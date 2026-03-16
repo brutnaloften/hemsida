@@ -8,9 +8,10 @@ const promises = defineCollection({
     name: z.string(),
     description: z.string(),
     party: z.string(),
+    status: z.string(),
     date: z.string(),
     sources: z.array(
-      z.object({ value: z.string(), archive: z.string() }),
+      z.object({ value: z.string(), archive: z.string(), broken: z.boolean().optional() }),
     ),
     tags: z.array(z.string()),
   }),

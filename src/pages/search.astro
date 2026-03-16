@@ -6,6 +6,6 @@ import SearchPage from "../components/SearchPage";
 const promises = (await getCollection("promises")).map((e) => e.data);
 ---
 
-<Layout>
+<Layout title="Sök — Brutna Löften" description="Sök bland politiska löften i vår databas.">
   <SearchPage client:load promises={promises} />
 </Layout>

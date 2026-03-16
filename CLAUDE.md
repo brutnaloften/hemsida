@@ -11,8 +11,10 @@ Brutna Löften — a Swedish-language static site that tracks political promises
 - `pnpm dev` — dev server at localhost:4321
 - `pnpm build` — production build (output: `dist/`)
 - `pnpm preview` — preview production build
+- `pnpm fmt` — format all files with oxfmt
+- `pnpm fmt:check` — check formatting without writing (for CI)
 
-No linter or test runner is configured.
+oxfmt runs automatically via a PostToolUse hook after every Edit/Write.
 
 ## Architecture
 
