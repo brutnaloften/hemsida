@@ -6,11 +6,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Promise } from "@/data";
+import type { Promise } from "@/data/index";
 
-export default function PromiseCard(props: { promise: Promise }) {
-  const { promise } = props;
-
+export default function PromiseCard({ promise }: { promise: Promise }) {
   return (
     <Card className="p-4 mb-4">
       <CardHeader className="flex flex-col max-md:pb-2 md:items-center md:justify-between md:flex-row">

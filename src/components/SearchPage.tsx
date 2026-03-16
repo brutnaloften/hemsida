@@ -1,14 +1,10 @@
-"use client";
-
 import uFuzzy from "@leeoniya/ufuzzy";
 import { useEffect, useRef, useState } from "react";
-
-import "@/app/globals.css";
 import { Input } from "@/components/ui/input";
-import { Data } from "@/data";
-import PromiseCard from "./promise-card";
+import type { Promise } from "@/data/index";
+import PromiseCard from "./PromiseCard";
 
-export default function Search() {
+export default function SearchPage({ promises }: { promises: Promise[] }) {
   const state = useRef<{ fuzzy: uFuzzy; haystack: string[] }>();
   const [input, setInput] = useState("");
   const [result, setResult] = useState<number[]>();
@@ -16,7 +12,7 @@ export default function Search() {
   useEffect(() => {
     state.current = {
       fuzzy: new uFuzzy(),
-      haystack: Data.promises.map(
+      haystack: promises.map(
         (p) => `${p.name} ${p.description} ${p.party} ${p.tags} ${p.date}`,
       ),
     };
@@ -32,27 +28,23 @@ export default function Search() {
     setResult(ids ?? []);
   }, [input]);
 
-  let list;
-  if (result == undefined) {
-    list = Data.promises.map((p, i) => <PromiseCard key={i} promise={p} />);
-  } else {
-    list = result.map((idx) => (
-      <PromiseCard key={idx} promise={Data.promises[idx]} />
-    ));
-  }
+  const list =
+    result == undefined
+      ? promises.map((p, i) => <PromiseCard key={i} promise={p} />)
+      : result.map((idx) => (
+          <PromiseCard key={idx} promise={promises[idx]} />
+        ));
 
   return (
-    <>
-      <div className="container pt-4 px-4 md:px-6">
-        <Input
-          type="text"
-          placeholder="Sök"
-          className="mb-4"
-          value={input}
-          onChange={(ev) => setInput(ev.target.value)}
-        />
-        <div>{list}</div>
-      </div>
-    </>
+    <div className="container mx-auto pt-4 px-4 md:px-6">
+      <Input
+        type="text"
+        placeholder="Sök"
+        className="mb-4"
+        value={input}
+        onChange={(ev) => setInput(ev.target.value)}
+      />
+      <div>{list}</div>
+    </div>
   );
 }
