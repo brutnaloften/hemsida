@@ -1,0 +1,11 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import SearchPage from "../components/SearchPage";
+
+const promises = (await getCollection("promises")).map((e) => e.data);
+---
+
+<Layout>
+  <SearchPage client:load promises={promises} />
+</Layout>
