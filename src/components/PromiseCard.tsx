@@ -25,7 +25,7 @@ export default function PromiseCard({ promise }: { promise: Promise }) {
                   href={source.broken ? source.archive : source.value}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={buttonVariants({ variant: 'outline', size: 'sm' })}
+                  className={buttonVariants({ variant: "outline", size: "sm" })}
                 >
                   Källa
                 </a>

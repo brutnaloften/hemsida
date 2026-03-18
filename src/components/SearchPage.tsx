@@ -82,9 +82,7 @@ export default function SearchPage({ promises }: { promises: Promise[] }) {
           onChange={(v) => setSelectedYears((s) => toggle(s, v))}
         />
       </div>
-      {isFiltering && (
-        <p className="text-muted-foreground text-sm mb-3">{items.length} resultat</p>
-      )}
+      {isFiltering && <p className="text-muted-foreground text-sm mb-3">{items.length} resultat</p>}
       {items.length === 0 ? (
         <p className="text-muted-foreground text-center py-8">Inga resultat hittades.</p>
       ) : (

@@ -1,3 +1,3 @@
-import { cn } from "tailwind-variants"
+import { cn } from "tailwind-variants";
 
-export { cn }
+export { cn };

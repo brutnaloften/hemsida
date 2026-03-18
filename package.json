@@ -7,7 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check"
+    "fmt:check": "oxfmt --check",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.0",
@@ -30,8 +31,13 @@
     "@tailwindcss/vite": "^4.2.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
     "oxfmt": "^0.40.0",
     "typescript": "^5.9.3"
+  },
+  "lint-staged": {
+    "*": "oxfmt"
   },
   "packageManager": "pnpm@10.32.1"
 }
