@@ -44,6 +44,14 @@ export interface PromiseSource {
   broken?: boolean;
 }
 
+export interface PromiseUpdate {
+  date: string;
+  status: string;
+  reasoning: string;
+  sources: PromiseSource[];
+  confidence?: "high" | "medium";
+}
+
 export interface Promise {
   id: string;
   name: string;
@@ -53,12 +61,20 @@ export interface Promise {
   date: string;
   sources: PromiseSource[];
   tags: string[];
+  updates: PromiseUpdate[];
 }
 
 // --- Validation ---
 
 const DISCOVERY_FIELDS = ["url", "title", "snippet", "source_domain", "found_date"];
-const EXTRACTION_FIELDS = ["politician_or_party", "promise_text", "direct_quote", "date", "source_url", "confidence"];
+const EXTRACTION_FIELDS = [
+  "politician_or_party",
+  "promise_text",
+  "direct_quote",
+  "date",
+  "source_url",
+  "confidence",
+];
 const MATCH_FIELDS = ["type", "existing_promise_id", "extracted_index", "reasoning"];
 const UPDATE_FIELDS = ["promise_id", "new_status", "reasoning", "sources", "confidence"];
 const PROMISE_FIELDS = ["id", "name", "description", "party", "status", "date", "sources", "tags"];

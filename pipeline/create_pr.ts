@@ -28,6 +28,7 @@ function git(...args: string[]): string {
 }
 
 function applyUpdates(updates: Update[]): string[] {
+  const today = new Date().toISOString().slice(0, 10);
   const changed: string[] = [];
   for (const update of updates) {
     const path = join(PROMISES_DIR, `${update.promise_id}.json`);
@@ -39,15 +40,15 @@ function applyUpdates(updates: Update[]): string[] {
     const promise: PromiseData = JSON.parse(readFileSync(path, "utf-8"));
     if (promise.status === update.new_status) continue;
 
+    if (!promise.updates) promise.updates = [];
+    promise.updates.push({
+      date: today,
+      status: update.new_status,
+      reasoning: update.reasoning,
+      sources: update.sources.map((value) => ({ value, archive: "" })),
+      confidence: update.confidence,
+    });
     promise.status = update.new_status;
-
-    // Add new sources
-    const existingUrls = new Set(promise.sources.map((s) => s.value));
-    for (const sourceUrl of update.sources) {
-      if (!existingUrls.has(sourceUrl)) {
-        promise.sources.push({ value: sourceUrl, archive: "" });
-      }
-    }
 
     writeFileSync(path, JSON.stringify(promise, null, 2) + "\n");
     changed.push(path);
@@ -88,6 +89,7 @@ function createNewPromises(matches: Match[], extracted: Extraction[]): string[] 
       date: e.date,
       sources: [{ value: e.source_url, archive: "" }],
       tags: [],
+      updates: [],
     };
 
     const path = join(PROMISES_DIR, `${promiseId}.json`);
@@ -143,9 +145,15 @@ const { values } = parseArgs({
 });
 
 const maxChanges = parseInt(values["max-changes"]!, 10);
-const updates = existsSync(values.updates!) ? validateUpdates(loadJson(values.updates!) as unknown[]) : [];
-const matches = existsSync(values.matches!) ? validateMatches(loadJson(values.matches!) as unknown[]) : [];
-const extracted = existsSync(values.extracted!) ? (loadJson(values.extracted!) as Extraction[]) : [];
+const updates = existsSync(values.updates!)
+  ? validateUpdates(loadJson(values.updates!) as unknown[])
+  : [];
+const matches = existsSync(values.matches!)
+  ? validateMatches(loadJson(values.matches!) as unknown[])
+  : [];
+const extracted = existsSync(values.extracted!)
+  ? (loadJson(values.extracted!) as Extraction[])
+  : [];
 
 const totalChanges = updates.length + matches.filter((m) => m.type === "new").length;
 
