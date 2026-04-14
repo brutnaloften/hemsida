@@ -12,6 +12,8 @@ permissions:
 jobs:
   pipeline:
     runs-on: ubuntu-latest
+    environment: pipeline
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - uses: actions/checkout@v4
