@@ -6,6 +6,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import { parseArgs } from "node:util";
 import { join } from "node:path";
 import Anthropic from "@anthropic-ai/sdk";
+import { loggedCreate } from "./log.ts";
 import {
   type Extraction,
   type Match,
@@ -28,7 +29,9 @@ function parseJsonArray(text: string): unknown[] {
 }
 
 function loadExistingPromises(): PromiseData[] {
-  const files = readdirSync(PROMISES_DIR).filter((f) => f.endsWith(".json")).sort();
+  const files = readdirSync(PROMISES_DIR)
+    .filter((f) => f.endsWith(".json"))
+    .sort();
   const promises: PromiseData[] = [];
   for (const file of files) {
     const data = JSON.parse(readFileSync(join(PROMISES_DIR, file), "utf-8"));
@@ -82,7 +85,7 @@ async function matchPromises(
     2,
   );
 
-  const response = await client.messages.create({
+  const response = await loggedCreate(client, "match", {
     model: "claude-sonnet-4-20250514",
     max_tokens: 4096,
     messages: [

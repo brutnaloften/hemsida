@@ -5,6 +5,7 @@
 import { readFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 import Anthropic from "@anthropic-ai/sdk";
+import { loggedCreate } from "./log.ts";
 import { type Discovery, validateDiscoveries, writeJson } from "./schemas.ts";
 
 const PROMPT = readFileSync(new URL("prompts/discover.txt", import.meta.url), "utf-8");
@@ -33,7 +34,7 @@ async function discover(dryRun: boolean): Promise<Discovery[]> {
   }
 
   const client = new Anthropic();
-  const response = await client.messages.create({
+  const response = await loggedCreate(client, "discover", {
     model: "claude-sonnet-4-20250514",
     max_tokens: 4096,
     tools: [
@@ -51,13 +52,22 @@ async function discover(dryRun: boolean): Promise<Discovery[]> {
     ],
   });
 
-  for (const block of response.content) {
-    if (block.type === "text") {
-      return validateDiscoveries(parseJsonArray(block.text));
+  const textBlocks = response.content
+    .filter((block) => block.type === "text")
+    .map((block) => (block as { type: "text"; text: string }).text);
+
+  // Search text blocks in reverse — the final answer with the JSON array is
+  // typically the last text block, after any web_search tool use/result blocks.
+  for (const text of textBlocks.slice().reverse()) {
+    if (text.includes("[")) {
+      return validateDiscoveries(parseJsonArray(text));
     }
   }
 
-  console.error("Warning: no discoveries found in response");
+  console.error("Warning: no JSON array found in response. Text blocks:");
+  for (const [i, text] of textBlocks.entries()) {
+    console.error(`  [${i}] ${text.slice(0, 200)}`);
+  }
   return [];
 }
 

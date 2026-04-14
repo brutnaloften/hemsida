@@ -6,6 +6,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
 import Anthropic from "@anthropic-ai/sdk";
+import { loggedCreate } from "./log.ts";
 import {
   type Extraction,
   type Match,
@@ -40,9 +41,7 @@ async function evaluate(
   extracted: Extraction[],
   dryRun: boolean,
 ): Promise<Update[]> {
-  const updatesToEvaluate = matches.filter(
-    (m) => m.type === "update" && m.existing_promise_id,
-  );
+  const updatesToEvaluate = matches.filter((m) => m.type === "update" && m.existing_promise_id);
 
   if (updatesToEvaluate.length === 0) return [];
 
@@ -92,7 +91,7 @@ async function evaluate(
       2,
     );
 
-    const response = await client.messages.create({
+    const response = await loggedCreate(client, `evaluate: ${promise.id}`, {
       model: "claude-sonnet-4-20250514",
       max_tokens: 2048,
       messages: [

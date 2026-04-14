@@ -5,6 +5,7 @@
 import { readFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 import Anthropic from "@anthropic-ai/sdk";
+import { loggedCreate } from "./log.ts";
 import { sanitizeArticle, wrapUntrusted } from "./sanitize.ts";
 import {
   type Discovery,
@@ -62,7 +63,7 @@ async function extractFromArticle(
   const sanitized = sanitizeArticle(html);
   const wrapped = wrapUntrusted(sanitized);
 
-  const response = await client!.messages.create({
+  const response = await loggedCreate(client!, `extract: ${article.url}`, {
     model: "claude-sonnet-4-20250514",
     max_tokens: 4096,
     messages: [
