@@ -1,9 +1,9 @@
 import { defineCollection } from "astro:content";
 import { z } from "zod";
-import { file } from "astro/loaders";
+import { glob } from "astro/loaders";
 
 const promises = defineCollection({
-  loader: file("src/data/promises.json"),
+  loader: glob({ pattern: "*.json", base: "src/data/promises" }),
   schema: z.object({
     name: z.string(),
     description: z.string(),

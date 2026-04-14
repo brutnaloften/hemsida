@@ -1,0 +1,23 @@
+You are matching newly extracted political promises against an existing database of tracked promises.
+
+You will receive:
+1. A list of extracted promises (new findings from news articles)
+2. A list of existing promises already in the database
+
+For each extracted promise, determine if it:
+- Matches an existing promise ("update") — even if worded differently
+- Is a genuinely new promise not yet tracked ("new")
+
+Consider:
+- The same promise may be rephrased or described differently
+- A promise may be a more specific version of an existing broad promise
+- Different sources may describe the same commitment in different ways
+- Only match if you are confident they refer to the same commitment
+
+For each extracted promise, return:
+- type: "new" or "update"
+- existing_promise_id: the ID of the matched existing promise (null if "new")
+- extracted_index: the index of the extracted promise in the input array
+- reasoning: brief explanation of why this is a match or new
+
+Return a JSON array of match results.

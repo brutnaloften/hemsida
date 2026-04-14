@@ -20,7 +20,9 @@ oxfmt runs automatically via a PostToolUse hook after every Edit/Write.
 
 **Astro (static) + React islands:** Pages are Astro components (`src/pages/`), laid out with `src/layouts/Layout.astro` (includes Navbar, Footer, global CSS). Interactive parts use React via `client:load`.
 
-**Data flow:** Political promises live in `src/data/promises.json`. This file is loaded as an Astro content collection via `src/content.config.ts` (Zod-validated schema). Pages query it with `getCollection("promises")` and pass data as props to React components.
+**Data flow:** Political promises live as individual JSON files in `src/data/promises/` (one file per promise, e.g. `kd-miljardinvesteringar-infrastruktur.json`). These are loaded as an Astro content collection via `src/content.config.ts` (glob loader, Zod-validated schema). Pages query with `getCollection("promises")` and pass data as props to React components.
+
+**AI pipeline:** `pipeline/` contains a TypeScript pipeline that discovers political news, extracts promises, matches against existing data, evaluates status changes, and creates PRs. Run with `node --experimental-strip-types pipeline/discover.ts --dry-run`. Orchestrated via `.github/workflows/pipeline.yml` (manual trigger).
 
 **Search:** `src/pages/search.astro` hydrates `SearchPage.tsx` as a React island. It uses uFuzzy for client-side fuzzy search over all promise fields. `PromiseCard.tsx` renders individual results.
 

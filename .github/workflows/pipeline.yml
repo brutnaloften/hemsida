@@ -1,0 +1,51 @@
+name: AI Promise Pipeline
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '0 6 * * 1'  # Weekly on Mondays at 06:00 UTC
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install pipeline dependencies
+        run: cd pipeline && pnpm install --frozen-lockfile
+
+      - name: Step 1 — Discover articles
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node --experimental-strip-types pipeline/discover.ts -o discoveries.json
+
+      - name: Step 2 — Extract promises
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node --experimental-strip-types pipeline/extract.ts discoveries.json -o extracted.json
+
+      - name: Step 3 — Match against existing
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node --experimental-strip-types pipeline/match.ts extracted.json -o matches.json
+
+      - name: Step 4 — Evaluate status changes
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node --experimental-strip-types pipeline/evaluate.ts matches.json extracted.json -o updates.json
+
+      - name: Step 5 — Create PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node --experimental-strip-types pipeline/create_pr.ts --updates updates.json --matches matches.json --extracted extracted.json
