@@ -18,7 +18,7 @@ import {
 
 const PROMISES_DIR = new URL("../src/data/promises/", import.meta.url).pathname;
 const REPO_ROOT = new URL("../", import.meta.url).pathname;
-const MAX_CHANGES = 5;
+const MAX_CHANGES = 100;
 
 function git(...args: string[]): string {
   // Use execFileSync with an array — no shell, so arbitrary content in
@@ -211,14 +211,7 @@ git("push", "-u", "origin", branch);
 const prBody = buildPrBody(updates, matches, extracted);
 const prResult = execFileSync(
   "gh",
-  [
-    "pr",
-    "create",
-    "--title",
-    `Pipeline: Update promises ${timestamp}`,
-    "--body",
-    prBody,
-  ],
+  ["pr", "create", "--title", `Pipeline: Update promises ${timestamp}`, "--body", prBody],
   { cwd: REPO_ROOT, encoding: "utf-8" },
 ).trim();
 
