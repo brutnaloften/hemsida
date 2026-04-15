@@ -5,7 +5,7 @@
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
-import { execSync } from "node:child_process";
+import { execFileSync } from "node:child_process";
 import {
   type Extraction,
   type Match,
@@ -21,7 +21,10 @@ const REPO_ROOT = new URL("../", import.meta.url).pathname;
 const MAX_CHANGES = 5;
 
 function git(...args: string[]): string {
-  return execSync(["git", ...args].join(" "), {
+  // Use execFileSync with an array — no shell, so arbitrary content in
+  // args (commit messages, file paths) cannot be interpreted as shell
+  // syntax. Don't switch to execSync with string interpolation.
+  return execFileSync("git", args, {
     cwd: REPO_ROOT,
     encoding: "utf-8",
   }).trim();
@@ -195,13 +198,27 @@ git("checkout", "-b", branch);
 for (const f of allFiles) {
   git("add", f);
 }
-git("commit", "-m", `"pipeline: update promises ${timestamp}"`);
+// Message is passed as a bare arg to execFileSync, so no manual
+// shell-quoting — the wrapping literal quotes the previous version added
+// would have become part of the commit message itself.
+git("commit", "-m", `pipeline: update promises ${timestamp}`);
 git("push", "-u", "origin", branch);
 
-// Create PR via gh CLI
+// Create PR via gh CLI. execFileSync with an array of args means the
+// PR body (which contains Claude-generated text) is passed to gh as a
+// single argv entry and never touches a shell — no injection risk from
+// backticks, $, or \ in the reasoning or promise text.
 const prBody = buildPrBody(updates, matches, extracted);
-const prResult = execSync(
-  `gh pr create --title "Pipeline: Update promises ${timestamp}" --body "${prBody.replace(/"/g, '\\"')}"`,
+const prResult = execFileSync(
+  "gh",
+  [
+    "pr",
+    "create",
+    "--title",
+    `Pipeline: Update promises ${timestamp}`,
+    "--body",
+    prBody,
+  ],
   { cwd: REPO_ROOT, encoding: "utf-8" },
 ).trim();
 
