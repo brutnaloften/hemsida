@@ -5,8 +5,7 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { parseArgs } from "node:util";
 import { join } from "node:path";
-import Anthropic from "@anthropic-ai/sdk";
-import { loggedCreate } from "./log.ts";
+import { MODEL, createClient, loggedCreate } from "./log.ts";
 import {
   type Extraction,
   type Match,
@@ -61,7 +60,7 @@ async function matchPromises(
     ];
   }
 
-  const client = new Anthropic();
+  const client = createClient();
 
   // Build structured context — no raw web content
   const context = JSON.stringify(
@@ -86,7 +85,7 @@ async function matchPromises(
   );
 
   const response = await loggedCreate(client, "match", {
-    model: "claude-sonnet-4-20250514",
+    model: MODEL,
     max_tokens: 4096,
     messages: [
       {

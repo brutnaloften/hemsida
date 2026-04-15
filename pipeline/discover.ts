@@ -4,8 +4,7 @@
 
 import { readFileSync } from "node:fs";
 import { parseArgs } from "node:util";
-import Anthropic from "@anthropic-ai/sdk";
-import { loggedCreate } from "./log.ts";
+import { MODEL, createClient, loggedCreate } from "./log.ts";
 import { type Discovery, validateDiscoveries, writeJson } from "./schemas.ts";
 
 const PROMPT = readFileSync(new URL("prompts/discover.txt", import.meta.url), "utf-8");
@@ -33,9 +32,9 @@ async function discover(dryRun: boolean): Promise<Discovery[]> {
     ];
   }
 
-  const client = new Anthropic();
+  const client = createClient();
   const response = await loggedCreate(client, "discover", {
-    model: "claude-sonnet-4-20250514",
+    model: MODEL,
     max_tokens: 4096,
     tools: [
       {

@@ -1,11 +1,16 @@
 /**
  * Step 2: Extract political promises from discovered articles.
+ *
+ * This stage is resilient to transient API errors (rate limit, overload):
+ * it saves results after every article and a re-run will resume from
+ * where it left off, so hitting the TPM ceiling mid-run doesn't cost the
+ * work already done.
  */
 
-import { readFileSync } from "node:fs";
+import { appendFileSync, existsSync, readFileSync } from "node:fs";
 import { parseArgs } from "node:util";
-import Anthropic from "@anthropic-ai/sdk";
-import { loggedCreate } from "./log.ts";
+import type Anthropic from "@anthropic-ai/sdk";
+import { MODEL, createClient, isTransientApiError, loggedCreate } from "./log.ts";
 import { sanitizeArticle, wrapUntrusted } from "./sanitize.ts";
 import {
   type Discovery,
@@ -64,7 +69,7 @@ async function extractFromArticle(
   const wrapped = wrapUntrusted(sanitized);
 
   const response = await loggedCreate(client!, `extract: ${article.url}`, {
-    model: "claude-sonnet-4-20250514",
+    model: MODEL,
     max_tokens: 4096,
     messages: [
       {
@@ -82,6 +87,27 @@ async function extractFromArticle(
   return [];
 }
 
+// --- Resume support -----------------------------------------------------
+// A plain-text side-car file lists the URLs already successfully attempted.
+// We append to it after each article so a crash or TPM wipeout leaves a
+// usable cursor. Tracking attempts (not just successful extractions)
+// means articles that yielded zero promises aren't retried either.
+
+function loadProcessedUrls(path: string): Set<string> {
+  if (!existsSync(path)) return new Set();
+  const urls = readFileSync(path, "utf-8")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean);
+  return new Set(urls);
+}
+
+function markProcessed(path: string, url: string): void {
+  appendFileSync(path, url + "\n");
+}
+
+// --- Main ---------------------------------------------------------------
+
 const { values, positionals } = parseArgs({
   options: {
     "dry-run": { type: "boolean", default: false },
@@ -96,18 +122,59 @@ if (!inputPath) {
   process.exit(1);
 }
 
-const discoveries = validateDiscoveries(loadJson(inputPath) as unknown[]);
-const client = values["dry-run"] ? null : new Anthropic();
+const outputPath = values.output!;
+const processedPath = `${outputPath}.processed`;
+const dryRun = values["dry-run"]!;
 
-const allExtracted: Extraction[] = [];
-for (const article of discoveries) {
-  const extracted = await extractFromArticle(client, article, values["dry-run"]!);
-  allExtracted.push(...extracted);
+const discoveries = validateDiscoveries(loadJson(inputPath) as unknown[]);
+const client = dryRun ? null : createClient();
+
+// Resume: load prior results and the processed-URL cursor.
+const existing: Extraction[] = existsSync(outputPath)
+  ? validateExtractions(loadJson(outputPath) as unknown[])
+  : [];
+const processedUrls = loadProcessedUrls(processedPath);
+if (existing.length || processedUrls.size) {
+  console.error(
+    `Resume: ${existing.length} extractions loaded, ${processedUrls.size} URLs already attempted`,
+  );
 }
 
-// Filter to high/medium confidence only
-const filtered = allExtracted.filter((e) => e.confidence === "high" || e.confidence === "medium");
-const validated = validateExtractions(filtered);
+const allExtracted: Extraction[] = [...existing];
+let skippedTransient = 0;
 
-writeJson(values.output!, validated);
-console.error(`Extracted ${validated.length} promises, written to ${values.output}`);
+for (const article of discoveries) {
+  if (processedUrls.has(article.url)) {
+    console.error(`Skip (already processed): ${article.url}`);
+    continue;
+  }
+
+  let extracted: Extraction[];
+  try {
+    extracted = await extractFromArticle(client, article, dryRun);
+  } catch (err) {
+    if (isTransientApiError(err)) {
+      console.error(`Transient error on ${article.url}; skipping this article.`);
+      skippedTransient++;
+      continue;
+    }
+    // Non-transient: bubble up and fail the stage. Results so far are
+    // already on disk from the last successful incremental save.
+    throw err;
+  }
+
+  // Filter to high/medium confidence and validate before persisting.
+  const kept = validateExtractions(
+    extracted.filter((e) => e.confidence === "high" || e.confidence === "medium"),
+  );
+  allExtracted.push(...kept);
+
+  // Incremental save — if the next call 429s, we don't lose this one.
+  writeJson(outputPath, allExtracted);
+  if (!dryRun) markProcessed(processedPath, article.url);
+  processedUrls.add(article.url);
+}
+
+console.error(
+  `Extracted ${allExtracted.length} promises (skipped ${skippedTransient} transient-error articles), written to ${outputPath}`,
+);
