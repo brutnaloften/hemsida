@@ -111,10 +111,10 @@ function applyChange(change: Change): void {
 
 function titleFor(change: Change): string {
   if (change.kind === "update") {
-    return `Pipeline: ${change.promiseId} → ${change.update.new_status}`;
+    return `${titlePrefix}Pipeline: ${change.promiseId} → ${change.update.new_status}`;
   }
   const text = change.extraction.promise_text.slice(0, 60);
-  return `Pipeline: nytt löfte — ${change.extraction.politician_or_party}: ${text}`;
+  return `${titlePrefix}Pipeline: nytt löfte — ${change.extraction.politician_or_party}: ${text}`;
 }
 
 function bodyFor(change: Change): string {
@@ -160,9 +160,13 @@ const { values } = parseArgs({
     matches: { type: "string", default: "matches.json" },
     extracted: { type: "string", default: "extracted.json" },
     "dry-run": { type: "boolean", default: false },
+    "test-mode": { type: "boolean", default: false },
     "max-changes": { type: "string", default: String(MAX_CHANGES) },
   },
 });
+
+const testMode = values["test-mode"]!;
+const titlePrefix = testMode ? "[TEST] " : "";
 
 const maxChanges = parseInt(values["max-changes"]!, 10);
 const updates = existsSync(values.updates!)

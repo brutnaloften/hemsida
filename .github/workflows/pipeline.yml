@@ -2,6 +2,11 @@ name: AI Promise Pipeline
 
 on:
   workflow_dispatch:
+    inputs:
+      test_mode:
+        description: "Skip Claude stages and run step 5 against committed fixtures (creates a [TEST] PR from pipeline/__fixtures__)"
+        type: boolean
+        default: false
   # schedule:
   #   - cron: '0 6 * * 1'  # Weekly on Mondays at 06:00 UTC
 
@@ -32,32 +37,48 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Step 1 — Discover articles
+        if: ${{ !inputs.test_mode }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node --experimental-strip-types pipeline/discover.ts -o discoveries.json
 
       - name: Step 2 — Extract promises
+        if: ${{ !inputs.test_mode }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node --experimental-strip-types pipeline/extract.ts discoveries.json -o extracted.json
 
       - name: Step 3 — Match against existing
+        if: ${{ !inputs.test_mode }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node --experimental-strip-types pipeline/match.ts extracted.json -o matches.json
 
       - name: Step 4 — Evaluate status changes
+        if: ${{ !inputs.test_mode }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node --experimental-strip-types pipeline/evaluate.ts matches.json extracted.json -o updates.json
 
       - name: Step 5 — Create PR
+        if: ${{ !inputs.test_mode }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node --experimental-strip-types pipeline/create_pr.ts --updates updates.json --matches matches.json --extracted extracted.json
 
+      - name: Step 5 — Create PR (test mode)
+        if: ${{ inputs.test_mode }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node --experimental-strip-types pipeline/create_pr.ts \
+            --test-mode \
+            --updates pipeline/__fixtures__/updates.json \
+            --matches pipeline/__fixtures__/matches.json \
+            --extracted pipeline/__fixtures__/extracted.json
+
       - name: Upload pipeline artifacts
-        if: always()
+        if: ${{ always() && !inputs.test_mode }}
         uses: actions/upload-artifact@v4
         with:
           name: pipeline-outputs
