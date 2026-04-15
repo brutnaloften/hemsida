@@ -21,6 +21,7 @@ import {
 
 const PROMPT = readFileSync(new URL("prompts/match.txt", import.meta.url), "utf-8");
 const PROMISES_DIR = new URL("../src/data/promises/", import.meta.url).pathname;
+const OUTPUT_FORMAT = zodOutputFormat(MatchListSchema);
 
 function loadExistingPromises(): PromiseData[] {
   const files = readdirSync(PROMISES_DIR)
@@ -88,7 +89,7 @@ async function matchPromises(
         content: `${PROMPT}\n\n${context}`,
       },
     ],
-    output_config: { format: zodOutputFormat(MatchListSchema) },
+    output_config: { format: OUTPUT_FORMAT },
   });
 
   if (!response.parsed_output) {

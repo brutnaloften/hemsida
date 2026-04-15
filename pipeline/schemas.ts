@@ -13,7 +13,7 @@
  */
 
 import { readFileSync, writeFileSync } from "node:fs";
-import { z } from "zod";
+import { z } from "zod/v4";
 
 // --- Stage I/O schemas ---------------------------------------------------
 
@@ -109,11 +109,7 @@ export type Promise = z.infer<typeof PromiseSchema>;
 // Semantics: invalid items are logged and dropped (not thrown). This preserves
 // the prior skip-and-warn behavior that the rest of the pipeline assumes.
 
-function validateArray<T>(
-  schema: z.ZodType<T>,
-  data: unknown[],
-  label: string,
-): T[] {
+function validateArray<T>(schema: z.ZodType<T>, data: unknown[], label: string): T[] {
   const validated: T[] = [];
   for (const [i, item] of data.entries()) {
     const result = schema.safeParse(item);

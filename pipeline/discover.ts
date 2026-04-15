@@ -11,14 +11,10 @@ import { readFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 import { MODEL, createClient, loggedParse } from "./log.ts";
-import {
-  type Discovery,
-  DiscoveryListSchema,
-  validateDiscoveries,
-  writeJson,
-} from "./schemas.ts";
+import { type Discovery, DiscoveryListSchema, validateDiscoveries, writeJson } from "./schemas.ts";
 
 const PROMPT = readFileSync(new URL("prompts/discover.txt", import.meta.url), "utf-8");
+const OUTPUT_FORMAT = zodOutputFormat(DiscoveryListSchema);
 
 async function discover(dryRun: boolean): Promise<Discovery[]> {
   const today = new Date().toISOString().slice(0, 10);
@@ -53,7 +49,7 @@ async function discover(dryRun: boolean): Promise<Discovery[]> {
         content: `${PROMPT}\n\nToday's date: ${today}`,
       },
     ],
-    output_config: { format: zodOutputFormat(DiscoveryListSchema) },
+    output_config: { format: OUTPUT_FORMAT },
   });
 
   if (!response.parsed_output) {

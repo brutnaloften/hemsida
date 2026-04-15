@@ -26,6 +26,7 @@ import {
 
 const PROMPT = readFileSync(new URL("prompts/evaluate.txt", import.meta.url), "utf-8");
 const PROMISES_DIR = new URL("../src/data/promises/", import.meta.url).pathname;
+const OUTPUT_FORMAT = zodOutputFormat(UpdateListSchema);
 
 function loadPromise(id: string): Record<string, unknown> | null {
   const path = join(PROMISES_DIR, `${id}.json`);
@@ -73,9 +74,7 @@ const dryRun = values["dry-run"]!;
 const matches = validateMatches(loadJson(positionals[0]) as unknown[]);
 const extracted = validateExtractions(loadJson(positionals[1]) as unknown[]);
 
-const updatesToEvaluate = matches.filter(
-  (m) => m.type === "update" && m.existing_promise_id,
-);
+const updatesToEvaluate = matches.filter((m) => m.type === "update" && m.existing_promise_id);
 
 if (updatesToEvaluate.length === 0) {
   writeJson(outputPath, []);
@@ -166,7 +165,7 @@ for (const match of updatesToEvaluate) {
       model: MODEL,
       max_tokens: 2048,
       messages: [{ role: "user", content: `${PROMPT}\n\n${context}` }],
-      output_config: { format: zodOutputFormat(UpdateListSchema) },
+      output_config: { format: OUTPUT_FORMAT },
     });
   } catch (err) {
     if (isTransientApiError(err)) {

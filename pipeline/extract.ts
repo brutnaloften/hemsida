@@ -24,6 +24,7 @@ import {
 } from "./schemas.ts";
 
 const PROMPT = readFileSync(new URL("prompts/extract.txt", import.meta.url), "utf-8");
+const OUTPUT_FORMAT = zodOutputFormat(ExtractionListSchema);
 
 async function fetchArticle(url: string): Promise<string | null> {
   try {
@@ -72,7 +73,7 @@ async function extractFromArticle(
         content: `${PROMPT}\n\nArticle URL: ${article.url}\n\n${wrapped}`,
       },
     ],
-    output_config: { format: zodOutputFormat(ExtractionListSchema) },
+    output_config: { format: OUTPUT_FORMAT },
   });
 
   // parsed_output is undefined only if Claude refused (stop_reason "refusal")
