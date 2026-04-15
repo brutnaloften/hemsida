@@ -10,12 +10,15 @@
 import { appendFileSync, existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
-import { MODEL, createClient, isTransientApiError, loggedCreate } from "./log.ts";
+import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
+import { MODEL, createClient, isTransientApiError, loggedParse } from "./log.ts";
 import {
   type Extraction,
   type Match,
   type Update,
+  UpdateListSchema,
   loadJson,
+  validateExtractions,
   validateMatches,
   validateUpdates,
   writeJson,
@@ -23,13 +26,6 @@ import {
 
 const PROMPT = readFileSync(new URL("prompts/evaluate.txt", import.meta.url), "utf-8");
 const PROMISES_DIR = new URL("../src/data/promises/", import.meta.url).pathname;
-
-function parseJsonArray(text: string): unknown[] {
-  const start = text.indexOf("[");
-  const end = text.lastIndexOf("]") + 1;
-  if (start === -1 || end <= start) return [];
-  return JSON.parse(text.slice(start, end));
-}
 
 function loadPromise(id: string): Record<string, unknown> | null {
   const path = join(PROMISES_DIR, `${id}.json`);
@@ -75,7 +71,7 @@ const processedPath = `${outputPath}.processed`;
 const dryRun = values["dry-run"]!;
 
 const matches = validateMatches(loadJson(positionals[0]) as unknown[]);
-const extracted = loadJson(positionals[1]) as Extraction[];
+const extracted = validateExtractions(loadJson(positionals[1]) as unknown[]);
 
 const updatesToEvaluate = matches.filter(
   (m) => m.type === "update" && m.existing_promise_id,
@@ -166,10 +162,11 @@ for (const match of updatesToEvaluate) {
 
   let response;
   try {
-    response = await loggedCreate(client, `evaluate: ${promiseId}`, {
+    response = await loggedParse(client, `evaluate: ${promiseId}`, {
       model: MODEL,
       max_tokens: 2048,
       messages: [{ role: "user", content: `${PROMPT}\n\n${context}` }],
+      output_config: { format: zodOutputFormat(UpdateListSchema) },
     });
   } catch (err) {
     if (isTransientApiError(err)) {
@@ -180,12 +177,12 @@ for (const match of updatesToEvaluate) {
     throw err;
   }
 
-  for (const block of response.content) {
-    if (block.type === "text") {
-      const parsed = validateUpdates(parseJsonArray(block.text));
-      allUpdates.push(...parsed);
-      break;
-    }
+  if (response.parsed_output) {
+    allUpdates.push(...response.parsed_output.updates);
+  } else {
+    console.error(
+      `Warning: no parsed_output for ${promiseId} (stop_reason=${response.stop_reason}); skipping`,
+    );
   }
 
   writeJson(outputPath, allUpdates);

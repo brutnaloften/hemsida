@@ -5,10 +5,12 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { parseArgs } from "node:util";
 import { join } from "node:path";
-import { MODEL, createClient, loggedCreate } from "./log.ts";
+import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
+import { MODEL, createClient, loggedParse } from "./log.ts";
 import {
   type Extraction,
   type Match,
+  MatchListSchema,
   type Promise as PromiseData,
   loadJson,
   validateExtractions,
@@ -19,13 +21,6 @@ import {
 
 const PROMPT = readFileSync(new URL("prompts/match.txt", import.meta.url), "utf-8");
 const PROMISES_DIR = new URL("../src/data/promises/", import.meta.url).pathname;
-
-function parseJsonArray(text: string): unknown[] {
-  const start = text.indexOf("[");
-  const end = text.lastIndexOf("]") + 1;
-  if (start === -1 || end <= start) return [];
-  return JSON.parse(text.slice(start, end));
-}
 
 function loadExistingPromises(): PromiseData[] {
   const files = readdirSync(PROMISES_DIR)
@@ -84,7 +79,7 @@ async function matchPromises(
     2,
   );
 
-  const response = await loggedCreate(client, "match", {
+  const response = await loggedParse(client, "match", {
     model: MODEL,
     max_tokens: 4096,
     messages: [
@@ -93,14 +88,16 @@ async function matchPromises(
         content: `${PROMPT}\n\n${context}`,
       },
     ],
+    output_config: { format: zodOutputFormat(MatchListSchema) },
   });
 
-  for (const block of response.content) {
-    if (block.type === "text") {
-      return parseJsonArray(block.text) as Match[];
-    }
+  if (!response.parsed_output) {
+    console.error(
+      `Warning: no parsed_output from match stage (stop_reason=${response.stop_reason})`,
+    );
+    return [];
   }
-  return [];
+  return response.parsed_output.matches;
 }
 
 const { values, positionals } = parseArgs({

@@ -1,20 +1,24 @@
 /**
  * Step 1: Discover recent Swedish political news articles using Claude web search.
+ *
+ * Uses structured outputs: Claude executes web searches (server-side), then
+ * produces a final JSON object matching DiscoveryListSchema. No more reverse-
+ * scanning text blocks for the first `[` — the SDK returns `parsed_output`
+ * typed and validated.
  */
 
 import { readFileSync } from "node:fs";
 import { parseArgs } from "node:util";
-import { MODEL, createClient, loggedCreate } from "./log.ts";
-import { type Discovery, validateDiscoveries, writeJson } from "./schemas.ts";
+import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
+import { MODEL, createClient, loggedParse } from "./log.ts";
+import {
+  type Discovery,
+  DiscoveryListSchema,
+  validateDiscoveries,
+  writeJson,
+} from "./schemas.ts";
 
 const PROMPT = readFileSync(new URL("prompts/discover.txt", import.meta.url), "utf-8");
-
-function parseJsonArray(text: string): unknown[] {
-  const start = text.indexOf("[");
-  const end = text.lastIndexOf("]") + 1;
-  if (start === -1 || end <= start) return [];
-  return JSON.parse(text.slice(start, end));
-}
 
 async function discover(dryRun: boolean): Promise<Discovery[]> {
   const today = new Date().toISOString().slice(0, 10);
@@ -33,7 +37,7 @@ async function discover(dryRun: boolean): Promise<Discovery[]> {
   }
 
   const client = createClient();
-  const response = await loggedCreate(client, "discover", {
+  const response = await loggedParse(client, "discover", {
     model: MODEL,
     max_tokens: 4096,
     tools: [
@@ -41,7 +45,7 @@ async function discover(dryRun: boolean): Promise<Discovery[]> {
         type: "web_search_20250305",
         name: "web_search",
         max_uses: 10,
-      } as any,
+      },
     ],
     messages: [
       {
@@ -49,25 +53,19 @@ async function discover(dryRun: boolean): Promise<Discovery[]> {
         content: `${PROMPT}\n\nToday's date: ${today}`,
       },
     ],
+    output_config: { format: zodOutputFormat(DiscoveryListSchema) },
   });
 
-  const textBlocks = response.content
-    .filter((block) => block.type === "text")
-    .map((block) => (block as { type: "text"; text: string }).text);
-
-  // Search text blocks in reverse — the final answer with the JSON array is
-  // typically the last text block, after any web_search tool use/result blocks.
-  for (const text of textBlocks.slice().reverse()) {
-    if (text.includes("[")) {
-      return validateDiscoveries(parseJsonArray(text));
-    }
+  if (!response.parsed_output) {
+    // Likely pause_turn (server-tool iterations exhausted) or refusal — no
+    // structured output to return. Log and exit with zero discoveries so the
+    // workflow surfaces the issue instead of continuing on stale data.
+    console.error(
+      `Warning: no parsed_output from discover stage (stop_reason=${response.stop_reason})`,
+    );
+    return [];
   }
-
-  console.error("Warning: no JSON array found in response. Text blocks:");
-  for (const [i, text] of textBlocks.entries()) {
-    console.error(`  [${i}] ${text.slice(0, 200)}`);
-  }
-  return [];
+  return response.parsed_output.discoveries;
 }
 
 const { values } = parseArgs({
@@ -77,6 +75,6 @@ const { values } = parseArgs({
   },
 });
 
-const discoveries = await discover(values["dry-run"]!);
+const discoveries = validateDiscoveries(await discover(values["dry-run"]!));
 writeJson(values.output!, discoveries);
 console.error(`Found ${discoveries.length} articles, written to ${values.output}`);

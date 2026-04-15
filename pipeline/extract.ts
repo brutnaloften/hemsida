@@ -10,11 +10,13 @@
 import { appendFileSync, existsSync, readFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 import type Anthropic from "@anthropic-ai/sdk";
-import { MODEL, createClient, isTransientApiError, loggedCreate } from "./log.ts";
+import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
+import { MODEL, createClient, isTransientApiError, loggedParse } from "./log.ts";
 import { sanitizeArticle, wrapUntrusted } from "./sanitize.ts";
 import {
   type Discovery,
   type Extraction,
+  ExtractionListSchema,
   loadJson,
   validateDiscoveries,
   validateExtractions,
@@ -22,13 +24,6 @@ import {
 } from "./schemas.ts";
 
 const PROMPT = readFileSync(new URL("prompts/extract.txt", import.meta.url), "utf-8");
-
-function parseJsonArray(text: string): unknown[] {
-  const start = text.indexOf("[");
-  const end = text.lastIndexOf("]") + 1;
-  if (start === -1 || end <= start) return [];
-  return JSON.parse(text.slice(start, end));
-}
 
 async function fetchArticle(url: string): Promise<string | null> {
   try {
@@ -68,7 +63,7 @@ async function extractFromArticle(
   const sanitized = sanitizeArticle(html);
   const wrapped = wrapUntrusted(sanitized);
 
-  const response = await loggedCreate(client!, `extract: ${article.url}`, {
+  const response = await loggedParse(client!, `extract: ${article.url}`, {
     model: MODEL,
     max_tokens: 4096,
     messages: [
@@ -77,14 +72,18 @@ async function extractFromArticle(
         content: `${PROMPT}\n\nArticle URL: ${article.url}\n\n${wrapped}`,
       },
     ],
+    output_config: { format: zodOutputFormat(ExtractionListSchema) },
   });
 
-  for (const block of response.content) {
-    if (block.type === "text") {
-      return parseJsonArray(block.text) as Extraction[];
-    }
+  // parsed_output is undefined only if Claude refused (stop_reason "refusal")
+  // or hit max_tokens mid-output. Both are non-transient and skip-worthy.
+  if (!response.parsed_output) {
+    console.error(
+      `Warning: no parsed_output for ${article.url} (stop_reason=${response.stop_reason}); skipping`,
+    );
+    return [];
   }
-  return [];
+  return response.parsed_output.extractions;
 }
 
 // --- Resume support -----------------------------------------------------

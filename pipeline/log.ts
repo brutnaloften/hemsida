@@ -24,6 +24,18 @@ export function createClient(): Anthropic {
   });
 }
 
+function logError(label: string, err: unknown): void {
+  if (err instanceof Anthropic.RateLimitError) {
+    console.error(`Rate-limited (429) after retries for ${label}: ${err.message}`);
+  } else if (err instanceof Anthropic.APIError) {
+    console.error(
+      `API error ${err.status ?? "?"} (${err.name}) for ${label}: ${err.message}`,
+    );
+  } else {
+    console.error(`Non-API error for ${label}:`, err);
+  }
+}
+
 /**
  * Wrap a Claude API call with request/response logging and typed error
  * reporting. Errors are logged with their type/status, then re-thrown so
@@ -43,15 +55,35 @@ export async function loggedCreate(
     console.error(JSON.stringify(response, null, 2));
     return response;
   } catch (err) {
-    if (err instanceof Anthropic.RateLimitError) {
-      console.error(`Rate-limited (429) after retries for ${label}: ${err.message}`);
-    } else if (err instanceof Anthropic.APIError) {
-      console.error(
-        `API error ${err.status ?? "?"} (${err.name}) for ${label}: ${err.message}`,
-      );
-    } else {
-      console.error(`Non-API error for ${label}:`, err);
-    }
+    logError(label, err);
+    throw err;
+  } finally {
+    console.error("::endgroup::");
+  }
+}
+
+/**
+ * Structured-output variant: wraps `client.messages.parse()`, which validates
+ * the response against `params.output_config.format` (built with
+ * `zodOutputFormat(schema)`) and returns it as `parsed_output`. The return
+ * type is inferred from the Zod schema passed in, so callers get a fully
+ * typed `response.parsed_output` without any manual cast.
+ *
+ * Same error semantics as `loggedCreate` — errors logged, then re-thrown.
+ */
+export async function loggedParse<
+  Params extends Anthropic.MessageCreateParamsNonStreaming,
+>(client: Anthropic, label: string, params: Params) {
+  console.error(`::group::Claude call — ${label}`);
+  console.error("--- Request ---");
+  console.error(JSON.stringify(params, null, 2));
+  try {
+    const response = await client.messages.parse(params);
+    console.error("--- Response ---");
+    console.error(JSON.stringify(response, null, 2));
+    return response;
+  } catch (err) {
+    logError(label, err);
     throw err;
   } finally {
     console.error("::endgroup::");
