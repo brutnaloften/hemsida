@@ -34,3 +34,6 @@ pnpm-debug.log*
 # Git worktrees (manual / bd worktree, and Claude Code subagents)
 .worktrees/
 .claude/worktrees/
+
+# one-off tooling scratch (PDF download, resume cursors)
+tools/out/
