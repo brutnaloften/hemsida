@@ -199,7 +199,7 @@ punkt 3 | acklamation | (empty id)
 punkt 4 | acklamation | votering_id 86CD7737-A18E-4E06-B804-336656E8B507
 ```
 
-Fields: `punkt`, `rubrik`, `forslag` (HTML), `beslutstyp`, `motforslag_nummer`, `motforslag_partier`, `votering_id`, `votering_sammanfattning_html`, `votering_url_xml`, `rm`, `bet`, `vinnare`, `voteringskrav`, `beslutsregelkvot`, `beslutsregelparagraf`, `punkttyp`. Point 4 is `acklamation` yet has a `votering_id`, so do not assume an id means a recorded roll call (**UNVERIFIED** what that id returns).
+Fields: `punkt`, `rubrik`, `forslag` (HTML), `beslutstyp`, `motforslag_nummer`, `motforslag_partier`, `votering_id`, `votering_sammanfattning_html`, `votering_url_xml`, `rm`, `bet`, `vinnare`, `voteringskrav`, `beslutsregelkvot`, `beslutsregelparagraf`, `punkttyp`. Point 4 is `acklamation` yet has a `votering_id`, so do not assume an id means a recorded roll call. For NU5 the id on that point (86CD7737) returns real roll-call totals (154 Ja, 20 Nej, 127 Avstår) from `voteringlista`; check the totals rather than the `beslutstyp`.
 
 ### `dokuppgift.uppgift[]` and `dokaktivitet.aktivitet[]`
 
@@ -259,7 +259,7 @@ Other keys on each row: `hangar_id`, `punkttyp`, `fornamn`, `efternamn`, `iort`,
 parti "-" Ja 1 (the speaker), C Nej 21, KD Ja 16, L Ja 13, M Ja 59, MP Nej 15, S Nej 93, SD Ja 63, V Nej 20
 ```
 
-Each row is `{parti, Ja, Nej, Frånvarande, Avstår}` (strings, empty means 0). `gruppering=votering_id` aggregates a whole vote (this call used `rm` and `bet` without `punkt` and returned a single row for punkt 1; whether it returns one row per point is **UNVERIFIED**):
+Each row is `{parti, Ja, Nej, Frånvarande, Avstår}` (strings, empty means 0). `gruppering=votering_id` aggregates a whole vote (with only `rm` and `bet` (no `punkt`) it returns one row per vote id for the whole betänkande: four rows for NU5, 2C198CDF, 46B018B4, 86CD7737 and D3D272A2; one of them, D3D272A2, is not among the vote ids listed under the committee points, so votes do not map one-to-one to points; the row shown below is the one for punkt 1):
 
 ```json
 {
@@ -281,7 +281,7 @@ Votes can also be listed as documents: `dokumentlista?doktyp=votering` returns i
 
 ### Linking a vote to a promise's trail
 
-1. `dokumentstatus/{bet}.json` gives `dokutskottsforslag.utskottsforslag[].votering_id`.
+1. `dokumentstatus/{bet}.json` gives `dokutskottsforslag.utskottsforslag[].votering_id`. Compare `votering_id` values case-insensitively: they are lowercase in `dokumentstatus` and uppercase in `voteringlista`.
 2. `voteringlista?rm=...&bet=...&punkt=...&gruppering=parti` gives party totals for that point.
 
 ## Rate limits, caching and etiquette
