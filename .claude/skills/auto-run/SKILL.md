@@ -10,7 +10,8 @@ until there is no more work.** Do not end a turn by asking which task to pick,
 whether to proceed, or whether he wants you to continue. Pick, proceed, continue.
 
 This is the "work independently on multiple tasks" mode from CLAUDE.md: you may
-squash-merge your own PRs to `main` once CI is green and self-review is clean.
+squash-merge your own PRs to `main` once CI is green and the `code-reviewer`
+has approved.
 
 ## The loop
 
@@ -24,8 +25,10 @@ squash-merge your own PRs to `main` once CI is green and self-review is clean.
    touch different files may run in parallel; otherwise run them in sequence.
    Verify the worker's claims yourself — check the PR diff, CI status
    (`gh pr checks`), and that the branch actually reached the remote.
-4. Self-review the PR and fix the findings. When CI is green and review is
-   clean, `gh pr merge --squash --delete-branch`, then `bd close {ID}`.
+4. Spawn a `code-reviewer` on the PR. On NOT APPROVED, send the findings back
+   to a `bead-worker` (or fix them yourself), then re-review — every new push
+   needs a fresh approval. When CI is green and the latest review approves the
+   head commit, `gh pr merge --squash --delete-branch`, then `bd close {ID}`.
 5. Go to 1. Do not stop to report between iterations beyond 1-5 terse lines.
 
 When `bd ready` is empty and nothing is in progress: say so in one line, name
@@ -51,7 +54,7 @@ recommendation, in one message. Then keep working on anything not blocked by it.
 ## What is NOT a reason to stop
 
 - "Which of these should I do first?" — pick the one that unblocks more.
-- "Should I merge this?" — if CI is green and review is clean, merge it.
+- "Should I merge this?" — if CI is green and the code-reviewer approved, merge it.
 - "Do you want me to fix this too?" — if it is in the bead's scope, fix it.
   Otherwise file it with `--deps discovered-from:{ID}` and move on.
 - "This took a while, should I continue?" — yes.
