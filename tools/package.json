@@ -1,13 +1,17 @@
 {
-  "name": "brutna-loften-pipeline",
+  "name": "brutna-loften-tools",
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "scripts": {
+    "typecheck": "tsc"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.89.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@types/node": "^20.19.39"
+    "@types/node": "^20.19.39",
+    "typescript": "^5.9.3"
   }
 }

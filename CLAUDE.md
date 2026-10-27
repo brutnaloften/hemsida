@@ -32,7 +32,7 @@ oxfmt runs on staged files in the pre-commit hook (lint-staged).
 
 **Data model v2 (planned, epic `hemsida-bzj`):** data grouped by term (`src/data/2022-2026/promises/`), a `sources` collection for origin documents, evidence references inside each promise file, and one shared Zod schema imported by both site and tooling. Until that lands, the layout above is current.
 
-**AI pipeline (being retired, `hemsida-jfh.2`):** `pipeline/` contains the old news-discovery pipeline (discover → extract → match → evaluate → create PR), run via `.github/workflows/pipeline.yml`. Don't extend it. Reusable parts to keep: `create_pr.ts` (one PR per change, `execFileSync` for git), the Zod-schema-as-single-source pattern in `schemas.ts`, and `loggedParse`/`createClient` in `log.ts`.
+**Tooling:** `tools/` is a separate pnpm package (own `package.json`, run with `node --experimental-strip-types`, type-check with `pnpm typecheck` inside `tools/`). `tools/lib/` holds infrastructure kept from the retired news-discovery pipeline: `claude.ts` (`createClient`, `loggedParse`, `isTransientApiError`), `resume.ts` (resumable per-item runs that skip transient API errors), `pr.ts` (one PR per change, `execFileSync` for git) and `json.ts` (Zod-schema-as-single-source pattern, JSON I/O).
 
 **Search:** `src/pages/search.astro` hydrates `SearchPage.tsx` as a React island. It uses uFuzzy for client-side fuzzy search over all promise fields. `PromiseCard.tsx` renders individual results.
 
