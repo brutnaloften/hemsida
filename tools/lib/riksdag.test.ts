@@ -209,3 +209,48 @@ describe("throttle and retry", () => {
     expect(urls).toHaveLength(1);
   });
 });
+
+describe("network errors and concurrency", () => {
+  it("retries a network error then succeeds", async () => {
+    let calls = 0;
+    const client = createRiksdagClient({
+      fetch: (async () => {
+        if (calls++ === 0) throw new TypeError("fetch failed");
+        return new Response(JSON.stringify(fx.dokumentlistaEmpty));
+      }) as typeof fetch,
+      sleep: async () => {},
+      minIntervalMs: 0,
+    });
+    expect((await client.listDocuments({ doktyp: "a" })).total).toBe(0);
+    expect(calls).toBe(2);
+  });
+
+  it("serialises and spaces concurrent callers", async () => {
+    let clock = 0;
+    const starts: number[] = [];
+    let inFlight = 0;
+    let maxInFlight = 0;
+    const client = createRiksdagClient({
+      fetch: (async () => {
+        starts.push(clock);
+        maxInFlight = Math.max(maxInFlight, ++inFlight);
+        await Promise.resolve();
+        inFlight--;
+        return new Response(JSON.stringify(fx.dokumentlistaEmpty));
+      }) as typeof fetch,
+      sleep: async (ms) => {
+        clock += ms;
+      },
+      now: () => clock,
+    });
+    await Promise.all([1, 2, 3].map((n) => client.listDocuments({ doktyp: String(n) })));
+    expect(starts).toEqual([0, 1000, 2000]);
+    expect(maxInFlight).toBe(1);
+  });
+
+  it("falls back to the default page size for NaN", async () => {
+    const { client, urls } = setup([fx.dokumentlistaEmpty]);
+    await client.listDocuments({ sz: Number.NaN });
+    expect(new URL(urls[0]!).searchParams.get("sz")).toBe("200");
+  });
+});

@@ -42,6 +42,12 @@ function many<T extends z.ZodType>(item: T) {
     .transform((v): z.output<T>[] => (v == null ? [] : Array.isArray(v) ? v : [v]));
 }
 
+/** Page size clamped to 1..200; undefined or non-finite falls back to 200. */
+function pageSize(sz: number | undefined): number {
+  if (sz === undefined || !Number.isFinite(sz)) return MAX_PAGE_SIZE;
+  return Math.min(Math.max(Math.trunc(sz), 1), MAX_PAGE_SIZE);
+}
+
 /** `http://x`, `//x` -> `https://x`; "" stays "". */
 export function normaliseUrl(url: string): string {
   if (url.startsWith("//")) return `https:${url}`;
@@ -58,8 +64,9 @@ export function sameVoteId(a: string, b: string): boolean {
 
 /**
  * The `rm` (riksmöte) format differs per document type: a plain calendar year
- * for dir/sou/ds/sfs, `YYYY/YY` for everything else. `startYear` is the year
- * the riksmöte starts in (2023 -> "2023" or "2023/24").
+ * for dir/sou/ds/sfs (the calendar year `startYear`), `YYYY/YY` for everything
+ * else. `startYear` is the calendar year the riksmöte starts in
+ * (2023 -> "2023" for dir, "2023/24" for prop).
  */
 export function formatRm(doktyp: string, startYear: number): string {
   if (YEAR_RM_TYPES.has(doktyp)) return String(startYear);
@@ -186,12 +193,14 @@ const voteringlistaTotalsSchema = z.object({
 // ---------------------------------------------------------------------------
 
 export class RiksdagHttpError extends Error {
-  constructor(
-    readonly status: number,
-    readonly requestUrl: string,
-  ) {
+  readonly status: number;
+  readonly requestUrl: string;
+
+  constructor(status: number, requestUrl: string) {
     super(`Riksdag API returned HTTP ${status} for ${requestUrl}`);
     this.name = "RiksdagHttpError";
+    this.status = status;
+    this.requestUrl = requestUrl;
   }
 }
 
@@ -263,6 +272,7 @@ export function createRiksdagClient(options: RiksdagClientOptions = {}): Riksdag
           headers: { "User-Agent": userAgent, Accept: "application/json" },
         });
         if (res.ok) return await res.json();
+        await res.body?.cancel().catch(() => undefined);
         if (attempt < retries && (res.status === 429 || res.status >= 500)) {
           await sleep(delay);
           delay *= 2;
@@ -278,7 +288,7 @@ export function createRiksdagClient(options: RiksdagClientOptions = {}): Riksdag
   }
 
   function get<S extends z.ZodType>(path: string, query: URLSearchParams, schema: S) {
-    const requestUrl = `${baseUrl}${path}?${query}`;
+    const requestUrl = `${baseUrl}${path}${query.size > 0 ? `?${query}` : ""}`;
     const run = queue.then(() => throttledGet(requestUrl));
     queue = run.catch(() => undefined);
     return run.then((json) => {
@@ -300,7 +310,7 @@ export function createRiksdagClient(options: RiksdagClientOptions = {}): Riksdag
       const v = params[key];
       if (v !== undefined) q.set(key, v);
     }
-    q.set("sz", String(Math.min(Math.max(params.sz ?? MAX_PAGE_SIZE, 1), MAX_PAGE_SIZE)));
+    q.set("sz", String(pageSize(params.sz)));
     q.set("p", String(params.p ?? 1));
     q.set("utformat", "json");
     return q;
