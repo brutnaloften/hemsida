@@ -1,6 +1,14 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync, readdirSync } from "node:fs";
-import { promiseSchema, legacyPromiseSchema, VERDICTS, VERDICT_LABELS } from "@/schema/promise";
+import { fileURLToPath } from "node:url";
+import {
+  promiseSchema,
+  legacyPromiseSchema,
+  sourceSchema,
+  sourceRefSchema,
+  VERDICTS,
+  VERDICT_LABELS,
+} from "@/schema/promise";
 
 const valid = {
   id: "tido-skarpta-straff-gangbrott",
@@ -59,6 +67,18 @@ describe("promiseSchema", () => {
     expect(promiseSchema.safeParse({ ...valid, evidence: ev }).success).toBe(false);
   });
 
+  it("rejects votes on non-bet evidence", () => {
+    const votes = { M: "yes" };
+    const bad = { ...valid, evidence: [{ ...valid.evidence[0], votes }] };
+    expect(promiseSchema.safeParse(bad).success).toBe(false);
+    const ok = { ...valid, evidence: [{ ...valid.evidence[0], kind: "bet", votes }] };
+    expect(promiseSchema.safeParse(ok).success).toBe(true);
+  });
+
+  it("rejects roles for parties not in parties", () => {
+    expect(promiseSchema.safeParse({ ...valid, parties: ["M"] }).success).toBe(false);
+  });
+
   it("has a Swedish label for every verdict", () => {
     for (const v of VERDICTS) expect(VERDICT_LABELS[v]).toBeTruthy();
   });
@@ -66,10 +86,43 @@ describe("promiseSchema", () => {
 
 describe("legacyPromiseSchema", () => {
   it("accepts every current data file", () => {
-    const dir = "src/data/promises";
+    const dir = fileURLToPath(new URL("../data/promises", import.meta.url));
     for (const f of readdirSync(dir).filter((f) => f.endsWith(".json"))) {
       const r = legacyPromiseSchema.safeParse(JSON.parse(readFileSync(`${dir}/${f}`, "utf-8")));
       expect(r.success, f).toBe(true);
     }
+  });
+});
+
+describe("sourceSchema", () => {
+  const src = {
+    id: "tidoavtalet",
+    title: "Tidöavtalet",
+    kind: "government_agreement",
+    parties: ["M", "KD", "L", "SD"],
+    date: "2022-10-14",
+    url: "https://example.com/a.pdf",
+    archive: "https://web.archive.org/web/2022/https://example.com/a.pdf",
+  };
+  it("accepts a valid source", () => {
+    expect(sourceSchema.safeParse(src).success).toBe(true);
+  });
+  it("rejects bad kind, date and url", () => {
+    expect(sourceSchema.safeParse({ ...src, kind: "news" }).success).toBe(false);
+    expect(sourceSchema.safeParse({ ...src, date: "14/10/2022" }).success).toBe(false);
+    expect(sourceSchema.safeParse({ ...src, url: "not a url" }).success).toBe(false);
+  });
+});
+
+describe("sourceRefSchema", () => {
+  it("accepts id with optional page and quote", () => {
+    expect(sourceRefSchema.safeParse({ id: "tidoavtalet" }).success).toBe(true);
+    expect(sourceRefSchema.safeParse({ id: "tidoavtalet", page: 3, quote: "x" }).success).toBe(
+      true,
+    );
+  });
+  it("rejects bad slug and non-positive page", () => {
+    expect(sourceRefSchema.safeParse({ id: "Bad Id" }).success).toBe(false);
+    expect(sourceRefSchema.safeParse({ id: "a", page: 0 }).success).toBe(false);
   });
 });

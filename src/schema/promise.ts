@@ -52,17 +52,27 @@ const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "expected a lowercas
 
 export const verdictValueSchema = z.enum(VERDICTS);
 
-export const evidenceSchema = z.object({
-  kind: z.enum(EVIDENCE_KINDS),
-  dok_id: z.string().min(1),
-  designation: z.string().min(1),
-  title: z.string().min(1),
-  date: isoDate,
-  url: z.url(),
-  relevance: z.enum(["full", "partial"]),
-  note: z.string().nullable().default(null),
-  votes: z.partialRecord(partySchema, z.enum(["yes", "no", "abstain", "absent"])).optional(),
-});
+export const evidenceSchema = z
+  .object({
+    kind: z.enum(EVIDENCE_KINDS),
+    dok_id: z.string().min(1),
+    designation: z.string().min(1),
+    title: z.string().min(1),
+    date: isoDate,
+    url: z.url(),
+    relevance: z.enum(["full", "partial"]),
+    note: z.string().nullable().default(null),
+    votes: z.partialRecord(partySchema, z.enum(["yes", "no", "abstain", "absent"])).optional(),
+  })
+  .superRefine((e, ctx) => {
+    if (e.votes !== undefined && e.kind !== "bet") {
+      ctx.addIssue({
+        code: "custom",
+        path: ["votes"],
+        message: "votes are only allowed on kind bet",
+      });
+    }
+  });
 
 const verdictEntry = z.object({
   value: verdictValueSchema,
@@ -94,21 +104,33 @@ export const sourceRefSchema = z.object({
   quote: z.string().optional(),
 });
 
-export const promiseSchema = z.object({
-  id: slug,
-  term: z.string().regex(/^\d{4}-\d{4}$/, "expected YYYY-YYYY"),
-  title: z.string().min(1),
-  description: z.string().min(1),
-  source: sourceRefSchema,
-  parties: z.array(partySchema).min(1),
-  roles: z.partialRecord(partySchema, z.enum(ROLES)),
-  type: z.enum(PROMISE_TYPES),
-  area: z.string().min(1),
-  committee: z.string().optional(),
-  keywords: z.array(z.string()).default([]),
-  verdict: verdictSchema,
-  evidence: z.array(evidenceSchema).default([]),
-});
+export const promiseSchema = z
+  .object({
+    id: slug,
+    term: z.string().regex(/^\d{4}-\d{4}$/, "expected YYYY-YYYY"),
+    title: z.string().min(1),
+    description: z.string().min(1),
+    source: sourceRefSchema,
+    parties: z.array(partySchema).min(1),
+    roles: z.partialRecord(partySchema, z.enum(ROLES)),
+    type: z.enum(PROMISE_TYPES),
+    area: z.string().min(1),
+    committee: z.string().optional(),
+    keywords: z.array(z.string()).default([]),
+    verdict: verdictSchema,
+    evidence: z.array(evidenceSchema).default([]),
+  })
+  .superRefine((p, ctx) => {
+    for (const party of Object.keys(p.roles)) {
+      if (!p.parties.includes(party as (typeof p.parties)[number])) {
+        ctx.addIssue({
+          code: "custom",
+          path: ["roles", party],
+          message: "role party must be listed in parties",
+        });
+      }
+    }
+  });
 
 export const sourceSchema = z.object({
   id: slug,
@@ -120,7 +142,7 @@ export const sourceSchema = z.object({
   archive: z.url(),
 });
 
-export type Promise = z.infer<typeof promiseSchema>;
+export type PromiseRecord = z.infer<typeof promiseSchema>;
 export type Evidence = z.infer<typeof evidenceSchema>;
 export type Verdict = z.infer<typeof verdictSchema>;
 export type Source = z.infer<typeof sourceSchema>;
