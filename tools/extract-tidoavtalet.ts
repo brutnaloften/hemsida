@@ -17,6 +17,7 @@ import {
   candidateEntrySchema,
   countPdfPages,
   extractChunk,
+  inChunkRange,
   makeChunks,
   mergeChunk,
   pdfToBase64,
@@ -39,20 +40,39 @@ const { values } = parseArgs({
   },
 });
 
+function positiveInt(name: string, value: string): number {
+  const n = Number(value);
+  if (!Number.isInteger(n) || n <= 0) {
+    console.error(`Error: --${name} must be a positive integer, got "${value}"`);
+    process.exit(1);
+  }
+  return n;
+}
+
 const pdfPath = values.pdf!;
 const outPath = values.out!;
 const cursorPath = values.cursor!;
 
+const source = sourceSchema.parse(loadJson(resolve(root, "src/data/sources/tidoavtalet.json")));
+
 async function ensurePdf(path: string): Promise<void> {
   if (existsSync(path)) return;
-  const source = sourceSchema.parse(loadJson(resolve(root, "src/data/sources/tidoavtalet.json")));
   for (const url of [source.url, source.archive]) {
     console.error(`Downloading ${url}`);
-    const res = await fetch(url);
-    if (!res.ok) continue;
-    mkdirSync(dirname(path), { recursive: true });
-    writeFileSync(path, Buffer.from(await res.arrayBuffer()));
-    return;
+    try {
+      const res = await fetch(url);
+      if (!res.ok) continue;
+      const body = Buffer.from(await res.arrayBuffer());
+      if (body.subarray(0, 5).toString("latin1") !== "%PDF-") {
+        console.error(`Not a PDF: ${url}`);
+        continue;
+      }
+      mkdirSync(dirname(path), { recursive: true });
+      writeFileSync(path, body);
+      return;
+    } catch (err) {
+      console.error(`Download failed: ${err instanceof Error ? err.message : err}`);
+    }
   }
   throw new Error(`Could not download the PDF; place it at ${path} or pass --pdf`);
 }
@@ -63,7 +83,7 @@ async function main(): Promise<void> {
     console.error("ANTHROPIC_API_KEY is not set. Export it, or use --dry-run to preview requests.");
     process.exit(1);
   }
-  let totalPages = values.pages ? Number(values.pages) : null;
+  let totalPages = values.pages ? positiveInt("pages", values.pages) : null;
   if (!totalPages) {
     if (!dryRun) await ensurePdf(pdfPath);
     if (!existsSync(pdfPath)) {
@@ -72,7 +92,7 @@ async function main(): Promise<void> {
     totalPages = countPdfPages(readFileSync(pdfPath));
     if (!totalPages) throw new Error("Could not detect the page count; pass --pages N");
   }
-  const chunks = makeChunks(totalPages, Number(values["pages-per-chunk"]));
+  const chunks = makeChunks(totalPages, positiveInt("pages-per-chunk", values["pages-per-chunk"]!));
 
   if (dryRun) {
     console.log(`Dry run: ${chunks.length} requests, no API calls.`);
@@ -97,8 +117,10 @@ async function main(): Promise<void> {
     cursorPath,
     key: (c) => c.key,
     process: async (chunk) => {
-      const taken = new Set(entries.filter((e) => e.chunk !== chunk.key).map((e) => e.promise.id));
-      const fresh = await extractChunk(client, pdfBase64, chunk, taken);
+      const taken = new Set(
+        entries.filter((e) => !inChunkRange(e, chunk)).map((e) => e.promise.id),
+      );
+      const fresh = await extractChunk(client, pdfBase64, chunk, taken, source.date);
       entries = mergeChunk(entries, chunk, fresh);
       writeJson(outPath, entries);
       console.error(`${chunk.key}: ${fresh.length} candidates`);
@@ -108,6 +130,6 @@ async function main(): Promise<void> {
 }
 
 main().catch((err) => {
-  console.error(err);
+  console.error(err instanceof Error ? `Error: ${err.message}` : err);
   process.exit(1);
 });

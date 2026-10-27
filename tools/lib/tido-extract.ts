@@ -49,10 +49,14 @@ export const rawCandidateSchema = z.object({
   description: z.string().describe("The promise in Swedish, self-contained, in our own words"),
   page: z.number().int().describe("1-based PDF page number where the promise appears"),
   quote: z.string().describe("Short verbatim quote from the document supporting the promise"),
-  type: z.enum(PROMISE_TYPES),
+  // Plain strings: the SDK does not enforce enum values, and an off-list value would
+  // make messages.parse throw after the chunk was paid for. Validated per item in toEntry.
+  type: z.string().describe(`One of: ${PROMISE_TYPES.join(", ")}`),
   area: z.string().describe("Policy area in Swedish, e.g. Kriminalpolitik"),
   ministry: z.string().describe("Responsible ministry in Swedish, e.g. Justitiedepartementet"),
-  committee: z.enum(COMMITTEES).describe("Riksdag committee most likely to handle it"),
+  committee: z
+    .string()
+    .describe(`Riksdag committee most likely to handle it, one of: ${COMMITTEES.join(", ")}`),
   keywords: z.array(z.string()).describe("3-6 Swedish search terms for a Riksdag full-text search"),
 });
 
@@ -104,7 +108,15 @@ export function slugify(s: string): string {
 const PARTIES = ["M", "KD", "L", "SD"] as const;
 
 /** Turn a raw candidate into a schema-valid draft promise (verdict not_started). Throws on invalid data. */
-export function toEntry(raw: RawCandidate, chunk: Chunk, taken: Set<string>): CandidateEntry {
+export function toEntry(
+  raw: RawCandidate,
+  chunk: Chunk,
+  taken: Set<string>,
+  verdictDate: string,
+): CandidateEntry {
+  if (!(PROMISE_TYPES as readonly string[]).includes(raw.type)) {
+    throw new Error(`unknown type "${raw.type}"`);
+  }
   const base = "tido-" + (slugify(raw.slug) || slugify(raw.title));
   let id = base;
   for (let i = 2; taken.has(id); i++) id = `${base}-${i}`;
@@ -118,9 +130,11 @@ export function toEntry(raw: RawCandidate, chunk: Chunk, taken: Set<string>): Ca
     roles: { M: "government", KD: "government", L: "government", SD: "support" },
     type: raw.type,
     area: raw.area.trim(),
-    committee: raw.committee,
+    committee: (COMMITTEES as readonly string[]).includes(raw.committee)
+      ? raw.committee
+      : undefined,
     keywords: raw.keywords.map((k) => k.trim()).filter(Boolean),
-    verdict: { value: "not_started", reasoning: "", date: "2022-10-14", history: [] },
+    verdict: { value: "not_started", reasoning: "", date: verdictDate, history: [] },
     evidence: [],
   });
   return { chunk: chunk.key, ministry: raw.ministry.trim(), promise };
@@ -176,6 +190,7 @@ export async function extractChunk(
   pdfBase64: string,
   chunk: Chunk,
   takenIds: Set<string>,
+  verdictDate: string,
 ): Promise<CandidateEntry[]> {
   const response = await loggedParse(
     client,
@@ -194,7 +209,7 @@ export async function extractChunk(
       continue;
     }
     try {
-      const entry = toEntry(raw, chunk, takenIds);
+      const entry = toEntry(raw, chunk, takenIds, verdictDate);
       takenIds.add(entry.promise.id);
       entries.push(entry);
     } catch (err) {
@@ -204,13 +219,22 @@ export async function extractChunk(
   return entries;
 }
 
-/** Replace all entries of `chunk` with `fresh` (idempotent re-runs) and keep a stable order. */
+/** True if the entry's source page lies within the chunk's page range. */
+export function inChunkRange(e: CandidateEntry, chunk: Chunk): boolean {
+  const page = e.promise.source.page ?? 0;
+  return page >= chunk.firstPage && page <= chunk.lastPage;
+}
+
+/**
+ * Replace all entries on the chunk's pages with `fresh` (idempotent re-runs,
+ * also when --pages-per-chunk changed since an earlier run) and keep a stable order.
+ */
 export function mergeChunk(
   existing: CandidateEntry[],
   chunk: Chunk,
   fresh: CandidateEntry[],
 ): CandidateEntry[] {
-  return [...existing.filter((e) => e.chunk !== chunk.key), ...fresh].sort(
+  return [...existing.filter((e) => !inChunkRange(e, chunk)), ...fresh].sort(
     (a, b) =>
       (a.promise.source.page ?? 0) - (b.promise.source.page ?? 0) ||
       a.promise.id.localeCompare(b.promise.id),
