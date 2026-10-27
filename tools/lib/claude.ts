@@ -32,11 +32,6 @@ function logError(label: string, err: unknown): void {
   }
 }
 
-/**
- * Wrap a Claude API call with request/response logging and typed error
- * reporting. Errors are logged with their type/status, then re-thrown so
- * the caller can decide whether to skip the item or abort the run.
- */
 /** JSON.stringify replacer that hides base64 payloads (e.g. whole PDFs) in logged requests. */
 function redactBase64(key: string, value: unknown): unknown {
   return key === "data" && typeof value === "string" && value.length > 200
@@ -44,6 +39,11 @@ function redactBase64(key: string, value: unknown): unknown {
     : value;
 }
 
+/**
+ * Wrap a Claude API call with request/response logging and typed error
+ * reporting. Errors are logged with their type/status, then re-thrown so
+ * the caller can decide whether to skip the item or abort the run.
+ */
 export async function loggedCreate(
   client: Anthropic,
   label: string,
