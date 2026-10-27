@@ -149,7 +149,7 @@ export type Source = z.infer<typeof sourceSchema>;
 
 /**
  * Current (v1) promise shape, still used by the content collection until
- * hemsida-bzj.3 migrates the data files to v2. Remove then.
+ * hemsida-bzj.5 migrates the data files to v2. Remove then.
  */
 const legacySource = z.object({
   value: z.string(),
