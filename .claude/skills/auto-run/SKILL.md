@@ -29,7 +29,6 @@ has approved.
    to a `bead-worker` (or fix them yourself), then re-review — every new push
    needs a fresh approval. When CI is green and the latest review approves the
    head commit, `gh pr merge --squash --delete-branch`, then `bd close {ID}`.
-   The merge hook enforces this; do not work around it.
 5. Go to 1. Do not stop to report between iterations beyond 1-5 terse lines.
 
 When `bd ready` is empty and nothing is in progress: say so in one line, name
