@@ -67,6 +67,7 @@ pnpm (pinned via `packageManager` field in package.json).
 - **`code-reviewer`** (Opus, `.claude/agents/code-reviewer.md`, `isolation: worktree`): reviews one PR — re-runs the gates, checks the diff against the bead, then code quality — and posts its verdict as a PR comment. Read-only on code.
 - The main session orchestrates: it picks ready beads, claims them, and spawns a `bead-worker` for each, then a `code-reviewer` on each PR before merging. Workers don't claim — the orchestrator already did, which avoids races.
 - Only run beads in parallel when they touch different files; otherwise run them in sequence.
+- **Context budget:** keep each subagent under ~300k tokens of context unless the work genuinely cannot be split. Size beads and prompts accordingly: tell large tasks (bulk triage, many files) to do the highest-value slice first and file follow-up beads for the rest, rather than clearing everything in one run. Balance this against agent count: don't split into many tiny beads and reviews just to stay under the budget.
 - Worktrees share the beads database with the main checkout (via the git common dir), so `bd` works unchanged inside them.
 - A fresh worktree has no `node_modules` or husky hooks: run `pnpm install` first.
 
