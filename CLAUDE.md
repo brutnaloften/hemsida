@@ -19,6 +19,7 @@ The roadmap lives in beads as epics with child tasks and dependencies. `bd list 
 - `pnpm preview` — preview production build
 - `pnpm fmt` — format all files with oxfmt
 - `pnpm fmt:check` — check formatting without writing (for CI)
+- `pnpm test` — run unit tests with vitest
 
 oxfmt runs on staged files in the pre-commit hook (lint-staged).
 
@@ -53,7 +54,7 @@ pnpm (pinned via `packageManager` field in package.json).
 - **Merging:** do not merge to `main` unless the user has said to work independently on multiple tasks. In that mode, squash-merge once CI is green and review is clean, then move on to the next ready bead.
 - **Review before merging:** run the `code-reviewer` subagent on bead PRs before merging and fix what it finds. Trivial changes (typos, docs-only tweaks) can skip it.
 - **Done = bead closed.** Close a bead when its PR is merged. If the PR is waiting on the user, leave the bead `in_progress` and record the PR link with `bd note`.
-- **Quality gates before opening a PR:** `pnpm build`, `pnpm fmt:check`, and tests once they exist.
+- **Quality gates before opening a PR:** `pnpm build`, `pnpm fmt:check`, and `pnpm test`.
 - **Tests:** prefer tests for new logic (schemas, tooling, data transforms). UI-only changes may rely on `pnpm build`.
 - **Data changes:** once seeding is done, every promise or verdict change gets its own PR. During initial seeding (e.g. the Tidöavtalet import) bulk PRs are fine.
 - **Language:** code, comments, commits, PRs and beads in English; everything shown on the site in Swedish.
