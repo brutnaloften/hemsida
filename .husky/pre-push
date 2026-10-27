@@ -1,0 +1,2 @@
+# bd exits 3 when the beads database is not initialized in this clone
+bd hooks run pre-push "$@" || [ $? -eq 3 ]
