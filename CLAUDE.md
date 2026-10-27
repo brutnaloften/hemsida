@@ -29,9 +29,9 @@ oxfmt runs on staged files in the pre-commit hook (lint-staged).
 
 **Astro (static) + React islands:** Pages are Astro components (`src/pages/`), laid out with `src/layouts/Layout.astro` (includes Navbar, Footer, global CSS). Interactive parts use React via `client:load`.
 
-**Data flow:** Political promises live as individual JSON files in `src/data/promises/` (one file per promise, e.g. `kd-miljardinvesteringar-infrastruktur.json`). These are loaded as an Astro content collection via `src/content.config.ts` (glob loader, Zod-validated schema). Pages query with `getCollection("promises")` and pass data as props to React components.
+**Data flow:** Political promises live as individual JSON files in `src/data/<term>/promises/`, e.g. `src/data/2022-2026/promises/` (one file per promise, e.g. `kd-miljardinvesteringar-infrastruktur.json`). These are loaded as an Astro content collection via `src/content.config.ts` (glob loader, Zod-validated schema). Pages query with `getCollection("promises")` and pass data as props to React components.
 
-**Data model v2 (planned, epic `hemsida-bzj`):** data grouped by term (`src/data/2022-2026/promises/`), a `sources` collection for origin documents, evidence references inside each promise file, and one shared Zod schema imported by both site and tooling. Until that lands, the layout above is current.
+**Data model v2 (in progress, epic `hemsida-bzj`):** data is grouped by term (`src/data/2022-2026/promises/`) with a `sources` collection for origin documents (`src/data/sources/`), evidence references inside each promise file, and one shared Zod schema imported by both site and tooling. The promise files are still v1 shape (`legacyPromiseSchema`) until `hemsida-bzj.5` migrates them.
 
 **Tooling:** `tools/` is a separate pnpm package (own `package.json`, run with `node --experimental-strip-types`, type-check with `pnpm typecheck` inside `tools/`). `tools/lib/` holds infrastructure kept from the retired news-discovery pipeline: `claude.ts` (`createClient`, `loggedParse`, `isTransientApiError`), `resume.ts` (resumable per-item runs that skip transient API errors), `pr.ts` (one PR per change, `execFileSync` for git) and `json.ts` (Zod-schema-as-single-source pattern, JSON I/O).
 
