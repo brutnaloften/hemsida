@@ -297,7 +297,7 @@ export function createRiksdagClient(options: RiksdagClientOptions = {}): Riksdag
         });
         if (res.ok) {
           const text = await res.text();
-          return text === "" ? null : (JSON.parse(text) as unknown);
+          return text.trim() === "" ? null : (JSON.parse(text) as unknown);
         }
         await res.body?.cancel().catch(() => undefined);
         if (attempt < retries && (res.status === 429 || res.status >= 500)) {

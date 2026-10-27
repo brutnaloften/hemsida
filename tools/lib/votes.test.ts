@@ -22,7 +22,6 @@ const members = (
 
 const P1 = "2c198cdf-3a9c-4318-a678-e6aff5c2c68a";
 const P2 = "46b018b4-3f64-4613-883c-f160032658be";
-const P2_REASONING = "D3D272A2-0000-4000-8000-000000000000";
 const P4 = "86CD7737-A18E-4E06-B804-336656E8B507";
 const PWEIRD = "11111111-0000-4000-8000-000000000000";
 const P1_UP = P1.toUpperCase();
@@ -39,21 +38,25 @@ const voteRows: Record<string, MemberVote[]> = {
     ...members(P1_UP, "sakfrågan", "M", "Ja", 59),
     ...members(P1_UP, "sakfrågan", "S", "Nej", 93),
     ...members(P1_UP, "sakfrågan", "V", "Nej", 20),
-    ...members(P1_UP, "sakfrågan", "V", "Frånvarande", 48),
+    ...members(P1_UP, "sakfrågan", "SD", "Ja", 72),
+    ...members(P1_UP, "sakfrågan", "L", "Ja", 13),
+    ...members(P1_UP, "sakfrågan", "MP", "Nej", 15),
+    ...members(P1_UP, "sakfrågan", "V", "Frånvarande", 39),
   ],
-  // NU5 punkt 2: a sakfråga vote (349 members). The point's other vote, the
+  // A point with two votes: a sakfråga vote (349 members). The point's other vote, the
   // motivfråga, has 349 more rows in voteringlista, which is why that
   // endpoint (500 rows max) cannot resolve this point.
   [P2]: [
-    ...members(P2.toUpperCase(), "sakfrågan", "M", "Ja", 100),
+    ...members(P2.toUpperCase(), "sakfrågan", "-", "Ja", 1),
+    ...members(P2.toUpperCase(), "sakfrågan", "M", "Ja", 59),
     ...members(P2.toUpperCase(), "sakfrågan", "SD", "Ja", 63),
-    ...members(P2.toUpperCase(), "sakfrågan", "S", "Nej", 93),
-    ...members(P2.toUpperCase(), "sakfrågan", "V", "Nej", 20),
-    ...members(P2.toUpperCase(), "sakfrågan", "C", "Nej", 21),
-    ...members(P2.toUpperCase(), "sakfrågan", "MP", "Nej", 15),
     ...members(P2.toUpperCase(), "sakfrågan", "KD", "Ja", 16),
     ...members(P2.toUpperCase(), "sakfrågan", "L", "Ja", 13),
-    ...members(P2.toUpperCase(), "sakfrågan", "S", "Frånvarande", 8),
+    ...members(P2.toUpperCase(), "sakfrågan", "S", "Nej", 93),
+    ...members(P2.toUpperCase(), "sakfrågan", "C", "Nej", 21),
+    ...members(P2.toUpperCase(), "sakfrågan", "MP", "Avstår", 15),
+    ...members(P2.toUpperCase(), "sakfrågan", "V", "Avstår", 20),
+    ...members(P2.toUpperCase(), "sakfrågan", "S", "Frånvarande", 48),
   ],
   // Motivfråga only, as in NU5 punkt 4.
   [P4]: [
@@ -138,7 +141,7 @@ describe("getPointPartyVotes", () => {
       kind: "decision",
       votes: { C: "no", KD: "yes", M: "yes", S: "no", V: "no" },
       tied: [],
-      totals: { yes: 76, no: 134, abstain: 0, absent: 48 },
+      totals: { yes: 161, no: 149, abstain: 0, absent: 39 },
     });
   });
 
@@ -149,8 +152,17 @@ describe("getPointPartyVotes", () => {
       status: "ok",
       votingId: P2,
       kind: "decision",
-      votes: { M: "yes", SD: "yes", S: "no", V: "no", C: "no", MP: "no", KD: "yes", L: "yes" },
-      totals: { yes: 192, no: 149, abstain: 0, absent: 8 },
+      votes: {
+        M: "yes",
+        SD: "yes",
+        S: "no",
+        V: "abstain",
+        C: "no",
+        MP: "abstain",
+        KD: "yes",
+        L: "yes",
+      },
+      totals: { yes: 152, no: 114, abstain: 35, absent: 48 },
     });
     expect(calls).toEqual(["status HB01NU5", `members ${P2}`]);
   });

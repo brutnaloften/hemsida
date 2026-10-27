@@ -283,14 +283,14 @@ Other `gruppering` values are **UNVERIFIED**; the envelope carries slots `@grupp
 
 ### votering/{votering_id}
 
-`GET /votering/2C198CDF-3A9C-4318-A678-E6AFF5C2C68A` (XML, about 247 KB) or `.json` (about 285 KB). The JSON has `dokument` (the bet metadata, again with full `html`), `dokbilaga` and `dokvotering.votering[]` with the same per-member rows as `voteringlista` plus `valkretsnummer`, `källa` ("RIM-vot") and `datum`. Prefer `voteringlista` with `gruppering` for party totals: it is a few hundred bytes versus hundreds of KB.
+`GET /votering/2C198CDF-3A9C-4318-A678-E6AFF5C2C68A` (XML, about 247 KB) or `.json` (about 285 KB). The JSON has `dokument` (the bet metadata, again with full `html`), `dokbilaga` and `dokvotering.votering[]` with the same per-member rows as `voteringlista` plus `valkretsnummer`, `källa` ("RIM-vot") and `datum`. For a point with a single vote, `voteringlista` with `gruppering=parti` is a cheaper way to get party totals (a few hundred bytes versus hundreds of KB). For a point with two votes it mixes them, so use this endpoint and aggregate per party.
 
 Votes can also be listed as documents: `dokumentlista?doktyp=votering` returns items such as `HD19UU24p3 | votering | 2025/26 | UU24 | "Omröstning: betänkande 2025/26:UU24 ..."`. Details of these items beyond the list view are **UNVERIFIED**.
 
 ### Linking a vote to a promise's trail
 
 1. `dokumentstatus/{bet}.json` gives `dokutskottsforslag.utskottsforslag[].votering_id`. Compare `votering_id` values case-insensitively: they are lowercase in `dokumentstatus` and uppercase in `voteringlista`.
-2. `voteringlista?rm=...&bet=...&punkt=...&gruppering=parti` gives party totals for that point.
+2. `/votering/{votering_id}.json` for the chosen vote, aggregated per party (as `tools/lib/votes.ts` does). Only for a point with a single vote can `voteringlista?rm=...&bet=...&punkt=...&gruppering=parti` replace this; with two votes it mixes them.
 
 ## Rate limits, caching and etiquette
 
