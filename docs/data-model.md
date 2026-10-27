@@ -150,7 +150,27 @@ Budget evidence (budget bills, supplementary budgets, ESV outcomes) will be adde
 
 ### Rejected candidates
 
-`rejected-candidates.json` holds `(promise_id, dok_id)` pairs that the matcher proposed and review rejected, each with an optional reason. The search skips these pairs, so the same document isn't proposed twice and promise files stay clean.
+`src/data/<term>/rejected-candidates.json` holds `(promise_id, dok_id)` pairs that the matcher proposed and review rejected. The search skips these pairs, so the same document isn't proposed twice and promise files stay clean. Schema: `src/schema/rejected.ts`.
+
+```json
+[
+  {
+    "promise_id": "tido-skarpta-straff-gangbrott",
+    "dok_id": "HA03123",
+    "reason": "Gäller ungdomsbrott, inte gängbrott",
+    "rejected_at": "2026-01-02"
+  }
+]
+```
+
+| Field         | Type      | Notes                                     |
+| ------------- | --------- | ----------------------------------------- |
+| `promise_id`  | slug      | Promise filename without `.json`          |
+| `dok_id`      | string    | Riksdag document ID, same key as evidence |
+| `reason`      | string?   | Why it was rejected                       |
+| `rejected_at` | ISO date? | When review rejected it                   |
+
+The file is a flat array, one per term rather than one per promise: it is small, the matcher loads all of it at once, and a rejection is a one-line PR diff. A pair appears at most once. Accepting a previously rejected pair means deleting its row and adding the evidence.
 
 ## Edge cases
 
