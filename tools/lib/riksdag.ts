@@ -190,12 +190,13 @@ export const memberVoteSchema = z.object({
 });
 export type MemberVote = z.infer<typeof memberVoteSchema>;
 
-/** Largest page the voteringlista endpoint returns (verified with sz=500). */
-export const MEMBER_VOTES_PAGE_SIZE = 500;
-
-const voteringlistaMembersSchema = z.object({
-  voteringlista: z.object({ votering: many(memberVoteSchema) }),
-});
+/**
+ * `/votering/{id}.json`: every member row of one vote. An empty body (no
+ * roll-call data for that id) is parsed as null and treated as no rows.
+ */
+const voteMembersSchema = z
+  .object({ votering: z.object({ dokvotering: z.object({ votering: many(memberVoteSchema) }) }) })
+  .nullable();
 
 const voteringlistaPartiSchema = z.object({
   voteringlista: z.object({ votering: many(partyVotesSchema) }),
@@ -261,11 +262,12 @@ export interface RiksdagClient {
   /** Party totals for one point of a betänkande. */
   getPartyVotes(args: { rm: string; bet: string; punkt: string }): Promise<PartyVotes[]>;
   /**
-   * Per-member rows for one point, in a single request (page size 500). A point
-   * can hold several votes (see `votering_id` and `avser`). Fewer than
-   * MEMBER_VOTES_PAGE_SIZE rows means the list is complete.
+   * Every member row of one vote, from `/votering/{id}.json` (not capped, unlike
+   * voteringlista's 500 rows). Needs the full vote id, e.g. the `votering_id`
+   * of a committee proposal; a short prefix returns an empty body, which gives
+   * an empty list, as does an id without roll-call data.
    */
-  getMemberVotes(args: { rm: string; bet: string; punkt: string }): Promise<MemberVote[]>;
+  getVoteMembers(votingId: string): Promise<MemberVote[]>;
   /** One totals row per vote of a betänkande. */
   getVoteTotals(args: { rm: string; bet: string }): Promise<VoteTotals[]>;
 }
@@ -293,7 +295,10 @@ export function createRiksdagClient(options: RiksdagClientOptions = {}): Riksdag
         const res = await doFetch(requestUrl, {
           headers: { "User-Agent": userAgent, Accept: "application/json" },
         });
-        if (res.ok) return await res.json();
+        if (res.ok) {
+          const text = await res.text();
+          return text === "" ? null : (JSON.parse(text) as unknown);
+        }
         await res.body?.cancel().catch(() => undefined);
         if (attempt < retries && (res.status === 429 || res.status >= 500)) {
           await sleep(delay);
@@ -383,11 +388,13 @@ export function createRiksdagClient(options: RiksdagClientOptions = {}): Riksdag
       return r.voteringlista.votering;
     },
 
-    async getMemberVotes({ rm, bet, punkt }) {
-      const q = new URLSearchParams({ rm, bet, punkt, utformat: "json" });
-      q.set("sz", String(MEMBER_VOTES_PAGE_SIZE));
-      const r = await get("/voteringlista/", q, voteringlistaMembersSchema);
-      return r.voteringlista.votering;
+    async getVoteMembers(votingId) {
+      const r = await get(
+        `/votering/${encodeURIComponent(votingId)}.json`,
+        new URLSearchParams(),
+        voteMembersSchema,
+      );
+      return r?.votering.dokvotering.votering ?? [];
     },
 
     async getVoteTotals({ rm, bet }) {

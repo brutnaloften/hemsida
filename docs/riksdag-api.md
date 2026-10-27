@@ -226,7 +226,7 @@ Envelope (`@villkor` echoes the filters, `@antal` is the row count):
 }
 ```
 
-Without `gruppering` there is one row per member (349 for NU5 punkt 1, fetched with `sz=500`; whether `sz` caps this endpoint is **UNVERIFIED**):
+Without `gruppering` there is one row per member (349 for NU5 punkt 1, fetched with `sz=500`). **The endpoint caps at 500 rows**, and the `p` (page) and `avser` parameters are ignored, so a point with two votes (about 698 member rows for NU5 punkt 2) is cut off and cannot be read in full. Use `/votering/{votering_id}.json` below for per-member rows:
 
 ```text
 /voteringlista/?rm=2023%2F24&bet=NU5&punkt=1&utformat=json&sz=500
@@ -270,6 +270,14 @@ Each row is `{parti, Ja, Nej, Frånvarande, Avstår}` (strings, empty means 0). 
   "Avstår": ""
 }
 ```
+
+Per-member rows of a single vote come from `/votering/{votering_id}.json`, which is not capped:
+
+```text
+/votering/46B018B4-3F64-4613-883C-F160032658BE.json
+```
+
+It returns `{ votering: { dokument, dokbilaga, dokvotering: { votering: [...] } } }` with exactly the vote's own rows (349 for NU5 punkt 2, all `avser: "sakfrågan"`, about 285 KB). The rows have the same keys as the voteringlista member rows. The id must be the full id (a short prefix such as `46B018B4` returns an empty body with status 200). Resolving a point means taking the `votering_id` from its `utskottsforslag` and fetching this; `tools/lib/votes.ts` does so.
 
 Other `gruppering` values are **UNVERIFIED**; the envelope carries slots `@grupp1` to `@grupp8`.
 

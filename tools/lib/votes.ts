@@ -10,14 +10,13 @@
  *   acklamation points still carry an id with real roll-call data, so an id,
  *   not `beslutstyp`, decides.
  * - Vote ids are lowercase in dokumentstatus and uppercase in voteringlista.
- * - `voteringlista` is filtered on `punkt`, not on vote id, and a point can hold
- *   several votes (NU5 punkt 2 has a sakfråga and a motivfråga vote). One
- *   per-member request per point is filtered down to the point's own
- *   `votering_id`, and its `avser` says what was voted on: "sakfrågan" is the
- *   decision, "motivfrågan" is the reasoning only (NU5 punkt 4: a no there is
- *   not a vote against the decision). An unknown or mixed `avser`, or a
- *   member list cut off at the page size, is reported as ambiguous instead of
- *   guessing.
+ * - A point can hold several votes (NU5 punkt 2 has a sakfråga and a motivfråga
+ *   vote) and `voteringlista` caps at 500 rows and ignores `p`/`avser`, so
+ *   member rows come from `/votering/{votering_id}.json`, one request per
+ *   point, which returns exactly that vote. Its `avser` says what was voted on:
+ *   "sakfrågan" is the decision, "motivfrågan" is the reasoning only (NU5 punkt
+ *   4: a no there is not a vote against the decision). An unknown or mixed
+ *   `avser` is reported as ambiguous instead of guessing.
  * - Without `dokId` the document id is found by paging through every bet of
  *   the riksmöte (200 per request, ~1 req/s in bulk). Pass `dokId` whenever
  *   it is known.
@@ -26,7 +25,6 @@
  */
 
 import type { z } from "zod";
-import { MEMBER_VOTES_PAGE_SIZE, sameVoteId } from "./riksdag.ts";
 import type { MemberVote, PartyVotes, RiksdagClient } from "./riksdag.ts";
 import { PARTIES } from "../../src/schema/promise.ts";
 import type { partySchema } from "../../src/schema/promise.ts";
@@ -40,7 +38,7 @@ export type VoteKind = "decision" | "reasoning";
 
 export type VotesClient = Pick<
   RiksdagClient,
-  "listAllDocuments" | "getDocumentStatus" | "getMemberVotes"
+  "listAllDocuments" | "getDocumentStatus" | "getVoteMembers"
 >;
 
 export interface BetRef {
@@ -166,7 +164,7 @@ async function resolveDokId(
 async function resolvePoint(
   proposals: Array<{ punkt: string; votering_id: string }>,
   ref: { rm: string; bet: string; punkt: string },
-  getMemberVotes: VotesClient["getMemberVotes"],
+  getVoteMembers: VotesClient["getVoteMembers"],
 ): Promise<PointVotesResult> {
   const { rm, bet, punkt } = ref;
   const proposal = proposals.find((p) => p.punkt === punkt);
@@ -177,12 +175,8 @@ async function resolvePoint(
   if (votingId === "") {
     return { status: "no-recorded-vote", punkt, reason: "decided without a recorded vote" };
   }
-  // One request: the point's rows can hold several votes; keep only its own.
-  const all = await getMemberVotes({ rm, bet, punkt });
-  if (all.length >= MEMBER_VOTES_PAGE_SIZE) {
-    return { status: "ambiguous", punkt, votingId, reason: "member list cut off at the page size" };
-  }
-  const rows = all.filter((r) => sameVoteId(r.votering_id, votingId));
+  // Fetched by vote id, so rows of other votes under the same point never mix in.
+  const rows = await getVoteMembers(votingId);
   if (rows.length === 0) {
     return { status: "no-recorded-vote", punkt, reason: `vote ${votingId} has no roll-call data` };
   }
@@ -209,7 +203,7 @@ export async function getPointPartyVotes(
   const dokId = await resolveDokId(client, ref);
   if (dokId === null) return { status: "not-found", reason: `no bet ${ref.bet} in ${ref.rm}` };
   const { committeeProposals } = await client.getDocumentStatus(dokId);
-  return resolvePoint(committeeProposals, ref, (a) => client.getMemberVotes(a));
+  return resolvePoint(committeeProposals, ref, (id) => client.getVoteMembers(id));
 }
 
 /** Party votes for every committee point of a betänkande, in point order. */
@@ -224,7 +218,7 @@ export async function getBetPartyVotes(
   for (const p of committeeProposals) {
     results.push(
       await resolvePoint(committeeProposals, { rm: ref.rm, bet: ref.bet, punkt: p.punkt }, (a) =>
-        client.getMemberVotes(a),
+        client.getVoteMembers(a),
       ),
     );
   }

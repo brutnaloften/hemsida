@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-import { MEMBER_VOTES_PAGE_SIZE } from "./riksdag.ts";
 import type { MemberVote, PartyVotes } from "./riksdag.ts";
 import { aggregateParties, getBetPartyVotes, getPointPartyVotes, partyChoice } from "./votes.ts";
 import type { VotesClient } from "./votes.ts";
@@ -28,8 +27,12 @@ const P4 = "86CD7737-A18E-4E06-B804-336656E8B507";
 const PWEIRD = "11111111-0000-4000-8000-000000000000";
 const P1_UP = P1.toUpperCase();
 
-const memberRows: Record<string, MemberVote[]> = {
-  "1": [
+/**
+ * Member rows per vote id, as `/votering/{id}.json` returns them: only that
+ * vote's rows, never the other votes under the same point.
+ */
+const voteRows: Record<string, MemberVote[]> = {
+  [P1]: [
     ...members(P1_UP, "sakfrågan", "-", "Ja", 1),
     ...members(P1_UP, "sakfrågan", "C", "Nej", 21),
     ...members(P1_UP, "sakfrågan", "KD", "Ja", 16),
@@ -38,21 +41,27 @@ const memberRows: Record<string, MemberVote[]> = {
     ...members(P1_UP, "sakfrågan", "V", "Nej", 20),
     ...members(P1_UP, "sakfrågan", "V", "Frånvarande", 48),
   ],
-  // Two votes under one point, as in NU5 punkt 2.
-  "2": [
-    ...members(P2.toUpperCase(), "sakfrågan", "M", "Ja", 59),
-    ...members(P2.toUpperCase(), "sakfrågan", "S", "Nej", 90),
-    ...members(P2_REASONING, "motivfrågan", "M", "Ja", 59),
-    ...members(P2_REASONING, "motivfrågan", "S", "Avstår", 90),
+  // NU5 punkt 2: a sakfråga vote (349 members). The point's other vote, the
+  // motivfråga, has 349 more rows in voteringlista, which is why that
+  // endpoint (500 rows max) cannot resolve this point.
+  [P2]: [
+    ...members(P2.toUpperCase(), "sakfrågan", "M", "Ja", 100),
+    ...members(P2.toUpperCase(), "sakfrågan", "SD", "Ja", 63),
+    ...members(P2.toUpperCase(), "sakfrågan", "S", "Nej", 93),
+    ...members(P2.toUpperCase(), "sakfrågan", "V", "Nej", 20),
+    ...members(P2.toUpperCase(), "sakfrågan", "C", "Nej", 21),
+    ...members(P2.toUpperCase(), "sakfrågan", "MP", "Nej", 15),
+    ...members(P2.toUpperCase(), "sakfrågan", "KD", "Ja", 16),
+    ...members(P2.toUpperCase(), "sakfrågan", "L", "Ja", 13),
+    ...members(P2.toUpperCase(), "sakfrågan", "S", "Frånvarande", 8),
   ],
   // Motivfråga only, as in NU5 punkt 4.
-  "4": [
+  [P4]: [
     ...members(P4, "motivfrågan", "M", "Ja", 59),
     ...members(P4, "motivfrågan", "V", "Nej", 20),
     ...members(P4, "motivfrågan", "S", "Avstår", 90),
   ],
-  "5": members(PWEIRD, "något annat", "M", "Ja", 5),
-  "6": members(P1_UP, "sakfrågan", "M", "Ja", MEMBER_VOTES_PAGE_SIZE),
+  [PWEIRD]: members(PWEIRD, "något annat", "M", "Ja", 5),
 };
 
 function fakeClient(overrides: Partial<VotesClient> = {}) {
@@ -78,14 +87,13 @@ function fakeClient(overrides: Partial<VotesClient> = {}) {
           vote("3", "acklamation", ""),
           vote("4", "acklamation", P4),
           vote("5", "röstning", PWEIRD),
-          vote("6", "röstning", P1),
-          vote("7", "röstning", P1),
+          vote("7", "röstning", "99999999-0000-4000-8000-000000000000"),
         ],
       } as never;
     },
-    async getMemberVotes({ punkt }) {
-      calls.push(`members ${punkt}`);
-      return memberRows[punkt] ?? [];
+    async getVoteMembers(votingId) {
+      calls.push(`members ${votingId}`);
+      return voteRows[votingId] ?? [];
     },
     ...overrides,
   };
@@ -134,16 +142,17 @@ describe("getPointPartyVotes", () => {
     });
   });
 
-  it("resolves a point with two votes to its own vote with one request", async () => {
+  it("resolves a point with two votes by fetching its own vote id", async () => {
     const { client, calls } = fakeClient();
     const r = await getPointPartyVotes(client, { ...ref, punkt: "2", dokId: "HB01NU5" });
     expect(r).toMatchObject({
       status: "ok",
       votingId: P2,
       kind: "decision",
-      votes: { M: "yes", S: "no" },
+      votes: { M: "yes", SD: "yes", S: "no", V: "no", C: "no", MP: "no", KD: "yes", L: "yes" },
+      totals: { yes: 192, no: 149, abstain: 0, absent: 8 },
     });
-    expect(calls).toEqual(["status HB01NU5", "members 2"]);
+    expect(calls).toEqual(["status HB01NU5", `members ${P2}`]);
   });
 
   it("labels a motivfråga as reasoning", async () => {
@@ -168,12 +177,6 @@ describe("getPointPartyVotes", () => {
     const { client } = fakeClient();
     const r = await getPointPartyVotes(client, { ...ref, punkt: "5" });
     expect(r).toMatchObject({ status: "ambiguous", votingId: PWEIRD });
-  });
-
-  it("flags a member list cut off at the page size as ambiguous", async () => {
-    const { client } = fakeClient();
-    const r = await getPointPartyVotes(client, { ...ref, punkt: "6" });
-    expect(r).toMatchObject({ status: "ambiguous", votingId: P1 });
   });
 
   it("reports unknown points and missing roll-call data", async () => {
@@ -205,10 +208,9 @@ describe("getBetPartyVotes", () => {
       "no-recorded-vote",
       "ok",
       "ambiguous",
-      "ambiguous",
       "no-recorded-vote",
     ]);
     expect(calls.filter((c) => c.startsWith("status"))).toHaveLength(1);
-    expect(calls.filter((c) => c.startsWith("members"))).toHaveLength(6);
+    expect(calls.filter((c) => c.startsWith("members"))).toHaveLength(5);
   });
 });
