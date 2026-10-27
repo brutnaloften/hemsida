@@ -86,10 +86,23 @@ describe("promiseSchema", () => {
 
 describe("legacyPromiseSchema", () => {
   it("accepts every current data file", () => {
-    const dir = fileURLToPath(new URL("../data/promises", import.meta.url));
+    const dir = fileURLToPath(new URL("../data/2022-2026/promises", import.meta.url));
     for (const f of readdirSync(dir).filter((f) => f.endsWith(".json"))) {
       const r = legacyPromiseSchema.safeParse(JSON.parse(readFileSync(`${dir}/${f}`, "utf-8")));
       expect(r.success, f).toBe(true);
+    }
+  });
+});
+
+describe("sources data", () => {
+  it("accepts every file in src/data/sources and matches the filename", () => {
+    const dir = fileURLToPath(new URL("../data/sources", import.meta.url));
+    const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
+    expect(files).toContain("tidoavtalet.json");
+    for (const f of files) {
+      const r = sourceSchema.safeParse(JSON.parse(readFileSync(`${dir}/${f}`, "utf-8")));
+      expect(r.success, f).toBe(true);
+      if (r.success) expect(`${r.data.id}.json`).toBe(f);
     }
   });
 });
