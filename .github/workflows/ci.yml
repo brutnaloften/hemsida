@@ -32,6 +32,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Install tools dependencies
+        working-directory: tools
+        run: pnpm install --frozen-lockfile
+
       - name: Build
         run: pnpm build
 
@@ -43,10 +47,6 @@ jobs:
 
       - name: Test
         run: pnpm test
-
-      - name: Install tools dependencies
-        working-directory: tools
-        run: pnpm install --frozen-lockfile
 
       - name: Type check tools
         working-directory: tools

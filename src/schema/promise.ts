@@ -5,50 +5,50 @@
  * tooling in tools/ (via tools/lib/schema.ts). Keep it free of Astro and
  * browser imports so plain Node can load it.
  */
-import { z } from "zod";
+import { z } from 'zod';
 
-export const PARTIES = ["S", "M", "SD", "C", "V", "KD", "L", "MP"] as const;
+export const PARTIES = ['S', 'M', 'SD', 'C', 'V', 'KD', 'L', 'MP'] as const;
 export const partySchema = z.enum(PARTIES);
 
-export const ROLES = ["government", "support", "opposition"] as const;
+export const ROLES = ['government', 'support', 'opposition'] as const;
 
 export const PROMISE_TYPES = [
-  "legislative",
-  "inquiry",
-  "budget",
-  "outcome",
-  "other_action",
-  "vague",
+  'legislative',
+  'inquiry',
+  'budget',
+  'outcome',
+  'other_action',
+  'vague',
 ] as const;
 
 export const VERDICTS = [
-  "not_started",
-  "in_progress",
-  "fulfilled",
-  "partially_fulfilled",
-  "unfulfilled",
-  "abandoned",
-  "broken",
-  "not_assessable",
+  'not_started',
+  'in_progress',
+  'fulfilled',
+  'partially_fulfilled',
+  'unfulfilled',
+  'abandoned',
+  'broken',
+  'not_assessable',
 ] as const;
 
 /** Swedish display labels for verdict values. */
 export const VERDICT_LABELS: Record<(typeof VERDICTS)[number], string> = {
-  not_started: "Ej påbörjat",
-  in_progress: "Pågår",
-  fulfilled: "Uppfyllt",
-  partially_fulfilled: "Delvis uppfyllt",
-  unfulfilled: "Ej uppfyllt",
-  abandoned: "Övergivet",
-  broken: "Brutet",
-  not_assessable: "Ej bedömbart",
+  not_started: 'Ej påbörjat',
+  in_progress: 'Pågår',
+  fulfilled: 'Uppfyllt',
+  partially_fulfilled: 'Delvis uppfyllt',
+  unfulfilled: 'Ej uppfyllt',
+  abandoned: 'Övergivet',
+  broken: 'Brutet',
+  not_assessable: 'Ej bedömbart',
 };
 
 /** Evidence kinds in pipeline order (dir -> sou/ds -> prop -> bet -> sfs); mot sits outside it. */
-export const EVIDENCE_KINDS = ["dir", "sou", "ds", "prop", "bet", "sfs", "mot"] as const;
+export const EVIDENCE_KINDS = ['dir', 'sou', 'ds', 'prop', 'bet', 'sfs', 'mot'] as const;
 
-const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "expected YYYY-MM-DD");
-const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "expected a lowercase slug");
+const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'expected YYYY-MM-DD');
+const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'expected a lowercase slug');
 
 export const verdictValueSchema = z.enum(VERDICTS);
 
@@ -60,23 +60,23 @@ export const evidenceSchema = z
     title: z.string().min(1),
     date: isoDate,
     url: z.url(),
-    relevance: z.enum(["full", "partial"]),
+    relevance: z.enum(['full', 'partial']),
     note: z.string().nullable().default(null),
-    votes: z.partialRecord(partySchema, z.enum(["yes", "no", "abstain", "absent"])).optional(),
+    votes: z.partialRecord(partySchema, z.enum(['yes', 'no', 'abstain', 'absent'])).optional(),
   })
   .superRefine((e, ctx) => {
-    if (e.votes !== undefined && e.kind !== "bet") {
+    if (e.votes !== undefined && e.kind !== 'bet') {
       ctx.addIssue({
-        code: "custom",
-        path: ["votes"],
-        message: "votes are only allowed on kind bet",
+        code: 'custom',
+        path: ['votes'],
+        message: 'votes are only allowed on kind bet',
       });
     }
   });
 
 const verdictEntry = z.object({
   value: verdictValueSchema,
-  reasoning: z.string().default(""),
+  reasoning: z.string().default(''),
   date: isoDate,
 });
 
@@ -85,11 +85,11 @@ function requireReasoning(
   v: { value: string; reasoning: string },
   ctx: z.core.$RefinementCtx,
 ): void {
-  if (v.value !== "not_started" && v.reasoning.trim() === "") {
+  if (v.value !== 'not_started' && v.reasoning.trim() === '') {
     ctx.addIssue({
-      code: "custom",
-      path: ["reasoning"],
-      message: "reasoning is required unless the verdict is not_started",
+      code: 'custom',
+      path: ['reasoning'],
+      message: 'reasoning is required unless the verdict is not_started',
     });
   }
 }
@@ -107,7 +107,7 @@ export const sourceRefSchema = z.object({
 export const promiseSchema = z
   .object({
     id: slug,
-    term: z.string().regex(/^\d{4}-\d{4}$/, "expected YYYY-YYYY"),
+    term: z.string().regex(/^\d{4}-\d{4}$/, 'expected YYYY-YYYY'),
     title: z.string().min(1),
     description: z.string().min(1),
     source: sourceRefSchema,
@@ -124,9 +124,9 @@ export const promiseSchema = z
     for (const party of Object.keys(p.roles)) {
       if (!p.parties.includes(party as (typeof p.parties)[number])) {
         ctx.addIssue({
-          code: "custom",
-          path: ["roles", party],
-          message: "role party must be listed in parties",
+          code: 'custom',
+          path: ['roles', party],
+          message: 'role party must be listed in parties',
         });
       }
     }
@@ -135,7 +135,7 @@ export const promiseSchema = z
 export const sourceSchema = z.object({
   id: slug,
   title: z.string().min(1),
-  kind: z.enum(["government_agreement", "manifesto", "speech", "debate", "other"]),
+  kind: z.enum(['government_agreement', 'manifesto', 'speech', 'debate', 'other']),
   parties: z.array(partySchema).min(1),
   date: isoDate,
   url: z.url(),
@@ -172,7 +172,7 @@ export const legacyPromiseSchema = z.object({
         status: z.string(),
         reasoning: z.string(),
         sources: z.array(legacySource),
-        confidence: z.enum(["high", "medium"]).optional(),
+        confidence: z.enum(['high', 'medium']).optional(),
       }),
     )
     .default([]),

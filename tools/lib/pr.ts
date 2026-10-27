@@ -6,17 +6,17 @@
  * continues with the rest.
  */
 
-import { execFileSync } from "node:child_process";
+import { execFileSync } from 'node:child_process';
 
-const REPO_ROOT = new URL("../../", import.meta.url).pathname;
+const REPO_ROOT = new URL('../../', import.meta.url).pathname;
 
 export function git(...args: string[]): string {
   // Use execFileSync with an array — no shell, so arbitrary content in
   // args (commit messages, file paths) cannot be interpreted as shell
   // syntax. Don't switch to execSync with string interpolation.
-  return execFileSync("git", args, {
+  return execFileSync('git', args, {
     cwd: REPO_ROOT,
-    encoding: "utf-8",
+    encoding: 'utf-8',
   }).trim();
 }
 
@@ -49,7 +49,7 @@ export function openPrPerChange<C>(
   if (changes.length > maxChanges) {
     throw new Error(
       `${changes.length} changes exceeds limit of ${maxChanges}. ` +
-        "Review manually or raise maxChanges.",
+        'Review manually or raise maxChanges.',
     );
   }
 
@@ -59,8 +59,8 @@ export function openPrPerChange<C>(
     return { succeeded: 0, failed: 0 };
   }
 
-  const baseBranch = git("rev-parse", "--abbrev-ref", "HEAD");
-  const baseSha = git("rev-parse", "HEAD");
+  const baseBranch = git('rev-parse', '--abbrev-ref', 'HEAD');
+  const baseSha = git('rev-parse', 'HEAD');
 
   let succeeded = 0;
   let failed = 0;
@@ -70,16 +70,16 @@ export function openPrPerChange<C>(
     try {
       // Start each PR from a clean baseSha — discards any working-tree
       // state from a previous iteration's failure mid-way through.
-      git("reset", "--hard", baseSha);
-      git("checkout", "-B", branch);
+      git('reset', '--hard', baseSha);
+      git('checkout', '-B', branch);
       const paths = spec.apply(change);
-      git("add", "--", ...paths);
-      git("commit", "-m", spec.title(change));
-      git("push", "-u", "origin", branch);
+      git('add', '--', ...paths);
+      git('commit', '-m', spec.title(change));
+      git('push', '-u', 'origin', branch);
       const pr = execFileSync(
-        "gh",
-        ["pr", "create", "--title", spec.title(change), "--body", spec.body(change)],
-        { cwd: REPO_ROOT, encoding: "utf-8" },
+        'gh',
+        ['pr', 'create', '--title', spec.title(change), '--body', spec.body(change)],
+        { cwd: REPO_ROOT, encoding: 'utf-8' },
       ).trim();
       console.error(`PR ${i + 1}/${changes.length}: ${pr}`);
       succeeded++;
@@ -92,8 +92,8 @@ export function openPrPerChange<C>(
 
   // Restore whatever branch we started on so the caller is left in a tidy state.
   try {
-    git("reset", "--hard", baseSha);
-    git("checkout", baseBranch);
+    git('reset', '--hard', baseSha);
+    git('checkout', baseBranch);
   } catch {
     // Best-effort cleanup — don't mask the real result.
   }

@@ -12,9 +12,9 @@
  * `sleep` are injectable so tests never touch the network.
  */
 
-import { z } from "zod";
+import { z } from 'zod';
 
-export const RIKSDAG_BASE_URL = "https://data.riksdagen.se";
+export const RIKSDAG_BASE_URL = 'https://data.riksdagen.se';
 /** Hard server-side cap on `sz` for dokumentlista (larger values return 200). */
 export const MAX_PAGE_SIZE = 200;
 
@@ -26,7 +26,7 @@ export const MAX_PAGE_SIZE = 200;
 const str = z
   .union([z.string(), z.number(), z.null()])
   .optional()
-  .transform((v) => (v == null ? "" : String(v)));
+  .transform((v) => (v == null ? '' : String(v)));
 
 /** Integer-ish string ("196", "", null) -> number (0 when empty). */
 const int = str.transform((v) => {
@@ -50,8 +50,8 @@ function pageSize(sz: number | undefined): number {
 
 /** `http://x`, `//x` -> `https://x`; "" stays "". */
 export function normaliseUrl(url: string): string {
-  if (url.startsWith("//")) return `https:${url}`;
-  if (url.startsWith("http://")) return `https://${url.slice("http://".length)}`;
+  if (url.startsWith('//')) return `https:${url}`;
+  if (url.startsWith('http://')) return `https://${url.slice('http://'.length)}`;
   return url;
 }
 
@@ -59,7 +59,7 @@ const url = str.transform(normaliseUrl);
 
 /** Vote ids are lowercase in dokumentstatus and uppercase in voteringlista. */
 export function sameVoteId(a: string, b: string): boolean {
-  return a !== "" && a.toLowerCase() === b.toLowerCase();
+  return a !== '' && a.toLowerCase() === b.toLowerCase();
 }
 
 /**
@@ -70,10 +70,10 @@ export function sameVoteId(a: string, b: string): boolean {
  */
 export function formatRm(doktyp: string, startYear: number): string {
   if (YEAR_RM_TYPES.has(doktyp)) return String(startYear);
-  return `${startYear}/${String((startYear + 1) % 100).padStart(2, "0")}`;
+  return `${startYear}/${String((startYear + 1) % 100).padStart(2, '0')}`;
 }
 
-const YEAR_RM_TYPES = new Set(["dir", "sou", "ds", "sfs"]);
+const YEAR_RM_TYPES = new Set(['dir', 'sou', 'ds', 'sfs']);
 
 // ---------------------------------------------------------------------------
 // Schemas
@@ -98,9 +98,9 @@ export type RiksdagDocument = z.infer<typeof riksdagDocumentSchema>;
 
 const dokumentlistaSchema = z.object({
   dokumentlista: z.object({
-    "@traffar": int,
-    "@sida": int,
-    "@sidor": int,
+    '@traffar': int,
+    '@sida': int,
+    '@sidor': int,
     dokument: many(riksdagDocumentSchema),
   }),
 });
@@ -181,6 +181,23 @@ export const voteTotalsSchema = z.object({
 });
 export type VoteTotals = z.infer<typeof voteTotalsSchema>;
 
+/** One member's vote. `avser` is "sakfrågan" (the decision) or "motivfrågan" (the reasoning). */
+export const memberVoteSchema = z.object({
+  votering_id: str,
+  parti: str,
+  rost: str,
+  avser: str,
+});
+export type MemberVote = z.infer<typeof memberVoteSchema>;
+
+/**
+ * `/votering/{id}.json`: every member row of one vote. An empty body (no
+ * roll-call data for that id) is parsed as null and treated as no rows.
+ */
+const voteMembersSchema = z
+  .object({ votering: z.object({ dokvotering: z.object({ votering: many(memberVoteSchema) }) }) })
+  .nullable();
+
 const voteringlistaPartiSchema = z.object({
   voteringlista: z.object({ votering: many(partyVotesSchema) }),
 });
@@ -198,7 +215,7 @@ export class RiksdagHttpError extends Error {
 
   constructor(status: number, requestUrl: string) {
     super(`Riksdag API returned HTTP ${status} for ${requestUrl}`);
-    this.name = "RiksdagHttpError";
+    this.name = 'RiksdagHttpError';
     this.status = status;
     this.requestUrl = requestUrl;
   }
@@ -229,8 +246,8 @@ export interface ListDocumentsParams {
   tom?: string;
   /** Committee filter. Sent as `org`; the docs' `organ` param does not filter. */
   org?: string;
-  sort?: "rel" | "datum";
-  sortorder?: "asc" | "desc";
+  sort?: 'rel' | 'datum';
+  sortorder?: 'asc' | 'desc';
   /** Page size, clamped to 1..200. Default 200. */
   sz?: number;
   /** 1-based page number. */
@@ -240,10 +257,17 @@ export interface ListDocumentsParams {
 export interface RiksdagClient {
   listDocuments(params: ListDocumentsParams): Promise<DocumentPage>;
   /** Pages through every hit. Restrict by rm/from/tom: whole types are huge. */
-  listAllDocuments(params: Omit<ListDocumentsParams, "p">): AsyncGenerator<RiksdagDocument>;
+  listAllDocuments(params: Omit<ListDocumentsParams, 'p'>): AsyncGenerator<RiksdagDocument>;
   getDocumentStatus(dokId: string): Promise<DocumentStatus>;
   /** Party totals for one point of a betänkande. */
   getPartyVotes(args: { rm: string; bet: string; punkt: string }): Promise<PartyVotes[]>;
+  /**
+   * Every member row of one vote, from `/votering/{id}.json` (not capped, unlike
+   * voteringlista's 500 rows). Needs the full vote id, e.g. the `votering_id`
+   * of a committee proposal; a short prefix returns an empty body, which gives
+   * an empty list, as does an id without roll-call data.
+   */
+  getVoteMembers(votingId: string): Promise<MemberVote[]>;
   /** One totals row per vote of a betänkande. */
   getVoteTotals(args: { rm: string; bet: string }): Promise<VoteTotals[]>;
 }
@@ -255,7 +279,7 @@ export function createRiksdagClient(options: RiksdagClientOptions = {}): Riksdag
   const baseUrl = options.baseUrl ?? RIKSDAG_BASE_URL;
   const minInterval = options.minIntervalMs ?? 1000;
   const retries = options.retries ?? 2;
-  const userAgent = options.userAgent ?? "brutna-loften-tools (https://github.com/brutnaloften)";
+  const userAgent = options.userAgent ?? 'brutna-loften-tools (https://github.com/brutnaloften)';
 
   // Promise chain so concurrent callers are serialised and spaced out.
   let queue: Promise<unknown> = Promise.resolve();
@@ -269,9 +293,12 @@ export function createRiksdagClient(options: RiksdagClientOptions = {}): Riksdag
       lastStart = now();
       try {
         const res = await doFetch(requestUrl, {
-          headers: { "User-Agent": userAgent, Accept: "application/json" },
+          headers: { 'User-Agent': userAgent, Accept: 'application/json' },
         });
-        if (res.ok) return await res.json();
+        if (res.ok) {
+          const text = await res.text();
+          return text.trim() === '' ? null : (JSON.parse(text) as unknown);
+        }
         await res.body?.cancel().catch(() => undefined);
         if (attempt < retries && (res.status === 429 || res.status >= 500)) {
           await sleep(delay);
@@ -288,14 +315,14 @@ export function createRiksdagClient(options: RiksdagClientOptions = {}): Riksdag
   }
 
   function get<S extends z.ZodType>(path: string, query: URLSearchParams, schema: S) {
-    const requestUrl = `${baseUrl}${path}${query.size > 0 ? `?${query}` : ""}`;
+    const requestUrl = `${baseUrl}${path}${query.size > 0 ? `?${query}` : ''}`;
     const run = queue.then(() => throttledGet(requestUrl));
     queue = run.catch(() => undefined);
     return run.then((json) => {
       const parsed = schema.safeParse(json);
       if (!parsed.success) {
-        const issues = parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`);
-        throw new Error(`Unexpected Riksdag response for ${requestUrl}: ${issues.join("; ")}`);
+        const issues = parsed.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`);
+        throw new Error(`Unexpected Riksdag response for ${requestUrl}: ${issues.join('; ')}`);
       }
       return parsed.data as z.output<S>;
     });
@@ -304,25 +331,25 @@ export function createRiksdagClient(options: RiksdagClientOptions = {}): Riksdag
   function buildListQuery(params: ListDocumentsParams): URLSearchParams {
     const q = new URLSearchParams();
     const list = (v?: string | string[]) => (v === undefined ? [] : [v].flat());
-    if (params.doktyp !== undefined) q.set("doktyp", list(params.doktyp).join(","));
-    for (const rm of list(params.rm)) q.append("rm", rm);
-    for (const key of ["sok", "from", "tom", "org", "sort", "sortorder"] as const) {
+    if (params.doktyp !== undefined) q.set('doktyp', list(params.doktyp).join(','));
+    for (const rm of list(params.rm)) q.append('rm', rm);
+    for (const key of ['sok', 'from', 'tom', 'org', 'sort', 'sortorder'] as const) {
       const v = params[key];
       if (v !== undefined) q.set(key, v);
     }
-    q.set("sz", String(pageSize(params.sz)));
-    q.set("p", String(params.p ?? 1));
-    q.set("utformat", "json");
+    q.set('sz', String(pageSize(params.sz)));
+    q.set('p', String(params.p ?? 1));
+    q.set('utformat', 'json');
     return q;
   }
 
   async function listDocuments(params: ListDocumentsParams): Promise<DocumentPage> {
     const { dokumentlista: l } = await get(
-      "/dokumentlista/",
+      '/dokumentlista/',
       buildListQuery(params),
       dokumentlistaSchema,
     );
-    return { total: l["@traffar"], page: l["@sida"], pages: l["@sidor"], documents: l.dokument };
+    return { total: l['@traffar'], page: l['@sida'], pages: l['@sidor'], documents: l.dokument };
   }
 
   return {
@@ -355,16 +382,25 @@ export function createRiksdagClient(options: RiksdagClientOptions = {}): Riksdag
     },
 
     async getPartyVotes({ rm, bet, punkt }) {
-      const q = new URLSearchParams({ rm, bet, punkt, gruppering: "parti", utformat: "json" });
-      q.set("sz", String(MAX_PAGE_SIZE));
-      const r = await get("/voteringlista/", q, voteringlistaPartiSchema);
+      const q = new URLSearchParams({ rm, bet, punkt, gruppering: 'parti', utformat: 'json' });
+      q.set('sz', String(MAX_PAGE_SIZE));
+      const r = await get('/voteringlista/', q, voteringlistaPartiSchema);
       return r.voteringlista.votering;
     },
 
+    async getVoteMembers(votingId) {
+      const r = await get(
+        `/votering/${encodeURIComponent(votingId)}.json`,
+        new URLSearchParams(),
+        voteMembersSchema,
+      );
+      return r?.votering.dokvotering.votering ?? [];
+    },
+
     async getVoteTotals({ rm, bet }) {
-      const q = new URLSearchParams({ rm, bet, gruppering: "votering_id", utformat: "json" });
-      q.set("sz", String(MAX_PAGE_SIZE));
-      const r = await get("/voteringlista/", q, voteringlistaTotalsSchema);
+      const q = new URLSearchParams({ rm, bet, gruppering: 'votering_id', utformat: 'json' });
+      q.set('sz', String(MAX_PAGE_SIZE));
+      const r = await get('/voteringlista/', q, voteringlistaTotalsSchema);
       return r.voteringlista.votering;
     },
   };
