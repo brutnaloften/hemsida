@@ -24,21 +24,21 @@
  * Pure logic: the Riksdag client is injected.
  */
 
-import type { z } from "zod";
-import type { MemberVote, PartyVotes, RiksdagClient } from "./riksdag.ts";
-import { PARTIES } from "../../src/schema/promise.ts";
-import type { partySchema } from "../../src/schema/promise.ts";
+import type { z } from 'zod';
+import type { MemberVote, PartyVotes, RiksdagClient } from './riksdag.ts';
+import { PARTIES } from '../../src/schema/promise.ts';
+import type { partySchema } from '../../src/schema/promise.ts';
 
 export type Party = z.infer<typeof partySchema>;
-export type VoteChoice = "yes" | "no" | "abstain" | "absent";
+export type VoteChoice = 'yes' | 'no' | 'abstain' | 'absent';
 /** Shape of the schema's `votes` field. */
 export type PartyVoteMap = Partial<Record<Party, VoteChoice>>;
 /** What the vote was on: the decision itself or only its reasoning. */
-export type VoteKind = "decision" | "reasoning";
+export type VoteKind = 'decision' | 'reasoning';
 
 export type VotesClient = Pick<
   RiksdagClient,
-  "listAllDocuments" | "getDocumentStatus" | "getVoteMembers"
+  'listAllDocuments' | 'getDocumentStatus' | 'getVoteMembers'
 >;
 
 export interface BetRef {
@@ -64,7 +64,7 @@ export interface VoteCounts {
 
 export type PointVotesResult =
   | {
-      status: "ok";
+      status: 'ok';
       punkt: string;
       votingId: string;
       /** "decision" (sakfrågan) or "reasoning" (motivfrågan: not a vote on the outcome). */
@@ -76,11 +76,11 @@ export type PointVotesResult =
       /** Vote totals over all members, for context. */
       totals: VoteCounts;
     }
-  | { status: "no-recorded-vote"; punkt: string; reason: string }
-  | { status: "ambiguous"; punkt: string; votingId: string; reason: string };
+  | { status: 'no-recorded-vote'; punkt: string; reason: string }
+  | { status: 'ambiguous'; punkt: string; votingId: string; reason: string };
 
 export interface BetNotFound {
-  status: "not-found";
+  status: 'not-found';
   reason: string;
 }
 
@@ -95,12 +95,12 @@ function isParty(value: string): value is Party {
  */
 export function partyChoice(row: PartyVotes): VoteChoice | undefined {
   const counts: Array<[VoteChoice, number]> = [
-    ["yes", row.Ja],
-    ["no", row.Nej],
-    ["abstain", row.Avstår],
+    ['yes', row.Ja],
+    ['no', row.Nej],
+    ['abstain', row.Avstår],
   ];
   const max = Math.max(...counts.map(([, n]) => n));
-  if (max === 0) return row.Frånvarande > 0 ? "absent" : undefined;
+  if (max === 0) return row.Frånvarande > 0 ? 'absent' : undefined;
   const top = counts.filter(([, n]) => n === max);
   return top.length === 1 ? top[0][0] : undefined;
 }
@@ -141,21 +141,21 @@ function toPartyRows(rows: MemberVote[]): PartyVotes[] {
       p = { parti: r.parti, Ja: 0, Nej: 0, Frånvarande: 0, Avstår: 0 };
       byParty.set(r.parti, p);
     }
-    if (r.rost === "Ja" || r.rost === "Nej" || r.rost === "Frånvarande" || r.rost === "Avstår") {
+    if (r.rost === 'Ja' || r.rost === 'Nej' || r.rost === 'Frånvarande' || r.rost === 'Avstår') {
       p[r.rost]++;
     }
   }
   return [...byParty.values()];
 }
 
-const KIND: Record<string, VoteKind> = { sakfrågan: "decision", motivfrågan: "reasoning" };
+const KIND: Record<string, VoteKind> = { sakfrågan: 'decision', motivfrågan: 'reasoning' };
 
 async function resolveDokId(
   client: VotesClient,
   ref: { rm: string; bet: string; dokId?: string },
 ): Promise<string | null> {
   if (ref.dokId) return ref.dokId;
-  for await (const doc of client.listAllDocuments({ doktyp: "bet", rm: ref.rm })) {
+  for await (const doc of client.listAllDocuments({ doktyp: 'bet', rm: ref.rm })) {
     if (doc.beteckning === ref.bet) return doc.dok_id;
   }
   return null;
@@ -164,35 +164,35 @@ async function resolveDokId(
 async function resolvePoint(
   proposals: Array<{ punkt: string; votering_id: string }>,
   ref: { rm: string; bet: string; punkt: string },
-  getVoteMembers: VotesClient["getVoteMembers"],
+  getVoteMembers: VotesClient['getVoteMembers'],
 ): Promise<PointVotesResult> {
   const { rm, bet, punkt } = ref;
   const proposal = proposals.find((p) => p.punkt === punkt);
   if (!proposal) {
-    return { status: "no-recorded-vote", punkt, reason: `no point ${punkt} in ${bet} ${rm}` };
+    return { status: 'no-recorded-vote', punkt, reason: `no point ${punkt} in ${bet} ${rm}` };
   }
   const votingId = proposal.votering_id;
-  if (votingId === "") {
-    return { status: "no-recorded-vote", punkt, reason: "decided without a recorded vote" };
+  if (votingId === '') {
+    return { status: 'no-recorded-vote', punkt, reason: 'decided without a recorded vote' };
   }
   // Fetched by vote id, so rows of other votes under the same point never mix in.
   const rows = await getVoteMembers(votingId);
   if (rows.length === 0) {
-    return { status: "no-recorded-vote", punkt, reason: `vote ${votingId} has no roll-call data` };
+    return { status: 'no-recorded-vote', punkt, reason: `vote ${votingId} has no roll-call data` };
   }
   const avser = [...new Set(rows.map((r) => r.avser))];
   const kind = avser.length === 1 ? KIND[avser[0]] : undefined;
   if (kind === undefined) {
     return {
-      status: "ambiguous",
+      status: 'ambiguous',
       punkt,
       votingId,
-      reason: `cannot tell what vote ${votingId} was on (avser: ${avser.join(", ") || "none"})`,
+      reason: `cannot tell what vote ${votingId} was on (avser: ${avser.join(', ') || 'none'})`,
     };
   }
   const partyRows = toPartyRows(rows);
   const { votes, tied } = aggregateParties(partyRows);
-  return { status: "ok", punkt, votingId, kind, votes, tied, totals: sumRows(partyRows) };
+  return { status: 'ok', punkt, votingId, kind, votes, tied, totals: sumRows(partyRows) };
 }
 
 /** Party votes for one committee point of a betänkande. */
@@ -201,7 +201,7 @@ export async function getPointPartyVotes(
   ref: BetRef,
 ): Promise<PointVotesResult | BetNotFound> {
   const dokId = await resolveDokId(client, ref);
-  if (dokId === null) return { status: "not-found", reason: `no bet ${ref.bet} in ${ref.rm}` };
+  if (dokId === null) return { status: 'not-found', reason: `no bet ${ref.bet} in ${ref.rm}` };
   const { committeeProposals } = await client.getDocumentStatus(dokId);
   return resolvePoint(committeeProposals, ref, (id) => client.getVoteMembers(id));
 }
@@ -212,7 +212,7 @@ export async function getBetPartyVotes(
   ref: { rm: string; bet: string; dokId?: string },
 ): Promise<PointVotesResult[] | BetNotFound> {
   const dokId = await resolveDokId(client, ref);
-  if (dokId === null) return { status: "not-found", reason: `no bet ${ref.bet} in ${ref.rm}` };
+  if (dokId === null) return { status: 'not-found', reason: `no bet ${ref.bet} in ${ref.rm}` };
   const { committeeProposals } = await client.getDocumentStatus(dokId);
   const results: PointVotesResult[] = [];
   for (const p of committeeProposals) {

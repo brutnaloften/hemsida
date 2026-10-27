@@ -11,7 +11,7 @@
  * as a collapsible section in the workflow logs.
  */
 
-import Anthropic from "@anthropic-ai/sdk";
+import Anthropic from '@anthropic-ai/sdk';
 
 export function createClient(): Anthropic {
   return new Anthropic({
@@ -26,7 +26,7 @@ function logError(label: string, err: unknown): void {
   if (err instanceof Anthropic.RateLimitError) {
     console.error(`Rate-limited (429) after retries for ${label}: ${err.message}`);
   } else if (err instanceof Anthropic.APIError) {
-    console.error(`API error ${err.status ?? "?"} (${err.name}) for ${label}: ${err.message}`);
+    console.error(`API error ${err.status ?? '?'} (${err.name}) for ${label}: ${err.message}`);
   } else {
     console.error(`Non-API error for ${label}:`, err);
   }
@@ -34,7 +34,7 @@ function logError(label: string, err: unknown): void {
 
 /** JSON.stringify replacer that hides base64 payloads (e.g. whole PDFs) in logged requests. */
 function redactBase64(key: string, value: unknown): unknown {
-  return key === "data" && typeof value === "string" && value.length > 200
+  return key === 'data' && typeof value === 'string' && value.length > 200
     ? `<${value.length} chars omitted>`
     : value;
 }
@@ -50,18 +50,18 @@ export async function loggedCreate(
   params: Anthropic.MessageCreateParamsNonStreaming,
 ): Promise<Anthropic.Message> {
   console.error(`::group::Claude call — ${label}`);
-  console.error("--- Request ---");
+  console.error('--- Request ---');
   console.error(JSON.stringify(params, redactBase64, 2));
   try {
     const response = await client.messages.create(params);
-    console.error("--- Response ---");
+    console.error('--- Response ---');
     console.error(JSON.stringify(response, null, 2));
     return response;
   } catch (err) {
     logError(label, err);
     throw err;
   } finally {
-    console.error("::endgroup::");
+    console.error('::endgroup::');
   }
 }
 
@@ -80,19 +80,19 @@ export async function loggedParse<Params extends Anthropic.MessageCreateParamsNo
   params: Params,
 ) {
   console.error(`::group::Claude call — ${label}`);
-  console.error("--- Request ---");
+  console.error('--- Request ---');
   console.error(JSON.stringify(params, redactBase64, 2));
   try {
     // Streamed: long structured-output calls exceed the per-attempt timeout when non-streaming.
     const response = await client.messages.stream(params).finalMessage();
-    console.error("--- Response ---");
+    console.error('--- Response ---');
     console.error(JSON.stringify(response, null, 2));
     return response;
   } catch (err) {
     logError(label, err);
     throw err;
   } finally {
-    console.error("::endgroup::");
+    console.error('::endgroup::');
   }
 }
 
@@ -105,7 +105,7 @@ export function isTransientApiError(err: unknown): boolean {
   if (err instanceof Anthropic.RateLimitError) return true;
   if (err instanceof Anthropic.APIError) {
     if (err.status === 529) return true;
-    if (typeof err.status === "number" && err.status >= 500) return true;
+    if (typeof err.status === 'number' && err.status >= 500) return true;
   }
   return false;
 }

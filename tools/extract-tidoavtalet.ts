@@ -4,14 +4,14 @@
  *   node --experimental-strip-types tools/extract-tidoavtalet.ts [--dry-run] ...
  */
 
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
-import { parseArgs } from "node:util";
-import { createClient } from "./lib/claude.ts";
-import { loadJson, validateArray, writeJson } from "./lib/json.ts";
-import { processResumable } from "./lib/resume.ts";
-import { sourceSchema } from "./lib/schema.ts";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { parseArgs } from 'node:util';
+import { createClient } from './lib/claude.ts';
+import { loadJson, validateArray, writeJson } from './lib/json.ts';
+import { processResumable } from './lib/resume.ts';
+import { sourceSchema } from './lib/schema.ts';
 import {
   buildParams,
   candidateEntrySchema,
@@ -22,21 +22,21 @@ import {
   mergeChunk,
   pdfToBase64,
   type CandidateEntry,
-} from "./lib/tido-extract.ts";
+} from './lib/tido-extract.ts';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 const { values } = parseArgs({
   options: {
-    "dry-run": { type: "boolean", default: false },
-    pdf: { type: "string", default: resolve(root, "tools/out/tidoavtalet.pdf") },
+    'dry-run': { type: 'boolean', default: false },
+    pdf: { type: 'string', default: resolve(root, 'tools/out/tidoavtalet.pdf') },
     out: {
-      type: "string",
-      default: resolve(root, "src/data/2022-2026/candidates/tidoavtalet.json"),
+      type: 'string',
+      default: resolve(root, 'src/data/2022-2026/candidates/tidoavtalet.json'),
     },
-    cursor: { type: "string", default: resolve(root, "tools/out/tidoavtalet.processed") },
-    pages: { type: "string" },
-    "pages-per-chunk": { type: "string", default: "8" },
+    cursor: { type: 'string', default: resolve(root, 'tools/out/tidoavtalet.processed') },
+    pages: { type: 'string' },
+    'pages-per-chunk': { type: 'string', default: '8' },
   },
 });
 
@@ -53,7 +53,7 @@ const pdfPath = values.pdf!;
 const outPath = values.out!;
 const cursorPath = values.cursor!;
 
-const source = sourceSchema.parse(loadJson(resolve(root, "src/data/sources/tidoavtalet.json")));
+const source = sourceSchema.parse(loadJson(resolve(root, 'src/data/sources/tidoavtalet.json')));
 
 async function ensurePdf(path: string): Promise<void> {
   if (existsSync(path)) return;
@@ -63,7 +63,7 @@ async function ensurePdf(path: string): Promise<void> {
       const res = await fetch(url);
       if (!res.ok) continue;
       const body = Buffer.from(await res.arrayBuffer());
-      if (body.subarray(0, 5).toString("latin1") !== "%PDF-") {
+      if (body.subarray(0, 5).toString('latin1') !== '%PDF-') {
         console.error(`Not a PDF: ${url}`);
         continue;
       }
@@ -78,27 +78,27 @@ async function ensurePdf(path: string): Promise<void> {
 }
 
 async function main(): Promise<void> {
-  const dryRun = values["dry-run"];
+  const dryRun = values['dry-run'];
   if (!dryRun && !process.env.ANTHROPIC_API_KEY) {
-    console.error("ANTHROPIC_API_KEY is not set. Export it, or use --dry-run to preview requests.");
+    console.error('ANTHROPIC_API_KEY is not set. Export it, or use --dry-run to preview requests.');
     process.exit(1);
   }
-  let totalPages = values.pages ? positiveInt("pages", values.pages) : null;
+  let totalPages = values.pages ? positiveInt('pages', values.pages) : null;
   if (!totalPages) {
     if (!dryRun) await ensurePdf(pdfPath);
     if (!existsSync(pdfPath)) {
       throw new Error(`PDF not found at ${pdfPath}; pass --pages N for a dry run without it`);
     }
     totalPages = countPdfPages(readFileSync(pdfPath));
-    if (!totalPages) throw new Error("Could not detect the page count; pass --pages N");
+    if (!totalPages) throw new Error('Could not detect the page count; pass --pages N');
   }
-  const chunks = makeChunks(totalPages, positiveInt("pages-per-chunk", values["pages-per-chunk"]!));
+  const chunks = makeChunks(totalPages, positiveInt('pages-per-chunk', values['pages-per-chunk']!));
 
   if (dryRun) {
     console.log(`Dry run: ${chunks.length} requests, no API calls.`);
     for (const chunk of chunks) {
       console.log(`--- ${chunk.key} ---`);
-      console.log(JSON.stringify(buildParams("<pdf base64 omitted>", chunk), null, 2));
+      console.log(JSON.stringify(buildParams('<pdf base64 omitted>', chunk), null, 2));
     }
     return;
   }
@@ -108,7 +108,7 @@ async function main(): Promise<void> {
   const client = createClient();
 
   let entries: CandidateEntry[] = existsSync(outPath)
-    ? validateArray(candidateEntrySchema, loadJson(outPath) as unknown[], "candidates")
+    ? validateArray(candidateEntrySchema, loadJson(outPath) as unknown[], 'candidates')
     : [];
   mkdirSync(dirname(outPath), { recursive: true });
   mkdirSync(dirname(cursorPath), { recursive: true });

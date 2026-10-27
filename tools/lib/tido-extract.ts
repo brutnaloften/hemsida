@@ -9,55 +9,55 @@
  * independently resumable unit.
  */
 
-import { readFileSync } from "node:fs";
-import Anthropic from "@anthropic-ai/sdk";
-import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
-import { z } from "zod";
-import { loggedParse } from "./claude.ts";
-import { PROMISE_TYPES, promiseSchema, type PromiseRecord } from "./schema.ts";
+import { readFileSync } from 'node:fs';
+import Anthropic from '@anthropic-ai/sdk';
+import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
+import { z } from 'zod';
+import { loggedParse } from './claude.ts';
+import { PROMISE_TYPES, promiseSchema, type PromiseRecord } from './schema.ts';
 
-export const MODEL = "claude-opus-5-5";
-export const SOURCE_ID = "tidoavtalet";
-export const TERM = "2022-2026";
+export const MODEL = 'claude-opus-5-5';
+export const SOURCE_ID = 'tidoavtalet';
+export const TERM = '2022-2026';
 
 /** Riksdag committee codes the model may pick from (matches data.riksdagen.se `org`). */
 export const COMMITTEES = [
-  "AU",
-  "CU",
-  "FiU",
-  "FöU",
-  "JuU",
-  "KU",
-  "KrU",
-  "MJU",
-  "NU",
-  "SfU",
-  "SkU",
-  "SoU",
-  "TU",
-  "UbU",
-  "UFöU",
-  "UU",
+  'AU',
+  'CU',
+  'FiU',
+  'FöU',
+  'JuU',
+  'KU',
+  'KrU',
+  'MJU',
+  'NU',
+  'SfU',
+  'SkU',
+  'SoU',
+  'TU',
+  'UbU',
+  'UFöU',
+  'UU',
 ] as const;
 
 /** What the model returns for one promise. Deliberately simple (no regexes) for structured outputs. */
 export const rawCandidateSchema = z.object({
   slug: z
     .string()
-    .describe("Short lowercase ASCII slug with hyphens, e.g. skarpta-straff-gangbrott"),
-  title: z.string().describe("Short Swedish title"),
-  description: z.string().describe("The promise in Swedish, self-contained, in our own words"),
-  page: z.number().int().describe("1-based PDF page number where the promise appears"),
-  quote: z.string().describe("Short verbatim quote from the document supporting the promise"),
+    .describe('Short lowercase ASCII slug with hyphens, e.g. skarpta-straff-gangbrott'),
+  title: z.string().describe('Short Swedish title'),
+  description: z.string().describe('The promise in Swedish, self-contained, in our own words'),
+  page: z.number().int().describe('1-based PDF page number where the promise appears'),
+  quote: z.string().describe('Short verbatim quote from the document supporting the promise'),
   // Plain strings: the SDK does not enforce enum values, and an off-list value would
   // make messages.parse throw after the chunk was paid for. Validated per item in toEntry.
-  type: z.string().describe(`One of: ${PROMISE_TYPES.join(", ")}`),
-  area: z.string().describe("Policy area in Swedish, e.g. Kriminalpolitik"),
-  ministry: z.string().describe("Responsible ministry in Swedish, e.g. Justitiedepartementet"),
+  type: z.string().describe(`One of: ${PROMISE_TYPES.join(', ')}`),
+  area: z.string().describe('Policy area in Swedish, e.g. Kriminalpolitik'),
+  ministry: z.string().describe('Responsible ministry in Swedish, e.g. Justitiedepartementet'),
   committee: z
     .string()
-    .describe(`Riksdag committee most likely to handle it, one of: ${COMMITTEES.join(", ")}`),
-  keywords: z.array(z.string()).describe("3-6 Swedish search terms for a Riksdag full-text search"),
+    .describe(`Riksdag committee most likely to handle it, one of: ${COMMITTEES.join(', ')}`),
+  keywords: z.array(z.string()).describe('3-6 Swedish search terms for a Riksdag full-text search'),
 });
 
 export const extractionSchema = z.object({ candidates: z.array(rawCandidateSchema) });
@@ -88,24 +88,24 @@ export function makeChunks(totalPages: number, pagesPerChunk: number): Chunk[] {
 
 /** Heuristic page count from the raw PDF (works for PDFs without compressed object streams). */
 export function countPdfPages(pdf: Buffer): number | null {
-  const n = pdf.toString("latin1").match(/\/Type\s*\/Page(?![a-zA-Z])/g)?.length ?? 0;
+  const n = pdf.toString('latin1').match(/\/Type\s*\/Page(?![a-zA-Z])/g)?.length ?? 0;
   return n > 0 ? n : null;
 }
 
 export function slugify(s: string): string {
   return s
     .toLowerCase()
-    .replace(/å|ä/g, "a")
-    .replace(/ö/g, "o")
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
+    .replace(/å|ä/g, 'a')
+    .replace(/ö/g, 'o')
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
     .slice(0, 60)
-    .replace(/-+$/g, "");
+    .replace(/-+$/g, '');
 }
 
-const PARTIES = ["M", "KD", "L", "SD"] as const;
+const PARTIES = ['M', 'KD', 'L', 'SD'] as const;
 
 /** Turn a raw candidate into a schema-valid draft promise (verdict not_started). Throws on invalid data. */
 export function toEntry(
@@ -117,7 +117,7 @@ export function toEntry(
   if (!(PROMISE_TYPES as readonly string[]).includes(raw.type)) {
     throw new Error(`unknown type "${raw.type}"`);
   }
-  const base = "tido-" + (slugify(raw.slug) || slugify(raw.title));
+  const base = 'tido-' + (slugify(raw.slug) || slugify(raw.title));
   let id = base;
   for (let i = 2; taken.has(id); i++) id = `${base}-${i}`;
   const promise: PromiseRecord = promiseSchema.parse({
@@ -127,14 +127,14 @@ export function toEntry(
     description: raw.description.trim(),
     source: { id: SOURCE_ID, page: raw.page, quote: raw.quote.trim() || undefined },
     parties: [...PARTIES],
-    roles: { M: "government", KD: "government", L: "government", SD: "support" },
+    roles: { M: 'government', KD: 'government', L: 'government', SD: 'support' },
     type: raw.type,
     area: raw.area.trim(),
     committee: (COMMITTEES as readonly string[]).includes(raw.committee)
       ? raw.committee
       : undefined,
     keywords: raw.keywords.map((k) => k.trim()).filter(Boolean),
-    verdict: { value: "not_started", reasoning: "", date: verdictDate, history: [] },
+    verdict: { value: 'not_started', reasoning: '', date: verdictDate, history: [] },
     evidence: [],
   });
   return { chunk: chunk.key, ministry: raw.ministry.trim(), promise };
@@ -157,18 +157,18 @@ export function buildParams(pdfBase64: string, chunk: Chunk) {
     model: MODEL,
     max_tokens: 32000,
     system: SYSTEM,
-    output_config: { effort: "high", format: zodOutputFormat(extractionSchema) },
+    output_config: { effort: 'high', format: zodOutputFormat(extractionSchema) },
     messages: [
       {
-        role: "user",
+        role: 'user',
         content: [
           {
-            type: "document",
-            source: { type: "base64", media_type: "application/pdf", data: pdfBase64 },
-            cache_control: { type: "ephemeral" },
+            type: 'document',
+            source: { type: 'base64', media_type: 'application/pdf', data: pdfBase64 },
+            cache_control: { type: 'ephemeral' },
           },
           {
-            type: "text",
+            type: 'text',
             text: `Extract all promises that appear on PDF pages ${chunk.firstPage} to ${chunk.lastPage} (inclusive). Ignore promises on other pages, even if the text there is visible to you.`,
           },
         ],
@@ -178,7 +178,7 @@ export function buildParams(pdfBase64: string, chunk: Chunk) {
 }
 
 export function pdfToBase64(path: string): string {
-  return readFileSync(path).toString("base64");
+  return readFileSync(path).toString('base64');
 }
 
 /**
@@ -204,7 +204,7 @@ export async function extractChunk(
       { cause: err },
     );
   }
-  if (response.stop_reason === "refusal") throw new Error(`Model refused chunk ${chunk.key}`);
+  if (response.stop_reason === 'refusal') throw new Error(`Model refused chunk ${chunk.key}`);
   const parsed = extractionSchema.parse(response.parsed_output);
   const entries: CandidateEntry[] = [];
   for (const raw of parsed.candidates) {

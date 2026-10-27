@@ -11,8 +11,8 @@
  * output file) before returning, so the cursor never runs ahead of the data.
  */
 
-import { appendFileSync, existsSync, readFileSync } from "node:fs";
-import { isTransientApiError } from "./claude.ts";
+import { appendFileSync, existsSync, readFileSync } from 'node:fs';
+import { isTransientApiError } from './claude.ts';
 
 export interface ResumeOptions<T> {
   /** Path of the side-car cursor file, e.g. `${outputPath}.processed`. */
@@ -30,8 +30,8 @@ export interface ResumeSummary {
 
 export function loadCursor(path: string): Set<string> {
   if (!existsSync(path)) return new Set();
-  const keys = readFileSync(path, "utf-8")
-    .split("\n")
+  const keys = readFileSync(path, 'utf-8')
+    .split('\n')
     .map((l) => l.trim())
     .filter(Boolean);
   return new Set(keys);
@@ -67,7 +67,7 @@ export async function processResumable<T>(
       }
       throw err;
     }
-    appendFileSync(cursorPath, k + "\n");
+    appendFileSync(cursorPath, k + '\n');
     done.add(k);
     summary.processed++;
   }
