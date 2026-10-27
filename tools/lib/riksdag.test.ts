@@ -182,6 +182,52 @@ describe("votes", () => {
   });
 });
 
+describe("getVoteMembers", () => {
+  const body = (n: number) => ({
+    votering: {
+      dokument: { dok_id: "HB01NU5" },
+      dokvotering: {
+        votering: Array.from({ length: n }, (_, i) => ({
+          dok_id: "HB01NU5",
+          votering_id: "46B018B4-3F64-4613-883C-F160032658BE",
+          punkt: "2",
+          namn: `Ledamot ${i}`,
+          parti: "S",
+          rost: "Nej",
+          avser: "sakfrågan",
+        })),
+      },
+    },
+  });
+  const id = "46B018B4-3F64-4613-883C-F160032658BE";
+
+  it("requests /votering/{id}.json and returns all rows beyond 500", async () => {
+    const { client, urls } = setup([body(699)]);
+    const rows = await client.getVoteMembers(id);
+    expect(urls).toEqual([`https://data.riksdagen.se/votering/${id}.json`]);
+    expect(rows).toHaveLength(699);
+    expect(rows[0]).toEqual({
+      votering_id: id,
+      parti: "S",
+      rost: "Nej",
+      avser: "sakfrågan",
+    });
+  });
+
+  it("accepts a single row object and an empty body", async () => {
+    const one = body(1);
+    const { client } = setup([
+      { votering: { dokvotering: { votering: one.votering.dokvotering.votering[0] } } },
+    ]);
+    expect(await client.getVoteMembers(id)).toHaveLength(1);
+    const empty = createRiksdagClient({
+      fetch: (async () => new Response("", { status: 200 })) as typeof fetch,
+      sleep: async () => undefined,
+    });
+    expect(await empty.getVoteMembers("46B018B4")).toEqual([]);
+  });
+});
+
 describe("throttle and retry", () => {
   it("spaces requests by the minimum interval", async () => {
     const { client, sleeps } = setup([fx.dokumentlistaEmpty]);

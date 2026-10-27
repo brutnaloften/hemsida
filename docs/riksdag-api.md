@@ -226,7 +226,7 @@ Envelope (`@villkor` echoes the filters, `@antal` is the row count):
 }
 ```
 
-Without `gruppering` there is one row per member (349 for NU5 punkt 1, fetched with `sz=500`; whether `sz` caps this endpoint is **UNVERIFIED**):
+Without `gruppering` there is one row per member (349 for NU5 punkt 1, fetched with `sz=500`). **The endpoint caps at 500 rows**, and the `p` (page) and `avser` parameters are ignored, so a point with two votes (about 698 member rows for NU5 punkt 2) is cut off and cannot be read in full. Use `/votering/{votering_id}.json` below for per-member rows:
 
 ```text
 /voteringlista/?rm=2023%2F24&bet=NU5&punkt=1&utformat=json&sz=500
@@ -271,18 +271,26 @@ Each row is `{parti, Ja, Nej, Frånvarande, Avstår}` (strings, empty means 0). 
 }
 ```
 
+Per-member rows of a single vote come from `/votering/{votering_id}.json`, which is not capped:
+
+```text
+/votering/46B018B4-3F64-4613-883C-F160032658BE.json
+```
+
+It returns `{ votering: { dokument, dokbilaga, dokvotering: { votering: [...] } } }` with exactly the vote's own rows (349 for NU5 punkt 2, all `avser: "sakfrågan"`, about 285 KB). The rows have the same keys as the voteringlista member rows. The id must be the full id (a short prefix such as `46B018B4` returns an empty body with status 200). Resolving a point means taking the `votering_id` from its `utskottsforslag` and fetching this; `tools/lib/votes.ts` does so.
+
 Other `gruppering` values are **UNVERIFIED**; the envelope carries slots `@grupp1` to `@grupp8`.
 
 ### votering/{votering_id}
 
-`GET /votering/2C198CDF-3A9C-4318-A678-E6AFF5C2C68A` (XML, about 247 KB) or `.json` (about 285 KB). The JSON has `dokument` (the bet metadata, again with full `html`), `dokbilaga` and `dokvotering.votering[]` with the same per-member rows as `voteringlista` plus `valkretsnummer`, `källa` ("RIM-vot") and `datum`. Prefer `voteringlista` with `gruppering` for party totals: it is a few hundred bytes versus hundreds of KB.
+`GET /votering/2C198CDF-3A9C-4318-A678-E6AFF5C2C68A` (XML, about 247 KB) or `.json` (about 285 KB). The JSON has `dokument` (the bet metadata, again with full `html`), `dokbilaga` and `dokvotering.votering[]` with the same per-member rows as `voteringlista` plus `valkretsnummer`, `källa` ("RIM-vot") and `datum`. For a point with a single vote, `voteringlista` with `gruppering=parti` is a cheaper way to get party totals (a few hundred bytes versus hundreds of KB). For a point with two votes it mixes them, so use this endpoint and aggregate per party.
 
 Votes can also be listed as documents: `dokumentlista?doktyp=votering` returns items such as `HD19UU24p3 | votering | 2025/26 | UU24 | "Omröstning: betänkande 2025/26:UU24 ..."`. Details of these items beyond the list view are **UNVERIFIED**.
 
 ### Linking a vote to a promise's trail
 
 1. `dokumentstatus/{bet}.json` gives `dokutskottsforslag.utskottsforslag[].votering_id`. Compare `votering_id` values case-insensitively: they are lowercase in `dokumentstatus` and uppercase in `voteringlista`.
-2. `voteringlista?rm=...&bet=...&punkt=...&gruppering=parti` gives party totals for that point.
+2. `/votering/{votering_id}.json` for the chosen vote, aggregated per party (as `tools/lib/votes.ts` does). Only for a point with a single vote can `voteringlista?rm=...&bet=...&punkt=...&gruppering=parti` replace this; with two votes it mixes them.
 
 ## Rate limits, caching and etiquette
 
