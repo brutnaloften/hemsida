@@ -60,14 +60,16 @@ pnpm (pinned via `packageManager` field in package.json).
 
 ## Subagents
 
-- The main session orchestrates: it picks ready beads, claims them, and spawns the `bead-worker` agent (`.claude/agents/bead-worker.md`, which has `isolation: worktree`) for each. Workers don't claim — the orchestrator already did, which avoids races.
+- **`architect`** (Opus, `.claude/agents/architect.md`): breaks an epic down into child beads with dependencies, acceptance criteria and design notes. Read-only on code; it only writes beads. Run it on an epic before implementation starts.
+- **`bead-worker`** (Sonnet, `.claude/agents/bead-worker.md`, `isolation: worktree`): implements one claimed bead end to end and opens a PR.
+- The main session orchestrates: it picks ready beads, claims them, and spawns a `bead-worker` for each. Workers don't claim — the orchestrator already did, which avoids races.
 - Only run beads in parallel when they touch different files; otherwise run them in sequence.
 - Worktrees share the beads database with the main checkout (via the git common dir), so `bd` works unchanged inside them.
 - A fresh worktree has no `node_modules` or husky hooks: run `pnpm install` first.
 
 ## Worktrees
 
-- Manual worktrees (for working on several things at once) go in `.worktrees/<name>` at the repo root: `bd worktree create .worktrees/<name> --branch <branch>` or `git worktree add .worktrees/<name> -b <branch>`. Remove with `git worktree remove .worktrees/<name>` (`bd worktree remove` needs git ≥ 2.36 for `worktree list -z`).
+- Manual worktrees (for working on several things at once) go in `.worktrees/<name>` at the repo root: `bd worktree create .worktrees/<name> --branch <branch>` or `git worktree add .worktrees/<name> -b <branch>`. Remove with `bd worktree remove .worktrees/<name>` or `git worktree remove .worktrees/<name>`.
 - Claude Code subagent worktrees stay in Claude Code's default `.claude/worktrees/`, where it handles locking and cleanup itself.
 - Both directories are gitignored, which also keeps them out of oxfmt; TypeScript skips dot-directories.
 

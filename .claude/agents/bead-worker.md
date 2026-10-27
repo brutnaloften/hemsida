@@ -1,6 +1,7 @@
 ---
 name: bead-worker
 description: Implements one already-claimed beads issue end to end in an isolated worktree — branch, code, tests, quality gates, commit, push, PR. Pass the bead ID in the prompt.
+model: sonnet
 isolation: worktree
 ---
 
