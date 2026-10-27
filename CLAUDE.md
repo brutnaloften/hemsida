@@ -20,6 +20,7 @@ The roadmap lives in beads as epics with child tasks and dependencies. `bd list 
 - `pnpm fmt` — format all files with oxfmt
 - `pnpm fmt:check` — check formatting without writing (for CI)
 - `pnpm test` — run unit tests with vitest
+- `pnpm typecheck` — `astro sync && tsc --noEmit` for the site (CI also runs it in `tools/`)
 
 oxfmt runs on staged files in the pre-commit hook (lint-staged).
 
@@ -31,7 +32,7 @@ oxfmt runs on staged files in the pre-commit hook (lint-staged).
 
 **Data flow:** Political promises live as individual JSON files in `src/data/<term>/promises/`, e.g. `src/data/2022-2026/promises/` (one file per promise, e.g. `kd-miljardinvesteringar-infrastruktur.json`). These are loaded as an Astro content collection via `src/content.config.ts` (glob loader, Zod-validated schema). Pages query with `getCollection("promises")` and pass data as props to React components.
 
-**Data model v2 (in progress, epic `hemsida-bzj`):** data is grouped by term (`src/data/2022-2026/promises/`) with a `sources` collection for origin documents (`src/data/sources/`), evidence references inside each promise file, and one shared Zod schema imported by both site and tooling. The promise files are still v1 shape (`legacyPromiseSchema`) until `hemsida-bzj.5` migrates them.
+**Data model v2 (in progress, epic `hemsida-bzj`):** data is grouped by term (`src/data/2022-2026/promises/`) with a `sources` collection for origin documents (`src/data/sources/`), evidence references inside each promise file, and one shared Zod schema in `src/schema/promise.ts` (tested in `promise.test.ts`), imported by the site and re-exported to tooling via `tools/lib/schema.ts`. Data model decisions are in `docs/data-model.md`. The promise files are still v1 shape (`legacyPromiseSchema`) until `hemsida-bzj.5` migrates them.
 
 **Tooling:** `tools/` is a separate pnpm package (own `package.json`, run with `node --experimental-strip-types`, type-check with `pnpm typecheck` inside `tools/`). `tools/lib/` holds infrastructure kept from the retired news-discovery pipeline: `claude.ts` (`createClient`, `loggedParse`, `isTransientApiError`), `resume.ts` (resumable per-item runs that skip transient API errors), `pr.ts` (one PR per change, `execFileSync` for git) and `json.ts` (Zod-schema-as-single-source pattern, JSON I/O).
 
@@ -40,6 +41,8 @@ oxfmt runs on staged files in the pre-commit hook (lint-staged).
 **UI components:** `src/components/ui/` contains shadcn/ui-style primitives (Card, Badge, Input) using Tailwind CSS v4 with CSS-variable-based theming (`src/styles/globals.css`). Dark mode uses `prefers-color-scheme`.
 
 **Path aliases:** `@/*` maps to `./src/*` (configured in tsconfig.json).
+
+**CI:** `.github/workflows/ci.yml` runs build, typecheck, `fmt:check` and tests for the site, then typecheck for `tools/`. `deploy.yml` publishes to GitHub Pages on push to `main`.
 
 ## Package manager
 
