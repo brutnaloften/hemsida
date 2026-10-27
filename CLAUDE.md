@@ -49,8 +49,9 @@ pnpm (pinned via `packageManager` field in package.json).
 - **Work comes from beads.** Pick from `bd ready` and claim with `bd update <id> --claim` before starting. One bead = one branch = one PR. File follow-up work you discover as new beads (`--deps discovered-from:<id>`).
 - **Branches:** never commit to `main`. Name branches `<type>/<bead-id>-<slug>`, e.g. `feat/hemsida-bzj.2-shared-schema`.
 - **Commits:** Conventional Commits (`feat(scope): …`, `fix`, `chore`, `docs`, `refactor`, `test`, `ci`). The bead ID goes in the PR body, not in commit messages.
-- **PRs:** Claude owns PRs end to end — opens them, keeps CI green, self-reviews and fixes its own findings. The user does not review. PR body: bead ID, what changed, how it was verified.
-- **Merging:** do not merge to `main` unless the user has said to work independently on multiple tasks. In that mode, squash-merge once CI is green and self-review is clean, then move on to the next ready bead.
+- **PRs:** Claude owns PRs end to end — opens them, keeps CI green, and fixes review findings. The user does not review. PR body: bead ID, what changed, how it was verified.
+- **Merging:** do not merge to `main` unless the user has said to work independently on multiple tasks. In that mode, squash-merge once CI is green and the `code-reviewer` has approved, then move on to the next ready bead.
+- **Code review is mandatory before every merge.** Run the `code-reviewer` subagent on the PR; it posts `CODE REVIEW: APPROVED <sha>` or `NOT APPROVED` as a PR comment. Fix findings and re-review — any new push needs a fresh approval. A PreToolUse hook (`.claude/hooks/require-code-review.mjs`) blocks `gh pr merge` until the latest review approves the PR's head commit.
 - **Done = bead closed.** Close a bead when its PR is merged. If the PR is waiting on the user, leave the bead `in_progress` and record the PR link with `bd note`.
 - **Quality gates before opening a PR:** `pnpm build`, `pnpm fmt:check`, and tests once they exist.
 - **Tests:** prefer tests for new logic (schemas, tooling, data transforms). UI-only changes may rely on `pnpm build`.
@@ -62,7 +63,8 @@ pnpm (pinned via `packageManager` field in package.json).
 
 - **`architect`** (Opus, `.claude/agents/architect.md`): breaks an epic down into child beads with dependencies, acceptance criteria and design notes. Read-only on code; it only writes beads. Run it on an epic before implementation starts.
 - **`bead-worker`** (Sonnet, `.claude/agents/bead-worker.md`, `isolation: worktree`): implements one claimed bead end to end and opens a PR.
-- The main session orchestrates: it picks ready beads, claims them, and spawns a `bead-worker` for each. Workers don't claim — the orchestrator already did, which avoids races.
+- **`code-reviewer`** (Opus, `.claude/agents/code-reviewer.md`, `isolation: worktree`): reviews one PR — re-runs the gates, checks the diff against the bead, then code quality — and posts the verdict the merge hook checks. Read-only on code.
+- The main session orchestrates: it picks ready beads, claims them, and spawns a `bead-worker` for each, then a `code-reviewer` on each PR before merging. Workers don't claim — the orchestrator already did, which avoids races.
 - Only run beads in parallel when they touch different files; otherwise run them in sequence.
 - Worktrees share the beads database with the main checkout (via the git common dir), so `bd` works unchanged inside them.
 - A fresh worktree has no `node_modules` or husky hooks: run `pnpm install` first.
