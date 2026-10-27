@@ -6,6 +6,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Brutna Löften — a Swedish-language static site that tracks political promises. Built with Astro, deployed to GitHub Pages on push to `main`.
 
+**Direction (in transition):** promises are collected once per term from a fixed source (starting with Tidöavtalet, 2022–2026), then tracked against official Riksdag documents from data.riksdagen.se. Each promise gets an objective evidence timeline (dir, SOU, prop, bet/votering, SFS) plus a human-set verdict with reasoning. Data stays as files in git so every verdict change goes through a reviewable PR. The old news-discovery pipeline is being retired.
+
+## Roadmap
+
+The roadmap lives in beads as epics with child tasks and dependencies. `bd list --type epic` shows the epics, `bd ready` shows what can be started. Current order: cleanup → data model v2 → Tidö promises → Riksdag integration → website → 2026–2030 term → budget → later epics.
+
 ## Commands
 
 - `pnpm dev` — dev server at localhost:4321
@@ -14,7 +20,9 @@ Brutna Löften — a Swedish-language static site that tracks political promises
 - `pnpm fmt` — format all files with oxfmt
 - `pnpm fmt:check` — check formatting without writing (for CI)
 
-oxfmt runs automatically via a PostToolUse hook after every Edit/Write.
+oxfmt runs on staged files in the pre-commit hook (lint-staged).
+
+**Git hooks:** husky owns `core.hooksPath` (set by `pnpm install`). Each husky hook in `.husky/` also calls `bd hooks run <hook>`. Don't run `bd hooks install` — it repoints `core.hooksPath` and bypasses husky.
 
 ## Architecture
 
@@ -22,7 +30,9 @@ oxfmt runs automatically via a PostToolUse hook after every Edit/Write.
 
 **Data flow:** Political promises live as individual JSON files in `src/data/promises/` (one file per promise, e.g. `kd-miljardinvesteringar-infrastruktur.json`). These are loaded as an Astro content collection via `src/content.config.ts` (glob loader, Zod-validated schema). Pages query with `getCollection("promises")` and pass data as props to React components.
 
-**AI pipeline:** `pipeline/` contains a TypeScript pipeline that discovers political news, extracts promises, matches against existing data, evaluates status changes, and creates PRs. Run with `node --experimental-strip-types pipeline/discover.ts --dry-run`. Orchestrated via `.github/workflows/pipeline.yml` (manual trigger).
+**Data model v2 (planned, epic `hemsida-bzj`):** data grouped by term (`src/data/2022-2026/promises/`), a `sources` collection for origin documents, evidence references inside each promise file, and one shared Zod schema imported by both site and tooling. Until that lands, the layout above is current.
+
+**AI pipeline (being retired, `hemsida-jfh.2`):** `pipeline/` contains the old news-discovery pipeline (discover → extract → match → evaluate → create PR), run via `.github/workflows/pipeline.yml`. Don't extend it. Reusable parts to keep: `create_pr.ts` (one PR per change, `execFileSync` for git), the Zod-schema-as-single-source pattern in `schemas.ts`, and `loggedParse`/`createClient` in `log.ts`.
 
 **Search:** `src/pages/search.astro` hydrates `SearchPage.tsx` as a React island. It uses uFuzzy for client-side fuzzy search over all promise fields. `PromiseCard.tsx` renders individual results.
 
@@ -34,8 +44,29 @@ oxfmt runs automatically via a PostToolUse hook after every Edit/Write.
 
 pnpm (pinned via `packageManager` field in package.json).
 
+## Development workflow
+
+- **Work comes from beads.** Pick from `bd ready` and claim with `bd update <id> --claim` before starting. One bead = one branch = one PR. File follow-up work you discover as new beads (`--deps discovered-from:<id>`).
+- **Branches:** never commit to `main`. Name branches `<type>/<bead-id>-<slug>`, e.g. `feat/hemsida-bzj.2-shared-schema`.
+- **Commits:** Conventional Commits (`feat(scope): …`, `fix`, `chore`, `docs`, `refactor`, `test`, `ci`). The bead ID goes in the PR body, not in commit messages.
+- **PRs:** Claude owns PRs end to end — opens them, keeps CI green, self-reviews and fixes its own findings. The user does not review. PR body: bead ID, what changed, how it was verified.
+- **Merging:** do not merge to `main` unless the user has said to work independently on multiple tasks. In that mode, squash-merge once CI is green and self-review is clean, then move on to the next ready bead.
+- **Done = bead closed.** Close a bead when its PR is merged. If the PR is waiting on the user, leave the bead `in_progress` and record the PR link with `bd note`.
+- **Quality gates before opening a PR:** `pnpm build`, `pnpm fmt:check`, and tests once they exist.
+- **Tests:** prefer tests for new logic (schemas, tooling, data transforms). UI-only changes may rely on `pnpm build`.
+- **Data changes:** once seeding is done, every promise or verdict change gets its own PR. During initial seeding (e.g. the Tidöavtalet import) bulk PRs are fine.
+- **Language:** code, comments, commits, PRs and beads in English; everything shown on the site in Swedish.
+- **Authority:** Claude may commit, push branches, open/update/close PRs and close beads without asking. Never push to or force-push `main`; never merge outside independent mode.
+
+## Subagents
+
+- The main session orchestrates: it picks ready beads, claims them, and spawns the `bead-worker` agent (`.claude/agents/bead-worker.md`) with `isolation: "worktree"` for each. Workers don't claim — the orchestrator already did, which avoids races.
+- Only run beads in parallel when they touch different files; otherwise run them in sequence.
+- Worktrees share the beads database with the main checkout (via the git common dir), so `bd` works unchanged inside them.
+- A fresh worktree has no `node_modules` or husky hooks: run `pnpm install` first.
 
 <!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:1105d646 -->
+
 ## Beads Issue Tracker
 
 This project uses **bd (beads)** for issue tracking. Run `bd prime` to see full workflow context and commands.
@@ -73,6 +104,7 @@ This protocol applies when ending a Beads implementation workflow. It is subordi
 2. **Run quality gates** (if code changed) - Tests, linters, builds
 3. **Update issue status** - Close finished work, update in-progress items
 4. **Handle git/sync by active profile**:
+
    ```bash
    # Conservative/minimal/default: report status and proposed commands; wait for approval.
    git status
@@ -82,9 +114,11 @@ This protocol applies when ending a Beads implementation workflow. It is subordi
    git push
    git status
    ```
+
 5. **Hand off** - Summarize changes, validation, issue status, and any blocked sync/commit/push step
 
 **Critical rules:**
+
 - Explicit user or orchestrator instructions override this Beads block.
 - Do not commit or push without clear authority from the active profile or the current user request.
 - If a required sync or push is blocked, stop and report the exact command and error.
