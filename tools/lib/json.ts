@@ -12,8 +12,8 @@
  * array property (e.g. `{ candidates: [...] }`).
  */
 
-import { readFileSync, writeFileSync } from "node:fs";
-import type { z } from "zod/v4";
+import { readFileSync, writeFileSync } from 'node:fs';
+import type { z } from 'zod/v4';
 
 /**
  * Validate each item of an array loaded from disk. Invalid items are logged
@@ -36,13 +36,13 @@ export function validateArray<T>(schema: z.ZodType<T>, data: unknown[], label: s
 }
 
 export function formatIssues(error: z.ZodError): string {
-  return error.issues.map((e) => e.path.join(".") + ": " + e.message).join("; ");
+  return error.issues.map((e) => e.path.join('.') + ': ' + e.message).join('; ');
 }
 
 export function loadJson(path: string): unknown {
-  return JSON.parse(readFileSync(path, "utf-8"));
+  return JSON.parse(readFileSync(path, 'utf-8'));
 }
 
 export function writeJson(path: string, data: unknown): void {
-  writeFileSync(path, JSON.stringify(data, null, 2) + "\n");
+  writeFileSync(path, JSON.stringify(data, null, 2) + '\n');
 }

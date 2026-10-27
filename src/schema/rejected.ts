@@ -5,13 +5,13 @@
  * JSON array of (promise_id, dok_id) pairs that the matcher proposed and
  * review rejected. The matcher skips these pairs on later runs.
  */
-import { z } from "zod";
+import { z } from 'zod';
 
-const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "expected YYYY-MM-DD");
+const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'expected YYYY-MM-DD');
 
 export const rejectedCandidateSchema = z.object({
   /** Promise id (filename without `.json`). */
-  promise_id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "expected a lowercase slug"),
+  promise_id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'expected a lowercase slug'),
   /** Riksdag document ID, the same key evidence uses. */
   dok_id: z.string().min(1),
   /** Why the document was rejected. */
@@ -34,7 +34,7 @@ export const rejectedCandidatesFileSchema = z
       const key = rejectedKey(row.promise_id, row.dok_id);
       if (seen.has(key)) {
         ctx.addIssue({
-          code: "custom",
+          code: 'custom',
           path: [i],
           message: `duplicate pair (${row.promise_id}, ${row.dok_id})`,
         });

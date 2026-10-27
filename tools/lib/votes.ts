@@ -18,20 +18,20 @@
  * Pure logic: the Riksdag client is injected.
  */
 
-import type { z } from "zod";
-import { sameVoteId } from "./riksdag.ts";
-import type { PartyVotes, RiksdagClient, VoteTotals } from "./riksdag.ts";
-import { PARTIES } from "../../src/schema/promise.ts";
-import type { partySchema } from "../../src/schema/promise.ts";
+import type { z } from 'zod';
+import { sameVoteId } from './riksdag.ts';
+import type { PartyVotes, RiksdagClient, VoteTotals } from './riksdag.ts';
+import { PARTIES } from '../../src/schema/promise.ts';
+import type { partySchema } from '../../src/schema/promise.ts';
 
 export type Party = z.infer<typeof partySchema>;
-export type VoteChoice = "yes" | "no" | "abstain" | "absent";
+export type VoteChoice = 'yes' | 'no' | 'abstain' | 'absent';
 /** Shape of the schema's `votes` field. */
 export type PartyVoteMap = Partial<Record<Party, VoteChoice>>;
 
 export type VotesClient = Pick<
   RiksdagClient,
-  "listAllDocuments" | "getDocumentStatus" | "getPartyVotes" | "getVoteTotals"
+  'listAllDocuments' | 'getDocumentStatus' | 'getPartyVotes' | 'getVoteTotals'
 >;
 
 export interface BetRef {
@@ -54,7 +54,7 @@ export interface VoteCounts {
 
 export type PointVotesResult =
   | {
-      status: "ok";
+      status: 'ok';
       punkt: string;
       votingId: string;
       /** Ready for the schema's `votes` field. */
@@ -64,11 +64,11 @@ export type PointVotesResult =
       /** Vote totals over all members, for context. */
       totals: VoteCounts;
     }
-  | { status: "no-recorded-vote"; punkt: string; reason: string }
-  | { status: "ambiguous"; punkt: string; votingId: string; reason: string };
+  | { status: 'no-recorded-vote'; punkt: string; reason: string }
+  | { status: 'ambiguous'; punkt: string; votingId: string; reason: string };
 
 export interface BetNotFound {
-  status: "not-found";
+  status: 'not-found';
   reason: string;
 }
 
@@ -83,12 +83,12 @@ function isParty(value: string): value is Party {
  */
 export function partyChoice(row: PartyVotes): VoteChoice | undefined {
   const counts: Array<[VoteChoice, number]> = [
-    ["yes", row.Ja],
-    ["no", row.Nej],
-    ["abstain", row.Avstår],
+    ['yes', row.Ja],
+    ['no', row.Nej],
+    ['abstain', row.Avstår],
   ];
   const max = Math.max(...counts.map(([, n]) => n));
-  if (max === 0) return row.Frånvarande > 0 ? "absent" : undefined;
+  if (max === 0) return row.Frånvarande > 0 ? 'absent' : undefined;
   const top = counts.filter(([, n]) => n === max);
   return top.length === 1 ? top[0][0] : undefined;
 }
@@ -122,7 +122,7 @@ async function resolveDokId(
   ref: { rm: string; bet: string; dokId?: string },
 ): Promise<string | null> {
   if (ref.dokId) return ref.dokId;
-  for await (const doc of client.listAllDocuments({ doktyp: "bet", rm: ref.rm })) {
+  for await (const doc of client.listAllDocuments({ doktyp: 'bet', rm: ref.rm })) {
     if (doc.beteckning === ref.bet) return doc.dok_id;
   }
   return null;
@@ -132,20 +132,20 @@ async function resolvePoint(
   proposals: Array<{ punkt: string; votering_id: string }>,
   totals: VoteTotals[],
   ref: { rm: string; bet: string; punkt: string },
-  getPartyVotes: VotesClient["getPartyVotes"],
+  getPartyVotes: VotesClient['getPartyVotes'],
 ): Promise<PointVotesResult> {
   const { rm, bet, punkt } = ref;
   const proposal = proposals.find((p) => p.punkt === punkt);
   if (!proposal) {
-    return { status: "no-recorded-vote", punkt, reason: `no point ${punkt} in ${bet} ${rm}` };
+    return { status: 'no-recorded-vote', punkt, reason: `no point ${punkt} in ${bet} ${rm}` };
   }
   const votingId = proposal.votering_id;
-  if (votingId === "") {
-    return { status: "no-recorded-vote", punkt, reason: "decided without a recorded vote" };
+  if (votingId === '') {
+    return { status: 'no-recorded-vote', punkt, reason: 'decided without a recorded vote' };
   }
   const own = totals.find((t) => sameVoteId(t.votering_id, votingId));
   if (!own) {
-    return { status: "no-recorded-vote", punkt, reason: `vote ${votingId} has no roll-call data` };
+    return { status: 'no-recorded-vote', punkt, reason: `vote ${votingId} has no roll-call data` };
   }
   const rows = await getPartyVotes({ rm, bet, punkt });
   const sum = sumRows(rows);
@@ -156,14 +156,14 @@ async function resolvePoint(
     sum.absent === own.Frånvarande;
   if (!same) {
     return {
-      status: "ambiguous",
+      status: 'ambiguous',
       punkt,
       votingId,
       reason: `party rows for punkt ${punkt} do not match the totals of vote ${votingId}; the point has several votes`,
     };
   }
   const { votes, tied } = aggregateParties(rows);
-  return { status: "ok", punkt, votingId, votes, tied, totals: sum };
+  return { status: 'ok', punkt, votingId, votes, tied, totals: sum };
 }
 
 /** Party votes for one committee point of a betänkande. */
@@ -172,7 +172,7 @@ export async function getPointPartyVotes(
   ref: BetRef,
 ): Promise<PointVotesResult | BetNotFound> {
   const dokId = await resolveDokId(client, ref);
-  if (dokId === null) return { status: "not-found", reason: `no bet ${ref.bet} in ${ref.rm}` };
+  if (dokId === null) return { status: 'not-found', reason: `no bet ${ref.bet} in ${ref.rm}` };
   const { committeeProposals } = await client.getDocumentStatus(dokId);
   const proposal = committeeProposals.find((p) => p.punkt === ref.punkt);
   // Skip the vote requests when there is nothing to look up.
@@ -188,7 +188,7 @@ export async function getBetPartyVotes(
   ref: { rm: string; bet: string; dokId?: string },
 ): Promise<PointVotesResult[] | BetNotFound> {
   const dokId = await resolveDokId(client, ref);
-  if (dokId === null) return { status: "not-found", reason: `no bet ${ref.bet} in ${ref.rm}` };
+  if (dokId === null) return { status: 'not-found', reason: `no bet ${ref.bet} in ${ref.rm}` };
   const { committeeProposals } = await client.getDocumentStatus(dokId);
   const totals = committeeProposals.some((p) => p.votering_id)
     ? await client.getVoteTotals({ rm: ref.rm, bet: ref.bet })
