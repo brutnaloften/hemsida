@@ -13,31 +13,31 @@
     "typecheck": "astro sync && tsc --noEmit"
   },
   "dependencies": {
-    "@astrojs/react": "^5.0.0",
-    "@base-ui/react": "^1.3.0",
-    "@fontsource-variable/inter": "^5.2.8",
+    "@astrojs/react": "^7.1.1",
+    "@base-ui/react": "^1.9.0",
+    "@fontsource-variable/inter": "^5.3.0",
     "@leeoniya/ufuzzy": "^1.0.19",
-    "astro": "^6.0.4",
+    "astro": "^7.4.2",
     "lucide-react": "^0.511.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "shadcn": "^4.0.8",
-    "tailwind-merge": "^3.5.0",
-    "tailwind-variants": "^3.2.2",
-    "tailwindcss": "^4.2.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwind-merge": "^3.7.0",
+    "tailwind-variants": "^3.3.1",
+    "tailwindcss": "^4.3.3",
     "tailwindcss-animate": "^1.0.7",
     "tw-animate-css": "^1.4.0",
-    "zod": "^4.3.6"
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@beads/bd": "1.3.2",
-    "@tailwindcss/vite": "^4.2.1",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^26.6.5",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "oxfmt": "^0.40.0",
+    "shadcn": "^4.23.0",
     "typescript": "^5.9.3",
     "vitest": "^5.0.5"
   },
@@ -48,6 +48,9 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "@beads/bd"
-    ]
+    ],
+    "overrides": {
+      "tinypool": ">=2.1.2"
+    }
   }
 }
