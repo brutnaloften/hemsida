@@ -79,7 +79,8 @@ pnpm (pinned via `packageManager` field in package.json).
 - Manual worktrees (for working on several things at once) go in `.worktrees/<name>` at the repo root: `bd worktree create .worktrees/<name> --branch <branch>` or `git worktree add .worktrees/<name> -b <branch>`. Remove with `bd worktree remove .worktrees/<name>` or `git worktree remove .worktrees/<name>`.
 - Claude Code subagent worktrees stay in Claude Code's default `.claude/worktrees/`, where it handles locking and cleanup itself.
 - Both directories are gitignored, which also keeps them out of oxfmt; TypeScript skips dot-directories.
-  This project uses **bd** (beads) for issue tracking. Run `bd prime` for full workflow context.
+
+This project uses **bd** (beads) for issue tracking. Run `bd prime` for full workflow context.
 
 > **Architecture in one line:** Issues live in a local Dolt database
 > (`.beads/dolt/`); cross-machine sync uses `bd dolt push/pull` (a
