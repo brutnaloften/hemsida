@@ -10,7 +10,7 @@
  */
 
 import { readFileSync } from "node:fs";
-import type Anthropic from "@anthropic-ai/sdk";
+import Anthropic from "@anthropic-ai/sdk";
 import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 import { z } from "zod";
 import { loggedParse } from "./claude.ts";
@@ -192,15 +192,19 @@ export async function extractChunk(
   takenIds: Set<string>,
   verdictDate: string,
 ): Promise<CandidateEntry[]> {
-  const response = await loggedParse(
-    client,
-    `tidoavtalet ${chunk.key}`,
-    buildParams(pdfBase64, chunk),
-  );
-  if (response.stop_reason === "refusal") throw new Error(`Model refused chunk ${chunk.key}`);
-  if (response.stop_reason === "max_tokens") {
-    throw new Error(`Chunk ${chunk.key} hit max_tokens; use a smaller --pages-per-chunk`);
+  let response;
+  try {
+    response = await loggedParse(client, `tidoavtalet ${chunk.key}`, buildParams(pdfBase64, chunk));
+  } catch (err) {
+    // A response truncated at max_tokens leaves invalid JSON, so the SDK throws a
+    // parse error from finalMessage() before stop_reason can be inspected.
+    if (err instanceof Anthropic.APIError) throw err;
+    throw new Error(
+      `Chunk ${chunk.key} could not be parsed (often truncated at max_tokens); try a smaller --pages-per-chunk. Cause: ${err instanceof Error ? err.message : String(err)}`,
+      { cause: err },
+    );
   }
+  if (response.stop_reason === "refusal") throw new Error(`Model refused chunk ${chunk.key}`);
   const parsed = extractionSchema.parse(response.parsed_output);
   const entries: CandidateEntry[] = [];
   for (const raw of parsed.candidates) {
