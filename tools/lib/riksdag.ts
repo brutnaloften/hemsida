@@ -181,6 +181,22 @@ export const voteTotalsSchema = z.object({
 });
 export type VoteTotals = z.infer<typeof voteTotalsSchema>;
 
+/** One member's vote. `avser` is "sakfrågan" (the decision) or "motivfrågan" (the reasoning). */
+export const memberVoteSchema = z.object({
+  votering_id: str,
+  parti: str,
+  rost: str,
+  avser: str,
+});
+export type MemberVote = z.infer<typeof memberVoteSchema>;
+
+/** Largest page the voteringlista endpoint returns (verified with sz=500). */
+export const MEMBER_VOTES_PAGE_SIZE = 500;
+
+const voteringlistaMembersSchema = z.object({
+  voteringlista: z.object({ votering: many(memberVoteSchema) }),
+});
+
 const voteringlistaPartiSchema = z.object({
   voteringlista: z.object({ votering: many(partyVotesSchema) }),
 });
@@ -244,6 +260,12 @@ export interface RiksdagClient {
   getDocumentStatus(dokId: string): Promise<DocumentStatus>;
   /** Party totals for one point of a betänkande. */
   getPartyVotes(args: { rm: string; bet: string; punkt: string }): Promise<PartyVotes[]>;
+  /**
+   * Per-member rows for one point, in a single request (page size 500). A point
+   * can hold several votes (see `votering_id` and `avser`). Fewer than
+   * MEMBER_VOTES_PAGE_SIZE rows means the list is complete.
+   */
+  getMemberVotes(args: { rm: string; bet: string; punkt: string }): Promise<MemberVote[]>;
   /** One totals row per vote of a betänkande. */
   getVoteTotals(args: { rm: string; bet: string }): Promise<VoteTotals[]>;
 }
@@ -358,6 +380,13 @@ export function createRiksdagClient(options: RiksdagClientOptions = {}): Riksdag
       const q = new URLSearchParams({ rm, bet, punkt, gruppering: "parti", utformat: "json" });
       q.set("sz", String(MAX_PAGE_SIZE));
       const r = await get("/voteringlista/", q, voteringlistaPartiSchema);
+      return r.voteringlista.votering;
+    },
+
+    async getMemberVotes({ rm, bet, punkt }) {
+      const q = new URLSearchParams({ rm, bet, punkt, utformat: "json" });
+      q.set("sz", String(MEMBER_VOTES_PAGE_SIZE));
+      const r = await get("/voteringlista/", q, voteringlistaMembersSchema);
       return r.voteringlista.votering;
     },
 
