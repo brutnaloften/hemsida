@@ -15,7 +15,7 @@ Do not trust the implementer's claims ("build passes", "tested"). Verify by runn
 ```bash
 bd show <id>                      # description, acceptance criteria, notes
 gh pr view <pr> --json commits --jq '.commits[-1].oid'   # head SHA
-gh pr checkout <pr>
+gh pr checkout <pr> --detach         # the branch may be checked out in another worktree
 pnpm install
 pnpm build && pnpm fmt:check      # plus tests, if the repo has them
 ```
