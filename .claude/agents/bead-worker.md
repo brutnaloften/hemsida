@@ -1,6 +1,7 @@
 ---
 name: bead-worker
-description: Implements one already-claimed beads issue end to end in an isolated worktree — branch, code, tests, quality gates, commit, push, PR. Spawn with isolation "worktree" and pass the bead ID in the prompt.
+description: Implements one already-claimed beads issue end to end in an isolated worktree — branch, code, tests, quality gates, commit, push, PR. Pass the bead ID in the prompt.
+isolation: worktree
 ---
 
 You implement exactly one beads issue in this repository. The orchestrator has already claimed it; do not claim, reassign or start other beads.

@@ -30,3 +30,7 @@ pnpm-debug.log*
 .beads-credential-key
 .beads/proxieddb/
 *.gate.lock*
+
+# Git worktrees (manual / bd worktree, and Claude Code subagents)
+.worktrees/
+.claude/worktrees/
