@@ -37,6 +37,13 @@ function logError(label: string, err: unknown): void {
  * reporting. Errors are logged with their type/status, then re-thrown so
  * the caller can decide whether to skip the item or abort the run.
  */
+/** JSON.stringify replacer that hides base64 payloads (e.g. whole PDFs) in logged requests. */
+function redactBase64(key: string, value: unknown): unknown {
+  return key === "data" && typeof value === "string" && value.length > 200
+    ? `<${value.length} chars omitted>`
+    : value;
+}
+
 export async function loggedCreate(
   client: Anthropic,
   label: string,
@@ -44,7 +51,7 @@ export async function loggedCreate(
 ): Promise<Anthropic.Message> {
   console.error(`::group::Claude call — ${label}`);
   console.error("--- Request ---");
-  console.error(JSON.stringify(params, null, 2));
+  console.error(JSON.stringify(params, redactBase64, 2));
   try {
     const response = await client.messages.create(params);
     console.error("--- Response ---");
@@ -74,9 +81,10 @@ export async function loggedParse<Params extends Anthropic.MessageCreateParamsNo
 ) {
   console.error(`::group::Claude call — ${label}`);
   console.error("--- Request ---");
-  console.error(JSON.stringify(params, null, 2));
+  console.error(JSON.stringify(params, redactBase64, 2));
   try {
-    const response = await client.messages.parse(params);
+    // Streamed: long structured-output calls exceed the per-attempt timeout when non-streaming.
+    const response = await client.messages.stream(params).finalMessage();
     console.error("--- Response ---");
     console.error(JSON.stringify(response, null, 2));
     return response;
