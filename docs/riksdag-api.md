@@ -307,3 +307,17 @@ Votes can also be listed as documents: `dokumentlista?doktyp=votering` returns i
 - `status` strings vary by type (`Klar`, `Webbpublicering`, `planerat`, `Inkommen`, `Inte besvarad`); do not treat them as one lifecycle.
 - Treat numeric-looking fields as strings, handle `null` and `""`, normalise single-object versus array in nested lists, and treat a missing `dokument` key as an empty result.
 - Not explored: member and speech endpoints (`personlista`, `anforandelista`), bulk dumps, `sokdata` internals, and handling of `skr` beyond the `subtyp` observation.
+
+## Candidate search (per-promise document search)
+
+`tools/search-riksdag-candidates.ts` (logic in `tools/lib/riksdag-candidates.ts`) proposes Riksdag documents for each Tidö promise. Output is one file per promise, `src/data/<term>/riksdag-candidates/<promise-id>.json`, holding the queries used and up to 15 ranked documents (`dok_id`, `doktyp`, `rm`, `beteckning`, `datum`, `titel`, `organ`, `url`, `found_by`, `score`). It is data for the matcher only: it never touches promise evidence or verdicts. Pairs in `rejected-candidates.json` are dropped. Run `--dry-run` to print the planned queries, `--limit N` for the next N unattempted promises, `--promise <id>` to re-search one. Attempted promises are tracked in `tools/out/riksdag-candidates.<term>.processed` and raw responses are cached in `tools/out/riksdag-cache/` (both gitignored). Requests run sequentially, one per second.
+
+Strategy, from a smoke run on 10 promises (2026-10-28):
+
+- Window: `from`/`tom` covering the term (`2022-09-01` to `2026-09-30`) instead of `rm`, because `rm` has a different format per document type. Types: `dir`, `sou`, `ds`, `prop`, `bet`. Motions, questions and votes are left out (noise, and votes are reached through the `bet`).
+- One query per keyword (max 5), sorted by relevance. A keyword on its own is specific enough to find the topic. Multi-word keywords are quoted.
+- One query with all keywords together. Multi-word AND queries are narrow (43 hits for four keywords against 72 for `reservkraft` alone), so it works as a precision signal, not as the only query.
+- One `doktyp=bet&org=<committee>` query with all keywords, since the committee report is where the Riksdag decided on the topic.
+- Ranking: the number of distinct queries that returned a document, then newest first. A document found by several keywords or by the committee query is nearly always the relevant betänkande or proposition (for example the activity-requirement promise ranks `Aktivitetskrav för mottagare av försörjningsstöd`, both the proposition and the SoU report, first).
+- Weak spots: generic keywords (`investeringar`, `infrastruktur`, `väg`) return broad budget documents; promises about repealing or not doing something (`ökad anonymitet för poliser`) rank tangential documents because no document is titled after them; recurring documents such as `Riksdagens skrivelser till regeringen` and `Utgiftsområde` budget bets show up for many promises. The matcher is expected to discard these; better keywords on the promise file are the cheapest fix.
+- Cost: 4 to 7 requests per promise, so about 272 promises in roughly 25 minutes at one request per second.
