@@ -12,6 +12,11 @@ const counts = verdictCounts(promises);
 const total = promises.length;
 const assessed = assessedCount(promises);
 const pct = (n: number) => `${(n / total) * 100}%`;
+const segments = [
+  { cls: "bg-foreground/70", n: assessed, label: "Bedömda", show: true },
+  { cls: "bg-zinc-400 dark:bg-zinc-600", n: counts.not_assessable, label: "Ej bedömbara", show: counts.not_assessable > 0 },
+  { cls: "bg-muted", n: counts.unassessed, label: "Inte bedömda", show: true },
+];
 const legend = VERDICTS.filter((v) => counts[v] > 0 || v === "unassessed");
 ---
 
@@ -24,9 +29,7 @@ const legend = VERDICTS.filter((v) => counts[v] > 0 || v === "unassessed");
   role="img"
   aria-label={`${assessed} av ${total} löften är bedömda, ${counts.not_assessable} ej bedömbara, ${counts.unassessed} inte bedömda`}
 >
-  <div class="bg-foreground/70" style={`width:${pct(assessed)}`}></div>
-  <div class="bg-zinc-400 dark:bg-zinc-600" style={`width:${pct(counts.not_assessable)}`}></div>
-  <div class="bg-muted" style={`width:${pct(counts.unassessed)}`}></div>
+  {segments.map((seg) => <div class={seg.cls} style={`width:${pct(seg.n)}`} />)}
 </div>
 <ul class="mt-4 flex flex-wrap gap-2" aria-label="Förklaring">
   {
@@ -39,6 +42,15 @@ const legend = VERDICTS.filter((v) => counts[v] > 0 || v === "unassessed");
     ))
   }
 </ul>
-<p class="mt-2 text-xs text-muted-foreground">
-  Stapeln: mörk = bedömda, grå = ej bedömbara, ljus = inte bedömda.
-</p>
+<ul class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground" aria-label="Stapelns delar">
+  {
+    segments
+      .filter((seg) => seg.show)
+      .map((seg) => (
+        <li class="flex items-center gap-1.5">
+          <span class={`inline-block h-3 w-3 rounded-sm border border-muted-foreground/40 ${seg.cls}`} aria-hidden="true" />
+          {seg.label}
+        </li>
+      ))
+  }
+</ul>
