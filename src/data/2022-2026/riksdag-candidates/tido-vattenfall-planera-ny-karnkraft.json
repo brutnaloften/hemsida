@@ -1,0 +1,199 @@
+{
+  "promise_id": "tido-vattenfall-planera-ny-karnkraft",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:Vattenfall",
+    "keyword:ny kärnkraft",
+    "keyword:Ringhals",
+    "keyword:ägarstyrning",
+    "keyword:statsrådsgrupp",
+    "all-keywords",
+    "committee:NU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HEB347",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "47",
+      "datum": "2026-07-02",
+      "titel": "Rätt till ersättning vid avveckling av kärnkraft på grund av politiska beslut - Reaktorer som inte tagits i drift",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB347.html",
+      "found_by": ["keyword:ny kärnkraft", "keyword:Ringhals", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD03171",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "171",
+      "datum": "2026-03-10",
+      "titel": "En mer ändamålsenlig prövning av kärntekniska anläggningar",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03171.html",
+      "found_by": ["keyword:Vattenfall", "keyword:Ringhals", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD01NU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU13",
+      "datum": "2026-02-26",
+      "titel": "Energipolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
+      "found_by": ["keyword:ny kärnkraft", "keyword:Ringhals", "committee:NU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HC03150",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "150",
+      "datum": "2025-03-27",
+      "titel": "Finansiering och riskdelning vid investeringar i ny kärnkraft",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03150.html",
+      "found_by": ["keyword:Vattenfall", "keyword:ny kärnkraft", "keyword:Ringhals"],
+      "score": 3
+    },
+    {
+      "dok_id": "HB01NU5",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU5",
+      "datum": "2023-11-23",
+      "titel": "Ny kärnkraft i Sverige",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU5.html",
+      "found_by": ["keyword:ny kärnkraft", "keyword:Ringhals", "committee:NU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HA01NU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU17",
+      "datum": "2023-05-25",
+      "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
+      "found_by": ["keyword:statsrådsgrupp", "all-keywords", "committee:NU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HA01NU4",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU4",
+      "datum": "2023-02-01",
+      "titel": "2022 års redogörelse för företag med statligt ägande",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU4.html",
+      "found_by": ["keyword:statsrådsgrupp", "all-keywords", "committee:NU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HEB340",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "40",
+      "datum": "2026-06-18",
+      "titel": "Ny kärnkraft i Sverige– moderna regler för beredskap och skadeståndsansvar",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB340.html",
+      "found_by": ["keyword:Ringhals", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01NU24",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU24",
+      "datum": "2026-06-05",
+      "titel": "Ny kärnkraft i Sverige – fler möjliga platser vid kusten",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU24.html",
+      "found_by": ["keyword:ny kärnkraft", "committee:NU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01NU3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU3",
+      "datum": "2025-12-04",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
+      "found_by": ["keyword:ny kärnkraft", "committee:NU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB37",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "7",
+      "datum": "2025-01-16",
+      "titel": "Ny kärnkraft i Sverige",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB37.html",
+      "found_by": ["keyword:ny kärnkraft", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01NU4",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU4",
+      "datum": "2024-02-01",
+      "titel": "2023 års redogörelse för företag med statligt ägande",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU4.html",
+      "found_by": ["all-keywords", "committee:NU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03303",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "303",
+      "datum": "2026-07-14",
+      "titel": "En ny lag för ökad motståndskraft hos kritiska verksamhetsutövare",
+      "organ": "Försvarsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03303.html",
+      "found_by": ["keyword:Vattenfall"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03140",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "140",
+      "datum": "2026-06-30",
+      "titel": "2026 års redogörelse för företag med statligt ägande",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03140.html",
+      "found_by": ["keyword:Vattenfall"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB341",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "41",
+      "datum": "2026-06-17",
+      "titel": "Jämställdhet i en föränderlig tid - nuläge och vägar framåt, del 1",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB341.html",
+      "found_by": ["keyword:statsrådsgrupp"],
+      "score": 1
+    }
+  ]
+}

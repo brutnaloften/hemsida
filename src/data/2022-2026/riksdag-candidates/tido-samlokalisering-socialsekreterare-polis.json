@@ -1,0 +1,199 @@
+{
+  "promise_id": "tido-samlokalisering-socialsekreterare-polis",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:socialsekreterare",
+    "keyword:samlokalisering",
+    "keyword:polisstation",
+    "keyword:socialtjänst",
+    "keyword:unga",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01SoU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU20",
+      "datum": "2025-03-12",
+      "titel": "Socialtjänstens ansvar för våldsutsatta m.m.",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU20.html",
+      "found_by": ["keyword:socialtjänst", "all-keywords", "committee:SoU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HC0389",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "89",
+      "datum": "2025-01-28",
+      "titel": "En förebyggande socialtjänstlag – för ökade rättigheter, skyldigheter och möjligheter",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0389.html",
+      "found_by": ["keyword:socialsekreterare", "keyword:samlokalisering", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD03295",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "295",
+      "datum": "2026-06-30",
+      "titel": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03295.html",
+      "found_by": ["keyword:socialsekreterare", "keyword:socialtjänst"],
+      "score": 2
+    },
+    {
+      "dok_id": "HEB334",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "34",
+      "datum": "2026-06-12",
+      "titel": "Nya nätbrott och andra åtgärder för genomförandet av direktivet om bekämpning av våld mot kvinnor och våld i nära relationer",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB334.html",
+      "found_by": ["keyword:polisstation", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01SoU19",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU19",
+      "datum": "2026-03-26",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU19.html",
+      "found_by": ["keyword:socialtjänst", "keyword:unga"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB361",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "61",
+      "datum": "2025-06-02",
+      "titel": "Sveriges internationella adoptionsverksamhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB361.html",
+      "found_by": ["keyword:polisstation", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01JuU15",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU15",
+      "datum": "2025-04-14",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU15.html",
+      "found_by": ["keyword:polisstation", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01SoU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU17",
+      "datum": "2023-06-08",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
+      "found_by": ["all-keywords", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01JuU41",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU41",
+      "datum": "2026-08-12",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "found_by": ["keyword:unga"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SoU38",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU38",
+      "datum": "2026-08-07",
+      "titel": "För barns rättigheter och trygghet – en ny lag om omhändertagande för vård av barn och unga",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU38.html",
+      "found_by": ["keyword:unga"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SoU39",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU39",
+      "datum": "2026-08-07",
+      "titel": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU39.html",
+      "found_by": ["keyword:unga"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03294",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "294",
+      "datum": "2026-06-30",
+      "titel": "För barns rättigheter och trygghet – en ny lag om omhändertagande för vård av barn och unga",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03294.html",
+      "found_by": ["keyword:socialsekreterare"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03289",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "289",
+      "datum": "2026-06-11",
+      "titel": "Återkallelse av regeringens proposition 2025/26:246 Skärpta regler för unga lagöverträdare",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03289.html",
+      "found_by": ["keyword:unga"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB49",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "9",
+      "datum": "2026-05-06",
+      "titel": "En ny hemvist stärker sjö- och flygräddningstjänsten i Sverige",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB49.html",
+      "found_by": ["keyword:samlokalisering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU30",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU30",
+      "datum": "2026-05-05",
+      "titel": "Frihetsberövande påföljder för barn och unga",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
+      "found_by": ["keyword:unga"],
+      "score": 1
+    }
+  ]
+}

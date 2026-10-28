@@ -1,0 +1,199 @@
+{
+  "promise_id": "tido-omstallningsstod-efterfragade-utbildningar",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:omställningsstöd",
+    "keyword:kompetensbrist",
+    "keyword:utbildning",
+    "keyword:arbetsmarknadens parter",
+    "keyword:omställningsorganisation",
+    "all-keywords",
+    "committee:AU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HA01AU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU9",
+      "datum": "2023-04-20",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU9.html",
+      "found_by": ["keyword:omställningsorganisation", "all-keywords", "committee:AU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD03101",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "101",
+      "datum": "2026-04-13",
+      "titel": "Årsredovisning för staten 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03101.html",
+      "found_by": ["keyword:omställningsstöd", "keyword:omställningsorganisation"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB374",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "74",
+      "datum": "2025-06-11",
+      "titel": "Ny reglering för den arbetsmarknadspolitiska verksamheten ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB374.html",
+      "found_by": ["keyword:omställningsorganisation", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01AU7",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU7",
+      "datum": "2025-05-26",
+      "titel": "Arbetsrätt och arbetstid",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU7.html",
+      "found_by": ["keyword:arbetsmarknadens parter", "committee:AU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC03101",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "101",
+      "datum": "2025-04-15",
+      "titel": "Årsredovisning för staten 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03101.html",
+      "found_by": ["keyword:omställningsstöd", "keyword:omställningsorganisation"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB03168",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "168",
+      "datum": "2024-09-09",
+      "titel": "Ett effektivare omställningsstudiestöd",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03168.html",
+      "found_by": ["keyword:omställningsorganisation", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01AU2",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "AU2",
+      "datum": "2023-12-08",
+      "titel": "Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HB01AU2.html",
+      "found_by": ["all-keywords", "committee:AU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01AU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU5",
+      "datum": "2023-02-17",
+      "titel": "Arbetsrätt",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU5.html",
+      "found_by": ["all-keywords", "committee:AU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01AU2",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU2",
+      "datum": "2022-12-15",
+      "titel": "Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU2.html",
+      "found_by": ["all-keywords", "committee:AU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03288",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "288",
+      "datum": "2026-06-23",
+      "titel": "Riksrevisionens rapport om statens styrning av kommunernas myndighetsutövning som avser LSS",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03288.html",
+      "found_by": ["keyword:kompetensbrist"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03273",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "273",
+      "datum": "2026-06-16",
+      "titel": "Riksrevisionens rapport om infiltration i staten",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03273.html",
+      "found_by": ["keyword:omställningsorganisation"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03282",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "282",
+      "datum": "2026-06-09",
+      "titel": "Effektivare kontrollmöjligheter i systemen för rot, rut, grön teknik och personalliggare",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03282.html",
+      "found_by": ["keyword:omställningsstöd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01UbU19",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU19",
+      "datum": "2026-05-22",
+      "titel": "Riksrevisionens rapport om utbildning på vetenskaplig grund",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU19.html",
+      "found_by": ["keyword:utbildning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01UbU27",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU27",
+      "datum": "2026-05-22",
+      "titel": "Bättre förutsättningar för yrkesutbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU27.html",
+      "found_by": ["keyword:utbildning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01UbU17",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU17",
+      "datum": "2026-04-28",
+      "titel": "Framtidens yrkeshögskola",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU17.html",
+      "found_by": ["keyword:utbildning"],
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "promise_id": "tido-mer-lonsamt-fran-bidrag-till-arbete",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:arbetsutbud",
+    "keyword:bidragssystem",
+    "keyword:jobbskatteavdrag",
+    "keyword:arbetslinjen",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD03100",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "100",
+      "datum": "2026-04-13",
+      "titel": "2026 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03100.html",
+      "found_by": ["keyword:bidragssystem", "keyword:arbetslinjen", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD01SkU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU13",
+      "datum": "2026-03-19",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU13.html",
+      "found_by": ["keyword:jobbskatteavdrag", "all-keywords", "committee:SkU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["keyword:arbetsutbud", "keyword:jobbskatteavdrag", "keyword:arbetslinjen"],
+      "score": 3
+    },
+    {
+      "dok_id": "HC01SkU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU9",
+      "datum": "2025-03-20",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU9.html",
+      "found_by": ["keyword:jobbskatteavdrag", "all-keywords", "committee:SkU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HC01FiU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU1",
+      "datum": "2024-11-22",
+      "titel": "Statens budget 2025 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "found_by": ["keyword:jobbskatteavdrag", "keyword:arbetslinjen", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["keyword:arbetsutbud", "keyword:arbetslinjen", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HB01SkU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU11",
+      "datum": "2024-05-23",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU11.html",
+      "found_by": ["keyword:jobbskatteavdrag", "all-keywords", "committee:SkU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HB01FiU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU1",
+      "datum": "2023-11-24",
+      "titel": "Statens budget 2024 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU1.html",
+      "found_by": ["keyword:jobbskatteavdrag", "keyword:arbetslinjen", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD0332",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "32",
+      "datum": "2025-10-16",
+      "titel": "Sänkt skatt på arbetsinkomster, pension och sjuk- och aktivitetsersättning",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0332.html",
+      "found_by": ["keyword:arbetsutbud", "keyword:jobbskatteavdrag"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01FiU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU20",
+      "datum": "2025-06-12",
+      "titel": "Riktlinjer för den ekonomiska politiken och budgetpolitiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU20.html",
+      "found_by": ["keyword:arbetslinjen", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01FiU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU20",
+      "datum": "2024-06-13",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU20.html",
+      "found_by": ["keyword:arbetslinjen", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA03100",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "100",
+      "datum": "2023-04-17",
+      "titel": "2023 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03100.html",
+      "found_by": ["keyword:bidragssystem", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01FiU20",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU20",
+      "datum": "2026-06-04",
+      "titel": "Riktlinjer för den ekonomiska politiken och budgetpolitiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU20.html",
+      "found_by": ["keyword:bidragssystem"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD0398",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "98",
+      "datum": "2026-04-13",
+      "titel": "Redovisning av skatteutgifter 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0398.html",
+      "found_by": ["keyword:jobbskatteavdrag"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03207",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "207",
+      "datum": "2026-03-17",
+      "titel": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03207.html",
+      "found_by": ["keyword:arbetsutbud"],
+      "score": 1
+    }
+  ]
+}

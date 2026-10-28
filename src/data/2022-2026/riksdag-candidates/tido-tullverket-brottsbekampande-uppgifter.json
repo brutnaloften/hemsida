@@ -1,0 +1,199 @@
+{
+  "promise_id": "tido-tullverket-brottsbekampande-uppgifter",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:Tullverket",
+    "keyword:befogenheter",
+    "keyword:stöldgods",
+    "keyword:gränskontroll",
+    "keyword:brottsbekämpning",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01SkU21",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU21",
+      "datum": "2025-05-22",
+      "titel": "Skärpta åtgärder mot utförsel av stöldgods",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU21.html",
+      "found_by": ["keyword:Tullverket", "keyword:stöldgods", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HC01SkU2",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU2",
+      "datum": "2024-09-27",
+      "titel": "Ny tullbefogenhetslag",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU2.html",
+      "found_by": ["keyword:Tullverket", "keyword:befogenheter", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HA01JuU26",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU26",
+      "datum": "2023-06-13",
+      "titel": "Utökade polisiära befogenheter i gränsnära områden",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU26.html",
+      "found_by": ["keyword:befogenheter", "all-keywords", "committee:JuU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HA03109",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "109",
+      "datum": "2023-04-25",
+      "titel": "Utökade polisiära befogenheter i gränsnära områden",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03109.html",
+      "found_by": ["keyword:befogenheter", "keyword:gränskontroll", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HEB328",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "28",
+      "datum": "2026-04-28",
+      "titel": "Tillgång till passageraruppgifter  i brottsbekämpningen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB328.html",
+      "found_by": ["keyword:brottsbekämpning", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01KU5",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU5",
+      "datum": "2025-12-18",
+      "titel": "Uppföljning av riksdagens tillämpning av subsidiaritetsprincipen",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU5.html",
+      "found_by": ["keyword:befogenheter", "keyword:gränskontroll"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC03129",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "129",
+      "datum": "2025-03-18",
+      "titel": "Skärpta åtgärder mot utförsel av stöldgods",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03129.html",
+      "found_by": ["keyword:stöldgods", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03291",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "291",
+      "datum": "2026-07-03",
+      "titel": "Uppföljning av den nationella strategin mot våldsbejakande extremism och terrorism",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03291.html",
+      "found_by": ["keyword:gränskontroll"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SkU30",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU30",
+      "datum": "2026-06-11",
+      "titel": "Utökade befogenheter för Skatteverket inom folkbokföringsverksamheten",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU30.html",
+      "found_by": ["keyword:befogenheter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB128",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "28",
+      "datum": "2026-05-13",
+      "titel": "En modern och ändamålsenlig dataskyddsreglering för Skatteverkets och Tullverkets brottsbekämpande verksamheter samt ett stärkt skydd för personal vid Skatteverket, Tullverket och Kronofogdemyndigheten",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB128.html",
+      "found_by": ["keyword:Tullverket"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03261",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "261",
+      "datum": "2026-05-07",
+      "titel": "Utökade befogenheter för Skatteverket inom folkbokföringsverksamheten",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03261.html",
+      "found_by": ["keyword:befogenheter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU32",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU32",
+      "datum": "2026-05-07",
+      "titel": "Stärkt säkerhet vid allmänna sammankomster och offentliga tillställningar",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU32.html",
+      "found_by": ["keyword:befogenheter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03262",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "262",
+      "datum": "2026-04-30",
+      "titel": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03262.html",
+      "found_by": ["keyword:gränskontroll"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03218",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "218",
+      "datum": "2026-04-09",
+      "titel": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03218.html",
+      "found_by": ["keyword:stöldgods"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU16",
+      "datum": "2026-03-27",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU16.html",
+      "found_by": ["committee:JuU"],
+      "score": 1
+    }
+  ]
+}

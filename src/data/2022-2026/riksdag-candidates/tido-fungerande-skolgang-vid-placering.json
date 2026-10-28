@@ -1,0 +1,206 @@
+{
+  "promise_id": "tido-fungerande-skolgang-vid-placering",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:placerade barn",
+    "keyword:skolgång",
+    "keyword:familjehem",
+    "keyword:HVB",
+    "keyword:skolresultat",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD03294",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "294",
+      "datum": "2026-06-30",
+      "titel": "För barns rättigheter och trygghet – en ny lag om omhändertagande för vård av barn och unga",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03294.html",
+      "found_by": [
+        "keyword:placerade barn",
+        "keyword:skolgång",
+        "keyword:familjehem",
+        "keyword:HVB",
+        "keyword:skolresultat",
+        "all-keywords"
+      ],
+      "score": 6
+    },
+    {
+      "dok_id": "HD03295",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "295",
+      "datum": "2026-06-30",
+      "titel": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03295.html",
+      "found_by": ["keyword:skolgång", "keyword:familjehem", "keyword:HVB"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD03132",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "132",
+      "datum": "2026-02-19",
+      "titel": "Frihetsberövande påföljder för barn och unga",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03132.html",
+      "found_by": ["keyword:skolgång", "keyword:familjehem", "keyword:HVB"],
+      "score": 3
+    },
+    {
+      "dok_id": "HC01SoU19",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU19",
+      "datum": "2025-02-27",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU19.html",
+      "found_by": ["keyword:placerade barn", "all-keywords", "committee:SoU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HA01SoU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU17",
+      "datum": "2023-06-08",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
+      "found_by": ["keyword:placerade barn", "all-keywords", "committee:SoU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD01SoU38",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU38",
+      "datum": "2026-08-07",
+      "titel": "För barns rättigheter och trygghet – en ny lag om omhändertagande för vård av barn och unga",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU38.html",
+      "found_by": ["keyword:familjehem", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03293",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "293",
+      "datum": "2026-06-30",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03293.html",
+      "found_by": ["keyword:skolgång", "keyword:skolresultat"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03251",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "251",
+      "datum": "2026-04-30",
+      "titel": "En mer sammanhållen vård för personer med skadligt bruk eller beroende och andra psykiatriska tillstånd",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03251.html",
+      "found_by": ["keyword:familjehem", "keyword:HVB"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01SoU19",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU19",
+      "datum": "2026-03-26",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU19.html",
+      "found_by": ["all-keywords", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03194",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "194",
+      "datum": "2026-03-17",
+      "titel": "Nya läroplaner – för en stark kunskapsskola",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03194.html",
+      "found_by": ["keyword:skolgång", "keyword:skolresultat"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB384",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "84",
+      "datum": "2025-06-27",
+      "titel": "Hem för barn och unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB384.html",
+      "found_by": ["keyword:placerade barn", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HBB366",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "66",
+      "datum": "2023-11-07",
+      "titel": "För barn och unga i samhällsvård ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB366.html",
+      "found_by": ["keyword:placerade barn", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HBB366d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "66",
+      "datum": "2023-11-07",
+      "titel": "För barn och unga i samhällsvård, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB366d2.html",
+      "found_by": ["keyword:placerade barn", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HEB352d3",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "52",
+      "datum": "2026-08-18",
+      "titel": "En reform av den statliga barn- och ungdomsvården, del 3",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB352d3.html",
+      "found_by": ["keyword:placerade barn"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB352d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "52",
+      "datum": "2026-08-18",
+      "titel": "En reform av den statliga barn- och ungdomsvården, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB352d2.html",
+      "found_by": ["keyword:placerade barn"],
+      "score": 1
+    }
+  ]
+}
