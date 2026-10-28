@@ -1,0 +1,210 @@
+{
+  "promise_id": "tido-bvc-sprakscreening-integration-yngsta-barn",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:BVC",
+    "keyword:språkscreening",
+    "keyword:språkförskola",
+    "keyword:utsatta områden",
+    "keyword:nyanlända barn",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HEB337",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "37",
+      "datum": "2026-06-17",
+      "titel": "Förutsättningar för en likvärdig och språkutvecklande förskola",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB337.html",
+      "found_by": [
+        "keyword:BVC",
+        "keyword:språkscreening",
+        "keyword:språkförskola",
+        "keyword:nyanlända barn",
+        "all-keywords"
+      ],
+      "score": 5
+    },
+    {
+      "dok_id": "HEB417",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "17",
+      "datum": "2026-09-03",
+      "titel": "Identifiering av barn i behov av stöd för att utveckla sina färdigheter i svenska språket ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB417.html",
+      "found_by": [
+        "keyword:BVC",
+        "keyword:språkscreening",
+        "keyword:språkförskola",
+        "all-keywords"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HD01AU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU14",
+      "datum": "2026-06-04",
+      "titel": "Tidsbegränsat boende för vissa nyanlända invandrare – en ny lag om bosättning",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU14.html",
+      "found_by": ["keyword:utsatta områden", "keyword:nyanlända barn"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01SoU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU16",
+      "datum": "2026-04-01",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
+      "found_by": ["keyword:BVC", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01SoU19",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU19",
+      "datum": "2026-03-26",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU19.html",
+      "found_by": ["keyword:BVC", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01UbU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU9",
+      "datum": "2026-03-05",
+      "titel": "Lärare och elever",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU9.html",
+      "found_by": ["keyword:språkscreening", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD0367",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "67",
+      "datum": "2025-11-25",
+      "titel": "Riksrevisionens rapport om likvärdighet i förskolan – statens stöd, uppföljning och tillsyn",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0367.html",
+      "found_by": ["keyword:språkförskola", "keyword:nyanlända barn"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01UbU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU11",
+      "datum": "2025-05-27",
+      "titel": "Lärare och elever",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU11.html",
+      "found_by": ["keyword:språkscreening", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01SoU19",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU19",
+      "datum": "2025-02-27",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU19.html",
+      "found_by": ["keyword:BVC", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01UbU8",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU8",
+      "datum": "2025-01-29",
+      "titel": "Förskolan",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU8.html",
+      "found_by": ["keyword:språkförskola", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01AU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "AU1",
+      "datum": "2023-12-08",
+      "titel": "Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HB01AU1.html",
+      "found_by": ["keyword:språkscreening", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01SoU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU17",
+      "datum": "2023-06-08",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
+      "found_by": ["keyword:BVC", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01SoU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
+      "found_by": ["keyword:BVC", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HEB418",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "18",
+      "datum": "2026-09-03",
+      "titel": "Slutredovisning av tilläggsuppdraget om stärkt samverkan mellan socialtjänst och barn- och ungdomspsykiatri i brottsförebyggande syfte",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB418.html",
+      "found_by": ["keyword:BVC"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03215",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "215",
+      "datum": "2026-03-31",
+      "titel": "Tidsbegränsat boende för vissa nyanlända invandrare – en ny lag om bosättning",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03215.html",
+      "found_by": ["keyword:nyanlända barn"],
+      "score": 1
+    }
+  ]
+}

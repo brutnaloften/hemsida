@@ -1,0 +1,214 @@
+{
+  "promise_id": "tido-motverka-felaktig-lakemedelsforskrivning",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:läkemedelsförskrivning",
+    "keyword:recept",
+    "keyword:läkare",
+    "keyword:förskrivningsrätt",
+    "keyword:patientsäkerhet",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SoU22",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU22",
+      "datum": "2026-03-20",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU22.html",
+      "found_by": [
+        "keyword:läkemedelsförskrivning",
+        "keyword:förskrivningsrätt",
+        "all-keywords",
+        "committee:SoU"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HD01SoU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU14",
+      "datum": "2026-01-27",
+      "titel": "Läkemedel och tandvård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU14.html",
+      "found_by": [
+        "keyword:läkemedelsförskrivning",
+        "keyword:förskrivningsrätt",
+        "all-keywords",
+        "committee:SoU"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HB03122",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "122",
+      "datum": "2024-04-03",
+      "titel": "Riksrevisionens rapport om läkemedelsförskrivningen – statens styrning och tillsyn",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03122.html",
+      "found_by": [
+        "keyword:läkemedelsförskrivning",
+        "keyword:recept",
+        "keyword:förskrivningsrätt",
+        "all-keywords"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HD03271",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "271",
+      "datum": "2026-05-26",
+      "titel": "En förändrad abortlag",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03271.html",
+      "found_by": ["keyword:läkare", "keyword:förskrivningsrätt", "keyword:patientsäkerhet"],
+      "score": 3
+    },
+    {
+      "dok_id": "HEB319",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "19",
+      "datum": "2026-03-10",
+      "titel": "Stärkt tillsyn och uppföljning - förslag för att motverka oegentlig läkemedelsförskrivning ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB319.html",
+      "found_by": ["keyword:läkemedelsförskrivning", "keyword:förskrivningsrätt", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HC01SoU2",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU2",
+      "datum": "2024-10-04",
+      "titel": "Riksrevisionens rapport om läkemedelsförskrivningen – statens styrning och tillsyn",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU2.html",
+      "found_by": ["keyword:läkemedelsförskrivning", "all-keywords", "committee:SoU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD03247",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "247",
+      "datum": "2026-04-28",
+      "titel": "Receptfria läkemedel med krav på särskild rådgivning",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03247.html",
+      "found_by": ["keyword:recept", "keyword:patientsäkerhet"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["keyword:läkemedelsförskrivning", "keyword:patientsäkerhet"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD0319",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "19",
+      "datum": "2025-09-30",
+      "titel": "Nästa steg för en god och nära vård",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0319.html",
+      "found_by": ["keyword:läkare", "keyword:patientsäkerhet"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB363",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "63",
+      "datum": "2025-06-05",
+      "titel": "Stärkt patientsäkerhet genom rätt kompetens - utifrån hälso- och sjukvårdens och tandvårdens behov ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB363.html",
+      "found_by": ["keyword:patientsäkerhet", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01SoU22",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU22",
+      "datum": "2025-04-02",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU22.html",
+      "found_by": ["keyword:förskrivningsrätt", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01SoU14",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU14",
+      "datum": "2025-02-03",
+      "titel": "Läkemedel och tandvård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU14.html",
+      "found_by": ["keyword:förskrivningsrätt", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HCB182",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "82",
+      "datum": "2024-09-12",
+      "titel": "En översyn av vissa frågor om dokumentation, begränsningar och tillsyn avseende läkemedelsförskrivningar",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB182.html",
+      "found_by": ["keyword:läkemedelsförskrivning", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03294",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "294",
+      "datum": "2026-06-30",
+      "titel": "För barns rättigheter och trygghet – en ny lag om omhändertagande för vård av barn och unga",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03294.html",
+      "found_by": ["keyword:läkare"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03295",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "295",
+      "datum": "2026-06-30",
+      "titel": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03295.html",
+      "found_by": ["keyword:läkare"],
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "promise_id": "tido-nationell-vardformedling",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:vårdförmedling",
+    "keyword:vårdköer",
+    "keyword:ledig kapacitet",
+    "keyword:patientens val",
+    "keyword:sjukvård",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HB01SoU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU8",
+      "datum": "2024-04-18",
+      "titel": "Riksrevisionens rapport om statens arbete med väntetider i vården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU8.html",
+      "found_by": ["keyword:vårdköer", "keyword:ledig kapacitet", "all-keywords", "committee:SoU"],
+      "score": 4
+    },
+    {
+      "dok_id": "HA01SoU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU3",
+      "datum": "2022-11-17",
+      "titel": "Vissa frågor inom hälso- och sjukvårdsområdet",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU3.html",
+      "found_by": ["keyword:vårdköer", "keyword:ledig kapacitet", "all-keywords", "committee:SoU"],
+      "score": 4
+    },
+    {
+      "dok_id": "HEB338",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "38",
+      "datum": "2026-06-17",
+      "titel": "Behovsstyrd vård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB338.html",
+      "found_by": ["keyword:ledig kapacitet", "keyword:patientens val", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD01SoU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU16",
+      "datum": "2026-04-01",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
+      "found_by": ["keyword:vårdförmedling", "keyword:sjukvård", "committee:SoU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD01SoU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU1",
+      "datum": "2025-12-03",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
+      "found_by": ["keyword:vårdförmedling", "keyword:vårdköer", "keyword:sjukvård"],
+      "score": 3
+    },
+    {
+      "dok_id": "HC01SoU16",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU16",
+      "datum": "2025-06-04",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
+      "found_by": ["keyword:vårdförmedling", "all-keywords", "committee:SoU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HC01SoU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "found_by": ["keyword:sjukvård", "all-keywords", "committee:SoU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HA0327",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "27",
+      "datum": "2022-11-28",
+      "titel": "Vissa frågor inom hälso- och sjukvårdsområdet",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0327.html",
+      "found_by": ["keyword:vårdförmedling", "keyword:ledig kapacitet", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HEB138",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "38",
+      "datum": "2026-05-28",
+      "titel": "Effektiv nationell upphandling av specialiserad hälso- och sjukvård i privat regi",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB138.html",
+      "found_by": ["keyword:ledig kapacitet", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["keyword:vårdförmedling", "keyword:vårdköer"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["keyword:vårdförmedling", "keyword:vårdköer"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01SoU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU14",
+      "datum": "2024-06-03",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU14.html",
+      "found_by": ["all-keywords", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB0348",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "48",
+      "datum": "2023-12-05",
+      "titel": "Riksrevisionens rapport om statens arbete med väntetider i vården",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0348.html",
+      "found_by": ["keyword:vårdköer", "keyword:ledig kapacitet"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01SoU8",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU8",
+      "datum": "2023-02-16",
+      "titel": "Vissa frågor inom hälso- och sjukvårdsområdet",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU8.html",
+      "found_by": ["all-keywords", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01SoU28",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU28",
+      "datum": "2026-05-29",
+      "titel": "Riksrevisionens rapport om Inspektionen för vård och omsorgs hantering av enskildas klagomål på hälso- och sjukvården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU28.html",
+      "found_by": ["keyword:sjukvård"],
+      "score": 1
+    }
+  ]
+}

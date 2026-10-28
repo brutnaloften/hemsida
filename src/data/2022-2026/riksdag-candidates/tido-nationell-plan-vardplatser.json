@@ -1,0 +1,199 @@
+{
+  "promise_id": "tido-nationell-plan-vardplatser",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:vårdplatser",
+    "keyword:överbeläggningar",
+    "keyword:vårdskador",
+    "keyword:nationell plan",
+    "keyword:sjukhusvård",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SoU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU16",
+      "datum": "2026-04-01",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
+      "found_by": ["keyword:vårdplatser", "keyword:överbeläggningar", "committee:SoU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HA0327",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "27",
+      "datum": "2022-11-28",
+      "titel": "Vissa frågor inom hälso- och sjukvårdsområdet",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0327.html",
+      "found_by": ["keyword:vårdplatser", "keyword:överbeläggningar", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["keyword:vårdplatser", "keyword:nationell plan"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["keyword:överbeläggningar", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB362d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "62",
+      "datum": "2025-06-03",
+      "titel": "Ansvaret för hälso- och sjukvården, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB362d2.html",
+      "found_by": ["keyword:överbeläggningar", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC03149",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "149",
+      "datum": "2025-04-01",
+      "titel": "Riksrevisionens rapport om tillsynen över medicintekniska produkter",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03149.html",
+      "found_by": ["keyword:vårdskador", "keyword:sjukhusvård"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["keyword:överbeläggningar", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01SoU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU14",
+      "datum": "2024-06-03",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU14.html",
+      "found_by": ["all-keywords", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01SoU21",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU21",
+      "datum": "2024-05-07",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU21.html",
+      "found_by": ["all-keywords", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01SoU5",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU5",
+      "datum": "2023-11-27",
+      "titel": "Riksrevisionens rapport om lex Maria och lex Sarah",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU5.html",
+      "found_by": ["keyword:vårdskador", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB031d10",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d10.html",
+      "found_by": ["keyword:överbeläggningar", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01SoU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU12",
+      "datum": "2023-04-24",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
+      "found_by": ["all-keywords", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01SoU8",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU8",
+      "datum": "2023-02-16",
+      "titel": "Vissa frågor inom hälso- och sjukvårdsområdet",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU8.html",
+      "found_by": ["keyword:vårdplatser", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01SoU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU3",
+      "datum": "2022-11-17",
+      "titel": "Vissa frågor inom hälso- och sjukvårdsområdet",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU3.html",
+      "found_by": ["keyword:vårdplatser", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03297",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "297",
+      "datum": "2026-06-30",
+      "titel": "Ett nytt straffrättsligt påföljdssystem",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03297.html",
+      "found_by": ["keyword:överbeläggningar"],
+      "score": 1
+    }
+  ]
+}
