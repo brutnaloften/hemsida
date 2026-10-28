@@ -1,0 +1,37 @@
+---
+import { Badge } from "@/components/ui/badge";
+import { VERDICTS, VERDICT_LABELS } from "@/schema/promise";
+import { VERDICT_STYLES } from "@/lib/promise-labels";
+import { assessedCount, verdictCounts, type PartyPromise } from "@/lib/party-stats";
+
+interface Props {
+  promises: PartyPromise[];
+}
+const { promises } = Astro.props;
+const counts = verdictCounts(promises);
+const total = promises.length;
+const assessed = assessedCount(promises);
+---
+
+<p class="text-sm text-muted-foreground">
+  {total} löften, varav {assessed} bedömda. {counts.unassessed} löften är ännu inte bedömda av någon.
+</p>
+<div
+  class="mt-3 flex h-3 w-full overflow-hidden rounded-full border border-dashed border-muted-foreground/50"
+  role="img"
+  aria-label={`${counts.unassessed} av ${total} löften är inte bedömda`}
+>
+  <div class="bg-muted" style={`width:${(counts.unassessed / total) * 100}%`}></div>
+  <div class="bg-foreground/70" style={`width:${(assessed / total) * 100}%`}></div>
+</div>
+<ul class="mt-4 flex flex-wrap gap-2">
+  {
+    VERDICTS.filter((v) => counts[v] > 0 || v === "unassessed").map((v) => (
+      <li>
+        <Badge class={VERDICT_STYLES[v]}>
+          {VERDICT_LABELS[v]}: {counts[v]}
+        </Badge>
+      </li>
+    ))
+  }
+</ul>

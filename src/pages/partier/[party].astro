@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layouts/Layout.astro";
+import VerdictCounts from "@/components/VerdictCounts.astro";
+import PartyPromiseList from "@/components/PartyPromiseList";
+import { partyName } from "@/lib/promise-labels";
+import { areaCounts, partiesWithPromises, promisesForParty, sortByTitle } from "@/lib/party-stats";
+import { promisePath } from "@/lib/timeline";
+
+export const getStaticPaths = (async () => {
+  const all = (await getCollection("promises")).map((e) => e.data);
+  return partiesWithPromises(all).map((party) => ({
+    params: { party: party.toLowerCase() },
+    props: { party, promises: promisesForParty(all, party) },
+  }));
+}) satisfies GetStaticPaths;
+
+const { party, promises } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+const rows = sortByTitle(promises).map((p) => ({
+  id: p.id,
+  title: p.title,
+  area: p.area,
+  parties: p.parties,
+  verdict: { value: p.verdict.value },
+  href: `${base}${promisePath(p.id)}`,
+}));
+const areas = areaCounts(promises).map((a) => a.area);
+const name = partyName(party);
+---
+
+<Layout title={`${name} — Brutna Löften`} description={`Löften från ${name} och hur långt de bedömts.`}>
+  <div class="container mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12">
+    <a href={`${base}partier`} class="text-sm text-muted-foreground hover:text-foreground">&larr; Alla partier</a>
+    <h1 class="mt-4 text-2xl font-bold tracking-tight md:text-4xl">{name}</h1>
+    <section class="mt-6">
+      <h2 class="text-xl font-semibold">Bedömningar</h2>
+      <div class="mt-3"><VerdictCounts promises={rows} /></div>
+      <p class="mt-3 text-sm text-muted-foreground">
+        Löften som flera partier står bakom räknas för varje parti.
+      </p>
+    </section>
+    <section class="mt-10">
+      <h2 class="mb-3 text-xl font-semibold">Löften</h2>
+      <PartyPromiseList client:load promises={rows} areas={areas} />
+    </section>
+  </div>
+</Layout>
