@@ -1,15 +1,15 @@
 ---
-import { getCollection } from "astro:content";
-import type { GetStaticPaths } from "astro";
-import Layout from "../../layouts/Layout.astro";
-import VerdictCounts from "@/components/VerdictCounts.astro";
-import PartyPromiseList from "@/components/PartyPromiseList";
-import { partyName } from "@/lib/promise-labels";
-import { areaCounts, partiesWithPromises, promisesForParty, sortByTitle } from "@/lib/party-stats";
-import { promisePath } from "@/lib/timeline";
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import Layout from '../../layouts/Layout.astro';
+import VerdictCounts from '@/components/VerdictCounts.astro';
+import PartyPromiseList from '@/components/PartyPromiseList';
+import { partyName } from '@/lib/promise-labels';
+import { areaCounts, partiesWithPromises, promisesForParty, sortByTitle } from '@/lib/party-stats';
+import { promisePath } from '@/lib/timeline';
 
 export const getStaticPaths = (async () => {
-  const all = (await getCollection("promises")).map((e) => e.data);
+  const all = (await getCollection('promises')).map((e) => e.data);
   return partiesWithPromises(all).map((party) => ({
     params: { party: party.toLowerCase() },
     props: { party, promises: promisesForParty(all, party) },
@@ -17,7 +17,7 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { party, promises } = Astro.props;
-const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const rows = sortByTitle(promises).map((p) => ({
   id: p.id,
   title: p.title,

@@ -1,12 +1,12 @@
-import uFuzzy from "@leeoniya/ufuzzy";
-import { useMemo, useState } from "react";
-import { Input } from "@/components/ui/input";
-import type { Promise } from "@/data/index";
-import PromiseCard from "./PromiseCard";
-import FilterDropdown from "./FilterDropdown";
-import { useDebounce } from "@/hooks/useDebounce";
-import { VERDICTS, VERDICT_LABELS } from "@/schema/promise";
-import { TYPE_LABELS, partyName } from "@/lib/promise-labels";
+import uFuzzy from '@leeoniya/ufuzzy';
+import { useMemo, useState } from 'react';
+import { Input } from '@/components/ui/input';
+import type { Promise } from '@/data/index';
+import PromiseCard from './PromiseCard';
+import FilterDropdown from './FilterDropdown';
+import { useDebounce } from '@/hooks/useDebounce';
+import { VERDICTS, VERDICT_LABELS } from '@/schema/promise';
+import { TYPE_LABELS, partyName } from '@/lib/promise-labels';
 
 export default function SearchPage({ promises }: { promises: Promise[] }) {
   const { fuzzy, haystack } = useMemo(
@@ -16,21 +16,21 @@ export default function SearchPage({ promises }: { promises: Promise[] }) {
         [
           p.title,
           p.description,
-          p.parties.map((c) => `${c} ${partyName(c)}`).join(" "),
-          p.keywords.join(" "),
+          p.parties.map((c) => `${c} ${partyName(c)}`).join(' '),
+          p.keywords.join(' '),
           p.area,
-          p.committee ?? "",
+          p.committee ?? '',
           TYPE_LABELS[p.type],
           VERDICT_LABELS[p.verdict.value],
           p.verdict.reasoning,
           p.date,
-        ].join(" "),
+        ].join(' '),
       ),
     }),
     [],
   );
 
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState('');
   const query = useDebounce(input);
 
   const [selectedParties, setSelectedParties] = useState<Set<string>>(new Set());

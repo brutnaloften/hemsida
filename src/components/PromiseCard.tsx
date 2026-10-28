@@ -1,17 +1,17 @@
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import type { Promise } from "@/data/index";
-import { buttonVariants } from "./ui/button";
-import { VERDICT_LABELS, type RiksdagEvidence } from "@/schema/promise";
-import { sourceLinks } from "@/lib/source-link";
-import { promisePath } from "@/lib/timeline";
-import { EVIDENCE_KIND_LABELS, TYPE_LABELS, VERDICT_STYLES, partyName } from "@/lib/promise-labels";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import type { Promise } from '@/data/index';
+import { buttonVariants } from './ui/button';
+import { VERDICT_LABELS, type RiksdagEvidence } from '@/schema/promise';
+import { sourceLinks } from '@/lib/source-link';
+import { promisePath } from '@/lib/timeline';
+import { EVIDENCE_KIND_LABELS, TYPE_LABELS, VERDICT_STYLES, partyName } from '@/lib/promise-labels';
 
 export default function PromiseCard({ promise }: { promise: Promise }) {
   const { verdict } = promise;
   // Riksdag documents only: an agreement entry is not a pipeline stage. ISO dates sort lexicographically.
   const latest: RiksdagEvidence | undefined = promise.evidence
-    .filter((e): e is RiksdagEvidence => e.kind !== "agreement")
+    .filter((e): e is RiksdagEvidence => e.kind !== 'agreement')
     .sort((a, b) => b.date.localeCompare(a.date))[0];
   const links = sourceLinks({
     url: promise.sourceUrl,
@@ -43,7 +43,7 @@ export default function PromiseCard({ promise }: { promise: Promise }) {
       </CardHeader>
       <CardContent>
         <span className="text-muted-foreground">{promise.description}</span>
-        {verdict.reasoning.trim() !== "" && (
+        {verdict.reasoning.trim() !== '' && (
           <p className="mt-3 text-sm">
             <span className="font-medium">Motivering:</span> {verdict.reasoning}
           </p>
@@ -51,7 +51,7 @@ export default function PromiseCard({ promise }: { promise: Promise }) {
         <p className="mt-3 text-sm text-muted-foreground">
           {latest ? (
             <>
-              Senaste dokument ({latest.date}):{" "}
+              Senaste dokument ({latest.date}):{' '}
               <a
                 href={latest.url}
                 target="_blank"
@@ -59,11 +59,11 @@ export default function PromiseCard({ promise }: { promise: Promise }) {
                 className="underline underline-offset-2"
               >
                 {EVIDENCE_KIND_LABELS[latest.kind]} {latest.designation}
-              </a>{" "}
+              </a>{' '}
               &ndash; {latest.title}
             </>
           ) : (
-            "Inga riksdagsdokument kopplade till löftet ännu."
+            'Inga riksdagsdokument kopplade till löftet ännu.'
           )}
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
@@ -72,7 +72,7 @@ export default function PromiseCard({ promise }: { promise: Promise }) {
               href={links.original}
               target="_blank"
               rel="noopener noreferrer"
-              className={buttonVariants({ variant: "outline", size: "sm" })}
+              className={buttonVariants({ variant: 'outline', size: 'sm' })}
             >
               Källa
             </a>
@@ -81,7 +81,7 @@ export default function PromiseCard({ promise }: { promise: Promise }) {
             href={links.archive}
             target="_blank"
             rel="noopener noreferrer"
-            className={buttonVariants({ variant: "default", size: "sm" })}
+            className={buttonVariants({ variant: 'default', size: 'sm' })}
           >
             Arkiv
           </a>
