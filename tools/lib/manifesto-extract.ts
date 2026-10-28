@@ -11,6 +11,7 @@
 import { z } from 'zod';
 import { COMMITTEES, slugify } from './tido-extract.ts';
 import {
+  AGREEMENT_OUTCOMES,
   PROMISE_TYPES,
   promiseSchema,
   type PromiseRecord,
@@ -51,10 +52,10 @@ export const rawManifestoCandidateSchema = z.object({
 });
 export type RawManifestoCandidate = z.infer<typeof rawManifestoCandidateSchema>;
 
-/** Link proposal to Tidö promises, filled in by the linking step. `outcome` is validated elsewhere. */
+/** Link proposal to Tidö promises, filled in by the linking step. */
 export const candidateLinkSchema = z.object({
   promises: z.array(z.string()),
-  outcome: z.string(),
+  outcome: z.enum(AGREEMENT_OUTCOMES),
   note: z.string().nullable(),
   rationale: z.string(),
 });
@@ -224,6 +225,15 @@ export function validateCandidates(data: unknown, ctx: ValidationContext): Valid
       linked++;
       for (const id of link.promises) {
         if (!ctx.tidoIds.has(id)) errors.push(`${where}: linked Tidö promise "${id}" not found`);
+      }
+      if (new Set(link.promises).size !== link.promises.length) {
+        errors.push(`${where}: link.promises contains duplicates`);
+      }
+      if (link.outcome === 'not_addressed' && link.promises.length > 0) {
+        errors.push(`${where}: outcome not_addressed must have an empty promises list`);
+      }
+      if (link.outcome !== 'not_addressed' && link.promises.length === 0) {
+        errors.push(`${where}: outcome "${link.outcome}" needs at least one linked promise`);
       }
     }
   }

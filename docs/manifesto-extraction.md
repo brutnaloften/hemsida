@@ -11,7 +11,7 @@ How candidate promises are extracted from a party's election manifesto (valmanif
   `{ section, promise, link? }`.
   - `promise` is a complete, schema-valid promise (verdict `unassessed`, `evidence: []`). The id is `val<year>-<party>-<slug>`, roles come from the per-term table `TERM_ROLES`.
   - `section` is the manifesto's own heading. Review-only.
-  - `link` is filled by the later linking step: `{ promises: [tido ids], outcome: string, note: string | null, rationale }`. `outcome` is a plain string here; its allowed values are checked once the agreement schema exists (not in this tool yet). `rationale` is review-only.
+  - `link` is filled by the later linking step: `{ promises: [tido ids], outcome, note: string | null, rationale }`. `outcome` must be one of `AGREEMENT_OUTCOMES`; `not_addressed` is used exactly when `promises` is empty. `rationale` is review-only.
 
 ## Running an extraction (orchestrator)
 
@@ -31,7 +31,7 @@ How candidate promises are extracted from a party's election manifesto (valmanif
 
    Use `--pdf path` instead of `--pages-text` to run `pdftotext` (must be on PATH) from the validator. `--tido path` points at a Tidö candidates file; by default the Tidö ids come from `promises/tido-*.json`, falling back to `candidates/tidoavtalet.json`. `--data-dir` and `--term` override the data location (default `src/data`, `2022-2026`).
 
-4. The validator checks: every entry against the schema, source id and id prefix, unique ids that do not collide with existing promise files, every quote a verbatim substring of its cited page (whitespace, quote style, dashes and line-break hyphenation are normalised), and, when links are present, that every linked id is a Tidö promise. It exits non-zero on any error. Fix the file (or the quote) and rerun. Without page text the quote check is skipped with a warning.
+4. The validator checks: every entry against the schema, source id and id prefix, unique ids that do not collide with existing promise files, every quote a verbatim substring of its cited page (whitespace, quote style, dashes and line-break hyphenation are normalised), and, when links are present, that every linked id is a Tidö promise, that `link.outcome` is a valid outcome label, that `promises` has no duplicates, and that `not_addressed` holds iff `promises` is empty. It exits non-zero on any error. Fix the file (or the quote) and rerun. Without page text the quote check is skipped with a warning.
 
 ## Swapping the pilot party
 
@@ -39,4 +39,4 @@ Everything party-specific comes from the source file: add `src/data/sources/valm
 
 ## Not covered here
 
-- The `agreement` evidence kind and outcome-label validation (`hemsida-chv.4`, `hemsida-chv.7`).
+- Turning a link into `agreement` evidence on a promoted promise (`hemsida-chv.8`).
