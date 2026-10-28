@@ -109,12 +109,12 @@ const link = "underline underline-offset-2";
               isAgreement(e) ? (
                 <li>
                   <p class="text-sm text-muted-foreground">{e.date}</p>
-                  <p class="font-medium">
+                  <div class="font-medium">
                     {sources.get(e.source)?.title ?? e.source}{" "}
                     <Badge variant="outline" className={AGREEMENT_OUTCOME_STYLE} data-outcome={e.outcome}>
                       {AGREEMENT_OUTCOME_LABELS[e.outcome]}
                     </Badge>
-                  </p>
+                  </div>
                   {e.note ? (
                     <p class="text-sm">{e.note}</p>
                   ) : (
