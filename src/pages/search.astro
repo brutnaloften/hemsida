@@ -7,7 +7,7 @@ const sources = new Map((await getCollection("sources")).map((e) => [e.data.id, 
 const promises = (await getCollection("promises")).map((e) => {
   const source = sources.get(e.data.source.id);
   if (!source) throw new Error(`Unknown source "${e.data.source.id}" in ${e.data.id}`);
-  return { ...e.data, sourceUrl: source.url, sourceArchive: source.archive, date: source.date };
+  return { ...e.data, sourceUrl: source.url, sourceArchive: source.archive, sourceUrlDeadAsOf: source.urlDeadAsOf, date: source.date };
 });
 ---
 

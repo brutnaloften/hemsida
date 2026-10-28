@@ -278,6 +278,8 @@ export const sourceSchema = z.object({
   date: isoDate,
   url: z.url(),
   archive: z.url(),
+  /** Date the original `url` was found dead (404/gone); the archive copy is then preferred. */
+  urlDeadAsOf: isoDate.optional(),
 });
 
 export type PromiseRecord = z.infer<typeof promiseSchema>;
