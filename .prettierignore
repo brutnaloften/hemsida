@@ -1,2 +1,6 @@
 # Generated and rewritten by bd
 .beads/
+# Written by tools/ingest-budget.ts in its own compact format (macro.json is oxfmt-formatted and not listed)
+src/data/budget/meta.json
+src/data/budget/expenditure.json
+src/data/budget/revenue.json

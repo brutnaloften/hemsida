@@ -1,0 +1,67 @@
+{
+  "source": "https://www.statskontoret.se/analys-och-statistik/oppna-data/arsutfall/",
+  "licence": "CC0-1.0",
+  "fetched": "2026-10-28",
+  "unit": "mn kr",
+  "years": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+  "files": {
+    "expenditure": {
+      "url": "https://www.statskontoret.se/OpenDataArsUtfallPage/GetFile?documentType=Utgift&fileType=Zip&fileName=%C3%85rsutfall%20utgifter%201997%20-%202025,%20definitivt.zip&Year=2025&month=0&status=Definitiv",
+      "release": "Årsutfall utgifter 1997 - 2025, definitivt",
+      "status": "Definitiv",
+      "sha256": "c028c2272fdefdafdf86778552b80f9bf77f68e2b826cedf53e30a36355ad13a"
+    },
+    "revenue": {
+      "url": "https://www.statskontoret.se/OpenDataArsUtfallPage/GetFile?documentType=Inkomst&fileType=Zip&fileName=%C3%85rsutfall%20inkomster%202006%20-%202025,%20%20andra%20prelimin%C3%A4ra.zip&Year=2025&month=0&status=Prelimin%C3%A4r%202",
+      "release": "Årsutfall inkomster 2006 - 2025, andra preliminära",
+      "status": "Preliminär 2",
+      "sha256": "e0119431f2b3fdc8d995175421f0f7fbeed04ecc1e099fefec26245c47de0839"
+    }
+  },
+  "yearStatus": {
+    "expenditure": {
+      "2006": "final",
+      "2007": "final",
+      "2008": "final",
+      "2009": "final",
+      "2010": "final",
+      "2011": "final",
+      "2012": "final",
+      "2013": "final",
+      "2014": "final",
+      "2015": "final",
+      "2016": "final",
+      "2017": "final",
+      "2018": "final",
+      "2019": "final",
+      "2020": "final",
+      "2021": "final",
+      "2022": "final",
+      "2023": "final",
+      "2024": "final",
+      "2025": "final"
+    },
+    "revenue": {
+      "2006": "final",
+      "2007": "final",
+      "2008": "final",
+      "2009": "final",
+      "2010": "final",
+      "2011": "final",
+      "2012": "final",
+      "2013": "final",
+      "2014": "final",
+      "2015": "final",
+      "2016": "final",
+      "2017": "final",
+      "2018": "final",
+      "2019": "final",
+      "2020": "final",
+      "2021": "final",
+      "2022": "final",
+      "2023": "final",
+      "2024": "preliminary",
+      "2025": "preliminary"
+    }
+  }
+}
