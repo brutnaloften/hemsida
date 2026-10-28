@@ -1,0 +1,2942 @@
+{
+  "years": [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+  "typ": [
+    {
+      "kod": "1000",
+      "namn": "Statens skatteinkomster"
+    },
+    {
+      "kod": "2000",
+      "namn": "Inkomster av statens verksamhet"
+    },
+    {
+      "kod": "3000",
+      "namn": "Inkomster av försåld egendom"
+    },
+    {
+      "kod": "4000",
+      "namn": "Återbetalning av lån"
+    },
+    {
+      "kod": "5000",
+      "namn": "Kalkylmässiga inkomster"
+    },
+    {
+      "kod": "6000",
+      "namn": "Bidrag m.m. från EU"
+    },
+    {
+      "kod": "7000",
+      "namn": "Avräkningar m.m. i anslutning till skattesystemet"
+    },
+    {
+      "kod": "8000",
+      "namn": "Utgifter som redovisas som krediteringar på skattekonto"
+    }
+  ],
+  "huvudgrupp": [
+    {
+      "kod": "1100",
+      "typ": "1000",
+      "namn": "Direkta skatter på arbete"
+    },
+    {
+      "kod": "1200",
+      "typ": "1000",
+      "namn": "Indirekta skatter på arbete"
+    },
+    {
+      "kod": "1300",
+      "typ": "1000",
+      "namn": "Skatt på kapital"
+    },
+    {
+      "kod": "1400",
+      "typ": "1000",
+      "namn": "Skatt på konsumtion och insatsvaror"
+    },
+    {
+      "kod": "1500",
+      "typ": "1000",
+      "namn": "Skatt på import"
+    },
+    {
+      "kod": "1600",
+      "typ": "1000",
+      "namn": "Restförda och övriga skatter"
+    },
+    {
+      "kod": "1700",
+      "typ": "1000",
+      "namn": "Avgående poster, skatter till EU"
+    },
+    {
+      "kod": "1800",
+      "typ": "1000",
+      "namn": "Avgående poster, skatter till andra sektorer"
+    },
+    {
+      "kod": "1900",
+      "typ": "1000",
+      "namn": "Periodiseringar"
+    },
+    {
+      "kod": "2100",
+      "typ": "2000",
+      "namn": "Rörelseöverskott"
+    },
+    {
+      "kod": "2200",
+      "typ": "2000",
+      "namn": "Överskott av statens fastighetsförvaltning"
+    },
+    {
+      "kod": "2300",
+      "typ": "2000",
+      "namn": "Ränteinkomster"
+    },
+    {
+      "kod": "2400",
+      "typ": "2000",
+      "namn": "Inkomster av statens aktier"
+    },
+    {
+      "kod": "2500",
+      "typ": "2000",
+      "namn": "Offentligrättsliga avgifter"
+    },
+    {
+      "kod": "2600",
+      "typ": "2000",
+      "namn": "Försäljningsinkomster"
+    },
+    {
+      "kod": "2700",
+      "typ": "2000",
+      "namn": "Böter m.m."
+    },
+    {
+      "kod": "2800",
+      "typ": "2000",
+      "namn": "Övriga inkomster av statens verksamhet"
+    },
+    {
+      "kod": "3100",
+      "typ": "3000",
+      "namn": "Inkomster av försålda byggnader och maskiner"
+    },
+    {
+      "kod": "3200",
+      "typ": "3000",
+      "namn": "Övriga inkomster av markförsäljning"
+    },
+    {
+      "kod": "3300",
+      "typ": "3000",
+      "namn": "Övriga inkomster av försåld egendom"
+    },
+    {
+      "kod": "4100",
+      "typ": "4000",
+      "namn": "Återbetalning av näringslån"
+    },
+    {
+      "kod": "4300",
+      "typ": "4000",
+      "namn": "Återbetalning av studielån"
+    },
+    {
+      "kod": "4500",
+      "typ": "4000",
+      "namn": "Återbetalning av övriga lån"
+    },
+    {
+      "kod": "5100",
+      "typ": "5000",
+      "namn": "Avskrivningar och amorteringar"
+    },
+    {
+      "kod": "5200",
+      "typ": "5000",
+      "namn": "Statliga pensionsavgifter"
+    },
+    {
+      "kod": "6100",
+      "typ": "6000",
+      "namn": "Bidrag från EU:s jordbruksfonder"
+    },
+    {
+      "kod": "6200",
+      "typ": "6000",
+      "namn": "Bidrag från EU till fiskenäringen"
+    },
+    {
+      "kod": "6300",
+      "typ": "6000",
+      "namn": "Bidrag från Europeiska regionala utvecklingsfonden"
+    },
+    {
+      "kod": "6400",
+      "typ": "6000",
+      "namn": "Bidrag från Europeiska socialfonden"
+    },
+    {
+      "kod": "6500",
+      "typ": "6000",
+      "namn": "Bidrag till transeuropeiska nätverk"
+    },
+    {
+      "kod": "6600",
+      "typ": "6000",
+      "namn": "Bidrag från Europeiska faciliteten för återhämtning och resiliens"
+    },
+    {
+      "kod": "6900",
+      "typ": "6000",
+      "namn": "Övriga bidrag från EU"
+    },
+    {
+      "kod": "7100",
+      "typ": "7000",
+      "namn": "Tillkommande skatter"
+    },
+    {
+      "kod": "7200",
+      "typ": "7000",
+      "namn": "Avräkningar"
+    },
+    {
+      "kod": "8100",
+      "typ": "8000",
+      "namn": "Utgifter som redovisas som krediteringar på skattekonto"
+    }
+  ],
+  "titelgrupp": [
+    {
+      "kod": "1110",
+      "huvudgrupp": "1100",
+      "namn": "Inkomstskatter"
+    },
+    {
+      "kod": "1120",
+      "huvudgrupp": "1100",
+      "namn": "Allmän pensionsavgift"
+    },
+    {
+      "kod": "1130",
+      "huvudgrupp": "1100",
+      "namn": "Artistskatt"
+    },
+    {
+      "kod": "1140-1160",
+      "huvudgrupp": "1100",
+      "namn": "Skattereduktioner"
+    },
+    {
+      "kod": "1210",
+      "huvudgrupp": "1200",
+      "namn": "Arbetsgivaravgifter"
+    },
+    {
+      "kod": "1220",
+      "huvudgrupp": "1200",
+      "namn": "Särskild sjukförsäkringsavgift"
+    },
+    {
+      "kod": "1240",
+      "huvudgrupp": "1200",
+      "namn": "Egenavgifter"
+    },
+    {
+      "kod": "1260",
+      "huvudgrupp": "1200",
+      "namn": "Avgifter till premiepensionssystemet"
+    },
+    {
+      "kod": "1270",
+      "huvudgrupp": "1200",
+      "namn": "Särskild löneskatt"
+    },
+    {
+      "kod": "1280",
+      "huvudgrupp": "1200",
+      "namn": "Nedsättningar"
+    },
+    {
+      "kod": "1290",
+      "huvudgrupp": "1200",
+      "namn": "Tjänstegruppliv"
+    },
+    {
+      "kod": "1310",
+      "huvudgrupp": "1300",
+      "namn": "Skatt på kapital, hushåll"
+    },
+    {
+      "kod": "1320",
+      "huvudgrupp": "1300",
+      "namn": "Skatt på företagsvinster"
+    },
+    {
+      "kod": "1330",
+      "huvudgrupp": "1300",
+      "namn": "Kupongskatt"
+    },
+    {
+      "kod": "1340",
+      "huvudgrupp": "1300",
+      "namn": "Avkastningsskatt"
+    },
+    {
+      "kod": "1350",
+      "huvudgrupp": "1300",
+      "namn": "Fastighetskatt"
+    },
+    {
+      "kod": "1360",
+      "huvudgrupp": "1300",
+      "namn": "Stämpelskatt"
+    },
+    {
+      "kod": "1370",
+      "huvudgrupp": "1300",
+      "namn": "Förmögenhetsskatt"
+    },
+    {
+      "kod": "1380",
+      "huvudgrupp": "1300",
+      "namn": "Arvsskatt"
+    },
+    {
+      "kod": "1390",
+      "huvudgrupp": "1300",
+      "namn": "Riskskatt för kreditinstitut"
+    },
+    {
+      "kod": "1410",
+      "huvudgrupp": "1400",
+      "namn": "Mervärdesskatt"
+    },
+    {
+      "kod": "1420",
+      "huvudgrupp": "1400",
+      "namn": "Skatt på alkohol och tobak"
+    },
+    {
+      "kod": "1430",
+      "huvudgrupp": "1400",
+      "namn": "Energiskatt"
+    },
+    {
+      "kod": "1440",
+      "huvudgrupp": "1400",
+      "namn": "Koldioxidskatt"
+    },
+    {
+      "kod": "1450-1460",
+      "huvudgrupp": "1400",
+      "namn": "Övriga skatter på energi och miljö"
+    },
+    {
+      "kod": "1470",
+      "huvudgrupp": "1400",
+      "namn": "Skatt på vägtrafik"
+    },
+    {
+      "kod": "1480",
+      "huvudgrupp": "1400",
+      "namn": "Övriga skatter"
+    },
+    {
+      "kod": "1510",
+      "huvudgrupp": "1500",
+      "namn": "Skatt på import"
+    },
+    {
+      "kod": "1610",
+      "huvudgrupp": "1600",
+      "namn": "Restförda skatter"
+    },
+    {
+      "kod": "1620",
+      "huvudgrupp": "1600",
+      "namn": "Övriga skatter, hushåll"
+    },
+    {
+      "kod": "1630",
+      "huvudgrupp": "1600",
+      "namn": "Övriga skatter företag"
+    },
+    {
+      "kod": "1640",
+      "huvudgrupp": "1600",
+      "namn": "Intäkter som förs till fonder"
+    },
+    {
+      "kod": "1650",
+      "huvudgrupp": "1600",
+      "namn": "Avgifter till public service"
+    },
+    {
+      "kod": "1710",
+      "huvudgrupp": "1700",
+      "namn": "EU-skatter"
+    },
+    {
+      "kod": "1810",
+      "huvudgrupp": "1800",
+      "namn": "Skatter till andra sektorer"
+    },
+    {
+      "kod": "1910",
+      "huvudgrupp": "1900",
+      "namn": "Uppbördsförskjutningar"
+    },
+    {
+      "kod": "1920",
+      "huvudgrupp": "1900",
+      "namn": "Betalningsförskjutningar"
+    },
+    {
+      "kod": "1930",
+      "huvudgrupp": "1900",
+      "namn": "Anstånd"
+    },
+    {
+      "kod": "2110",
+      "huvudgrupp": "2100",
+      "namn": "Affärsverkens inlevererade överskott"
+    },
+    {
+      "kod": "2120",
+      "huvudgrupp": "2100",
+      "namn": "Övriga myndigheters inlevererade överskott"
+    },
+    {
+      "kod": "2130",
+      "huvudgrupp": "2100",
+      "namn": "Riksbankens inlevererade överskott"
+    },
+    {
+      "kod": "2210",
+      "huvudgrupp": "2200",
+      "namn": "Överskott av fastighetsförvaltning"
+    },
+    {
+      "kod": "2320",
+      "huvudgrupp": "2300",
+      "namn": "Räntor på näringslån"
+    },
+    {
+      "kod": "2340",
+      "huvudgrupp": "2300",
+      "namn": "Räntor på studielån"
+    },
+    {
+      "kod": "2390",
+      "huvudgrupp": "2300",
+      "namn": "Övriga ränteinkomster"
+    },
+    {
+      "kod": "2410",
+      "huvudgrupp": "2400",
+      "namn": "Inkomster av statens aktier"
+    },
+    {
+      "kod": "2510",
+      "huvudgrupp": "2500",
+      "namn": "Offentligrättsliga avgifter"
+    },
+    {
+      "kod": "2620",
+      "huvudgrupp": "2600",
+      "namn": "Försäljningsinkomster"
+    },
+    {
+      "kod": "2710",
+      "huvudgrupp": "2700",
+      "namn": "Böter m.m."
+    },
+    {
+      "kod": "2810",
+      "huvudgrupp": "2800",
+      "namn": "Övriga inkomster av statens verksamhet"
+    },
+    {
+      "kod": "3120",
+      "huvudgrupp": "3100",
+      "namn": "Statliga myndigheters inkomster av försålda byggnader och maskiner"
+    },
+    {
+      "kod": "3210",
+      "huvudgrupp": "3200",
+      "namn": "Övriga inkomster av markförsäljning"
+    },
+    {
+      "kod": "3310",
+      "huvudgrupp": "3300",
+      "namn": "Övriga inkomster av försåld egendom"
+    },
+    {
+      "kod": "4120",
+      "huvudgrupp": "4100",
+      "namn": "Återbetalning av jordbrukslån"
+    },
+    {
+      "kod": "4130",
+      "huvudgrupp": "4100",
+      "namn": "Återbetalning av övriga näringslån"
+    },
+    {
+      "kod": "4310",
+      "huvudgrupp": "4300",
+      "namn": "Återbetalning av studielån"
+    },
+    {
+      "kod": "4510",
+      "huvudgrupp": "4500",
+      "namn": "Återbetalning av övriga lån"
+    },
+    {
+      "kod": "5120",
+      "huvudgrupp": "5100",
+      "namn": "Avskrivningar på fastigheter"
+    },
+    {
+      "kod": "5130",
+      "huvudgrupp": "5100",
+      "namn": "Uppdragsmyndigheters komplementkostnader"
+    },
+    {
+      "kod": "5210",
+      "huvudgrupp": "5200",
+      "namn": "Statliga pensionsavgifter"
+    },
+    {
+      "kod": "6110",
+      "huvudgrupp": "6100",
+      "namn": "Bidrag från Europeiska garantifonden för jordbruket"
+    },
+    {
+      "kod": "6120",
+      "huvudgrupp": "6100",
+      "namn": "Bidrag från EU till landsbygdsutvecklingen"
+    },
+    {
+      "kod": "7110",
+      "huvudgrupp": "7100",
+      "namn": "EU-skatter"
+    },
+    {
+      "kod": "7120",
+      "huvudgrupp": "7100",
+      "namn": "Kommunala utjämningsavgifter"
+    },
+    {
+      "kod": "7210",
+      "huvudgrupp": "7200",
+      "namn": "Intäkter som förs till fonder"
+    },
+    {
+      "kod": "7220",
+      "huvudgrupp": "7200",
+      "namn": "Kompensation för mervärdesskatt"
+    },
+    {
+      "kod": "7230",
+      "huvudgrupp": "7200",
+      "namn": "Övriga avräkningar"
+    },
+    {
+      "kod": "8110",
+      "huvudgrupp": "8100",
+      "namn": "Utgifter som redovisas som krediteringar på skattekonto"
+    }
+  ],
+  "titlar": [
+    {
+      "kod": "1111",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1110",
+      "namn": "Statlig inkomstskatt",
+      "budget": [40612.2, 45753.3, 50644.8, 43804.3, 42088.6, 41812.5, 44441.9, 47477, 45459.1, 51380.9, 57362.2, 61098.8, 60806.7, 57075.4, 51458.6, 49800.4, 54616.7, 53723.9, 62767.5, 64165.4],
+      "utfall": [41004.6, 44799.2, 47953, 40087.1, 42475.1, 44648.6, 44153, 44812.4, 47435.9, 50805.9, 55600.2, 58494.8, 60381.3, 56266.9, 50347.2, 56316.2, 60692.8, 55928.8, 63890.9, 63958.9]
+    },
+    {
+      "kod": "1115",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1110",
+      "namn": "Kommunal inkomstskatt",
+      "budget": [452391.3, 473968, 507995, 525950.6, 513888.3, 528464.7, 552977.4, 584611.1, 602933.2, 637637.2, 668386.6, 706130.3, 726025, 752544, 771750.3, 783111.2, 825245.8, 881308.6, 920596.6, 969640.9],
+      "utfall": [454117.3, 479068.2, 503422.6, 511149.7, 522850.1, 538227.3, 560766.3, 581933.8, 602651.9, 635718.9, 669578.6, 700078, 726221.2, 748196.7, 766081.6, 806446.6, 852510.3, 893370.7, 928426.1, 959267.6]
+    },
+    {
+      "kod": "1121",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1120",
+      "namn": "Allmän pensionsavgift",
+      "budget": [76700.5, 79427.1, 85705.2, 89310.7, 87125.1, 93445.6, 96411.8, 101168.3, 104256.7, 109240.6, 113126.9, 119147.5, 123118.8, 128720.9, 132637.2, 133861.5, 142033.2, 151593.9, 159172.5, 166628.5],
+      "utfall": [77329.1, 81088.1, 85162.3, 86844.9, 89174.9, 93499.6, 97560.6, 100860.9, 103955.1, 108355.8, 113340.4, 118739.9, 123660.6, 128160.6, 131043.6, 137337.4, 145337.1, 152845.9, 158081.6, 163952.5]
+    },
+    {
+      "kod": "1131",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1130",
+      "namn": "Artistskatt",
+      "budget": [59, 73.1, 77.7, 90.3, 107.4, 131.3, 93.5, 85.1, 6.3, -0.5, null, 1.9, 0.3, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [73.7, 86.3, 103.4, 127.3, 89.5, 85.1, 6.3, -0.5, 0, 1.9, 0.3, 0, 0, 0, null, null, null, null, null, 0]
+    },
+    {
+      "kod": "1141",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Allmän pensionsavgift",
+      "budget": [-76700.5, -79427.1, -85705.2, -89271.7, -87100, -92650.6, -96379.1, -101029.4, -104725.8, -109208.5, -113091.7, -119114.6, -123087, -128739.4, -132606.1, -133831.6, -141969.5, -151560.9, -159139.9, -166602.8],
+      "utfall": [-77295.3, -81061, -85134.4, -86815.4, -89144.2, -93471.5, -97532, -100829.6, -103926.4, -108327.8, -113313.7, -118712, -123633, -128133, -131015.1, -137309.2, -145308.1, -152815.3, -158049.2, -163918.9]
+    },
+    {
+      "kod": "1142",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Fackföreningsavgift",
+      "budget": [-2201.3, 0, null, null, null, null, null, null, null, null, null, null, -1335, -667.5, 0, null, 0, null, null, null],
+      "utfall": [-2141.6, 0, null, null, null, null, null, null, null, null, null, null, -1267.1, -635.9, 0, 0, 0, 0, 0, 0]
+    },
+    {
+      "kod": "1143",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Arbetslöshetskassa",
+      "budget": [-1813.4, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -1636.8, -1647.4, -1603],
+      "utfall": [-1668, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -1577.9, -1645.7, -1620]
+    },
+    {
+      "kod": "1144",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Fastighetsavgift",
+      "budget": [-556.5, -699.5, null, null, -69, -108, -127.5, -176.4, -197.8, -199.1, -234.9, -240.7, -248.2, -248.6, -260, -347, -388.7, -437.1, -494.5, -505.9],
+      "utfall": [-277.4, -264.3, -68.4, -107.6, -128.7, -178.4, -199.1, -207.7, -235, -240.1, -248.6, -260, -347, -388.7, -437.1, -494.5, -519.1, -506.6, -569.6, -625.8]
+    },
+    {
+      "kod": "1145",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Förmögenhetsskatt",
+      "budget": [-61.4, -43.2, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-78.1, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1146",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Miljöåtgärder",
+      "budget": [-50, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-90.1, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1147",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Reparation och ombyggnad",
+      "budget": [0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1148",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Glesbygd",
+      "budget": [-300, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1149",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Bredband",
+      "budget": [-15, -40, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-20.8, -30.7, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1151",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Sjöinkomst",
+      "budget": [-77.6, -78.9, -77.6, -77.3, -77.6, -77.8, -72.4, -67.7, -62.7, -62.8, -53.8, -53.7, -54.4, -54.2, -52.7, -48.6, -50.7, -42.8, -39, -40],
+      "utfall": [-77.3, -77.6, -77.8, -77, -72.4, -67.6, -62.8, -56.4, -54.9, -54.1, -54.2, -52.7, -48.6, -50.7, -42.8, -39, -41.6, -40.6, -40.5, -40.5]
+    },
+    {
+      "kod": "1152",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Stormskador",
+      "budget": [-400, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-730.3, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1153",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Jobbskatteavdrag",
+      "budget": [null, -39923.2, -53874.5, -66500.9, -74061.5, -79312.2, -82106, -85540.2, -99245.7, -104013.5, -103669.2, -108615, -112556.6, -126887.2, -129893.4, -129602.4, -144255.7, -157321.8, -180377.4, -204420.9],
+      "utfall": [null, -40475.2, -53466.9, -65195.1, -76811.8, -80358.5, -83603.8, -85795.4, -100160.7, -104001, -105101.7, -109088, -113145, -126815, -128129, -131752.4, -146295.4, -158829.1, -181291.2, -201535]
+    },
+    {
+      "kod": "1154",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Avdrag för hushållsarbete",
+      "budget": [null, -650, -1300, -800, -4800, -10394.5, -11853, -16046.7, -16815.6, -18567.7, -15312.5, -13664, -15051.4, -15059.9, -16016.1, -17900.5, -19563, -20208.5, -19412.6, -19892.1],
+      "utfall": [null, -120.1, -442.4, -10354.6, -13733.2, -15043.7, -15871.9, -17532.7, -19168.2, -23694.9, -12687, -13834.5, -14214.2, -15251.3, -16766.4, -18911.7, -19075.8, -18035.5, -20155.9, -30435]
+    },
+    {
+      "kod": "1155",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Gåvor till ideell verksamhet",
+      "budget": [null, null, null, null, null, null, -260, -260, -270, null, null, 0, 0, 0, -250, -250, -112, -373.3, -404.5, -512.7],
+      "utfall": [null, null, null, null, null, null, -153.4, -210.1, -246.4, -283.8, 0, 0, 0, -38.5, -373.3, -404.5, -536.9, -512.5, -533.9, -533.9]
+    },
+    {
+      "kod": "1156",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Övriga skattereduktioner",
+      "budget": [null, null, null, null, null, null, null, null, null, -17, -17, -17, -490.8, -482.6, -1892.2, -5081.5, -5078.3, 0, 0, 0],
+      "utfall": [null, null, null, null, null, null, null, null, 0, -11.2, -19, -29.3, -526.2, -557.7, -1964.3, -5076.1, -6098.2, -14.8, 0, 0]
+    },
+    {
+      "kod": "1157",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Skattereduktion för boende i vissa områden",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -1350, -1340.9, -1349.8, -1353.4, -1366.2],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -1348.7, -1360, -1359.6, -1354.3, -1354.3]
+    },
+    {
+      "kod": "1158",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Skattereduktion sjuk- och aktivitetsersättning",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -420.4, -3044, -3926.9, -4015, -4148.2],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -428.8, -3199.9, -3559.1, -3977.3, -4140.6]
+    },
+    {
+      "kod": "1159",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Skattereduktion för förnybar el",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -55.8, -100.3, -179.2, -241, -710.9],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, -238.5, -400.8, -711.3, -927.8, -974.1]
+    },
+    {
+      "kod": "1161",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Skattereduktion för installation av grön teknik",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -198, -198, -2140, -4583.3, -4305.8],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -1103.3, -2709.5, -5388.6, -3384.2, -3602.1]
+    },
+    {
+      "kod": "1162",
+      "huvudgrupp": "1100",
+      "titelgrupp": "1140-1160",
+      "namn": "Skattereduktion för förvärvsinkomst",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -8529.5, -8649.8, -8629, -9164.6, -9374.9],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -8657.5, -8924.1, -9107.2, -9155, -9265.8]
+    },
+    {
+      "kod": "1211",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1210",
+      "namn": "Sjukförsäkringsavgift",
+      "budget": [94478.4, 101129.6, 96722.5, 80826.7, 69485.5, 62440.4, 64423.9, 67657.2, 60382.4, 65178.4, 69551.4, 82398.8, 76986.7, 65851, 67462.2, 65933.8, 70291.1, 77218.1, 81592.4, 85888.2],
+      "utfall": [94084.9, 100993, 92340.4, 78630.7, 71292.3, 63318.1, 65434, 58364.7, 60287.3, 64332.4, 78539.5, 74389.3, 77890.1, 66015.3, 62066, 68834.2, 73102.9, 79047.2, 82584, 85086.8]
+    },
+    {
+      "kod": "1212",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1210",
+      "namn": "Föräldraförsäkringsavgift",
+      "budget": [24100.3, 25397.9, 27599.1, 26540.1, 25692.1, 27364.3, 28233.6, 29650.6, 36090.5, 38957.1, 41571.1, 44172.6, 46015.1, 48229, 49409, 48289.5, 51480.8, 56554.1, 59757.8, 62904.1],
+      "utfall": [24229.8, 25356, 26331.3, 25764.2, 26354.6, 27729.4, 33877.9, 34854.5, 36037.6, 38447.8, 42107.9, 44447.9, 46554, 48326.2, 45448.8, 50411.3, 53537.2, 57888.8, 60476.7, 62311.2]
+    },
+    {
+      "kod": "1213",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1210",
+      "namn": "Arbetsskadeavgift",
+      "budget": [7435.8, 7832.4, 8530.6, 8203.3, 7941.2, 8458.1, 8726.7, 9164.7, 4164.3, 4495, 4796.7, 5096.8, 3539.6, 3709.9, 3800.7, 3714.6, 3960.1, 4350.3, 4596.8, 4838.8],
+      "utfall": [7498.7, 7844.4, 8138.9, 7963.5, 8146, 8571, 3914.1, 4022.5, 4151.4, 4430.6, 4856.3, 3422, 3584.8, 3717.7, 3496, 3877.7, 4118.2, 4452.9, 4652, 4793.1]
+    },
+    {
+      "kod": "1214",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1210",
+      "namn": "Ålderspensionsavgift",
+      "budget": [111678.5, 118173.7, 128980.1, 134088.7, 128430.3, 136881.1, 142980.4, 150201.2, 154411.3, 162101.5, 168854.5, 180452.7, 186096.1, 194850.7, 200593, 199841.4, 214450.4, 230093.9, 241806.6, 253666.4],
+      "utfall": [112631.6, 120881.5, 127872.7, 128750.8, 132234, 140075.7, 145215.8, 149659.6, 154990.4, 161913.3, 170026.4, 178188.5, 186679.7, 194371, 196427.9, 207883, 221389.1, 233031.6, 242023.7, 249601.3]
+    },
+    {
+      "kod": "1215",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1210",
+      "namn": "Efterlevandepensionsavgift",
+      "budget": [18589.5, 19580.9, 21326.6, 20508.3, 19853, 14552.8, 15015.1, 15768.7, 16240.7, 17530.7, 18707, 19877.7, 12388.7, 11129.8, 11402.1, 11143.7, 11880.2, 13050.9, 13790.3, 14516.3],
+      "utfall": [18745.8, 19610.6, 20351.4, 19904.9, 20362.3, 14771.4, 15250.3, 15692.8, 16216.1, 17305.1, 18954.1, 11983.4, 12534.4, 11159.1, 10492.9, 11636.4, 12358.5, 13362.6, 13961.1, 14383.5]
+    },
+    {
+      "kod": "1216",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1210",
+      "namn": "Arbetsmarknadsavgift",
+      "budget": [42583.1, 43725, 13429.2, 28759.5, 53787, 35672, 36795, 38650.3, 39820.1, 43027.9, 45938.8, 44234.7, 46115, 48367.2, 49560.5, 48445.6, 51662.4, 56781.3, 60021.9, 63198.9],
+      "utfall": [44473, 48471.2, 29012.2, 28324.8, 55443.3, 36752.1, 37918.5, 39006.7, 39365.6, 37925.9, 41631.8, 43923.9, 45971.6, 47681.6, 44078.3, 48300.5, 51320.1, 55503.1, 57851.3, 59823.6]
+    },
+    {
+      "kod": "1217",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1210",
+      "namn": "Allmän löneavgift",
+      "budget": [48982.3, 50680, 93962.5, 90477.7, 70419.8, 114805.7, 118452.7, 124397.6, 137143.9, 134037.9, 157970, 163948.5, 189723.9, 215546.5, 220820.1, 215817, 230212.6, 252753.3, 267071.3, 281132.8],
+      "utfall": [48342.1, 51207.4, 88982.2, 87177.6, 71830.7, 115399.8, 119393.1, 131670.3, 136710.7, 149989.2, 156197, 183128.3, 191778.2, 215328.2, 202490.1, 224620.7, 238598.7, 257945.9, 269442.1, 277536]
+    },
+    {
+      "kod": "1218",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1210",
+      "namn": "Ofördelade avgifter",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [-27, 144.5, 612.9, -859.9, 471.8, -141.3, 419.8, -475.2, 235.8, 160.1, -348.2, -131.3, 160.3, 12.8, -460.1, 191.4, -544.6, -166.9, -130.6, 2512.4]
+    },
+    {
+      "kod": "1219",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1210",
+      "namn": "Nedsatta avgifter",
+      "budget": [6077.6, 7530.9, 17055.3, 20562.5, 16408.4, 16907.5, 21059.1, 22164.6, 22219.2, 13014, 4979.6, 1699.5, 3913.6, 3493, 5343.8, 12482.2, 16745.5, 6690.4, 3747.7, 4986.7],
+      "utfall": [5695.1, 7619.8, 10426.6, 16789.4, 17728, 20077, 21023.9, 21518.2, 23103, 17109.2, 3726.4, 1188.1, 1363.4, 1944.3, 30813, 13584, 15569.9, 6559.7, 3599.3, 3682.8]
+    },
+    {
+      "kod": "1221",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1220",
+      "namn": "Särskild sjukförsäkringsavgift",
+      "budget": [2479.4, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [1373.8, -13.8, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1241",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1240",
+      "namn": "Sjukförsäkringsavgift",
+      "budget": [2848.5, 3153.8, 3110.6, 2648.8, 2364.9, 1320.6, 1045.5, 1385.3, 1267.9, -27.5, 2.4, 268.4, 260.6, 73.3, 406.6, 436.7, 541.9, 139, 55.6, 136],
+      "utfall": [3205.7, 3451.6, 2910.1, 2618.8, 2081.9, 840.3, 751.3, 550.3, 290.1, 256.2, 325.6, 273, 290.9, 151.7, 59.4, 184.5, 206, 216, 214.6, 136.3]
+    },
+    {
+      "kod": "1242",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1240",
+      "namn": "Föräldraförsäkringsavgift",
+      "budget": [725.5, 798.7, 942.7, 911.2, 849.6, 921.7, 958.6, 979.2, 1157.1, 1149.7, 1106.5, 1116.8, 642.3, 791.1, 661.9, 723.3, 912.7, 581.8, 622.2, 627.8],
+      "utfall": [801.8, 857.3, 864.6, 833.9, 888.1, 903.5, 1007.8, 960.4, 597.4, 602.8, 662.5, 624.9, 636.1, 518, 279.2, 568, 605, 600.4, 602.1, 576.3]
+    },
+    {
+      "kod": "1243",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1240",
+      "namn": "Arbetsskadeavgift",
+      "budget": [224.2, 247.1, 292, 281, 263, 284.6, 296.2, 302.6, 133.3, 132.4, 127.5, 128.7, 83.3, 89.9, 88.9, 88.7, 84.5, 55.8, 59.2, 58.6],
+      "utfall": [247.6, 264.4, 267.1, 257.6, 274.8, 279.5, 115.6, 113.2, 103.8, 84.4, 112.6, 58.4, 59.2, 50.5, 28.8, 53.9, 56.5, 55.6, 55.5, 35.1]
+    },
+    {
+      "kod": "1244",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1240",
+      "namn": "Ålderspensionsavgift, netto",
+      "budget": [3388.8, 3766, 4479.6, 4455.9, 4251.8, 4613, 5004.4, 5173.4, 5265.2, 5302, 5177.1, 5204.7, 4979.3, 5071, 4927.6, 5165.5, 5096, 4997.2, 4637, 4644],
+      "utfall": [3774.4, 4099.7, 4331.1, 4195.6, 4553.6, 4678, 4447.9, 4438.6, 4515.9, 4606.9, 4414.7, 4525, 4504.9, 4301.3, 4580.4, 4505.9, 4617.8, 4462, 4402.1, 4644.4]
+    },
+    {
+      "kod": "1245",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1240",
+      "namn": "Efterlevandepensionsavgift",
+      "budget": [559.9, 616.9, 728.8, 704.1, 656.3, 712.6, 509.4, 520.3, 520.4, 517.1, 497.7, 502.5, 291.7, 314.8, 266.8, 266.4, 253.7, 173.7, 184, 181.4],
+      "utfall": [618.9, 661.7, 668, 643.3, 686.8, 481.6, 452.5, 441.5, 443.2, 443.2, 443.5, 256.2, 255.7, 157.6, 90.8, 167.5, 175.1, 172.3, 171.7, 219.9]
+    },
+    {
+      "kod": "1246",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1240",
+      "namn": "Arbetsmarknadsavgift",
+      "budget": [629.8, 693.4, 223.7, 207.1, 792.8, 532.5, -220, -88.6, -1228.2, -68.3, 0, 0, 41.7, 45, 44.4, 44.3, 42.2, 3, 1.2, 1.7],
+      "utfall": [696, 743.7, 197.6, 191.7, 218.5, 13.6, 1.9, 6.9, 6.4, -1, 0.7, 1.2, 1.4, 1.2, 0.1, 1.4, 1.4, 1.4, 1.3, 0]
+    },
+    {
+      "kod": "1247",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1240",
+      "namn": "Allmän löneavgift",
+      "budget": [1510.4, 1662.4, 3191.3, 3106.8, 2296.8, 2455.5, 4022.1, 4108.7, 4397.4, 4340.6, 3959.2, 3911.7, 4347.3, 4417.5, 4238.3, 4544.3, 4783, 4866.7, 4286.6, 4267.2],
+      "utfall": [1602.2, 1715.8, 2859.7, 2832.1, 2375.8, 3709.7, 3531.2, 3660.7, 3673.2, 3849.7, 3594.4, 4085.1, 4070.8, 4136, 2564.3, 4278.5, 4386, 4294.9, 4224.4, 4336.7]
+    },
+    {
+      "kod": "1248",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1240",
+      "namn": "Ofördelade avgifter",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, 0, null, null, null, null, 0]
+    },
+    {
+      "kod": "1249",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1240",
+      "namn": "Nedsatta avgifter",
+      "budget": [null, null, null, null, null, 1653.8, 1782.4, 1219.9, 2651.5, 2350.9, 2753.5, 2126, 2163.1, 2323.3, 2131.2, 2240.2, 2202.9, 1847.8, 1966.2, 1814],
+      "utfall": [null, null, null, null, 1206.7, 1482.3, 1413.3, 1363.4, 2004.4, 1999.2, 1989.2, 1980.2, 1942.9, 1783.4, 4123.7, 1768, 1761, 1701.9, 1696.6, 1702.1]
+    },
+    {
+      "kod": "1261",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1260",
+      "namn": "Avgifter till premiepensionssystemet",
+      "budget": [null, null, -25649.9, -26597.8, -25769.9, -27981.7, -29555.7, -31067.2, -32099.6, -33812.9, -35151.4, -37182.3, -38689, -40859.8, -41981, -41758.1, -44640.1, -48492.4, -50842, -53234],
+      "utfall": [-22320.7, -23920.2, -25111.4, -25350.3, -26423.9, -28876.9, -29994.3, -31048.2, -31875.7, -33644.8, -35586.4, -36886.9, -38775.4, -41088, -41328, -43214.8, -46397.9, -49054, -50493.8, -51966.9]
+    },
+    {
+      "kod": "1271",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1270",
+      "namn": "Pensionskostnader, företag",
+      "budget": [22002.4, 24279.7, 23959.6, 25763.8, 25026.9, 27933.1, 28979.5, 33038.3, 33941.2, 34499.3, 34948.3, 35458.1, 39213.1, 40398.4, 43019.1, 42956, 48608.7, 51816.2, 53884.5, 60732.6],
+      "utfall": [21568.7, 24123.7, 26184.9, 26305.4, 26790, 30458.8, 31546.3, 30923, 30957.6, 34174.2, 35104.8, 37230, 40159.4, 42351.8, 45211, 46356.3, 52561.8, 55310.8, 57942.7, 59826.6]
+    },
+    {
+      "kod": "1272",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1270",
+      "namn": "Pensionskostnader, staten",
+      "budget": [2372.2, 2674.4, 2970.5, 3103.6, 3323.6, 3318.7, 3396.8, 3728.6, 3347.9, 3398.5, 3432.9, 3866.4, 3977, 4188.4, 4282.4, 4416.5, 4642, 4836.8, 5343.6, 5643.3],
+      "utfall": [2835.8, 2908.1, 3190.5, 3238.7, 3470.3, 3139.6, 3387.3, 3416.4, 3615, 3743.4, 3773.3, 4022.4, 4089.4, 4225.3, 4395.9, 4498, 4605.5, 5037.7, 5948.1, 6175.5]
+    },
+    {
+      "kod": "1273",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1270",
+      "namn": "Förvärvsinkomster",
+      "budget": [3179, 3495.4, 3436.3, 2062.4, 2158.6, 2039.5, 2135.6, 2086.1, 1862.5, 3415.2, 3700, 3938, 4180.7, 3215.3, 1764.8, 512, 589.8, 381.9, 566, 529.1],
+      "utfall": [3016.9, 1863.8, 2159.2, 1917.1, 1835.1, 1679.4, 1616.4, 1690.4, 1668.6, 1590.4, 3620.5, 3591.8, 3813.6, 1886.5, 539.3, 345.9, 518.6, 486.6, 566.4, 626.1]
+    },
+    {
+      "kod": "1274",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1270",
+      "namn": "Egenföretagare",
+      "budget": [1454, 1599.2, 1816.7, 1361.2, 1082, 1148.9, 1089.8, 1042.8, 1024.4, 1251.9, 1343.6, 1362.1, 1297, 1166.8, 816.5, 748.3, 739.6, 734.5, 731.8, 677.1],
+      "utfall": [1499, 1329.6, 1035.7, 1000.9, 994.3, 940.6, 849.7, 802.4, 780.5, 775.1, 1141.4, 1132.9, 1122.7, 903.1, 690.3, 664.9, 634.4, 647.2, 643.8, 656.6]
+    },
+    {
+      "kod": "1275",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1270",
+      "namn": "Övrigt",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, 0]
+    },
+    {
+      "kod": "1281",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1280",
+      "namn": "Sjöfartsstöd",
+      "budget": [-2000, -1867.5, -1948, -1961.2, -2128.6, -1854, -1929.6, -1815.8, -1773.8, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-1704.8, -1772.4, -1892.1, -1925.7, -1818.8, -1711.6, -1672, -1482.6, -1414.7, 0, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1282",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1280",
+      "namn": "Arbetsgivaravgifter",
+      "budget": [-6077.6, -7530.9, -17055.3, -20562.5, -16408.4, -16907.5, -21059.1, -22164.6, -22219.2, -13014, -4979.6, -1699.5, -3913.6, -3491, -5343.8, -12482.2, -16745.5, -6690.4, -3747.7, -4986.7],
+      "utfall": [-5695.1, -7619.8, -10426.6, -16789.4, -17728, -20077, -21023.9, -21518.2, -23103, -17109.2, -3726.4, -1188.1, -1363.4, -1944.3, -30813, -13584, -15569.9, -6559.7, -3599.3, -3682.8]
+    },
+    {
+      "kod": "1283",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1280",
+      "namn": "Egenavgifter, generell nedsättning",
+      "budget": [-1257.5, -690.4, 0, -79.7, -1466.7, -1571.5, -1690.3, -1123.8, -2558.6, -2263.9, -2670.8, -2038.9, -2086.4, -2244.1, -2054.4, -2165.7, -2128.5, -1769.8, -1892.5, -1748.3],
+      "utfall": [-1338.7, -681.2, 0, 0, -1121.8, -1398.8, -1335.7, -1290.3, -1928.3, -1925.5, -1919.7, -1911.7, -1874, -1716.2, -4080.2, -1704.5, -1698.1, -1641.3, -1635.9, -1641.5]
+    },
+    {
+      "kod": "1284",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1280",
+      "namn": "Egenavgifter, regional nedsättning",
+      "budget": [-79.4, -83.9, -92.7, -99.7, -74, -82.4, -92.1, -96.1, -92.8, -87, -82.7, -87.2, -76.7, -79.3, -76.9, -74.5, -74.4, -78, -73.7, -65.6],
+      "utfall": [-86.2, -88.4, 0, -82.7, -84.8, -83.5, -77.6, -73.1, -76.1, -73.7, -69.5, -68.5, -68.9, -67.2, -43.4, -63.6, -62.9, -60.6, -60.7, -60.6]
+    },
+    {
+      "kod": "1285",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1280",
+      "namn": "Nystartjobb",
+      "budget": [null, -700, -2057, -1232, -2828, -5296, -6789, -6217, -6022, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, -365.5, -983.8, -1758.3, -3821.8, -6163.5, -6192.6, -6073.4, -6606.8, 0, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1286",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1280",
+      "namn": "Stöd till yrkesintroduktionsanställning",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, -7.4, 0, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1291",
+      "huvudgrupp": "1200",
+      "titelgrupp": "1290",
+      "namn": "Tjänstegruppliv",
+      "budget": [1212.2, 1222.1, 1113.8, 980.5, 1125.1, 814.3, 1298.3, 571.6, 858.5, 675.5, 667.3, 467.1, 423.4, 508.3, 560.2, 585.9, 589.8, 609.6, 632.3, 558.2],
+      "utfall": [1237.5, 891.3, 1184.3, 869.8, 1128.9, 952.7, 858.5, 677.5, 667.3, 513.3, 478.3, 458.1, 565.9, 597.8, 601.8, 580.6, 632.3, 558.2, 548.1, 578.3]
+    },
+    {
+      "kod": "1311",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1310",
+      "namn": "Skatt på kapital",
+      "budget": [30435.6, 40949.9, 48666.3, 50155.1, 38815.3, 55768.5, 54158.4, 47966, 51685, 55752.3, 59331.2, 76168.3, 86762.7, 86932.6, 86388.1, 82557.3, 110804.9, 115156.5, 121992.7, 126695.2],
+      "utfall": [52731.7, 67957.1, 50885.6, 44543.7, 51736.6, 52764.2, 53188.5, 56128.4, 69322.4, 87167.1, 91940.9, 97924.8, 87552, 89519.7, 87094.6, 125730.6, 117830.9, 110994.9, 130563.2, 121861.4]
+    },
+    {
+      "kod": "1312",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1310",
+      "namn": "Skattereduktion kapital",
+      "budget": [-16770.5, -22502.8, -21204.2, -23772.1, -14991.2, -22839.9, -22872.5, -21374.1, -17393.1, -15286.9, -12459.1, -15186.6, -17351.7, -18336.1, -19239.2, -22185.2, -24774.3, -37616.2, -40558.6, -34706.1],
+      "utfall": [-15587.8, -18622.1, -24804.5, -19368.8, -17306.5, -24115.8, -25562.1, -23227.6, -21317.7, -18096.4, -17355.2, -17666.8, -18351.6, -19861.3, -21163, -20978.4, -25182, -39419.5, -45401.7, -33773.1]
+    },
+    {
+      "kod": "1313",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1310",
+      "namn": "Expansionsmedelsskatt",
+      "budget": [94, 183.9, 259, 306, 162.1, 6.9, 130.3, -301.2, 106.2, 576.1, -150.5, 9.4, 23.5, 162.8, 151.3, 162.8, 12, 45.6, 64.2, 154.2],
+      "utfall": [279.4, 371.8, 220, -254.2, 112.6, 127.7, 97.4, -599.9, -25.7, -6.8, 18.9, 132.8, 144.7, -81.4, 43.1, -147.8, 243.3, 116.5, 145.2, 146.2]
+    },
+    {
+      "kod": "1314",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1310",
+      "namn": "Skattereduktion riskkapital",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [0, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1321",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1320",
+      "namn": "Skatt på företagsvinster",
+      "budget": [72814, 97146.3, 108884.6, 106040.3, 81365.7, 104765.3, 109509.9, 103286.7, 97260.3, 95119.1, 101302.1, 113738, 129635.8, 143235, 153413.4, 131071.1, 168306.4, 179481.4, 199753.1, 225169.5],
+      "utfall": [99217, 104611.7, 83041.5, 86518.7, 106631, 102773, 89473.8, 88959.6, 96534.3, 119588.8, 115232.1, 127130.2, 132939.4, 153385.4, 149313.6, 183588.7, 199793.4, 203092.4, 203039.6, 221989]
+    },
+    {
+      "kod": "1322",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1320",
+      "namn": "Skattereduktioner",
+      "budget": [-15, -10, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, -5501.1, -1402.1, -1404, -106.3, -6.3],
+      "utfall": [-149, -10.8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1.1, -2.1, -4, -6.3, -6799.3, -1825.9, -115.9, -24.8]
+    },
+    {
+      "kod": "1331",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1330",
+      "namn": "Kupongskatt",
+      "budget": [2719.2, 3083.8, 5044.2, 6149.7, 3746.1, 3575.7, 3996.5, 4365.8, 4448.6, 4351.2, 4943.6, 5141.5, 7261, 8158.1, 9098.4, 6508.7, 5759.8, 10146.6, 7634, 9283.5],
+      "utfall": [3880.1, 6339.9, 5520.3, 3088.6, 3064.5, 4580.1, 3772.4, 4144.8, 4209.8, 4633.7, 5732.3, 6412.9, 8537, 7225, 3555.4, 9369, 12340, 9433.2, 11082.3, 8952.5]
+    },
+    {
+      "kod": "1341",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1340",
+      "namn": "Avkastningsskatt hushåll",
+      "budget": [144.4, 133.3, 157.5, 119.9, 225.8, 232.7, 275.7, 332.9, 235.9, 147.7, null, 0, 139.3, 144.2, 168.2, 184.5, 176.5, 200, 264.6, 267.7],
+      "utfall": [119.9, 157.8, 232.7, 220.5, 291.9, 324.7, 178.1, 129.5, 192.2, 101.5, 144.2, 168.2, 184.5, 176.5, 200, 264.6, 267.7, 592.4, 821, 821]
+    },
+    {
+      "kod": "1342",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1340",
+      "namn": "Avkastningsskatt företag",
+      "budget": [10810.6, 12189.1, 16261.9, 14435.6, 13209.4, 10761.1, 9627.5, 6574.4, 9396.5, 8721.4, 4877.9, 3449.7, 4123.3, 6179.3, 5145.6, 5428.6, 7145.8, 19018.4, 28425.3, 29589.3],
+      "utfall": [10737.2, 12319.7, 14615, 11821.4, 11260.3, 11208.5, 9693.3, 6537.6, 9783.1, 8007.3, 4414.3, 3961.3, 5095.6, 5023.1, 5342.9, 6354.8, 7888.7, 17858.7, 30071.7, 28889.7]
+    },
+    {
+      "kod": "1343",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1340",
+      "namn": "Avkastningsskatt på individuellt pensionssparande",
+      "budget": [180.1, 219.6, 228.4, 309.5, 386.3, 274.8, 304.2, 304.2, 304.2, 274.1, 183.2, 273.7, 87.2, 72.6, 77.5, 108.5, 100.7, 104.9, 137.2, 137.2],
+      "utfall": [228.4, 309.5, 386.3, 274.8, 304.2, 328.7, 274.1, 183.2, 273.7, 262.1, 87.2, 72.6, 77.5, 108.5, 100.7, 104.9, 137.2, 348.7, 671.7, 664.8]
+    },
+    {
+      "kod": "1351",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1350",
+      "namn": "Fastighetsskatt hushåll",
+      "budget": [15785, 13371.6, 409.9, 397.6, 903.1, 483.3, 769.6, 813.4, 658.2, 697.3, 699.1, 688.6, 687.1, 800.9, 785, 812.7, 786.9, 778.2, 950, 949.1],
+      "utfall": [13239.4, 13474.5, 787.7, 963.2, 717.3, 716, 676.1, 681.6, 671.2, 670, 654.7, 638.7, 665.5, 700.1, 688.5, 729.8, 742.1, 736.3, 813.7, 804]
+    },
+    {
+      "kod": "1352",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1350",
+      "namn": "Fastighetsskatt företag",
+      "budget": [12299.4, 12034, 10024.2, 10019.3, 10558, 11533, 12063.9, 13157.9, 14319, 14458.3, 15348, 14428.4, 13336.7, 12408.5, 11782.9, 14472.4, 14213.8, 15085.3, 18019.7, 19276.8],
+      "utfall": [11767.3, 12390.2, 10715.6, 10289.3, 11176.3, 12005.8, 12163.1, 14985.2, 15223.7, 15290.3, 16086, 14929.3, 14071.2, 14597.8, 14049.8, 14197.9, 15882.8, 16063.6, 16164.6, 16960.1]
+    },
+    {
+      "kod": "1353",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1350",
+      "namn": "Kommunal fastighetsavgift hushåll",
+      "budget": [null, null, 9224.7, 10650.5, 11286.4, 11608.4, 12215.1, 12699.9, 12861.7, 13166.1, 13431.7, 13901.2, 15076.4, 15279.7, 15759.4, 16195.5, 16652.5, 17500.8, 17714.6, 18104.6],
+      "utfall": [null, null, 9619.9, 10998.8, 11266.1, 11545.8, 12395.2, 12740.3, 12893.8, 13179.2, 13247.2, 13714.8, 14726.3, 15107, 15697.8, 16807.3, 17362.4, 18169.5, 19628, 20543.3]
+    },
+    {
+      "kod": "1354",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1350",
+      "namn": "Kommunal fastighetsavgift företag",
+      "budget": [null, null, 2835.3, 3079.9, 3187.9, 3203.5, 3161.1, 3052.8, 3107.6, 3170.7, 3231.5, 3304.1, 3563.7, 3623.1, 3794.4, 3894.6, 4274.2, 4595.2, 4583.5, 4797],
+      "utfall": [null, null, 2830.5, 3076, 3224.3, 3272.1, 3458.2, 3151.9, 3194.6, 3285.3, 3443.1, 3578.7, 3743.6, 3977, 4121.7, 4348.7, 4612.6, 4802, 4983.3, 5266.9]
+    },
+    {
+      "kod": "1361",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1360",
+      "namn": "Stämpelskatt",
+      "budget": [7996.7, 9220.9, 9944.4, 9884.8, 8170.2, 10332.4, 9196.1, 7547.2, 8345.5, 9274.7, 9540.9, 12754.8, 12267.5, 12850.4, 11936.4, 13234, 14734.3, 14612, 13644.2, 12906.7],
+      "utfall": [9470.9, 9414.1, 9423.4, 8063.8, 8968.3, 7988.9, 7961, 8912.9, 9261.5, 10895, 12331, 12138.1, 12059.4, 12276.4, 12721.2, 15524.9, 15759.1, 10312.7, 10630, 12336.1]
+    },
+    {
+      "kod": "1371",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1370",
+      "namn": "Förmögenhetsskatt hushåll",
+      "budget": [5536.1, 4417.7, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [5949.4, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1372",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1370",
+      "namn": "Förmögenhetsskatt företag",
+      "budget": [133.3, 74.2, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [192.4, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1381",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1380",
+      "namn": "Arvsskatt",
+      "budget": [12, 6, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [110.3, 15, 14.4, 1.6, 9.4, 3.8, -4.5, -4.3, 1.5, -0.1, 0, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1382",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1380",
+      "namn": "Gåvoskatt",
+      "budget": [6, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [9.4, 8.5, 1.6, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1391",
+      "huvudgrupp": "1300",
+      "titelgrupp": "1390",
+      "namn": "Riskskatt för kreditinstitut",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 7557, 4528.8, 5980.9],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 4723.5, 5480.9, 6727.2, 6727.2]
+    },
+    {
+      "kod": "1411",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1410",
+      "namn": "Mervärdesskatt",
+      "budget": [258294.5, 283466, 307838.1, 313855.6, 295404.6, 329275.5, 335806.1, 349530, 352604.7, 371046.1, 385151.7, 413751.2, 450559.8, 461064.5, 474187, 470220.4, 526583.8, 594498.8, 584200.3, 589617.6],
+      "utfall": [265673.2, 285461.6, 300921.6, 302312.6, 324463.5, 332461, 330645.7, 339477, 354984.1, 380315.2, 406453.8, 427172.9, 446776.8, 461260.5, 467879.5, 510997.4, 559620.8, 557860.6, 561902.6, 583232.1]
+    },
+    {
+      "kod": "1412",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1410",
+      "namn": "Skattelättnad för vissa byggtjänster",
+      "budget": [-1000, -700, -600, -100, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-522.5, -685.3, -651.4, -762.7, -117.1, -1.7, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, 0]
+    },
+    {
+      "kod": "1421",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1420",
+      "namn": "Skatt på tobak",
+      "budget": [8378.2, 10104.8, 11331.8, 10480.2, 11281.1, 10754.7, 11934.7, 11632.9, 11524.5, 11405, 11448.1, 11778.4, 12040.6, 12277.6, 12363.7, 12541.8, 11992.7, 12195.4, 12634.8, 12594.9],
+      "utfall": [8617.4, 9742, 9925.6, 10604.3, 10588.5, 11261, 11799.1, 11135.8, 11375.8, 11825.2, 11918, 11871.5, 12373.8, 11812.8, 11798, 11711.8, 12779.8, 10966.1, 14191.5, 9028]
+    },
+    {
+      "kod": "1422",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1420",
+      "namn": "Skatt på etylalkohol",
+      "budget": [3816.2, 4120, 4151.4, 4249.1, 4403, 4539.9, 4237.5, 4213.7, 4280.7, 3974.8, 4008.3, 4096.4, 4280.6, 4290.6, 4377.2, 4532.2, 5289.6, 5705.7, 5807.3, 6182.4],
+      "utfall": [4151.4, 4249.1, 4162.6, 4436.3, 4323.6, 4347.5, 4325.6, 3996.3, 4073, 4202.3, 4238.6, 4326.7, 4466.1, 4532.2, 5243.5, 5607.9, 5513.1, 5553.6, 5446.6, 5584]
+    },
+    {
+      "kod": "1423",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1420",
+      "namn": "Skatt på vin",
+      "budget": [3574.7, 3636.9, 3682.6, 3894.4, 4374.5, 4572.8, 4509.7, 4595.7, 5115.2, 5428.3, 5610.3, 6021.4, 5935.6, 6083.5, 6205.4, 6237.5, 6471.1, 6913.2, 7225.2, 7163.5],
+      "utfall": [3644.9, 3817.6, 3901.8, 4255, 4411.2, 4505.1, 4592.9, 4709.2, 5039.5, 5502.1, 5577.6, 5847.2, 5964.4, 5995.3, 6407.1, 6501.4, 6368.1, 6625.3, 7026.5, 6795.2]
+    },
+    {
+      "kod": "1424",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1420",
+      "namn": "Skatt på mellanklassprodukter",
+      "budget": [181, 183.9, 184.2, 182.9, 199.6, 197.6, 184.5, 172.7, 201.4, 181, 170.9, 162.9, 146.7, 138, 146, 148.1, 143.2, 142.4, 155.4, 169.1],
+      "utfall": [180.6, 182.9, 191.6, 193.6, 177.4, 172.7, 174.6, 177.8, 157.7, 151.7, 146.7, 137.7, 146, 148.1, 144.6, 133.9, 127.4, 146.1, 153.7, 124.6]
+    },
+    {
+      "kod": "1425",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1420",
+      "namn": "Skatt på öl",
+      "budget": [2605.2, 2710.7, 3153, 2941.3, 3183, 3353.5, 3219.4, 3153.7, 3558, 3946.3, 3884.2, 4132.2, 4139, 4256.7, 4439.4, 4399.8, 4432.7, 5211.2, 5216.2, 5170],
+      "utfall": [2710.3, 2773.5, 3130.5, 3270.7, 3219.4, 3185.6, 3237.1, 3328.9, 3509.4, 3895, 3973.4, 4122.2, 4343.7, 4313.1, 4477.5, 4545.9, 4582.5, 4710.3, 5377.3, 5241.2]
+    },
+    {
+      "kod": "1426",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1420",
+      "namn": "Privatinförsel av alkohol och tobak",
+      "budget": [1.7, 1.7, 0.9, 0.5, -1, 0.7, 0.2, 1.2, 2.7, 4.8, 18.6, 5.7, -5.5, 0.3, -0.3, 0.3, 6.4, 0.7, 0.8, 0.9],
+      "utfall": [0.9, 0.5, -1, 0.7, 0.2, 1.2, 2.7, 4.8, 18.6, 5.7, -5.5, 0.3, -0.3, 0.3, 6.2, 0.7, 0.8, 86.1, 2.2, 2.4]
+    },
+    {
+      "kod": "1427",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1420",
+      "namn": "Skatt på vissa nikotinhaltiga produkter",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, 44, 44, 79, 183.9, 195.6, 378, 516.5],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, 79.5, 113.9, 195.6, 378, 516.5, 618.9, 782.4]
+    },
+    {
+      "kod": "1431",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1430",
+      "namn": "Skatt på elektrisk kraft",
+      "budget": [18507.8, 19255.9, 19281.5, 19915.3, 20178.4, 20572.4, 20624.8, 20812.9, 21280.9, 21405.1, 21457.7, 23184.3, 24248.6, 25671.2, 25653.5, 26941.2, 28969.1, 28295.3, 31628.1, 34952.7],
+      "utfall": [19026.1, 18832.2, 19081.9, 19875, 21060.7, 20227.8, 20262.6, 21072.6, 19719.5, 20394.8, 21058.8, 22959, 27219.5, 25654.8, 27157.2, 27183.2, 25028.9, 27758.1, 31120.4, 31825.7]
+    },
+    {
+      "kod": "1432",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1430",
+      "namn": "Energiskatt bensin",
+      "budget": [15193.4, 14762.3, 14898.2, 13894.7, 13876.6, 13428.7, 12327.5, 11179.5, 10868.1, 10595, 11787.4, 11875.3, 11242.9, 11634.8, 11142.9, 11432.2, 10928.6, 8647.9, 5472.3, 4384.2],
+      "utfall": [14542.8, 14405.5, 13779.7, 14175.4, 13479.1, 12348.2, 11658, 11099.2, 10656.4, 10749.5, 11908.3, 11558.7, 11633.6, 11727.7, 11191.5, 11479.7, 9254.2, 9285.3, 6999.9, 4648.1]
+    },
+    {
+      "kod": "1433",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1430",
+      "namn": "Energiskatt oljeprodukter",
+      "budget": [4583.9, 4864.6, 5827.4, 6605.1, 6018.5, 7734.7, 8196.4, 9707.7, 9152.4, 9459.3, 11411.3, 11534.7, 11786.9, 14080.5, 15663.9, 14440.9, 13482.5, 9781.9, 6690.1, 4929.4],
+      "utfall": [4597.1, 4931.5, 5854.5, 5928.8, 6524, 7620.5, 7760.4, 8361.6, 8311.7, 9243.5, 11304.7, 11807.7, 13348.4, 14658.2, 14162.4, 14914.5, 10222.7, 8201.4, 8076.7, 6752.1]
+    },
+    {
+      "kod": "1434",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1430",
+      "namn": "Energiskatt övrigt",
+      "budget": [107, 90.8, 94.4, 91, 86.8, 227.8, 406.9, 420.7, 311.6, 297.2, 325, 300.7, 313.1, 288.9, 255.4, 209.2, 667.9, 527.4, 252.8, 279.2],
+      "utfall": [78.2, 76.4, 75.1, 84.7, 88.2, 386.2, 436.8, 377.3, 301.3, 308.5, 295.2, 248, 232.8, 165.6, 105.6, 218.1, 212.4, 318.7, 253.6, 14.1]
+    },
+    {
+      "kod": "1441",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1440",
+      "namn": "Koldioxidskatt bensin",
+      "budget": [10548.6, 11035.9, 11944, 11037.1, 11320.5, 10664, 9759.3, 8762.2, 8455.1, 8413.2, 8111.8, 7811.5, 7517.6, 7624.4, 7146.1, 7339.8, 7882, 7566.1, 7680.5, 8612.1],
+      "utfall": [10843.5, 10746, 10952.1, 11250.4, 10671, 9867.9, 9343.3, 8845.4, 8489.6, 8573.4, 8219.2, 7768.6, 7655.5, 7684.7, 7096, 7282.6, 7198.3, 7785.5, 8583.8, 9081.7]
+    },
+    {
+      "kod": "1442",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1440",
+      "namn": "Koldioxidskatt oljeprodukter",
+      "budget": [14041.3, 12819.4, 13673.1, 15802.8, 13647.8, 15098.1, 15891.8, 16731.1, 14796.8, 15643.5, 13882.3, 15076.2, 15193, 14662.7, 15285.9, 13790.3, 13913.3, 14727.9, 16062.9, 15414.6],
+      "utfall": [12764.2, 13085.1, 13583.3, 13537.9, 15303.7, 14674.2, 14750.9, 14455, 14262.6, 15397.4, 15354.8, 15381.1, 14904.6, 14247.9, 13136.3, 14264.1, 13746.8, 14121, 15287.2, 15122.4]
+    },
+    {
+      "kod": "1443",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1440",
+      "namn": "Koldioxidskatt övrigt",
+      "budget": [1112.7, 1019.4, 1343.3, 1448.9, 1129.2, 1090.2, 1032.3, 925.7, 860.8, 1000.2, 839.7, 769.5, 611, 531.7, 436.5, 163.4, 159.6, 174.2, 333.1, 506.7],
+      "utfall": [1135.5, 1256.4, 1209.2, 1296.5, 1359.5, 826.3, 1149.8, 730.6, 581.7, 633.8, 564.3, 381.2, 423, 233.9, 155.1, 373.8, 284.1, 748, 706.9, -759.8]
+    },
+    {
+      "kod": "1451",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Svavelskatt",
+      "budget": [92.2, 76.2, 79.7, 55.6, 19.8, 38.8, 38.8, 27.2, 29.1, 29.1, 14.1, 12.2, 12.2, 12.2, 11.7, 9.8, 9.8, 5.8, 12.7, 11.1],
+      "utfall": [79.7, 55.6, 19.8, 38.8, 47.8, 27.2, 29.1, 14.1, 10.2, 12.3, 10.8, 10.8, 13.4, 5.2, 1.6, 10, 18.1, 4.4, 2.8, 0.8]
+    },
+    {
+      "kod": "1452",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Skatt på råtallolja",
+      "budget": [23.2, 21.2, 16.6, 0.9, 0.8, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [16.1, 0.9, 0.7, -4.6, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, 110.9, 129.7, 0]
+    },
+    {
+      "kod": "1453",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Särskild skatt mot försurning",
+      "budget": [53.9, 55.3, 55.8, 55.6, 50.1, 45.2, 52.2, 62.5, 52.7, 57.6, 49.3, 52, 52.5, 51.1, 55.5, 64.9, 63.2, 63.2, 59.5, 55.9],
+      "utfall": [47.6, 50.8, 51.6, 40.1, 57.2, 58.6, 51.3, 57.4, 49.1, 53.5, 52, 51.1, 55.5, 64.9, 63.2, 63.2, 59.5, 55.9, 54, 48.2]
+    },
+    {
+      "kod": "1454",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Skatt på bekämpningsmedel",
+      "budget": [364.1, 406.6, 380.1, 386.4, 89, 71.2, 79.3, 74.4, 99.3, 100.8, 124.9, 135.3, 148.7, 143.2, 153.8, 148.1, 142.7, 150.7, 148.5, 158.2],
+      "utfall": [375.7, 386.4, 455.4, 248.7, 85.1, 87, 92.7, 92.4, 105.1, 114.6, 126.7, 121.7, 131.3, 126.2, 129.5, 136.7, 134.7, 143.5, 143.9, 162.2]
+    },
+    {
+      "kod": "1455",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Skatt på termisk effekt i kärnkraftsreaktorer",
+      "budget": [3164, 3226.1, 3968.1, 4030.9, 4112, 4129.4, 4234.7, 4270.7, 4227.8, 4075.1, 4643.9, 2347.1, 0, 0, 0, null, null, null, null, null],
+      "utfall": [3198, 3238.3, 3975.5, 3394.3, 3997.3, 3851.6, 3938.8, 4037.6, 3840.7, 3767.5, 4252.7, 2563.3, -3.5, null, null, null, null, null, null, 0]
+    },
+    {
+      "kod": "1456",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Avfallsskatt",
+      "budget": [1648.7, 1108.7, 645.6, 608.8, 332.8, 189.3, 249.3, 184.7, 169.3, 123.7, 142.2, 268.3, 272.6, 176.7, 228.3, 242.5, 202.5, 307.7, 350.8, 370.1],
+      "utfall": [645.6, 608.8, 332.8, 189.3, 289.2, 204.6, 198.4, 119.3, 139.8, 297.3, 302.1, 184.7, 234.3, 252.1, 211.4, 298.1, 311, 347.6, 427.4, 357.1]
+    },
+    {
+      "kod": "1457",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Avgifter till Kemikalieinspektionen",
+      "budget": [64.5, 65.4, 67, 69, 70, 69, 41, 47, 46, 12.3, 44.4, 54.5, 53.1, 54.1, 55.2, 56.3, 51.6, 52.6, 46.8, 51.7],
+      "utfall": [67.2, 66.1, 70.7, 68.7, 34.7, 44.8, 43.6, 2.1, 42.7, 43.7, 49.3, 47.8, 49.4, 47.6, 49.6, 49.8, 48.9, 49.7, 48.7, 46.9]
+    },
+    {
+      "kod": "1458",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Övriga skatter",
+      "budget": [1261.4, 285.3, 261.3, 261.5, 258.6, 157.4, 205.3, 172.9, 120.1, 129.1, 146.1, 126.4, 155.8, 162.8, 113.5, 102.3, 179.2, 131.6, 193.7, 116.4],
+      "utfall": [251.2, 261.5, 225.3, 167.4, 153.3, 190.9, 108.7, 33.7, 73.8, 185.4, 74.1, 76.5, 25.2, 30.7, 315.3, 279.7, -55.8, 265, 79.6, -114.5]
+    },
+    {
+      "kod": "1459",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Intäkter från EU:s handel med utsläppsrätter",
+      "budget": [null, null, null, null, null, null, 68.1, 1238.9, 1315.3, 506.2, 334.6, 331.7, 324.8, 563.2, 1394.9, 1461.6, 2676.3, 3451, 3584.4, 3498],
+      "utfall": [null, null, null, null, null, null, 0, 0, 183, 342, 336, 281, 466, 1405, 1574, 1079, 2253.6, 3009.5, 3709.2, 2706.8]
+    },
+    {
+      "kod": "1461",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Kemikalieskatt",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, 1116, 2232, 1541, 1923.8, 1827.8, 1683, 1947.2, 1962.2, 2283.6],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, 735, 1376.8, 1469, 1629.4, 1752.7, 1614.3, 2042.4, 2478, 2600]
+    },
+    {
+      "kod": "1462",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Flygskatt",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, 1080, 737, 1690.7, 1797.8, 699.2, 1114.6, 1827.9, 774.8],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, 1267.5, 1785.1, 495.1, 465.1, 1120.1, 1499.4, 1693.2, 899.8]
+    },
+    {
+      "kod": "1463",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Skatt på avfallsförbränning",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, 300, 540, 450, 7.5, 0, 0],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, 247.9, 469.9, 599.7, 19.9, -5.5, 1.3]
+    },
+    {
+      "kod": "1464",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Skatt på plastbärkassar",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, 1660, 500, 400, 595.9, 427.5, 0],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, 221.7, 397.3, 517.5, 498.4, 408, 0.4]
+    },
+    {
+      "kod": "1465",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Intäkter från handel med elcertifikat",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 2409, 666, 218, 154, 150],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, 1128, 425, 269, 170, 123, 76]
+    },
+    {
+      "kod": "1467",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1450-1460",
+      "namn": "Flaskhalsintäkter",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 26177, 12.7, 0]
+    },
+    {
+      "kod": "1471",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1470",
+      "namn": "Fordonsskatt",
+      "budget": [10058, 11335.1, 11063.2, 11353.9, 11624.2, 11403.6, 11600.2, 11919.5, 11786.1, 13556.1, 14042.2, 14138.9, 14741.3, 15200.7, 16147.7, 16357.2, 16102.3, 17635.2, 16523.9, 15408.4],
+      "utfall": [10571.9, 10348.6, 11288.1, 11682.1, 11875, 11236.5, 11191.3, 11492.4, 11576.4, 13289.6, 13381.4, 13272.7, 13154.9, 13908.7, 14679.3, 15590.4, 15506.5, 15061.5, 14581.3, 14280.6]
+    },
+    {
+      "kod": "1472",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1470",
+      "namn": "Vägavgifter",
+      "budget": [823.8, 651.3, 747.4, 778.6, 797.7, 926.7, 795.1, 811, 801.7, 830.8, 783.9, 850.9, 959.9, 1186, 1377.3, 1410.8, 1309.8, 1479.7, 1515.2, 1603.2],
+      "utfall": [718.4, 748.4, 782, 890.7, 777.6, 778.4, 771.4, 751.5, 753.5, 817.8, 896.3, 1015, 1071.4, 1228.6, 1259, 1302.4, 1333.7, 1410.9, 1453.9, 1525.4]
+    },
+    {
+      "kod": "1473",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1470",
+      "namn": "Trängselskatt",
+      "budget": [530.8, 0, 740, 830, 750, 784.9, 787.6, 1899.2, 1625, 1859, 2470.1, 2730, 2728, 2701, 2979, 3073, 3110, 2820, 2813, 2632.1],
+      "utfall": [491.6, 344.7, 687.3, 784.9, 799.1, 802.2, 812, 1492.6, 1675.8, 1835.9, 2578.5, 2743, 2722.6, 2684.1, 2849.9, 2856, 2877.2, 2869.1, 2844, 2857.8]
+    },
+    {
+      "kod": "1474",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1470",
+      "namn": "Skatt på trafikförsäkringspremier",
+      "budget": [null, 1500, 3075.6, 3461.3, 3273.6, 3099.8, 2993.2, 2970.2, 2805.2, 2790.7, 2825.7, 2870.2, 2935.6, 3006.2, 2990, 2868.9, 2878.2, 3291.8, 3176.2, 2829.1],
+      "utfall": [null, 1641, 3269.7, 3018.5, 2947.9, 2906.6, 2828.2, 2765.5, 2801.4, 2808.9, 2840.2, 2893.3, 2885.7, 2828.9, 2793.1, 2800.4, 2809.6, 2727.4, 2767.2, 2757]
+    },
+    {
+      "kod": "1481",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1480",
+      "namn": "Systembolaget AB:s överskott",
+      "budget": [90, 160, 200, 200, 160, 210, 320, 165.5, 93.6, 102, 261.1, 206, 210.1, 293.7, 187, 250, 252.8, 390.9, 171.3, 356.3],
+      "utfall": [210, 868.5, 201.2, 344.9, 302, 159.1, 90, 115.6, 251, 197.6, 289.2, 282.3, 179.7, 240.3, 471.2, 375.7, 158.8, 409.3, 362, 372.1]
+    },
+    {
+      "kod": "1482",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1480",
+      "namn": "Inlevererat överskott från Svenska Spel AB",
+      "budget": [3400, 3270, 3800, 3360, 4230, 4867, 4577, 5005.5, 5239.8, 5055.1, 4572.8, 4899.7, 4919.7, 4163.5, 2284.1, 1274.2, 2889, 2621.1, 2129.2, 1851.3],
+      "utfall": [3436.6, 3656.9, 3587.2, 4476.6, 4766.4, 5006, 5136.6, 5268.9, 4762.4, 4803.1, 4822.7, 4691.3, 4478.2, 0, 3200, 2900, 2000, 1900, 1600, 1800]
+    },
+    {
+      "kod": "1483",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1480",
+      "namn": "Skatt på spel",
+      "budget": [29.9, 32.7, 27.7, 23.9, 21, 20.9, 19.3, 17.9, 16.7, 16.8, 16.4, 17.1, 15.8, 1792, 3938.1, 3836.2, 4262, 4697.5, 5301.5, 5461.3],
+      "utfall": [25, 21.9, 20.6, 19.2, 18.3, 16.7, 15.6, 15.4, 15.3, 15.7, 14.6, 14.3, 12.8, 3799, 3776.7, 4027.8, 4271.3, 4219.8, 4802.5, 5324.6]
+    },
+    {
+      "kod": "1484",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1480",
+      "namn": "Lotteriskatt",
+      "budget": [1278.4, 1239, 1233.9, 1324.3, 1332.4, 1366.5, 1445.2, 1452.1, 1373.8, 1303.5, 1316.3, 1431.2, 1573.5, 0, 0, null, null, null, 0, null],
+      "utfall": [1243.2, 1293.6, 1268.2, 1351.1, 1360.1, 1394.5, 1319.2, 1293.1, 1304.7, 1337.1, 1440.7, 1470.3, 1454.7, 2, null, null, null, null, null, 0]
+    },
+    {
+      "kod": "1485",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1480",
+      "namn": "Spelavgifter",
+      "budget": [31.9, 35.2, 35.5, 34, 31.1, 32.1, 26.9, 26, 25.5, 32.5, 30.5, 31, 31.5, 67, 70, 65, 57, 79, 58.3, 42.5],
+      "utfall": [32.6, 27.1, 29.5, 28, 25.2, 25, 21.3, 34.1, 29.2, 30.6, 29.7, 31.6, 89.4, 70.7, 82.2, 68.5, 61.9, 87.5, 44.9, 62.7]
+    },
+    {
+      "kod": "1486",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1480",
+      "namn": "Skatt på annonser och reklam",
+      "budget": [606.9, 580.1, 630.3, 438.6, 386.9, 317.8, 460.4, 314.2, 310.4, 264.9, 241.2, 197.9, 182.8, 158.9, 131.1, 137.2, 0, 0, 0, 0],
+      "utfall": [659.5, 657.1, 212.7, 292.4, 335.1, 390.2, 290, 243.8, 225.1, 200.1, 200.8, 169.7, 146, 151, 114.2, 102.7, 28.3, 0.9, 0.1, 0]
+    },
+    {
+      "kod": "1487",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1480",
+      "namn": "Koncessionsavgifter på televisionens område",
+      "budget": [406, 295, 30, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [439.2, 297.1, 2.3, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1488",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1480",
+      "namn": "Lokalradioavgifter",
+      "budget": [126, 129, 131, 134, 137, 138, 136, 127.5, 130, 118.2, 118.1, 143.1, 137.9, 0, 0, null, null, null, null, null],
+      "utfall": [125.6, 128, 139.7, 121.7, 126.2, 199, 127.7, 128.2, 115.9, 130.1, 124.5, 107.7, 64, null, null, null, null, null, null, 0]
+    },
+    {
+      "kod": "1489",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1480",
+      "namn": "Avgifter avseende Myndigheten för radio och tv",
+      "budget": [6.7, 6.8, 6.8, 7.4, 7.5, 7.6, 7.7, 7.7, 7.8, 8.7, 8.7, 8.7, 8.7, 8.7, 0, null, null, null, null, null],
+      "utfall": [6.6, 6.7, 7.2, 7.3, 7.6, 7.6, 7.7, 7.7, 8.7, 8.7, 8.7, 8.7, 8.7, null, null, null, null, null, null, 0]
+    },
+    {
+      "kod": "1491",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1480",
+      "namn": "Avgifter för telekommunikation",
+      "budget": [100, 100, 100, 100, 102, 102, 102, 102, 102, 102, 102, 104, 106, 108, 110, 112, 100, 110, 110, 140],
+      "utfall": [91.8, 96.1, 93.6, 97.9, 94.8, 94.9, 75, 108.6, 92.3, 96.7, 97.5, 99.9, 99.4, 99.4, 97.3, 101.8, 110, 124.6, 130.9, 135.9]
+    },
+    {
+      "kod": "1492",
+      "huvudgrupp": "1400",
+      "titelgrupp": "1480",
+      "namn": "Försäljningsskatt på motorfordon",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [1.7, 3.4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, 0]
+    },
+    {
+      "kod": "1511",
+      "huvudgrupp": "1500",
+      "titelgrupp": "1510",
+      "namn": "Tullmedel",
+      "budget": [4343, 5009.3, 5566.3, 5668.8, 4180.1, 5882.5, 5601.4, 5455.1, 4932.3, 5680.1, 6377.7, 6510.2, 6775.6, 7086.2, 7329.8, 6601.6, 6990.8, 9434.3, 9551.7, 7933.3],
+      "utfall": [4704.1, 5098.7, 5211.7, 4764.2, 5412.4, 5398.5, 4995.1, 4976.4, 5737, 6243, 6043.7, 6225.1, 6497.9, 6864.7, 6211.6, 7338.5, 9328.7, 7935.8, 8480.1, 9054.4]
+    },
+    {
+      "kod": "1512",
+      "huvudgrupp": "1500",
+      "titelgrupp": "1510",
+      "namn": "Sockeravgifter",
+      "budget": [343.8, 392.6, 260.7, 327.3, 222.1, 319.6, 261.6, 298.9, 252.6, 276.1, 77.6, 34.3, 37.1, 38.9, 0, -0.3, 0, 0, 0, 0],
+      "utfall": [232.7, 294.4, 276.9, 251.1, 261.2, 261.6, 259.6, 244.3, 69.8, 32.2, 33.1, 33.8, 0, -0.3, 0, null, null, null, null, 0]
+    },
+    {
+      "kod": "1513",
+      "huvudgrupp": "1500",
+      "titelgrupp": "1510",
+      "namn": "Avgifter till EU:s omstruktureringsfond för sockersektorn",
+      "budget": [null, 418.8, 480.3, 343.5, 344, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [223.6, 491, 385.3, 136, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1611",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1610",
+      "namn": "Restförda skatter, hushåll",
+      "budget": [-2104.9, -2646.2, -2117.5, -2843.4, -3136.3, -2397.3, -1643.6, -2199.6, -2256.8, -2105.4, -1535.1, -1410, -1736.7, -2009.4, -1967, -1581.5, -843.6, -1615.9, -2358.1, -3769.7],
+      "utfall": [-1853.2, -2569.6, -2787.8, -2803.8, -1922.3, -2199.6, -2256.8, -2105.4, -1535.1, -1410, -1736.7, -2009.4, -1967, -1581.5, -843.6, -1615.9, -2358.1, -3769.7, -5207.1, -3346.7]
+    },
+    {
+      "kod": "1612",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1610",
+      "namn": "Restförda skatter, företag",
+      "budget": [-4539.3, -5712, -4023.7, -5596.4, -6066.5, -4250.8, -3224.9, -4148.4, -4006.9, -4511.2, -4339.8, -2911.2, -2972.4, -3811.5, -2747.7, -3726.5, -5112.4, -6523.8, -8570.1, -8917.4],
+      "utfall": [-3521.4, -5057.6, -5392.4, -4971.6, -3771.8, -4148.4, -4006.9, -4511.2, -4339.8, -2911.2, -2972.4, -3811.5, -2747.7, -3426.5, -9198.9, -14510.8, -11296.1, -9274.4, -11292, -7583.1]
+    },
+    {
+      "kod": "1621",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1620",
+      "namn": "Omprövningar aktuellt beskattningsår",
+      "budget": [-100, -100, -100, -100, -100, -24.9, -12.9, -166.5, 27.8, -23.8, -82.6, -187.7, -240.1, -228.9, -966.9, 91.9, -422.2, -345, -87.6, -577.8],
+      "utfall": [-673.3, -108.4, -109.3, 76.8, -166.5, 27.8, -330.9, -82.6, -187.7, -240.1, -228.9, -966.9, 91.9, -1004.4, -345, -87.5, -577.7, 173.5, 132, -200]
+    },
+    {
+      "kod": "1622",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1620",
+      "namn": "Omprövningar äldre beskattningsår",
+      "budget": [-700, -1000, 500, 500, 500, 500, 534.2, 1000, 1000, 49.6, 3579.5, 774.6, 1000, 1000, 1000, 1000, 613, 1613, 2102.5, 1912.3],
+      "utfall": [413.4, 1153, 889.3, 534.2, 832.8, 332.2, 2782.4, 49.6, 3579.5, 774.6, -105, 2997.5, 2674.3, -231.9, 2730.3, -4979.7, 2342.4, 2046.5, 3210.4, 2759.6]
+    },
+    {
+      "kod": "1623",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1620",
+      "namn": "Anstånd",
+      "budget": [-200, -200, -100, -100, -355.4, 553.8, 553.8, 500, 500, 500, -2604.7, 1088.9, 1000, 1000, 500, 500, 500, 500, 500, 500],
+      "utfall": [96.3, -405.8, -355.4, 553.8, 140.8, 681.5, -1737.4, 428.9, -2604.7, 1088.9, 2116.9, 576.6, -1125.7, 1376.9, -1330.1, -271.2, 339.5, 128.7, -1032.6, 0]
+    },
+    {
+      "kod": "1624",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1620",
+      "namn": "Övriga skatter",
+      "budget": [1192.2, 1441.4, 1570.8, 1605.2, 1900.6, 2319.9, 1902.7, 1878.7, 1520.8, 1758.3, 2132.5, 1610.3, 3571.4, 3806.3, 3300.4, 4264.5, 4095.4, 3828.4, 3336.1, 4825.4],
+      "utfall": [1841.3, 1754.4, 1961.3, 2177.4, 1916.6, 1898.5, 2217.5, 2265.2, 1747.2, 2095.3, 2986.7, 4345.3, 4463.9, 3187.8, 3138.4, 3023.8, 4137.5, 3513.7, 3234.6, 5347.4]
+    },
+    {
+      "kod": "1625",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1620",
+      "namn": "Skattetillägg",
+      "budget": [318.9, 286.8, 281.1, 265.1, 228.9, 194.1, 195.4, 207.3, 174.7, 145, 137.1, 205.1, 145.1, 176.5, 167.2, 166.6, 150.7, 161.8, 180.2, 144.8],
+      "utfall": [265.1, 228.9, 194.1, 195.4, 207.3, 174.7, 145, 137.1, 147.7, 146.7, 176.5, 167.2, 166.6, 150.7, 161.8, 180.2, 144.8, 158.8, 181.4, 181.4]
+    },
+    {
+      "kod": "1626",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1620",
+      "namn": "Förseningsavgifter",
+      "budget": [97.7, 96.1, 52, 103.1, 97.2, 93.3, 88.6, 100.8, 96.7, 107.8, 131.9, 39.2, 69, 147.7, 169.8, 198.3, 147.9, 171.5, 176.8, 186.1],
+      "utfall": [103.1, 97.2, 93.3, 88.6, 100.8, 96.7, 107.8, 131.9, 133.6, 167.2, 147.7, 169.8, 198.3, 147.9, 171.5, 176.8, 186.1, 201.5, 200.9, 200.9]
+    },
+    {
+      "kod": "1631",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1630",
+      "namn": "Omprövningar aktuellt beskattningsår",
+      "budget": [700, -664.2, -1000, -1000, -1000, -1000, -500, -500, -500, -1660.4, -960.6, -1237.8, -1656.3, -1731.7, -1581.5, -1201.7, -1579.1, -1750.6, -1739.6, -1739.6],
+      "utfall": [-774.5, -734, -484.3, -1618.7, -1444.6, -1315.1, -1660.4, -960.6, -2422.9, -2134, -1480.4, -909.5, -1215.2, -2156.6, -2608.1, -2066.1, -2191.1, -2851.7, -5695.8, -1000]
+    },
+    {
+      "kod": "1632",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1630",
+      "namn": "Omprövningar äldre beskattningsår",
+      "budget": [400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 0, 0, 0, 0],
+      "utfall": [792.5, 290.2, 113, -1735.4, 2563.6, -2748.2, -439.2, -298.4, 3340.7, -982.7, -843.7, -1431.5, 329.1, -942.2, -2745.6, -4453.1, -4182.4, -1054.7, -2542.7, -2622.8]
+    },
+    {
+      "kod": "1633",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1630",
+      "namn": "Anstånd",
+      "budget": [-1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -500, -500, -500, -500, -500, -500],
+      "utfall": [-2081.1, 38.8, -685.1, -1421.3, -3249.4, 3121.6, -955.5, 6904, 431.8, -329, 3491.8, -467.9, 403.5, -3002.1, 286, -217.5, 3009.7, -1093.5, 3056.1, 1452]
+    },
+    {
+      "kod": "1634",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1630",
+      "namn": "Övriga skatter",
+      "budget": [276.3, 308.1, 315.1, 314, 488.6, 521.6, 518.5, 530.9, 530, 522.3, 516.1, 510, 138.2, 128.8, 131, -2, -10, -10, -10, -10],
+      "utfall": [609.6, 692.8, 41.4, 625.1, 599.2, 918.4, 144.7, 248.6, 105, 422.3, 355.6, 1084.3, 606.3, 560.8, 426, 712.2, 522.8, -148.7, -328.6, 4.8]
+    },
+    {
+      "kod": "1635",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1630",
+      "namn": "Skattetillägg",
+      "budget": [1031.1, 0.2, 868.6, 984.9, 971.1, 912.7, 1177.6, 1233, 1231.8, 1286.3, 1149.4, 1085.5, 1223.5, 1214.5, 1232.8, 933.4, 1149.3, 1338.2, 1519.8, 1455.2],
+      "utfall": [760.7, 1241.6, 1156.8, 1513.7, 967, 1246.8, 1342.1, 1353.5, 840.8, 812.6, 1476.1, 1580.2, 1206.8, 896.6, 1828.6, 1848.9, 2541.2, 1310.8, 1664.9, 1287.4]
+    },
+    {
+      "kod": "1636",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1630",
+      "namn": "Förseningsavgifter",
+      "budget": [182.3, -0.1, 158.1, 196.9, 162.8, 168.9, 170.3, 182.7, 190.1, 193.5, 264.2, 392.5, 375.4, 328.2, 390.2, 431.7, 472.1, 468.5, 463.2, 413.9],
+      "utfall": [79.7, 200.1, 168.3, 192.3, 145.9, 235.6, 207.5, 183.6, 237.5, 229, 358.7, 339.5, 354, 470.1, 211.9, 411.3, 421.8, 386.4, 418, 436.4]
+    },
+    {
+      "kod": "1641",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1640",
+      "namn": "Insättningsgarantiavgifter",
+      "budget": [385, 540, 521.8, 586.8, 639.9, 2279.2, 3699.2, 4080.4, 4615.9, 4595.8, 4870.8, 1514.4, 1571.8, 1895.3, 1343.7, 1535.6, 1807.9, 1827.5, 2118.3, 2409.3],
+      "utfall": [521.8, 586.8, 633.3, 879.2, 2259.2, 2580.4, 4215.9, 4370.3, 4533.2, 4973.2, 4914.1, 1581.8, 1317.2, 1505.4, 1772.3, 1791.5, 2076.6, 2361.8, 2349.4, 2514.2]
+    },
+    {
+      "kod": "1642",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1640",
+      "namn": "Avgifter till Kärnavfallsfonden",
+      "budget": [500, 690, 648, 980.5, 649.6, 845.9, 1032.7, 1040.7, 2412, 2478.4, 2451.1, 2460.9, 3750.6, 4756.2, 3700.2, null, null, null, null, null],
+      "utfall": [648, 980.5, 649.6, 845.9, 1032.7, 1040.7, 2412, 2478.4, 2451.1, 3466.8, 3735.7, 3797.4, 3685.4, 3590.9, 0, null, null, null, null, 0]
+    },
+    {
+      "kod": "1643",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1640",
+      "namn": "Bilskrotningsavgifter",
+      "budget": [276, 270.1, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [270.4, 155.4, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1644",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1640",
+      "namn": "Batteriavgifter",
+      "budget": [85.8, 93, 84.3, 77.6, 76.5, 14.2, 25.1, 7.3, 5.6, 4.9, 4.5, 4.5, 3.6, 2.8, 1.8, 2.2, 1.3, 1.9, 1.7, 1.7],
+      "utfall": [84.3, 77.6, 76.5, 14.2, 25.1, 7.3, 5.6, 4.9, 4.5, 5, 3.6, 2.8, 1.8, 2.2, 1.3, 1.9, 1.7, 2.3, 0.4, 0.9]
+    },
+    {
+      "kod": "1645",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1640",
+      "namn": "Kväveoxidavgifter",
+      "budget": [621, 588, 570.4, 568.7, 535.3, 672.9, 714.1, 793.9, 657, 666.2, 666, 590.2, 568.4, 605.3, 616.3, 639.8, 603.9, 528.3, 645.3, 612.9],
+      "utfall": [570.4, 568.7, 535.3, 672.9, 714.1, 793.9, 657, 666.2, 666, 589, 566.2, 602.8, 613.9, 637.2, 601.5, 526.2, 642.7, 610.4, 596.3, 572.7]
+    },
+    {
+      "kod": "1647",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1640",
+      "namn": "Resolutionsavgifter",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, 7400, 9043.1, 5743, 3381, 3417, 3629, 3851, 4089.9, 4327.7],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, 3393.3, 6511.4, 9083, 5848.1, 3453.5, 3664.1, 3891.4, 4060.1, 4326.8, 4386.9]
+    },
+    {
+      "kod": "1651",
+      "huvudgrupp": "1600",
+      "titelgrupp": "1650",
+      "namn": "Avgifter till public service",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, 9082, 9364.6, 9082, 9524.5, 9821.3, 10313.2, 9434.7],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, 9027.9, 9368.5, 9148.7, 9351.8, 9323.2, 8859.4, 9120.3]
+    },
+    {
+      "kod": "1711",
+      "huvudgrupp": "1700",
+      "titelgrupp": "1710",
+      "namn": "EU-skatter",
+      "budget": [-8428.8, -7126.6, -7663.3, -7758.7, -6118.5, -7680.2, -7413, -7396.8, -7818.5, -5956.3, -6455.3, -6544.5, -6812.8, -7125.1, -7329.8, -6601.3, -6990.8, -9434.3, -9551.7, -7933.3],
+      "utfall": [-9387.5, -7240.1, -7304.3, -6790.6, -7109.8, -7223.7, -6897.8, -6934.9, -8394.8, -6275.1, -6076.8, -6259, -6497.8, -6864.4, -6211.6, -7338.5, -9328.7, -7935.8, -8480.1, -9054.4]
+    },
+    {
+      "kod": "1811",
+      "huvudgrupp": "1800",
+      "titelgrupp": "1810",
+      "namn": "Kommunala skatter",
+      "budget": [-452391.3, -473968, -520055, -539680.9, -528021, -542886.1, -567963.2, -599973.4, -618512.1, -649903.5, -684659.3, -722945.2, -744148, -771092.7, -790950.1, -802846.6, -845752.8, -902952.9, -942401, -992013.5],
+      "utfall": [-454117.3, -479068.2, -515482.6, -524834, -536950.1, -552654.8, -576229.2, -597339.6, -618223.3, -651653.9, -685914.9, -717016.8, -744271.3, -766829, -785407.5, -827073.6, -873940.6, -915818.5, -952498.5, -984493.2]
+    },
+    {
+      "kod": "1812",
+      "huvudgrupp": "1800",
+      "titelgrupp": "1810",
+      "namn": "Avgifter till AP-fonder",
+      "budget": [-156563.2, -164673.7, -178204.5, -185228.1, -178502.9, -191170.5, -198900.9, -207662.2, -213744.9, -228017.9, -232855.2, -245123.2, -254432.7, -266600.3, -274348.7, -274820.4, -292691.3, -313549.3, -328974.8, -344419.8],
+      "utfall": [-159596.1, -168943.5, -178108.3, -178792.5, -183497.3, -195207.9, -201594, -207518, -213657.4, -224128.5, -233904.5, -245031.8, -256744.7, -266516, -269092, -283471.3, -300547.6, -315411.8, -326689.3, -339199.8]
+    },
+    {
+      "kod": "1813",
+      "huvudgrupp": "1800",
+      "titelgrupp": "1810",
+      "namn": "Avgifter till premiepensionssystemet",
+      "budget": [-21801.6, -23348.6, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1851",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Stöd till forskning och utveckling i små och medelstora företag",
+      "budget": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "1911",
+      "huvudgrupp": "1900",
+      "titelgrupp": "1910",
+      "namn": "Uppbördsförskjutningar",
+      "budget": [-7996.6, 16165.3, -3900.4, -10163.4, -8519.9, -1827.6, 2946.6, 2177.8, 10280.5, 4063.4, 17742.7, 14119.5, 19500.4, 12100.1, 18723, 11862.4, -4255.6, 17135.6, 26016.8, 12086.1],
+      "utfall": [-3637.9, -2578.6, 36243.9, -2575.1, -9236, 33714.7, 33126.2, 13844, -7160.6, -29291.8, 9498.7, -552.9, 21403.6, 8952.1, 4900.2, -23795.9, 28087.2, 45359.7, 13696.1, 18496.5]
+    },
+    {
+      "kod": "1921",
+      "huvudgrupp": "1900",
+      "titelgrupp": "1920",
+      "namn": "Kommuner och regioner",
+      "budget": [5177.9, 472.3, -1801.2, -5295.1, 3968.8, 16119, -8678.6, -10484.8, -9148.3, 3091.2, 2363, -2081.5, 3875, 4468.9, 1875.3, 10999, 6151.8, -26943.2, -22905.4, -11380.3],
+      "utfall": [6266.2, 8955.7, -4215.2, -22247, 13189.1, 27951.9, -375.3, -15034.9, -8058, 6799.8, -1019, -6262.2, 3368.9, -3393.3, -6988.2, 36411.6, 34307.5, -13293.1, -17889.6, -14781.6]
+    },
+    {
+      "kod": "1922",
+      "huvudgrupp": "1900",
+      "titelgrupp": "1920",
+      "namn": "Ålderspensionssystemet",
+      "budget": [1945.2, -85.2, -1294.1, 247.4, 2282.8, -3046.1, -431.4, -335.7, -699.3, -71.9, 1840.7, 433.6, 546, 251.7, 1463.4, 2947.6, -1921.5, -880.7, -1445.8, 1577.2],
+      "utfall": [2807, 1540.5, -705.8, -1270.9, 2870, 673.2, 864.8, -164.6, -447.7, 737.8, 1819.5, 961.2, 1387.4, -989.4, -1072.4, 7264.6, -854.4, 2030.5, -2405.1, -965.5]
+    },
+    {
+      "kod": "1923",
+      "huvudgrupp": "1900",
+      "titelgrupp": "1920",
+      "namn": "Företag och hushåll",
+      "budget": [781.4, -6534.9, -3371.8, 760.5, -961.3, -9745.3, 7513.3, -640.6, -6877.4, -9140.6, -1341.7, -5621.2, -29283.1, -7618.3, -7424.8, -6223.8, -8090.1, -14797, -25706.8, -14815.7],
+      "utfall": [1001.5, -14522.9, -8140, -4713.2, -16345.1, -16852.1, -17219, -20173.6, -7869.4, -11354.7, 20534.2, -8523.3, -4862, -18873.2, -8663.9, -3737.2, -43095.3, -30166.9, -19135.6, -33371.4]
+    },
+    {
+      "kod": "1924",
+      "huvudgrupp": "1900",
+      "titelgrupp": "1920",
+      "namn": "Kyrkosamfund",
+      "budget": [-592, -580, -503.1, -921.3, -1102.4, -527.5, 11.2, -342.6, -761.5, -979.5, -669, -996.1, -1337.7, -1261.1, -925.1, -316.6, -101.1, -669, -1031.9, 176.2],
+      "utfall": [-59.4, 445.4, 545.1, -204.1, -958, -226.2, 652.9, 619.7, 68.7, 272.2, 883.2, 413.8, -409.3, -669.3, -354.3, 526.6, 1180, 570.5, -170.7, -604.4]
+    },
+    {
+      "kod": "1925",
+      "huvudgrupp": "1900",
+      "titelgrupp": "1920",
+      "namn": "EU",
+      "budget": [null, null, -3139.7, 6183.8, -224.5, 50.7, 17.7, 20.4, -2458.7, 29.3, 33.6, 40.9, 20.5, 52.1, 19.2, 34.1, 40.6, 21.2, 26, 19.2],
+      "utfall": [240.8, -2960.8, -3104.8, 5736.7, 106.4, -46.3, -31.8, 45.8, -2650.6, 49.1, 25.4, -36.9, 17, 27.7, -27.7, 220, -33.4, -112.1, 176.4, 7.2]
+    },
+    {
+      "kod": "1931",
+      "huvudgrupp": "1900",
+      "titelgrupp": "1930",
+      "namn": "Anstånd",
+      "budget": [-205.2, -243.9, -47.7, -1309.5, 4278.7, 526.2, -1195.4, -200, -200, 51, -5.5, -582.8, -311.1, 372.2, 0, 36000, 13300, 10600, 17400, 15400],
+      "utfall": [-41.8, -1183.5, 1136.6, -4554.2, 1601.9, 3409.9, 3.5, 51, -5.5, -582.8, -311.1, 372.2, -2030, 2169.7, -29733, -487.6, -3511.7, -9398.2, 15644.4, 14212.5]
+    },
+    {
+      "kod": "2114",
+      "huvudgrupp": "2100",
+      "titelgrupp": "2110",
+      "namn": "Luftfartsverkets inlevererade överskott",
+      "budget": [67, 75, 115, 100, 25, 10, 11, null, 2, 11, 11.7, 12.5, 13.2, 13.5, 0, 0, 0, 0, 0, 0],
+      "utfall": [null, 157.1, null, 30, null, null, null, null, null, null, null, 16.9, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2116",
+      "huvudgrupp": "2100",
+      "titelgrupp": "2110",
+      "namn": "Affärsverket Svenska Kraftnäts inlevererade utdelning och inleverans av motsvari",
+      "budget": [367, 700, 399, 649, 407, 408, 436, 450, 480, 312, 495, 410, 211, 201, 422, 338, 363, 382, 259, 261],
+      "utfall": [1573, 439, 476, 1172, 244, 499, 378, 618, 553, 475, 729, 359, 132, null, 382, 404, 348, 381, 274, 132]
+    },
+    {
+      "kod": "2118",
+      "huvudgrupp": "2100",
+      "titelgrupp": "2110",
+      "namn": "Sjöfartsverkets inlevererade överskott",
+      "budget": [12.7, 1.8, 11, 17.3, 8.3, null, 11.7, null, null, null, null, 0, 0, 0, 2.9, 0, 0, 0, 0, 0],
+      "utfall": [31.2, 19.9, null, 16.6, null, null, null, null, null, null, null, null, null, 4.9, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2124",
+      "huvudgrupp": "2100",
+      "titelgrupp": "2120",
+      "namn": "Inlevererat överskott av Riksgäldskontorets garantiverksamhet",
+      "budget": [5.8, 5.8, 5.8, 0.1, 0.1, null, null, null, 25, 50, 50, 32.7, 28.6, 31.9, 53.1, 59.5, 85.5, 105, 105, 78.8],
+      "utfall": [0.7, null, null, null, null, null, 49.1, 56.3, 41.8, 18.2, 26.5, 39, 51.8, 127.6, 78, 113.2, 68.9, 77.7, 71, 563.8]
+    },
+    {
+      "kod": "2126",
+      "huvudgrupp": "2100",
+      "titelgrupp": "2120",
+      "namn": "Inlevererat överskott av statsstödd exportkredit",
+      "budget": [50, 40, 5, 0, 20, 5, 1, 1, 50, 50, 100, 100, 0, 0, 0, 0, 0, 0, 80, 0],
+      "utfall": [51.5, 1.8, 94.3, 24.9, null, null, 115.7, 128.4, 254.4, 99.9, 164.1, 235.4, 125, 17.9, null, null, null, null, 165.8, null]
+    },
+    {
+      "kod": "2127",
+      "huvudgrupp": "2100",
+      "titelgrupp": "2120",
+      "namn": "Inlevererat överskott från övriga myndigheter",
+      "budget": [null, null, null, null, null, null, null, null, null, null, 76.4, 320, 350, 150, 102, 412.4, 405.8, 372.7, 295.3, 288.4],
+      "utfall": [null, null, null, null, null, null, null, null, null, 2289.7, 515, 486.8, 629.2, 135.1, 597.9, 131.8, 416.5, 145.6, 124.8, 105.7]
+    },
+    {
+      "kod": "2131",
+      "huvudgrupp": "2100",
+      "titelgrupp": "2130",
+      "namn": "Riksbankens inlevererade överskott",
+      "budget": [5000, 3900, 2700, 3600, 5600, 5700, 5200, 6700, 3600, 2400, 2700, 1700, 1600, 1800, 4000, 7800, 2000, 0, 0, 0],
+      "utfall": [5300, 4400, 3600, 5900, 5800, 6200, 7500, 6800, 3300, 4100, 2800, 2500, 2300, 3800, 5300, 6800, 3900, null, null, null]
+    },
+    {
+      "kod": "2215",
+      "huvudgrupp": "2200",
+      "titelgrupp": "2210",
+      "namn": "Inlevererat överskott av statens fastighetsförvaltning",
+      "budget": [254, 222, 301, 304, 268, 343, 265, 436, 467, 438, 239, 384, 273, 235, 285, 235, 501, 268, 383, 565],
+      "utfall": [321.1, 622, 329, 935.3, 460, 313, 243.4, 456.5, 487.6, 259.9, 286.3, 361.5, 226.5, 642.8, 230.6, 324.8, 263.4, 705.4, 463.3, 626.1]
+    },
+    {
+      "kod": "2314",
+      "huvudgrupp": "2300",
+      "titelgrupp": "2320",
+      "namn": "Ränteinkomster på lån till fiskerinäringen",
+      "budget": [2, 0.6, 0.5, 0.5, 0.3, 0.3, 0.3, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [0.5, 0.3, 0.3, 0.3, 0.1, 0.1, 0, 0, 0, 0, 0, null, 0.1, null, null, null, 0, null, null, null]
+    },
+    {
+      "kod": "2316",
+      "huvudgrupp": "2300",
+      "titelgrupp": "2320",
+      "namn": "Ränteinkomster på vattenkraftslån",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2322",
+      "huvudgrupp": "2300",
+      "titelgrupp": "2320",
+      "namn": "Räntor på övriga näringslån",
+      "budget": [2, 0.1, 0.1, 0, -0.8, -1, -1, -0.9, -0.7, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [-0.8, -0.8, -0.8, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 0, null, 0, 0.2, 0.1, 0.1, 0.1]
+    },
+    {
+      "kod": "2323",
+      "huvudgrupp": "2300",
+      "titelgrupp": "2320",
+      "namn": "Räntor på övriga näringslån",
+      "budget": [0, 0, 0, 0, null, null, 0, 0, 0, 0, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [0, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2324",
+      "huvudgrupp": "2300",
+      "titelgrupp": "2320",
+      "namn": "Ränteinkomster på lokaliseringslån",
+      "budget": [2, 0.3, 1, 1, 0.7, 0.5, 0.3, 0.2, 0.2, 0.2, 0.1, 0.1, 0.1, 0.1, 0, 0, 0, 0, 0, 0],
+      "utfall": [1.3, 1.2, 0.8, 0.5, 0.3, 0.3, 0.3, 0.1, 0.1, 0.1, 0.1, 0, 0, 0, 0, 0, null, null, null, null]
+    },
+    {
+      "kod": "2341",
+      "huvudgrupp": "2300",
+      "titelgrupp": "2340",
+      "namn": "Ränteinkomster på statens lån för universitetsstudier och garantilån för studera",
+      "budget": [0, 0, 0, 0, null, null, 0, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [0, 0, null, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2342",
+      "huvudgrupp": "2300",
+      "titelgrupp": "2340",
+      "namn": "Ränteinkomster på allmänna studielån",
+      "budget": [50, 50, 65, 70, 60, 55, 60, 55, 44, 39, 36, 37, 38, 38, 34, 33, 21, 23, 24, 34],
+      "utfall": [62, 76, 66.9, 60.5, 59.3, 51.6, 54.1, 39.7, 37.2, 40.3, 35.8, 36, 33.2, 32.8, 30.8, 32.1, 18.5, 17.2, 20.6, 44.5]
+    },
+    {
+      "kod": "2343",
+      "huvudgrupp": "2300",
+      "titelgrupp": "2340",
+      "namn": "Ränteinkomster på studielån upptagna efter 1988",
+      "budget": [4287, 4449, 4956, 5562, 5251, 4814, 4555, 4020.9, 0, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [4615.8, 4792.9, 4903.8, 4991.3, 4944.6, 4539.8, 4011.7, 3620, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2391",
+      "huvudgrupp": "2300",
+      "titelgrupp": "2390",
+      "namn": "Ränteinkomster på markförvärv för jordbrukets rationalisering",
+      "budget": [0.2, 0.2, 0.1, 0.1, null, null, 0, 0, 0, 0, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, 0, null, 0, 0, 0]
+    },
+    {
+      "kod": "2392",
+      "huvudgrupp": "2300",
+      "titelgrupp": "2390",
+      "namn": "Räntor på intressemedel",
+      "budget": [0.5, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2394",
+      "huvudgrupp": "2300",
+      "titelgrupp": "2390",
+      "namn": "Övriga ränteinkomster",
+      "budget": [40, 28, 37, 40, 39.9, 153.3, 168, 84.6, 81.6, 92.6, 60, 68.1, 63.4, 53.8, 42.4, 35.8, 35.1, 33.6, 40.3, 27.7],
+      "utfall": [36.5, 28.1, 117, 148.7, 803.3, 55.5, 107.1, 66.6, 72.4, 58.1, 58.3, 34, 42.4, 36.7, 47, 125.9, 140.1, 39.7, 88.7, 126.2]
+    },
+    {
+      "kod": "2397",
+      "huvudgrupp": "2300",
+      "titelgrupp": "2390",
+      "namn": "Räntor på skattekonton m.m., netto",
+      "budget": [1513, 1515, 1715, 2718, 515, 1112, 2011, 1609, 1208.1, 1707.8, 1901, 1601.9, 1251.5, 2500.4, 2100.4, 1900.7, 2000.3, 2000.4, 2200.4, 3400.3],
+      "utfall": [1272.3, 2336.8, 2623.5, 2527.9, 1014.5, 1244.5, 1650.9, 2294.4, 1965.8, 1247.6, 1867.1, 2309.2, 2273.8, 1910.5, 2229.6, 2413.4, 3108.4, 2933.8, 5687.9, 4860.4]
+    },
+    {
+      "kod": "2411",
+      "huvudgrupp": "2400",
+      "titelgrupp": "2410",
+      "namn": "Inkomster av statens aktier",
+      "budget": [12290.4, 20000, 19000, 22000, 14727, 24000, 23000, 24000, 18000, 18000, 14000, 11000, 15200, 15000, 21000, 15000, 24000, 20700, 25700, 24900],
+      "utfall": [22963.1, 33248.8, 24680.5, 19139.7, 16875.7, 26926, 21657.8, 20654.9, 12435.9, 19520.6, 12588.3, 8557.6, 14627.7, 15080.8, 17925.2, 17576.5, 46206.6, 19929.4, 20467.9, 23187.7]
+    },
+    {
+      "kod": "2511",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Expeditions- och ansökningsavgifter",
+      "budget": [450, 620, 670, 663, 655.6, 803.3, 768.5, 771.8, 827.3, 910.8, 884.6, 986.5, 958.2, 984.3, 1120.4, 1170.1, 1024.4, 1186.3, 1175.2, 1086.5],
+      "utfall": [618.8, 658.4, 639.7, 695.9, 759.3, 749.8, 798.3, 800.8, 838.5, 936, 938.3, 953.6, 993.3, 1085.4, 987.7, 1038.7, 1173.1, 1101.1, 1140.8, 1203.7]
+    },
+    {
+      "kod": "2522",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Fastställande av åldersgränser för framställning i film",
+      "budget": [9.4, 10.6, 10, 10, 10.1, 8, 8.2, 4.5, 4.2, 4, 4, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [10.8, 9.1, 9.4, 9.9, 9.2, 8.8, 6.9, 6.4, 3.2, 3.8, 3.5, 0.3, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2525",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Finansieringsavgift från arbetslöshetskassor",
+      "budget": [3172, 13150, 10025, 7128, 8806, 6736.9, 5290, 5209, 2849, 3133.9, 3379, 3396.1, 3468.2, 3503.4, 3633.4, 3884.2, 4333.7, 3963, 4894.3, 5118.4],
+      "utfall": [3130.1, 10552.8, 8940.7, 7381.4, 6381.4, 4991.6, 5193.4, 5520, 2848, 2996.7, 3364.8, 3439.4, 3494.3, 3558.9, 4161.2, 4487.4, 4600.2, 4800.6, 4964.5, 5073]
+    },
+    {
+      "kod": "2526",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Utjämningsavgift från arbetslöshetskassor",
+      "budget": [77.8, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [77.7, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2527",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter för statskontroll av krigsmaterieltillverkning",
+      "budget": [25.4, 25.4, 28, 28.8, 24.2, 26.2, 28.3, 26.5, 25.1, 26.4, 26.8, 27, 28, 36, 36.5, 36, 38.5, 40.5, 48, 48.5],
+      "utfall": [22.3, 22.7, 23.8, 30.5, 24.2, 25.9, 25.5, 26.5, 28.4, 26.8, 26, 31, 32, 33.2, 37.2, 38.5, 39.6, 47.1, 50.2, 50]
+    },
+    {
+      "kod": "2528",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter vid Bergsstaten",
+      "budget": [10, 11, 12, 15, 12, 12, 19, 19, 19, 12, 19, 11.5, 22, 26, 15, 10.3, 18.3, 26.7, 38.3, 30.9],
+      "utfall": [14.3, 21.7, 25.5, 11.7, 14.9, 34.3, 26.9, 19.1, 22.9, 15.6, 10.3, 20.7, 20.8, 9.1, 22.7, 17.2, 11.9, 26.3, 33.2, 29.7]
+    },
+    {
+      "kod": "2529",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter vid patent- och registreringsväsendet",
+      "budget": [71.9, 59, 84.7, 87, 110.4, 114.9, 128, 143.4, 118.1, 111.8, 105.6, 403.7, 372.7, 414, 431, 436.5, 436.5, 430, 456, 459],
+      "utfall": [77.3, 94.1, 108.5, 115.1, 115, 124.9, 111.2, 106.9, 82.3, 105.5, 114.2, 388, 395.4, 440.8, 423.3, 411.6, 463, 461.3, 481.4, 479]
+    },
+    {
+      "kod": "2531",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter för registrering i föreningsregister m.fl.",
+      "budget": [1.2, 1.2, 1.7, 2.1, 1.9, 2.3, 2.2, 2.2, 2.5, 2.7, 2.3, 2.3, 2.4, 2.5, 2.3, 2.2, 2.4, 2.5, 2.8, 2.8],
+      "utfall": [1.9, 2, 2, 2.1, 2.1, 2.1, 2.4, 2.4, 2.2, 2.2, 2.1, 2.1, 2.2, 2.2, 2.3, 2.4, 2.4, 2.7, 2.7, 2.9]
+    },
+    {
+      "kod": "2532",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter vid Kronofogdemyndigheten",
+      "budget": [875, 913, 980, 1135, 1234, 1209, 1355, 1415, 1385, 1395, 1470, 1460, 1460, 1467, 1530, 1585, 1659.5, 1654.6, 1770.3, 1683.8],
+      "utfall": [975.8, 1027.5, 1151.1, 1290.9, 1388.9, 1385.6, 1364.5, 1710.7, 1501.3, 1438.5, 1567.2, 1449.1, 1391.6, 1425, 1531.8, 1484.4, 1584.5, 2530.4, 1864.4, 1898]
+    },
+    {
+      "kod": "2534",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter vid Transportstyrelsen",
+      "budget": [22, 20, 25.5, 28, 17.5, 1609.1, 1652.6, 1590.7, 1535, 1549, 1381, 1303, 1282, 1411, 1443, 1498, 1592, 1572, 1691, 1751],
+      "utfall": [22, 26.8, 22.4, 17.3, 25.1, 1545.3, 1548.3, 1558.8, 1516.1, 1452.7, 1313.5, 1507, 1189.4, 1358.3, 1392, 1405.2, 1584.8, 1529.5, 1640.9, 1873.3]
+    },
+    {
+      "kod": "2535",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter för statliga garantier",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [0, null, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2537",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Miljöskyddsavgift",
+      "budget": [110, 110, 121, 122, 96.5, 100.6, 104.4, 131.6, 130.4, 128.7, 129.7, 150, 132.7, 177.7, 300, 160, 340, 375, 357.7, 364.6],
+      "utfall": [108.6, 118.9, 99.3, 95, 97.5, 127.8, 125.8, 124.3, 123, 137.7, 158.4, 191.2, 205.7, 216.8, 314.1, 291.7, 248.3, 294.2, 285.2, 173.3]
+    },
+    {
+      "kod": "2539",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Täktavgift",
+      "budget": [15, 19, 18, 19, 16.5, 18.6, 21, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [16.1, 16.6, 17.4, 17.5, 19.6, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2541",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter vid Tullverket",
+      "budget": [11, 16, 20.4, 21, 21, 20, 28, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [14.4, 20, 19, 20.8, 25, 26.9, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2542",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Patientavgifter vid tandläkarutbildningen",
+      "budget": [6, 8, 8.5, 9, 5.6, 3.2, 2, 1.9, 2.4, 3, 3.2, 4.1, 3.1, 3.2, 0, null, null, null, null, null],
+      "utfall": [7.9, 7.4, 5.9, 3, 1.9, 1.9, 2.3, 3.8, 3.1, 4.3, 4.3, 0.3, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2544",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter vid Folkhälsoinstitutet",
+      "budget": [4, 4, 4, 4, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [3.6, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2548",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter för Finansinspektionens verksamhet",
+      "budget": [175, 188, 191, 205, 312, 281, 345, 346, 383, 458, 506, 511, 542, 624, 631, 660.7, 683, 787, 848, 852.1],
+      "utfall": [169, 193.4, 215, 235.6, 245.6, 293.9, 332, 299.7, 424.4, 453.5, 519.1, 542.6, 602, 615.5, 663.5, 678, 721.9, 737.7, 831.7, 858.9]
+    },
+    {
+      "kod": "2551",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter från kärnkraftverken",
+      "budget": [247.7, 252.1, 253.8, 269, 244.2, 254, 255, 282, 290, 285, 300.5, 296, 260, 237, 286, 289, 319, 313, 312, 319],
+      "utfall": [246, 251.8, 280.4, 270.4, 215.9, 324.3, 276.5, 285.3, 281.3, 282.9, 285.8, 263.1, 250, 248.7, 284.7, 315.6, 315.4, 311.2, 291.2, 286.3]
+    },
+    {
+      "kod": "2552",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Övriga offentligrättsliga avgifter",
+      "budget": [350, 360, 375, 380, 400, 410, 410.1, 401.9, 402.7, 469.5, 468.3, 437.3, 475.5, 488.5, 418.3, 457.4, 515, 530, 556, 570],
+      "utfall": [386.6, 372.7, 378.5, 385.4, 383.1, 394.5, 388.6, 404.7, 424.9, 406.4, 488.9, 419.9, 440.3, 468.1, 481.3, 507.6, 516.5, 542.1, 864.1, 869.9]
+    },
+    {
+      "kod": "2553",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Registreringsavgift till Fastighetsmäklarinspektionen",
+      "budget": [10.2, 14.8, 15.6, 16, 15, 16, 16.6, 16.2, 16.9, 17.3, 17.6, 18, 20.4, 23.6, 24.3, 24.7, 30.1, 33, 33, 33],
+      "utfall": [14.7, 15.5, 16.1, 16.2, 16.8, 17.3, 17.2, 17.1, 17.3, 17.3, 17.7, 20.5, 23.9, 24.2, 24.6, 31, 30.5, 34.4, 33.5, 33.8]
+    },
+    {
+      "kod": "2557",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter vid statens internbank i Riksgäldskontoret",
+      "budget": [9, 8.6, 7, 7, 6.2, 5, 5.9, 4.9, 4.6, 4.7, 4.8, 4.4, 2.6, 1, 0, null, null, null, null, null],
+      "utfall": [6, 5.7, 6.5, 4.7, 4.5, 4.8, 4.4, 4.5, 4.6, 4.3, 4, 0.1, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2558",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter för årlig revision",
+      "budget": [135, 121.9, 120, 125, 126.9, 125.9, 130.6, 120.1, 129.7, 135, 146.9, 162, 161.2, 165.5, 152.7, 153.1, 152.1, 151.8, 172.1, 166.7],
+      "utfall": [119.9, 132.1, 133.4, 118.4, 122, 112.7, 125.2, 131.7, 139.2, 156.4, 153.5, 152.9, 154.7, 153.5, 146.9, 152.1, 164.1, 178.6, 71.6, null]
+    },
+    {
+      "kod": "2559",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Avgifter för etikprövning av forskning",
+      "budget": [20, 22, 23, 24, 26.1, 26, 24.6, 27.5, 27.6, 27, 27.3, 28.5, 30.1, 29.5, 20.4, 28.8, 28.4, 28.7, 29.1, 30.4],
+      "utfall": [21, 21.9, 23.3, 24.4, 23, 24.8, 25.6, 26.3, 25.9, 26.9, 28.1, 29.3, 28.4, 25.1, 31, 30.5, 29.1, 32.3, 32, 32.3]
+    },
+    {
+      "kod": "2561",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "Efterbevaknings- och tillsynsavgifter",
+      "budget": [18, 22.5, 20, 20, 15.3, 17.3, 19.9, 20.6, 18.4, 22, 22, 21.4, 20.8, 24.3, 18.3, 18.9, 19.2, 20.8, 21.1, 21.8],
+      "utfall": [19.6, 18, 16.1, 16.2, 18.6, 21.9, 17.8, 21.3, 20.9, 22.9, 19.3, 17, 21.1, 16.9, 21.6, 21.4, 24.7, 20, 21.9, 24.9]
+    },
+    {
+      "kod": "2562",
+      "huvudgrupp": "2500",
+      "titelgrupp": "2510",
+      "namn": "CSN-avgifter",
+      "budget": [null, null, null, null, null, null, null, null, null, null, 665, 802, 667, 641, 645.5, 668.5, 662.2, 687.3, 750.6, 758.3],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, 1341.7, 667.3, 657.4, 669.9, 675.9, 687, 714.7, 714.7, 780.9, 760.2]
+    },
+    {
+      "kod": "2624",
+      "huvudgrupp": "2600",
+      "titelgrupp": "2620",
+      "namn": "Inkomster av uppbörd av felparkeringsavgifter",
+      "budget": [50, 58, 54, 55, 54.8, 54, 54, 58, 55, 57, 59, 67, 62, 70, 71.6, 72, 70, 60, 50, 49.2],
+      "utfall": [49.5, 58, 54.7, 53, 58.1, 58.6, 56.9, 53.9, 62, 67.2, 67.8, 93.3, 73.3, 72.5, 73.6, 68.9, 55.8, 51.2, 47.7, 44.4]
+    },
+    {
+      "kod": "2625",
+      "huvudgrupp": "2600",
+      "titelgrupp": "2620",
+      "namn": "Utförsäljning av beredskapslager",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [null, null, null, 0.4, 0, null, 7.2, 0, null, null, null, 0.1, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2627",
+      "huvudgrupp": "2600",
+      "titelgrupp": "2620",
+      "namn": "Offentlig lagring, försäljningsintäkter",
+      "budget": [120, 120, 120, 100, 70, 280, 66, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [212, 196.7, 102.2, 30.7, 6.7, 201.2, null, 0.1, 0.2, 0.4, 0.1, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "2711",
+      "huvudgrupp": "2700",
+      "titelgrupp": "2710",
+      "namn": "Restavgifter och dröjsmålsavgifter",
+      "budget": [71, 61, 96, 72, 91, 93, 97, 99, 95, 97, 101, 95, 101, 97, 93, 94, 86.5, 96.3, 81.1, 78.1],
+      "utfall": [104.5, 80.8, 82.9, 101.1, 93.2, 98, 92.8, 112, 93.6, 101.5, 107.5, 95.1, 93.5, 96.9, 85.7, 89.2, 81.7, 76.7, 68.1, 63]
+    },
+    {
+      "kod": "2712",
+      "huvudgrupp": "2700",
+      "titelgrupp": "2710",
+      "namn": "Bötesmedel",
+      "budget": [507, 531, 925, 940, 995, 1054, 1105, 1071, 1015, 985, 959, 953, 862, 864, 869, 1010, 1210, 1745, 1496.2, 1505.2],
+      "utfall": [576.1, 901.3, 1037.1, 978.4, 995.1, 1112.2, 976.1, 1034, 910.5, 890.8, 781.3, 772.6, 820.2, 962.1, 6196.4, 1288.6, 1438.7, 2359.3, 1649.7, 2064.1]
+    },
+    {
+      "kod": "2713",
+      "huvudgrupp": "2700",
+      "titelgrupp": "2710",
+      "namn": "Vattenföroreningsavgifter m.m.",
+      "budget": [1.5, 1.5, 20, 26, 10.2, 4, 4, 3, 3, 2.6, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [5.4, 37.3, 14.1, 1.7, 2.6, 0.4, 32.5, -6, -5.8, 82.9, 2, -0.1, -0.4, 0.1, 14.5, -0.6, 2.6, 9.2, 42.7, 46.8]
+    },
+    {
+      "kod": "2714",
+      "huvudgrupp": "2700",
+      "titelgrupp": "2710",
+      "namn": "Sanktionsavgifter m.m.",
+      "budget": [20, 20, 20, 50, 50, 50, 645, 292, 50, 50, 50, 90, 122.4, 146.7, 130.9, 147.2, 156.9, 176.5, 306.5, 336.3],
+      "utfall": [24.3, 287.6, 50.3, 311.7, 25.2, 61.7, 307.8, 184.6, 86.4, 121.4, 130.7, 168.1, 136.4, 145.9, 163.9, 199.6, 283.1, 419.4, 483.4, 406.3]
+    },
+    {
+      "kod": "2717",
+      "huvudgrupp": "2700",
+      "titelgrupp": "2710",
+      "namn": "Kontrollavgifter vid särskild skattekontroll",
+      "budget": [null, 1, 15, 28, 16, 13, 26, 43, 53, 51, 76, 47.9, 48.9, 54.3, 81.4, 54.7, 53.9, 28.1, 25.5, 24.1],
+      "utfall": [null, 23.4, 17.2, 11.9, 11.3, 31.5, 49.2, 48.4, 45.3, 46.4, 50.7, 65.5, 68.2, 73.1, 33.9, 16.4, 24.3, 23.7, 19.5, 21.6]
+    },
+    {
+      "kod": "2811",
+      "huvudgrupp": "2800",
+      "titelgrupp": "2810",
+      "namn": "Övriga inkomster av statens verksamhet",
+      "budget": [415, 5465, 450, 450, 460, 510, 890, 1063, 11920, 612, 670, 819.8, 700.1, 1021.1, 1167.4, 1180.1, 1613, 4820.5, 3688.3, 2991.6],
+      "utfall": [165.5, 5226.2, 2580.2, 916.9, 496.9, 3721.8, 1166.8, 910, 13065.1, 1059.9, 686, 1154.9, 1236, 1833.5, 1536.8, 2095.8, 3367.5, 15231.5, 4511.1, 5773.6]
+    },
+    {
+      "kod": "2812",
+      "huvudgrupp": "2800",
+      "titelgrupp": "2810",
+      "namn": "Ersättning för uppbördskostnader tull PCO",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "3125",
+      "huvudgrupp": "3100",
+      "titelgrupp": "3120",
+      "namn": "Fortifikationsverkets försäljning av fastigheter",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [24.6, 20.3, 38.7, 23.3, 26.1, 33.8, 64.7, 70.6, 28.1, 11, 19.5, 5.8, 99.4, 4.8, 0.3, null, 2, 0, 12.7, 53.6]
+    },
+    {
+      "kod": "3211",
+      "huvudgrupp": "3200",
+      "titelgrupp": "3210",
+      "namn": "Övriga inkomster av markförsäljning",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 17.6, null]
+    },
+    {
+      "kod": "3311",
+      "huvudgrupp": "3300",
+      "titelgrupp": "3310",
+      "namn": "Inkomster av statens gruvegendom",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "3312",
+      "huvudgrupp": "3300",
+      "titelgrupp": "3310",
+      "namn": "Övriga inkomster av försåld egendom",
+      "budget": [15000, 50000, 50000, 50000, null, 25000, 15000, 15000, 15000, 15000, 5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000],
+      "utfall": [31.8, 17995.6, 76480.4, 78.5, 140.7, 23090.1, 257.5, 20701.5, 154.3, 122.7, 211, 2.3, 1708.3, 32.9, 839.7, 23.3, 939.2, 92.3, 1210.2, 435.3]
+    },
+    {
+      "kod": "4123",
+      "huvudgrupp": "4100",
+      "titelgrupp": "4120",
+      "namn": "Återbetalning av lån till fiskerinäringen",
+      "budget": [9, 8, 6, 5, 3, 2, 2, 0.5, 0.5, 0.4, 0.4, 0.4, 0.3, 0.3, 0, 0, 0, 0, 0, 0],
+      "utfall": [10.3, 9.1, 5.8, 4.1, 2.6, 2.9, 0.9, 0.7, 0.5, 0.3, 0.3, null, null, null, null, null, 0, null, null, null]
+    },
+    {
+      "kod": "4131",
+      "huvudgrupp": "4100",
+      "titelgrupp": "4130",
+      "namn": "Återbetalning av vattenkraftslån",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, 0, null],
+      "utfall": [0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "4132",
+      "huvudgrupp": "4100",
+      "titelgrupp": "4130",
+      "namn": "Återbetalning av lån avseende såddfinansiering",
+      "budget": [0, 3, 2, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [4.9, 1, 0.3, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "4135",
+      "huvudgrupp": "4100",
+      "titelgrupp": "4130",
+      "namn": "Återbetalning av skogsvägslån",
+      "budget": [0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "4136",
+      "huvudgrupp": "4100",
+      "titelgrupp": "4130",
+      "namn": "Återbetalning av övriga näringslån",
+      "budget": [3.9, 0.8, 0.7, 0.5, 0.4, 0.2, 1, 0.1, null, null, null, 0.1, 0.1, 0.1, 0.1, 0, 0, 0, 0, 0.8],
+      "utfall": [0.9, 1.1, 0.8, 0.6, 0.4, 0.2, 0.2, 0, 0.1, 0.1, 0.1, 0.1, 0.1, 0, null, null, 0, 0.8, 19.6, 2.7]
+    },
+    {
+      "kod": "4137",
+      "huvudgrupp": "4100",
+      "titelgrupp": "4130",
+      "namn": "Återbetalning av övriga näringslån, Statens jordbruksverk",
+      "budget": [0, 0, 0, 0, null, 0.1, 0.1, 1, 1, 1, null, 0, 0, 0, 0.1, 0, 0, 0, 0, 0],
+      "utfall": [0.5, 1.4, 0.8, 1.4, 2.2, 0.7, 0.4, 1, 0, 0.1, 0.9, 0.4, 0.2, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "4138",
+      "huvudgrupp": "4100",
+      "titelgrupp": "4130",
+      "namn": "Återbetalning av tidigare infriade statliga garantier",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "4139",
+      "huvudgrupp": "4100",
+      "titelgrupp": "4130",
+      "namn": "Återbetalning av lokaliseringslån",
+      "budget": [36, 10, 7, 10, 9, 1.2, 1.1, 1, 0.5, 0.4, 0.3, 0.2, 0.1, 0, 0.1, 0.1, 0.1, 0, 0, 0],
+      "utfall": [38.3, 11.6, 6, 2.2, 1.2, 0.9, 0.6, 0.7, 0.3, 0.4, 0.2, 0.1, 0.2, 0.1, 0.1, 0.1, null, null, null, null]
+    },
+    {
+      "kod": "4311",
+      "huvudgrupp": "4300",
+      "titelgrupp": "4310",
+      "namn": "Återbetalning av statens lån för universitetsstudier",
+      "budget": [0, 0, 0, 0, null, null, 0, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "4312",
+      "huvudgrupp": "4300",
+      "titelgrupp": "4310",
+      "namn": "Återbetalning av allmänna studielån",
+      "budget": [0.5, 0.5, 0.5, 0.5, 0.5, 0.4, 0.3, 0.1, 0.1, 0.1, 0.1, 0.1, 0, 0, 0, 0, 0.1, 0.1, 0.1, 0.1],
+      "utfall": [0.5, 0.7, 0.5, 0.4, 0.3, 0.2, 0.1, 0.1, 0.1, 0.1, 0.1, 0, 0, 0, 0, 0.1, 0.1, 0.1, 0.1, 0]
+    },
+    {
+      "kod": "4313",
+      "huvudgrupp": "4300",
+      "titelgrupp": "4310",
+      "namn": "Återbetalning av studiemedel",
+      "budget": [2046, 1958, 1814, 1712, 1605, 1441, 1284, 1047, 910, 733, 613, 529, 493, 468, 440, 433, 298, 279, 320, 384],
+      "utfall": [1984.3, 1906.7, 1773.8, 1673.9, 1602, 1401.6, 1180.3, 967.9, 817.6, 711.3, 578.8, 521.1, 471.8, 457.4, 418.3, 406.7, 270.8, 244.3, 261.7, 396.9]
+    },
+    {
+      "kod": "4516",
+      "huvudgrupp": "4500",
+      "titelgrupp": "4510",
+      "namn": "Återbetalning av utgivna startlån och bidrag",
+      "budget": [0, 0, 0, 0, null, null, 0, 0, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "4517",
+      "huvudgrupp": "4500",
+      "titelgrupp": "4510",
+      "namn": "Återbetalning från Portugalfonden",
+      "budget": [0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "4525",
+      "huvudgrupp": "4500",
+      "titelgrupp": "4510",
+      "namn": "Återbetalning av lån för svenska FN-styrkor",
+      "budget": [10, 20, 20, 20, 20, 20, 15, 1, 1, 1, 1, 1, 109, 71.3, 62.9, 92.9, 36.7, 41.5, 77.5, 48.6],
+      "utfall": [65.7, 65.1, 32.8, 25.3, 1.1, 0.3, null, 0.8, 1.2, 40.3, 52.2, 71, 63, 119.5, 40.4, 78.3, 60, 61.7, 7.5, 2.5]
+    },
+    {
+      "kod": "4526",
+      "huvudgrupp": "4500",
+      "titelgrupp": "4510",
+      "namn": "Återbetalning av övriga lån",
+      "budget": [33.5, 40, 40, 27.1, 35.6, 26, 57.6, 148, 140, 140, 146, 160.7, 164, 177.1, 153.4, 144.3, 194, 207.4, 217, 129.4],
+      "utfall": [38.4, 49.4, 60.1, 28.3, 77.4, 45.6, 139.8, 133.8, 125.5, 159.7, 151.3, 171.7, 203.2, 219.5, 191.2, 575, 1048.6, 124.8, 98, 273.2]
+    },
+    {
+      "kod": "5121",
+      "huvudgrupp": "5100",
+      "titelgrupp": "5120",
+      "namn": "Amortering på statskapital",
+      "budget": [530, 505, 503, 485, 478, 543, 536, 537, 536, 159, 107, 97, 87, 77, 0, 0, 0, 0, 0, 0],
+      "utfall": [517.9, 567.4, 512, 537.3, 550.2, 551.7, 525.8, 533.8, 540.5, 154.5, 107.4, 96.4, 84, 12.6, null, null, null, null, null, 148.3]
+    },
+    {
+      "kod": "5131",
+      "huvudgrupp": "5100",
+      "titelgrupp": "5130",
+      "namn": "Uppdragsmyndigheters m.fl. komplementkostnader",
+      "budget": [4.4, 4.4, 4.4, 4.4, 4.4, 4.4, null, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [4.3, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "5211",
+      "huvudgrupp": "5200",
+      "titelgrupp": "5210",
+      "namn": "Statliga pensionsavgifter",
+      "budget": [6540, 8050, 8420, 8119, 8401, 10380, 10769, 10197, 9718, 9839, 10612, 11197, 11786, 14117, 16009, 17262, 18038, 19134, 22164, 23921],
+      "utfall": [7240.6, 7606.2, 8188.3, 8374.8, 8390.1, 10534, 9191.3, 9404.4, 9327, 9593.6, 10667.8, 11331, 12085.4, 14201.7, 16223.6, 17794.8, 18163.6, 19921.5, 21943.2, 24963.6]
+    },
+    {
+      "kod": "6111",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6110",
+      "namn": "Gårdsstöd",
+      "budget": [5001.5, 5560.8, 6411, 6501, 7700, 6360, 5470, 5431.5, 5859, 5921.2, 6808.3, 6431, 7500, 6600, 7255, 7159, 6897, 5572, 9447, 7661.3],
+      "utfall": [5469, 5689.1, 6276.2, 6663.3, 6826.5, 6028.5, 5608.4, 5670.6, 5859.4, 6272, 6345.2, 6698.3, 6613.2, 7176.9, 7288.3, 7101.2, 7022, 7474.4, 7870.7, 7751.4]
+    },
+    {
+      "kod": "6112",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6110",
+      "namn": "Kompletterande åtgärder perioden 1995-1999",
+      "budget": [1, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [1.8, 0, 0, null, null, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6113",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6110",
+      "namn": "Övriga interventioner",
+      "budget": [293.7, 323.5, 135, 135, 134, 157, 480, 138, 133, 130, 126, 130, 138, 138, 144, 137, 160, 149, 159, 169],
+      "utfall": [162.3, 131.7, 126.1, 166.6, 217.2, 134.8, 150.6, 98, 124.1, 121.7, 127.5, 116.8, 108.9, 122, 116.4, 131.5, 146.1, 144.8, 144, 143.1]
+    },
+    {
+      "kod": "6114",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6110",
+      "namn": "Exportbidrag",
+      "budget": [682.4, 751.7, 350, 100, 100, 10, 0.5, 0.4, null, null, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [599.5, 249.4, 105.8, 210.1, 55.9, 0.9, 0.6, 0, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6115",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6110",
+      "namn": "Djurbidrag",
+      "budget": [1214.9, 1343.6, 322, 322, 345, 334.9, 158, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [736.9, 1034.8, 324.6, 309, 347, 306.6, 312.1, -0.1, 0, 0.3, 0, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6116",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6110",
+      "namn": "Offentlig lagring",
+      "budget": [150, 70, 10, 10, 12, 33, 12, 12, 12, 12, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "utfall": [71.9, -81.9, 20.4, 6.7, 107.2, -75.2, 62.7, 8.4, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6117",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6110",
+      "namn": "Miljö-, struktur- och regionala åtgärder perioden 2000-2006",
+      "budget": [2125.9, 0, -5.5, -2, -2, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [1531, -17, -5.1, -3, -1.7, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6118",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6110",
+      "namn": "EU:s landsbygdsfond 2007-2013",
+      "budget": [null, 1790.1, 2728, 2010, 2650, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, 2685.6, 1806.6, 1106.4, 2884.2, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6119",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6110",
+      "namn": "Övriga bidrag från Europeiska garantifonden för jordbruket",
+      "budget": [6, 6, 6, 6, 6, 11.5, 12.6, 7, 8, 8, 8, 4.4, 4.4, 4.4, 4.4, 4.4, 4.4, 0, 0, 0],
+      "utfall": [119.1, -119.2, 216.4, 722.6, -206.8, -225.5, -239, 73.6, 181.3, 206.1, 6.9, -40.2, 240.1, 135.7, -115.6, -382.1, 317.2, 359.5, -30.6, -2.6]
+    },
+    {
+      "kod": "6121",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6120",
+      "namn": "Europeiska utvecklings- och garantifonden - utvecklingssektionen 1995 -1999",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6122",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6120",
+      "namn": "Europeiska utvecklings- och garantifonden - utvecklingssektionen 2000 - 2006",
+      "budget": [190, 189, 109, 0, -18.8, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [198.2, 269, 123.1, 9.5, null, -19.5, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6123",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6120",
+      "namn": "Europeiska utvecklings- och garantifonden - garantisektionen 2000 - 2006",
+      "budget": [null, null, null, null, null, -1, null, -1, -1, null, -0.5, 0, 0, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, -1.2, -0.5, -0.9, -0.5, -0.2, -0.1, -0.1, 0, 0, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6124",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6120",
+      "namn": "Bidrag från Europeiska jordbruksfonden för landsbygdsutveckling 2007 - 2013",
+      "budget": [null, null, null, null, null, 3100, 3140, 2525.1, 2647, null, 530.1, 0, -7.3, -4.6, -2, -1, -0.5, 0, 0, 0],
+      "utfall": [null, null, null, null, null, 2521.8, 2564.4, 1603.1, 1945.8, null, 405.3, null, -9.3, -3.6, -0.8, -0.9, -0.5, 0, 0, null]
+    },
+    {
+      "kod": "6125",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6120",
+      "namn": "Bidrag från Europeiska jordbruksfonden för landsbygdsutveckling 2014 - 2020",
+      "budget": [null, null, null, null, null, null, null, null, 1190, 2312, 2771, 1950, 2404.4, 2182.4, 3020.1, 1667, 4085, 1476, 1138, 773.1],
+      "utfall": [null, null, null, null, null, null, null, null, null, 1621.1, 1966.8, 1004, 1932.8, 2359.3, 3468.2, 3310.6, 3099.6, 3138.3, 862.7, 604.3]
+    },
+    {
+      "kod": "6126",
+      "huvudgrupp": "6100",
+      "titelgrupp": "6120",
+      "namn": "Bidrag från Europeiska jordbruksfonden för landsbygdsutveckling 2021 – 2027",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 2018, 0, 1206, 1921, 1686.6],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 120.6, 1605.5, 1680.3]
+    },
+    {
+      "kod": "6211",
+      "huvudgrupp": "6200",
+      "titelgrupp": null,
+      "namn": "Bidrag från Fonden för fiskets utveckling 1995 -1999",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-1.5, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6212",
+      "huvudgrupp": "6200",
+      "titelgrupp": null,
+      "namn": "Bidrag från Fonden för fiskets utveckling 2000 - 2006",
+      "budget": [63.9, 44.3, 126, 20, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [77.2, 89.9, 58.5, 24.6, null, null, null, null, -12.3, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6213",
+      "huvudgrupp": "6200",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska fiskefonden 2007-2013",
+      "budget": [null, 14.8, 30, 40, 100, 73, 101.6, 80, 70, 39, 54.2, 0, -34.4, 0, 0, null, null, null, null, null],
+      "utfall": [null, null, 35.8, 45.3, 101.8, 49.6, 2.3, 93.5, 50.5, 81.9, 22.4, null, null, null, -39, null, null, null, null, null]
+    },
+    {
+      "kod": "6214",
+      "huvudgrupp": "6200",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska havs- och fiskerifonden 2014 - 2020",
+      "budget": [null, null, null, null, null, null, null, null, 18, 35, 76.2, 162.4, 234, 251, 209, 167, 174, 109, 0, 0],
+      "utfall": [null, null, null, null, null, null, null, null, null, 21.4, 35.9, 15.2, 236.7, 143.5, 103.2, 97.1, 138.6, 259.5, 2.6, null]
+    },
+    {
+      "kod": "6215",
+      "huvudgrupp": "6200",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska havs- och fiskerifonden 2021 – 2027",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 120, 120, 115, 196, 217.5],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 12.4, 40.3, 100.6, 122.1]
+    },
+    {
+      "kod": "6311",
+      "huvudgrupp": "6300",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska regionala utvecklingsfonden 1995 -1999",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6312",
+      "huvudgrupp": "6300",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska regionala utvecklingsfonden 2000 - 2006",
+      "budget": [1255.2, 1055.3, 375, 42, 60, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [1212, 948.7, 192, 57.9, 3, 65.3, 10.6, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6313",
+      "huvudgrupp": "6300",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska regionala utvecklingsfonden 2007 - 2013",
+      "budget": [null, 263.8, 325, 1000, 1700, 1440, 1390, 1413, 1021, 218, 114, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [null, 181.7, 272, 1256.8, 869.2, 1779.1, 991.9, 1291.7, 1330.8, 405.5, 47.1, 293.3, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6314",
+      "huvudgrupp": "6300",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska regionala utvecklingsfonden 2014 - 2020",
+      "budget": [null, null, null, null, null, null, null, null, 170, 106, 872, 1407, 1407.9, 1455, 1498.9, 1819, 1600, 1430, 334, 0],
+      "utfall": [null, null, null, null, null, null, null, null, 64.4, 103.5, 673.6, 919.9, 1556.6, 791.7, 1449.1, 1184.6, 1273.1, 1607.1, 881.2, 4.1]
+    },
+    {
+      "kod": "6315",
+      "huvudgrupp": "6300",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska regionala utvecklingsfonden 2021–2027",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 150, 600, 650, 1080, 1595],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 157.3, 106.6, 1008, 954.2]
+    },
+    {
+      "kod": "6411",
+      "huvudgrupp": "6400",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska socialfonden 1995 -1999",
+      "budget": [0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6412",
+      "huvudgrupp": "6400",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska socialfonden 2000-2006",
+      "budget": [1553.6, 1625.5, 700, 247, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [1270.6, 1504.4, 675, 102.1, null, 23.2, -0.7, -25.7, null, -4.7, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6413",
+      "huvudgrupp": "6400",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska socialfonden 2007 - 2013",
+      "budget": [null, 180.6, 365, 400, 800, 976.1, 1351, 1440, 880, 556, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [null, 128.2, 195.2, 255.9, 1151.1, 1165.1, null, 867.6, 1908.6, 328.7, null, null, 291, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "6414",
+      "huvudgrupp": "6400",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska socialfonden 2014 - 2020",
+      "budget": [null, null, null, null, null, null, null, null, null, 395.5, 648, 979, 956, 1538, 1239, 1996, 2546, 2219, 75, 0],
+      "utfall": [null, null, null, null, null, null, null, null, 73.1, 199.7, 324.1, 578.2, 1021, 1123.3, 1008.9, 1245.4, 1169.7, 2331.1, 1528.7, null]
+    },
+    {
+      "kod": "6415",
+      "huvudgrupp": "6400",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska socialfonden 2021–2027",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 50, 225, 431, 1387, 1554],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 114.8, 79.8, 937.7, 848.5]
+    },
+    {
+      "kod": "6511",
+      "huvudgrupp": "6500",
+      "titelgrupp": null,
+      "namn": "Bidrag till transeuropeiska nätverk",
+      "budget": [295, 290, 279.9, 219.8, 235, 350, 662, 400, 300, 400, 450, 22, 71, 95, 100, 150, 150, 150, 534, 533.5],
+      "utfall": [193.8, 187.5, 347.8, 469.6, 391.4, 419.4, 211.9, 393.4, 293.6, 123.1, 382.7, 215.2, 103.6, 114.2, 318, 505.6, 794.2, 997.1, 453.4, 571.7]
+    },
+    {
+      "kod": "6611",
+      "huvudgrupp": "6600",
+      "titelgrupp": null,
+      "namn": "Bidrag från Europeiska faciliteten för återhämtning och resiliens",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 14000, 10513, 18790.5, 32163.7, 34580.4],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 18528.6]
+    },
+    {
+      "kod": "6911",
+      "huvudgrupp": "6900",
+      "titelgrupp": null,
+      "namn": "Övriga bidrag från EU",
+      "budget": [12, 9, 8, 47, 60, 195, 154, 177.3, 98.6, 200, 238.4, 186, 236.3, 262.5, 247.5, 880, 713, 180, 240, 0],
+      "utfall": [799, 39.9, 5.3, 30.5, 205.9, 98.8, 82.8, 191.8, 44.7, 253.1, 642.4, 674.8, 272, 593.9, 609.5, 1416.4, 1376, 1602.8, 1022.4, 803.8]
+    },
+    {
+      "kod": "6912",
+      "huvudgrupp": "6900",
+      "titelgrupp": null,
+      "namn": "Bidrag till EU:s omstruktureringsfond för sockersektorn",
+      "budget": [null, 146, 204, 30, null, 52.9, 37, null, null, null, null, 0, 0, 0, 0, null, null, null, null, null],
+      "utfall": [null, 114.9, 260, 248.4, 25.8, 56.4, 23.9, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "7111",
+      "huvudgrupp": "7100",
+      "titelgrupp": "7110",
+      "namn": "Momsbaserad EU-avgift",
+      "budget": [3742, 1306, 4474.8, -4746.4, 1511, 1478.2, 1550, 1642.7, 5106, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [4227.2, 4474.9, 4322.7, -4304.7, 1444.1, 1563.6, 1643.1, 1714.2, 5251.6, 0, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "7112",
+      "huvudgrupp": "7100",
+      "titelgrupp": "7110",
+      "namn": "Tullmedel",
+      "budget": [4343, 5009.3, 5542.6, 5652.1, 4266.1, 5833.9, 5584.5, 5436, 4919.3, 5652.4, 6344.5, 6469.4, 6755.2, 7034.1, 7310.5, 6567.5, 6950.3, 9413.1, 9525.6, 7914.2],
+      "utfall": [4691, 5071.6, 5225.1, 4814.7, 5300.1, 5447.3, 5027.1, 4908.4, 5724, 6193.9, 6018.3, 6262, 6480.9, 6838, 6238.3, 7118.5, 9362, 8047.9, 8303.7, 9047.3]
+    },
+    {
+      "kod": "7113",
+      "huvudgrupp": "7100",
+      "titelgrupp": "7110",
+      "namn": "Jordbrukstullar och sockeravgifter",
+      "budget": [343.8, 392.6, 259.6, 326.3, 221.9, 317.4, 260.8, 297.7, 251.9, 274.6, 77.2, 34.2, 37, 38.8, 0, -0.3, 0, 0, 0, 0],
+      "utfall": [228.5, 279.1, 348.2, 196.5, 259.3, 259.1, 259.4, 266.5, 69.8, 32.2, 33.1, 33.8, 0, -1.3, 1, null, null, null, null, 0]
+    },
+    {
+      "kod": "7114",
+      "huvudgrupp": "7100",
+      "titelgrupp": "7110",
+      "namn": "Avgifter till EU:s omstruktureringsfond för sockersektorn",
+      "budget": [null, 418.8, 526, 343, 344, null, null, null, null, null, null, 0, 0, null, null, null, null, null, null, null],
+      "utfall": [null, 375.3, 513.1, 347.4, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "7121",
+      "huvudgrupp": "7100",
+      "titelgrupp": "7120",
+      "namn": "Utjämningsavgift för LSS-kostnader",
+      "budget": [1767.2, 1906.6, 1791.5, 2259.1, 2807.9, 2807.9, 3017.2, 3093.5, 3093.5, 3306.1, 3465.3, 3645.6, 3664.3, 4070, 4446.4, 4683.5, 4718.3, 4893.1, 5727.3, 5727.3],
+      "utfall": [1791.5, 1948.9, 2228, 2792.9, 2933.4, 3014.6, 3156.7, 3306.1, 3465.3, 3645.6, 3664.3, 3902.2, 4094.1, 4505.7, 4662.2, 4716.5, 4893.1, 5718, 5827.3, 6128.4]
+    },
+    {
+      "kod": "7211",
+      "huvudgrupp": "7200",
+      "titelgrupp": "7210",
+      "namn": "Intäkter som förs till fonder",
+      "budget": [-1867.8, -2181.1, -1824.5, -2213.6, -1901.3, -3812.2, -5471.2, -5922.2, -7690.6, -7745.2, -7992.3, -11970, -14937.5, -13002.6, -9043, -5594.5, -6042.1, -6208.8, -6855.2, -7351.6],
+      "utfall": [-2094.9, -2369, -1894.7, -2412.2, -4031.2, -4422.2, -7290.6, -7519.7, -7654.7, -9034, -12612.8, -12496.2, -14701.3, -11583.8, -5828.6, -5983.7, -6612.4, -7034.7, -7272.9, -7474.6]
+    },
+    {
+      "kod": "7221",
+      "huvudgrupp": "7200",
+      "titelgrupp": "7220",
+      "namn": "Avräknad mervärdesskatt, statliga myndigheter",
+      "budget": [-20795.5, -22594.4, -22016.4, -25285, -25429.6, -24985.7, -27655.1, -28855.9, -28959.7, -30025.3, -30584.9, -31738.2, -32987.6, -32597.9, -35766.3, -34916.5, -40009.3, -45992.7, -55067.2, -58302.6],
+      "utfall": [-20395.1, -22037.7, -23227.1, -24234.8, -25965.1, -26944, -28199.1, -28640.6, -28711.7, -29211.2, -30325.1, -30936.5, -32584.8, -34077.2, -36691.6, -40929.1, -45935.8, -50471.3, -54028.9, -61847.2]
+    },
+    {
+      "kod": "7222",
+      "huvudgrupp": "7200",
+      "titelgrupp": "7220",
+      "namn": "Kompensation för mervärdesskatt, kommuner",
+      "budget": [-34574.7, -37671.3, -41235.4, -44268.1, -45296.6, -47954.6, -47330.9, -50668.7, -52139.9, -54986.2, -59985.2, -66442.9, -66243.4, -69219.4, -75818, -78284.2, -81750.5, -84735.1, -88464.3, -92218.6],
+      "utfall": [-36631.2, -39614.2, -43671.4, -44007.6, -45468.8, -49686.9, -49524.7, -51014.2, -54457.5, -57380.6, -62133.2, -65561.2, -70982, -73550.3, -74909.2, -75339.8, -81386.7, -89954.1, -89373.3, -91817.9]
+    },
+    {
+      "kod": "7231",
+      "huvudgrupp": "7200",
+      "titelgrupp": "7230",
+      "namn": "Avgifter till public service",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, -9082, -9364.6, -9082, -9813.4, -10104.7, -9765, -9992.6],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, -8876.1, -9236.2, -9712.4, -10091, -9551, -9429.5, -9474]
+    },
+    {
+      "kod": "7232",
+      "huvudgrupp": "7200",
+      "titelgrupp": "7230",
+      "namn": "Intäkter från handel med elcertifikat",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -2409, -666, -218, -154, -150],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, -1128, -425, -269, -170, -123, -76]
+    },
+    {
+      "kod": "7233",
+      "huvudgrupp": "7200",
+      "titelgrupp": "7230",
+      "namn": "Flaskhalsintäkter",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, -26177, -12.7, 0]
+    },
+    {
+      "kod": "8111",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Anställningsstöd",
+      "budget": [-7643, -5944, -2523, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-4813.8, -5980.3, -2220.6, -5.6, 0, 0.1, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8112",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Stöd till utbildningsvikariat",
+      "budget": [-1248, -52, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-139.9, -140.1, -0.5, -0.3, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8113",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Stöd till investeringar i källsorteringslokaler",
+      "budget": [-133, -270, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-17.8, -22.1, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8114",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Stöd till bredbandsinstallation",
+      "budget": [-325, -180, -20, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-388.4, -281.6, -171.6, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8115",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Stöd för energieffektivisering i lokaler med offentlig verksamhet",
+      "budget": [-666.7, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-168.7, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8116",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Sysselsättningsstöd till kommuner  och landsting",
+      "budget": [-7000, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-6915.4, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8117",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Stöd till anställning av  långtidssjukskrivna",
+      "budget": [-24, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8118",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Stöd till skyddat arbete hos offentlig arbetsgivare",
+      "budget": [-785, -785, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-739.3, -732.4, 1.5, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8119",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Stöd till utbildning av personal i vård och äldreomsorg",
+      "budget": [-300, -300, null, null, 25, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-299.7, -300.6, 0, 19.3, 47.8, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8121",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Stöd för konvertering från direktverkande el",
+      "budget": [-300, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-27.6, 0, -1.7, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8122",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Stöd för konvertering från oljeuppvärmning",
+      "budget": [-100, -250, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [-161.5, -279.9, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8123",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Jämställdhetsbonus",
+      "budget": [null, null, -40, -100, -150, -125, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, 0, 0, -27, -112.6, -143.9, -2.9, 0, 0, 0, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8124",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Sjöfartsstöd",
+      "budget": [null, null, null, null, null, null, null, null, null, -1572.9, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, 0, -1426.4, 0, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8125",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Nystartsjobb",
+      "budget": [null, null, null, null, null, null, null, null, null, -6774, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, 0, -6670.2, 0, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8126",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Stöd till yrkesintroduktionsanställning",
+      "budget": [null, null, null, null, null, null, null, null, null, -67, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, 0, -56.4, 0, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8127",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Korttidsarbete",
+      "budget": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, 0, 0, 0, null, null, null, null, null, null, null, null, null]
+    },
+    {
+      "kod": "8128",
+      "huvudgrupp": "8100",
+      "titelgrupp": "8110",
+      "namn": "Ersättning för höga sjuklönekostnader",
+      "budget": [null, null, null, null, null, null, null, null, null, -18, null, null, null, null, null, null, null, null, null, null],
+      "utfall": [null, null, null, null, null, null, null, null, 0, -1.9, 0, null, null, null, null, null, null, null, null, null]
+    }
+  ]
+}
