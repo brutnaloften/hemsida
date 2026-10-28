@@ -1,0 +1,144 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { VERDICTS, VERDICT_LABELS } from "../schema/promise";
+
+// Verdict descriptions follow the definitions in docs/data-model.md.
+const verdictDescriptions: Record<(typeof VERDICTS)[number], string> = {
+  not_started: "Vi har inte hittat något som tyder på att arbetet har påbörjats.",
+  in_progress:
+    "Arbetet pågår, till exempel i form av en utredning, ett förslag eller en proposition, men är ännu inte beslutat eller i kraft.",
+  fulfilled: "Löftet har genomförts som det formulerades.",
+  partially_fulfilled:
+    "Löftet har genomförts, men i väsentligt snävare eller svagare form än utlovat, eller bara till vissa delar.",
+  unfulfilled: "Mandatperioden gick ut utan att löftet hade genomförts.",
+  abandoned: "De partier som gav löftet har uttryckligen släppt det.",
+  broken: "Partierna har gjort tvärtemot löftet eller röstat emot det.",
+  not_assessable: "Löftet är för vagt för att kunna bedömas.",
+};
+
+const stages = [
+  { code: "dir", label: "Kommittédirektiv", text: "Regeringen ger en utredning i uppdrag att undersöka frågan." },
+  {
+    code: "sou / ds",
+    label: "Utredningsbetänkande",
+    text: "Utredningen redovisar sina förslag i en statlig offentlig utredning (SOU) eller en departementsserie (Ds).",
+  },
+  { code: "prop", label: "Proposition", text: "Regeringen lägger fram ett lagförslag för riksdagen." },
+  {
+    code: "bet",
+    label: "Betänkande och votering",
+    text: "Riksdagens utskott behandlar förslaget och riksdagen röstar.",
+  },
+  {
+    code: "sfs",
+    label: "Svensk författningssamling",
+    text: "Lagen eller förordningen utfärdas och publiceras.",
+  },
+];
+---
+
+<Layout
+  title="Om metoden — Brutna Löften"
+  description="Så samlar vi in politiska löften, följer dem mot riksdagens officiella dokument och sätter bedömningar."
+>
+  <article class="container mx-auto px-4 md:px-6 py-10 max-w-3xl space-y-10">
+    <header class="space-y-3">
+      <h1 class="text-3xl font-bold">Om metoden</h1>
+      <p class="text-muted-foreground">
+        Brutna Löften följer politiska löften mot officiella dokument. Den här sidan beskriver hur löftena
+        samlas in, vilka källor vi använder och hur bedömningarna sätts.
+      </p>
+    </header>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-semibold">Löftena samlas in en gång per mandatperiod</h2>
+      <p>
+        Löftena hämtas från ett fast underlag per mandatperiod, i stället för att fångas upp löpande ur
+        nyhetsflödet. För mandatperioden 2022–2026 är underlaget Tidöavtalet, överenskommelsen mellan
+        Moderaterna, Kristdemokraterna, Liberalerna och Sverigedemokraterna. Varje löfte hänvisar till sin
+        källa, med sidnummer och i förekommande fall ett ordagrant citat.
+      </p>
+      <p>
+        Löftena är formulerade med våra egna ord men ska gå att jämföra med originaltexten. Ett parti kan
+        ha olika roller under perioden: regeringsparti, stödparti eller opposition. Det anges för varje
+        löfte, så att det går att skilja på att regeringen inte levererat och att ett stödparti har röstat
+        emot.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-semibold">Spårning mot riksdagens dokument</h2>
+      <p>
+        Varje löfte följs mot officiella dokument från riksdagens öppna data (data.riksdagen.se). Vi lagrar
+        referenser till dokumenten, alltså dokument-ID, beteckning, titel, datum och länk, inte kopior av
+        innehållet. Varje dokument markeras som att det rör hela löftet eller bara en del av det.
+      </p>
+      <p>Dokumenten ordnas i en tidslinje längs lagstiftningskedjan:</p>
+      <ol class="space-y-2">
+        {
+          stages.map((s) => (
+            <li class="rounded-md border p-3">
+              <span class="font-medium">{s.label}</span>
+              <span class="text-muted-foreground text-sm"> ({s.code})</span>
+              <p class="text-sm text-muted-foreground">{s.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+      <p>
+        Löftets aktuella steg utgår från den senaste typen av dokument i tidslinjen. Alla löften går inte
+        genom alla steg, och vissa löften kan inte följas på det här sättet, till exempel löften om
+        budgetbelopp eller mätbara resultat.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-semibold">Bedömningar sätts av människor</h2>
+      <p>
+        Bevisen och bedömningen hålls isär. Dokumenten i tidslinjen är fakta som delvis kan hittas
+        automatiskt. Bedömningen, alltså hur långt löftet har uppfyllts, sätts av en människa och åtföljs av
+        en skriftlig motivering som hänvisar till dokumenten. Motivering krävs för alla bedömningar utom
+        &quot;Ej påbörjat&quot;. Tidigare bedömningar sparas så att det går att se hur bilden har förändrats.
+      </p>
+      <h3 class="text-lg font-medium pt-2">Bedömningsskalan</h3>
+      <dl class="space-y-3">
+        {
+          VERDICTS.map((v) => (
+            <div class="rounded-md border p-3">
+              <dt class="font-medium">{VERDICT_LABELS[v]}</dt>
+              <dd class="text-sm text-muted-foreground">{verdictDescriptions[v]}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      <p>
+        När mandatperioden är slut går kvarvarande löften som står som &quot;Ej påbörjat&quot; eller
+        &quot;Pågår&quot; över till &quot;Ej uppfyllt&quot; i en särskild avslutande genomgång.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-semibold">Öppen och granskningsbar data</h2>
+      <p>
+        All data ligger som filer i ett öppet versionshanterat arkiv på GitHub, en fil per löfte. Varje
+        ändring av en bedömning görs som en pull request som kan granskas, vilket ger en offentlig
+        historik över hur och varför bedömningarna har ändrats.
+      </p>
+      <p>
+        Om ett dokument har föreslagits som relevant för ett löfte men avvisats vid granskning sparas det
+        som ett avvisat förslag, så att samma dokument inte föreslås igen.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-semibold">Rapportera fel</h2>
+      <p>
+        Hittar du ett fel i ett löfte, en källhänvisning eller en bedömning kan du öppna ett ärende i
+        <a
+          href="https://github.com/brutnaloften/hemsida/issues"
+          class="underline underline-offset-4 hover:text-foreground">projektets arkiv på GitHub</a
+        >.
+      </p>
+    </section>
+  </article>
+</Layout>
