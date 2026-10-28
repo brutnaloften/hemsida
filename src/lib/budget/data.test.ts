@@ -4,6 +4,7 @@ import {
   anslagByKod,
   anslagForUo,
   areas,
+  assertSameYears,
   latestYear,
   meta,
   revenueTree,
@@ -71,5 +72,11 @@ describe('budget data', () => {
     expect(typ6000.children.some((h) => h.children.some((c) => c.children.length === 0))).toBe(
       true,
     );
+  });
+
+  it('rejects files whose year lists differ from meta', () => {
+    expect(() => assertSameYears([2006, 2007], [2006, 2007], [2006, 2007])).not.toThrow();
+    expect(() => assertSameYears([2006, 2007], [2006], [2006, 2007])).toThrow(/expenditure/);
+    expect(() => assertSameYears([2006, 2007], [2006, 2007], [2007])).toThrow(/revenue/);
   });
 });

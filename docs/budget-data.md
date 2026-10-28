@@ -279,11 +279,12 @@ The committed data in `src/data/budget/` (`meta.json`, `expenditure.json`, `reve
 ```
 node --experimental-strip-types tools/ingest-budget.ts
   [--utgift <url|zip path>] [--inkomst <url|zip path>]
+  [--utgift-url <url>] [--inkomst-url <url>]
   [--revenue-final-through 2023] [--cache <dir>] [--out <dir>]
 ```
 
 - **When:** after ESV releases (expenditure in March and June, revenue Prel 1/2/3 and Def). Each refresh is one data PR; no scheduled CI.
-- **Discovery:** without arguments the tool scrapes the listing page and takes the newest zip per type (latest year, then Definitiv > Prel 3 > 2 > 1). Pass `--utgift`/`--inkomst` with a URL or a local zip to override.
+- **Discovery:** without arguments the tool scrapes the listing page and takes the newest zip per type (latest year, then Definitiv > Prel 3 > 2 > 1). Pass `--utgift`/`--inkomst` with a URL or a local zip to override. The status is read from the URL's `status` query, else derived from the release name (`definitivt`, `första/andra/tredje preliminära`). A local zip records `--utgift-url`/`--inkomst-url` as provenance, defaulting to the listing page.
 - **Cache:** downloads go to the gitignored `tools/out/budget-cache/` and are reused when a file of the same name exists, so a new release (new file name) is fetched and an old one is not. Delete the cached file to force a re-download. Requests are sequential with a descriptive User-Agent.
 - **Everything is regenerated** from one release of each file, because anslag codes are only unique within a release.
 - **Revenue status** per year is configuration, not data: years up to `--revenue-final-through` (default `DEFAULT_REVENUE_FINAL_THROUGH` in `tools/lib/budget-ingest.ts`, 2023) are `final`, later ones `preliminary`. Raise it when ESV publishes a definitive file. Expenditure is always `final`.
@@ -294,6 +295,6 @@ node --experimental-strip-types tools/ingest-budget.ts
 Notes from the first ingestion:
 
 - Old discontinued anslag have six-character codes with a year suffix (`020104 2008`, `14D003 1998`) whose structure does not follow the UO column, so they get `beteckning: null` and take the UO from the column. Current codes (`0901011`, `0501003 2024`) derive the designation as documented.
-- In the 2025 release 490 anslag are active (no suffix). The 503 anslag rows of 2025 mentioned above include 13 suffixed (discontinued) rows that carry only transfer balances.
+- In the 2025 release 490 anslag are active (no suffix). The 503 anslag rows of 2025 mentioned above include 13 suffixed (discontinued) rows that have no budget and (with one exception, 0301004 2024 with 0.1 mn kr outcome) no outcome in 2025.
 - 179 revenue rows (type 6000, EU funds) have no titelgrupp; those titles hang directly under their huvudgrupp (`titelgrupp: null`).
 - The raw `... utfallsår` columns and the transfer columns (Ingående/Utgående överföringsbelopp, Anslagskredit, Indragningar) are not kept; `hemsida-rn4.6` (anslagspost) can read the cached monthly file separately.

@@ -24,7 +24,7 @@ const yearsSchema = z.array(z.number().int()).min(1);
 const yearKeySchema = z.string().regex(/^\d{4}$/);
 const statusByYearSchema = z.record(yearKeySchema, budgetStatusSchema);
 
-const fileInfoSchema = z.object({
+const fileInfoSchema = z.strictObject({
   /** Download URL of the zip. */
   url: z.string().url(),
   /** Release name as the file is titled by the publisher, e.g. "Årsutfall utgifter 1997 - 2025, definitivt". */
@@ -35,26 +35,26 @@ const fileInfoSchema = z.object({
   sha256: z.string().regex(/^[0-9a-f]{64}$/),
 });
 
-export const budgetMetaSchema = z.object({
+export const budgetMetaSchema = z.strictObject({
   source: z.string().url(),
   licence: z.literal('CC0-1.0'),
   /** Date (YYYY-MM-DD) the files were fetched. */
   fetched: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   unit: z.literal('mn kr'),
   years: yearsSchema,
-  files: z.object({
+  files: z.strictObject({
     expenditure: fileInfoSchema,
     revenue: fileInfoSchema,
   }),
   /** Per-year status. Revenue status comes from ingestion config, not from the data. */
-  yearStatus: z.object({
+  yearStatus: z.strictObject({
     expenditure: statusByYearSchema,
     revenue: statusByYearSchema,
   }),
 });
 export type BudgetMeta = z.infer<typeof budgetMetaSchema>;
 
-const anslagSchema = z.object({
+const anslagSchema = z.strictObject({
   /** Restated code as in the file; discontinued anslag carry a year suffix, e.g. "0501003 2024" (old ones are six characters, e.g. "020104 2008"). */
   kod: z.string().regex(/^(\d{7}( \d{4})?|[0-9A-Z]{6} \d{4})$/),
   uo: z.number().int().min(1).max(27),
@@ -87,9 +87,9 @@ export type OvrigtKey = (typeof OVRIGT_KEYS)[number];
 export const expenditureSchema = z
   .object({
     years: yearsSchema,
-    uo: z.array(z.object({ nr: z.number().int().min(1).max(27), namn: z.string().min(1) })),
+    uo: z.array(z.strictObject({ nr: z.number().int().min(1).max(27), namn: z.string().min(1) })),
     anslag: z.array(anslagSchema),
-    ovrigt: z.object({
+    ovrigt: z.strictObject({
       nettoutlaning: seriesSchema,
       kassamassigKorrigering: seriesSchema,
       alderspension: seriesSchema,
@@ -135,13 +135,15 @@ const codeSchema = z.string().regex(/^\d{4}(-\d{4})?$/);
 export const revenueSchema = z
   .object({
     years: yearsSchema,
-    typ: z.array(z.object({ kod: codeSchema, namn: z.string().min(1) })),
-    huvudgrupp: z.array(z.object({ kod: codeSchema, typ: codeSchema, namn: z.string().min(1) })),
+    typ: z.array(z.strictObject({ kod: codeSchema, namn: z.string().min(1) })),
+    huvudgrupp: z.array(
+      z.strictObject({ kod: codeSchema, typ: codeSchema, namn: z.string().min(1) }),
+    ),
     titelgrupp: z.array(
-      z.object({ kod: codeSchema, huvudgrupp: codeSchema, namn: z.string().min(1) }),
+      z.strictObject({ kod: codeSchema, huvudgrupp: codeSchema, namn: z.string().min(1) }),
     ),
     titlar: z.array(
-      z.object({
+      z.strictObject({
         kod: codeSchema,
         huvudgrupp: codeSchema,
         /** null for titles that hang directly under their huvudgrupp. */

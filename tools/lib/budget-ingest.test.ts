@@ -1,6 +1,13 @@
 import { describe, expect, it } from 'vitest';
+import { execFileSync } from 'node:child_process';
+import { mkdtempSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import {
   buildMeta,
+  describeTarget,
+  statusFromRelease,
+  readSingleZipEntry,
   EXPENDITURE_HEADER,
   parseAmount,
   parseAnslagKod,
@@ -332,5 +339,73 @@ describe('stringifyCompact', () => {
       '{\n  "a": [1, null, 2.5],\n  "b": {\n    "c": [\n      {\n        "d": 1\n      }\n    ]\n  },\n  "e": []\n}',
     );
     expect(JSON.parse(out)).toEqual({ a: [1, null, 2.5], b: { c: [{ d: 1 }] }, e: [] });
+  });
+});
+
+describe('describeTarget / statusFromRelease', () => {
+  it('derives the status from the release name', () => {
+    expect(statusFromRelease('Årsutfall utgifter 1997 - 2025, definitivt')).toBe('Definitiv');
+    expect(statusFromRelease('Årsutfall inkomster 2006 - 2025, första preliminära')).toBe(
+      'Preliminär 1',
+    );
+    expect(statusFromRelease('Årsutfall inkomster 2006 - 2025, andra preliminära')).toBe(
+      'Preliminär 2',
+    );
+    expect(statusFromRelease('x, tredje preliminära')).toBe('Preliminär 3');
+    expect(() => statusFromRelease('something else')).toThrow();
+  });
+
+  it('uses the status query of a normal URL', () => {
+    const url =
+      'https://www.statskontoret.se/OpenDataArsUtfallPage/GetFile?documentType=Inkomst&fileType=Zip&fileName=%C3%85rsutfall%20inkomster%202006%20-%202025,%20%20andra%20prelimin%C3%A4ra.zip&Year=2025&month=0&status=Prelimin%C3%A4r%202';
+    const t = describeTarget(url);
+    expect(t.url).toBe(url);
+    expect(t.location).toBe(url);
+    expect(t.status).toBe('Preliminär 2');
+  });
+
+  it('falls back to the release name for a URL without status', () => {
+    const t = describeTarget(
+      'https://example.org/files/Årsutfall utgifter 1997 - 2025, definitivt.zip',
+    );
+    expect(t.status).toBe('Definitiv');
+    expect(t.fileName).toBe('Årsutfall utgifter 1997 - 2025, definitivt.zip');
+  });
+
+  it('accepts a local path with the listing page, or a given URL, as provenance', () => {
+    const path = '/tmp/x/Årsutfall inkomster 2006 - 2025,  andra preliminära.zip';
+    const local = describeTarget(path);
+    expect(local.location).toBe(path);
+    expect(local.url).toBe(
+      'https://www.statskontoret.se/analys-och-statistik/oppna-data/arsutfall/',
+    );
+    expect(local.status).toBe('Preliminär 2');
+    expect(describeTarget(path, 'https://example.org/orig.zip').url).toBe(
+      'https://example.org/orig.zip',
+    );
+  });
+});
+
+describe('readSingleZipEntry', () => {
+  it('reads the only entry and rejects multi-entry zips', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'budget-zip-'));
+    writeFileSync(join(dir, 'a.csv'), 'x;y\r\n1;2\r\n');
+    writeFileSync(join(dir, 'b.csv'), 'z\n');
+    const makeZip = (zip: string, ...files: string[]) =>
+      execFileSync(
+        'python3',
+        [
+          '-I',
+          '-c',
+          'import sys, zipfile\nz = zipfile.ZipFile(sys.argv[1], "w")\n[z.write(f) for f in sys.argv[2:]]\nz.close()',
+          zip,
+          ...files,
+        ],
+        { cwd: dir },
+      );
+    makeZip('one.zip', 'a.csv');
+    makeZip('two.zip', 'a.csv', 'b.csv');
+    expect(readSingleZipEntry(join(dir, 'one.zip'))).toBe('x;y\r\n1;2\r\n');
+    expect(() => readSingleZipEntry(join(dir, 'two.zip'))).toThrow(/one zip entry/);
   });
 });

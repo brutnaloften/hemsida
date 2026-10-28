@@ -2,6 +2,7 @@
  * Ingest the ESV/Statskontoret årsutfall (expenditure and revenue) into src/data/budget/.
  *   node --experimental-strip-types tools/ingest-budget.ts
  *     [--utgift <url|zip path>] [--inkomst <url|zip path>]
+ *     [--utgift-url <url>] [--inkomst-url <url>]   (provenance URL for local zips)
  *     [--revenue-final-through 2023] [--cache <dir>] [--out <dir>]
  *
  * Without --utgift/--inkomst the newest zips are found by scraping the listing page. Downloads are
@@ -16,6 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import {
   buildMeta,
+  describeTarget,
   DEFAULT_REVENUE_FINAL_THROUGH,
   parseExpenditure,
   parseListing,
@@ -26,6 +28,7 @@ import {
   SOURCE_PAGE,
   stringifyCompact,
   type ReleaseFile,
+  type Target,
 } from './lib/budget-ingest.ts';
 import { budgetMetaSchema, expenditureSchema, revenueSchema } from './lib/schema.ts';
 
@@ -36,6 +39,8 @@ const { values } = parseArgs({
   options: {
     utgift: { type: 'string' },
     inkomst: { type: 'string' },
+    'utgift-url': { type: 'string' },
+    'inkomst-url': { type: 'string' },
     'revenue-final-through': { type: 'string' },
     cache: { type: 'string', default: resolve(root, 'tools/out/budget-cache') },
     out: { type: 'string', default: resolve(root, 'src/data/budget') },
@@ -58,32 +63,18 @@ async function fetchOk(url: string): Promise<Response> {
   return res;
 }
 
-type Target = { url: string; fileName: string; status: string };
-
-function describe(arg: string): Target {
-  if (/^https?:\/\//.test(arg)) {
-    const u = new URL(arg);
-    return {
-      url: arg,
-      fileName: u.searchParams.get('fileName') ?? basename(u.pathname),
-      status: u.searchParams.get('status') ?? '',
-    };
-  }
-  return { url: arg, fileName: basename(arg), status: '' };
-}
-
 async function obtain(target: Target): Promise<{ file: ReleaseFile; zipPath: string }> {
   let zipPath: string;
-  if (/^https?:\/\//.test(target.url)) {
+  if (/^https?:\/\//.test(target.location)) {
     zipPath = resolve(cacheDir, target.fileName.replace(/[^\p{L}\p{N}._ ,-]/gu, '_'));
     if (existsSync(zipPath)) {
-      console.log(`cached  ${zipPath}`);
+      console.log(`cached  ${zipPath} (delete it to re-download)`);
     } else {
-      console.log(`fetch   ${target.url}`);
-      writeFileSync(zipPath, Buffer.from(await (await fetchOk(target.url)).arrayBuffer()));
+      console.log(`fetch   ${target.location}`);
+      writeFileSync(zipPath, Buffer.from(await (await fetchOk(target.location)).arrayBuffer()));
     }
   } else {
-    zipPath = resolve(target.url);
+    zipPath = resolve(target.location);
   }
   const csv = readSingleZipEntry(zipPath);
   return {
@@ -95,18 +86,18 @@ async function obtain(target: Target): Promise<{ file: ReleaseFile; zipPath: str
 let utgift: Target;
 let inkomst: Target;
 if (values.utgift && values.inkomst) {
-  utgift = describe(values.utgift);
-  inkomst = describe(values.inkomst);
+  utgift = describeTarget(values.utgift, values['utgift-url']);
+  inkomst = describeTarget(values.inkomst, values['inkomst-url']);
 } else {
   console.log(`list    ${SOURCE_PAGE}`);
   const listing = parseListing(await (await fetchOk(SOURCE_PAGE)).text());
-  const pick = (type: 'Utgift' | 'Inkomst', override?: string): Target => {
-    if (override) return describe(override);
+  const pick = (type: 'Utgift' | 'Inkomst', override?: string, provenance?: string): Target => {
+    if (override) return describeTarget(override, provenance);
     const f = pickNewest(listing, type);
-    return { url: f.url, fileName: f.fileName, status: f.status };
+    return { location: f.url, url: f.url, fileName: f.fileName, status: f.status };
   };
-  utgift = pick('Utgift', values.utgift);
-  inkomst = pick('Inkomst', values.inkomst);
+  utgift = pick('Utgift', values.utgift, values['utgift-url']);
+  inkomst = pick('Inkomst', values.inkomst, values['inkomst-url']);
 }
 
 const expenditureFile = (await obtain(utgift)).file;
@@ -138,7 +129,9 @@ for (const [name, data] of [
 ] as const) {
   const text = stringifyCompact(data) + '\n';
   writeFileSync(resolve(outDir, name), text);
-  console.log(`wrote   ${resolve(outDir, name)} (${(text.length / 1024).toFixed(0)} KB)`);
+  console.log(
+    `wrote   ${resolve(outDir, name)} (${(Buffer.byteLength(text) / 1024).toFixed(0)} KB)`,
+  );
 }
 console.log(
   `years ${meta.years[0]}-${meta.years[meta.years.length - 1]}; ` +

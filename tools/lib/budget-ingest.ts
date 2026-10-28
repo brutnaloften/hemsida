@@ -481,6 +481,49 @@ export function pickNewest(files: ListedFile[], documentType: 'Utgift' | 'Inkoms
   )[0];
 }
 
+/** Publisher status derived from the release name, e.g. "..., andra preliminära" -> "Preliminär 2". */
+export function statusFromRelease(release: string): string {
+  const r = release.toLowerCase();
+  if (r.includes('definitiv')) return 'Definitiv';
+  const n = r.includes('första') ? 1 : r.includes('andra') ? 2 : r.includes('tredje') ? 3 : 0;
+  if (n > 0 && r.includes('prelimin')) return `Preliminär ${n}`;
+  throw new Error(`Cannot derive the release status from "${release}"`);
+}
+
+export type Target = {
+  /** Download URL, or a local zip path. */
+  location: string;
+  fileName: string;
+  /** Provenance URL recorded in meta.json (the download URL, or the listing page for local files). */
+  url: string;
+  status: string;
+};
+
+/**
+ * Describe a --utgift/--inkomst argument: a URL (status from its query, else from the release
+ * name) or a local zip path (provenance `provenanceUrl`, else the listing page).
+ */
+export function describeTarget(arg: string, provenanceUrl?: string): Target {
+  const isUrl = /^https?:\/\//.test(arg);
+  let fileName: string;
+  let queryStatus = '';
+  if (isUrl) {
+    const u = new URL(arg);
+    fileName =
+      u.searchParams.get('fileName') ?? decodeURIComponent(u.pathname.split('/').pop() ?? '');
+    queryStatus = u.searchParams.get('status') ?? '';
+  } else {
+    fileName = arg.split(/[\\/]/).pop() ?? '';
+  }
+  const status = queryStatus || statusFromRelease(releaseName(fileName));
+  return {
+    location: arg,
+    fileName,
+    url: isUrl ? arg : (provenanceUrl ?? SOURCE_PAGE),
+    status,
+  };
+}
+
 /** Release title without extension, e.g. "Årsutfall inkomster 2006 - 2025, andra preliminära". */
 export function releaseName(fileName: string): string {
   return fileName

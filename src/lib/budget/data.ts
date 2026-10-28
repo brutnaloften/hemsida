@@ -20,6 +20,15 @@ export const meta = budgetMetaSchema.parse(metaJson);
 const expenditure = expenditureSchema.parse(expenditureJson);
 const revenue = revenueSchema.parse(revenueJson);
 
+/** Series in all three files are indexed by meta.years, so the year lists must be identical. */
+export function assertSameYears(metaYears: number[], expYears: number[], revYears: number[]): void {
+  if (expYears.join() !== metaYears.join())
+    throw new Error('expenditure.json years differ from meta.json');
+  if (revYears.join() !== metaYears.join())
+    throw new Error('revenue.json years differ from meta.json');
+}
+assertSameYears(meta.years, expenditure.years, revenue.years);
+
 export type RevenueTitel = (typeof revenue.titlar)[number];
 
 export const years: readonly number[] = meta.years;
@@ -64,8 +73,8 @@ export function anslagForUo(uo: number): Anslag[] {
 
 /**
  * Anslag that are not discontinued (no year suffix in the code): the ones that get their own page.
- * The 2025 file has 503 anslag rows, but 13 of them are suffixed (discontinued) codes that only
- * carry transfer balances, so 490 are active.
+ * The 2025 file has 503 anslag rows, but 13 of them are suffixed (discontinued) codes with no budget and
+ * (bar one, 0301004 2024) no outcome, so 490 are active.
  */
 export function activeAnslag(): Anslag[] {
   return expenditure.anslag.filter((a) => a.upphort === null);
