@@ -5,12 +5,16 @@ import type { Promise } from "@/data/index";
 import PromiseCard from "./PromiseCard";
 import FilterDropdown from "./FilterDropdown";
 import { useDebounce } from "@/hooks/useDebounce";
+import { VERDICT_LABELS } from "@/schema/promise";
 
 export default function SearchPage({ promises }: { promises: Promise[] }) {
   const { fuzzy, haystack } = useMemo(
     () => ({
       fuzzy: new uFuzzy(),
-      haystack: promises.map((p) => `${p.name} ${p.description} ${p.party} ${p.tags} ${p.date}`),
+      haystack: promises.map(
+        (p) =>
+          `${p.title} ${p.description} ${p.parties.join(" ")} ${p.keywords.join(" ")} ${p.area} ${p.date}`,
+      ),
     }),
     [],
   );
@@ -22,8 +26,11 @@ export default function SearchPage({ promises }: { promises: Promise[] }) {
   const [selectedStatuses, setSelectedStatuses] = useState<Set<string>>(new Set());
   const [selectedYears, setSelectedYears] = useState<Set<string>>(new Set());
 
-  const parties = useMemo(() => [...new Set(promises.map((p) => p.party))].sort(), []);
-  const statuses = useMemo(() => [...new Set(promises.map((p) => p.status))].sort(), []);
+  const parties = useMemo(() => [...new Set(promises.flatMap((p) => p.parties))].sort(), []);
+  const statuses = useMemo(
+    () => [...new Set(promises.map((p) => VERDICT_LABELS[p.verdict.value]))].sort(),
+    [],
+  );
   const years = useMemo(() => [...new Set(promises.map((p) => p.date.slice(0, 4)))].sort(), []);
 
   function toggle(set: Set<string>, value: string): Set<string> {
@@ -41,8 +48,8 @@ export default function SearchPage({ promises }: { promises: Promise[] }) {
     const searched = searchResult ? searchResult.map((idx) => promises[idx]) : promises;
     return searched.filter(
       (p) =>
-        (selectedParties.size === 0 || selectedParties.has(p.party)) &&
-        (selectedStatuses.size === 0 || selectedStatuses.has(p.status)) &&
+        (selectedParties.size === 0 || p.parties.some((party) => selectedParties.has(party))) &&
+        (selectedStatuses.size === 0 || selectedStatuses.has(VERDICT_LABELS[p.verdict.value])) &&
         (selectedYears.size === 0 || selectedYears.has(p.date.slice(0, 4))),
     );
   }, [searchResult, selectedParties, selectedStatuses, selectedYears]);
@@ -88,7 +95,7 @@ export default function SearchPage({ promises }: { promises: Promise[] }) {
       ) : (
         <div>
           {items.map((p) => (
-            <PromiseCard key={p.name} promise={p} />
+            <PromiseCard key={p.id} promise={p} />
           ))}
         </div>
       )}

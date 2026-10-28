@@ -146,34 +146,3 @@ export type PromiseRecord = z.infer<typeof promiseSchema>;
 export type Evidence = z.infer<typeof evidenceSchema>;
 export type Verdict = z.infer<typeof verdictSchema>;
 export type Source = z.infer<typeof sourceSchema>;
-
-/**
- * Current (v1) promise shape, still used by the content collection until
- * hemsida-bzj.5 migrates the data files to v2. Remove then.
- */
-const legacySource = z.object({
-  value: z.string(),
-  archive: z.string(),
-  broken: z.boolean().optional(),
-});
-
-export const legacyPromiseSchema = z.object({
-  name: z.string(),
-  description: z.string(),
-  party: z.string(),
-  status: z.string(),
-  date: z.string(),
-  sources: z.array(legacySource),
-  tags: z.array(z.string()),
-  updates: z
-    .array(
-      z.object({
-        date: z.string(),
-        status: z.string(),
-        reasoning: z.string(),
-        sources: z.array(legacySource),
-        confidence: z.enum(['high', 'medium']).optional(),
-      }),
-    )
-    .default([]),
-});

@@ -3,7 +3,6 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import {
   promiseSchema,
-  legacyPromiseSchema,
   sourceSchema,
   sourceRefSchema,
   VERDICTS,
@@ -84,12 +83,23 @@ describe('promiseSchema', () => {
   });
 });
 
-describe('legacyPromiseSchema', () => {
+describe('promise data', () => {
   it('accepts every current data file', () => {
     const dir = fileURLToPath(new URL('../data/2022-2026/promises', import.meta.url));
     for (const f of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
-      const r = legacyPromiseSchema.safeParse(JSON.parse(readFileSync(`${dir}/${f}`, 'utf-8')));
+      const r = promiseSchema.safeParse(JSON.parse(readFileSync(`${dir}/${f}`, 'utf-8')));
       expect(r.success, f).toBe(true);
+      if (r.success) expect(`${r.data.id}.json`, f).toBe(f);
+    }
+  });
+
+  it('references an existing source', () => {
+    const dir = fileURLToPath(new URL('../data/2022-2026/promises', import.meta.url));
+    const sourceDir = fileURLToPath(new URL('../data/sources', import.meta.url));
+    const sourceIds = readdirSync(sourceDir).map((f) => f.replace(/\.json$/, ''));
+    for (const f of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
+      const p = promiseSchema.parse(JSON.parse(readFileSync(`${dir}/${f}`, 'utf-8')));
+      expect(sourceIds, f).toContain(p.source.id);
     }
   });
 });

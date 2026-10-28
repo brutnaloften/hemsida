@@ -1,17 +1,15 @@
 {
   "id": "kd-miljardinvesteringar-infrastruktur",
-  "name": "Miljardinvesteringar i infrastruktur",
+  "term": "2022-2026",
+  "title": "Miljardinvesteringar i infrastruktur",
   "description": "Investera i järnväg, väg och elnät för att främja ekonomisk tillväxt och jobbskapande.",
-  "party": "Kristdemokraterna",
-  "status": "Pågående",
-  "date": "2024-06-28",
-  "sources": [
-    {
-      "value": "https://kristdemokraterna.se/arkiv/nyheter/2023/2024-06-28-ebba-buschs-tal-i-almedalen-28-juni-2024",
-      "archive": "https://web.archive.org/web/20240630072151/https://kristdemokraterna.se/arkiv/nyheter/2023/2024-06-28-ebba-buschs-tal-i-almedalen-28-juni-2024",
-      "broken": true
-    }
-  ],
-  "tags": ["Almedalen 2024"],
-  "updates": []
+  "source": { "id": "kd-almedalen-2024" },
+  "parties": ["KD"],
+  "roles": { "KD": "government" },
+  "type": "budget",
+  "area": "Infrastruktur",
+  "committee": "TU",
+  "keywords": ["infrastruktur", "järnväg", "väg", "elnät", "investeringar"],
+  "verdict": { "value": "not_started", "reasoning": "", "date": "2026-10-28", "history": [] },
+  "evidence": []
 }
