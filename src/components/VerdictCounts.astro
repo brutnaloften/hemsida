@@ -1,11 +1,11 @@
 ---
-import { Badge } from "@/components/ui/badge";
-import { VERDICTS, VERDICT_LABELS } from "@/schema/promise";
-import { VERDICT_STYLES } from "@/lib/promise-labels";
-import { assessedCount, verdictCounts, type PartyPromise } from "@/lib/party-stats";
+import { Badge } from '@/components/ui/badge';
+import { VERDICTS, VERDICT_LABELS } from '@/schema/promise';
+import { VERDICT_STYLES } from '@/lib/promise-labels';
+import { assessedCount, verdictCounts, type PartyPromise } from '@/lib/party-stats';
 
 interface Props {
-  promises: Pick<PartyPromise, "verdict">[];
+  promises: Pick<PartyPromise, 'verdict'>[];
 }
 const { promises } = Astro.props;
 const counts = verdictCounts(promises);
@@ -13,11 +13,11 @@ const total = promises.length;
 const assessed = assessedCount(promises);
 const pct = (n: number) => `${(n / total) * 100}%`;
 const segments = [
-  { cls: "bg-foreground/70", n: assessed, label: "Bedömda", show: true },
-  { cls: "bg-zinc-400 dark:bg-zinc-600", n: counts.not_assessable, label: "Ej bedömbara", show: counts.not_assessable > 0 },
-  { cls: "bg-muted", n: counts.unassessed, label: "Inte bedömda", show: true },
+  { cls: 'bg-foreground/70', n: assessed, label: 'Bedömda', show: true },
+  { cls: 'bg-zinc-400 dark:bg-zinc-600', n: counts.not_assessable, label: 'Ej bedömbara', show: counts.not_assessable > 0 },
+  { cls: 'bg-muted', n: counts.unassessed, label: 'Inte bedömda', show: true },
 ];
-const legend = VERDICTS.filter((v) => counts[v] > 0 || v === "unassessed");
+const legend = VERDICTS.filter((v) => counts[v] > 0 || v === 'unassessed');
 ---
 
 <p class="text-sm text-muted-foreground">

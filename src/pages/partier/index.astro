@@ -1,12 +1,12 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
-import VerdictCounts from "@/components/VerdictCounts.astro";
-import { partyName } from "@/lib/promise-labels";
-import { partiesWithPromises, promisesForParty } from "@/lib/party-stats";
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import VerdictCounts from '@/components/VerdictCounts.astro';
+import { partyName } from '@/lib/promise-labels';
+import { partiesWithPromises, promisesForParty } from '@/lib/party-stats';
 
-const promises = (await getCollection("promises")).map((e) => e.data);
-const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+const promises = (await getCollection('promises')).map((e) => e.data);
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const parties = partiesWithPromises(promises);
 ---
 

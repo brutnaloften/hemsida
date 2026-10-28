@@ -1,18 +1,18 @@
-import { useMemo, useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { VERDICTS, VERDICT_LABELS } from "@/schema/promise";
-import { VERDICT_STYLES } from "@/lib/promise-labels";
-import { filterPromises, type PartyPromise } from "@/lib/party-stats";
+import { useMemo, useState } from 'react';
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { VERDICTS, VERDICT_LABELS } from '@/schema/promise';
+import { VERDICT_STYLES } from '@/lib/promise-labels';
+import { filterPromises, type PartyPromise } from '@/lib/party-stats';
 
 const PAGE_SIZE = 40;
 
-interface Row extends Pick<PartyPromise, "id" | "title" | "area" | "verdict"> {
+interface Row extends Pick<PartyPromise, 'id' | 'title' | 'area' | 'verdict'> {
   href: string;
 }
 
 const selectClass =
-  "h-10 rounded-md border border-input bg-background px-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
+  'h-10 rounded-md border border-input bg-background px-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring';
 
 export default function PartyPromiseList({
   promises,
@@ -21,9 +21,9 @@ export default function PartyPromiseList({
   promises: Row[];
   areas: string[];
 }) {
-  const [query, setQuery] = useState("");
-  const [area, setArea] = useState("");
-  const [verdict, setVerdict] = useState<(typeof VERDICTS)[number] | "">("");
+  const [query, setQuery] = useState('');
+  const [area, setArea] = useState('');
+  const [verdict, setVerdict] = useState<(typeof VERDICTS)[number] | ''>('');
   const [shown, setShown] = useState(PAGE_SIZE);
 
   const filtered = useMemo(

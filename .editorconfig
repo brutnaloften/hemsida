@@ -15,5 +15,5 @@ charset = utf-8
 indent_style = space
 indent_size = 2
 
-[*.{ts}]
+[*.{js,mjs,ts,tsx,astro}]
 quote_type = single
