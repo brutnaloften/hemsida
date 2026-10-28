@@ -1,6 +1,6 @@
 # Review of Liberalerna 2022 manifesto candidates
 
-Companion to `src/data/2022-2026/candidates/valmanifest-2022-l.json` (bead hemsida-chv.6). Nothing has been deleted or merged; every editorial call is left to the reviewer (hemsida-chv.8). Page numbers are PDF pages (cover = 1), the same as `source.page` in the candidate file; the printed page number in the manifesto is the same as the PDF page.
+Companion to `src/data/2022-2026/candidates/valmanifest-2022-l.json` (bead hemsida-chv.6). Nothing has been deleted or merged; every editorial call is left to the reviewer (hemsida-chv.8). Page numbers are PDF pages (cover = 1), the same as `source.page` in the candidate file; the printed page number in the manifesto is the PDF page minus 1.
 
 Extraction was done by a Claude Code subagent on the user's subscription (no Anthropic API calls), reading the PDF text page by page and following `EXTRACTION_RULES` in `tools/lib/manifesto-extract.ts`. 233 candidates, ids prefixed `val2022-l-`, `link` empty (linking is hemsida-chv.7). Every verdict is `unassessed`. The `section` field is `<chapter heading> > <point number>. <point heading>`.
 

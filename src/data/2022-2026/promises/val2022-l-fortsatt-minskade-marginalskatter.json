@@ -1,0 +1,38 @@
+{
+  "id": "val2022-l-fortsatt-minskade-marginalskatter",
+  "term": "2022-2026",
+  "title": "Marginalskatterna fortsätter minska för alla",
+  "description": "Marginalskatterna för alla ska fortsätta att minska.",
+  "source": {
+    "id": "valmanifest-2022-l",
+    "page": 12,
+    "quote": "marginalskatterna för alla fortsätter att minska"
+  },
+  "parties": ["L"],
+  "roles": {
+    "L": "government"
+  },
+  "type": "legislative",
+  "area": "Skatter",
+  "committee": "SkU",
+  "keywords": ["marginalskatt", "skiktgräns", "statlig inkomstskatt", "värnskatt"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2022-08-08",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": [
+        "tido-sankt-skatt-arbetsinkomst-pensionsinkomst",
+        "tido-mer-lonsamt-fran-bidrag-till-arbete"
+      ],
+      "outcome": "weakened",
+      "note": "Avtalet har sänkt skatt på arbetsinkomster men nämner inte marginalskatter för alla."
+    }
+  ]
+}

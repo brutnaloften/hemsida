@@ -1,0 +1,38 @@
+{
+  "id": "val2022-l-mer-sol-och-vindkraft-i-hela-landet",
+  "term": "2022-2026",
+  "title": "Bygg mer sol- och vindkraft i hela landet",
+  "description": "Det ska byggas mer sol- och vindkraft i hela landet.",
+  "source": {
+    "id": "valmanifest-2022-l",
+    "page": 10,
+    "quote": "också mer sol- och vindkraft i hela landet"
+  },
+  "parties": ["L"],
+  "roles": {
+    "L": "government"
+  },
+  "type": "other_action",
+  "area": "Energi",
+  "committee": "NU",
+  "keywords": ["solkraft", "vindkraft", "elproduktion", "förnybar el", "elpriser"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2022-08-08",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": [
+        "tido-tillaggsuppdrag-vindkraft-ersattning-kommuner",
+        "tido-oversyn-bygglov-integrerade-solceller"
+      ],
+      "outcome": "weakened",
+      "note": "Avtalet säger att vindkraft och ny elproduktion behövs men nämner inga mål för mer sol- och vindkraft; vindkraften ska byggas på konkurrensneutrala villkor."
+    }
+  ]
+}

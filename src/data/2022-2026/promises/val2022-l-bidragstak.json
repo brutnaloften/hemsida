@@ -1,0 +1,41 @@
+{
+  "id": "val2022-l-bidragstak",
+  "term": "2022-2026",
+  "title": "Bidragstak: de samlade bidragen får inte överstiga de lägsta kollektivavtalade lönerna",
+  "description": "Ett bidragstak ska införas så att de samlade bidragen inte kan vara högre än de lägsta kollektivavtalade lönerna.",
+  "source": {
+    "id": "valmanifest-2022-l",
+    "page": 12,
+    "quote": "genom ett bidragstak – de samlade bidragen ska inte kunna vara högre än de lägsta kollektivavtalade lönerna"
+  },
+  "parties": ["L"],
+  "roles": {
+    "L": "government"
+  },
+  "type": "legislative",
+  "area": "Socialförsäkring och bidrag",
+  "committee": "SoU",
+  "keywords": [
+    "bidragstak",
+    "bidrag",
+    "försörjningsstöd",
+    "kollektivavtalade löner",
+    "arbetslinjen"
+  ],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2022-08-08",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-bidragsreform-bidragstak-lagre-skatt"],
+      "outcome": "included",
+      "note": "Avtalet inför ett bidragstak så att den som kan arbeta inte kan få högre inkomster av bidrag än av eget arbete."
+    }
+  ]
+}

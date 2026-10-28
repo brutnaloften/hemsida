@@ -1,0 +1,35 @@
+{
+  "id": "val2022-l-forsta-300000-kronorna-pa-isk-skattefria",
+  "term": "2022-2026",
+  "title": "De första 300 000 kronorna på ett ISK skattefria",
+  "description": "De första 300 000 kronorna på ett investeringssparkonto (ISK) ska göras helt skattefria.",
+  "source": {
+    "id": "valmanifest-2022-l",
+    "page": 13,
+    "quote": "göra de första 300 000 kronorna på ett ISK helt skattefria"
+  },
+  "parties": ["L"],
+  "roles": {
+    "L": "government"
+  },
+  "type": "legislative",
+  "area": "Skatter",
+  "committee": "SkU",
+  "keywords": ["ISK", "investeringssparkonto", "schablonbeskattning", "skattefritt", "sparande"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2022-08-08",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-isk-skattefri-grundniva-300000"],
+      "outcome": "included",
+      "note": "Avtalet gör de första 300 000 kronorna på ISK skattefria."
+    }
+  ]
+}

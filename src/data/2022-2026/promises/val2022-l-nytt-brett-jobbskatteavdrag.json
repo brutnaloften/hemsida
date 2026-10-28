@@ -1,0 +1,38 @@
+{
+  "id": "val2022-l-nytt-brett-jobbskatteavdrag",
+  "term": "2022-2026",
+  "title": "Skyndsamt genomföra ett nytt brett jobbskatteavdrag",
+  "description": "Ett nytt brett jobbskatteavdrag ska skyndsamt genomföras.",
+  "source": {
+    "id": "valmanifest-2022-l",
+    "page": 12,
+    "quote": "vill vi skyndsamt genomföra ett nytt brett jobbskatteavdrag"
+  },
+  "parties": ["L"],
+  "roles": {
+    "L": "government"
+  },
+  "type": "legislative",
+  "area": "Skatter",
+  "committee": "SkU",
+  "keywords": ["jobbskatteavdrag", "skatt på arbete", "inkomstskatt", "arbetslinjen"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2022-08-08",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": [
+        "tido-sankt-skatt-arbetsinkomst-pensionsinkomst",
+        "tido-bidragsreform-bidragstak-lagre-skatt"
+      ],
+      "outcome": "weakened",
+      "note": "Avtalet har sänkt skatt på arbetsinkomster och lägre skatt för låg- och medelinkomsttagare, men nämner varken jobbskatteavdrag eller tidpunkt."
+    }
+  ]
+}

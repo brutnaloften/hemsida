@@ -1,0 +1,35 @@
+{
+  "id": "val2022-l-slopa-nastan-automatisk-frigivning",
+  "term": "2022-2026",
+  "title": "Slopa den närmast automatiska frigivningen från fängelsestraff",
+  "description": "Den närmast automatiska frigivningen från fängelsestraff ska slopas.",
+  "source": {
+    "id": "valmanifest-2022-l",
+    "page": 8,
+    "quote": "slopa den närmast automatiska frigivningen från fängelsestraff"
+  },
+  "parties": ["L"],
+  "roles": {
+    "L": "government"
+  },
+  "type": "legislative",
+  "area": "Rättsväsende",
+  "committee": "JuU",
+  "keywords": ["villkorlig frigivning", "fängelsestraff", "frigivning", "brottsbalken"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2022-08-08",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-villkorlig-frigivning-undantag"],
+      "outcome": "included",
+      "note": "Avtalet gör villkorlig frigivning till undantag."
+    }
+  ]
+}
