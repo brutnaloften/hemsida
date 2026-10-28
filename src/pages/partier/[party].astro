@@ -22,7 +22,6 @@ const rows = sortByTitle(promises).map((p) => ({
   id: p.id,
   title: p.title,
   area: p.area,
-  parties: p.parties,
   verdict: { value: p.verdict.value },
   href: `${base}${promisePath(p.id)}`,
 }));

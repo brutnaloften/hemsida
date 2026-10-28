@@ -5,28 +5,32 @@ import { VERDICT_STYLES } from "@/lib/promise-labels";
 import { assessedCount, verdictCounts, type PartyPromise } from "@/lib/party-stats";
 
 interface Props {
-  promises: PartyPromise[];
+  promises: Pick<PartyPromise, "verdict">[];
 }
 const { promises } = Astro.props;
 const counts = verdictCounts(promises);
 const total = promises.length;
 const assessed = assessedCount(promises);
+const pct = (n: number) => `${(n / total) * 100}%`;
+const legend = VERDICTS.filter((v) => counts[v] > 0 || v === "unassessed");
 ---
 
 <p class="text-sm text-muted-foreground">
   {total} löften, varav {assessed} bedömda. {counts.unassessed} löften är ännu inte bedömda av någon.
+  {counts.not_assessable > 0 && ` ${counts.not_assessable} är ej bedömbara (till exempel vaga löften).`}
 </p>
 <div
   class="mt-3 flex h-3 w-full overflow-hidden rounded-full border border-dashed border-muted-foreground/50"
   role="img"
-  aria-label={`${counts.unassessed} av ${total} löften är inte bedömda`}
+  aria-label={`${assessed} av ${total} löften är bedömda, ${counts.not_assessable} ej bedömbara, ${counts.unassessed} inte bedömda`}
 >
-  <div class="bg-muted" style={`width:${(counts.unassessed / total) * 100}%`}></div>
-  <div class="bg-foreground/70" style={`width:${(assessed / total) * 100}%`}></div>
+  <div class="bg-foreground/70" style={`width:${pct(assessed)}`}></div>
+  <div class="bg-zinc-400 dark:bg-zinc-600" style={`width:${pct(counts.not_assessable)}`}></div>
+  <div class="bg-muted" style={`width:${pct(counts.unassessed)}`}></div>
 </div>
-<ul class="mt-4 flex flex-wrap gap-2">
+<ul class="mt-4 flex flex-wrap gap-2" aria-label="Förklaring">
   {
-    VERDICTS.filter((v) => counts[v] > 0 || v === "unassessed").map((v) => (
+    legend.map((v) => (
       <li>
         <Badge class={VERDICT_STYLES[v]}>
           {VERDICT_LABELS[v]}: {counts[v]}
@@ -35,3 +39,6 @@ const assessed = assessedCount(promises);
     ))
   }
 </ul>
+<p class="mt-2 text-xs text-muted-foreground">
+  Stapeln: mörk = bedömda, grå = ej bedömbara, ljus = inte bedömda.
+</p>

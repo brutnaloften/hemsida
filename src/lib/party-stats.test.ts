@@ -21,11 +21,12 @@ const all = [
   p('a', ['M', 'KD', 'L', 'SD']),
   p('b', ['L'], 'fulfilled', 'Skola'),
   p('c', ['L'], 'broken', 'Skola'),
+  p('d', ['L'], 'not_assessable'),
 ];
 
 describe('party-stats', () => {
   it('counts joint promises for every party', () => {
-    expect(promisesForParty(all, 'L')).toHaveLength(3);
+    expect(promisesForParty(all, 'L')).toHaveLength(4);
     expect(promisesForParty(all, 'SD')).toHaveLength(1);
     expect(promisesForParty(all, 'S')).toHaveLength(0);
   });
@@ -40,6 +41,7 @@ describe('party-stats', () => {
     expect(c.fulfilled).toBe(1);
     expect(c.broken).toBe(1);
     expect(c.in_progress).toBe(0);
+    expect(c.not_assessable).toBe(1);
     expect(assessedCount(all)).toBe(2);
   });
 
@@ -49,12 +51,12 @@ describe('party-stats', () => {
     expect(filterPromises(all, { area: 'Skola', verdict: 'broken' }).map((x) => x.id)).toEqual([
       'c',
     ]);
-    expect(filterPromises(all, {})).toHaveLength(3);
+    expect(filterPromises(all, {})).toHaveLength(4);
   });
 
   it('groups areas and sorts titles without mutating', () => {
     expect(areaCounts(all)).toEqual([
-      { area: 'Skatter', count: 1 },
+      { area: 'Skatter', count: 2 },
       { area: 'Skola', count: 2 },
     ]);
     const input = [p('b', []), p('a', [])];

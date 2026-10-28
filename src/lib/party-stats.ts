@@ -36,9 +36,11 @@ export function verdictCounts(
   return counts;
 }
 
-/** Number of promises with a human verdict other than `unassessed`. */
+/** Promises with a real verdict: everything except `unassessed` and `not_assessable`. */
 export function assessedCount(promises: readonly Pick<PartyPromise, 'verdict'>[]): number {
-  return promises.filter((p) => p.verdict.value !== 'unassessed').length;
+  return promises.filter(
+    (p) => p.verdict.value !== 'unassessed' && p.verdict.value !== 'not_assessable',
+  ).length;
 }
 
 export interface PromiseFilter {
@@ -48,7 +50,7 @@ export interface PromiseFilter {
 }
 
 /** Case-insensitive title match plus optional exact area and verdict. */
-export function filterPromises<T extends PartyPromise>(
+export function filterPromises<T extends Pick<PartyPromise, 'title' | 'area' | 'verdict'>>(
   promises: readonly T[],
   { query = '', area = '', verdict = '' }: PromiseFilter,
 ): T[] {

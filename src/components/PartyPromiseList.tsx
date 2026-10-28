@@ -7,7 +7,7 @@ import { filterPromises, type PartyPromise } from "@/lib/party-stats";
 
 const PAGE_SIZE = 40;
 
-interface Row extends PartyPromise {
+interface Row extends Pick<PartyPromise, "id" | "title" | "area" | "verdict"> {
   href: string;
 }
 
