@@ -7,6 +7,8 @@ import {
   sourceRefSchema,
   VERDICTS,
   VERDICT_LABELS,
+  AGREEMENT_OUTCOMES,
+  AGREEMENT_OUTCOME_LABELS,
 } from '@/schema/promise';
 
 const valid = {
@@ -73,6 +75,64 @@ describe('promiseSchema', () => {
     expect(promiseSchema.safeParse(bad).success).toBe(false);
     const ok = { ...valid, evidence: [{ ...valid.evidence[0], kind: 'bet', votes }] };
     expect(promiseSchema.safeParse(ok).success).toBe(true);
+  });
+
+  describe('agreement evidence', () => {
+    const agreement = {
+      kind: 'agreement',
+      source: 'tidoavtalet',
+      date: '2022-10-14',
+      promises: ['tido-skarpta-straff-gangbrott'],
+      outcome: 'included',
+    };
+    const withEvidence = (...evidence: unknown[]) => ({ ...valid, evidence });
+
+    it('accepts an agreement entry next to Riksdag entries and defaults note', () => {
+      const r = promiseSchema.safeParse(withEvidence(agreement, valid.evidence[0]));
+      expect(r.success).toBe(true);
+      if (r.success) expect(r.data.evidence[0]!.note).toBeNull();
+    });
+
+    it('requires an empty promises list for not_addressed', () => {
+      const ok = { ...agreement, outcome: 'not_addressed', promises: [] };
+      expect(promiseSchema.safeParse(withEvidence(ok)).success).toBe(true);
+      const bad = { ...ok, promises: ['tido-skarpta-straff-gangbrott'] };
+      expect(promiseSchema.safeParse(withEvidence(bad)).success).toBe(false);
+    });
+
+    it('requires a non-empty promises list for every other outcome', () => {
+      for (const outcome of AGREEMENT_OUTCOMES.filter((o) => o !== 'not_addressed')) {
+        const bad = { ...agreement, outcome, promises: [] };
+        expect(promiseSchema.safeParse(withEvidence(bad)).success, outcome).toBe(false);
+      }
+    });
+
+    it('rejects Riksdag fields mixed into an agreement', () => {
+      for (const extra of [{ dok_id: 'H901' }, { votes: { S: 'yes' } }, { url: 'https://x.se' }]) {
+        expect(promiseSchema.safeParse(withEvidence({ ...agreement, ...extra })).success).toBe(
+          false,
+        );
+      }
+    });
+
+    it('rejects unknown outcomes and a missing source', () => {
+      expect(
+        promiseSchema.safeParse(withEvidence({ ...agreement, outcome: 'dropped' })).success,
+      ).toBe(false);
+      const { source: _s, ...noSource } = agreement;
+      expect(promiseSchema.safeParse(withEvidence(noSource)).success).toBe(false);
+    });
+
+    it('rejects two agreement entries for the same source', () => {
+      const bad = withEvidence(agreement, { ...agreement, outcome: 'weakened' });
+      expect(promiseSchema.safeParse(bad).success).toBe(false);
+      const other = withEvidence(agreement, { ...agreement, source: 'tidoavtalet-2' });
+      expect(promiseSchema.safeParse(other).success).toBe(true);
+    });
+
+    it('has a Swedish label for every outcome', () => {
+      for (const o of AGREEMENT_OUTCOMES) expect(AGREEMENT_OUTCOME_LABELS[o]).toBeTruthy();
+    });
   });
 
   it('rejects roles for parties not in parties', () => {

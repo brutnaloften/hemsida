@@ -149,6 +149,34 @@ A reference to an official document that bears on the promise.
 
 The **stage** shown on the site comes from the latest evidence `kind` (dir → sou/ds → prop → bet → sfs), so it isn't stored separately.
 
+#### Agreement evidence
+
+A second evidence kind, `agreement`, records how a government agreement (Tidöavtalet, later the 2026–2030 agreement) treated a promise made elsewhere, typically a party's election manifesto. It is a separate branch of the evidence union (discriminated on `kind`): it has none of the Riksdag fields above (`dok_id`, `designation`, `title`, `url`, `relevance`, `votes`), so code that reads those must narrow on `kind` first.
+
+| Field      | Type           | Notes                                                                                            |
+| ---------- | -------------- | ------------------------------------------------------------------------------------------------ |
+| `kind`     | `agreement`    |                                                                                                  |
+| `source`   | slug           | Id of the agreement's source file in `src/data/sources/` (kind `government_agreement`)           |
+| `date`     | ISO date       | The agreement's date                                                                             |
+| `promises` | slug[]         | Ids of the agreement's promise files that correspond to this one; empty only for `not_addressed` |
+| `outcome`  | enum           | How the agreement treated the promise (below)                                                    |
+| `note`     | string \| null | Optional Swedish note                                                                            |
+
+| Outcome         | Swedish label    | Meaning                                                                                                  |
+| --------------- | ---------------- | -------------------------------------------------------------------------------------------------------- |
+| `included`      | Med i avtalet    | The agreement contains the promise                                                                       |
+| `weakened`      | Urvattnat        | The agreement contains a weaker version                                                                  |
+| `strengthened`  | Skärpt           | The agreement goes further than the promise                                                              |
+| `contradicted`  | Motsägs          | The agreement says the opposite                                                                          |
+| `not_addressed` | Saknas i avtalet | The agreement does not mention it (this also covers "negotiated away", which the text alone cannot show) |
+
+Rules:
+
+- **The outcome is not a verdict.** It describes the agreement text and never sets or implies the verdict, which stays a separate human call. Agreement evidence alone is never enough for `in_progress` or `fulfilled` (to be enforced with the other evidence-to-verdict constraints in `hemsida-bzj.7`).
+- **Agreement is not a pipeline stage.** Stage derivation (dir → sou/ds → prop → bet → sfs) ignores it.
+- **References, not copies.** `promises` holds ids only. Riksdag evidence of the linked Tidö promises is not copied onto the manifesto promise; the site shows the linked promise's timeline inline.
+- **Schema checks:** `promises` is empty if and only if the outcome is `not_addressed`, and a promise has at most one agreement entry per `source`. A data test checks that every id in `promises` is a promise file in the same term and that `source` is a `government_agreement` source file.
+
 Budget evidence (budget bills, supplementary budgets, ESV outcomes) will be added by the budget epic.
 
 ### Rejected candidates
@@ -184,6 +212,7 @@ The file is a flat array, one per term rather than one per promise: it is small,
 - **Reversed later.** Add the reversing document as evidence and move the verdict (e.g. `fulfilled` → `broken`); the earlier verdict stays in `history`.
 - **One sentence holds several promises.** Split into separate promise files that share the same `source.page`.
 - **A support party, not a government party.** `roles` records it (`SD: support`), so the site can distinguish "the government did not deliver" from "a support party voted against".
+- **Manifesto promise vs agreement.** A manifesto promise is its own promise file with its own verdict. The agreement is evidence on it: add one `agreement` entry for the agreement, linking the Tidö promise ids that cover it. A manifesto promise the agreement left out gets `not_addressed` with empty `promises`; the verdict is still set by a human (`not_addressed` does not make it `broken` or `abandoned`).
 - **Term ends.** Remaining `unassessed` / `no_evidence` / `in_progress` verdicts become `unfulfilled` in a term-close review PR.
 
 ## Decision: JSON, not YAML

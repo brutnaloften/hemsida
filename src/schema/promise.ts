@@ -54,7 +54,57 @@ const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'expected a lowercas
 
 export const verdictValueSchema = z.enum(VERDICTS);
 
-export const evidenceSchema = z
+/**
+ * How a government agreement (e.g. Tidöavtalet) treated a promise made elsewhere (e.g. a party
+ * manifesto). Describes the agreement text only; it is never a verdict.
+ */
+export const AGREEMENT_OUTCOMES = [
+  'included',
+  'weakened',
+  'strengthened',
+  'contradicted',
+  'not_addressed',
+] as const;
+
+/** Swedish display labels for agreement outcomes. */
+export const AGREEMENT_OUTCOME_LABELS: Record<(typeof AGREEMENT_OUTCOMES)[number], string> = {
+  included: 'Med i avtalet',
+  weakened: 'Urvattnat',
+  strengthened: 'Skärpt',
+  contradicted: 'Motsägs',
+  not_addressed: 'Saknas i avtalet',
+};
+
+const agreementEvidenceSchema = z
+  .object({
+    kind: z.literal('agreement'),
+    /** Id of the agreement's source file (kind government_agreement). */
+    source: slug,
+    date: isoDate,
+    /** Ids of the agreement's promises that correspond to this one. */
+    promises: z.array(slug).default([]),
+    outcome: z.enum(AGREEMENT_OUTCOMES),
+    note: z.string().nullable().default(null),
+  })
+  .strict()
+  .superRefine((e, ctx) => {
+    if (e.outcome === 'not_addressed' && e.promises.length > 0) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['promises'],
+        message: 'promises must be empty when the outcome is not_addressed',
+      });
+    }
+    if (e.outcome !== 'not_addressed' && e.promises.length === 0) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['promises'],
+        message: 'promises must list at least one promise unless the outcome is not_addressed',
+      });
+    }
+  });
+
+const riksdagEvidenceSchema = z
   .object({
     kind: z.enum(EVIDENCE_KINDS),
     dok_id: z.string().min(1),
@@ -75,6 +125,11 @@ export const evidenceSchema = z
       });
     }
   });
+
+export const evidenceSchema = z.discriminatedUnion('kind', [
+  riksdagEvidenceSchema,
+  agreementEvidenceSchema,
+]);
 
 const verdictEntry = z.object({
   value: verdictValueSchema,
@@ -132,6 +187,18 @@ export const promiseSchema = z
         });
       }
     }
+    const agreementSources = new Set<string>();
+    p.evidence.forEach((e, i) => {
+      if (e.kind !== 'agreement') return;
+      if (agreementSources.has(e.source)) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['evidence', i, 'source'],
+          message: `more than one agreement entry for source ${e.source}`,
+        });
+      }
+      agreementSources.add(e.source);
+    });
   });
 
 export const sourceSchema = z.object({
@@ -146,5 +213,8 @@ export const sourceSchema = z.object({
 
 export type PromiseRecord = z.infer<typeof promiseSchema>;
 export type Evidence = z.infer<typeof evidenceSchema>;
+export type RiksdagEvidence = Extract<Evidence, { kind: (typeof EVIDENCE_KINDS)[number] }>;
+export type AgreementEvidence = Extract<Evidence, { kind: 'agreement' }>;
+export type AgreementOutcome = (typeof AGREEMENT_OUTCOMES)[number];
 export type Verdict = z.infer<typeof verdictSchema>;
 export type Source = z.infer<typeof sourceSchema>;
