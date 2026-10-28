@@ -1,0 +1,24 @@
+---
+import type { RiksdagEvidence } from "@/schema/promise";
+import { EVIDENCE_KIND_LABELS } from "@/lib/promise-labels";
+
+interface Props {
+  entry: RiksdagEvidence;
+}
+const { entry: e } = Astro.props;
+const link = "underline underline-offset-2";
+---
+
+<li>
+  <p class="text-sm text-muted-foreground">
+    {e.date} &middot; {EVIDENCE_KIND_LABELS[e.kind]}
+    {e.relevance === "partial" && " (delvis relevant)"}
+  </p>
+  <p class="font-medium">
+    <a href={e.url} target="_blank" rel="noopener noreferrer" class={link}>
+      {e.designation}
+    </a>{" "}
+    &ndash; {e.title}
+  </p>
+  {e.note && <p class="text-sm">{e.note}</p>}
+</li>

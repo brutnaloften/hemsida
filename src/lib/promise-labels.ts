@@ -60,3 +60,10 @@ export const VERDICT_STYLES: Record<VerdictValue, string> = {
 export function partyName(code: string): string {
   return PARTY_NAMES[code as Party] ?? code;
 }
+
+/**
+ * Agreement outcome badges: square corners and a thick violet outline keep
+ * them visually apart from the rounded, filled verdict badges.
+ */
+export const AGREEMENT_OUTCOME_STYLE =
+  'rounded-none border-2 border-violet-500 bg-transparent text-violet-900 dark:border-violet-400 dark:text-violet-200';
