@@ -51,11 +51,12 @@ describe('promiseSchema', () => {
     expect(promiseSchema.safeParse(bad).success).toBe(false);
   });
 
-  it('requires reasoning except for not_started', () => {
+  it('requires reasoning except for unassessed and not_started', () => {
     const v = (value: string) => ({
       ...valid,
       verdict: { value, reasoning: '', date: '2023-01-01' },
     });
+    expect(promiseSchema.safeParse(v('unassessed')).success).toBe(true);
     expect(promiseSchema.safeParse(v('not_started')).success).toBe(true);
     expect(promiseSchema.safeParse(v('broken')).success).toBe(false);
   });
@@ -77,6 +78,11 @@ describe('promiseSchema', () => {
 
   it('rejects roles for parties not in parties', () => {
     expect(promiseSchema.safeParse({ ...valid, parties: ['M'] }).success).toBe(false);
+  });
+
+  it('lists unassessed first, labelled Inte bedömt', () => {
+    expect(VERDICTS[0]).toBe('unassessed');
+    expect(VERDICT_LABELS.unassessed).toBe('Inte bedömt');
   });
 
   it('has a Swedish label for every verdict', () => {

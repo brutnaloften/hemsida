@@ -107,7 +107,7 @@ export function slugify(s: string): string {
 
 const PARTIES = ['M', 'KD', 'L', 'SD'] as const;
 
-/** Turn a raw candidate into a schema-valid draft promise (verdict not_started). Throws on invalid data. */
+/** Turn a raw candidate into a schema-valid draft promise (verdict unassessed). Throws on invalid data. */
 export function toEntry(
   raw: RawCandidate,
   chunk: Chunk,
@@ -134,7 +134,7 @@ export function toEntry(
       ? raw.committee
       : undefined,
     keywords: raw.keywords.map((k) => k.trim()).filter(Boolean),
-    verdict: { value: 'not_started', reasoning: '', date: verdictDate, history: [] },
+    verdict: { value: 'unassessed', reasoning: '', date: verdictDate, history: [] },
     evidence: [],
   });
   return { chunk: chunk.key, ministry: raw.ministry.trim(), promise };

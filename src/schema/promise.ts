@@ -22,6 +22,7 @@ export const PROMISE_TYPES = [
 ] as const;
 
 export const VERDICTS = [
+  'unassessed',
   'not_started',
   'in_progress',
   'fulfilled',
@@ -34,6 +35,7 @@ export const VERDICTS = [
 
 /** Swedish display labels for verdict values. */
 export const VERDICT_LABELS: Record<(typeof VERDICTS)[number], string> = {
+  unassessed: 'Inte bedömt',
   not_started: 'Ej påbörjat',
   in_progress: 'Pågår',
   fulfilled: 'Uppfyllt',
@@ -80,16 +82,16 @@ const verdictEntry = z.object({
   date: isoDate,
 });
 
-/** Reasoning is required for every verdict value except `not_started`. */
+/** Reasoning is required for every verdict value except `unassessed` and `not_started`. */
 function requireReasoning(
   v: { value: string; reasoning: string },
   ctx: z.core.$RefinementCtx,
 ): void {
-  if (v.value !== 'not_started' && v.reasoning.trim() === '') {
+  if (v.value !== 'unassessed' && v.value !== 'not_started' && v.reasoning.trim() === '') {
     ctx.addIssue({
       code: 'custom',
       path: ['reasoning'],
-      message: 'reasoning is required unless the verdict is not_started',
+      message: 'reasoning is required unless the verdict is unassessed or not_started',
     });
   }
 }
