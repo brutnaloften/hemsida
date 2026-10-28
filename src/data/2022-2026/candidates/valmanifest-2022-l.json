@@ -140,7 +140,7 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-lobok-per-elev-och-amne"],
+      "promises": ["tido-larobok-per-elev-och-amne"],
       "outcome": "included",
       "note": "Avtalet har en satsning mot principen en lärobok per elev och ämne.",
       "rationale": "Tidö s. 54: \"Satsning görs för att sträva mot principen om en lärobok per elev och ämne\"."
@@ -1587,7 +1587,10 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-sfi-yrkesutbildning-alla-kommuner", "tido-sankt-etableringsstod"],
+      "promises": [
+        "tido-obligatorisk-samhallsintroduktion-och-samhallsorientering",
+        "tido-sankt-etableringsstod"
+      ],
       "outcome": "weakened",
       "note": "Avtalet vill förstärka SFI-undervisningen och ställa krav på aktivt deltagande, men anger inga skärpta kunskapskrav eller kvalitetsmått.",
       "rationale": "Tidö s. 47: \"föreslå förstärkningar av SFI-undervisningen\" och \"krav ställas på aktivt deltagande i SFI\". Osäker: \"förstärkningar\" är vagt."
@@ -3670,10 +3673,7 @@
       "evidence": []
     },
     "link": {
-      "promises": [
-        "tido-karnkraft-kreditgarantier-400-miljarder",
-        "tido-kreditgarantier-grona-oversyn-nybyggnation-karnkraft"
-      ],
+      "promises": ["tido-karnkraft-kreditgarantier-400-miljarder"],
       "outcome": "included",
       "note": "Avtalet inför statliga kreditgarantier om 400 miljarder kronor för kärnkraft.",
       "rationale": "Tidö s. 13: \"särskilda statliga kreditgarantier uppgående till 400 miljarder kronor\"."
@@ -3710,8 +3710,7 @@
     "link": {
       "promises": [
         "tido-lagandringar-ny-karnkraft-miljobalken",
-        "tido-kortare-tillstandsprocess-snabbspar-karnkraft",
-        "tido-sank-ansokningsavgift-karnkraft-typgodkannande"
+        "tido-kortare-tillstandsprocess-snabbspar-karnkraft"
       ],
       "outcome": "included",
       "note": "Avtalet förändrar regelverken för ny kärnkraft: borttagna förbud, snabbspår och lägre ansökningsavgift.",
@@ -3783,7 +3782,7 @@
     },
     "link": {
       "promises": [
-        "tido-tilllaggsuppdrag-vindkraft-ersattning-kommuner",
+        "tido-tillaggsuppdrag-vindkraft-ersattning-kommuner",
         "tido-oversyn-bygglov-integrerade-solceller"
       ],
       "outcome": "weakened",
@@ -7715,10 +7714,7 @@
       "evidence": []
     },
     "link": {
-      "promises": [
-        "tido-asylregler-miniminivan-eu-ratten",
-        "tido-asylregler-miniminivan-proposition-2026"
-      ],
+      "promises": ["tido-asylregler-miniminivan-eu-ratten"],
       "outcome": "included",
       "note": "Avtalet anpassar svensk asyllagstiftning till EU-rättens miniminivå.",
       "rationale": "Tidö s. 35: asyllagstiftningen ska anpassas \"en rättslig miniminivå enligt EU-rätten\"; s. 36: övriga regler \"genom proposition till riksdagen senast våren 2026\". Miniminivå är striktare än L:s \"i linje med andra EU-länder\" men åt samma håll."

@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { loadJson } from './json.ts';
 import { promiseSchema, type PromiseRecord } from './schema.ts';
-import { MERGES, promote, type Candidate } from './tido-promote.ts';
+import { MERGES, promote, remapLinkPromises, type Candidate } from './tido-promote.ts';
 
 const dataDir = resolve(import.meta.dirname, '../../src/data/2022-2026');
 const candidates = loadJson(resolve(dataDir, 'candidates/tidoavtalet.json')) as Candidate[];
@@ -43,7 +43,11 @@ describe('promote', () => {
 
 describe('committed promise files', () => {
   it('has the files the script generates', () => {
-    expect(tidoFiles).toHaveLength(promote(candidates).promises.length);
+    expect([...tidoFiles].sort()).toEqual(
+      promote(candidates)
+        .promises.map((p) => `${p.id}.json`)
+        .sort(),
+    );
   });
 
   it('validates every file against the schema, with the id matching the file name', () => {
@@ -58,5 +62,38 @@ describe('committed promise files', () => {
       (f) => (loadJson(resolve(promisesDir, f)) as PromiseRecord).id,
     );
     expect(new Set(all).size).toBe(all.length);
+  });
+});
+
+describe('candidate links', () => {
+  it('remaps absorbed and renamed ids and drops duplicates', () => {
+    const { map } = promote(candidates);
+    expect(
+      remapLinkPromises(
+        [
+          'tido-sfi-yrkesutbildning-alla-kommuner',
+          'tido-obligatorisk-samhallsintroduktion-och-samhallsorientering',
+          'tido-lobok-per-elev-och-amne',
+        ],
+        map,
+      ),
+    ).toEqual([
+      'tido-obligatorisk-samhallsintroduktion-och-samhallsorientering',
+      'tido-larobok-per-elev-och-amne',
+    ]);
+  });
+
+  it('resolves every link.promises id in the candidate files to a committed promise', () => {
+    const candidatesDir = resolve(dataDir, 'candidates');
+    const ids = new Set(readdirSync(promisesDir).map((f) => f.replace(/\.json$/, '')));
+    for (const f of readdirSync(candidatesDir)) {
+      if (f === 'tidoavtalet.json') continue;
+      const entries = loadJson(resolve(candidatesDir, f)) as { link?: { promises?: string[] } }[];
+      for (const e of entries) {
+        for (const id of e.link?.promises ?? []) {
+          expect(ids.has(id), `${f}: ${id}`).toBe(true);
+        }
+      }
+    }
   });
 });
