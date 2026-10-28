@@ -99,8 +99,8 @@ describe('addRawCandidates', () => {
     );
     expect(first.map((e) => e.promise.source.page)).toEqual([2, 5]);
     expect(first.map((e) => e.promise.id)).toEqual([
-      'val2022-l-skolplikt-forlangd',
       'val2022-l-skolplikt-forlangd-2',
+      'val2022-l-skolplikt-forlangd',
     ]);
     const second = addRawCandidates(
       [raw({ page: 5, slug: 'ny' })],
@@ -110,7 +110,7 @@ describe('addRawCandidates', () => {
       '2026-10-28',
     );
     expect(second.map((e) => e.promise.id)).toEqual([
-      'val2022-l-skolplikt-forlangd',
+      'val2022-l-skolplikt-forlangd-2',
       'val2022-l-ny',
     ]);
   });
