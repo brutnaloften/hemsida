@@ -102,7 +102,10 @@ export function buildMacro({ kpi, bnp, today, previous }: BuildMacroInput): Macr
       values: bnpValues,
       ...(missing.length > 0
         ? {
-            note: `BNP för ${missing.join(', ')} är inte publicerat av SCB ännu; andel av BNP saknas för dessa år.`,
+            note:
+              missing.length === 1
+                ? `BNP för ${missing[0]} är inte publicerat av SCB ännu; andel av BNP saknas för det året.`
+                : `BNP för ${missing.join(', ')} är inte publicerat av SCB ännu; andel av BNP saknas för dessa år.`,
           }
         : {}),
     },
@@ -110,7 +113,28 @@ export function buildMacro({ kpi, bnp, today, previous }: BuildMacroInput): Macr
   return macroSchema.parse(result);
 }
 
-/** Deterministic serialisation: fixed key order from buildMacro, trailing newline. */
+const PRINT_WIDTH = 100;
+
+/**
+ * Deterministic serialisation matching oxfmt's output for this file: two-space
+ * JSON, except the `years` array of numbers, which the formatter fills into
+ * lines of at most 100 columns. Fixed key order from buildMacro, trailing newline.
+ */
 export function serializeMacro(macro: Macro): string {
-  return `${JSON.stringify(macro, null, 2)}\n`;
+  const lines: string[] = [];
+  let line = '    ';
+  macro.years.forEach((y, i) => {
+    const item = i < macro.years.length - 1 ? `${y},` : `${y}`;
+    const next = line.trim() === '' ? line + item : `${line} ${item}`;
+    if (next.length > PRINT_WIDTH) {
+      lines.push(line);
+      line = `    ${item}`;
+    } else {
+      line = next;
+    }
+  });
+  lines.push(line);
+  const json = JSON.stringify({ ...macro, years: ['__YEARS__'] }, null, 2);
+  const out = json.replace(/\[\s*"__YEARS__"\s*\]/, `[\n${lines.join('\n')}\n  ]`);
+  return `${out}\n`;
 }

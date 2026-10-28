@@ -1,7 +1,9 @@
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
+import { macroSchema } from './schema.ts';
 import { buildMacro, parseJsonStat2Years, serializeMacro, tableUrl } from './macro-ingest.ts';
 
-/** Trimmed from a recorded TAB4352 response (values cut to 2005-2008 for the fixture). */
+/** Hand-trimmed TAB4352 response shape (2005-2008). 2005 and 2006 are real SCB values; 2007 and 2008 are made up. */
 const kpiFixture = {
   version: '2.0',
   class: 'dataset',
@@ -14,7 +16,7 @@ const kpiFixture = {
   value: [280.4, 284.22, 289.0, 297.0],
 };
 
-/** Trimmed from a recorded TAB3610 response; 2008 has no value yet. */
+/** Hand-trimmed TAB3610 response shape (2005-2008). 2006 is a real SCB value; the rest are made up, and 2008 is null on purpose. */
 const bnpFixture = {
   version: '2.0',
   class: 'dataset',
@@ -74,6 +76,14 @@ describe('buildMacro', () => {
   it('throws when a KPI year is missing', () => {
     const holes = new Map(kpi).set(2007, null);
     expect(() => buildMacro({ kpi: holes, bnp, today: '2026-10-28' })).toThrow(/2007/);
+  });
+});
+
+describe('serializeMacro', () => {
+  it('reproduces the committed macro.json byte for byte', () => {
+    const path = new URL('../../src/data/budget/macro.json', import.meta.url);
+    const text = readFileSync(path, 'utf8');
+    expect(serializeMacro(macroSchema.parse(JSON.parse(text)))).toBe(text);
   });
 });
 

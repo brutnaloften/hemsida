@@ -241,8 +241,8 @@ Pretty-printed with the repo formatter the files will be 2-3 times larger on dis
 
 // macro.json
 {
-  "kpi": { "base": "1980=100", "source": "SCB TAB4352", "values": { "2006": 284.22 } },
-  "bnp": { "unit": "mn kr", "source": "SCB TAB3610", "values": { "2006": 3117499 } }
+  "kpi": { "base": "1980=100", "source": "TAB4352", "values": { "2006": 284.22 } },
+  "bnp": { "unit": "mn kr", "source": "TAB3610", "values": { "2006": 3117499 } }
 }
 ```
 
