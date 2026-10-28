@@ -18,11 +18,22 @@ function agreementLinkProblems(
     if (!idsByTerm.has(p.term)) idsByTerm.set(p.term, new Set());
     idsByTerm.get(p.term)!.add(p.id);
   }
+  const promiseById = new Map(promises.map((p) => [p.id, p]));
   const problems: string[] = [];
   for (const p of promises) {
     for (const e of p.evidence) {
       if (e.kind !== 'agreement') continue;
+      if (new Set(e.promises).size !== e.promises.length) {
+        problems.push(`${p.id}: duplicate linked ids in agreement entry for ${e.source}`);
+      }
       for (const id of e.promises) {
+        if (id === p.id) problems.push(`${p.id}: agreement entry links to itself`);
+        const target = promiseById.get(id);
+        if (target && target.term === p.term && target.source.id !== e.source) {
+          problems.push(
+            `${p.id}: linked promise ${id} has source ${target.source.id}, not ${e.source}`,
+          );
+        }
         if (!idsByTerm.get(p.term)?.has(id)) {
           problems.push(`${p.id}: linked promise ${id} not found in term ${p.term}`);
         }
@@ -75,16 +86,16 @@ const base = {
   area: 'A',
   verdict: { value: 'unassessed', date: '2022-10-14' },
 };
-const manifesto = (agreementSource: string, linked: string) =>
+const manifesto = (agreementSource: string, linked: string | string[], id = 'val2022-l-x') =>
   promiseSchema.parse({
     ...base,
-    id: 'val2022-l-x',
+    id,
     evidence: [
       {
         kind: 'agreement',
         source: agreementSource,
         date: '2022-10-14',
-        promises: [linked],
+        promises: Array.isArray(linked) ? linked : [linked],
         outcome: 'included',
       },
     ],
@@ -107,11 +118,30 @@ describe('agreement link check', () => {
     expect(problems[0]).toContain('tido-missing');
   });
 
+  it('flags a linked promise from a different source', () => {
+    const other = promiseSchema.parse({ ...base, id: 'other-x', source: { id: 'annat' } });
+    const problems = agreementLinkProblems([manifesto('tidoavtalet', 'other-x'), other], kinds);
+    expect(problems).toHaveLength(1);
+    expect(problems[0]).toContain('not tidoavtalet');
+  });
+
+  it('flags self-links and duplicate ids', () => {
+    const self = agreementLinkProblems([manifesto('tidoavtalet', 'val2022-l-x'), tido], kinds);
+    expect(self.some((p) => p.includes('itself'))).toBe(true);
+    const dup = agreementLinkProblems(
+      [manifesto('tidoavtalet', ['tido-x', 'tido-x']), tido],
+      kinds,
+    );
+    expect(dup.some((p) => p.includes('duplicate'))).toBe(true);
+  });
+
   it('flags a missing source file and a source of the wrong kind', () => {
-    expect(agreementLinkProblems([manifesto('nope', 'tido-x'), tido], kinds)).toHaveLength(1);
-    expect(
-      agreementLinkProblems([manifesto('valmanifest-2022-l', 'tido-x'), tido], kinds),
-    ).toHaveLength(1);
+    const kindProblems = (src: string) =>
+      agreementLinkProblems([manifesto(src, 'tido-x'), tido], kinds).filter((p) =>
+        p.includes('agreement source'),
+      );
+    expect(kindProblems('nope')).toHaveLength(1);
+    expect(kindProblems('valmanifest-2022-l')).toHaveLength(1);
   });
 });
 

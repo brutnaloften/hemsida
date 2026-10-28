@@ -107,7 +107,15 @@ describe('promiseSchema', () => {
       }
     });
 
-    it('rejects unknown outcomes and Riksdag fields mixed into an agreement', () => {
+    it('rejects Riksdag fields mixed into an agreement', () => {
+      for (const extra of [{ dok_id: 'H901' }, { votes: { S: 'yes' } }, { url: 'https://x.se' }]) {
+        expect(promiseSchema.safeParse(withEvidence({ ...agreement, ...extra })).success).toBe(
+          false,
+        );
+      }
+    });
+
+    it('rejects unknown outcomes and a missing source', () => {
       expect(
         promiseSchema.safeParse(withEvidence({ ...agreement, outcome: 'dropped' })).success,
       ).toBe(false);

@@ -2,13 +2,15 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Badge } from "@/components/ui/badge";
 import type { Promise } from "@/data/index";
 import { buttonVariants } from "./ui/button";
-import { VERDICT_LABELS } from "@/schema/promise";
+import { VERDICT_LABELS, type RiksdagEvidence } from "@/schema/promise";
 import { EVIDENCE_KIND_LABELS, TYPE_LABELS, VERDICT_STYLES, partyName } from "@/lib/promise-labels";
 
 export default function PromiseCard({ promise }: { promise: Promise }) {
   const { verdict } = promise;
-  // ISO dates sort lexicographically.
-  const latest = [...promise.evidence].sort((a, b) => b.date.localeCompare(a.date))[0];
+  // Riksdag documents only: an agreement entry is not a pipeline stage. ISO dates sort lexicographically.
+  const latest: RiksdagEvidence | undefined = promise.evidence
+    .filter((e): e is RiksdagEvidence => e.kind !== "agreement")
+    .sort((a, b) => b.date.localeCompare(a.date))[0];
   return (
     <Card className="p-4 mb-4">
       <CardHeader className="flex flex-col max-md:pb-2 md:items-center md:justify-between md:flex-row">

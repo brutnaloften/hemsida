@@ -86,6 +86,7 @@ const agreementEvidenceSchema = z
     outcome: z.enum(AGREEMENT_OUTCOMES),
     note: z.string().nullable().default(null),
   })
+  .strict()
   .superRefine((e, ctx) => {
     if (e.outcome === 'not_addressed' && e.promises.length > 0) {
       ctx.addIssue({
