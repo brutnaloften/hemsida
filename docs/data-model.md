@@ -117,16 +117,19 @@ Party codes: `S`, `M`, `SD`, `C`, `V`, `KD`, `L`, `MP`.
 
 Set by a human, with reasoning that cites evidence. `history` keeps earlier verdicts so the site can show how the assessment changed. Git keeps the full audit trail on top of that.
 
-| Value                 | Swedish label   | Meaning                                                                      |
-| --------------------- | --------------- | ---------------------------------------------------------------------------- |
-| `not_started`         | Ej påbörjat     | No evidence of action yet                                                    |
-| `in_progress`         | Pågår           | Action under way (inquiry, proposal, bill), not yet decided or in force      |
-| `fulfilled`           | Uppfyllt        | Done as promised                                                             |
-| `partially_fulfilled` | Delvis uppfyllt | Done, but substantially narrower or weaker than promised, or only some parts |
-| `unfulfilled`         | Ej uppfyllt     | The term ended without fulfilment                                            |
-| `abandoned`           | Övergivet       | The promising parties explicitly dropped it                                  |
-| `broken`              | Brutet          | They did the opposite, or voted against it                                   |
-| `not_assessable`      | Ej bedömbart    | Too vague to assess                                                          |
+| Value                 | Swedish label     | Meaning                                                                      |
+| --------------------- | ----------------- | ---------------------------------------------------------------------------- |
+| `unassessed`          | Inte bedömt       | Nobody has looked yet; makes no claim about the world. The default           |
+| `no_evidence`         | Inga belägg funna | A human searched the Riksdag record and found nothing (see below)            |
+| `in_progress`         | Pågår             | Action under way (inquiry, proposal, bill), not yet decided or in force      |
+| `fulfilled`           | Uppfyllt          | Done as promised                                                             |
+| `partially_fulfilled` | Delvis uppfyllt   | Done, but substantially narrower or weaker than promised, or only some parts |
+| `unfulfilled`         | Ej uppfyllt       | The term ended without fulfilment                                            |
+| `abandoned`           | Övergivet         | The promising parties explicitly dropped it                                  |
+| `broken`              | Brutet            | They did the opposite, or voted against it                                   |
+| `not_assessable`      | Ej bedömbart      | Too vague to assess                                                          |
+
+`unassessed` and `no_evidence` are deliberately different. `no_evidence` is a statement about our record, not about what the government did. Absence of evidence is not evidence of absence: `unassessed` only says the promise has not been reviewed, while `no_evidence` is a positive finding by a human who searched the Riksdag record and recorded that nothing was found. Its reasoning must state what was searched and when (committee, keywords, date). New promises and extraction candidates default to `unassessed`. Schema enforcement of the `no_evidence` reasoning is tracked in `hemsida-bzj.7`.
 
 ### Evidence
 
@@ -181,7 +184,7 @@ The file is a flat array, one per term rather than one per promise: it is small,
 - **Reversed later.** Add the reversing document as evidence and move the verdict (e.g. `fulfilled` → `broken`); the earlier verdict stays in `history`.
 - **One sentence holds several promises.** Split into separate promise files that share the same `source.page`.
 - **A support party, not a government party.** `roles` records it (`SD: support`), so the site can distinguish "the government did not deliver" from "a support party voted against".
-- **Term ends.** Remaining `not_started` / `in_progress` verdicts become `unfulfilled` in a term-close review PR.
+- **Term ends.** Remaining `unassessed` / `no_evidence` / `in_progress` verdicts become `unfulfilled` in a term-close review PR.
 
 ## Decision: JSON, not YAML
 
@@ -190,5 +193,5 @@ Promise files stay JSON. The tooling reads and writes them without an extra depe
 ## Open questions
 
 1. Is `unfulfilled` (term ended) different enough from `broken` (did the opposite) to show separately? This draft says yes.
-2. Should verdict reasoning be required for `not_started`? This draft says no, but it is required for every other value.
+2. Should verdict reasoning be required for `no_evidence`? Its reasoning is meant to state what was searched and when; enforcement is tracked in `hemsida-bzj.7`. It is not required for `unassessed`.
 3. The four Almedalen 2024 KD promises (`hemsida-bzj.5`): migrate them with `source.kind: speech`, or drop them to keep the dataset Tidö-only for now?
