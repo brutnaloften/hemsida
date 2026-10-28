@@ -51,13 +51,13 @@ describe('promiseSchema', () => {
     expect(promiseSchema.safeParse(bad).success).toBe(false);
   });
 
-  it('requires reasoning except for unassessed and not_started', () => {
+  it('requires reasoning except for unassessed and no_evidence', () => {
     const v = (value: string) => ({
       ...valid,
       verdict: { value, reasoning: '', date: '2023-01-01' },
     });
     expect(promiseSchema.safeParse(v('unassessed')).success).toBe(true);
-    expect(promiseSchema.safeParse(v('not_started')).success).toBe(true);
+    expect(promiseSchema.safeParse(v('no_evidence')).success).toBe(true);
     expect(promiseSchema.safeParse(v('broken')).success).toBe(false);
   });
 
