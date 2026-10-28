@@ -358,6 +358,10 @@ describe('sourceSchema', () => {
   it('accepts a valid source', () => {
     expect(sourceSchema.safeParse(src).success).toBe(true);
   });
+  it('accepts an optional urlDeadAsOf date and rejects a malformed one', () => {
+    expect(sourceSchema.safeParse({ ...src, urlDeadAsOf: '2026-10-28' }).success).toBe(true);
+    expect(sourceSchema.safeParse({ ...src, urlDeadAsOf: 'yesterday' }).success).toBe(false);
+  });
   it('rejects bad kind, date and url', () => {
     expect(sourceSchema.safeParse({ ...src, kind: 'news' }).success).toBe(false);
     expect(sourceSchema.safeParse({ ...src, date: '14/10/2022' }).success).toBe(false);
