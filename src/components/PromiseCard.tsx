@@ -14,7 +14,11 @@ export default function PromiseCard({ promise }: { promise: Promise }) {
       <CardHeader className="flex flex-col max-md:pb-2 md:items-center md:justify-between md:flex-row">
         <CardTitle className="pb-2 md:pb-0">{promise.title}</CardTitle>
         <div className="flex flex-wrap items-start gap-2 md:items-end md:justify-end">
-          <Badge className={VERDICT_STYLES[verdict.value]} data-verdict={verdict.value}>
+          <Badge
+            variant="outline"
+            className={VERDICT_STYLES[verdict.value]}
+            data-verdict={verdict.value}
+          >
             {VERDICT_LABELS[verdict.value]}
           </Badge>
           {promise.parties.map((party) => (

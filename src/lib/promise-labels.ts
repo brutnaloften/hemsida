@@ -44,8 +44,9 @@ export const EVIDENCE_KIND_LABELS: Record<EvidenceKind, string> = {
  */
 export const VERDICT_STYLES: Record<VerdictValue, string> = {
   unassessed: 'border-dashed border-muted-foreground/50 bg-transparent text-muted-foreground',
-  no_evidence: 'border-dashed border-muted-foreground/50 bg-muted text-muted-foreground',
-  not_assessable: 'border-transparent bg-muted text-muted-foreground',
+  // text-muted-foreground on bg-muted is 4.4:1 in light mode (below AA); zinc-700 is 9.5:1.
+  no_evidence: 'border-dashed border-muted-foreground/50 bg-muted text-zinc-700 dark:text-zinc-300',
+  not_assessable: 'border-transparent bg-muted text-zinc-700 dark:text-zinc-300',
   in_progress: 'border-transparent bg-blue-100 text-blue-900 dark:bg-blue-950 dark:text-blue-200',
   fulfilled: 'border-transparent bg-green-100 text-green-900 dark:bg-green-950 dark:text-green-200',
   partially_fulfilled:
