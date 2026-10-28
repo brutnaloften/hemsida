@@ -1,9 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import {
   promiseSchema,
-  legacyPromiseSchema,
   sourceSchema,
   sourceRefSchema,
   VERDICTS,
@@ -90,12 +89,42 @@ describe('promiseSchema', () => {
   });
 });
 
-describe('legacyPromiseSchema', () => {
-  it('accepts every current data file', () => {
-    const dir = fileURLToPath(new URL('../data/2022-2026/promises', import.meta.url));
-    for (const f of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
-      const r = legacyPromiseSchema.safeParse(JSON.parse(readFileSync(`${dir}/${f}`, 'utf-8')));
-      expect(r.success, f).toBe(true);
+const dataRoot = fileURLToPath(new URL('../data', import.meta.url));
+
+/** Every promise file in every term folder: src/data/<term>/promises/*.json */
+function promiseFiles(): { dir: string; file: string }[] {
+  return readdirSync(dataRoot, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && existsSync(`${dataRoot}/${d.name}/promises`))
+    .flatMap((d) => {
+      const dir = `${dataRoot}/${d.name}/promises`;
+      return readdirSync(dir)
+        .filter((f) => f.endsWith('.json'))
+        .map((file) => ({ dir, file }));
+    });
+}
+
+describe('promise data', () => {
+  it('finds promise files', () => {
+    expect(promiseFiles().length).toBeGreaterThan(0);
+  });
+
+  it('accepts every current data file in every term folder', () => {
+    for (const { dir, file } of promiseFiles()) {
+      const r = promiseSchema.safeParse(JSON.parse(readFileSync(`${dir}/${file}`, 'utf-8')));
+      expect(r.success, `${dir}/${file}`).toBe(true);
+      if (r.success) {
+        expect(`${r.data.id}.json`, file).toBe(file);
+        expect(dir.endsWith(`/${r.data.term}/promises`), `${file} term matches folder`).toBe(true);
+      }
+    }
+  });
+
+  it('references an existing source', () => {
+    const sourceDir = `${dataRoot}/sources`;
+    const sourceIds = readdirSync(sourceDir).map((f) => f.replace(/\.json$/, ''));
+    for (const { dir, file } of promiseFiles()) {
+      const p = promiseSchema.parse(JSON.parse(readFileSync(`${dir}/${file}`, 'utf-8')));
+      expect(sourceIds, file).toContain(p.source.id);
     }
   });
 });

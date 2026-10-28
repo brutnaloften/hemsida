@@ -1,12 +1,11 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { legacyPromiseSchema, sourceSchema } from './schema/promise';
+import { promiseSchema, sourceSchema } from './schema/promise';
 
 // One directory per term: src/data/<term>/promises/*.json
 const promises = defineCollection({
   loader: glob({ pattern: '*/promises/*.json', base: 'src/data' }),
-  // v1 shape until hemsida-bzj.5 migrates the remaining files to promiseSchema.
-  schema: legacyPromiseSchema,
+  schema: promiseSchema,
 });
 
 // Origin documents that promises cite: src/data/sources/*.json
