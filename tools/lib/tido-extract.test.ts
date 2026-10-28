@@ -61,7 +61,7 @@ describe('extractChunk', () => {
       'tido-skarpta-straff',
       'tido-skarpta-straff-2',
     ]);
-    expect(entries[0].promise.verdict.value).toBe('not_started');
+    expect(entries[0].promise.verdict.value).toBe('unassessed');
     expect(entries[0].promise.verdict.date).toBe('2022-10-14');
     expect(entries[0].promise.keywords).toEqual(['gängbrott', 'straff']);
     expect(entries[0].promise.roles.SD).toBe('support');
