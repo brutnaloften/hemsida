@@ -161,6 +161,74 @@ export const sourceRefSchema = z.object({
   quote: z.string().optional(),
 });
 
+const PLANNING_KINDS: readonly string[] = ['dir', 'sou', 'ds', 'prop'];
+const ISO_DATE_IN_TEXT = /\d{4}-\d{2}-\d{2}/;
+const MIN_SEARCH_NOTE_LENGTH = 30;
+
+/**
+ * Evidence-to-verdict constraints for the CURRENT verdict (history entries are not checked; they
+ * were judged against the evidence available at the time). Only Riksdag evidence counts;
+ * `agreement` evidence never qualifies a verdict. See "Verdict" in docs/data-model.md.
+ */
+function checkVerdictEvidence(
+  p: {
+    verdict: { value: string; reasoning: string };
+    evidence: Evidence[];
+    committee?: string | undefined;
+    keywords: string[];
+  },
+  ctx: z.core.$RefinementCtx,
+): void {
+  const { value, reasoning } = p.verdict;
+  const riksdag = p.evidence.filter((e): e is RiksdagEvidence => e.kind !== 'agreement');
+  const fail = (message: string) =>
+    ctx.addIssue({ code: 'custom', path: ['verdict', 'value'], message });
+
+  if (value === 'in_progress' && !riksdag.some((e) => PLANNING_KINDS.includes(e.kind))) {
+    fail(
+      'verdict in_progress requires Riksdag evidence of kind dir, sou, ds or prop (agreement evidence does not count)',
+    );
+  }
+  if (value === 'fulfilled' && !riksdag.some((e) => e.kind === 'sfs')) {
+    fail(
+      'verdict fulfilled requires Riksdag evidence of kind sfs (agreement evidence does not count)',
+    );
+  }
+  if (value === 'broken') {
+    const hasVote = riksdag.some((e) => e.kind === 'bet' && e.votes !== undefined);
+    const citesDocument = riksdag.some((e) => reasoning.includes(e.designation));
+    if (!hasVote && !citesDocument) {
+      fail(
+        'verdict broken requires a bet evidence entry with votes (a voting record), or reasoning that cites the designation of a Riksdag evidence entry documenting the reversal',
+      );
+    }
+  }
+  if (value === 'no_evidence') {
+    const text = reasoning.toLowerCase();
+    const terms = [...(p.committee ? [p.committee] : []), ...p.keywords]
+      .map((t) => t.trim().toLowerCase())
+      .filter((t) => t !== '');
+    const problems: string[] = [];
+    if (!ISO_DATE_IN_TEXT.test(reasoning)) problems.push('the date of the search (YYYY-MM-DD)');
+    if (terms.length > 0) {
+      if (!terms.some((t) => text.includes(t))) {
+        problems.push(
+          'what was searched (mention the committee or at least one of the promise keywords)',
+        );
+      }
+    } else if (reasoning.trim().length < MIN_SEARCH_NOTE_LENGTH) {
+      problems.push(`what was searched (at least ${MIN_SEARCH_NOTE_LENGTH} characters)`);
+    }
+    if (problems.length > 0) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['verdict', 'reasoning'],
+        message: `verdict no_evidence requires reasoning recording the search: ${problems.join('; ')}`,
+      });
+    }
+  }
+}
+
 export const promiseSchema = z
   .object({
     id: slug,
@@ -199,6 +267,7 @@ export const promiseSchema = z
       }
       agreementSources.add(e.source);
     });
+    checkVerdictEvidence(p, ctx);
   });
 
 export const sourceSchema = z.object({
