@@ -1,0 +1,39 @@
+{
+  "id": "val2022-l-nedsatt-forsorjningsstod-om-man-inte-lar-sig-svenska",
+  "term": "2022-2026",
+  "title": "Nedsatt försörjningsstöd för den som låter bli att lära sig svenska",
+  "description": "Den som låter bli att lära sig svenska ska i normalfallet kunna få sitt försörjningsstöd nedsatt.",
+  "source": {
+    "id": "valmanifest-2022-l",
+    "page": 6,
+    "quote": "Den som låter bli att lära sig svenska i normalfallet kunna få sitt försörjningsstöd nedsatt."
+  },
+  "parties": ["L"],
+  "roles": {
+    "L": "government"
+  },
+  "type": "legislative",
+  "area": "Integration och utsatta områden",
+  "committee": "SoU",
+  "keywords": ["försörjningsstöd", "socialtjänstlagen", "språkkrav", "SFI", "nedsättning"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2022-08-08",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": [
+        "tido-obligatorisk-samhallsintroduktion-och-samhallsorientering",
+        "tido-sankt-etableringsstod",
+        "tido-aktivitetskrav-forsorjningsstod"
+      ],
+      "outcome": "weakened",
+      "note": "Avtalet kopplar försörjningsstöd och etableringsersättning till deltagande i bl.a. SFI och samhällsintroduktion, men säger inget om att försörjningsstödet ska nedsättas för den som inte lär sig svenska."
+    }
+  ]
+}

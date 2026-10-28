@@ -1,0 +1,38 @@
+{
+  "id": "val2022-l-investera-i-kraftsystemet",
+  "term": "2022-2026",
+  "title": "Investera i kraftsystemet",
+  "description": "Det ska investeras i kraftsystemet för att få ner elpriserna.",
+  "source": {
+    "id": "valmanifest-2022-l",
+    "page": 10,
+    "quote": "investerar i kraftsystemet"
+  },
+  "parties": ["L"],
+  "roles": {
+    "L": "government"
+  },
+  "type": "other_action",
+  "area": "Energi",
+  "committee": "NU",
+  "keywords": ["kraftsystemet", "elnät", "stamnät", "överföring", "investeringar"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2022-08-08",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": [
+        "tido-karnkraft-kreditgarantier-400-miljarder",
+        "tido-svenska-kraftnat-upphandla-planerbar-elproduktion"
+      ],
+      "outcome": "weakened",
+      "note": "Avtalet har åtgärder som stärker kraftsystemet (kreditgarantier, upphandling av planerbar elproduktion) men ingen allmän investeringssatsning."
+    }
+  ]
+}

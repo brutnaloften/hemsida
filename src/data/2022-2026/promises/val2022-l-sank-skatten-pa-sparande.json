@@ -1,0 +1,35 @@
+{
+  "id": "val2022-l-sank-skatten-pa-sparande",
+  "term": "2022-2026",
+  "title": "Sänk skatten på sparande",
+  "description": "Skatten på sparande ska sänkas.",
+  "source": {
+    "id": "valmanifest-2022-l",
+    "page": 13,
+    "quote": "I stället för att som regeringen gång på gång höja skatten på sparande vill vi sänka den."
+  },
+  "parties": ["L"],
+  "roles": {
+    "L": "government"
+  },
+  "type": "legislative",
+  "area": "Skatter",
+  "committee": "SkU",
+  "keywords": ["sparande", "kapitalbeskattning", "schablonintäkt", "sparskatt"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2022-08-08",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-isk-skattefri-grundniva-300000"],
+      "outcome": "included",
+      "note": "Avtalet sänker skatten på sparande genom en skattefri grundnivå i ISK."
+    }
+  ]
+}
