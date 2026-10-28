@@ -13,6 +13,8 @@ export default function FilterDropdown({
   selected: Set<string>;
   onChange: (value: string) => void;
 }) {
+  // A filter with nothing to choose between is just noise.
+  if (options.length < 2) return null;
   const count = selected.size;
   return (
     <Popover>
