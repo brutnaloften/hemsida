@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import type { Promise } from "@/data/index";
 import { buttonVariants } from "./ui/button";
 import { VERDICT_LABELS, type RiksdagEvidence } from "@/schema/promise";
+import { promisePath } from "@/lib/timeline";
 import { EVIDENCE_KIND_LABELS, TYPE_LABELS, VERDICT_STYLES, partyName } from "@/lib/promise-labels";
 
 export default function PromiseCard({ promise }: { promise: Promise }) {
@@ -14,7 +15,11 @@ export default function PromiseCard({ promise }: { promise: Promise }) {
   return (
     <Card className="p-4 mb-4">
       <CardHeader className="flex flex-col max-md:pb-2 md:items-center md:justify-between md:flex-row">
-        <CardTitle className="pb-2 md:pb-0">{promise.title}</CardTitle>
+        <CardTitle className="pb-2 md:pb-0">
+          <a href={promisePath(promise.id)} className="hover:underline underline-offset-2">
+            {promise.title}
+          </a>
+        </CardTitle>
         <div className="flex flex-wrap items-start gap-2 md:items-end md:justify-end">
           <Badge
             variant="outline"
