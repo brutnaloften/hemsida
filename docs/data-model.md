@@ -129,7 +129,23 @@ Set by a human, with reasoning that cites evidence. `history` keeps earlier verd
 | `broken`              | Brutet            | They did the opposite, or voted against it                                   |
 | `not_assessable`      | Ej bedömbart      | Too vague to assess                                                          |
 
-`unassessed` and `no_evidence` are deliberately different. `no_evidence` is a statement about our record, not about what the government did. Absence of evidence is not evidence of absence: `unassessed` only says the promise has not been reviewed, while `no_evidence` is a positive finding by a human who searched the Riksdag record and recorded that nothing was found. Its reasoning must state what was searched and when (committee, keywords, date). New promises and extraction candidates default to `unassessed`. Schema enforcement of the `no_evidence` reasoning is tracked in `hemsida-bzj.7`.
+`unassessed` and `no_evidence` are deliberately different. `no_evidence` is a statement about our record, not about what the government did. Absence of evidence is not evidence of absence: `unassessed` only says the promise has not been reviewed, while `no_evidence` is a positive finding by a human who searched the Riksdag record and recorded that nothing was found. Its reasoning must state what was searched and when (committee, keywords, date). New promises and extraction candidates default to `unassessed`.
+
+#### Evidence constraints on the verdict
+
+The verdict stays human-set, but the schema (`checkVerdictEvidence` in `src/schema/promise.ts`) limits which values the evidence allows. Only the current verdict is checked, not `history`. Only Riksdag evidence counts (`dir`, `sou`, `ds`, `prop`, `bet`, `sfs`, `mot`); `agreement` evidence never qualifies any verdict.
+
+| Verdict                                           | Enforced requirement                                                                                                                                                                                                            |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `unassessed`                                      | None                                                                                                                                                                                                                            |
+| `not_assessable`                                  | None beyond the general rule that reasoning is non-empty                                                                                                                                                                        |
+| `in_progress`                                     | At least one evidence entry of kind `dir`, `sou`, `ds` or `prop`                                                                                                                                                                |
+| `fulfilled`                                       | At least one evidence entry of kind `sfs`                                                                                                                                                                                       |
+| `broken`                                          | A `bet` evidence entry with `votes` (the voting record; there is no separate `votering` kind), or reasoning that contains the `designation` of a Riksdag evidence entry (the document documenting the reversal)                 |
+| `no_evidence`                                     | Reasoning contains an ISO date (`YYYY-MM-DD`) and names what was searched: the promise's `committee` or at least one of its `keywords` (case-insensitive). If the promise has neither, reasoning must be at least 30 characters |
+| `partially_fulfilled`, `unfulfilled`, `abandoned` | None beyond non-empty reasoning                                                                                                                                                                                                 |
+
+The `no_evidence` check is pragmatic: it cannot verify that a search really happened, only that one is recorded with a date and a search target.
 
 ### Evidence
 
@@ -213,7 +229,7 @@ The file is a flat array, one per term rather than one per promise: it is small,
 - **One sentence holds several promises.** Split into separate promise files that share the same `source.page`.
 - **A support party, not a government party.** `roles` records it (`SD: support`), so the site can distinguish "the government did not deliver" from "a support party voted against".
 - **Manifesto promise vs agreement.** A manifesto promise is its own promise file with its own verdict. The agreement is evidence on it: add one `agreement` entry for the agreement, linking the Tidö promise ids that cover it. A manifesto promise the agreement left out gets `not_addressed` with empty `promises`; the verdict is still set by a human (`not_addressed` does not make it `broken` or `abandoned`).
-- **Term ends.** Remaining `unassessed` / `no_evidence` / `in_progress` verdicts become `unfulfilled` in a term-close review PR.
+- **Term ends.** Nothing is set automatically. In the term-close review PR a human assesses every remaining `unassessed` promise, and decides whether `no_evidence` / `in_progress` ones become `unfulfilled`, `broken` or something else. `unassessed` is never turned into `unfulfilled` by default: not having looked is not a finding.
 
 ## Decision: JSON, not YAML
 
@@ -222,5 +238,5 @@ Promise files stay JSON. The tooling reads and writes them without an extra depe
 ## Open questions
 
 1. Is `unfulfilled` (term ended) different enough from `broken` (did the opposite) to show separately? This draft says yes.
-2. Should verdict reasoning be required for `no_evidence`? Its reasoning is meant to state what was searched and when; enforcement is tracked in `hemsida-bzj.7`. It is not required for `unassessed`.
+2. Should verdict reasoning be required for `no_evidence`? Yes: the schema enforces a recorded search (see the constraint table). It is not required for `unassessed`.
 3. The four Almedalen 2024 KD promises (`hemsida-bzj.5`): migrate them with `source.kind: speech`, or drop them to keep the dataset Tidö-only for now?
