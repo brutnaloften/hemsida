@@ -95,8 +95,8 @@ export interface MergeResult {
 /**
  * Merge locally matched documents into a promise's candidate file.
  * Existing candidate entries are kept as they are (found_by, score and all);
- * only documents not yet listed are added. Ranking and the cap are the same as
- * the API search, so a better new hit can push out the weakest old one. Pairs
+ * only documents not yet listed are added. New hits are ranked as in the API search and only fill free slots up to
+ * the cap, so a full file never changes. Pairs
  * in `rejected` are never added. Returns `changed: false` (and the existing
  * file untouched) when nothing was added.
  */
@@ -117,10 +117,12 @@ export function mergeCandidates(
   const rank = (a: CandidateDocument, b: CandidateDocument) =>
     b.score - a.score || b.datum.localeCompare(a.datum);
   const before = existing?.candidates ?? [];
-  const candidates = [...before, ...additions].sort(rank).slice(0, MAX_CANDIDATES);
-  const added = candidates.length > 0 && candidates.some((c) => !known.has(c.dok_id));
+  // Existing entries are never reordered or evicted; new ones only fill free slots.
+  const free = Math.max(0, MAX_CANDIDATES - before.length);
+  const added = additions.sort(rank).slice(0, free);
+  const candidates = [...before, ...added];
 
-  if (existing && !added) return { file: existing, changed: false };
+  if (existing && added.length === 0) return { file: existing, changed: false };
   return {
     changed: true,
     file: {

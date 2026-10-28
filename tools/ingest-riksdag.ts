@@ -52,25 +52,33 @@ const store = loadStore(storePath, term);
 const client = createRiksdagClient();
 const today = new Date().toISOString().slice(0, 10);
 
+function positiveInt(name: string, v: string | undefined): number | undefined {
+  if (v === undefined) return undefined;
+  if (!/^[1-9]\d*$/.test(v)) throw new Error(`--${name} must be a positive integer, got ${v}`);
+  return Number.parseInt(v, 10);
+}
+const lookbackDays = positiveInt('lookback-days', values['lookback-days']) ?? DEFAULT_LOOKBACK_DAYS;
+const maxPages = positiveInt('max-pages', values['max-pages']);
+
 let requests = 0;
 let added = 0;
+let updated = 0;
 for (const doktyp of doktyper) {
   const s = await ingestDoktyp(store, doktyp, {
     term,
     list: (p) => client.listDocuments(p),
     save: (st) => saveStore(storePath, st),
     today,
-    lookbackDays: values['lookback-days']
-      ? Number.parseInt(values['lookback-days'], 10)
-      : DEFAULT_LOOKBACK_DAYS,
-    maxPages: values['max-pages'] ? Number.parseInt(values['max-pages'], 10) : undefined,
+    lookbackDays,
+    maxPages,
     from: values.from,
     tom: values.tom,
     log: (m) => console.error(m),
   });
   requests += s.requests;
   added += s.added;
+  updated += s.updated;
 }
 console.error(
-  `Done. ${requests} requests, ${added} documents added, ${Object.keys(store.documents).length} in store (${storePath}).`,
+  `Done. ${requests} requests, ${added} documents added, ${updated} updated, ${Object.keys(store.documents).length} in store (${storePath}).`,
 );

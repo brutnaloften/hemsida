@@ -128,6 +128,23 @@ describe('mergeCandidates', () => {
     expect(res.file.queries).toEqual(first.queries);
   });
 
+  it('never evicts existing entries from a full file', () => {
+    const full = mergeCandidates(
+      promise,
+      undefined,
+      Array.from({ length: MAX_CANDIDATES }, (_, i) => sdoc(`O${i}`, { titel: 'Reservkraft' })),
+      new Set(),
+      '2026-01-01',
+    ).file;
+    const res = mergeCandidates(promise, full, [sdoc('BETTER')], new Set(), '2026-10-28');
+    expect(res.changed).toBe(false);
+    expect(res.file).toBe(full);
+    const room = { ...full, candidates: full.candidates.slice(0, MAX_CANDIDATES - 1) };
+    const res2 = mergeCandidates(promise, room, [sdoc('BETTER'), sdoc('B2')], new Set(), 'x');
+    expect(res2.file.candidates.slice(0, MAX_CANDIDATES - 1)).toEqual(room.candidates);
+    expect(res2.file.candidates).toHaveLength(MAX_CANDIDATES);
+  });
+
   it('skips rejected pairs but not pairs rejected for other promises', () => {
     const rejected = new Set(['tido-x:A', 'other:B']);
     const { file } = mergeCandidates(

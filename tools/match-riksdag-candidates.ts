@@ -15,6 +15,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
+import { z } from 'zod';
 import { loadJson, writeJson } from './lib/json.ts';
 import { candidateFileSchema, type SearchPromise } from './lib/riksdag-candidates.ts';
 import { defaultStorePath, loadStore } from './lib/riksdag-ingest.ts';
@@ -38,16 +39,16 @@ const outDir = resolve(termDir, 'riksdag-candidates');
 const storePath = values.store ? resolve(values.store) : defaultStorePath(root, term);
 const statePath = storePath.replace(/\.json$/, '.match.json');
 
-interface MatchState {
+const matchStateSchema = z.object({
   /** Highest document `seq` already matched against the promises whose hash is unchanged. */
-  matched_seq: number;
+  matched_seq: z.number().int().min(0),
   /** Match hash per promise. */
-  promises: Record<string, string>;
-}
+  promises: z.record(z.string(), z.string()),
+});
 
-const state: MatchState = existsSync(statePath)
-  ? (JSON.parse(readFileSync(statePath, 'utf-8')) as MatchState)
-  : { matched_seq: 0, promises: {} };
+const state = existsSync(statePath)
+  ? matchStateSchema.parse(JSON.parse(readFileSync(statePath, 'utf-8')))
+  : { matched_seq: 0, promises: {} as Record<string, string> };
 
 function loadPromises(): SearchPromise[] {
   const dir = resolve(termDir, 'promises');
