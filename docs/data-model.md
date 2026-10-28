@@ -40,14 +40,15 @@ A document that promises come from.
 }
 ```
 
-| Field            | Type        | Notes                                                            |
-| ---------------- | ----------- | ---------------------------------------------------------------- |
-| `id`             | slug        | Referenced from promises                                         |
-| `title`          | string      | Swedish display title                                            |
-| `kind`           | enum        | `government_agreement`, `manifesto`, `speech`, `debate`, `other` |
-| `parties`        | party codes | Parties that stand behind the document                           |
-| `date`           | ISO date    | Publication date                                                 |
-| `url`, `archive` | URL         | Original and web.archive.org copy                                |
+| Field            | Type        | Notes                                                                                    |
+| ---------------- | ----------- | ---------------------------------------------------------------------------------------- |
+| `id`             | slug        | Referenced from promises                                                                 |
+| `title`          | string      | Swedish display title                                                                    |
+| `kind`           | enum        | `government_agreement`, `manifesto`, `speech`, `debate`, `other`                         |
+| `parties`        | party codes | Parties that stand behind the document                                                   |
+| `date`           | ISO date    | Publication date                                                                         |
+| `url`, `archive` | URL         | Original and web.archive.org copy                                                        |
+| `urlDeadAsOf`    | ISO date    | Optional. Set when the original `url` is dead; the site then links the archive copy only |
 
 ## Promise
 

@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import type { Promise } from "@/data/index";
 import { buttonVariants } from "./ui/button";
 import { VERDICT_LABELS, type RiksdagEvidence } from "@/schema/promise";
+import { sourceLinks } from "@/lib/source-link";
 import { promisePath } from "@/lib/timeline";
 import { EVIDENCE_KIND_LABELS, TYPE_LABELS, VERDICT_STYLES, partyName } from "@/lib/promise-labels";
 
@@ -12,6 +13,11 @@ export default function PromiseCard({ promise }: { promise: Promise }) {
   const latest: RiksdagEvidence | undefined = promise.evidence
     .filter((e): e is RiksdagEvidence => e.kind !== "agreement")
     .sort((a, b) => b.date.localeCompare(a.date))[0];
+  const links = sourceLinks({
+    url: promise.sourceUrl,
+    archive: promise.sourceArchive,
+    urlDeadAsOf: promise.sourceUrlDeadAsOf,
+  });
   return (
     <Card className="p-4 mb-4">
       <CardHeader className="flex flex-col max-md:pb-2 md:items-center md:justify-between md:flex-row">
@@ -61,16 +67,18 @@ export default function PromiseCard({ promise }: { promise: Promise }) {
           )}
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
+          {links.original && (
+            <a
+              href={links.original}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={buttonVariants({ variant: "outline", size: "sm" })}
+            >
+              Källa
+            </a>
+          )}
           <a
-            href={promise.sourceUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={buttonVariants({ variant: "outline", size: "sm" })}
-          >
-            Källa
-          </a>
-          <a
-            href={promise.sourceArchive}
+            href={links.archive}
             target="_blank"
             rel="noopener noreferrer"
             className={buttonVariants({ variant: "default", size: "sm" })}
