@@ -114,7 +114,7 @@ describe('validateCandidates', () => {
   it('accepts a good file and counts links', () => {
     const linked = {
       ...entry(),
-      link: { promises: ['tido-a'], outcome: 'x', note: null, rationale: 'r' },
+      link: { promises: ['tido-a'], outcome: 'included', note: null, rationale: 'r' },
     };
     const r = validateCandidates([linked], ctx);
     expect(r.errors).toEqual([]);
@@ -141,9 +141,34 @@ describe('validateCandidates', () => {
   it('flags dangling link ids', () => {
     const e = {
       ...entry(),
-      link: { promises: ['tido-zzz'], outcome: 'x', note: null, rationale: '' },
+      link: { promises: ['tido-zzz'], outcome: 'included', note: null, rationale: '' },
     };
     expect(validateCandidates([e], ctx).errors.join()).toMatch(/"tido-zzz" not found/);
+  });
+
+  it('flags an unknown outcome label', () => {
+    const e = {
+      ...entry(),
+      link: { promises: ['tido-a'], outcome: 'dropped', note: null, rationale: '' },
+    };
+    expect(validateCandidates([e], ctx).errors.join()).toMatch(/link\.outcome/);
+  });
+
+  it('requires not_addressed exactly when promises is empty', () => {
+    const link = (promises: string[], outcome: string) => ({
+      ...entry(),
+      link: { promises, outcome, note: null, rationale: '' },
+    });
+    expect(validateCandidates([link([], 'not_addressed')], ctx).errors).toEqual([]);
+    expect(validateCandidates([link(['tido-a'], 'not_addressed')], ctx).errors.join()).toMatch(
+      /must have an empty promises list/,
+    );
+    expect(validateCandidates([link([], 'weakened')], ctx).errors.join()).toMatch(
+      /needs at least one linked promise/,
+    );
+    expect(validateCandidates([link(['tido-a', 'tido-a'], 'included')], ctx).errors.join()).toMatch(
+      /duplicates/,
+    );
   });
 
   it('flags schema errors, wrong source id and wrong prefix', () => {
