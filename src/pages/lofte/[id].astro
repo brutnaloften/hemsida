@@ -4,20 +4,31 @@ import type { GetStaticPaths } from "astro";
 import Layout from "../../layouts/Layout.astro";
 import { Badge } from "@/components/ui/badge";
 import { AGREEMENT_OUTCOME_LABELS, VERDICT_LABELS } from "@/schema/promise";
-import { EVIDENCE_KIND_LABELS, TYPE_LABELS, VERDICT_STYLES, partyName } from "@/lib/promise-labels";
+import RiksdagEntry from "@/components/RiksdagEntry.astro";
+import { AGREEMENT_OUTCOME_STYLE, TYPE_LABELS, VERDICT_STYLES, partyName } from "@/lib/promise-labels";
+import { buildReverseIndex, linkedRiksdagTimelines } from "@/lib/agreement-links";
 import { isAgreement, orderTimeline, promisePath } from "@/lib/timeline";
 
 export const getStaticPaths = (async () => {
   const promises = await getCollection("promises");
   const sources = new Map((await getCollection("sources")).map((e) => [e.data.id, e.data]));
-  const titles = new Map(promises.map((e) => [e.data.id, e.data.title]));
-  return promises.map((entry) => ({
-    params: { id: entry.data.id },
-    props: { promise: entry.data, sources, titles },
+  const all = promises.map((e) => e.data);
+  const titles = new Map(all.map((p) => [p.id, p.title]));
+  const byId = new Map(all.map((p) => [p.id, p]));
+  const reverse = buildReverseIndex(all);
+  return all.map((promise) => ({
+    params: { id: promise.id },
+    props: {
+      promise,
+      sources,
+      titles,
+      linkedTimelines: linkedRiksdagTimelines(promise, byId),
+      basedOn: (reverse.get(promise.id) ?? []).map((p) => ({ id: p.id, title: p.title })),
+    },
   }));
 }) satisfies GetStaticPaths;
 
-const { promise, sources, titles } = Astro.props;
+const { promise, sources, titles, linkedTimelines, basedOn } = Astro.props;
 const source = sources.get(promise.source.id);
 const { verdict } = promise;
 const timeline = orderTimeline(promise.evidence);
@@ -71,7 +82,8 @@ const link = "underline underline-offset-2";
       {
         verdict.value === "unassessed" ? (
           <p class="mt-3 text-muted-foreground">
-            Det här löftet har inte bedömts ännu. Tidslinjen nedan visar de dokument som hittills kopplats till löftet.
+            Det här löftet har inte bedömts ännu.
+            {timeline.length > 0 && " Tidslinjen nedan visar de dokument som hittills kopplats till löftet."}
           </p>
         ) : (
           <>
@@ -99,9 +111,17 @@ const link = "underline underline-offset-2";
                   <p class="text-sm text-muted-foreground">{e.date}</p>
                   <p class="font-medium">
                     {sources.get(e.source)?.title ?? e.source}{" "}
-                    <Badge variant="outline">{AGREEMENT_OUTCOME_LABELS[e.outcome]}</Badge>
+                    <Badge variant="outline" class={AGREEMENT_OUTCOME_STYLE} data-outcome={e.outcome}>
+                      {AGREEMENT_OUTCOME_LABELS[e.outcome]}
+                    </Badge>
                   </p>
-                  {e.note && <p class="text-sm">{e.note}</p>}
+                  {e.note ? (
+                    <p class="text-sm">{e.note}</p>
+                  ) : (
+                    e.outcome === "not_addressed" && (
+                      <p class="text-sm text-muted-foreground">Löftet finns inte med i avtalet.</p>
+                    )
+                  )}
                   {e.promises.length > 0 && (
                     <ul class="mt-1 list-disc pl-5 text-sm">
                       {e.promises.map((id) => (
@@ -119,24 +139,54 @@ const link = "underline underline-offset-2";
                   )}
                 </li>
               ) : (
-                <li>
-                  <p class="text-sm text-muted-foreground">
-                    {e.date} &middot; {EVIDENCE_KIND_LABELS[e.kind]}
-                    {e.relevance === "partial" && " (delvis relevant)"}
-                  </p>
-                  <p class="font-medium">
-                    <a href={e.url} target="_blank" rel="noopener noreferrer" class={link}>
-                      {e.designation}
-                    </a>{" "}
-                    &ndash; {e.title}
-                  </p>
-                  {e.note && <p class="text-sm">{e.note}</p>}
-                </li>
+                <RiksdagEntry entry={e} />
               ),
             )}
           </ol>
         )
       }
     </section>
+
+    {
+      linkedTimelines.length > 0 && (
+        <section class="mt-8">
+          <h2 class="text-xl font-semibold">Hur det gick i riksdagen (via Tidöavtalet)</h2>
+          <p class="mt-2 text-sm text-muted-foreground">
+            Dokument som hör till de avtalslöften som det här löftet motsvarar.
+          </p>
+          {linkedTimelines.map((t) => (
+            <div class="mt-4">
+              <h3 class="font-medium">
+                <a href={promisePath(t.id)} class={link}>
+                  {t.title}
+                </a>
+              </h3>
+              <ol class="mt-3 space-y-4 border-l pl-6">
+                {t.evidence.map((e) => (
+                  <RiksdagEntry entry={e} />
+                ))}
+              </ol>
+            </div>
+          ))}
+        </section>
+      )
+    }
+
+    {
+      basedOn.length > 0 && (
+        <section class="mt-8">
+          <h2 class="text-xl font-semibold">Vallöften som avtalet bygger på</h2>
+          <ul class="mt-2 list-disc pl-5">
+            {basedOn.map((p) => (
+              <li>
+                <a href={promisePath(p.id)} class={link}>
+                  {p.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
   </article>
 </Layout>
