@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Evidence } from '@/schema/promise';
-import { buildReverseIndex, linkedRiksdagTimelines } from '@/lib/agreement-links';
+import { buildReverseIndex, linkedRiksdagTimelines } from '@/lib/agreement-index';
 
 const doc = (dok_id: string, date: string): Evidence => ({
   kind: 'prop',

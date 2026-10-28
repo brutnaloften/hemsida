@@ -62,7 +62,7 @@ export function partyName(code: string): string {
 }
 
 /**
- * Agreement outcome badges: square corners, thick violet border and a prefix in the page keep
+ * Agreement outcome badges: square corners and a thick violet outline keep
  * them visually apart from the rounded, filled verdict badges.
  */
 export const AGREEMENT_OUTCOME_STYLE =

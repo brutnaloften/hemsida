@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { AGREEMENT_OUTCOME_LABELS, VERDICT_LABELS } from "@/schema/promise";
 import RiksdagEntry from "@/components/RiksdagEntry.astro";
 import { AGREEMENT_OUTCOME_STYLE, TYPE_LABELS, VERDICT_STYLES, partyName } from "@/lib/promise-labels";
-import { buildReverseIndex, linkedRiksdagTimelines } from "@/lib/agreement-links";
+import { buildReverseIndex, linkedRiksdagTimelines } from "@/lib/agreement-index";
 import { isAgreement, orderTimeline, promisePath } from "@/lib/timeline";
 
 export const getStaticPaths = (async () => {
@@ -75,7 +75,7 @@ const link = "underline underline-offset-2";
     <section class="mt-8">
       <h2 class="text-xl font-semibold">Bedömning</h2>
       <div class="mt-2">
-        <Badge variant="outline" class={VERDICT_STYLES[verdict.value]} data-verdict={verdict.value}>
+        <Badge variant="outline" className={VERDICT_STYLES[verdict.value]} data-verdict={verdict.value}>
           {VERDICT_LABELS[verdict.value]}
         </Badge>
       </div>
@@ -111,7 +111,7 @@ const link = "underline underline-offset-2";
                   <p class="text-sm text-muted-foreground">{e.date}</p>
                   <p class="font-medium">
                     {sources.get(e.source)?.title ?? e.source}{" "}
-                    <Badge variant="outline" class={AGREEMENT_OUTCOME_STYLE} data-outcome={e.outcome}>
+                    <Badge variant="outline" className={AGREEMENT_OUTCOME_STYLE} data-outcome={e.outcome}>
                       {AGREEMENT_OUTCOME_LABELS[e.outcome]}
                     </Badge>
                   </p>
