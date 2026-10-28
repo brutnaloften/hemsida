@@ -2,7 +2,7 @@
 
 Companion to `src/data/2022-2026/candidates/tidoavtalet.json` (bead hemsida-bvb.3). Nothing has been deleted or merged; every editorial call is left to the reviewer. Page numbers are PDF pages (cover = 1), the same as `source.page` in the candidate file.
 
-Extraction was done by Claude Code reading the PDF text in 8-page chunks (not by the API script), following the rules in `tools/lib/tido-extract.ts`. 282 candidates, ids prefixed `tido-`. Candidates are data, not verdicts: every verdict is `not_started`.
+Extraction was done by Claude Code reading the PDF text in 8-page chunks (not by the API script), following the rules in `tools/lib/tido-extract.ts`. 282 candidates, ids prefixed `tido-`. Candidates are data, not verdicts: every verdict is `unassessed`.
 
 Skipped on purpose: the cooperation/process rules (pp. 3-5), the generic boilerplate of each project plan (purpose, delimitations, method, ownership, communication), the table of contents and statements of goals that contain no commitment.
 
@@ -83,6 +83,6 @@ Candidates the extraction typed as `vague` (too unspecific to assess objectively
 
 ## Scope notes for the editor
 
-- Several candidates bundle more than one measure because the agreement presents them as one bullet or one paragraph (for example `skarpt-hedersforstryck-lagstiftning`, `ungdomsfangelser`, `forstarkt-samverkan-aterv-andande-forvarsplatser`). Split them if you want per-measure verdicts.
+- Several candidates bundle more than one measure because the agreement presents them as one bullet or one paragraph (for example `skarpt-hedersforstryck-lagstiftning`, `ungdomsfangelser`, `forstarkt-samverkan-atervandande-forvarsplatser`). Split them if you want per-measure verdicts.
 - Many candidates have type `inquiry`: the agreement only promises an investigation (utreda). The resulting legislation is a separate promise that the agreement does not make explicitly; decide whether those should be tracked as one promise or two.
 - Ministry names follow the 2022-2026 government structure as best known; verify before linking to Riksdag data. Committee codes are best guesses for later Riksdag search.
