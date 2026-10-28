@@ -38,7 +38,14 @@ const termDir = resolve(dataDir, values.term!);
 
 const sourcePath = resolve(dataDir, 'sources', `${values.source}.json`);
 if (!existsSync(sourcePath)) fail(`source file not found: ${sourcePath}`);
-const source = sourceSchema.parse(loadJson(sourcePath));
+const parsedSource = sourceSchema.safeParse(loadJson(sourcePath));
+if (!parsedSource.success) {
+  const issues = parsedSource.error.issues.map((e) => `${e.path.join('.')}: ${e.message}`);
+  fail(`invalid source file ${sourcePath}: ${issues.join('; ')}`);
+}
+const source = parsedSource.data;
+if (source.kind !== 'manifesto')
+  fail(`source ${source.id} has kind "${source.kind}", not manifesto`);
 
 const candidatesPath = resolve(termDir, 'candidates', `${source.id}.json`);
 if (!existsSync(candidatesPath)) fail(`candidate file not found: ${candidatesPath}`);
@@ -75,8 +82,13 @@ const existingIds = new Set(
 );
 
 // Tidö ids: promoted promise files first, falling back to the candidate file.
+// The fallback file is only required when some candidate actually has a link.
+const candidates = loadJson(candidatesPath);
+const hasLinks =
+  Array.isArray(candidates) &&
+  candidates.some((e) => typeof e === 'object' && e !== null && 'link' in e && e.link);
 let tidoIds = new Set([...existingIds].filter((id) => id.startsWith('tido-')));
-if (values.tido || tidoIds.size === 0) {
+if (hasLinks && (values.tido || tidoIds.size === 0)) {
   const tidoPath = values.tido
     ? resolve(values.tido)
     : resolve(termDir, 'candidates', 'tidoavtalet.json');
@@ -85,7 +97,7 @@ if (values.tido || tidoIds.size === 0) {
   tidoIds = new Set(tido.flatMap((e) => (e.promise?.id ? [e.promise.id] : [])));
 }
 
-const result = validateCandidates(loadJson(candidatesPath), {
+const result = validateCandidates(candidates, {
   sourceId: source.id,
   existingIds,
   tidoIds,

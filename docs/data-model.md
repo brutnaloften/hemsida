@@ -85,20 +85,20 @@ A document that promises come from.
 }
 ```
 
-| Field                  | Type         | Notes                                                                                                    |
-| ---------------------- | ------------ | -------------------------------------------------------------------------------------------------------- |
-| `id`                   | slug         | Filename without `.json`. Prefixed by source, e.g. `tido-`                                               |
-| `term`                 | `YYYY-YYYY`  | The mandate period the promise belongs to                                                                |
-| `title`, `description` | string       | Swedish. The title is short; the description gives the full promise in our words                         |
-| `source`               | object       | `id` of the source, `page` (if paginated), optional verbatim `quote`                                     |
-| `parties`              | party codes  | Who made the promise                                                                                     |
-| `roles`                | party → role | Each party's role **during the term**: `government`, `support`, `opposition`. SD is `support` under Tidö |
-| `type`                 | enum         | See _Promise types_                                                                                      |
-| `area`                 | string       | Policy area, Swedish (used for grouping/filtering)                                                       |
-| `committee`            | utskott code | Riksdag committee, e.g. `JuU`, `SfU`, `FiU`. Narrows the Riksdag search                                  |
-| `keywords`             | string[]     | Swedish search terms for the Riksdag full-text search                                                    |
-| `verdict`              | object       | See _Verdict_                                                                                            |
-| `evidence`             | Evidence[]   | Sorted by date. See _Evidence_                                                                           |
+| Field                  | Type         | Notes                                                                                                                                                                                                        |
+| ---------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `id`                   | slug         | Filename without `.json`. Prefixed by source: `tido-` for the Tidö agreement, `val<year>-<party>-` for a party manifesto (year of the source `date`, the election year; party lowercased, e.g. `val2022-l-`) |
+| `term`                 | `YYYY-YYYY`  | The mandate period the promise belongs to                                                                                                                                                                    |
+| `title`, `description` | string       | Swedish. The title is short; the description gives the full promise in our words                                                                                                                             |
+| `source`               | object       | `id` of the source, `page` (if paginated), optional verbatim `quote`                                                                                                                                         |
+| `parties`              | party codes  | Who made the promise                                                                                                                                                                                         |
+| `roles`                | party → role | Each party's role **during the term**: `government`, `support`, `opposition`. SD is `support` under Tidö                                                                                                     |
+| `type`                 | enum         | See _Promise types_                                                                                                                                                                                          |
+| `area`                 | string       | Policy area, Swedish (used for grouping/filtering)                                                                                                                                                           |
+| `committee`            | utskott code | Riksdag committee, e.g. `JuU`, `SfU`, `FiU`. Narrows the Riksdag search                                                                                                                                      |
+| `keywords`             | string[]     | Swedish search terms for the Riksdag full-text search                                                                                                                                                        |
+| `verdict`              | object       | See _Verdict_                                                                                                                                                                                                |
+| `evidence`             | Evidence[]   | Sorted by date. See _Evidence_                                                                                                                                                                               |
 
 Party codes: `S`, `M`, `SD`, `C`, `V`, `KD`, `L`, `MP`.
 

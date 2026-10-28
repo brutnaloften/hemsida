@@ -9,7 +9,7 @@
  */
 
 import { z } from 'zod';
-import { COMMITTEES, slugify } from './tido-extract.ts';
+import { COMMITTEES, slugify } from './common.ts';
 import {
   AGREEMENT_OUTCOMES,
   PROMISE_TYPES,
@@ -81,8 +81,11 @@ export function rolesFor(term: string, parties: readonly string[]): Record<strin
   return Object.fromEntries(parties.map((p) => [p, table[p] ?? 'opposition']));
 }
 
-/** `val2022-l` for a manifesto source dated 2022 with party L. */
-export function idPrefix(source: Pick<Source, 'parties' | 'date'>): string {
+/** `val2022-l` for a manifesto source dated 2022 with party L. The year is the year of the source `date`, which for a manifesto must be the election year. */
+export function idPrefix(source: Pick<Source, 'kind' | 'parties' | 'date'>): string {
+  if (source.kind !== 'manifesto') {
+    throw new Error(`source kind must be "manifesto", got "${source.kind}"`);
+  }
   if (source.parties.length !== 1) {
     throw new Error(`manifesto source must have exactly one party, got [${source.parties}]`);
   }
@@ -92,7 +95,7 @@ export function idPrefix(source: Pick<Source, 'parties' | 'date'>): string {
 /** Turn a raw candidate into a schema-valid draft promise (verdict unassessed). Throws on invalid data. */
 export function toManifestoEntry(
   raw: RawManifestoCandidate,
-  source: Pick<Source, 'id' | 'parties' | 'date'>,
+  source: Pick<Source, 'id' | 'kind' | 'parties' | 'date'>,
   taken: Set<string>,
   verdictDate: string,
   term = '2022-2026',
@@ -128,7 +131,7 @@ export function toManifestoEntry(
 export function normalizeText(s: string): string {
   return s
     .normalize('NFKC')
-    .replace(/­/g, '')
+    .replace(/\u00AD/g, '')
     .replace(/[‘’‚`´]/g, "'")
     .replace(/[“”„«»]/g, '"')
     .replace(/[‐‑–—−]/g, '-')
@@ -142,12 +145,69 @@ function loose(s: string): string {
   return normalizeText(s).replace(/[-\s]/g, '');
 }
 
-/** True if the quote appears in the page text after normalisation. */
-export function quoteMatches(pageText: string, quote: string): boolean {
+/**
+ * How a quote matched the page text: `exact` after normalisation (the primary check),
+ * `loose` only when hyphens and spaces are ignored entirely, or `none`.
+ */
+export function quoteMatchKind(pageText: string, quote: string): 'exact' | 'loose' | 'none' {
   const q = normalizeText(quote);
-  if (q === '') return false;
-  if (normalizeText(pageText).includes(q)) return true;
-  return loose(pageText).includes(loose(quote));
+  if (q === '') return 'none';
+  if (normalizeText(pageText).includes(q)) return 'exact';
+  return loose(pageText).includes(loose(quote)) ? 'loose' : 'none';
+}
+
+/** True if the quote appears in the page text, strictly or via the loose fallback. */
+export function quoteMatches(pageText: string, quote: string): boolean {
+  return quoteMatchKind(pageText, quote) !== 'none';
+}
+
+/**
+ * Merge freshly extracted entries into an existing candidate list. Existing entries from
+ * pages the new entries cover are replaced (re-run semantics); the result is sorted by page, then id.
+ */
+export function mergeEntries(
+  existing: readonly ManifestoEntry[],
+  fresh: readonly ManifestoEntry[],
+): ManifestoEntry[] {
+  const pages = new Set(fresh.map((e) => e.promise.source.page));
+  const kept = existing.filter((e) => !pages.has(e.promise.source.page));
+  return [...kept, ...fresh].sort(
+    (a, b) =>
+      (a.promise.source.page ?? 0) - (b.promise.source.page ?? 0) ||
+      a.promise.id.localeCompare(b.promise.id),
+  );
+}
+
+/**
+ * Build entries for a batch of raw candidates and merge them into the existing file contents.
+ * Ids are derived (collisions with other promises or kept entries get a numeric suffix).
+ * Throws on the first invalid candidate, so nothing is written for a bad batch.
+ */
+export function addRawCandidates(
+  rawList: readonly unknown[],
+  source: Pick<Source, 'id' | 'kind' | 'parties' | 'date'>,
+  existingIds: ReadonlySet<string>,
+  existing: readonly ManifestoEntry[],
+  verdictDate: string,
+  term = '2022-2026',
+): ManifestoEntry[] {
+  const parsed = rawList.map((r, i) => {
+    const res = rawManifestoCandidateSchema.safeParse(r);
+    if (!res.success) {
+      const issues = res.error.issues.map((e) => `${e.path.join('.')}: ${e.message}`);
+      throw new Error(`raw candidate [${i}]: ${issues.join('; ')}`);
+    }
+    return res.data;
+  });
+  const pages = new Set(parsed.map((r) => r.page));
+  const kept = existing.filter((e) => !pages.has(e.promise.source.page ?? -1));
+  const taken = new Set([...existingIds, ...kept.map((e) => e.promise.id)]);
+  const fresh = parsed.map((r) => {
+    const entry = toManifestoEntry(r, source, taken, verdictDate, term);
+    taken.add(entry.promise.id);
+    return entry;
+  });
+  return mergeEntries(existing, fresh);
 }
 
 /**
@@ -216,8 +276,13 @@ export function validateCandidates(data: unknown, ctx: ValidationContext): Valid
         errors.push(`${where}: source.page and source.quote are required for the quote check`);
       } else if (page > ctx.pages.length) {
         errors.push(`${where}: page ${page} is beyond the ${ctx.pages.length} pages of text`);
-      } else if (!quoteMatches(ctx.pages[page - 1], quote)) {
-        errors.push(`${where}: quote is not a verbatim substring of page ${page}: "${quote}"`);
+      } else {
+        const kind = quoteMatchKind(ctx.pages[page - 1], quote);
+        if (kind === 'none') {
+          errors.push(`${where}: quote is not a verbatim substring of page ${page}: "${quote}"`);
+        } else if (kind === 'loose') {
+          warnings.push(`${where}: quote only matches page ${page} ignoring spaces and hyphens`);
+        }
       }
     }
 

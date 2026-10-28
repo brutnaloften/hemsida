@@ -5,6 +5,8 @@ import { join } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import {
   EXTRACTION_RULES,
+  addRawCandidates,
+  quoteMatchKind,
   quoteMatches,
   splitPages,
   toManifestoEntry,
@@ -12,8 +14,13 @@ import {
   type RawManifestoCandidate,
 } from './manifesto-extract.ts';
 
-const srcL = { id: 'valmanifest-2022-l', parties: ['L' as const], date: '2022-08-01' };
-const srcS = { id: 'valmanifest-2022-s', parties: ['S' as const], date: '2022-08-01' };
+const srcL = {
+  id: 'valmanifest-2022-l',
+  kind: 'manifesto' as const,
+  parties: ['L' as const],
+  date: '2022-08-01',
+};
+const srcS = { ...srcL, id: 'valmanifest-2022-s', parties: ['S' as const] };
 
 const raw = (over: Partial<RawManifestoCandidate> = {}): RawManifestoCandidate => ({
   slug: 'Skolplikt förlängd',
@@ -73,6 +80,57 @@ describe('toManifestoEntry', () => {
       toManifestoEntry(raw(), { ...srcL, parties: ['L', 'M'] }, new Set(), '2026-10-28'),
     ).toThrow(/exactly one party/);
   });
+
+  it('rejects a source that is not a manifesto', () => {
+    expect(() =>
+      toManifestoEntry(raw(), { ...srcL, kind: 'government_agreement' }, new Set(), 'x'),
+    ).toThrow(/kind must be "manifesto"/);
+  });
+});
+
+describe('addRawCandidates', () => {
+  it('derives ids, replaces entries from the same pages and sorts', () => {
+    const first = addRawCandidates(
+      [raw({ page: 5 }), raw({ page: 2 })],
+      srcL,
+      new Set(),
+      [],
+      '2026-10-28',
+    );
+    expect(first.map((e) => e.promise.source.page)).toEqual([2, 5]);
+    expect(first.map((e) => e.promise.id)).toEqual([
+      'val2022-l-skolplikt-forlangd-2',
+      'val2022-l-skolplikt-forlangd',
+    ]);
+    const second = addRawCandidates(
+      [raw({ page: 5, slug: 'ny' })],
+      srcL,
+      new Set(),
+      first,
+      '2026-10-28',
+    );
+    expect(second.map((e) => e.promise.id)).toEqual([
+      'val2022-l-skolplikt-forlangd-2',
+      'val2022-l-ny',
+    ]);
+  });
+
+  it('avoids ids of existing promise files', () => {
+    const out = addRawCandidates(
+      [raw()],
+      srcL,
+      new Set(['val2022-l-skolplikt-forlangd']),
+      [],
+      '2026-10-28',
+    );
+    expect(out[0].promise.id).toBe('val2022-l-skolplikt-forlangd-2');
+  });
+
+  it('throws on a malformed raw candidate', () => {
+    expect(() => addRawCandidates([{ title: 'x' }], srcL, new Set(), [], '2026-10-28')).toThrow(
+      /raw candidate \[0\]/,
+    );
+  });
 });
 
 describe('quoteMatches', () => {
@@ -91,6 +149,16 @@ describe('quoteMatches', () => {
   it('rejects a mismatch and an empty quote', () => {
     expect(quoteMatches(page, 'Skolplikten ska avskaffas')).toBe(false);
     expect(quoteMatches(page, '  ')).toBe(false);
+  });
+});
+
+describe('quoteMatchKind', () => {
+  it('reports exact for the strict match and loose only for the fallback', () => {
+    expect(quoteMatchKind('Skolplikten ska förlängas', 'Skolplikten ska förlängas')).toBe('exact');
+    expect(quoteMatchKind('Skolplikten ska förlängas', 'Skol plikten ska för längas')).toBe(
+      'loose',
+    );
+    expect(quoteMatchKind('abc', 'xyz')).toBe('none');
   });
 });
 
@@ -124,6 +192,12 @@ describe('validateCandidates', () => {
   it('flags a bad quote', () => {
     const r = validateCandidates([entry(raw({ quote: 'Något helt annat' }))], ctx);
     expect(r.errors.join()).toMatch(/not a verbatim substring of page 2/);
+  });
+
+  it('warns, not errors, on a loose-only quote match', () => {
+    const r = validateCandidates([entry(raw({ quote: 'Skol plikten ska förlängas' }))], ctx);
+    expect(r.errors).toEqual([]);
+    expect(r.warnings.join()).toMatch(/ignoring spaces and hyphens/);
   });
 
   it('flags a page beyond the text', () => {
@@ -242,5 +316,80 @@ describe('validate-manifesto-candidates CLI', () => {
     expect(() =>
       execFileSync('node', setup('Skolplikten ska avskaffas'), { stdio: 'pipe' }),
     ).toThrow();
+  });
+
+  it('does not need Tidö candidates when no entry has a link', () => {
+    const args = setup('Skolplikten ska förlängas');
+    rmSync(join(dir, '2022-2026', 'candidates', 'tidoavtalet.json'));
+    const out = execFileSync('node', args, { encoding: 'utf8' });
+    expect(out).toMatch(/0 errors/);
+  });
+
+  it('gives a clean error for an invalid source file', () => {
+    const args = setup('Skolplikten ska förlängas');
+    writeFileSync(join(dir, 'sources', 'valmanifest-2022-l.json'), '{"id":"x"}');
+    try {
+      execFileSync('node', args, { stdio: 'pipe' });
+      expect.unreachable();
+    } catch (err) {
+      const stderr = String((err as { stderr?: unknown }).stderr);
+      expect(stderr).toMatch(/Error: invalid source file/);
+      expect(stderr).not.toMatch(/ZodError/);
+    }
+  });
+});
+
+describe('add-manifesto-candidates CLI', () => {
+  let dir = '';
+  afterEach(() => rmSync(dir, { recursive: true, force: true }));
+
+  it('writes a valid candidate file that the validator accepts', () => {
+    dir = mkdtempSync(join(tmpdir(), 'manifesto-add-'));
+    mkdirSync(join(dir, 'sources'));
+    mkdirSync(join(dir, '2022-2026', 'candidates'), { recursive: true });
+    writeFileSync(
+      join(dir, 'sources', 'valmanifest-2022-l.json'),
+      JSON.stringify({
+        ...srcL,
+        title: 'Fixture',
+        url: 'https://example.com/a.pdf',
+        archive: 'https://web.archive.org/a.pdf',
+      }),
+    );
+    writeFileSync(join(dir, 'raw.json'), JSON.stringify([raw()]));
+    writeFileSync(join(dir, 'pages.txt'), 'omslag\fSkolplikten ska förlängas till 18 år.\f');
+    const tools = join(import.meta.dirname, '..');
+    const out = execFileSync(
+      'node',
+      [
+        '--experimental-strip-types',
+        join(tools, 'add-manifesto-candidates.ts'),
+        '--source',
+        'valmanifest-2022-l',
+        '--input',
+        join(dir, 'raw.json'),
+        '--date',
+        '2026-10-28',
+        '--data-dir',
+        dir,
+      ],
+      { encoding: 'utf8' },
+    );
+    expect(out).toMatch(/wrote 1 candidates/);
+    const validated = execFileSync(
+      'node',
+      [
+        '--experimental-strip-types',
+        join(tools, 'validate-manifesto-candidates.ts'),
+        '--source',
+        'valmanifest-2022-l',
+        '--data-dir',
+        dir,
+        '--pages-text',
+        join(dir, 'pages.txt'),
+      ],
+      { encoding: 'utf8' },
+    );
+    expect(validated).toMatch(/1 candidates, 0 with links, 0 errors/);
   });
 });
