@@ -93,6 +93,11 @@ export const riksdagDocumentSchema = z.object({
   status: str,
   dokument_url_html: url,
   dokumentstatus_url_xml: url,
+  /** Text snippets served in list responses; used for local keyword matching. Often empty. */
+  undertitel: str.optional(),
+  summary: str.optional(),
+  notisrubrik: str.optional(),
+  notis: str.optional(),
 });
 export type RiksdagDocument = z.infer<typeof riksdagDocumentSchema>;
 
