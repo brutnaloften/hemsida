@@ -1,0 +1,38 @@
+{
+  "id": "val2022-m-storskalig-koldioxidinfangning",
+  "term": "2022-2026",
+  "title": "Storskalig infångning av koldioxid",
+  "description": "Storskalig infångning av koldioxid ska komma på plats.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 19,
+    "quote": "Få på plats storskalig infångning"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "outcome",
+  "area": "Klimat",
+  "committee": "MJU",
+  "keywords": ["koldioxidinfångning", "CCS", "BECCS", "utsläpp", "klimat"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": [
+        "tido-ccs-minst-tva-auktioner",
+        "tido-ccs-styrmedel-cementfabriker-raffinaderier"
+      ],
+      "outcome": "included",
+      "note": null
+    }
+  ]
+}

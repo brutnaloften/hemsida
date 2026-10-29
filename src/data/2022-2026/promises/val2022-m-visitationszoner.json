@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-visitationszoner",
+  "term": "2022-2026",
+  "title": "Visitationszoner",
+  "description": "Införa visitationszoner så att Polisen får bättre möjligheter att leta efter vapen.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 14,
+    "quote": "Införa visitationszoner så att Polisen får bättre möjligheter att leta efter vapen"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "legislative",
+  "area": "Polisen",
+  "committee": "JuU",
+  "keywords": ["visitationszoner", "vapen", "polisens befogenheter", "husrannsakan"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-visitationszoner"],
+      "outcome": "included",
+      "note": null
+    }
+  ]
+}

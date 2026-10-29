@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-hogkostnadsskydd-ny-karnkraft",
+  "term": "2022-2026",
+  "title": "Statligt högkostnadsskydd för konstruktion av ny kärnkraft",
+  "description": "Ett statligt högkostnadsskydd ska införas för konstruktionen av ny kärnkraft.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 18,
+    "quote": "Införa ett statligt högkostnadsskydd för"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "budget",
+  "area": "Energi",
+  "committee": "NU",
+  "keywords": ["högkostnadsskydd", "kärnkraft", "konstruktion", "kostnadsrisk"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-karnkraft-kreditgarantier-400-miljarder"],
+      "outcome": "weakened",
+      "note": "Avtalet har kreditgarantier med generösa villkor, men inget uttryckligt statligt högkostnadsskydd för konstruktion."
+    }
+  ]
+}

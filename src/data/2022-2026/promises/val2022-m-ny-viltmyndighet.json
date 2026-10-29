@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-ny-viltmyndighet",
+  "term": "2022-2026",
+  "title": "Inrätta en ny viltmyndighet",
+  "description": "En ny viltmyndighet ska inrättas.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 20,
+    "quote": "Inrätta en ny viltmyndighet"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "legislative",
+  "area": "Jakt och rovdjur",
+  "committee": "MJU",
+  "keywords": ["viltmyndighet", "myndighet", "vilt", "viltförvaltning"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-bred-utredning-vapenlagen"],
+      "outcome": "weakened",
+      "note": "Avtalet nämner en ny jakt- och viltvårdsmyndighet endast som förslag i en vapenlagsutredning med fokus på licensprövning."
+    }
+  ]
+}

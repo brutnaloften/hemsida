@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-sankt-skatt-isk",
+  "term": "2022-2026",
+  "title": "Sänkt skatt på investeringssparkonton",
+  "description": "Sänka skatten på investeringssparkonton (ISK).",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 5,
+    "quote": "Sänka skatten på investeringssparkonton (ISK) – så att du lättare kan spara till en bostad eller till pensionen"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "budget",
+  "area": "Skatter",
+  "committee": "SkU",
+  "keywords": ["ISK", "investeringssparkonto", "schablonskatt", "sparande"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-isk-skattefri-grundniva-300000"],
+      "outcome": "included",
+      "note": "Avtalet gör en grundnivå på 300 000 kr i ISK skattefri."
+    }
+  ]
+}

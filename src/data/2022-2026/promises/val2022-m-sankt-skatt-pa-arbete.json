@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-sankt-skatt-pa-arbete",
+  "term": "2022-2026",
+  "title": "Sänkt skatt på arbete",
+  "description": "Moderaterna vill sänka skatten på arbete så att ansträngning lönar sig bättre.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 4,
+    "quote": "Sänka skatten på arbete så att din ansträngning lönar sig bättre"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "budget",
+  "area": "Skatter",
+  "committee": "FiU",
+  "keywords": ["skatt på arbete", "jobbskatteavdrag", "inkomstskatt", "arbetslinjen"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-sankt-skatt-arbetsinkomst-pensionsinkomst"],
+      "outcome": "included",
+      "note": "Avtalet sänker skatten på arbetsinkomster."
+    }
+  ]
+}

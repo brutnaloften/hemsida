@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-jobbpremie-langtidsarbetslosa",
+  "term": "2022-2026",
+  "title": "Jobbpremie för långtidsarbetslösa",
+  "description": "Införa en jobbpremie som gör det extra lönsamt för långtidsarbetslösa att gå från bidrag till arbete.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 4,
+    "quote": "Införa en jobbpremie som gör det extra lönsamt för långtidsarbetslösa att gå från bidrag till arbete"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "budget",
+  "area": "Arbetsmarknad",
+  "committee": "AU",
+  "keywords": ["jobbpremie", "långtidsarbetslösa", "bidrag", "arbetslinjen"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-mer-lonsamt-fran-bidrag-till-arbete"],
+      "outcome": "weakened",
+      "note": "Avtalet nämner att det ska bli mer lönsamt att gå från bidrag till arbete, men ingen jobbpremie."
+    }
+  ]
+}

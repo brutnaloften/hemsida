@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-anonyma-vittnen",
+  "term": "2022-2026",
+  "title": "Tillåta anonyma vittnen",
+  "description": "Tillåta anonyma vittnen så att fler vågar vittna.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 14,
+    "quote": "Tillåta anonyma vittnen så att fler vågar vittna"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "legislative",
+  "area": "Rättsprocess",
+  "committee": "JuU",
+  "keywords": ["anonyma vittnen", "vittnen", "rättegång", "vittnesskydd"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-anonyma-vittnen"],
+      "outcome": "included",
+      "note": null
+    }
+  ]
+}

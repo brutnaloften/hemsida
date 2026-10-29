@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-heltidsaktivitet-forsorjningsstod",
+  "term": "2022-2026",
+  "title": "Aktivitetskrav på heltid vid försörjningsstöd",
+  "description": "Kräva aktivitet på heltid av den som lever på försörjningsstöd.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 7,
+    "quote": "Kräva aktivitet på heltid av den som lever på försörjningsstöd"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "legislative",
+  "area": "Socialtjänst",
+  "committee": "SoU",
+  "keywords": ["försörjningsstöd", "aktivitetskrav", "socialbidrag", "heltid"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-aktivitetskrav-forsorjningsstod"],
+      "outcome": "weakened",
+      "note": "Avtalet kräver aktivitet motsvarande arbetsförmågan, inte uttryckligen heltid."
+    }
+  ]
+}

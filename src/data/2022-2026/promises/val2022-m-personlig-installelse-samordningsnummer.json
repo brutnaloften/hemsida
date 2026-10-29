@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-personlig-installelse-samordningsnummer",
+  "term": "2022-2026",
+  "title": "Personlig inställelse för samordningsnummer",
+  "description": "Kräva personlig inställelse för att bekräfta samordningsnummer, annars ska det återkallas.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 9,
+    "quote": "Kräva personlig inställelse för att bekräfta samordningsnummer, annars ska det återkallas"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "legislative",
+  "area": "Bidragsbrott",
+  "committee": "SkU",
+  "keywords": ["samordningsnummer", "personlig inställelse", "folkbokföring", "bidragsfusk"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-forbered-folkrakning-samordningsnummer"],
+      "outcome": "weakened",
+      "note": "Avtalet återkallar samordningsnummer som inte bekräftas av innehavaren på sikt, utan krav på personlig inställelse."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-avskaffa-avfallsforbranningsskatt",
+  "term": "2022-2026",
+  "title": "Avskaffa avfallsförbränningsskatten",
+  "description": "Avfallsförbränningsskatten ska avskaffas för att öka kapaciteten i kraftvärmeverken.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 18,
+    "quote": "Avskaffa avfallsförbränningsskatten för"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "legislative",
+  "area": "Energi",
+  "committee": "SkU",
+  "keywords": ["avfallsförbränningsskatt", "kraftvärme", "skatt", "energi"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-fjarr-och-kraftvarmestrategi-skatteoversyn"],
+      "outcome": "weakened",
+      "note": "Avtalet lovar endast en översyn av avfallsförbränningsskatten, inte ett avskaffande."
+    }
+  ]
+}

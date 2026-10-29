@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-patientansvarig-lakare-aldres-sjukvard",
+  "term": "2022-2026",
+  "title": "Låt den patientansvariga läkarkontakten vara navet i äldres sjukvård",
+  "description": "Moderaterna vill se till att den patientansvariga läkarkontakten utgör navet i äldres sjukvård.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 32,
+    "quote": "Se till att den patientansvariga läkarkontakten ska utgöra navet i äldres sjukvård"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "legislative",
+  "area": "Äldreomsorg",
+  "committee": "SoU",
+  "keywords": ["patientansvarig läkare", "läkarkontakt", "äldres sjukvård", "kontinuitet"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-fast-lakarkontakt-uppfoljning"],
+      "outcome": "weakened",
+      "note": "Avtalet följer bara upp rätten till fast läkarkontakt och särskiljer inte äldres sjukvård."
+    }
+  ]
+}
