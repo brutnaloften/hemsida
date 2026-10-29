@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-starkt-tandvard-for-aldre",
+  "term": "2022-2026",
+  "title": "Stärkt tandvård för äldre",
+  "description": "Tandvården för äldre stärks, bland annat genom att sänka högkostnadsskyddet.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 11,
+    "quote": "Stärkt tandvård för äldre"
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "legislative",
+  "area": "Äldreomsorg",
+  "committee": "SoU",
+  "keywords": ["tandvård", "högkostnadsskydd", "äldre", "tandvårdsstöd"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-tandvardsreform-hogkostnadsskydd"],
+      "outcome": "weakened",
+      "note": "Avtalet tillsätter bara en utredning om tandvårdens högkostnadsskydd, med prioritet för äldre med sämst munhälsa."
+    }
+  ]
+}

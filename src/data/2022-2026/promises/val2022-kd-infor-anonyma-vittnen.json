@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-infor-anonyma-vittnen",
+  "term": "2022-2026",
+  "title": "Anonyma vittnen",
+  "description": "Anonyma vittnen införs.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 7,
+    "quote": "Inför anonyma vittnen."
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "legislative",
+  "area": "Rättsväsendet",
+  "committee": "JuU",
+  "keywords": ["anonyma vittnen", "vittnesskydd", "rättegång", "fällande domar"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-anonyma-vittnen"],
+      "outcome": "included",
+      "note": "Avtalet inför ett system med anonyma vittnen."
+    }
+  ]
+}

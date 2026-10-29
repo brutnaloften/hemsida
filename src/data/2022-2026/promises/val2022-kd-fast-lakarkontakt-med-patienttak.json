@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-fast-lakarkontakt-med-patienttak",
+  "term": "2022-2026",
+  "title": "Fast läkarkontakt med tak för antal patienter",
+  "description": "Fast läkarkontakt med en namngiven läkare införs, med tak för antalet patienter per läkare.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 5,
+    "quote": "Inför fast läkarkontakt med en namngiven läkare och tak för antal patienter"
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "legislative",
+  "area": "Hälso- och sjukvård",
+  "committee": "SoU",
+  "keywords": ["fast läkarkontakt", "patientlista", "primärvård"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-fast-lakarkontakt-uppfoljning"],
+      "outcome": "weakened",
+      "note": "Avtalet följer bara upp rätten till fast läkarkontakt; ingen namngiven läkare eller patienttak införs."
+    }
+  ]
+}

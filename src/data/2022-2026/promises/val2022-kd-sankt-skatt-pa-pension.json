@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-sankt-skatt-pa-pension",
+  "term": "2022-2026",
+  "title": "Sänkt skatt på pension",
+  "description": "Skatten på pension sänks.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 11,
+    "quote": "Sänkt skatt på pension."
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "legislative",
+  "area": "Pension och skatt",
+  "committee": "SkU",
+  "keywords": ["pensionsskatt", "pensionärer", "skattesänkning"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-sankt-skatt-arbetsinkomst-pensionsinkomst"],
+      "outcome": "included",
+      "note": "Avtalet sänker skatten på arbetsinkomster och pensionsinkomster."
+    }
+  ]
+}

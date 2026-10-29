@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-sank-bensin-och-dieselpriserna",
+  "term": "2022-2026",
+  "title": "Sänkta bensin- och dieselpriser",
+  "description": "Bensin- och dieselpriserna sänks rejält för alla, främst genom minskad inblandning av biobränsle.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 9,
+    "quote": "Sänk bensin- och dieselpriserna rejält för alla"
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "outcome",
+  "area": "Drivmedel",
+  "committee": "SkU",
+  "keywords": ["drivmedelspriser", "bensin", "diesel", "reduktionsplikt", "biobränsle"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-lagre-drivmedelspriser"],
+      "outcome": "weakened",
+      "note": "Avtalet nämner bara lägre drivmedelspriser som inriktning för hushållsåtgärder, utan konkreta åtgärder som minskad inblandning av biobränsle."
+    }
+  ]
+}

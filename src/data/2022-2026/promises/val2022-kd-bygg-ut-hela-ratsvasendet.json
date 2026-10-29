@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-bygg-ut-hela-ratsvasendet",
+  "term": "2022-2026",
+  "title": "Bygg ut hela rättsväsendet",
+  "description": "Rättsväsendet byggs ut med fler åklagare, domstolar på fler platser i landet och en kraftigt utbyggd kriminalvård.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 7,
+    "quote": "Fler poliser kräver fler åklagare, domstolar på fler platser i landet och en kraftigt utbyggd kriminalvård."
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "other_action",
+  "area": "Rättsväsendet",
+  "committee": "JuU",
+  "keywords": ["åklagare", "domstolar", "kriminalvård", "rättsväsendet"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-kriminalvarden-expanderas-kraftigt"],
+      "outcome": "weakened",
+      "note": "Avtalet utökar bara Kriminalvården; fler åklagare och domstolar nämns inte."
+    }
+  ]
+}
