@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-hogkostnadsskydd-elrakningar",
+  "term": "2022-2026",
+  "title": "Högkostnadsskydd mot elräkningar",
+  "description": "Skydda hushållen mot vinterns elräkningar genom ett högkostnadsskydd.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 6,
+    "quote": "Skydda hushållen mot vinterns elräkningar genom ett högkostnadsskydd"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "budget",
+  "area": "Energi",
+  "committee": "NU",
+  "keywords": ["högkostnadsskydd", "elpris", "elräkning", "elstöd"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-hogkostnadsskydd-el-hushall-foretag"],
+      "outcome": "included",
+      "note": null
+    }
+  ]
+}

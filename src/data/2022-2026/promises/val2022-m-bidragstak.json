@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-bidragstak",
+  "term": "2022-2026",
+  "title": "Bidragstak",
+  "description": "Införa ett bidragstak så att de samlade bidragen aldrig kan bli högre än lönen från ett arbete.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 7,
+    "quote": "Införa ett bidragstak så att de samlade bidragen aldrig kan bli högre än lönen från ett arbete"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "legislative",
+  "area": "Bidrag och arbetsmarknad",
+  "committee": "SfU",
+  "keywords": ["bidragstak", "bidrag", "arbetslinjen", "försörjningsstöd"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-bidragsreform-bidragstak-lagre-skatt"],
+      "outcome": "included",
+      "note": null
+    }
+  ]
+}

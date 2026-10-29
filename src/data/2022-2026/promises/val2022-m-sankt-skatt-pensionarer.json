@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-sankt-skatt-pensionarer",
+  "term": "2022-2026",
+  "title": "Sänkt skatt för pensionärer",
+  "description": "Sänka skatten för alla Sveriges pensionärer.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 5,
+    "quote": "Sänka skatten för alla Sveriges pensionärer"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "budget",
+  "area": "Pensioner och skatt",
+  "committee": "SfU",
+  "keywords": ["pensionärer", "skatt", "skatt på pension", "grundavdrag"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-sankt-skatt-arbetsinkomst-pensionsinkomst"],
+      "outcome": "included",
+      "note": null
+    }
+  ]
+}

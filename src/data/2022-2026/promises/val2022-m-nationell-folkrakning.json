@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-nationell-folkrakning",
+  "term": "2022-2026",
+  "title": "Nationell folkräkning",
+  "description": "Genomföra en nationell folkräkning för att stoppa bidragsbrotten.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 9,
+    "quote": "Genomföra en nationell folkräkning för att stoppa bidragsbrotten"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "legislative",
+  "area": "Bidragsbrott",
+  "committee": "SkU",
+  "keywords": ["folkräkning", "folkbokföring", "bidragsbrott", "samordningsnummer"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-forbered-folkrakning-samordningsnummer"],
+      "outcome": "weakened",
+      "note": "Avtalet förbereder en folkräkning men beslutar inte att genomföra den."
+    }
+  ]
+}

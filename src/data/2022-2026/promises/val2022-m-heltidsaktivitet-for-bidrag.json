@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-heltidsaktivitet-for-bidrag",
+  "term": "2022-2026",
+  "title": "Krav på heltidsaktiviteter för att få bidrag",
+  "description": "Bidrag ska kräva heltidsaktiviteter.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 25,
+    "quote": "Ställa krav på heltidsaktiviteter för att få bidrag"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "legislative",
+  "area": "Arbetsmarknad",
+  "committee": "SfU",
+  "keywords": ["aktivitetskrav", "bidrag", "heltidsaktivitet", "försörjningsstöd"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-sankt-etableringsstod", "tido-aktivitetskrav-forsorjningsstod"],
+      "outcome": "weakened",
+      "note": "Avtalet kräver aktivitet för försörjningsstöd (motsvarande arbetsförmågan) och heltidsaktiviteter för full etableringsersättning, inte för bidrag generellt."
+    }
+  ]
+}

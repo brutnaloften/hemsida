@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-sankt-pris-bensin-diesel",
+  "term": "2022-2026",
+  "title": "Sänkt pris på bensin och diesel",
+  "description": "Sänka priset på bensin och diesel.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 5,
+    "quote": "Sänka priset på bensin och diesel så att du klarar din vardagsekonomi"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "budget",
+  "area": "Drivmedel",
+  "committee": "SkU",
+  "keywords": ["bensin", "diesel", "drivmedelspris", "drivmedelsskatt", "reduktionsplikt"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-lagre-drivmedelspriser"],
+      "outcome": "included",
+      "note": null
+    }
+  ]
+}

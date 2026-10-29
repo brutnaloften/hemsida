@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-sankt-kostnad-anstalla-langtidsarbetslosa",
+  "term": "2022-2026",
+  "title": "Lägre kostnad att anställa långtidsarbetslösa",
+  "description": "Kraftigt sänka kostnaden för att anställa långtidsarbetslösa.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 7,
+    "quote": "Kraftigt sänka kostnaden för att anställa långtidsarbetslösa"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "budget",
+  "area": "Arbetsmarknad",
+  "committee": "AU",
+  "keywords": ["anställningsstöd", "långtidsarbetslösa", "arbetsgivaravgift", "sänkta kostnader"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-lagre-anstallningskostnader-langtidsarbetslosa"],
+      "outcome": "included",
+      "note": null
+    }
+  ]
+}

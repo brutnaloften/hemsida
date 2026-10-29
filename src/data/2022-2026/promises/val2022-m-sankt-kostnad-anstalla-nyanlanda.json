@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-sankt-kostnad-anstalla-nyanlanda",
+  "term": "2022-2026",
+  "title": "Lägre kostnad att anställa nyanlända",
+  "description": "Kraftigt sänka anställningskostnaderna för den som anställer nyanlända och långtidsarbetslösa.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 8,
+    "quote": "Kraftigt sänka anställningskostnaderna för den som anställer nyanlända och långtidsarbetslösa"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "budget",
+  "area": "Arbetsmarknad",
+  "committee": "AU",
+  "keywords": ["anställningskostnader", "nyanlända", "långtidsarbetslösa", "anställningsstöd"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-lagre-anstallningskostnader-langtidsarbetslosa"],
+      "outcome": "weakened",
+      "note": "Avtalet gäller endast den som anställer långtidsarbetslösa, inte nyanlända."
+    }
+  ]
+}

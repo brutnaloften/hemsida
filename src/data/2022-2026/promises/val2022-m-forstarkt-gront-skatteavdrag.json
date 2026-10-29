@@ -1,0 +1,35 @@
+{
+  "id": "val2022-m-forstarkt-gront-skatteavdrag",
+  "term": "2022-2026",
+  "title": "Förstärkt grönt skatteavdrag",
+  "description": "Förstärka och utvidga det gröna skatteavdraget så att det blir billigare att minska elkonsumtionen.",
+  "source": {
+    "id": "valmanifest-2022-m",
+    "page": 6,
+    "quote": "Göra det billigare för privatpersoner att minska sin elkonsumtion genom att förstärka och utvidga det gröna skatteavdraget"
+  },
+  "parties": ["M"],
+  "roles": {
+    "M": "government"
+  },
+  "type": "budget",
+  "area": "Energi",
+  "committee": "SkU",
+  "keywords": ["grönt skatteavdrag", "energieffektivisering", "elkonsumtion", "solceller"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-starkt-stod-energieffektivisering-privatpersoner"],
+      "outcome": "weakened",
+      "note": "Avtalet förstärker stödet till energieffektivisering för privatpersoner men nämner inte det gröna skatteavdraget."
+    }
+  ]
+}
