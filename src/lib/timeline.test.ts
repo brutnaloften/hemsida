@@ -25,7 +25,7 @@ describe('orderTimeline', () => {
   it('puts agreement first, then documents by date, without mutating input', () => {
     const input = [doc('b', '2024-01-01'), doc('a', '2023-01-01'), agreement];
     const out = orderTimeline(input);
-    expect(out.map((e) => (isAgreement(e) ? 'agreement' : e.dok_id))).toEqual([
+    expect(out.map((e) => (e.kind === 'prop' ? e.dok_id : 'agreement'))).toEqual([
       'agreement',
       'a',
       'b',

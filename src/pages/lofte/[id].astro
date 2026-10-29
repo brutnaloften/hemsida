@@ -5,9 +5,10 @@ import Layout from '../../layouts/Layout.astro';
 import { Badge } from '@/components/ui/badge';
 import { AGREEMENT_OUTCOME_LABELS, VERDICT_LABELS } from '@/schema/promise';
 import RiksdagEntry from '@/components/RiksdagEntry.astro';
+import BudgetEntry from '@/components/BudgetEntry.astro';
 import { AGREEMENT_OUTCOME_STYLE, TYPE_LABELS, VERDICT_STYLES, partyName } from '@/lib/promise-labels';
 import { buildReverseIndex, linkedRiksdagTimelines } from '@/lib/agreement-index';
-import { isAgreement, orderTimeline, promisePath } from '@/lib/timeline';
+import { isAgreement, isBudget, orderTimeline, promisePath } from '@/lib/timeline';
 
 export const getStaticPaths = (async () => {
   const promises = await getCollection('promises');
@@ -138,6 +139,8 @@ const link = 'underline underline-offset-2';
                     </ul>
                   )}
                 </li>
+              ) : isBudget(e) ? (
+                <BudgetEntry entry={e} />
               ) : (
                 <RiksdagEntry entry={e} />
               ),

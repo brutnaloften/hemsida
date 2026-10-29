@@ -126,9 +126,43 @@ const riksdagEvidenceSchema = z
     }
   });
 
+/**
+ * A budget comparison for one anslag (appropriation line): the amount before and after the
+ * promise period, in mn kr nominal, as in src/data/budget. Describes the numbers only; it is never
+ * a verdict. The anslag is identified by its restated code (`kod`, including the year suffix of a
+ * discontinued anslag), which is only unique within one release of the ESV data, so the entry also
+ * records the `release` year it was read from. `namn` is kept for readers and for the data test
+ * that checks the reference still resolves.
+ */
+const budgetEvidenceSchema = z
+  .object({
+    kind: z.literal('budget'),
+    anslag: z
+      .object({
+        kod: z.string().regex(/^(\d{7}( \d{4})?|[0-9A-Z]{6} \d{4})$/, 'expected an anslag code'),
+        namn: z.string().min(1),
+        /** Last year of the ESV release the code belongs to (meta.years max), e.g. 2025. */
+        release: z.number().int().min(2006),
+      })
+      .strict(),
+    /** Years compared: `from` is the baseline year, `to` the later one. */
+    years: z
+      .object({ from: z.number().int().min(2006), to: z.number().int().min(2006) })
+      .strict()
+      .refine((y) => y.from < y.to, { message: 'years.from must be before years.to' }),
+    /** Amounts in mn kr, nominal (not inflation adjusted). */
+    amounts: z.object({ before: z.number(), after: z.number() }).strict(),
+    /** Date of the evidence, used to place it on the timeline (e.g. the budget proposition). */
+    date: isoDate,
+    relevance: z.enum(['full', 'partial']),
+    note: z.string().nullable().default(null),
+  })
+  .strict();
+
 export const evidenceSchema = z.discriminatedUnion('kind', [
   riksdagEvidenceSchema,
   agreementEvidenceSchema,
+  budgetEvidenceSchema,
 ]);
 
 const verdictEntry = z.object({
@@ -168,7 +202,7 @@ const MIN_SEARCH_NOTE_LENGTH = 30;
 /**
  * Evidence-to-verdict constraints for the CURRENT verdict (history entries are not checked; they
  * were judged against the evidence available at the time). Only Riksdag evidence counts;
- * `agreement` evidence never qualifies a verdict. See "Verdict" in docs/data-model.md.
+ * `agreement` and `budget` evidence never qualify a verdict. See "Verdict" in docs/data-model.md.
  */
 function checkVerdictEvidence(
   p: {
@@ -180,18 +214,18 @@ function checkVerdictEvidence(
   ctx: z.core.$RefinementCtx,
 ): void {
   const { value, reasoning } = p.verdict;
-  const riksdag = p.evidence.filter((e): e is RiksdagEvidence => e.kind !== 'agreement');
+  const riksdag = p.evidence.filter(isRiksdagEvidence);
   const fail = (message: string) =>
     ctx.addIssue({ code: 'custom', path: ['verdict', 'value'], message });
 
   if (value === 'in_progress' && !riksdag.some((e) => PLANNING_KINDS.includes(e.kind))) {
     fail(
-      'verdict in_progress requires Riksdag evidence of kind dir, sou, ds or prop (agreement evidence does not count)',
+      'verdict in_progress requires Riksdag evidence of kind dir, sou, ds or prop (agreement and budget evidence do not count)',
     );
   }
   if (value === 'fulfilled' && !riksdag.some((e) => e.kind === 'sfs')) {
     fail(
-      'verdict fulfilled requires Riksdag evidence of kind sfs (agreement evidence does not count)',
+      'verdict fulfilled requires Riksdag evidence of kind sfs (agreement and budget evidence do not count)',
     );
   }
   if (value === 'broken') {
@@ -282,9 +316,15 @@ export const sourceSchema = z.object({
   urlDeadAsOf: isoDate.optional(),
 });
 
+/** True for evidence that is a Riksdag document (not agreement or budget evidence). */
+export function isRiksdagEvidence(e: Evidence): e is RiksdagEvidence {
+  return e.kind !== 'agreement' && e.kind !== 'budget';
+}
+
 export type PromiseRecord = z.infer<typeof promiseSchema>;
 export type Evidence = z.infer<typeof evidenceSchema>;
 export type RiksdagEvidence = Extract<Evidence, { kind: (typeof EVIDENCE_KINDS)[number] }>;
+export type BudgetEvidence = Extract<Evidence, { kind: 'budget' }>;
 export type AgreementEvidence = Extract<Evidence, { kind: 'agreement' }>;
 export type AgreementOutcome = (typeof AGREEMENT_OUTCOMES)[number];
 export type Verdict = z.infer<typeof verdictSchema>;
