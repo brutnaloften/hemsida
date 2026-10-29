@@ -379,9 +379,9 @@
     },
     "link": {
       "promises": ["tido-ett-samlat-elprisomrade"],
-      "outcome": "weakened",
-      "note": "Avtalet siktar på att Sverige på sikt och efter utredning kan bli ett samlat elprisområde, vilket är en annan inriktning än en översyn av utformningen.",
-      "rationale": "Osäker: Tidö s. 16 \"bli ett samlat elprisområde\" efter utredning."
+      "outcome": "included",
+      "note": null,
+      "rationale": "Granskning (PR #105): avtalet innehåller en översyn av elprisområdena, vilket är vad löftet säger. Tidigare förslag: weakened. Osäker: Tidö s. 16 \"bli ett samlat elprisområde\" efter utredning."
     }
   },
   {
@@ -1627,41 +1627,6 @@
   {
     "section": "Vi ska göra den största satsningen någonsin för att förebygga kriminalitet",
     "promise": {
-      "id": "val2022-m-over-50-reformer-brottsforebyggande",
-      "term": "2022-2026",
-      "title": "Över 50 brottsförebyggande reformer",
-      "description": "Genomföra det största brottsförebyggande reformpaketet i modern tid, över 50 reformer för socialtjänst, skola och missbruksvård.",
-      "source": {
-        "id": "valmanifest-2022-m",
-        "page": 10,
-        "quote": "Det handlar om över 50 reformer för att stärka socialtjänst, skola och missbruksvård"
-      },
-      "parties": ["M"],
-      "roles": {
-        "M": "government"
-      },
-      "type": "other_action",
-      "area": "Brottsförebyggande",
-      "committee": "SoU",
-      "keywords": ["brottsförebyggande", "reformpaket", "socialtjänst", "missbruksvård"],
-      "verdict": {
-        "value": "unassessed",
-        "reasoning": "",
-        "date": "2026-10-29",
-        "history": []
-      },
-      "evidence": []
-    },
-    "link": {
-      "promises": [],
-      "outcome": "not_addressed",
-      "note": null,
-      "rationale": "Osäker: för diffust för att länka till enskilda Tidö-löften."
-    }
-  },
-  {
-    "section": "Vi ska göra den största satsningen någonsin för att förebygga kriminalitet",
-    "promise": {
       "id": "val2022-m-starka-foraldraansvaret",
       "term": "2022-2026",
       "title": "Förstärkt föräldraansvar",
@@ -1765,41 +1730,6 @@
     }
   },
   {
-    "section": "Våldtäkt ska inte ge rabatt – vi ska skärpa straffen för allvarliga brott",
-    "promise": {
-      "id": "val2022-m-aldrefridsbrott",
-      "term": "2022-2026",
-      "title": "Nytt äldrefridsbrott",
-      "description": "Införa ett nytt äldrefridsbrott för att stävja brott mot äldre.",
-      "source": {
-        "id": "valmanifest-2022-m",
-        "page": 11,
-        "quote": "Införa ett nytt äldrefridsbrott för att stävja brott mot äldre"
-      },
-      "parties": ["M"],
-      "roles": {
-        "M": "government"
-      },
-      "type": "legislative",
-      "area": "Straffrätt",
-      "committee": "JuU",
-      "keywords": ["äldrefridsbrott", "brott mot äldre", "straffrätt", "äldre"],
-      "verdict": {
-        "value": "unassessed",
-        "reasoning": "",
-        "date": "2026-10-29",
-        "history": []
-      },
-      "evidence": []
-    },
-    "link": {
-      "promises": [],
-      "outcome": "not_addressed",
-      "note": null,
-      "rationale": "Inget i Tidö."
-    }
-  },
-  {
     "section": "Vi ska sätta brottsoffret i centrum",
     "promise": {
       "id": "val2022-m-dubbla-skadestand-brottsoffer",
@@ -1879,7 +1809,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 11,
-        "quote": "Moderaterna kommer att avsätta medel för höjda polislöner"
+        "quote": "Moderaterna kommer att avsätta medel för höjda polislöner och se till att CSN-lån skrivs av i takt med att personen börjar arbeta som polis."
       },
       "parties": ["M"],
       "roles": {
@@ -2147,9 +2077,9 @@
     },
     "link": {
       "promises": ["tido-oversyn-brottsskadeersattning-skadestand"],
-      "outcome": "included",
-      "note": null,
-      "rationale": "Tidö s. 27: regelverket för brottsskadeersättning ses över för att minska brottsoffrets ansvar att driva in skadeståndet."
+      "outcome": "weakened",
+      "note": "Avtalet säger bara att reglerna för brottsskadeersättning ska ses över, inte att utbetalningen ska underlättas.",
+      "rationale": "Granskning (PR #105): Tidö s. 27 anger enbart en översyn (\"ses över\"). Tidigare förslag: included."
     }
   },
   {
@@ -2940,7 +2870,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 14,
-        "quote": "Införa särskilda grupper i varje polisregion som är specialiserade på sexualbrott och våld i nära relation"
+        "quote": "Införa särskilda grupper i varje polisregion som är specialiserade på sexualbrott och våld i nära relation för att fler anmälda brott ska leda till lagföring och straff"
       },
       "parties": ["M"],
       "roles": {
@@ -3115,7 +3045,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 14,
-        "quote": "Införa vistelseförbud för personer som dömts för våld i nära relation"
+        "quote": "Införa vistelseförbud för personer som dömts för våld i nära relation, så att den som utsatt sin tidigare partner för våld och övergrepp kan förbjudas att vara i ett visst bostadsområde även efter att ha släppts ur fängelset"
       },
       "parties": ["M"],
       "roles": {
@@ -3143,14 +3073,14 @@
   {
     "section": "Vi ska upprätta äldrefrid",
     "promise": {
-      "id": "val2022-m-aldrefridsbrott-2",
+      "id": "val2022-m-aldrefridsbrott",
       "term": "2022-2026",
       "title": "Införa äldrefridsbrott",
       "description": "Äldrefridsbrott ska införas som en ny brottsrubricering för att skärpa straffen för brott mot äldre.",
       "source": {
         "id": "valmanifest-2022-m",
         "page": 15,
-        "quote": "Införa äldrefridsbrott som en ny brottsrubricering"
+        "quote": "Införa äldrefridsbrott som en ny brottsrubricering i syfte att skärpa straffen för dessa brott"
       },
       "parties": ["M"],
       "roles": {
@@ -3185,7 +3115,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 15,
-        "quote": "Se till att fler unga lagöverträdare häktas"
+        "quote": "Se till att fler unga lagöverträdare häktas när det rör sig om allvarliga brott och det finns risk för återfall"
       },
       "parties": ["M"],
       "roles": {
@@ -3290,7 +3220,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 15,
-        "quote": "Satsa mer pengar på att utreda bedrägeribrott"
+        "quote": "Satsa mer pengar på att utreda bedrägeribrott och annan brottslighet mot äldre"
       },
       "parties": ["M"],
       "roles": {
@@ -3325,7 +3255,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 15,
-        "quote": "Ta bort sekretesshindren mellan polis och socialtjänst"
+        "quote": "Ta bort sekretesshindren mellan polis och socialtjänst samt inrätta ett nationellt no entry-program för unga i riskzonen i syfte att snabbt stoppa en påbörjad kriminell karriär"
       },
       "parties": ["M"],
       "roles": {
@@ -3369,7 +3299,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 15,
-        "quote": "Se till att rån med förnedringsinslag rubriceras som grova rån"
+        "quote": "Se till att rån med förnedringsinslag rubriceras som grova rån, vilket alltid ska leda till strängare straff"
       },
       "parties": ["M"],
       "roles": {
@@ -3512,7 +3442,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 17,
-        "quote": "Ge Vattenfall i uppdrag att omedelbart"
+        "quote": "Ge Vattenfall i uppdrag att omedelbart genomföra en förstudie för att bygga ny kärnkraft vid Ringhals"
       },
       "parties": ["M"],
       "roles": {
@@ -3547,7 +3477,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 17,
-        "quote": "Moderaterna vill att staten garanterar"
+        "quote": "Moderaterna vill att staten garanterar lån för byggandet av ny kärnkraft – det skulle möjliggöra att 10 nya reaktorer byggs."
       },
       "parties": ["M"],
       "roles": {
@@ -3582,7 +3512,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 17,
-        "quote": "Ge nybyggd kärnkraft rätten till drift och elproduktion"
+        "quote": "Ge nybyggd kärnkraft rätten till drift och elproduktion under hela sin tekniska livslängd"
       },
       "parties": ["M"],
       "roles": {
@@ -3617,7 +3547,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 17,
-        "quote": "Avskaffa förbudet mot att bygga reaktorer på andra platser än vid de"
+        "quote": "Avskaffa förbudet mot att bygga reaktorer på andra platser än vid de befintliga kärnkraftverken"
       },
       "parties": ["M"],
       "roles": {
@@ -3690,7 +3620,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 17,
-        "quote": "Ta bort förbudet mot att ha fler än tio"
+        "quote": "Ta bort förbudet mot att ha fler än tio kärnkraftsreaktorer i drift"
       },
       "parties": ["M"],
       "roles": {
@@ -3725,7 +3655,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 18,
-        "quote": "Avskaffa avfallsförbränningsskatten för"
+        "quote": "Avskaffa avfallsförbränningsskatten för att öka kapaciteten i kraftvärmeverket"
       },
       "parties": ["M"],
       "roles": {
@@ -3795,7 +3725,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 18,
-        "quote": "Införa ett statligt högkostnadsskydd för"
+        "quote": "Införa ett statligt högkostnadsskydd för konstruktionen av ny kärnkraft"
       },
       "parties": ["M"],
       "roles": {
@@ -3830,7 +3760,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 18,
-        "quote": "Investera i det svenska elnätet och korta"
+        "quote": "Investera i det svenska elnätet och korta tillståndsprocesserna för elnätsutbyggnad"
       },
       "parties": ["M"],
       "roles": {
@@ -3865,7 +3795,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 18,
-        "quote": "Upphandla kraftproduktion som stärker"
+        "quote": "Upphandla kraftproduktion som stärker stabiliteten"
       },
       "parties": ["M"],
       "roles": {
@@ -3900,7 +3830,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 19,
-        "quote": "Bygga ut laddstolpar och laddstationer"
+        "quote": "Bygga ut laddstolpar och laddstationer i hela landet"
       },
       "parties": ["M"],
       "roles": {
@@ -3935,7 +3865,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 19,
-        "quote": "Fortsätta satsa på Industriklivet som"
+        "quote": "Fortsätta satsa på Industriklivet som hjälper industrin att ställa om"
       },
       "parties": ["M"],
       "roles": {
@@ -3970,7 +3900,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 19,
-        "quote": "Öka klimatbiståndets andel av det totala biståndet"
+        "quote": "Öka klimatbiståndets andel av det totala biståndet för att minska utsläppen utomlands"
       },
       "parties": ["M"],
       "roles": {
@@ -4040,7 +3970,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 19,
-        "quote": "Få på plats storskalig infångning"
+        "quote": "Få på plats storskalig infångning av koldioxid"
       },
       "parties": ["M"],
       "roles": {
@@ -4078,7 +4008,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 20,
-        "quote": "Se till att fjälljakten är tillgänglig för alla"
+        "quote": "Se till att fjälljakten är tillgänglig för alla svenska jägare på lika villkor"
       },
       "parties": ["M"],
       "roles": {
@@ -4183,7 +4113,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 20,
-        "quote": "Stärka skogsägarnas äganderätt genom"
+        "quote": "Stärka skogsägarnas äganderätt genom att formellt skydd av skog ska ske genom frivillighet"
       },
       "parties": ["M"],
       "roles": {
@@ -4218,7 +4148,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 20,
-        "quote": "Höja ersättningsnivåerna för rovdjursangrepp"
+        "quote": "Höja ersättningsnivåerna för rovdjursangrepp så att de ligger i nivå med de faktiska kostnaderna"
       },
       "parties": ["M"],
       "roles": {
@@ -4253,7 +4183,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 20,
-        "quote": "Arbeta för kortade handläggningstider"
+        "quote": "Arbeta för kortade handläggningstider för vapenlicenser"
       },
       "parties": ["M"],
       "roles": {
@@ -4288,7 +4218,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 20,
-        "quote": "Minska antalet regler för jordbruket och"
+        "quote": "Minska antalet regler för jordbruket och korta handläggningstider för miljötillstånd"
       },
       "parties": ["M"],
       "roles": {
@@ -4323,7 +4253,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 20,
-        "quote": "Minska ytan av skog som är undantagen"
+        "quote": "Minska ytan av skog som är undantagen från skogsbruk"
       },
       "parties": ["M"],
       "roles": {
@@ -4358,7 +4288,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 20,
-        "quote": "Verka för att minska vargstammen i Sverige"
+        "quote": "Verka för att minska vargstammen i Sverige till 170 vargar – genom ökad jakt"
       },
       "parties": ["M"],
       "roles": {
@@ -4428,7 +4358,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 20,
-        "quote": "Sälja av en större andel av statliga Sveaskogs"
+        "quote": "Sälja av en större andel av statliga Sveaskogs innehav till personer med regional anknytning"
       },
       "parties": ["M"],
       "roles": {
@@ -4463,7 +4393,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 20,
-        "quote": "Låta jägare sälja vildsvinskött direkt till"
+        "quote": "Låta jägare sälja vildsvinskött direkt till konsumenter"
       },
       "parties": ["M"],
       "roles": {
@@ -4533,7 +4463,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 20,
-        "quote": "Stärka ägande- och brukanderätten"
+        "quote": "Stärka ägande- och brukanderätten för jordbrukare"
       },
       "parties": ["M"],
       "roles": {
@@ -4568,7 +4498,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 20,
-        "quote": "Vårda redan skyddad skog bättre för att"
+        "quote": "Vårda redan skyddad skog bättre för att stärka den biologiska mångfalden"
       },
       "parties": ["M"],
       "roles": {
@@ -4673,7 +4603,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 21,
-        "quote": "Förhindra missbruk av och värna"
+        "quote": "Förhindra missbruk av och värna allemansrätten"
       },
       "parties": ["M"],
       "roles": {
@@ -4708,7 +4638,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 21,
-        "quote": "Stärka kunskapen om och tillämpningen av"
+        "quote": "Stärka kunskapen om och tillämpningen av allemansrätten och äganderätten genom utökad information"
       },
       "parties": ["M"],
       "roles": {
@@ -4743,7 +4673,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 21,
-        "quote": "Göra naturupplevelser och friluftsliv i statliga"
+        "quote": "Göra naturupplevelser och friluftsliv i statliga naturreservat och nationalparker tillgängliga för fler genom satsningar på leder och friluftsanordningar"
       },
       "parties": ["M"],
       "roles": {
@@ -4778,7 +4708,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 21,
-        "quote": "Förstärka det gemensamma Östersjöarbetet"
+        "quote": "Förstärka det gemensamma Östersjöarbetet för åtgärder mot övergödning och nedskräpning"
       },
       "parties": ["M"],
       "roles": {
@@ -4813,7 +4743,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 21,
-        "quote": "Skärpa straffen för miljöbrott och nedskräpning"
+        "quote": "Skärpa straffen för miljöbrott och nedskräpning och ge ordningsvakter befogenhet att dela ut böter för småskräp"
       },
       "parties": ["M"],
       "roles": {
@@ -4848,7 +4778,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 21,
-        "quote": "Stödja privata markägare som vill tillgängliggöra"
+        "quote": "Stödja privata markägare som vill tillgängliggöra sin mark för friluftslivet genom till exempel hjälp med skyltning och leder"
       },
       "parties": ["M"],
       "roles": {
@@ -4883,7 +4813,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 21,
-        "quote": "Minska jordbrukets miljöpåverkan genom"
+        "quote": "Minska jordbrukets miljöpåverkan genom stöd till teknikutveckling och innovationer"
       },
       "parties": ["M"],
       "roles": {
@@ -4918,7 +4848,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 21,
-        "quote": "Tydliggöra det offentligas ansvar för"
+        "quote": "Tydliggöra det offentligas ansvar för friluftslivet"
       },
       "parties": ["M"],
       "roles": {
@@ -4953,7 +4883,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 21,
-        "quote": "Satsa på forskning om vattenrening samt"
+        "quote": "Satsa på forskning om vattenrening samt utbyggnad av avancerad vattenrening"
       },
       "parties": ["M"],
       "roles": {
@@ -4988,7 +4918,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 25,
-        "quote": "Anpassa asyllagstiftningen efter den rättsliga"
+        "quote": "Anpassa asyllagstiftningen efter den rättsliga miniminivån enligt EU-rätten"
       },
       "parties": ["M"],
       "roles": {
@@ -5023,7 +4953,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 25,
-        "quote": "Avskaffa möjligheten till spårbyte"
+        "quote": "Avskaffa möjligheten till spårbyte, det vill säga möjligheten för en person som fått avslag på sin asylansökan att i stället få ett arbetstillstånd"
       },
       "parties": ["M"],
       "roles": {
@@ -5058,7 +4988,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 25,
-        "quote": "Ställa krav på heltidsaktiviteter för att"
+        "quote": "Ställa krav på heltidsaktiviteter för att få bidrag"
       },
       "parties": ["M"],
       "roles": {
@@ -5131,7 +5061,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 25,
-        "quote": "Införa kvalificering till välfärden för nyanlända"
+        "quote": "Införa kvalificering till välfärden för nyanlända genom eget arbete eller genom permanent och laglig bosättning i landet"
       },
       "parties": ["M"],
       "roles": {
@@ -5166,7 +5096,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 25,
-        "quote": "Införa obligatorisk samhällsorientering"
+        "quote": "Införa obligatorisk samhällsorientering med prov, där godkänt ska vara ett krav för medborgarskap"
       },
       "parties": ["M"],
       "roles": {
@@ -5204,7 +5134,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 25,
-        "quote": "Prioritera kvinnor och hbtq-personer"
+        "quote": "Prioritera kvinnor och hbtq-personer i kvotflyktingmottagandet"
       },
       "parties": ["M"],
       "roles": {
@@ -5239,7 +5169,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 25,
-        "quote": "Utveckla samhällsorienteringen till att fokusera"
+        "quote": "Utveckla samhällsorienteringen till att fokusera på grundläggande värderingar och hur vi lever i Sverige"
       },
       "parties": ["M"],
       "roles": {
@@ -5274,7 +5204,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 25,
-        "quote": "Varje person som läser SFI ska få en individuell"
+        "quote": "Varje person som läser SFI ska få en individuell prestationsplan med kunskapsmål som han eller hon ska uppnå i sin utbildning."
       },
       "parties": ["M"],
       "roles": {
@@ -5309,7 +5239,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 25,
-        "quote": "Kräva grundläggande kunskaper i svenska"
+        "quote": "Kräva grundläggande kunskaper i svenska för permanent uppehållstillstånd och medborgarskap"
       },
       "parties": ["M"],
       "roles": {
@@ -5344,7 +5274,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 25,
-        "quote": "Införa ett volymmål för asylmottagandet"
+        "quote": "Införa ett volymmål för asylmottagandet på nordiska nivåer"
       },
       "parties": ["M"],
       "roles": {
@@ -5379,7 +5309,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 26,
-        "quote": "Ge Brå i uppdrag att kartlägga de kriminella"
+        "quote": "Ge Brå i uppdrag att kartlägga de kriminella klaner som är aktiva i Sverige idag"
       },
       "parties": ["M"],
       "roles": {
@@ -5449,7 +5379,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 26,
-        "quote": "Inrätta en särskild klanenhet inom Polisen"
+        "quote": "Inrätta en särskild klanenhet inom Polisen enligt tysk modell"
       },
       "parties": ["M"],
       "roles": {
@@ -5484,7 +5414,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 26,
-        "quote": "Kriminalisera klanrättegångar och andra"
+        "quote": "Kriminalisera klanrättegångar och andra otillbörliga parallella rättsprocesser"
       },
       "parties": ["M"],
       "roles": {
@@ -5519,7 +5449,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 26,
-        "quote": "Införa obligatorisk språkförskola för barn"
+        "quote": "Införa obligatorisk språkförskola för barn som visar en bristande språkutveckling"
       },
       "parties": ["M"],
       "roles": {
@@ -5589,7 +5519,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 26,
-        "quote": "Verka för att fler barn som växer upp"
+        "quote": "Verka för att fler barn som växer upp i kriminella klaner ska omhändertas"
       },
       "parties": ["M"],
       "roles": {
@@ -6264,7 +6194,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 28,
-        "quote": "Ta fram en plan för hur animalieproduktion"
+        "quote": "Ta fram en plan för hur animalieproduktion och växtodling ska kunna bedrivas vid höjd beredskap"
       },
       "parties": ["M"],
       "roles": {
@@ -6318,10 +6248,10 @@
       "evidence": []
     },
     "link": {
-      "promises": [],
-      "outcome": "not_addressed",
-      "note": null,
-      "rationale": "Ingen motsvarande åtgärd i Tidöavtalet."
+      "promises": ["tido-djurvalfardsutredning-konkurrensforutsattningar-livsmedel"],
+      "outcome": "weakened",
+      "note": "Avtalet utreder konkurrensförutsättningarna i livsmedelsproduktionen, men innehåller inga konkreta åtgärder för att stärka jordbruket.",
+      "rationale": "Granskning (PR #105): Utredning av konkurrensförutsättningar. Tidigare förslag: not_addressed."
     }
   },
   {
@@ -6404,7 +6334,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 29,
-        "quote": "Kraftigt öka antalet utvisningar genom"
+        "quote": "Kraftigt öka antalet utvisningar genom fler EU-gemensamma återtagandeavtal"
       },
       "parties": ["M"],
       "roles": {
@@ -6649,7 +6579,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 30,
-        "quote": "Inrätta en nationell vårdförmedling som ska"
+        "quote": "Inrätta en nationell vårdförmedling som ska hjälpa patienter med lång väntetid att få vård i en annan del av landet där det finns ledig kapacitet"
       },
       "parties": ["M"],
       "roles": {
@@ -6703,10 +6633,13 @@
       "evidence": []
     },
     "link": {
-      "promises": [],
-      "outcome": "not_addressed",
-      "note": null,
-      "rationale": "Ingen motsvarande åtgärd i Tidöavtalet."
+      "promises": [
+        "tido-kartlaggning-kompetensforsorjning-vard",
+        "tido-starkt-nationellt-atagande-kompetensforsorjning"
+      ],
+      "outcome": "weakened",
+      "note": "Avtalet innehåller kartläggning och ett nationellt åtagande för vårdens kompetensförsörjning, men inga konkreta åtgärder för att stärka medarbetarnas villkor.",
+      "rationale": "Granskning (PR #105): Kompetensförsörjning i vården täcker en del av löftet. Tidigare förslag: not_addressed."
     }
   },
   {
@@ -6754,7 +6687,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 31,
-        "quote": "Prioritera cancervården och fördubbla"
+        "quote": "Prioritera cancervården och fördubbla stödet till barncancervården, som ska ges särskilt riktade resurser varje år"
       },
       "parties": ["M"],
       "roles": {
@@ -6789,7 +6722,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 31,
-        "quote": "Införa en förstärkt vårdgaranti för cancer"
+        "quote": "Införa en förstärkt vårdgaranti för cancerpatienter – om inte vården kan ges inom angivna tidsgränser ska patienten ha rätt att vända sig till annan vårdgivare och bli ersatt för de merkostnader detta innebär"
       },
       "parties": ["M"],
       "roles": {
@@ -6859,7 +6792,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 31,
-        "quote": "Se till att födande kvinnor får ha tillgång till samma team av barnmorskor från mödravård till eftervård Färre än fyra av tio män med prostatacancer får vård i rätt tid."
+        "quote": "Se till att födande kvinnor får ha tillgång till samma team av barnmorskor från mödravård till eftervård"
       },
       "parties": ["M"],
       "roles": {
@@ -7025,41 +6958,6 @@
     }
   },
   {
-    "section": "Vi ska förbättra äldreomsorgen",
-    "promise": {
-      "id": "val2022-m-minska-delade-turer-2",
-      "term": "2022-2026",
-      "title": "Minska förekomsten av delade turer",
-      "description": "Moderaterna vill minska förekomsten av delade turer i offentlig vård och omsorg.",
-      "source": {
-        "id": "valmanifest-2022-m",
-        "page": 32,
-        "quote": "Minska förekomsten av delade turer i offentlig vård och omsorg"
-      },
-      "parties": ["M"],
-      "roles": {
-        "M": "government"
-      },
-      "type": "outcome",
-      "area": "Äldreomsorg",
-      "committee": "AU",
-      "keywords": ["delade turer", "arbetsvillkor", "äldreomsorg", "offentlig vård"],
-      "verdict": {
-        "value": "unassessed",
-        "reasoning": "",
-        "date": "2026-10-29",
-        "history": []
-      },
-      "evidence": []
-    },
-    "link": {
-      "promises": [],
-      "outcome": "not_addressed",
-      "note": null,
-      "rationale": "Ingen Tidö-punkt om delade turer."
-    }
-  },
-  {
     "section": "Vi ska förebygga psykisk ohälsa bland barn och unga",
     "promise": {
       "id": "val2022-m-nationell-strategi-mot-sjalvmord",
@@ -7069,7 +6967,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 32,
-        "quote": "Ta fram en nationell strategi mot självmord"
+        "quote": "Ta fram en nationell strategi mot självmord, med särskilt fokus på barn och unga"
       },
       "parties": ["M"],
       "roles": {
@@ -7104,7 +7002,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 32,
-        "quote": "Införa en nollvision för hemlöshet bland"
+        "quote": "Införa en nollvision för hemlöshet bland pensionärer och öka den statliga finansieringen av boendestöd"
       },
       "parties": ["M"],
       "roles": {
@@ -7604,41 +7502,6 @@
     }
   },
   {
-    "section": "Vi ska ge bättre stöd till de barn som har det svårast",
-    "promise": {
-      "id": "val2022-m-obligatorisk-sprakforskola-2",
-      "term": "2022-2026",
-      "title": "Inför obligatorisk språkförskola för barn med bristande språkutveckling",
-      "description": "Moderaterna vill införa obligatorisk språkförskola för barn som visar en bristande språkutveckling.",
-      "source": {
-        "id": "valmanifest-2022-m",
-        "page": 34,
-        "quote": "Införa obligatorisk språkförskola för barn"
-      },
-      "parties": ["M"],
-      "roles": {
-        "M": "government"
-      },
-      "type": "legislative",
-      "area": "Skola",
-      "committee": "UbU",
-      "keywords": ["språkförskola", "språkutveckling", "förskola", "svenska språket"],
-      "verdict": {
-        "value": "unassessed",
-        "reasoning": "",
-        "date": "2026-10-29",
-        "history": []
-      },
-      "evidence": []
-    },
-    "link": {
-      "promises": ["tido-bvc-sprakscreening-integration-yngsta-barn"],
-      "outcome": "weakened",
-      "note": "Avtalet har obligatorisk språkscreening på BVC och ska endast överväga språkförskola, för utsatta områden och nyanlända barn.",
-      "rationale": "Tidö p48: Språkförskola ska övervägas; obligatorisk språkscreening på BVC."
-    }
-  },
-  {
     "section": "Vi ska upprätta ordning och reda i skolan",
     "promise": {
       "id": "val2022-m-ordning-studiero-skollagen-ordningsomdomen",
@@ -7648,7 +7511,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 34,
-        "quote": "Skriva in ordning och studiero i skollagens"
+        "quote": "Skriva in ordning och studiero i skollagens portalparagraf och införa ordningsomdömen"
       },
       "parties": ["M"],
       "roles": {
@@ -7724,7 +7587,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 34,
-        "quote": "Sätta stopp för betygsinflation"
+        "quote": "Sätta stopp för betygsinflation och olämpliga påtryckningar från föräldrar"
       },
       "parties": ["M"],
       "roles": {
@@ -7829,7 +7692,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 35,
-        "quote": "Öka likvärdigheten genom att införa ett"
+        "quote": "Öka likvärdigheten genom att införa ett gemensamt kommunalt kösystem och en tydligare statlig styrning av skolpengen"
       },
       "parties": ["M"],
       "roles": {
@@ -7896,41 +7759,6 @@
       "outcome": "weakened",
       "note": "Avtalet har en gymnasial yrkesskola med relevant innehåll, men inga kortare tekniska utbildningar.",
       "rationale": "Tidö p55: gymnasial yrkesskola med relevant innehåll i samverkan med näringslivet."
-    }
-  },
-  {
-    "section": "Skolan ska förbereda för ett yrkesliv - och forskningen stå fri",
-    "promise": {
-      "id": "val2022-m-nationell-samordning-utbildningsplatser-2",
-      "term": "2022-2026",
-      "title": "Få på plats nationell samordning av antalet utbildningsplatser",
-      "description": "Moderaterna vill få på plats en nationell samordning över samhällets behov av antalet utbildningsplatser för att förbättra kompetensförsörjningen.",
-      "source": {
-        "id": "valmanifest-2022-m",
-        "page": 35,
-        "quote": "Få på plats en nationell samordning över samhällets behov av antalet utbildningsplatser för att förbättra kompetensförsörjningen"
-      },
-      "parties": ["M"],
-      "roles": {
-        "M": "government"
-      },
-      "type": "other_action",
-      "area": "Utbildning",
-      "committee": "UbU",
-      "keywords": ["utbildningsplatser", "kompetensförsörjning", "samordning", "högre utbildning"],
-      "verdict": {
-        "value": "unassessed",
-        "reasoning": "",
-        "date": "2026-10-29",
-        "history": []
-      },
-      "evidence": []
-    },
-    "link": {
-      "promises": [],
-      "outcome": "not_addressed",
-      "note": null,
-      "rationale": "Ingen Tidö-punkt om nationell samordning av utbildningsplatser."
     }
   },
   {
@@ -8403,7 +8231,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 37,
-        "quote": "Möjliggöra mer rättvisa hyror genom att potentiella hyresgästers värdering av boendet ges större vikt 71% Det är bostadsbrist i 207 av landets 290 kommuner."
+        "quote": "Möjliggöra mer rättvisa hyror genom att potentiella hyresgästers värdering av boendet ges större vikt"
       },
       "parties": ["M"],
       "roles": {
@@ -8548,7 +8376,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 38,
-        "quote": "Skärpa tjänstemannaansvaret så att du"
+        "quote": "Skärpa tjänstemannaansvaret så att du som skattebetalare vet att med all offentlig maktutövning följer ett ansvar för de beslut som fattas"
       },
       "parties": ["M"],
       "roles": {
@@ -8766,7 +8594,7 @@
       "source": {
         "id": "valmanifest-2022-m",
         "page": 39,
-        "quote": "Ge Socialstyrelsen i uppdrag att ändra i"
+        "quote": "Ge Socialstyrelsen i uppdrag att ändra i riktlinjerna för blodgivning så att sexuell läggning inte längre ska vara avgörande för vem som får donera blod"
       },
       "parties": ["M"],
       "roles": {
@@ -8896,10 +8724,10 @@
       "evidence": []
     },
     "link": {
-      "promises": [],
-      "outcome": "not_addressed",
-      "note": null,
-      "rationale": "Osäker: Tidö gör samhällsorientering obligatorisk men nämner inte jämställdhet eller hbtq-rättigheter som innehåll."
+      "promises": ["tido-obligatorisk-samhallsintroduktion-och-samhallsorientering"],
+      "outcome": "weakened",
+      "note": "Avtalet inför obligatorisk samhällsorientering, men nämner inte jämställdhet och hbtq som särskilt innehåll.",
+      "rationale": "Granskning (PR #105): Samhällsorienteringen är det gemensamma åtagandet; innehållet är inte preciserat. Tidigare förslag: not_addressed."
     }
   },
   {
@@ -9071,10 +8899,10 @@
       "evidence": []
     },
     "link": {
-      "promises": [],
-      "outcome": "not_addressed",
-      "note": null,
-      "rationale": "Ingen Tidö-punkt om brottet olaga frihetsbegränsning."
+      "promises": ["tido-skarpt-hedersforstryck-lagstiftning"],
+      "outcome": "weakened",
+      "note": "Avtalet skärper lagstiftningen mot hedersförtryck, men nämner inte ett nytt brott för olaga frihetsberövande eller frihetsbegränsning.",
+      "rationale": "Granskning (PR #105): Överlappar via skärpt hedersbrottslagstiftning. Tidigare förslag: not_addressed."
     }
   },
   {
@@ -9141,10 +8969,10 @@
       "evidence": []
     },
     "link": {
-      "promises": [],
-      "outcome": "not_addressed",
-      "note": null,
-      "rationale": "Osäker: Tidö har inget om organisationer som hetsar mot hbtq-personer; demokratiska värderingar nämns bara generellt."
+      "promises": ["tido-allmanna-arvsfonden-inriktning"],
+      "outcome": "weakened",
+      "note": "Avtalet utreder arvsfondens användning och kräver demokratiska värderingar hos medelsmottagare, men nämner inte hbtq-hat eller något stopp för bidrag.",
+      "rationale": "Granskning (PR #105): Delvis överlappande åtgärd om bidragsgivning. Tidigare förslag: not_addressed."
     }
   },
   {
