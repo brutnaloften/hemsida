@@ -1,20 +1,20 @@
 # Kristdemokraterna 2022 manifesto promotion map
 
-59 candidates in `src/data/2022-2026/candidates/valmanifest-2022-kd.json` were promoted unchanged to `src/data/2022-2026/promises/val2022-kd-*.json`, each with exactly one `agreement` evidence entry for `tidoavtalet` taken from the proposed link. Review was done by AI in place of a human reviewer, as decided for seeding. Every verdict is `unassessed`, including the two `vague` promises (verdicts are human-set only). Outcome labels describe the agreement text only and are not verdicts. Ids, titles, quotes and links are as extracted; no renames or overrides were needed. Promotion used a throwaway script equivalent to `promote()` in `tools/lib/manifesto-promote.ts`, which is still party-specific to L.
+59 candidates in `src/data/2022-2026/candidates/valmanifest-2022-kd.json` were promoted unchanged to `src/data/2022-2026/promises/val2022-kd-*.json`, each with exactly one `agreement` evidence entry for `tidoavtalet` taken from the proposed link. Review was done by AI in place of a human reviewer, as decided for seeding. Verdicts are unchanged: every promise is `unassessed`, except the 2 `vague` ones (`stram-migrationspolitik`, `varna-vattenkraften`), which are `not_assessable` with the standard reasoning, as for L. Outcome labels describe the agreement text only and are not verdicts. Ids, titles, quotes and links are as extracted; no renames or overrides were needed. Promotion used a throwaway script equivalent to `promote()` in `tools/lib/manifesto-promote.ts`, which is still party-specific to L.
 
 ## Outcome counts
 
 | Outcome       | Count |
 | ------------- | ----- |
-| included      | 16    |
+| weakened      | 21    |
 | not_addressed | 23    |
-| weakened      | 20    |
+| included      | 15    |
 
 ## Candidate to promise
 
 | Promise                                                           | Outcome       | Linked Tidö promises                                                                                                                 |
 | ----------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `val2022-kd-barnmorsketeam-i-hela-vardkedjan`                     | included      | `tido-nationell-forlossningsplan`                                                                                                    |
+| `val2022-kd-barnmorsketeam-i-hela-vardkedjan`                     | weakened      | `tido-nationell-forlossningsplan`                                                                                                    |
 | `val2022-kd-battre-villkor-i-vardens-bristyrken`                  | not_addressed |                                                                                                                                      |
 | `val2022-kd-enklare-starta-egen-lakarverksamhet`                  | not_addressed |                                                                                                                                      |
 | `val2022-kd-fast-lakarkontakt-med-patienttak`                     | weakened      | `tido-fast-lakarkontakt-uppfoljning`                                                                                                 |

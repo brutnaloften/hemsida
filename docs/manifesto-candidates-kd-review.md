@@ -4,9 +4,9 @@ Companion to `src/data/2022-2026/candidates/valmanifest-2022-kd.json` (bead hems
 
 ## Source
 
-KD:s national manifesto "Redo för en ny regering. Valmanifest 2022" is a 12-page leaflet. The kristdemokraterna.se original is no longer online and has no Wayback snapshot, so the copy archived by SND Vivill (`https://snd.se/en/vivill/file/kd/v/2022/pdf`) is used. An existing Wayback snapshot of that URL (2026-02-15) was checked byte for byte against the downloaded PDF (identical). No URL was submitted for archiving.
+KD:s national manifesto "Redo för en ny regering. Valmanifest 2022" is a 12-page leaflet. The source uses the party's own PDF on kristdemokraterna.se. The `archive` field is an existing Wayback snapshot of it (2026-10-01, 20261001075755), checked byte for byte against the downloaded PDF (identical). No URL was submitted for archiving. The SND Vivill copy (`https://snd.se/en/vivill/file/kd/v/2022/pdf`) was used for the first extraction and has the same text and page numbers; all 59 quotes validate on both PDFs.
 
-The publication date could not be found (PDF metadata says 2021-02-05, which is clearly a template date). The source `date` is set to the election day, 2022-09-11, meaning "published no later than". Local and municipal KD manifestos are out of scope.
+The source `date` is 2022-08-11, the document creation date (the timestamp in the download URL decodes to the same day). Local and municipal KD manifestos are out of scope.
 
 Page numbers are PDF pages (cover = 1), the same as `source.page`. The `section` field is the chapter heading.
 
