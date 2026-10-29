@@ -149,6 +149,44 @@ describe('promiseSchema', () => {
     });
   });
 
+  describe('budget evidence', () => {
+    const budget = {
+      kind: 'budget',
+      anslag: { kod: '0901011', namn: 'Exempelanslag', release: 2025 },
+      years: { from: 2022, to: 2025 },
+      amounts: { before: 1000, after: 1500.5 },
+      date: '2025-09-22',
+      relevance: 'full',
+    };
+    const withEvidence = (...evidence: unknown[]) => ({ ...valid, verdict: unassessed, evidence });
+    const ok = (e: unknown) => promiseSchema.safeParse(withEvidence(e)).success;
+
+    it('accepts a budget entry next to Riksdag entries and defaults note', () => {
+      const r = promiseSchema.safeParse(withEvidence(budget, valid.evidence[0]));
+      expect(r.success).toBe(true);
+      if (r.success) expect(r.data.evidence[0]!.note).toBeNull();
+    });
+
+    it('accepts a discontinued anslag code with year suffix', () => {
+      expect(ok({ ...budget, anslag: { ...budget.anslag, kod: '0501003 2024' } })).toBe(true);
+    });
+
+    it('rejects a malformed anslag code, unordered years and Riksdag fields', () => {
+      expect(ok({ ...budget, anslag: { ...budget.anslag, kod: '1:11' } })).toBe(false);
+      expect(ok({ ...budget, years: { from: 2025, to: 2022 } })).toBe(false);
+      expect(ok({ ...budget, dok_id: 'H901' })).toBe(false);
+      expect(ok({ ...budget, amounts: { before: 1 } })).toBe(false);
+    });
+
+    it('never qualifies a verdict', () => {
+      const fulfilled = { value: 'fulfilled', reasoning: 'Budgeten höjdes.', date: '2025-10-01' };
+      const r = promiseSchema.safeParse({ ...valid, verdict: fulfilled, evidence: [budget] });
+      expect(r.success).toBe(false);
+      const p = { ...valid, verdict: { ...fulfilled, value: 'in_progress' }, evidence: [budget] };
+      expect(promiseSchema.safeParse(p).success).toBe(false);
+    });
+  });
+
   describe('verdict-evidence constraints', () => {
     const ev = (kind: string, extra: object = {}) => ({
       kind,

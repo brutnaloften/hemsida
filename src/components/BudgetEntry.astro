@@ -1,0 +1,22 @@
+---
+import type { BudgetEvidence } from '@/schema/promise';
+import { formatBudgetChange } from '@/lib/budget-evidence';
+
+interface Props {
+  entry: BudgetEvidence;
+}
+const { entry: e } = Astro.props;
+const change = formatBudgetChange(e);
+---
+
+<li>
+  <p class="text-sm text-muted-foreground">
+    {e.date} &middot; Budget
+    {e.relevance === 'partial' && ' (delvis relevant)'}
+  </p>
+  <p class="font-medium">{e.anslag.namn}</p>
+  <p class="text-sm">
+    {change.years}: {change.before} &rarr; {change.after} ({change.delta})
+  </p>
+  {e.note && <p class="text-sm">{e.note}</p>}
+</li>

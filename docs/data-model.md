@@ -134,7 +134,7 @@ Set by a human, with reasoning that cites evidence. `history` keeps earlier verd
 
 #### Evidence constraints on the verdict
 
-The verdict stays human-set, but the schema (`checkVerdictEvidence` in `src/schema/promise.ts`) limits which values the evidence allows. Only the current verdict is checked, not `history`. Only Riksdag evidence counts (`dir`, `sou`, `ds`, `prop`, `bet`, `sfs`, `mot`); `agreement` evidence never qualifies any verdict.
+The verdict stays human-set, but the schema (`checkVerdictEvidence` in `src/schema/promise.ts`) limits which values the evidence allows. Only the current verdict is checked, not `history`. Only Riksdag evidence counts (`dir`, `sou`, `ds`, `prop`, `bet`, `sfs`, `mot`); `agreement` and `budget` evidence never qualify any verdict.
 
 | Verdict                                           | Enforced requirement                                                                                                                                                                                                            |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -194,7 +194,28 @@ Rules:
 - **References, not copies.** `promises` holds ids only. Riksdag evidence of the linked Tidö promises is not copied onto the manifesto promise; the site shows the linked promise's timeline inline.
 - **Schema checks:** `promises` is empty if and only if the outcome is `not_addressed`, and a promise has at most one agreement entry per `source`. A data test checks that every id in `promises` is a promise file in the same term and that `source` is a `government_agreement` source file.
 
-Budget evidence (budget bills, supplementary budgets, ESV outcomes) will be added by the budget epic.
+#### Budget evidence
+
+A third evidence kind, `budget`, records a before/after comparison of one anslag (appropriation line) for promises about money. Like `agreement` it is its own branch of the union, strict, and has none of the Riksdag fields.
+
+| Field            | Type              | Notes                                                                                                              |
+| ---------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `kind`           | `budget`          |                                                                                                                    |
+| `anslag.kod`     | string            | Restated anslag code as in `src/data/budget/expenditure.json`, with year suffix if discontinued                    |
+| `anslag.namn`    | string            | Anslag name in that release, so a reader (and the data test) can see what the code meant                           |
+| `anslag.release` | integer           | Last year of the ESV release the code was read from (`meta.years` max, e.g. 2025)                                  |
+| `years`          | `{from, to}`      | Years compared, `from` < `to`, within the data range                                                               |
+| `amounts`        | `{before, after}` | mn kr, nominal (as in the budget data, not inflation adjusted); `before` is the `from` year, `after` the `to` year |
+| `date`           | ISO date          | Places the entry on the timeline, e.g. the date of the budget proposition                                          |
+| `relevance`      | enum              | `full` or `partial`, as for Riksdag evidence                                                                       |
+| `note`           | string \| null    | Optional Swedish note                                                                                              |
+
+Rules:
+
+- **Stable reference.** Anslag codes are only unique within one release of the ESV data (see `docs/budget-data.md`, Gotchas), so the entry stores `kod` plus `release` and not a route slug. A data test (`src/data/budget-links.test.ts`) checks that `kod` exists in the committed data for that release with the same `namn`; when the data is regenerated from a new release, entries must be re-checked and `release` bumped.
+- **Evidence only, never a verdict.** Budget evidence does not qualify any verdict value (`in_progress`, `fulfilled`, `broken`, ...) and is ignored by stage derivation, like `agreement`.
+- **Link to `/budget`.** The anslag page does not exist yet; the link is derived from `kod` at build time once the budget pages land (`hemsida-rn4`), so it is not stored in the data.
+- **Rendering.** The detail page timeline shows the anslag name, the years, both amounts and the nominal change in Swedish; entries are ordered by `date` together with the Riksdag documents.
 
 ### Rejected candidates
 
