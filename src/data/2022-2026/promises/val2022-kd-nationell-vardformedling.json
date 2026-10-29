@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-nationell-vardformedling",
+  "term": "2022-2026",
+  "title": "Nationell vårdförmedling",
+  "description": "En nationell vårdförmedling införs som matchar vårdbehovet med vårdkapaciteten i hela landet.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 5,
+    "quote": "Inför en nationell vårdförmedling"
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "legislative",
+  "area": "Hälso- och sjukvård",
+  "committee": "SoU",
+  "keywords": ["vårdförmedling", "vårdköer", "vårdgaranti", "sjukvård"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-nationell-vardformedling"],
+      "outcome": "included",
+      "note": "Avtalet inför en nationell vårdförmedling i statlig regi där ledig kapacitet redovisas."
+    }
+  ]
+}

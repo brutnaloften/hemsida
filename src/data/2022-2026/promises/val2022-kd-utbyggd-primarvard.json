@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-utbyggd-primarvard",
+  "term": "2022-2026",
+  "title": "Utbyggd primärvård i hjärtlandet",
+  "description": "Primärvården byggs ut.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 9,
+    "quote": "utbyggd primärvård"
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "other_action",
+  "area": "Hälso- och sjukvård",
+  "committee": "SoU",
+  "keywords": ["primärvård", "landsbygd", "vårdcentraler"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-utbyggd-primarvard-tio-ar"],
+      "outcome": "included",
+      "note": "Avtalet innebär en omfattande utbyggnad av primärvården under tio år."
+    }
+  ]
+}

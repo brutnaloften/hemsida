@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-fler-vardplatser",
+  "term": "2022-2026",
+  "title": "Fler vårdplatser",
+  "description": "Antalet vårdplatser ska öka.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 5,
+    "quote": "Fler vårdplatser."
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "outcome",
+  "area": "Hälso- och sjukvård",
+  "committee": "SoU",
+  "keywords": ["vårdplatser", "sjukhus", "vårdköer"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-nationell-plan-vardplatser"],
+      "outcome": "weakened",
+      "note": "Avtalet utreder och tar fram en nationell plan mot bristen på vårdplatser, men lovar inte fler vårdplatser."
+    }
+  ]
+}

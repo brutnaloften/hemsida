@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-oversyn-av-sekretessreglerna",
+  "term": "2022-2026",
+  "title": "Total översyn av sekretessreglerna",
+  "description": "Sekretessreglerna ses över i sin helhet så att myndigheter kan dela uppgifter för att förebygga och klara upp brott.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 7,
+    "quote": "Total översyn av sekretessreglerna"
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "inquiry",
+  "area": "Rättsväsendet",
+  "committee": "KU",
+  "keywords": ["sekretess", "informationsutbyte", "myndighetssamverkan", "brottsbekämpning"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-sekretess-huvudregel-informationsdelning-brottsbekampning"],
+      "outcome": "included",
+      "note": "Avtalet inför en ny huvudregel i sekretesslagstiftningen om att all relevant information ska delas med brottsbekämpande myndigheter."
+    }
+  ]
+}

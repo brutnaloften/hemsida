@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-stotdampare-i-elskatten",
+  "term": "2022-2026",
+  "title": "Stötdämpare i elskatten",
+  "description": "En stötdämpare införs i elskatten så att skatten sänks om elpriserna ökar.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 9,
+    "quote": "Inför en \"stötdämpare\" i elskatten så att den sänks om elpriserna ökar."
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "legislative",
+  "area": "Energi",
+  "committee": "SkU",
+  "keywords": ["elskatt", "elpris", "stötdämpare", "energiskatt"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-hogkostnadsskydd-el-hushall-foretag", "tido-skydd-hushall-elprischocker"],
+      "outcome": "weakened",
+      "note": "Avtalet inför ett högkostnadsskydd för el och vill skydda hushållen mot elprischocker, men inte en stötdämpare i elskatten. Osäker."
+    }
+  ]
+}

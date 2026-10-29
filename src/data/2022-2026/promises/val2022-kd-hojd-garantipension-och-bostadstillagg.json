@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-hojd-garantipension-och-bostadstillagg",
+  "term": "2022-2026",
+  "title": "Höjd garantipension och höjt bostadstillägg",
+  "description": "Garantipensionen och bostadstillägget för pensionärer höjs.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 11,
+    "quote": "Höjd garantipension och höjt bostadstillägg för pensionärer."
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "budget",
+  "area": "Pension och skatt",
+  "committee": "SfU",
+  "keywords": ["garantipension", "bostadstillägg", "pensionärer", "pension"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-forslag-starka-pensionarernas-ekonomi"],
+      "outcome": "weakened",
+      "note": "Avtalet ska bara ta fram förslag för att stärka pensionärernas ekonomi, utan konkreta höjningar."
+    }
+  ]
+}

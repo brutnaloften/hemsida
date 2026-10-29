@@ -1,0 +1,35 @@
+{
+  "id": "val2022-kd-forlang-befintliga-reaktorers-drift",
+  "term": "2022-2026",
+  "title": "Förlängd drift av befintliga reaktorer",
+  "description": "Befintliga reaktorers drift förlängs.",
+  "source": {
+    "id": "valmanifest-2022-kd",
+    "page": 9,
+    "quote": "Förläng befintliga reaktorers drift"
+  },
+  "parties": ["KD"],
+  "roles": {
+    "KD": "government"
+  },
+  "type": "other_action",
+  "area": "Energi",
+  "committee": "NU",
+  "keywords": ["kärnkraft", "reaktorer", "drifttid", "energi"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-10-29",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-regler-mot-godtycklig-nedstangning-karnkraft"],
+      "outcome": "included",
+      "note": "Avtalet garanterar kärnkraften rätt till drift så länge anläggningarna är i gott skick och hindrar godtycklig nedstängning."
+    }
+  ]
+}
