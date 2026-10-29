@@ -1,0 +1,56 @@
+---
+import { Badge } from '@/components/ui/badge';
+import { VERDICTS, VERDICT_LABELS } from '@/schema/promise';
+import { VERDICT_STYLES } from '@/lib/promise-labels';
+import { assessedCount, verdictCounts, type PartyPromise } from '@/lib/party-stats';
+
+interface Props {
+  promises: Pick<PartyPromise, 'verdict'>[];
+}
+const { promises } = Astro.props;
+const counts = verdictCounts(promises);
+const total = promises.length;
+const assessed = assessedCount(promises);
+const pct = (n: number) => `${(n / total) * 100}%`;
+const segments = [
+  { cls: 'bg-foreground/70', n: assessed, label: 'Bedömda', show: true },
+  { cls: 'bg-zinc-400 dark:bg-zinc-600', n: counts.not_assessable, label: 'Ej bedömbara', show: counts.not_assessable > 0 },
+  { cls: 'bg-muted', n: counts.unassessed, label: 'Inte bedömda', show: true },
+];
+const legend = VERDICTS.filter((v) => counts[v] > 0 || v === 'unassessed');
+---
+
+<p class="text-sm text-muted-foreground">
+  {total} löften, varav {assessed} bedömda. {counts.unassessed} löften är ännu inte bedömda av någon.
+  {counts.not_assessable > 0 && ` ${counts.not_assessable} är ej bedömbara (till exempel vaga löften).`}
+</p>
+<div
+  class="mt-3 flex h-3 w-full overflow-hidden rounded-full border border-dashed border-muted-foreground/50"
+  role="img"
+  aria-label={`${assessed} av ${total} löften är bedömda, ${counts.not_assessable} ej bedömbara, ${counts.unassessed} inte bedömda`}
+>
+  {segments.map((seg) => <div class={seg.cls} style={`width:${pct(seg.n)}`} />)}
+</div>
+<ul class="mt-4 flex flex-wrap gap-2" aria-label="Förklaring">
+  {
+    legend.map((v) => (
+      <li>
+        <Badge class={VERDICT_STYLES[v]}>
+          {VERDICT_LABELS[v]}: {counts[v]}
+        </Badge>
+      </li>
+    ))
+  }
+</ul>
+<ul class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground" aria-label="Stapelns delar">
+  {
+    segments
+      .filter((seg) => seg.show)
+      .map((seg) => (
+        <li class="flex items-center gap-1.5">
+          <span class={`inline-block h-3 w-3 rounded-sm border border-muted-foreground/40 ${seg.cls}`} aria-hidden="true" />
+          {seg.label}
+        </li>
+      ))
+  }
+</ul>

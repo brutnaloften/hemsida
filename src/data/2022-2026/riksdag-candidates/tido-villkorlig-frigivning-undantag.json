@@ -1,0 +1,210 @@
+{
+  "promise_id": "tido-villkorlig-frigivning-undantag",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:villkorlig frigivning",
+    "keyword:särskilda skäl",
+    "keyword:tre fjärdedelar",
+    "keyword:övervakningstid",
+    "keyword:Kriminalvården",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD03297",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "297",
+      "datum": "2026-06-30",
+      "titel": "Ett nytt straffrättsligt påföljdssystem",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03297.html",
+      "found_by": [
+        "keyword:villkorlig frigivning",
+        "keyword:särskilda skäl",
+        "keyword:tre fjärdedelar",
+        "keyword:övervakningstid",
+        "all-keywords"
+      ],
+      "score": 5
+    },
+    {
+      "dok_id": "HCB348d2",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "48",
+      "datum": "2024-07-05",
+      "titel": "Ett ändamålsenligt samhällsskydd Volym 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB348d2.html",
+      "found_by": [
+        "keyword:villkorlig frigivning",
+        "keyword:särskilda skäl",
+        "keyword:tre fjärdedelar",
+        "all-keywords"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HD01JuU15",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU15",
+      "datum": "2026-04-02",
+      "titel": "Kriminalvårdsfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU15.html",
+      "found_by": ["keyword:Kriminalvården", "all-keywords", "committee:JuU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD01JuU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU8",
+      "datum": "2025-11-28",
+      "titel": "Skärpta regler för villkorlig frigivning",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU8.html",
+      "found_by": ["keyword:villkorlig frigivning", "keyword:tre fjärdedelar", "committee:JuU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HDB366d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d2.html",
+      "found_by": ["keyword:villkorlig frigivning", "keyword:särskilda skäl", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD03132",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "132",
+      "datum": "2026-02-19",
+      "titel": "Frihetsberövande påföljder för barn och unga",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03132.html",
+      "found_by": ["keyword:villkorlig frigivning", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD0395",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "95",
+      "datum": "2026-01-22",
+      "titel": "Säkerhetsförvaring – en ny tidsobestämd frihetsberövande påföljd",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0395.html",
+      "found_by": ["keyword:övervakningstid", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD0334",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "34",
+      "datum": "2025-10-16",
+      "titel": "Skärpta regler för villkorlig frigivning",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0334.html",
+      "found_by": ["keyword:villkorlig frigivning", "keyword:tre fjärdedelar"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01JuU14",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU14",
+      "datum": "2025-04-23",
+      "titel": "Kriminalvårdsfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU14.html",
+      "found_by": ["keyword:Kriminalvården", "committee:JuU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HCB348",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "48",
+      "datum": "2024-07-05",
+      "titel": "Ett ändamålsenligt samhällsskydd Volym 1",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB348.html",
+      "found_by": ["keyword:villkorlig frigivning", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01JuU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU17",
+      "datum": "2024-04-17",
+      "titel": "Kriminalvårdsfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU17.html",
+      "found_by": ["all-keywords", "committee:JuU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HBB344",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "44",
+      "datum": "2023-11-08",
+      "titel": "En översyn av regleringen om frihetsberövande påföljder för unga ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB344.html",
+      "found_by": ["keyword:villkorlig frigivning", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01JuU13",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU13",
+      "datum": "2023-04-13",
+      "titel": "Kriminalvårdsfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU13.html",
+      "found_by": ["keyword:Kriminalvården", "committee:JuU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HEB1119",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "119",
+      "datum": "2026-09-03",
+      "titel": "En stärkt hälso- och sjukvård inom Kriminalvården",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1119.html",
+      "found_by": ["keyword:Kriminalvården"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03295",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "295",
+      "datum": "2026-06-30",
+      "titel": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03295.html",
+      "found_by": ["keyword:övervakningstid"],
+      "score": 1
+    }
+  ]
+}

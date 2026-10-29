@@ -1,0 +1,203 @@
+{
+  "promise_id": "tido-utred-ansvar-staten-kommuner-langtidsarbetslosa",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:ansvarsfördelning",
+    "keyword:långtidsarbetslösa",
+    "keyword:kommunerna",
+    "keyword:Arbetsförmedlingen",
+    "all-keywords",
+    "committee:AU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01AU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU9",
+      "datum": "2026-02-20",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU9.html",
+      "found_by": [
+        "keyword:långtidsarbetslösa",
+        "keyword:Arbetsförmedlingen",
+        "all-keywords",
+        "committee:AU"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HD01AU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU14",
+      "datum": "2026-06-04",
+      "titel": "Tidsbegränsat boende för vissa nyanlända invandrare – en ny lag om bosättning",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU14.html",
+      "found_by": ["keyword:kommunerna", "all-keywords", "committee:AU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD01AU6",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU6",
+      "datum": "2026-03-10",
+      "titel": "Riksrevisionens rapport om Arbetsförmedlingens stöd till personer med funktionsnedsättning, m.m.",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU6.html",
+      "found_by": ["keyword:Arbetsförmedlingen", "all-keywords", "committee:AU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD0372",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "72",
+      "datum": "2025-12-09",
+      "titel": "Riksrevisionens rapport om Arbetsförmedlingens stöd till personer med funktionsnedsättning",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0372.html",
+      "found_by": ["keyword:långtidsarbetslösa", "keyword:Arbetsförmedlingen", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HC01AU3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU3",
+      "datum": "2024-10-17",
+      "titel": "Riksrevisionens rapport om kortutbildade arbetssökandes övergång till reguljär utbildning",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU3.html",
+      "found_by": ["keyword:Arbetsförmedlingen", "all-keywords", "committee:AU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HEB188",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "88",
+      "datum": "2026-08-06",
+      "titel": "Åtgärder mot långtidsarbetslöshet",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB188.html",
+      "found_by": ["keyword:långtidsarbetslösa", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01TU20",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "TU20",
+      "datum": "2026-06-11",
+      "titel": "Infrastrukturfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HD01TU20.html",
+      "found_by": ["keyword:ansvarsfördelning", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01AU2",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU2",
+      "datum": "2025-12-04",
+      "titel": "Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU2.html",
+      "found_by": ["keyword:Arbetsförmedlingen", "committee:AU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01AU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU11",
+      "datum": "2025-06-03",
+      "titel": "Förbättrat informationsutbyte mellan Arbetsförmedlingen och kommuner",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU11.html",
+      "found_by": ["keyword:kommunerna", "keyword:Arbetsförmedlingen"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01AU6",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU6",
+      "datum": "2025-03-03",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU6.html",
+      "found_by": ["all-keywords", "committee:AU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01AU10",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "AU10",
+      "datum": "2024-06-03",
+      "titel": "Riksrevisionens rapport om kontrollen av subventionerade anställningar",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HB01AU10.html",
+      "found_by": ["keyword:Arbetsförmedlingen", "committee:AU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HCB48",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "8",
+      "datum": "2024-05-17",
+      "titel": "Förbättrat informationsutbyte mellan Arbetsförmedlingen och kommuner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB48.html",
+      "found_by": ["keyword:Arbetsförmedlingen", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01AU3",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "AU3",
+      "datum": "2023-12-11",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HB01AU3.html",
+      "found_by": ["all-keywords", "committee:AU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03288",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "288",
+      "datum": "2026-06-23",
+      "titel": "Riksrevisionens rapport om statens styrning av kommunernas myndighetsutövning som avser LSS",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03288.html",
+      "found_by": ["keyword:kommunerna"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SfU32",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU32",
+      "datum": "2026-06-11",
+      "titel": "Stärkt återvändandeverksamhet",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
+      "found_by": ["keyword:Arbetsförmedlingen"],
+      "score": 1
+    }
+  ]
+}

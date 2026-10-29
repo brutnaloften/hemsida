@@ -1,0 +1,209 @@
+{
+  "promise_id": "tido-lagre-drivmedelspriser",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:drivmedelspriser",
+    "keyword:bensinpris",
+    "keyword:dieselpris",
+    "keyword:reduktionsplikt",
+    "keyword:energiskatt",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HB0344",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "44",
+      "datum": "2023-11-28",
+      "titel": "Riksrevisionens rapport om reduktionsplikten för bensin och diesel",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0344.html",
+      "found_by": [
+        "keyword:drivmedelspriser",
+        "keyword:dieselpris",
+        "keyword:reduktionsplikt",
+        "all-keywords"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HB0328",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "28",
+      "datum": "2023-10-17",
+      "titel": "Sänkning av reduktionsplikten för bensin och diesel",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0328.html",
+      "found_by": [
+        "keyword:drivmedelspriser",
+        "keyword:dieselpris",
+        "keyword:reduktionsplikt",
+        "all-keywords"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HEB333",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "33",
+      "datum": "2026-05-28",
+      "titel": "Vägen mot utfasning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB333.html",
+      "found_by": ["keyword:bensinpris", "keyword:dieselpris", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HC0330",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "30",
+      "datum": "2024-10-17",
+      "titel": "Sänkt skatt på bensin och diesel",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0330.html",
+      "found_by": ["keyword:drivmedelspriser", "keyword:dieselpris", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HB01MJU5",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU5",
+      "datum": "2023-11-23",
+      "titel": "Sänkning av reduktionsplikten för bensin och diesel",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU5.html",
+      "found_by": ["keyword:drivmedelspriser", "keyword:reduktionsplikt", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD01FiU47",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU47",
+      "datum": "2026-06-16",
+      "titel": "Extra ändringsbudget för 2026 – Stöd till Ukraina samt stöd till hushåll och andra åtgärder med anledning av kriget i Mellanöstern",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU47.html",
+      "found_by": ["keyword:drivmedelspriser", "keyword:dieselpris"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03275",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "275",
+      "datum": "2026-05-28",
+      "titel": "Extra ändringsbudget för 2026 – Stöd till Ukraina samt stöd till hushåll och andra åtgärder med anledning av kriget i Mellanöstern",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03275.html",
+      "found_by": ["keyword:drivmedelspriser", "keyword:energiskatt"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01FiU48",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU48",
+      "datum": "2026-04-21",
+      "titel": "Extra ändringsbudget för 2026 – Sänkt skatt på drivmedel samt el- och gasprisstöd",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU48.html",
+      "found_by": ["keyword:drivmedelspriser", "keyword:energiskatt"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03236",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "236",
+      "datum": "2026-04-13",
+      "titel": "Extra ändringsbudget för 2026 – Sänkt skatt på drivmedel samt el- och gasprisstöd",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03236.html",
+      "found_by": ["keyword:drivmedelspriser", "keyword:energiskatt"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01MJU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU16",
+      "datum": "2026-03-02",
+      "titel": "Klimatpolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU16.html",
+      "found_by": ["keyword:bensinpris", "keyword:dieselpris"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["keyword:bensinpris", "keyword:energiskatt"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["keyword:reduktionsplikt", "keyword:energiskatt"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01MJU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU17",
+      "datum": "2025-05-15",
+      "titel": "Nya regler för datacenter och hållbara bränslen samt en ny reduktionsplikt",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU17.html",
+      "found_by": ["keyword:reduktionsplikt", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["keyword:drivmedelspriser", "keyword:reduktionsplikt"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01MJU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU8",
+      "datum": "2024-03-07",
+      "titel": "Riksrevisionens rapport om reduktionsplikten för bensin och diesel",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU8.html",
+      "found_by": ["keyword:reduktionsplikt", "all-keywords"],
+      "score": 2
+    }
+  ]
+}

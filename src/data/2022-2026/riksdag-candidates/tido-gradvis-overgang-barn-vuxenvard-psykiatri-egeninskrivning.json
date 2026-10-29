@@ -1,0 +1,204 @@
+{
+  "promise_id": "tido-gradvis-overgang-barn-vuxenvard-psykiatri-egeninskrivning",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:psykiatri",
+    "keyword:egeninskrivning",
+    "keyword:övergång barn vuxenvård",
+    "keyword:vårdplats",
+    "keyword:patientens önskemål",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SoU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU16",
+      "datum": "2026-04-01",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
+      "found_by": ["keyword:psykiatri", "keyword:vårdplats", "all-keywords", "committee:SoU"],
+      "score": 4
+    },
+    {
+      "dok_id": "HA01SoU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU12",
+      "datum": "2023-04-24",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
+      "found_by": [
+        "keyword:vårdplats",
+        "keyword:patientens önskemål",
+        "all-keywords",
+        "committee:SoU"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HEB338",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "38",
+      "datum": "2026-06-17",
+      "titel": "Behovsstyrd vård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB338.html",
+      "found_by": ["keyword:vårdplats", "keyword:patientens önskemål", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["keyword:psykiatri", "keyword:vårdplats", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HB01SoU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU14",
+      "datum": "2024-06-03",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU14.html",
+      "found_by": ["keyword:vårdplats", "all-keywords", "committee:SoU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD01SoU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU1",
+      "datum": "2025-12-03",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
+      "found_by": ["keyword:psykiatri", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB384",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "84",
+      "datum": "2025-06-27",
+      "titel": "Hem för barn och unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB384.html",
+      "found_by": ["keyword:vårdplats", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB310",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "10",
+      "datum": "2025-02-04",
+      "titel": "En förändrad abortlag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB310.html",
+      "found_by": ["keyword:vårdplats", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["keyword:vårdplats", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03271",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "271",
+      "datum": "2026-05-26",
+      "titel": "En förändrad abortlag",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03271.html",
+      "found_by": ["keyword:vårdplats"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03251",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "251",
+      "datum": "2026-04-30",
+      "titel": "En mer sammanhållen vård för personer med skadligt bruk eller beroende och andra psykiatriska tillstånd",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03251.html",
+      "found_by": ["keyword:psykiatri"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03101",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "101",
+      "datum": "2026-04-13",
+      "titel": "Årsredovisning för staten 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03101.html",
+      "found_by": ["keyword:psykiatri"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SoU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU14",
+      "datum": "2026-01-27",
+      "titel": "Läkemedel och tandvård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU14.html",
+      "found_by": ["committee:SoU"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD0319",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "19",
+      "datum": "2025-09-30",
+      "titel": "Nästa steg för en god och nära vård",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0319.html",
+      "found_by": ["keyword:psykiatri"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SoU16",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU16",
+      "datum": "2025-06-04",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
+      "found_by": ["committee:SoU"],
+      "score": 1
+    }
+  ]
+}

@@ -14,31 +14,14 @@ import Anthropic from '@anthropic-ai/sdk';
 import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
 import { z } from 'zod';
 import { loggedParse } from './claude.ts';
+import { COMMITTEES, slugify } from './common.ts';
 import { PROMISE_TYPES, promiseSchema, type PromiseRecord } from './schema.ts';
 
 export const MODEL = 'claude-opus-5-5';
 export const SOURCE_ID = 'tidoavtalet';
 export const TERM = '2022-2026';
 
-/** Riksdag committee codes the model may pick from (matches data.riksdagen.se `org`). */
-export const COMMITTEES = [
-  'AU',
-  'CU',
-  'FiU',
-  'FöU',
-  'JuU',
-  'KU',
-  'KrU',
-  'MJU',
-  'NU',
-  'SfU',
-  'SkU',
-  'SoU',
-  'TU',
-  'UbU',
-  'UFöU',
-  'UU',
-] as const;
+export { COMMITTEES, slugify };
 
 /** What the model returns for one promise. Deliberately simple (no regexes) for structured outputs. */
 export const rawCandidateSchema = z.object({
@@ -92,22 +75,9 @@ export function countPdfPages(pdf: Buffer): number | null {
   return n > 0 ? n : null;
 }
 
-export function slugify(s: string): string {
-  return s
-    .toLowerCase()
-    .replace(/å|ä/g, 'a')
-    .replace(/ö/g, 'o')
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 60)
-    .replace(/-+$/g, '');
-}
-
 const PARTIES = ['M', 'KD', 'L', 'SD'] as const;
 
-/** Turn a raw candidate into a schema-valid draft promise (verdict not_started). Throws on invalid data. */
+/** Turn a raw candidate into a schema-valid draft promise (verdict unassessed). Throws on invalid data. */
 export function toEntry(
   raw: RawCandidate,
   chunk: Chunk,
@@ -134,7 +104,7 @@ export function toEntry(
       ? raw.committee
       : undefined,
     keywords: raw.keywords.map((k) => k.trim()).filter(Boolean),
-    verdict: { value: 'not_started', reasoning: '', date: verdictDate, history: [] },
+    verdict: { value: 'unassessed', reasoning: '', date: verdictDate, history: [] },
     evidence: [],
   });
   return { chunk: chunk.key, ministry: raw.ministry.trim(), promise };

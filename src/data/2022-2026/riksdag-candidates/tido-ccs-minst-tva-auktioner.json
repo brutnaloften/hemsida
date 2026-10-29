@@ -1,0 +1,214 @@
+{
+  "promise_id": "tido-ccs-minst-tva-auktioner",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:CCS",
+    "keyword:koldioxidinfångning",
+    "keyword:omvända auktioner",
+    "keyword:BECCS",
+    "keyword:Energimyndigheten",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01MJU14",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU14",
+      "datum": "2025-04-24",
+      "titel": "Klimatpolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU14.html",
+      "found_by": [
+        "keyword:koldioxidinfångning",
+        "keyword:omvända auktioner",
+        "all-keywords",
+        "committee:MJU"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HB01MJU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU15",
+      "datum": "2024-05-06",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
+      "found_by": [
+        "keyword:koldioxidinfångning",
+        "keyword:omvända auktioner",
+        "all-keywords",
+        "committee:MJU"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HA01MJU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU16",
+      "datum": "2023-05-26",
+      "titel": "Klimatpolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU16.html",
+      "found_by": [
+        "keyword:koldioxidinfångning",
+        "keyword:omvända auktioner",
+        "all-keywords",
+        "committee:MJU"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HD01MJU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU16",
+      "datum": "2026-03-02",
+      "titel": "Klimatpolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU16.html",
+      "found_by": ["keyword:CCS", "all-keywords", "committee:MJU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HB01MJU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU1",
+      "datum": "2023-12-11",
+      "titel": "Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU1.html",
+      "found_by": ["keyword:koldioxidinfångning", "all-keywords", "committee:MJU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HA01MJU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU1",
+      "datum": "2022-12-15",
+      "titel": "Utgiftsområde 20 Allmän miljö- och naturvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU1.html",
+      "found_by": ["keyword:omvända auktioner", "all-keywords", "committee:MJU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HEB333",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "33",
+      "datum": "2026-05-28",
+      "titel": "Vägen mot utfasning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB333.html",
+      "found_by": ["keyword:BECCS", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03153",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "153",
+      "datum": "2026-03-03",
+      "titel": "Riksrevisionens rapport om internationella klimatinsatser",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03153.html",
+      "found_by": ["keyword:CCS", "keyword:Energimyndigheten"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["keyword:CCS", "keyword:Energimyndigheten"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01MJU15",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU15",
+      "datum": "2025-04-09",
+      "titel": "Riksrevisionens rapport om Industriklivet",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU15.html",
+      "found_by": ["keyword:Energimyndigheten", "committee:MJU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["keyword:CCS", "keyword:koldioxidinfångning"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC031d21",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d21.html",
+      "found_by": ["keyword:omvända auktioner", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01MJU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU8",
+      "datum": "2024-03-07",
+      "titel": "Riksrevisionens rapport om reduktionsplikten för bensin och diesel",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU8.html",
+      "found_by": ["keyword:Energimyndigheten", "committee:MJU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["keyword:CCS", "keyword:koldioxidinfångning"],
+      "score": 2
+    },
+    {
+      "dok_id": "HBB315",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "15",
+      "datum": "2023-03-29",
+      "titel": "Förnybart i tanken Ett styrmedelsförslag för en stärkt bioekonomi ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB315.html",
+      "found_by": ["keyword:omvända auktioner", "all-keywords"],
+      "score": 2
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "promise_id": "tido-sankt-etableringsstod",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:etableringsersättning",
+    "keyword:etableringstillägg",
+    "keyword:aktivitetskrav",
+    "keyword:SFI",
+    "keyword:nyanlända",
+    "all-keywords",
+    "committee:AU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD03189",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "189",
+      "datum": "2026-03-17",
+      "titel": "Vissa justeringar i inkomstskattelagen med anledning av förändrade ersättningar för nyanlända invandrare",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03189.html",
+      "found_by": [
+        "keyword:etableringsersättning",
+        "keyword:etableringstillägg",
+        "keyword:nyanlända"
+      ],
+      "score": 3
+    },
+    {
+      "dok_id": "HD01AU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU8",
+      "datum": "2026-01-29",
+      "titel": "Integration",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU8.html",
+      "found_by": ["keyword:nyanlända", "all-keywords", "committee:AU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HA01AU6",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU6",
+      "datum": "2023-02-17",
+      "titel": "Integration",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU6.html",
+      "found_by": ["keyword:nyanlända", "all-keywords", "committee:AU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD01SkU35",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU35",
+      "datum": "2026-06-04",
+      "titel": "Vissa justeringar i inkomstskattelagen med anledning av förändrade ersättningar för nyanlända invandrare",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU35.html",
+      "found_by": ["keyword:etableringstillägg", "keyword:nyanlända"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03207",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "207",
+      "datum": "2026-03-17",
+      "titel": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03207.html",
+      "found_by": ["keyword:aktivitetskrav", "keyword:SFI"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03175",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "175",
+      "datum": "2026-03-12",
+      "titel": "Skärpta krav för svenskt medborgarskap",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03175.html",
+      "found_by": ["keyword:etableringsersättning", "keyword:SFI"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["keyword:etableringstillägg", "keyword:aktivitetskrav"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB353",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "53",
+      "datum": "2025-04-30",
+      "titel": "Kvalificering till socialförsäkring och ekonomiskt bistånd för vissa grupper",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB353.html",
+      "found_by": ["keyword:etableringstillägg", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB315",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "15",
+      "datum": "2025-02-26",
+      "titel": "Stärkta drivkrafter och möjligheter för biståndsmottagare",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB315.html",
+      "found_by": ["keyword:etableringstillägg", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HCB429",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "29",
+      "datum": "2024-11-25",
+      "titel": "Aktivitetskrav inom försörjningsstödet - för arbete, egenförsörjning och nationell likformighet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB429.html",
+      "found_by": ["keyword:aktivitetskrav", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HCB341",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "41",
+      "datum": "2024-06-14",
+      "titel": "Styrkraft för lyckad integration ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB341.html",
+      "found_by": ["keyword:etableringstillägg", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HEB419",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "19",
+      "datum": "2026-09-07",
+      "titel": "Utökad tillsyn över barn vars föräldrar omfattas av aktivitetskrav enligt socialtjänstlagen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB419.html",
+      "found_by": ["keyword:aktivitetskrav"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01AU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU14",
+      "datum": "2026-06-04",
+      "titel": "Tidsbegränsat boende för vissa nyanlända invandrare – en ny lag om bosättning",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU14.html",
+      "found_by": ["keyword:nyanlända"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SoU29",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU29",
+      "datum": "2026-05-20",
+      "titel": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU29.html",
+      "found_by": ["keyword:aktivitetskrav"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03101",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "101",
+      "datum": "2026-04-13",
+      "titel": "Årsredovisning för staten 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03101.html",
+      "found_by": ["keyword:etableringsersättning"],
+      "score": 1
+    }
+  ]
+}

@@ -22,7 +22,8 @@ export const PROMISE_TYPES = [
 ] as const;
 
 export const VERDICTS = [
-  'not_started',
+  'unassessed',
+  'no_evidence',
   'in_progress',
   'fulfilled',
   'partially_fulfilled',
@@ -34,7 +35,8 @@ export const VERDICTS = [
 
 /** Swedish display labels for verdict values. */
 export const VERDICT_LABELS: Record<(typeof VERDICTS)[number], string> = {
-  not_started: 'Ej påbörjat',
+  unassessed: 'Inte bedömt',
+  no_evidence: 'Inga belägg funna',
   in_progress: 'Pågår',
   fulfilled: 'Uppfyllt',
   partially_fulfilled: 'Delvis uppfyllt',
@@ -52,7 +54,57 @@ const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'expected a lowercas
 
 export const verdictValueSchema = z.enum(VERDICTS);
 
-export const evidenceSchema = z
+/**
+ * How a government agreement (e.g. Tidöavtalet) treated a promise made elsewhere (e.g. a party
+ * manifesto). Describes the agreement text only; it is never a verdict.
+ */
+export const AGREEMENT_OUTCOMES = [
+  'included',
+  'weakened',
+  'strengthened',
+  'contradicted',
+  'not_addressed',
+] as const;
+
+/** Swedish display labels for agreement outcomes. */
+export const AGREEMENT_OUTCOME_LABELS: Record<(typeof AGREEMENT_OUTCOMES)[number], string> = {
+  included: 'Med i avtalet',
+  weakened: 'Urvattnat',
+  strengthened: 'Skärpt',
+  contradicted: 'Motsägs',
+  not_addressed: 'Saknas i avtalet',
+};
+
+const agreementEvidenceSchema = z
+  .object({
+    kind: z.literal('agreement'),
+    /** Id of the agreement's source file (kind government_agreement). */
+    source: slug,
+    date: isoDate,
+    /** Ids of the agreement's promises that correspond to this one. */
+    promises: z.array(slug).default([]),
+    outcome: z.enum(AGREEMENT_OUTCOMES),
+    note: z.string().nullable().default(null),
+  })
+  .strict()
+  .superRefine((e, ctx) => {
+    if (e.outcome === 'not_addressed' && e.promises.length > 0) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['promises'],
+        message: 'promises must be empty when the outcome is not_addressed',
+      });
+    }
+    if (e.outcome !== 'not_addressed' && e.promises.length === 0) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['promises'],
+        message: 'promises must list at least one promise unless the outcome is not_addressed',
+      });
+    }
+  });
+
+const riksdagEvidenceSchema = z
   .object({
     kind: z.enum(EVIDENCE_KINDS),
     dok_id: z.string().min(1),
@@ -74,22 +126,27 @@ export const evidenceSchema = z
     }
   });
 
+export const evidenceSchema = z.discriminatedUnion('kind', [
+  riksdagEvidenceSchema,
+  agreementEvidenceSchema,
+]);
+
 const verdictEntry = z.object({
   value: verdictValueSchema,
   reasoning: z.string().default(''),
   date: isoDate,
 });
 
-/** Reasoning is required for every verdict value except `not_started`. */
+/** Reasoning is required for every verdict value except `unassessed` and `no_evidence`. */
 function requireReasoning(
   v: { value: string; reasoning: string },
   ctx: z.core.$RefinementCtx,
 ): void {
-  if (v.value !== 'not_started' && v.reasoning.trim() === '') {
+  if (v.value !== 'unassessed' && v.value !== 'no_evidence' && v.reasoning.trim() === '') {
     ctx.addIssue({
       code: 'custom',
       path: ['reasoning'],
-      message: 'reasoning is required unless the verdict is not_started',
+      message: 'reasoning is required unless the verdict is unassessed or no_evidence',
     });
   }
 }
@@ -103,6 +160,74 @@ export const sourceRefSchema = z.object({
   page: z.number().int().positive().optional(),
   quote: z.string().optional(),
 });
+
+const PLANNING_KINDS: readonly string[] = ['dir', 'sou', 'ds', 'prop'];
+const ISO_DATE_IN_TEXT = /\d{4}-\d{2}-\d{2}/;
+const MIN_SEARCH_NOTE_LENGTH = 30;
+
+/**
+ * Evidence-to-verdict constraints for the CURRENT verdict (history entries are not checked; they
+ * were judged against the evidence available at the time). Only Riksdag evidence counts;
+ * `agreement` evidence never qualifies a verdict. See "Verdict" in docs/data-model.md.
+ */
+function checkVerdictEvidence(
+  p: {
+    verdict: { value: string; reasoning: string };
+    evidence: Evidence[];
+    committee?: string | undefined;
+    keywords: string[];
+  },
+  ctx: z.core.$RefinementCtx,
+): void {
+  const { value, reasoning } = p.verdict;
+  const riksdag = p.evidence.filter((e): e is RiksdagEvidence => e.kind !== 'agreement');
+  const fail = (message: string) =>
+    ctx.addIssue({ code: 'custom', path: ['verdict', 'value'], message });
+
+  if (value === 'in_progress' && !riksdag.some((e) => PLANNING_KINDS.includes(e.kind))) {
+    fail(
+      'verdict in_progress requires Riksdag evidence of kind dir, sou, ds or prop (agreement evidence does not count)',
+    );
+  }
+  if (value === 'fulfilled' && !riksdag.some((e) => e.kind === 'sfs')) {
+    fail(
+      'verdict fulfilled requires Riksdag evidence of kind sfs (agreement evidence does not count)',
+    );
+  }
+  if (value === 'broken') {
+    const hasVote = riksdag.some((e) => e.kind === 'bet' && e.votes !== undefined);
+    const citesDocument = riksdag.some((e) => reasoning.includes(e.designation));
+    if (!hasVote && !citesDocument) {
+      fail(
+        'verdict broken requires a bet evidence entry with votes (a voting record), or reasoning that cites the designation of a Riksdag evidence entry documenting the reversal',
+      );
+    }
+  }
+  if (value === 'no_evidence') {
+    const text = reasoning.toLowerCase();
+    const terms = [...(p.committee ? [p.committee] : []), ...p.keywords]
+      .map((t) => t.trim().toLowerCase())
+      .filter((t) => t !== '');
+    const problems: string[] = [];
+    if (!ISO_DATE_IN_TEXT.test(reasoning)) problems.push('the date of the search (YYYY-MM-DD)');
+    if (terms.length > 0) {
+      if (!terms.some((t) => text.includes(t))) {
+        problems.push(
+          'what was searched (mention the committee or at least one of the promise keywords)',
+        );
+      }
+    } else if (reasoning.trim().length < MIN_SEARCH_NOTE_LENGTH) {
+      problems.push(`what was searched (at least ${MIN_SEARCH_NOTE_LENGTH} characters)`);
+    }
+    if (problems.length > 0) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['verdict', 'reasoning'],
+        message: `verdict no_evidence requires reasoning recording the search: ${problems.join('; ')}`,
+      });
+    }
+  }
+}
 
 export const promiseSchema = z
   .object({
@@ -130,6 +255,19 @@ export const promiseSchema = z
         });
       }
     }
+    const agreementSources = new Set<string>();
+    p.evidence.forEach((e, i) => {
+      if (e.kind !== 'agreement') return;
+      if (agreementSources.has(e.source)) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['evidence', i, 'source'],
+          message: `more than one agreement entry for source ${e.source}`,
+        });
+      }
+      agreementSources.add(e.source);
+    });
+    checkVerdictEvidence(p, ctx);
   });
 
 export const sourceSchema = z.object({
@@ -140,40 +278,14 @@ export const sourceSchema = z.object({
   date: isoDate,
   url: z.url(),
   archive: z.url(),
+  /** Date the original `url` was found dead (404/gone); the archive copy is then preferred. */
+  urlDeadAsOf: isoDate.optional(),
 });
 
 export type PromiseRecord = z.infer<typeof promiseSchema>;
 export type Evidence = z.infer<typeof evidenceSchema>;
+export type RiksdagEvidence = Extract<Evidence, { kind: (typeof EVIDENCE_KINDS)[number] }>;
+export type AgreementEvidence = Extract<Evidence, { kind: 'agreement' }>;
+export type AgreementOutcome = (typeof AGREEMENT_OUTCOMES)[number];
 export type Verdict = z.infer<typeof verdictSchema>;
 export type Source = z.infer<typeof sourceSchema>;
-
-/**
- * Current (v1) promise shape, still used by the content collection until
- * hemsida-bzj.5 migrates the data files to v2. Remove then.
- */
-const legacySource = z.object({
-  value: z.string(),
-  archive: z.string(),
-  broken: z.boolean().optional(),
-});
-
-export const legacyPromiseSchema = z.object({
-  name: z.string(),
-  description: z.string(),
-  party: z.string(),
-  status: z.string(),
-  date: z.string(),
-  sources: z.array(legacySource),
-  tags: z.array(z.string()),
-  updates: z
-    .array(
-      z.object({
-        date: z.string(),
-        status: z.string(),
-        reasoning: z.string(),
-        sources: z.array(legacySource),
-        confidence: z.enum(['high', 'medium']).optional(),
-      }),
-    )
-    .default([]),
-});

@@ -306,4 +306,47 @@ Votes can also be listed as documents: `dokumentlista?doktyp=votering` returns i
 - Date fields: `datum` is the document date, `publicerad` the publication timestamp, `systemdatum` the last system update. Whether `systemdatum` can be filtered server-side for incremental refreshes is **UNVERIFIED**.
 - `status` strings vary by type (`Klar`, `Webbpublicering`, `planerat`, `Inkommen`, `Inte besvarad`); do not treat them as one lifecycle.
 - Treat numeric-looking fields as strings, handle `null` and `""`, normalise single-object versus array in nested lists, and treat a missing `dokument` key as an empty result.
-- Not explored: member and speech endpoints (`personlista`, `anforandelista`), bulk dumps, `sokdata` internals, and handling of `skr` beyond the `subtyp` observation.
+- Not explored: member and speech endpoints (`personlista`, `anforandelista`), bulk dumps (exist as per-type archives, not used; see "Incremental ingest"), `sokdata` internals, and handling of `skr` beyond the `subtyp` observation.
+
+## Candidate search (per-promise document search)
+
+`tools/search-riksdag-candidates.ts` (logic in `tools/lib/riksdag-candidates.ts`) proposes Riksdag documents for each Tidö promise. Output is one file per promise, `src/data/<term>/riksdag-candidates/<promise-id>.json`, holding the queries used and up to 15 ranked documents (`dok_id`, `doktyp`, `rm`, `beteckning`, `datum`, `titel`, `organ`, `url`, `found_by`, `score`). It is data for the matcher only: it never touches promise evidence or verdicts. Pairs in `rejected-candidates.json` are dropped. Run `--dry-run` to print the planned queries, `--limit N` for the next N unattempted promises, `--promise <id>` to re-search one. Attempted promises are tracked in `tools/out/riksdag-candidates.<term>.processed` and raw responses are cached in `tools/out/riksdag-cache/` (both gitignored). Requests run sequentially, one per second.
+
+Strategy, from a smoke run on 10 promises (2026-10-28):
+
+- Window: `from`/`tom` covering the term (`2022-09-01` to `2026-09-30`) instead of `rm`, because `rm` has a different format per document type. Types: `dir`, `sou`, `ds`, `prop`, `bet`. Motions, questions and votes are left out (noise, and votes are reached through the `bet`).
+- One query per keyword (max 5), sorted by relevance. A keyword on its own is specific enough to find the topic. Multi-word keywords are quoted.
+- One query with all keywords together. Multi-word AND queries are narrow (43 hits for four keywords against 72 for `reservkraft` alone), so it works as a precision signal, not as the only query.
+- One `doktyp=bet&org=<committee>` query with all keywords, since the committee report is where the Riksdag decided on the topic.
+- Ranking: the number of distinct queries that returned a document, then newest first. A document found by several keywords or by the committee query is nearly always the relevant betänkande or proposition (for example the activity-requirement promise ranks `Aktivitetskrav för mottagare av försörjningsstöd`, both the proposition and the SoU report, first).
+- Weak spots: generic keywords (`investeringar`, `infrastruktur`, `väg`) return broad budget documents; promises about repealing or not doing something (`ökad anonymitet för poliser`) rank tangential documents because no document is titled after them; recurring documents such as `Riksdagens skrivelser till regeringen` and `Utgiftsområde` budget bets show up for many promises. The matcher is expected to discard these; better keywords on the promise file are the cheapest fix.
+- Cost: 4 to 7 requests per promise, so about 272 promises in roughly 25 minutes at one request per second.
+
+## Incremental ingest (local document store)
+
+`tools/ingest-riksdag.ts` (logic in `tools/lib/riksdag-ingest.ts`) stores metadata for `dir`, `sou`, `ds`, `prop` and `bet` documents of a term in a local file, and `tools/match-riksdag-candidates.ts` (logic in `tools/lib/riksdag-match.ts`) scores them against the promises. It replaces the per-promise search (about 1,850 requests for a full backfill) with a one-time ingest of a few dozen requests plus a local match. The per-promise search still works and writes the same files.
+
+### Decision: paged API, not bulk dumps (2026-10-28)
+
+Bulk dumps do exist; my first version of this section wrongly said they did not. The Riksdag's open-data page (`riksdagen.se/sv/dokument-och-lagar/riksdagens-oppna-data/dokument/`) links archives per document type and period, for example `https://data.riksdagen.se/dataset/dokument/bet-2022-2025.json.zip` and `prop-2022-2025.json.zip` (the `bet` archive is about 90 MB; a header check returned 200). I guessed file names and paths that did not exist (the guesses all returned 404) and never looked at that page. No dump was downloaded.
+
+Trade-off:
+
+- **Dumps:** one request per type and period, but large (tens of MB each), they hold full documents and not just metadata, the periods (for example 2022-2025) do not line up with the Tidö term (September 2022 to September 2026), and they are snapshots. Incremental runs would still need the API for everything newer than the latest archive, so two code paths would be needed.
+- **Paged search with a date window:** `dokumentlista?doktyp=<t>&from=<date>&tom=<date>&sort=datum&sortorder=asc&sz=200&p=<n>` works (verified for `bet` and `dir`: `@traffar`, `@sidor` and ascending dates behave). Each list item already carries the text needed for keyword matching: `summary`, `notisrubrik`, `notis` and `undertitel` were all present for every `bet` and `dir` item checked (240 of 240 items had text, 446 characters on average, e.g. "Riksdagen sa nej till cirka 80 förslag om arbetsmarknadspolitik ..."). No `dokumentstatus` or full-text fetch is needed for matching, and the same code serves the first run and later runs.
+
+So: paged API stays the choice. A full backfill is `sum(@traffar / 200)` requests over five types, roughly 30 to 40, about one minute at one request per second, which is cheaper than downloading hundreds of MB. If the API ever becomes a problem, a dump could seed the first backfill: the store format (below) is simple enough to fill from one, after which normal incremental runs take over.
+
+### Cursor and store
+
+- Store: `tools/out/riksdag-store/<term>.json` (gitignored with the rest of `tools/out/`): `cursors` (latest `datum` per `doktyp`), a `documents` map by `dok_id` and a `next_seq` counter. Each stored document has `dok_id`, `doktyp`, `rm`, `beteckning`, `titel`, `datum`, `organ`, `url`, `text` (subtitle, notice heading, summary and notice joined, tags stripped, capped at 1,500 characters) and `seq`, the ingest order. About 750 bytes per document, so a full term is a few MB. That is too big for a tiny committed index, and it is derived data that anyone can rebuild, so it stays out of git. Candidate files (small, reviewable) are the committed output.
+- Cursor: the filter is on `datum` (the document date), not `systemdatum`, because `from`/`tom` filter `datum` and filtering `systemdatum` server-side is still unverified. A run fetches from `cursor - 14 days` to the end of the term window, sorted ascending, and saves the store after every page, so an interrupted run resumes from the cursor. The 14 day overlap re-reads recent documents, which catches documents published late with an earlier `datum` and picks up edits (known documents are updated in place and keep their `seq`). Documents dated more than 14 days before the cursor but published after it would be missed; a periodic `--from <date> --store <other>` ingest or a fresh store is the way to audit that. Documents edited in place (counted as `updated` by the ingest) are not re-matched either; use `--rematch` after a run that reports updates you care about. The cursor never moves past today.
+- `--from/--tom` need an explicit `--store`, so a small live check cannot move the real cursors.
+
+### Matching
+
+`match-riksdag-candidates.ts` evaluates the same "queries" as the API search, locally, over title and stored text: `keyword:<k>` per keyword, `all-keywords` when every keyword matches, and `committee:<c>` for a `bet` of the promise's committee when every keyword matches. The score and ranking are the same (distinct labels, then newest first, capped at 15) and the output is the same candidate file, so the matcher is unaffected. Keywords of five characters or more match anywhere in the text (Swedish compounds), shorter ones only at a word start. Local text is narrower than the API's full-text index, so expect fewer hits per keyword; the matcher judges the real relevance.
+
+- New documents only: `tools/out/riksdag-store/<term>.match.json` holds the highest `seq` matched so far and a hash of each promise's keywords and committee. A normal run scores only documents with a higher `seq`. A promise whose hash changed (new keywords) is matched against the whole store; `--rematch` forces that for all promises.
+- Existing candidate entries are kept exactly as they are (never reordered or evicted); new hits only fill free slots up to the cap of 15, so a full file never changes, pairs in `rejected-candidates.json` are never added, and a file is rewritten only when it gained a candidate. A promise without a file gets one on its first match, empty if nothing matched (an empty file means "matched, nothing found", as with the API search).
+- The old backfill (`search-riksdag-candidates.ts`) is no longer needed: the first ingest followed by the first match is the backfill.

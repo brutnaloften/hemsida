@@ -1,3 +1,9 @@
 import type { CollectionEntry } from 'astro:content';
 
-export type Promise = CollectionEntry<'promises'>['data'];
+/** Promise as shown on the site: the v2 record plus its source's URLs and date. */
+export type Promise = CollectionEntry<'promises'>['data'] & {
+  sourceUrl: string;
+  sourceArchive: string;
+  sourceUrlDeadAsOf?: string;
+  date: string;
+};

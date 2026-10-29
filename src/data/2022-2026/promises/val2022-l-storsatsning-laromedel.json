@@ -1,0 +1,35 @@
+{
+  "id": "val2022-l-storsatsning-laromedel",
+  "term": "2022-2026",
+  "title": "Storsatsning på läromedel",
+  "description": "En storsatsning på läromedel ska göras så att eleverna får riktiga skolböcker och lärarna slipper kopiera.",
+  "source": {
+    "id": "valmanifest-2022-l",
+    "page": 4,
+    "quote": "En storsatsning på läromedel måste göras"
+  },
+  "parties": ["L"],
+  "roles": {
+    "L": "government"
+  },
+  "type": "budget",
+  "area": "Skola",
+  "committee": "UbU",
+  "keywords": ["läromedel", "skolböcker", "skolbok", "statsbidrag"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2022-08-08",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-larobok-per-elev-och-amne"],
+      "outcome": "included",
+      "note": "Avtalet har en satsning mot principen en lärobok per elev och ämne."
+    }
+  ]
+}

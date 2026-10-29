@@ -1,16 +1,14 @@
 {
   "id": "kd-samtal-om-varderingar",
-  "name": "Samtal om värderingar",
+  "term": "2022-2026",
+  "title": "Samtal om värderingar",
   "description": "Föra samtal om värderingar och vilken kultur som ska råda i Sverige för att främja gemenskap och trygghet.",
-  "party": "Kristdemokraterna",
-  "status": "Pågående",
-  "date": "2024-06-28",
-  "sources": [
-    {
-      "value": "https://kristdemokraterna.se/arkiv/nyheter/2023/2024-06-28-ebba-buschs-tal-i-almedalen-28-juni-2024",
-      "archive": "https://web.archive.org/web/20240630072151/https://kristdemokraterna.se/arkiv/nyheter/2023/2024-06-28-ebba-buschs-tal-i-almedalen-28-juni-2024"
-    }
-  ],
-  "tags": ["Almedalen 2024"],
-  "updates": []
+  "source": { "id": "kd-almedalen-2024" },
+  "parties": ["KD"],
+  "roles": { "KD": "government" },
+  "type": "vague",
+  "area": "Värderingar och kultur",
+  "keywords": ["värderingar", "kultur", "gemenskap"],
+  "verdict": { "value": "unassessed", "reasoning": "", "date": "2026-10-28", "history": [] },
+  "evidence": []
 }

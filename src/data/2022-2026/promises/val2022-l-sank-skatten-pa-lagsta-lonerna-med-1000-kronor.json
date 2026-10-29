@@ -1,0 +1,38 @@
+{
+  "id": "val2022-l-sank-skatten-pa-lagsta-lonerna-med-1000-kronor",
+  "term": "2022-2026",
+  "title": "Permanent sänkt skatt på de lägsta lönerna med minst 1 000 kronor i månaden",
+  "description": "På sikt ska skatten på de lägsta lönerna sänkas permanent med minst 1 000 kronor i månaden.",
+  "source": {
+    "id": "valmanifest-2022-l",
+    "page": 12,
+    "quote": "permanent sänka skatten på de lägsta lönerna med minst 1 000 kronor i månaden"
+  },
+  "parties": ["L"],
+  "roles": {
+    "L": "government"
+  },
+  "type": "legislative",
+  "area": "Skatter",
+  "committee": "SkU",
+  "keywords": ["skatt på låga löner", "jobbskatteavdrag", "1 000 kronor", "inkomstskatt"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2022-08-08",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": [
+        "tido-bidragsreform-bidragstak-lagre-skatt",
+        "tido-sankt-skatt-arbetsinkomst-pensionsinkomst"
+      ],
+      "outcome": "weakened",
+      "note": "Avtalet har lägre skatt för låg- och medelinkomsttagare under mandatperioden, men anger inget belopp på 1 000 kronor i månaden."
+    }
+  ]
+}

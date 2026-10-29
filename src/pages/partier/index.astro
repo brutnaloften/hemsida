@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import VerdictCounts from '@/components/VerdictCounts.astro';
+import { partyName } from '@/lib/promise-labels';
+import { partiesWithPromises, promisesForParty } from '@/lib/party-stats';
+
+const promises = (await getCollection('promises')).map((e) => e.data);
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const parties = partiesWithPromises(promises);
+---
+
+<Layout title="Partier — Brutna Löften" description="Löften per parti och hur långt de bedömts.">
+  <div class="container mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12">
+    <h1 class="text-2xl font-bold tracking-tight md:text-4xl">Partier</h1>
+    <p class="mt-3 text-muted-foreground">
+      Löften per parti. Ett löfte som flera partier står bakom, till exempel Tidöavtalet, räknas för varje parti
+      som står bakom det. Att ett löfte är obedömt betyder inte att det är infriat eller brutet, bara att ingen
+      har bedömt det ännu.
+    </p>
+    <div class="mt-8 space-y-6">
+      {
+        parties.map((party) => (
+          <section class="rounded-lg border p-4">
+            <h2 class="text-xl font-semibold">
+              <a href={`${base}partier/${party.toLowerCase()}`} class="underline-offset-2 hover:underline">
+                {partyName(party)} ({party})
+              </a>
+            </h2>
+            <div class="mt-3">
+              <VerdictCounts promises={promisesForParty(promises, party)} />
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

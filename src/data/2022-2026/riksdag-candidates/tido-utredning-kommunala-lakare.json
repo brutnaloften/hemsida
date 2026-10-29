@@ -1,0 +1,211 @@
+{
+  "promise_id": "tido-utredning-kommunala-lakare",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:kommunala läkare",
+    "keyword:kommunal vård",
+    "keyword:medicinskt ledningsansvarig",
+    "keyword:äldreomsorg",
+    "keyword:läkare",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HA01SoU22",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU22",
+      "datum": "2023-03-13",
+      "titel": "Äldreomsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU22.html",
+      "found_by": [
+        "keyword:kommunala läkare",
+        "keyword:kommunal vård",
+        "keyword:medicinskt ledningsansvarig",
+        "keyword:äldreomsorg",
+        "all-keywords",
+        "committee:SoU"
+      ],
+      "score": 6
+    },
+    {
+      "dok_id": "HD01SoU32",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU32",
+      "datum": "2026-05-29",
+      "titel": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU32.html",
+      "found_by": ["keyword:kommunala läkare", "keyword:läkare", "all-keywords", "committee:SoU"],
+      "score": 4
+    },
+    {
+      "dok_id": "HA01SoU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU12",
+      "datum": "2023-04-24",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
+      "found_by": [
+        "keyword:kommunala läkare",
+        "keyword:medicinskt ledningsansvarig",
+        "all-keywords",
+        "committee:SoU"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HD03216",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "216",
+      "datum": "2026-04-01",
+      "titel": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03216.html",
+      "found_by": ["keyword:kommunala läkare", "keyword:läkare", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HB01SoU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU20",
+      "datum": "2024-04-05",
+      "titel": "Äldreomsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU20.html",
+      "found_by": ["keyword:kommunal vård", "keyword:äldreomsorg", "committee:SoU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HB01SoU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU1",
+      "datum": "2023-12-06",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
+      "found_by": ["keyword:medicinskt ledningsansvarig", "all-keywords", "committee:SoU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HEB336",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "36",
+      "datum": "2026-06-18",
+      "titel": "Bättre förutsättningar att inkludera personer med nedsatt beslutsförmåga i medicinsk forskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB336.html",
+      "found_by": ["keyword:medicinskt ledningsansvarig", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB348",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "48",
+      "datum": "2025-04-23",
+      "titel": "Stärkt pandemiberedskap",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB348.html",
+      "found_by": ["keyword:kommunala läkare", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB348d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "48",
+      "datum": "2025-04-23",
+      "titel": "Stärkt pandemiberedskap, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB348d2.html",
+      "found_by": ["keyword:medicinskt ledningsansvarig", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01SoU21",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU21",
+      "datum": "2025-02-26",
+      "titel": "Äldreomsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU21.html",
+      "found_by": ["keyword:äldreomsorg", "committee:SoU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HCB372",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "72",
+      "datum": "2024-11-07",
+      "titel": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB372.html",
+      "found_by": ["keyword:kommunala läkare", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HBB394",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "94",
+      "datum": "2023-12-14",
+      "titel": "Förändring genom försök - Försöksverksamhet i den kommunala sektorn ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB394.html",
+      "found_by": ["keyword:kommunala läkare", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03294",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "294",
+      "datum": "2026-06-30",
+      "titel": "För barns rättigheter och trygghet – en ny lag om omhändertagande för vård av barn och unga",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03294.html",
+      "found_by": ["keyword:läkare"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03295",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "295",
+      "datum": "2026-06-30",
+      "titel": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03295.html",
+      "found_by": ["keyword:läkare"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB147",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "47",
+      "datum": "2026-06-11",
+      "titel": "Ökad trygghet och möjlighet att välja kön på personal som utför insatser i äldreomsorgen",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB147.html",
+      "found_by": ["keyword:äldreomsorg"],
+      "score": 1
+    }
+  ]
+}

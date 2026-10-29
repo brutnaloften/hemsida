@@ -1,0 +1,198 @@
+{
+  "promise_id": "tido-breddat-agande-boende-sparande-pension",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:breddat ägande",
+    "keyword:bostadsägande",
+    "keyword:sparande",
+    "keyword:pensionssparande",
+    "all-keywords",
+    "committee:FiU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HA01FiU20",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU20",
+      "datum": "2023-06-15",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU20.html",
+      "found_by": ["keyword:bostadsägande", "all-keywords", "committee:FiU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HEB360",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "60",
+      "datum": "2026-09-30",
+      "titel": "Sveriges flygplatser i en förändrad omvärld",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB360.html",
+      "found_by": ["keyword:breddat ägande", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03159",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "159",
+      "datum": "2026-03-05",
+      "titel": "Nytt mål för effektiv energianvändning och genomförande av det omarbetade direktivet om byggnaders energiprestanda",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03159.html",
+      "found_by": ["keyword:bostadsägande", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03119",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "119",
+      "datum": "2026-02-05",
+      "titel": "Utveckling av makrotillsynsområdet",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03119.html",
+      "found_by": ["keyword:bostadsägande", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01FiU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU1",
+      "datum": "2024-11-22",
+      "titel": "Statens budget 2025 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "found_by": ["keyword:sparande", "committee:FiU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HCB371",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "71",
+      "datum": "2024-11-04",
+      "titel": "Reglering av hushållens skulder ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB371.html",
+      "found_by": ["keyword:bostadsägande", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01CU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "CU14",
+      "datum": "2023-04-03",
+      "titel": "Hyresrätt m.m.",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HA01CU14.html",
+      "found_by": ["keyword:breddat ägande", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01SkU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU11",
+      "datum": "2023-03-09",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU11.html",
+      "found_by": ["keyword:breddat ägande", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01FiU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU14",
+      "datum": "2022-12-02",
+      "titel": "En paneuropeisk privat pensionsprodukt",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU14.html",
+      "found_by": ["keyword:pensionssparande", "committee:FiU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01FiU47",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU47",
+      "datum": "2026-06-16",
+      "titel": "Extra ändringsbudget för 2026 – Stöd till Ukraina samt stöd till hushåll och andra åtgärder med anledning av kriget i Mellanöstern",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU47.html",
+      "found_by": ["keyword:sparande"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SkU30",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU30",
+      "datum": "2026-06-11",
+      "titel": "Utökade befogenheter för Skatteverket inom folkbokföringsverksamheten",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU30.html",
+      "found_by": ["keyword:sparande"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01FiU21",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU21",
+      "datum": "2026-06-04",
+      "titel": "Vårändringsbudget för 2026",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU21.html",
+      "found_by": ["keyword:sparande"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03130",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "130",
+      "datum": "2026-05-29",
+      "titel": "Redovisning av AP-fondernas verksamhet t.o.m. 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03130.html",
+      "found_by": ["keyword:pensionssparande"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01FiU40",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU40",
+      "datum": "2026-05-21",
+      "titel": "En starkare fondmarknad",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU40.html",
+      "found_by": ["committee:FiU"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01FiU48",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU48",
+      "datum": "2026-04-21",
+      "titel": "Extra ändringsbudget för 2026 – Sänkt skatt på drivmedel samt el- och gasprisstöd",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU48.html",
+      "found_by": ["keyword:sparande"],
+      "score": 1
+    }
+  ]
+}

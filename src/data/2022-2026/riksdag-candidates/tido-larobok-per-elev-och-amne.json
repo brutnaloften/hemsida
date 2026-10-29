@@ -1,0 +1,210 @@
+{
+  "promise_id": "tido-larobok-per-elev-och-amne",
+  "searched_at": "2026-10-28",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:läroböcker",
+    "keyword:läromedel",
+    "keyword:en lärobok per elev",
+    "keyword:skolbokssatsning",
+    "all-keywords",
+    "committee:UbU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01UbU10",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU10",
+      "datum": "2025-05-06",
+      "titel": "Grundläggande om utbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU10.html",
+      "found_by": [
+        "keyword:läroböcker",
+        "keyword:läromedel",
+        "keyword:en lärobok per elev",
+        "all-keywords",
+        "committee:UbU"
+      ],
+      "score": 5
+    },
+    {
+      "dok_id": "HB01UbU6",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "UbU6",
+      "datum": "2023-12-11",
+      "titel": "Stärkt tillgång till läromedel",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU6.html",
+      "found_by": [
+        "keyword:läroböcker",
+        "keyword:läromedel",
+        "keyword:skolbokssatsning",
+        "all-keywords",
+        "committee:UbU"
+      ],
+      "score": 5
+    },
+    {
+      "dok_id": "HD01UbU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU8",
+      "datum": "2026-02-09",
+      "titel": "Grundläggande om utbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU8.html",
+      "found_by": ["keyword:läroböcker", "keyword:läromedel", "all-keywords", "committee:UbU"],
+      "score": 4
+    },
+    {
+      "dok_id": "HC01UbU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU1.html",
+      "found_by": ["keyword:en lärobok per elev", "all-keywords", "committee:UbU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HB01UbU10",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "UbU10",
+      "datum": "2024-04-24",
+      "titel": "Grundläggande om utbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU10.html",
+      "found_by": ["keyword:läromedel", "all-keywords", "committee:UbU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HB0321",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "21",
+      "datum": "2023-10-03",
+      "titel": "Stärkt tillgång till läromedel",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0321.html",
+      "found_by": ["keyword:läroböcker", "keyword:läromedel", "all-keywords"],
+      "score": 3
+    },
+    {
+      "dok_id": "HA01UbU6",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UbU6",
+      "datum": "2023-04-14",
+      "titel": "Grundläggande om utbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU6.html",
+      "found_by": ["keyword:läromedel", "all-keywords", "committee:UbU"],
+      "score": 3
+    },
+    {
+      "dok_id": "HD03292",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "292",
+      "datum": "2026-06-25",
+      "titel": "Skärpta villkor för friskolesektorn",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03292.html",
+      "found_by": ["keyword:läroböcker", "keyword:läromedel"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03194",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "194",
+      "datum": "2026-03-17",
+      "titel": "Nya läroplaner – för en stark kunskapsskola",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03194.html",
+      "found_by": ["keyword:läroböcker", "keyword:läromedel"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01UbU11",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU11",
+      "datum": "2026-01-23",
+      "titel": "Vuxenutbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU11.html",
+      "found_by": ["keyword:läroböcker", "committee:UbU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01UbU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU13",
+      "datum": "2025-04-11",
+      "titel": "Vuxenutbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU13.html",
+      "found_by": ["keyword:läroböcker", "committee:UbU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC03143",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "143",
+      "datum": "2025-03-18",
+      "titel": "En tioårig grundskola",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03143.html",
+      "found_by": ["keyword:läroböcker", "keyword:läromedel"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC031d17",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d17.html",
+      "found_by": ["keyword:en lärobok per elev", "all-keywords"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01UbU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UbU1",
+      "datum": "2022-12-14",
+      "titel": "Utgiftsområde 16 Utbildning och  universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
+      "found_by": ["all-keywords", "committee:UbU"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03193",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "193",
+      "datum": "2026-03-17",
+      "titel": "Bättre förutsättningar för trygghet och studiero i skolan",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03193.html",
+      "found_by": ["keyword:läroböcker"],
+      "score": 1
+    }
+  ]
+}
