@@ -13,11 +13,13 @@ import {
   BNP_TABLE,
   KPI_QUERY,
   KPI_TABLE,
+  SCB_BASE,
   buildMacro,
   parseJsonStat2Years,
   serializeMacro,
   tableUrl,
 } from './lib/macro-ingest.ts';
+import { defaultManifestPath, recordFreshness } from './lib/freshness.ts';
 import { macroSchema } from './lib/schema.ts';
 
 const OUT = resolve(import.meta.dirname, '../src/data/budget/macro.json');
@@ -41,4 +43,9 @@ const previous = existsSync(OUT)
   : undefined;
 const macro = buildMacro({ kpi, bnp, today: new Date().toISOString().slice(0, 10), previous });
 writeFileSync(OUT, serializeMacro(macro));
+recordFreshness(defaultManifestPath(resolve(import.meta.dirname, '..')), 'macro', {
+  source: SCB_BASE,
+  fetchedAt: new Date().toISOString().slice(0, 10),
+  latestPeriod: String(macro.years.at(-1)),
+});
 console.log(`wrote ${OUT} (${macro.years[0]}-${macro.years.at(-1)})`);

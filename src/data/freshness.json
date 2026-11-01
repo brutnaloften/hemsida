@@ -1,0 +1,14 @@
+{
+  "datasets": {
+    "budget": {
+      "source": "https://www.statskontoret.se/analys-och-statistik/oppna-data/arsutfall/",
+      "fetchedAt": "2026-10-28",
+      "latestPeriod": "2025"
+    },
+    "macro": {
+      "source": "https://api.scb.se/OV0104/v2beta/api/v2/",
+      "fetchedAt": "2026-10-28",
+      "latestPeriod": "2025"
+    }
+  }
+}
