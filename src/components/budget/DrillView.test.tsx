@@ -59,7 +59,7 @@ describe('DrillView revenue side in kr mode', () => {
     expect(
       host.querySelector('a[aria-label^="Skatt på inkomst"]')?.getAttribute('aria-label'),
     ).toMatch(/Din del: ungefär 60\s000 kronor per år$/);
-    expect(host.textContent).toContain('≈ 60');
+    expect(host.textContent).toMatch(/≈\s60\s000\skr/);
     expect(host.textContent).toContain('Din del (kr)');
     await act(async () => r.unmount());
   });
