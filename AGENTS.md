@@ -19,7 +19,7 @@ The roadmap lives in beads as epics with child tasks and dependencies. `bd list 
 - `pnpm preview` — preview production build
 - `pnpm fmt` — format all files with oxfmt
 - `pnpm fmt:check` — check formatting without writing (for CI)
-- `pnpm test` — run unit tests with vitest
+- `pnpm test` — run unit tests with vitest (also runs `tools/**/*.test.ts`, so run `pnpm install` in `tools/` too; the run prints a hint if it is missing)
 - `pnpm typecheck` — `astro sync && tsc --noEmit` for the site (CI also runs it in `tools/`)
 
 oxfmt runs on staged files in the pre-commit hook (lint-staged).
