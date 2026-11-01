@@ -1,4 +1,6 @@
-import { PARTIES, VERDICTS } from '@/schema/promise';
+import { AGREEMENT_OUTCOMES, PARTIES, VERDICTS } from '@/schema/promise';
+import type { AgreementOutcome, Evidence } from '@/schema/promise';
+import { isAgreement } from '@/lib/timeline';
 
 type Party = (typeof PARTIES)[number];
 type VerdictValue = (typeof VERDICTS)[number];
@@ -75,4 +77,29 @@ export function areaCounts(promises: readonly Pick<PartyPromise, 'area'>[]) {
 /** Sort by title (Swedish collation) without mutating the input. */
 export function sortByTitle<T extends Pick<PartyPromise, 'title'>>(promises: readonly T[]): T[] {
   return [...promises].sort((a, b) => a.title.localeCompare(b.title, 'sv'));
+}
+
+/**
+ * Count of a party's promises per agreement outcome, always containing every outcome (zero when
+ * absent). Only promises with an agreement evidence entry are counted (in practice manifesto
+ * promises compared to the agreement); a promise with several agreement entries counts once,
+ * under its most recent entry. `total` is the number of promises counted.
+ */
+export function agreementOutcomeCounts(promises: readonly { evidence: readonly Evidence[] }[]): {
+  counts: Record<AgreementOutcome, number>;
+  total: number;
+} {
+  const counts = Object.fromEntries(AGREEMENT_OUTCOMES.map((o) => [o, 0])) as Record<
+    AgreementOutcome,
+    number
+  >;
+  let total = 0;
+  for (const p of promises) {
+    const entries = p.evidence.filter(isAgreement);
+    if (entries.length === 0) continue;
+    const latest = entries.reduce((a, b) => (b.date > a.date ? b : a));
+    counts[latest.outcome]++;
+    total++;
+  }
+  return { counts, total };
 }

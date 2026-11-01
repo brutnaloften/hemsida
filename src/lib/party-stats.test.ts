@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
+import type { AgreementOutcome, Evidence } from '@/schema/promise';
 import {
+  agreementOutcomeCounts,
   areaCounts,
   assessedCount,
   filterPromises,
@@ -62,5 +64,48 @@ describe('party-stats', () => {
     const input = [p('b', []), p('a', [])];
     expect(sortByTitle(input).map((x) => x.id)).toEqual(['a', 'b']);
     expect(input[0]!.id).toBe('b');
+  });
+});
+
+describe('agreementOutcomeCounts', () => {
+  const ag = (outcome: AgreementOutcome, date = '2022-11-14') =>
+    ({
+      kind: 'agreement',
+      source: 'tidoavtalet',
+      date,
+      promises: outcome === 'not_addressed' ? [] : ['x'],
+      outcome,
+      note: null,
+    }) as Evidence;
+
+  it('counts every outcome, zero when absent', () => {
+    const { counts, total } = agreementOutcomeCounts([
+      { evidence: [ag('included')] },
+      { evidence: [ag('included')] },
+      { evidence: [ag('not_addressed')] },
+    ]);
+    expect(counts).toEqual({
+      included: 2,
+      weakened: 0,
+      strengthened: 0,
+      contradicted: 0,
+      not_addressed: 1,
+    });
+    expect(total).toBe(3);
+  });
+
+  it('skips promises without agreement evidence', () => {
+    const { counts, total } = agreementOutcomeCounts([{ evidence: [] }]);
+    expect(total).toBe(0);
+    expect(Object.values(counts).every((n) => n === 0)).toBe(true);
+  });
+
+  it('counts a promise once, under its latest agreement entry', () => {
+    const { counts, total } = agreementOutcomeCounts([
+      { evidence: [ag('included', '2022-01-01'), ag('weakened', '2023-01-01')] },
+    ]);
+    expect(counts.weakened).toBe(1);
+    expect(counts.included).toBe(0);
+    expect(total).toBe(1);
   });
 });
