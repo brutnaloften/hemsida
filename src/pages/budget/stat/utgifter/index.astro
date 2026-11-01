@@ -1,0 +1,10 @@
+---
+import DrillPage from '@/components/budget/DrillPage.astro';
+import { latestYear } from '@/lib/budget/data';
+---
+
+<DrillPage
+  nodeId="root:utgifter"
+  title={`Statens utgifter ${latestYear}`}
+  description="Statens utgifter fördelade på de 27 utgiftsområdena, med utfall från Ekonomistyrningsverket."
+/>

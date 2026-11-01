@@ -1,0 +1,19 @@
+---
+import type { GetStaticPaths } from 'astro';
+import LeafDetail from '@/components/budget/LeafDetail.astro';
+import { anslagForUo, areas } from '@/lib/budget/data';
+import { anslagSlug } from '@/lib/budget/view';
+
+// Every restated anslag key, active and discontinued, so no box links to a missing page.
+export const getStaticPaths = (() =>
+  areas.flatMap((u) =>
+    anslagForUo(u.nr).map((a) => ({
+      params: { uo: String(u.nr), anslag: anslagSlug(a) },
+      props: { kod: a.kod },
+    })),
+  )) satisfies GetStaticPaths;
+
+const { kod } = Astro.props;
+---
+
+<LeafDetail nodeId={`anslag:${kod}`} />

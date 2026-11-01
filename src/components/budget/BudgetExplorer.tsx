@@ -4,9 +4,12 @@ import { crumbsFor, type Crumb } from '@/components/budget/Breadcrumbs';
 import { DrillView } from '@/components/budget/DrillView';
 import type { Openable } from '@/components/budget/types';
 import type { YearOption } from '@/components/budget/YearSelect';
+import { LeafView } from '@/components/budget/LeafView';
 import {
   balanceFrom,
   baseOf,
+  existsIn,
+  type Side,
   levelHref,
   pathTo,
   splitChildren,
@@ -116,14 +119,16 @@ type Props = {
   initial: Balance;
   years: YearOption[];
   /**
-   * Set on a static drill page: the node of the page (children one level deep), so the page is
+   * Set on a static drill or leaf page: the node of the page (children one level deep), so the page is
    * complete before the island has fetched anything. Always for the latest year.
    */
   drill?: {
     node: BudgetNode;
-    side: 'utgifter' | 'inkomster';
+    side: Side;
     sideTotal: number;
     crumbs: Crumb[];
+    /** The node's parent (without children), for the share on a leaf page. */
+    parent?: BudgetNode;
   };
 };
 
@@ -164,8 +169,8 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
         if (!chain) {
           nodeId = null;
           mindre = 0;
-        } else if (chain[chain.length - 1].value === null) {
-          const kept = [...chain].reverse().find((n) => n.value !== null);
+        } else if (!existsIn(chain[chain.length - 1], target.year)) {
+          const kept = [...chain].reverse().find((n) => existsIn(n, target.year));
           const lost = chain[chain.length - 1];
           nodeId = kept?.id ?? null;
           mindre = 0;
@@ -217,11 +222,23 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
     };
     const params = new URLSearchParams(window.location.search);
     const rest = window.location.pathname.slice(BUDGET.length).replace(/\/$/, '');
-    if (params.has('ar') || (rest !== '' && rest !== 'stat')) restore(false);
+    // A static drill page already shows its latest-year view; only a query needs the island's data.
+    if (params.has('ar') || params.has('mindre') || (!drill && rest !== '' && rest !== 'stat')) {
+      restore(false);
+    }
     const onPop = () => restore(true);
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
-  }, [fromLocation, go]);
+  }, [fromLocation, go, drill]);
+
+  // Slots below a leaf page (promises, anslagsposter) belong to that leaf: hide them while the island
+  // shows another node, e.g. after a year without the anslag climbed to its UO.
+  useEffect(() => {
+    if (drill)
+      document
+        .getElementById('page-extras')
+        ?.toggleAttribute('hidden', view.nodeId !== drill.node.id);
+  }, [drill, view.nodeId]);
 
   useEffect(() => {
     if (focusTick > 0) h1Ref.current?.focus();
@@ -229,8 +246,15 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
 
   const onOpen = (target: Openable, e: MouseEvent<HTMLAnchorElement>) => {
     if (!plainClick(e)) return;
-    // Leaves have their own pages (not part of the island); the browser follows the link.
-    if (target.kind === 'leaf') return;
+    // Leaves have their own static pages (with their own slots), so the browser loads them; a year
+    // other than the latest travels along in the query.
+    if (target.kind === 'leaf') {
+      if (view.year !== latest) {
+        e.preventDefault();
+        window.location.assign(`${target.href}?ar=${view.year}`);
+      }
+      return;
+    }
     let nodeId = target.id;
     let mindre = 0;
     if (target.kind === 'smaller') {
@@ -257,13 +281,44 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
   const preliminary = years.find((y) => y.year === view.year)?.preliminary ?? false;
   const trees = treesCache.get(view.year);
   let body;
+  // The drilled node comes from the loaded trees, or, before they load, from the static page's props.
+  type Drilled = { node: BudgetNode; parent?: BudgetNode; side: Side; sideTotal: number; crumbs: Crumb[] };
+  let drilled: Drilled | undefined;
   if (view.nodeId && trees) {
-    const node = trees.byId.get(view.nodeId);
     const side = sideOf(view.nodeId);
-    if (node) {
+    const chain = pathTo(side === 'utgifter' ? trees.spending : trees.revenue, view.nodeId);
+    if (chain) {
+      drilled = {
+        node: chain[chain.length - 1],
+        parent: chain.length > 2 ? chain[chain.length - 2] : undefined,
+        side,
+        sideTotal: side === 'utgifter' ? trees.totals.utgifter : trees.totals.inkomster,
+        crumbs: crumbsFor(chain, side, initial.level),
+      };
+    }
+  } else if (drill && view.nodeId === drill.node.id && view.year === latest) {
+    drilled = drill;
+  }
+  if (drilled) {
+    const { node, parent, side, sideTotal } = drilled;
+    const crumbs = [...drilled.crumbs];
+    if (!node.children) {
+      body = (
+        <LeafView
+          node={node}
+          parent={parent}
+          side={side}
+          year={view.year}
+          sideTotal={sideTotal}
+          crumbs={crumbs}
+          years={years}
+          onYear={onYear}
+          onCrumb={onCrumb}
+          h1Ref={h1Ref}
+        />
+      );
+    } else {
       const shown = resolveMindre(node, view.mindre);
-      const chain = pathTo(side === 'utgifter' ? trees.spending : trees.revenue, node.id) ?? [node];
-      const crumbs = crumbsFor(chain, side, initial.level);
       if (shown !== node) {
         crumbs.push({ label: 'Mindre poster', href: shown.href, nodeId: node.id });
       }
@@ -272,7 +327,7 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
           node={shown}
           side={side}
           year={view.year}
-          sideTotal={side === 'utgifter' ? trees.totals.utgifter : trees.totals.inkomster}
+          sideTotal={sideTotal}
           crumbs={crumbs}
           years={years}
           preliminary={preliminary && side === 'inkomster'}
@@ -283,23 +338,6 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
         />
       );
     }
-  }
-  if (!body && drill && view.nodeId === drill.node.id && view.year === latest) {
-    body = (
-      <DrillView
-        node={resolveMindre(drill.node, view.mindre)}
-        side={drill.side}
-        year={view.year}
-        sideTotal={drill.sideTotal}
-        crumbs={drill.crumbs}
-        years={years}
-        preliminary={preliminary && drill.side === 'inkomster'}
-        onYear={onYear}
-        onOpen={onOpen}
-        onCrumb={onCrumb}
-        h1Ref={h1Ref}
-      />
-    );
   }
   if (!body) {
     const balance =

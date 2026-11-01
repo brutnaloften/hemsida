@@ -1,0 +1,31 @@
+---
+/**
+ * Leaf page of the budget explorer (docs/design/budget-explorer.md P5): breadcrumb, H1, lead sentence,
+ * share bar, year selector, "Upphörde efter" and the "fanns inte" fallback, all drawn by the explorer
+ * island (LeafView.tsx) so the year can change without a reload.
+ *
+ * Generic on purpose: it takes a node id, not an anslag, so the revenue leaf pages (titlar, rn4.5) reuse
+ * it with `nodeId="rev:1111"`. The default slot is for sections that only apply to this leaf, such as
+ * "Löften som gäller detta anslag" (9ce.4) and "Anslagsposter" (rn4.6); put each in its own element that
+ * renders nothing when empty.
+ */
+import DrillPage from '@/components/budget/DrillPage.astro';
+import { latestYear } from '@/lib/budget/data';
+import { formatAmountWords } from '@/lib/budget/format';
+import { buildPageView, existsIn } from '@/lib/budget/view';
+
+interface Props {
+  nodeId: string;
+}
+
+const { nodeId } = Astro.props;
+const { chain, side } = buildPageView(latestYear, nodeId);
+const node = chain[chain.length - 1];
+const sideLabel = side === 'utgifter' ? 'statens utgifter' : 'statens inkomster';
+const title = `${node.name} ${latestYear} – ${sideLabel}`;
+const description = existsIn(node, latestYear)
+  ? `${node.name}: ${formatAmountWords(node.value ?? 0)} ${latestYear}, enligt utfallet från Ekonomistyrningsverket.`
+  : `${node.name} i ${sideLabel}, utfall per år från Ekonomistyrningsverket.`;
+---
+
+<DrillPage nodeId={nodeId} title={title} description={description}><slot /></DrillPage>

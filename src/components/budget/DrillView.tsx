@@ -92,7 +92,7 @@ export function DrillView({
       )}
       <p className="mt-2 text-muted-foreground">
         {formatAmountWords(value)} {year}
-        {value > 0 && sideTotal > 0 && (
+        {value > 0 && sideTotal > 0 && !node.id.startsWith('root:') && (
           <>
             , {formatPercent(shareOf(value, sideTotal))} av {sideLabel}
           </>
