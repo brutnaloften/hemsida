@@ -93,6 +93,10 @@ if (values.utgift && values.inkomst) {
   const listing = parseListing(await (await fetchOk(SOURCE_PAGE)).text());
   const pick = (type: 'Utgift' | 'Inkomst', override?: string, provenance?: string): Target => {
     if (override) return describeTarget(override, provenance);
+    if (provenance)
+      throw new Error(
+        `--${type.toLowerCase()}-url needs a matching local --${type.toLowerCase()} path`,
+      );
     const f = pickNewest(listing, type);
     return { location: f.url, url: f.url, fileName: f.fileName, status: f.status };
   };
