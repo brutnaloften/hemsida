@@ -33,6 +33,7 @@ import {
   type Side,
   pathTo,
   stripChildren,
+  grossBase,
 } from '@/lib/budget/core';
 
 export * from '@/lib/budget/core';
@@ -241,13 +242,16 @@ function revenueIds(): Set<string> {
   return revenueIdCache;
 }
 
-/** Year selector options; a year is preliminary while its revenue or spending is not final. */
-export function yearOptions(): { year: number; preliminary: boolean }[] {
+/** Year selector options; revenue and spending are preliminary independently of each other. */
+export function yearOptions(): {
+  year: number;
+  revenuePreliminary: boolean;
+  spendingPreliminary: boolean;
+}[] {
   return years.map((year) => ({
     year,
-    preliminary:
-      meta.yearStatus.revenue[String(year)] !== 'final' ||
-      meta.yearStatus.expenditure[String(year)] !== 'final',
+    revenuePreliminary: meta.yearStatus.revenue[String(year)] !== 'final',
+    spendingPreliminary: meta.yearStatus.expenditure[String(year)] !== 'final',
   }));
 }
 
@@ -265,7 +269,9 @@ export function buildPageView(year: number, nodeId: string, opts?: BuildOptions)
   return {
     nodeId,
     side: p.side,
-    chain: chain.map((n, i) => (i === chain.length - 1 ? n : stripChildren(n))),
+    chain: chain.map((n, i) =>
+      i === chain.length - 1 ? n : { ...stripChildren(n), childBase: grossBase(n) },
+    ),
     sideTotal: p.side === 'utgifter' ? totals.utgifter : totals.inkomster,
   };
 }

@@ -2,12 +2,13 @@ import { useCallback, useEffect, useRef, useState, type MouseEvent } from 'react
 import { BalanceView } from '@/components/budget/BalanceView';
 import { crumbsFor, type Crumb } from '@/components/budget/Breadcrumbs';
 import { DrillView } from '@/components/budget/DrillView';
-import type { Openable } from '@/components/budget/types';
+import { plainClick, type Openable } from '@/components/budget/types';
 import type { YearOption } from '@/components/budget/YearSelect';
 import { LeafView } from '@/components/budget/LeafView';
 import {
   balanceFrom,
   baseOf,
+  describeNode,
   existsIn,
   type Side,
   levelHref,
@@ -16,6 +17,7 @@ import {
   type Balance,
   type BudgetNode,
 } from '@/lib/budget/core';
+import { formatAmountWords } from '@/lib/budget/format';
 import { treesFromFiles, type NamesFile, type YearFile } from '@/lib/budget/tree';
 
 type View = { year: number; nodeId: string | null; mindre: number };
@@ -108,8 +110,11 @@ function urlFor(view: View, latest: number, trees: Trees | undefined): string {
   return query ? `${path}?${query}` : path;
 }
 
-function plainClick(e: MouseEvent): boolean {
-  return e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey;
+/** Point the page's meta description (and og copy) at the node the island now shows. */
+function setDescription(text: string) {
+  for (const sel of ['meta[name="description"]', 'meta[property="og:description"]']) {
+    document.querySelector(sel)?.setAttribute('content', text);
+  }
 }
 
 // --- The island ----------------------------------------------------------------------------------
@@ -186,6 +191,18 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
       setNotice(message);
       setAnnouncement(`Visar ${title} ${next.year}${count ? `, ${count} poster` : ''}.`);
       document.title = `${title} ${next.year} – Brutna Löften`;
+      // The static page's description names the leaf it was built for; follow the climb.
+      if (shown) {
+        setDescription(
+          describeNode(
+            shown,
+            next.year,
+            sideOf(shown.id),
+            existsIn(shown, next.year),
+            formatAmountWords(shown.value ?? 0),
+          ),
+        );
+      }
       const url = urlFor(next, latest, trees);
       if (opts.push) window.history.pushState(null, '', url);
       else window.history.replaceState(null, '', url);
@@ -278,7 +295,9 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
     void go({ ...view, year }, { push: true, focus: false });
   };
 
-  const preliminary = years.find((y) => y.year === view.year)?.preliminary ?? false;
+  const yearOption = years.find((y) => y.year === view.year);
+  // The badge text is about the tax figures, so it follows the revenue flag.
+  const preliminary = yearOption?.revenuePreliminary ?? false;
   const trees = treesCache.get(view.year);
   let body;
   // The drilled node comes from the loaded trees, or, before they load, from the static page's props.
@@ -318,6 +337,7 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
           sideTotal={sideTotal}
           crumbs={crumbs}
           years={years}
+          preliminary={preliminary && side === 'inkomster'}
           onYear={onYear}
           onCrumb={onCrumb}
           h1Ref={h1Ref}

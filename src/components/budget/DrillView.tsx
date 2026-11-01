@@ -14,7 +14,7 @@ import {
   formatPercent,
   shareOf,
 } from '@/lib/budget/format';
-import { splitChildren, type BudgetNode } from '@/lib/budget/core';
+import { sideGap, splitChildren, type BudgetNode } from '@/lib/budget/core';
 import { revenueExplanation } from '@/lib/budget/revenue-labels';
 import { FRAME_ASPECT, layoutNodes } from '@/lib/budget/treemap';
 
@@ -51,6 +51,9 @@ export function DrillView({
   const split = useMemo(() => splitChildren(node), [node]);
   const sideLabel = side === 'utgifter' ? 'statens utgifter' : 'statens inkomster';
   const value = node.value ?? 0;
+  // The root's total is the sum of its boxes; the "av statens ..." share below is taken of the side
+  // total, which can be larger. Say so instead of leaving two different numbers unexplained.
+  const gap = node.id.startsWith('root:') ? sideGap(side, value, sideTotal) : undefined;
   const explanation = side === 'inkomster' ? revenueExplanation(node.id) : undefined;
   const caption =
     split.strip.length === 0 || split.base === 0
@@ -99,8 +102,15 @@ export function DrillView({
         )}
         .
       </p>
+      {gap && (
+        <p className="mt-2 max-w-prose text-sm text-muted-foreground">
+          Statens {side === 'utgifter' ? 'utgifter' : 'inkomster'} är {formatMdkr(sideTotal)} {year}
+          . Det är {formatMdkr(Math.abs(gap.gap))} {gap.gap > 0 ? 'mer' : 'mindre'} än summan här.{' '}
+          {gap.text}
+        </p>
+      )}
       <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
-        <YearSelect years={years} value={year} onChange={onYear} />
+        <YearSelect years={years} value={year} onChange={onYear} side={side} />
       </div>
 
       {boxes.length > 0 ? (
@@ -121,7 +131,11 @@ export function DrillView({
         </>
       ) : split.strip.length === 0 ? (
         <p className="mt-4">Inga poster med belopp {year}.</p>
-      ) : null}
+      ) : (
+        // Only deducted items: no boxes, but the base the table's shares are taken of is still
+        // stated, as "Andel av 0,0 mdkr".
+        <p className="mt-4 text-sm text-muted-foreground">{caption}</p>
+      )}
       <MinusStrip
         items={split.strip}
         onOpen={onOpen}
