@@ -22,7 +22,7 @@ import { viewUrl } from '@/lib/budget/url';
 import { buildAdvanced } from '@/components/budget/advanced';
 import type { AdvancedFile } from '@/lib/budget/series';
 import { SalaryPanel, usePersistedSalary } from '@/components/budget/SalaryPanel';
-import { estimateFor, revenuePartOf } from '@/lib/budget/salary-view';
+import { estimateFor, perPeriod, revenuePartOf, salaryNavKey } from '@/lib/budget/salary-view';
 import { treesFromFiles, type NamesFile, type YearFile } from '@/lib/budget/tree';
 
 type View = {
@@ -189,7 +189,7 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
   // The salary estimate is mirrored to localStorage (one key, see salary-storage.ts) so it survives
   // leaf pages (full page loads), reloads and later visits. It is never put in the URL or any
   // request. The panel itself starts closed and closes on every navigation (P8).
-  const [salary, setSalary] = usePersistedSalary(`${view.year}/${view.nodeId ?? ''}`);
+  const [salary, setSalary] = usePersistedSalary(salaryNavKey(view));
 
   const go = useCallback(
     async (target: View, opts: { push: boolean; focus: boolean; href?: string }): Promise<void> => {
@@ -378,8 +378,15 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
   );
   const personal: Personal = {
     panel: <SalaryPanel state={salary} onChange={setSalary} estimate={estimate} year={view.year} />,
-    total: estimate ? estimate.total : null,
-    revenue: estimate ? (id: string) => revenuePartOf(estimate.breakdown, id) : null,
+    // The views get the amounts already in the chosen period.
+    total: estimate ? perPeriod(estimate.total, salary.period) : null,
+    period: salary.period,
+    revenue: estimate
+      ? (id: string) => {
+          const v = revenuePartOf(estimate.breakdown, id);
+          return v === null ? null : perPeriod(v, salary.period);
+        }
+      : null,
   };
   const advancedFor = (
     nodeId: string | null,

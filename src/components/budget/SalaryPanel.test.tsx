@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { act, useMemo } from 'react';
 import { createRoot } from 'react-dom/client';
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { SalaryPanel, usePersistedSalary } from '@/components/budget/SalaryPanel';
 import { SALARY_STORAGE_KEY } from '@/lib/budget/salary-storage';
 import { estimateFor } from '@/lib/budget/salary-view';
@@ -107,6 +107,66 @@ describe('SalaryPanel', () => {
     expect(expanded()).toBe('true');
     await act(async () => root.render(<Harness year={2026} navKey="b" />));
     expect(expanded()).toBe('false');
+    await act(async () => root.unmount());
+  });
+
+  it('switches between per år and per månad and persists the choice', async () => {
+    let root = createRoot(host);
+    await act(async () => root.render(<Harness year={2026} />));
+    await openPanel();
+    await act(async () =>
+      type(host.querySelector<HTMLInputElement>('input[inputmode="numeric"]')!, '41237'),
+    );
+    await act(async () => host.querySelector<HTMLButtonElement>('button[type="submit"]')!.click());
+    const status = () => host.querySelector('[role="status"]')!.textContent!;
+    const yearly = status();
+    expect(yearly).toMatch(/per år av det du/);
+    const radio = (label: string) =>
+      [...host.querySelectorAll('label')]
+        .find((l) => l.textContent === label)!
+        .querySelector<HTMLInputElement>('input')!;
+    expect(radio('per år').checked).toBe(true);
+
+    await act(async () => radio('per månad').click());
+    const monthly = status();
+    expect(monthly).toMatch(/per månad av det du/);
+    const num = (t: string) => Number(t.match(/Ungefär ([\d\s]+)\skr/)![1].replace(/\D/g, ''));
+    expect(Math.abs(num(monthly) - num(yearly) / 12)).toBeLessThanOrEqual(55);
+    expect(JSON.parse(localStorage.getItem(SALARY_STORAGE_KEY)!).period).toBe('month');
+    await act(async () => root.unmount());
+
+    host.replaceChildren();
+    root = createRoot(host);
+    await act(async () => root.render(<Harness year={2026} />));
+    expect(radio('per månad').checked).toBe(true);
+    expect(status()).toBe(monthly);
+    await act(async () => root.unmount());
+  });
+
+  it('loads a value stored before the period existed as per år, and keeps it on mount', async () => {
+    const old = JSON.stringify({
+      monthly: '41237',
+      consumption: '85',
+      vat: '11,4',
+      applied: '41237',
+    });
+    localStorage.setItem(SALARY_STORAGE_KEY, old);
+    const root = createRoot(host);
+    await act(async () => root.render(<Harness year={2026} />));
+    expect(host.querySelector('[role="status"]')!.textContent).toMatch(/per år av det du/);
+    expect(JSON.parse(localStorage.getItem(SALARY_STORAGE_KEY)!)).toEqual({
+      ...JSON.parse(old),
+      period: 'year',
+    });
+    await act(async () => root.unmount());
+  });
+
+  it('does not touch storage on the initial mount', async () => {
+    const spy = vi.spyOn(Storage.prototype, 'removeItem');
+    const root = createRoot(host);
+    await act(async () => root.render(<Harness year={2026} />));
+    expect(spy).not.toHaveBeenCalled();
+    spy.mockRestore();
     await act(async () => root.unmount());
   });
 

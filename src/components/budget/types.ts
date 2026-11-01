@@ -1,16 +1,19 @@
 import type { MouseEvent, ReactNode } from 'react';
 import type { BudgetNode } from '@/lib/budget/core';
+import type { Period } from '@/lib/budget/salary-view';
 
 /** What the island needs to know about a clicked link: the node id and where it points. */
 export type Openable = Pick<BudgetNode, 'id' | 'href' | 'kind'>;
 
 /**
  * The salary panel (P8) as the views see it: the control to place in the controls row, and the
- * person's yearly share to the state in kr, or null while no estimate is shown (percent mode).
+ * person's share to the state in kr (per year or per month, see `period`), or null while no estimate is shown (percent mode).
  */
 export type Personal = {
   panel: ReactNode;
   total: number | null;
+  /** Which period the kr amounts above are expressed in; they are already converted. */
+  period: Period;
   /**
    * The person's own kr on a revenue node (from the panel's breakdown), or null for nodes the
    * estimate does not cover. Absent while no estimate is shown.

@@ -31,8 +31,9 @@ const skatter: BudgetNode = {
 const SIDE_TOTAL = 1000;
 
 const breakdown = estimateFor({ ...DEFAULT_INPUTS, monthly: '40000' }, 2026)!.breakdown;
-const personal = (on: boolean): Personal => ({
+const personal = (on: boolean, period: Personal['period'] = 'year'): Personal => ({
   panel: null,
+  period,
   total: on ? breakdown.total : null,
   revenue: on ? (id) => revenuePartOf(breakdown, id) : null,
 });
@@ -166,5 +167,44 @@ describe('revenue boxes in kr mode', () => {
       expect(host.textContent?.includes('Din del:')).toBe(expected);
       await act(async () => r.unmount());
     }
+  });
+
+  it('per månad: aria text, table header, and the leaf use the monthly amount', async () => {
+    const monthly = (id: string) => (revenuePartOf(breakdown, id) ?? 0) / 12;
+    const p: Personal = {
+      panel: null,
+      period: 'month',
+      total: breakdown.total / 12,
+      revenue: (id) => (revenuePartOf(breakdown, id) === null ? null : monthly(id)),
+    };
+    let r = await render(
+      <DrillView
+        {...common}
+        node={skatter}
+        side="inkomster"
+        year={2026}
+        sideTotal={SIDE_TOTAL}
+        preliminary={false}
+        personal={p}
+      />,
+    );
+    expect(label('Skatt på konsumtion')).toContain('per månad');
+    expect(label('Skatt på konsumtion')).not.toContain('per år');
+    expect(host.textContent).toContain('Din del (kr per månad)');
+    await act(async () => r.unmount());
+
+    r = await render(
+      <LeafView
+        {...common}
+        node={node('rev:1400', 'Skatt på konsumtion', 300, 'leaf')}
+        parent={skatter}
+        side="inkomster"
+        year={2026}
+        sideTotal={SIDE_TOTAL}
+        personal={p}
+      />,
+    );
+    expect(host.textContent).toMatch(/Din del: ≈\s[\d\s]+\skr per månad/);
+    await act(async () => r.unmount());
   });
 });

@@ -32,7 +32,7 @@ export function DataTable({
   total?: { label: string; value: number };
   onOpen?: OpenHandler;
   /** Adds the column "Din del (kr)": the person's share of a row's value, formatted, or "–". */
-  personal?: { part: (node: BudgetNode) => string; total?: string };
+  personal?: { part: (node: BudgetNode) => string; total?: string; label?: string };
   /** Advanced mode (P10): opens the table and adds the code and budget columns. */
   advanced?: Pick<Advanced, 'on' | 'columns' | 'code'>;
 }) {
@@ -70,7 +70,7 @@ export function DataTable({
               ))}
               {personal && (
                 <th scope="col" className="py-1 pl-2 text-right font-medium">
-                  Din del (kr)
+                  {personal.label ?? 'Din del (kr)'}
                 </th>
               )}
             </tr>

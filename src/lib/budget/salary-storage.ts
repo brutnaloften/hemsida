@@ -12,9 +12,11 @@ const stored = z.object({
   consumption: z.string().max(40),
   vat: z.string().max(40),
   applied: z.string().max(40).nullable(),
+  /** Whether kr amounts are shown per year or per month. Absent in values stored before the switch. */
+  period: z.enum(['year', 'month']).default('year'),
 });
 
-export type StoredSalary = z.infer<typeof stored>;
+export type StoredSalary = z.output<typeof stored>;
 
 /** Reads and validates the stored estimate; null when missing, unreadable, corrupt or old. */
 export function loadSalary(): StoredSalary | null {

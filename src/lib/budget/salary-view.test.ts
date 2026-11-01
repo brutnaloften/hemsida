@@ -9,6 +9,9 @@ import {
   parseMonthlySalary,
   revenuePartOf,
   partOf,
+  perPeriod,
+  periodLabel,
+  salaryNavKey,
 } from './salary-view';
 
 const NBSP = ' ';
@@ -123,5 +126,34 @@ describe('revenuePartOf', () => {
   it('speaks a negative amount', () => {
     expect(krWords(-1_234)).toBe(`minus ungefär 1${NBSP}230 kronor`);
     expect(krWords(-3)).toBe('ungefär 0 kronor');
+  });
+});
+
+describe('per month / per year', () => {
+  it('labels the periods', () => {
+    expect(periodLabel('year')).toBe('per år');
+    expect(periodLabel('month')).toBe('per månad');
+  });
+
+  it('divides the yearly amount by twelve only in month mode', () => {
+    expect(perPeriod(12_000, 'year')).toBe(12_000);
+    expect(perPeriod(12_000, 'month')).toBe(1_000);
+    expect(perPeriod(-600, 'month')).toBe(-50);
+  });
+
+  it('rounds the monthly total and parts to the nearest 10 kr, the yearly total to 100 kr', () => {
+    expect(formatTotal(9_849)).toBe(`9${NBSP}800${NBSP}kr`);
+    expect(formatTotal(perPeriod(9_849, 'month'), 'month')).toBe(`820${NBSP}kr`);
+    expect(formatPart(perPeriod(9_849, 'month'))).toBe(`≈${NBSP}820${NBSP}kr`);
+    expect(formatPart(perPeriod(60, 'month'))).toBe(`<${NBSP}10${NBSP}kr`);
+    expect(krWords(perPeriod(9_849, 'month'))).toBe('ungefär 820 kronor');
+  });
+
+  it('keys the panel collapse on year, node and Mindre poster level', () => {
+    const k = (mindre: number) => salaryNavKey({ year: 2026, nodeId: 'a', mindre });
+    expect(k(0)).not.toBe(k(1));
+    expect(salaryNavKey({ year: 2026, nodeId: null, mindre: 0 })).not.toBe(
+      salaryNavKey({ year: 2025, nodeId: null, mindre: 0 }),
+    );
   });
 });

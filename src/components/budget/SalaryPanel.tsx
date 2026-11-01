@@ -6,6 +6,9 @@ import {
   formatTotal,
   krWords,
   maxVatPercent,
+  perPeriod,
+  periodLabel,
+  type Period,
   type Estimate,
   type SalaryInputs,
 } from '@/lib/budget/salary-view';
@@ -20,12 +23,15 @@ export type SalaryState = {
   inputs: SalaryInputs;
   /** The monthly salary the estimate was computed for; null until "Räkna". */
   applied: string | null;
+  /** Whether kr amounts are shown per year (default) or per month. Persisted with the estimate. */
+  period: Period;
 };
 
 export const INITIAL_SALARY_STATE: SalaryState = {
   open: false,
   inputs: { monthly: '', consumption: '85', vat: '11,4' },
   applied: null,
+  period: 'year',
 };
 
 /**
@@ -36,19 +42,27 @@ export const INITIAL_SALARY_STATE: SalaryState = {
 export function usePersistedSalary(navKey: string) {
   const [state, setState] = useState<SalaryState>(INITIAL_SALARY_STATE);
   const loaded = useRef(false);
+  const isFirstSave = useRef(true);
   useEffect(() => {
     const s = loadSalary();
     if (s) {
-      const { applied, ...inputs } = s;
-      setState((prev) => ({ ...prev, inputs, applied }));
+      const { applied, period, ...inputs } = s;
+      setState((prev) => ({ ...prev, inputs, applied, period }));
     }
     loaded.current = true;
   }, []);
   useEffect(() => {
+    // The first run is the initial state, before the stored value has been applied: saving it would
+    // delete the stored value and rewrite it. Only changes after that are written back.
+    if (isFirstSave.current) {
+      isFirstSave.current = false;
+      return;
+    }
     if (!loaded.current) return;
-    if (state.applied === null && state.inputs.monthly.trim() === '') clearSalary();
-    else saveSalary({ ...state.inputs, applied: state.applied });
-  }, [state.inputs, state.applied]);
+    if (state.applied === null && state.inputs.monthly.trim() === '' && state.period === 'year') {
+      clearSalary();
+    } else saveSalary({ ...state.inputs, applied: state.applied, period: state.period });
+  }, [state.inputs, state.applied, state.period]);
   useEffect(() => {
     setState((prev) => (prev.open ? { ...prev, open: false } : prev));
   }, [navKey]);
@@ -73,12 +87,13 @@ const FIELD =
 export function SalaryPanel({ state, onChange, estimate, year }: Props) {
   const id = useId();
   const panelId = `${id}-panel`;
-  const { open, inputs, applied } = state;
+  const { open, inputs, applied, period } = state;
   const set = (patch: Partial<SalaryInputs>) =>
     onChange({ ...state, inputs: { ...inputs, ...patch } });
   const apply = () =>
     onChange({ ...state, applied: inputs.monthly.trim() === '' ? null : inputs.monthly });
   const clear = () => onChange({ ...state, inputs: { ...inputs, monthly: '' }, applied: null });
+  const unit = periodLabel(period);
   const submit = (e: FormEvent) => {
     e.preventDefault();
     apply();
@@ -86,11 +101,11 @@ export function SalaryPanel({ state, onChange, estimate, year }: Props) {
   const maxVat = String(Math.floor(maxVatPercent(year) * 10) / 10).replace('.', ',');
   const b = estimate?.breakdown;
   const fallback = b ? fallbackNotice(b) : null;
-  const total = b ? b.total : 0;
+  const total = b ? perPeriod(b.total, period) : 0;
   const headline = b
     ? total < 50
-      ? `Din del av statens budget är ungefär 0 kronor per år (uppskattning för ${year}): avdragen är lika stora som det du betalar in.`
-      : `Ungefär ${formatTotal(total)} per år av det du och din arbetsgivare betalar går till statens budget (uppskattning för ${year}).`
+      ? `Din del av statens budget är ungefär 0 kronor ${unit} (uppskattning för ${year}): avdragen är lika stora som det du betalar in.`
+      : `Ungefär ${formatTotal(total, period)} ${unit} av det du och din arbetsgivare betalar går till statens budget (uppskattning för ${year}).`
     : '';
   const invalidSalary = applied !== null && !estimate;
 
@@ -155,8 +170,12 @@ export function SalaryPanel({ state, onChange, estimate, year }: Props) {
                       {c.label}
                     </dt>
                     <dd className="tabular-nums whitespace-nowrap">
-                      <span className="sr-only">{krWords(Math.abs(c.amount))}</span>
-                      <span aria-hidden="true">{formatPart(Math.abs(c.amount))}</span>
+                      <span className="sr-only">
+                        {krWords(perPeriod(Math.abs(c.amount), period))}
+                      </span>
+                      <span aria-hidden="true">
+                        {formatPart(perPeriod(Math.abs(c.amount), period))}
+                      </span>
                     </dd>
                   </div>
                 ))}
@@ -218,7 +237,8 @@ export function SalaryPanel({ state, onChange, estimate, year }: Props) {
           den går till kommunen och regionen, inte till staten. Beloppen i rutorna visar hur din del
           skulle fördelas om den följde samma proportioner som statens utgifter. Uppgiften sparas
           bara i din webbläsare på den här enheten och skickas aldrig någonstans. Knappen Rensa tar
-          bort den.
+          bort den. Per månad är beloppen årsbeloppet delat med tolv, avrundat till närmaste tio
+          kronor.
         </p>
         <p className="mt-2 max-w-prose text-sm">
           Av arbetsgivaravgifterna räknas bara statens del med, inte pensionsdelen som går till
@@ -226,13 +246,29 @@ export function SalaryPanel({ state, onChange, estimate, year }: Props) {
           kommunerna.
         </p>
 
-        <button
-          type="button"
-          onClick={clear}
-          className="mt-3 h-9 rounded-md border border-input bg-background px-3 text-sm font-medium focus-visible:outline-2 focus-visible:outline-ring"
-        >
-          Rensa
-        </button>
+        <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2">
+          <button
+            type="button"
+            onClick={clear}
+            className="h-9 rounded-md border border-input bg-background px-3 text-sm font-medium focus-visible:outline-2 focus-visible:outline-ring"
+          >
+            Rensa
+          </button>
+          <fieldset className="flex items-center gap-3 text-sm">
+            <legend className="sr-only">Visa beloppen</legend>
+            {(['year', 'month'] as const).map((p) => (
+              <label key={p} className="flex items-center gap-1.5">
+                <input
+                  type="radio"
+                  name={`${id}-period`}
+                  checked={period === p}
+                  onChange={() => onChange({ ...state, period: p })}
+                />
+                {periodLabel(p)}
+              </label>
+            ))}
+          </fieldset>
+        </div>
       </div>
     </>
   );
