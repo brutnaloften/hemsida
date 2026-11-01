@@ -19,6 +19,8 @@ export type Box = {
   aria: string;
   /** Link boxes are tabbable; saldo and övriga poster are plain boxes. */
   link: boolean;
+  /** Narrower or lower than 2 px in either frame: not a tab stop (an invisible focus ring); still in the table. */
+  tiny: boolean;
   rects: Record<Frame, Rect>;
   tiers: Record<Frame, LabelTier>;
 };
@@ -52,6 +54,9 @@ export function makeBoxes(
         node,
         ...describe(node),
         rects,
+        tiny: (['portrait', 'landscape'] as const).some(
+          (f) => Math.min(rects[f].w * widths[f], (rects[f].h * widths[f]) / aspect[f]) < 2,
+        ),
         tiers: { portrait: tier('portrait'), landscape: tier('landscape') },
       },
     ];
@@ -111,7 +116,7 @@ export function Treemap({ label, boxes, side, aspect, onOpen }: TreemapProps) {
       className="relative m-0 w-full list-none p-0 aspect-(--ar) sm:aspect-(--lar)"
       style={style}
     >
-      {boxes.map(({ node, value, aria, link, rects, tiers }, index) => {
+      {boxes.map(({ node, value, aria, link, tiny, rects, tiers }, index) => {
         const p = rects.portrait;
         const l = rects.landscape;
         const liStyle: CssVars = {
@@ -170,6 +175,7 @@ export function Treemap({ label, boxes, side, aspect, onOpen }: TreemapProps) {
                 href={node.href}
                 aria-label={aria}
                 title={aria}
+                tabIndex={tiny ? -1 : undefined}
                 onClick={onOpen ? (e) => onOpen(node, e) : undefined}
                 className={cn(
                   boxClass,

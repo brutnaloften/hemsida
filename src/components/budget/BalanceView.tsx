@@ -114,9 +114,13 @@ export function BalanceView({
         {formatAmountWords(Math.abs(totals.saldo))}.{' '}
         {deficit
           ? 'Staten lånade mellanskillnaden.'
-          : 'Överskottet användes till att betala av på statsskulden.'}{' '}
-        {preliminary && <PrelimBadge />}
+          : 'Överskottet användes till att betala av på statsskulden.'}
       </p>
+      {preliminary && (
+        <div className="mt-2">
+          <PrelimBadge />
+        </div>
+      )}
       <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
         <YearSelect years={years} value={year} onChange={onYear} />
       </div>
