@@ -187,8 +187,9 @@ export function SalaryPanel({ state, onChange, estimate, year }: Props) {
           Det här är en grov uppskattning, inte din faktiska skatt. Den bygger på skattereglerna för{' '}
           {b ? b.paramsYear : year} och antagandena ovan. Kommunalskatten räknas inte med, eftersom
           den går till kommunen och regionen, inte till staten. Beloppen i rutorna visar hur din del
-          skulle fördelas om den följde samma proportioner som statens utgifter. Vi sparar
-          ingenting: uppgiften finns bara i din webbläsare tills du stänger sidan.
+          skulle fördelas om den följde samma proportioner som statens utgifter respektive
+          inkomster. Vi sparar ingenting: uppgiften finns bara i din webbläsare tills du stänger
+          sidan.
         </p>
         <p className="mt-2 max-w-prose text-sm">
           Av arbetsgivaravgifterna räknas bara statens del med, inte pensionsdelen som går till

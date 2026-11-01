@@ -114,9 +114,9 @@ export function BalanceView({
         'statens inkomster',
         totals.utgifter,
         'utgifterna',
-        null,
+        kr,
       ),
-    [balance, totals.inkomster],
+    [balance, totals.inkomster, kr],
   );
   const aspect = { portrait: columnAspect('portrait'), landscape: columnAspect('landscape') };
   const topOut = balance.out.items
@@ -261,9 +261,15 @@ export function BalanceView({
             ? undefined
             : {
                 part: (n) =>
-                  n.kind === 'saldo' || !balance.out.items.includes(n)
+                  n.kind === 'saldo'
                     ? '–'
-                    : formatPart(partOf(kr, n.value ?? 0, totals.utgifter)),
+                    : formatPart(
+                        partOf(
+                          kr,
+                          n.value ?? 0,
+                          balance.out.items.includes(n) ? totals.utgifter : totals.inkomster,
+                        ),
+                      ),
               }
         }
         sections={[

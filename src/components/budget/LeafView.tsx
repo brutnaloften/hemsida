@@ -138,7 +138,7 @@ export function LeafView({
         {personal?.panel}
         {advanced?.controls}
       </div>
-      {present && side === 'utgifter' && personal?.total != null && value > 0 && (
+      {present && personal?.total != null && value > 0 && sideTotal > 0 && (
         <p className="mt-3">
           Din del: {formatPart(partOf(personal.total, value, sideTotal))} per år
           <span className="sr-only"> ({krWords(partOf(personal.total, value, sideTotal))})</span>

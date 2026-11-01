@@ -67,8 +67,8 @@ export function DrillView({
         ? `Andel av ${formatMdkr(split.base)}, bruttobelopp före avdrag (${node.name})`
         : `Andel av ${formatMdkr(split.base)} före avdrag (${node.name})`;
 
-  // Kr mode (P8) applies to spending boxes; the revenue side stays in percent.
-  const kr = personal?.total != null && side === 'utgifter' ? personal.total : null;
+  // Kr mode (P8) applies to both sides: the person's total is spread over the side shown.
+  const kr = personal?.total ?? null;
   const boxes = useMemo(
     () =>
       makeBoxes(split.boxes, layoutNodes(split.boxes), FRAME_ASPECT, LABEL_WIDTH, (n) => {
