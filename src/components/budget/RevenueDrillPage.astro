@@ -26,9 +26,8 @@ const crumbs = crumbsFor(chain.map(slim), 'inkomster', STAT_LEVEL);
 const balance = withoutChildren(buildBalance(latestYear));
 const yearOptions = years.map((year) => ({
   year,
-  preliminary:
-    meta.yearStatus.revenue[String(year)] !== 'final' ||
-    meta.yearStatus.expenditure[String(year)] !== 'final',
+  revenuePreliminary: meta.yearStatus.revenue[String(year)] !== 'final',
+  spendingPreliminary: meta.yearStatus.expenditure[String(year)] !== 'final',
 }));
 const description =
   revenueExplanation(node.id) ??

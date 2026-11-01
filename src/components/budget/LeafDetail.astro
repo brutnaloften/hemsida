@@ -5,14 +5,14 @@
  * island (LeafView.tsx) so the year can change without a reload.
  *
  * Generic on purpose: it takes a node id, not an anslag, so the revenue leaf pages (titlar, rn4.5) reuse
- * it with `nodeId="rev:1111"`. The default slot is for sections that only apply to this leaf, such as
- * "Löften som gäller detta anslag" (9ce.4) and "Anslagsposter" (rn4.6); put each in its own element that
- * renders nothing when empty.
+ * it with `nodeId="rev:1111"`. Two named slots hold the sections that only apply to this leaf, in this
+ * order: `promises` ("Löften som gäller detta anslag", 9ce.4) and `anslagsposter` ("Anslagsposter",
+ * rn4.6). A slot that is not filled renders nothing, not even a wrapper.
  */
 import DrillPage from '@/components/budget/DrillPage.astro';
 import { latestYear } from '@/lib/budget/data';
 import { formatAmountWords } from '@/lib/budget/format';
-import { buildPageView, existsIn } from '@/lib/budget/view';
+import { buildPageView, describeNode, existsIn } from '@/lib/budget/view';
 
 interface Props {
   nodeId: string;
@@ -23,9 +23,28 @@ const { chain, side } = buildPageView(latestYear, nodeId);
 const node = chain[chain.length - 1];
 const sideLabel = side === 'utgifter' ? 'statens utgifter' : 'statens inkomster';
 const title = `${node.name} ${latestYear} – ${sideLabel}`;
-const description = existsIn(node, latestYear)
-  ? `${node.name}: ${formatAmountWords(node.value ?? 0)} ${latestYear}, enligt utfallet från Ekonomistyrningsverket.`
-  : `${node.name} i ${sideLabel}, utfall per år från Ekonomistyrningsverket.`;
+const description = describeNode(
+  node,
+  latestYear,
+  side,
+  existsIn(node, latestYear),
+  formatAmountWords(node.value ?? 0),
+);
 ---
 
-<DrillPage nodeId={nodeId} title={title} description={description}><slot /></DrillPage>
+<DrillPage nodeId={nodeId} title={title} description={description}>
+  {
+    Astro.slots.has('promises') && (
+      <section data-slot="promises">
+        <slot name="promises" />
+      </section>
+    )
+  }
+  {
+    Astro.slots.has('anslagsposter') && (
+      <section data-slot="anslagsposter">
+        <slot name="anslagsposter" />
+      </section>
+    )
+  }
+</DrillPage>

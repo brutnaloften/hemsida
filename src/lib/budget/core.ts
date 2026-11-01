@@ -41,6 +41,8 @@ export type BudgetNode = {
   value: number | null;
   children?: BudgetNode[];
   kind?: NodeKind;
+  /** Set on a parent stripped of its children: the positive children's sum (see grossBase). */
+  childBase?: number;
 };
 
 export type BuildOptions = {
@@ -64,6 +66,53 @@ export function hrefFor(side: Side, segments: string[] = [], opts?: BuildOptions
 /** href of the level's balance page. */
 export function levelHref(opts?: BuildOptions): string {
   return `${baseOf(opts)}budget/${(opts?.level ?? STAT_LEVEL).id}/`;
+}
+
+/**
+ * The base the shares of a node's children are taken of: the sum of its positive children, the same
+ * number the treemap boxes add up to (P3). For a node with a net value (a UO whose anslag include
+ * negative ones) this differs from `value`. Falls back to `value` when the children are unknown.
+ */
+export function grossBase(n: BudgetNode): number {
+  if (n.children) return splitChildren(n).base;
+  return n.childBase ?? n.value ?? 0;
+}
+
+/**
+ * Meta description of a node's page for a year. Shared by the static page and the island, which
+ * rewrites it when the view climbs to another node.
+ */
+export function describeNode(
+  node: BudgetNode,
+  year: number,
+  side: Side,
+  present: boolean,
+  amountWords: string,
+): string {
+  const sideLabel = side === 'utgifter' ? 'statens utgifter' : 'statens inkomster';
+  return present
+    ? `${node.name}: ${amountWords} ${year}, enligt utfallet från Ekonomistyrningsverket.`
+    : `${node.name} i ${sideLabel}, utfall per år från Ekonomistyrningsverket.`;
+}
+
+/**
+ * Explains why a side root's total differs from the base its children's shares are taken of
+ * (spending: the UO sum 1 402,3 vs statens utgifter 1 405,8). Undefined when they agree.
+ */
+export function sideGap(
+  side: Side,
+  rootValue: number,
+  sideTotal: number,
+): { gap: number; text: string } | undefined {
+  const gap = round1(sideTotal - rootValue);
+  if (gap === 0) return undefined;
+  return {
+    gap,
+    text:
+      side === 'utgifter'
+        ? 'Procenten på de följande sidorna räknas av statens totala utgifter, som även omfattar övriga poster: Riksgäldskontorets nettoutlåning och en kassamässig korrigering.'
+        : 'Procenten på de följande sidorna räknas av statens totala inkomster, som även omfattar övriga poster som inte ingår i rutorna.',
+  };
 }
 
 /** A node without its subtree. */

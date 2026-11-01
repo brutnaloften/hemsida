@@ -8,7 +8,11 @@ import {
   existsIn,
   buildRevenueTree,
   buildSpendingTree,
+  describeNode,
   findNode,
+  grossBase,
+  sideGap,
+  yearOptions,
   hrefFor,
   idForPath,
   pathForId,
@@ -315,5 +319,37 @@ describe('slugs and ids', () => {
     expect(hrefFor('utgifter', [], { base: '/x', level: { ...STAT_LEVEL, id: 'kommun' } })).toBe(
       '/x/budget/kommun/utgifter/',
     );
+  });
+});
+
+describe('leaf polish helpers', () => {
+  it('grossBase matches the treemap base, also for a stripped parent', () => {
+    const year = years[years.length - 1];
+    const view = buildPageView(year, 'anslag:0901011');
+    const parent = view.chain[view.chain.length - 2];
+    const uo = findNode(buildSpendingTree(year, opts), parent.id)!;
+    expect(parent.children).toBeUndefined();
+    expect(grossBase(parent)).toBe(splitChildren(uo).base);
+    expect(grossBase(uo)).toBe(splitChildren(uo).base);
+  });
+
+  it('sideGap explains a difference and is silent when the totals agree', () => {
+    expect(sideGap('utgifter', 1402.3, 1405.8)?.gap).toBe(3.5);
+    expect(sideGap('utgifter', 100, 100)).toBeUndefined();
+    expect(sideGap('inkomster', 100, 90)?.gap).toBe(-10);
+  });
+
+  it('describeNode names the node it is given', () => {
+    const node = { id: 'uo:9', name: 'Hälsovård', href: '/', value: 1 } as BudgetNode;
+    expect(describeNode(node, 2025, 'utgifter', true, '1 mnkr')).toContain(
+      'Hälsovård: 1 mnkr 2025',
+    );
+    expect(describeNode(node, 2025, 'utgifter', false, '')).toContain('statens utgifter');
+  });
+
+  it('year options carry the side-specific preliminary flags', () => {
+    const latest = yearOptions().at(-1)!;
+    expect(typeof latest.revenuePreliminary).toBe('boolean');
+    expect(typeof latest.spendingPreliminary).toBe('boolean');
   });
 });

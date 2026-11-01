@@ -1,8 +1,22 @@
 import type { MouseEvent, Ref } from 'react';
 import { Breadcrumbs, type Crumb } from '@/components/budget/Breadcrumbs';
 import { YearSelect, type YearOption } from '@/components/budget/YearSelect';
-import { discontinuedAfter, existsIn, type BudgetNode, type Side } from '@/lib/budget/core';
-import { formatAmountWords, formatPercent, formatPercentWords, shareOf } from '@/lib/budget/format';
+import { PrelimBadge } from '@/components/budget/PrelimBadge';
+import { plainClick } from '@/components/budget/types';
+import {
+  discontinuedAfter,
+  existsIn,
+  grossBase,
+  type BudgetNode,
+  type Side,
+} from '@/lib/budget/core';
+import {
+  formatAmountWords,
+  formatMdkr,
+  formatPercent,
+  formatPercentWords,
+  shareOf,
+} from '@/lib/budget/format';
 
 type Props = {
   node: BudgetNode;
@@ -13,6 +27,8 @@ type Props = {
   sideTotal: number;
   crumbs: Crumb[];
   years: YearOption[];
+  /** Revenue is preliminary for this year and the leaf is on the revenue side. */
+  preliminary?: boolean;
   onYear: (year: number) => void;
   onCrumb: (crumb: Crumb, event: MouseEvent<HTMLAnchorElement>) => void;
   h1Ref: Ref<HTMLHeadingElement>;
@@ -37,6 +53,7 @@ export function LeafView({
   sideTotal,
   crumbs,
   years,
+  preliminary = false,
   onYear,
   onCrumb,
   h1Ref,
@@ -47,7 +64,10 @@ export function LeafView({
   const value = node.value ?? 0;
 
   const ofSide = sideTotal > 0 ? shareOf(value, sideTotal) : null;
-  const ofParent = parent && (parent.value ?? 0) > 0 ? shareOf(value, parent.value!) : null;
+  // The share is taken of the same base as the treemap boxes (the parent's positive children), so a
+  // box and its leaf page show the same percentage even when the parent's net value is lower.
+  const parentBase = parent ? grossBase(parent) : 0;
+  const ofParent = parent && parentBase > 0 ? shareOf(value, parentBase) : null;
 
   return (
     <>
@@ -88,7 +108,7 @@ export function LeafView({
               <a
                 href={`${node.href}?ar=${last}`}
                 onClick={(e) => {
-                  if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                  if (!plainClick(e)) return;
                   e.preventDefault();
                   onYear(last);
                 }}
@@ -102,14 +122,19 @@ export function LeafView({
         </p>
       )}
 
+      {preliminary && (
+        <div className="mt-2">
+          <PrelimBadge />
+        </div>
+      )}
       <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
-        <YearSelect years={years} value={year} onChange={onYear} />
+        <YearSelect years={years} value={year} onChange={onYear} side={side} />
       </div>
 
       {present && ofParent !== null && parent && value > 0 && (
         <figure className="mt-4">
           <figcaption className="text-sm text-muted-foreground">
-            Andel av {parent.name} ({formatAmountWords(parent.value ?? 0)})
+            Andel av {formatMdkr(parentBase)} ({parentLabel(parent)})
           </figcaption>
           <div
             role="img"
