@@ -501,10 +501,16 @@ export type Target = {
 
 /**
  * Describe a --utgift/--inkomst argument: a URL (status from its query, else from the release
- * name) or a local zip path (provenance `provenanceUrl`, else the listing page).
+ * name) or a local zip path (provenance `provenanceUrl`, else the listing page). Passing
+ * `provenanceUrl` together with a URL target throws rather than silently ignoring it.
  */
 export function describeTarget(arg: string, provenanceUrl?: string): Target {
   const isUrl = /^https?:\/\//.test(arg);
+  if (isUrl && provenanceUrl) {
+    throw new Error(
+      `A provenance URL (${provenanceUrl}) only applies to local zip paths, but the target is already a URL: ${arg}`,
+    );
+  }
   let fileName: string;
   let queryStatus = '';
   if (isUrl) {

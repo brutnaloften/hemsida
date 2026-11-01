@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { execFileSync } from 'node:child_process';
-import { mkdtempSync, writeFileSync } from 'node:fs';
+import { execFileSync, spawnSync } from 'node:child_process';
+import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import {
@@ -372,6 +372,15 @@ describe('describeTarget / statusFromRelease', () => {
     expect(t.fileName).toBe('Årsutfall utgifter 1997 - 2025, definitivt.zip');
   });
 
+  it('rejects a provenance URL given together with a URL target', () => {
+    expect(() =>
+      describeTarget(
+        'https://example.org/files/Årsutfall utgifter 1997 - 2025, definitivt.zip',
+        'https://example.org/orig.zip',
+      ),
+    ).toThrow(/provenance URL/);
+  });
+
   it('accepts a local path with the listing page, or a given URL, as provenance', () => {
     const path = '/tmp/x/Årsutfall inkomster 2006 - 2025,  andra preliminära.zip';
     const local = describeTarget(path);
@@ -386,26 +395,36 @@ describe('describeTarget / statusFromRelease', () => {
   });
 });
 
+const hasPython3 = spawnSync('python3', ['--version']).status === 0;
+if (!hasPython3)
+  console.warn(
+    'python3 not found: skipping readSingleZipEntry test (needs python3 to build fixture zips)',
+  );
+
 describe('readSingleZipEntry', () => {
-  it('reads the only entry and rejects multi-entry zips', () => {
+  it.skipIf(!hasPython3)('reads the only entry and rejects multi-entry zips', () => {
     const dir = mkdtempSync(join(tmpdir(), 'budget-zip-'));
-    writeFileSync(join(dir, 'a.csv'), 'x;y\r\n1;2\r\n');
-    writeFileSync(join(dir, 'b.csv'), 'z\n');
-    const makeZip = (zip: string, ...files: string[]) =>
-      execFileSync(
-        'python3',
-        [
-          '-I',
-          '-c',
-          'import sys, zipfile\nz = zipfile.ZipFile(sys.argv[1], "w")\n[z.write(f) for f in sys.argv[2:]]\nz.close()',
-          zip,
-          ...files,
-        ],
-        { cwd: dir },
-      );
-    makeZip('one.zip', 'a.csv');
-    makeZip('two.zip', 'a.csv', 'b.csv');
-    expect(readSingleZipEntry(join(dir, 'one.zip'))).toBe('x;y\r\n1;2\r\n');
-    expect(() => readSingleZipEntry(join(dir, 'two.zip'))).toThrow(/one zip entry/);
+    try {
+      writeFileSync(join(dir, 'a.csv'), 'x;y\r\n1;2\r\n');
+      writeFileSync(join(dir, 'b.csv'), 'z\n');
+      const makeZip = (zip: string, ...files: string[]) =>
+        execFileSync(
+          'python3',
+          [
+            '-I',
+            '-c',
+            'import sys, zipfile\nz = zipfile.ZipFile(sys.argv[1], "w")\n[z.write(f) for f in sys.argv[2:]]\nz.close()',
+            zip,
+            ...files,
+          ],
+          { cwd: dir },
+        );
+      makeZip('one.zip', 'a.csv');
+      makeZip('two.zip', 'a.csv', 'b.csv');
+      expect(readSingleZipEntry(join(dir, 'one.zip'))).toBe('x;y\r\n1;2\r\n');
+      expect(() => readSingleZipEntry(join(dir, 'two.zip'))).toThrow(/one zip entry/);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
   });
 });
