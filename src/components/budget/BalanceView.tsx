@@ -14,7 +14,13 @@ import {
 } from '@/lib/budget/format';
 import { formatPart, krWords, partOf } from '@/lib/budget/salary-view';
 import { LABELS } from '@/lib/budget/labels';
-import { hrefFor, levelHref, type Balance, type BalanceColumn } from '@/lib/budget/core';
+import {
+  hrefFor,
+  levelHref,
+  type Balance,
+  type BalanceColumn,
+  type BudgetNode,
+} from '@/lib/budget/core';
 import { columnAspect, layoutColumn, type Frame } from '@/lib/budget/treemap';
 
 /** Container widths used for label tiers: the narrowest phone content (320 - 2 x 16) and a mid desktop. */
@@ -45,8 +51,8 @@ function columnBoxes(
   baseLabel: string,
   saldoBase: number,
   saldoLabel: string,
-  /** The person's yearly share (P8) to show in kr on this column, or null for percent. */
-  kr: number | null,
+  /** The person's yearly kr (P8) for a box of this column, or null to show percent. */
+  partFor: (n: BudgetNode, base: number) => number | null,
 ): Box[] {
   const aspect = { portrait: columnAspect('portrait'), landscape: columnAspect('landscape') };
   const layouts = {
@@ -60,7 +66,7 @@ function columnBoxes(
     const percentWords = `${formatPercentWords(share)} av ${n.kind === 'saldo' ? saldoLabel : baseLabel}`;
     const plain = n.kind === 'saldo' || n.kind === 'other';
     // The saldo box shows nothing personal, to avoid implying "your share of the debt".
-    const part = kr !== null && n.kind !== 'saldo' ? partOf(kr, v, base) : null;
+    const part = n.kind !== 'saldo' ? partFor(n, base) : null;
     return {
       value:
         n.kind === 'saldo'
@@ -94,6 +100,7 @@ export function BalanceView({
   const { totals, year, saldo } = balance;
   const deficit = totals.saldo < 0;
   const kr = personal?.total ?? null;
+  const revenue = personal?.revenue ?? null;
   const outBoxes = useMemo(
     () =>
       columnBoxes(
@@ -102,7 +109,7 @@ export function BalanceView({
         'statens utgifter',
         totals.utgifter,
         'utgifterna',
-        kr,
+        (n, base) => (kr === null ? null : partOf(kr, n.value ?? 0, base)),
       ),
     [balance, totals.utgifter, kr],
   );
@@ -114,9 +121,9 @@ export function BalanceView({
         'statens inkomster',
         totals.utgifter,
         'utgifterna',
-        null,
+        (n) => (revenue ? revenue(n.id) : null),
       ),
-    [balance, totals.inkomster],
+    [balance, totals.inkomster, revenue],
   );
   const aspect = { portrait: columnAspect('portrait'), landscape: columnAspect('landscape') };
   const topOut = balance.out.items
@@ -257,13 +264,18 @@ export function BalanceView({
         } ${formatAmountWords(Math.abs(totals.saldo))} visas som en egen post.`}
         onOpen={onOpen}
         personal={
-          kr === null
+          kr === null && !revenue
             ? undefined
             : {
-                part: (n) =>
-                  n.kind === 'saldo' || !balance.out.items.includes(n)
-                    ? '–'
-                    : formatPart(partOf(kr, n.value ?? 0, totals.utgifter)),
+                part: (n) => {
+                  if (n.kind === 'saldo') return '–';
+                  const p = balance.out.items.includes(n)
+                    ? kr === null
+                      ? null
+                      : partOf(kr, n.value ?? 0, totals.utgifter)
+                    : (revenue?.(n.id) ?? null);
+                  return p === null ? '–' : formatPart(p);
+                },
               }
         }
         sections={[

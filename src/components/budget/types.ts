@@ -8,7 +8,15 @@ export type Openable = Pick<BudgetNode, 'id' | 'href' | 'kind'>;
  * The salary panel (P8) as the views see it: the control to place in the controls row, and the
  * person's yearly share to the state in kr, or null while no estimate is shown (percent mode).
  */
-export type Personal = { panel: ReactNode; total: number | null };
+export type Personal = {
+  panel: ReactNode;
+  total: number | null;
+  /**
+   * The person's own kr on a revenue node (from the panel's breakdown), or null for nodes the
+   * estimate does not cover. Absent while no estimate is shown.
+   */
+  revenue: ((nodeId: string) => number | null) | null;
+};
 
 /** A left click without a modifier key: the only click the island handles itself (P1). */
 export function plainClick(e: MouseEvent): boolean {

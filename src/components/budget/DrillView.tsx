@@ -1,4 +1,4 @@
-import { useMemo, type MouseEvent, type Ref } from 'react';
+import { useCallback, useMemo, type MouseEvent, type Ref } from 'react';
 import { Breadcrumbs, type Crumb } from '@/components/budget/Breadcrumbs';
 import { DataTable } from '@/components/budget/DataTable';
 import { MinusStrip } from '@/components/budget/MinusStrip';
@@ -69,20 +69,28 @@ export function DrillView({
 
   // Kr mode (P8) applies to spending boxes; the revenue side stays in percent.
   const kr = personal?.total != null && side === 'utgifter' ? personal.total : null;
+  const revenue = side === 'inkomster' ? (personal?.revenue ?? null) : null;
+  // Spending is spread pro rata over the side; revenue shows the panel's own breakdown, and only
+  // on the nodes it covers (revenue boxes are gross, so pro rata would not add up).
+  const partFor = useCallback(
+    (n: BudgetNode): number | null =>
+      kr !== null ? partOf(kr, n.value ?? 0, sideTotal) : revenue ? revenue(n.id) : null,
+    [kr, revenue, sideTotal],
+  );
   const boxes = useMemo(
     () =>
       makeBoxes(split.boxes, layoutNodes(split.boxes), FRAME_ASPECT, LABEL_WIDTH, (n) => {
         const share = shareOf(n.value ?? 0, split.base);
         const words = `${n.name}: ${formatPercentWords(share)} av ${node.name}, ${formatAmountWords(n.value ?? 0)}`;
-        if (kr === null) return { value: formatPercent(share), aria: words, link: true };
-        const part = partOf(kr, n.value ?? 0, sideTotal);
+        const part = partFor(n);
+        if (part === null) return { value: formatPercent(share), aria: words, link: true };
         return {
           value: formatPart(part),
           aria: `${words}. Din del: ${krWords(part)} per år`,
           link: true,
         };
       }),
-    [split, node.name, kr, sideTotal],
+    [split, node.name, partFor],
   );
 
   // The table lists every item individually, so grouped small ones are expanded again.
@@ -172,11 +180,17 @@ export function DrillView({
         advanced={advanced}
         onOpen={onOpen}
         personal={
-          kr === null
+          kr === null && !revenue
             ? undefined
             : {
-                part: (n) => formatPart(partOf(kr, n.value ?? 0, sideTotal)),
-                total: formatPart(partOf(kr, value, sideTotal)),
+                part: (n) => {
+                  const p = partFor(n);
+                  return p === null ? '–' : formatPart(p);
+                },
+                total: (() => {
+                  const p = partFor(node);
+                  return p === null ? undefined : formatPart(p);
+                })(),
               }
         }
         sections={[
