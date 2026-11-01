@@ -32,14 +32,27 @@ export interface TaxYearParams {
    */
   employerPensionRate: number;
   /**
-   * Percentage points of the total kommunal tax rate that are begravningsavgift
-   * and avgift till trossamfund; excluded from the rate used in the
-   * jobbskatteavdrag. SKV_433 7.5.2.
+   * Allmän pensionsavgift: rate, ceiling of the fee base (8,07 inkomstbasbelopp
+   * x 83 400 = 673 038 kr) and the income below which no fee is charged
+   * (0,423 PBB). The fee goes to the AP funds but is fully offset by
+   * skattereduktion för allmän pensionsavgift, which the state bears (titel
+   * 1141). SKV_433 7.4 and 7.5.1.
    */
-  jsaRateExclusion: number;
+  pensionFee: { rate: number; baseCeiling: number; minIncome: number };
+  /**
+   * Skattereduktion för förvärvsinkomst (titel 1162): 0,75 % of taxable income
+   * above `from`, up to `maxIncome` where the maximum `max` is reached.
+   * SKV_433 7.5.4.
+   */
+  forvarvsinkomstReduction: { rate: number; from: number; maxIncome: number; max: number };
   /** Moms rates (share of price excl. moms). SKV_BELOPP. */
   vat: { standard: number; reduced12: number; reduced6: number };
-  /** Average total kommun + region tax rate (memo only, NOT state budget). SCB_KOMMUNALSKATT. */
+  /**
+   * Average kommun + region tax rate, EXCLUDING begravningsavgift and avgift
+   * till trossamfund (SCB reports those separately). Same unit as SKV_433's
+   * "KI" in the jobbskatteavdrag formula, i.e. SKV's combined rate minus its
+   * 1,16 pp for those fees. SCB_KOMMUNALSKATT.
+   */
   avgKommunalskattesats: number;
   sources: { label: string; url: string }[];
 }
@@ -52,7 +65,8 @@ export const TAX_YEARS: Record<number, TaxYearParams> = {
     stateTaxRate: 0.2,
     employerTotalRate: 0.3142,
     employerPensionRate: 0.1021,
-    jsaRateExclusion: 0.0116,
+    pensionFee: { rate: 0.07, baseCeiling: 673_038, minIncome: 25_042 },
+    forvarvsinkomstReduction: { rate: 0.0075, from: 40_000, maxIncome: 240_000, max: 1_500 },
     vat: { standard: 0.25, reduced12: 0.12, reduced6: 0.06 },
     avgKommunalskattesats: 0.3238,
     sources: [
@@ -117,13 +131,17 @@ export const LATEST_TAX_YEAR = 2026;
 
 /**
  * ASSUMPTION (not an official figure): share of disposable income spent on
- * consumption; the rest is saved. Overridable.
+ * consumption; the rest is saved. 85 % is a rounded illustrative value that
+ * implies 15 % saving; it is not derived from SCB or other statistics.
+ * Overridable.
  */
 export const DEFAULT_CONSUMPTION_SHARE = 0.85;
 
 /**
  * ASSUMPTION (not an official figure): how consumption splits over moms
  * categories. `exempt` covers momsfri spending such as housing rent,
- * healthcare and education. Shares must sum to 1. Overridable.
+ * healthcare and education. Shares must each be in [0, 1] and sum to 1. The
+ * default implies an average moms of about 11,4 % of consumption (incl. moms).
+ * Overridable.
  */
 export const DEFAULT_VAT_MIX = { standard: 0.5, reduced12: 0.05, reduced6: 0.15, exempt: 0.3 };

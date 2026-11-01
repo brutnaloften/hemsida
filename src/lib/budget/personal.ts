@@ -7,17 +7,28 @@
  * budget; its estimate is only a memo (`stat.memo.kommunalskatt`).
  *
  * State components:
- * - statlig inkomstskatt: 20 % of taxable income above the skiktgräns.
- * - jobbskatteavdrag: negative. It is deducted against kommunal tax but
- *   booked against state revenue (the state compensates kommuner/regioner),
- *   so it lowers the state's net receipts.
+ * - statlig inkomstskatt: 20 % of taxable income (after grundavdrag) above
+ *   the skiktgräns.
+ * - three negative skattereduktioner, booked against state revenue (the
+ *   state compensates kommuner/regioner and the AP funds): jobbskatteavdrag
+ *   (titel 1153), skattereduktion för allmän pensionsavgift (1141, which
+ *   offsets the 7 % fee that goes to the AP funds) and skattereduktion för
+ *   förvärvsinkomst (1162). With the 2026 rules the total stays
+ *   non-negative (lowest around 80 000 kr salary with no consumption), but
+ *   callers should still handle a negative total (see allocateProportionally).
  * - arbetsgivaravgifter (statens del): total rate minus ålderspensionsavgift,
  *   which goes to the AP funds outside the state budget.
  * - moms from consumption (adjustable assumptions).
  *
- * Simplifications: employees under 66 born 1959 or later, no other deductions
- * or reductions, gross salary treated as both fastställd förvärvsinkomst and
- * arbetsinkomst, no rounding of taxable income. Not tax advice.
+ * Simplifications: employees under 66 born 1959 or later; gross salary is
+ * treated as fastställd förvärvsinkomst and arbetsinkomst; taxable income is
+ * not rounded; public service-avgift (max 1 184 kr) is ignored; the temporary
+ * reduced arbetsgivaravgift for young people (2026-04 to 2027-09) is ignored;
+ * reductions are applied in the order pensionsavgift, jobbskatteavdrag,
+ * förvärvsinkomst, each capped by the tax left to reduce. `memo.kommunalskatt`
+ * is kommun+region tax before any skattereduktion (roughly what they receive),
+ * `memo.kommunalskattEfterAvdrag` what the person pays after the reductions.
+ * Not tax advice.
  */
 import {
   DEFAULT_CONSUMPTION_SHARE,
@@ -40,19 +51,26 @@ export interface PersonalInput {
   /** Split of consumption over moms categories; must sum to 1. */
   vatMix?: VatMix;
   /**
-   * Total kommun + region tax rate (e.g. 0.3238). Drives jobbskatteavdrag,
-   * disposable income and the kommunalskatt memo. Defaults to the national average.
+   * Kommun + region tax rate EXCLUDING begravningsavgift and trossamfund
+   * (e.g. SCB's 0.3238 average for 2026). It is used directly as "KI" in the
+   * jobbskatteavdrag formula. Defaults to the national average.
    */
   kommunalskattesats?: number;
 }
 
 export interface Component {
-  id: 'statlig-inkomstskatt' | 'jobbskatteavdrag' | 'arbetsgivaravgifter' | 'moms';
+  id:
+    | 'statlig-inkomstskatt'
+    | 'jobbskatteavdrag'
+    | 'skattereduktion-pensionsavgift'
+    | 'skattereduktion-forvarvsinkomst'
+    | 'arbetsgivaravgifter'
+    | 'moms';
   /** Swedish label for display. */
   label: string;
   /** One-sentence Swedish explanation for display. */
   explanation: string;
-  /** Kr per year; negative for jobbskatteavdrag. */
+  /** Kr per year; negative for the skattereduktioner. */
   amount: number;
 }
 
@@ -65,12 +83,12 @@ export interface Breakdown {
   /** True when `paramsYear !== year` (nearest year's rules were used). */
   usedFallbackYear: boolean;
   components: Component[];
-  /** Sum of the components, kr per year. */
+  /** Sum of the components, kr per year. May in principle be negative. */
   total: number;
   disposableIncome: number;
   consumption: number;
   /** Not state budget; informational only. */
-  memo: { kommunalskatt: number };
+  memo: { kommunalskatt: number; kommunalskattEfterAvdrag: number };
   assumptions: {
     consumptionShare: number;
     vatMix: VatMix;
@@ -129,10 +147,25 @@ export function jobbskatteavdrag(
   else if (ai <= J.b2Pbb * pbb) base = J.b1Pbb * pbb + J.rate2 * (ai - J.b1Pbb * pbb);
   else if (ai <= J.b3Pbb * pbb) base = J.base3Pbb * pbb + J.rate3 * (ai - J.b2Pbb * pbb);
   else base = J.topPbb * pbb;
-  const ki = kommunalskattesats - p.jsaRateExclusion;
-  const jsa = Math.max(0, base - ga) * ki;
+  const jsa = Math.max(0, base - ga) * kommunalskattesats;
   const cap = Math.max(0, income - ga) * kommunalskattesats;
   return Math.floor(Math.min(jsa, cap));
+}
+
+/** Allmän pensionsavgift (7 % of income up to the ceiling), rounded to nearest 100 kr. SKV_433 7.4. */
+export function pensionFee(income: number, p: TaxYearParams): number {
+  const f = p.pensionFee;
+  if (income < f.minIncome) return 0;
+  const fee = Math.min(income, f.baseCeiling) * f.rate;
+  // "Avgift som slutar på 50 kr avrundas till närmaste lägre hundratal."
+  return Math.abs((fee % 100) - 50) < 1e-6 ? fee - 50 : Math.round(fee / 100) * 100;
+}
+
+/** Skattereduktion för förvärvsinkomst on taxable income `bfi`, whole kr. SKV_433 7.5.4. */
+export function forvarvsinkomstReduction(bfi: number, p: TaxYearParams): number {
+  const r = p.forvarvsinkomstReduction;
+  if (bfi > r.maxIncome) return r.max;
+  return Math.floor(Math.max(0, bfi - r.from) * r.rate);
 }
 
 /** Statlig inkomstskatt: rate on taxable income above the skiktgräns. */
@@ -143,6 +176,8 @@ export function stateIncomeTax(income: number, p: TaxYearParams): number {
 
 /** Moms contained in `consumption` (spending incl. moms) for a category mix. */
 export function vatInConsumption(consumption: number, mix: VatMix, p: TaxYearParams): number {
+  for (const v of Object.values(mix))
+    if (!(v >= 0 && v <= 1)) throw new Error('vatMix shares must be between 0 and 1');
   const sum = mix.standard + mix.reduced12 + mix.reduced6 + mix.exempt;
   if (Math.abs(sum - 1) > 1e-9) throw new Error('vatMix shares must sum to 1');
   const part = (share: number, rate: number) => (consumption * share * rate) / (1 + rate);
@@ -169,11 +204,17 @@ export function estimateContribution(
     throw new Error('kommunalskattesats must be between 0 and 1');
 
   const ga = grundavdrag(gross, p);
+  const taxable = Math.max(0, gross - ga);
   const statTax = stateIncomeTax(gross, p);
-  const jsa = jobbskatteavdrag(gross, kommunalskattesats, p);
+  const kommunalGross = taxable * kommunalskattesats;
+  const fee = pensionFee(gross, p);
+  const pensionRed = Math.min(fee, statTax + kommunalGross);
+  const left = statTax + kommunalGross - pensionRed;
+  const jsa = Math.min(jobbskatteavdrag(gross, kommunalskattesats, p), left);
+  const forv = Math.min(forvarvsinkomstReduction(taxable, p), left - jsa);
   const employer = gross * (p.employerTotalRate - p.employerPensionRate);
-  const kommunalskatt = Math.max(0, gross - ga) * kommunalskattesats - jsa;
-  const disposableIncome = gross - statTax - kommunalskatt;
+  const kommunalNet = Math.max(0, kommunalGross - jsa - forv - pensionRed);
+  const disposableIncome = gross - statTax - kommunalGross + pensionRed + jsa + forv - fee;
   const consumption = Math.max(0, disposableIncome) * consumptionShare;
   const moms = vatInConsumption(consumption, vatMix, p);
 
@@ -181,7 +222,7 @@ export function estimateContribution(
     {
       id: 'statlig-inkomstskatt',
       label: 'Statlig inkomstskatt',
-      explanation: `Den del av inkomsten som överstiger ${p.skiktgrans.toLocaleString('sv-SE')} kr beskattas med ${p.stateTaxRate * 100} procent till staten.`,
+      explanation: `Den beskattningsbara inkomsten (lönen efter grundavdrag) över ${p.skiktgrans.toLocaleString('sv-SE')} kr beskattas med ${p.stateTaxRate * 100} procent till staten.`,
       amount: statTax,
     },
     {
@@ -190,6 +231,20 @@ export function estimateContribution(
       explanation:
         'Jobbskatteavdraget sänker din kommunalskatt, men staten betalar tillbaka beloppet till kommunerna, så det minskar statens inkomster.',
       amount: -jsa,
+    },
+    {
+      id: 'skattereduktion-pensionsavgift',
+      label: 'Skattereduktion för allmän pensionsavgift',
+      explanation:
+        'Den allmänna pensionsavgiften på 7 procent går till pensionssystemet, men du får tillbaka lika mycket i skattereduktion som staten bekostar.',
+      amount: -pensionRed,
+    },
+    {
+      id: 'skattereduktion-forvarvsinkomst',
+      label: 'Skattereduktion för förvärvsinkomst',
+      explanation:
+        'Staten ger en liten skattereduktion på förvärvsinkomster, högst 1 500 kronor om året, som minskar statens inkomster.',
+      amount: -forv,
     },
     {
       id: 'arbetsgivaravgifter',
@@ -216,29 +271,45 @@ export function estimateContribution(
       total: components.reduce((s, c) => s + c.amount, 0),
       disposableIncome,
       consumption,
-      memo: { kommunalskatt },
+      memo: { kommunalskatt: kommunalGross, kommunalskattEfterAvdrag: kommunalNet },
       assumptions: { consumptionShare, vatMix, kommunalskattesats },
     },
   };
 }
 
 /**
+ * Effective moms as a share of consumption incl. moms (e.g. 0.114) expressed
+ * as a vatMix, for a UI that edits one average percentage: the rest of
+ * consumption is split between the standard rate and momsfri. Valid up to the
+ * standard rate's share of the price (20 % at 25 % moms).
+ */
+export function vatMixFromEffectiveRate(rate: number, p: TaxYearParams = getTaxYear()): VatMix {
+  const maxRate = p.vat.standard / (1 + p.vat.standard);
+  if (!(rate >= 0 && rate <= maxRate)) throw new Error(`effective moms must be 0-${maxRate}`);
+  const standard = rate / maxRate;
+  return { standard, reduced12: 0, reduced6: 0, exempt: 1 - standard };
+}
+
+/**
  * Distribute `total` over `weights` proportionally (e.g. treemap box sizes).
- * Result sums exactly to the rounded total (largest remainder on whole kr);
- * zero or negative weights get 0. All-zero weights yield all zeros.
+ * Result sums exactly to the rounded total (largest remainder on whole kr)
+ * and has the sign of `total` (a negative total gives negative parts).
+ * Zero or negative weights get 0; all-zero weights or a zero total give zeros.
  */
 export function allocateProportionally(total: number, weights: number[]): number[] {
   const w = weights.map((x) => (Number.isFinite(x) && x > 0 ? x : 0));
   const sum = w.reduce((a, b) => a + b, 0);
-  if (sum === 0 || total <= 0) return w.map(() => 0);
-  const exact = w.map((x) => (x / sum) * total);
+  const abs = Math.abs(total);
+  if (sum === 0 || !(abs > 0)) return w.map(() => 0);
+  const sign = total < 0 ? -1 : 1;
+  const exact = w.map((x) => (x / sum) * abs);
   const floors = exact.map(Math.floor);
-  let rest = Math.round(total) - floors.reduce((a, b) => a + b, 0);
+  let rest = Math.round(abs) - floors.reduce((a, b) => a + b, 0);
   const order = exact
     .map((e, i) => ({ i, frac: e - floors[i] }))
     .filter(({ i }) => w[i] > 0)
     .sort((a, b) => b.frac - a.frac);
   for (let k = 0; rest > 0 && order.length; k = (k + 1) % order.length, rest--)
     floors[order[k].i]++;
-  return floors;
+  return floors.map((x) => (x === 0 ? 0 : sign * x));
 }

@@ -2,11 +2,14 @@ import { describe, expect, it } from 'vitest';
 import {
   allocateProportionally,
   estimateContribution,
+  forvarvsinkomstReduction,
   getTaxYear,
   grundavdrag,
   jobbskatteavdrag,
+  pensionFee,
   stateIncomeTax,
   vatInConsumption,
+  vatMixFromEffectiveRate,
 } from './personal';
 import { DEFAULT_VAT_MIX } from './personal-params';
 
@@ -26,12 +29,12 @@ describe('grundavdrag (SKV 433 2026 worked examples)', () => {
   it('never exceeds income', () => expect(grundavdrag(10_000, p)).toBe(10_000));
 });
 
-describe('jobbskatteavdrag (SKV 433 2026 worked examples, kommunal rate 34 %)', () => {
-  it('90 000 kr gives 11 976', () => expect(jobbskatteavdrag(90_000, 0.34, p)).toBe(11_976));
-  it('240 000 kr gives 26 083', () => expect(jobbskatteavdrag(240_000, 0.34, p)).toBe(26_083));
+describe('jobbskatteavdrag (SKV 433 2026 worked examples, KI 32,84 % = SKV 34 % - 1,16 pp)', () => {
+  it('90 000 kr gives 11 976', () => expect(jobbskatteavdrag(90_000, 0.3284, p)).toBe(11_976));
+  it('240 000 kr gives 26 083', () => expect(jobbskatteavdrag(240_000, 0.3284, p)).toBe(26_083));
   it('is constant-ish above 8,08 PBB and never negative', () => {
-    expect(jobbskatteavdrag(900_000, 0.34, p)).toBe(jobbskatteavdrag(1_500_000, 0.34, p));
-    expect(jobbskatteavdrag(0, 0.34, p)).toBe(0);
+    expect(jobbskatteavdrag(900_000, 0.3284, p)).toBe(jobbskatteavdrag(1_500_000, 0.3284, p));
+    expect(jobbskatteavdrag(0, 0.3284, p)).toBe(0);
   });
 });
 
