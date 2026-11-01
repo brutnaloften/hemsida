@@ -1,4 +1,5 @@
 import type { MouseEvent } from 'react';
+import { baseOf, levelHref, type BudgetLevel, type BudgetNode } from '@/lib/budget/core';
 
 export type Crumb = {
   label: string;
@@ -42,4 +43,21 @@ export function Breadcrumbs({
       </ol>
     </nav>
   );
+}
+
+/** Crumbs Budget > level > side > ... for the root-to-node `chain` (the first node is the side root). */
+export function crumbsFor(
+  chain: BudgetNode[],
+  side: 'utgifter' | 'inkomster',
+  level: BudgetLevel,
+): Crumb[] {
+  return [
+    { label: 'Budget', href: `${baseOf()}budget/`, nodeId: null },
+    { label: level.name, href: levelHref(), nodeId: null },
+    ...chain.map((n, i): Crumb => ({
+      label: i === 0 ? (side === 'utgifter' ? 'Utgifter' : 'Inkomster') : n.name,
+      href: n.href,
+      nodeId: n.id,
+    })),
+  ];
 }

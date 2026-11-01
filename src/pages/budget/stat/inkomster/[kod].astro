@@ -1,0 +1,30 @@
+---
+import type { GetStaticPaths } from 'astro';
+import RevenueDrillPage from '@/components/budget/RevenueDrillPage.astro';
+import { latestYear } from '@/lib/budget/data';
+import { pathTo, type BudgetNode } from '@/lib/budget/core';
+import { buildRevenueTree } from '@/lib/budget/view';
+
+// One page for every revenue node that has children: Skatter, netto, typ, huvudgrupp and titelgrupp.
+// Titel leaf pages are separate (LeafDetail, rn4.4).
+export const getStaticPaths = (() => {
+  const root = buildRevenueTree(latestYear);
+  const paths: { params: { kod: string }; props: { chain: BudgetNode[]; sideTotal: number } }[] = [];
+  const walk = (n: BudgetNode) => {
+    for (const c of n.children ?? []) {
+      if (c.kind === 'leaf') continue;
+      paths.push({
+        params: { kod: c.id.replace(/^rev:/, '') },
+        props: { chain: pathTo(root, c.id)!, sideTotal: root.value ?? 0 },
+      });
+      walk(c);
+    }
+  };
+  walk(root);
+  return paths;
+}) satisfies GetStaticPaths;
+
+const { chain, sideTotal } = Astro.props;
+---
+
+<RevenueDrillPage chain={chain} sideTotal={sideTotal} />

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type MouseEvent } from 'react';
 import { BalanceView } from '@/components/budget/BalanceView';
-import type { Crumb } from '@/components/budget/Breadcrumbs';
+import { crumbsFor, type Crumb } from '@/components/budget/Breadcrumbs';
 import { DrillView } from '@/components/budget/DrillView';
 import type { Openable } from '@/components/budget/types';
 import type { YearOption } from '@/components/budget/YearSelect';
@@ -115,6 +115,16 @@ type Props = {
   /** The balance view of the latest year, rendered at build time. */
   initial: Balance;
   years: YearOption[];
+  /**
+   * Set on a static drill page: the node of the page (children one level deep), so the page is
+   * complete before the island has fetched anything. Always for the latest year.
+   */
+  drill?: {
+    node: BudgetNode;
+    side: 'utgifter' | 'inkomster';
+    sideTotal: number;
+    crumbs: Crumb[];
+  };
 };
 
 /**
@@ -122,9 +132,13 @@ type Props = {
  * component hydrates it and handles year changes and drilling client-side with history.pushState
  * (P1). Without JavaScript every box is an ordinary link and the page is complete as it is.
  */
-export default function BudgetExplorer({ initial, years }: Props) {
+export default function BudgetExplorer({ initial, years, drill }: Props) {
   const latest = initial.year;
-  const [view, setView] = useState<View>({ year: latest, nodeId: null, mindre: 0 });
+  const [view, setView] = useState<View>({
+    year: latest,
+    nodeId: drill?.node.id ?? null,
+    mindre: 0,
+  });
   const [notice, setNotice] = useState<string | null>(null);
   const [announcement, setAnnouncement] = useState('');
   const [failed, setFailed] = useState(false);
@@ -249,16 +263,7 @@ export default function BudgetExplorer({ initial, years }: Props) {
     if (node) {
       const shown = resolveMindre(node, view.mindre);
       const chain = pathTo(side === 'utgifter' ? trees.spending : trees.revenue, node.id) ?? [node];
-      const level = initial.level;
-      const crumbs: Crumb[] = [
-        { label: 'Budget', href: BUDGET, nodeId: null },
-        { label: level.name, href: levelHref(), nodeId: null },
-        ...chain.map((n, i): Crumb => ({
-          label: i === 0 ? (side === 'utgifter' ? 'Utgifter' : 'Inkomster') : n.name,
-          href: n.href,
-          nodeId: n.id,
-        })),
-      ];
+      const crumbs = crumbsFor(chain, side, initial.level);
       if (shown !== node) {
         crumbs.push({ label: 'Mindre poster', href: shown.href, nodeId: node.id });
       }
@@ -278,6 +283,23 @@ export default function BudgetExplorer({ initial, years }: Props) {
         />
       );
     }
+  }
+  if (!body && drill && view.nodeId === drill.node.id && view.year === latest) {
+    body = (
+      <DrillView
+        node={resolveMindre(drill.node, view.mindre)}
+        side={drill.side}
+        year={view.year}
+        sideTotal={drill.sideTotal}
+        crumbs={drill.crumbs}
+        years={years}
+        preliminary={preliminary && drill.side === 'inkomster'}
+        onYear={onYear}
+        onOpen={onOpen}
+        onCrumb={onCrumb}
+        h1Ref={h1Ref}
+      />
+    );
   }
   if (!body) {
     const balance =

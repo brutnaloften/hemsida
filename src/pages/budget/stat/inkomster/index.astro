@@ -1,0 +1,9 @@
+---
+import RevenueDrillPage from '@/components/budget/RevenueDrillPage.astro';
+import { latestYear } from '@/lib/budget/data';
+import { buildRevenueTree } from '@/lib/budget/view';
+
+const root = buildRevenueTree(latestYear);
+---
+
+<RevenueDrillPage chain={[root]} sideTotal={root.value ?? 0} />
