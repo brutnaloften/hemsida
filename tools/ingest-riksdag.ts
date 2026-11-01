@@ -23,6 +23,7 @@ import {
   INGEST_DOKTYPER,
   ingestDoktyp,
   loadStore,
+  riksdagLatestPeriod,
   saveStore,
 } from './lib/riksdag-ingest.ts';
 
@@ -84,13 +85,14 @@ console.error(
   `Done. ${requests} requests, ${added} documents added, ${updated} updated, ${Object.keys(store.documents).length} in store (${storePath}).`,
 );
 
-// Only the default store feeds the real manifest; --store runs are live checks or experiments.
-const cursorDates = Object.values(store.cursors).sort();
-if (!values.store && cursorDates.length > 0) {
+// Only complete runs on the default store feed the manifest; --store, --doktyp and --max-pages
+// runs are live checks, experiments or partial.
+const partial = Boolean(values.store || values.doktyp || values['max-pages'] !== undefined);
+const latestPeriod = partial ? undefined : riksdagLatestPeriod(store.cursors);
+if (latestPeriod) {
   recordFreshness(defaultManifestPath(root), `riksdag-${term}`, {
     source: 'https://data.riksdagen.se/dokumentlista/',
     fetchedAt: today,
-    // The oldest per-doktyp cursor: every ingested type is complete at least up to this date.
-    latestPeriod: cursorDates[0]!,
+    latestPeriod,
   });
 }

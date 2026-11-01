@@ -198,3 +198,17 @@ export function saveStore(path: string, store: Store): void {
   writeFileSync(tmp, JSON.stringify(store));
   renameSync(tmp, path);
 }
+
+/**
+ * Oldest per-doktyp cursor: every ingested type is complete at least up to this date. Undefined
+ * while any type has no cursor yet (e.g. an interrupted or partial first run), since the
+ * dataset is then not complete up to any date.
+ */
+export function riksdagLatestPeriod(
+  cursors: Record<string, string>,
+  doktyper: readonly string[] = INGEST_DOKTYPER,
+): string | undefined {
+  const dates = doktyper.map((d) => cursors[d]);
+  if (dates.some((d) => d === undefined)) return undefined;
+  return (dates as string[]).sort()[0];
+}
