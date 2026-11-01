@@ -24,11 +24,14 @@ export function DataTable({
   sections,
   total,
   onOpen,
+  personal,
 }: {
   caption: string;
   sections: TableSection[];
   total?: { label: string; value: number };
   onOpen?: OpenHandler;
+  /** Adds the column "Din del (kr)": the person's share of a row's value, formatted, or "–". */
+  personal?: { part: (node: BudgetNode) => string; total?: string };
 }) {
   return (
     <details className="mt-6 rounded-md border">
@@ -49,13 +52,22 @@ export function DataTable({
               <th scope="col" className="py-1 pl-2 text-right font-medium">
                 Miljarder kronor
               </th>
+              {personal && (
+                <th scope="col" className="py-1 pl-2 text-right font-medium">
+                  Din del (kr)
+                </th>
+              )}
             </tr>
           </thead>
           {sections.map((section, i) => (
             <tbody key={section.heading ?? i}>
               {section.heading && (
                 <tr>
-                  <th scope="colgroup" colSpan={3} className="pt-3 pb-1 text-left font-semibold">
+                  <th
+                    scope="colgroup"
+                    colSpan={personal ? 4 : 3}
+                    className="pt-3 pb-1 text-left font-semibold"
+                  >
                     {section.heading}
                   </th>
                 </tr>
@@ -81,6 +93,11 @@ export function DataTable({
                   <td className="py-1 pl-2 text-right tabular-nums whitespace-nowrap">
                     {node.value === null ? '–' : formatMdkr(node.value)}
                   </td>
+                  {personal && (
+                    <td className="py-1 pl-2 text-right tabular-nums whitespace-nowrap">
+                      {node.value === null ? '–' : personal.part(node)}
+                    </td>
+                  )}
                 </tr>
               ))}
             </tbody>
@@ -95,6 +112,11 @@ export function DataTable({
                 <td className="pt-2 pl-2 text-right tabular-nums whitespace-nowrap">
                   {formatMdkr(total.value)}
                 </td>
+                {personal && (
+                  <td className="pt-2 pl-2 text-right tabular-nums whitespace-nowrap">
+                    {personal.total ?? ''}
+                  </td>
+                )}
               </tr>
             </tfoot>
           )}

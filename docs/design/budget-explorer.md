@@ -461,7 +461,7 @@ Each item is sized for one bead. The files are listed. Items 1–2 must land fir
    - Changes to `DataTable.tsx` (budget, ändring and skillnad columns).
    - New `src/components/budget/TimeSeriesChart.tsx` (SVG) and `PriceToggle.tsx`, plus `src/lib/budget/real.ts` (KPI, GDP share) with tests.
    - The switch and its URL param go in `BudgetExplorer.tsx`.
-6. **rn4.11 (unchanged scope, plus the level-agnostic API in P8):** the contribution model in `src/lib/budget/contribution.ts` with tests.
+6. **rn4.11 (unchanged scope, plus the level-agnostic API in P8):** the contribution model in `src/lib/budget/personal.ts` with tests.
 7. **Salary panel UI (new bead, depends on 6 and 2).** `src/components/budget/SalaryPanel.tsx`, the kr display mode in Treemap, DataTable and the aria labels, and the copy from P8.
 8. **Docs and cleanup (new chore bead, small).** Fix the dark-mode sentence in `AGENTS.md:41` (E2). Optionally drop the duplicate Google Fonts load in `src/layouts/Layout.astro:29-34` (E3) after checking that the fontsource weights cover 400–700.
 

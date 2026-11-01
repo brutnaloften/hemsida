@@ -2,7 +2,7 @@ import type { MouseEvent, Ref } from 'react';
 import { Breadcrumbs, type Crumb } from '@/components/budget/Breadcrumbs';
 import { YearSelect, type YearOption } from '@/components/budget/YearSelect';
 import { PrelimBadge } from '@/components/budget/PrelimBadge';
-import { plainClick } from '@/components/budget/types';
+import { plainClick, type Personal } from '@/components/budget/types';
 import {
   discontinuedAfter,
   existsIn,
@@ -10,6 +10,7 @@ import {
   type BudgetNode,
   type Side,
 } from '@/lib/budget/core';
+import { formatPart, krWords, partOf } from '@/lib/budget/salary-view';
 import {
   formatAmountWords,
   formatMdkr,
@@ -32,6 +33,7 @@ type Props = {
   onYear: (year: number) => void;
   onCrumb: (crumb: Crumb, event: MouseEvent<HTMLAnchorElement>) => void;
   h1Ref: Ref<HTMLHeadingElement>;
+  personal?: Personal;
 };
 
 /** "utgiftsområde 9" for a UO, otherwise the parent's own name. */
@@ -57,6 +59,7 @@ export function LeafView({
   onYear,
   onCrumb,
   h1Ref,
+  personal,
 }: Props) {
   const sideLabel = side === 'utgifter' ? 'statens utgifter' : 'statens inkomster';
   const last = discontinuedAfter(node.id);
@@ -129,7 +132,14 @@ export function LeafView({
       )}
       <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
         <YearSelect years={years} value={year} onChange={onYear} side={side} />
+        {personal?.panel}
       </div>
+      {present && side === 'utgifter' && personal?.total != null && value > 0 && (
+        <p className="mt-3">
+          Din del: {formatPart(partOf(personal.total, value, sideTotal))} per år
+          <span className="sr-only"> ({krWords(partOf(personal.total, value, sideTotal))})</span>
+        </p>
+      )}
 
       {present && ofParent !== null && parent && value > 0 && (
         <figure className="mt-4">

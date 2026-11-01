@@ -1,5 +1,5 @@
 import { useMemo, type MouseEvent, type Ref } from 'react';
-import type { OpenHandler } from '@/components/budget/types';
+import type { OpenHandler, Personal } from '@/components/budget/types';
 import { Breadcrumbs, type Crumb } from '@/components/budget/Breadcrumbs';
 import { DataTable } from '@/components/budget/DataTable';
 import { makeBoxes, Treemap, type Box } from '@/components/budget/Treemap';
@@ -12,6 +12,7 @@ import {
   formatPercent,
   shareOf,
 } from '@/lib/budget/format';
+import { formatPart, krWords, partOf } from '@/lib/budget/salary-view';
 import { LABELS } from '@/lib/budget/labels';
 import { hrefFor, levelHref, type Balance, type BalanceColumn } from '@/lib/budget/core';
 import { columnAspect, layoutColumn, type Frame } from '@/lib/budget/treemap';
@@ -27,6 +28,7 @@ type Props = {
   onOpen: OpenHandler;
   onCrumb: (crumb: Crumb, event: MouseEvent<HTMLAnchorElement>) => void;
   h1Ref: Ref<HTMLHeadingElement>;
+  personal?: Personal;
 };
 
 /** Explanations of "Övriga poster" (P2), read out in the box's accessible name. */
@@ -42,6 +44,8 @@ function columnBoxes(
   baseLabel: string,
   saldoBase: number,
   saldoLabel: string,
+  /** The person's yearly share (P8) to show in kr on this column, or null for percent. */
+  kr: number | null,
 ): Box[] {
   const aspect = { portrait: columnAspect('portrait'), landscape: columnAspect('landscape') };
   const layouts = {
@@ -54,9 +58,18 @@ function columnBoxes(
     const share = shareOf(v, n.kind === 'saldo' ? saldoBase : base);
     const percentWords = `${formatPercentWords(share)} av ${n.kind === 'saldo' ? saldoLabel : baseLabel}`;
     const plain = n.kind === 'saldo' || n.kind === 'other';
+    // The saldo box shows nothing personal, to avoid implying "your share of the debt".
+    const part = kr !== null && n.kind !== 'saldo' ? partOf(kr, v, base) : null;
     return {
-      value: n.kind === 'saldo' ? `${n.name} ${formatMdkr(v)}` : formatPercent(share),
+      value:
+        n.kind === 'saldo'
+          ? `${n.name} ${formatMdkr(v)}`
+          : part !== null
+            ? formatPart(part)
+            : formatPercent(share),
       aria: `${n.name}: ${percentWords}, ${formatAmountWords(v)}${
+        part !== null ? `. Din del: ${krWords(part)} per år` : ''
+      }${
         n.kind === 'other'
           ? `. ${OTHER_EXPLANATION[n.name === LABELS.ovrigaMinskar ? 'minskar' : 'utgift']}`
           : ''
@@ -74,17 +87,33 @@ export function BalanceView({
   onOpen,
   onCrumb,
   h1Ref,
+  personal,
 }: Props) {
   const { totals, year, saldo } = balance;
   const deficit = totals.saldo < 0;
+  const kr = personal?.total ?? null;
   const outBoxes = useMemo(
     () =>
-      columnBoxes(balance.out, totals.utgifter, 'statens utgifter', totals.utgifter, 'utgifterna'),
-    [balance, totals.utgifter],
+      columnBoxes(
+        balance.out,
+        totals.utgifter,
+        'statens utgifter',
+        totals.utgifter,
+        'utgifterna',
+        kr,
+      ),
+    [balance, totals.utgifter, kr],
   );
   const inBoxes = useMemo(
     () =>
-      columnBoxes(balance.in, totals.inkomster, 'statens inkomster', totals.utgifter, 'utgifterna'),
+      columnBoxes(
+        balance.in,
+        totals.inkomster,
+        'statens inkomster',
+        totals.utgifter,
+        'utgifterna',
+        null,
+      ),
     [balance, totals.inkomster],
   );
   const aspect = { portrait: columnAspect('portrait'), landscape: columnAspect('landscape') };
@@ -123,6 +152,7 @@ export function BalanceView({
       )}
       <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
         <YearSelect years={years} value={year} onChange={onYear} />
+        {personal?.panel}
       </div>
       <p className="mt-4 text-sm text-muted-foreground">
         Klicka på en ruta för att se vad den består av.
@@ -220,6 +250,16 @@ export function BalanceView({
           deficit ? 'Underskottet' : 'Överskottet'
         } ${formatAmountWords(Math.abs(totals.saldo))} visas som en egen post.`}
         onOpen={onOpen}
+        personal={
+          kr === null
+            ? undefined
+            : {
+                part: (n) =>
+                  n.kind === 'saldo' || !balance.out.items.includes(n)
+                    ? '–'
+                    : formatPart(partOf(kr, n.value ?? 0, totals.utgifter)),
+              }
+        }
         sections={[
           {
             heading: 'Utgifter',
