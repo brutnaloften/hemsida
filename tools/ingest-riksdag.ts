@@ -23,6 +23,7 @@ import {
   INGEST_DOKTYPER,
   ingestDoktyp,
   loadStore,
+  riksdagLatestPeriod,
   saveStore,
 } from './lib/riksdag-ingest.ts';
 
@@ -85,12 +86,11 @@ console.error(
 );
 
 // Only the default store feeds the real manifest; --store runs are live checks or experiments.
-const cursorDates = Object.values(store.cursors).sort();
-if (!values.store && cursorDates.length > 0) {
+const latestPeriod = values.store ? undefined : riksdagLatestPeriod(store.cursors);
+if (latestPeriod) {
   recordFreshness(defaultManifestPath(root), `riksdag-${term}`, {
     source: 'https://data.riksdagen.se/dokumentlista/',
     fetchedAt: today,
-    // The oldest per-doktyp cursor: every ingested type is complete at least up to this date.
-    latestPeriod: cursorDates[0]!,
+    latestPeriod,
   });
 }

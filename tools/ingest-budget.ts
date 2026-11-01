@@ -140,7 +140,7 @@ for (const [name, data] of [
 }
 recordFreshness(defaultManifestPath(root), 'budget', {
   source: SOURCE_PAGE,
-  fetchedAt: meta.fetched,
+  fetchedAt: new Date().toISOString().slice(0, 10),
   latestPeriod: String(meta.years[meta.years.length - 1]),
 });
 console.log(

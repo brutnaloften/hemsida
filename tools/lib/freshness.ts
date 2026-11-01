@@ -1,18 +1,18 @@
 /**
  * Freshness manifest: one entry per ingested dataset in `src/data/freshness.json`, written by the
- * ingest tools. `tools/check-freshness.ts` (hemsida-8a2.2) compares it against release calendars.
+ * ingest tools. `tools/check-freshness.ts` (`tools/lib/freshness-check.ts`) compares it against release calendars.
  */
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { z } from 'zod/v4';
-import { formatIssues, writeJson } from './json.ts';
+import { formatIssues, writeJsonAtomic } from './json.ts';
 
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 
 export const freshnessEntrySchema = z.strictObject({
   /** URL of the upstream source the data was fetched from. */
   source: z.url(),
-  /** Date (YYYY-MM-DD) of the fetch. */
+  /** Date (YYYY-MM-DD) of the last successful ingest run, whether or not the data changed. */
   fetchedAt: isoDate,
   /** Latest period the data covers: a year ("2025"), a month ("2026-09") or a date. */
   latestPeriod: z.string().regex(/^\d{4}(-\d{2}(-\d{2})?)?$/),
@@ -52,5 +52,5 @@ export function withEntry(
 }
 
 export function recordFreshness(path: string, id: string, entry: FreshnessEntry): void {
-  writeJson(path, withEntry(loadManifest(path), id, entry));
+  writeJsonAtomic(path, withEntry(loadManifest(path), id, entry));
 }
