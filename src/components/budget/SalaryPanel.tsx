@@ -1,4 +1,5 @@
-import { useId, type FormEvent } from 'react';
+import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
+import { clearSalary, loadSalary, saveSalary } from '@/lib/budget/salary-storage';
 import {
   fallbackNotice,
   formatPart,
@@ -10,8 +11,9 @@ import {
 } from '@/lib/budget/salary-view';
 
 /**
- * What the island keeps in memory about the salary panel (P8). It is React state only: nothing
- * here is written to the URL, localStorage, sessionStorage or sent anywhere.
+ * What the island keeps about the salary panel (P8). The inputs and the applied value are mirrored
+ * to localStorage (see salary-storage.ts) by the island; `open` is never stored. Nothing here is
+ * written to the URL or sessionStorage or sent anywhere.
  */
 export type SalaryState = {
   open: boolean;
@@ -25,6 +27,33 @@ export const INITIAL_SALARY_STATE: SalaryState = {
   inputs: { monthly: '', consumption: '85', vat: '11,4' },
   applied: null,
 };
+
+/**
+ * The salary state, mirrored to localStorage. The stored value is read after mount (so the server
+ * HTML and the first client render match) and every change is written back; Rensa removes it. The
+ * panel closes whenever `navKey` changes (drill, year change), and starts closed on every page load.
+ */
+export function usePersistedSalary(navKey: string) {
+  const [state, setState] = useState<SalaryState>(INITIAL_SALARY_STATE);
+  const loaded = useRef(false);
+  useEffect(() => {
+    const s = loadSalary();
+    if (s) {
+      const { applied, ...inputs } = s;
+      setState((prev) => ({ ...prev, inputs, applied }));
+    }
+    loaded.current = true;
+  }, []);
+  useEffect(() => {
+    if (!loaded.current) return;
+    if (state.applied === null && state.inputs.monthly.trim() === '') clearSalary();
+    else saveSalary({ ...state.inputs, applied: state.applied });
+  }, [state.inputs, state.applied]);
+  useEffect(() => {
+    setState((prev) => (prev.open ? { ...prev, open: false } : prev));
+  }, [navKey]);
+  return [state, setState] as const;
+}
 
 type Props = {
   state: SalaryState;
@@ -187,8 +216,9 @@ export function SalaryPanel({ state, onChange, estimate, year }: Props) {
           Det här är en grov uppskattning, inte din faktiska skatt. Den bygger på skattereglerna för{' '}
           {b ? b.paramsYear : year} och antagandena ovan. Kommunalskatten räknas inte med, eftersom
           den går till kommunen och regionen, inte till staten. Beloppen i rutorna visar hur din del
-          skulle fördelas om den följde samma proportioner som statens utgifter. Vi sparar
-          ingenting: uppgiften finns bara i din webbläsare tills du stänger sidan.
+          skulle fördelas om den följde samma proportioner som statens utgifter. Det du skriver
+          sparas bara i den här webbläsaren på den här enheten, skickas aldrig någonstans och tas
+          bort när du trycker på Rensa.
         </p>
         <p className="mt-2 max-w-prose text-sm">
           Av arbetsgivaravgifterna räknas bara statens del med, inte pensionsdelen som går till
