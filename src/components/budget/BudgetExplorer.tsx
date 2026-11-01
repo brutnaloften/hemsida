@@ -282,7 +282,13 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
   const trees = treesCache.get(view.year);
   let body;
   // The drilled node comes from the loaded trees, or, before they load, from the static page's props.
-  type Drilled = { node: BudgetNode; parent?: BudgetNode; side: Side; sideTotal: number; crumbs: Crumb[] };
+  type Drilled = {
+    node: BudgetNode;
+    parent?: BudgetNode;
+    side: Side;
+    sideTotal: number;
+    crumbs: Crumb[];
+  };
   let drilled: Drilled | undefined;
   if (view.nodeId && trees) {
     const side = sideOf(view.nodeId);
