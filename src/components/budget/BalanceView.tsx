@@ -1,5 +1,5 @@
 import { useMemo, type MouseEvent, type Ref } from 'react';
-import type { OpenHandler, Personal } from '@/components/budget/types';
+import type { Advanced, OpenHandler, Personal } from '@/components/budget/types';
 import { Breadcrumbs, type Crumb } from '@/components/budget/Breadcrumbs';
 import { DataTable } from '@/components/budget/DataTable';
 import { makeBoxes, Treemap, type Box } from '@/components/budget/Treemap';
@@ -29,6 +29,7 @@ type Props = {
   onCrumb: (crumb: Crumb, event: MouseEvent<HTMLAnchorElement>) => void;
   h1Ref: Ref<HTMLHeadingElement>;
   personal?: Personal;
+  advanced?: Advanced;
 };
 
 /** Explanations of "Övriga poster" (P2), read out in the box's accessible name. */
@@ -88,6 +89,7 @@ export function BalanceView({
   onCrumb,
   h1Ref,
   personal,
+  advanced,
 }: Props) {
   const { totals, year, saldo } = balance;
   const deficit = totals.saldo < 0;
@@ -153,6 +155,7 @@ export function BalanceView({
       <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
         <YearSelect years={years} value={year} onChange={onYear} />
         {personal?.panel}
+        {advanced?.controls}
       </div>
       <p className="mt-4 text-sm text-muted-foreground">
         Klicka på en ruta för att se vad den består av.
@@ -245,7 +248,10 @@ export function BalanceView({
         </ol>
       </section>
 
+      {advanced?.chart}
+
       <DataTable
+        advanced={advanced}
         caption={`Statens utgifter och inkomster ${year}. ${
           deficit ? 'Underskottet' : 'Överskottet'
         } ${formatAmountWords(Math.abs(totals.saldo))} visas som en egen post.`}

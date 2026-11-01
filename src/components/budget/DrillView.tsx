@@ -5,7 +5,7 @@ import { MinusStrip } from '@/components/budget/MinusStrip';
 import { PrelimBadge } from '@/components/budget/PrelimBadge';
 import { makeBoxes, Treemap } from '@/components/budget/Treemap';
 import { LABEL_WIDTH } from '@/components/budget/BalanceView';
-import type { OpenHandler, Personal } from '@/components/budget/types';
+import type { Advanced, OpenHandler, Personal } from '@/components/budget/types';
 import { YearSelect, type YearOption } from '@/components/budget/YearSelect';
 import {
   formatAmountWords,
@@ -34,6 +34,7 @@ type Props = {
   onCrumb: (crumb: Crumb, event: MouseEvent<HTMLAnchorElement>) => void;
   h1Ref: Ref<HTMLHeadingElement>;
   personal?: Personal;
+  advanced?: Advanced;
 };
 
 /** One template for every drill level on both sides (P3): the children of a node as a treemap. */
@@ -50,6 +51,7 @@ export function DrillView({
   onCrumb,
   h1Ref,
   personal,
+  advanced,
 }: Props) {
   const split = useMemo(() => splitChildren(node), [node]);
   const sideLabel = side === 'utgifter' ? 'statens utgifter' : 'statens inkomster';
@@ -95,6 +97,7 @@ export function DrillView({
       <h1 ref={h1Ref} tabIndex={-1} className="mt-3 text-2xl font-bold outline-none md:text-3xl">
         {node.name}
       </h1>
+      {advanced?.header}
       {explanation && <p className="mt-2 max-w-prose">{explanation}</p>}
       {preliminary && (
         <div className="mt-2">
@@ -120,6 +123,7 @@ export function DrillView({
       <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
         <YearSelect years={years} value={year} onChange={onYear} side={side} />
         {personal?.panel}
+        {advanced?.controls}
       </div>
 
       {boxes.length > 0 ? (
@@ -161,8 +165,11 @@ export function DrillView({
         }
       />
 
+      {advanced?.chart}
+
       <DataTable
         caption={caption}
+        advanced={advanced}
         onOpen={onOpen}
         personal={
           kr === null

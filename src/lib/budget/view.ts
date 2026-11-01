@@ -178,7 +178,7 @@ function computeSpendingTree(year: number, opts?: BuildOptions): BudgetNode {
 }
 
 /** Typ whose sum is netted into "Skatter, netto": skatter, avräkningar and krediteringar på skattekonto. */
-const SKATTER_TYPER = ['1000', '7000', '8000'];
+export const SKATTER_TYPER = ['1000', '7000', '8000'];
 
 type RevNode = ReturnType<typeof revenueTree>[number];
 
