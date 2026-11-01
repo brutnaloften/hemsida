@@ -56,7 +56,7 @@ export function DrillView({
     split.strip.length === 0 || split.base === 0
       ? `Andel av ${formatMdkr(split.base)} (${node.name})`
       : side === 'inkomster'
-        ? `Andel av ${formatMdkr(split.base)} som betalades in, före avdrag (${node.name})`
+        ? `Andel av ${formatMdkr(split.base)}, bruttobelopp före avdrag (${node.name})`
         : `Andel av ${formatMdkr(split.base)} före avdrag (${node.name})`;
 
   const boxes = useMemo(
@@ -131,7 +131,7 @@ export function DrillView({
                 base: split.base,
                 stripTotal: split.stripTotal,
                 total: value,
-                baseLabel: node.id === 'rev:skatter' ? 'Inbetalt' : 'Summan av rutorna',
+                baseLabel: node.id === 'rev:skatter' ? 'Bruttobelopp' : 'Summan av rutorna',
                 name: node.name,
               }
             : undefined
