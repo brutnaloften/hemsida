@@ -432,6 +432,8 @@ export function buildMeta(args: {
       expenditure: yearStatuses(expenditure.years, latest),
       revenue: yearStatuses(revenue.years, args.revenueFinalThrough),
     },
+    // Hand-maintained (not derived from the ESV files), so a refresh keeps it.
+    ...(previous?.governments ? { governments: previous.governments } : {}),
   };
 }
 

@@ -1,7 +1,13 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { budgetMetaSchema, expenditureSchema, revenueSchema } from '@/schema/budget';
+import {
+  assertGovernmentsCoverYears,
+  budgetMetaSchema,
+  expenditureSchema,
+  governmentYearSchema,
+  revenueSchema,
+} from '@/schema/budget';
 
 const read = (name: string): unknown =>
   JSON.parse(
@@ -107,5 +113,31 @@ describe('revenueSchema', () => {
     const bad = structuredClone(valid);
     bad.titlar[0].titelgrupp = '9999';
     expect(revenueSchema.safeParse(bad).success).toBe(false);
+  });
+});
+
+describe('governments in meta.json', () => {
+  const meta = budgetMetaSchema.parse(read('meta.json'));
+  const gov = meta.governments ?? [];
+
+  it('lists every year once, in order', () => {
+    expect(() => assertGovernmentsCoverYears(meta.years, gov)).not.toThrow();
+    expect(() => assertGovernmentsCoverYears([2006, 2007], gov.slice(0, 1))).toThrow();
+  });
+
+  it('marks the post-election and caretaker budgets explicitly', () => {
+    const noted = gov.filter((g) => g.note).map((g) => g.year);
+    expect(noted).toEqual(expect.arrayContaining([2007, 2015, 2019, 2023]));
+    expect(gov.find((g) => g.year === 2006)?.government).toBe('Persson');
+    expect(gov.find((g) => g.year === 2007)?.government).toBe('Reinfeldt');
+    expect(gov.find((g) => g.year === 2015)?.government).toBe('Löfven');
+    expect(gov.find((g) => g.year === 2023)?.government).toBe('Kristersson');
+  });
+
+  it('rejects unknown fields', () => {
+    expect(
+      governmentYearSchema.safeParse({ year: 2010, government: 'X', parties: 'Y', extra: 1 })
+        .success,
+    ).toBe(false);
   });
 });

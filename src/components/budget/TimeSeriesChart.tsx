@@ -1,6 +1,7 @@
 import { useId } from 'react';
+import type { GovernmentYear } from '@/schema/budget';
 import { formatNumber } from '@/lib/budget/format';
-import { mdkrNumber, summarize, type Line } from '@/lib/budget/series';
+import { governmentRuns, mdkrNumber, summarize, type Line } from '@/lib/budget/series';
 
 const W = 640;
 const H = 260;
@@ -18,6 +19,8 @@ type Props = {
   note?: string;
   /** Said under the table. */
   tableNote?: string;
+  /** Budget-proposing government per year; draws neutral bands behind the lines when given. */
+  governments?: GovernmentYear[];
 };
 
 /** A "nice" step for about four intervals over `span`. */
@@ -33,7 +36,7 @@ function niceStep(span: number): number {
  * get an open marker. The visible text summary and the table inside the figure are the alternative.
  * Amounts in are mn kr, shown as miljarder kronor.
  */
-export function TimeSeriesChart({ title, lines, extra = [], note, tableNote }: Props) {
+export function TimeSeriesChart({ title, lines, extra = [], note, tableNote, governments }: Props) {
   const id = useId();
   const years = lines[0]?.points.map((p) => p.year) ?? [];
   const values = lines.flatMap((l) => l.points.map((p) => p.value).filter((v) => v !== null));
@@ -50,6 +53,13 @@ export function TimeSeriesChart({ title, lines, extra = [], note, tableNote }: P
   const ticks: number[] = [];
   for (let v = yMin; v <= yMax + step / 2; v += step) ticks.push(v);
   const everyOther = years.length > 12 ? 4 : 1;
+
+  const runs = governments ? governmentRuns(governments, years) : [];
+  const half = years.length === 1 ? 0 : (W - M.left - M.right) / (years.length - 1) / 2;
+  const bandX0 = (r: { from: number }) => Math.max(M.left, x(r.from) - half);
+  const bandX1 = (r: { to: number }) => Math.min(W - M.right, x(r.to) + half);
+  const govNames = [...new Set(runs.map((r) => r.government))];
+  const notes = (governments ?? []).filter((g) => g.note && years.includes(g.year));
 
   const summary = lines.map((l) => summarize(l.name, l)).join(' ');
   const hasPrelim = lines.some((l) => l.points.some((p) => p.preliminary && p.value !== null));
@@ -73,6 +83,36 @@ export function TimeSeriesChart({ title, lines, extra = [], note, tableNote }: P
           aria-label={title}
           className="h-auto w-full min-w-[640px] text-foreground"
         >
+          {runs.map((r, k) => (
+            <g key={`${r.government}-${r.from}`}>
+              <rect
+                x={bandX0(r)}
+                y={M.top}
+                width={bandX1(r) - bandX0(r)}
+                height={H - M.top - M.bottom}
+                className={k % 2 === 0 ? 'fill-foreground/[0.06]' : 'fill-foreground/[0.02]'}
+              />
+              {k > 0 && (
+                <line
+                  x1={bandX0(r)}
+                  x2={bandX0(r)}
+                  y1={M.top}
+                  y2={H - M.bottom}
+                  className="stroke-foreground/30"
+                  strokeWidth={1}
+                  strokeDasharray="2 3"
+                />
+              )}
+              <text
+                x={(bandX0(r) + bandX1(r)) / 2}
+                y={M.top - 6}
+                textAnchor="middle"
+                className="fill-muted-foreground text-[10px]"
+              >
+                {bandX1(r) - bandX0(r) >= 44 ? r.government : ''}
+              </text>
+            </g>
+          ))}
           {ticks.map((t) => (
             <g key={t}>
               <line
@@ -169,6 +209,14 @@ export function TimeSeriesChart({ title, lines, extra = [], note, tableNote }: P
             {line.name}
           </li>
         ))}
+        {runs.length > 0 && (
+          <li className="flex items-center gap-2">
+            <svg width="30" height="12" aria-hidden="true">
+              <rect width="30" height="12" className="fill-foreground/[0.06]" />
+            </svg>
+            Band: regeringen som lade fram budgetpropositionen ({govNames.join(', ')})
+          </li>
+        )}
         {hasPrelim && (
           <li className="flex items-center gap-2">
             <svg width="30" height="12" aria-hidden="true" className="text-foreground">
@@ -179,6 +227,24 @@ export function TimeSeriesChart({ title, lines, extra = [], note, tableNote }: P
         )}
       </ul>
       {note && <p className="mt-1 text-sm text-muted-foreground">{note}</p>}
+      {runs.length > 0 && (
+        <div className="mt-1 max-w-prose text-sm text-muted-foreground">
+          <p>
+            Banden visar vilken regering som lade fram budgetpropositionen för året, inte vem som
+            beslutade om budgeten eller vad som orsakade förändringar. Budgeten för ett år läggs
+            normalt fram på hösten året före och beslutas av riksdagen.
+          </p>
+          {notes.length > 0 && (
+            <ul className="mt-1 list-disc pl-5">
+              {notes.map((g) => (
+                <li key={g.year}>
+                  {g.year}: {g.note}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
       <details className="mt-3 rounded-md border">
         <summary className="cursor-pointer px-3 py-2 text-sm font-medium focus-visible:outline-2 focus-visible:outline-ring">
           Visa diagrammet som tabell
@@ -198,6 +264,11 @@ export function TimeSeriesChart({ title, lines, extra = [], note, tableNote }: P
                     {l.name}
                   </th>
                 ))}
+                {runs.length > 0 && (
+                  <th scope="col" className="px-2 py-1 text-left font-medium">
+                    Regering som lade fram budgetpropositionen
+                  </th>
+                )}
                 {extra.map((c) => (
                   <th key={c.label} scope="col" className="py-1 pl-2 text-right font-medium">
                     {c.label}
@@ -222,6 +293,11 @@ export function TimeSeriesChart({ title, lines, extra = [], note, tableNote }: P
                       {mdkrNumber(l.points[i].value)}
                     </td>
                   ))}
+                  {runs.length > 0 && (
+                    <td className="px-2 py-1 whitespace-nowrap">
+                      {governments?.find((g) => g.year === year)?.government ?? '–'}
+                    </td>
+                  )}
                   {extra.map((c) => (
                     <td
                       key={c.label}

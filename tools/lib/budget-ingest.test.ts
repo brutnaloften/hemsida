@@ -293,6 +293,10 @@ describe('meta', () => {
     const first = buildMeta({ ...args, today: '2026-01-01' });
     expect(first.fetched).toBe('2026-01-01');
     expect(buildMeta({ ...args, today: '2026-02-02', previous: first }).fetched).toBe('2026-01-01');
+    const withGov = { ...first, governments: [{ year: 2022, government: 'X', parties: 'Y' }] };
+    expect(buildMeta({ ...args, today: '2026-02-02', previous: withGov }).governments).toEqual(
+      withGov.governments,
+    );
     const changed = buildMeta({
       ...args,
       expenditureFile: file('a2'),

@@ -7,6 +7,7 @@ import metaJson from '@/data/budget/meta.json';
 import expenditureJson from '@/data/budget/expenditure.json';
 import revenueJson from '@/data/budget/revenue.json';
 import {
+  assertGovernmentsCoverYears,
   budgetMetaSchema,
   expenditureSchema,
   revenueSchema,
@@ -28,6 +29,7 @@ export function assertSameYears(metaYears: number[], expYears: number[], revYear
     throw new Error('revenue.json years differ from meta.json');
 }
 assertSameYears(meta.years, expenditure.years, revenue.years);
+if (meta.governments) assertGovernmentsCoverYears(meta.years, meta.governments);
 
 export type RevenueTitel = (typeof revenue.titlar)[number];
 

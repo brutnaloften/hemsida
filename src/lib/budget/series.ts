@@ -4,6 +4,7 @@
  * runtime, so the island never ships the committed JSON.
  */
 import { formatMdkr, formatNumber } from '@/lib/budget/format';
+import type { GovernmentYear } from '@/schema/budget';
 import { toFixedPrices, type Kpi } from '@/lib/budget/real';
 
 /** A value per year in `AdvancedFile.years`; null where the node has no value that year. */
@@ -27,6 +28,8 @@ export type AdvancedFile = {
   budget: (YearSeries | null)[];
   /** Ändringsbudgetar; spending rows only. */
   andrad: (YearSeries | null)[];
+  /** Budget-proposing government per year (meta.json); absent when the data has none. */
+  governments?: GovernmentYear[];
   /** Codes to show, e.g. "Anslag 1:11, ESV-kod 0901011"; null for rows without one. */
   codes: (string | null)[];
 };
@@ -110,4 +113,28 @@ export function summarize(name: string, line: Line): string {
 /** Miljarder kronor as a bare number for table cells and axes; "–" for no value. */
 export function mdkrNumber(mnKr: number | null, decimals = 1): string {
   return mnKr === null ? '–' : formatNumber(mnKr / 1000, decimals);
+}
+
+export type GovernmentRun = {
+  government: string;
+  parties: string;
+  /** Index in `years` of the first and last year of the run. */
+  from: number;
+  to: number;
+};
+
+/**
+ * Consecutive years with the same budget-proposing government, as bands over `years`. Years with no
+ * entry in `governments` break a run and are not drawn.
+ */
+export function governmentRuns(governments: GovernmentYear[], years: number[]): GovernmentRun[] {
+  const runs: GovernmentRun[] = [];
+  years.forEach((year, i) => {
+    const g = governments.find((e) => e.year === year);
+    if (!g) return;
+    const last = runs[runs.length - 1];
+    if (last && last.to === i - 1 && last.government === g.government) last.to = i;
+    else runs.push({ government: g.government, parties: g.parties, from: i, to: i });
+  });
+  return runs;
 }

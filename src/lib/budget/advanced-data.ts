@@ -109,5 +109,6 @@ export function buildAdvancedFile(): AdvancedFile {
     budget: ids.map((id) => budgets.get(id)?.budget ?? null),
     andrad: ids.map((id) => budgets.get(id)?.andrad ?? null),
     codes: ids.map(codeOf),
+    ...(meta.governments ? { governments: meta.governments } : {}),
   };
 }

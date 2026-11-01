@@ -35,6 +35,28 @@ const fileInfoSchema = z.strictObject({
   sha256: z.string().regex(/^[0-9a-f]{64}$/),
 });
 
+/**
+ * The government that tabled the budget proposition (BP) for a budget year. Year t's BP is normally
+ * tabled in September t-1; after an election (2006, 2014, 2022) the new government tables it, and in
+ * 2018 a caretaker government did. This says who tabled it, not who decided the final budget.
+ */
+export const governmentYearSchema = z.strictObject({
+  year: z.number().int(),
+  /** Short name used in the legend and on the band, e.g. "Reinfeldt". */
+  government: z.string().min(1),
+  /** Parties in the government, e.g. "M, C, FP, KD". */
+  parties: z.string().min(1),
+  /** Swedish note for transition years (new government, caretaker). */
+  note: z.string().min(1).optional(),
+});
+export type GovernmentYear = z.infer<typeof governmentYearSchema>;
+
+/** Throws unless `governments` has exactly one entry per year, in order. */
+export function assertGovernmentsCoverYears(years: number[], governments: GovernmentYear[]): void {
+  if (governments.map((g) => g.year).join() !== years.join())
+    throw new Error('meta.json governments must list every year in order');
+}
+
 export const budgetMetaSchema = z.strictObject({
   source: z.string().url(),
   licence: z.literal('CC0-1.0'),
@@ -51,6 +73,8 @@ export const budgetMetaSchema = z.strictObject({
     expenditure: statusByYearSchema,
     revenue: statusByYearSchema,
   }),
+  /** Budget-proposing government per budget year; hand-maintained, kept by the ingest. */
+  governments: z.array(governmentYearSchema).optional(),
 });
 export type BudgetMeta = z.infer<typeof budgetMetaSchema>;
 
