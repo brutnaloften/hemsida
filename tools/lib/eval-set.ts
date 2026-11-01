@@ -14,7 +14,7 @@ export interface EvalPromise {
   description: string;
   area?: string;
   committee?: string;
-  source: { quote: string };
+  source: { quote?: string };
 }
 
 export interface Pool {
@@ -129,7 +129,7 @@ export function toEvalPair({ promise, doc }: Pool): EvalPair {
     promise_id: promise.id,
     promise_title: promise.title,
     promise_text: promise.description,
-    promise_quote: promise.source.quote,
+    promise_quote: promise.source.quote ?? '',
     document_id: doc.dok_id,
     document_title: doc.titel,
     document_type: doc.doktyp,
@@ -147,4 +147,52 @@ export function mergeLabels(fresh: EvalPair[], existing: EvalPair[]): EvalPair[]
     const prev = old.get(p.id);
     return prev?.label ? { ...p, label: prev.label, note: prev.note } : p;
   });
+}
+
+/** Ids of labelled pairs in `existing` that a regenerated set would drop. */
+export function droppedLabelled(
+  fresh: readonly { id: string }[],
+  existing: readonly { id: string; label: unknown }[],
+): string[] {
+  const keep = new Set(fresh.map((p) => p.id));
+  return existing.filter((p) => p.label && !keep.has(p.id)).map((p) => p.id);
+}
+
+/**
+ * Navigation through the pairs for the labeller, testable without a TTY. `back` steps
+ * through the visited pairs (labelled or not), `advance` moves to the next pair that
+ * still needs a label (every pair with `redo`). `current` is null when finished.
+ */
+export class Navigator {
+  current: number | null;
+  private history: number[] = [];
+  private readonly pairs: readonly { label: unknown }[];
+  private readonly redo: boolean;
+
+  constructor(pairs: readonly { label: unknown }[], redo: boolean) {
+    this.pairs = pairs;
+    this.redo = redo;
+    this.current = this.firstFrom(0);
+  }
+
+  private firstFrom(start: number): number | null {
+    for (let i = start; i < this.pairs.length; i++) {
+      if (this.redo || !this.pairs[i]!.label) return i;
+    }
+    return null;
+  }
+
+  advance(): void {
+    if (this.current === null) return;
+    this.history.push(this.current);
+    this.current = this.firstFrom(this.current + 1);
+  }
+
+  /** Returns false when there is nothing to go back to. */
+  back(): boolean {
+    const prev = this.history.pop();
+    if (prev === undefined) return false;
+    this.current = prev;
+    return true;
+  }
 }

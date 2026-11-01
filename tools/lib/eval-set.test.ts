@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest';
 import {
   buildPool,
   mergeLabels,
+  Navigator,
+  droppedLabelled,
   samplePairs,
   stratumOf,
   toEvalPair,
@@ -69,6 +71,48 @@ describe('samplePairs', () => {
   });
   it('returns fewer pairs when the pool is small', () => {
     expect(samplePairs(pool.slice(0, 3), 10, 1)).toHaveLength(3);
+  });
+});
+
+describe('Navigator', () => {
+  const mk = (labels: (string | null)[]) => labels.map((label) => ({ label }));
+  it('skips labelled pairs and goes back to the previous one even if labelled', () => {
+    const nav = new Navigator(mk(['match', null, 'match', null, null]), false);
+    expect(nav.current).toBe(1);
+    nav.advance();
+    expect(nav.current).toBe(3);
+    expect(nav.back()).toBe(true);
+    expect(nav.current).toBe(1);
+    expect(nav.back()).toBe(false);
+    nav.advance();
+    nav.advance();
+    nav.advance();
+    expect(nav.current).toBeNull();
+  });
+  it('goes back across a labelled pair that was just answered', () => {
+    const pairs = mk([null, null]);
+    const nav = new Navigator(pairs, false);
+    pairs[0]!.label = 'match';
+    nav.advance();
+    expect(nav.current).toBe(1);
+    expect(nav.back()).toBe(true);
+    expect(nav.current).toBe(0);
+  });
+  it('visits every pair with redo', () => {
+    const nav = new Navigator(mk(['match', null]), true);
+    expect(nav.current).toBe(0);
+    nav.advance();
+    expect(nav.current).toBe(1);
+  });
+});
+
+describe('droppedLabelled', () => {
+  it('lists labelled existing pairs missing from the fresh set', () => {
+    const base = toEvalPair(samplePairs(buildPool(promises, files, types), 2, 1)[0]!);
+    const other = { ...base, id: 'x::y' };
+    expect(
+      droppedLabelled([base], [{ ...base, label: 'match' }, { ...other, label: 'partial' }, other]),
+    ).toEqual(['x::y']);
   });
 });
 

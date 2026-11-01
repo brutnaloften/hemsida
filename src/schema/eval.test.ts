@@ -24,6 +24,12 @@ describe('evalPairSchema', () => {
   it('rejects unknown labels', () => {
     expect(evalPairSchema.safeParse({ ...pair, label: 'yes' }).success).toBe(false);
   });
+  it('rejects unknown keys such as a typo', () => {
+    expect(evalPairSchema.safeParse({ ...pair, lable: 'match' }).success).toBe(false);
+    expect(evalFileSchema.safeParse({ term: 't', seed: 1, pairs: [], extra: 1 }).success).toBe(
+      false,
+    );
+  });
   it('parses a file', () => {
     expect(evalFileSchema.safeParse({ term: '2022-2026', seed: 1, pairs: [pair] }).success).toBe(
       true,

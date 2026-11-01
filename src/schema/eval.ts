@@ -8,7 +8,7 @@ import { z } from 'zod';
 export const evalLabelSchema = z.enum(['match', 'partial', 'no_match']);
 export type EvalLabel = z.infer<typeof evalLabelSchema>;
 
-export const evalPairSchema = z.object({
+export const evalPairSchema = z.strictObject({
   /** Stable key: `<promise_id>::<document_id>`. */
   id: z.string().min(1),
   promise_id: z.string().min(1),
@@ -31,7 +31,7 @@ export const evalPairSchema = z.object({
 });
 export type EvalPair = z.infer<typeof evalPairSchema>;
 
-export const evalFileSchema = z.object({
+export const evalFileSchema = z.strictObject({
   term: z.string(),
   seed: z.number().int(),
   pairs: z.array(evalPairSchema),
