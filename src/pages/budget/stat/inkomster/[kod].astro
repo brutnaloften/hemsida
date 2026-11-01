@@ -1,21 +1,30 @@
 ---
 import type { GetStaticPaths } from 'astro';
+import LeafDetail from '@/components/budget/LeafDetail.astro';
 import RevenueDrillPage from '@/components/budget/RevenueDrillPage.astro';
 import { latestYear } from '@/lib/budget/data';
 import { pathTo, type BudgetNode } from '@/lib/budget/core';
 import { buildRevenueTree } from '@/lib/budget/view';
 
-// One page for every revenue node that has children: Skatter, netto, typ, huvudgrupp and titelgrupp.
-// Titel leaf pages are separate (LeafDetail, rn4.4).
+// One page for every revenue node: Skatter, netto, typ, huvudgrupp and titelgrupp drill pages, and a
+// leaf page (LeafDetail) for every titel.
 export const getStaticPaths = (() => {
   const root = buildRevenueTree(latestYear);
-  const paths: { params: { kod: string }; props: { chain: BudgetNode[]; sideTotal: number } }[] = [];
+  const paths: {
+    params: { kod: string };
+    props: { id: string; leaf: boolean; chain: BudgetNode[]; sideTotal: number };
+  }[] = [];
   const walk = (n: BudgetNode) => {
     for (const c of n.children ?? []) {
-      if (c.kind === 'leaf') continue;
+      const leaf = c.kind === 'leaf';
       paths.push({
         params: { kod: c.id.replace(/^rev:/, '') },
-        props: { chain: pathTo(root, c.id)!, sideTotal: root.value ?? 0 },
+        props: {
+          id: c.id,
+          leaf,
+          chain: leaf ? [] : pathTo(root, c.id)!,
+          sideTotal: root.value ?? 0,
+        },
       });
       walk(c);
     }
@@ -24,7 +33,7 @@ export const getStaticPaths = (() => {
   return paths;
 }) satisfies GetStaticPaths;
 
-const { chain, sideTotal } = Astro.props;
+const { id, leaf, chain, sideTotal } = Astro.props;
 ---
 
-<RevenueDrillPage chain={chain} sideTotal={sideTotal} />
+{leaf ? <LeafDetail nodeId={id} /> : <RevenueDrillPage chain={chain} sideTotal={sideTotal} />}

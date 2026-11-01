@@ -102,6 +102,26 @@ describe('trees', () => {
     ]);
     expect(pathTo(root, 'rev:nope')).toBeUndefined();
   });
+
+  it('gives every titel leaf a unique, resolvable page path and a page view', () => {
+    const root = buildRevenueTree(years[years.length - 1]);
+    const leaves: BudgetNode[] = [];
+    const walk = (n: BudgetNode) => {
+      if (n.kind === 'leaf') leaves.push(n);
+      n.children?.forEach(walk);
+    };
+    walk(root);
+    expect(leaves.length).toBeGreaterThan(100);
+    const kods = new Set(leaves.map((l) => l.id));
+    expect(kods.size).toBe(leaves.length);
+    for (const l of leaves) {
+      const p = pathForId(l.id)!;
+      expect(idForPath(p.side, p.segments)).toBe(l.id);
+      const view = buildPageView(years[years.length - 1], l.id);
+      expect(view.side).toBe('inkomster');
+      expect(view.chain[view.chain.length - 1].id).toBe(l.id);
+    }
+  });
 });
 
 describe('splitChildren', () => {
