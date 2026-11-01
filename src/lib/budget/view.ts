@@ -9,6 +9,7 @@
  * Amounts are mn kr, nominal. The government level ("stat") only appears in STAT_LEVEL.
  */
 import {
+  meta,
   anslagByKod,
   anslagForUo,
   areas,
@@ -28,7 +29,10 @@ import {
   type Balance,
   type BudgetNode,
   type BuildOptions,
+  type PageView,
   type Side,
+  pathTo,
+  stripChildren,
 } from '@/lib/budget/core';
 
 export * from '@/lib/budget/core';
@@ -69,6 +73,8 @@ function anslagBySlug(): Map<string, string> {
 
 /** URL segments below the side root for a node id: "uo:9" -> ["9"], "rev:1140-1160" -> ["1140-1160"]. */
 export function pathForId(id: string): { side: Side; segments: string[] } | undefined {
+  if (id === 'root:utgifter') return { side: 'utgifter', segments: [] };
+  if (id === 'root:inkomster') return { side: 'inkomster', segments: [] };
   let m = /^uo:(\d+)$/.exec(id);
   if (m) return { side: 'utgifter', segments: [m[1]] };
   m = /^anslag:(.+)$/.exec(id);
@@ -116,6 +122,29 @@ function hrefForId(id: string, opts?: BuildOptions): string {
  * "Övriga poster" (see buildBalance).
  */
 export function buildSpendingTree(year: number, opts?: BuildOptions): BudgetNode {
+  return memoized(spendingMemo, year, opts, () => computeSpendingTree(year, opts));
+}
+
+/**
+ * Trees with default options are built once per year: every static page of the explorer asks for them,
+ * and building one walks all 814 anslag. Callers must not mutate the result.
+ */
+function memoized<T>(
+  memo: Map<number, T>,
+  year: number,
+  opts: BuildOptions | undefined,
+  build: () => T,
+): T {
+  if (opts) return build();
+  let hit = memo.get(year);
+  if (!hit) memo.set(year, (hit = build()));
+  return hit;
+}
+const spendingMemo = new Map<number, BudgetNode>();
+const revenueMemo = new Map<number, BudgetNode>();
+const balanceMemo = new Map<number, Balance>();
+
+function computeSpendingTree(year: number, opts?: BuildOptions): BudgetNode {
   const level = opts?.level ?? STAT_LEVEL;
   const i = yearIndex(year);
   const uoNodes = areas.map((u): BudgetNode => {
@@ -171,6 +200,10 @@ function revNode(n: RevNode, i: number, opts?: BuildOptions): BudgetNode {
  * totalsForYear().inkomster.
  */
 export function buildRevenueTree(year: number, opts?: BuildOptions): BudgetNode {
+  return memoized(revenueMemo, year, opts, () => computeRevenueTree(year, opts));
+}
+
+function computeRevenueTree(year: number, opts?: BuildOptions): BudgetNode {
   const level = opts?.level ?? STAT_LEVEL;
   const i = yearIndex(year);
   const typer = revenueTree();
@@ -208,13 +241,44 @@ function revenueIds(): Set<string> {
   return revenueIdCache;
 }
 
+/** Year selector options; a year is preliminary while its revenue or spending is not final. */
+export function yearOptions(): { year: number; preliminary: boolean }[] {
+  return years.map((year) => ({
+    year,
+    preliminary:
+      meta.yearStatus.revenue[String(year)] !== 'final' ||
+      meta.yearStatus.expenditure[String(year)] !== 'final',
+  }));
+}
+
+/**
+ * Island props for a static drill or leaf page of `year`: the chain root -> node. Ancestors lose their
+ * subtrees. Throws on an unknown id.
+ */
+export function buildPageView(year: number, nodeId: string, opts?: BuildOptions): PageView {
+  const p = pathForId(nodeId);
+  if (!p) throw new Error(`No page for ${nodeId}`);
+  const root = p.side === 'utgifter' ? buildSpendingTree(year, opts) : buildRevenueTree(year, opts);
+  const chain = pathTo(root, nodeId);
+  if (!chain) throw new Error(`${nodeId} is not in the ${p.side} tree`);
+  const totals = totalsForYear(year);
+  return {
+    nodeId,
+    side: p.side,
+    chain: chain.map((n, i) => (i === chain.length - 1 ? n : stripChildren(n))),
+    sideTotal: p.side === 'utgifter' ? totals.utgifter : totals.inkomster,
+  };
+}
+
 /** Same-scale balance view of one year from the committed data (see balanceFrom). */
 export function buildBalance(year: number, opts?: BuildOptions): Balance {
-  return balanceFrom(
-    year,
-    totalsForYear(year),
-    buildSpendingTree(year, opts),
-    buildRevenueTree(year, opts),
-    opts,
+  return memoized(balanceMemo, year, opts, () =>
+    balanceFrom(
+      year,
+      totalsForYear(year),
+      buildSpendingTree(year, opts),
+      buildRevenueTree(year, opts),
+      opts,
+    ),
   );
 }

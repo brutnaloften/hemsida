@@ -1,0 +1,38 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import AboutNumbers from '@/components/budget/AboutNumbers.astro';
+import BudgetExplorer from '@/components/budget/BudgetExplorer';
+import { latestYear } from '@/lib/budget/data';
+import { crumbsFor } from '@/components/budget/Breadcrumbs';
+import { STAT_LEVEL, stripChildren } from '@/lib/budget/core';
+import { buildBalance, buildPageView, withoutChildren, yearOptions } from '@/lib/budget/view';
+
+interface Props {
+  /** Node id of the page: "root:utgifter", "uo:9", "anslag:0901011", "rev:1100", ... */
+  nodeId: string;
+  title: string;
+  description: string;
+}
+
+const { nodeId, title, description } = Astro.props;
+const balance = withoutChildren(buildBalance(latestYear));
+const { chain, side, sideTotal } = buildPageView(latestYear, nodeId);
+const node = chain[chain.length - 1];
+// Children one level deep are all the island needs; deeper levels are fetched when drilled into.
+const drill = {
+  node: { ...node, children: node.children?.map(stripChildren) },
+  parent: chain.length > 2 ? chain[chain.length - 2] : undefined,
+  side,
+  sideTotal,
+  crumbs: crumbsFor(chain, side, STAT_LEVEL),
+};
+---
+
+<Layout title={`${title} – Brutna Löften`} description={description}>
+  <div class="container mx-auto max-w-5xl px-4 py-6 md:px-6">
+    <BudgetExplorer client:idle initial={balance} years={yearOptions()} drill={drill} />
+    <!-- Optional content below the island (slot). Hidden by the island when it shows another node. -->
+    <div id="page-extras"><slot /></div>
+    <AboutNumbers />
+  </div>
+</Layout>

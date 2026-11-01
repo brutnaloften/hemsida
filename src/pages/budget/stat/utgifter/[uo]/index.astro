@@ -1,0 +1,19 @@
+---
+import type { GetStaticPaths } from 'astro';
+import DrillPage from '@/components/budget/DrillPage.astro';
+import { areas, latestYear } from '@/lib/budget/data';
+import { formatAmountWords } from '@/lib/budget/format';
+import { buildSpendingTree } from '@/lib/budget/view';
+
+export const getStaticPaths = (() =>
+  areas.map((u) => ({ params: { uo: String(u.nr) }, props: { nr: u.nr } }))) satisfies GetStaticPaths;
+
+const { nr } = Astro.props;
+const node = buildSpendingTree(latestYear).children!.find((c) => c.id === `uo:${nr}`)!;
+---
+
+<DrillPage
+  nodeId={`uo:${nr}`}
+  title={`${node.name} ${latestYear} – statens utgifter`}
+  description={`Utgiftsområde ${nr}, ${node.name}: ${formatAmountWords(node.value ?? 0)} ${latestYear}, fördelade på anslag.`}
+/>

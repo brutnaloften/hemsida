@@ -66,6 +66,36 @@ export function levelHref(opts?: BuildOptions): string {
   return `${baseOf(opts)}budget/${(opts?.level ?? STAT_LEVEL).id}/`;
 }
 
+/** A node without its subtree. */
+export function stripChildren(n: BudgetNode): BudgetNode {
+  const { children: _children, ...rest } = n;
+  return rest;
+}
+
+/**
+ * What a statically rendered drill or leaf page hands to the island: the chain from the side root to
+ * the page's node (only the last one keeps its children) and the side total for the "av statens ..." share.
+ */
+export type PageView = {
+  nodeId: string;
+  side: Side;
+  chain: BudgetNode[];
+  sideTotal: number;
+};
+
+/** Discontinued anslag carry their last year as a code suffix: "anslag:0107002 2024" -> 2024. */
+export function discontinuedAfter(id: string): number | null {
+  const m = /^anslag:\S+ (\d{4})$/.exec(id);
+  return m ? Number(m[1]) : null;
+}
+
+/** False when the node has no value in `year` or the anslag had already been discontinued. */
+export function existsIn(node: BudgetNode, year: number): boolean {
+  if (node.value === null) return false;
+  const last = discontinuedAfter(node.id);
+  return last === null || year <= last;
+}
+
 /** Depth-first lookup by id. */
 export function findNode(root: BudgetNode, id: string): BudgetNode | undefined {
   if (root.id === id) return root;
@@ -241,10 +271,7 @@ export function balanceFrom(
  * subtrees (every anslag) would otherwise be serialised into the page as island props.
  */
 export function withoutChildren(balance: Balance): Balance {
-  const slim = (n: BudgetNode): BudgetNode => {
-    const { children: _children, ...rest } = n;
-    return rest;
-  };
+  const slim = stripChildren;
   const column = (c: BalanceColumn): BalanceColumn => ({ ...c, items: c.items.map(slim) });
   return {
     ...balance,

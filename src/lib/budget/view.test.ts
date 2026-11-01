@@ -4,6 +4,8 @@ import {
   STAT_LEVEL,
   anslagSlug,
   buildBalance,
+  buildPageView,
+  existsIn,
   buildRevenueTree,
   buildSpendingTree,
   findNode,
@@ -277,6 +279,34 @@ describe('slugs and ids', () => {
     expect(pathForId('rev:1140-1160')?.segments).toEqual(['1140-1160']);
     expect(idForPath('inkomster', ['skatter'])).toBe('rev:skatter');
     expect(idForPath('inkomster', ['9999'])).toBeUndefined();
+  });
+
+  it('builds a page view chain for every anslag, UO and the side roots', () => {
+    const root = buildSpendingTree(2025);
+    expect(buildPageView(2025, 'root:utgifter').chain.map((n) => n.id)).toEqual(['root:utgifter']);
+    expect(buildPageView(2025, 'root:inkomster').side).toBe('inkomster');
+    expect(pathForId('root:utgifter')).toEqual({ side: 'utgifter', segments: [] });
+    let count = 0;
+    for (const uo of root.children!) {
+      const uoPage = buildPageView(2025, uo.id);
+      expect(uoPage.chain[1].children?.length).toBe(uo.children!.length);
+      expect(uoPage.chain[0].children).toBeUndefined();
+      for (const a of uo.children!) {
+        const page = buildPageView(2025, a.id);
+        expect(page.chain.map((n) => n.id)).toEqual(['root:utgifter', uo.id, a.id]);
+        count++;
+      }
+    }
+    expect(count).toBe(814);
+  });
+
+  it('treats a discontinued anslag as missing after its last year', () => {
+    const active = { id: 'anslag:0901011', name: 'a', value: 1, href: '' };
+    const gone = { id: 'anslag:0107002 2024', name: 'b', value: 0, href: '' };
+    expect(existsIn(active, 2025)).toBe(true);
+    expect(existsIn(gone, 2024)).toBe(true);
+    expect(existsIn(gone, 2025)).toBe(false);
+    expect(existsIn({ ...active, value: null }, 2008)).toBe(false);
   });
 
   it('builds hrefs from the base and level', () => {
