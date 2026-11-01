@@ -194,6 +194,16 @@ describe('validateCandidates', () => {
     expect(r.errors.join()).toMatch(/not a verbatim substring of page 2/);
   });
 
+  it('rejects a quote with a soft hyphen or double space even if it matches', () => {
+    const soft = validateCandidates(
+      [entry(raw({ quote: 'Skolplikten ska för\u00ADlängas' }))],
+      ctx,
+    );
+    expect(soft.errors.join()).toMatch(/soft hyphen or repeated whitespace/);
+    const dbl = validateCandidates([entry(raw({ quote: 'Skolplikten  ska förlängas' }))], ctx);
+    expect(dbl.errors.join()).toMatch(/soft hyphen or repeated whitespace/);
+  });
+
   it('warns, not errors, on a loose-only quote match', () => {
     const r = validateCandidates([entry(raw({ quote: 'Skol plikten ska förlängas' }))], ctx);
     expect(r.errors).toEqual([]);

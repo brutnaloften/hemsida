@@ -131,7 +131,7 @@ export function toManifestoEntry(
 export function normalizeText(s: string): string {
   return s
     .normalize('NFKC')
-    .replace(/\u00AD/g, '')
+    .replace(/\u00AD[ \t]*(\r?\n\s*)?/g, '')
     .replace(/[‘’‚`´]/g, "'")
     .replace(/[“”„«»]/g, '"')
     .replace(/[‐‑–—−]/g, '-')
@@ -271,6 +271,11 @@ export function validateCandidates(data: unknown, ctx: ValidationContext): Valid
     }
 
     const { page, quote } = promise.source;
+    if (quote !== undefined && /\u00AD|\s{2,}/.test(quote)) {
+      errors.push(
+        `${where}: quote contains a soft hyphen or repeated whitespace (PDF artifact); clean it`,
+      );
+    }
     if (ctx.pages) {
       if (page === undefined || quote === undefined) {
         errors.push(`${where}: source.page and source.quote are required for the quote check`);

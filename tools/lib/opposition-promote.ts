@@ -4,12 +4,9 @@
  * everything else stays as extracted (`unassessed`, `evidence: []`).
  */
 
-import type { z } from 'zod';
-import type { manifestoEntrySchema } from './manifesto-extract.ts';
+import type { ManifestoEntry } from './manifesto-extract.ts';
 import { VAGUE_REASONING } from './manifesto-promote.ts';
 import { promiseSchema, type PromiseRecord } from './schema.ts';
-
-type ManifestoEntry = z.infer<typeof manifestoEntrySchema>;
 
 export function promoteOpposition(
   entries: readonly ManifestoEntry[],
