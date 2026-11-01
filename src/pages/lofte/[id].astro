@@ -8,6 +8,7 @@ import RiksdagEntry from '@/components/RiksdagEntry.astro';
 import BudgetEntry from '@/components/BudgetEntry.astro';
 import { AGREEMENT_OUTCOME_STYLE, TYPE_LABELS, VERDICT_STYLES, partyName } from '@/lib/promise-labels';
 import { buildReverseIndex, linkedRiksdagTimelines } from '@/lib/agreement-index';
+import { sourceLinks } from '@/lib/source-link';
 import { isAgreement, isBudget, orderTimeline, promisePath } from '@/lib/timeline';
 
 export const getStaticPaths = (async () => {
@@ -31,6 +32,7 @@ export const getStaticPaths = (async () => {
 
 const { promise, sources, titles, linkedTimelines, basedOn } = Astro.props;
 const source = sources.get(promise.source.id);
+const links = source ? sourceLinks(source) : undefined;
 const { verdict } = promise;
 const timeline = orderTimeline(promise.evidence);
 const link = 'underline underline-offset-2';
@@ -51,13 +53,17 @@ const link = 'underline underline-offset-2';
     <section class="mt-8">
       <h2 class="text-xl font-semibold">Källa</h2>
       {
-        source && (
+        source && links && (
           <p class="mt-2 text-sm">
-            <a href={source.url} target="_blank" rel="noopener noreferrer" class={link}>
-              {source.title}
-            </a>
+            {links.original ? (
+              <a href={links.original} target="_blank" rel="noopener noreferrer" class={link}>
+                {source.title}
+              </a>
+            ) : (
+              source.title
+            )}
             {promise.source.page !== undefined && <>, s. {promise.source.page}</>} (
-            <a href={source.archive} target="_blank" rel="noopener noreferrer" class={link}>
+            <a href={links.archive} target="_blank" rel="noopener noreferrer" class={link}>
               arkiv
             </a>
             )
