@@ -14,8 +14,8 @@
  *   (titel 1153), skattereduktion för allmän pensionsavgift (1141, which
  *   offsets the 7 % fee that goes to the AP funds) and skattereduktion för
  *   förvärvsinkomst (1162). With the 2026 rules the total stays
- *   non-negative (lowest around 80 000 kr salary with no consumption), but
- *   callers should still handle a negative total (see allocateProportionally).
+ *   non-negative in the default case (the minimum is 0 at 0 kr salary), but
+ *   a user-supplied kommunalskattesats can make it slightly negative, so callers should still handle a negative total (see allocateProportionally).
  * - arbetsgivaravgifter (statens del): total rate minus ålderspensionsavgift,
  *   which goes to the AP funds outside the state budget.
  * - moms from consumption (adjustable assumptions).

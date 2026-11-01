@@ -5,7 +5,7 @@ import { MinusStrip } from '@/components/budget/MinusStrip';
 import { PrelimBadge } from '@/components/budget/PrelimBadge';
 import { makeBoxes, Treemap } from '@/components/budget/Treemap';
 import { LABEL_WIDTH } from '@/components/budget/BalanceView';
-import type { OpenHandler } from '@/components/budget/types';
+import type { OpenHandler, Personal } from '@/components/budget/types';
 import { YearSelect, type YearOption } from '@/components/budget/YearSelect';
 import {
   formatAmountWords,
@@ -14,6 +14,7 @@ import {
   formatPercent,
   shareOf,
 } from '@/lib/budget/format';
+import { formatPart, krWords, partOf } from '@/lib/budget/salary-view';
 import { sideGap, splitChildren, type BudgetNode } from '@/lib/budget/core';
 import { revenueExplanation } from '@/lib/budget/revenue-labels';
 import { FRAME_ASPECT, layoutNodes } from '@/lib/budget/treemap';
@@ -32,6 +33,7 @@ type Props = {
   onOpen: OpenHandler;
   onCrumb: (crumb: Crumb, event: MouseEvent<HTMLAnchorElement>) => void;
   h1Ref: Ref<HTMLHeadingElement>;
+  personal?: Personal;
 };
 
 /** One template for every drill level on both sides (P3): the children of a node as a treemap. */
@@ -47,6 +49,7 @@ export function DrillView({
   onOpen,
   onCrumb,
   h1Ref,
+  personal,
 }: Props) {
   const split = useMemo(() => splitChildren(node), [node]);
   const sideLabel = side === 'utgifter' ? 'statens utgifter' : 'statens inkomster';
@@ -62,17 +65,22 @@ export function DrillView({
         ? `Andel av ${formatMdkr(split.base)}, bruttobelopp före avdrag (${node.name})`
         : `Andel av ${formatMdkr(split.base)} före avdrag (${node.name})`;
 
+  // Kr mode (P8) applies to spending boxes; the revenue side stays in percent.
+  const kr = personal?.total != null && side === 'utgifter' ? personal.total : null;
   const boxes = useMemo(
     () =>
       makeBoxes(split.boxes, layoutNodes(split.boxes), FRAME_ASPECT, LABEL_WIDTH, (n) => {
         const share = shareOf(n.value ?? 0, split.base);
+        const words = `${n.name}: ${formatPercentWords(share)} av ${node.name}, ${formatAmountWords(n.value ?? 0)}`;
+        if (kr === null) return { value: formatPercent(share), aria: words, link: true };
+        const part = partOf(kr, n.value ?? 0, sideTotal);
         return {
-          value: formatPercent(share),
-          aria: `${n.name}: ${formatPercentWords(share)} av ${node.name}, ${formatAmountWords(n.value ?? 0)}`,
+          value: formatPart(part),
+          aria: `${words}. Din del: ${krWords(part)} per år`,
           link: true,
         };
       }),
-    [split, node.name],
+    [split, node.name, kr, sideTotal],
   );
 
   // The table lists every item individually, so grouped small ones are expanded again.
@@ -111,6 +119,7 @@ export function DrillView({
       )}
       <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
         <YearSelect years={years} value={year} onChange={onYear} side={side} />
+        {personal?.panel}
       </div>
 
       {boxes.length > 0 ? (
@@ -155,6 +164,14 @@ export function DrillView({
       <DataTable
         caption={caption}
         onOpen={onOpen}
+        personal={
+          kr === null
+            ? undefined
+            : {
+                part: (n) => formatPart(partOf(kr, n.value ?? 0, sideTotal)),
+                total: formatPart(partOf(kr, value, sideTotal)),
+              }
+        }
         sections={[
           { rows: tableRows },
           ...(split.strip.length

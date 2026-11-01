@@ -1,8 +1,8 @@
-import { useCallback, useEffect, useRef, useState, type MouseEvent } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react';
 import { BalanceView } from '@/components/budget/BalanceView';
 import { crumbsFor, type Crumb } from '@/components/budget/Breadcrumbs';
 import { DrillView } from '@/components/budget/DrillView';
-import { plainClick, type Openable } from '@/components/budget/types';
+import { plainClick, type Openable, type Personal } from '@/components/budget/types';
 import type { YearOption } from '@/components/budget/YearSelect';
 import { LeafView } from '@/components/budget/LeafView';
 import {
@@ -18,6 +18,12 @@ import {
   type BudgetNode,
 } from '@/lib/budget/core';
 import { formatAmountWords } from '@/lib/budget/format';
+import {
+  INITIAL_SALARY_STATE,
+  SalaryPanel,
+  type SalaryState,
+} from '@/components/budget/SalaryPanel';
+import { estimateFor } from '@/lib/budget/salary-view';
 import { treesFromFiles, type NamesFile, type YearFile } from '@/lib/budget/tree';
 
 type View = { year: number; nodeId: string | null; mindre: number };
@@ -154,6 +160,9 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
   const [failed, setFailed] = useState(false);
   const [focusTick, setFocusTick] = useState(0);
   const h1Ref = useRef<HTMLHeadingElement>(null);
+  // The salary lives here, in memory only, so it survives client-side drills between views (P8).
+  // It is never put in the URL, storage or any request.
+  const [salary, setSalary] = useState<SalaryState>(INITIAL_SALARY_STATE);
 
   const go = useCallback(
     async (target: View, opts: { push: boolean; focus: boolean; href?: string }): Promise<void> => {
@@ -295,6 +304,17 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
     void go({ ...view, year }, { push: true, focus: false });
   };
 
+  const estimate = useMemo(
+    () =>
+      salary.applied === null
+        ? null
+        : estimateFor({ ...salary.inputs, monthly: salary.applied }, view.year),
+    [salary.applied, salary.inputs, view.year],
+  );
+  const personal: Personal = {
+    panel: <SalaryPanel state={salary} onChange={setSalary} estimate={estimate} year={view.year} />,
+    total: estimate ? estimate.total : null,
+  };
   const yearOption = years.find((y) => y.year === view.year);
   // The badge text is about the tax figures, so it follows the revenue flag.
   const preliminary = yearOption?.revenuePreliminary ?? false;
@@ -341,6 +361,7 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
           onYear={onYear}
           onCrumb={onCrumb}
           h1Ref={h1Ref}
+          personal={personal}
         />
       );
     } else {
@@ -361,6 +382,7 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
           onOpen={onOpen}
           onCrumb={onCrumb}
           h1Ref={h1Ref}
+          personal={personal}
         />
       );
     }
@@ -381,6 +403,7 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
         onOpen={onOpen}
         onCrumb={onCrumb}
         h1Ref={h1Ref}
+        personal={personal}
       />
     );
   }

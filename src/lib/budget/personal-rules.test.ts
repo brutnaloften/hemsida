@@ -19,7 +19,7 @@ const by = (income: number) =>
   );
 
 describe('default path at 480 000 kr (hand-computed from SKV 433 2026)', () => {
-  // GA 17 400; JSA = floor((3,027 PBB 179 198,40 - 17 400) * 0,3238) = 52 389;
+  // GA 17 400; JSA = floor((3,027 PBB 179 198,40 - 17 400) * 0,3238) = 52 390;
   // pension fee 7 % = 33 600 (fully offset); förvärvsinkomst reduction capped 1 500;
   // arbetsgivaravgifter 21,21 % = 101 808; no statlig skatt (taxable 462 600 < 643 000).
   const c = by(480_000);
@@ -31,7 +31,7 @@ describe('default path at 480 000 kr (hand-computed from SKV 433 2026)', () => {
     expect(c['statlig-inkomstskatt']).toBe(0);
   });
   it('moms is about 11,4 % of consumption (default mix)', () => {
-    // disposable 480 000 - 149 789,88 + 52 389 + 1 500 = 384 099,12; x 0,85 x 0,11385
+    // disposable 480 000 - 149 789,88 + 52 389 + 1 500 = 384 100,12; x 0,85 x 0,11385
     expect(c['moms']).toBeCloseTo(37_170, -1);
   });
   it('total is about 51 500', () => {
