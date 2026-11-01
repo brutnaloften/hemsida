@@ -14,7 +14,7 @@ const EXPLANATIONS: Readonly<Record<string, string>> = {
   inkomster:
     'Statens inkomster delas in efter vad pengarna kommer från: skatter, statens egen verksamhet, försåld egendom, återbetalda lån, kalkylmässiga poster och bidrag från EU.',
   skatter:
-    'Skatterna efter avdrag: kommunala skatter och avgifter till AP-fonderna, EU-skatter, momsåterbetalningar och periodiseringar räknas bort från de skatter som tas in.',
+    'Skatterna efter avdrag: kommunala skatter och avgifter till AP-fonderna, EU-skatter och momsåterbetalningar räknas bort från de skatter som tas in, och periodiseringar justerar summan uppåt eller nedåt.',
 
   // Typ (the top level of the revenue classification).
   '1000':
@@ -75,7 +75,7 @@ const EXPLANATIONS: Readonly<Record<string, string>> = {
   '7200':
     'Avräknad moms för statliga myndigheter, momskompensation till kommuner och regioner, avgifter till public service och intäkter som förs till fonder.',
   '8100':
-    'Stöd som anställningsstöd, nystartsjobb och korttidsarbete, redovisade som krediteringar på skattekonto.',
+    'Stöd som anställningsstöd, och nystartsjobb, redovisade som krediteringar på skattekonto.',
 };
 
 /** Heading of the avgående poster 1700 and 1800 in the minus strip (P0). Not for other items. */
