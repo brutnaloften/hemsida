@@ -1,6 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { VERDICTS, VERDICT_LABELS } from "../schema/promise";
+import {
+  AGREEMENT_OUTCOMES,
+  AGREEMENT_OUTCOME_LABELS,
+  VERDICTS,
+  VERDICT_LABELS,
+} from "../schema/promise";
 
 // Verdict descriptions follow the definitions in docs/data-model.md.
 const verdictDescriptions: Record<(typeof VERDICTS)[number], string> = {
@@ -90,6 +95,27 @@ const stages = [
         genom alla steg. Löften om budgetbelopp följs inte genom stegen ovan utan prövas mot statens
         faktiska utfall per anslag, enligt Statskontorets öppna data. Löften om mätbara resultat kan
         inte följas genom dokumentkedjan alls.
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-semibold">Valmanifest jämförs med Tidöavtalet</h2>
+      <p>
+        Löften som Moderaterna, Kristdemokraterna och Liberalerna gav i sina valmanifest inför valet 2022
+        jämförs med Tidöavtalet. För varje manifestlöfte anges hur avtalstexten behandlar det, med någon
+        av etiketterna{" "}
+        {AGREEMENT_OUTCOMES.map((o) => `"${AGREEMENT_OUTCOME_LABELS[o]}"`).join(", ")}. Etiketten
+        beskriver enbart vad avtalet säger. Den är ingen bedömning och styr inte bedömningen av löftet.
+      </p>
+      <p>
+        Om avtalet behandlar löftet pekar manifestlöftet ut de löften i avtalet som motsvarar det.
+        Dokumenten från riksdagen kopieras inte över: tidslinjen visas i stället via det länkade
+        Tidölöftet. För löften som saknas i avtalet finns inget länkat Tidölöfte och därmed ingen
+        tidslinje. De flesta manifestlöften är ännu inte bedömda. De som var för vaga för att bedömas
+        markerades som &quot;Ej bedömbart&quot; vid inläsningen. Jämförelsen mellan manifest och avtal
+        är i dagsläget gjord med hjälp av AI, som också har granskat de inledande etiketterna i stället
+        för en människa. Etiketterna kan därför innehålla fel, och de som upptäcks rättas via en pull
+        request.
       </p>
     </section>
 
