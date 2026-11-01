@@ -1,0 +1,41 @@
+name: Data freshness
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: data-freshness
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v4.4.0
+
+      - name: Setup Node
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # 4.0.2
+        with:
+          node-version: "24"
+          cache: pnpm
+          cache-dependency-path: tools/pnpm-lock.yaml
+
+      - name: Install tools dependencies
+        working-directory: tools
+        run: pnpm install --frozen-lockfile
+
+      # Reads the manifest and syncs issues only; it never ingests or pushes data.
+      - name: Sync stale-dataset issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node --experimental-strip-types tools/sync-freshness-issues.ts
