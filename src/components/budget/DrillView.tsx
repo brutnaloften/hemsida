@@ -10,7 +10,7 @@ import { YearSelect, type YearOption } from '@/components/budget/YearSelect';
 import {
   formatAmountWords,
   formatMdkr,
-  formatNumber,
+  formatPercentWords,
   formatPercent,
   shareOf,
 } from '@/lib/budget/format';
@@ -58,7 +58,7 @@ export function DrillView({
         const share = shareOf(n.value ?? 0, split.base);
         return {
           value: formatPercent(share),
-          aria: `${n.name}: ${formatNumber(share * 100, 1)} procent av ${node.name}, ${formatAmountWords(n.value ?? 0)}`,
+          aria: `${n.name}: ${formatPercentWords(share)} av ${node.name}, ${formatAmountWords(n.value ?? 0)}`,
           link: true,
         };
       }),
@@ -74,14 +74,14 @@ export function DrillView({
   return (
     <>
       <Breadcrumbs crumbs={crumbs} onOpen={onCrumb} />
-      <h1
-        ref={h1Ref}
-        tabIndex={-1}
-        className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-2xl font-bold outline-none md:text-3xl"
-      >
-        <span>{node.name}</span>
-        {preliminary && <PrelimBadge />}
+      <h1 ref={h1Ref} tabIndex={-1} className="mt-3 text-2xl font-bold outline-none md:text-3xl">
+        {node.name}
       </h1>
+      {preliminary && (
+        <div className="mt-2">
+          <PrelimBadge />
+        </div>
+      )}
       <p className="mt-2 text-muted-foreground">
         {formatAmountWords(value)} {year}
         {value > 0 && sideTotal > 0 && (

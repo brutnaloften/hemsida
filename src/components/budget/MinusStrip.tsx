@@ -11,7 +11,7 @@ export function MinusStrip({ items, onOpen }: { items: BudgetNode[]; onOpen?: Op
   if (items.length === 0) return null;
   return (
     <section className="budget-hatch mt-3 rounded-sm border border-budget-hatch/60 p-3 text-budget-box-foreground">
-      <h3 className="text-sm font-semibold">{LABELS.stripHeading}</h3>
+      <h2 className="text-sm font-semibold">{LABELS.stripHeading}</h2>
       <ul role="list" className="mt-1 space-y-1 text-sm">
         {items.map((n) => (
           <li key={n.id} className="flex justify-between gap-3">

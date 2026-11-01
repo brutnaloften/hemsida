@@ -8,10 +8,11 @@ import { YearSelect, type YearOption } from '@/components/budget/YearSelect';
 import {
   formatAmountWords,
   formatMdkr,
-  formatNumber,
+  formatPercentWords,
   formatPercent,
   shareOf,
 } from '@/lib/budget/format';
+import { LABELS } from '@/lib/budget/labels';
 import { hrefFor, levelHref, type Balance, type BalanceColumn } from '@/lib/budget/core';
 import { columnAspect, layoutColumn, type Frame } from '@/lib/budget/treemap';
 
@@ -28,7 +29,20 @@ type Props = {
   h1Ref: Ref<HTMLHeadingElement>;
 };
 
-function columnBoxes(column: BalanceColumn, base: number, baseLabel: string): Box[] {
+/** Explanations of "Övriga poster" (P2), read out in the box's accessible name. */
+const OTHER_EXPLANATION = {
+  minskar:
+    'I statens redovisning minskar de här posterna utgifterna. Här visas de på inkomstsidan så att båda sidorna kan ritas som ytor.',
+  utgift: 'Lån och kassamässiga justeringar som ingår i statens utgifter.',
+} as const;
+
+function columnBoxes(
+  column: BalanceColumn,
+  base: number,
+  baseLabel: string,
+  saldoBase: number,
+  saldoLabel: string,
+): Box[] {
   const aspect = { portrait: columnAspect('portrait'), landscape: columnAspect('landscape') };
   const layouts = {
     portrait: layoutColumn(column, aspect.portrait),
@@ -37,12 +51,16 @@ function columnBoxes(column: BalanceColumn, base: number, baseLabel: string): Bo
   const half = { portrait: LABEL_WIDTH.portrait / 2, landscape: LABEL_WIDTH.landscape / 2 };
   return makeBoxes(column.items, layouts, aspect, half, (n) => {
     const v = n.value ?? 0;
-    const share = shareOf(v, base);
-    const percentWords = `${formatNumber(share * 100, 1)} procent av ${baseLabel}`;
+    const share = shareOf(v, n.kind === 'saldo' ? saldoBase : base);
+    const percentWords = `${formatPercentWords(share)} av ${n.kind === 'saldo' ? saldoLabel : baseLabel}`;
     const plain = n.kind === 'saldo' || n.kind === 'other';
     return {
       value: n.kind === 'saldo' ? `${n.name} ${formatMdkr(v)}` : formatPercent(share),
-      aria: `${n.name}: ${percentWords}, ${formatAmountWords(v)}`,
+      aria: `${n.name}: ${percentWords}, ${formatAmountWords(v)}${
+        n.kind === 'other'
+          ? `. ${OTHER_EXPLANATION[n.name === LABELS.ovrigaMinskar ? 'minskar' : 'utgift']}`
+          : ''
+      }`,
       link: !plain,
     };
   });
@@ -60,11 +78,13 @@ export function BalanceView({
   const { totals, year, saldo } = balance;
   const deficit = totals.saldo < 0;
   const outBoxes = useMemo(
-    () => columnBoxes(balance.out, totals.utgifter, 'statens utgifter'),
+    () =>
+      columnBoxes(balance.out, totals.utgifter, 'statens utgifter', totals.utgifter, 'utgifterna'),
     [balance, totals.utgifter],
   );
   const inBoxes = useMemo(
-    () => columnBoxes(balance.in, totals.inkomster, 'statens inkomster'),
+    () =>
+      columnBoxes(balance.in, totals.inkomster, 'statens inkomster', totals.utgifter, 'utgifterna'),
     [balance, totals.inkomster],
   );
   const aspect = { portrait: columnAspect('portrait'), landscape: columnAspect('landscape') };
@@ -91,7 +111,11 @@ export function BalanceView({
       <p className="mt-2 text-muted-foreground">
         Staten gav ut {formatAmountWords(totals.utgifter)} och tog in{' '}
         {formatAmountWords(totals.inkomster)}. {deficit ? 'Underskottet' : 'Överskottet'} blev{' '}
-        {formatAmountWords(Math.abs(totals.saldo))}. {preliminary && <PrelimBadge />}
+        {formatAmountWords(Math.abs(totals.saldo))}.{' '}
+        {deficit
+          ? 'Staten lånade mellanskillnaden.'
+          : 'Överskottet användes till att betala av på statsskulden.'}{' '}
+        {preliminary && <PrelimBadge />}
       </p>
       <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
         <YearSelect years={years} value={year} onChange={onYear} />
@@ -133,19 +157,21 @@ export function BalanceView({
           </a>
         </section>
         <section aria-labelledby="budget-in-heading" className="row-span-3 grid grid-rows-subgrid">
-          <h2 id="budget-in-heading" className="mb-1 text-sm font-semibold sm:text-base">
-            <a
-              href={inHref}
-              onClick={(e) => onOpen({ id: 'root:inkomster', href: inHref }, e)}
-              className="underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-ring"
-            >
-              Inkomster
-            </a>{' '}
-            <span className="block font-normal tabular-nums sm:inline">
-              {formatMdkr(totals.inkomster)}
-            </span>{' '}
+          <div>
+            <h2 id="budget-in-heading" className="mb-1 text-sm font-semibold sm:text-base">
+              <a
+                href={inHref}
+                onClick={(e) => onOpen({ id: 'root:inkomster', href: inHref }, e)}
+                className="underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-ring"
+              >
+                Inkomster
+              </a>{' '}
+              <span className="block font-normal tabular-nums sm:inline">
+                {formatMdkr(totals.inkomster)}
+              </span>
+            </h2>
             {preliminary && <PrelimBadge />}
-          </h2>
+          </div>
           <Treemap
             label={`Inkomster ${year}, största först`}
             boxes={inBoxes}

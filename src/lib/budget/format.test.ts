@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   formatAmountWords,
+  formatPercentWords,
   formatAmount,
   formatKr,
   formatMdkr,
@@ -69,5 +70,13 @@ describe('formatAmountWords', () => {
   it('uses miljarder from 1 000 mn kr and miljoner below', () => {
     expect(formatAmountWords(163500)).toBe('163,5 miljarder kronor');
     expect(formatAmountWords(420)).toBe('420 miljoner kronor');
+  });
+});
+
+describe('formatPercentWords', () => {
+  it('says "mindre än 0,1 procent" for tiny shares', () => {
+    expect(formatPercentWords(0.1167)).toBe('11,7 procent');
+    expect(formatPercentWords(0.0001)).toBe('mindre än 0,1 procent');
+    expect(formatPercentWords(0)).toBe('0,0 procent');
   });
 });

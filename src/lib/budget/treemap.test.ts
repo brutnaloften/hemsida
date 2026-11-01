@@ -100,3 +100,31 @@ describe('label tiers', () => {
     expect(labelTierFor({ x: 0, y: 0, w: 0.01, h: 0.01 }, 'portrait')).toBe('none');
   });
 });
+
+describe('balance layout invariants (every year, both frames)', () => {
+  it('keeps every rect inside its frame, proportional to its value, filling each column', () => {
+    const eps = 1e-9;
+    for (const year of years) {
+      const balance = buildBalance(year, { base: '/' });
+      const layouts = layoutBalance(balance);
+      for (const frame of ['portrait', 'landscape'] as const) {
+        for (const side of ['out', 'in'] as const) {
+          const column = balance[side];
+          const placed = layouts[frame][side];
+          expect(placed).toHaveLength(column.items.length);
+          let area = 0;
+          for (const { id, rect } of placed) {
+            expect(rect.x).toBeGreaterThanOrEqual(-eps);
+            expect(rect.y).toBeGreaterThanOrEqual(-eps);
+            expect(rect.x + rect.w).toBeLessThanOrEqual(1 + eps);
+            expect(rect.y + rect.h).toBeLessThanOrEqual(1 + eps);
+            const item = column.items.find((i) => i.id === id)!;
+            expect(rect.w * rect.h).toBeCloseTo((item.value ?? 0) / column.total, 6);
+            area += rect.w * rect.h;
+          }
+          expect(area).toBeCloseTo(1, 6);
+        }
+      }
+    }
+  });
+});

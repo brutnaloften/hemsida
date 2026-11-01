@@ -125,12 +125,19 @@ export function Treemap({ label, boxes, side, aspect, onOpen }: TreemapProps) {
           '--lh': pct(l.h),
         };
         const boxClass = cn(
-          'absolute inset-px flex flex-col overflow-hidden rounded-sm p-1.5 text-left text-budget-box-foreground',
+          'absolute inset-px flex flex-col overflow-hidden rounded-sm text-left text-budget-box-foreground',
           fillFor(node, index, side),
-          node.kind === 'saldo' && 'p-1 sm:p-1.5',
         );
-        const content = (
-          <span aria-hidden="true" className="flex min-h-0 flex-col gap-0.5 text-xs leading-tight">
+        const labelled = tiers.portrait !== 'none' || tiers.landscape !== 'none';
+        // Padding lives on the label, not the box, so a tiny box can be as small as its value says.
+        const content = labelled && (
+          <span
+            aria-hidden="true"
+            className={cn(
+              'flex min-h-0 min-w-0 flex-col gap-0.5 text-xs leading-tight',
+              node.kind === 'saldo' ? 'p-1 sm:p-1.5' : 'p-1.5',
+            )}
+          >
             {node.kind !== 'saldo' && (
               <span
                 className={cn(

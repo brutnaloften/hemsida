@@ -162,7 +162,7 @@ export default function BudgetExplorer({ initial, years }: Props) {
       const node = nodeId ? trees.byId.get(nodeId) : undefined;
       const shown = node ? resolveMindre(node, mindre) : undefined;
       const title = shown ? shown.name : `Statens budget`;
-      const count = shown?.children?.length;
+      const count = shown?.children?.filter((c) => c.value !== null).length;
       setView(next);
       setNotice(message);
       setAnnouncement(`Visar ${title} ${next.year}${count ? `, ${count} poster` : ''}.`);
