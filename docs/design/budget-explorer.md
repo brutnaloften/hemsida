@@ -296,9 +296,9 @@ Contrast requirement for the implementer to verify (with a test computing the ra
 ```
 [closed]  --click "Vad betalar jag?"-->  [panel open, empty]
 [panel open] --type salary, blur/Enter or "Räkna"--> [estimate shown, display switches to kr, "kr" segment appears in toggle]
-[estimate shown] --drill / change year--> [kept in memory, recomputed with that year's parameters]
+[estimate shown] --drill / change year / open a leaf--> [panel collapses; estimate kept (localStorage), recomputed with that year's parameters]
 [estimate shown] --"Rensa"--> [panel open, empty, display back to procent]
-[any] --page reload or new tab--> [gone; nothing stored]
+[any] --page reload, new tab or later visit--> [estimate restored from localStorage, panel closed]
 ```
 
 **Panel copy (Swedish):**
@@ -326,8 +326,9 @@ Det här är en grov uppskattning, inte din faktiska skatt. Den bygger på
 skattereglerna för 2025 och antagandena ovan. Kommunalskatten räknas inte
 med, eftersom den går till kommunen och regionen, inte till staten.
 Beloppen i rutorna visar hur din del skulle fördelas om den följde samma
-proportioner som statens utgifter. Vi sparar ingenting: uppgiften finns bara
-i din webbläsare tills du stänger sidan.
+proportioner som statens utgifter. Uppgiften sparas bara i din
+webbläsare på den här enheten och skickas aldrig någonstans. Knappen Rensa
+tar bort den.
 
 [Rensa]
 ```
@@ -337,7 +338,8 @@ Rules:
 - Monthly input (`inputmode="numeric"`, spaces allowed, "35 000" and "35000" both parse), shown as monthly because that is how most people know their salary. The result is per year, and the unit is always written out.
 - Results are **rounded to the nearest 100 kr** for the total and the nearest 10 kr per box, always shown with "ungefär"/"≈". Boxes below 10 kr show "< 10 kr".
 - Box values in kr mode = `din del × box share of the side total` (shares of statens utgifter). The copy above states this exactly. On the inkomster side, kr mode shows the same breakdown as the panel. The three boxes the person's money mostly enters through (Skatter, netto, and inside it 1100/1200/1400) get a small "Din del: ≈ X kr" line, and other boxes stay in percent. In the balance view the saldo box in kr mode shows nothing personal, just the mdkr and the percent, to avoid implying "your share of the debt".
-- **Never put the salary in the URL** or in storage, and never send it anywhere. The URL keeps `visa=procent` when a salary is entered, so a copied link never leaks it.
+- **Never put the salary in the URL**, and never send it anywhere. The URL keeps `visa=procent` when a salary is entered, so a copied link never leaks it.
+- **Persistence (decision 2026-11-01, hemsida-ktr):** the monthly salary, the applied value and the two assumptions are kept in `localStorage` under the single key `brutnaloften:salary-estimate:v1` (`src/lib/budget/salary-storage.ts`), so the estimate survives leaf pages (full page loads), reloads and later visits. Never in `sessionStorage`. Every access is wrapped in try/catch and the stored value is validated with Zod; corrupt or old values are ignored. "Rensa" removes the key. The panel's open state is never stored: it is closed on load and collapses on every navigation (drill, leaf, year change), because it takes a lot of space on mobile.
 - If the selected year has no tax parameters in rn4.11, use the nearest year and say so: "Skatteregler för 2023 saknas, uppskattningen använder 2024 års regler."
 - **Level-agnostic API** (for the coordinator's constraint): the model returns one figure per level, `estimateContribution(input, year): { stat: Breakdown; kommun?: Breakdown; region?: Breakdown }`. The UI shows the one for the current root. For `kommun` and `region` the kommunalskatt rate comes from the future kommun picker, so the API takes it as an optional input (`kommunalskattesats?`). rn4.11 implements only `stat`.
 
@@ -532,7 +534,7 @@ Depends on rn4.3. Scope per P10: a switch with `?avancerat=1`; extra table colum
 
 ### New bead: "Salary panel: Vad betalar jag?"
 
-Depends on rn4.11 and rn4.3. Scope per P8: the disclosure panel, monthly input, an editable assumptions section, the breakdown, kr display mode in boxes, table and aria labels, the honesty copy verbatim, state kept in memory across client-side drills, never in the URL or storage, and the "nearest year's rules" fallback. Files: `src/components/budget/SalaryPanel.tsx`, plus edits to `Treemap.tsx`, `DataTable.tsx` and `BudgetExplorer.tsx`. Acceptance: no salary value appears in `location.href`, `localStorage` or `sessionStorage` (test); rounding rules; screen reader announces the result.
+Depends on rn4.11 and rn4.3. Scope per P8: the disclosure panel, monthly input, an editable assumptions section, the breakdown, kr display mode in boxes, table and aria labels, the honesty copy verbatim, state kept in localStorage (single key) across drills, leaf pages and visits, never in the URL, and the "nearest year's rules" fallback. Files: `src/components/budget/SalaryPanel.tsx`, plus edits to `Treemap.tsx`, `DataTable.tsx` and `BudgetExplorer.tsx`. Acceptance: no salary value appears in `location.href` or `sessionStorage`, and `localStorage` holds it only under the documented key (test); rounding rules; screen reader announces the result.
 
 ### hemsida-rn4.11 (addendum, not a rewrite)
 

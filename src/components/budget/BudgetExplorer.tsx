@@ -21,11 +21,7 @@ import { formatAmountWords } from '@/lib/budget/format';
 import { viewUrl } from '@/lib/budget/url';
 import { buildAdvanced } from '@/components/budget/advanced';
 import type { AdvancedFile } from '@/lib/budget/series';
-import {
-  INITIAL_SALARY_STATE,
-  SalaryPanel,
-  type SalaryState,
-} from '@/components/budget/SalaryPanel';
+import { SalaryPanel, usePersistedSalary } from '@/components/budget/SalaryPanel';
 import { estimateFor, revenuePartOf } from '@/lib/budget/salary-view';
 import { treesFromFiles, type NamesFile, type YearFile } from '@/lib/budget/tree';
 
@@ -190,9 +186,10 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
   const [advFailed, setAdvFailed] = useState(false);
   const [focusTick, setFocusTick] = useState(0);
   const h1Ref = useRef<HTMLHeadingElement>(null);
-  // The salary lives here, in memory only, so it survives client-side drills between views (P8).
-  // It is never put in the URL, storage or any request.
-  const [salary, setSalary] = useState<SalaryState>(INITIAL_SALARY_STATE);
+  // The salary estimate is mirrored to localStorage (one key, see salary-storage.ts) so it survives
+  // leaf pages (full page loads), reloads and later visits. It is never put in the URL or any
+  // request. The panel itself starts closed and closes on every navigation (P8).
+  const [salary, setSalary] = usePersistedSalary(`${view.year}/${view.nodeId ?? ''}`);
 
   const go = useCallback(
     async (target: View, opts: { push: boolean; focus: boolean; href?: string }): Promise<void> => {
