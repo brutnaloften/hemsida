@@ -158,6 +158,7 @@ export function buildAdvanced(i: Input): Advanced {
     chart = (
       <TimeSeriesChart
         title="Statens utgifter och inkomster över tid"
+        governments={file.governments}
         lines={lines}
         note={priceNote}
         extra={[
@@ -194,6 +195,7 @@ export function buildAdvanced(i: Input): Advanced {
       chart = (
         <TimeSeriesChart
           title={`${i.nodeName} över tid`}
+          governments={file.governments}
           lines={lines}
           note={priceNote}
           tableNote={

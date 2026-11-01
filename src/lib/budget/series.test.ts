@@ -5,6 +5,7 @@ import { flattenTrees } from '@/lib/budget/tree';
 import { buildRevenueTree, buildSpendingTree } from '@/lib/budget/view';
 import {
   bnpShares,
+  governmentRuns,
   lastBnpYear,
   pointsOf,
   summarize,
@@ -104,5 +105,24 @@ describe('summarize', () => {
   });
   it('handles a line without values', () => {
     expect(summarize('Budget', { ...line, points: [] })).toBe('Budget: inga uppgifter.');
+  });
+});
+
+describe('governmentRuns', () => {
+  const g = (year: number, government: string) => ({ year, government, parties: 'x' });
+  it('merges consecutive years and splits on a change', () => {
+    expect(
+      governmentRuns(
+        [g(2006, 'A'), g(2007, 'B'), g(2008, 'B'), g(2009, 'A')],
+        [2006, 2007, 2008, 2009],
+      ),
+    ).toEqual([
+      { government: 'A', parties: 'x', from: 0, to: 0 },
+      { government: 'B', parties: 'x', from: 1, to: 2 },
+      { government: 'A', parties: 'x', from: 3, to: 3 },
+    ]);
+  });
+  it('skips years without an entry', () => {
+    expect(governmentRuns([g(2007, 'A')], [2006, 2007])).toHaveLength(1);
   });
 });
