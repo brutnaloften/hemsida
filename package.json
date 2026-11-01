@@ -51,6 +51,9 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "@beads/bd"
-    ]
+    ],
+    "overrides": {
+      "minimatch@10": "^11.0.1"
+    }
   }
 }
