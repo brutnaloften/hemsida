@@ -36,7 +36,7 @@ const EXPLANATIONS: Readonly<Record<string, string>> = {
   '1200':
     'Arbetsgivaravgifter och egenavgifter, till exempel sjukförsäkringsavgift och ålderspensionsavgift.',
   '1300':
-    'Skatt på kapital: kapital och företagsvinster, kupongskatt, avkastningsskatt, fastighetsskatt, stämpelskatt och riskskatt för kreditinstitut.',
+    'Skatt på kapital: skatt på hushållens kapital och på företagsvinster, kupongskatt, avkastningsskatt, fastighetsskatt, stämpelskatt och riskskatt för kreditinstitut.',
   '1400':
     'Skatt på konsumtion och insatsvaror: moms, tobak, alkohol, energi, koldioxid, fordon och spel.',
   '1500': 'Tullmedel och sockeravgifter.',
@@ -75,7 +75,7 @@ const EXPLANATIONS: Readonly<Record<string, string>> = {
   '7200':
     'Avräknad moms för statliga myndigheter, momskompensation till kommuner och regioner, avgifter till public service och intäkter som förs till fonder.',
   '8100':
-    'Stöd som anställningsstöd, och nystartsjobb, redovisade som krediteringar på skattekonto.',
+    'Stöd som anställningsstöd och nystartsjobb, redovisade som krediteringar på skattekonto.',
 };
 
 /** Heading of the avgående poster 1700 and 1800 in the minus strip (P0). Not for other items. */
