@@ -14,8 +14,8 @@ import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { loadJson, writeJson } from './lib/json.ts';
 import { idPrefix, manifestoEntrySchema } from './lib/manifesto-extract.ts';
-import { VAGUE_REASONING } from './lib/manifesto-promote.ts';
-import { promiseSchema, sourceSchema } from './lib/schema.ts';
+import { promoteOpposition } from './lib/opposition-promote.ts';
+import { sourceSchema } from './lib/schema.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const { values } = parseArgs({
@@ -34,20 +34,7 @@ const entries = manifestoEntrySchema
   .array()
   .parse(loadJson(resolve(termDir, 'candidates', `${source.id}.json`)));
 
-const promises = entries.map((e) => {
-  if (e.link) throw new Error(`${e.promise.id} has a Tidö link; use the Tidö-linked promotion`);
-  const p = structuredClone(e.promise);
-  if (p.roles[party] !== 'opposition') throw new Error(`${p.id}: ${party} is not opposition`);
-  if (p.type === 'vague') {
-    p.verdict = {
-      value: 'not_assessable',
-      reasoning: VAGUE_REASONING,
-      date: p.verdict.date,
-      history: [],
-    };
-  }
-  return promiseSchema.parse(p);
-});
+const promises = promoteOpposition(entries, party);
 
 const outDir = resolve(termDir, 'promises');
 mkdirSync(outDir, { recursive: true });

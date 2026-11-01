@@ -20,5 +20,8 @@ All five chapters are covered: crime and segregation (p4-6), welfare (p7-10), cl
 
 ## Notes
 
-- Items repeated in two chapters (free summer public transport for young people appears on p12 and p14) are kept once, at the fuller wording.
+- Free summer public transport for young people appears on p12 and p14; it is kept once (p12, the fuller wording).
+- Known overlaps kept as separate promises because the manifesto words them separately: the new reseavdrag on p12 (`nytt-reseavdrag-for-klimatsmarta-resor`) and cheaper commutes on p14 (`billigare-arbetsresor-for-lang-pendling`) are likely one reform; language requirements appear on p7 (permanent residence, staff in förskola and äldreomsorg) and p10 (everyone working in welfare, `sprakkrav-och-utbildning-for-alla-i-valfarden`, which overlaps the p7 staff requirement). Assess them together later.
+- `ingen-fastighetsskatt` is a pledge not to introduce a tax and is typed `legislative` (the closest type; the outcome is "no such law passed").
+- Some quotes end where the PDF text is shuffled by the extractor or breaks across a column (for example `fler-vampliktiga-och-modern-materiel`, whose sentence continues in a separate text block); they are verbatim but stop before the end of the sentence.
 - Roles come from `TERM_ROLES`: S has no entry, so it defaults to `opposition`.
