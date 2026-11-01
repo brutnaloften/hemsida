@@ -326,9 +326,9 @@ Det här är en grov uppskattning, inte din faktiska skatt. Den bygger på
 skattereglerna för 2025 och antagandena ovan. Kommunalskatten räknas inte
 med, eftersom den går till kommunen och regionen, inte till staten.
 Beloppen i rutorna visar hur din del skulle fördelas om den följde samma
-proportioner som statens utgifter. Det du skriver sparas bara i den här
-webbläsaren på den här enheten, skickas aldrig någonstans och tas bort när
-du trycker på Rensa.
+proportioner som statens utgifter. Uppgiften sparas bara i din
+webbläsare på den här enheten och skickas aldrig någonstans. Knappen Rensa
+tar bort den.
 
 [Rensa]
 ```

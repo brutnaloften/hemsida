@@ -59,8 +59,9 @@ describe('SalaryPanel', () => {
     const status = host.querySelector('[role="status"]')!;
     expect(status.textContent).toMatch(/^Ungefär .* per år av det du och din arbetsgivare/);
     expect(host.textContent).toContain('Det här är en grov uppskattning, inte din faktiska skatt.');
-    expect(host.textContent).toContain('sparas bara i den här webbläsaren på den här enheten');
-    expect(host.textContent).toContain('skickas aldrig någonstans');
+    expect(host.textContent).toMatch(
+      /Uppgiften\s+sparas bara i din webbläsare på den här enheten och skickas aldrig någonstans\.\s+Knappen\s+Rensa tar bort den\./,
+    );
     expect(host.textContent).toContain('Arbetsgivaravgifter (statens del)');
 
     const needles = ['41237', '41 237', '494844', '494 844'];
