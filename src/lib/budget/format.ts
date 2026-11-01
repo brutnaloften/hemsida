@@ -70,6 +70,13 @@ export function formatKr(kr: number, step = 10): string {
   return `${formatNumber(Math.round(kr / step) * step)}${NBSP}kr`;
 }
 
+/** Amount as words for screen readers and prose: "163,5 miljarder kronor" / "420 miljoner kronor". */
+export function formatAmountWords(mnKr: number): string {
+  return Math.abs(mnKr) >= 1000
+    ? `${formatNumber(mnKr / 1000, 1)} miljarder kronor`
+    : `${formatNumber(mnKr)} miljoner kronor`;
+}
+
 /** Share of `part` in `base`, 0 when the base is zero. */
 export function shareOf(part: number, base: number): number {
   return base === 0 ? 0 : part / base;

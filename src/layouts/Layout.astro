@@ -6,9 +6,12 @@ import '../styles/globals.css';
 interface Props {
   title?: string;
   description?: string;
+  /** Absolute canonical URL, for pages that are reachable under more than one path. */
+  canonical?: string;
 }
 
 const {
+  canonical,
   title = 'Brutna Löften',
   description = 'En databas som spårar och analyserar politiska löften i Sverige. Se vilka politiker som lever upp till sina ord.',
 } = Astro.props;
@@ -24,6 +27,7 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="sv_SE" />
+    {canonical && <link rel="canonical" href={canonical} />}
     <base href={import.meta.env.BASE_URL} />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <script is:inline>

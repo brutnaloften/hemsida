@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  formatAmountWords,
   formatAmount,
   formatKr,
   formatMdkr,
@@ -61,5 +62,12 @@ describe('other formats', () => {
   it('computes shares safely', () => {
     expect(shareOf(1, 4)).toBe(0.25);
     expect(shareOf(1, 0)).toBe(0);
+  });
+});
+
+describe('formatAmountWords', () => {
+  it('uses miljarder from 1 000 mn kr and miljoner below', () => {
+    expect(formatAmountWords(163500)).toBe('163,5 miljarder kronor');
+    expect(formatAmountWords(420)).toBe('420 miljoner kronor');
   });
 });
