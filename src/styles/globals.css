@@ -50,15 +50,17 @@
 
   --color-sidebar: var(--sidebar);
 
-  --color-chart-5: var(--chart-5);
-
-  --color-chart-4: var(--chart-4);
-
-  --color-chart-3: var(--chart-3);
-
-  --color-chart-2: var(--chart-2);
-
-  --color-chart-1: var(--chart-1);
+  --color-budget-out-1: hsl(var(--budget-out-1));
+  --color-budget-out-2: hsl(var(--budget-out-2));
+  --color-budget-out-3: hsl(var(--budget-out-3));
+  --color-budget-out-4: hsl(var(--budget-out-4));
+  --color-budget-in-1: hsl(var(--budget-in-1));
+  --color-budget-in-2: hsl(var(--budget-in-2));
+  --color-budget-in-3: hsl(var(--budget-in-3));
+  --color-budget-in-4: hsl(var(--budget-in-4));
+  --color-budget-box-foreground: hsl(var(--budget-box-foreground));
+  --color-budget-hatch: hsl(var(--budget-hatch));
+  --color-budget-other: hsl(var(--budget-other));
 
   --radius-xl: calc(var(--radius) * 1.4);
 
@@ -100,6 +102,19 @@
     --ring: 240 10% 3.9%;
 
     --radius: 0.5rem;
+
+    /* Budget explorer (docs/design/budget-explorer.md P6): slate-teal for utgifter, sand for inkomster. */
+    --budget-out-1: 187 30% 82%;
+    --budget-out-2: 187 26% 74%;
+    --budget-out-3: 187 22% 88%;
+    --budget-out-4: 187 18% 78%;
+    --budget-in-1: 35 30% 82%;
+    --budget-in-2: 35 30% 74%;
+    --budget-in-3: 35 30% 88%;
+    --budget-in-4: 35 30% 78%;
+    --budget-box-foreground: 240 10% 3.9%;
+    --budget-hatch: 240 4% 46%;
+    --budget-other: 240 4.8% 95.9%;
   }
 
   .dark {
@@ -130,6 +145,18 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
+
+    --budget-out-1: 187 30% 22%;
+    --budget-out-2: 187 26% 28%;
+    --budget-out-3: 187 22% 18%;
+    --budget-out-4: 187 18% 25%;
+    --budget-in-1: 35 25% 22%;
+    --budget-in-2: 35 25% 28%;
+    --budget-in-3: 35 25% 18%;
+    --budget-in-4: 35 25% 25%;
+    --budget-box-foreground: 0 0% 98%;
+    --budget-hatch: 240 5% 65%;
+    --budget-other: 240 3.7% 15.9%;
   }
   * {
     @apply border-border outline-ring/50;
@@ -149,4 +176,13 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+}
+
+/* Budget explorer: diagonal stripes for the saldo box and the minus strip (not colour alone). */
+.budget-hatch {
+  background-image: repeating-linear-gradient(
+    45deg,
+    hsl(var(--budget-hatch) / 0.35) 0 2px,
+    transparent 2px 6px
+  );
 }
