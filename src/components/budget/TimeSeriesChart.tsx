@@ -212,7 +212,11 @@ export function TimeSeriesChart({ title, lines, extra = [], note, tableNote, gov
         {runs.length > 0 && (
           <li className="flex items-center gap-2">
             <svg width="30" height="12" aria-hidden="true">
-              <rect width="30" height="12" className="fill-foreground/[0.06]" />
+              <rect
+                width="30"
+                height="12"
+                className="fill-foreground/[0.06] stroke-foreground/30"
+              />
             </svg>
             Band: regeringen som lade fram budgetpropositionen ({govNames.join(', ')})
           </li>
