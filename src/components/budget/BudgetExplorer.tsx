@@ -18,6 +18,8 @@ import {
   type BudgetNode,
 } from '@/lib/budget/core';
 import { formatAmountWords } from '@/lib/budget/format';
+import { buildAdvanced } from '@/components/budget/advanced';
+import type { AdvancedFile } from '@/lib/budget/series';
 import {
   INITIAL_SALARY_STATE,
   SalaryPanel,
@@ -26,7 +28,15 @@ import {
 import { estimateFor } from '@/lib/budget/salary-view';
 import { treesFromFiles, type NamesFile, type YearFile } from '@/lib/budget/tree';
 
-type View = { year: number; nodeId: string | null; mindre: number };
+type View = {
+  year: number;
+  nodeId: string | null;
+  mindre: number;
+  /** Avancerat läge (?avancerat=1). */
+  advanced: boolean;
+  /** Fasta priser (?priser=fasta); only has an effect in advanced mode. */
+  fasta: boolean;
+};
 type Trees = ReturnType<typeof treesFromFiles> & { totals: YearFile['totals'] };
 
 const BASE = baseOf();
@@ -75,6 +85,24 @@ async function ensure(year: number): Promise<Trees> {
   return trees;
 }
 
+let advancedPromise: Promise<AdvancedFile> | undefined;
+let rowIndex: Map<string, number> | undefined;
+
+/** advanced.json, fetched once and only when advanced mode is on (P10). */
+function ensureAdvanced(): Promise<AdvancedFile> {
+  advancedPromise ??= getJson<AdvancedFile>(`${DATA}advanced.json`).catch((e) => {
+    advancedPromise = undefined;
+    throw e;
+  });
+  return advancedPromise;
+}
+
+/** Row of a node id in the per-row arrays of advanced.json (the order of names.json). */
+function rowOf(id: string): number | undefined {
+  if (!rowIndex && namesLoaded) rowIndex = new Map(namesLoaded.rows.map((r, i) => [r[0], i]));
+  return rowIndex?.get(id);
+}
+
 // --- Helpers -------------------------------------------------------------------------------------
 
 const sideOf = (id: string): 'utgifter' | 'inkomster' =>
@@ -100,6 +128,14 @@ function nodeIdForPath(names: NamesFile, path: string): string | null {
   return row ? row[0] : null;
 }
 
+/** The flags of advanced mode as query parameters, in the URL order. */
+function flagParams(view: Pick<View, 'advanced' | 'fasta'>, params: URLSearchParams) {
+  if (view.advanced) {
+    params.set('avancerat', '1');
+    if (view.fasta) params.set('priser', 'fasta');
+  }
+}
+
 function urlFor(view: View, latest: number, trees: Trees | undefined): string {
   const params = new URLSearchParams();
   if (view.year !== latest) params.set('ar', String(view.year));
@@ -107,7 +143,9 @@ function urlFor(view: View, latest: number, trees: Trees | undefined): string {
   if (view.nodeId && trees) {
     path = trees.byId.get(view.nodeId)?.href ?? levelHref();
     if (view.mindre > 0) params.set('mindre', String(view.mindre));
+    flagParams(view, params);
   } else {
+    flagParams(view, params);
     path = /\/budget\/(stat\/)?$/.test(window.location.pathname)
       ? window.location.pathname
       : levelHref();
@@ -154,10 +192,14 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
     year: latest,
     nodeId: drill?.node.id ?? null,
     mindre: 0,
+    advanced: false,
+    fasta: false,
   });
+  const [adv, setAdv] = useState<AdvancedFile | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [announcement, setAnnouncement] = useState('');
   const [failed, setFailed] = useState(false);
+  const [advFailed, setAdvFailed] = useState(false);
   const [focusTick, setFocusTick] = useState(0);
   const h1Ref = useRef<HTMLHeadingElement>(null);
   // The salary lives here, in memory only, so it survives client-side drills between views (P8).
@@ -191,7 +233,7 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
           message = `${lost.name} fanns inte ${target.year}. Visar ${kept?.name ?? 'Statens budget'} i stället.`;
         }
       }
-      const next: View = { year: target.year, nodeId, mindre };
+      const next: View = { ...target, nodeId, mindre };
       const node = nodeId ? trees.byId.get(nodeId) : undefined;
       const shown = node ? resolveMindre(node, mindre) : undefined;
       const title = shown ? shown.name : `Statens budget`;
@@ -237,7 +279,14 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
       }
       nodeId = namesLoaded ? nodeIdForPath(namesLoaded, rest) : null;
     }
-    return { year, nodeId, mindre: Number(params.get('mindre')) || 0 };
+    const advanced = params.get('avancerat') === '1';
+    return {
+      year,
+      nodeId,
+      mindre: Number(params.get('mindre')) || 0,
+      advanced,
+      fasta: advanced && params.get('priser') === 'fasta',
+    };
   }, [years, latest]);
 
   useEffect(() => {
@@ -249,7 +298,12 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
     const params = new URLSearchParams(window.location.search);
     const rest = window.location.pathname.slice(BUDGET.length).replace(/\/$/, '');
     // A static drill page already shows its latest-year view; only a query needs the island's data.
-    if (params.has('ar') || params.has('mindre') || (!drill && rest !== '' && rest !== 'stat')) {
+    if (
+      params.has('ar') ||
+      params.has('mindre') ||
+      params.has('avancerat') ||
+      (!drill && rest !== '' && rest !== 'stat')
+    ) {
       restore(false);
     }
     const onPop = () => restore(true);
@@ -275,9 +329,13 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
     // Leaves have their own static pages (with their own slots), so the browser loads them; a year
     // other than the latest travels along in the query.
     if (target.kind === 'leaf') {
-      if (view.year !== latest) {
+      const params = new URLSearchParams();
+      if (view.year !== latest) params.set('ar', String(view.year));
+      flagParams(view, params);
+      const query = params.toString();
+      if (query) {
         e.preventDefault();
-        window.location.assign(`${target.href}?ar=${view.year}`);
+        window.location.assign(`${target.href}?${query}`);
       }
       return;
     }
@@ -288,14 +346,14 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
       nodeId = nodeId.replace(/^(smaller:)+/, '');
     }
     e.preventDefault();
-    void go({ year: view.year, nodeId, mindre }, { push: true, focus: true, href: target.href });
+    void go({ ...view, nodeId, mindre }, { push: true, focus: true, href: target.href });
   };
 
   const onCrumb = (crumb: Crumb, e: MouseEvent<HTMLAnchorElement>) => {
     if (!plainClick(e)) return;
     e.preventDefault();
     void go(
-      { year: view.year, nodeId: crumb.nodeId, mindre: 0 },
+      { ...view, nodeId: crumb.nodeId, mindre: 0 },
       { push: true, focus: true, href: crumb.href },
     );
   };
@@ -303,6 +361,24 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
   const onYear = (year: number) => {
     void go({ ...view, year }, { push: true, focus: false });
   };
+
+  // Switching advanced mode or the price level only changes the URL, not the history (P10).
+  const setFlags = (patch: Partial<Pick<View, 'advanced' | 'fasta'>>) => {
+    const next = { ...view, ...patch };
+    setView(next);
+    window.history.replaceState(null, '', urlFor(next, latest, treesCache.get(next.year)));
+    if (patch.advanced !== undefined) {
+      setAnnouncement(patch.advanced ? 'Avancerat läge på.' : 'Avancerat läge av.');
+    } else if (patch.fasta !== undefined) {
+      setAnnouncement(patch.fasta ? 'Fasta priser.' : 'Löpande priser.');
+    }
+  };
+
+  useEffect(() => {
+    if (!view.advanced || adv) return;
+    setAdvFailed(false);
+    ensureAdvanced().then(setAdv, () => setAdvFailed(true));
+  }, [view.advanced, adv]);
 
   const estimate = useMemo(
     () =>
@@ -315,6 +391,27 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
     panel: <SalaryPanel state={salary} onChange={setSalary} estimate={estimate} year={view.year} />,
     total: estimate ? estimate.total : null,
   };
+  const advancedFor = (
+    nodeId: string | null,
+    nodeName: string,
+    side: 'utgifter' | 'inkomster' | 'both',
+    totalId: string | null,
+  ) =>
+    buildAdvanced({
+      file: adv,
+      failed: advFailed,
+      on: view.advanced,
+      fasta: view.fasta,
+      year: view.year,
+      latest,
+      onAdvanced: (advanced) => setFlags({ advanced }),
+      onFasta: (fasta) => setFlags({ fasta }),
+      nodeId,
+      nodeName,
+      side,
+      rowOf,
+      totalId,
+    });
   const yearOption = years.find((y) => y.year === view.year);
   // The badge text is about the tax figures, so it follows the revenue flag.
   const preliminary = yearOption?.revenuePreliminary ?? false;
@@ -362,6 +459,7 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
           onCrumb={onCrumb}
           h1Ref={h1Ref}
           personal={personal}
+          advanced={advancedFor(node.id, node.name, side, null)}
         />
       );
     } else {
@@ -383,6 +481,7 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
           onCrumb={onCrumb}
           h1Ref={h1Ref}
           personal={personal}
+          advanced={advancedFor(node.id, node.name, side, shown === node ? node.id : null)}
         />
       );
     }
@@ -404,6 +503,7 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
         onCrumb={onCrumb}
         h1Ref={h1Ref}
         personal={personal}
+        advanced={advancedFor(null, 'Statens budget', 'both', null)}
       />
     );
   }

@@ -2,7 +2,7 @@ import type { MouseEvent, Ref } from 'react';
 import { Breadcrumbs, type Crumb } from '@/components/budget/Breadcrumbs';
 import { YearSelect, type YearOption } from '@/components/budget/YearSelect';
 import { PrelimBadge } from '@/components/budget/PrelimBadge';
-import { plainClick, type Personal } from '@/components/budget/types';
+import { plainClick, type Advanced, type Personal } from '@/components/budget/types';
 import {
   discontinuedAfter,
   existsIn,
@@ -34,6 +34,7 @@ type Props = {
   onCrumb: (crumb: Crumb, event: MouseEvent<HTMLAnchorElement>) => void;
   h1Ref: Ref<HTMLHeadingElement>;
   personal?: Personal;
+  advanced?: Advanced;
 };
 
 /** "utgiftsområde 9" for a UO, otherwise the parent's own name. */
@@ -60,6 +61,7 @@ export function LeafView({
   onCrumb,
   h1Ref,
   personal,
+  advanced,
 }: Props) {
   const sideLabel = side === 'utgifter' ? 'statens utgifter' : 'statens inkomster';
   const last = discontinuedAfter(node.id);
@@ -78,6 +80,7 @@ export function LeafView({
       <h1 ref={h1Ref} tabIndex={-1} className="mt-3 text-2xl font-bold outline-none md:text-3xl">
         {node.name}
       </h1>
+      {advanced?.header}
       {last !== null && <p className="mt-2 text-sm font-medium">Upphörde efter {last}.</p>}
 
       {present ? (
@@ -133,6 +136,7 @@ export function LeafView({
       <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
         <YearSelect years={years} value={year} onChange={onYear} side={side} />
         {personal?.panel}
+        {advanced?.controls}
       </div>
       {present && side === 'utgifter' && personal?.total != null && value > 0 && (
         <p className="mt-3">
@@ -158,6 +162,7 @@ export function LeafView({
           </div>
         </figure>
       )}
+      {advanced?.chart}
     </>
   );
 }

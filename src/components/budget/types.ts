@@ -16,3 +16,24 @@ export function plainClick(e: MouseEvent): boolean {
 }
 
 export type OpenHandler = (target: Openable, event: MouseEvent<HTMLAnchorElement>) => void;
+
+/** An extra table column of advanced mode: one formatted cell per row, optionally in the total row. */
+export type TableColumn = {
+  label: string;
+  cell: (node: BudgetNode) => string;
+  total?: string;
+};
+
+/**
+ * Advanced mode (P10) as the views see it. The explorer builds the pieces for the node on screen;
+ * the views only place them: `controls` in the controls row, `header` under the H1, `chart` under the
+ * treemap, and the columns and codes in the data table. Absent when the island has no data for it.
+ */
+export type Advanced = {
+  on: boolean;
+  controls: ReactNode;
+  header: ReactNode;
+  chart: ReactNode;
+  columns: TableColumn[];
+  code: (node: BudgetNode) => string | null;
+};
