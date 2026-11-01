@@ -12,7 +12,7 @@
  * array property (e.g. `{ candidates: [...] }`).
  */
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, renameSync, writeFileSync } from 'node:fs';
 import type { z } from 'zod/v4';
 
 /**
@@ -41,6 +41,13 @@ export function formatIssues(error: z.ZodError): string {
 
 export function loadJson(path: string): unknown {
   return JSON.parse(readFileSync(path, 'utf-8'));
+}
+
+/** Write via a temp file and rename, so an interrupted write never leaves a truncated file. */
+export function writeJsonAtomic(path: string, data: unknown): void {
+  const tmp = `${path}.tmp`;
+  writeFileSync(tmp, JSON.stringify(data, null, 2) + '\n');
+  renameSync(tmp, path);
 }
 
 export function writeJson(path: string, data: unknown): void {
