@@ -4,7 +4,7 @@
  *   node --experimental-strip-types tools/ingest-macro.ts
  *
  * Two requests, sequential, well inside SCB's limit of 30 calls per 10 seconds.
- * Rerunning with unchanged upstream data produces no diff.
+ * Rerunning with unchanged upstream data leaves macro.json unchanged (freshness.json still gets today).
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';

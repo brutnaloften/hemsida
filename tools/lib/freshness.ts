@@ -1,6 +1,6 @@
 /**
  * Freshness manifest: one entry per ingested dataset in `src/data/freshness.json`, written by the
- * ingest tools. `tools/check-freshness.ts` (`tools/lib/freshness-check.ts`) compares it against release calendars.
+ * ingest tools; compared against release rules in `freshness-check.ts`.
  */
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';

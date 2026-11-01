@@ -8,7 +8,7 @@
  * Without --utgift/--inkomst the newest zips are found by scraping the listing page. Downloads are
  * cached in tools/out/budget-cache/ (gitignored) and reused when the file name is already there;
  * files are fetched sequentially with a descriptive User-Agent. Output is deterministic: running
- * it again on the same files yields no diff. See docs/budget-data.md ("Refresh").
+ * it again on the same files yields no diff in the data files (freshness.json gets today as fetchedAt). See docs/budget-data.md ("Refresh").
  */
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';

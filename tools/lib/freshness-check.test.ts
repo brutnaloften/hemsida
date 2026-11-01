@@ -41,6 +41,13 @@ describe('checkFreshness', () => {
     expect(stale(m({ a, r: e('2026-09-20', '2026-08') }), '2026-10-15').r).toBe(false);
     expect(stale(m({ a, r }), '2030-01-01').r).toBe(false);
   });
+  it('treats an invalid fetchedAt as stale', () => {
+    const a = e('2026-13-45', '2025');
+    expect(stale(m({ a, r: e('2026-10-31', '2026-10') }), '2026-11-01').a).toBe(true);
+    expect(
+      stale(m({ a: e('2026-01-01', '2025'), r: e('garbage', '2026-10') }), '2026-11-01').r,
+    ).toBe(true);
+  });
   it('notes datasets without a rule as not stale', () => {
     const v = checkFreshness(m({ x: e('2026-01-01', '2025') }), '2026-11-01', {});
     expect(v).toEqual([{ id: 'x', stale: false, reason: 'no rule configured' }]);

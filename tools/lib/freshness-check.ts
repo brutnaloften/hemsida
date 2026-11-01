@@ -39,13 +39,19 @@ export const RULES: Record<string, Rule> = {
 
 export type Verdict = { id: string; stale: boolean; reason: string };
 
-/** Newest year expected for an annual rule on `today` (YYYY-MM-DD), or null if none yet. */
+/** Newest year expected for an annual rule on `today` (YYYY-MM-DD). */
 export function expectedYear(rule: Extract<Rule, { kind: 'annual' }>, today: string): number {
   const year = Number(today.slice(0, 4));
   const md = (m: number, d: number) => m * 100 + d;
   const todayMd = md(Number(today.slice(5, 7)), Number(today.slice(8, 10)));
   // Year Y is published from (rule date) in Y+1.
   return todayMd >= md(rule.month, rule.day) ? year - 1 : year - 2;
+}
+
+export function isValidDate(s: string): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(s)) return false;
+  const d = new Date(`${s}T00:00:00Z`);
+  return !Number.isNaN(d.getTime()) && d.toISOString().slice(0, 10) === s;
 }
 
 export function daysBetween(from: string, to: string): number {
@@ -60,6 +66,10 @@ export function checkFreshness(
   const verdicts: Verdict[] = [];
   for (const [id, rule] of Object.entries(rules)) {
     const entry = manifest.datasets[id];
+    if (entry && !isValidDate(entry.fetchedAt)) {
+      verdicts.push({ id, stale: true, reason: `invalid fetchedAt ${entry.fetchedAt}` });
+      continue;
+    }
     if (rule.kind === 'max-age') {
       if (entry && rule.closeAfter && entry.fetchedAt >= rule.closeAfter) {
         verdicts.push({ id, stale: false, reason: `final snapshot taken ${entry.fetchedAt}` });

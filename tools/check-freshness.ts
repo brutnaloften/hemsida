@@ -5,11 +5,11 @@
 import { resolve } from 'node:path';
 import { parseArgs } from 'node:util';
 import { defaultManifestPath, loadManifest } from './lib/freshness.ts';
-import { checkFreshness } from './lib/freshness-check.ts';
+import { checkFreshness, isValidDate } from './lib/freshness-check.ts';
 
 const { values } = parseArgs({ options: { today: { type: 'string' } } });
 const today = values.today ?? new Date().toISOString().slice(0, 10);
-if (!/^\d{4}-\d{2}-\d{2}$/.test(today)) throw new Error(`--today must be YYYY-MM-DD, got ${today}`);
+if (!isValidDate(today)) throw new Error(`--today must be YYYY-MM-DD, got ${today}`);
 
 const manifest = loadManifest(defaultManifestPath(resolve(import.meta.dirname, '..')));
 const verdicts = checkFreshness(manifest, today);
