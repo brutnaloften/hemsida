@@ -4,7 +4,7 @@ import { mdkrNumber, summarize, type Line } from '@/lib/budget/series';
 
 const W = 640;
 const H = 260;
-const M = { top: 12, right: 16, bottom: 28, left: 52 };
+const M = { top: 24, right: 16, bottom: 28, left: 52 };
 
 export type ChartColumn = { label: string; cells: string[] };
 
@@ -60,87 +60,96 @@ export function TimeSeriesChart({ title, lines, extra = [], note, tableNote }: P
         {title}
       </h2>
       <p className="mt-1 max-w-prose text-sm text-muted-foreground">{summary}</p>
-      <svg
-        viewBox={`0 0 ${W} ${H}`}
-        role="img"
-        aria-label={`${title}. ${summary}`}
-        className="mt-2 h-auto w-full max-w-3xl text-foreground"
+      {/* Natural size on phones (11 px labels), scrolls sideways when the screen is narrower. */}
+      <div
+        className="mt-2 max-w-3xl overflow-x-auto"
+        tabIndex={0}
+        role="region"
+        aria-label={`${title}, diagram`}
       >
-        {ticks.map((t) => (
-          <g key={t}>
-            <line
-              x1={M.left}
-              x2={W - M.right}
-              y1={y(t)}
-              y2={y(t)}
-              className={t === 0 ? 'stroke-foreground/50' : 'stroke-border'}
-              strokeWidth={1}
-            />
-            <text
-              x={M.left - 6}
-              y={y(t)}
-              textAnchor="end"
-              dominantBaseline="middle"
-              className="fill-muted-foreground text-[11px]"
-            >
-              {formatNumber(t / 1000)}
-            </text>
-          </g>
-        ))}
-        <text x={M.left - 6} y={8} textAnchor="end" className="fill-muted-foreground text-[11px]">
-          mdkr
-        </text>
-        {years.map((year, i) =>
-          i % everyOther === 0 || i === years.length - 1 ? (
-            <text
-              key={year}
-              x={x(i)}
-              y={H - 8}
-              textAnchor="middle"
-              className="fill-muted-foreground text-[11px]"
-            >
-              {year}
-            </text>
-          ) : null,
-        )}
-        {lines.map((line) => {
-          const segments: string[][] = [[]];
-          line.points.forEach((p, i) => {
-            if (p.value === null) segments.push([]);
-            else segments[segments.length - 1].push(`${x(i).toFixed(1)},${y(p.value).toFixed(1)}`);
-          });
-          return (
-            <g key={line.name}>
-              {segments
-                .filter((s) => s.length > 1)
-                .map((s, k) => (
-                  <polyline
-                    key={k}
-                    points={s.join(' ')}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeDasharray={line.dashed ? '6 4' : undefined}
-                    strokeLinejoin="round"
-                    opacity={line.dashed ? 0.65 : 1}
-                  />
-                ))}
-              {line.points.map((p, i) =>
-                p.value === null ? null : (
-                  <Marker
-                    key={p.year}
-                    shape={line.marker}
-                    cx={x(i)}
-                    cy={y(p.value)}
-                    open={p.preliminary}
-                    faded={line.dashed}
-                  />
-                ),
-              )}
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          role="img"
+          aria-label={title}
+          className="h-auto w-full min-w-[640px] text-foreground"
+        >
+          {ticks.map((t) => (
+            <g key={t}>
+              <line
+                x1={M.left}
+                x2={W - M.right}
+                y1={y(t)}
+                y2={y(t)}
+                className={t === 0 ? 'stroke-foreground/50' : 'stroke-border'}
+                strokeWidth={1}
+              />
+              <text
+                x={M.left - 6}
+                y={y(t)}
+                textAnchor="end"
+                dominantBaseline="middle"
+                className="fill-muted-foreground text-[11px]"
+              >
+                {formatNumber(t / 1000)}
+              </text>
             </g>
-          );
-        })}
-      </svg>
+          ))}
+          <text x={4} y={10} className="fill-muted-foreground text-[11px]">
+            mdkr
+          </text>
+          {years.map((year, i) =>
+            i % everyOther === 0 || i === years.length - 1 ? (
+              <text
+                key={year}
+                x={x(i)}
+                y={H - 8}
+                textAnchor="middle"
+                className="fill-muted-foreground text-[11px]"
+              >
+                {year}
+              </text>
+            ) : null,
+          )}
+          {lines.map((line) => {
+            const segments: string[][] = [[]];
+            line.points.forEach((p, i) => {
+              if (p.value === null) segments.push([]);
+              else
+                segments[segments.length - 1].push(`${x(i).toFixed(1)},${y(p.value).toFixed(1)}`);
+            });
+            return (
+              <g key={line.name}>
+                {segments
+                  .filter((s) => s.length > 1)
+                  .map((s, k) => (
+                    <polyline
+                      key={k}
+                      points={s.join(' ')}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeDasharray={line.dashed ? '6 4' : undefined}
+                      strokeLinejoin="round"
+                      opacity={line.dashed ? 0.65 : 1}
+                    />
+                  ))}
+                {line.points.map((p, i) =>
+                  p.value === null ? null : (
+                    <Marker
+                      key={p.year}
+                      shape={line.marker}
+                      cx={x(i)}
+                      cy={y(p.value)}
+                      open={p.preliminary}
+                      faded={line.dashed}
+                    />
+                  ),
+                )}
+              </g>
+            );
+          })}
+        </svg>
+      </div>
       <ul className="mt-1 flex flex-wrap gap-x-5 gap-y-1 text-sm" aria-label="Förklaring">
         {lines.map((line) => (
           <li key={line.name} className="flex items-center gap-2">

@@ -68,6 +68,9 @@ function budgetSeries(): Map<string, Pair> {
       (t) => revenueHuvudgrupper.find((h) => h.kod === t.huvudgrupp)?.typ === typ,
     );
   for (const typ of revenueTyper) out.set(`rev:${typ.kod}`, rev(inTyp(typ.kod)));
+  // Nets the same typ as the outcome (1000 + 7000 + 8000, so the avgående poster of typ 7000 are
+  // deducted from the budget too); checked for 2025: budget 1 247,8 mdkr vs utfall 1 193,9 mdkr is a
+  // real difference, not a netting mismatch.
   out.set('rev:skatter', rev(SKATTER_TYPER.flatMap(inTyp)));
   out.set('root:inkomster', rev(revenueTitlar));
   return out;

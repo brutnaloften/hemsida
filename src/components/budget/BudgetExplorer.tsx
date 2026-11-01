@@ -18,6 +18,7 @@ import {
   type BudgetNode,
 } from '@/lib/budget/core';
 import { formatAmountWords } from '@/lib/budget/format';
+import { viewUrl } from '@/lib/budget/url';
 import { buildAdvanced } from '@/components/budget/advanced';
 import type { AdvancedFile } from '@/lib/budget/series';
 import {
@@ -137,21 +138,8 @@ function flagParams(view: Pick<View, 'advanced' | 'fasta'>, params: URLSearchPar
 }
 
 function urlFor(view: View, latest: number, trees: Trees | undefined): string {
-  const params = new URLSearchParams();
-  if (view.year !== latest) params.set('ar', String(view.year));
-  let path: string;
-  if (view.nodeId && trees) {
-    path = trees.byId.get(view.nodeId)?.href ?? levelHref();
-    if (view.mindre > 0) params.set('mindre', String(view.mindre));
-    flagParams(view, params);
-  } else {
-    flagParams(view, params);
-    path = /\/budget\/(stat\/)?$/.test(window.location.pathname)
-      ? window.location.pathname
-      : levelHref();
-  }
-  const query = params.toString();
-  return query ? `${path}?${query}` : path;
+  const href = view.nodeId ? trees?.byId.get(view.nodeId)?.href : undefined;
+  return viewUrl(view, latest, href, window.location.pathname, levelHref());
 }
 
 /** Point the page's meta description (and og copy) at the node the island now shows. */
@@ -377,8 +365,12 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
   useEffect(() => {
     if (!view.advanced || adv) return;
     setAdvFailed(false);
-    ensureAdvanced().then(setAdv, () => setAdvFailed(true));
-  }, [view.advanced, adv]);
+    // The names file gives advanced.json its row order, so it must be loaded too.
+    Promise.all([ensureAdvanced(), ensure(view.year)]).then(
+      ([file]) => setAdv(file),
+      () => setAdvFailed(true),
+    );
+  }, [view.advanced, view.year, adv]);
 
   const estimate = useMemo(
     () =>
