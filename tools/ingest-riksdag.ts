@@ -15,6 +15,7 @@
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
+import { defaultManifestPath, recordFreshness } from './lib/freshness.ts';
 import { createRiksdagClient } from './lib/riksdag.ts';
 import {
   DEFAULT_LOOKBACK_DAYS,
@@ -82,3 +83,14 @@ for (const doktyp of doktyper) {
 console.error(
   `Done. ${requests} requests, ${added} documents added, ${updated} updated, ${Object.keys(store.documents).length} in store (${storePath}).`,
 );
+
+// Only the default store feeds the real manifest; --store runs are live checks or experiments.
+const cursorDates = Object.values(store.cursors).sort();
+if (!values.store && cursorDates.length > 0) {
+  recordFreshness(defaultManifestPath(root), `riksdag-${term}`, {
+    source: 'https://data.riksdagen.se/dokumentlista/',
+    fetchedAt: today,
+    // The oldest per-doktyp cursor: every ingested type is complete at least up to this date.
+    latestPeriod: cursorDates[0]!,
+  });
+}

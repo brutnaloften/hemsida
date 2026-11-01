@@ -30,6 +30,7 @@ import {
   type ReleaseFile,
   type Target,
 } from './lib/budget-ingest.ts';
+import { defaultManifestPath, recordFreshness } from './lib/freshness.ts';
 import { budgetMetaSchema, expenditureSchema, revenueSchema } from './lib/schema.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -137,6 +138,11 @@ for (const [name, data] of [
     `wrote   ${resolve(outDir, name)} (${(Buffer.byteLength(text) / 1024).toFixed(0)} KB)`,
   );
 }
+recordFreshness(defaultManifestPath(root), 'budget', {
+  source: SOURCE_PAGE,
+  fetchedAt: meta.fetched,
+  latestPeriod: String(meta.years[meta.years.length - 1]),
+});
 console.log(
   `years ${meta.years[0]}-${meta.years[meta.years.length - 1]}; ` +
     `${expenditure.anslag.length} anslag, ${revenue.titlar.length} inkomsttitlar`,
