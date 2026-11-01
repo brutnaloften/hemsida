@@ -1,0 +1,48 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import AboutNumbers from '@/components/budget/AboutNumbers.astro';
+import BudgetExplorer from '@/components/budget/BudgetExplorer';
+import { crumbsFor } from '@/components/budget/Breadcrumbs';
+import { latestYear, meta, years } from '@/lib/budget/data';
+import { STAT_LEVEL, type BudgetNode } from '@/lib/budget/core';
+import { revenueExplanation } from '@/lib/budget/revenue-labels';
+import { buildBalance, withoutChildren } from '@/lib/budget/view';
+
+interface Props {
+  /** Chain from the revenue root to the page's node (inclusive). */
+  chain: BudgetNode[];
+  sideTotal: number;
+}
+
+const { chain, sideTotal } = Astro.props;
+const slim = (n: BudgetNode): BudgetNode => {
+  const { children: _children, ...rest } = n;
+  return rest;
+};
+const node = chain[chain.length - 1];
+// Children one level deep are all the island needs for this page; deeper levels are fetched on drill.
+const pageNode: BudgetNode = { ...node, children: node.children?.map(slim) };
+const crumbs = crumbsFor(chain.map(slim), 'inkomster', STAT_LEVEL);
+const balance = withoutChildren(buildBalance(latestYear));
+const yearOptions = years.map((year) => ({
+  year,
+  preliminary:
+    meta.yearStatus.revenue[String(year)] !== 'final' ||
+    meta.yearStatus.expenditure[String(year)] !== 'final',
+}));
+const description =
+  revenueExplanation(node.id) ??
+  `${node.name}: hur mycket staten tog in ${latestYear} och vad det består av.`;
+---
+
+<Layout title={`${node.name} ${latestYear} – Brutna Löften`} description={description}>
+  <div class="container mx-auto max-w-5xl px-4 py-6 md:px-6">
+    <BudgetExplorer
+      client:idle
+      initial={balance}
+      years={yearOptions}
+      drill={{ node: pageNode, side: 'inkomster', sideTotal, crumbs }}
+    />
+    <AboutNumbers />
+  </div>
+</Layout>

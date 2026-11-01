@@ -15,6 +15,7 @@ import {
   shareOf,
 } from '@/lib/budget/format';
 import { splitChildren, type BudgetNode } from '@/lib/budget/core';
+import { revenueExplanation } from '@/lib/budget/revenue-labels';
 import { FRAME_ASPECT, layoutNodes } from '@/lib/budget/treemap';
 
 type Props = {
@@ -50,7 +51,13 @@ export function DrillView({
   const split = useMemo(() => splitChildren(node), [node]);
   const sideLabel = side === 'utgifter' ? 'statens utgifter' : 'statens inkomster';
   const value = node.value ?? 0;
-  const caption = `Andel av ${formatMdkr(split.base)} (${node.name})`;
+  const explanation = side === 'inkomster' ? revenueExplanation(node.id) : undefined;
+  const caption =
+    split.strip.length === 0 || split.base === 0
+      ? `Andel av ${formatMdkr(split.base)} (${node.name})`
+      : side === 'inkomster'
+        ? `Andel av ${formatMdkr(split.base)}, bruttobelopp före avdrag (${node.name})`
+        : `Andel av ${formatMdkr(split.base)} före avdrag (${node.name})`;
 
   const boxes = useMemo(
     () =>
@@ -77,6 +84,7 @@ export function DrillView({
       <h1 ref={h1Ref} tabIndex={-1} className="mt-3 text-2xl font-bold outline-none md:text-3xl">
         {node.name}
       </h1>
+      {explanation && <p className="mt-2 max-w-prose">{explanation}</p>}
       {preliminary && (
         <div className="mt-2">
           <PrelimBadge />
@@ -111,10 +119,24 @@ export function DrillView({
             />
           </div>
         </>
-      ) : (
+      ) : split.strip.length === 0 ? (
         <p className="mt-4">Inga poster med belopp {year}.</p>
-      )}
-      <MinusStrip items={split.strip} onOpen={onOpen} />
+      ) : null}
+      <MinusStrip
+        items={split.strip}
+        onOpen={onOpen}
+        equation={
+          split.base > 0
+            ? {
+                base: split.base,
+                stripTotal: split.stripTotal,
+                total: value,
+                baseLabel: node.id === 'rev:skatter' ? 'Bruttobelopp' : 'Summan av rutorna',
+                name: node.name,
+              }
+            : undefined
+        }
+      />
 
       <DataTable
         caption={caption}
