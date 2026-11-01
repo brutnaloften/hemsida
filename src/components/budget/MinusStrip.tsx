@@ -5,7 +5,7 @@ import {
   formatPercentWords,
 } from '@/lib/budget/format';
 import { LABELS } from '@/lib/budget/labels';
-import { revenueExplanation } from '@/lib/budget/revenue-labels';
+import { AVGAENDE_NOTE, revenueExplanation } from '@/lib/budget/revenue-labels';
 import type { BudgetNode } from '@/lib/budget/core';
 import type { OpenHandler } from '@/components/budget/types';
 
@@ -69,6 +69,11 @@ export function MinusStrip({
     <section className="budget-hatch mt-3 rounded-sm border border-budget-hatch/60 p-3 text-budget-box-foreground">
       <div>
         <h2 className="text-sm font-semibold">{LABELS.stripHeading}</h2>
+        {items.some((n) => n.id === 'rev:1700' || n.id === 'rev:1800') && (
+          <p className="mt-1 rounded-sm bg-background px-2 py-1 text-sm text-foreground">
+            {AVGAENDE_NOTE}
+          </p>
+        )}
         <ul role="list" className="mt-1 space-y-2 text-sm">
           {items.map((n) => {
             const note = revenueExplanation(n.id);
@@ -85,7 +90,11 @@ export function MinusStrip({
                   </a>
                   <span className="tabular-nums whitespace-nowrap">{formatMdkr(n.value ?? 0)}</span>
                 </div>
-                {note && <p className="text-xs opacity-90">{note}</p>}
+                {note && (
+                  <p className="mt-1 rounded-sm bg-background px-2 py-1 text-sm text-foreground">
+                    {note}
+                  </p>
+                )}
               </li>
             );
           })}

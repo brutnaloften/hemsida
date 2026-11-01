@@ -52,7 +52,12 @@ export function DrillView({
   const sideLabel = side === 'utgifter' ? 'statens utgifter' : 'statens inkomster';
   const value = node.value ?? 0;
   const explanation = side === 'inkomster' ? revenueExplanation(node.id) : undefined;
-  const caption = `Andel av ${formatMdkr(split.base)} (${node.name})`;
+  const caption =
+    split.strip.length === 0 || split.base === 0
+      ? `Andel av ${formatMdkr(split.base)} (${node.name})`
+      : side === 'inkomster'
+        ? `Andel av ${formatMdkr(split.base)} som betalades in, före avdrag (${node.name})`
+        : `Andel av ${formatMdkr(split.base)} före avdrag (${node.name})`;
 
   const boxes = useMemo(
     () =>
@@ -114,9 +119,9 @@ export function DrillView({
             />
           </div>
         </>
-      ) : (
+      ) : split.strip.length === 0 ? (
         <p className="mt-4">Inga poster med belopp {year}.</p>
-      )}
+      ) : null}
       <MinusStrip
         items={split.strip}
         onOpen={onOpen}

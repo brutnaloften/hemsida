@@ -18,8 +18,10 @@ const EXPLANATIONS: Readonly<Record<string, string>> = {
   '4000': 'Pengar som låntagare betalar tillbaka till staten, till exempel studielån.',
   '5000': 'Poster som staten räknar fram i sin bokföring utan att pengar byter hand.',
   '6000': 'Pengar som staten får tillbaka från EU, till exempel jordbruksstöd.',
-  '7000': 'Justeringar av skatterna, till exempel skatt som tillkommer eller dras av efteråt.',
-  '8000': 'Utgifter som betalas ut genom att de dras direkt från skattekontot.',
+  '7000':
+    'Poster som läggs till eller dras av skatterna innan de blir statens inkomster: tullmedel och LSS-avgift läggs till, medan momsåterbetalning och public service-avgift dras av.',
+  '8000':
+    'Stöd och ersättningar som staten betalar ut genom att kreditera mottagarens skattekonto.',
 
   // Huvudgrupper.
   '1100':
@@ -29,15 +31,18 @@ const EXPLANATIONS: Readonly<Record<string, string>> = {
   '1400':
     'Skatt som ligger på det vi köper, främst moms, och på varor som alkohol, tobak och bensin.',
   '1500': 'Tullar och andra skatter på varor som förs in i EU.',
-  '1600': 'Skatter som inte passar någon annan grupp, och skatter som betalas i efterhand.',
+  '1600':
+    'Restförda skatter som inte betalats i tid, rättelser av skatt som ändrats i efterhand och avgifter som inte hör till någon annan grupp, till exempel public service-avgiften.',
   '1700': 'Tullar och andra skatter på import som går vidare till EU.',
-  '1800': 'Går vidare till kommuner, regioner, pensionssystemet och EU.',
+  '1800':
+    'Kommunalskatten går vidare till kommuner och regioner, och pensionsavgifterna till AP-fonderna.',
   '1900': 'En justering så att skatterna hamnar på rätt år.',
   '2100': 'Överskott från statliga verk och myndigheter som drivs som affärsverksamhet.',
   '2200': 'Överskott från att staten förvaltar och hyr ut sina fastigheter.',
   '2300': 'Ränta som staten får, till exempel på lån och bankkonton.',
   '2400': 'Utdelning från de företag som staten äger helt eller delvis.',
-  '2500': 'Avgifter som myndigheter tar ut enligt lag, till exempel för pass och körkort.',
+  '2500':
+    'Avgifter som myndigheter tar ut enligt lag, till exempel hos Kronofogdemyndigheten och Transportstyrelsen.',
   '2600': 'Pengar från försäljning av varor och tjänster.',
   '2700': 'Böter, sanktionsavgifter och liknande.',
   '2800': 'Övriga inkomster av statens verksamhet.',
@@ -45,7 +50,7 @@ const EXPLANATIONS: Readonly<Record<string, string>> = {
   '3200': 'Pengar från att staten säljer mark.',
   '3300': 'Pengar från försäljning av annan egendom, till exempel aktier.',
   '4100': 'Återbetalning av lån som staten gett till företag.',
-  '4300': 'Pengar som tidigare studenter betalar tillbaka på sina studielån.',
+  '4300': 'Återbetalning av äldre studielån och studiemedel.',
   '4500': 'Återbetalning av andra lån som staten gett.',
   '5100': 'Beräknade kostnader för slitage på statens egendom, som räknas in som inkomst.',
   '5200': 'Avgifter som staten som arbetsgivare betalar för sina anställdas pensioner.',
@@ -56,12 +61,16 @@ const EXPLANATIONS: Readonly<Record<string, string>> = {
   '6500': 'Stöd från EU till vägar, järnvägar och andra transportnät.',
   '6600': 'Pengar från EU:s återhämtningsfond efter pandemin.',
   '6900': 'Andra bidrag från EU.',
-  '7100': 'Skatt som tillkommer vid avstämning av skattekontot.',
+  '7100':
+    'Inkomster som räknas till skatterna fast de inte tas in via skattekontot: tullmedel och kommunernas avgift till LSS-utjämningen.',
   '7200':
-    'Skatt som betalats in men som dras av vid avstämningen av skattekontot, till exempel överskjutande skatt som betalas tillbaka.',
+    'Moms som betalas tillbaka till statliga myndigheter, kommuner och regioner, och intäkter som förs vidare, till exempel public service-avgiften.',
   '8100':
-    'Statliga utgifter som betalas ut genom att skattekontot krediteras i stället för att pengarna betalas ut direkt.',
+    'Stöd och ersättningar som staten betalar ut genom att kreditera mottagarens skattekonto i stället för att betala ut pengarna direkt.',
 };
+
+/** Note at strip level in Skatter, netto: what the avgående poster 1700 and 1800 have in common. */
+export const AVGAENDE_NOTE = 'Går vidare till kommuner, regioner, pensionssystemet och EU.';
 
 /** Explanation for a revenue node: a node id ("rev:1100", "rev:skatter", "root:inkomster") or a code. */
 export function revenueExplanation(idOrKod: string): string | undefined {
