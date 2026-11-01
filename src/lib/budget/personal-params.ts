@@ -2,53 +2,117 @@
  * Tax-year parameters for the personal state-budget contribution estimate.
  * Every value below is cited; values marked ASSUMPTION are illustrative
  * defaults, not official figures, and are overridable inputs of the model.
- * To update for a new year, add a new entry to TAX_YEARS and cite the page.
+ * To update for a new year, add a new entry to TAX_YEARS and cite the pages.
+ *
+ * Primary sources (all checked 2026-11-01):
+ * - SKV_BELOPP: Skatteverket, Belopp och procent inkomstår 2026
+ *   https://www.skatteverket.se/privat/skatter/beloppochprocent/2026
+ * - SKV_433: Skatteverket, Teknisk beskrivning SKV 433 utgåva 36 (skattetabeller 2026),
+ *   section 6 "Grundavdrag" and 7.5.2 "Skattereduktion för arbetsinkomst" (jobbskatteavdrag)
+ *   https://www.skatteverket.se/download/18.1522bf3f19aea8075ba55c/1766385913260/teknisk-beskrivning-skv-433-2026-utgava-36.pdf
+ * - SKV_AVGIFTER: Skatteverket, Arbetsgivaravgifter (2026 table)
+ *   https://skatteverket.se/arbetsgivaravgifter
+ * - SCB_KOMMUNALSKATT: SCB, Kommunalskatterna 2026
  */
 
 export interface TaxYearParams {
   year: number;
-  /** Skiktgräns: taxable income above this is taxed at `stateTaxRate`. */
+  /** Prisbasbelopp (kr). SKV_BELOPP. */
+  pbb: number;
+  /** Skiktgräns: taxable income above this is taxed at `stateTaxRate`. SKV_BELOPP. */
   skiktgrans: number;
-  /** Statlig inkomstskatt rate on taxable income above the skiktgräns. */
+  /** Statlig inkomstskatt rate on taxable income above the skiktgräns. SKV_BELOPP. */
   stateTaxRate: number;
+  /** Total arbetsgivaravgifter (born 1959 or later), on gross salary. SKV_AVGIFTER. */
+  employerTotalRate: number;
   /**
-   * Grundavdrag (under 66) that applies at incomes high enough to reach the
-   * skiktgräns: the minimum amount, 17 400 kr in 2026. Taxable income =
-   * gross - grundavdrag.
+   * Ålderspensionsavgift part of the above. It is paid to the AP funds, which
+   * are outside the state budget, so it is excluded from the state's part.
+   * SKV_AVGIFTER.
    */
-  grundavdragHighIncome: number;
-  /** Total arbetsgivaravgifter (employees born 1959-2002), on gross salary. */
-  employerContributionRate: number;
-  /** Moms rates (share of price excl. moms). */
+  employerPensionRate: number;
+  /**
+   * Percentage points of the total kommunal tax rate that are begravningsavgift
+   * and avgift till trossamfund; excluded from the rate used in the
+   * jobbskatteavdrag. SKV_433 7.5.2.
+   */
+  jsaRateExclusion: number;
+  /** Moms rates (share of price excl. moms). SKV_BELOPP. */
   vat: { standard: number; reduced12: number; reduced6: number };
-  /** Average total kommun + region tax rate (NOT state budget; memo only). */
-  avgMunicipalTaxRate: number;
+  /** Average total kommun + region tax rate (memo only, NOT state budget). SCB_KOMMUNALSKATT. */
+  avgKommunalskattesats: number;
   sources: { label: string; url: string }[];
 }
 
 export const TAX_YEARS: Record<number, TaxYearParams> = {
   2026: {
     year: 2026,
+    pbb: 59_200,
     skiktgrans: 643_000,
     stateTaxRate: 0.2,
-    grundavdragHighIncome: 17_400,
-    employerContributionRate: 0.3142,
+    employerTotalRate: 0.3142,
+    employerPensionRate: 0.1021,
+    jsaRateExclusion: 0.0116,
     vat: { standard: 0.25, reduced12: 0.12, reduced6: 0.06 },
-    avgMunicipalTaxRate: 0.3238,
+    avgKommunalskattesats: 0.3238,
     sources: [
       {
-        label:
-          'Skatteverket, Belopp och procent inkomstår 2026 (skiktgräns 643 000 kr, 20 % statlig skatt, grundavdrag, arbetsgivaravgift 31,42 %, moms 25/12/6 %)',
+        label: 'Skatteverket, Belopp och procent inkomstår 2026',
         url: 'https://www.skatteverket.se/privat/skatter/beloppochprocent/2026',
       },
       {
-        label: 'SCB, Kommunalskatterna 2026 (genomsnittlig kommunal skattesats 32,38 %)',
+        label:
+          'Skatteverket, Teknisk beskrivning SKV 433 utgåva 36 (grundavdrag, jobbskatteavdrag 2026)',
+        url: 'https://www.skatteverket.se/download/18.1522bf3f19aea8075ba55c/1766385913260/teknisk-beskrivning-skv-433-2026-utgava-36.pdf',
+      },
+      {
+        label: 'Skatteverket, Arbetsgivaravgifter',
+        url: 'https://skatteverket.se/arbetsgivaravgifter',
+      },
+      {
+        label: 'SCB, Kommunalskatterna 2026 (genomsnitt 32,38 %)',
         url: 'https://www.scb.se/hitta-statistik/statistik-efter-amne/offentlig-ekonomi/finanser-for-den-kommunala-sektorn/kommunalskatterna/pong/statistiknyhet/kommunalskatterna-2026/',
       },
     ],
   },
 };
 
+/**
+ * Grundavdrag (under 66) and jobbskatteavdrag (under 66) shapes, in
+ * prisbasbelopp (PBB) multiples. SKV_433 for 2026; assumed unchanged in
+ * shape for other years until their entry says otherwise (add a per-year
+ * override to TaxYearParams if the rules change).
+ */
+export const GRUNDAVDRAG_RULES = {
+  /** Up to this income: `floorPbb` (0,423 PBB). */
+  lowIncomePbb: 0.99,
+  floorPbb: 0.423,
+  /** 0,99-2,72 PBB: floor + 20 % of income above 0,99 PBB. */
+  risingUntilPbb: 2.72,
+  risingRate: 0.2,
+  /** 2,72-3,11 PBB: flat 0,77 PBB. */
+  maxPbb: 0.77,
+  flatUntilPbb: 3.11,
+  /** 3,11-7,88 PBB: 0,77 PBB minus 10 % of income above 3,11 PBB. */
+  fallingUntilPbb: 7.88,
+  fallingRate: 0.1,
+  /** Above 7,88 PBB: 0,293 PBB. */
+  highIncomePbb: 0.293,
+} as const;
+
+export const JOBBSKATTEAVDRAG_RULES = {
+  /** Brackets of earned income in PBB with the base amount (PBB) at the start and the marginal rate. */
+  b1Pbb: 0.91,
+  b2Pbb: 3.24,
+  b3Pbb: 8.08,
+  rate2: 0.3874,
+  rate3: 0.251,
+  /** 1,813 PBB at 3,24 PBB, 3,027 PBB above 8,08 PBB. */
+  base3Pbb: 1.813,
+  topPbb: 3.027,
+} as const;
+
+/** Preferred year when none is asked for. */
 export const LATEST_TAX_YEAR = 2026;
 
 /**

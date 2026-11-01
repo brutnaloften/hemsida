@@ -1,18 +1,29 @@
 /**
  * Estimate of one person's yearly contribution to the STATE budget from
- * gross salary. Pure functions, no I/O. Level-agnostic: the result is a list
- * of named components tagged with the level of government that receives
- * them, so kommunal/regional components can be added later. Kommunalskatt is
- * reported separately (`otherLevels`) and never counts toward `stateTotal`.
+ * gross salary. Pure functions, no I/O.
  *
- * Simplifications (documented, deliberate): no jobbskatteavdrag or other
- * deductions, no sector-specific arbetsgivaravgift reductions; grundavdrag is
- * the high-income minimum, which is the only value relevant where statlig
- * skatt is paid. Not tax advice.
+ * Level-agnostic: `estimateContribution` returns `{ stat }` today, with
+ * `kommun` and `region` keys reserved for later. Kommunalskatt is NOT state
+ * budget; its estimate is only a memo (`stat.memo.kommunalskatt`).
+ *
+ * State components:
+ * - statlig inkomstskatt: 20 % of taxable income above the skiktgräns.
+ * - jobbskatteavdrag: negative. It is deducted against kommunal tax but
+ *   booked against state revenue (the state compensates kommuner/regioner),
+ *   so it lowers the state's net receipts.
+ * - arbetsgivaravgifter (statens del): total rate minus ålderspensionsavgift,
+ *   which goes to the AP funds outside the state budget.
+ * - moms from consumption (adjustable assumptions).
+ *
+ * Simplifications: employees under 66 born 1959 or later, no other deductions
+ * or reductions, gross salary treated as both fastställd förvärvsinkomst and
+ * arbetsinkomst, no rounding of taxable income. Not tax advice.
  */
 import {
   DEFAULT_CONSUMPTION_SHARE,
   DEFAULT_VAT_MIX,
+  GRUNDAVDRAG_RULES as G,
+  JOBBSKATTEAVDRAG_RULES as J,
   LATEST_TAX_YEAR,
   TAX_YEARS,
   type TaxYearParams,
@@ -24,45 +35,109 @@ export type VatMix = typeof DEFAULT_VAT_MIX;
 export interface PersonalInput {
   /** Gross yearly salary in kr. */
   grossSalary: number;
-  /** Tax year; defaults to the latest supported. */
-  year?: number;
   /** Share of disposable income spent on consumption (0-1). */
   consumptionShare?: number;
   /** Split of consumption over moms categories; must sum to 1. */
   vatMix?: VatMix;
-  /** Total kommun + region tax rate, used for disposable income and the kommunalskatt memo. */
-  municipalTaxRate?: number;
+  /**
+   * Total kommun + region tax rate (e.g. 0.3238). Drives jobbskatteavdrag,
+   * disposable income and the kommunalskatt memo. Defaults to the national average.
+   */
+  kommunalskattesats?: number;
 }
 
 export interface Component {
-  id: 'statlig-inkomstskatt' | 'arbetsgivaravgifter' | 'moms' | 'kommunalskatt';
+  id: 'statlig-inkomstskatt' | 'jobbskatteavdrag' | 'arbetsgivaravgifter' | 'moms';
+  /** Swedish label for display. */
   label: string;
-  level: GovLevel;
-  /** Kr per year. */
+  /** One-sentence Swedish explanation for display. */
+  explanation: string;
+  /** Kr per year; negative for jobbskatteavdrag. */
   amount: number;
 }
 
-export interface PersonalResult {
+export interface Breakdown {
+  level: GovLevel;
+  /** Year the caller asked for. */
   year: number;
-  /** Components that go to the state budget. */
+  /** Year whose rules were actually used. */
+  paramsYear: number;
+  /** True when `paramsYear !== year` (nearest year's rules were used). */
+  usedFallbackYear: boolean;
   components: Component[];
-  /** Other levels, informational only (not state budget). */
-  otherLevels: Component[];
-  stateTotal: number;
+  /** Sum of the components, kr per year. */
+  total: number;
   disposableIncome: number;
   consumption: number;
-  assumptions: Required<Omit<PersonalInput, 'grossSalary' | 'year'>> & { year: number };
+  /** Not state budget; informational only. */
+  memo: { kommunalskatt: number };
+  assumptions: {
+    consumptionShare: number;
+    vatMix: VatMix;
+    kommunalskattesats: number;
+  };
 }
 
+export interface Contribution {
+  stat: Breakdown;
+  kommun?: Breakdown;
+  region?: Breakdown;
+}
+
+/** Params for `year`, or the nearest supported year (earlier wins ties). */
 export function getTaxYear(year: number = LATEST_TAX_YEAR): TaxYearParams {
-  const p = TAX_YEARS[year];
-  if (!p) throw new Error(`No tax parameters for year ${year}`);
-  return p;
+  const exact = TAX_YEARS[year];
+  if (exact) return exact;
+  const years = Object.keys(TAX_YEARS).map(Number);
+  if (years.length === 0) throw new Error('No tax parameters defined');
+  const nearest = years.reduce((best, y) => {
+    const d = Math.abs(y - year);
+    const bd = Math.abs(best - year);
+    return d < bd || (d === bd && y < best) ? y : best;
+  });
+  return TAX_YEARS[nearest];
+}
+
+/** Grundavdrag (under 66), rounded up to whole hundreds, capped at income. SKV_433 section 6. */
+export function grundavdrag(income: number, p: TaxYearParams): number {
+  const pbb = p.pbb;
+  let ga: number;
+  if (income <= G.lowIncomePbb * pbb) ga = G.floorPbb * pbb;
+  else if (income <= G.risingUntilPbb * pbb)
+    ga = G.floorPbb * pbb + (income - G.lowIncomePbb * pbb) * G.risingRate;
+  else if (income <= G.flatUntilPbb * pbb) ga = G.maxPbb * pbb;
+  else if (income <= G.fallingUntilPbb * pbb)
+    ga = G.maxPbb * pbb - (income - G.flatUntilPbb * pbb) * G.fallingRate;
+  else ga = G.highIncomePbb * pbb;
+  return Math.min(Math.ceil(ga / 100) * 100, income);
+}
+
+/**
+ * Jobbskatteavdrag (under 66), whole kr. Earned income is rounded down to
+ * whole hundreds; capped at the kommunal tax on taxable income. SKV_433 7.5.2.
+ */
+export function jobbskatteavdrag(
+  income: number,
+  kommunalskattesats: number,
+  p: TaxYearParams,
+): number {
+  const ai = Math.floor(income / 100) * 100;
+  const ga = grundavdrag(income, p);
+  const pbb = p.pbb;
+  let base: number;
+  if (ai <= J.b1Pbb * pbb) base = ai;
+  else if (ai <= J.b2Pbb * pbb) base = J.b1Pbb * pbb + J.rate2 * (ai - J.b1Pbb * pbb);
+  else if (ai <= J.b3Pbb * pbb) base = J.base3Pbb * pbb + J.rate3 * (ai - J.b2Pbb * pbb);
+  else base = J.topPbb * pbb;
+  const ki = kommunalskattesats - p.jsaRateExclusion;
+  const jsa = Math.max(0, base - ga) * ki;
+  const cap = Math.max(0, income - ga) * kommunalskattesats;
+  return Math.floor(Math.min(jsa, cap));
 }
 
 /** Statlig inkomstskatt: rate on taxable income above the skiktgräns. */
-export function stateIncomeTax(grossSalary: number, p: TaxYearParams): number {
-  const taxable = Math.max(0, grossSalary - p.grundavdragHighIncome);
+export function stateIncomeTax(income: number, p: TaxYearParams): number {
+  const taxable = Math.max(0, income - grundavdrag(income, p));
   return Math.max(0, taxable - p.skiktgrans) * p.stateTaxRate;
 }
 
@@ -78,38 +153,72 @@ export function vatInConsumption(consumption: number, mix: VatMix, p: TaxYearPar
   );
 }
 
-export function estimatePersonalContribution(input: PersonalInput): PersonalResult {
-  const p = getTaxYear(input.year);
+export function estimateContribution(
+  input: PersonalInput,
+  year: number = LATEST_TAX_YEAR,
+): Contribution {
+  const p = getTaxYear(year);
   const gross = input.grossSalary;
   if (!Number.isFinite(gross) || gross < 0) throw new Error('grossSalary must be >= 0');
   const consumptionShare = input.consumptionShare ?? DEFAULT_CONSUMPTION_SHARE;
   if (consumptionShare < 0 || consumptionShare > 1)
     throw new Error('consumptionShare must be between 0 and 1');
   const vatMix = input.vatMix ?? DEFAULT_VAT_MIX;
-  const municipalTaxRate = input.municipalTaxRate ?? p.avgMunicipalTaxRate;
+  const kommunalskattesats = input.kommunalskattesats ?? p.avgKommunalskattesats;
+  if (kommunalskattesats < 0 || kommunalskattesats > 1)
+    throw new Error('kommunalskattesats must be between 0 and 1');
 
+  const ga = grundavdrag(gross, p);
   const statTax = stateIncomeTax(gross, p);
-  const employer = gross * p.employerContributionRate;
-  const kommunal = Math.max(0, gross - p.grundavdragHighIncome) * municipalTaxRate;
-  const disposableIncome = gross - statTax - kommunal;
+  const jsa = jobbskatteavdrag(gross, kommunalskattesats, p);
+  const employer = gross * (p.employerTotalRate - p.employerPensionRate);
+  const kommunalskatt = Math.max(0, gross - ga) * kommunalskattesats - jsa;
+  const disposableIncome = gross - statTax - kommunalskatt;
   const consumption = Math.max(0, disposableIncome) * consumptionShare;
   const moms = vatInConsumption(consumption, vatMix, p);
 
   const components: Component[] = [
-    { id: 'statlig-inkomstskatt', label: 'Statlig inkomstskatt', level: 'stat', amount: statTax },
-    { id: 'arbetsgivaravgifter', label: 'Arbetsgivaravgifter', level: 'stat', amount: employer },
-    { id: 'moms', label: 'Moms', level: 'stat', amount: moms },
+    {
+      id: 'statlig-inkomstskatt',
+      label: 'Statlig inkomstskatt',
+      explanation: `Den del av inkomsten som överstiger ${p.skiktgrans.toLocaleString('sv-SE')} kr beskattas med ${p.stateTaxRate * 100} procent till staten.`,
+      amount: statTax,
+    },
+    {
+      id: 'jobbskatteavdrag',
+      label: 'Jobbskatteavdrag',
+      explanation:
+        'Jobbskatteavdraget sänker din kommunalskatt, men staten betalar tillbaka beloppet till kommunerna, så det minskar statens inkomster.',
+      amount: -jsa,
+    },
+    {
+      id: 'arbetsgivaravgifter',
+      label: 'Arbetsgivaravgifter (statens del)',
+      explanation:
+        'Din arbetsgivare betalar avgifter på lönen; pensionsdelen går till AP-fonderna och räknas inte med här.',
+      amount: employer,
+    },
+    {
+      id: 'moms',
+      label: 'Moms på det du köper',
+      explanation:
+        'Moms ingår i priset på det du handlar för och går till staten; beloppet bygger på antaganden om hur mycket du handlar för och vad.',
+      amount: moms,
+    },
   ];
   return {
-    year: p.year,
-    components,
-    otherLevels: [
-      { id: 'kommunalskatt', label: 'Kommunalskatt', level: 'kommun', amount: kommunal },
-    ],
-    stateTotal: components.reduce((s, c) => s + c.amount, 0),
-    disposableIncome,
-    consumption,
-    assumptions: { year: p.year, consumptionShare, vatMix, municipalTaxRate },
+    stat: {
+      level: 'stat',
+      year,
+      paramsYear: p.year,
+      usedFallbackYear: p.year !== year,
+      components,
+      total: components.reduce((s, c) => s + c.amount, 0),
+      disposableIncome,
+      consumption,
+      memo: { kommunalskatt },
+      assumptions: { consumptionShare, vatMix, kommunalskattesats },
+    },
   };
 }
 

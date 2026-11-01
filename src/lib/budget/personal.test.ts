@@ -1,17 +1,42 @@
 import { describe, expect, it } from 'vitest';
 import {
   allocateProportionally,
-  estimatePersonalContribution,
+  estimateContribution,
   getTaxYear,
+  grundavdrag,
+  jobbskatteavdrag,
   stateIncomeTax,
   vatInConsumption,
 } from './personal';
 import { DEFAULT_VAT_MIX } from './personal-params';
 
 const p = getTaxYear(2026);
+const by = (income: number, extra = {}) =>
+  Object.fromEntries(
+    estimateContribution({ grossSalary: income, ...extra }, 2026).stat.components.map((c) => [
+      c.id,
+      c.amount,
+    ]),
+  );
+
+describe('grundavdrag (SKV 433 2026 worked examples)', () => {
+  it('120 000 kr gives 37 400', () => expect(grundavdrag(120_000, p)).toBe(37_400));
+  it('324 000 kr gives 31 600', () => expect(grundavdrag(324_000, p)).toBe(31_600));
+  it('high income gives the minimum 17 400', () => expect(grundavdrag(900_000, p)).toBe(17_400));
+  it('never exceeds income', () => expect(grundavdrag(10_000, p)).toBe(10_000));
+});
+
+describe('jobbskatteavdrag (SKV 433 2026 worked examples, kommunal rate 34 %)', () => {
+  it('90 000 kr gives 11 976', () => expect(jobbskatteavdrag(90_000, 0.34, p)).toBe(11_976));
+  it('240 000 kr gives 26 083', () => expect(jobbskatteavdrag(240_000, 0.34, p)).toBe(26_083));
+  it('is constant-ish above 8,08 PBB and never negative', () => {
+    expect(jobbskatteavdrag(900_000, 0.34, p)).toBe(jobbskatteavdrag(1_500_000, 0.34, p));
+    expect(jobbskatteavdrag(0, 0.34, p)).toBe(0);
+  });
+});
 
 describe('stateIncomeTax', () => {
-  it('is zero at the 2026 brytpunkt (skiktgräns + grundavdrag = 660 400)', () => {
+  it('is zero at the 2026 brytpunkt (643 000 + 17 400)', () => {
     expect(stateIncomeTax(660_400, p)).toBe(0);
     expect(stateIncomeTax(300_000, p)).toBe(0);
   });
@@ -33,31 +58,45 @@ describe('vatInConsumption', () => {
   });
 });
 
-describe('estimatePersonalContribution', () => {
-  it('computes components for a 40 000 kr/month salary', () => {
-    const r = estimatePersonalContribution({ grossSalary: 480_000 });
-    const by = Object.fromEntries(r.components.map((c) => [c.id, c.amount]));
-    expect(by['statlig-inkomstskatt']).toBe(0);
-    expect(by['arbetsgivaravgifter']).toBeCloseTo(480_000 * 0.3142);
-    expect(by['moms']).toBeGreaterThan(0);
-    expect(r.stateTotal).toBeCloseTo(by['arbetsgivaravgifter'] + by['moms']);
+describe('estimateContribution', () => {
+  it('counts only the state part of arbetsgivaravgifter (31,42 - 10,21 %)', () => {
+    expect(by(480_000)['arbetsgivaravgifter']).toBeCloseTo(480_000 * 0.2121);
   });
-  it('keeps kommunalskatt out of the state total', () => {
-    const r = estimatePersonalContribution({ grossSalary: 480_000 });
-    expect(r.components.every((c) => c.level === 'stat')).toBe(true);
-    expect(r.otherLevels[0]).toMatchObject({ id: 'kommunalskatt', level: 'kommun' });
-    expect(r.otherLevels[0].amount).toBeCloseTo((480_000 - 17_400) * 0.3238);
+  it('has jobbskatteavdrag as a separate negative component', () => {
+    const c = by(480_000);
+    expect(c['jobbskatteavdrag']).toBeLessThan(0);
+    expect(c['statlig-inkomstskatt']).toBe(0);
+  });
+  it('total is the sum of components and keeps kommunalskatt out', () => {
+    const { stat } = estimateContribution({ grossSalary: 480_000 }, 2026);
+    expect(stat.total).toBeCloseTo(stat.components.reduce((s, c) => s + c.amount, 0));
+    expect(stat.components.map((c) => c.id)).not.toContain('kommunalskatt');
+    expect(stat.memo.kommunalskatt).toBeGreaterThan(0);
+    expect(stat.level).toBe('stat');
+    expect(stat.components.every((c) => c.explanation.length > 0)).toBe(true);
+  });
+  it('reserves kommun and region keys without filling them', () => {
+    const r = estimateContribution({ grossSalary: 480_000 }, 2026);
+    expect(r.kommun).toBeUndefined();
+    expect(r.region).toBeUndefined();
   });
   it('moms scales with consumption share', () => {
-    const lo = estimatePersonalContribution({ grossSalary: 480_000, consumptionShare: 0.5 });
-    const hi = estimatePersonalContribution({ grossSalary: 480_000, consumptionShare: 1 });
-    expect(hi.components[2].amount).toBeCloseTo(lo.components[2].amount * 2);
+    expect(by(480_000, { consumptionShare: 1 })['moms']).toBeCloseTo(
+      by(480_000, { consumptionShare: 0.5 })['moms'] * 2,
+    );
+  });
+  it('falls back to the nearest year and flags it', () => {
+    const a = estimateContribution({ grossSalary: 480_000 }, 2023).stat;
+    expect(a.year).toBe(2023);
+    expect(a.paramsYear).toBe(2026);
+    expect(a.usedFallbackYear).toBe(true);
+    expect(estimateContribution({ grossSalary: 1 }, 2026).stat.usedFallbackYear).toBe(false);
   });
   it('handles zero salary and validates input', () => {
-    expect(estimatePersonalContribution({ grossSalary: 0 }).stateTotal).toBe(0);
-    expect(() => estimatePersonalContribution({ grossSalary: -1 })).toThrow();
-    expect(() => estimatePersonalContribution({ grossSalary: 1, consumptionShare: 2 })).toThrow();
-    expect(() => estimatePersonalContribution({ grossSalary: 1, year: 1999 })).toThrow();
+    expect(estimateContribution({ grossSalary: 0 }, 2026).stat.total).toBe(0);
+    expect(() => estimateContribution({ grossSalary: -1 })).toThrow();
+    expect(() => estimateContribution({ grossSalary: 1, consumptionShare: 2 })).toThrow();
+    expect(() => estimateContribution({ grossSalary: 1, kommunalskattesats: 2 })).toThrow();
   });
 });
 
