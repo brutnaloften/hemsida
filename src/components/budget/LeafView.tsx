@@ -68,6 +68,16 @@ export function LeafView({
   const present = existsIn(node, year);
   const value = node.value ?? 0;
 
+  // Spending: pro rata of the side. Revenue: only the nodes the panel's breakdown covers.
+  const yours =
+    value <= 0
+      ? null
+      : side === 'utgifter'
+        ? personal?.total != null && sideTotal > 0
+          ? partOf(personal.total, value, sideTotal)
+          : null
+        : (personal?.revenue?.(node.id) ?? null);
+
   const ofSide = sideTotal > 0 ? shareOf(value, sideTotal) : null;
   // The share is taken of the same base as the treemap boxes (the parent's positive children), so a
   // box and its leaf page show the same percentage even when the parent's net value is lower.
@@ -138,10 +148,10 @@ export function LeafView({
         {personal?.panel}
         {advanced?.controls}
       </div>
-      {present && personal?.total != null && value > 0 && sideTotal > 0 && (
+      {present && yours !== null && (
         <p className="mt-3">
-          Din del: {formatPart(partOf(personal.total, value, sideTotal))} per år
-          <span className="sr-only"> ({krWords(partOf(personal.total, value, sideTotal))})</span>
+          Din del: {formatPart(yours)} per år
+          <span className="sr-only"> ({krWords(yours)})</span>
         </p>
       )}
 

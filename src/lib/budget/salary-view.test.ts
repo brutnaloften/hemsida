@@ -7,6 +7,7 @@ import {
   formatTotal,
   krWords,
   parseMonthlySalary,
+  revenuePartOf,
   partOf,
 } from './salary-view';
 
@@ -86,5 +87,41 @@ describe('rounding', () => {
   it('partOf scales the total by the box share of the side', () => {
     expect(partOf(10_000, 250, 1_000)).toBe(2_500);
     expect(partOf(10_000, 250, 0)).toBe(0);
+  });
+});
+
+describe('revenuePartOf', () => {
+  const b = estimateFor({ ...DEFAULT_INPUTS, monthly: '40000' }, 2026)!.breakdown;
+  const amount = (id: string) => b.components.find((c) => c.id === id)!.amount;
+
+  it('maps the covered revenue nodes to the panel breakdown', () => {
+    expect(revenuePartOf(b, 'rev:skatter')).toBeCloseTo(b.total);
+    expect(revenuePartOf(b, 'rev:1200')).toBeCloseTo(amount('arbetsgivaravgifter'));
+    expect(revenuePartOf(b, 'rev:1400')).toBeCloseTo(amount('moms'));
+    expect(revenuePartOf(b, 'rev:1100')).toBeCloseTo(
+      amount('statlig-inkomstskatt') +
+        amount('jobbskatteavdrag') +
+        amount('skattereduktion-pensionsavgift') +
+        amount('skattereduktion-forvarvsinkomst'),
+    );
+  });
+  it('the three boxes add up to the total', () => {
+    const sum = ['rev:1100', 'rev:1200', 'rev:1400'].reduce(
+      (s, id) => s + revenuePartOf(b, id)!,
+      0,
+    );
+    expect(sum).toBeCloseTo(b.total);
+  });
+  it('is null for nodes the estimate does not cover', () => {
+    for (const id of ['rev:1300', 'rev:2000', 'rev:5200', 'rev:6000', 'rev:1115', 'other:ovriga'])
+      expect(revenuePartOf(b, id)).toBeNull();
+  });
+  it('1100 can be zero or negative at a low salary', () => {
+    const low = estimateFor({ ...DEFAULT_INPUTS, monthly: '15000' }, 2026)!.breakdown;
+    expect(revenuePartOf(low, 'rev:1100')!).toBeLessThanOrEqual(0);
+  });
+  it('speaks a negative amount', () => {
+    expect(krWords(-1_234)).toBe(`minus ungefär 1${NBSP}230 kronor`);
+    expect(krWords(-3)).toBe('ungefär 0 kronor');
   });
 });

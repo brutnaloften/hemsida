@@ -26,7 +26,7 @@ import {
   SalaryPanel,
   type SalaryState,
 } from '@/components/budget/SalaryPanel';
-import { estimateFor } from '@/lib/budget/salary-view';
+import { estimateFor, revenuePartOf } from '@/lib/budget/salary-view';
 import { treesFromFiles, type NamesFile, type YearFile } from '@/lib/budget/tree';
 
 type View = {
@@ -382,6 +382,7 @@ export default function BudgetExplorer({ initial, years, drill }: Props) {
   const personal: Personal = {
     panel: <SalaryPanel state={salary} onChange={setSalary} estimate={estimate} year={view.year} />,
     total: estimate ? estimate.total : null,
+    revenue: estimate ? (id: string) => revenuePartOf(estimate.breakdown, id) : null,
   };
   const advancedFor = (
     nodeId: string | null,

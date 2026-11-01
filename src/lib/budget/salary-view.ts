@@ -113,8 +113,37 @@ export function partOf(total: number, value: number, sideTotal: number): number 
   return sideTotal > 0 ? (total * value) / sideTotal : 0;
 }
 
+/**
+ * The person's own kr on a revenue node, taken from the panel's breakdown, not spread pro rata:
+ * Skatter netto is the total, 1100 is statlig inkomstskatt plus the skattereduktioner, 1200 the
+ * arbetsgivaravgifter (statens del) and 1400 the moms. Null for every other node (the estimate
+ * has no component for them). Can be zero or negative for 1100.
+ */
+export function revenuePartOf(b: Breakdown, nodeId: string): number | null {
+  const sum = (ids: string[]) =>
+    b.components.filter((c) => ids.includes(c.id)).reduce((a, c) => a + c.amount, 0);
+  switch (nodeId) {
+    case 'rev:skatter':
+      return b.total;
+    case 'rev:1100':
+      return sum([
+        'statlig-inkomstskatt',
+        'jobbskatteavdrag',
+        'skattereduktion-pensionsavgift',
+        'skattereduktion-forvarvsinkomst',
+      ]);
+    case 'rev:1200':
+      return sum(['arbetsgivaravgifter']);
+    case 'rev:1400':
+      return sum(['moms']);
+    default:
+      return null;
+  }
+}
+
 /** For screen readers: "ungefär 1 230 kronor". */
 export function krWords(kr: number, step = 10): string {
+  if (kr < 0) return Math.abs(kr) < step ? 'ungefär 0 kronor' : `minus ${krWords(-kr, step)}`;
   if (kr === 0) return '0 kronor';
   if (Math.abs(kr) < step) return `mindre än ${formatNumber(step)} kronor`;
   return `ungefär ${formatNumber(Math.round(kr / step) * step)} kronor`;
