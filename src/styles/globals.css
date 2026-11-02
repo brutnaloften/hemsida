@@ -320,98 +320,101 @@
   --agreement-not_addressed-fg: #ddd6fe;
 }
 
-.verdict-badge,
-.agreement-badge {
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  line-height: 1;
-  border-width: 1px;
-  border-style: solid;
-}
-.verdict-badge {
-  border-radius: 9999px;
-}
-.agreement-badge {
-  border-radius: 0;
-  border-width: 2px;
-}
-.verdict-badge[data-verdict="unassessed"],
-.verdict-badge[data-verdict="no_evidence"],
-.agreement-badge[data-outcome="contradicted"] {
-  border-style: dashed;
-}
-.verdict-badge[data-verdict="unassessed"] {
-  background-color: var(--verdict-unassessed-bg);
-  color: var(--verdict-unassessed-fg);
-  border-color: var(--verdict-unassessed-border);
-}
-.verdict-badge[data-verdict="no_evidence"] {
-  background-color: var(--verdict-no_evidence-bg);
-  color: var(--verdict-no_evidence-fg);
-  border-color: var(--verdict-no_evidence-border);
-}
-.verdict-badge[data-verdict="not_assessable"] {
-  background-color: var(--verdict-not_assessable-bg);
-  color: var(--verdict-not_assessable-fg);
-  border-color: var(--verdict-not_assessable-border);
-}
-.verdict-badge[data-verdict="in_progress"] {
-  background-color: var(--verdict-in_progress-bg);
-  color: var(--verdict-in_progress-fg);
-  border-color: var(--verdict-in_progress-border);
-}
-.verdict-badge[data-verdict="fulfilled"] {
-  background-color: var(--verdict-fulfilled-bg);
-  color: var(--verdict-fulfilled-fg);
-  border-color: var(--verdict-fulfilled-border);
-}
-.verdict-badge[data-verdict="partially_fulfilled"] {
-  background-color: var(--verdict-partially_fulfilled-bg);
-  color: var(--verdict-partially_fulfilled-fg);
-  border-color: var(--verdict-partially_fulfilled-border);
-}
-.verdict-badge[data-verdict="unfulfilled"] {
-  background-color: var(--verdict-unfulfilled-bg);
-  color: var(--verdict-unfulfilled-fg);
-  border-color: var(--verdict-unfulfilled-border);
-}
-.verdict-badge[data-verdict="abandoned"] {
-  background-color: var(--verdict-abandoned-bg);
-  color: var(--verdict-abandoned-fg);
-  border-color: var(--verdict-abandoned-border);
-}
-.verdict-badge[data-verdict="broken"] {
-  background-color: var(--verdict-broken-bg);
-  color: var(--verdict-broken-fg);
-  border-color: var(--verdict-broken-border);
-}
-.agreement-badge[data-outcome="included"] {
-  background-color: var(--agreement-included-bg);
-  color: var(--agreement-included-fg);
-  border-color: var(--agreement-included-border);
-}
-.agreement-badge[data-outcome="strengthened"] {
-  background-color: var(--agreement-strengthened-bg);
-  color: var(--agreement-strengthened-fg);
-  border-color: var(--agreement-strengthened-border);
-}
-.agreement-badge[data-outcome="weakened"] {
-  background-color: var(--agreement-weakened-bg);
-  color: var(--agreement-weakened-fg);
-  border-color: var(--agreement-weakened-border);
-}
-.agreement-badge[data-outcome="contradicted"] {
-  background-color: var(--agreement-contradicted-bg);
-  color: var(--agreement-contradicted-fg);
-  border-color: var(--agreement-contradicted-border);
-}
-.agreement-badge[data-outcome="not_addressed"] {
-  background-color: var(--agreement-not_addressed-bg);
-  color: var(--agreement-not_addressed-fg);
-  border-color: var(--agreement-not_addressed-border);
+/* In @layer components so utilities such as text-sm and px-3 can override badge defaults. */
+@layer components {
+  .verdict-badge,
+  .agreement-badge {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1;
+    border-width: 1px;
+    border-style: solid;
+  }
+  .verdict-badge {
+    border-radius: 9999px;
+  }
+  .agreement-badge {
+    border-radius: 0;
+    border-width: 2px;
+  }
+  .verdict-badge[data-verdict="unassessed"],
+  .verdict-badge[data-verdict="no_evidence"],
+  .agreement-badge[data-outcome="contradicted"] {
+    border-style: dashed;
+  }
+  .verdict-badge[data-verdict="unassessed"] {
+    background-color: var(--verdict-unassessed-bg);
+    color: var(--verdict-unassessed-fg);
+    border-color: var(--verdict-unassessed-border);
+  }
+  .verdict-badge[data-verdict="no_evidence"] {
+    background-color: var(--verdict-no_evidence-bg);
+    color: var(--verdict-no_evidence-fg);
+    border-color: var(--verdict-no_evidence-border);
+  }
+  .verdict-badge[data-verdict="not_assessable"] {
+    background-color: var(--verdict-not_assessable-bg);
+    color: var(--verdict-not_assessable-fg);
+    border-color: var(--verdict-not_assessable-border);
+  }
+  .verdict-badge[data-verdict="in_progress"] {
+    background-color: var(--verdict-in_progress-bg);
+    color: var(--verdict-in_progress-fg);
+    border-color: var(--verdict-in_progress-border);
+  }
+  .verdict-badge[data-verdict="fulfilled"] {
+    background-color: var(--verdict-fulfilled-bg);
+    color: var(--verdict-fulfilled-fg);
+    border-color: var(--verdict-fulfilled-border);
+  }
+  .verdict-badge[data-verdict="partially_fulfilled"] {
+    background-color: var(--verdict-partially_fulfilled-bg);
+    color: var(--verdict-partially_fulfilled-fg);
+    border-color: var(--verdict-partially_fulfilled-border);
+  }
+  .verdict-badge[data-verdict="unfulfilled"] {
+    background-color: var(--verdict-unfulfilled-bg);
+    color: var(--verdict-unfulfilled-fg);
+    border-color: var(--verdict-unfulfilled-border);
+  }
+  .verdict-badge[data-verdict="abandoned"] {
+    background-color: var(--verdict-abandoned-bg);
+    color: var(--verdict-abandoned-fg);
+    border-color: var(--verdict-abandoned-border);
+  }
+  .verdict-badge[data-verdict="broken"] {
+    background-color: var(--verdict-broken-bg);
+    color: var(--verdict-broken-fg);
+    border-color: var(--verdict-broken-border);
+  }
+  .agreement-badge[data-outcome="included"] {
+    background-color: var(--agreement-included-bg);
+    color: var(--agreement-included-fg);
+    border-color: var(--agreement-included-border);
+  }
+  .agreement-badge[data-outcome="strengthened"] {
+    background-color: var(--agreement-strengthened-bg);
+    color: var(--agreement-strengthened-fg);
+    border-color: var(--agreement-strengthened-border);
+  }
+  .agreement-badge[data-outcome="weakened"] {
+    background-color: var(--agreement-weakened-bg);
+    color: var(--agreement-weakened-fg);
+    border-color: var(--agreement-weakened-border);
+  }
+  .agreement-badge[data-outcome="contradicted"] {
+    background-color: var(--agreement-contradicted-bg);
+    color: var(--agreement-contradicted-fg);
+    border-color: var(--agreement-contradicted-border);
+  }
+  .agreement-badge[data-outcome="not_addressed"] {
+    background-color: var(--agreement-not_addressed-bg);
+    color: var(--agreement-not_addressed-fg);
+    border-color: var(--agreement-not_addressed-border);
+  }
 }
 
 /* Reviewer's highlighter: quotes and the logo word. Ink stays dark in both themes. */
