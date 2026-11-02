@@ -1,10 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import VerdictCounts from '@/components/VerdictCounts.astro';
+import { PartyChip } from '@/components/ui/party-chip';
 import { partyName } from '@/lib/promise-labels';
-import { termOfFilePath, termPagePath } from '@/lib/terms';
-import { partiesWithPromises, promisesForParty } from '@/lib/party-stats';
+import { ROLE_LABELS, termOfFilePath, termPagePath } from '@/lib/terms';
+import { buildPartierRows, rolesPresent } from '@/lib/partier-table';
+import { agreementName, VERDICTS, VERDICT_LABELS } from '@/schema/promise';
 
 interface Props {
   term: string;
@@ -13,38 +14,195 @@ const { term } = Astro.props;
 const promises = (await getCollection('promises'))
   .filter((e) => termOfFilePath(e.filePath ?? '') === term)
   .map((e) => e.data);
+const termRecord = (await getCollection('terms')).map((e) => e.data).find((t) => t.id === term);
+const sources = (await getCollection('sources')).map((e) => e.data);
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-const parties = partiesWithPromises(promises);
+const rows = termRecord ? buildPartierRows(termRecord, promises, sources) : [];
+const agreements = (termRecord?.agreements ?? [])
+  .map((id) => sources.find((s) => s.id === id))
+  .filter((s) => s !== undefined);
+const roles = rolesPresent(rows);
+const FILTER_LABELS = { government: 'Regering', support: 'Stödparti', opposition: 'Opposition' } as const;
+const ASSESSED = VERDICTS.filter((v) => v !== 'unassessed' && v !== 'not_assessable');
+const hatch =
+  'background-image:repeating-linear-gradient(135deg,#ecece8 0 6px,#f7f7f4 6px 12px);border:1px dashed #a9a9a2;';
+const pct = (n: number, total: number) => `${(n / total) * 100}%`;
 ---
 
 <Layout
   title="Partier — Brutna Löften"
-  description="Löften per parti och hur långt de bedömts."
+  description="Jämför partierna: roll i perioden, antal löften och hur långt de bedömts."
   period={{ kind: 'partier', term }}
 >
-  <div class="container mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12">
-    <h1 class="text-2xl font-bold tracking-tight md:text-4xl">Partier</h1>
-    <p class="mt-3 text-muted-foreground">
-      Löften per parti. Ett löfte som flera partier står bakom, till exempel Tidöavtalet, räknas för varje parti
-      som står bakom det. Att ett löfte är obedömt betyder inte att det är infriat eller brutet, bara att ingen
-      har bedömt det ännu.
+  <div class="container mx-auto max-w-[1200px] px-4 py-8 md:px-6 md:py-12">
+    <h1 class="font-serif text-3xl font-bold tracking-tight md:text-4xl">Partier</h1>
+    <p class="mt-3 max-w-2xl text-muted-foreground">
+      Jämför partierna i samma mått. Ett löfte som flera partier står bakom räknas för varje parti.
+      &quot;Inte bedömt&quot; betyder inte att ett löfte är infriat eller brutet, bara att ingen har bedömt det ännu.
     </p>
-    {parties.length === 0 && <p class="mt-8">Löften för perioden samlas in.</p>}
-    <div class="mt-8 space-y-6">
-      {
-        parties.map((party) => (
-          <section class="rounded-lg border p-4">
-            <h2 class="text-xl font-semibold">
-              <a href={`${base}${termPagePath('party', term, party)}`} class="underline-offset-2 hover:underline">
-                {partyName(party)} ({party})
-              </a>
-            </h2>
-            <div class="mt-3">
-              <VerdictCounts promises={promisesForParty(promises, party)} />
-            </div>
-          </section>
-        ))
-      }
+
+    {rows.length === 0 && <p class="mt-8">Löften för perioden samlas in.</p>}
+    {
+      rows.length > 0 && (
+        <>
+          <div hidden data-partier-filters class="mt-6 flex flex-wrap gap-2" role="group" aria-label="Filtrera på roll">
+            <button type="button" data-filter="" aria-pressed="true" class="partier-chip">Alla partier</button>
+            {roles.map((r) => (
+              <button type="button" data-filter={r} aria-pressed="false" class="partier-chip">
+                {FILTER_LABELS[r]}
+              </button>
+            ))}
+          </div>
+
+          <div class="mt-4 overflow-x-auto rounded-xl border" tabindex="0" role="region" aria-label="Tabell över partier, rulla i sidled">
+            <table class="w-full min-w-[640px] border-collapse text-left text-[15px]">
+              <caption class="sr-only">
+                Partier i {term}: roll i perioden, antal löften och bedömning
+                {agreements.length > 0 && `, samt utfall i ${agreements.map(agreementName).join(' och ')}`}
+              </caption>
+              <thead class="bg-muted/50 text-xs uppercase tracking-wider text-muted-foreground">
+                <tr>
+                  <th scope="col" class="px-4 py-3 font-semibold">Parti</th>
+                  <th scope="col" class="px-4 py-3 font-semibold">Roll i perioden</th>
+                  <th scope="col" class="px-4 py-3 text-right font-semibold">Vallöften</th>
+                  <th scope="col" class="px-4 py-3 font-semibold">Bedömning</th>
+                  {agreements.map((a) => (
+                    <th scope="col" class="px-4 py-3 font-semibold">I {agreementName(a)}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((row) => (
+                  <tr data-role={row.role} class="border-t align-top">
+                    <th scope="row" class="px-4 py-3 font-normal">
+                      <a
+                        href={`${base}${termPagePath('party', term, row.party)}`}
+                        class="flex min-h-11 items-center gap-3 font-semibold underline-offset-2 hover:underline"
+                      >
+                        <PartyChip party={row.party} role={row.role} size="inline" aria-hidden="true" />
+                        {partyName(row.party)}
+                      </a>
+                    </th>
+                    <td class="px-4 py-3">{ROLE_LABELS[row.role]}</td>
+                    <td class="px-4 py-3 text-right tabular-nums">{row.promiseCount}</td>
+                    <td class="min-w-48 px-4 py-3">
+                      <div
+                        class="flex h-2.5 w-full overflow-hidden rounded-full"
+                        style={row.assessed === 0 ? hatch : 'background:#ecece8'}
+                        aria-hidden="true"
+                      >
+                        {ASSESSED.filter((v) => row.verdicts[v] > 0).map((v) => (
+                          <div
+                            style={`width:${pct(row.verdicts[v], row.promiseCount)};background:var(--verdict-${v}-bg);box-shadow:inset 0 0 0 1px var(--verdict-${v}-border)`}
+                          />
+                        ))}
+                      </div>
+                      <p class="mt-1.5 text-sm text-muted-foreground">
+                        {row.assessed === 0
+                          ? 'Inte bedömt ännu'
+                          : ASSESSED.filter((v) => row.verdicts[v] > 0)
+                              .map((v) => `${row.verdicts[v]} ${VERDICT_LABELS[v].toLocaleLowerCase('sv')}`)
+                              .join(' · ') + ` · ${row.promiseCount - row.assessed} inte bedömda`}
+                      </p>
+                    </td>
+                    {row.agreements.map((cell) => (
+                      <td class="min-w-48 px-4 py-3">
+                        {!cell.stands ? (
+                          <span class="text-sm text-muted-foreground">Står inte bakom överenskommelsen</span>
+                        ) : cell.total === 0 ? (
+                          <span class="text-sm text-muted-foreground">Inga löften jämförda</span>
+                        ) : (
+                          <>
+                            <div class="flex h-2.5 w-full overflow-hidden rounded-full bg-[#dcdcd6]" aria-hidden="true">
+                              <div style={`width:${pct(cell.counts.included + cell.counts.strengthened, cell.total)};background:#5b21b6`} />
+                              <div style={`width:${pct(cell.counts.weakened + cell.counts.contradicted, cell.total)};background:#a78bfa`} />
+                            </div>
+                            <p class="mt-1.5 text-sm text-muted-foreground">
+                              {cell.counts.included + cell.counts.strengthened} med · {cell.counts.weakened + cell.counts.contradicted}{' '}
+                              urvattnade · {cell.counts.not_addressed} saknas
+                            </p>
+                          </>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p hidden data-partier-empty class="mt-4 text-muted-foreground">Inga partier med den rollen i perioden.</p>
+          {agreements.length > 0 && (
+            <ul class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted-foreground" aria-label="Förklaring till överenskommelsen">
+              <li class="flex items-center gap-2"><span class="inline-block size-3 rounded-sm" style="background:#5b21b6" aria-hidden="true"></span>Med</li>
+              <li class="flex items-center gap-2"><span class="inline-block size-3 rounded-sm" style="background:#a78bfa" aria-hidden="true"></span>Urvattnade</li>
+              <li class="flex items-center gap-2"><span class="inline-block size-3 rounded-sm" style="background:#dcdcd6" aria-hidden="true"></span>Saknas</li>
+            </ul>
+          )}
+        </>
+      )
+    }
+
+    <div class="mt-10 grid gap-4 md:grid-cols-2">
+      <section class="rounded-xl border p-5">
+        <h2 class="font-serif text-xl font-semibold">Regeringsöverenskommelser</h2>
+        {
+          agreements.length > 0 ? (
+            <p class="mt-2 text-muted-foreground">
+              {agreements.map(agreementName).join(' och ')} beskriver vad en överenskommelse gjorde med partiernas
+              vallöften. Det är belägg, inte en bedömning: ett löfte som är med i överenskommelsen är inte därmed infriat.
+            </p>
+          ) : (
+            <p class="mt-2 text-muted-foreground">
+              Ingen skriftlig överenskommelse för perioden. Löftena följs direkt mot Riksdagens dokument.
+            </p>
+          )
+        }
+      </section>
+      <section class="rounded-xl border p-5">
+        <h2 class="font-serif text-xl font-semibold">Roller byts mellan perioder</h2>
+        <p class="mt-2 text-muted-foreground">
+          Ett partis roll hör till perioden, inte till partiet. Använd periodväljaren för att se hur rollerna såg ut i en annan period.
+        </p>
+      </section>
     </div>
   </div>
 </Layout>
+
+<style is:global>
+  .partier-chip {
+    min-height: 44px;
+    padding: 0 1rem;
+    border: 1px solid #a9a9a2;
+    border-radius: 9999px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+  .partier-chip[aria-pressed='true'] {
+    background: hsl(var(--foreground));
+    color: hsl(var(--background));
+    border-color: hsl(var(--foreground));
+  }
+</style>
+
+<script>
+  // Progressive enhancement: without JS the filter chips stay hidden and the full table shows.
+  const bar = document.querySelector<HTMLElement>('[data-partier-filters]');
+  if (bar) {
+    bar.hidden = false;
+    const rows = document.querySelectorAll<HTMLElement>('tbody tr[data-role]');
+    const empty = document.querySelector<HTMLElement>('[data-partier-empty]');
+    bar.addEventListener('click', (ev) => {
+      const btn = (ev.target as HTMLElement).closest<HTMLButtonElement>('button[data-filter]');
+      if (!btn) return;
+      const role = btn.dataset.filter ?? '';
+      bar.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+      let shown = 0;
+      rows.forEach((r) => {
+        const show = role === '' || r.dataset.role === role;
+        r.hidden = !show;
+        if (show) shown++;
+      });
+      if (empty) empty.hidden = shown > 0;
+    });
+  }
+</script>
