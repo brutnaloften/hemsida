@@ -170,6 +170,20 @@ describe('normalizeText soft hyphens', () => {
     expect(normalizeText('möj­ ligheter')).toBe('möjligheter');
     expect(quoteMatchKind('bättre möj­\nligheter till', 'bättre möjligheter')).toBe('exact');
   });
+  it('maps a soft hyphen to a visible hyphen in hyphen mode', () => {
+    expect(normalizeText('hälso­ och', 'hyphen')).toBe('hälso- och');
+    expect(normalizeText('hbtqi­flyktingar', 'hyphen')).toBe('hbtqi-flyktingar');
+    expect(normalizeText('hälso­\noch', 'hyphen')).toBe('hälso- och');
+  });
+  it('matches quotes with a visible hyphen strictly (MP examples)', () => {
+    expect(quoteMatchKind('stöd till hälso­ och sjukvård', 'hälso- och sjukvård')).toBe('exact');
+    expect(quoteMatchKind('hbtqi­flyktingar får', 'hbtqi-flyktingar')).toBe('exact');
+    expect(quoteMatchKind('sex­ och samlevnad', 'sex- och samlevnad')).toBe('exact');
+    expect(midWordCut('hbtqi­flyktingar får', 'hbtqi-flyktingar')).toBeNull();
+  });
+  it('still reports loose for unrelated spacing differences', () => {
+    expect(quoteMatchKind('hälso­ och sjukvård', 'hälsooch sjuk vård')).toBe('loose');
+  });
 });
 
 describe('midWordCut', () => {
