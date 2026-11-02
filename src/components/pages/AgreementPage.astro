@@ -7,8 +7,9 @@ import { buildAgreementPage } from '@/lib/agreement-page';
 import { outcomeCountsText } from '@/lib/manifesto';
 import { PARTY_NAMES } from '@/lib/promise-labels';
 import { sourceLinks } from '@/lib/source-link';
+import { formatDate } from '@/lib/start-page';
 import { getTerms } from '@/lib/term-data';
-import { partyRole, termOfFilePath, termPagePath } from '@/lib/terms';
+import { partyRole, termPagePath } from '@/lib/terms';
 import { promisePath } from '@/lib/timeline';
 import { agreementName } from '@/schema/promise';
 
@@ -24,8 +25,8 @@ const source = (await getCollection('sources')).map((e) => e.data).find((s) => s
 const name = agreementName(source);
 const termRecord = (await getTerms()).find((t) => t.id === term)!;
 const promises = (await getCollection('promises'))
-  .filter((e) => termOfFilePath(e.filePath ?? '') === term)
-  .map((e) => e.data);
+  .map((e) => e.data)
+  .filter((p) => p.term === term);
 const page = buildAgreementPage(agreementId, promises);
 const links = sourceLinks(source);
 const counts = outcomeCountsText(page.outcomeCounts);
@@ -33,7 +34,7 @@ const counts = outcomeCountsText(page.outcomeCounts);
 const roleOf = (party: string) => partyRole(termRecord, party) ?? 'opposition';
 const partyHref = (party: string) => `${base}${termPagePath('party', term, party)}`;
 const promiseHref = (id: string) => `${base}${promisePath(id)}`;
-const signatories = source.parties as string[];
+const signatories = source.parties;
 ---
 
 <Layout
@@ -45,7 +46,7 @@ const signatories = source.parties as string[];
     <a href={`${base}${termPagePath('lofter', term)}`} class="text-sm text-muted-foreground hover:text-foreground">&larr; Alla löften</a>
     <h1 class="mt-4 text-2xl font-bold tracking-tight md:text-4xl">{source.title}</h1>
     <p class="mt-2 text-muted-foreground">
-      {name}, {source.date}. Punkterna nedan är belägg om vad överenskommelsen innehåller, inte en bedömning.
+      {name}, {formatDate(source.date)}. Punkterna nedan är belägg om vad överenskommelsen innehåller, inte en bedömning.
     </p>
 
     <section class="mt-6" aria-labelledby="kalla">
@@ -101,6 +102,7 @@ const signatories = source.parties as string[];
                               ))}
                             </span>
                             <a href={promiseHref(m.id)} class="underline underline-offset-2">{m.title}</a>
+                            <AgreementBadge outcome={m.outcome} source={source} />
                           </li>
                         ))}
                       </ul>

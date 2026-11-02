@@ -34,7 +34,9 @@ describe('buildAgreementPage', () => {
   });
 
   it('maps matched manifesto promises onto points', () => {
-    expect(page.points[0].items[0].matched.map((m) => m.id)).toEqual(['m1']);
+    expect(page.points[0].items[0].matched.map((m) => [m.id, m.outcome])).toEqual([
+      ['m1', 'included'],
+    ]);
     expect(page.unmatchedCount).toBe(2);
   });
 
@@ -48,8 +50,9 @@ describe('buildAgreementPage', () => {
 });
 
 describe('hasAgreementPoints', () => {
-  it('is false when nothing cites the agreement', () => {
+  it('is true only for an agreement with points; a term without any has none', () => {
     expect(hasAgreementPoints('ex', data)).toBe(true);
     expect(hasAgreementPoints('other', data)).toBe(false);
+    expect(hasAgreementPoints('ex', [])).toBe(false);
   });
 });

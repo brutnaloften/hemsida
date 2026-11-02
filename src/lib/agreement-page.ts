@@ -22,9 +22,13 @@ export interface PromiseLink {
   parties: string[];
 }
 
+export interface MatchedLink extends PromiseLink {
+  outcome: AgreementOutcome;
+}
+
 export interface AgreementPoint extends PromiseLink {
   /** Manifesto promises whose agreement entry for this agreement points at this point. */
-  matched: PromiseLink[];
+  matched: MatchedLink[];
 }
 
 export interface AreaGroup<T> {
@@ -84,7 +88,7 @@ export function buildAgreementPage(
   const points = promises.filter((p) => p.source.id === agreementId).sort(byTitle);
   const others = promises.filter((p) => p.source.id !== agreementId).sort(byTitle);
 
-  const matchedBy = new Map<string, PromiseLink[]>();
+  const matchedBy = new Map<string, MatchedLink[]>();
   const notAddressed: PageablePromise[] = [];
   const outcomeCounts = Object.fromEntries(AGREEMENT_OUTCOMES.map((o) => [o, 0])) as Record<
     AgreementOutcome,
@@ -97,7 +101,7 @@ export function buildAgreementPage(
     if (entry.outcome === 'not_addressed') notAddressed.push(p);
     for (const id of entry.promises) {
       const list = matchedBy.get(id) ?? [];
-      list.push(toLink(p));
+      list.push({ ...toLink(p), outcome: entry.outcome });
       matchedBy.set(id, list);
     }
   }
