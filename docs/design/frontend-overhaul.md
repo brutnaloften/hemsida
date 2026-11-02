@@ -173,7 +173,7 @@ Every page has: header, (period bar if term-dependent), breadcrumb (Start / Part
 
 ### Start
 
-1. Hero: overline with term and election, serif H1 ("Vad lovade partierna – och vad blev det av det?" with the second half highlighted), one-line value proposition, search form (`role="search"`, posts to Löften with `?q=`), and a key-numbers list on the right (promises, parties, assessed so far, Riksdag documents linked). **All numbers come from data**; the canvas figures (1 190, 8, 0, 0) are placeholders.
+1. Hero: overline with term and election, serif H1 ("Partierna lovar. Vi följer upp." with the second sentence highlighted), one-line value proposition, search form (`role="search"`, posts to Löften with `?q=`), and a key-numbers list on the right (promises, parties, assessed so far, Riksdag documents linked). **All numbers come from data**; the canvas figures (1 190, 8, 0, 0) are placeholders.
 2. Government-formation box for the selected term: roles in three rows (Regering, Stödparti, Opposition) from the term record, next to the **agreement box**: the named agreement with date and point count and a one-line "belägg, inte bedömning" note, or "Ingen skriftlig överenskommelse" with a sentence saying promises are followed directly against Riksdag documents.
 3. Status strip ("Var vi står just nu"): says plainly that "Inte bedömt" says nothing about whether a promise is kept; link "Så arbetar vi".
 4. "Välj ett parti": party cards grouped by role (Regering, Stödparti, Opposition) with chip, name, role, promise count, "0 bedömda", hatch bar. The agreement split line (shortTitle chip plus counts) appears only for parties behind an agreement. Link "Jämför alla partier".
