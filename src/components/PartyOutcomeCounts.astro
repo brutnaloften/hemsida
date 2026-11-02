@@ -1,28 +1,31 @@
 ---
 import { Badge } from '@/components/ui/badge';
-import { AGREEMENT_OUTCOMES, AGREEMENT_OUTCOME_LABELS } from '@/schema/promise';
+import { AGREEMENT_OUTCOMES, agreementName, agreementOutcomeLabel } from '@/schema/promise';
 import { AGREEMENT_OUTCOME_STYLE } from '@/lib/promise-labels';
 import type { AgreementOutcome } from '@/schema/promise';
 
 interface Props {
   counts: Record<AgreementOutcome, number>;
   total: number;
+  /** The compared agreement's source; its name is used in the labels. */
+  source: { shortTitle?: string; title: string };
 }
-const { counts, total } = Astro.props;
+const { counts, total, source } = Astro.props;
+const name = agreementName(source);
 ---
 
 {
   total > 0 && (
     <>
       <p class="text-sm text-muted-foreground">
-        {total} löften i partiets valmanifest har jämförts med Tidöavtalet. Det beskriver vad avtalets text säger, inte om
-        löftet hållits.
+        {total} löften i partiets valmanifest har jämförts med {name}. Det beskriver vad texten säger, inte om löftet
+        hållits.
       </p>
-      <ul class="mt-3 flex flex-wrap gap-2" aria-label="Löften per utfall i avtalet">
+      <ul class="mt-3 flex flex-wrap gap-2" aria-label={`Löften per utfall i ${name}`}>
         {AGREEMENT_OUTCOMES.map((o) => (
           <li>
             <Badge variant="outline" className={AGREEMENT_OUTCOME_STYLE} data-outcome={o}>
-              {AGREEMENT_OUTCOME_LABELS[o]}: {counts[o]}
+              {agreementOutcomeLabel(o, source)}: {counts[o]}
             </Badge>
           </li>
         ))}
