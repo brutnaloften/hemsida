@@ -23,7 +23,7 @@ Pages 2-6 (contents, introduction, priorities) hold no commitments beyond the on
 ## Notes
 
 - Quotes are verbatim whole sentences or clauses from the cited page, extended where needed so that title and description are supported by the quote alone (for example `hojt-straff-for-sexualbrott-och-kvinnofridskrankning`, `nej-till-visitationszoner-och-preventiv-avlyssning`, `intensivar-for-snabbare-integration`). Where one bullet states several measures that are separate candidates, the quote is the clause for that measure; `kriminalisera-oskuldskontroller` quotes the sentence that also names kontrollerande beteende, but its description covers only oskuldskontroller (the other has its own candidate).
-- `se-over-amorteringskravet` (the id is kept from the first draft): p17 says the strengthened amortisation requirement "bör avskaffas när ränteläget nu normaliseras", so the promise is about abolishing it (type `legislative`), quoted verbatim. The earlier "se över" wording is not used.
+- `avskaffa-forstarkta-amorteringskravet` (renamed from `se-over-amorteringskravet`): p17 says the strengthened amortisation requirement "bör avskaffas när ränteläget nu normaliseras", so the promise is about abolishing it (type `legislative`), quoted verbatim. The earlier "se över" wording is not used.
 - Likely overlaps to assess together later:
   - Violence against women and honour oppression: `kriminalisera-kontrollerande-beteende` and `kriminalisera-oskuldskontroller`; `handlingsplaner-mot-vald-och-hedersforstryck` and `nationell-franvarostatistik-for-att-upptacka-hedersvald`.
   - Care: `enkel-vag-in-vid-stressrelaterad-ohalsa` (p13) and `battre-psykiatri-och-kortare-bup-koer` (p19); `samma-barnmorska-genom-graviditet-och-forlossning` (also stated on p18).
