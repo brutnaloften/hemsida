@@ -60,6 +60,7 @@ const agreementSource = promise.evidence.flatMap((e) =>
   e.kind === 'agreement' ? [sources.get(e.source)] : [],
 )[0];
 const agreementLabel = agreementSource ? agreementName(agreementSource) : 'överenskommelsen';
+const agreementHref = (id: string) => (term ? `${base}${termPagePath('agreement', term, id)}` : undefined);
 const history = historyUrl(term, promise.id);
 const assessed = verdict.value !== 'unassessed';
 const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-foreground';
@@ -97,7 +98,11 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
               </blockquote>
               {source && links && (
                 <figcaption class="mt-2 text-sm text-muted-foreground">
-                  {source.title}
+                  {source.kind === 'government_agreement' && agreementHref(source.id) ? (
+                    <a href={agreementHref(source.id)} class={link}>{source.title}</a>
+                  ) : (
+                    source.title
+                  )}
                   {promise.source.page !== undefined && (
                     <span class="font-mono"> s. {promise.source.page}</span>
                   )}
@@ -176,7 +181,13 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                       <TimelineMarker step="agreement" class="absolute left-[-1px] top-1 -translate-x-1/2" />
                       <p class="text-sm text-muted-foreground">{s.evidence.date} &middot; Överenskommelse</p>
                       <div class="flex flex-wrap items-center gap-2 font-medium">
-                        <span>{sources.get(s.evidence.source)?.title ?? s.evidence.source}</span>
+                        {agreementHref(s.evidence.source) ? (
+                          <a href={agreementHref(s.evidence.source)} class={link}>
+                            {sources.get(s.evidence.source)?.title ?? s.evidence.source}
+                          </a>
+                        ) : (
+                          <span>{sources.get(s.evidence.source)?.title ?? s.evidence.source}</span>
+                        )}
                         <AgreementBadge
                           outcome={s.evidence.outcome}
                           source={sources.get(s.evidence.source) ?? { title: s.evidence.source }}

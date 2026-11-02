@@ -132,7 +132,9 @@ const otherTerm = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1
             </section>
             {agreement && (
               <section class="rounded-md border p-4">
-                <h2 class="text-lg font-semibold">{agreement.name}</h2>
+                <h2 class="text-lg font-semibold">
+                  <a href={`${base}${termPagePath('agreement', term, agreement.source.id)}`} class="underline underline-offset-2">{agreement.name}</a>
+                </h2>
                 <div class="mt-3">
                   {agreement.total > 0 ? (
                     <PartyOutcomeCounts counts={agreement.counts} total={agreement.total} source={agreement.source} />
