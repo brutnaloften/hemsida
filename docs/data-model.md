@@ -50,6 +50,34 @@ A document that promises come from.
 | `url`, `archive` | URL         | Original and web.archive.org copy                                                        |
 | `urlDeadAsOf`    | ISO date    | Optional. Set when the original `url` is dead; the site then links the archive copy only |
 
+## Term record
+
+`src/data/<term>/term.json` is the single place that says who governed in a term. Schema: `src/schema/term.ts`, loaded as the `terms` content collection.
+
+```json
+{
+  "id": "2022-2026",
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support",
+    "S": "opposition",
+    "V": "opposition",
+    "C": "opposition",
+    "MP": "opposition"
+  },
+  "agreements": ["tidoavtalet"],
+  "role_changes": [{ "date": "2024-05-01", "party": "S", "role": "government", "note": "…" }]
+}
+```
+
+- `id` is `YYYY-YYYY` and equals the directory name.
+- `roles` lists every party with its role at the start of the term (`government`, `support`, `opposition`).
+- `agreements` holds ids of `government_agreement` sources. Zero (`[]`), one or several are all valid.
+- `role_changes` (optional) are dated changes mid-term, e.g. a government change. The first change per party must differ from the starting role.
+- Data tests check that `agreements` are `government_agreement` source files and that the `roles` in every promise file agree with the term record.
+
 ## Promise
 
 ```json

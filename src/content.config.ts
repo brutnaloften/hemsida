@@ -1,6 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { promiseSchema, sourceSchema } from './schema/promise';
+import { termSchema } from './schema/term';
 
 // One directory per term: src/data/<term>/promises/*.json
 const promises = defineCollection({
@@ -14,4 +15,10 @@ const sources = defineCollection({
   schema: sourceSchema,
 });
 
-export const collections = { promises, sources };
+// Term records (government, support, opposition, agreements): src/data/<term>/term.json
+const terms = defineCollection({
+  loader: glob({ pattern: '*/term.json', base: 'src/data' }),
+  schema: termSchema,
+});
+
+export const collections = { promises, sources, terms };
