@@ -1,7 +1,6 @@
 ---
-import { Badge } from '@/components/ui/badge';
-import { VERDICTS, VERDICT_LABELS } from '@/schema/promise';
-import { VERDICT_STYLES } from '@/lib/promise-labels';
+import { VerdictBadge } from '@/components/ui/verdict-badge';
+import { VERDICTS } from '@/schema/promise';
 import { assessedCount, verdictCounts, type PartyPromise } from '@/lib/party-stats';
 
 interface Props {
@@ -35,9 +34,7 @@ const legend = VERDICTS.filter((v) => counts[v] > 0 || v === 'unassessed');
   {
     legend.map((v) => (
       <li>
-        <Badge class={VERDICT_STYLES[v]}>
-          {VERDICT_LABELS[v]}: {counts[v]}
-        </Badge>
+        <VerdictBadge verdict={v} suffix={String(counts[v])} />
       </li>
     ))
   }

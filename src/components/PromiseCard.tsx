@@ -1,11 +1,12 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { VerdictBadge } from '@/components/ui/verdict-badge';
 import type { Promise } from '@/data/index';
 import { buttonVariants } from './ui/button';
-import { VERDICT_LABELS, isRiksdagEvidence, type RiksdagEvidence } from '@/schema/promise';
+import { isRiksdagEvidence, type RiksdagEvidence } from '@/schema/promise';
 import { sourceLinks } from '@/lib/source-link';
 import { promisePath } from '@/lib/timeline';
-import { EVIDENCE_KIND_LABELS, TYPE_LABELS, VERDICT_STYLES, partyName } from '@/lib/promise-labels';
+import { EVIDENCE_KIND_LABELS, TYPE_LABELS, partyName } from '@/lib/promise-labels';
 
 export default function PromiseCard({ promise }: { promise: Promise }) {
   const { verdict } = promise;
@@ -27,13 +28,7 @@ export default function PromiseCard({ promise }: { promise: Promise }) {
           </a>
         </CardTitle>
         <div className="flex flex-wrap items-start gap-2 md:items-end md:justify-end">
-          <Badge
-            variant="outline"
-            className={VERDICT_STYLES[verdict.value]}
-            data-verdict={verdict.value}
-          >
-            {VERDICT_LABELS[verdict.value]}
-          </Badge>
+          <VerdictBadge verdict={verdict.value} />
           {promise.parties.map((party) => (
             <Badge key={party} variant="secondary">
               {partyName(party)}
