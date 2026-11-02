@@ -103,7 +103,7 @@ export function SalaryPanel({ state, onChange, estimate, year }: Props) {
   const fallback = b ? fallbackNotice(b) : null;
   const total = b ? perPeriod(b.total, period) : 0;
   const headline = b
-    ? total < 50
+    ? total < (period === 'month' ? 5 : 50)
       ? `Din del av statens budget är ungefär 0 kronor ${unit} (uppskattning för ${year}): avdragen är lika stora som det du betalar in.`
       : `Ungefär ${formatTotal(total, period)} ${unit} av det du och din arbetsgivare betalar går till statens budget (uppskattning för ${year}).`
     : '';

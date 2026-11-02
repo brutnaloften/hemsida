@@ -131,7 +131,7 @@ describe('SalaryPanel', () => {
     const monthly = status();
     expect(monthly).toMatch(/per månad av det du/);
     const num = (t: string) => Number(t.match(/Ungefär ([\d\s]+)\skr/)![1].replace(/\D/g, ''));
-    expect(Math.abs(num(monthly) - num(yearly) / 12)).toBeLessThanOrEqual(55);
+    expect(Math.abs(num(monthly) - num(yearly) / 12)).toBeLessThanOrEqual(10);
     expect(JSON.parse(localStorage.getItem(SALARY_STORAGE_KEY)!).period).toBe('month');
     await act(async () => root.unmount());
 
@@ -140,6 +140,27 @@ describe('SalaryPanel', () => {
     await act(async () => root.render(<Harness year={2026} />));
     expect(radio('per månad').checked).toBe(true);
     expect(status()).toBe(monthly);
+    await act(async () => root.unmount());
+  });
+
+  it('does not round a small monthly total down to "0 kronor"', async () => {
+    const root = createRoot(host);
+    await act(async () => root.render(<Harness year={2026} />));
+    await openPanel();
+    await act(async () =>
+      type(host.querySelector<HTMLInputElement>('input[inputmode="numeric"]')!, '100'),
+    );
+    await act(async () => host.querySelector<HTMLButtonElement>('button[type="submit"]')!.click());
+    const status = () => host.querySelector('[role="status"]')!.textContent!;
+    expect(status()).toMatch(/^Ungefär .* per år av det du/);
+    await act(async () =>
+      [...host.querySelectorAll('label')]
+        .find((l) => l.textContent === 'per månad')!
+        .querySelector<HTMLInputElement>('input')!
+        .click(),
+    );
+    expect(status()).toMatch(/^Ungefär .* per månad av det du/);
+    expect(status()).not.toMatch(/ungefär 0 kronor/);
     await act(async () => root.unmount());
   });
 
