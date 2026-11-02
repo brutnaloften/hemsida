@@ -32,7 +32,7 @@ const raw = (over: Partial<RawManifestoCandidate> = {}): RawManifestoCandidate =
   page: 2,
   quote: 'Skolplikten ska förlängas',
   type: 'legislative',
-  area: 'Utbildningspolitik',
+  area: 'Skola och utbildning',
   committee: 'UbU',
   keywords: ['skolplikt', ' '],
   ...over,

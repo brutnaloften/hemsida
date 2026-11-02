@@ -62,7 +62,7 @@ const entry = (kod: string, namn: string, release: number) =>
     parties: ['M'],
     roles: {},
     type: 'budget',
-    area: 'A',
+    area: 'Energi',
     verdict: { value: 'unassessed', date: '2025-01-01' },
     evidence: [
       {

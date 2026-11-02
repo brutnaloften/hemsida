@@ -83,7 +83,7 @@ const base = {
   parties: ['L'],
   roles: { L: 'government' },
   type: 'legislative',
-  area: 'A',
+  area: 'Energi',
   verdict: { value: 'unassessed', date: '2022-10-14' },
 };
 const manifesto = (agreementSource: string, linked: string | string[], id = 'val2022-l-x') =>

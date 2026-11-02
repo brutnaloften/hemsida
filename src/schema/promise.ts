@@ -6,6 +6,7 @@
  * browser imports so plain Node can load it.
  */
 import { z } from 'zod';
+import { AREAS } from './areas.ts';
 
 export const PARTIES = ['S', 'M', 'SD', 'C', 'V', 'KD', 'L', 'MP'] as const;
 export const partySchema = z.enum(PARTIES);
@@ -289,7 +290,7 @@ export const promiseSchema = z
     parties: z.array(partySchema).min(1),
     roles: z.partialRecord(partySchema, z.enum(ROLES)),
     type: z.enum(PROMISE_TYPES),
-    area: z.string().min(1),
+    area: z.enum(AREAS),
     committee: z.string().optional(),
     keywords: z.array(z.string()).default([]),
     verdict: verdictSchema,

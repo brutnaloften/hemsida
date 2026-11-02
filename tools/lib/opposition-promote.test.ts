@@ -14,7 +14,7 @@ function promise(id: string, over: Partial<PromiseRecord> = {}): PromiseRecord {
     parties: ['S'],
     roles: { S: 'opposition' },
     type: 'legislative',
-    area: 'Område',
+    area: 'Energi',
     committee: 'JuU',
     keywords: ['a', 'b', 'c'],
     verdict: { value: 'unassessed', reasoning: '', date: '2026-11-01', history: [] },
