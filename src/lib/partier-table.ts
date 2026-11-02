@@ -7,6 +7,7 @@ import {
   verdictCounts,
   type PartyPromise,
 } from '@/lib/party-stats';
+import { manifestoOnly } from '@/lib/manifesto';
 import type { Role } from '@/lib/terms';
 
 const ROLE_ORDER: Role[] = ['government', 'support', 'opposition'];
@@ -46,11 +47,10 @@ export function buildPartierRows(
   const agreements = term.agreements
     .map((id) => sources.find((s) => s.id === id))
     .filter((s): s is NonNullable<typeof s> => s !== undefined);
-  const manifestos = new Set(sources.filter((s) => s.kind === 'manifesto').map((s) => s.id));
   const rows: PartierRow[] = [];
   for (const [party, role] of Object.entries(term.roles) as [string, Role][]) {
     // Only manifesto promises count: agreement points and mid-term pledges are not "vallöften".
-    const own = promisesForParty(promises, party).filter((p) => manifestos.has(p.source.id));
+    const own = promisesForParty(manifestoOnly(promises, sources), party);
     rows.push({
       party,
       role,
