@@ -1,34 +1,96 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import SearchPage from '../SearchPage';
-import { termOfFilePath } from '@/lib/terms';
+import LofterList from '../LofterList';
+import { AREAS } from '@/schema/areas';
+import { PARTY_NAMES, TYPE_LABELS } from '@/lib/promise-labels';
+import { getTerms } from '@/lib/term-data';
+import { partyRole, termOfFilePath, termPagePath } from '@/lib/terms';
+import { isAgreement, promisePath } from '@/lib/timeline';
+import { VERDICT_LABELS } from '@/schema/promise';
 
 interface Props {
   term: string;
 }
 const { term } = Astro.props;
 
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const terms = await getTerms();
+const termRecord = terms.find((t) => t.id === term);
+const other = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1);
 const sources = new Map((await getCollection('sources')).map((e) => [e.data.id, e.data]));
 const promises = (await getCollection('promises'))
   .filter((e) => termOfFilePath(e.filePath ?? '') === term)
-  .map((e) => {
-    const source = sources.get(e.data.source.id);
-    if (!source) throw new Error(`Unknown source '${e.data.source.id}' in ${e.data.id}`);
-    return { ...e.data, sourceUrl: source.url, sourceArchive: source.archive, sourceUrlDeadAsOf: source.urlDeadAsOf, date: source.date };
-  });
+  .map((e) => e.data);
+
+const agreementIds = new Set<string>();
+const rows = promises
+  .map((p) => {
+    const entries = p.evidence.filter(isAgreement);
+    const latest = entries.length > 0 ? entries.reduce((a, b) => (b.date > a.date ? b : a)) : undefined;
+    if (latest) agreementIds.add(latest.source);
+    return {
+      id: p.id,
+      title: p.title,
+      area: p.area,
+      href: `${base}${promisePath(p.id)}`,
+      parties: p.parties,
+      roles: Object.fromEntries(
+        p.parties.flatMap((party) => {
+          const role = termRecord ? partyRole(termRecord, party) : undefined;
+          return role ? [[party, role]] : [];
+        }),
+      ),
+      verdict: p.verdict.value,
+      outcome: latest?.outcome,
+      search: [
+        p.title,
+        p.description,
+        p.parties.map((c) => `${c} ${PARTY_NAMES[c]}`).join(' '),
+        p.keywords.join(' '),
+        p.area,
+        p.committee ?? '',
+        TYPE_LABELS[p.type],
+        VERDICT_LABELS[p.verdict.value],
+      ].join(' '),
+    };
+  })
+  .sort((a, b) => a.title.localeCompare(b.title, 'sv'));
+
+// One agreement per term in practice; the filter and badges name it.
+const agreement = agreementIds.size === 1 ? sources.get([...agreementIds][0]) : undefined;
+const areas = AREAS.filter((a) => promises.some((p) => p.area === a));
 ---
 
 <Layout
   title="Löften — Brutna Löften"
-  description="Sök bland politiska löften i vår databas."
+  description="Sök och filtrera politiska löften i vår databas."
   period={{ kind: 'lofter', term }}
 >
-  {
-    promises.length === 0 ? (
-      <p class="container mx-auto px-4 py-12 md:px-6">Löften för perioden samlas in.</p>
-    ) : (
-      <SearchPage client:load promises={promises} />
-    )
-  }
+  <div class="container mx-auto px-4 py-8 md:px-6 md:py-12">
+    <h1 class="text-2xl font-bold tracking-tight md:text-4xl">Löften</h1>
+    {
+      promises.length === 0 ? (
+        <div class="mt-6">
+          <p>Löften för perioden samlas in.</p>
+          {other && (
+            <p class="mt-2">
+              <a href={`${base}${termPagePath('lofter', other.id)}`} class="underline underline-offset-2">
+                Se löften för {other.id}
+              </a>
+            </p>
+          )}
+        </div>
+      ) : (
+        <div class="mt-6">
+          <LofterList
+            client:load
+            rows={rows}
+            areas={areas}
+            agreement={agreement && { shortTitle: agreement.shortTitle, title: agreement.title }}
+          />
+        </div>
+      )
+    }
+  </div>
 </Layout>
