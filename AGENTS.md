@@ -36,7 +36,7 @@ oxfmt runs on staged files in the pre-commit hook (lint-staged).
 
 **Tooling:** `tools/` is a separate pnpm package (own `package.json`, run with `node --experimental-strip-types`, type-check with `pnpm typecheck` inside `tools/`). `tools/lib/` holds infrastructure kept from the retired news-discovery pipeline: `claude.ts` (`createClient`, `loggedParse`, `isTransientApiError`), `resume.ts` (resumable per-item runs that skip transient API errors), `pr.ts` (one PR per change, `execFileSync` for git) and `json.ts` (Zod-schema-as-single-source pattern, JSON I/O).
 
-**Search:** `src/pages/search.astro` hydrates `SearchPage.tsx` as a React island. It uses uFuzzy for client-side fuzzy search over all promise fields. `PromiseCard.tsx` renders individual results.
+**Search:** `src/pages/search.astro` redirects to the default term's Löften page. `src/components/pages/LofterPage.astro` builds the rows and hydrates `LofterList.tsx` as a React island: uFuzzy fuzzy search plus party, assessment, agreement-outcome and area filters, with filter state in the URL query string (`src/lib/lofter-filter.ts`, tested).
 
 **UI components:** `src/components/ui/` contains shadcn/ui-style primitives (Card, Badge, Input) using Tailwind CSS v4 with CSS-variable-based theming (`src/styles/globals.css`). Dark mode is class-based: a `.dark` class on `<html>` (set by an inline script in `Layout.astro` from `localStorage` or `prefers-color-scheme`) toggles it via `@custom-variant dark` in `globals.css`.
 

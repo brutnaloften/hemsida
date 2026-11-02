@@ -1,5 +1,5 @@
 import uFuzzy from '@leeoniya/ufuzzy';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { AgreementBadge } from '@/components/ui/agreement-badge';
 import { Input } from '@/components/ui/input';
 import { PartyChip } from '@/components/ui/party-chip';
@@ -88,28 +88,27 @@ export default function LofterList({ rows, areas, agreement }: Props) {
   const fuzzy = useMemo(() => new uFuzzy({ intraMode: 1 }), []);
   const haystack = useMemo(() => rows.map((r) => r.search), [rows]);
 
+  // `filters.q` is unused; the text query lives in `input` and its debounced copy `query`.
   const [filters, setFilters] = useState<LofterFilters>(EMPTY_FILTERS);
   const [input, setInput] = useState('');
   const [shown, setShown] = useState(PAGE_SIZE);
-  const ready = useRef(false);
+  const [loaded, setLoaded] = useState(false);
+  const query = useDebounce(input);
+  const effective = useMemo(() => ({ ...filters, q: query }), [filters, query]);
 
   // Read the URL once on mount (not in the initial state, to match the server render).
   useEffect(() => {
     const f = parseFilters(window.location.search);
     setFilters(f);
     setInput(f.q);
-    ready.current = true;
+    setLoaded(true);
   }, []);
 
-  const query = useDebounce(input);
+  // Keep the URL in sync so a filtered view can be shared. Wait until the URL has been read and
+  // the debounced query has caught up with the input, so restoring never overwrites the URL.
   useEffect(() => {
-    setFilters((f) => (f.q === query ? f : { ...f, q: query }));
-  }, [query]);
-
-  // Keep the URL in sync so a filtered view can be shared.
-  useEffect(() => {
-    if (!ready.current) return;
-    const qs = serializeFilters(filters);
+    if (!loaded || query !== input) return;
+    const qs = serializeFilters(effective);
     if (qs !== window.location.search) {
       window.history.replaceState(
         null,
@@ -117,7 +116,7 @@ export default function LofterList({ rows, areas, agreement }: Props) {
         `${window.location.pathname}${qs}${window.location.hash}`,
       );
     }
-  }, [filters]);
+  }, [loaded, query, input, effective]);
 
   const update = (patch: Partial<LofterFilters>) => {
     setFilters((f) => ({ ...f, ...patch }));
@@ -125,7 +124,7 @@ export default function LofterList({ rows, areas, agreement }: Props) {
   };
 
   const matched = useMemo(() => {
-    const q = filters.q.trim();
+    const q = effective.q.trim();
     let ordered: number[];
     if (q) {
       const [idxs, info, order] = fuzzy.search(haystack, q);
@@ -133,8 +132,8 @@ export default function LofterList({ rows, areas, agreement }: Props) {
     } else {
       ordered = rows.map((_, i) => i);
     }
-    return ordered.map((i) => rows[i]).filter((r) => matchesFilters(r, filters));
-  }, [rows, haystack, fuzzy, filters]);
+    return ordered.map((i) => rows[i]).filter((r) => matchesFilters(r, effective));
+  }, [rows, haystack, fuzzy, effective]);
 
   const counts = useMemo(() => {
     const party = new Map<string, number>();
@@ -167,7 +166,7 @@ export default function LofterList({ rows, areas, agreement }: Props) {
   }));
 
   const visible = matched.slice(0, shown);
-  const active = hasActiveFilters(filters);
+  const active = hasActiveFilters(effective);
 
   return (
     <div className="grid gap-8 md:grid-cols-[16rem_1fr]">
