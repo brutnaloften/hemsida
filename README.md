@@ -1,6 +1,6 @@
 # Brutna Löften
 
-En databas som spårar politiska löften. Löften samlas in en gång per mandatperiod från en fast källa (först Tidöavtalet, 2022–2026) och följs sedan mot officiella dokument från Riksdagen (data.riksdagen.se: dir, SOU, prop, bet/votering, SFS). Varje löfte får en bevistidslinje och ett manuellt satt utfall med motivering.
+En databas som spårar politiska löften. Löften samlas in en gång per mandatperiod från en fast källa (först Tidöavtalet, 2022–2026) och följs sedan mot officiella dokument från Riksdagen (data.riksdagen.se: dir, SOU, prop, bet/votering, SFS). Varje löfte får en bevistidslinje och ett utfall med skriftlig motivering.
 
 ## Data
 
