@@ -14,7 +14,7 @@ import {
   formatPercent,
   shareOf,
 } from '@/lib/budget/format';
-import { formatPart, krWords, partOf } from '@/lib/budget/salary-view';
+import { formatPart, krWords, partOf, periodLabel } from '@/lib/budget/salary-view';
 import { sideGap, splitChildren, type BudgetNode } from '@/lib/budget/core';
 import { revenueExplanation } from '@/lib/budget/revenue-labels';
 import { FRAME_ASPECT, layoutNodes } from '@/lib/budget/treemap';
@@ -86,7 +86,7 @@ export function DrillView({
         if (part === null) return { value: formatPercent(share), aria: words, link: true };
         return {
           value: formatPart(part),
-          aria: `${words}. Din del: ${krWords(part)} per år`,
+          aria: `${words}. Din del: ${krWords(part)} ${periodLabel(personal?.period ?? 'year')}`,
           link: true,
         };
       }),
@@ -187,6 +187,7 @@ export function DrillView({
                   const p = partFor(n);
                   return p === null ? '–' : formatPart(p);
                 },
+                label: `Din del (kr ${periodLabel(personal?.period ?? 'year')})`,
                 total: (() => {
                   const p = partFor(node);
                   return p === null ? undefined : formatPart(p);

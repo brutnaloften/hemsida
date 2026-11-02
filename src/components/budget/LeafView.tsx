@@ -10,7 +10,7 @@ import {
   type BudgetNode,
   type Side,
 } from '@/lib/budget/core';
-import { formatPart, krWords, partOf } from '@/lib/budget/salary-view';
+import { formatPart, krWords, partOf, periodLabel } from '@/lib/budget/salary-view';
 import {
   formatAmountWords,
   formatMdkr,
@@ -150,7 +150,7 @@ export function LeafView({
       </div>
       {present && yours !== null && (
         <p className="mt-3">
-          Din del: {formatPart(yours)} per år
+          Din del: {formatPart(yours)} {periodLabel(personal?.period ?? 'year')}
           <span className="sr-only"> ({krWords(yours)})</span>
         </p>
       )}

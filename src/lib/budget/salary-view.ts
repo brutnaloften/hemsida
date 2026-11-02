@@ -97,9 +97,34 @@ export function estimateFor(inputs: SalaryInputs, year: number): Estimate | null
   };
 }
 
-/** The headline total: nearest 100 kr. */
-export function formatTotal(kr: number): string {
-  return formatKr(kr, 100);
+/** Whether the personal kr amounts are shown per year (default) or per month. */
+export type Period = 'year' | 'month';
+
+/** "per år" / "per månad". */
+export function periodLabel(period: Period): string {
+  return period === 'month' ? 'per månad' : 'per år';
+}
+
+/** A yearly kr amount in the chosen period (the estimate itself is always computed per year). */
+export function perPeriod(yearlyKr: number, period: Period): number {
+  return period === 'month' ? yearlyKr / 12 : yearlyKr;
+}
+
+/**
+ * The key the island collapses the salary panel on: the panel closes whenever the view changes
+ * (year, node or "Mindre poster" level).
+ */
+export function salaryNavKey(view: {
+  year: number;
+  nodeId: string | null;
+  mindre: number;
+}): string {
+  return `${view.year}/${view.nodeId ?? ''}/${view.mindre}`;
+}
+
+/** The headline total: nearest 100 kr per year, nearest 10 kr per month (the amount is smaller). */
+export function formatTotal(kr: number, period: Period = 'year'): string {
+  return formatKr(kr, period === 'month' ? 10 : 100);
 }
 
 /** A component or box value: nearest 10 kr, "≈" in front, "< 10 kr" below that. */

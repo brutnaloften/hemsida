@@ -12,7 +12,7 @@ import {
   formatPercent,
   shareOf,
 } from '@/lib/budget/format';
-import { formatPart, krWords, partOf } from '@/lib/budget/salary-view';
+import { formatPart, krWords, partOf, periodLabel } from '@/lib/budget/salary-view';
 import { LABELS } from '@/lib/budget/labels';
 import {
   hrefFor,
@@ -53,6 +53,7 @@ function columnBoxes(
   saldoLabel: string,
   /** The person's yearly kr (P8) for a box of this column, or null to show percent. */
   partFor: (n: BudgetNode, base: number) => number | null,
+  unit: string,
 ): Box[] {
   const aspect = { portrait: columnAspect('portrait'), landscape: columnAspect('landscape') };
   const layouts = {
@@ -75,7 +76,7 @@ function columnBoxes(
             ? formatPart(part)
             : formatPercent(share),
       aria: `${n.name}: ${percentWords}, ${formatAmountWords(v)}${
-        part !== null ? `. Din del: ${krWords(part)} per år` : ''
+        part !== null ? `. Din del: ${krWords(part)} ${unit}` : ''
       }${
         n.kind === 'other'
           ? `. ${OTHER_EXPLANATION[n.name === LABELS.ovrigaMinskar ? 'minskar' : 'utgift']}`
@@ -101,6 +102,7 @@ export function BalanceView({
   const deficit = totals.saldo < 0;
   const kr = personal?.total ?? null;
   const revenue = personal?.revenue ?? null;
+  const unit = periodLabel(personal?.period ?? 'year');
   const outBoxes = useMemo(
     () =>
       columnBoxes(
@@ -110,8 +112,9 @@ export function BalanceView({
         totals.utgifter,
         'utgifterna',
         (n, base) => (kr === null ? null : partOf(kr, n.value ?? 0, base)),
+        unit,
       ),
-    [balance, totals.utgifter, kr],
+    [balance, totals.utgifter, kr, unit],
   );
   const inBoxes = useMemo(
     () =>
@@ -122,8 +125,9 @@ export function BalanceView({
         totals.utgifter,
         'utgifterna',
         (n) => (revenue ? revenue(n.id) : null),
+        unit,
       ),
-    [balance, totals.inkomster, revenue],
+    [balance, totals.inkomster, revenue, unit],
   );
   const aspect = { portrait: columnAspect('portrait'), landscape: columnAspect('landscape') };
   const topOut = balance.out.items
@@ -276,6 +280,7 @@ export function BalanceView({
                     : (revenue?.(n.id) ?? null);
                   return p === null ? '–' : formatPart(p);
                 },
+                label: `Din del (kr ${unit})`,
               }
         }
         sections={[
