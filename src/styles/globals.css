@@ -2,6 +2,10 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/inter";
+@import "@fontsource-variable/source-serif-4";
+@import "@fontsource-variable/source-serif-4/wght-italic.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -33,6 +37,15 @@
   --radius-sm: calc(var(--radius) - 4px);
 
   --font-sans: "Inter Variable", sans-serif;
+  --font-serif: "Source Serif 4 Variable", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-highlight: var(--highlight);
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
 
   --color-sidebar-ring: var(--sidebar-ring);
 
@@ -74,34 +87,45 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --foreground: 220 13% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 220 13% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 220 13% 9%;
 
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 220 13% 9%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 60 13% 95.5%;
+    --secondary-foreground: 220 13% 9%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 60 13% 95.5%;
+    --muted-foreground: 216.9 7% 36.3%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 60 13% 95.5%;
+    --accent-foreground: 220 13% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+    --border: 60 9.4% 87.5%;
+    --input: 60 9.4% 87.5%;
+    --ring: 220 13% 9%;
 
     --radius: 0.5rem;
+
+    /* Visual system (docs/design/frontend-overhaul.md). Hex because they are used as plain colours. */
+    --highlight: #ffe14d;
+    --highlight-foreground: #14161a;
+    --foreground-soft: #3a3e45;
+    --dashed: #8a8a84;
+    --chart-1: 220 13% 9%;
+    --chart-2: 262 70% 40%;
+    --chart-3: 216.9 7% 36.3%;
+    --chart-4: 262 80% 70%;
+    --chart-5: 60 5% 80%;
 
     /* Budget explorer (docs/design/budget-explorer.md P6): slate-teal for utgifter, sand for inkomster. */
     --budget-out-1: 187 30% 82%;
@@ -112,39 +136,49 @@
     --budget-in-2: 35 30% 74%;
     --budget-in-3: 35 30% 88%;
     --budget-in-4: 35 30% 78%;
-    --budget-box-foreground: 240 10% 3.9%;
+    --budget-box-foreground: 220 13% 9%;
     --budget-hatch: 240 4% 46%;
-    --budget-other: 240 4.8% 95.9%;
+    --budget-other: 60 13% 95.5%;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 220 15% 7.8%;
+    --foreground: 60 13.3% 94.1%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 220 15% 7.8%;
+    --card-foreground: 60 13.3% 94.1%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 15% 7.8%;
+    --popover-foreground: 60 13.3% 94.1%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 60 13.3% 94.1%;
+    --primary-foreground: 220 15% 7.8%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 217.5 12.9% 12.2%;
+    --secondary-foreground: 60 13.3% 94.1%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 217.5 12.9% 12.2%;
+    --muted-foreground: 218.2 6.8% 68.4%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 217.5 12.9% 12.2%;
+    --accent-foreground: 60 13.3% 94.1%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 220 9.3% 19%;
+    --input: 220 9.3% 19%;
+    --ring: 218.2 6.8% 68.4%;
+
+    --highlight: #ffe14d;
+    --highlight-foreground: #14161a;
+    --foreground-soft: #c9ccd1;
+    --dashed: #6b6f76;
+    --chart-1: 60 13.3% 94.1%;
+    --chart-2: 255 92% 76%;
+    --chart-3: 218.2 6.8% 68.4%;
+    --chart-4: 262 70% 45%;
+    --chart-5: 220 9.3% 28%;
 
     --budget-out-1: 187 30% 22%;
     --budget-out-2: 187 26% 28%;
@@ -154,9 +188,9 @@
     --budget-in-2: 35 25% 28%;
     --budget-in-3: 35 25% 18%;
     --budget-in-4: 35 25% 25%;
-    --budget-box-foreground: 0 0% 98%;
+    --budget-box-foreground: 60 13.3% 94.1%;
     --budget-hatch: 240 5% 65%;
-    --budget-other: 240 3.7% 15.9%;
+    --budget-other: 217.5 12.9% 12.2%;
   }
   * {
     @apply border-border outline-ring/50;
@@ -166,6 +200,11 @@
   }
   html {
     @apply font-sans;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
   }
 }
 
@@ -185,4 +224,198 @@
     hsl(var(--budget-hatch) / 0.35) 0 2px,
     transparent 2px 6px
   );
+}
+
+/*
+ * Assessment and agreement badge colours (docs/design/frontend-overhaul.md). Contrast of every
+ * fg/bg pair is checked in src/lib/contrast.test.ts, which parses this file.
+ */
+:root {
+  --verdict-unassessed-bg: transparent;
+  --verdict-unassessed-fg: #3a3e45;
+  --verdict-unassessed-border: #8a8a84;
+  --verdict-no_evidence-bg: #f5f5f2;
+  --verdict-no_evidence-fg: #3a3e45;
+  --verdict-no_evidence-border: #8a8a84;
+  --verdict-not_assessable-bg: #ecece8;
+  --verdict-not_assessable-fg: #3a3e45;
+  --verdict-not_assessable-border: #ecece8;
+  --verdict-in_progress-bg: #dbeafe;
+  --verdict-in_progress-fg: #1e3a8a;
+  --verdict-in_progress-border: #dbeafe;
+  --verdict-fulfilled-bg: #166534;
+  --verdict-fulfilled-fg: #ffffff;
+  --verdict-fulfilled-border: #166534;
+  --verdict-partially_fulfilled-bg: #d9f99d;
+  --verdict-partially_fulfilled-fg: #365314;
+  --verdict-partially_fulfilled-border: #d9f99d;
+  --verdict-unfulfilled-bg: #ffedd5;
+  --verdict-unfulfilled-fg: #7c2d12;
+  --verdict-unfulfilled-border: #ffedd5;
+  --verdict-abandoned-bg: #fef3c7;
+  --verdict-abandoned-fg: #78350f;
+  --verdict-abandoned-border: #fef3c7;
+  --verdict-broken-bg: #991b1b;
+  --verdict-broken-fg: #ffffff;
+  --verdict-broken-border: #991b1b;
+  --agreement-included-bg: #5b21b6;
+  --agreement-included-border: #5b21b6;
+  --agreement-included-fg: #ffffff;
+  --agreement-strengthened-bg: #5b21b6;
+  --agreement-strengthened-border: #5b21b6;
+  --agreement-strengthened-fg: #ffffff;
+  --agreement-weakened-bg: #ede9fe;
+  --agreement-weakened-border: #7c3aed;
+  --agreement-weakened-fg: #3b0764;
+  --agreement-contradicted-bg: #ede9fe;
+  --agreement-contradicted-border: #7c3aed;
+  --agreement-contradicted-fg: #3b0764;
+  --agreement-not_addressed-bg: transparent;
+  --agreement-not_addressed-border: #c4b5fd;
+  --agreement-not_addressed-fg: #4c1d95;
+}
+
+.dark {
+  --verdict-unassessed-bg: transparent;
+  --verdict-unassessed-fg: #c9ccd1;
+  --verdict-unassessed-border: #6b6f76;
+  --verdict-no_evidence-bg: #1b1e23;
+  --verdict-no_evidence-fg: #c9ccd1;
+  --verdict-no_evidence-border: #6b6f76;
+  --verdict-not_assessable-bg: #2c2f35;
+  --verdict-not_assessable-fg: #d4d6da;
+  --verdict-not_assessable-border: #2c2f35;
+  --verdict-in_progress-bg: #172554;
+  --verdict-in_progress-fg: #bfdbfe;
+  --verdict-in_progress-border: #172554;
+  --verdict-fulfilled-bg: #052e16;
+  --verdict-fulfilled-fg: #bbf7d0;
+  --verdict-fulfilled-border: #052e16;
+  --verdict-partially_fulfilled-bg: #1a2e05;
+  --verdict-partially_fulfilled-fg: #d9f99d;
+  --verdict-partially_fulfilled-border: #1a2e05;
+  --verdict-unfulfilled-bg: #431407;
+  --verdict-unfulfilled-fg: #fed7aa;
+  --verdict-unfulfilled-border: #431407;
+  --verdict-abandoned-bg: #451a03;
+  --verdict-abandoned-fg: #fde68a;
+  --verdict-abandoned-border: #451a03;
+  --verdict-broken-bg: #450a0a;
+  --verdict-broken-fg: #fecaca;
+  --verdict-broken-border: #450a0a;
+  --agreement-included-bg: #5b21b6;
+  --agreement-included-border: #5b21b6;
+  --agreement-included-fg: #ffffff;
+  --agreement-strengthened-bg: #5b21b6;
+  --agreement-strengthened-border: #5b21b6;
+  --agreement-strengthened-fg: #ffffff;
+  --agreement-weakened-bg: #2e1065;
+  --agreement-weakened-border: #a78bfa;
+  --agreement-weakened-fg: #ede9fe;
+  --agreement-contradicted-bg: #2e1065;
+  --agreement-contradicted-border: #a78bfa;
+  --agreement-contradicted-fg: #ede9fe;
+  --agreement-not_addressed-bg: transparent;
+  --agreement-not_addressed-border: #c4b5fd;
+  --agreement-not_addressed-fg: #ddd6fe;
+}
+
+.verdict-badge,
+.agreement-badge {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1;
+  border-width: 1px;
+  border-style: solid;
+}
+.verdict-badge {
+  border-radius: 9999px;
+}
+.agreement-badge {
+  border-radius: 0;
+  border-width: 2px;
+}
+.verdict-badge[data-verdict="unassessed"],
+.verdict-badge[data-verdict="no_evidence"],
+.agreement-badge[data-outcome="contradicted"] {
+  border-style: dashed;
+}
+.verdict-badge[data-verdict="unassessed"] {
+  background-color: var(--verdict-unassessed-bg);
+  color: var(--verdict-unassessed-fg);
+  border-color: var(--verdict-unassessed-border);
+}
+.verdict-badge[data-verdict="no_evidence"] {
+  background-color: var(--verdict-no_evidence-bg);
+  color: var(--verdict-no_evidence-fg);
+  border-color: var(--verdict-no_evidence-border);
+}
+.verdict-badge[data-verdict="not_assessable"] {
+  background-color: var(--verdict-not_assessable-bg);
+  color: var(--verdict-not_assessable-fg);
+  border-color: var(--verdict-not_assessable-border);
+}
+.verdict-badge[data-verdict="in_progress"] {
+  background-color: var(--verdict-in_progress-bg);
+  color: var(--verdict-in_progress-fg);
+  border-color: var(--verdict-in_progress-border);
+}
+.verdict-badge[data-verdict="fulfilled"] {
+  background-color: var(--verdict-fulfilled-bg);
+  color: var(--verdict-fulfilled-fg);
+  border-color: var(--verdict-fulfilled-border);
+}
+.verdict-badge[data-verdict="partially_fulfilled"] {
+  background-color: var(--verdict-partially_fulfilled-bg);
+  color: var(--verdict-partially_fulfilled-fg);
+  border-color: var(--verdict-partially_fulfilled-border);
+}
+.verdict-badge[data-verdict="unfulfilled"] {
+  background-color: var(--verdict-unfulfilled-bg);
+  color: var(--verdict-unfulfilled-fg);
+  border-color: var(--verdict-unfulfilled-border);
+}
+.verdict-badge[data-verdict="abandoned"] {
+  background-color: var(--verdict-abandoned-bg);
+  color: var(--verdict-abandoned-fg);
+  border-color: var(--verdict-abandoned-border);
+}
+.verdict-badge[data-verdict="broken"] {
+  background-color: var(--verdict-broken-bg);
+  color: var(--verdict-broken-fg);
+  border-color: var(--verdict-broken-border);
+}
+.agreement-badge[data-outcome="included"] {
+  background-color: var(--agreement-included-bg);
+  color: var(--agreement-included-fg);
+  border-color: var(--agreement-included-border);
+}
+.agreement-badge[data-outcome="strengthened"] {
+  background-color: var(--agreement-strengthened-bg);
+  color: var(--agreement-strengthened-fg);
+  border-color: var(--agreement-strengthened-border);
+}
+.agreement-badge[data-outcome="weakened"] {
+  background-color: var(--agreement-weakened-bg);
+  color: var(--agreement-weakened-fg);
+  border-color: var(--agreement-weakened-border);
+}
+.agreement-badge[data-outcome="contradicted"] {
+  background-color: var(--agreement-contradicted-bg);
+  color: var(--agreement-contradicted-fg);
+  border-color: var(--agreement-contradicted-border);
+}
+.agreement-badge[data-outcome="not_addressed"] {
+  background-color: var(--agreement-not_addressed-bg);
+  color: var(--agreement-not_addressed-fg);
+  border-color: var(--agreement-not_addressed-border);
+}
+
+/* Reviewer's highlighter: quotes and the logo word. Ink stays dark in both themes. */
+.highlight {
+  background-color: var(--highlight);
+  color: var(--highlight-foreground);
 }

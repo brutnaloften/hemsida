@@ -1,8 +1,7 @@
 import { useMemo, useState } from 'react';
-import { Badge } from '@/components/ui/badge';
+import { VerdictBadge } from '@/components/ui/verdict-badge';
 import { Input } from '@/components/ui/input';
 import { VERDICTS, VERDICT_LABELS } from '@/schema/promise';
-import { VERDICT_STYLES } from '@/lib/promise-labels';
 import { filterPromises, type PartyPromise } from '@/lib/party-stats';
 
 const PAGE_SIZE = 40;
@@ -94,9 +93,7 @@ export default function PartyPromiseList({
               </a>
               <div className="text-xs text-muted-foreground">{p.area}</div>
             </div>
-            <Badge className={`shrink-0 self-start ${VERDICT_STYLES[p.verdict.value]}`}>
-              {VERDICT_LABELS[p.verdict.value]}
-            </Badge>
+            <VerdictBadge verdict={p.verdict.value} className="self-start" />
           </li>
         ))}
         {visible.length === 0 && (
