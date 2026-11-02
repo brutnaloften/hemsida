@@ -93,7 +93,7 @@ const signatories = source.parties;
                       <p class="text-muted-foreground">Motsvarande vallöften</p>
                       <ul class="mt-1 space-y-1">
                         {point.matched.map((m) => (
-                          <li class="flex flex-wrap items-start gap-x-2 gap-y-1">
+                          <li class="flex items-start gap-x-2 gap-y-1 max-sm:flex-wrap">
                             <span class="flex shrink-0 gap-1">
                               {m.parties.map((party) => (
                                 <a href={partyHref(party)} aria-label={`${party} ${PARTY_NAMES[party as keyof typeof PARTY_NAMES] ?? party}`}>
@@ -101,7 +101,7 @@ const signatories = source.parties;
                                 </a>
                               ))}
                             </span>
-                            <a href={promiseHref(m.id)} class="underline underline-offset-2">{m.title}</a>
+                            <a href={promiseHref(m.id)} class="min-w-0 underline underline-offset-2">{m.title}</a>
                             <AgreementBadge outcome={m.outcome} source={source} />
                           </li>
                         ))}
@@ -137,7 +137,7 @@ const signatories = source.parties;
                 </h3>
                 <ul class="divide-y">
                   {group.items.map((p) => (
-                    <li class="flex flex-wrap items-start gap-x-2 gap-y-1 py-2">
+                    <li class="flex items-start gap-x-2 gap-y-1 max-sm:flex-wrap py-2">
                       <span class="flex shrink-0 gap-1">
                         {p.parties.map((party) => (
                           <a href={partyHref(party)} aria-label={`${party} ${PARTY_NAMES[party as keyof typeof PARTY_NAMES] ?? party}`}>
@@ -145,7 +145,7 @@ const signatories = source.parties;
                           </a>
                         ))}
                       </span>
-                      <a href={promiseHref(p.id)} class="underline underline-offset-2">{p.title}</a>
+                      <a href={promiseHref(p.id)} class="min-w-0 underline underline-offset-2">{p.title}</a>
                     </li>
                   ))}
                 </ul>

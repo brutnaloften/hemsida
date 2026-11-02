@@ -108,7 +108,10 @@ const keyList = [
               <dt class="w-24 shrink-0 text-sm font-semibold">{g.label}</dt>
               <dd class="flex flex-wrap gap-1.5">
                 {g.parties.map((party) => (
-                  <PartyChip party={party} role={g.role} size="inline" aria-label={`${party} ${partyName(party)}`} title={partyName(party)} />
+                  <span title={partyName(party)}>
+                    <PartyChip party={party} role={g.role} size="inline" />
+                    <span class="sr-only">{partyName(party)}</span>
+                  </span>
                 ))}
               </dd>
             </div>
@@ -225,11 +228,11 @@ const keyList = [
         {
           [
             { title: 'Löftet', text: 'Partiet lovar något i sitt valmanifest.' },
-            { title: 'Överenskommelsen', note: 'när det finns', text: 'Regeringsunderlaget kan skriva ned vad som gäller i en överenskommelse.' },
+            { title: 'Överenskommelsen', agreementStep: true, note: 'när det finns', text: 'Regeringsunderlaget kan skriva ned vad som gäller i en överenskommelse.' },
             { title: 'Riksdagen', text: 'Direktiv, utredningar, propositioner, betänkanden och lagar.' },
             { title: 'Bedömningen', text: 'Vi bedömer löftet mot beläggen och motiverar bedömningen.' },
           ]
-            .filter((s) => model.agreements.length > 0 || s.title !== 'Överenskommelsen')
+            .filter((s) => model.agreements.length > 0 || !s.agreementStep)
             .map((s, i) => (
             <li class="rounded-lg border bg-background p-4">
               <span class="font-mono text-sm text-muted-foreground">{i + 1}</span>
