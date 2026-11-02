@@ -1,14 +1,21 @@
 ---
 import ThemeToggle from './ThemeToggle';
+import { getDefaultTerm } from '@/lib/term-data';
+import { termPagePath } from '@/lib/terms';
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
+const term = await getDefaultTerm();
 const links = [
-  { href: `${base}partier`, label: 'Partier' },
-  { href: `${base}budget/`, label: 'Budget' },
-  { href: `${base}om-metoden`, label: 'Om metoden' },
-  { href: `${base}search`, label: 'Sök' },
+  { href: `${base}${termPagePath('partier', term)}`, label: 'Partier', section: 'partier' },
+  { href: `${base}${termPagePath('lofter', term)}`, label: 'Löften', section: 'lofter' },
+  { href: `${base}budget/`, label: 'Budget', section: 'budget' },
+  { href: `${base}om-metoden`, label: 'Om metoden', section: 'om-metoden' },
 ];
+// Path segments after the base, e.g. ['2022-2026', 'partier', 'm'] or ['lofte', 'x'].
+const segments = Astro.url.pathname.slice(base.length - 1).split('/').filter(Boolean);
+const isCurrent = (section: string) =>
+  segments.includes(section) || (section === 'lofter' && segments[0] === 'lofte');
 ---
 
 <!-- Push content below fixed header -->
@@ -23,7 +30,11 @@ const links = [
         {
           links.map((l) => (
             <li>
-              <a href={l.href} class="text-sm whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors">
+              <a
+                href={l.href}
+                aria-current={isCurrent(l.section) ? 'page' : undefined}
+                class="text-sm whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors aria-[current=page]:text-foreground aria-[current=page]:font-medium aria-[current=page]:underline aria-[current=page]:decoration-[3px] aria-[current=page]:underline-offset-8"
+              >
                 {l.label}
               </a>
             </li>
@@ -53,7 +64,7 @@ const links = [
       {
         links.map((l) => (
           <li>
-            <a href={l.href} class="block py-3 text-base text-foreground">
+            <a href={l.href} aria-current={isCurrent(l.section) ? 'page' : undefined} class="block py-3 text-base text-foreground aria-[current=page]:font-semibold">
               {l.label}
             </a>
           </li>

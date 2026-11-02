@@ -1,0 +1,10 @@
+---
+import PartyPage from '@/components/pages/PartyPage.astro';
+import { termPartyPaths } from '@/lib/term-paths';
+
+export const getStaticPaths = termPartyPaths;
+const { term } = Astro.params;
+const { party } = Astro.props;
+---
+
+<PartyPage term={term!} party={party} />

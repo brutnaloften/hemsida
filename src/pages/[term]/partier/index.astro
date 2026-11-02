@@ -1,0 +1,9 @@
+---
+import PartierPage from '@/components/pages/PartierPage.astro';
+import { termPaths } from '@/lib/term-paths';
+
+export const getStaticPaths = termPaths;
+const { term } = Astro.params;
+---
+
+<PartierPage term={term!} />

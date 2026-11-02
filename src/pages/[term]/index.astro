@@ -1,0 +1,9 @@
+---
+import StartPage from '@/components/pages/StartPage.astro';
+import { termPaths } from '@/lib/term-paths';
+
+export const getStaticPaths = termPaths;
+const { term } = Astro.params;
+---
+
+<StartPage term={term!} />

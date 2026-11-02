@@ -1,0 +1,9 @@
+---
+import LofterPage from '@/components/pages/LofterPage.astro';
+import { termPaths } from '@/lib/term-paths';
+
+export const getStaticPaths = termPaths;
+const { term } = Astro.params;
+---
+
+<LofterPage term={term!} />

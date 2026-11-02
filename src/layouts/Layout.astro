@@ -1,6 +1,8 @@
 ---
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import PeriodBar from '../components/PeriodBar.astro';
+import type { PageKind } from '../lib/terms';
 import '../styles/globals.css';
 
 interface Props {
@@ -8,10 +10,13 @@ interface Props {
   description?: string;
   /** Absolute canonical URL, for pages that are reachable under more than one path. */
   canonical?: string;
+  /** Renders the period bar under the header; set on term-dependent pages only. */
+  period?: { kind: PageKind; term: string; param?: string; subtitles?: Record<string, string> };
 }
 
 const {
   canonical,
+  period,
   title = 'Brutna Löften',
   description = 'En databas som spårar och analyserar politiska löften i Sverige. Se vilka politiker som lever upp till sina ord.',
 } = Astro.props;
@@ -41,6 +46,7 @@ const {
   <body>
     <div class="flex flex-col min-h-screen">
       <Navbar />
+      {period && <PeriodBar {...period} />}
       <main class="flex-1">
         <slot />
       </main>
