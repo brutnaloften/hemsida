@@ -12,6 +12,7 @@ import {
   type PromiseRecord,
   type RiksdagEvidence,
   type Source,
+  type VoteValue,
 } from '@/schema/promise';
 
 /** Riksdag pipeline stages in order. `sou` and `ds` share one stage; `mot` sits outside it. */
@@ -127,38 +128,34 @@ interface Linkable {
 }
 
 /**
- * Promises connected through agreement evidence (either direction) that involve at least one party
- * the promise does not belong to. Empty when the data does not link anything, in which case the
- * page omits the block.
+ * Promises of other parties that the agreement links to the same agreement point as this promise
+ * (e.g. two parties' manifesto promises that both fed into one Tidöavtalet point). `reverse` maps
+ * an agreement point id to the promises linking to it (see buildReverseIndex). Only promises with
+ * at least one party this promise lacks count. Empty means the page omits the block.
  */
 export function relatedFromOtherParties<T extends Linkable>(
   promise: T,
-  byId: ReadonlyMap<string, T>,
   reverse: ReadonlyMap<string, readonly T[]>,
 ): T[] {
   const found = new Map<string, T>();
   for (const e of promise.evidence) {
     if (e.kind !== 'agreement') continue;
-    for (const id of e.promises) {
-      const p = byId.get(id);
-      if (p) found.set(p.id, p);
+    for (const point of e.promises) {
+      for (const p of reverse.get(point) ?? []) found.set(p.id, p);
     }
   }
-  for (const p of reverse.get(promise.id) ?? []) found.set(p.id, p);
   found.delete(promise.id);
   return [...found.values()]
     .filter((p) => p.parties.some((party) => !promise.parties.includes(party)))
     .sort((a, b) => a.title.localeCompare(b.title, 'sv'));
 }
 
-export const VOTE_LABELS = {
+export const VOTE_LABELS: Record<VoteValue, string> = {
   yes: 'Ja',
   no: 'Nej',
   abstain: 'Avstår',
   absent: 'Frånvarande',
-} as const;
-
-export type VoteValue = keyof typeof VOTE_LABELS;
+};
 
 /** Vote rows in fixed party order; parties without a recorded vote are left out. */
 export function voteRows(votes: Partial<Record<(typeof PARTIES)[number], VoteValue>>): {

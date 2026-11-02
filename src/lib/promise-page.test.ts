@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Evidence, Source } from '@/schema/promise';
+import { buildReverseIndex } from '@/lib/agreement-index';
 import {
   buildTimelineSteps,
   historyUrl,
@@ -143,20 +144,25 @@ describe('relatedFromOtherParties', () => {
     evidence,
   });
   const m = mk('m-a', ['M'], [agreement]);
-  const tido = mk('tido-x', ['M', 'KD', 'SD', 'L']);
-  const byId = new Map([m, tido].map((p) => [p.id, p]));
-  it('finds the agreement promise from the manifesto promise', () => {
-    expect(relatedFromOtherParties(m, byId, new Map()).map((p) => p.id)).toEqual(['tido-x']);
+  const kd = mk('kd-a', ['KD'], [agreement]);
+  const m2 = mk('m-b', ['M'], [agreement]);
+  const reverse = new Map([['tido-x', [m, kd, m2]]]);
+  it('finds other parties promises linked to the same agreement point', () => {
+    expect(relatedFromOtherParties(m, reverse).map((p) => p.id)).toEqual(['kd-a']);
   });
-  it('is empty when the reverse link has no other party', () => {
-    expect(
-      relatedFromOtherParties(tido, byId, new Map([['tido-x', [m]]])).map((p) => p.id),
-    ).toEqual([]);
+  it('is empty without agreement links or other parties', () => {
+    expect(relatedFromOtherParties(mk('s', ['S']), reverse)).toEqual([]);
+    expect(relatedFromOtherParties(m, new Map([['tido-x', [m, m2]]]))).toEqual([]);
   });
-  it('is empty with no links or when the linked promise has the same parties', () => {
-    expect(relatedFromOtherParties(mk('a', ['S']), byId, new Map())).toEqual([]);
-    const same = mk('s', ['M', 'KD', 'SD', 'L'], [agreement]);
-    expect(relatedFromOtherParties(same, new Map([[tido.id, tido]]), new Map())).toEqual([]);
+});
+
+describe('basedOn via buildReverseIndex', () => {
+  it('lists the manifesto promises behind an agreement point, and nothing for a manifesto promise', () => {
+    const point = { id: 'tido-x', title: 'T', parties: ['M'], evidence: [] };
+    const m = { id: 'm-a', title: 'A', parties: ['M'], evidence: [agreement] };
+    const index = buildReverseIndex([point, m]);
+    expect(index.get('tido-x')?.map((p) => p.id)).toEqual(['m-a']);
+    expect(index.get('m-a')).toBeUndefined();
   });
 });
 

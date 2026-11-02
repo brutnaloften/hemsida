@@ -37,7 +37,8 @@ export const getStaticPaths = (async () => {
       sources,
       titles,
       linkedTimelines: linkedRiksdagTimelines(promise, byId),
-      related: relatedFromOtherParties(promise, byId, reverse).map((p) => ({
+      basedOn: (reverse.get(promise.id) ?? []).map((p) => ({ id: p.id, title: p.title })),
+      related: relatedFromOtherParties(promise, reverse).map((p) => ({
         id: p.id,
         title: p.title,
         parties: p.parties,
@@ -46,7 +47,7 @@ export const getStaticPaths = (async () => {
   }));
 }) satisfies GetStaticPaths;
 
-const { promise, term, sources, titles, linkedTimelines, related } = Astro.props;
+const { promise, term, sources, titles, linkedTimelines, basedOn, related } = Astro.props;
 const source = sources.get(promise.source.id);
 const links = source ? sourceLinks(source) : undefined;
 const { verdict } = promise;
@@ -55,6 +56,10 @@ const link = 'underline underline-offset-2';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const mainParty = promise.parties[0];
 const backHref = term && mainParty ? termPagePath('party', term, mainParty) : 'search';
+const agreementSource = promise.evidence.flatMap((e) =>
+  e.kind === 'agreement' ? [sources.get(e.source)] : [],
+)[0];
+const agreementLabel = agreementSource ? agreementName(agreementSource) : 'överenskommelsen';
 const history = historyUrl(term, promise.id);
 const assessed = verdict.value !== 'unassessed';
 const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-foreground';
@@ -147,7 +152,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
         <section class="mt-10" aria-labelledby="tidslinje">
           <h2 id="tidslinje" class="font-serif text-2xl font-semibold">Vad har hänt?</h2>
           <p class="mt-2 text-sm text-muted-foreground">
-            Belägg i tidsordning. Belägg är fakta ur dokument; bedömningen ovan är vår tolkning av dem.
+            Belägg i den ordning ett löfte normalt går genom riksdagen. Belägg är fakta ur dokument; bedömningen ovan är vår tolkning av dem.
           </p>
           <ol class="mt-6 ml-1.5 border-l-2 border-foreground/80">
             {
@@ -248,7 +253,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
         {
           linkedTimelines.length > 0 && (
             <section class="mt-10">
-              <h2 class="font-serif text-2xl font-semibold">Hur det gick i riksdagen (via Tidöavtalet)</h2>
+              <h2 class="font-serif text-2xl font-semibold">Hur det gick i riksdagen (via {agreementLabel})</h2>
               <p class="mt-2 text-sm text-muted-foreground">
                 Dokument som hör till de avtalslöften som det här löftet motsvarar.
               </p>
@@ -269,6 +274,22 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                   </ol>
                 </div>
               ))}
+            </section>
+          )
+        }
+        {
+          basedOn.length > 0 && (
+            <section class="mt-10">
+              <h2 class="font-serif text-2xl font-semibold">Vallöften som avtalet bygger på</h2>
+              <ul class="mt-2 list-disc pl-5">
+                {basedOn.map((p) => (
+                  <li>
+                    <a href={`${base}${promisePath(p.id)}`} class={link}>
+                      {p.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </section>
           )
         }
