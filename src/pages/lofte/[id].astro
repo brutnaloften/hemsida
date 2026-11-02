@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import type { GetStaticPaths } from 'astro';
 import Layout from '../../layouts/Layout.astro';
 import { Badge } from '@/components/ui/badge';
-import { AGREEMENT_OUTCOME_LABELS, VERDICT_LABELS } from '@/schema/promise';
+import { agreementName, agreementOutcomeLabel, VERDICT_LABELS } from '@/schema/promise';
 import RiksdagEntry from '@/components/RiksdagEntry.astro';
 import BudgetEntry from '@/components/BudgetEntry.astro';
 import { AGREEMENT_OUTCOME_STYLE, TYPE_LABELS, VERDICT_STYLES, partyName } from '@/lib/promise-labels';
@@ -119,14 +119,14 @@ const link = 'underline underline-offset-2';
                   <div class="font-medium">
                     {sources.get(e.source)?.title ?? e.source}{" "}
                     <Badge variant="outline" className={AGREEMENT_OUTCOME_STYLE} data-outcome={e.outcome}>
-                      {AGREEMENT_OUTCOME_LABELS[e.outcome]}
+                      {agreementOutcomeLabel(e.outcome, sources.get(e.source) ?? { title: e.source })}
                     </Badge>
                   </div>
                   {e.note ? (
                     <p class="text-sm">{e.note}</p>
                   ) : (
                     e.outcome === "not_addressed" && (
-                      <p class="text-sm text-muted-foreground">Löftet finns inte med i avtalet.</p>
+                      <p class="text-sm text-muted-foreground">Löftet finns inte med i {agreementName(sources.get(e.source) ?? { title: e.source })}.</p>
                     )
                   )}
                   {e.promises.length > 0 && (

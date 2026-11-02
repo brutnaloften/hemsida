@@ -66,14 +66,30 @@ export const AGREEMENT_OUTCOMES = [
   'not_addressed',
 ] as const;
 
-/** Swedish display labels for agreement outcomes. */
-export const AGREEMENT_OUTCOME_LABELS: Record<(typeof AGREEMENT_OUTCOMES)[number], string> = {
-  included: 'Med i avtalet',
-  weakened: 'Urvattnat',
-  strengthened: 'Skärpt',
-  contradicted: 'Motsägs',
-  not_addressed: 'Saknas i avtalet',
+/**
+ * Swedish outcome phrases, completed with the agreement's name by agreementOutcomeLabel
+ * ("Med i Tidöavtalet", "Motsägs av Tidöavtalet"). The preposition differs per outcome.
+ */
+export const AGREEMENT_OUTCOME_PHRASES: Record<AgreementOutcome, string> = {
+  included: 'Med i',
+  weakened: 'Urvattnat i',
+  strengthened: 'Skärpt i',
+  contradicted: 'Motsägs av',
+  not_addressed: 'Saknas i',
 };
+
+/** The name used for an agreement in badges and headers: shortTitle, falling back to title. */
+export function agreementName(source: { shortTitle?: string; title: string }): string {
+  return source.shortTitle ?? source.title;
+}
+
+/** Badge label for an outcome in a given agreement, e.g. "Saknas i Tidöavtalet". */
+export function agreementOutcomeLabel(
+  outcome: AgreementOutcome,
+  source: { shortTitle?: string; title: string },
+): string {
+  return `${AGREEMENT_OUTCOME_PHRASES[outcome]} ${agreementName(source)}`;
+}
 
 const agreementEvidenceSchema = z
   .object({
@@ -304,17 +320,29 @@ export const promiseSchema = z
     checkVerdictEvidence(p, ctx);
   });
 
-export const sourceSchema = z.object({
-  id: slug,
-  title: z.string().min(1),
-  kind: z.enum(['government_agreement', 'manifesto', 'speech', 'debate', 'other']),
-  parties: z.array(partySchema).min(1),
-  date: isoDate,
-  url: z.url(),
-  archive: z.url(),
-  /** Date the original `url` was found dead (404/gone); the archive copy is then preferred. */
-  urlDeadAsOf: isoDate.optional(),
-});
+export const sourceSchema = z
+  .object({
+    id: slug,
+    title: z.string().min(1),
+    /** Short name for badges and column headers, e.g. "Tidöavtalet". Required for government agreements. */
+    shortTitle: z.string().min(1).optional(),
+    kind: z.enum(['government_agreement', 'manifesto', 'speech', 'debate', 'other']),
+    parties: z.array(partySchema).min(1),
+    date: isoDate,
+    url: z.url(),
+    archive: z.url(),
+    /** Date the original `url` was found dead (404/gone); the archive copy is then preferred. */
+    urlDeadAsOf: isoDate.optional(),
+  })
+  .superRefine((s, ctx) => {
+    if (s.kind === 'government_agreement' && s.shortTitle === undefined) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['shortTitle'],
+        message: 'shortTitle is required for kind government_agreement',
+      });
+    }
+  });
 
 /** True for evidence that is a Riksdag document (not agreement or budget evidence). */
 export function isRiksdagEvidence(e: Evidence): e is RiksdagEvidence {

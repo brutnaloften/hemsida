@@ -1,11 +1,15 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import {
   AGREEMENT_OUTCOMES,
-  AGREEMENT_OUTCOME_LABELS,
+  agreementOutcomeLabel,
   VERDICTS,
   VERDICT_LABELS,
 } from "../schema/promise";
+
+const tido = (await getCollection("sources")).map((e) => e.data).find((s) => s.id === "tidoavtalet");
+if (!tido) throw new Error("source tidoavtalet not found");
 
 // Verdict descriptions follow the definitions in docs/data-model.md.
 const verdictDescriptions: Record<(typeof VERDICTS)[number], string> = {
@@ -104,7 +108,7 @@ const stages = [
         Löften som Moderaterna, Kristdemokraterna och Liberalerna gav i sina valmanifest inför valet 2022
         jämförs med Tidöavtalet. För varje manifestlöfte anges hur avtalstexten behandlar det, med någon
         av etiketterna{" "}
-        {AGREEMENT_OUTCOMES.map((o) => `"${AGREEMENT_OUTCOME_LABELS[o]}"`).join(", ")}. Etiketten
+        {AGREEMENT_OUTCOMES.map((o) => `"${agreementOutcomeLabel(o, tido)}"`).join(", ")}. Etiketten
         beskriver enbart vad avtalet säger. Den är ingen bedömning och styr inte bedömningen av löftet.
       </p>
       <p>

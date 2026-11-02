@@ -8,16 +8,18 @@ import { partyName } from '@/lib/promise-labels';
 import PartyOutcomeCounts from '@/components/PartyOutcomeCounts.astro';
 import { agreementOutcomeCounts, areaCounts, partiesWithPromises, promisesForParty, sortByTitle } from '@/lib/party-stats';
 import { promisePath } from '@/lib/timeline';
+import { agreementName } from '@/schema/promise';
 
 export const getStaticPaths = (async () => {
   const all = (await getCollection('promises')).map((e) => e.data);
+  const agreement = (await getCollection('sources')).map((e) => e.data).find((s) => s.id === 'tidoavtalet');
   return partiesWithPromises(all).map((party) => ({
     params: { party: party.toLowerCase() },
-    props: { party, promises: promisesForParty(all, party) },
+    props: { party, promises: promisesForParty(all, party), agreement },
   }));
 }) satisfies GetStaticPaths;
 
-const { party, promises } = Astro.props;
+const { party, promises, agreement } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const rows = sortByTitle(promises).map((p) => ({
   id: p.id,
@@ -43,11 +45,11 @@ const outcome = agreementOutcomeCounts(promises);
       </p>
     </section>
     {
-      outcome.total > 0 && (
+      outcome.total > 0 && agreement && (
         <section class="mt-10">
-          <h2 class="text-xl font-semibold">Valmanifest och Tidöavtalet</h2>
+          <h2 class="text-xl font-semibold">Valmanifest och {agreementName(agreement)}</h2>
           <div class="mt-3">
-            <PartyOutcomeCounts counts={outcome.counts} total={outcome.total} />
+            <PartyOutcomeCounts counts={outcome.counts} total={outcome.total} source={agreement} />
           </div>
         </section>
       )

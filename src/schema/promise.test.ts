@@ -8,7 +8,8 @@ import {
   VERDICTS,
   VERDICT_LABELS,
   AGREEMENT_OUTCOMES,
-  AGREEMENT_OUTCOME_LABELS,
+  agreementOutcomeLabel,
+  agreementName,
 } from '@/schema/promise';
 
 const valid = {
@@ -145,7 +146,9 @@ describe('promiseSchema', () => {
     });
 
     it('has a Swedish label for every outcome', () => {
-      for (const o of AGREEMENT_OUTCOMES) expect(AGREEMENT_OUTCOME_LABELS[o]).toBeTruthy();
+      for (const o of AGREEMENT_OUTCOMES) {
+        expect(agreementOutcomeLabel(o, { shortTitle: 'Tidöavtalet', title: 'x' })).toBeTruthy();
+      }
     });
   });
 
@@ -383,10 +386,31 @@ describe('sources data', () => {
   });
 });
 
+describe('agreementOutcomeLabel', () => {
+  const tido = { shortTitle: 'Tidöavtalet', title: 'Tidöavtalet: Överenskommelse för Sverige' };
+  const fictional = { shortTitle: 'Januariavtalet', title: 'Januariöverenskommelsen' };
+  it('builds all five outcome labels with the agreement name', () => {
+    expect(agreementOutcomeLabel('included', tido)).toBe('Med i Tidöavtalet');
+    expect(agreementOutcomeLabel('weakened', tido)).toBe('Urvattnat i Tidöavtalet');
+    expect(agreementOutcomeLabel('strengthened', tido)).toBe('Skärpt i Tidöavtalet');
+    expect(agreementOutcomeLabel('contradicted', tido)).toBe('Motsägs av Tidöavtalet');
+    expect(agreementOutcomeLabel('not_addressed', tido)).toBe('Saknas i Tidöavtalet');
+  });
+  it('works for another agreement name', () => {
+    expect(agreementOutcomeLabel('included', fictional)).toBe('Med i Januariavtalet');
+    expect(agreementOutcomeLabel('contradicted', fictional)).toBe('Motsägs av Januariavtalet');
+    expect(agreementOutcomeLabel('not_addressed', fictional)).toBe('Saknas i Januariavtalet');
+  });
+  it('falls back to the long title without a shortTitle', () => {
+    expect(agreementName({ title: 'Lång titel' })).toBe('Lång titel');
+  });
+});
+
 describe('sourceSchema', () => {
   const src = {
     id: 'tidoavtalet',
-    title: 'Tidöavtalet',
+    title: 'Tidöavtalet: Överenskommelse för Sverige',
+    shortTitle: 'Tidöavtalet',
     kind: 'government_agreement',
     parties: ['M', 'KD', 'L', 'SD'],
     date: '2022-10-14',
@@ -395,6 +419,11 @@ describe('sourceSchema', () => {
   };
   it('accepts a valid source', () => {
     expect(sourceSchema.safeParse(src).success).toBe(true);
+  });
+  it('requires shortTitle for government agreements only', () => {
+    const { shortTitle: _omit, ...without } = src;
+    expect(sourceSchema.safeParse(without).success).toBe(false);
+    expect(sourceSchema.safeParse({ ...without, kind: 'manifesto' }).success).toBe(true);
   });
   it('accepts an optional urlDeadAsOf date and rejects a malformed one', () => {
     expect(sourceSchema.safeParse({ ...src, urlDeadAsOf: '2026-10-28' }).success).toBe(true);
