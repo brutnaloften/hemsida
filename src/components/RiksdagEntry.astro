@@ -9,7 +9,7 @@ const { entry: e } = Astro.props;
 const link = 'underline underline-offset-2';
 ---
 
-<li>
+<div>
   <p class="text-sm text-muted-foreground">
     {e.date} &middot; {EVIDENCE_KIND_LABELS[e.kind]}
     {e.relevance === "partial" && " (delvis relevant)"}
@@ -21,4 +21,4 @@ const link = 'underline underline-offset-2';
     &ndash; {e.title}
   </p>
   {e.note && <p class="text-sm">{e.note}</p>}
-</li>
+</div>

@@ -50,6 +50,10 @@ export const VERDICT_LABELS: Record<(typeof VERDICTS)[number], string> = {
 /** Evidence kinds in pipeline order (dir -> sou/ds -> prop -> bet -> sfs); mot sits outside it. */
 export const EVIDENCE_KINDS = ['dir', 'sou', 'ds', 'prop', 'bet', 'sfs', 'mot'] as const;
 
+/** How a party voted on a betänkande. */
+export const VOTE_VALUES = ['yes', 'no', 'abstain', 'absent'] as const;
+export type VoteValue = (typeof VOTE_VALUES)[number];
+
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'expected YYYY-MM-DD');
 const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'expected a lowercase slug');
 
@@ -131,7 +135,7 @@ const riksdagEvidenceSchema = z
     url: z.url(),
     relevance: z.enum(['full', 'partial']),
     note: z.string().nullable().default(null),
-    votes: z.partialRecord(partySchema, z.enum(['yes', 'no', 'abstain', 'absent'])).optional(),
+    votes: z.partialRecord(partySchema, z.enum(VOTE_VALUES)).optional(),
   })
   .superRefine((e, ctx) => {
     if (e.votes !== undefined && e.kind !== 'bet') {

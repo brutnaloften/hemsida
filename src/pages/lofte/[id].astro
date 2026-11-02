@@ -2,17 +2,25 @@
 import { getCollection } from 'astro:content';
 import type { GetStaticPaths } from 'astro';
 import Layout from '../../layouts/Layout.astro';
-import { Badge } from '@/components/ui/badge';
 import { VerdictBadge } from '@/components/ui/verdict-badge';
 import { AgreementBadge } from '@/components/ui/agreement-badge';
+import { PartyChip } from '@/components/ui/party-chip';
+import { TimelineMarker } from '@/components/ui/timeline-marker';
 import { agreementName } from '@/schema/promise';
 import RiksdagEntry from '@/components/RiksdagEntry.astro';
 import BudgetEntry from '@/components/BudgetEntry.astro';
 import { TYPE_LABELS, partyName } from '@/lib/promise-labels';
 import { buildReverseIndex, linkedRiksdagTimelines } from '@/lib/agreement-index';
 import { sourceLinks } from '@/lib/source-link';
-import { termOfFilePath, termPagePath } from '@/lib/terms';
-import { isAgreement, isBudget, orderTimeline, promisePath } from '@/lib/timeline';
+import { ROLE_LABELS, termOfFilePath, termPagePath } from '@/lib/terms';
+import { promisePath } from '@/lib/timeline';
+import {
+  buildTimelineSteps,
+  historyUrl,
+  relatedFromOtherParties,
+  suggestSourceUrl,
+  voteRows,
+} from '@/lib/promise-page';
 
 export const getStaticPaths = (async () => {
   const promises = await getCollection('promises');
@@ -30,177 +38,352 @@ export const getStaticPaths = (async () => {
       titles,
       linkedTimelines: linkedRiksdagTimelines(promise, byId),
       basedOn: (reverse.get(promise.id) ?? []).map((p) => ({ id: p.id, title: p.title })),
+      related: relatedFromOtherParties(promise, reverse).map((p) => ({
+        id: p.id,
+        title: p.title,
+        parties: p.parties,
+      })),
     },
   }));
 }) satisfies GetStaticPaths;
 
-const { promise, term, sources, titles, linkedTimelines, basedOn } = Astro.props;
+const { promise, term, sources, titles, linkedTimelines, basedOn, related } = Astro.props;
 const source = sources.get(promise.source.id);
 const links = source ? sourceLinks(source) : undefined;
 const { verdict } = promise;
-const timeline = orderTimeline(promise.evidence);
+const steps = buildTimelineSteps(promise, source);
 const link = 'underline underline-offset-2';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const mainParty = promise.parties[0];
+const backHref = term && mainParty ? termPagePath('party', term, mainParty) : 'search';
+const agreementSource = promise.evidence.flatMap((e) =>
+  e.kind === 'agreement' ? [sources.get(e.source)] : [],
+)[0];
+const agreementLabel = agreementSource ? agreementName(agreementSource) : 'överenskommelsen';
+const history = historyUrl(term, promise.id);
+const assessed = verdict.value !== 'unassessed';
+const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-foreground';
 ---
 
 <Layout title={`${promise.title} — Brutna Löften`} description={promise.description}>
-  <article class="container mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12">
-    <a
-      href={`${base}${term ? termPagePath('lofter', term) : 'search'}`}
-      class="text-sm text-muted-foreground hover:text-foreground">&larr; Sök bland löften</a
-    >
-    <h1 class="mt-4 text-2xl font-bold tracking-tight md:text-4xl">{promise.title}</h1>
-    <div class="mt-3 flex flex-wrap gap-2">
-      {promise.parties.map((p) => <Badge variant="secondary">{partyName(p)}</Badge>)}
-      <Badge variant="outline">{TYPE_LABELS[promise.type]}</Badge>
-      <Badge variant="outline">{promise.area}</Badge>
-      {term && <Badge variant="outline">Period {term}</Badge>}
-      {promise.committee && <Badge variant="outline">Utskott: {promise.committee}</Badge>}
-    </div>
-    <p class="mt-6 text-lg text-muted-foreground">{promise.description}</p>
+  <article class="container mx-auto max-w-5xl px-4 py-8 md:px-6 md:py-12">
+    <a href={`${base}${backHref}`} class="text-sm text-muted-foreground hover:text-foreground">
+      &larr; {term && mainParty ? partyName(mainParty) : 'Sök bland löften'}
+    </a>
 
-    <section class="mt-8">
-      <h2 class="text-xl font-semibold">Källa</h2>
-      {
-        source && links && (
-          <p class="mt-2 text-sm">
-            {links.original ? (
-              <a href={links.original} target="_blank" rel="noopener noreferrer" class={link}>
-                {source.title}
-              </a>
-            ) : (
-              source.title
-            )}
-            {promise.source.page !== undefined && <>, s. {promise.source.page}</>} (
-            <a href={links.archive} target="_blank" rel="noopener noreferrer" class={link}>
-              arkiv
-            </a>
-            )
-          </p>
-        )
-      }
-      {
-        promise.source.quote && (
-          <blockquote class="mt-3 border-l-4 pl-4 italic text-muted-foreground">
-            {promise.source.quote}
-          </blockquote>
-        )
-      }
-    </section>
+    <div class="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
+      <div class="min-w-0">
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted-foreground">
+          {
+            promise.parties.map((p) => (
+              <span class="inline-flex items-center gap-2">
+                <PartyChip party={p} role={promise.roles[p] ?? 'opposition'} size="inline" />
+                <span>{partyName(p)}</span>
+              </span>
+            ))
+          }
+          {source?.kind === 'manifesto' && term && <span>Vallöfte {term.slice(0, 4)}</span>}
+        </div>
+        <h1 class="mt-4 font-serif text-3xl font-bold tracking-tight [overflow-wrap:anywhere] md:text-4xl">
+          {promise.title}
+        </h1>
+        <p class="mt-4 text-lg text-muted-foreground">{promise.description}</p>
 
-    <section class="mt-8">
-      <h2 class="text-xl font-semibold">Bedömning</h2>
-      <div class="mt-2">
-        <VerdictBadge verdict={verdict.value} size="box" />
-      </div>
-      {
-        verdict.value === "unassessed" ? (
-          <p class="mt-3 text-muted-foreground">
-            Det här löftet har inte bedömts ännu.
-            {timeline.length > 0 && " Tidslinjen nedan visar de dokument som hittills kopplats till löftet."}
-          </p>
-        ) : (
-          <>
-            {verdict.reasoning.trim() !== "" && (
-              <p class="mt-3">
-                <span class="font-medium">Motivering:</span> {verdict.reasoning}
-              </p>
-            )}
-            <p class="mt-1 text-sm text-muted-foreground">Bedömt {verdict.date}</p>
-          </>
-        )
-      }
-    </section>
-
-    <section class="mt-8">
-      <h2 class="text-xl font-semibold">Tidslinje</h2>
-      {
-        timeline.length === 0 ? (
-          <p class="mt-2 text-muted-foreground">Inga dokument kopplade till löftet ännu.</p>
-        ) : (
-          <ol class="mt-4 space-y-4 border-l pl-6">
-            {timeline.map((e) =>
-              isAgreement(e) ? (
-                <li>
-                  <p class="text-sm text-muted-foreground">{e.date}</p>
-                  <div class="font-medium">
-                    {sources.get(e.source)?.title ?? e.source}{" "}
-                    <AgreementBadge outcome={e.outcome} source={sources.get(e.source) ?? { title: e.source }} />
-                  </div>
-                  {e.note ? (
-                    <p class="text-sm">{e.note}</p>
-                  ) : (
-                    e.outcome === "not_addressed" && (
-                      <p class="text-sm text-muted-foreground">Löftet finns inte med i {agreementName(sources.get(e.source) ?? { title: e.source })}.</p>
-                    )
+        {
+          promise.source.quote && (
+            <figure class="mt-8">
+              <blockquote class="border-l-4 border-foreground bg-muted/50 py-3 pl-5 pr-4 font-serif text-lg italic">
+                {promise.source.quote}
+              </blockquote>
+              {source && links && (
+                <figcaption class="mt-2 text-sm text-muted-foreground">
+                  {source.title}
+                  {promise.source.page !== undefined && (
+                    <span class="font-mono"> s. {promise.source.page}</span>
                   )}
-                  {e.promises.length > 0 && (
-                    <ul class="mt-1 list-disc pl-5 text-sm">
-                      {e.promises.map((id) => (
-                        <li>
-                          {titles.has(id) ? (
-                            <a href={promisePath(id)} class={link}>
-                              {titles.get(id)}
-                            </a>
-                          ) : (
-                            id
-                          )}
-                        </li>
-                      ))}
-                    </ul>
+                  {' · '}
+                  {links.original && (
+                    <>
+                      <a href={links.original} target="_blank" rel="noopener noreferrer" class={link}>
+                        Originalet (PDF)
+                      </a>
+                      {' · '}
+                    </>
+                  )}
+                  <a href={links.archive} target="_blank" rel="noopener noreferrer" class={link}>
+                    Arkiverad kopia
+                  </a>
+                </figcaption>
+              )}
+            </figure>
+          )
+        }
+
+        <section class="mt-8 border-2 border-foreground p-5" aria-labelledby="bedomning">
+          <div class="flex flex-wrap items-center gap-3">
+            <h2 id="bedomning" class="text-sm font-semibold uppercase tracking-wider">Vår bedömning</h2>
+            <VerdictBadge verdict={verdict.value} size="box" />
+          </div>
+          {
+            assessed ? (
+              <>
+                {verdict.reasoning.trim() !== '' && <p class="mt-3">{verdict.reasoning}</p>}
+                <p class="mt-2 text-sm text-muted-foreground">
+                  Bedömt {verdict.date}
+                  {history && (
+                    <>
+                      {' · '}
+                      <a href={history} target="_blank" rel="noopener noreferrer" class={link}>
+                        Historik
+                      </a>
+                    </>
+                  )}
+                </p>
+              </>
+            ) : (
+              <p class="mt-3">
+                Vi har inte bedömt det här löftet ännu. Bedömningen sätts när riksdagsdokument har
+                kopplats till löftet. Det betyder inte att löftet är uppfyllt eller brutet.
+              </p>
+            )
+          }
+        </section>
+
+        <section class="mt-10" aria-labelledby="tidslinje">
+          <h2 id="tidslinje" class="font-serif text-2xl font-semibold">Vad har hänt?</h2>
+          <p class="mt-2 text-sm text-muted-foreground">
+            Belägg i den ordning ett löfte normalt går genom riksdagen. Belägg är fakta ur dokument; bedömningen ovan är vår tolkning av dem.
+          </p>
+          <ol class="mt-6 ml-1.5 border-l-2 border-foreground/80">
+            {
+              steps.map((s) => (
+                <li class="relative pb-8 pl-6 last:pb-0">
+                  {s.type === 'promise' && (
+                    <>
+                      <TimelineMarker step="promise" class="absolute left-[-1px] top-1 -translate-x-1/2" />
+                      <p class="text-sm text-muted-foreground">
+                        {s.date && <>{s.date} &middot; </>}
+                        {s.label}
+                      </p>
+                      <p class="font-medium">
+                        {s.sourceTitle ?? 'Okänd källa'}
+                        {s.page !== undefined && <span class="font-mono text-sm"> s. {s.page}</span>}
+                      </p>
+                    </>
+                  )}
+                  {s.type === 'agreement' && (
+                    <>
+                      <TimelineMarker step="agreement" class="absolute left-[-1px] top-1 -translate-x-1/2" />
+                      <p class="text-sm text-muted-foreground">{s.evidence.date} &middot; Överenskommelse</p>
+                      <div class="flex flex-wrap items-center gap-2 font-medium">
+                        <span>{sources.get(s.evidence.source)?.title ?? s.evidence.source}</span>
+                        <AgreementBadge
+                          outcome={s.evidence.outcome}
+                          source={sources.get(s.evidence.source) ?? { title: s.evidence.source }}
+                        />
+                      </div>
+                      {s.evidence.note ? (
+                        <p class="mt-1 text-sm">{s.evidence.note}</p>
+                      ) : (
+                        s.evidence.outcome === 'not_addressed' && (
+                          <p class="mt-1 text-sm text-muted-foreground">
+                            Löftet finns inte med i{' '}
+                            {agreementName(sources.get(s.evidence.source) ?? { title: s.evidence.source })}.
+                          </p>
+                        )
+                      )}
+                      {s.evidence.promises.length > 0 && (
+                        <ul class="mt-2 space-y-1 text-sm">
+                          {s.evidence.promises.map((id) => (
+                            <li class="border border-border p-2">
+                              {titles.has(id) ? (
+                                <a href={`${base}${promisePath(id)}`} class={link}>
+                                  {titles.get(id)}
+                                </a>
+                              ) : (
+                                id
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  )}
+                  {s.type === 'document' && (
+                    <>
+                      <TimelineMarker step="document" class="absolute left-[-1px] top-1 -translate-x-1/2" />
+                      <RiksdagEntry entry={s.evidence} />
+                      {s.evidence.kind === 'bet' && s.evidence.votes && (
+                        <details class="mt-2 text-sm">
+                          <summary class="cursor-pointer font-medium">Så röstade partierna</summary>
+                          <table class="mt-2 w-full max-w-xs border-collapse">
+                            <tbody>
+                              {voteRows(s.evidence.votes).map((r) => (
+                                <tr class="border-b border-border">
+                                  <th scope="row" class="py-1 pr-4 text-left font-mono font-medium">
+                                    {r.party}
+                                  </th>
+                                  <td class="py-1">{r.label}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </details>
+                      )}
+                    </>
+                  )}
+                  {s.type === 'budget' && (
+                    <>
+                      <TimelineMarker step="document" class="absolute left-[-1px] top-1 -translate-x-1/2" />
+                      <BudgetEntry entry={s.evidence} />
+                    </>
+                  )}
+                  {s.type === 'missing' && (
+                    <>
+                      <TimelineMarker step="missing" class="absolute left-[-1px] top-1.5 -translate-x-1/2" />
+                      <p class="text-sm italic text-muted-foreground">{s.label}</p>
+                    </>
                   )}
                 </li>
-              ) : isBudget(e) ? (
-                <BudgetEntry entry={e} />
-              ) : (
-                <RiksdagEntry entry={e} />
-              ),
-            )}
+              ))
+            }
           </ol>
-        )
-      }
-    </section>
+        </section>
 
-    {
-      linkedTimelines.length > 0 && (
-        <section class="mt-8">
-          <h2 class="text-xl font-semibold">Hur det gick i riksdagen (via Tidöavtalet)</h2>
-          <p class="mt-2 text-sm text-muted-foreground">
-            Dokument som hör till de avtalslöften som det här löftet motsvarar.
-          </p>
-          {linkedTimelines.map((t) => (
-            <div class="mt-4">
-              <h3 class="font-medium">
-                <a href={promisePath(t.id)} class={link}>
-                  {t.title}
-                </a>
-              </h3>
-              <ol class="mt-3 space-y-4 border-l pl-6">
-                {t.evidence.map((e) => (
-                  <RiksdagEntry entry={e} />
+        {
+          linkedTimelines.length > 0 && (
+            <section class="mt-10">
+              <h2 class="font-serif text-2xl font-semibold">Hur det gick i riksdagen (via {agreementLabel})</h2>
+              <p class="mt-2 text-sm text-muted-foreground">
+                Dokument som hör till de avtalslöften som det här löftet motsvarar.
+              </p>
+              {linkedTimelines.map((t) => (
+                <div class="mt-4">
+                  <h3 class="font-medium">
+                    <a href={`${base}${promisePath(t.id)}`} class={link}>
+                      {t.title}
+                    </a>
+                  </h3>
+                  <ol class="mt-3 ml-1.5 border-l-2 border-foreground/80">
+                    {t.evidence.map((e) => (
+                      <li class="relative pb-6 pl-6 last:pb-0">
+                        <TimelineMarker step="document" class="absolute left-[-1px] top-1 -translate-x-1/2" />
+                        <RiksdagEntry entry={e} />
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              ))}
+            </section>
+          )
+        }
+        {
+          basedOn.length > 0 && (
+            <section class="mt-10">
+              <h2 class="font-serif text-2xl font-semibold">Vallöften som avtalet bygger på</h2>
+              <ul class="mt-2 list-disc pl-5">
+                {basedOn.map((p) => (
+                  <li>
+                    <a href={`${base}${promisePath(p.id)}`} class={link}>
+                      {p.title}
+                    </a>
+                  </li>
                 ))}
-              </ol>
-            </div>
-          ))}
-        </section>
-      )
-    }
+              </ul>
+            </section>
+          )
+        }
+      </div>
 
-    {
-      basedOn.length > 0 && (
-        <section class="mt-8">
-          <h2 class="text-xl font-semibold">Vallöften som avtalet bygger på</h2>
-          <ul class="mt-2 list-disc pl-5">
-            {basedOn.map((p) => (
-              <li>
-                <a href={promisePath(p.id)} class={link}>
-                  {p.title}
-                </a>
-              </li>
-            ))}
-          </ul>
+      <aside class="min-w-0 space-y-6 lg:pt-1" aria-label="Om löftet">
+        <section>
+          <h2 class={sideTitle}>Om löftet</h2>
+          <dl class="mt-2 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-sm">
+            <dt class="text-muted-foreground">Typ</dt>
+            <dd>{TYPE_LABELS[promise.type]}</dd>
+            <dt class="text-muted-foreground">Område</dt>
+            <dd>{promise.area}</dd>
+            {promise.committee && (
+              <>
+                <dt class="text-muted-foreground">Utskott</dt>
+                <dd>{promise.committee}</dd>
+              </>
+            )}
+            {term && (
+              <>
+                <dt class="text-muted-foreground">Period</dt>
+                <dd>{term}</dd>
+              </>
+            )}
+            {mainParty && promise.roles[mainParty] && (
+              <>
+                <dt class="text-muted-foreground">Roll</dt>
+                <dd>{ROLE_LABELS[promise.roles[mainParty]]}</dd>
+              </>
+            )}
+          </dl>
         </section>
-      )
-    }
+
+        <section>
+          <h2 class={sideTitle}>Bedömningshistorik</h2>
+          {
+            verdict.history.length === 0 ? (
+              <p class="mt-2 text-sm text-muted-foreground">Inga tidigare bedömningar.</p>
+            ) : (
+              <ul class="mt-2 space-y-2 text-sm">
+                {[...verdict.history].reverse().map((h) => (
+                  <li>
+                    <span class="text-muted-foreground">{h.date}</span>{' '}
+                    <VerdictBadge verdict={h.value} />
+                  </li>
+                ))}
+              </ul>
+            )
+          }
+          {
+            history && (
+              <p class="mt-2 text-sm">
+                <a href={history} target="_blank" rel="noopener noreferrer" class={link}>
+                  Alla ändringar på GitHub
+                </a>
+              </p>
+            )
+          }
+        </section>
+
+        <section>
+          <h2 class={sideTitle}>Saknas något?</h2>
+          <p class="mt-2 text-sm text-muted-foreground">
+            Känner du till ett dokument som hör till löftet men inte finns med?
+          </p>
+          <a
+            href={suggestSourceUrl(promise)}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-2 inline-flex min-h-11 w-full items-center justify-center border-2 border-foreground px-4 text-sm font-medium hover:bg-muted lg:w-auto"
+          >
+            Föreslå en källa
+          </a>
+        </section>
+
+        {
+          related.length > 0 && (
+            <section>
+              <h2 class={sideTitle}>Liknande löften från andra partier</h2>
+              <ul class="mt-2 space-y-2 text-sm">
+                {related.map((p) => (
+                  <li>
+                    <a href={`${base}${promisePath(p.id)}`} class={link}>
+                      {p.title}
+                    </a>
+                    <span class="font-mono text-xs text-muted-foreground"> {p.parties.join(', ')}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+      </aside>
+    </div>
   </article>
 </Layout>

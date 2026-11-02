@@ -9,7 +9,7 @@ const { entry: e } = Astro.props;
 const change = formatBudgetChange(e);
 ---
 
-<li>
+<div>
   <p class="text-sm text-muted-foreground">
     {e.date} &middot; Budget
     {e.relevance === 'partial' && ' (delvis relevant)'}
@@ -19,4 +19,4 @@ const change = formatBudgetChange(e);
     {change.years}: {change.before} &rarr; {change.after} ({change.delta})
   </p>
   {e.note && <p class="text-sm">{e.note}</p>}
-</li>
+</div>
