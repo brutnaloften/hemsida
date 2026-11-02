@@ -290,3 +290,7 @@ Promise files stay JSON. The tooling reads and writes them without an extra depe
 1. Is `unfulfilled` (term ended) different enough from `broken` (did the opposite) to show separately? This draft says yes.
 2. Should verdict reasoning be required for `no_evidence`? Yes: the schema enforces a recorded search (see the constraint table). It is not required for `unassessed`.
 3. The four Almedalen 2024 KD promises (`hemsida-bzj.5`): migrate them with `source.kind: speech`, or drop them to keep the dataset Tidö-only for now?
+
+## Area vocabulary
+
+`area` is a fixed list of 20 Swedish areas in `src/schema/areas.ts` (the schema rejects anything else). Free-text labels from extraction are mapped onto it with `tools/area-mapping.json` (grouped by target area) via `node --experimental-strip-types tools/map-areas.ts [--term T] [--apply]`, which also proposes an area from the committee for unmapped labels. Reuse the same list and mapping for 2026-2030; add new areas deliberately.

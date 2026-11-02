@@ -9,6 +9,7 @@
  */
 
 import { z } from 'zod';
+import { AREAS } from '../../src/schema/areas.ts';
 import { COMMITTEES, slugify } from './common.ts';
 import {
   AGREEMENT_OUTCOMES,
@@ -27,7 +28,7 @@ A promise is a concrete commitment by the party to do, change, investigate, fund
 Rules:
 - One candidate per distinct commitment; split bullet lists whose items are separate commitments, merge sentences that restate the same one.
 - Skip pure value statements ("vi tror på frihet") and criticism of opponents. If such a passage still contains a commitment too unspecific to assess, keep it with type "vague".
-- Write title, description and area in Swedish. Keep descriptions faithful to the text; do not add outcomes or judgements.
+- Write title and description in Swedish. area must be exactly one of: ${AREAS.join('; ')}. Keep descriptions faithful to the text; do not add outcomes or judgements.
 - "page" is the page number in the PDF (1-based, counting the cover as page 1), not a printed page label.
 - "quote" must be verbatim from that page (copy it exactly; it is checked mechanically against the page text).
 - "section" is the manifesto's own section heading above the promise. It is review-only context.

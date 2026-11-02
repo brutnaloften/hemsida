@@ -10,6 +10,7 @@
  */
 
 import { readFileSync } from 'node:fs';
+import { AREAS } from '../../src/schema/areas.ts';
 import Anthropic from '@anthropic-ai/sdk';
 import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
 import { z } from 'zod';
@@ -35,7 +36,7 @@ export const rawCandidateSchema = z.object({
   // Plain strings: the SDK does not enforce enum values, and an off-list value would
   // make messages.parse throw after the chunk was paid for. Validated per item in toEntry.
   type: z.string().describe(`One of: ${PROMISE_TYPES.join(', ')}`),
-  area: z.string().describe('Policy area in Swedish, e.g. Kriminalpolitik'),
+  area: z.string().describe('One of the fixed policy areas (see the prompt)'),
   ministry: z.string().describe('Responsible ministry in Swedish, e.g. Justitiedepartementet'),
   committee: z
     .string()
@@ -114,7 +115,7 @@ const SYSTEM = `You extract political promises from the Swedish government agree
 A promise is a concrete commitment by the parties to do, change, investigate, fund or achieve something. Skip background text, analysis and purely descriptive passages.
 Rules:
 - One candidate per distinct commitment; split bullet lists whose items are separate commitments, merge sentences that restate the same one.
-- Write title, description, area and ministry in Swedish. Keep descriptions faithful to the text; do not add outcomes or judgements.
+- Write title, description and ministry in Swedish. area must be exactly one of: ${AREAS.join('; ')}. Keep descriptions faithful to the text; do not add outcomes or judgements.
 - "page" is the page number in the PDF (1-based, counting the cover as page 1), not a printed page label.
 - "quote" must be verbatim from the document.
 - type: legislative = needs a law change; inquiry = the promise is to investigate (utreda); budget = an amount or spending change; outcome = a measurable result; other_action = government action outside the Riksdag; vague = too unspecific to assess.
