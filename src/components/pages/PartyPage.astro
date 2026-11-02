@@ -2,14 +2,16 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import VerdictCounts from '@/components/VerdictCounts.astro';
-import PartyPromiseList from '@/components/PartyPromiseList';
-import { partyName } from '@/lib/promise-labels';
+import PartyList from '@/components/PartyList';
 import PartyOutcomeCounts from '@/components/PartyOutcomeCounts.astro';
-import { agreementOutcomeCounts, areaCounts, promisesForParty, sortByTitle } from '@/lib/party-stats';
+import { PartyChip } from '@/components/ui/party-chip';
+import { partyName } from '@/lib/promise-labels';
+import { agreementEntry, buildPartyModel, type PartyRow } from '@/lib/party-page';
+import { sourceLinks } from '@/lib/source-link';
 import { promisePath } from '@/lib/timeline';
 import { getTerms } from '@/lib/term-data';
 import { ROLE_LABELS, partyRole, termOfFilePath, termPagePath } from '@/lib/terms';
-import { agreementName } from '@/schema/promise';
+import { AREAS } from '@/schema/areas';
 
 interface Props {
   term: string;
@@ -18,32 +20,48 @@ interface Props {
 }
 
 const { term, party } = Astro.props;
+const terms = await getTerms();
+const termRecord = terms.find((t) => t.id === term);
+if (!termRecord) throw new Error(`No term record for ${term}`);
+const sources = (await getCollection('sources')).map((e) => e.data);
 const all = (await getCollection('promises'))
   .filter((e) => termOfFilePath(e.filePath ?? '') === term)
   .map((e) => e.data);
-const promises = promisesForParty(all, party);
-const agreement = (await getCollection('sources')).map((e) => e.data).find((s) => s.id === 'tidoavtalet');
+const model = buildPartyModel(termRecord, party, sources, all);
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-const rows = sortByTitle(promises).map((p) => ({
-  id: p.id,
-  title: p.title,
-  area: p.area,
-  verdict: { value: p.verdict.value },
-  href: `${base}${promisePath(p.id)}`,
-}));
-const areas = areaCounts(promises).map((a) => a.area);
+
+// The agreement the party stands behind in this term, read from the term record (zero or one in practice).
+const agreement = model.agreements[0];
+const toRow =
+  (other: boolean) =>
+  (p: (typeof all)[number]): PartyRow => {
+    const outcome = agreement ? agreementEntry(p.evidence, agreement.source.id) : undefined;
+    return {
+      id: p.id,
+      title: p.title,
+      area: p.area,
+      href: `${base}${promisePath(p.id)}`,
+      verdict: p.verdict.value,
+      ...(p.source.page !== undefined && { page: p.source.page }),
+      ...(outcome && { outcome }),
+      other,
+    };
+  };
+const rows = [...model.manifesto.map(toRow(false)), ...model.other.map(toRow(true))];
+const areas = AREAS.filter((a) => rows.some((r) => r.area === a));
 const name = partyName(party);
-const outcome = agreementOutcomeCounts(promises);
+const manifestoSource = model.manifestoSources[0];
+const links = manifestoSource ? sourceLinks(manifestoSource) : undefined;
 
 // The party's role per term replaces per-term tabs: it is the period bar subtitle.
-const terms = await getTerms();
 const subtitles: Record<string, string> = {};
 for (const t of terms) {
-  const role = partyRole(t, party);
-  if (role) subtitles[t.id] = ROLE_LABELS[role];
+  const r = partyRole(t, party);
+  if (r) subtitles[t.id] = ROLE_LABELS[r];
 }
+const roleKey = partyRole(termRecord, party);
 const role = subtitles[term];
-const other = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1);
+const otherTerm = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1);
 ---
 
 <Layout
@@ -51,42 +69,95 @@ const other = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1);
   description={`Löften från ${name} och hur långt de bedömts.`}
   period={{ kind: 'party', term, param: party, subtitles }}
 >
-  <div class="container mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12">
-    <a href={`${base}${termPagePath('partier', term)}`} class="text-sm text-muted-foreground hover:text-foreground">&larr; Alla partier</a>
-    <h1 class="mt-4 text-2xl font-bold tracking-tight md:text-4xl">{name}</h1>
-    {role && <p class="mt-2 text-muted-foreground">{role} {term}</p>}
+  <div class="container mx-auto px-4 py-8 md:px-6 md:py-12">
+    <a href={`${base}${termPagePath('partier', term)}`} class="text-sm text-muted-foreground hover:text-foreground"
+      >&larr; Alla partier</a
+    >
+    <div class="mt-4 flex items-center gap-4">
+      <PartyChip party={party} role={roleKey ?? 'opposition'} size="header" />
+      <div>
+        <h1 class="text-2xl font-bold tracking-tight md:text-4xl">{name}</h1>
+        {role && <p class="mt-1 text-muted-foreground">{role} {term}</p>}
+        {
+          manifestoSource && links && (
+            <p class="mt-1 text-sm">
+              Källa:{' '}
+              <a href={links.original ?? links.archive} class="underline underline-offset-2" rel="noopener">
+                {manifestoSource.title}
+              </a>
+              {links.original && (
+                <>
+                  {' '}
+                  (
+                  <a href={links.archive} class="underline underline-offset-2" rel="noopener">
+                    arkiv
+                  </a>
+                  )
+                </>
+              )}
+            </p>
+          )
+        }
+      </div>
+    </div>
     {
-      promises.length === 0 ? (
+      rows.length === 0 ? (
         <section class="mt-8">
-          <p>Inga löften insamlade för {name} under {term}.</p>
-          {other && (
+          <p>
+            Inga löften insamlade för {name} under {term}.
+          </p>
+          {otherTerm && (
             <p class="mt-2">
-              <a href={`${base}${termPagePath('party', other.id, party)}`} class="underline underline-offset-2">
-                Se {name} {other.id}
+              <a href={`${base}${termPagePath('party', otherTerm.id, party)}`} class="underline underline-offset-2">
+                Se {name} {otherTerm.id}
               </a>
             </p>
           )}
         </section>
       ) : (
         <>
-          <section class="mt-6">
-            <h2 class="text-xl font-semibold">Bedömningar</h2>
-            <div class="mt-3"><VerdictCounts promises={rows} /></div>
-            <p class="mt-3 text-sm text-muted-foreground">
-              Löften som flera partier står bakom räknas för varje parti.
-            </p>
-          </section>
-          {outcome.total > 0 && agreement && (
-            <section class="mt-10">
-              <h2 class="text-xl font-semibold">Valmanifest och {agreementName(agreement)}</h2>
+          <div class={`mt-8 grid gap-6 ${agreement ? 'md:grid-cols-2' : ''}`}>
+            <section class="rounded-md border p-4">
+              <h2 class="text-lg font-semibold">Vallöften och bedömningar</h2>
               <div class="mt-3">
-                <PartyOutcomeCounts counts={outcome.counts} total={outcome.total} source={agreement} />
+                {model.manifesto.length > 0 ? (
+                  <VerdictCounts promises={model.manifesto.map((p) => ({ verdict: { value: p.verdict.value } }))} />
+                ) : (
+                  <p class="text-sm text-muted-foreground">Inga vallöften insamlade för {term}.</p>
+                )}
               </div>
+              <p class="mt-3 text-sm text-muted-foreground">
+                Löften som flera partier står bakom räknas för varje parti.
+              </p>
             </section>
+            {agreement && (
+              <section class="rounded-md border p-4">
+                <h2 class="text-lg font-semibold">{agreement.name}</h2>
+                <div class="mt-3">
+                  {agreement.total > 0 ? (
+                    <PartyOutcomeCounts counts={agreement.counts} total={agreement.total} source={agreement.source} />
+                  ) : (
+                    <p class="text-sm text-muted-foreground">
+                      Inga av partiets vallöften har jämförts med {agreement.name}.
+                    </p>
+                  )}
+                </div>
+              </section>
+            )}
+          </div>
+          {!agreement && (
+            <p class="mt-4 text-sm text-muted-foreground">
+              Partiet står inte bakom någon skriftlig överenskommelse under {term}.
+            </p>
           )}
           <section class="mt-10">
             <h2 class="mb-3 text-xl font-semibold">Löften</h2>
-            <PartyPromiseList client:load promises={rows} areas={areas} />
+            <PartyList
+              client:load
+              rows={rows}
+              areas={areas}
+              agreement={agreement && { shortTitle: agreement.source.shortTitle, title: agreement.source.title }}
+            />
           </section>
         </>
       )
