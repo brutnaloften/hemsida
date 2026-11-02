@@ -116,7 +116,7 @@ const otherTerm = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1
         </section>
       ) : (
         <>
-          <div class="mt-8 grid gap-6 md:grid-cols-2">
+          <div class={`mt-8 grid gap-6 ${agreement ? 'md:grid-cols-2' : ''}`}>
             <section class="rounded-md border p-4">
               <h2 class="text-lg font-semibold">Vallöften och bedömningar</h2>
               <div class="mt-3">
@@ -130,21 +130,26 @@ const otherTerm = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1
                 Löften som flera partier står bakom räknas för varje parti.
               </p>
             </section>
-            <section class="rounded-md border p-4">
-              <h2 class="text-lg font-semibold">{agreement ? agreement.name : 'Överenskommelse'}</h2>
-              <div class="mt-3">
-                {agreement && agreement.total > 0 ? (
-                  <PartyOutcomeCounts counts={agreement.counts} total={agreement.total} source={agreement.source} />
-                ) : (
-                  <p class="text-sm text-muted-foreground">
-                    {agreement
-                      ? `Inga av partiets vallöften har jämförts med ${agreement.name}.`
-                      : `Partiet står inte bakom någon skriftlig överenskommelse under ${term}.`}
-                  </p>
-                )}
-              </div>
-            </section>
+            {agreement && (
+              <section class="rounded-md border p-4">
+                <h2 class="text-lg font-semibold">{agreement.name}</h2>
+                <div class="mt-3">
+                  {agreement.total > 0 ? (
+                    <PartyOutcomeCounts counts={agreement.counts} total={agreement.total} source={agreement.source} />
+                  ) : (
+                    <p class="text-sm text-muted-foreground">
+                      Inga av partiets vallöften har jämförts med {agreement.name}.
+                    </p>
+                  )}
+                </div>
+              </section>
+            )}
           </div>
+          {!agreement && (
+            <p class="mt-4 text-sm text-muted-foreground">
+              Partiet står inte bakom någon skriftlig överenskommelse under {term}.
+            </p>
+          )}
           <section class="mt-10">
             <h2 class="mb-3 text-xl font-semibold">Löften</h2>
             <PartyList

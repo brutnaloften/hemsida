@@ -9,6 +9,7 @@ import { agreementName } from '@/schema/promise';
 import type { AgreementOutcome, Evidence, PromiseRecord } from '@/schema/promise';
 import type { Term } from '@/schema/term';
 import { agreementOutcomeCounts } from '@/lib/party-stats';
+import { manifestoOnly } from '@/lib/manifesto';
 import { isAgreement } from '@/lib/timeline';
 
 export interface PartySource {
@@ -65,14 +66,14 @@ export function buildPartyModel<T extends PartyPagePromise>(
   const mine = promises.filter((p) => (p.parties as readonly string[]).includes(party));
   // Agreement points live on the agreement, not on the party page.
   const own = mine.filter((p) => !agreementIds.has(p.source.id));
-  const isManifesto = (p: T) => byId.get(p.source.id)?.kind === 'manifesto';
-  const manifesto = own.filter(isManifesto);
-  const other = own.filter((p) => !isManifesto(p));
+  const manifesto = manifestoOnly(own, sources);
+  const manifestoSet = new Set(manifesto);
+  const other = own.filter((p) => !manifestoSet.has(p));
 
   const agreements = term.agreements.flatMap((id): PartyAgreement[] => {
     const source = byId.get(id);
-    if (!source) throw new Error(`Term lists agreement "${id}" but no such source exists`);
-    if (!source.parties.includes(party)) return [];
+    // Unknown ids are skipped, as on the Partier table.
+    if (!source || !source.parties.includes(party)) return [];
     const forAgreement = manifesto.map((p) => ({
       evidence: p.evidence.filter((e) => isAgreement(e) && e.source === id),
     }));

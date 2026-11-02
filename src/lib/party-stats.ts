@@ -1,8 +1,7 @@
-import { AGREEMENT_OUTCOMES, PARTIES, VERDICTS } from '@/schema/promise';
+import { AGREEMENT_OUTCOMES, VERDICTS } from '@/schema/promise';
 import type { AgreementOutcome, Evidence } from '@/schema/promise';
 import { isAgreement } from '@/lib/timeline';
 
-type Party = (typeof PARTIES)[number];
 type VerdictValue = (typeof VERDICTS)[number];
 
 export interface PartyPromise {
@@ -24,11 +23,6 @@ export function promisesForParty<T extends PartyPromise>(
   return promises.filter((p) => p.parties.includes(party));
 }
 
-/** Parties that have at least one promise, in canonical PARTIES order. */
-export function partiesWithPromises(promises: readonly PartyPromise[]): Party[] {
-  return PARTIES.filter((party) => promises.some((p) => p.parties.includes(party)));
-}
-
 /** Count per verdict value, always containing every value (zero when absent). */
 export function verdictCounts(
   promises: readonly Pick<PartyPromise, 'verdict'>[],
@@ -43,40 +37,6 @@ export function assessedCount(promises: readonly Pick<PartyPromise, 'verdict'>[]
   return promises.filter(
     (p) => p.verdict.value !== 'unassessed' && p.verdict.value !== 'not_assessable',
   ).length;
-}
-
-export interface PromiseFilter {
-  query?: string;
-  area?: string;
-  verdict?: VerdictValue | '';
-}
-
-/** Case-insensitive title match plus optional exact area and verdict. */
-export function filterPromises<T extends Pick<PartyPromise, 'title' | 'area' | 'verdict'>>(
-  promises: readonly T[],
-  { query = '', area = '', verdict = '' }: PromiseFilter,
-): T[] {
-  const q = query.trim().toLocaleLowerCase('sv');
-  return promises.filter(
-    (p) =>
-      (q === '' || p.title.toLocaleLowerCase('sv').includes(q)) &&
-      (area === '' || p.area === area) &&
-      (verdict === '' || p.verdict.value === verdict),
-  );
-}
-
-/** Distinct areas with promise counts, sorted by name (Swedish collation). */
-export function areaCounts(promises: readonly Pick<PartyPromise, 'area'>[]) {
-  const map = new Map<string, number>();
-  for (const p of promises) map.set(p.area, (map.get(p.area) ?? 0) + 1);
-  return [...map]
-    .map(([area, count]) => ({ area, count }))
-    .sort((a, b) => a.area.localeCompare(b.area, 'sv'));
-}
-
-/** Sort by title (Swedish collation) without mutating the input. */
-export function sortByTitle<T extends Pick<PartyPromise, 'title'>>(promises: readonly T[]): T[] {
-  return [...promises].sort((a, b) => a.title.localeCompare(b.title, 'sv'));
 }
 
 /**
