@@ -30,6 +30,14 @@ function agreementSource(id: string, shortTitle: string): SourceInfo {
   };
 }
 
+const manifestos: SourceInfo[] = ['m', 's'].map((p) => ({
+  id: `valmanifest-2022-${p}`,
+  title: p,
+  kind: 'manifesto',
+  parties: [p.toUpperCase()],
+  date: '2022-08-29',
+}));
+
 function promise(
   source: string,
   parties: string[],
@@ -61,7 +69,7 @@ describe('buildStartModel', () => {
   it('scenario 1: an agreement, split only on parties behind it', () => {
     const m = buildStartModel(
       { roles, agreements: ['tidoavtalet'] },
-      [agreementSource('tidoavtalet', 'Tidöavtalet')],
+      [agreementSource('tidoavtalet', 'Tidöavtalet'), ...manifestos],
       promisesFor('tidoavtalet'),
     );
     expect(m.keyNumbers).toMatchObject({ promises: 3, parties: 8, assessed: 1 });
@@ -79,13 +87,13 @@ describe('buildStartModel', () => {
   });
 
   it('scenario 2: no agreement, so no agreement data at all', () => {
-    const m = buildStartModel({ roles, agreements: [] }, [], promisesFor('x'));
+    const m = buildStartModel({ roles, agreements: [] }, manifestos, promisesFor('x'));
     expect(m.agreements).toEqual([]);
     expect(m.cardGroups.flatMap((g) => g.cards).every((c) => c.agreementSplits.length === 0)).toBe(
       true,
     );
-    // Without an agreement nothing is excluded from the party counts.
-    expect(m.keyNumbers.promises).toBe(4);
+    // Only manifesto promises count, with or without an agreement.
+    expect(m.keyNumbers.promises).toBe(3);
   });
 
   it('scenario 3: a differently named agreement', () => {

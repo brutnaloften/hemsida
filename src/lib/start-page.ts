@@ -10,6 +10,7 @@ import { agreementName, ROLES } from '@/schema/promise';
 import type { Term } from '@/schema/term';
 import { agreementOutcomeCounts, assessedCount } from '@/lib/party-stats';
 import { isAgreement, isRiksdag } from '@/lib/timeline';
+import { manifestoOnly, outcomeCountsText } from '@/lib/manifesto';
 
 type Role = (typeof ROLES)[number];
 
@@ -59,20 +60,9 @@ export interface StartModel {
   cardGroups: { role: Role; label: string; cards: PartyCardData[] }[];
 }
 
-/** Short count phrases for the agreement split line, e.g. "57 med · 67 urvattnade". */
-const SPLIT_WORDS: Record<AgreementOutcome, string> = {
-  included: 'med',
-  strengthened: 'skärpta',
-  weakened: 'urvattnade',
-  contradicted: 'motsagda',
-  not_addressed: 'saknas',
-};
-
+/** Count phrases for the agreement split line; wording shared with the Partier table. */
 export function agreementSplitText(counts: Record<AgreementOutcome, number>): string {
-  return (Object.keys(SPLIT_WORDS) as AgreementOutcome[])
-    .filter((o) => counts[o] > 0)
-    .map((o) => `${counts[o]} ${SPLIT_WORDS[o]}`)
-    .join(' · ');
+  return outcomeCountsText(counts);
 }
 
 /** "14 oktober 2022" from an ISO date. */
@@ -107,9 +97,8 @@ export function buildStartModel(
       parties: s.parties,
     };
   });
-  const agreementIds = new Set(agreements.map((a) => a.id));
-  // Agreement points are tracked on the agreement; party counts are the parties' own promises.
-  const own = promises.filter((p) => !agreementIds.has(p.source.id));
+  // Same rule as the Partier table: party counts are manifesto promises only.
+  const own = manifestoOnly(promises, sources);
 
   const riksdagDocs = new Set<string>();
   for (const p of promises) {
