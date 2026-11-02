@@ -1,42 +1,233 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import { Scale } from 'lucide-react';
-import { termPagePath } from '@/lib/terms';
+import { PartyChip } from '@/components/ui/party-chip';
+import { partyName } from '@/lib/promise-labels';
+import { termOfFilePath, termPagePath } from '@/lib/terms';
+import {
+  agreementSplitText,
+  buildStartModel,
+  electionYear,
+  formatDate,
+} from '@/lib/start-page';
 
 interface Props {
   term: string;
 }
 const { term } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const path = (kind: Parameters<typeof termPagePath>[0], param?: string) =>
+  `${base}${termPagePath(kind, term, param)}`;
+const num = (n: number) => n.toLocaleString('sv-SE');
+
+const termRecord = (await getCollection('terms')).find((e) => e.data.id === term)?.data;
+if (!termRecord) throw new Error(`No term record for ${term}`);
+const sources = (await getCollection('sources')).map((e) => e.data);
+const promises = (await getCollection('promises'))
+  .filter((e) => termOfFilePath(e.filePath ?? '') === term)
+  .map((e) => e.data);
+const model = buildStartModel(termRecord, sources, promises);
+const { keyNumbers: k } = model;
+const hasData = promises.length > 0;
+const keyList = [
+  { n: k.promises, label: 'löften' },
+  { n: k.parties, label: 'partier' },
+  { n: k.assessed, label: 'bedömda hittills' },
+  { n: k.riksdagDocuments, label: 'Riksdagsdokument kopplade' },
+];
 ---
 
 <Layout period={{ kind: 'start', term }}>
-  <section class="w-full py-12 md:py-24 lg:py-32">
-    <div class="container mx-auto px-4 md:px-6">
-      <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-        <div class="flex flex-col justify-center space-y-4">
-          <div class="space-y-2">
-            <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none pb-2">
-              Se vilka politiker som lever upp till sina ord
-            </h1>
-            <p class="max-w-[600px] text-muted-foreground md:text-xl">
-              Brutna Löften är en databas som spårar och analyserar politiska
-              löften. Vi håller koll på vad politiker säger och vad de
-              faktiskt gör.
-            </p>
-          </div>
-          <div class="flex flex-col gap-2 min-[400px]:flex-row">
-            <a
-              href={`${base}${termPagePath('lofter', term)}`}
-              class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-            >
-              Sök i databasen
-            </a>
-          </div>
-        </div>
-
-        <Scale aria-hidden="true" className="place-self-center w-3/4 h-auto max-h-96" />
+  <!-- Hero -->
+  <section class="border-b">
+    <div class="container mx-auto grid gap-8 px-4 py-10 md:px-6 md:py-16 lg:grid-cols-[1fr_320px] lg:gap-16">
+      <div>
+        <p class="text-[13px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
+          Mandatperioden <span class="font-mono">{term}</span> · valet {electionYear(term)}
+        </p>
+        <h1 class="mt-3 font-serif text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+          Vad lovade partierna – och <mark class="bg-highlight px-1 text-[color:var(--highlight-foreground)]">vad blev det av det?</mark>
+        </h1>
+        <p class="mt-4 max-w-[60ch] text-lg text-muted-foreground">
+          Vi samlar partiernas löften och följer dem mot Riksdagens egna dokument. Bedömningen sätts av
+          människor, med motivering.
+        </p>
+        <form role="search" method="get" action={path('lofter')} class="mt-6 flex max-w-xl flex-col gap-2 sm:flex-row">
+          <label for="start-q" class="sr-only">Sök bland löften</label>
+          <input
+            id="start-q"
+            type="search"
+            name="q"
+            placeholder="Sök bland löften, till exempel elpris"
+            class="h-11 min-w-0 flex-1 rounded-md border border-input bg-background px-3 text-base"
+          />
+          <button
+            type="submit"
+            class="h-11 rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+          >
+            Sök
+          </button>
+        </form>
       </div>
+      <dl class="grid grid-cols-2 gap-px self-start overflow-hidden rounded-lg border bg-border">
+        {
+          keyList.map((item) => (
+            <div class="bg-background p-4">
+              <dd class="font-serif text-3xl font-bold tabular-nums">{num(item.n)}</dd>
+              <dt class="mt-1 text-sm text-muted-foreground">{item.label}</dt>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+
+  {
+    !hasData && (
+      <section class="container mx-auto px-4 py-10 md:px-6">
+        <p class="text-lg">Löften för perioden samlas in.</p>
+      </section>
+    )
+  }
+
+  <!-- Government formation and agreement -->
+  <section class="container mx-auto grid gap-6 px-4 py-10 md:px-6 md:grid-cols-2" aria-labelledby="regering-rubrik">
+    <div class="rounded-lg border p-5">
+      <h2 id="regering-rubrik" class="font-serif text-xl font-semibold">Så styrdes landet {term}</h2>
+      <dl class="mt-4 space-y-3">
+        {
+          model.roleGroups.map((g) => (
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+              <dt class="w-24 shrink-0 text-sm font-semibold">{g.label}</dt>
+              <dd class="flex flex-wrap gap-1.5">
+                {g.parties.map((party) => (
+                  <PartyChip party={party} role={g.role} size="inline" aria-label={partyName(party)} title={partyName(party)} />
+                ))}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+    <div class="rounded-lg border p-5">
+      <h2 class="font-serif text-xl font-semibold">
+        {model.agreements.length === 0 ? 'Ingen skriftlig överenskommelse' : model.agreements.length === 1 ? 'Överenskommelse' : 'Överenskommelser'}
+      </h2>
+      {
+        model.agreements.length === 0 ? (
+          <p class="mt-3 text-muted-foreground">
+            Regeringsunderlaget bygger inte på en skriftlig överenskommelse. Löftena följs därför direkt mot
+            Riksdagens dokument.
+          </p>
+        ) : (
+          <ul class="mt-3 space-y-4">
+            {model.agreements.map((a) => (
+              <li>
+                <span class="agreement-badge h-8 px-3 text-sm">{a.name}</span>
+                <p class="mt-2 text-sm text-muted-foreground">
+                  {formatDate(a.date)} · {num(a.points)} punkter · {a.parties.join(', ')}
+                </p>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      {
+        model.agreements.length > 0 && (
+          <p class="mt-4 text-sm text-muted-foreground">
+            Överenskommelsen är belägg, inte bedömning: den visar vad texten gjorde med ett löfte, inte om
+            löftet hålls.
+          </p>
+        )
+      }
+    </div>
+  </section>
+
+  <!-- Status strip -->
+  <section class="border-y bg-muted" aria-labelledby="status-rubrik">
+    <div class="container mx-auto px-4 py-6 md:px-6">
+      <h2 id="status-rubrik" class="text-[13px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
+        Var vi står just nu
+      </h2>
+      <p class="mt-2 max-w-3xl">
+        {num(k.assessed)} av {num(k.promises)} löften är bedömda. <strong>Inte bedömt</strong> säger ingenting om
+        huruvida ett löfte hålls. Det betyder bara att ingen har bedömt det ännu.
+        <a href={`${base}om-metoden`} class="underline underline-offset-2">Så arbetar vi</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Party cards -->
+  <section class="container mx-auto px-4 py-10 md:px-6" aria-labelledby="partier-rubrik">
+    <div class="flex flex-wrap items-baseline justify-between gap-2">
+      <h2 id="partier-rubrik" class="font-serif text-2xl font-semibold">Välj ett parti</h2>
+      <a href={path('partier')} class="text-sm underline underline-offset-2">Jämför alla partier</a>
+    </div>
+    {
+      model.cardGroups.map((g) => (
+        <div class="mt-6">
+          <h3 class="text-[13px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">{g.label}</h3>
+          <ul class="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {g.cards.map((c) => (
+              <li class="rounded-lg border">
+                <a href={path('party', c.party)} class="flex min-h-11 flex-col gap-3 p-4 outline-offset-2 hover:bg-muted focus-visible:outline focus-visible:outline-2">
+                  <span class="flex items-center gap-3">
+                    <PartyChip party={c.party} role={c.role} size="card" />
+                    <span class="font-semibold">{partyName(c.party)}</span>
+                  </span>
+                  <span class="text-sm text-muted-foreground">
+                    {c.promises > 0 ? `${num(c.promises)} löften` : 'Inga löften insamlade'}
+                    {c.promises > 0 && ` · ${num(c.assessed)} bedömda`}
+                  </span>
+                  {c.promises > 0 && (
+                    <span
+                      class="flex h-2.5 overflow-hidden rounded-full border border-dashed border-muted-foreground/60"
+                      role="img"
+                      aria-label={`${c.assessed} av ${c.promises} löften bedömda`}
+                    >
+                      <span class="bg-foreground/70" style={`width:${(c.assessed / c.promises) * 100}%`} />
+                    </span>
+                  )}
+                  {c.agreementSplits
+                    .filter((s) => s.total > 0)
+                    .map((s) => (
+                      <span class="flex flex-wrap items-center gap-2 text-sm">
+                        <span class="agreement-badge px-2">{s.agreement.name}</span>
+                        <span>{agreementSplitText(s.counts)}</span>
+                      </span>
+                    ))}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </section>
+
+  <!-- From promise to law -->
+  <section class="border-t bg-muted" aria-labelledby="steg-rubrik">
+    <div class="container mx-auto px-4 py-10 md:px-6">
+      <h2 id="steg-rubrik" class="font-serif text-2xl font-semibold">Från löfte till lag</h2>
+      <ol class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          [
+            { title: 'Löftet', text: 'Partiet lovar något i sitt valmanifest.' },
+            { title: 'Överenskommelsen', note: 'när det finns', text: 'Regeringsunderlaget kan skriva ned vad som gäller i en överenskommelse.' },
+            { title: 'Riksdagen', text: 'Direktiv, utredningar, propositioner, betänkanden och lagar.' },
+            { title: 'Bedömningen', text: 'Vi bedömer löftet mot beläggen och motiverar bedömningen.' },
+          ].map((s, i) => (
+            <li class="rounded-lg border bg-background p-4">
+              <span class="font-mono text-sm text-muted-foreground">{i + 1}</span>
+              <h3 class="font-semibold">
+                {s.title}
+                {s.note && <span class="ml-1 text-sm font-normal text-muted-foreground">({s.note})</span>}
+              </h3>
+              <p class="mt-1 text-sm text-muted-foreground">{s.text}</p>
+            </li>
+          ))
+        }
+      </ol>
     </div>
   </section>
 </Layout>
