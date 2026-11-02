@@ -1,0 +1,157 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { PartyChip } from '@/components/ui/party-chip';
+import { AgreementBadge } from '@/components/ui/agreement-badge';
+import { buildAgreementPage } from '@/lib/agreement-page';
+import { outcomeCountsText } from '@/lib/manifesto';
+import { PARTY_NAMES } from '@/lib/promise-labels';
+import { sourceLinks } from '@/lib/source-link';
+import { getTerms } from '@/lib/term-data';
+import { partyRole, termOfFilePath, termPagePath } from '@/lib/terms';
+import { promisePath } from '@/lib/timeline';
+import { agreementName } from '@/schema/promise';
+
+interface Props {
+  term: string;
+  /** Source id of the agreement. */
+  agreement: string;
+}
+
+const { term, agreement: agreementId } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const source = (await getCollection('sources')).map((e) => e.data).find((s) => s.id === agreementId)!;
+const name = agreementName(source);
+const termRecord = (await getTerms()).find((t) => t.id === term)!;
+const promises = (await getCollection('promises'))
+  .filter((e) => termOfFilePath(e.filePath ?? '') === term)
+  .map((e) => e.data);
+const page = buildAgreementPage(agreementId, promises);
+const links = sourceLinks(source);
+const counts = outcomeCountsText(page.outcomeCounts);
+
+const roleOf = (party: string) => partyRole(termRecord, party) ?? 'opposition';
+const partyHref = (party: string) => `${base}${termPagePath('party', term, party)}`;
+const promiseHref = (id: string) => `${base}${promisePath(id)}`;
+const signatories = source.parties as string[];
+---
+
+<Layout
+  title={`${name} — Brutna Löften`}
+  description={`${name}: punkterna och hur de motsvarar vallöftena.`}
+  period={{ kind: 'start', term }}
+>
+  <div class="container mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12">
+    <a href={`${base}${termPagePath('lofter', term)}`} class="text-sm text-muted-foreground hover:text-foreground">&larr; Alla löften</a>
+    <h1 class="mt-4 text-2xl font-bold tracking-tight md:text-4xl">{source.title}</h1>
+    <p class="mt-2 text-muted-foreground">
+      {name}, {source.date}. Punkterna nedan är belägg om vad överenskommelsen innehåller, inte en bedömning.
+    </p>
+
+    <section class="mt-6" aria-labelledby="kalla">
+      <h2 id="kalla" class="text-xl font-semibold">Källa och parter</h2>
+      <ul class="mt-3 flex flex-wrap gap-x-6 gap-y-1">
+        {links.original && <li><a href={links.original} class="underline underline-offset-2">Originaldokument</a></li>}
+        <li><a href={links.archive} class="underline underline-offset-2">Arkiverad kopia</a></li>
+      </ul>
+      {
+        signatories.length > 0 && (
+          <ul class="mt-4 flex flex-wrap gap-3" aria-label="Parter">
+            {signatories.map((party) => (
+              <li>
+                <a href={partyHref(party)} class="flex items-center gap-2 underline-offset-2 hover:underline">
+                  <PartyChip party={party} role={roleOf(party)} size="inline" />
+                  <span>{PARTY_NAMES[party as keyof typeof PARTY_NAMES] ?? party}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      <p class="mt-4 text-sm">
+        {page.pointCount} punkter. {page.pointCount - page.unmatchedCount} motsvaras av minst ett vallöfte,
+        {' '}{page.unmatchedCount} av inget.
+        {counts && ` Vallöften mot ${name}: ${counts}.`}
+      </p>
+    </section>
+
+    <section class="mt-10" aria-labelledby="punkter">
+      <h2 id="punkter" class="text-xl font-semibold">Punkter i {name}</h2>
+      {
+        page.points.map((group) => (
+          <section class="mt-8">
+            <h3 class="border-b-2 border-foreground pb-1 font-serif text-lg font-semibold">
+              {group.area} <span class="font-mono text-sm font-normal text-muted-foreground">{group.items.length}</span>
+            </h3>
+            <ul class="divide-y">
+              {group.items.map((point) => (
+                <li class="py-3">
+                  <a href={promiseHref(point.id)} class="font-medium underline-offset-2 hover:underline">{point.title}</a>
+                  {point.matched.length > 0 ? (
+                    <div class="mt-2 text-sm">
+                      <p class="text-muted-foreground">Motsvarande vallöften</p>
+                      <ul class="mt-1 space-y-1">
+                        {point.matched.map((m) => (
+                          <li class="flex items-start gap-2">
+                            <span class="flex shrink-0 gap-1">
+                              {m.parties.map((party) => (
+                                <a href={partyHref(party)} aria-label={PARTY_NAMES[party as keyof typeof PARTY_NAMES] ?? party}>
+                                  <PartyChip party={party} role={roleOf(party)} size="inline" />
+                                </a>
+                              ))}
+                            </span>
+                            <a href={promiseHref(m.id)} class="underline underline-offset-2">{m.title}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <p class="mt-1 text-sm text-muted-foreground">Inget vallöfte kopplat till punkten.</p>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
+      }
+    </section>
+
+    {
+      page.notAddressedCount > 0 && (
+        <section class="mt-12" aria-labelledby="saknas">
+          <h2 id="saknas" class="text-xl font-semibold">
+            Vallöften som {name} inte tar upp ({page.notAddressedCount})
+          </h2>
+          <p class="mt-2 text-sm text-muted-foreground">
+            <AgreementBadge outcome="not_addressed" source={source} size="list" /> betyder att vi inte hittat
+            löftet i texten. Det säger inget om löftet i övrigt.
+          </p>
+          <details class="mt-4">
+            <summary class="cursor-pointer font-medium">Visa lista</summary>
+            {page.notAddressed.map((group) => (
+              <section class="mt-6">
+                <h3 class="border-b-2 border-foreground pb-1 font-serif text-lg font-semibold">
+                  {group.area} <span class="font-mono text-sm font-normal text-muted-foreground">{group.items.length}</span>
+                </h3>
+                <ul class="divide-y">
+                  {group.items.map((p) => (
+                    <li class="flex items-start gap-2 py-2">
+                      <span class="flex shrink-0 gap-1">
+                        {p.parties.map((party) => (
+                          <a href={partyHref(party)} aria-label={PARTY_NAMES[party as keyof typeof PARTY_NAMES] ?? party}>
+                            <PartyChip party={party} role={roleOf(party)} size="inline" />
+                          </a>
+                        ))}
+                      </span>
+                      <a href={promiseHref(p.id)} class="underline underline-offset-2">{p.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </details>
+        </section>
+      )
+    }
+  </div>
+</Layout>

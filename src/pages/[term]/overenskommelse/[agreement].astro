@@ -1,0 +1,9 @@
+---
+import AgreementPage from '@/components/pages/AgreementPage.astro';
+import { termAgreementPaths } from '@/lib/term-paths';
+
+export const getStaticPaths = termAgreementPaths;
+const { term, agreement } = Astro.params;
+---
+
+<AgreementPage term={term!} agreement={agreement!} />
