@@ -131,7 +131,7 @@ export function toManifestoEntry(
 export function normalizeText(s: string): string {
   return s
     .normalize('NFKC')
-    .replace(/\u00AD/g, '')
+    .replace(/\u00AD[ \t]*(\r?\n\s*)?/g, '')
     .replace(/[‘’‚`´]/g, "'")
     .replace(/[“”„«»]/g, '"')
     .replace(/[‐‑–—−]/g, '-')
@@ -154,6 +154,23 @@ export function quoteMatchKind(pageText: string, quote: string): 'exact' | 'loos
   if (q === '') return 'none';
   if (normalizeText(pageText).includes(q)) return 'exact';
   return loose(pageText).includes(loose(quote)) ? 'loose' : 'none';
+}
+
+/**
+ * Where a quote that matches the page exactly starts or ends in the middle of a word, i.e. a
+ * letter or digit sits right before its first or after its last character on the page.
+ */
+export function midWordCut(pageText: string, quote: string): 'start' | 'end' | 'both' | null {
+  const page = normalizeText(pageText);
+  const q = normalizeText(quote);
+  if (q === '') return null;
+  const idx = page.indexOf(q);
+  if (idx < 0) return null;
+  const word = /[\p{L}\p{N}]/u;
+  const start = idx > 0 && word.test(page[idx - 1]) && word.test(q[0]);
+  const end =
+    idx + q.length < page.length && word.test(page[idx + q.length]) && word.test(q[q.length - 1]);
+  return start && end ? 'both' : start ? 'start' : end ? 'end' : null;
 }
 
 /** True if the quote appears in the page text, strictly or via the loose fallback. */
@@ -271,6 +288,11 @@ export function validateCandidates(data: unknown, ctx: ValidationContext): Valid
     }
 
     const { page, quote } = promise.source;
+    if (quote !== undefined && /\u00AD|\s{2,}/.test(quote)) {
+      errors.push(
+        `${where}: quote contains a soft hyphen or repeated whitespace (PDF artifact); clean it`,
+      );
+    }
     if (ctx.pages) {
       if (page === undefined || quote === undefined) {
         errors.push(`${where}: source.page and source.quote are required for the quote check`);
@@ -282,6 +304,12 @@ export function validateCandidates(data: unknown, ctx: ValidationContext): Valid
           errors.push(`${where}: quote is not a verbatim substring of page ${page}: "${quote}"`);
         } else if (kind === 'loose') {
           warnings.push(`${where}: quote only matches page ${page} ignoring spaces and hyphens`);
+        } else {
+          const cut = midWordCut(ctx.pages[page - 1], quote);
+          if (cut) {
+            const what = cut === 'both' ? 'starts and ends' : cut === 'start' ? 'starts' : 'ends';
+            warnings.push(`${where}: quote ${what} mid-word on page ${page}`);
+          }
         }
       }
     }
