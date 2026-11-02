@@ -22,7 +22,7 @@ Core journeys:
 
 Principles:
 
-- The **assessment** (verdict, set by a human, with reasoning) is the main measure. Everything else is evidence.
+- The **assessment** (verdict, with written reasoning) is the main measure. Everything else is evidence.
 - "Inte bedömt" says nothing about whether a promise is kept. The UI says so in plain words wherever it is the common state.
 - Nothing about the Tidö agreement, party roles or term is hardcoded in UI code. It all comes from data (see [Term model](#term-model) and [Agreement layer](#agreement-layer)).
 - Swedish UI text, static Astro, React islands only where interaction needs it, Tailwind v4 tokens, class-based dark mode.
