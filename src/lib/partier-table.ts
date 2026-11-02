@@ -11,7 +11,10 @@ import type { Role } from '@/lib/terms';
 
 const ROLE_ORDER: Role[] = ['government', 'support', 'opposition'];
 
-type TablePromise = PartyPromise & { evidence: readonly Evidence[] };
+type TablePromise = PartyPromise & {
+  source: { id: string };
+  evidence: readonly Evidence[];
+};
 
 export interface AgreementCell {
   agreementId: string;
@@ -31,22 +34,23 @@ export interface PartierRow {
 }
 
 /**
- * One row per party that has promises in the term, grouped government, support, opposition and
+ * One row per party in the term record (parties without manifesto promises get promiseCount 0), grouped government, support, opposition and
  * in the term record's party order within a group. Roles come from the term record only.
  * Agreements are the term's `agreements` that resolve to a source; unknown ids are skipped.
  */
 export function buildPartierRows(
   term: Pick<Term, 'roles' | 'agreements'>,
   promises: readonly TablePromise[],
-  sources: readonly Pick<Source, 'id' | 'parties'>[],
+  sources: readonly Pick<Source, 'id' | 'parties' | 'kind'>[],
 ): PartierRow[] {
   const agreements = term.agreements
     .map((id) => sources.find((s) => s.id === id))
     .filter((s): s is NonNullable<typeof s> => s !== undefined);
+  const manifestos = new Set(sources.filter((s) => s.kind === 'manifesto').map((s) => s.id));
   const rows: PartierRow[] = [];
   for (const [party, role] of Object.entries(term.roles) as [string, Role][]) {
-    const own = promisesForParty(promises, party);
-    if (own.length === 0) continue;
+    // Only manifesto promises count: agreement points and mid-term pledges are not "vallöften".
+    const own = promisesForParty(promises, party).filter((p) => manifestos.has(p.source.id));
     rows.push({
       party,
       role,
@@ -56,7 +60,11 @@ export function buildPartierRows(
       agreements: agreements.map((a) => ({
         agreementId: a.id,
         stands: (a.parties as readonly string[]).includes(party),
-        ...agreementOutcomeCounts(own),
+        ...agreementOutcomeCounts(
+          own.map((p) => ({
+            evidence: p.evidence.filter((e) => e.kind !== 'agreement' || e.source === a.id),
+          })),
+        ),
       })),
     });
   }
