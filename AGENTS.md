@@ -61,6 +61,7 @@ pnpm (pinned via `packageManager` field in package.json).
 - **Tests:** prefer tests for new logic (schemas, tooling, data transforms). UI-only changes may rely on `pnpm build`.
 - **Data changes:** once seeding is done, every promise or verdict change gets its own PR. During initial seeding (e.g. the Tidöavtalet import) bulk PRs are fine.
 - **Language:** code, comments, commits, PRs and beads in English; everything shown on the site in Swedish.
+- **No hardcoded agreement names:** Tidöavtalet is only the first source. Site copy, labels and code must not assume a single agreement or term; take names from the `sources` data (e.g. its title or short title) and write generic wording ("avtal", "uppgörelser") where no specific source is meant.
 - **Authority:** Claude may commit, push branches, open/update/close PRs and close beads without asking. Never push to or force-push `main`; never merge outside independent mode.
 
 ## Subagents
