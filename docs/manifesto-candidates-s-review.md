@@ -12,7 +12,7 @@ Source: `valmanifest-2022-s` (Socialdemokraternas valmanifest 2022, "Vårt Sveri
 
 ## Validation
 
-`node --experimental-strip-types tools/validate-manifesto-candidates.ts --source valmanifest-2022-s --pages-text <text>` reports 0 errors and 1 warning (`eu-ska-sluta-fler-handelsavtal`: the extracted text has "handels avtal" with a stray space, so the correct quote only matches in the loose fallback) (schema, unique ids, every quote verbatim on its cited page). A few quotes are deliberately cut at a soft hyphen in the PDF text; they are still verbatim.
+`node --experimental-strip-types tools/validate-manifesto-candidates.ts --source valmanifest-2022-s --pages-text <text>` reports 0 errors and 1 warning (`eu-ska-sluta-fler-handelsavtal`: the extracted text has "handels avtal" with a stray space, so the correct quote only matches in the loose fallback) (schema, unique ids, every quote verbatim on its cited page).
 
 ## Coverage
 

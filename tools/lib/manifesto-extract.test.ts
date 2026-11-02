@@ -6,6 +6,8 @@ import { afterEach, describe, expect, it } from 'vitest';
 import {
   EXTRACTION_RULES,
   addRawCandidates,
+  midWordCut,
+  normalizeText,
   quoteMatchKind,
   quoteMatches,
   splitPages,
@@ -162,6 +164,27 @@ describe('quoteMatchKind', () => {
   });
 });
 
+describe('normalizeText soft hyphens', () => {
+  it('joins words split across a soft hyphen and a line break', () => {
+    expect(normalizeText('möj­\nligheter')).toBe('möjligheter');
+    expect(normalizeText('möj­ ligheter')).toBe('möjligheter');
+    expect(quoteMatchKind('bättre möj­\nligheter till', 'bättre möjligheter')).toBe('exact');
+  });
+});
+
+describe('midWordCut', () => {
+  const page = 'ge makt åt Sverige­\ndemokraterna, ett parti';
+  it('detects a quote cut inside a word', () => {
+    expect(midWordCut(page, 'ge makt åt Sverige')).toBe('end');
+    expect(midWordCut(page, 'demokraterna, ett')).toBe('start');
+    expect(midWordCut('abc def ghi', 'c de')).toBe('both');
+  });
+  it('accepts whole-word quotes', () => {
+    expect(midWordCut(page, 'ge makt åt Sverigedemokraterna,')).toBeNull();
+    expect(midWordCut('abc def.', 'def')).toBeNull();
+  });
+});
+
 describe('splitPages', () => {
   it('splits on form feeds and drops the trailing empty page', () => {
     expect(splitPages('a\fb\f')).toEqual(['a', 'b']);
@@ -208,6 +231,12 @@ describe('validateCandidates', () => {
     const r = validateCandidates([entry(raw({ quote: 'Skol plikten ska förlängas' }))], ctx);
     expect(r.errors).toEqual([]);
     expect(r.warnings.join()).toMatch(/ignoring spaces and hyphens/);
+  });
+
+  it('warns on a quote that is cut mid-word', () => {
+    const r = validateCandidates([entry(raw({ quote: 'Skolplikten ska förläng' }))], ctx);
+    expect(r.errors).toEqual([]);
+    expect(r.warnings.join()).toMatch(/ends mid-word on page 2/);
   });
 
   it('flags a page beyond the text', () => {

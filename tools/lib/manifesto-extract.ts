@@ -156,6 +156,23 @@ export function quoteMatchKind(pageText: string, quote: string): 'exact' | 'loos
   return loose(pageText).includes(loose(quote)) ? 'loose' : 'none';
 }
 
+/**
+ * Where a quote that matches the page exactly starts or ends in the middle of a word, i.e. a
+ * letter or digit sits right before its first or after its last character on the page.
+ */
+export function midWordCut(pageText: string, quote: string): 'start' | 'end' | 'both' | null {
+  const page = normalizeText(pageText);
+  const q = normalizeText(quote);
+  if (q === '') return null;
+  const idx = page.indexOf(q);
+  if (idx < 0) return null;
+  const word = /[\p{L}\p{N}]/u;
+  const start = idx > 0 && word.test(page[idx - 1]) && word.test(q[0]);
+  const end =
+    idx + q.length < page.length && word.test(page[idx + q.length]) && word.test(q[q.length - 1]);
+  return start && end ? 'both' : start ? 'start' : end ? 'end' : null;
+}
+
 /** True if the quote appears in the page text, strictly or via the loose fallback. */
 export function quoteMatches(pageText: string, quote: string): boolean {
   return quoteMatchKind(pageText, quote) !== 'none';
@@ -287,6 +304,12 @@ export function validateCandidates(data: unknown, ctx: ValidationContext): Valid
           errors.push(`${where}: quote is not a verbatim substring of page ${page}: "${quote}"`);
         } else if (kind === 'loose') {
           warnings.push(`${where}: quote only matches page ${page} ignoring spaces and hyphens`);
+        } else {
+          const cut = midWordCut(ctx.pages[page - 1], quote);
+          if (cut) {
+            const what = cut === 'both' ? 'starts and ends' : cut === 'start' ? 'starts' : 'ends';
+            warnings.push(`${where}: quote ${what} mid-word on page ${page}`);
+          }
         }
       }
     }
