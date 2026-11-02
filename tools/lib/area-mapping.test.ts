@@ -4,6 +4,8 @@ import { AREAS } from '../../src/schema/areas.ts';
 import {
   COMMITTEE_AREA,
   invertMapping,
+  loadAreaMapping,
+  normalizeArea,
   resolveArea,
   type AreaMappingFile,
 } from './area-mapping.ts';
@@ -37,5 +39,16 @@ describe('area mapping', () => {
     });
     expect(resolveArea('Okänt', 'JuU', m)).toEqual({ status: 'proposed', area: 'Kriminalpolitik' });
     expect(resolveArea('Okänt', undefined, m)).toEqual({ status: 'proposed', area: undefined });
+  });
+
+  it('lets a per-id override win and validates the overrides file', () => {
+    const m = invertMapping(file);
+    expect(resolveArea('Ungdom', 'JuU', m, 'Kriminalpolitik')).toEqual({
+      status: 'mapped',
+      area: 'Kriminalpolitik',
+    });
+    expect(() => loadAreaMapping()).not.toThrow();
+    expect(normalizeArea('Rättsväsendet', 'JuU')).toBe('Kriminalpolitik');
+    expect(normalizeArea('Okänt', undefined)).toBe('Okänt');
   });
 });

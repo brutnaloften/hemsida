@@ -1,43 +1,65 @@
 /**
  * Normalise promise `area` values onto the controlled vocabulary.
  *
- *   node --experimental-strip-types tools/map-areas.ts [--term 2022-2026] [--apply]
+ *   node --experimental-strip-types tools/map-areas.ts [--term 2022-2026] [--from-ref <ref>] [--apply]
  *
  * Covers the promise files and the candidate files (src/data/<term>/candidates/,
  * whose entries hold a promise under `.promise`). Without --apply it only reports:
  * counts per target area and every label that tools/area-mapping.json does not
  * cover (with a committee-based proposal). With --apply it rewrites the files and
  * refuses if anything is unmapped, so add those labels to the mapping file first.
+ * Per-promise exceptions for mixed labels live in tools/area-overrides.json (id -> area).
+ * `--from-ref <ref>` re-derives areas from the original labels at that ref, which is how
+ * a corrected mapping is re-applied to files that already hold vocabulary values.
  * Run `pnpm fmt` afterwards. Reusable for new terms.
  */
+import { execFileSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { invertMapping, resolveArea, type AreaMappingFile } from './lib/area-mapping.ts';
+import { fileURLToPath } from 'node:url';
+import { loadAreaMapping, resolveArea } from './lib/area-mapping.ts';
 
 const args = process.argv.slice(2);
 const apply = args.includes('--apply');
 const termIdx = args.indexOf('--term');
 const term = termIdx >= 0 ? args[termIdx + 1] : '2022-2026';
+const refIdx = args.indexOf('--from-ref');
+const fromRef = refIdx >= 0 ? args[refIdx + 1] : undefined;
 
 const root = new URL('..', import.meta.url);
-const mapping = invertMapping(
-  JSON.parse(readFileSync(new URL('tools/area-mapping.json', root), 'utf8')) as AreaMappingFile,
-);
+const { mapping, overrides } = loadAreaMapping();
 
-type P = { area: string; committee?: string };
+type P = { id: string; area: string; committee?: string };
 const unmapped = new Map<string, { count: number; proposals: Map<string, number> }>();
 const perArea = new Map<string, number>();
 const writes: { file: URL; text: string }[] = [];
 let changed = 0;
 
-/** Resolve one promise object in place; returns true when its area changed. */
-function fix(p: P): boolean {
-  const r = resolveArea(p.area, p.committee, mapping);
+/** Original JSON of a file at --from-ref, or undefined when not using a ref / file is new. */
+function original(file: URL): unknown {
+  if (!fromRef) return undefined;
+  const rel = fileURLToPath(file).slice(fileURLToPath(root).length);
+  try {
+    const out = execFileSync('git', ['show', `${fromRef}:${rel}`], {
+      cwd: fileURLToPath(root),
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    });
+    return JSON.parse(out);
+  } catch {
+    return undefined;
+  }
+}
+
+/** Resolve one promise object in place (label from `orig` when given); true when it changed. */
+function fix(p: P, orig?: P): boolean {
+  const label = orig?.area ?? p.area;
+  const r = resolveArea(label, p.committee, mapping, overrides.get(p.id));
   if (r.status === 'proposed') {
-    const e = unmapped.get(p.area) ?? { count: 0, proposals: new Map() };
+    const e = unmapped.get(label) ?? { count: 0, proposals: new Map() };
     e.count++;
     const k = r.area ?? '?';
     e.proposals.set(k, (e.proposals.get(k) ?? 0) + 1);
-    unmapped.set(p.area, e);
+    unmapped.set(label, e);
     return false;
   }
   perArea.set(r.area, (perArea.get(r.area) ?? 0) + 1);
@@ -49,11 +71,11 @@ function fix(p: P): boolean {
 const promiseDir = new URL(`src/data/${term}/promises/`, root);
 for (const name of readdirSync(promiseDir).filter((f) => f.endsWith('.json'))) {
   const file = new URL(name, promiseDir);
-  const p = JSON.parse(readFileSync(file, 'utf8')) as P;
+  const text = readFileSync(file, 'utf8');
+  const p = JSON.parse(text) as P;
   const area = p.area;
-  if (fix(p)) {
+  if (fix(p, original(file) as P | undefined)) {
     // Replace only the area value so key order and formatting stay untouched.
-    const text = readFileSync(file, 'utf8');
     const next = text.replace(/("area":\s*)"(?:[^"\\]|\\.)*"/, `$1${JSON.stringify(p.area)}`);
     if (next === text) throw new Error(`could not rewrite area ${area} in ${name}`);
     writes.push({ file, text: next });
@@ -66,8 +88,15 @@ if (existsSync(candDir)) {
   for (const name of readdirSync(candDir).filter((f) => f.endsWith('.json'))) {
     const file = new URL(name, candDir);
     const entries = JSON.parse(readFileSync(file, 'utf8')) as { promise?: P }[];
+    const origById = new Map(
+      ((original(file) as { promise?: P }[] | undefined) ?? []).flatMap((e) =>
+        e.promise ? [[e.promise.id, e.promise] as const] : [],
+      ),
+    );
     let touched = false;
-    for (const e of entries) if (e.promise && fix(e.promise)) touched = true;
+    for (const e of entries) {
+      if (e.promise && fix(e.promise, origById.get(e.promise.id))) touched = true;
+    }
     if (touched) {
       writes.push({ file, text: JSON.stringify(entries, null, 2) + '\n' });
       changed++;

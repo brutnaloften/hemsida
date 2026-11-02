@@ -5,6 +5,7 @@
  * inverts it. Labels that are not in the file get a *proposal* from the promise's
  * committee, which a human must confirm by adding the label to the file.
  */
+import { readFileSync } from 'node:fs';
 import { AREAS, type Area } from '../../src/schema/areas.ts';
 
 export type AreaMappingFile = Record<string, string[]>;
@@ -54,11 +55,40 @@ export function resolveArea(
   label: string,
   committee: string | undefined,
   mapping: Map<string, Area>,
+  override?: Area,
 ): AreaResolution {
+  if (override) return { status: 'mapped', area: override };
   const trimmed = label.trim();
   if ((AREAS as readonly string[]).includes(trimmed))
     return { status: 'mapped', area: trimmed as Area };
   const hit = mapping.get(trimmed);
   if (hit) return { status: 'mapped', area: hit };
   return { status: 'proposed', area: committee ? COMMITTEE_AREA[committee] : undefined };
+}
+
+export type AreaOverrides = Record<string, string>;
+
+/** Load tools/area-mapping.json inverted, and validate tools/area-overrides.json (id -> area). */
+export function loadAreaMapping(): { mapping: Map<string, Area>; overrides: Map<string, Area> } {
+  const read = (name: string) =>
+    JSON.parse(readFileSync(new URL(`../${name}`, import.meta.url), 'utf8')) as unknown;
+  const mapping = invertMapping(read('area-mapping.json') as AreaMappingFile);
+  const overrides = new Map<string, Area>();
+  for (const [id, area] of Object.entries(read('area-overrides.json') as AreaOverrides)) {
+    if (!(AREAS as readonly string[]).includes(area)) {
+      throw new Error(`area-overrides: "${id}" has unknown area "${area}"`);
+    }
+    overrides.set(id, area as Area);
+  }
+  return { mapping, overrides };
+}
+
+/**
+ * Best-effort area for model output: a per-id override, the mapping, then the committee
+ * default. Returns the trimmed label unchanged when nothing resolves, so the schema rejects it.
+ */
+export function normalizeArea(label: string, committee: string | undefined, id?: string): string {
+  const { mapping, overrides } = loadAreaMapping();
+  const r = resolveArea(label, committee, mapping, id ? overrides.get(id) : undefined);
+  return r.area ?? label.trim();
 }

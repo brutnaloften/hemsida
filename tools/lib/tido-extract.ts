@@ -10,10 +10,11 @@
  */
 
 import { readFileSync } from 'node:fs';
-import { AREAS } from '../../src/schema/areas.ts';
 import Anthropic from '@anthropic-ai/sdk';
 import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
 import { z } from 'zod';
+import { AREAS } from '../../src/schema/areas.ts';
+import { normalizeArea } from './area-mapping.ts';
 import { loggedParse } from './claude.ts';
 import { COMMITTEES, slugify } from './common.ts';
 import { PROMISE_TYPES, promiseSchema, type PromiseRecord } from './schema.ts';
@@ -100,7 +101,11 @@ export function toEntry(
     parties: [...PARTIES],
     roles: { M: 'government', KD: 'government', L: 'government', SD: 'support' },
     type: raw.type,
-    area: raw.area.trim(),
+    area: normalizeArea(
+      raw.area,
+      (COMMITTEES as readonly string[]).includes(raw.committee) ? raw.committee : undefined,
+      id,
+    ),
     committee: (COMMITTEES as readonly string[]).includes(raw.committee)
       ? raw.committee
       : undefined,

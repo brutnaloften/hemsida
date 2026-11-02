@@ -10,6 +10,7 @@
 
 import { z } from 'zod';
 import { AREAS } from '../../src/schema/areas.ts';
+import { normalizeArea } from './area-mapping.ts';
 import { COMMITTEES, slugify } from './common.ts';
 import {
   AGREEMENT_OUTCOMES,
@@ -117,7 +118,11 @@ export function toManifestoEntry(
     parties: [...source.parties],
     roles: rolesFor(term, source.parties),
     type: raw.type,
-    area: raw.area.trim(),
+    area: normalizeArea(
+      raw.area,
+      (COMMITTEES as readonly string[]).includes(raw.committee) ? raw.committee : undefined,
+      id,
+    ),
     committee: (COMMITTEES as readonly string[]).includes(raw.committee)
       ? raw.committee
       : undefined,

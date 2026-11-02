@@ -51,6 +51,11 @@ const valid = {
 const unassessed = { value: 'unassessed', reasoning: '', date: '2023-01-01' };
 
 describe('promiseSchema', () => {
+  it('rejects an area outside the controlled vocabulary', () => {
+    expect(promiseSchema.safeParse({ ...valid, area: 'Skolpolitik' }).success).toBe(false);
+    expect(promiseSchema.safeParse({ ...valid, area: '' }).success).toBe(false);
+  });
+
   it('accepts a valid promise and applies defaults', () => {
     const p = promiseSchema.parse(valid);
     expect(p.keywords).toEqual([]);
