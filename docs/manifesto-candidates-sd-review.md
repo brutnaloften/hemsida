@@ -14,7 +14,7 @@ Page numbers are PDF pages (cover = 1), the same as `source.page`. The `section`
 
 ## Coverage
 
-Types: budget 34, legislative 86, other_action 85, vague 44, outcome 3, inquiry 2. Proposed outcomes: weakened 67, included 31, not_addressed 156.
+Types: budget 34, legislative 86, other_action 85, vague 44, outcome 3, inquiry 2. Proposed outcomes: weakened 68, included 30, not_addressed 156.
 
 Candidates per section:
 
