@@ -16,6 +16,9 @@ const links = [
 const segments = Astro.url.pathname.slice(base.length - 1).split('/').filter(Boolean);
 const isCurrent = (section: string) =>
   segments.includes(section) || (section === 'lofter' && segments[0] === 'lofte');
+// "page" only on the section's own page; sub-pages (a party, a promise) mark their parent with "true".
+const current = (section: string) =>
+  !isCurrent(section) ? undefined : segments.at(-1) === section ? 'page' : 'true';
 ---
 
 <!-- Push content below fixed header -->
@@ -32,8 +35,8 @@ const isCurrent = (section: string) =>
             <li>
               <a
                 href={l.href}
-                aria-current={isCurrent(l.section) ? 'page' : undefined}
-                class="text-sm whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors aria-[current=page]:text-foreground aria-[current=page]:font-medium aria-[current=page]:underline aria-[current=page]:decoration-[3px] aria-[current=page]:underline-offset-8"
+                aria-current={current(l.section)}
+                class="text-sm whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors aria-[current]:text-foreground aria-[current]:font-medium aria-[current]:underline aria-[current]:decoration-[3px] aria-[current]:underline-offset-8"
               >
                 {l.label}
               </a>
@@ -64,7 +67,7 @@ const isCurrent = (section: string) =>
       {
         links.map((l) => (
           <li>
-            <a href={l.href} aria-current={isCurrent(l.section) ? 'page' : undefined} class="block py-3 text-base text-foreground aria-[current=page]:font-semibold">
+            <a href={l.href} aria-current={current(l.section)} class="block py-3 text-base text-foreground aria-[current]:font-semibold">
               {l.label}
             </a>
           </li>

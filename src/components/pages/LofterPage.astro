@@ -26,7 +26,9 @@ const promises = (await getCollection('promises'))
 const agreementIds = new Set<string>();
 const rows = promises
   .map((p) => {
-    const entries = p.evidence.filter(isAgreement);
+    const entries = p.evidence.filter(
+      (e) => isAgreement(e) && (termRecord?.agreements.includes(e.source) ?? true),
+    );
     const latest = entries.length > 0 ? entries.reduce((a, b) => (b.date > a.date ? b : a)) : undefined;
     if (latest) agreementIds.add(latest.source);
     return {
