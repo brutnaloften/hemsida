@@ -1,0 +1,38 @@
+{
+  "id": "val2022-sd-arbetsplikt-for-bidrag",
+  "term": "2022-2026",
+  "title": "Inför arbetsplikt för bidrag",
+  "description": "Arbetsplikt införs som villkor för bidrag.",
+  "source": {
+    "id": "valmanifest-2022-sd",
+    "page": 18,
+    "quote": "Inför arbetsplikt för bidrag"
+  },
+  "parties": ["SD"],
+  "roles": {
+    "SD": "support"
+  },
+  "type": "legislative",
+  "area": "Arbetsmarknad",
+  "committee": "SoU",
+  "keywords": ["arbetsplikt", "försörjningsstöd", "aktivitetskrav"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-02",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": [
+        "tido-aktivitetskrav-forsorjningsstod",
+        "tido-bryta-passiv-langtidsarbetsloshet"
+      ],
+      "outcome": "weakened",
+      "note": "Avtalet inför aktivitetskrav för försörjningsstöd av arbetsmarknadsskäl, vilket är mindre långtgående än en arbetsplikt."
+    }
+  ]
+}

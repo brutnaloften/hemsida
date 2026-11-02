@@ -1,0 +1,35 @@
+{
+  "id": "val2022-sd-sank-bensin-och-dieselpriset",
+  "term": "2022-2026",
+  "title": "Sänk bensin- och dieselpriset genom sänkt skatt och minskad reduktionsplikt",
+  "description": "Bensin- och dieselpriset sänks genom sänkt bränsleskatt och minskad reduktionsplikt.",
+  "source": {
+    "id": "valmanifest-2022-sd",
+    "page": 26,
+    "quote": "Sänka bensin- och dieselpriset genom sänkt bränsleskatt och minskad reduktionsplikt."
+  },
+  "parties": ["SD"],
+  "roles": {
+    "SD": "support"
+  },
+  "type": "legislative",
+  "area": "Drivmedel",
+  "committee": "SkU",
+  "keywords": ["bensinpris", "dieselpris", "reduktionsplikt", "bränsleskatt"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-02",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-lagre-drivmedelspriser"],
+      "outcome": "weakened",
+      "note": "Avtalet anger lägre drivmedelspriser, utan att ange skatt eller reduktionsplikt."
+    }
+  ]
+}

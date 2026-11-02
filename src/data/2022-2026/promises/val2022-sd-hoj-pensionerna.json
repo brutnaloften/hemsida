@@ -1,0 +1,38 @@
+{
+  "id": "val2022-sd-hoj-pensionerna",
+  "term": "2022-2026",
+  "title": "Höj pensionerna",
+  "description": "Pensionerna höjs.",
+  "source": {
+    "id": "valmanifest-2022-sd",
+    "page": 40,
+    "quote": "Höja pensionerna"
+  },
+  "parties": ["SD"],
+  "roles": {
+    "SD": "support"
+  },
+  "type": "budget",
+  "area": "Pensioner",
+  "committee": "SfU",
+  "keywords": ["pensioner", "pensionshöjning", "pensionärer"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-02",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": [
+        "tido-forslag-starka-pensionarernas-ekonomi",
+        "tido-sankt-skatt-arbetsinkomst-pensionsinkomst"
+      ],
+      "outcome": "weakened",
+      "note": "Avtalet anger att förslag ska tas fram på hur pensionärernas ekonomi kan stärkas och sänkt skatt på pensionsinkomst."
+    }
+  ]
+}

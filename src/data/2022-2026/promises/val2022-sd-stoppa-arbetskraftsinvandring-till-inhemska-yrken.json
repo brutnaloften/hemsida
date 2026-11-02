@@ -1,0 +1,38 @@
+{
+  "id": "val2022-sd-stoppa-arbetskraftsinvandring-till-inhemska-yrken",
+  "term": "2022-2026",
+  "title": "Stoppa arbetskraftsinvandring till yrken som kan tillgodoses av inhemsk arbetskraft",
+  "description": "Arbetskraftsinvandring stoppas till yrken som kan tillgodoses av inhemsk arbetskraft.",
+  "source": {
+    "id": "valmanifest-2022-sd",
+    "page": 27,
+    "quote": "Stoppa arbetskraftsinvandring till yrken som kan tillgodoses av inhemsk arbetskraft"
+  },
+  "parties": ["SD"],
+  "roles": {
+    "SD": "support"
+  },
+  "type": "legislative",
+  "area": "Migration",
+  "committee": "SfU",
+  "keywords": ["arbetskraftsinvandring", "arbetstillstånd", "lönekrav"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-02",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": [
+        "tido-skarpta-villkor-arbetskraftsinvandring-medianlon",
+        "tido-undanta-yrkesgrupper-arbetstillstand"
+      ],
+      "outcome": "weakened",
+      "note": "Avtalet anger att arbetstillstånd endast ska beviljas om lönen når en inkomstgräns kopplad till medianlön och att regeringen ska kunna undanta vissa yrkesgrupper från arbetstillstånd."
+    }
+  ]
+}
