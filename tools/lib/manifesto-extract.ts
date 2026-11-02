@@ -128,10 +128,15 @@ export function toManifestoEntry(
 }
 
 /** Normalise PDF text or a quote for comparison: ligatures, quotes, dashes, hyphenation, whitespace. */
-export function normalizeText(s: string): string {
+export function normalizeText(s: string, softHyphen: 'join' | 'hyphen' = 'join'): string {
   return s
     .normalize('NFKC')
-    .replace(/\u00AD[ \t]*(\r?\n\s*)?/g, '')
+    .replace(
+      /\u00AD([ \t]*)(\r?\n\s*)?/g,
+      // 'join': a soft hyphen at a line end is invisible, so the word continues.
+      // 'hyphen': the PDF draws it as a visible hyphen ("hälso- och", "hbtqi-flyktingar").
+      (_m: string, sp: string, nl?: string) => (softHyphen === 'join' ? '' : nl ? '- ' : `-${sp}`),
+    )
     .replace(/[‘’‚`´]/g, "'")
     .replace(/[“”„«»]/g, '"')
     .replace(/[‐‑–—−]/g, '-')
@@ -150,9 +155,11 @@ function loose(s: string): string {
  * `loose` only when hyphens and spaces are ignored entirely, or `none`.
  */
 export function quoteMatchKind(pageText: string, quote: string): 'exact' | 'loose' | 'none' {
-  const q = normalizeText(quote);
-  if (q === '') return 'none';
-  if (normalizeText(pageText).includes(q)) return 'exact';
+  if (normalizeText(quote) === '') return 'none';
+  // Strict first: try the soft hyphen as a word join, then as a visible hyphen.
+  for (const mode of ['join', 'hyphen'] as const) {
+    if (normalizeText(pageText, mode).includes(normalizeText(quote, mode))) return 'exact';
+  }
   return loose(pageText).includes(loose(quote)) ? 'loose' : 'none';
 }
 
@@ -161,10 +168,16 @@ export function quoteMatchKind(pageText: string, quote: string): 'exact' | 'loos
  * letter or digit sits right before its first or after its last character on the page.
  */
 export function midWordCut(pageText: string, quote: string): 'start' | 'end' | 'both' | null {
-  const page = normalizeText(pageText);
-  const q = normalizeText(quote);
-  if (q === '') return null;
-  const idx = page.indexOf(q);
+  let page = '';
+  let q = '';
+  let idx = -1;
+  for (const mode of ['join', 'hyphen'] as const) {
+    page = normalizeText(pageText, mode);
+    q = normalizeText(quote, mode);
+    if (q === '') return null;
+    idx = page.indexOf(q);
+    if (idx >= 0) break;
+  }
   if (idx < 0) return null;
   const word = /[\p{L}\p{N}]/u;
   const start = idx > 0 && word.test(page[idx - 1]) && word.test(q[0]);
