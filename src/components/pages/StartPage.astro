@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { PartyChip } from '@/components/ui/party-chip';
+import { getDefaultTerm } from '@/lib/term-data';
 import { partyName } from '@/lib/promise-labels';
 import { termOfFilePath, termPagePath } from '@/lib/terms';
 import {
@@ -29,11 +30,12 @@ const promises = (await getCollection('promises'))
 const model = buildStartModel(termRecord, sources, promises);
 const { keyNumbers: k } = model;
 const hasData = promises.length > 0;
+const latestTerm = await getDefaultTerm();
 const keyList = [
   { n: k.promises, label: 'löften' },
   { n: k.parties, label: 'partier' },
   { n: k.assessed, label: 'bedömda hittills' },
-  { n: k.riksdagDocuments, label: 'Riksdagsdokument kopplade' },
+  { n: k.riksdagDocuments, label: 'riksdagsdokument kopplade' },
 ];
 ---
 
@@ -72,9 +74,9 @@ const keyList = [
       <dl class="grid grid-cols-2 gap-px self-start overflow-hidden rounded-lg border bg-border">
         {
           keyList.map((item) => (
-            <div class="bg-background p-4">
-              <dd class="font-serif text-3xl font-bold tabular-nums">{num(item.n)}</dd>
+            <div class="flex flex-col-reverse justify-end bg-background p-4">
               <dt class="mt-1 text-sm text-muted-foreground">{item.label}</dt>
+              <dd class="font-serif text-3xl font-bold tabular-nums">{num(item.n)}</dd>
             </div>
           ))
         }
@@ -85,7 +87,12 @@ const keyList = [
   {
     !hasData && (
       <section class="container mx-auto px-4 py-10 md:px-6">
-        <p class="text-lg">Löften för perioden samlas in.</p>
+        <p class="text-lg">
+          Löften för perioden samlas in.{' '}
+          <a href={`${base}${termPagePath('start', latestTerm)}`} class="underline underline-offset-2">
+            Se senaste perioden med löften ({latestTerm})
+          </a>
+        </p>
       </section>
     )
   }
@@ -135,14 +142,17 @@ const keyList = [
       {
         model.agreements.length > 0 && (
           <p class="mt-4 text-sm text-muted-foreground">
-            Överenskommelsen är belägg, inte bedömning: den visar vad texten gjorde med ett löfte, inte om
-            löftet hålls.
+            {model.agreements.length === 1
+              ? 'Överenskommelsen är belägg, inte bedömning: den visar vad texten gjorde med ett löfte, inte om löftet hålls.'
+              : 'Överenskommelserna är belägg, inte bedömning: de visar vad texterna gjorde med ett löfte, inte om löftet hålls.'}
           </p>
         )
       }
     </div>
   </section>
 
+  {hasData && (
+  <>
   <!-- Status strip -->
   <section class="border-y bg-muted" aria-labelledby="status-rubrik">
     <div class="container mx-auto px-4 py-6 md:px-6">
@@ -183,7 +193,7 @@ const keyList = [
                     <span
                       class="flex h-2.5 overflow-hidden rounded-full border border-dashed border-muted-foreground/60"
                       role="img"
-                      aria-label={`${c.assessed} av ${c.promises} löften bedömda`}
+                      aria-label={`${num(c.assessed)} av ${num(c.promises)} löften bedömda`}
                     >
                       <span class="bg-foreground/70" style={`width:${(c.assessed / c.promises) * 100}%`} />
                     </span>
@@ -204,6 +214,8 @@ const keyList = [
       ))
     }
   </section>
+  </>
+  )}
 
   <!-- From promise to law -->
   <section class="border-t bg-muted" aria-labelledby="steg-rubrik">
