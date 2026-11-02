@@ -1,0 +1,93 @@
+---
+/**
+ * Period bar: one segment per term, directly under the header on term-dependent
+ * pages. Server-rendered links, no JS: segments from `sm` up (up to three terms),
+ * a <details> dropdown on narrow screens or with more than three terms.
+ */
+import { getTerms } from '@/lib/term-data';
+import { dataStatusLabel, termPagePath, type PageKind } from '@/lib/terms';
+
+interface Props {
+  kind: PageKind;
+  /** The term being shown. */
+  term: string;
+  /** Page parameter: party id or agreement slug. */
+  param?: string;
+  /** Subtitle per term id; falls back to the data status of the term. */
+  subtitles?: Record<string, string>;
+}
+
+const { kind, term, param, subtitles = {} } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const items = (await getTerms()).map((t) => ({
+  id: t.id,
+  href: `${base}${termPagePath(kind, t.id, param)}`,
+  subtitle: subtitles[t.id] ?? dataStatusLabel(t),
+  current: t.id === term,
+}));
+const dropdownOnly = items.length > 3;
+const current = items.find((i) => i.current);
+---
+
+<div class="border-b bg-muted" data-period-bar>
+  <nav
+    aria-label="Period"
+    class="container mx-auto flex items-center gap-3 px-4 py-2 md:px-6"
+  >
+    <span class="hidden text-xs font-medium uppercase tracking-wide text-muted-foreground sm:inline"
+      >Period</span
+    >
+    {
+      !dropdownOnly && (
+        <ul class="hidden gap-1 sm:flex">
+          {items.map((i) => (
+            <li>
+              <a
+                href={i.href}
+                aria-current={i.current ? 'page' : undefined}
+                class:list={[
+                  'flex min-h-11 flex-col justify-center rounded-md px-4 py-1 outline-offset-2 focus-visible:outline focus-visible:outline-2',
+                  i.current
+                    ? 'bg-background ring-1 ring-foreground'
+                    : 'text-muted-foreground hover:bg-background/60 hover:text-foreground',
+                ]}
+              >
+                <span class="font-mono text-sm font-medium">{i.id}</span>
+                <span class="text-xs">{i.subtitle}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    <details class:list={['relative', dropdownOnly ? '' : 'sm:hidden']}>
+      <summary
+        class="flex min-h-11 cursor-pointer list-none items-center gap-2 rounded-md bg-background px-4 py-1 ring-1 ring-foreground"
+      >
+        <span class="font-mono text-sm font-medium">{current?.id ?? term}</span>
+        <span class="text-xs text-muted-foreground">{current?.subtitle}</span>
+        <span aria-hidden="true">&#9662;</span>
+      </summary>
+      <ul class="absolute left-0 top-full z-40 mt-1 min-w-56 rounded-md border bg-background p-1 shadow-md">
+        {
+          items.map((i) => (
+            <li>
+              <a
+                href={i.href}
+                aria-current={i.current ? 'page' : undefined}
+                class:list={[
+                  'flex min-h-11 flex-col justify-center rounded px-3 py-1 hover:bg-muted',
+                  i.current && 'font-medium ring-1 ring-foreground',
+                ]}
+              >
+                <span class="font-mono text-sm">{i.id}</span>
+                <span class="text-xs text-muted-foreground">{i.subtitle}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </details>
+  </nav>
+</div>

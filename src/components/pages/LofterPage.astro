@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import SearchPage from '../SearchPage';
+import { termOfFilePath } from '@/lib/terms';
+
+interface Props {
+  term: string;
+}
+const { term } = Astro.props;
+
+const sources = new Map((await getCollection('sources')).map((e) => [e.data.id, e.data]));
+const promises = (await getCollection('promises'))
+  .filter((e) => termOfFilePath(e.filePath ?? '') === term)
+  .map((e) => {
+    const source = sources.get(e.data.source.id);
+    if (!source) throw new Error(`Unknown source '${e.data.source.id}' in ${e.data.id}`);
+    return { ...e.data, sourceUrl: source.url, sourceArchive: source.archive, sourceUrlDeadAsOf: source.urlDeadAsOf, date: source.date };
+  });
+---
+
+<Layout
+  title="Löften — Brutna Löften"
+  description="Sök bland politiska löften i vår databas."
+  period={{ kind: 'lofter', term }}
+>
+  {
+    promises.length === 0 ? (
+      <p class="container mx-auto px-4 py-12 md:px-6">Löften för perioden samlas in.</p>
+    ) : (
+      <SearchPage client:load promises={promises} />
+    )
+  }
+</Layout>

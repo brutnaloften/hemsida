@@ -1,62 +1,13 @@
 ---
-import { getCollection } from 'astro:content';
-import type { GetStaticPaths } from 'astro';
-import Layout from '../../layouts/Layout.astro';
-import VerdictCounts from '@/components/VerdictCounts.astro';
-import PartyPromiseList from '@/components/PartyPromiseList';
-import { partyName } from '@/lib/promise-labels';
-import PartyOutcomeCounts from '@/components/PartyOutcomeCounts.astro';
-import { agreementOutcomeCounts, areaCounts, partiesWithPromises, promisesForParty, sortByTitle } from '@/lib/party-stats';
-import { promisePath } from '@/lib/timeline';
-import { agreementName } from '@/schema/promise';
+import Redirect from '@/components/Redirect.astro';
+import { PARTIES } from '@/schema/promise';
+import { getDefaultTerm } from '@/lib/term-data';
+import { termPagePath } from '@/lib/terms';
 
-export const getStaticPaths = (async () => {
-  const all = (await getCollection('promises')).map((e) => e.data);
-  const agreement = (await getCollection('sources')).map((e) => e.data).find((s) => s.id === 'tidoavtalet');
-  return partiesWithPromises(all).map((party) => ({
-    params: { party: party.toLowerCase() },
-    props: { party, promises: promisesForParty(all, party), agreement },
-  }));
-}) satisfies GetStaticPaths;
+export const getStaticPaths = () => PARTIES.map((p) => ({ params: { party: p.toLowerCase() } }));
 
-const { party, promises, agreement } = Astro.props;
-const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
-const rows = sortByTitle(promises).map((p) => ({
-  id: p.id,
-  title: p.title,
-  area: p.area,
-  verdict: { value: p.verdict.value },
-  href: `${base}${promisePath(p.id)}`,
-}));
-const areas = areaCounts(promises).map((a) => a.area);
-const name = partyName(party);
-const outcome = agreementOutcomeCounts(promises);
+const term = await getDefaultTerm();
+const { party } = Astro.params;
 ---
 
-<Layout title={`${name} — Brutna Löften`} description={`Löften från ${name} och hur långt de bedömts.`}>
-  <div class="container mx-auto max-w-3xl px-4 py-8 md:px-6 md:py-12">
-    <a href={`${base}partier`} class="text-sm text-muted-foreground hover:text-foreground">&larr; Alla partier</a>
-    <h1 class="mt-4 text-2xl font-bold tracking-tight md:text-4xl">{name}</h1>
-    <section class="mt-6">
-      <h2 class="text-xl font-semibold">Bedömningar</h2>
-      <div class="mt-3"><VerdictCounts promises={rows} /></div>
-      <p class="mt-3 text-sm text-muted-foreground">
-        Löften som flera partier står bakom räknas för varje parti.
-      </p>
-    </section>
-    {
-      outcome.total > 0 && agreement && (
-        <section class="mt-10">
-          <h2 class="text-xl font-semibold">Valmanifest och {agreementName(agreement)}</h2>
-          <div class="mt-3">
-            <PartyOutcomeCounts counts={outcome.counts} total={outcome.total} source={agreement} />
-          </div>
-        </section>
-      )
-    }
-    <section class="mt-10">
-      <h2 class="mb-3 text-xl font-semibold">Löften</h2>
-      <PartyPromiseList client:load promises={rows} areas={areas} />
-    </section>
-  </div>
-</Layout>
+<Redirect to={termPagePath('party', term, party)} />
