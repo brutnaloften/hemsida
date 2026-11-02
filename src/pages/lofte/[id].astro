@@ -165,7 +165,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                 <li class="relative pb-8 pl-6 last:pb-0">
                   {s.type === 'promise' && (
                     <>
-                      <TimelineMarker step="promise" class="absolute left-[-1px] top-1 -translate-x-1/2" />
+                      <TimelineMarker step="promise" />
                       <p class="text-sm text-muted-foreground">
                         {s.date && <>{s.date} &middot; </>}
                         {s.label}
@@ -178,7 +178,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                   )}
                   {s.type === 'agreement' && (
                     <>
-                      <TimelineMarker step="agreement" class="absolute left-[-1px] top-1 -translate-x-1/2" />
+                      <TimelineMarker step="agreement" />
                       <p class="text-sm text-muted-foreground">{s.evidence.date} &middot; Överenskommelse</p>
                       <div class="flex flex-wrap items-center gap-2 font-medium">
                         {agreementHref(s.evidence.source) ? (
@@ -222,7 +222,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                   )}
                   {s.type === 'document' && (
                     <>
-                      <TimelineMarker step="document" class="absolute left-[-1px] top-1 -translate-x-1/2" />
+                      <TimelineMarker step="document" />
                       <RiksdagEntry entry={s.evidence} />
                       {s.evidence.kind === 'bet' && s.evidence.votes && (
                         <details class="mt-2 text-sm">
@@ -245,13 +245,13 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                   )}
                   {s.type === 'budget' && (
                     <>
-                      <TimelineMarker step="document" class="absolute left-[-1px] top-1 -translate-x-1/2" />
+                      <TimelineMarker step="document" />
                       <BudgetEntry entry={s.evidence} />
                     </>
                   )}
                   {s.type === 'missing' && (
                     <>
-                      <TimelineMarker step="missing" class="absolute left-[-1px] top-1.5 -translate-x-1/2" />
+                      <TimelineMarker step="missing" />
                       <p class="text-sm italic text-muted-foreground">{s.label}</p>
                     </>
                   )}
@@ -278,7 +278,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                   <ol class="mt-3 ml-1.5 border-l-2 border-foreground/80">
                     {t.evidence.map((e) => (
                       <li class="relative pb-6 pl-6 last:pb-0">
-                        <TimelineMarker step="document" class="absolute left-[-1px] top-1 -translate-x-1/2" />
+                        <TimelineMarker step="document" />
                         <RiksdagEntry entry={e} />
                       </li>
                     ))}

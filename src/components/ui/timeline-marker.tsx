@@ -2,12 +2,14 @@ import { cn } from '@/lib/utils';
 
 export type TimelineStep = 'promise' | 'agreement' | 'document' | 'missing';
 
+// The `top-*` offsets centre each marker on the first 20 px line (text-sm) of its entry.
 const MARKERS: Record<TimelineStep, string> = {
-  promise: 'size-4 rounded-full bg-foreground',
+  promise: 'top-0.5 size-4 rounded-full bg-foreground',
   agreement:
-    'size-3.5 border-2 border-[#5b21b6] bg-[#ede9fe] dark:border-[#a78bfa] dark:bg-[#2e1065]',
-  document: 'size-3.5 rounded-full border-[3px] border-foreground bg-background',
-  missing: 'size-3 rounded-full border-2 border-dashed border-[var(--dashed)] bg-transparent',
+    'top-[3px] size-3.5 border-2 border-[#5b21b6] bg-[#ede9fe] dark:border-[#a78bfa] dark:bg-[#2e1065]',
+  document: 'top-[3px] size-3.5 rounded-full border-[3px] border-foreground bg-background',
+  // Opaque background: a transparent marker lets the connector line show through the ring.
+  missing: 'top-1 size-3 rounded-full border-2 border-dashed border-[var(--dashed)] bg-background',
 };
 
 /**
@@ -19,7 +21,7 @@ export function TimelineMarker({ step, className }: { step: TimelineStep; classN
     <span
       aria-hidden="true"
       data-step={step}
-      className={cn('inline-block shrink-0', MARKERS[step], className)}
+      className={cn('absolute left-[-1px] -translate-x-1/2 shrink-0', MARKERS[step], className)}
     />
   );
 }
