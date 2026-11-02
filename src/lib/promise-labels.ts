@@ -1,4 +1,4 @@
-import type { PROMISE_TYPES, PARTIES, EVIDENCE_KINDS } from '@/schema/promise';
+import type { PROMISE_TYPES, PARTIES, EVIDENCE_KINDS, VERDICTS } from '@/schema/promise';
 
 type Party = (typeof PARTIES)[number];
 type PromiseType = (typeof PROMISE_TYPES)[number];
@@ -40,3 +40,19 @@ export const EVIDENCE_KIND_LABELS: Record<EvidenceKind, string> = {
 export function partyName(code: string): string {
   return PARTY_NAMES[code as Party] ?? code;
 }
+
+/** One-sentence Swedish explanation per verdict value, shown on om-metoden. */
+export const VERDICT_DESCRIPTIONS: Record<(typeof VERDICTS)[number], string> = {
+  unassessed: 'Löftet har inte bedömts ännu. Det betyder inte att det är uppfyllt eller brutet.',
+  no_evidence:
+    'Vi har sökt i riksdagens dokument och inte hittat något som visar att arbetet har påbörjats. Motiveringen anger när och vad vi sökte efter.',
+  in_progress:
+    'Arbetet pågår, till exempel i form av en utredning, ett förslag eller en proposition, men är ännu inte beslutat eller i kraft.',
+  fulfilled: 'Löftet har genomförts som det formulerades.',
+  partially_fulfilled:
+    'Löftet har genomförts, men i väsentligt snävare eller svagare form än utlovat, eller bara till vissa delar.',
+  unfulfilled: 'Mandatperioden gick ut utan att löftet hade genomförts.',
+  abandoned: 'De partier som gav löftet har uttryckligen släppt det.',
+  broken: 'Partierna har gjort tvärtemot löftet eller röstat emot det.',
+  not_assessable: 'Löftet är för vagt för att kunna bedömas.',
+};

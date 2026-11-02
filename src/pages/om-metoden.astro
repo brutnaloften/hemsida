@@ -8,22 +8,11 @@ import {
   VERDICT_LABELS,
 } from "../schema/promise";
 
+import { VERDICT_DESCRIPTIONS as verdictDescriptions } from "../lib/promise-labels";
+
 const tido = (await getCollection("sources")).map((e) => e.data).find((s) => s.id === "tidoavtalet");
 if (!tido) throw new Error("source tidoavtalet not found");
 
-// Verdict descriptions follow the definitions in docs/data-model.md.
-const verdictDescriptions: Record<(typeof VERDICTS)[number], string> = {
-  not_started: "Vi har inte hittat något som tyder på att arbetet har påbörjats.",
-  in_progress:
-    "Arbetet pågår, till exempel i form av en utredning, ett förslag eller en proposition, men är ännu inte beslutat eller i kraft.",
-  fulfilled: "Löftet har genomförts som det formulerades.",
-  partially_fulfilled:
-    "Löftet har genomförts, men i väsentligt snävare eller svagare form än utlovat, eller bara till vissa delar.",
-  unfulfilled: "Mandatperioden gick ut utan att löftet hade genomförts.",
-  abandoned: "De partier som gav löftet har uttryckligen släppt det.",
-  broken: "Partierna har gjort tvärtemot löftet eller röstat emot det.",
-  not_assessable: "Löftet är för vagt för att kunna bedömas.",
-};
 
 const stages = [
   { code: "dir", label: "Kommittédirektiv", text: "Regeringen ger en utredning i uppdrag att undersöka frågan." },
@@ -127,10 +116,7 @@ const stages = [
         Bevisen och bedömningen hålls isär. Dokumenten i tidslinjen är fakta som delvis kan hittas
         automatiskt. Bedömningen, alltså hur långt löftet har uppfyllts, åtföljs av en skriftlig
         motivering som hänvisar till dokumenten. Motivering krävs för alla bedömningar utom
-        &quot;Ej påbörjat&quot;. Tidigare bedömningar sparas så att det går att se hur bilden har förändrats.
-      </p>
-      <p>
-        Fel som upptäcks rättas via en pull request, så varje ändring går att granska.
+        &quot;Inte bedömt&quot;. För &quot;Inga belägg funna&quot; ska motiveringen ange när och vad vi sökte efter. Tidigare bedömningar sparas så att det går att se hur bilden har förändrats.
       </p>
       <h3 class="text-lg font-medium pt-2">Bedömningsskalan</h3>
       <dl class="space-y-3">
@@ -144,7 +130,7 @@ const stages = [
         }
       </dl>
       <p>
-        När mandatperioden är slut går kvarvarande löften som står som &quot;Ej påbörjat&quot; eller
+        När mandatperioden är slut går kvarvarande löften som står som &quot;Inga belägg funna&quot; eller
         &quot;Pågår&quot; över till &quot;Ej uppfyllt&quot; i en särskild avslutande genomgång.
       </p>
     </section>

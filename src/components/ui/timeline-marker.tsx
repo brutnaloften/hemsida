@@ -6,7 +6,7 @@ export type TimelineStep = 'promise' | 'agreement' | 'document' | 'missing';
 const MARKERS: Record<TimelineStep, string> = {
   promise: 'top-0.5 size-4 rounded-full bg-foreground',
   agreement:
-    'top-[3px] size-3.5 border-2 border-[#5b21b6] bg-[#ede9fe] dark:border-[#a78bfa] dark:bg-[#2e1065]',
+    'top-[3px] size-3.5 border-2 border-[var(--agreement-weakened-border)] bg-[var(--agreement-weakened-bg)]',
   document: 'top-[3px] size-3.5 rounded-full border-[3px] border-foreground bg-background',
   // Opaque background: a transparent marker lets the connector line show through the ring.
   missing: 'top-1 size-3 rounded-full border-2 border-dashed border-[var(--dashed)] bg-background',
