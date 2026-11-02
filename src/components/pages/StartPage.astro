@@ -61,11 +61,11 @@ const keyList = [
             type="search"
             name="q"
             placeholder="Sök bland löften, till exempel elpris"
-            class="h-11 min-w-0 flex-1 rounded-md border border-input bg-background px-3 text-base"
+            class="h-11 w-full min-w-0 rounded-md sm:w-auto sm:flex-1 border border-input bg-background px-3 text-base"
           />
           <button
             type="submit"
-            class="h-11 rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+            class="h-11 w-full rounded-md bg-primary px-6 sm:w-auto text-sm font-medium text-primary-foreground hover:bg-primary/90"
           >
             Sök
           </button>
@@ -205,7 +205,7 @@ const keyList = [
                     .filter((s) => s.total > 0)
                     .map((s) => (
                       <span class="flex flex-wrap items-center gap-2 text-sm">
-                        <span class="agreement-badge px-2">{s.agreement.name}</span>
+                        <span class="agreement-badge h-7 px-2.5">{s.agreement.name}</span>
                         <span>{agreementSplitText(s.counts)}</span>
                       </span>
                     ))}
