@@ -1,6 +1,6 @@
 # Review of Sverigedemokraterna 2022 manifesto candidates
 
-Companion to `src/data/2022-2026/candidates/valmanifest-2022-sd.json` (bead hemsida-uun.4). Extraction and linking were done by an AI (Claude Code subagent on the user's subscription, no Anthropic API calls), following `EXTRACTION_RULES` in `tools/lib/manifesto-extract.ts`. 267 candidates, ids prefixed `val2022-sd-`, each with a proposed `link` to the Tidöavtalet (the party is a Tidö party, role `support`). Every verdict is `unassessed`. Promotion to promise files is a separate PR.
+Companion to `src/data/2022-2026/candidates/valmanifest-2022-sd.json` (bead hemsida-uun.4). Extraction and linking were done by an AI (Claude Code subagent on the user's subscription, no Anthropic API calls), following `EXTRACTION_RULES` in `tools/lib/manifesto-extract.ts`. 254 candidates, ids prefixed `val2022-sd-`, each with a proposed `link` to the Tidöavtalet (the party is a Tidö party, role `support`). Every verdict is `unassessed`. Promotion to promise files is a separate PR.
 
 ## Source
 
@@ -14,30 +14,30 @@ Page numbers are PDF pages (cover = 1), the same as `source.page`. The `section`
 
 ## Coverage
 
-Types: budget 36, legislative 93, other_action 85, vague 47, outcome 3, inquiry 3. Proposed outcomes: weakened 58, included 55, not_addressed 154.
+Types: budget 34, legislative 86, other_action 85, vague 44, outcome 3, inquiry 2. Proposed outcomes: weakened 67, included 31, not_addressed 156.
 
 Candidates per section:
 
 | Section                   | Candidates |
 | ------------------------- | ---------- |
 | Brott och straff          | 6          |
-| Gängkriminalitet          | 7          |
+| Gängkriminalitet          | 6          |
 | Brottsoffer               | 6          |
 | Polisen                   | 6          |
 | Terrorism                 | 4          |
-| Integration               | 5          |
-| Migration                 | 7          |
-| Hedersproblematik         | 6          |
+| Integration               | 4          |
+| Migration                 | 6          |
+| Hedersproblematik         | 5          |
 | Jämställdhet              | 6          |
 | Ekonomi                   | 3          |
-| Svenska jobb              | 6          |
+| Svenska jobb              | 4          |
 | Småföretag                | 5          |
 | Näringsliv                | 5          |
 | Miljö                     | 7          |
 | Klimat                    | 4          |
 | Energi                    | 6          |
-| Landsbygd                 | 5          |
-| Bilen                     | 7          |
+| Landsbygd                 | 3          |
+| Bilen                     | 6          |
 | Arbetsmarknadens villkor  | 7          |
 | A-kassan                  | 3          |
 | Offentligt slöseri        | 6          |
@@ -45,30 +45,30 @@ Candidates per section:
 | Jord- och skogsbruk       | 8          |
 | Djurskydd                 | 6          |
 | Bostäder                  | 5          |
-| Infrastruktur             | 7          |
+| Infrastruktur             | 6          |
 | Barnomsorg                | 6          |
 | Skola och utbildning      | 8          |
-| Ungdomsfrågor             | 6          |
+| Ungdomsfrågor             | 5          |
 | Pensioner                 | 5          |
 | Äldrefrågor               | 7          |
 | Familj                    | 7          |
 | Sjukförsäkring            | 7          |
 | Funktionsrätt             | 6          |
 | Sjukvård                  | 7          |
-| Psykisk ohälsa            | 6          |
-| Kultur                    | 3          |
+| Psykisk ohälsa            | 7          |
+| Kultur                    | 2          |
 | Idrott                    | 2          |
 | HBT+                      | 2          |
-| Demokrati                 | 7          |
+| Demokrati                 | 6          |
 | Yttrandefrihet på nätet   | 2          |
-| Utrikes                   | 3          |
+| Utrikes                   | 2          |
 | Norden och vårt närområde | 6          |
 | Europa                    | 9          |
 | Bistånd                   | 6          |
 | Krisberedskap             | 7          |
 | Försvar                   | 7          |
 
-Selection rule: the "Sverigedemokraterna vill:" bullet lists (pp. 5-62) are the manifesto's own statement of commitments, so each bullet that states something to do, change, fund or achieve became one candidate. Bullets that only name a value or direction ("Bedriva en politik för hela Sverige", "Prioritera svenska medborgares intressen i den ekonomiska politiken", "Låta hela landet få del av välstånd", "Skapa förutsättningar för en livskraftig industri", "Prioritera svensk industri och konkurrenskraft", "Att flickor och pojkar ska ha samma livsutsikter, oavsett bakgrund", "Göra det svårare att exploatera den svenska välfärden", "Öka tryggheten i hela Sverige och i alla bostadsområden") were dropped; a few that name a policy area but give no assessable content were kept as `vague`. Each quote is the full bullet (or full sentence) verbatim from its page.
+Selection rule (this list was extended after review with `standardiserad-uppfoljning-av-sjalvmordsnara`, p50, which was missed at first): the "Sverigedemokraterna vill:" bullet lists (pp. 5-62) are the manifesto's own statement of commitments, so each bullet that states something to do, change, fund or achieve became one candidate. Bullets that only name a value or direction ("Bedriva en politik för hela Sverige", "Prioritera svenska medborgares intressen i den ekonomiska politiken", "Låta hela landet få del av välstånd", "Skapa förutsättningar för en livskraftig industri", "Prioritera svensk industri och konkurrenskraft", "Att flickor och pojkar ska ha samma livsutsikter, oavsett bakgrund", "Göra det svårare att exploatera den svenska välfärden", "Öka tryggheten i hela Sverige och i alla bostadsområden") were dropped; a few that name a policy area but give no assessable content were kept as `vague`. Each quote is the full bullet (or full sentence) verbatim from its page.
 
 Skipped on purpose:
 
@@ -76,78 +76,33 @@ Skipped on purpose:
 - The prose of each section, which gives rationale and repeats the bullets. Prose-only commitments were not extracted separately, except one sentence on p. 5 (slopa straffrabatter och avtjäna hela straffet) that is not in the bullet list.
 - Section "Utrikes" (p. 57) starts with a quoted paragraph that is a statement of values.
 
-## Possible duplicates and overlaps
+## Duplicates and overlaps
 
-Ids are shown without the `val2022-sd-` prefix. The manifesto itself repeats several commitments in different sections; nothing was merged.
+The manifesto repeats several commitments in different sections. Following `EXTRACTION_RULES` ("merge sentences that restate the same one") and the M precedent, repeats were dropped and the fullest version kept. Ids without the `val2022-sd-` prefix:
 
-- `kravbaserad-integrationspolitik-gangen` (p6), `kravbaserad-integrationspolitik` (p11), `kravbaserad-integrationspolitik-arbete` (p18): the same bullet in three sections.
-- `gor-det-lonsamt-att-arbeta` (p17) and `gor-det-mer-lonsamt-att-arbeta` (p18).
-- `sank-skatten-pa-drivmedel` (p25), `sank-bensin-och-dieselpriset` (p26), `sank-skatten-pa-bensin-och-diesel` (p35).
-- `stoppa-asylinvandringen-och-pausa-kvotflyktingar` (p6) and `stoppa-asylinvandring-fran-lander-utanfor-naromradet` (p12).
-- `forbjud-heltackande-beslojning-i-offentliga-miljoer` (p14) and `forbjud-heltackande-slojor-i-offentliga-rummet` (p15); `forbjud-religios-beslojning-av-barn-i-skolan` (p38) is the school variant.
-- `infor-tjanstemannaansvar` (p54) and `aterinfor-tjanstemannaansvaret` (p29).
-- `statligt-helhetsansvar-for-personlig-assistans` and `samtliga-grundlaggande-behov-assistansgrundande` (p46).
-- `kraftigt-forstark-elevhalsan` (p50) and `starka-insatser-for-ungas-psykiska-halsa` (p39).
-- `bistandsmedel-for-att-stimulera-frivillig-atervandring` (p60), `aktiv-atervandringspolitik` (p11) and `uppmuntra-frivillig-aterundvandring` (p13).
-- `stoppa-statligt-stod-till-extremistiska-organisationer` (p11) and `stoppa-bidrag-till-extremistiska-ideorganisationer` (p51).
-- `gor-det-lonsamt-att-arbeta` / `oka-kraven-pa-icke-integrerade` are `vague`/broad and overlap with the Tidö benefit-and-work items.
+- `kravbaserad-integrationspolitik` (p11) kept; the same bullet on p6 and p18 dropped.
+- `sank-bensin-och-dieselpriset` (p26) kept; the p25 and p35 "sänk skatten på drivmedel" bullets dropped.
+- `gor-det-lonsamt-att-arbeta` (p17) kept; "göra det mer lönsamt att arbeta" (p18) dropped.
+- `forbjud-heltackande-slojor-i-offentliga-rummet` (p15) kept; "förbjuda heltäckande beslöjning i offentliga miljöer" (p14) dropped. `forbjud-religios-beslojning-av-barn-i-skolan` (p38) is the school variant and kept.
+- `aterinfor-tjanstemannaansvaret` (p29) kept; "införa tjänstemannaansvar" (p54) dropped.
+- `stoppa-asylinvandringen-och-pausa-kvotflyktingar` (p6) kept; p12 "stoppa asylinvandringen från länder utanför närområdet" and p57 "stoppa migrationsrörelser" dropped.
+- `uppmuntra-frivillig-aterundvandring` (p13) kept; "skapa en aktiv återvandringspolitik" (p11) dropped. The aid variant (p60) is kept separately.
+- `stoppa-statligt-stod-till-extremistiska-organisationer` (p11) kept; "stoppa bidrag till extremistiska idéorganisationer" (p51) dropped.
+- `rusta-upp-vag-och-jarnvagsnatet` (p35) kept; "förbättra underhållet av vägar och järnväg" (p25) and "rusta upp vägnätet" (p26) dropped.
+- `starka-yttrandefriheten-pa-internet` (p56) kept; "värna yttrandefriheten på nätet" (p39) dropped.
+
+Remaining near-overlaps that were kept because they differ in scope: `statligt-helhetsansvar-for-personlig-assistans` and `samtliga-grundlaggande-behov-assistansgrundande` (p46); `kraftigt-forstark-elevhalsan` (p50) and `starka-insatser-for-ungas-psykiska-halsa` (p39); `bevara-inrikesflyget-och-bromma-flygplats` (p25) and `bevara-regionala-flygplatser-som-beredskapsflygplatser` (p36); `bekampa-islamism` (p55) and `bekampa-internationell-terrorism-och-islamism` (p57).
 
 ## Linking to the Tidöavtalet
 
-Links are editorial proposals made from the Tidö promise titles in `src/data/2022-2026/promises/tido-*.json`, not from re-reading the agreement text for every item. `included` means the agreement contains the commitment; `weakened` means it contains a smaller step (typically an inquiry, a narrower scope or a partial measure); `not_addressed` means no matching Tidö promise was found. No `strengthened` or `contradicted` outcome was proposed. Outcome labels describe the agreement only and imply no verdict.
+Links are editorial proposals. After review (PR #141), every included and weakened link was re-checked against the text of the Tidöavtalet and each note was rewritten to state only what the agreement says. Rules applied: an item that the agreement says "ska utredas", "ska övervägas", "ska ses över" or "ska tas fram förslag" is `weakened` at best; an unrelated link was removed and the candidate set to `not_addressed`; no mention is `not_addressed`. `included` means the agreement commits to the measure; `weakened` means a smaller step (inquiry, narrower scope, partial measure). No `strengthened` or `contradicted` outcome was proposed. Outcome labels describe the agreement only and imply no verdict.
 
-The 50 links below were uncertain (the evidence did not settle the label, or the match is loose). Where in doubt the more conservative label was chosen (`weakened` rather than `included`, `not_addressed` rather than `weakened`). They need a human check:
+Items still worth a human look (loose match, kept conservative):
 
-- `kraftigt-upprustat-ratsvasende` -> weakened (`kriminalvarden-expanderas-kraftigt`)
-- `slopa-straffrabatter-och-avtjana-hela-straffet` -> weakened (`avskaffa-mangdrabatt`, `ta-bort-straffreduktion-18-20-utred-straffrabatt-under-18`, `villkorlig-frigivning-undantag`)
-- `utvisa-utlandska-kriminella-och-aterkalla-tillstand` -> weakened (`fler-utvisningar-pa-grund-av-brott`, `aterkalla-medborgarskap-dubbelt-medborgarskap`, `utvisning-bristande-vandel`, `utredning-utvidgade-mojligheter-aterkalla-uppehallstillstand`)
-- `sank-straffmyndighetsaldern` -> weakened (`hemliga-tvangsmedel-under-15`, `ungdomskriminalitetsnamnder-och-bevistalan-under-15`)
-- `hoj-skadestanden` -> weakened (`oversyn-brottsskadeersattning-skadestand`)
-- `inskrankningar-av-rorelsefrihet-efter-straff` -> weakened (`vistelseforbud`)
-- `forutsattningar-for-polisen-att-bekampa-brott` -> weakened (`hemliga-tvangsmedel-sou-2022-19`, `direktatkomst-register-brottsbekampande`, `tullverket-brottsbekampande-uppgifter`)
-- `utvisa-terrordomda` -> weakened (`aterkalla-medborgarskap-dubbelt-medborgarskap`, `fler-utvisningar-pa-grund-av-brott`)
-- `informera-nyanlanda-om-krav` -> included (`obligatorisk-samhallsintroduktion-och-samhallsorientering`)
-- `stoppa-statligt-stod-till-extremistiska-organisationer` -> weakened (`utredning-utlandsk-finansiering-trossamfund`, `allmanna-arvsfonden-inriktning`)
-- `prioritera-kvotflyktingar-fran-naromradet` -> weakened (`kvotflyktingar-900-per-ar`, `krav-unhcr-urval-kvotflyktingar`)
-- `samordna-insatserna-mot-hedersforstryck` -> weakened (`insatser-hedersforstryck-kransningar-skolan`)
-- `sarskilt-hedersbrott` -> weakened (`skarpt-hedersforstryck-lagstiftning`)
-- `minska-kostnader-for-migration-bistand-eu-och-klimat` -> weakened (`asylsokandes-kostnadsansvar-fast-avgift`, `bistand-verktyg-mot-irreguljar-migration`, `oversyn-klimatstyrmedel-beraknings-konventioner`)
-- `lattare-att-anstalla-och-battre-for-industrin` -> weakened (`lagre-anstallningskostnader-langtidsarbetslosa`, `lagre-administrativa-kostnader-foretag`)
-- `forutsattningar-for-nyforetagande-och-entreprenorskap` -> weakened (`battre-villkor-sma-foretag-312-regler`, `forenklade-agarskiften-familjeforetag`)
-- `arbetskraftsutbud-som-svarar-mot-arbetsmarknadens-behov` -> weakened (`skarpta-villkor-arbetskraftsinvandring-medianlon`, `undanta-yrkesgrupper-arbetstillstand`)
-- `effektiv-klimatpolitik-med-globalt-perspektiv` -> weakened (`oversyn-klimatstyrmedel-beraknings-konventioner`, `fokusera-klimatstod-industri-laddinfrastruktur`)
-- `forskning-for-lonsammare-fossilfri-energi` -> included (`ny-energiforskningsproposition`)
-- `satsa-pa-atgarder-som-minskar-utslappen-mest-per-krona` -> weakened (`oversyn-klimatstyrmedel-beraknings-konventioner`)
-- `mal-for-fossilfrihet-och-leveranssakerhet` -> weakened (`energipolitiskt-mal-fossilfritt`)
-- `varna-det-kommunala-vetot-for-vindkraft` -> included (`tillaggsuppdrag-vindkraft-ersattning-kommuner`)
-- `sank-skatten-pa-drivmedel` -> included (`lagre-drivmedelspriser`)
-- `minska-anvandningen-av-dyra-biodrivmedel-fran-utlandet` -> weakened (`lagre-drivmedelspriser`)
-- `oka-kraven-pa-icke-integrerade` -> weakened (`bryta-passiv-langtidsarbetsloshet`, `sankt-etableringsstod`)
-- `stoppa-offentliga-medel-till-latsasjobb` -> weakened (`forenkla-arbetsmarknadspolitiska-insatser`)
-- `stoppa-hetsjakten-pa-jagare-och-legala-vapeninnehavare` -> weakened (`bred-utredning-vapenlagen`)
-- `oka-jordbrukets-konkurrenskraft-och-sjalvforsorjning` -> weakened (`djurvalfardsutredning-konkurrensforutsattningar-livsmedel`)
-- `forenkla-regler-och-processer-for-planering-och-byggnation` -> weakened (`oversyn-bygglov-integrerade-solceller`)
-- `sank-skatten-pa-bensin-och-diesel` -> included (`lagre-drivmedelspriser`)
-- `hogre-krav-pa-fristaende-forskolor-och-tillsyn` -> included (`okade-befogenheter-skolinspektionen`, `skarpt-agarprovning-friskolor`)
-- `prioritera-svenska-spraket-inom-barnomsorgen` -> weakened (`sprakforskola-utsatta-omraden-nyanlanda-barn`)
 - `starka-insatser-for-ungas-psykiska-halsa` -> included (`reform-elevhalsan-elevhalsogaranti`, `nationell-strategi-psykisk-halsa-suicidprevention`)
-- `oka-ekonomiskt-stod-till-mest-utsatta-aldre` -> weakened (`forslag-starka-pensionarernas-ekonomi`)
-- `underlatta-privat-pensionssparande` -> included (`breddat-agande-boende-sparande-pension`)
-- `forebyggande-socialtjanst-for-ungdomar-pa-glid` -> included (`ny-socialtjanstlag-brottsforebyggande`, `mellantvang-socialtjanstlagen`)
-- `trygg-och-rattssaker-sjukforsakring` -> weakened (`sjukforsakring-rehabilitering-avstamningstillfallen`)
-- `mer-resurser-till-forebyggande-arbete-och-rehabilitering` -> weakened (`sjukforsakring-rehabilitering-avstamningstillfallen`)
 - `stoppa-valfardsbrottsligheten-inom-socialforsakringen` -> included (`ny-myndighet-valfardsutbetalningar-transaktionskonto`, `skarp-bidragsbrottslagen-foretagsstod`)
-- `samtliga-grundlaggande-behov-assistansgrundande` -> weakened (`statligt-ansvar-personlig-assistans`)
-- `bekampa-fusk-och-bedragerier-inom-lss` -> weakened (`skarp-bidragsbrottslagen-foretagsstod`, `ny-myndighet-valfardsutbetalningar-transaktionskonto`)
-- `avskaffa-vardkoerna-och-infor-en-riktig-vardgaranti` -> weakened (`nationell-vardformedling`, `tjugofyra-timmarsgaranti-socialtjansten`)
-- `nationellt-patientjournalsystem` -> weakened (`enhetlig-digital-infrastruktur-vard`)
-- `tidigt-upptacka-och-behandla-psykisk-ohalsa` -> weakened (`gradvis-overgang-barn-vuxenvard-psykiatri-egeninskrivning`, `reform-elevhalsan-elevhalsogaranti`)
-- `sammanhallning-kring-svensk-kultur-och-nationell-identitet` -> weakened (`svensk-kulturkanon`)
-- `stoppa-bidrag-till-extremistiska-ideorganisationer` -> weakened (`utredning-utlandsk-finansiering-trossamfund`, `reform-folkbildningsradet-medelstilldelning`)
+- `standardiserad-uppfoljning-av-sjalvmordsnara` -> weakened (`uppfoljning-patienter-suicidalt-beteende`)
 - `bekampa-islamism` -> weakened (`utredning-utlandsk-finansiering-trossamfund`)
-- `bistandsmedel-for-att-stimulera-frivillig-atervandring` -> weakened (`stimulera-frivillig-aterundvandring-utredning`, `bistand-verktyg-mot-irreguljar-migration`)
-- `effektivisera-och-utvardera-det-svenska-bistandet` -> weakened (`bistand-verktyg-mot-irreguljar-migration`)
-- `villkora-bilateralt-bistand-med-mottagandesamverkan` -> included (`villkora-bistand-aterta-medborgare`, `eu-frysa-bistand-viseringar-icke-samarbetande-lander`)
 
 ## Verification
 
