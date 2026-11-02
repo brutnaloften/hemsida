@@ -1,0 +1,38 @@
+{
+  "id": "val2022-sd-villkora-bilateralt-bistand-med-mottagandesamverkan",
+  "term": "2022-2026",
+  "title": "Som regel villkora bilateralt bistånd med avtal om mottagandesamverkan",
+  "description": "Bilateralt bistånd villkoras som regel med avtal om mottagandesamverkan.",
+  "source": {
+    "id": "valmanifest-2022-sd",
+    "page": 60,
+    "quote": "Som regel villkora bilateralt bistånd med avtal om mottagandesamverkan"
+  },
+  "parties": ["SD"],
+  "roles": {
+    "SD": "support"
+  },
+  "type": "other_action",
+  "area": "Bistånd",
+  "committee": "UU",
+  "keywords": ["bistånd", "villkor", "återtagande"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-02",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": [
+        "tido-villkora-bistand-aterta-medborgare",
+        "tido-eu-frysa-bistand-viseringar-icke-samarbetande-lander"
+      ],
+      "outcome": "weakened",
+      "note": "Avtalet anger att delar av biståndet villkoras med att mottagarlandet tar ansvar för sina egna medborgare."
+    }
+  ]
+}

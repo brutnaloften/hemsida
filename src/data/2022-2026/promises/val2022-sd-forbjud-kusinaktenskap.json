@@ -1,0 +1,35 @@
+{
+  "id": "val2022-sd-forbjud-kusinaktenskap",
+  "term": "2022-2026",
+  "title": "Förbjud kusinäktenskap",
+  "description": "Äktenskap mellan kusiner förbjuds.",
+  "source": {
+    "id": "valmanifest-2022-sd",
+    "page": 14,
+    "quote": "Förbjuda kusinäktenskap"
+  },
+  "parties": ["SD"],
+  "roles": {
+    "SD": "support"
+  },
+  "type": "legislative",
+  "area": "Hedersproblematik",
+  "committee": "CU",
+  "keywords": ["kusinäktenskap", "förbud", "äktenskap"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-02",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-forbjud-kusinaktenskap"],
+      "outcome": "included",
+      "note": "Avtalet förbjuder äktenskap mellan kusiner."
+    }
+  ]
+}

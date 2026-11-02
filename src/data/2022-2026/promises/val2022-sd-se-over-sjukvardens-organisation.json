@@ -1,0 +1,35 @@
+{
+  "id": "val2022-sd-se-over-sjukvardens-organisation",
+  "term": "2022-2026",
+  "title": "Se över sjukvårdens organisation",
+  "description": "Sjukvårdens organisation ses över.",
+  "source": {
+    "id": "valmanifest-2022-sd",
+    "page": 48,
+    "quote": "Se över sjukvårdens organisation"
+  },
+  "parties": ["SD"],
+  "roles": {
+    "SD": "support"
+  },
+  "type": "inquiry",
+  "area": "Sjukvård",
+  "committee": "SoU",
+  "keywords": ["sjukvårdens organisation", "huvudman", "regioner"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-02",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-utredning-statligt-huvudmannaskap-sjukvard"],
+      "outcome": "included",
+      "note": "Avtalet utreder statligt huvudmannaskap för sjukvården."
+    }
+  ]
+}

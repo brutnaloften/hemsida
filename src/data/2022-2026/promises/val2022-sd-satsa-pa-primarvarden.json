@@ -1,0 +1,35 @@
+{
+  "id": "val2022-sd-satsa-pa-primarvarden",
+  "term": "2022-2026",
+  "title": "Satsa på primärvården",
+  "description": "Det görs en satsning på primärvården.",
+  "source": {
+    "id": "valmanifest-2022-sd",
+    "page": 48,
+    "quote": "Satsa på primärvården"
+  },
+  "parties": ["SD"],
+  "roles": {
+    "SD": "support"
+  },
+  "type": "budget",
+  "area": "Sjukvård",
+  "committee": "SoU",
+  "keywords": ["primärvård", "vårdcentraler", "fast läkarkontakt"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-02",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-utbyggd-primarvard-tio-ar", "tido-fast-lakarkontakt-uppfoljning"],
+      "outcome": "included",
+      "note": "Avtalet innebär en omfattande utbyggnad av primärvården."
+    }
+  ]
+}

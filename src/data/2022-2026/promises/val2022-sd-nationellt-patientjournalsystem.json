@@ -1,0 +1,35 @@
+{
+  "id": "val2022-sd-nationellt-patientjournalsystem",
+  "term": "2022-2026",
+  "title": "Införa ett nationellt patientjournalsystem",
+  "description": "Ett nationellt patientjournalsystem införs.",
+  "source": {
+    "id": "valmanifest-2022-sd",
+    "page": 48,
+    "quote": "Införa ett nationellt patientjournalsystem"
+  },
+  "parties": ["SD"],
+  "roles": {
+    "SD": "support"
+  },
+  "type": "other_action",
+  "area": "Sjukvård",
+  "committee": "SoU",
+  "keywords": ["patientjournal", "digitalisering", "vård"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-02",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-enhetlig-digital-infrastruktur-vard"],
+      "outcome": "weakened",
+      "note": "Avtalet anger att en enhetlig och gemensam digital infrastruktur för den svenska sjukvården genomförs."
+    }
+  ]
+}

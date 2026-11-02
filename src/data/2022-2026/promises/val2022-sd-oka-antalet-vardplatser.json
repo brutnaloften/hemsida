@@ -1,0 +1,35 @@
+{
+  "id": "val2022-sd-oka-antalet-vardplatser",
+  "term": "2022-2026",
+  "title": "Öka antalet vårdplatser",
+  "description": "Antalet vårdplatser ökar.",
+  "source": {
+    "id": "valmanifest-2022-sd",
+    "page": 48,
+    "quote": "Öka antalet vårdplatser"
+  },
+  "parties": ["SD"],
+  "roles": {
+    "SD": "support"
+  },
+  "type": "budget",
+  "area": "Sjukvård",
+  "committee": "SoU",
+  "keywords": ["vårdplatser", "sjukhus", "vårdplatsbrist"],
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-02",
+    "history": []
+  },
+  "evidence": [
+    {
+      "kind": "agreement",
+      "source": "tidoavtalet",
+      "date": "2022-10-14",
+      "promises": ["tido-nationell-plan-vardplatser"],
+      "outcome": "weakened",
+      "note": "Avtalet anger att en nationell plan ska utredas och tas fram för hur bristen på vårdplatser ska åtgärdas."
+    }
+  ]
+}
