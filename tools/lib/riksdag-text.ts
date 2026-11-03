@@ -127,7 +127,7 @@ const PARTY_NAMES: Record<string, string> = {
 
 /** Party codes inside a trailing parenthesis, e.g. "... punkt 2 (S, V)" -> S, V. */
 export function trailingParties(heading: string): string[] {
-  const m = /\(([A-ZÅÄÖ]{1,2}(?:\s*(?:,|och)\s*[A-ZÅÄÖ]{1,2})*)\)\s*$/.exec(heading);
+  const m = /\(([A-ZÅÄÖ]{1,2}(?:\s*(?:,|och)\s*[A-ZÅÄÖ]{1,2})*)\)\s*:?\s*$/.exec(heading);
   if (!m) return [];
   return m[1]!.match(/MP|SD|KD|[SVCML]/g) ?? [];
 }
@@ -138,6 +138,10 @@ const DISSENT_END = /^(Bilaga|Bilagor|Utskottets|Regeringens|Förslag|Beslut|Mot
 
 /** Headings that end the per-anslag part of a budget document. */
 const ANSLAG_END = /^(Motionerna|Utskottets|Särskilda|Reservation|Bilaga|Förslag|Beslut)/i;
+
+/** Headings that end a section-level speaker context. */
+const CTX_END = /^(Utskottets|Motionerna|Motionen|Förslag|Beslut)/i;
+const ANNEX_START = /^(Bilaga|Bilagor|Förteckning över behandlade förslag)/i;
 
 const GOV_PARA = /^Regeringen (föreslår|bedömer|anser|avser|har)|^Regeringens (förslag|bedömning)/;
 const COMMITTEE_PARA = /^Utskottet\b/;
@@ -160,50 +164,71 @@ export function annotateParagraphs(raw: RawParagraph[], doktyp: string): Paragra
           ? { kind: 'committee', parties: [], label: 'Utskottet (majoriteten)' }
           : { kind: 'other', parties: [], label: 'Okänd avsändare' };
 
+  const govRef: Speaker = { kind: 'government', parties: [], label: 'Regeringen (refererad)' };
+  const annexOther: Speaker = { kind: 'other', parties: [], label: 'Bilaga' };
+  const dissentOf = (kind: SpeakerKind, parties: string[]): Speaker => ({
+    kind,
+    parties,
+    label: `${kind === 'reservation' ? 'Reservation' : 'Särskilt yttrande'}${partyList(parties)}`,
+  });
+
   let section = '';
   let anslag: string | null = null;
   let dissent: Speaker | null = null;
-  let motionParty: string | null = null;
+  // Section-level speaker: the committee summarising the government's proposal ("Propositionen",
+  // "Tillkännagivanden som redovisas ...") or a party's motion. Lasts until the committee's own
+  // heading, the motions heading or a dissent.
+  let ctx: Speaker | null = null;
+  let annex = false;
   const out: Paragraph[] = [];
 
   raw.forEach((p, index) => {
     let speaker: Speaker;
     if (p.heading) {
       section = p.text;
-      if (/^Anslaget \d+:\d+/.test(p.text)) anslag = p.text;
-      else if (ANSLAG_END.test(p.text) || PARTY_NAMES[p.text.toLowerCase()]) anslag = null;
-      if (DISSENT_START.test(p.text)) {
-        const kind = /yttrande/i.test(p.text) ? 'special_statement' : 'reservation';
-        const parties = trailingParties(p.text);
-        dissent = {
-          kind,
-          parties,
-          label: `${kind === 'reservation' ? 'Reservation' : 'Särskilt yttrande'}${partyList(parties)}`,
-        };
-        motionParty = null;
-      } else if (dissent) {
-        const parties = trailingParties(p.text);
-        if (parties.length > 0) {
-          dissent = {
-            ...dissent,
-            parties,
-            label: `${dissent.kind === 'reservation' ? 'Reservation' : 'Särskilt yttrande'}${partyList(parties)}`,
-          };
-        } else if (DISSENT_END.test(p.text)) {
-          dissent = null;
-        }
-      }
+      const parties = trailingParties(p.text);
       const party = PARTY_NAMES[p.text.toLowerCase()];
-      if (party && !dissent) motionParty = party;
-      else if (!party && !dissent && !/\(.*\)\s*$/.test(p.text)) motionParty = null;
-      speaker = dissent ?? { ...base };
+      if (ANNEX_START.test(p.text)) {
+        annex = true;
+        dissent = null;
+        ctx = null;
+        anslag = null;
+      } else if (DISSENT_START.test(p.text)) {
+        dissent = dissentOf(
+          /yttrande/i.test(p.text) ? 'special_statement' : 'reservation',
+          parties,
+        );
+        ctx = null;
+        anslag = null;
+      } else if (dissent) {
+        if (parties.length > 0) dissent = dissentOf(dissent.kind, parties);
+        else if (DISSENT_END.test(p.text)) dissent = null;
+      }
+      if (!dissent) {
+        if (/^Anslaget \d+:\d+/.test(p.text)) anslag = p.text;
+        else if (ANSLAG_END.test(p.text) || party) anslag = null;
+        if (/^Propositionen$|^Tillkännagivanden som redovisas/i.test(p.text)) ctx = govRef;
+        else if (annex && parties.length > 0 && /^\d{4}\/\d{2}:\d+ av /.test(p.text)) {
+          ctx = { kind: 'motion', parties, label: `Motion${partyList(parties)}` };
+        } else if (annex) {
+          if (/^Motioner/i.test(p.text)) ctx = null;
+        } else if (party) {
+          ctx = { kind: 'motion', parties: [party], label: `Motion (${party})` };
+        } else if (CTX_END.test(p.text)) ctx = null;
+      }
+      speaker = dissent ?? ctx ?? (annex ? annexOther : { ...base });
     } else if (dissent) {
       speaker = dissent;
-    } else if (motionParty && !GOV_PARA.test(p.text) && !COMMITTEE_PARA.test(p.text)) {
-      speaker = { kind: 'motion', parties: [motionParty], label: `Motion (${motionParty})` };
+    } else if (annex) {
+      speaker = ctx ?? annexOther;
+    } else if (
+      ctx &&
+      (ctx.kind !== 'motion' || (!GOV_PARA.test(p.text) && !COMMITTEE_PARA.test(p.text)))
+    ) {
+      speaker = ctx;
     } else if (base.kind === 'committee' && (anslag !== null || GOV_PARA.test(p.text))) {
       // Per-anslag sections of a budget betänkande restate the government's proposal.
-      speaker = { kind: 'government', parties: [], label: 'Regeringen (refererad)' };
+      speaker = govRef;
     } else {
       speaker = { ...base };
     }

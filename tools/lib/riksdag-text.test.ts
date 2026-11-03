@@ -87,7 +87,7 @@ describe('annotateParagraphs', () => {
   });
 
   it('ends the dissent at an annex heading', () => {
-    expect(find('Förteckning över behandlade förslag').speaker.kind).toBe('committee');
+    expect(find('Förteckning över behandlade förslag').speaker.kind).toBe('other');
   });
 
   it('defaults by document type', () => {

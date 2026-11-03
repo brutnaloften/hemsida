@@ -39,6 +39,8 @@ Each brief reports facts only, never a suggested label:
 - **Term counts** for the promise's keywords, extra terms from `tools/eval-brief-terms.json` and distinctive words
   (6+ letters) of the promise title and source quote. Terms match from a word start, so `förlossning` also counts
   `förlossningsvård`. Zero counts are listed explicitly ("Förekommer inte i texten").
+- Extra hand-picked terms per promise live in `tools/eval-brief-terms.json` (promise id to list of terms), for when the
+  promise's wording and the document's wording differ.
 - **Verbatim passages** with the section heading, the `Anslaget N:N` heading when there is one, and the speaker:
   government, committee majority, reservation or special statement by party, motion by party, inquiry. Passages are
   the paragraphs with the most (rarity-weighted) term matches, shown in document order.

@@ -8,14 +8,14 @@
  * If tools/out/eval-briefs/<pair-id>.json exists (tools/build-eval-briefs.ts) its evidence is
  * printed under each pair; otherwise only the stored snippet is shown. See docs/eval-set.md.
  */
+import { existsSync } from 'node:fs';
 import { createInterface } from 'node:readline/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { loadJson, writeJsonAtomic } from './lib/json.ts';
-import { existsSync } from 'node:fs';
 import { Navigator } from './lib/eval-set.ts';
-import { briefPath, renderBrief, type Brief } from './lib/eval-brief.ts';
+import { briefPath, briefSchema, renderBrief } from './lib/eval-brief.ts';
 import { evalFileSchema, type EvalLabel } from '../src/schema/eval.ts';
 
 if (!process.stdin.isTTY) {
@@ -60,7 +60,15 @@ while (nav.current !== null) {
   console.log(`LÖFTE: ${p.promise_title}\n${p.promise_text}\nCitat: "${p.promise_quote}"`);
   console.log(`\nDOKUMENT: [${p.document_type}] ${p.document_title}\n${p.snippet}\n${p.url}`);
   const bp = briefPath(values.briefs!, p.id);
-  if (existsSync(bp)) console.log(`\n${renderBrief(loadJson(bp) as Brief)}`);
+  if (existsSync(bp)) {
+    try {
+      console.log(`\n${renderBrief(briefSchema.parse(loadJson(bp)))}`);
+    } catch {
+      console.log(
+        `\n(Underlaget ${bp} är föråldrat eller trasigt; kör build-eval-briefs.ts igen.)`,
+      );
+    }
+  }
   if (p.label) console.log(`(nuvarande etikett: ${p.label})`);
   const key = (
     await rl.question(

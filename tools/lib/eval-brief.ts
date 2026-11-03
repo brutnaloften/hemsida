@@ -5,6 +5,7 @@
  * explicitly), verbatim passages with section and speaker, parsed amounts, and for budget
  * documents the same for the prior-year counterpart. Never a suggested label or verdict.
  */
+import { z } from 'zod';
 import type { Paragraph } from './riksdag-text.ts';
 
 /** File name of a pair's brief inside the output directory (pair ids contain `::`). */
@@ -89,7 +90,7 @@ export interface Amount {
 }
 
 const AMOUNT_RE =
-  /(\d{1,3}(?: \d{3})+|\d+(?:,\d+)?)\s*(miljarder|miljard|miljoner|miljon|tusen)?\s*(kronor|kr)\b/giu;
+  /(?<![\d\p{L}])(\d{1,3}(?: \d{3})+|\d+(?:,\d+)?)\s*(miljarder|miljard|miljoner|miljon|tusen)?\s*(kronor|kr)\b/giu;
 
 const UNIT: Record<string, number> = {
   miljarder: 1e9,
@@ -108,7 +109,7 @@ export function parseAmounts(text: string): Amount[] {
   const out: Amount[] = [];
   for (const sentence of sentencesOf(text)) {
     const year = /\b(20\d\d)\b/.exec(sentence)?.[1];
-    const perYear = /\bper år\b|\bårligen\b/i.test(sentence);
+    const perYear = /(?<!\p{L})(per år|årligen)(?!\p{L})/iu.test(sentence);
     for (const m of sentence.matchAll(AMOUNT_RE)) {
       const num = parseFloat(m[1]!.replace(/ /g, '').replace(',', '.'));
       const unit = m[2] ? UNIT[m[2].toLowerCase()]! : 1;
@@ -247,11 +248,12 @@ export function findPriorYear(
   // same utgiftsområde number.
   const key = titleKey(doc.titel);
   const number = areaNumber(doc.titel);
-  const candidates = [
-    ...sameSlot.filter((d) => titleKey(d.titel) === key),
-    ...sameSlot.filter((d) => number !== null && areaNumber(d.titel) === number),
-  ];
-  candidates.sort((a, b) => a.dok_id.localeCompare(b.dok_id));
+  const byId = (a: StoreDoc, b: StoreDoc) => a.dok_id.localeCompare(b.dok_id);
+  const sameTitle = sameSlot.filter((d) => titleKey(d.titel) === key).sort(byId);
+  const sameNumber = sameSlot
+    .filter((d) => number !== null && areaNumber(d.titel) === number)
+    .sort(byId);
+  const candidates = [...sameTitle, ...sameNumber];
   return candidates[0] ?? null;
 }
 
@@ -356,3 +358,45 @@ export function renderBrief(b: Brief): string {
   }
   return lines.join('\n');
 }
+
+const termCountSchema = z.object({ term: z.string(), count: z.number() });
+const amountSchema = z.object({
+  raw: z.string(),
+  kronor: z.number(),
+  year: z.number().nullable(),
+  per_year: z.boolean(),
+});
+const passageSchema = z.object({
+  section: z.string(),
+  anslag: z.string().nullable(),
+  speaker: z.string(),
+  text: z.string(),
+  matched_terms: z.array(z.string()),
+  amounts: z.array(amountSchema),
+});
+const documentBriefSchema = z.object({
+  document_id: z.string(),
+  document_type: z.string(),
+  title: z.string(),
+  rm: z.string(),
+  date: z.string(),
+  url: z.string(),
+  text_available: z.boolean(),
+  paragraph_count: z.number(),
+  terms: z.array(termCountSchema),
+  passages: z.array(passageSchema),
+});
+
+/** Validates a brief file read by the labeller, so a stale or malformed one can be ignored. */
+export const briefSchema: z.ZodType<Brief> = z.object({
+  pair_id: z.string(),
+  promise_id: z.string(),
+  promise_title: z.string(),
+  document: documentBriefSchema,
+  prior_year: z
+    .discriminatedUnion('status', [
+      z.object({ status: z.literal('found'), document: documentBriefSchema }),
+      z.object({ status: z.literal('none'), reason: z.string() }),
+    ])
+    .nullable(),
+});

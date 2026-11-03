@@ -87,6 +87,18 @@ describe('parseAmounts', () => {
     ]);
   });
 
+  it('needs a left boundary so a year before the amount is not part of it', () => {
+    expect(parseAmounts('Anslaget minskas 2026 500 000 000 kronor.')).toEqual([
+      { raw: '500 000 000 kronor', kronor: 500_000_000, year: 2026, per_year: false },
+    ]);
+  });
+
+  it('detects årligen and per år with non-ASCII boundaries', () => {
+    expect(parseAmounts('Det tillförs 50 miljoner kronor årligen.')[0]!.per_year).toBe(true);
+    expect(parseAmounts('Det tillförs 50 miljoner kronor per år.')[0]!.per_year).toBe(true);
+    expect(parseAmounts('Det tillförs 50 miljoner kronor årligenom.')[0]!.per_year).toBe(false);
+  });
+
   it('finds nothing in text without kronor amounts', () => {
     expect(parseAmounts('Planen ska utvecklas under 2026.')).toEqual([]);
   });
@@ -159,6 +171,13 @@ describe('previousRm and findPriorYear', () => {
   it('falls back to the utgiftsområde number when the area was renamed', () => {
     const renamed = doc({ dok_id: 'R1', rm: '2024/25', titel: 'Utgiftsområde 9 Annat namn' });
     expect(findPriorYear(doc({}), [renamed])?.dok_id).toBe('R1');
+  });
+
+  it('prefers same-title matches, sorted within the group', () => {
+    const n1 = doc({ dok_id: 'A1', rm: '2024/25', titel: 'Utgiftsområde 9 Annat namn' });
+    const t9 = doc({ dok_id: 'T9', rm: '2024/25' });
+    const t2 = doc({ dok_id: 'T2', rm: '2024/25' });
+    expect(findPriorYear(doc({}), [n1, t9, t2])?.dok_id).toBe('T2');
   });
 
   it('ignores years in the title (budget propositions)', () => {
