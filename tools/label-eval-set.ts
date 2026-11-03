@@ -5,14 +5,17 @@
  * Keys per pair: m = match, p = partial, c = contradicts, n = no match, s = skip, b = back one pair,
  * q = quit. After a label you may type an optional note (Enter for none).
  * Already labelled pairs are skipped unless --redo. Needs an interactive terminal.
- * See docs/eval-set.md.
+ * If tools/out/eval-briefs/<pair-id>.json exists (tools/build-eval-briefs.ts) its evidence is
+ * printed under each pair; otherwise only the stored snippet is shown. See docs/eval-set.md.
  */
+import { existsSync } from 'node:fs';
 import { createInterface } from 'node:readline/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { loadJson, writeJsonAtomic } from './lib/json.ts';
 import { Navigator } from './lib/eval-set.ts';
+import { briefPath, briefSchema, renderBrief } from './lib/eval-brief.ts';
 import { evalFileSchema, type EvalLabel } from '../src/schema/eval.ts';
 
 if (!process.stdin.isTTY) {
@@ -25,6 +28,7 @@ const { values } = parseArgs({
   options: {
     term: { type: 'string', default: '2022-2026' },
     redo: { type: 'boolean', default: false },
+    briefs: { type: 'string', default: resolve(root, 'tools/out/eval-briefs') },
   },
 });
 const path = resolve(root, 'src/data', values.term!, 'eval/pairs.json');
@@ -55,6 +59,16 @@ while (nav.current !== null) {
   console.log(`\n=== ${nav.current + 1}/${file.pairs.length} (${done} labelled) ===`);
   console.log(`LÖFTE: ${p.promise_title}\n${p.promise_text}\nCitat: "${p.promise_quote}"`);
   console.log(`\nDOKUMENT: [${p.document_type}] ${p.document_title}\n${p.snippet}\n${p.url}`);
+  const bp = briefPath(values.briefs!, p.id);
+  if (existsSync(bp)) {
+    try {
+      console.log(`\n${renderBrief(briefSchema.parse(loadJson(bp)))}`);
+    } catch {
+      console.log(
+        `\n(Underlaget ${bp} är föråldrat eller trasigt; kör build-eval-briefs.ts igen.)`,
+      );
+    }
+  }
   if (p.label) console.log(`(nuvarande etikett: ${p.label})`);
   const key = (
     await rl.question(
