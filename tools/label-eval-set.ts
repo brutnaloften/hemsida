@@ -2,7 +2,7 @@
  * Label the eval set interactively in the terminal (offline, progress saved after every answer).
  *   node --experimental-strip-types tools/label-eval-set.ts [--term 2022-2026] [--redo]
  *
- * Keys per pair: m = match, p = partial, n = no match, s = skip, b = back one pair,
+ * Keys per pair: m = match, p = partial, c = contradicts, n = no match, s = skip, b = back one pair,
  * q = quit. After a label you may type an optional note (Enter for none).
  * Already labelled pairs are skipped unless --redo. Needs an interactive terminal.
  * See docs/eval-set.md.
@@ -29,7 +29,12 @@ const { values } = parseArgs({
 });
 const path = resolve(root, 'src/data', values.term!, 'eval/pairs.json');
 const file = evalFileSchema.parse(loadJson(path));
-const keys: Record<string, EvalLabel> = { m: 'match', p: 'partial', n: 'no_match' };
+const keys: Record<string, EvalLabel> = {
+  m: 'match',
+  p: 'partial',
+  c: 'contradicts',
+  n: 'no_match',
+};
 
 function summary(): void {
   const labelled = file.pairs.filter((x) => x.label).length;
@@ -51,7 +56,11 @@ while (nav.current !== null) {
   console.log(`LÖFTE: ${p.promise_title}\n${p.promise_text}\nCitat: "${p.promise_quote}"`);
   console.log(`\nDOKUMENT: [${p.document_type}] ${p.document_title}\n${p.snippet}\n${p.url}`);
   if (p.label) console.log(`(nuvarande etikett: ${p.label})`);
-  const key = (await rl.question('\n[m]atch / [p]artial / [n]o match / [s]kip / [b]ack / [q]uit: '))
+  const key = (
+    await rl.question(
+      '\n[m]atch / [p]artial / [c]ontradicts / [n]o match / [s]kip / [b]ack / [q]uit: ',
+    )
+  )
     .trim()
     .toLowerCase();
   if (key === 'q') break;
@@ -65,7 +74,7 @@ while (nav.current !== null) {
   }
   const label = keys[key];
   if (!label) {
-    console.log(`Unknown key "${key}". Use m, p, n, s, b or q.`);
+    console.log(`Unknown key "${key}". Use m, p, c, n, s, b or q.`);
     continue;
   }
   const note = (await rl.question('Note (optional): ')).trim();
