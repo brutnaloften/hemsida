@@ -191,6 +191,7 @@ A reference to an official document that bears on the promise.
 | `relevance`   | enum           | `full` (addresses the whole promise) or `partial` (one part of it)                                                                      |
 | `note`        | string \| null | Optional Swedish note, e.g. what part is covered or what was watered down                                                               |
 | `votes`       | object?        | For `bet` only, later (`hemsida-4np`): party → `yes` / `no` / `abstain` / `absent`                                                      |
+| `figures`     | array?         | For `bet` and `prop` only: prose budget intentions found in the text, see "Evidence figures" below                                      |
 
 The **stage** shown on the site comes from the latest evidence `kind` (dir → sou/ds → prop → bet → sfs), so it isn't stored separately.
 
@@ -244,6 +245,18 @@ Rules:
 - **Evidence only, never a verdict.** Budget evidence does not qualify any verdict value (`in_progress`, `fulfilled`, `broken`, ...) and is ignored by stage derivation, like `agreement`.
 - **Link to `/budget`.** The anslag page does not exist yet; the link is derived from `kod` at build time once the budget pages land (`hemsida-rn4`), so it is not stored in the data.
 - **Rendering.** The detail page timeline shows the anslag name, the years, both amounts and the nominal change in Swedish; entries are ordered by `date` together with the Riksdag documents.
+
+#### Evidence figures and the three tiers
+
+Money can be evidenced at three tiers, and they must not be mixed up:
+
+1. **Binding ceiling**: the anslag appropriation voted by the Riksdag (budget evidence, `src/data/budget`).
+2. **Actual outcome**: what was spent, ESV utfall (budget data).
+3. **Stated intention**: a prose statement in a bet/prop text such as "För 2026 avsätts 1 000 000 000 kronor för ...". This is the `figures` field on Riksdag evidence.
+
+Each figure: `year`, `amount` (mn kr nominal, like budget evidence), `scope` (the document's own Swedish wording of what the money is for), `tier` (always `intention`), `speaker` (`role` is `government`, `committee` or `reservation`, plus an optional `party`) and `quote` (the sentence it was read from). Example from bet 2024/25:SoU1: "För 2024 avsattes 1 600 000 000 kronor för förlossningsvård och kvinnors hälsa. För 2025 avsätts motsvarande belopp."
+
+Figures are only allowed on `bet` and `prop` (enforced like `votes`) and never qualify a verdict: `checkVerdictEvidence` ignores them.
 
 ### Rejected candidates
 

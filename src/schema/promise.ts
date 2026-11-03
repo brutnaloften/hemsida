@@ -125,6 +125,30 @@ const agreementEvidenceSchema = z
     }
   });
 
+/**
+ * A prose budget intention found in a bet/prop text (e.g. "För 2026 avsätts 1 000 000 000 kronor
+ * för ..."). Third evidence tier next to the binding anslag ceiling (budget evidence) and the
+ * actual outcome (ESV utfall): it states what someone said they would spend, binds nothing and
+ * never qualifies a verdict.
+ */
+export const evidenceFigureSchema = z
+  .object({
+    year: z.number().int().min(2006),
+    /** Amount in mn kr, nominal, like budget evidence. */
+    amount: z.number(),
+    /** What the money is for, in the document's own Swedish wording. */
+    scope: z.string().min(1),
+    tier: z.literal('intention'),
+    speaker: z
+      .object({
+        role: z.enum(['government', 'committee', 'reservation']),
+        party: partySchema.optional(),
+      })
+      .strict(),
+    quote: z.string().min(1),
+  })
+  .strict();
+
 const riksdagEvidenceSchema = z
   .object({
     kind: z.enum(EVIDENCE_KINDS),
@@ -136,8 +160,16 @@ const riksdagEvidenceSchema = z
     relevance: z.enum(['full', 'partial']),
     note: z.string().nullable().default(null),
     votes: z.partialRecord(partySchema, z.enum(VOTE_VALUES)).optional(),
+    figures: z.array(evidenceFigureSchema).optional(),
   })
   .superRefine((e, ctx) => {
+    if (e.figures !== undefined && e.kind !== 'bet' && e.kind !== 'prop') {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['figures'],
+        message: 'figures are only allowed on kind bet or prop',
+      });
+    }
     if (e.votes !== undefined && e.kind !== 'bet') {
       ctx.addIssue({
         code: 'custom',
@@ -357,6 +389,7 @@ export function isRiksdagEvidence(e: Evidence): e is RiksdagEvidence {
 export type PromiseRecord = z.infer<typeof promiseSchema>;
 export type Evidence = z.infer<typeof evidenceSchema>;
 export type RiksdagEvidence = Extract<Evidence, { kind: (typeof EVIDENCE_KINDS)[number] }>;
+export type EvidenceFigure = z.infer<typeof evidenceFigureSchema>;
 export type BudgetEvidence = Extract<Evidence, { kind: 'budget' }>;
 export type AgreementEvidence = Extract<Evidence, { kind: 'agreement' }>;
 export type AgreementOutcome = (typeof AGREEMENT_OUTCOMES)[number];
