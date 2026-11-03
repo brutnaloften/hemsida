@@ -165,10 +165,13 @@ interface Sentence {
   end: number;
 }
 
-function sentenceSpans(text: string): Sentence[] {
+/** Abbreviations whose full stop does not end a sentence ("prop. 2024/25:1", "bl.a. Sverige"). */
+const ABBREVIATION = '\\b(?:prop|bet|bl\\.a|t\\.ex|m\\.fl|nr|dnr|jfr|kap|ca|st)';
+
+export function sentenceSpans(text: string): Sentence[] {
   const spans: Sentence[] = [];
   let start = 0;
-  const re = /(?<=[.!?])\s+(?=[A-ZÅÄÖ0-9])/gu;
+  const re = new RegExp(`(?<=[.!?])(?<!${ABBREVIATION}\\.)\\s+(?=[A-ZÅÄÖ0-9])`, 'gu');
   for (let m = re.exec(text); m !== null; m = re.exec(text)) {
     spans.push({ start, end: m.index });
     start = m.index + m[0].length;
@@ -413,7 +416,7 @@ export function scopeTerms(brief: DocumentBrief): string[] {
   return [...out];
 }
 
-function formatKr(n: number): string {
+export function formatKr(n: number): string {
   return n.toLocaleString('sv-SE').replace(/ /g, ' ');
 }
 

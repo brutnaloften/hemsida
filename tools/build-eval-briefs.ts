@@ -33,6 +33,7 @@ import {
   type Brief,
   type StoreDoc,
 } from './lib/eval-brief.ts';
+import { buildSummary } from './lib/eval-summary.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const { values } = parseArgs({
@@ -136,13 +137,23 @@ for (const pair of pairs) {
     }
   }
 
-  const brief: Brief = {
+  const currentParagraphs = await paragraphsOf(pair.document_id, pair.document_type);
+  const priorParagraphs =
+    prior?.status === 'found'
+      ? await paragraphsOf(prior.document.document_id, prior.document.document_type)
+      : null;
+  const brief = {
     pair_id: pair.id,
     promise_id: pair.promise_id,
     promise_title: pair.promise_title,
     document: current,
     prior_year: prior,
-  };
+    // Nyckelfynd summary for the labeller (tools/lib/eval-summary.ts); extra key, not in Brief.
+    summary: {
+      current: buildSummary(currentParagraphs ?? [], terms, distinctive),
+      prior: priorParagraphs ? buildSummary(priorParagraphs, terms, distinctive) : null,
+    },
+  } satisfies Brief & { summary: unknown };
   writeJsonAtomic(briefPath(outDir, pair.id), brief);
   const hits = current.terms.filter((t) => t.count > 0).length;
   console.log(
