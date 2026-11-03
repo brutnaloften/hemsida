@@ -26,6 +26,8 @@ import {
   briefPath,
   buildDocumentBrief,
   deriveTerms,
+  distinctiveTerms,
+  scopeTerms,
   findPriorYear,
   isBudgetDocument,
   type Brief,
@@ -87,15 +89,14 @@ const pairs = file.pairs.filter((p) => !values.only || p.id === values.only);
 let n = 0;
 for (const pair of pairs) {
   n++;
-  const terms = deriveTerms(
-    {
-      id: pair.promise_id,
-      title: pair.promise_title,
-      keywords: keywords.get(pair.promise_id) ?? [],
-      quote: pair.promise_quote,
-    },
-    extras[pair.promise_id] ?? [],
-  );
+  const promise = {
+    id: pair.promise_id,
+    title: pair.promise_title,
+    keywords: keywords.get(pair.promise_id) ?? [],
+    quote: pair.promise_quote,
+  };
+  const terms = deriveTerms(promise, extras[pair.promise_id] ?? []);
+  const distinctive = distinctiveTerms(promise, extras[pair.promise_id] ?? []);
   const doc: StoreDoc | undefined = documents[pair.document_id];
 
   const current = buildDocumentBrief(
@@ -103,6 +104,7 @@ for (const pair of pairs) {
     await paragraphsOf(pair.document_id, pair.document_type),
     terms,
     6,
+    distinctive,
   );
 
   let prior: Brief['prior_year'] = null;
@@ -127,6 +129,8 @@ for (const pair of pairs) {
           await paragraphsOf(p.dok_id, p.doktyp),
           terms,
           4,
+          // Also look for last year's line on the scope the current document's amounts talk about.
+          [...new Set([...distinctive, ...scopeTerms(current)])],
         ),
       };
     }

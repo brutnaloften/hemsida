@@ -150,16 +150,84 @@ export function excerpt(text: string, at: number, max = MAX_PASSAGE_CHARS): stri
   return `${start > 0 ? '… ' : ''}${text.slice(start, end)}${end < text.length ? ' …' : ''}`;
 }
 
+/** Keywords and hand-picked extras: the terms specific to the promise (not title/quote words). */
+export function distinctiveTerms(promise: BriefPromise, extras: string[] = []): string[] {
+  const out: string[] = [];
+  for (const t of [...promise.keywords, ...extras]) {
+    const term = t.toLowerCase().replace(/\s+/g, ' ').trim();
+    if (term && !out.includes(term)) out.push(term);
+  }
+  return out;
+}
+
+interface Sentence {
+  start: number;
+  end: number;
+}
+
+function sentenceSpans(text: string): Sentence[] {
+  const spans: Sentence[] = [];
+  let start = 0;
+  const re = /(?<=[.!?])\s+(?=[A-ZÅÄÖ0-9])/gu;
+  for (let m = re.exec(text); m !== null; m = re.exec(text)) {
+    spans.push({ start, end: m.index });
+    start = m.index + m[0].length;
+  }
+  spans.push({ start, end: text.length });
+  return spans;
+}
+
 /**
- * Paragraphs that mention at least one term, best first (most distinct terms, then document
- * order), at most `limit`, returned in document order. Headings are skipped.
+ * Verbatim excerpt of whole sentences, at most `max` characters, starting from the sentence
+ * that contains `at` and growing to its neighbours (next one first). A single sentence longer
+ * than `max` falls back to {@link excerpt}. Ellipses mark cuts.
+ */
+export function sentenceExcerpt(text: string, at: number, max = MAX_PASSAGE_CHARS): string {
+  if (text.length <= max) return text;
+  const spans = sentenceSpans(text);
+  let lo = spans.findIndex((sp) => at >= sp.start && at <= sp.end);
+  if (lo < 0) return excerpt(text, at, max);
+  let hi = lo;
+  if (spans[lo]!.end - spans[lo]!.start > max) return excerpt(text, at, max);
+  const size = () => spans[hi]!.end - spans[lo]!.start;
+  for (;;) {
+    let grew = false;
+    if (hi + 1 < spans.length && spans[hi + 1]!.end - spans[lo]!.start <= max) {
+      hi++;
+      grew = true;
+    }
+    if (lo > 0 && spans[hi]!.end - spans[lo - 1]!.start <= max) {
+      lo--;
+      grew = true;
+    }
+    if (!grew || size() >= max) break;
+  }
+  const start = spans[lo]!.start;
+  const end = spans[hi]!.end;
+  return `${start > 0 ? '\u2026 ' : ''}${text.slice(start, end)}${end < text.length ? ' \u2026' : ''}`;
+}
+
+/** Slots in the passage cap reserved for amount-bearing passages (see {@link findPassages}). */
+export const AMOUNT_SLOTS = 3;
+
+/**
+ * Paragraphs that mention at least one term, at most `limit`, returned in document order.
+ * Headings are skipped. Up to AMOUNT_SLOTS of the slots go first to paragraphs where a
+ * distinctive term sits in the same sentence as a kronor amount or in the sentence before one
+ * (e.g. "Satsningen på kvinnors hälsa fortsätter. För 2026 avsätts 1 000 000 000 kronor."),
+ * ranked among themselves with the government's and committee's own text before motions and
+ * dissents. The rest are ranked by rarity-weighted term matches, so a very common term does
+ * not outweigh a rare one. Long paragraphs are shown as the sentences around the amount (or
+ * the first hit).
  */
 export function findPassages(
   paragraphs: readonly Paragraph[],
   terms: readonly string[],
   limit: number,
+  distinctive: readonly string[] = [],
 ): Passage[] {
   const regexes = terms.map((t) => [t, termRegex(t)] as const);
+  const distinctRegexes = distinctive.map((t) => termRegex(t));
   const hits = paragraphs
     .filter((p) => !p.heading)
     .map((p) => {
@@ -173,25 +241,57 @@ export function findPassages(
           at = Math.min(at, m.index);
         }
       }
-      return { p, matched, at };
+      return { p, matched, at, amountAt: amountFocus(p.text, distinctRegexes) };
     })
-    .filter((h) => h.matched.length > 0);
-  // Rank by rarity-weighted term matches so a very common term (e.g. "nationell") does not
-  // outweigh a rare, specific one.
+    .filter((h) => h.matched.length > 0 || h.amountAt !== null);
   const counts = new Map(countTerms(paragraphs, terms).map((t) => [t.term, t.count]));
   const weight = (m: string[]) => m.reduce((s, t) => s + 1 / (1 + Math.log(counts.get(t) || 1)), 0);
-  hits.sort((a, b) => weight(b.matched) - weight(a.matched) || a.p.index - b.p.index);
-  return hits
-    .slice(0, limit)
+  const own = (kind: string) =>
+    kind === 'motion' || kind === 'reservation' || kind === 'special_statement' ? 1 : 0;
+
+  const amountHits = hits
+    .filter((h) => h.amountAt !== null)
+    .sort(
+      (a, b) =>
+        own(a.p.speaker.kind) - own(b.p.speaker.kind) ||
+        weight(b.matched) - weight(a.matched) ||
+        a.p.index - b.p.index,
+    );
+  const picked = new Set(amountHits.slice(0, Math.min(AMOUNT_SLOTS, limit)));
+  const rest = hits
+    .filter((h) => !picked.has(h) && h.matched.length > 0)
+    .sort((a, b) => weight(b.matched) - weight(a.matched) || a.p.index - b.p.index);
+  for (const h of rest) {
+    if (picked.size >= limit) break;
+    picked.add(h);
+  }
+  return [...picked]
     .sort((a, b) => a.p.index - b.p.index)
-    .map(({ p, matched, at }) => ({
+    .map(({ p, matched, at, amountAt }) => ({
       section: p.section,
       anslag: p.anslag,
       speaker: p.speaker.label,
-      text: excerpt(p.text, at),
+      text: sentenceExcerpt(p.text, amountAt ?? at),
       matched_terms: matched,
       amounts: parseAmounts(p.text),
     }));
+}
+
+/** Offset of a distinctive term that has a kronor amount in its sentence or the next one. */
+function amountFocus(text: string, distinct: readonly RegExp[]): number | null {
+  if (distinct.length === 0) return null;
+  const spans = sentenceSpans(text);
+  const hasAmount = spans.map((sp) => parseAmounts(text.slice(sp.start, sp.end)).length > 0);
+  for (let i = 0; i < spans.length; i++) {
+    if (!hasAmount[i] && !hasAmount[i + 1]) continue;
+    const sentence = text.slice(spans[i]!.start, spans[i]!.end);
+    for (const re of distinct) {
+      re.lastIndex = 0;
+      const m = re.exec(sentence);
+      if (m) return spans[i]!.start + m.index;
+    }
+  }
+  return null;
 }
 
 export interface StoreDoc {
@@ -292,6 +392,7 @@ export function buildDocumentBrief(
   paragraphs: readonly Paragraph[] | null,
   terms: readonly string[],
   passageLimit: number,
+  distinctive: readonly string[] = [],
 ): DocumentBrief {
   const ps = paragraphs ?? [];
   return {
@@ -299,8 +400,17 @@ export function buildDocumentBrief(
     text_available: paragraphs !== null && ps.length > 0,
     paragraph_count: ps.length,
     terms: countTerms(ps, terms),
-    passages: findPassages(ps, terms, passageLimit),
+    passages: findPassages(ps, terms, passageLimit, distinctive),
   };
+}
+
+/** Terms that occur in the document's amount-bearing passages (the scope of its amounts). */
+export function scopeTerms(brief: DocumentBrief): string[] {
+  const out = new Set<string>();
+  for (const p of brief.passages) {
+    if (p.amounts.length > 0) p.matched_terms.forEach((t) => out.add(t));
+  }
+  return [...out];
 }
 
 function formatKr(n: number): string {
