@@ -106,7 +106,7 @@ describe('promiseSchema', () => {
       speaker: { role: 'government' },
       quote: 'För 2026 avsätts 1 000 000 000 kronor.',
     };
-    const figure2025 = {
+    const figure2024 = {
       year: 2024,
       amount: 1600,
       scope: 'förlossningsvård och kvinnors hälsa',
@@ -121,7 +121,7 @@ describe('promiseSchema', () => {
     });
 
     it('accepts figures on bet and prop', () => {
-      expect(promiseSchema.safeParse(withFigures('bet', [figure, figure2025])).success).toBe(true);
+      expect(promiseSchema.safeParse(withFigures('bet', [figure, figure2024])).success).toBe(true);
       expect(promiseSchema.safeParse(withFigures('prop', [figure])).success).toBe(true);
     });
 
@@ -143,12 +143,24 @@ describe('promiseSchema', () => {
     });
 
     it('does not qualify a verdict', () => {
-      const p = {
+      const inProgress = { value: 'in_progress', reasoning: 'Satsning.', date: '2025-01-01' };
+      const betOnly = (figures?: unknown[]) => ({
         ...valid,
-        verdict: { value: 'in_progress', reasoning: 'Satsning.', date: '2025-01-01' },
-        evidence: [{ ...valid.evidence[0], kind: 'bet', figures: [figure] }],
+        verdict: inProgress,
+        evidence: [{ ...valid.evidence[0], kind: 'bet', ...(figures && { figures }) }],
+      });
+      // in_progress needs a dir/sou/ds/prop entry: a bet fails with or without figures.
+      expect(promiseSchema.safeParse(betOnly()).success).toBe(false);
+      expect(promiseSchema.safeParse(betOnly([figure])).success).toBe(false);
+      // The same promise passes once a prop is linked, so the failure above is about the evidence.
+      const withProp = {
+        ...betOnly([figure]),
+        evidence: [
+          { ...valid.evidence[0], kind: 'prop' },
+          { ...valid.evidence[0], kind: 'bet', figures: [figure] },
+        ],
       };
-      expect(promiseSchema.safeParse(p).success).toBe(false);
+      expect(promiseSchema.safeParse(withProp).success).toBe(true);
     });
   });
 
