@@ -97,6 +97,61 @@ describe('promiseSchema', () => {
     expect(promiseSchema.safeParse(ok).success).toBe(true);
   });
 
+  describe('figures', () => {
+    const figure = {
+      year: 2026,
+      amount: 1000,
+      scope: 'kvinnors och flickors hälsa och mödravården',
+      tier: 'intention',
+      speaker: { role: 'government' },
+      quote: 'För 2026 avsätts 1 000 000 000 kronor.',
+    };
+    const figure2025 = {
+      year: 2024,
+      amount: 1600,
+      scope: 'förlossningsvård och kvinnors hälsa',
+      tier: 'intention',
+      speaker: { role: 'committee', party: 'M' },
+      quote: 'För 2024 avsattes 1 600 000 000 kronor för förlossningsvård och kvinnors hälsa.',
+    };
+    const withFigures = (kind: string, figures: unknown[]) => ({
+      ...valid,
+      verdict: unassessed,
+      evidence: [{ ...valid.evidence[0], kind, figures }],
+    });
+
+    it('accepts figures on bet and prop', () => {
+      expect(promiseSchema.safeParse(withFigures('bet', [figure, figure2025])).success).toBe(true);
+      expect(promiseSchema.safeParse(withFigures('prop', [figure])).success).toBe(true);
+    });
+
+    it('rejects figures on other kinds', () => {
+      for (const kind of ['dir', 'sou', 'ds', 'sfs', 'mot']) {
+        expect(promiseSchema.safeParse(withFigures(kind, [figure])).success, kind).toBe(false);
+      }
+    });
+
+    it('rejects a wrong tier, role, unknown field or empty scope', () => {
+      for (const bad of [
+        { ...figure, tier: 'outcome' },
+        { ...figure, speaker: { role: 'opposition' } },
+        { ...figure, extra: 1 },
+        { ...figure, scope: '' },
+      ]) {
+        expect(promiseSchema.safeParse(withFigures('bet', [bad])).success).toBe(false);
+      }
+    });
+
+    it('does not qualify a verdict', () => {
+      const p = {
+        ...valid,
+        verdict: { value: 'in_progress', reasoning: 'Satsning.', date: '2025-01-01' },
+        evidence: [{ ...valid.evidence[0], kind: 'bet', figures: [figure] }],
+      };
+      expect(promiseSchema.safeParse(p).success).toBe(false);
+    });
+  });
+
   describe('agreement evidence', () => {
     const agreement = {
       kind: 'agreement',
