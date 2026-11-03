@@ -2,7 +2,7 @@
  * Label the eval set interactively in the terminal (offline, progress saved after every answer).
  *   node --experimental-strip-types tools/label-eval-set.ts [--term 2022-2026] [--redo]
  *
- * Keys per pair: m = match, p = partial, c = contradicts, n = no match, s = skip, b = back one pair,
+ * Keys per pair: d = show the full evidence detail, m = match, p = partial, c = contradicts, n = no match, s = skip, b = back one pair,
  * q = quit. After a label you may type an optional note (Enter for none).
  * Already labelled pairs are skipped unless --redo. Needs an interactive terminal.
  * If tools/out/eval-briefs/<pair-id>.json exists (tools/build-eval-briefs.ts) its evidence is
@@ -15,7 +15,13 @@ import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { loadJson, writeJsonAtomic } from './lib/json.ts';
 import { Navigator } from './lib/eval-set.ts';
-import { briefPath, briefSchema, renderBrief } from './lib/eval-brief.ts';
+import { briefPath, briefSchema, renderBrief, type Brief } from './lib/eval-brief.ts';
+import {
+  briefSummarySchema,
+  renderSummary,
+  useColor,
+  type BriefSummary,
+} from './lib/eval-summary.ts';
 import { evalFileSchema, type EvalLabel } from '../src/schema/eval.ts';
 
 if (!process.stdin.isTTY) {
@@ -59,24 +65,48 @@ while (nav.current !== null) {
   console.log(`\n=== ${nav.current + 1}/${file.pairs.length} (${done} labelled) ===`);
   console.log(`LÖFTE: ${p.promise_title}\n${p.promise_text}\nCitat: "${p.promise_quote}"`);
   console.log(`\nDOKUMENT: [${p.document_type}] ${p.document_title}\n${p.snippet}\n${p.url}`);
+  let brief: Brief | null = null;
+  let briefSummary: BriefSummary | undefined;
   const bp = briefPath(values.briefs!, p.id);
   if (existsSync(bp)) {
     try {
-      console.log(`\n${renderBrief(briefSchema.parse(loadJson(bp)))}`);
+      const raw = loadJson(bp);
+      brief = briefSchema.parse(raw);
+      briefSummary = briefSummarySchema.parse(raw).summary;
     } catch {
       console.log(
         `\n(Underlaget ${bp} är föråldrat eller trasigt; kör build-eval-briefs.ts igen.)`,
       );
     }
   }
+  const width = Math.min(120, Math.max(60, process.stdout.columns ?? 100));
+  const summaryText = brief
+    ? renderSummary(brief, briefSummary, {
+        width,
+        color: useColor(process.stdout.isTTY, process.env),
+      })
+    : null;
+  if (summaryText) console.log(`\n${summaryText}`);
+  // Without a stored summary (older briefs) the full detail is shown straight away.
+  let detailShown = false;
+  if (brief && !summaryText) {
+    console.log(`\n${renderBrief(brief)}`);
+    detailShown = true;
+  }
   if (p.label) console.log(`(nuvarande etikett: ${p.label})`);
-  const key = (
-    await rl.question(
-      '\n[m]atch / [p]artial / [c]ontradicts / [n]o match / [s]kip / [b]ack / [q]uit: ',
-    )
-  )
-    .trim()
-    .toLowerCase();
+  const menu = '[m]atch / [p]artial / [c]ontradicts / [n]o match / [s]kip / [b]ack / [q]uit: ';
+  let key = '';
+  for (;;) {
+    const offer = brief && !detailShown ? '\n[d] visa detaljer   ' : '\n';
+    key = (await rl.question(offer + menu)).trim().toLowerCase();
+    if (key === 'd' && brief) {
+      // Shown once; pressing d again just asks again.
+      if (!detailShown) console.log(`\n${renderBrief(brief)}`);
+      detailShown = true;
+      continue;
+    }
+    break;
+  }
   if (key === 'q') break;
   if (key === 'b') {
     if (!nav.back()) console.log('Already at the first pair.');
@@ -88,7 +118,7 @@ while (nav.current !== null) {
   }
   const label = keys[key];
   if (!label) {
-    console.log(`Unknown key "${key}". Use m, p, c, n, s, b or q.`);
+    console.log(`Unknown key "${key}". Use d, m, p, c, n, s, b or q.`);
     continue;
   }
   const note = (await rl.question('Note (optional): ')).trim();

@@ -87,10 +87,14 @@ export interface Amount {
   year: number | null;
   /** True when the sentence says "per år" / "årligen". */
   per_year: boolean;
+  /** True when the amount is preceded by "cirka" / "ca" / "omkring". */
+  approx?: boolean;
 }
 
 const AMOUNT_RE =
-  /(?<![\d\p{L}])(\d{1,3}(?: \d{3})+|\d+(?:,\d+)?)\s*(miljarder|miljard|miljoner|miljon|tusen)?\s*(kronor|kr)\b/giu;
+  /(?<![\d\p{L}])(\d{1,3}(?: \d{3})+|\d+(?:,\d+)?)\s*(miljarder|miljard|miljoner|miljon|tusen)?\s*(kronor|kr)(?![\p{L}\p{N}])/giu;
+
+const APPROX = /(?<![\p{L}])(?:cirka|ca\.?|omkring)\s+$/iu;
 
 const UNIT: Record<string, number> = {
   miljarder: 1e9,
@@ -100,15 +104,47 @@ const UNIT: Record<string, number> = {
   tusen: 1e3,
 };
 
-function sentencesOf(text: string): string[] {
-  return text.split(/(?<=[.!?])\s+(?=[A-ZÅÄÖ0-9])/u);
+/** Parse kronor amounts ("1 000 000 000 kronor", "127 miljarder kronor") with their year. */
+/** Characters between a preposition-year and the amount it may belong to. */
+const MAX_YEAR_DISTANCE = 40;
+
+/**
+ * A year that the sentence ties to the money: after a preposition ("för 2026", "under 2023",
+ * "år 2025", "budgetåret 2026"), as "2026 års", or directly after the amount ("kronor 2023").
+ * Ranges ("2026–2046"), riksmöten ("2024/25") and references ("2025:50") never count, and a
+ * year that is only somewhere in the sentence ("infördes 2022") is not attached. When several
+ * qualify, the one nearest the amount wins.
+ * A preposition-year must be within MAX_YEAR_DISTANCE characters of the amount.
+ */
+export function yearOfAmount(sentence: string, at: number, length: number): number | null {
+  const NOT_PART = '(?![\\d/:\\u2013\\u2014-])';
+  const tied: { year: number; dist: number }[] = [];
+  const patterns = [
+    new RegExp(
+      `(?<![\\p{L}\\p{N}])(?:för|under|år|budgetåret)\\s+(20\\d\\d)${NOT_PART}(?![\\p{L}\\p{N}])`,
+      'giu',
+    ),
+    new RegExp(`(?<![\\p{L}\\p{N}\\u2013-])(20\\d\\d)\\s+års(?![\\p{L}\\p{N}])`, 'giu'),
+  ];
+  for (const re of patterns) {
+    for (const m of sentence.matchAll(re)) {
+      const y = Number(m[1]);
+      const pos = m.index + m[0].lastIndexOf(m[1]!);
+      const dist = pos < at ? at - (pos + 4) : pos - (at + length);
+      if (dist <= MAX_YEAR_DISTANCE) tied.push({ year: y, dist });
+    }
+  }
+  const after = new RegExp(`^\\s*(?:år\\s+)?(20\\d\\d)${NOT_PART}(?![\\p{L}\\p{N}])`, 'u').exec(
+    sentence.slice(at + length),
+  );
+  if (after) tied.push({ year: Number(after[1]), dist: 0 });
+  tied.sort((a, b) => a.dist - b.dist);
+  return tied[0]?.year ?? null;
 }
 
-/** Parse kronor amounts ("1 000 000 000 kronor", "127 miljarder kronor") with their year. */
 export function parseAmounts(text: string): Amount[] {
   const out: Amount[] = [];
-  for (const sentence of sentencesOf(text)) {
-    const year = /\b(20\d\d)\b/.exec(sentence)?.[1];
+  for (const sentence of sentenceSpans(text).map((sp) => text.slice(sp.start, sp.end))) {
     const perYear = /(?<!\p{L})(per år|årligen)(?!\p{L})/iu.test(sentence);
     for (const m of sentence.matchAll(AMOUNT_RE)) {
       const num = parseFloat(m[1]!.replace(/ /g, '').replace(',', '.'));
@@ -116,8 +152,9 @@ export function parseAmounts(text: string): Amount[] {
       out.push({
         raw: m[0],
         kronor: Math.round(num * unit),
-        year: year ? Number(year) : null,
+        year: yearOfAmount(sentence, m.index, m[0].length),
         per_year: perYear,
+        ...(APPROX.test(sentence.slice(0, m.index)) ? { approx: true } : {}),
       });
     }
   }
@@ -165,11 +202,23 @@ interface Sentence {
   end: number;
 }
 
-function sentenceSpans(text: string): Sentence[] {
+/**
+ * Abbreviations whose full stop does not end a sentence ("prop. 2024/25:1", "rskr. 2015/16:155",
+ * "bl.a. Sverige"). Matched after a non-letter, so "bäst." and "höst." still end a sentence.
+ */
+const ABBREVIATION =
+  /(?<![\p{L}\p{N}])(?:prop|bet|rskr|bl\.a|t\.ex|m\.fl|m\.m|s\.k|dvs|nr|dnr|jfr|kap|ca|st)\.$/u;
+/** "s. 34" (page reference): `s` is an abbreviation only before a digit. */
+const PAGE = /(?<![\p{L}\p{N}])s\.$/u;
+
+export function sentenceSpans(text: string): Sentence[] {
   const spans: Sentence[] = [];
   let start = 0;
   const re = /(?<=[.!?])\s+(?=[A-ZÅÄÖ0-9])/gu;
   for (let m = re.exec(text); m !== null; m = re.exec(text)) {
+    const before = text.slice(start, m.index);
+    const next = text[m.index + m[0].length]!;
+    if (ABBREVIATION.test(before) || (PAGE.test(before) && /\d/.test(next))) continue;
     spans.push({ start, end: m.index });
     start = m.index + m[0].length;
   }
@@ -413,7 +462,7 @@ export function scopeTerms(brief: DocumentBrief): string[] {
   return [...out];
 }
 
-function formatKr(n: number): string {
+export function formatKr(n: number): string {
   return n.toLocaleString('sv-SE').replace(/ /g, ' ');
 }
 
@@ -475,6 +524,7 @@ const amountSchema = z.object({
   kronor: z.number(),
   year: z.number().nullable(),
   per_year: z.boolean(),
+  approx: z.boolean().optional(),
 });
 const passageSchema = z.object({
   section: z.string(),

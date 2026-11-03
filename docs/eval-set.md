@@ -49,8 +49,33 @@ Each brief reports facts only, never a suggested label:
   counterpart in the previous riksmöte (same organ and title, else same utgiftsområde number), only if it is inside the
   term (found in the riksdag store); otherwise the brief says there is none.
 
+### Nyckelfynd (summary view)
+
+The full brief is dense, so the labeller first shows **NYCKELFYND (utan bedömning)**, a few rule-selected lines,
+and the full detail on key `d`. `build-eval-briefs.ts` stores the summary in each brief file (`summary` key; briefs
+built before this lack it, and the labeller then shows the full detail directly: re-run the build). Rules, no
+judgement and never a label suggestion (`tools/lib/eval-summary.ts`):
+
+- Only the promise's own terms count (keywords and extras). Title and quote words are used only if the promise has
+  no keywords, and then only when not generic (more than 15 hits and 2% of the paragraphs counts as generic), so
+  `nationell` (94 hits) is dropped.
+- A **finding** is a sentence containing a promise term, with the kronor amounts of that sentence or, for the
+  government and committee, of the next one. If the document has such sentences only those are shown, government
+  first, then committee, then others (at most 3, best per speaker: amounts in the sentence, then rarer terms).
+  Without any amounts (dir, sou, most prop) the best term-bearing sentence per speaker is shown instead; with no
+  term hit at all the block says so.
+- **Opposition** (reservation, special statement, motion) is one line per party (max 3, then a count), the sentence
+  with the most and rarest terms; only amounts in that sentence.
+- Budget documents show the prior year in the same table (year column: the budget year, so 2025/26 is 2026).
+- One **zero-hit line** per promise term with no hits in either year ("0 träffar (båda åren)", or the counts per year
+  and the first sentence from the year that has it). A longer term (`förlossningsvård`) is dropped when its prefix
+  (`förlossning`) has no hits; the prefix-matching note is printed once.
+- Matched terms are ANSI bold (off when stdout is not a TTY or `NO_COLOR` is set); lines wrap to the terminal width
+  (60 to 120 columns).
+
 `label-eval-set.ts` prints the brief under each pair when `tools/out/eval-briefs/<pair-id>.json` exists and falls back
-to the stored snippet otherwise (`--briefs <dir>` overrides the folder). Parsing, speaker detection and fetching are in
+to the stored snippet otherwise (`--briefs <dir>` overrides the folder). The summary comes first and `d` shows the
+full detail. Parsing, speaker detection and fetching are in
 `tools/lib/riksdag-text.ts`, the rest in `tools/lib/eval-brief.ts`; both are tested on real HD01SoU1/HC01SoU1 passages.
 
 ## Label

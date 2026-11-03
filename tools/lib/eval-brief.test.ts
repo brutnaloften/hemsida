@@ -89,7 +89,7 @@ describe('parseAmounts', () => {
 
   it('needs a left boundary so a year before the amount is not part of it', () => {
     expect(parseAmounts('Anslaget minskas 2026 500 000 000 kronor.')).toEqual([
-      { raw: '500 000 000 kronor', kronor: 500_000_000, year: 2026, per_year: false },
+      { raw: '500 000 000 kronor', kronor: 500_000_000, year: null, per_year: false },
     ]);
   });
 
