@@ -60,6 +60,7 @@ const OPPOSITION: ReadonlySet<SpeakerKind> = new Set([
 const MAX_MAIN = 3;
 const MAX_OPPOSITION = 3;
 const MAX_SENTENCE = 240;
+const MIN_WORDS = 5;
 /** A derived (non-curated) term is generic above this count or share of paragraphs. */
 const GENERIC_MIN_COUNT = 15;
 const GENERIC_SHARE = 0.02;
@@ -91,6 +92,8 @@ export function clip(sentence: string, at: number, max = MAX_SENTENCE): string {
 interface Candidate {
   p: Paragraph;
   finding: Finding;
+  /** Fewer than MIN_WORDS words: a table cell, heading or list stub. */
+  fragment: boolean;
   score: number;
   /** 0 amount in the sentence itself, 1 in the next one, 2 none. */
   amountRank: number;
@@ -142,7 +145,8 @@ export function buildSummary(
         re.lastIndex = 0;
         const m = re.exec(p.text)!;
         const sp = sentenceSpans(p.text).find((s) => m.index >= s.start && m.index <= s.end)!;
-        samples.set(t, clip(p.text.slice(sp.start, sp.end), m.index - sp.start));
+        const lead = /^[.\s]*/.exec(p.text.slice(sp.start, sp.end))![0].length;
+        samples.set(t, clip(p.text.slice(sp.start + lead, sp.end), m.index - sp.start - lead));
       }
     }
     counts.set(t, n);
@@ -151,8 +155,13 @@ export function buildSummary(
 
   const candidates: Candidate[] = [];
   for (const p of body) {
-    const sentences = sentenceSpans(p.text).map((s) => p.text.slice(s.start, s.end));
-    const amounts = sentences.map((s) => parseAmounts(s));
+    const spans = sentenceSpans(p.text);
+    // Leading ". " (list items split off a numbered point) is not part of the sentence.
+    const starts = spans.map(
+      (sp) => sp.start + /^[.\s]*/.exec(p.text.slice(sp.start, sp.end))![0].length,
+    );
+    const sentences = spans.map((sp, i) => p.text.slice(starts[i], sp.end));
+    const amounts = sentences.map((x) => parseAmounts(x));
     sentences.forEach((sentence, i) => {
       const matched: string[] = [];
       let at = Infinity;
@@ -167,31 +176,40 @@ export function buildSummary(
       if (matched.length === 0) return;
       const own = amounts[i]!;
       const next = amounts[i + 1] ?? [];
-      const specific = mostSpecific(matched);
-      const clipped = clip(sentence, at);
+      // The government's and committee's amount often sits in the sentence after the term
+      // ("Satsningen ... fortsätter. För 2026 avsätts 1 000 000 000 kronor."): quote both.
+      const useNext =
+        own.length === 0 &&
+        next.length > 0 &&
+        (p.speaker.kind === 'government' || p.speaker.kind === 'committee');
+      const quoted = useNext ? p.text.slice(starts[i], spans[i + 1]!.end) : sentence;
+      const clipped = clip(quoted, at, useNext ? 2 * MAX_SENTENCE : MAX_SENTENCE);
+      const shown = (useNext ? next : own).filter((a) => clipped.includes(a.raw));
+      const visible = matched.filter((t) => termRegex(t).test(clipped));
+      const specific = mostSpecific(visible.length > 0 ? visible : matched);
       candidates.push({
         p,
-        amountRank: own.length > 0 ? 0 : next.length > 0 ? 1 : 2,
-        score: specific.reduce((s, t) => s + weight(t), 0),
+        fragment: sentence.split(/\s+/).length < MIN_WORDS,
+        amountRank: shown.length === 0 ? 2 : useNext ? 1 : 0,
+        score: mostSpecific(matched).reduce((s, t) => s + weight(t), 0),
         finding: {
           kind: p.speaker.kind,
           parties: p.speaker.parties,
           section: p.section,
           text: clipped,
           terms: specific,
-          // Amounts of the matched sentence that are visible in the shortened quote; for the
-          // government and committee the next sentence's amounts when this one has none.
-          amounts:
-            own.length > 0 || OPPOSITION.has(p.speaker.kind)
-              ? own.filter((a) => clipped.includes(a.raw))
-              : next,
+          amounts: shown,
         },
       });
     });
   }
 
+  // Fragments (table cells, headings, list stubs) rank after real sentences.
   const byScore = (a: Candidate, b: Candidate) =>
-    a.amountRank - b.amountRank || b.score - a.score || a.p.index - b.p.index;
+    Number(a.fragment) - Number(b.fragment) ||
+    a.amountRank - b.amountRank ||
+    b.score - a.score ||
+    a.p.index - b.p.index;
   const seen = new Set<string>();
   const fresh = (c: Candidate) => {
     const key = c.finding.text.toLowerCase();
@@ -220,7 +238,10 @@ export function buildSummary(
 
   // Opposition: the best sentence per party group (more and rarer terms first, then amounts).
   const byTerms = (a: Candidate, b: Candidate) =>
-    b.score - a.score || a.amountRank - b.amountRank || a.p.index - b.p.index;
+    Number(a.fragment) - Number(b.fragment) ||
+    b.score - a.score ||
+    a.amountRank - b.amountRank ||
+    a.p.index - b.p.index;
   const perParty = new Map<string, Candidate>();
   for (const c of candidates.filter((x) => OPPOSITION.has(x.finding.kind))) {
     const key = c.finding.parties.join('+') || c.p.speaker.label;
@@ -241,12 +262,24 @@ export function buildSummary(
   const lineTerms = uniq.filter(
     (t) => !uniq.some((o) => subsumes(o, t) && (counts.get(o) ?? 0) === 0),
   );
+  // Two terms that are word-suffixes of each other with the same first sentence ("allmänna
+  // arvsfonden", "arvsfonden") are one line: keep the longer.
+  const merged = lineTerms.filter(
+    (t) =>
+      !lineTerms.some(
+        (o) =>
+          o !== t &&
+          o.endsWith(` ${t}`) &&
+          counts.get(o) === counts.get(t) &&
+          samples.get(o) === samples.get(t),
+      ),
+  );
   return {
     mode,
     main,
     opposition,
     opposition_more: Math.max(0, oppAll.length - opposition.length),
-    terms: lineTerms.map((term) => ({
+    terms: merged.map((term) => ({
       term,
       count: counts.get(term) ?? 0,
       sample: samples.get(term) ?? null,
@@ -274,6 +307,7 @@ const findingSchema = z.object({
       kronor: z.number(),
       year: z.number().nullable(),
       per_year: z.boolean(),
+      approx: z.boolean().optional(),
     }),
   ),
 });
@@ -385,10 +419,12 @@ function speakerLabel(f: Finding): string {
   return KIND_LABEL[f.kind];
 }
 
-function amountsLabel(f: Finding): string {
-  const shown = f.amounts
-    .slice(0, 3)
-    .map((a) => `${formatKr(a.kronor)} kr${a.per_year ? '/år' : ''}`);
+function amountsLabel(f: Finding, rowYear: string): string {
+  const shown = f.amounts.slice(0, 3).map((a) => {
+    // The amount's own year, when the sentence names one that is not the row's.
+    const year = a.year !== null && String(a.year) !== rowYear ? ` (${a.year})` : '';
+    return `${a.approx ? 'ca ' : ''}${formatKr(a.kronor)} kr${a.per_year ? '/år' : ''}${year}`;
+  });
   const more = f.amounts.length - shown.length;
   return shown.join(', ') + (more > 0 ? ` +${more}` : '');
 }
@@ -405,7 +441,7 @@ function rowsOf(year: string, findings: readonly Finding[]): Row[] {
   return findings.map((f) => ({
     year,
     who: speakerLabel(f),
-    amounts: amountsLabel(f),
+    amounts: amountsLabel(f, year),
     text: f.text,
     terms: f.terms,
   }));
@@ -507,7 +543,11 @@ export function renderSummary(
   lines.push(...zeroLines(summary.current, prior, curYear, priorYear, o));
   if (brief.prior_year?.status === 'none') {
     lines.push(
-      ...indented(`Föregående år: ingen motsvarighet (${brief.prior_year.reason}).`, 2, o.width),
+      ...indented(
+        `Föregående år: ${/^ingen motsvarighet/.test(brief.prior_year.reason) ? brief.prior_year.reason : `ingen motsvarighet (${brief.prior_year.reason})`}.`,
+        2,
+        o.width,
+      ),
     );
   } else if (priorDoc && !priorDoc.text_available) {
     lines.push('  Föregående år: fulltext saknas hos Riksdagen.');

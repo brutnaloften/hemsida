@@ -94,14 +94,14 @@ while (nav.current !== null) {
     detailShown = true;
   }
   if (p.label) console.log(`(nuvarande etikett: ${p.label})`);
-  const prompt =
-    (brief && !detailShown ? '\n[d] visa detaljer   ' : '\n') +
-    '[m]atch / [p]artial / [c]ontradicts / [n]o match / [s]kip / [b]ack / [q]uit: ';
+  const menu = '[m]atch / [p]artial / [c]ontradicts / [n]o match / [s]kip / [b]ack / [q]uit: ';
   let key = '';
   for (;;) {
-    key = (await rl.question(prompt)).trim().toLowerCase();
-    if (key === 'd' && brief && !detailShown) {
-      console.log(`\n${renderBrief(brief)}`);
+    const offer = brief && !detailShown ? '\n[d] visa detaljer   ' : '\n';
+    key = (await rl.question(offer + menu)).trim().toLowerCase();
+    if (key === 'd' && brief) {
+      // Shown once; pressing d again just asks again.
+      if (!detailShown) console.log(`\n${renderBrief(brief)}`);
       detailShown = true;
       continue;
     }
@@ -118,7 +118,7 @@ while (nav.current !== null) {
   }
   const label = keys[key];
   if (!label) {
-    console.log(`Unknown key "${key}". Use m, p, c, n, s, b or q.`);
+    console.log(`Unknown key "${key}". Use d, m, p, c, n, s, b or q.`);
     continue;
   }
   const note = (await rl.question('Note (optional): ')).trim();

@@ -87,10 +87,14 @@ export interface Amount {
   year: number | null;
   /** True when the sentence says "per år" / "årligen". */
   per_year: boolean;
+  /** True when the amount is preceded by "cirka" / "ca" / "omkring". */
+  approx?: boolean;
 }
 
 const AMOUNT_RE =
-  /(?<![\d\p{L}])(\d{1,3}(?: \d{3})+|\d+(?:,\d+)?)\s*(miljarder|miljard|miljoner|miljon|tusen)?\s*(kronor|kr)\b/giu;
+  /(?<![\d\p{L}])(\d{1,3}(?: \d{3})+|\d+(?:,\d+)?)\s*(miljarder|miljard|miljoner|miljon|tusen)?\s*(kronor|kr)(?![\p{L}\p{N}])/giu;
+
+const APPROX = /(?<![\p{L}])(?:cirka|ca\.?|omkring)\s+$/iu;
 
 const UNIT: Record<string, number> = {
   miljarder: 1e9,
@@ -100,14 +104,10 @@ const UNIT: Record<string, number> = {
   tusen: 1e3,
 };
 
-function sentencesOf(text: string): string[] {
-  return text.split(/(?<=[.!?])\s+(?=[A-ZÅÄÖ0-9])/u);
-}
-
 /** Parse kronor amounts ("1 000 000 000 kronor", "127 miljarder kronor") with their year. */
 export function parseAmounts(text: string): Amount[] {
   const out: Amount[] = [];
-  for (const sentence of sentencesOf(text)) {
+  for (const sentence of sentenceSpans(text).map((sp) => text.slice(sp.start, sp.end))) {
     const year = /\b(20\d\d)\b/.exec(sentence)?.[1];
     const perYear = /(?<!\p{L})(per år|årligen)(?!\p{L})/iu.test(sentence);
     for (const m of sentence.matchAll(AMOUNT_RE)) {
@@ -118,6 +118,7 @@ export function parseAmounts(text: string): Amount[] {
         kronor: Math.round(num * unit),
         year: year ? Number(year) : null,
         per_year: perYear,
+        ...(APPROX.test(sentence.slice(0, m.index)) ? { approx: true } : {}),
       });
     }
   }
@@ -165,14 +166,23 @@ interface Sentence {
   end: number;
 }
 
-/** Abbreviations whose full stop does not end a sentence ("prop. 2024/25:1", "bl.a. Sverige"). */
-const ABBREVIATION = '\\b(?:prop|bet|bl\\.a|t\\.ex|m\\.fl|nr|dnr|jfr|kap|ca|st)';
+/**
+ * Abbreviations whose full stop does not end a sentence ("prop. 2024/25:1", "rskr. 2015/16:155",
+ * "bl.a. Sverige"). Matched after a non-letter, so "bäst." and "höst." still end a sentence.
+ */
+const ABBREVIATION =
+  /(?<![\p{L}\p{N}])(?:prop|bet|rskr|bl\.a|t\.ex|m\.fl|m\.m|s\.k|dvs|nr|dnr|jfr|kap|ca|st)\.$/u;
+/** "s. 34" (page reference): `s` is an abbreviation only before a digit. */
+const PAGE = /(?<![\p{L}\p{N}])s\.$/u;
 
 export function sentenceSpans(text: string): Sentence[] {
   const spans: Sentence[] = [];
   let start = 0;
-  const re = new RegExp(`(?<=[.!?])(?<!${ABBREVIATION}\\.)\\s+(?=[A-ZÅÄÖ0-9])`, 'gu');
+  const re = /(?<=[.!?])\s+(?=[A-ZÅÄÖ0-9])/gu;
   for (let m = re.exec(text); m !== null; m = re.exec(text)) {
+    const before = text.slice(start, m.index);
+    const next = text[m.index + m[0].length]!;
+    if (ABBREVIATION.test(before) || (PAGE.test(before) && /\d/.test(next))) continue;
     spans.push({ start, end: m.index });
     start = m.index + m[0].length;
   }
@@ -478,6 +488,7 @@ const amountSchema = z.object({
   kronor: z.number(),
   year: z.number().nullable(),
   per_year: z.boolean(),
+  approx: z.boolean().optional(),
 });
 const passageSchema = z.object({
   section: z.string(),

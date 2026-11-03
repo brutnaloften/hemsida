@@ -44,10 +44,49 @@ describe('buildSummary', () => {
     expect(s.mode).toBe('amounts');
     expect(s.main).toHaveLength(1);
     expect(s.main[0]!.kind).toBe('government');
+    // the amount sits in the sentence after the term: both are quoted verbatim
     expect(s.main[0]!.text).toBe(
-      'Satsningen på kvinnors och flickors hälsa och mödravården fortsätter.',
+      'Satsningen på kvinnors och flickors hälsa och mödravården fortsätter. För 2026 avsätts 1 000 000 000 kronor.',
     );
+    for (const f of [...s.main, ...s.opposition]) {
+      for (const a of f.amounts) expect(f.text).toContain(a.raw);
+    }
     expect(s.main[0]!.amounts.map((a) => a.kronor)).toEqual([1_000_000_000]);
+  });
+
+  it('quotes the next sentence only for government and committee, not for an inquiry', () => {
+    const sou = annotateParagraphs(
+      [{ text: 'Anhörigstöd ska utvecklas. Det kostar 5 miljoner kronor.', heading: false }],
+      'sou',
+    );
+    const s = buildSummary(sou, ['anhörigstöd'], ['anhörigstöd']);
+    expect(s.main[0]!.text).toBe('Anhörigstöd ska utvecklas.');
+    expect(s.main[0]!.amounts).toEqual([]);
+  });
+
+  it('ranks fragments after sentences and strips a leading ". "', () => {
+    const dir = annotateParagraphs(
+      [
+        { text: 'Driftstöd för bio-CCS', heading: false },
+        { text: '. Utredaren ska analysera driftstöd för bio-CCS i sin helhet.', heading: false },
+      ],
+      'dir',
+    );
+    const s = buildSummary(dir, ['driftstöd'], ['driftstöd']);
+    expect(s.main[0]!.text).toBe('Utredaren ska analysera driftstöd för bio-CCS i sin helhet.');
+  });
+
+  it('merges terms that are word-suffixes of each other with the same sample', () => {
+    const ps = annotateParagraphs(
+      [{ text: 'Allmänna arvsfonden fördelar medel varje år till föreningar.', heading: false }],
+      'dir',
+    );
+    const s = buildSummary(
+      ps,
+      ['allmänna arvsfonden', 'arvsfonden'],
+      ['allmänna arvsfonden', 'arvsfonden'],
+    );
+    expect(s.terms.map((t) => t.term)).toEqual(['allmänna arvsfonden']);
   });
 
   it('only takes amounts from the matched sentence, not from the rest of the paragraph', () => {
@@ -181,12 +220,29 @@ describe('renderSummary', () => {
   it('shows both years side by side, then the zero-hit lines, and never a label', () => {
     expect(out).toContain('NYCKELFYND (utan bedömning)');
     expect(out).toMatch(/2026\s+Regeringen\s+1 000 000 000 kr\s+«Satsningen på kvinnors/);
-    expect(out).toMatch(/2025\s+Regeringen\s+1 600 000 000 kr\s+«För 2024 avsattes/);
+    expect(out).toMatch(/2025\s+Regeringen\s+1 600 000 000 kr \(2024\)\s+«För 2024 avsattes/);
     expect(out).toMatch(/S \(särskilt yttrande\)\s+«Vidare har regeringen valt att sänka/);
     expect(out).toContain('«förlossningsplan»: 0 träffar (båda åren)');
     expect(out).toContain('«barnmorsketeam»: 0 träffar (båda åren)');
     expect(out).not.toMatch(/nationell/);
     expect(out).not.toMatch(/match|partial|no_match|contradicts/i);
+  });
+
+  it("shows an amount's own year when it differs from the row year, and cirka", () => {
+    const f = {
+      kind: 'committee' as const,
+      parties: [],
+      section: '',
+      text: 'Överskottet var cirka 4 miljarder kronor 2023.',
+      terms: [],
+      amounts: [
+        { raw: '4 miljarder kronor', kronor: 4e9, year: 2023, per_year: false, approx: true },
+      ],
+    };
+    const base = buildSummary(hd, ['barnmorsketeam'], ['barnmorsketeam']);
+    const withF: BriefSummary = { current: { ...base, main: [f] }, prior: null };
+    const text = renderSummary(briefOf(null), withF, { width: 100, color: false })!;
+    expect(text).toContain('ca 4 000 000 000 kr (2023)');
   });
 
   it('prints the prefix note once and fits the width', () => {
