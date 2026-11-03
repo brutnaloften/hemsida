@@ -19,7 +19,37 @@ already-labelled pair, the tool warns and refuses unless `--force` is given.
 
 Each pair has the promise (title, description, source quote), the document (id, title,
 type, reference/date/committee snippet, URL), the search score and an empty `label`.
-Candidate files store no document body, so open the URL when the title is not enough.
+Candidate files store no document body: run the evidence briefs below, or open the URL.
+
+## Evidence briefs (full text)
+
+The stored snippet is not enough to judge a pair, so build briefs from each document's full text first:
+
+```sh
+node --experimental-strip-types tools/build-eval-briefs.ts
+```
+
+It fetches `data.riksdagen.se/dokument/<id>.text` (sequentially, 1 req/s, descriptive User-Agent), caches the raw
+response in `tools/out/riksdag-text/` (not committed, so re-runs are offline) and writes
+`tools/out/eval-briefs/<pair-id>.json` per pair. Options: `--only <pair-id>`, `--term`, `--store`
+(riksdag store, default `tools/out/riksdag-store/<term>.json`), `--out`, `--cache`.
+
+Each brief reports facts only, never a suggested label:
+
+- **Term counts** for the promise's keywords, extra terms from `tools/eval-brief-terms.json` and distinctive words
+  (6+ letters) of the promise title and source quote. Terms match from a word start, so `förlossning` also counts
+  `förlossningsvård`. Zero counts are listed explicitly ("Förekommer inte i texten").
+- **Verbatim passages** with the section heading, the `Anslaget N:N` heading when there is one, and the speaker:
+  government, committee majority, reservation or special statement by party, motion by party, inquiry. Passages are
+  the paragraphs with the most (rarity-weighted) term matches, shown in document order.
+- **Amounts** in those passages ("1 000 000 000 kronor", "127 miljarder kronor") with the year in the same sentence.
+- **Prior year** for budget documents (bet/prop for an utgiftsområde): the same passages and counts for the
+  counterpart in the previous riksmöte (same organ and title, else same utgiftsområde number), only if it is inside the
+  term (found in the riksdag store); otherwise the brief says there is none.
+
+`label-eval-set.ts` prints the brief under each pair when `tools/out/eval-briefs/<pair-id>.json` exists and falls back
+to the stored snippet otherwise (`--briefs <dir>` overrides the folder). Parsing, speaker detection and fetching are in
+`tools/lib/riksdag-text.ts`, the rest in `tools/lib/eval-brief.ts`; both are tested on real HD01SoU1/HC01SoU1 passages.
 
 ## Label
 
