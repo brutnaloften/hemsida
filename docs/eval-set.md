@@ -28,14 +28,16 @@ node --experimental-strip-types tools/label-eval-set.ts
 ```
 
 Works offline in an interactive terminal (piped stdin is rejected). Ctrl-C prints a summary. For each unlabelled pair press `m` (match), `p` (partial),
-`n` (no match), `s` (skip), `b` (back) or `q` (quit); then optionally type a note. Every
+`c` (contradicts), `n` (no match), `s` (skip), `b` (back) or `q` (quit); then optionally type a note. Every
 answer is saved immediately, so you can quit and resume at any time. `--redo` revisits
-labelled pairs. You can also edit `label` (`match` | `partial` | `no_match`) and `note`
+labelled pairs. You can also edit `label` (`match` | `partial` | `contradicts` | `no_match`) and `note`
 directly in the JSON.
 
 Guidance: `match` = the document is direct evidence of the promise being acted on (the
 proposal, bill or decision implements it); `partial` = same topic, covers part of the
-promise or only prepares it (e.g. an inquiry directive); `no_match` = unrelated or only
+promise or only prepares it (e.g. an inquiry directive); `contradicts` = on topic but
+works against the promise (e.g. a proposal that cuts the funding the promise relies on; it is
+relevant evidence for the timeline, but not progress); `no_match` = unrelated or only
 shares keywords.
 
 Commit the labelled `pairs.json` when done.

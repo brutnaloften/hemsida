@@ -5,7 +5,7 @@
  */
 import { z } from 'zod';
 
-export const evalLabelSchema = z.enum(['match', 'partial', 'no_match']);
+export const evalLabelSchema = z.enum(['match', 'partial', 'contradicts', 'no_match']);
 export type EvalLabel = z.infer<typeof evalLabelSchema>;
 
 export const evalPairSchema = z.strictObject({
