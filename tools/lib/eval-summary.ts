@@ -423,7 +423,9 @@ function amountsLabel(f: Finding, rowYear: string): string {
   const shown = f.amounts.slice(0, 3).map((a) => {
     // The amount's own year, when the sentence names one that is not the row's.
     const year = a.year !== null && String(a.year) !== rowYear ? ` (${a.year})` : '';
-    return `${a.approx ? 'ca ' : ''}${formatKr(a.kronor)} kr${a.per_year ? '/år' : ''}${year}`;
+    // Whole kronor are formatted from the value; amounts with öre keep their decimals as written.
+    const decimal = /^(\d[\d ]*,\d+)\s*(?:kronor|kr)$/iu.exec(a.raw)?.[1];
+    return `${a.approx ? 'ca ' : ''}${decimal ? decimal : formatKr(a.kronor)} kr${a.per_year ? '/år' : ''}${year}`;
   });
   const more = f.amounts.length - shown.length;
   return shown.join(', ') + (more > 0 ? ` +${more}` : '');

@@ -245,6 +245,24 @@ describe('renderSummary', () => {
     expect(text).toContain('ca 4 000 000 000 kr (2023)');
   });
 
+  it('shows decimals as written for amounts with öre', () => {
+    const f = {
+      kind: 'committee' as const,
+      parties: [],
+      section: '',
+      text: 'Avgiften är 332,60 kronor.',
+      terms: [],
+      amounts: [{ raw: '332,60 kronor', kronor: 333, year: null, per_year: false }],
+    };
+    const base = buildSummary(hd, ['barnmorsketeam'], ['barnmorsketeam']);
+    const text = renderSummary(
+      briefOf(null),
+      { current: { ...base, main: [f] }, prior: null },
+      { width: 100, color: false },
+    )!;
+    expect(text).toContain('332,60 kr');
+  });
+
   it('prints the prefix note once and fits the width', () => {
     expect(out.match(/räknas från ordbörjan/g)).toHaveLength(1);
     expect(out.split('\n').every((l) => visibleLength(l) <= 100)).toBe(true);

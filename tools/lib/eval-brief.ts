@@ -105,10 +105,46 @@ const UNIT: Record<string, number> = {
 };
 
 /** Parse kronor amounts ("1 000 000 000 kronor", "127 miljarder kronor") with their year. */
+/** Characters between a preposition-year and the amount it may belong to. */
+const MAX_YEAR_DISTANCE = 40;
+
+/**
+ * A year that the sentence ties to the money: after a preposition ("för 2026", "under 2023",
+ * "år 2025", "budgetåret 2026"), as "2026 års", or directly after the amount ("kronor 2023").
+ * Ranges ("2026–2046"), riksmöten ("2024/25") and references ("2025:50") never count, and a
+ * year that is only somewhere in the sentence ("infördes 2022") is not attached. When several
+ * qualify, the one nearest the amount wins.
+ * A preposition-year must be within MAX_YEAR_DISTANCE characters of the amount.
+ */
+export function yearOfAmount(sentence: string, at: number, length: number): number | null {
+  const NOT_PART = '(?![\\d/:\\u2013\\u2014-])';
+  const tied: { year: number; dist: number }[] = [];
+  const patterns = [
+    new RegExp(
+      `(?<![\\p{L}\\p{N}])(?:för|under|år|budgetåret)\\s+(20\\d\\d)${NOT_PART}(?![\\p{L}\\p{N}])`,
+      'giu',
+    ),
+    new RegExp(`(?<![\\p{L}\\p{N}\\u2013-])(20\\d\\d)\\s+års(?![\\p{L}\\p{N}])`, 'giu'),
+  ];
+  for (const re of patterns) {
+    for (const m of sentence.matchAll(re)) {
+      const y = Number(m[1]);
+      const pos = m.index + m[0].lastIndexOf(m[1]!);
+      const dist = pos < at ? at - (pos + 4) : pos - (at + length);
+      if (dist <= MAX_YEAR_DISTANCE) tied.push({ year: y, dist });
+    }
+  }
+  const after = new RegExp(`^\\s*(?:år\\s+)?(20\\d\\d)${NOT_PART}(?![\\p{L}\\p{N}])`, 'u').exec(
+    sentence.slice(at + length),
+  );
+  if (after) tied.push({ year: Number(after[1]), dist: 0 });
+  tied.sort((a, b) => a.dist - b.dist);
+  return tied[0]?.year ?? null;
+}
+
 export function parseAmounts(text: string): Amount[] {
   const out: Amount[] = [];
   for (const sentence of sentenceSpans(text).map((sp) => text.slice(sp.start, sp.end))) {
-    const year = /\b(20\d\d)\b/.exec(sentence)?.[1];
     const perYear = /(?<!\p{L})(per år|årligen)(?!\p{L})/iu.test(sentence);
     for (const m of sentence.matchAll(AMOUNT_RE)) {
       const num = parseFloat(m[1]!.replace(/ /g, '').replace(',', '.'));
@@ -116,7 +152,7 @@ export function parseAmounts(text: string): Amount[] {
       out.push({
         raw: m[0],
         kronor: Math.round(num * unit),
-        year: year ? Number(year) : null,
+        year: yearOfAmount(sentence, m.index, m[0].length),
         per_year: perYear,
         ...(APPROX.test(sentence.slice(0, m.index)) ? { approx: true } : {}),
       });

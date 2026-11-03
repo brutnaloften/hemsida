@@ -48,4 +48,23 @@ describe('parseAmounts', () => {
     expect(both).toHaveLength(1);
     expect(both[0]!.year).toBe(2024);
   });
+
+  it('attaches a year only when the sentence ties it to the money', () => {
+    const year = (t: string) => parseAmounts(t)[0]?.year;
+    expect(year('För 2026 avsätts 1 000 000 000 kronor.')).toBe(2026);
+    expect(year('För 2024 avsattes 1 600 000 000 kronor för förlossningsvård.')).toBe(2024);
+    expect(year('Regeringen avsätter 1 700 000 000 kronor under 2023.')).toBe(2023);
+    expect(year('Anslaget uppgår till 5 miljoner kronor 2023.')).toBe(2023);
+    expect(year('Med 2026 års prisnivå motsvarar det 2 miljoner kronor.')).toBe(2026);
+    // a year elsewhere in the sentence is not the amount's year
+    expect(year('Regeln infördes 2022 och kostar 200 000 000 kronor.')).toBeNull();
+    // ranges, riksmöten and references are never a single year
+    expect(year('Ett åtagande på högst 36 miljoner kronor för 2026–2046.')).toBeNull();
+    expect(year('Enligt prop. 2024/25:1 avsätts 5 miljoner kronor.')).toBeNull();
+    expect(year('Enligt lagen (2025:50) avsätts 5 miljoner kronor.')).toBeNull();
+  });
+
+  it('keeps öre decimals in raw', () => {
+    expect(parseAmounts('Avgiften är 332,60 kronor.')[0]!.raw).toBe('332,60 kronor');
+  });
 });
