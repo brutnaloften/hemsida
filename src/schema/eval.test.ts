@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { evalFileSchema, evalPairSchema } from './eval.ts';
+import { evalFileSchema, evalPairSchema, modelLabelsFileSchema } from './eval.ts';
 
 const pair = {
   id: 'p::d',
@@ -34,5 +34,26 @@ describe('evalPairSchema', () => {
     expect(evalFileSchema.safeParse({ term: '2022-2026', seed: 1, pairs: [pair] }).success).toBe(
       true,
     );
+  });
+});
+
+describe('modelLabelsFileSchema', () => {
+  const ok = { label: 'partial', confidence: 'low', reason: 'Only a directive.' };
+  it('accepts judgements keyed by pair id and model, with optional stage', () => {
+    const file = {
+      term: '2022-2026',
+      labels: { 'a::b': { sonnet: ok, opus: { ...ok, stage: 'preparatory' } } },
+    };
+    expect(modelLabelsFileSchema.safeParse(file).success).toBe(true);
+  });
+  it('rejects an empty reason and unknown labels', () => {
+    expect(
+      modelLabelsFileSchema.safeParse({ term: 't', labels: { x: { m: { ...ok, reason: '' } } } })
+        .success,
+    ).toBe(false);
+    expect(
+      modelLabelsFileSchema.safeParse({ term: 't', labels: { x: { m: { ...ok, label: 'yes' } } } })
+        .success,
+    ).toBe(false);
   });
 });

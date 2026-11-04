@@ -2,7 +2,7 @@
  * Label the eval set interactively in the terminal (offline, progress saved after every answer).
  *   node --experimental-strip-types tools/label-eval-set.ts [--term 2022-2026] [--redo] [--only-file ids.txt]
  *
- * Keys per pair: d = show the full evidence detail, m = match, p = partial, c = contradicts, n = no match, s = skip, b = back one pair,
+ * Keys per pair: d = show the full evidence detail, r = show what the models answered blind and why (hidden by default so it does not anchor you), m = match, p = partial, c = contradicts, n = no match, s = skip, b = back one pair,
  * q = quit. After a label you may type an optional note (Enter for none).
  * Already labelled pairs are skipped unless --redo. --only-file takes a file with one pair id per line
  * (blank lines and # comments ignored), shows only those pairs and implies --redo. When relabelling, Enter at
@@ -24,7 +24,7 @@ import {
   useColor,
   type BriefSummary,
 } from './lib/eval-summary.ts';
-import { evalFileSchema, type EvalLabel } from '../src/schema/eval.ts';
+import { evalFileSchema, modelLabelsFileSchema, type EvalLabel } from '../src/schema/eval.ts';
 
 if (!process.stdin.isTTY) {
   console.error('label-eval-set needs an interactive terminal (stdin is not a TTY).');
@@ -37,11 +37,19 @@ const { values } = parseArgs({
     term: { type: 'string', default: '2022-2026' },
     redo: { type: 'boolean', default: false },
     'only-file': { type: 'string' },
+    'model-labels': { type: 'string' },
     briefs: { type: 'string', default: resolve(root, 'tools/out/eval-briefs') },
   },
 });
 const path = resolve(root, 'src/data', values.term!, 'eval/pairs.json');
 const file = evalFileSchema.parse(loadJson(path));
+// Optional blind model judgements (model-labels.json next to pairs.json); shown on `r`.
+const modelLabelsPath = values['model-labels']
+  ? resolve(values['model-labels'])
+  : resolve(dirname(path), 'model-labels.json');
+const modelLabels = existsSync(modelLabelsPath)
+  ? modelLabelsFileSchema.parse(loadJson(modelLabelsPath)).labels
+  : {};
 const keys: Record<string, EvalLabel> = {
   m: 'match',
   p: 'partial',
@@ -114,8 +122,18 @@ while (nav.current !== null) {
   const menu = '[m]atch / [p]artial / [c]ontradicts / [n]o match / [s]kip / [b]ack / [q]uit: ';
   let key = '';
   for (;;) {
-    const offer = brief && !detailShown ? '\n[d] visa detaljer   ' : '\n';
+    const judgements = Object.entries(modelLabels[p.id] ?? {});
+    const offer =
+      (brief && !detailShown ? '\n[d] visa detaljer   ' : '\n') +
+      (judgements.length ? '[r] modellernas svar   ' : '');
     key = (await rl.question(offer + menu)).trim().toLowerCase();
+    if (key === 'r' && judgements.length) {
+      for (const [model, j] of judgements) {
+        const stage = j.stage ? `, stadium: ${j.stage}` : '';
+        console.log(`\n${model}: ${j.label} (${j.confidence}${stage})\n  ${j.reason}`);
+      }
+      continue;
+    }
     if (key === 'd' && brief) {
       // Shown once; pressing d again just asks again.
       if (!detailShown) console.log(`\n${renderBrief(brief)}`);
@@ -135,7 +153,7 @@ while (nav.current !== null) {
   }
   const label = keys[key];
   if (!label) {
-    console.log(`Unknown key "${key}". Use d, m, p, c, n, s, b or q.`);
+    console.log(`Unknown key "${key}". Use d, r, m, p, c, n, s, b or q.`);
     continue;
   }
   const prompt = p.note
