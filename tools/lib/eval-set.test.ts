@@ -104,6 +104,14 @@ describe('Navigator', () => {
     nav.advance();
     expect(nav.current).toBe(1);
   });
+  it('only visits the selected indexes', () => {
+    const nav = new Navigator(mk(['match', 'match', null, 'match']), true, new Set([1, 3]));
+    expect(nav.current).toBe(1);
+    nav.advance();
+    expect(nav.current).toBe(3);
+    nav.advance();
+    expect(nav.current).toBeNull();
+  });
 });
 
 describe('droppedLabelled', () => {
