@@ -168,15 +168,19 @@ export class Navigator {
   private history: number[] = [];
   private readonly pairs: readonly { label: unknown }[];
   private readonly redo: boolean;
+  private readonly only: ReadonlySet<number> | undefined;
 
-  constructor(pairs: readonly { label: unknown }[], redo: boolean) {
+  /** `only` restricts the walk to those pair indexes. */
+  constructor(pairs: readonly { label: unknown }[], redo: boolean, only?: ReadonlySet<number>) {
     this.pairs = pairs;
     this.redo = redo;
+    this.only = only;
     this.current = this.firstFrom(0);
   }
 
   private firstFrom(start: number): number | null {
     for (let i = start; i < this.pairs.length; i++) {
+      if (this.only && !this.only.has(i)) continue;
       if (this.redo || !this.pairs[i]!.label) return i;
     }
     return null;

@@ -37,3 +37,31 @@ export const evalFileSchema = z.strictObject({
   pairs: z.array(evalPairSchema),
 });
 export type EvalFile = z.infer<typeof evalFileSchema>;
+
+export const evalStageSchema = z.enum(['definitive', 'preparatory', 'background']);
+export type EvalStage = z.infer<typeof evalStageSchema>;
+
+/** One model's blind full-text judgement of a pair. Never the ground truth; the hand label is. */
+export const modelJudgementSchema = z.strictObject({
+  label: evalLabelSchema,
+  /** How far along the document is (decision, inquiry/proposal, or mere mention); not asked of every model. */
+  stage: evalStageSchema.optional(),
+  confidence: z.enum(['high', 'medium', 'low']),
+  reason: z.string().min(1),
+});
+export type ModelJudgement = z.infer<typeof modelJudgementSchema>;
+
+/** Baseline from models labelling pairs blind (no hand label visible), keyed by pair id, then model name. */
+export const modelLabelsFileSchema = z.strictObject({
+  term: z.string(),
+  /** Where the judgements come from, so the baseline can be compared with or reproduced later. */
+  meta: z.strictObject({
+    generated: z.string().min(1),
+    /** What "blind" means and what each model was given. */
+    method: z.string().min(1),
+    /** Per model name: which model ran and how it was prompted (prompts can differ between models). */
+    models: z.record(z.string(), z.string().min(1)),
+  }),
+  labels: z.record(z.string(), z.record(z.string(), modelJudgementSchema)),
+});
+export type ModelLabelsFile = z.infer<typeof modelLabelsFileSchema>;
