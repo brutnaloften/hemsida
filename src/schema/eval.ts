@@ -8,6 +8,10 @@ import { z } from 'zod';
 export const evalLabelSchema = z.enum(['match', 'partial', 'contradicts', 'no_match']);
 export type EvalLabel = z.infer<typeof evalLabelSchema>;
 
+/** How far along the process the document is; a separate axis from the relevance label. */
+export const evalStageSchema = z.enum(['definitive', 'preparatory', 'background']);
+export type EvalStage = z.infer<typeof evalStageSchema>;
+
 export const evalPairSchema = z.strictObject({
   /** Stable key: `<promise_id>::<document_id>`. */
   id: z.string().min(1),
@@ -27,6 +31,8 @@ export const evalPairSchema = z.strictObject({
   search_score: z.number().int().positive(),
   /** Null until labelled. */
   label: evalLabelSchema.nullable(),
+  /** Hand-set document stage; absent until the user labels it. */
+  stage: evalStageSchema.optional(),
   note: z.string().optional(),
 });
 export type EvalPair = z.infer<typeof evalPairSchema>;
@@ -37,9 +43,6 @@ export const evalFileSchema = z.strictObject({
   pairs: z.array(evalPairSchema),
 });
 export type EvalFile = z.infer<typeof evalFileSchema>;
-
-export const evalStageSchema = z.enum(['definitive', 'preparatory', 'background']);
-export type EvalStage = z.infer<typeof evalStageSchema>;
 
 /** One model's blind full-text judgement of a pair. Never the ground truth; the hand label is. */
 export const modelJudgementSchema = z.strictObject({

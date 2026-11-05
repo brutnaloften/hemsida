@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   buildPool,
   mergeLabels,
+  stageAgreement,
   Navigator,
   droppedLabelled,
   samplePairs,
@@ -134,5 +135,31 @@ describe('toEvalPair / mergeLabels', () => {
   it('keeps existing labels on regeneration', () => {
     const merged = mergeLabels([pair], [{ ...pair, label: 'match', note: 'ok' }]);
     expect(merged[0]).toMatchObject({ label: 'match', note: 'ok' });
+  });
+  it('keeps existing stages on regeneration', () => {
+    const merged = mergeLabels([pair], [{ ...pair, label: 'match', stage: 'preparatory' }]);
+    expect(merged[0]?.stage).toBe('preparatory');
+  });
+});
+
+describe('stageAgreement', () => {
+  it('compares hand stages with a model and lists confusions', () => {
+    const pairs = [
+      { id: 'a', stage: 'definitive' as const },
+      { id: 'b', stage: 'preparatory' as const },
+      { id: 'c', stage: 'background' as const },
+      { id: 'd' },
+    ];
+    const labels = {
+      a: { opus: { stage: 'definitive' as const } },
+      b: { opus: { stage: 'definitive' as const } },
+      c: { sonnet: {} },
+      d: { opus: { stage: 'background' as const } },
+    };
+    expect(stageAgreement(pairs, labels, 'opus')).toEqual({
+      compared: 2,
+      agree: 1,
+      confusions: { 'preparatory -> definitive': 1 },
+    });
   });
 });

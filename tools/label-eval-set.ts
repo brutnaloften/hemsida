@@ -3,7 +3,10 @@
  *   node --experimental-strip-types tools/label-eval-set.ts [--term 2022-2026] [--redo] [--only-file ids.txt] [--model-labels file.json]
  *
  * Keys per pair: d = show the full evidence detail, r = show what the models answered blind and why (hidden by default so it does not anchor you), m = match, p = partial, c = contradicts, n = no match, s = skip, b = back one pair,
- * q = quit. After a label you may type an optional note (Enter for none, or to keep the existing note when relabelling).
+ * q = quit. After a label you are asked for the document stage (a separate prompt, so its keys never clash with the label keys):
+ * d = definitive (decision), p = preparatory (dir/SOU/Ds/proposal not yet decided), b = background (only mentions or rejects motions),
+ * Enter or s = skip (keeps any existing stage), - = remove the stage. The models' blind stage is shown only by `r`, never at the prompt.
+ * Then you may type an optional note (Enter for none, or to keep the existing note when relabelling).
  * Already labelled pairs are skipped unless --redo. --only-file takes a file with one pair id per line
  * (blank lines and # comments ignored), shows only those pairs and implies --redo. When relabelling, Enter at
  * the note prompt keeps the existing note; type - to remove it. Needs an interactive terminal.
@@ -24,7 +27,12 @@ import {
   useColor,
   type BriefSummary,
 } from './lib/eval-summary.ts';
-import { evalFileSchema, modelLabelsFileSchema, type EvalLabel } from '../src/schema/eval.ts';
+import {
+  evalFileSchema,
+  modelLabelsFileSchema,
+  type EvalLabel,
+  type EvalStage,
+} from '../src/schema/eval.ts';
 
 if (!process.stdin.isTTY) {
   console.error('label-eval-set needs an interactive terminal (stdin is not a TTY).');
@@ -55,6 +63,12 @@ const keys: Record<string, EvalLabel> = {
   p: 'partial',
   c: 'contradicts',
   n: 'no_match',
+};
+
+const stageKeys: Record<string, EvalStage> = {
+  d: 'definitive',
+  p: 'preparatory',
+  b: 'background',
 };
 
 function summary(): void {
@@ -122,7 +136,9 @@ while (nav.current !== null) {
     detailShown = true;
   }
   if (p.label)
-    console.log(`(nuvarande etikett: ${p.label}${p.note ? `; anteckning: ${p.note}` : ''})`);
+    console.log(
+      `(nuvarande etikett: ${p.label}${p.stage ? `; stadium: ${p.stage}` : ''}${p.note ? `; anteckning: ${p.note}` : ''})`,
+    );
   const menu = '[m]atch / [p]artial / [c]ontradicts / [n]o match / [s]kip / [b]ack / [q]uit: ';
   let key = '';
   for (;;) {
@@ -160,11 +176,34 @@ while (nav.current !== null) {
     console.log(`Unknown key "${key}". Use d, r, m, p, c, n, s, b or q.`);
     continue;
   }
+  // Separate step so the stage keys (d/p/b) do not collide with the label keys.
+  let stage: EvalStage | undefined | null; // null = remove, undefined = keep
+  for (;;) {
+    const answer = (
+      await rl.question(
+        `Stadium${p.stage ? ` (nu: ${p.stage})` : ''}: [d]efinitive / [p]reparatory / [b]ackground / Enter or s = skip${p.stage ? ' / - remove' : ''}: `,
+      )
+    )
+      .trim()
+      .toLowerCase();
+    if (answer === '' || answer === 's') break;
+    if (answer === '-') {
+      stage = null;
+      break;
+    }
+    if (stageKeys[answer]) {
+      stage = stageKeys[answer];
+      break;
+    }
+    console.log(`Unknown key "${answer}". Use d, p, b, s, - or Enter.`);
+  }
   const prompt = p.note
     ? 'Note (Enter keeps the current note, - removes it): '
     : 'Note (optional): ';
   const note = (await rl.question(prompt)).trim();
   p.label = label;
+  if (stage === null) delete p.stage;
+  else if (stage) p.stage = stage;
   if (note === '-') delete p.note;
   else if (note) p.note = note;
   else if (!p.note) delete p.note;
