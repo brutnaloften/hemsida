@@ -220,7 +220,11 @@ export function frontSummary(pages: Map<number, string>): string | null {
       out.push(...paras.slice(at + 1));
     } else out.push(...paras);
   }
-  const text = out.join('\n').trim();
+  // Without a ToC page to stop at, the summary would run through the whole document: cap it.
+  const text = out
+    .join('\n')
+    .trim()
+    .slice(0, FALLBACK_TOKENS * CHARS_PER_TOKEN);
   return found && text ? text : null;
 }
 const DECISION = /^förslag till riksdagsbeslut$/;
