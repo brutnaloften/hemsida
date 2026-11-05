@@ -2,7 +2,9 @@ import { describe, expect, it } from 'vitest';
 import {
   betDecisionText,
   classifyOutcome,
+  bodyStartPage,
   extractBet,
+  frontSummary,
   extractConverted,
   extractTier1,
   pagesOf,
@@ -46,6 +48,8 @@ describe('bet outcome', () => {
     ['Avslag samtliga motioner', 'avslag'],
     ['Riksdagen avslår motionerna', 'avslag'],
     ['Riksdagen lägger skrivelsen till handlingarna', 'noted'],
+    ['Riksdagen lämnar ett motiverat yttrande', 'bifall'],
+    ['Anmälan av ärendet', 'noted'],
     ['Utskottet föreslår att riksdagen ...', 'other'],
     [null, 'unknown'],
   ])('classifies %s as %s', (text, outcome) => {
@@ -85,6 +89,16 @@ describe('ToC layouts', () => {
     ]);
   });
   it('keeps a wanted section whose successor starts on the same page', () => {
+    const same = `<html>${[
+      `<DIV id="page_1"><TABLE><TR><TD><A href="#page_3">Sammanfattning ........</A></TD></TR><TR><TD><A href="#page_3">Författningsförslag ........</A></TD></TR></TABLE></DIV>`,
+      '<DIV id="page_3"><P>Kort sammanfattning och därefter författningsförslag.</P></DIV>',
+    ].join('')}</html>`;
+    const r = extractConverted(same, 'sou');
+    expect(r.structure).toBe('toc');
+    expect(r.sections.map((s) => s.heading)).toEqual(['sammanfattning']);
+    expect(r.sections[0]!.text).toContain('Kort sammanfattning');
+  });
+  it('keeps the proposition decision proposal and its unlisted front summary', () => {
     const r = extractConverted(toc2, 'prop');
     expect(r.structure).toBe('toc');
     expect(r.sections.map((s) => s.heading)).toEqual(['förslag till riksdagsbeslut']);
@@ -101,7 +115,45 @@ describe('ToC layouts', () => {
   });
 });
 
+const links = (n: number) =>
+  Array.from({ length: n }, (_, i) => `<A href="#page_${i + 5}">Kapitel ${i}</A>`).join(' ');
+
+describe('front matter', () => {
+  it('finds the first body page after the leading ToC pages, ignoring cross-references in the body', () => {
+    const pages = new Map([
+      [1, '<P>Titel</P>'],
+      [2, `<P>${links(8)}</P>`],
+      [3, `<P>${links(8)}</P>`],
+      [4, '<P>Brödtext</P>'],
+      [9, `<P>Se <A href="#page_4">avsnitt 1</A> och ${links(5)}</P>`],
+    ]);
+    expect(bodyStartPage(pages)).toBe(4);
+    expect(bodyStartPage(new Map([[1, '<P>Ingen ToC</P>']]))).toBe(0);
+  });
+  it('reads a proposition summary that sits before the ToC', () => {
+    const pages = new Map([
+      [1, '<P>Propositionens huvudsakliga innehåll</P><P>Regeringen föreslår en ny lag.</P>'],
+      [2, '<P>Fortsättning på sammanfattningen.</P>'],
+      [3, `<P>${links(8)}</P>`],
+    ]);
+    expect(frontSummary(pages)).toBe(
+      'Regeringen föreslår en ny lag.\nFortsättning på sammanfattningen.',
+    );
+    expect(frontSummary(new Map([[1, '<P>Annat</P>']]))).toBeNull();
+  });
+});
+
 describe('extractBet', () => {
+  it('drops reservation text even after the "Förslag till riksdagsbeslut" sub-heading inside it', () => {
+    const html =
+      '<h1>Utskottets förslag till riksdagsbeslut</h1><p>Riksdagen bifaller propositionen.</p>' +
+      '<h1>Reservationer</h1><h2>1. Rubrik, reservation 1 (S)</h2><h2>Förslag till riksdagsbeslut</h2><p>Oppositionens förslag.</p>';
+    const text = extractBet(`<html>${html.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</html>`)
+      .sections.map((x) => x.text)
+      .join('\n');
+    expect(text).toContain('Riksdagen bifaller propositionen');
+    expect(text).not.toContain('Oppositionens förslag');
+  });
   const bet = `<html>&lt;h1&gt;Förslag till riksdagsbeslut&lt;/h1&gt;&lt;p&gt;Riksdagen bifaller propositionen.&lt;/p&gt;&lt;h1&gt;Utskottets ställningstagande&lt;/h1&gt;&lt;p&gt;Utskottet delar regeringens bedömning.&lt;/p&gt;&lt;h1&gt;Reservation 1 (S)&lt;/h1&gt;&lt;p&gt;Oppositionens text.&lt;/p&gt;&lt;h1&gt;Bilaga 1&lt;/h1&gt;&lt;p&gt;Bilagetext.&lt;/p&gt;</html>`;
   it('keeps the committee sections and drops opposition and annexes', () => {
     const r = extractBet(bet);

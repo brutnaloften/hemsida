@@ -60,13 +60,13 @@ export function classifyOutcome(decision: string | null): BetOutcome {
   // Any positive decision means the Riksdag decided something, even if motions were rejected or a report noted
   // in the same breath ("Bifall till framställningarna. Redogörelsen läggs till handlingarna.").
   if (
-    /\b(bifall|bifaller|bifalla|antar|godkänner|tillstyrker|medger|tillkännagivande)\b|ställer sig bakom|beslutar att lämna/.test(
+    /\b(bifall|bifaller|bifalla|antar|godkänner|tillstyrker|medger|tillkännagivande)\b|ställer sig bakom|beslutar att lämna|lämnar ett motiverat yttrande/.test(
       d,
     )
   )
     return 'bifall';
   if (/\b(avslag|avslår|avslås)\b/.test(d)) return 'avslag';
-  if (/till handlingarna|\banmäler\b/.test(d)) return 'noted';
+  if (/till handlingarna|\banmäler\b|\banmälan\b/.test(d)) return 'noted';
   return 'other';
 }
 
@@ -94,8 +94,15 @@ function groupBySection(ps: Paragraph[]): Tier1Section[] {
   return out;
 }
 
+/** From here on a betänkande holds only dissent and annexes: reservations, then special statements, then bilagor. */
+const DISSENT_HEADING = /^(reservationer?\b|särskilda yttranden|särskilt yttrande)/i;
+
 export function extractBet(raw: string): { sections: Tier1Section[]; structure: Structure } {
-  const ps = annotateParagraphs(parseRiksdagText(raw), 'bet').filter(
+  const all = annotateParagraphs(parseRiksdagText(raw), 'bet');
+  // The speaker detection ends a reservation at its own "Förslag till riksdagsbeslut" sub-heading, so cut by
+  // position instead: nothing after the first reservation heading is the committee's.
+  const cut = all.findIndex((p) => p.heading && DISSENT_HEADING.test(p.text));
+  const ps = (cut >= 0 ? all.slice(0, cut) : all).filter(
     (p) => !p.heading && p.speaker.label !== 'Bilaga' && BET_SPEAKERS.has(p.speaker.kind),
   );
   // Budget bets decide per `Anslaget N:N`, so those paragraphs are kept whatever the heading says.
@@ -173,6 +180,42 @@ export function pagesOf(html: string): Map<number, string> {
 }
 
 const SUMMARY = /^(sammanfattning|propositionens huvudsakliga innehåll)$/;
+const FRONT_SUMMARY = /^propositionens huvudsakliga innehåll$/i;
+const TOC_LINK = /<A href="#page_\d+"/g;
+/** A page with this many ToC links is a ToC page; body pages hold at most a few cross-references. */
+const TOC_PAGE_LINKS = 5;
+
+const linkCount = (html: string): number => html.match(TOC_LINK)?.length ?? 0;
+
+/** First page after the leading run of ToC pages (0 when there is no ToC page). */
+export function bodyStartPage(pages: Map<number, string>): number {
+  const nums = [...pages.keys()].sort((a, b) => a - b);
+  const first = nums.findIndex((n) => linkCount(pages.get(n)!) >= TOC_PAGE_LINKS);
+  if (first < 0) return 0;
+  let last = first;
+  while (last + 1 < nums.length && linkCount(pages.get(nums[last + 1]!)!) >= TOC_PAGE_LINKS) last++;
+  return nums[last]! + 1;
+}
+
+/** A proposition's "Propositionens huvudsakliga innehåll" sits on the first pages, before the ToC and not in it. */
+export function frontSummary(pages: Map<number, string>): string | null {
+  const nums = [...pages.keys()].sort((a, b) => a - b);
+  const out: string[] = [];
+  let found = false;
+  for (const n of nums) {
+    const html = pages.get(n)!;
+    if (linkCount(html) >= TOC_PAGE_LINKS) break;
+    const paras = parseRiksdagText(html).map((p) => p.text);
+    if (!found) {
+      const at = paras.findIndex((t) => FRONT_SUMMARY.test(t));
+      if (at < 0) continue;
+      found = true;
+      out.push(...paras.slice(at + 1));
+    } else out.push(...paras);
+  }
+  const text = out.join('\n').trim();
+  return found && text ? text : null;
+}
 const DECISION = /^förslag till riksdagsbeslut$/;
 
 export function wanted(doktyp: string, title: string): boolean {
@@ -210,12 +253,21 @@ export function extractConverted(
         .trim();
       if (body) sections.push({ heading: e.title, text: body, est_tokens: tokensOf(body) });
     });
-    if (sections.length) return { sections, structure: 'toc' };
+    const front = doktyp === 'prop' ? frontSummary(pages) : null;
+    // A proposition's front summary is not in the ToC; the ToC may also list "Sammanfattning" again.
+    if (front && !sections.some((x) => x.heading === 'propositionens huvudsakliga innehåll')) {
+      sections.unshift({
+        heading: 'propositionens huvudsakliga innehåll',
+        text: front,
+        est_tokens: tokensOf(front),
+      });
+    }
+    const unique = sections.filter((x, i) => sections.findIndex((y) => y.text === x.text) === i);
+    if (unique.length) return { sections: unique, structure: 'toc' };
   }
-  // No ToC or no wanted section in it: the start of the body after the front matter (title page and ToC
-  // pages, i.e. every page up to the last one that holds a ToC link), flagged.
-  const tocPages = [...pages].filter(([, h]) => /<A href="#page_\d+"/.test(h)).map(([n]) => n);
-  const bodyStart = tocPages.length ? Math.max(...tocPages) + 1 : 0;
+  // No ToC or no wanted section in it: the start of the body after the front matter (title page and the
+  // leading ToC pages), flagged.
+  const bodyStart = bodyStartPage(pages);
   const body = pages.size
     ? [...pages]
         .filter(([n]) => n >= bodyStart)
