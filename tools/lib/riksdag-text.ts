@@ -262,7 +262,7 @@ export function createTextFetcher(
   let lastStart = Number.NEGATIVE_INFINITY;
 
   return async (dokId) => {
-    if (!/^[A-Za-z0-9_-]+$/.test(dokId)) throw new Error(`Bad dok_id: ${dokId}`);
+    if (!/^[\p{L}\p{N}_-]+$/u.test(dokId)) throw new Error(`Bad dok_id: ${dokId}`);
     const file = resolve(options.cacheDir, `${dokId}.xml`);
     if (existsSync(file)) return readFileSync(file, 'utf8') || null;
 
@@ -273,7 +273,9 @@ export function createTextFetcher(
       lastStart = Date.now();
       let res: Response;
       try {
-        res = await doFetch(`${base}/dokument/${dokId}.text`, { headers: { 'User-Agent': ua } });
+        res = await doFetch(`${base}/dokument/${encodeURIComponent(dokId)}.text`, {
+          headers: { 'User-Agent': ua },
+        });
       } catch (err) {
         if (attempt >= 2) throw err;
         await sleep(delay);
