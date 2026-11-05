@@ -3,7 +3,7 @@
  *   node --experimental-strip-types tools/label-eval-set.ts [--term 2022-2026] [--redo] [--only-file ids.txt] [--model-labels file.json]
  *
  * Keys per pair: d = show the full evidence detail, r = show what the models answered blind and why (hidden by default so it does not anchor you), m = match, p = partial, c = contradicts, n = no match, s = skip, b = back one pair,
- * q = quit. After a label you may type an optional note (Enter for none).
+ * q = quit. After a label you may type an optional note (Enter for none, or to keep the existing note when relabelling).
  * Already labelled pairs are skipped unless --redo. --only-file takes a file with one pair id per line
  * (blank lines and # comments ignored), shows only those pairs and implies --redo. When relabelling, Enter at
  * the note prompt keeps the existing note; type - to remove it. Needs an interactive terminal.

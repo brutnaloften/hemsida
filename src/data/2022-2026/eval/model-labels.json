@@ -2,7 +2,7 @@
   "term": "2022-2026",
   "meta": {
     "generated": "2026-11-04",
-    "method": "Blind: each model saw 17 of the 51 pairs (three chunks) with the hand label and note removed, never other models' answers, and read the full text of each document (the cached Riksdag response, not tier-1 extracts), with the generated evidence briefs available as a help. One pass per pair, Claude Code subagents, reasons written by the model.",
+    "method": "Blind: each model labelled all 51 pairs, split over three parallel agents of 17 pairs each, with the hand label and note removed, never other models' answers, and read the full text of each document (the cached Riksdag response, not tier-1 extracts), with the generated evidence briefs available as a help. One pass per pair, Claude Code subagents, reasons written by the model.",
     "models": {
       "sonnet": "Claude Code subagent, model alias 'sonnet' (Sonnet 5.5); exact snapshot id not recorded. Prompt: the label definitions of docs/eval-set.md (match, partial, contradicts, no_match); no stage requested.",
       "opus": "Claude Code subagent, model alias 'opus'; exact snapshot id not recorded. Same definitions, plus: contradicts means actively working against the promise and merely lower spending is not contradiction; also asked for a separate document stage (definitive, preparatory, background). The prompts therefore differ from the Sonnet run."
