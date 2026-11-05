@@ -1,6 +1,6 @@
 /**
  * Score the hand-labelled eval pairs with Jev over the FULL text of each document (hemsida-4np.12).
- *   node --experimental-strip-types --env-file=.env tools/jev-eval.ts [--pairs <pairs.json>] [--max-chars 60000]
+ *   node --experimental-strip-types --env-file=.env tools/jev-eval.ts [--pairs <pairs.json>] [--max-chars 40000] [--all-promises tido-]
  *
  * Per document, the text is split into chunks and every promise in the eval set is asked as a yes/no
  * question against each chunk, so a document is read once for all promises. A pair's score is the highest
@@ -8,6 +8,7 @@
  * Writes tools/out/jev-eval/results.json (gitignored) and prints AUC, per-class scores and misses.
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
@@ -63,8 +64,10 @@ async function scoreChunk(
     return { scores, tokens: res.usage.input_tokens, requests: 1 };
   } catch (err) {
     if (!(err instanceof JevError && err.tooLong) || state.length < 2000) throw err;
-    const mid = state.lastIndexOf('\n', state.length / 2);
-    const [a, b] = [state.slice(0, mid), state.slice(mid + 1)];
+    // Split at a paragraph break near the middle, or exactly in the middle when there is none, so it always shrinks.
+    const at = state.lastIndexOf('\n', state.length / 2);
+    const mid = at > 0 ? at : Math.floor(state.length / 2);
+    const [a, b] = [state.slice(0, mid), state.slice(at > 0 ? mid + 1 : mid)];
     const [x, y] = [await scoreChunk(a), await scoreChunk(b)];
     const scores: Record<string, number> = { ...x.scores };
     for (const [k, v] of Object.entries(y.scores)) scores[k] = Math.max(scores[k] ?? 0, v);
@@ -72,11 +75,17 @@ async function scoreChunk(
   }
 }
 
+const runKey = createHash('sha256')
+  .update(JSON.stringify([maxChars, questions]))
+  .digest('hex')
+  .slice(0, 12);
+
 const docs = [...new Set(file.pairs.map((p) => p.document_id))];
 const byDoc = new Map<string, { scores: Record<string, number>; chunks: number; tokens: number }>();
 let requests = 0;
 for (const id of docs) {
-  const cached = resolve(values.out!, `doc-${id}.json`);
+  // The cache is keyed on everything that changes the answer: document, chunk size and the question set.
+  const cached = resolve(values.out!, `doc-${id}-${runKey}.json`);
   if (existsSync(cached)) {
     byDoc.set(id, JSON.parse(readFileSync(cached, 'utf8')));
     continue;
