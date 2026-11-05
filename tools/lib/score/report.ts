@@ -1,6 +1,6 @@
 /**
  * Metrics of a scoring run against the hand-labelled eval pairs (hemsida-vzn). Pure; reproduces the numbers
- * of the earlier tools/jev-eval.ts for the same scores.
+ * of the earlier one-off Jev eval script (removed) for the same scores.
  */
 import { auc } from '../jev.ts';
 import type { ScoreResults } from './results.ts';

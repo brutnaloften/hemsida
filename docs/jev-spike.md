@@ -79,7 +79,7 @@ Constraints:
 
 ## Results on the 51 eval pairs (2026-11-05)
 
-`tools/jev-eval.ts` scores the hand-labelled pairs over the full text of each document (chunks of at most 40,000 characters; a request that Jev rejects as too long is split in half). All 50 promises of the eval set are asked as yes/no (`noul`) questions in every request; a pair's score is the highest chunk probability for its own promise. API: `POST https://api.typesafe.ai/v1/systemone`, model `jev-latest` (answered by `jev-1.14.0`); a chunk of about 20k tokens answers in well under a second.
+The first runs used a one-off script (since replaced by the harness, `pnpm score tools/score-configs/tido-eval-v1.json`, which reproduced them: AUC 0.966 at 274 questions, 535 requests, $0.99) that scored the hand-labelled pairs over the full text of each document (chunks of at most 40,000 characters; a request that Jev rejects as too long is split in half). All 50 promises of the eval set are asked as yes/no (`noul`) questions in every request; a pair's score is the highest chunk probability for its own promise. API: `POST https://api.typesafe.ai/v1/systemone`, model `jev-latest` (answered by `jev-1.14.0`); a chunk of about 20k tokens answers in well under a second.
 
 - **Quality:** AUC 0.966 for `match`/`partial` (33 pairs) against `no_match` (18). Mean score 0.81 for both `match` and `partial`, 0.19 for `no_match`. In 26 of 33 positive pairs the pair's own promise is the top-ranked of the 50 promises for that document, so Jev also tells promises apart.
 - **Threshold:** at 0.5 it finds 30 of 33 positives with 3 of 18 false positives; at 0.6, 29 of 33 with 1 of 18.
@@ -100,4 +100,4 @@ Constraints:
 
 ## Scoring harness
 
-The ad-hoc `tools/jev-eval.ts` is being replaced by a declarative, cached and budget-guarded harness (`pnpm score`, see `docs/scoring-harness.md`).
+The ad-hoc eval script was replaced by a declarative, cached and budget-guarded harness (`pnpm score`, see `docs/scoring-harness.md`).
