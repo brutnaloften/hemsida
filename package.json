@@ -10,7 +10,8 @@
     "fmt:check": "oxfmt --check",
     "prepare": "husky",
     "test": "vitest run",
-    "typecheck": "astro sync && tsc --noEmit"
+    "typecheck": "astro sync && tsc --noEmit",
+    "score": "node --experimental-strip-types --env-file-if-exists=.env tools/score.ts"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.1",
