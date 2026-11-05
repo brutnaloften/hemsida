@@ -40,7 +40,7 @@ export interface Tier1Doc {
 }
 
 const CHARS_PER_TOKEN = 3;
-/** Fallback when a sou/ds/prop has no ToC: this much of the start of the body (after the front matter). */
+/** Fallback when a sou/ds/prop has no usable ToC: this much of the start of the body, after the front matter. */
 export const FALLBACK_TOKENS = 6000;
 
 export const tokensOf = (s: string): number => Math.round(s.length / CHARS_PER_TOKEN);
@@ -57,11 +57,16 @@ export function betDecisionText(raw: string): string | null {
 export function classifyOutcome(decision: string | null): BetOutcome {
   if (!decision) return 'unknown';
   const d = decision.toLowerCase();
-  if (/^(delvis )?bifall till (proposition|utskottets|regeringens|förslaget)/.test(d))
+  // Any positive decision means the Riksdag decided something, even if motions were rejected or a report noted
+  // in the same breath ("Bifall till framställningarna. Redogörelsen läggs till handlingarna.").
+  if (
+    /\b(bifall|bifaller|bifalla|antar|godkänner|tillstyrker|medger|tillkännagivande)\b|ställer sig bakom|beslutar att lämna/.test(
+      d,
+    )
+  )
     return 'bifall';
-  if (/^avslag på/.test(d)) return 'avslag';
-  if (/läggs till handlingarna|^utskottet anmäler/.test(d)) return 'noted';
-  if (/^bifall/.test(d) || /^riksdagen (beslutar|antar|godkänner)/.test(d)) return 'bifall';
+  if (/\b(avslag|avslår|avslås)\b/.test(d)) return 'avslag';
+  if (/till handlingarna|\banmäler\b/.test(d)) return 'noted';
   return 'other';
 }
 
@@ -74,7 +79,7 @@ export function stageOf(doktyp: string, outcome?: BetOutcome): Tier1Stage {
 // --- bet ---------------------------------------------------------------------------------------
 
 const BET_KEEP =
-  /förslag till riksdagsbeslut|utskottets förslag|ställningstagande|pågående arbete|^propositionen$|skrivelsen|redogörelsen|tillkännagivanden som redovisas/i;
+  /förslag till riksdagsbeslut|utskottets förslag|ställningstagande|pågående arbete|^(propositionen|skrivelsen|redogörelsen)$|tillkännagivanden som redovisas/i;
 const BET_SPEAKERS = new Set(['committee', 'government', 'inquiry', 'other']);
 
 function groupBySection(ps: Paragraph[]): Tier1Section[] {
@@ -114,33 +119,47 @@ const UNNUMBERED_TOP =
   /^(sammanfattning|summary|författningsförslag|förslag till|referenser|bilaga|förord|innehåll|förkortningar|beteckningar|kommittédirektiv|lagrådsremissens|betänkandets|promemorians|lagrådets|propositionens|författningskommentar|bilagor)/;
 
 function tocTitle(t: string): string {
-  return t
-    .replace(/[\s.…]+$/, '')
+  return (t.split(/\s*\.{3,}/)[0] ?? '')
     .replace(/^\d+(\.\d+)*\s*/, '')
     .trim()
     .toLowerCase();
 }
 
-/** Top-level ToC entries (chapters, plus the unnumbered front/back matter) with their page ids, in page order. */
+const NUMBER = /^(\d+(?:\.\d+)*|Bilaga\s*\d+)$/;
+const NUMBER_THEN_TITLE = /^(\d+(?:\.\d+)*|Bilaga\s*\d+)\s+(\S.*)$/;
+
+/**
+ * Top-level ToC entries (chapters, plus the unnumbered front/back matter) with their page ids, in page order.
+ * Rows come in several layouts: the number in its own anchor and the title in the next (with or without the
+ * dotted leader in a third), the number inline in the title anchor, or an unnumbered title. Wrapped title lines
+ * (no number, not a known front/back matter title) are skipped.
+ */
 export function parseToc(html: string): TocEntry[] {
   const entries: TocEntry[] = [];
   for (const row of html.match(/<TR>[\s\S]*?<\/TR>/g) ?? []) {
     const anchors = [...row.matchAll(/<A href="#page_(\d+)">([^<]*)<\/A>/g)].map(
-      (m) => [Number(m[1]), m[2]!] as const,
+      (m) => [Number(m[1]), m[2]!.trim()] as const,
     );
-    const lead = anchors.find(([, t]) => t.includes('....'));
-    if (!lead) continue;
+    if (!anchors.length) continue;
+    const [page, first] = anchors[0]!;
     let num = '';
-    for (const [, t] of anchors) {
-      if (t.includes('....')) break;
-      if (/^(Bilaga\s*)?\d+(\.\d+)*$/.test(t.trim())) num = t.trim();
+    let rawTitle = first;
+    if (NUMBER.test(first)) {
+      num = first;
+      rawTitle = anchors[1]?.[1] ?? '';
+    } else {
+      const m = NUMBER_THEN_TITLE.exec(first);
+      if (m) {
+        num = m[1]!;
+        rawTitle = m[2]!;
+      }
     }
-    const title = tocTitle(lead[1]);
+    const title = tocTitle(rawTitle);
     const top =
       num.startsWith('Bilaga') ||
       (num !== '' && !num.includes('.')) ||
       (num === '' && UNNUMBERED_TOP.test(title));
-    if (top && title) entries.push({ title, page: lead[0] });
+    if (top && title && !/^\.+$/.test(title)) entries.push({ title, page });
   }
   return entries.sort((a, b) => a.page - b.page);
 }
@@ -178,7 +197,8 @@ export function extractConverted(
   if (toc.length >= 2) {
     toc.forEach((e, i) => {
       if (!wanted(doktyp, e.title)) return;
-      const end = toc[i + 1]?.page ?? last + 1;
+      // Never an empty range: a following entry on the same page still leaves this section its page.
+      const end = Math.max(toc[i + 1]?.page ?? last + 1, e.page + 1);
       const body = [...pages.entries()]
         .filter(([n]) => n >= e.page && n < end)
         .map(([, h]) =>
@@ -192,8 +212,17 @@ export function extractConverted(
     });
     if (sections.length) return { sections, structure: 'toc' };
   }
-  // No ToC or no wanted section in it: the start of the body, flagged.
-  const text = parseRiksdagText(raw)
+  // No ToC or no wanted section in it: the start of the body after the front matter (title page and ToC
+  // pages, i.e. every page up to the last one that holds a ToC link), flagged.
+  const tocPages = [...pages].filter(([, h]) => /<A href="#page_\d+"/.test(h)).map(([n]) => n);
+  const bodyStart = tocPages.length ? Math.max(...tocPages) + 1 : 0;
+  const body = pages.size
+    ? [...pages]
+        .filter(([n]) => n >= bodyStart)
+        .map(([, h]) => h)
+        .join('\n')
+    : raw;
+  const text = parseRiksdagText(body)
     .map((p) => p.text)
     .join('\n')
     .slice(0, FALLBACK_TOKENS * CHARS_PER_TOKEN);

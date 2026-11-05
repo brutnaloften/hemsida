@@ -21,9 +21,14 @@ const { values } = parseArgs({
     only: { type: 'string' },
   },
 });
-const store = JSON.parse(
-  readFileSync(resolve(root, 'tools/out/riksdag-store', `${values.term}.json`), 'utf8'),
-) as { documents: Record<string, { dok_id: string; doktyp: string }> };
+const storePath = resolve(root, 'tools/out/riksdag-store', `${values.term}.json`);
+if (!existsSync(storePath)) {
+  console.error(`No Riksdag store at ${storePath}; run tools/ingest-riksdag.ts first.`);
+  process.exit(1);
+}
+const store = JSON.parse(readFileSync(storePath, 'utf8')) as {
+  documents: Record<string, { dok_id: string; doktyp: string }>;
+};
 mkdirSync(values.out!, { recursive: true });
 
 const kept: Record<string, number> = {};
