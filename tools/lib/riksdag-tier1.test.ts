@@ -141,9 +141,48 @@ describe('front matter', () => {
     );
     expect(frontSummary(new Map([[1, '<P>Annat</P>']]))).toBeNull();
   });
+  it('also reads a skrivelse summary', () => {
+    const pages = new Map([
+      [1, '<P>Skrivelsens huvudsakliga innehåll</P><P>Regeringen redovisar.</P>'],
+    ]);
+    expect(frontSummary(pages)).toBe('Regeringen redovisar.');
+  });
+  it('keeps the front summary in the fallback of a document without a wanted ToC entry', () => {
+    const html = `<html>${[
+      '<DIV id="page_1"><P>Skrivelsens huvudsakliga innehåll</P><P>Kort om skrivelsen.</P></DIV>',
+      `<DIV id="page_2">${links(8)}</DIV>`,
+      '<DIV id="page_5"><P>Brödtext efter innehållsförteckningen.</P></DIV>',
+    ].join('')}</html>`;
+    const r = extractConverted(html, 'prop');
+    expect(r.structure).toBe('none');
+    expect(r.sections.map((x) => x.text)).toEqual([
+      'Kort om skrivelsen.',
+      'Brödtext efter innehållsförteckningen.',
+    ]);
+  });
 });
 
 describe('extractBet', () => {
+  const wrap = (html: string) => `<html>${html.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</html>`;
+  it('cuts at a singular "Reservation" heading too', () => {
+    const r = extractBet(
+      wrap(
+        '<h1>Utskottets förslag till riksdagsbeslut</h1><p>Riksdagen bifaller.</p><h1>Reservation</h1><p>Vi anser något annat.</p>',
+      ),
+    );
+    const text = r.sections.map((x) => x.text).join('\n');
+    expect(text).toContain('bifaller');
+    expect(text).not.toContain('Vi anser');
+  });
+  it('caps a betänkande without recognisable headings', () => {
+    const long = Array.from(
+      { length: 3000 },
+      (_, i) => `<p>Stycke ${i} med ganska mycket text i sig.</p>`,
+    ).join('');
+    const r = extractBet(wrap(long));
+    expect(r.structure).toBe('none');
+    expect(r.sections.reduce((n, x) => n + x.est_tokens, 0)).toBeLessThanOrEqual(6000);
+  });
   it('drops reservation text even after the "Förslag till riksdagsbeslut" sub-heading inside it', () => {
     const html =
       '<h1>Utskottets förslag till riksdagsbeslut</h1><p>Riksdagen bifaller propositionen.</p>' +

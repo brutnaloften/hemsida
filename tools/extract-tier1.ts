@@ -1,7 +1,7 @@
 /**
  * Extract the tier-1 text (hemsida-3fu) of every cached Riksdag document and report how much it keeps.
  *   node --experimental-strip-types tools/extract-tier1.ts [--term 2022-2026] [--cache tools/out/riksdag-text]
- *     [--out tools/out/riksdag-tier1] [--only <dok_id>]
+ *     [--out tools/out/riksdag-tier1] [--only <dok_id>] [--store <riksdag-store.json>]
  *
  * Reads the raw responses fetched by `fetch-riksdag-text.ts` (offline), writes one JSON per document to
  * `--out` (gitignored) and prints tokens per document type, the structure breakdown and the bet outcomes.
@@ -19,9 +19,12 @@ const { values } = parseArgs({
     cache: { type: 'string', default: resolve(root, 'tools/out/riksdag-text') },
     out: { type: 'string', default: resolve(root, 'tools/out/riksdag-tier1') },
     only: { type: 'string' },
+    store: { type: 'string' },
   },
 });
-const storePath = resolve(root, 'tools/out/riksdag-store', `${values.term}.json`);
+const storePath = values.store
+  ? resolve(values.store)
+  : resolve(root, 'tools/out/riksdag-store', `${values.term}.json`);
 if (!existsSync(storePath)) {
   console.error(`No Riksdag store at ${storePath}; run tools/ingest-riksdag.ts first.`);
   process.exit(1);

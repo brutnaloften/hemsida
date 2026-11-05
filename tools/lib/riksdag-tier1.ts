@@ -95,7 +95,7 @@ function groupBySection(ps: Paragraph[]): Tier1Section[] {
 }
 
 /** From here on a betänkande holds only dissent and annexes: reservations, then special statements, then bilagor. */
-const DISSENT_HEADING = /^(reservationer?\b|särskilda yttranden|särskilt yttrande)/i;
+const DISSENT_HEADING = /^(reservation(er)?\b|särskilda yttranden|särskilt yttrande)/i;
 
 export function extractBet(raw: string): { sections: Tier1Section[]; structure: Structure } {
   const all = annotateParagraphs(parseRiksdagText(raw), 'bet');
@@ -108,11 +108,18 @@ export function extractBet(raw: string): { sections: Tier1Section[]; structure: 
   // Budget bets decide per `Anslaget N:N`, so those paragraphs are kept whatever the heading says.
   const kept = ps.filter((p) => BET_KEEP.test(p.section) || p.anslag !== null);
   if (kept.length) return { sections: groupBySection(kept), structure: 'headings' };
-  // No recognisable headings: keep everything the committee or government says.
-  return {
-    sections: groupBySection(ps),
-    structure: ps.some((p) => p.section) ? 'headings' : 'none',
-  };
+  // No recognisable headings: the start of what the committee or government says, capped (such documents are
+  // often KU granskning annexes and hearing transcripts, hundreds of thousands of tokens).
+  const all2 = groupBySection(ps);
+  const capped: Tier1Section[] = [];
+  let used = 0;
+  for (const sec of all2) {
+    if (used >= FALLBACK_TOKENS) break;
+    const text = sec.text.slice(0, (FALLBACK_TOKENS - used) * CHARS_PER_TOKEN);
+    capped.push({ heading: sec.heading, text, est_tokens: tokensOf(text) });
+    used += tokensOf(text);
+  }
+  return { sections: capped, structure: ps.some((p) => p.section) ? 'headings' : 'none' };
 }
 
 // --- sou / ds / prop ---------------------------------------------------------------------------
@@ -180,7 +187,7 @@ export function pagesOf(html: string): Map<number, string> {
 }
 
 const SUMMARY = /^(sammanfattning|propositionens huvudsakliga innehåll)$/;
-const FRONT_SUMMARY = /^propositionens huvudsakliga innehåll$/i;
+const FRONT_SUMMARY = /^(propositionens|skrivelsens) huvudsakliga innehåll$/i;
 const TOC_LINK = /<A href="#page_\d+"/g;
 /** A page with this many ToC links is a ToC page; body pages hold at most a few cross-references. */
 const TOC_PAGE_LINKS = 5;
@@ -237,6 +244,10 @@ export function extractConverted(
   const pages = pagesOf(html);
   const last = Math.max(0, ...pages.keys());
   const sections: Tier1Section[] = [];
+  const frontText = doktyp === 'prop' ? frontSummary(pages) : null;
+  const front: Tier1Section | null = frontText
+    ? { heading: 'huvudsakliga innehåll', text: frontText, est_tokens: tokensOf(frontText) }
+    : null;
   if (toc.length >= 2) {
     toc.forEach((e, i) => {
       if (!wanted(doktyp, e.title)) return;
@@ -253,15 +264,8 @@ export function extractConverted(
         .trim();
       if (body) sections.push({ heading: e.title, text: body, est_tokens: tokensOf(body) });
     });
-    const front = doktyp === 'prop' ? frontSummary(pages) : null;
-    // A proposition's front summary is not in the ToC; the ToC may also list "Sammanfattning" again.
-    if (front && !sections.some((x) => x.heading === 'propositionens huvudsakliga innehåll')) {
-      sections.unshift({
-        heading: 'propositionens huvudsakliga innehåll',
-        text: front,
-        est_tokens: tokensOf(front),
-      });
-    }
+    // The front summary of a proposition or skrivelse is not in the ToC; the ToC may list "Sammanfattning" too.
+    if (front) sections.unshift(front);
     const unique = sections.filter((x, i) => sections.findIndex((y) => y.text === x.text) === i);
     if (unique.length) return { sections: unique, structure: 'toc' };
   }
@@ -278,10 +282,10 @@ export function extractConverted(
     .map((p) => p.text)
     .join('\n')
     .slice(0, FALLBACK_TOKENS * CHARS_PER_TOKEN);
-  return {
-    sections: text ? [{ heading: '(början av dokumentet)', text, est_tokens: tokensOf(text) }] : [],
-    structure: 'none',
-  };
+  const start: Tier1Section[] = text
+    ? [{ heading: '(början av dokumentet)', text, est_tokens: tokensOf(text) }]
+    : [];
+  return { sections: front ? [front, ...start] : start, structure: 'none' };
 }
 
 // --- entry point -------------------------------------------------------------------------------
