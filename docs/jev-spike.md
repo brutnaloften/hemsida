@@ -77,10 +77,22 @@ Constraints:
 5. Run the exhaustive pass on the full store. Measure recall against the keyword candidates: how many of Jev's top-scoring pairs per promise (and how many judged `match` or `partial` by Haiku) are missing from the 15-per-promise keyword files.
 6. Report: cost, time, precision at the top-k, recall gain over keywords, and a recommendation (adopt as first pass, use as a pre-filter, or drop). If adopted, file follow-up beads for the real tool, a provider-agnostic scorer interface next to `tools/lib/claude.ts`, and the weekly job.
 
+## Results on the 51 eval pairs (2026-11-05)
+
+`tools/jev-eval.ts` scores the hand-labelled pairs over the full text of each document (chunks of at most 40,000 characters; a request that Jev rejects as too long is split in half). All 50 promises of the eval set are asked as yes/no (`noul`) questions in every request; a pair's score is the highest chunk probability for its own promise. API: `POST https://api.typesafe.ai/v1/systemone`, model `jev-latest` (answered by `jev-1.14.0`); a chunk of about 20k tokens answers in well under a second.
+
+- **Quality:** AUC 0.966 for `match`/`partial` (33 pairs) against `no_match` (18). Mean score 0.81 for both `match` and `partial`, 0.19 for `no_match`. In 26 of 33 positive pairs the pair's own promise is the top-ranked of the 50 promises for that document, so Jev also tells promises apart.
+- **Threshold:** at 0.5 it finds 30 of 33 positives with 3 of 18 false positives; at 0.6, 29 of 33 with 1 of 18.
+- **Misses (score 0.65 or lower):** `HD01NU25` (0.25, a general electricity-market bet), `HD01SoU1` (0.26, budget bet on förlossningsvård), `HD01KU1` (0.42), `HEB1104`, `HBB174`, `HB01MJU1`, `HD01JuU40`. The labels on several of these are themselves the ambiguous ones.
+- **Many questions:** with all 274 Tidö promises asked in every request (`--all-promises tido-`) the separation of positives from negatives is unchanged (AUC 0.969), but the ranking among promises is looser: the pair's own promise is top-ranked in 18 of 33 positives (26 with 50 questions), in the top 3 for 25 and in the top 10 for 31, since 274 candidate promises compete. Use the score as a threshold filter, not as a pick-one classifier; 274 questions add about 30k tokens per request, a request answers in about 0.5 s. The cost of that run was 23.6M input tokens (about $1.0), 2.3 times the 50-question run, because the questions are billed in every request. All 1,468 promises (Tidö plus manifestos) in one request fail with `max_tokens_exceeded`; they need about 5 question batches per chunk. Projection for the full corpus (about 307M tokens of text, state up to 32k tokens, 30k tokens of questions per request): about $27 for the 274 Tidö promises, about $135 for all 1,468.
+- **Cost:** 536 requests, 10.2M input tokens for 51 documents (including a 633k-token proposition), about $0.43. The state is billed once per request; 50 questions add about 5k tokens, not 50 copies of the document.
+- **Swedish:** works. Not tested on the hard cases beyond the eval set.
+- **Limitation:** the score says the document is about the promise, not how (match vs partial vs contradicts) or whether it decided anything. Those need the stage axis (`hemsida-as5`) and a second-stage reader.
+
 ## Risks and open questions
 
-- Swedish quality of Jev is untested and is the main risk.
-- The questions-per-request cap and billing of repeated state are undocumented.
+- Swedish quality: good on the 51 eval pairs (see results); not yet tested on the whole corpus.
+- 274 questions per request works (see results); 1,468 do not fit in one request (limit 64k tokens in total).
 - The limits page is third-party and may be stale; rate limits "may change without notice".
 - Precision: a cheap model scoring about a million pairs yields many false positives unless its probabilities are well calibrated on this task.
 - Sending promise and document text to an early-access third-party API: both are public data, so acceptable here; reconsider before sending anything non-public.
