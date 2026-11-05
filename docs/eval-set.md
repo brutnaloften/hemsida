@@ -108,7 +108,7 @@ Commit the labelled `pairs.json` when done.
 
 ## Model baselines (`model-labels.json`)
 
-`src/data/2022-2026/eval/model-labels.json` holds Sonnet and Opus judgements for every pair (label, confidence, a
+`src/data/2022-2026/eval/model-labels.json` holds Sonnet, Opus and Haiku judgements for every pair (label, confidence, a
 short reason; Opus also a document stage), made blind to the hand labels over the full document text. Its `meta` field
 records the date, what blind means and how each model was prompted; the two prompts differ (Opus was also told that
 lower spending alone is not contradiction and asked for a stage), and exact model snapshot ids were not recorded. It is
