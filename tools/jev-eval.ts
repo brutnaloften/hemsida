@@ -7,7 +7,7 @@
  * chunk probability for its own promise. Needs JEV_TOKEN and the text cache from fetch-riksdag-text.ts.
  * Writes tools/out/jev-eval/results.json (gitignored) and prints AUC, per-class scores and misses.
  */
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
@@ -20,6 +20,7 @@ const { values } = parseArgs({
   options: {
     pairs: { type: 'string', default: resolve(root, 'src/data/2022-2026/eval/pairs.json') },
     'max-chars': { type: 'string', default: '40000' },
+    'all-promises': { type: 'string' },
     out: { type: 'string', default: resolve(root, 'tools/out/jev-eval') },
   },
 });
@@ -28,12 +29,26 @@ if (!token) throw new Error('JEV_TOKEN is not set (run with --env-file=.env)');
 const file = evalFileSchema.parse(JSON.parse(readFileSync(values.pairs!, 'utf8')));
 const maxChars = Number(values['max-chars']);
 
+const question = (title: string, text: string): NoulQuestion => ({
+  type: 'noul',
+  instructions: `Beskriver eller genomför dokumentet något som hör till detta vallöfte? Löfte: ${title}. ${text}`,
+});
 const promises = new Map<string, NoulQuestion>();
 for (const p of file.pairs) {
-  promises.set(p.promise_id, {
-    type: 'noul',
-    instructions: `Beskriver eller genomför dokumentet något som hör till detta vallöfte? Löfte: ${p.promise_title}. ${p.promise_text}`,
-  });
+  promises.set(p.promise_id, question(p.promise_title, p.promise_text));
+}
+// --all-promises <id prefix>: also ask every promise with that id prefix (e.g. `tido-`), the real many-question shape.
+if (values['all-promises']) {
+  const dir = resolve(root, 'src/data', file.term, 'promises');
+  for (const f of readdirSync(dir)) {
+    if (!f.startsWith(values['all-promises']) || !f.endsWith('.json')) continue;
+    const p = JSON.parse(readFileSync(resolve(dir, f), 'utf8')) as {
+      id: string;
+      title: string;
+      description: string;
+    };
+    if (!promises.has(p.id)) promises.set(p.id, question(p.title, p.description));
+  }
 }
 const questions = Object.fromEntries(promises);
 
