@@ -12,7 +12,7 @@ import { parseScoreConfig } from './lib/score/config.ts';
 import { loadInputs } from './lib/score/inputs.ts';
 import { formatReport } from './lib/score/report.ts';
 import { executeRun } from './lib/score/run.ts';
-import { createScorer } from './lib/score/scorer.ts';
+import { scorerFor } from './lib/score/scorer.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const { values, positionals } = parseArgs({
@@ -39,16 +39,20 @@ const maxCost = values['max-cost'] === undefined ? undefined : Number(values['ma
 if (maxCost !== undefined && !(maxCost > 0))
   throw new Error('--max-cost must be a positive number');
 
+const concurrency = Number(values.concurrency);
+if (!Number.isInteger(concurrency) || concurrency < 1)
+  throw new Error('--concurrency must be a positive integer');
+
 const inputs = loadInputs(config, root, values['text-dir']!);
 const outcome = await executeRun({
   config,
   inputs,
-  scorer: createScorer(config.scorer.kind, config.scorer.model),
+  scorer: scorerFor(config.scorer.kind, config.scorer.model, values['dry-run'] ?? false),
   cacheDir: values['cache-dir']!,
   runsDir: values['runs-dir']!,
   dryRun: values['dry-run'],
   maxCostUsd: maxCost,
-  concurrency: Number(values.concurrency),
+  concurrency,
   log: (l) => console.error(l),
 });
 

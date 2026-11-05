@@ -4,7 +4,7 @@
  * always give a byte-identical plan, and tokens and cost are estimated before anything is sent.
  *
  * Batch size depends on the largest chunk of the whole run, not on each chunk, so batch boundaries are the
- * same for every chunk and adding a promise only changes the last batch (the cache stays valid for the rest).
+ * same for every chunk and a promise that sorts last only changes the last batch (an earlier one shifts the batches after it).
  */
 import { createHash } from 'node:crypto';
 import { chunkParagraphs } from '../jev.ts';

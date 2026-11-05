@@ -10,7 +10,7 @@ import { buildReport, type LabelledPair } from './report.ts';
 import { aggregateResults } from './results.ts';
 import { classifyPlan, runPlan } from './runner.ts';
 import { executeRun } from './run.ts';
-import { createFakeScorer, createScorer, type Scorer } from './scorer.ts';
+import { createFakeScorer, createScorer, scorerFor, type Scorer } from './scorer.ts';
 
 const baseConfig = {
   name: 'test-run',
@@ -252,6 +252,9 @@ describe('scorers', () => {
   it('jev scorer needs a token from the environment', () => {
     expect(() => createScorer('jev', 'jev-latest', {})).toThrow(/JEV_TOKEN/);
     expect(createScorer('jev', 'jev-latest', { JEV_TOKEN: 't' }).kind).toBe('jev');
+    // A dry run needs no token and never scores.
+    expect(scorerFor('jev', 'jev-latest', true, {}).kind).toBe('jev');
+    expect(() => scorerFor('jev', 'jev-latest', false, {})).toThrow(/JEV_TOKEN/);
   });
 });
 

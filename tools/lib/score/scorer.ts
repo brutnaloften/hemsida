@@ -88,3 +88,19 @@ export function createScorer(
   }
   throw new Error(`unknown scorer kind: ${kind}`);
 }
+
+/** The scorer for a run. A dry run never calls it, so it needs no token: it gets a stand-in that refuses to score. */
+export function scorerFor(
+  kind: string,
+  model: string,
+  dryRun: boolean,
+  env: Record<string, string | undefined> = process.env,
+): Scorer {
+  if (!dryRun) return createScorer(kind, model, env);
+  return {
+    kind,
+    score: async () => {
+      throw new Error('a dry run must not call the scorer');
+    },
+  };
+}
