@@ -97,3 +97,7 @@ Constraints:
 - Precision: a cheap model scoring about a million pairs yields many false positives unless its probabilities are well calibrated on this task.
 - Sending promise and document text to an early-access third-party API: both are public data, so acceptable here; reconsider before sending anything non-public.
 - Other sources (government actions outside the Riksdag, `hemsida-l8h`) need their own retrieval step; a shared scorer interface would let them reuse the same approach.
+
+## Scoring harness
+
+The ad-hoc `tools/jev-eval.ts` is being replaced by a declarative, cached and budget-guarded harness (`pnpm score`, see `docs/scoring-harness.md`).

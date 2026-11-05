@@ -20,6 +20,7 @@ The roadmap lives in beads as epics with child tasks and dependencies. `bd list 
 - `pnpm fmt` — format all files with oxfmt
 - `pnpm fmt:check` — check formatting without writing (for CI)
 - `pnpm test` — run unit tests with vitest (also runs `tools/**/*.test.ts`, so run `pnpm install` in `tools/` too; the run prints a hint if it is missing)
+- `pnpm score <config>` — declarative scoring run (`--dry-run` first)
 - `pnpm typecheck` — `astro sync && tsc --noEmit` for the site (CI also runs it in `tools/`)
 
 oxfmt runs on staged files in the pre-commit hook (lint-staged).
@@ -34,7 +35,7 @@ oxfmt runs on staged files in the pre-commit hook (lint-staged).
 
 **Data model v2 (in progress, epic `hemsida-bzj`):** data is grouped by term (`src/data/2022-2026/promises/`) with a `sources` collection for origin documents (`src/data/sources/`), evidence references inside each promise file, and one shared Zod schema in `src/schema/promise.ts` (tested in `promise.test.ts`), imported by the site and re-exported to tooling via `tools/lib/schema.ts`. Data model decisions are in `docs/data-model.md`. The promise files are still v1 shape (`legacyPromiseSchema`) until `hemsida-bzj.5` migrates them.
 
-**Tooling:** `tools/` is a separate pnpm package (own `package.json`, run with `node --experimental-strip-types`, type-check with `pnpm typecheck` inside `tools/`). `tools/lib/` holds infrastructure kept from the retired news-discovery pipeline: `claude.ts` (`createClient`, `loggedParse`, `isTransientApiError`), `resume.ts` (resumable per-item runs that skip transient API errors), `pr.ts` (one PR per change, `execFileSync` for git) and `json.ts` (Zod-schema-as-single-source pattern, JSON I/O).
+**Tooling:** `tools/` is a separate pnpm package (own `package.json`, run with `node --experimental-strip-types`, type-check with `pnpm typecheck` inside `tools/`). `tools/lib/` holds infrastructure kept from the retired news-discovery pipeline: `claude.ts` (`createClient`, `loggedParse`, `isTransientApiError`), `resume.ts` (resumable per-item runs that skip transient API errors), `pr.ts` (one PR per change, `execFileSync` for git) and `json.ts` (Zod-schema-as-single-source pattern, JSON I/O). Scoring runs go through `pnpm score <tools/score-configs/x.json>` (`tools/lib/score/`, dry-run first; see `docs/scoring-harness.md`).
 
 **Pages and search:** page bodies live in `src/components/pages/` (Start, Partier, Parti, Löften, Överenskommelse), routed under `src/pages/[term]/`; the old unscoped URLs are `Redirect.astro` stubs. **Search:** `src/pages/search.astro` redirects to the default term's Löften page. `src/components/pages/LofterPage.astro` builds the rows and hydrates `LofterList.tsx` as a React island: uFuzzy fuzzy search plus party, assessment, agreement-outcome and area filters, with filter state in the URL query string (`src/lib/lofter-filter.ts`, tested).
 
