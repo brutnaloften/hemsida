@@ -18,7 +18,7 @@ for pairs that are sampled again. If a different `--count`/`--seed` would drop a
 already-labelled pair, the tool warns and refuses unless `--force` is given.
 
 Each pair has the promise (title, description, source quote), the document (id, title,
-type, reference/date/committee snippet, URL), the search score and an empty `label`.
+type, reference/date/committee snippet, URL), the search score and an empty `label` (and no `stage`).
 Candidate files store no document body: run the evidence briefs below, or open the URL.
 
 ## Evidence briefs (full text)
@@ -85,24 +85,49 @@ node --experimental-strip-types tools/label-eval-set.ts
 ```
 
 Works offline in an interactive terminal (piped stdin is rejected). Ctrl-C prints a summary. For each unlabelled pair press `m` (match), `p` (partial),
-`c` (contradicts), `n` (no match), `s` (skip), `b` (back) or `q` (quit); then optionally type a note. Every
+`c` (contradicts), `n` (no match), `s` (skip), `b` (back) or `q` (quit). After a label you are asked for the document
+**stage** in a separate prompt (`d` definitive, `p` preparatory, `b` background, Enter or `s` to skip and keep any
+existing stage, `-` to remove it), then optionally a note. Every
 answer is saved immediately, so you can quit and resume at any time. `--redo` revisits
 labelled pairs. `--only-file ids.txt` (one pair id per line, `#` comments) walks only those pairs and implies `--redo`;
 unknown ids are an error. When relabelling, Enter at the note prompt keeps the existing note and `-` removes it. Press
-`r` to see what the blind model judgements in `model-labels.json` said and why (hidden by default so they do not
-anchor you; `--model-labels <file>` points at another file). You can also edit `label` (`match` | `partial` | `contradicts` | `no_match`) and `note`
-directly in the JSON.
+`r` to see what the blind model judgements in `model-labels.json` said and why, including Opus's stage (hidden by
+default so they do not anchor you, and never shown at the stage prompt; `--model-labels <file>` points at another file).
+You can also edit `label` (`match` | `partial` | `contradicts` | `no_match`), `stage` (`definitive` | `preparatory` |
+`background`) and `note` directly in the JSON.
 
-Guidance: `match` = the document is direct evidence of the promise being acted on (the
-proposal, bill or decision implements it); `partial` = same topic, covers part of the
-promise or only prepares it (e.g. an inquiry directive); `contradicts` = on topic but
-works against the promise (e.g. a proposal that cuts the funding the promise relies on; it is
-relevant evidence for the timeline, but not progress); `no_match` = unrelated or only
-shares keywords.
+## Two axes: relevance and stage
 
-Hand labels treat a document that prepares the measure (inquiry directive, SOU, committee report) as `match` when it is
-the evidence for the promise; separating "how much of the promise" from "how far along the process is" is the planned
-`stage` axis (`hemsida-as5`), after which `partial` will be redefined.
+**Relevance (`label`)** is how much of the promise the document covers:
+
+- `match`: the document is direct evidence of the promise being acted on and covers the promise as a whole (the
+  proposal, bill, decision or inquiry implements or prepares exactly what was promised);
+- `partial`: same topic, but it covers only part of the promise (one of several measures, a narrower scope, a smaller
+  amount);
+- `contradicts`: on topic but works against the promise (e.g. a proposal that cuts the funding the promise relies on;
+  relevant evidence for the timeline, but not progress);
+- `no_match`: unrelated or only shares keywords.
+
+**Stage (`stage`, optional)** is how far along the process the document is:
+
+- `definitive`: a decision: a law, an adopted betänkande, an anslag;
+- `preparatory`: a directive, SOU, Ds or proposal that prepares a measure and is not yet decided;
+- `background`: only mentions the topic, or rejects motions about it.
+
+The axes are independent. A directive, SOU or committee report that prepares the whole promised measure is `match` +
+`preparatory`; it is no longer `partial` merely for preparing. Stage is only meaningful for documents that are
+relevant, but it is recorded for any label the user chooses to give it.
+
+Hand labels made before the stage axis existed treated documents that prepare the measure (inquiry directive, SOU,
+committee report) as `match`, and `partial` was defined as "covers part of the promise or only prepares it". Old
+`partial` labels may therefore need a second look with `--redo`/`--only-file`. `stage` is optional in the schema and
+empty for every pair until it is hand-labelled.
+
+`model-labels.json` has a stage only for Opus; the Sonnet and Haiku judgements have none. Once hand stages exist, compare:
+
+```sh
+node --experimental-strip-types tools/eval-stage-agreement.ts [--model opus]
+```
 
 Commit the labelled `pairs.json` when done.
 

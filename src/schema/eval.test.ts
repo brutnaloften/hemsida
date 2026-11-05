@@ -24,6 +24,12 @@ describe('evalPairSchema', () => {
   it('rejects unknown labels', () => {
     expect(evalPairSchema.safeParse({ ...pair, label: 'yes' }).success).toBe(false);
   });
+  it('accepts an optional stage and rejects unknown stages', () => {
+    for (const stage of ['definitive', 'preparatory', 'background']) {
+      expect(evalPairSchema.safeParse({ ...pair, label: 'match', stage }).success).toBe(true);
+    }
+    expect(evalPairSchema.safeParse({ ...pair, stage: 'final' }).success).toBe(false);
+  });
   it('rejects unknown keys such as a typo', () => {
     expect(evalPairSchema.safeParse({ ...pair, lable: 'match' }).success).toBe(false);
     expect(evalFileSchema.safeParse({ term: 't', seed: 1, pairs: [], extra: 1 }).success).toBe(

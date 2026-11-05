@@ -145,7 +145,7 @@ export function mergeLabels(fresh: EvalPair[], existing: EvalPair[]): EvalPair[]
   const old = new Map(existing.map((p) => [p.id, p]));
   return fresh.map((p) => {
     const prev = old.get(p.id);
-    return prev?.label ? { ...p, label: prev.label, note: prev.note } : p;
+    return prev?.label ? { ...p, label: prev.label, stage: prev.stage, note: prev.note } : p;
   });
 }
 
@@ -199,4 +199,32 @@ export class Navigator {
     this.current = prev;
     return true;
   }
+}
+
+export interface StageAgreement {
+  /** Pairs with both a hand stage and a model stage. */
+  compared: number;
+  agree: number;
+  /** Counts of `hand -> model` disagreements, e.g. `preparatory -> definitive`. */
+  confusions: Record<string, number>;
+}
+
+/** Agreement between hand stages and one model's blind stages (pairs lacking either are ignored). */
+export function stageAgreement(
+  pairs: readonly Pick<EvalPair, 'id' | 'stage'>[],
+  labels: Record<string, Record<string, { stage?: string }>>,
+  model: string,
+): StageAgreement {
+  const out: StageAgreement = { compared: 0, agree: 0, confusions: {} };
+  for (const p of pairs) {
+    const m = labels[p.id]?.[model]?.stage;
+    if (!p.stage || !m) continue;
+    out.compared++;
+    if (p.stage === m) out.agree++;
+    else {
+      const k = `${p.stage} -> ${m}`;
+      out.confusions[k] = (out.confusions[k] ?? 0) + 1;
+    }
+  }
+  return out;
 }
