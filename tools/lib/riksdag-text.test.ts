@@ -124,6 +124,20 @@ describe('createTextFetcher', () => {
     expect(readFileSync(join(dir, 'HD01SoU1.xml'), 'utf8')).toBe('<x/>');
   });
 
+  it('accepts ids with Swedish letters (FöU) and URL-encodes them', async () => {
+    const calls: string[] = [];
+    const fetcher = createTextFetcher({
+      cacheDir: mkdtempSync(join(tmpdir(), 'rt-')),
+      sleep: async () => undefined,
+      fetch: (async (url: string) => {
+        calls.push(url);
+        return ok('<x/>');
+      }) as unknown as typeof fetch,
+    });
+    expect(await fetcher('HD01FöU1')).toBe('<x/>');
+    expect(calls).toEqual(['https://data.riksdagen.se/dokument/HD01F%C3%B6U1.text']);
+  });
+
   it('returns null on 404 and rejects unsafe ids', async () => {
     const fetcher = createTextFetcher({
       cacheDir: mkdtempSync(join(tmpdir(), 'rt-')),
