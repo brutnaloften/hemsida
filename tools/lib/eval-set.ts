@@ -6,7 +6,7 @@
  * set spreads over areas and does not repeat a promise. Ties break by a seeded shuffle.
  */
 import type { CandidateDocument, CandidateFile } from './riksdag-candidates.ts';
-import type { EvalPair } from '../../src/schema/eval.ts';
+import type { EvalPair, EvalStage } from '../../src/schema/eval.ts';
 
 export interface EvalPromise {
   id: string;
@@ -212,7 +212,7 @@ export interface StageAgreement {
 /** Agreement between hand stages and one model's blind stages (pairs lacking either are ignored). */
 export function stageAgreement(
   pairs: readonly Pick<EvalPair, 'id' | 'stage'>[],
-  labels: Record<string, Record<string, { stage?: string }>>,
+  labels: Record<string, Record<string, { stage?: EvalStage }>>,
   model: string,
 ): StageAgreement {
   const out: StageAgreement = { compared: 0, agree: 0, confusions: {} };

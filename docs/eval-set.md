@@ -114,7 +114,7 @@ You can also edit `label` (`match` | `partial` | `contradicts` | `no_match`), `s
 - `preparatory`: a directive, SOU, Ds or proposal that prepares a measure and is not yet decided;
 - `background`: only mentions the topic, or rejects motions about it.
 
-The axes are independent. A directive, SOU or committee report that prepares the whole promised measure is `match` +
+The axes are independent. A directive, SOU, Ds or proposal (or a committee report before the chamber has decided) that prepares the whole promised measure is `match` +
 `preparatory`; it is no longer `partial` merely for preparing. Stage is only meaningful for documents that are
 relevant, but it is recorded for any label the user chooses to give it.
 

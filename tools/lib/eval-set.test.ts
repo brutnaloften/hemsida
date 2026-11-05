@@ -151,10 +151,10 @@ describe('stageAgreement', () => {
       { id: 'd' },
     ];
     const labels = {
-      a: { opus: { stage: 'definitive' } },
-      b: { opus: { stage: 'definitive' } },
+      a: { opus: { stage: 'definitive' as const } },
+      b: { opus: { stage: 'definitive' as const } },
       c: { sonnet: {} },
-      d: { opus: { stage: 'background' } },
+      d: { opus: { stage: 'background' as const } },
     };
     expect(stageAgreement(pairs, labels, 'opus')).toEqual({
       compared: 2,
