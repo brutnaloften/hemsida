@@ -14,7 +14,8 @@
       "snippet": "BET 2025/26 SoU1 | 2025-12-03 | utskott/organ SoU | träffade sökningarna: keyword:förlossningsvård, keyword:förlossningsplan, keyword:barnmorsketeam, all-keywords, committee:SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
       "search_score": 5,
-      "label": null
+      "label": "match",
+      "note": "Regeringen fortsätter satsa på mödravården som lovat men minskar investeringen kraftigt jämfört med tidigare år. Investering kanske redan har fått den effekt man ville ha."
     },
     {
       "id": "tido-nationell-forlossningsplan::HC01SoU1",
@@ -28,7 +29,8 @@
       "snippet": "BET 2024/25 SoU1 | 2024-12-04 | utskott/organ SoU | tillagd manuellt: föregående års motsvarighet till HD01SoU1, hittades inte av kandidatsökningen",
       "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
       "search_score": 1,
-      "label": null
+      "label": "match",
+      "note": "Regeringen fortsätter satsa på mödravården som lovat men minskar investeringen lite jämfört med tidigare år."
     },
     {
       "id": "tido-utredning-reformera-svenska-kraftnat::HD01UbU31",
@@ -42,7 +44,7 @@
       "snippet": "BET 2025/26 UbU31 | 2026-06-11 | utskott/organ UbU | träffade sökningarna: keyword:myndighetsform",
       "url": "https://data.riksdagen.se/dokument/HD01UbU31.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-ccs-minst-tva-auktioner::HB01MJU1",
@@ -56,7 +58,8 @@
       "snippet": "BET 2023/24 MJU1 | 2023-12-11 | utskott/organ MJU | träffade sökningarna: keyword:koldioxidinfångning, all-keywords, committee:MJU",
       "url": "https://data.riksdagen.se/dokument/HB01MJU1.html",
       "search_score": 3,
-      "label": null
+      "label": "match",
+      "note": "Nämner inte specifikt 2 auktioner, men tilldelar pengarna som behövs"
     },
     {
       "id": "tido-reform-elevhalsan-elevhalsogaranti::HCB130",
@@ -70,7 +73,7 @@
       "snippet": "DIR 2024 30 | 2024-03-07 | utskott/organ U-dep | träffade sökningarna: keyword:elevhälsa, keyword:elevhälsogaranti, keyword:vårduppdrag, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HCB130.html",
       "search_score": 4,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-projekt-hogstaligor-konkurrenskraft::HEB1122",
@@ -84,7 +87,7 @@
       "snippet": "DIR 2026 122 | 2026-09-03 | utskott/organ LI-dep | träffade sökningarna: keyword:konkurrenskraft",
       "url": "https://data.riksdagen.se/dokument/HEB1122.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-oversyn-frihetsberovande-unga-hakning-kvarhallande::HBB1102",
@@ -98,7 +101,7 @@
       "snippet": "DIR 2023 102 | 2023-06-29 | utskott/organ Justitiedepartementet | träffade sökningarna: keyword:unga brottsmisstänkta, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HBB1102.html",
       "search_score": 2,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-bistand-verktyg-mot-irreguljar-migration::HC031d8",
@@ -112,7 +115,7 @@
       "snippet": "PROP 2024/25 1 | 2024-09-19 | träffade sökningarna: keyword:biståndspolitik, keyword:irreguljär migration, keyword:grundorsaker, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HC031d8.html",
       "search_score": 4,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-public-service-oberoende-finansiering-tillstandsperiod::HD03121",
@@ -126,7 +129,7 @@
       "snippet": "PROP 2025/26 121 | 2026-02-19 | utskott/organ Försvarsdepartementet | träffade sökningarna: keyword:SVT",
       "url": "https://data.riksdagen.se/dokument/HD03121.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-mer-lonsamt-fran-bidrag-till-arbete::HA03100",
@@ -140,7 +143,8 @@
       "snippet": "PROP 2022/23 100 | 2023-04-17 | utskott/organ Finansdepartementet | träffade sökningarna: keyword:bidragssystem, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HA03100.html",
       "search_score": 2,
-      "label": null
+      "label": "partial",
+      "note": "Innehåller förslag som sätter tak på bidrag."
     },
     {
       "id": "tido-begransa-ratten-till-tolk::HEB323",
@@ -154,7 +158,7 @@
       "snippet": "SOU 2026 23 | 2026-03-31 | träffade sökningarna: keyword:tolkavgift, keyword:offentligt finansierad tolk, keyword:tolkförmedling, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HEB323.html",
       "search_score": 4,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-battre-villkor-sma-foretag-312-regler::HEB356",
@@ -168,7 +172,7 @@
       "snippet": "SOU 2026 56 | 2026-09-17 | träffade sökningarna: keyword:små och medelstora företag",
       "url": "https://data.riksdagen.se/dokument/HEB356.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-bevara-bromma-flygplats::HDB367",
@@ -182,7 +186,7 @@
       "snippet": "SOU 2025 67 | 2025-06-03 | träffade sökningarna: keyword:Bromma flygplats, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HDB367.html",
       "search_score": 2,
-      "label": null
+      "label": "partial"
     },
     {
       "id": "tido-forslag-starka-pensionarernas-ekonomi::HD01SfU13",
@@ -196,7 +200,7 @@
       "snippet": "BET 2025/26 SfU13 | 2025-12-11 | utskott/organ SfU | träffade sökningarna: keyword:pension, keyword:pensionärernas ekonomi, all-keywords, committee:SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU13.html",
       "search_score": 4,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-lagre-administrativa-kostnader-foretag::HD01MJU29",
@@ -210,7 +214,7 @@
       "snippet": "BET 2025/26 MJU29 | 2026-06-09 | utskott/organ MJU | träffade sökningarna: keyword:regelförenkling",
       "url": "https://data.riksdagen.se/dokument/HD01MJU29.html",
       "search_score": 1,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-allmanna-arvsfonden-inriktning::HD01KU1",
@@ -224,7 +228,7 @@
       "snippet": "BET 2025/26 KU1 | 2025-11-28 | utskott/organ KU | träffade sökningarna: keyword:resultatredovisning, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HD01KU1.html",
       "search_score": 2,
-      "label": null
+      "label": "partial"
     },
     {
       "id": "tido-anhorigsatsning-kontaktperson-anhoriglinje::HBB177",
@@ -238,7 +242,7 @@
       "snippet": "DIR 2023 77 | 2023-06-08 | utskott/organ Socialdepartementet | träffade sökningarna: keyword:anhöriga, keyword:anhöriglinje, keyword:barn som anhöriga, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HBB177.html",
       "search_score": 4,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-djurvalfardsutredning-konkurrensforutsattningar-livsmedel::HEB1112",
@@ -252,7 +256,7 @@
       "snippet": "DIR 2026 112 | 2026-09-03 | utskott/organ KN-dep | träffade sökningarna: keyword:konkurrenskraft",
       "url": "https://data.riksdagen.se/dokument/HEB1112.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-sprakkrav-aldreomsorg::HBB144",
@@ -266,7 +270,7 @@
       "snippet": "DIR 2023 44 | 2023-03-30 | utskott/organ Socialdepartementet | träffade sökningarna: keyword:språkkrav, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HBB144.html",
       "search_score": 2,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-parlamentarisk-kommitte-valsystem-gemensamma-valsedlar::HB0392",
@@ -280,7 +284,7 @@
       "snippet": "PROP 2023/24 92 | 2024-03-19 | utskott/organ Kulturdepartementet | träffade sökningarna: keyword:valsystem, keyword:valsedlar, keyword:Valmyndigheten, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HB0392.html",
       "search_score": 4,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-fler-langa-arbetsstipendier-kulturskapare::HD03170",
@@ -294,7 +298,7 @@
       "snippet": "PROP 2025/26 170 | 2026-03-10 | utskott/organ Socialdepartementet | träffade sökningarna: keyword:stipendier",
       "url": "https://data.riksdagen.se/dokument/HD03170.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-breddat-agande-boende-sparande-pension::HD03159",
@@ -308,7 +312,7 @@
       "snippet": "PROP 2025/26 159 | 2026-03-05 | utskott/organ Klimat- och näringslivsdepartementet | träffade sökningarna: keyword:bostadsägande, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HD03159.html",
       "search_score": 2,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-oversyn-arvsratten-kusiner::HDB391",
@@ -322,7 +326,7 @@
       "snippet": "SOU 2025 91 | 2025-08-29 | träffade sökningarna: keyword:arvsrätt, keyword:arvsrätt för kusiner, keyword:arv, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HDB391.html",
       "search_score": 4,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-vidareutbildning-hogskolor-omstallningsuppdrag::HEB357",
@@ -336,7 +340,7 @@
       "snippet": "SOU 2026 57 | 2026-09-11 | träffade sökningarna: keyword:livslångt lärande",
       "url": "https://data.riksdagen.se/dokument/HEB357.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-utred-kommunala-utjamningssystemet::HCB350d2",
@@ -350,7 +354,7 @@
       "snippet": "SOU 2024 50 | 2024-07-05 | träffade sökningarna: keyword:högskattekommuner, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HCB350d2.html",
       "search_score": 2,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-statligt-ansvar-personlig-assistans::HB01SoU13",
@@ -364,7 +368,7 @@
       "snippet": "BET 2023/24 SoU13 | 2024-06-05 | utskott/organ SoU | träffade sökningarna: keyword:personlig assistans, keyword:assistansersättning, all-keywords, committee:SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU13.html",
       "search_score": 4,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-regler-mot-godtycklig-nedstangning-karnkraft::HD01NU24",
@@ -378,7 +382,7 @@
       "snippet": "BET 2025/26 NU24 | 2026-06-05 | utskott/organ NU | träffade sökningarna: keyword:kärnkraft",
       "url": "https://data.riksdagen.se/dokument/HD01NU24.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-tydligare-kunskapsinriktning-styrdokument::HD01UbU8",
@@ -392,7 +396,7 @@
       "snippet": "BET 2025/26 UbU8 | 2026-02-09 | utskott/organ UbU | träffade sökningarna: keyword:kunskapsinriktning, all-keywords, committee:UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU8.html",
       "search_score": 3,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-lojalitetsforklaring-medborgarskapsceremoni::HBB1129",
@@ -406,7 +410,7 @@
       "snippet": "DIR 2023 129 | 2023-09-07 | utskott/organ Ju-dep | träffade sökningarna: keyword:lojalitetsförklaring, keyword:medborgarskapssamtal, keyword:medborgarskapsceremoni, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HBB1129.html",
       "search_score": 4,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-forenkla-arbetsmarknadspolitiska-insatser::HEB1106",
@@ -420,7 +424,7 @@
       "snippet": "DIR 2026 106 | 2026-09-03 | utskott/organ Ju-dep | träffade sökningarna: keyword:förenkling",
       "url": "https://data.riksdagen.se/dokument/HEB1106.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-forvaringsdom::HBB174",
@@ -434,7 +438,7 @@
       "snippet": "DIR 2023 74 | 2023-06-01 | utskott/organ Ju-dep | träffade sökningarna: keyword:återfall, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HBB174.html",
       "search_score": 2,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-ccs-styrmedel-cementfabriker-raffinaderier::HB0359",
@@ -448,7 +452,7 @@
       "snippet": "PROP 2023/24 59 | 2023-12-21 | utskott/organ Klimat- och näringslivsdepartementet | träffade sökningarna: keyword:CCS, keyword:CCU, keyword:lagringsplatser, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HB0359.html",
       "search_score": 4,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-oversyn-bosattningslagen-etableringsboende::HD031",
@@ -462,7 +466,7 @@
       "snippet": "PROP 2025/26 1 | 2025-09-22 | utskott/organ Finansdepartementet | träffade sökningarna: keyword:etableringsboende",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
       "search_score": 1,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-reform-folkbildningsradet-medelstilldelning::HC03166",
@@ -476,7 +480,7 @@
       "snippet": "PROP 2024/25 166 | 2025-05-22 | utskott/organ Kulturdepartementet | träffade sökningarna: keyword:folkbildning, keyword:Folkbildningsrådet, keyword:medelstilldelning",
       "url": "https://data.riksdagen.se/dokument/HC03166.html",
       "search_score": 3,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-forenklade-agarskiften-familjeforetag::HDB382",
@@ -490,7 +494,8 @@
       "snippet": "SOU 2025 82 | 2025-06-27 | träffade sökningarna: keyword:ägarskiften, keyword:generationsskifte, keyword:familjeföretag, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HDB382.html",
       "search_score": 4,
-      "label": null
+      "label": "partial",
+      "note": "Underlättar men bara för en specifik typ av företag (jordbruk)"
     },
     {
       "id": "tido-stark-abortratten-i-regeringsformen::HEB358",
@@ -504,7 +509,7 @@
       "snippet": "SOU 2026 58 | 2026-09-30 | träffade sökningarna: keyword:grundlagsutredning",
       "url": "https://data.riksdagen.se/dokument/HEB358.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-konkurrenskraftiga-bolags-och-kapitalskatter::HCB329",
@@ -518,7 +523,8 @@
       "snippet": "SOU 2024 29 | 2024-04-29 | träffade sökningarna: keyword:kapitalskatt, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HCB329.html",
       "search_score": 2,
-      "label": null
+      "label": "partial",
+      "note": "Det är bakgrund som eventuellt kan leda till ett beslut, men detta dokument i sig innehåller inga beslut."
     },
     {
       "id": "tido-sjukforsakring-rehabilitering-avstamningstillfallen::HA01SfU1",
@@ -532,7 +538,8 @@
       "snippet": "BET 2022/23 SfU1 | 2022-12-13 | utskott/organ SfU | träffade sökningarna: keyword:rehabilitering, keyword:avstämningstillfällen, all-keywords, committee:SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU1.html",
       "search_score": 4,
-      "label": null
+      "label": "partial",
+      "note": "Minskar budgeten för sjukförsäkringar"
     },
     {
       "id": "tido-studie-nya-medielandskapet-opinionsbildning::HD01UU17",
@@ -546,7 +553,7 @@
       "snippet": "BET 2025/26 UU17 | 2026-06-08 | utskott/organ UU | träffade sökningarna: keyword:transparens",
       "url": "https://data.riksdagen.se/dokument/HD01UU17.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-elmarknad-utredning-likvardiga-spelregler::HD01NU25",
@@ -560,7 +567,7 @@
       "snippet": "BET 2025/26 NU25 | 2026-06-08 | utskott/organ NU | träffade sökningarna: keyword:elmarknaden, keyword:elmarknadsutredning",
       "url": "https://data.riksdagen.se/dokument/HD01NU25.html",
       "search_score": 2,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-sekretess-huvudregel-informationsdelning-brottsbekampning::HEB1104",
@@ -574,7 +581,7 @@
       "snippet": "DIR 2026 104 | 2026-09-03 | utskott/organ Ju-dep | träffade sökningarna: keyword:informationsutbyte",
       "url": "https://data.riksdagen.se/dokument/HEB1104.html",
       "search_score": 1,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-motverka-felaktig-lakemedelsforskrivning::HCB182",
@@ -588,7 +595,7 @@
       "snippet": "DIR 2024 82 | 2024-09-12 | utskott/organ S-dep | träffade sökningarna: keyword:läkemedelsförskrivning, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HCB182.html",
       "search_score": 2,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-atgarder-mot-betygsinflation::HD03197",
@@ -602,7 +609,7 @@
       "snippet": "PROP 2025/26 197 | 2026-03-17 | utskott/organ Utbildningsdepartementet | träffade sökningarna: keyword:betygsinflation, keyword:betyg, keyword:nationella prov, keyword:betygssystem, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HD03197.html",
       "search_score": 5,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-genomfor-sou-2021-92-granskontroller::HD03275",
@@ -616,7 +623,7 @@
       "snippet": "PROP 2025/26 275 | 2026-05-28 | utskott/organ Finansdepartementet | träffade sökningarna: keyword:gränsområden",
       "url": "https://data.riksdagen.se/dokument/HD03275.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-obligatorisk-samhallsintroduktion-och-samhallsorientering::HA031d14",
@@ -630,7 +637,7 @@
       "snippet": "PROP 2022/23 1 | 2022-11-08 | träffade sökningarna: keyword:nyanlända, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HA031d14.html",
       "search_score": 2,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-drivkrafter-aldre-stanna-i-arbetslivet::HDB370",
@@ -644,7 +651,7 @@
       "snippet": "SOU 2025 70 | 2025-06-17 | träffade sökningarna: keyword:äldre på arbetsmarknaden, keyword:arbetsliv, keyword:förlängt arbetsliv, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HDB370.html",
       "search_score": 4,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-utbyggd-laddinfrastruktur::HEB333",
@@ -658,7 +665,7 @@
       "snippet": "SOU 2026 33 | 2026-05-28 | träffade sökningarna: all-keywords",
       "url": "https://data.riksdagen.se/dokument/HEB333.html",
       "search_score": 1,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-armslangds-avstand-kulturpolitiken::HEB331",
@@ -672,7 +679,7 @@
       "snippet": "SOU 2026 31 | 2026-05-18 | träffade sökningarna: keyword:kulturstöd, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HEB331.html",
       "search_score": 2,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-isk-skattefri-grundniva-300000::HC01FiU1",
@@ -686,7 +693,7 @@
       "snippet": "BET 2024/25 FiU1 | 2024-11-22 | utskott/organ FiU | träffade sökningarna: keyword:investeringssparkonto, keyword:skattefri grundnivå, keyword:sparande, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
       "search_score": 4,
-      "label": null
+      "label": "match"
     },
     {
       "id": "tido-forbattrade-villkor-personaloptioner-forskningsincitament::HD01FiU1",
@@ -700,7 +707,7 @@
       "snippet": "BET 2025/26 FiU1 | 2025-11-21 | utskott/organ FiU | träffade sökningarna: keyword:skatteregler",
       "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
       "search_score": 1,
-      "label": null
+      "label": "no_match"
     },
     {
       "id": "tido-aterinfor-tjansteansvar-utredning::HD01JuU40",
@@ -714,7 +721,7 @@
       "snippet": "BET 2025/26 JuU40 | 2026-06-11 | utskott/organ JuU | träffade sökningarna: keyword:tjänstemannaansvar, keyword:tjänstefel, all-keywords",
       "url": "https://data.riksdagen.se/dokument/HD01JuU40.html",
       "search_score": 3,
-      "label": null
+      "label": "match"
     }
   ]
 }
