@@ -87,7 +87,10 @@ node --experimental-strip-types tools/label-eval-set.ts
 Works offline in an interactive terminal (piped stdin is rejected). Ctrl-C prints a summary. For each unlabelled pair press `m` (match), `p` (partial),
 `c` (contradicts), `n` (no match), `s` (skip), `b` (back) or `q` (quit); then optionally type a note. Every
 answer is saved immediately, so you can quit and resume at any time. `--redo` revisits
-labelled pairs. You can also edit `label` (`match` | `partial` | `contradicts` | `no_match`) and `note`
+labelled pairs. `--only-file ids.txt` (one pair id per line, `#` comments) walks only those pairs and implies `--redo`;
+unknown ids are an error. When relabelling, Enter at the note prompt keeps the existing note and `-` removes it. Press
+`r` to see what the blind model judgements in `model-labels.json` said and why (hidden by default so they do not
+anchor you; `--model-labels <file>` points at another file). You can also edit `label` (`match` | `partial` | `contradicts` | `no_match`) and `note`
 directly in the JSON.
 
 Guidance: `match` = the document is direct evidence of the promise being acted on (the
@@ -97,4 +100,16 @@ works against the promise (e.g. a proposal that cuts the funding the promise rel
 relevant evidence for the timeline, but not progress); `no_match` = unrelated or only
 shares keywords.
 
+Hand labels treat a document that prepares the measure (inquiry directive, SOU, committee report) as `match` when it is
+the evidence for the promise; separating "how much of the promise" from "how far along the process is" is the planned
+`stage` axis (`hemsida-as5`), after which `partial` will be redefined.
+
 Commit the labelled `pairs.json` when done.
+
+## Model baselines (`model-labels.json`)
+
+`src/data/2022-2026/eval/model-labels.json` holds Sonnet and Opus judgements for every pair (label, confidence, a
+short reason; Opus also a document stage), made blind to the hand labels over the full document text. Its `meta` field
+records the date, what blind means and how each model was prompted; the two prompts differ (Opus was also told that
+lower spending alone is not contradiction and asked for a stage), and exact model snapshot ids were not recorded. It is
+a comparison baseline and never ground truth: the hand label in `pairs.json` is. Its keys must match the pair ids.

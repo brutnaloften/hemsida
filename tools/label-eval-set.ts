@@ -1,6 +1,6 @@
 /**
  * Label the eval set interactively in the terminal (offline, progress saved after every answer).
- *   node --experimental-strip-types tools/label-eval-set.ts [--term 2022-2026] [--redo] [--only-file ids.txt]
+ *   node --experimental-strip-types tools/label-eval-set.ts [--term 2022-2026] [--redo] [--only-file ids.txt] [--model-labels file.json]
  *
  * Keys per pair: d = show the full evidence detail, r = show what the models answered blind and why (hidden by default so it does not anchor you), m = match, p = partial, c = contradicts, n = no match, s = skip, b = back one pair,
  * q = quit. After a label you may type an optional note (Enter for none).
@@ -80,6 +80,10 @@ if (values['only-file']) {
     console.error(`Unknown pair ids in ${values['only-file']}:\n${unknown.join('\n')}`);
     process.exit(1);
   }
+  if (!ids.length) {
+    console.error(`${values['only-file']} lists no pair ids.`);
+    process.exit(1);
+  }
   only = new Set(ids.map((id) => file.pairs.findIndex((x) => x.id === id)));
 }
 const nav = new Navigator(file.pairs, values.redo || only !== undefined, only);
@@ -129,7 +133,7 @@ while (nav.current !== null) {
     key = (await rl.question(offer + menu)).trim().toLowerCase();
     if (key === 'r' && judgements.length) {
       for (const [model, j] of judgements) {
-        const stage = j.stage ? `, stadium: ${j.stage}` : '';
+        const stage = j.stage ? `, stage: ${j.stage}` : '';
         console.log(`\n${model}: ${j.label} (${j.confidence}${stage})\n  ${j.reason}`);
       }
       continue;
