@@ -4,8 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   output: 'static',
-  site: 'https://brutnaloften.github.io/',
-  base: '/hemsida/',
+  site: 'https://xn--brutnalften-xfb.se',
+  base: '/',
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],

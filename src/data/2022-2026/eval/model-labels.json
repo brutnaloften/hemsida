@@ -5,7 +5,8 @@
     "method": "Blind: each model labelled all 51 pairs, split over three parallel agents of 17 pairs each, with the hand label and note removed, never other models' answers, and read the full text of each document (the cached Riksdag response, not tier-1 extracts), with the generated evidence briefs available as a help. One pass per pair, Claude Code subagents, reasons written by the model.",
     "models": {
       "sonnet": "Claude Code subagent, model alias 'sonnet' (Sonnet 5.5); exact snapshot id not recorded. Prompt: the label definitions of docs/eval-set.md (match, partial, contradicts, no_match); no stage requested.",
-      "opus": "Claude Code subagent, model alias 'opus'; exact snapshot id not recorded. Same definitions, plus: contradicts means actively working against the promise and merely lower spending is not contradiction; also asked for a separate document stage (definitive, preparatory, background). The prompts therefore differ from the Sonnet run."
+      "opus": "Claude Code subagent, model alias 'opus'; exact snapshot id not recorded. Same definitions, plus: contradicts means actively working against the promise and merely lower spending is not contradiction; also asked for a separate document stage (definitive, preparatory, background). The prompts therefore differ from the Sonnet run.",
+      "haiku": "Claude Code subagent, model alias 'haiku' (Haiku 5.5); exact snapshot id not recorded. Run 2026-11-05, after the Sonnet and Opus runs. Same blind method (three parallel agents of 17 pairs, full text with the evidence brief as help, one pass per pair), same label definitions as the Sonnet prompt; no stage requested."
     }
   },
   "labels": {
@@ -20,6 +21,11 @@
         "stage": "definitive",
         "confidence": "medium",
         "reason": "The UO9 budget bet keeps funding the förlossningsvård initiative under anslag 1:6 (\"välkomnar utskottet att regeringen fortsätter satsningen på området\"). It contains no national förlossningsplan and nothing on barnmorsketeam."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "low",
+        "reason": "The 2026 budget committee report on UO9 only says the government continues its funding for maternity and birth care. It does not mention a national birth care plan."
       }
     },
     "tido-ccs-minst-tva-auktioner::HB01MJU1": {
@@ -33,6 +39,11 @@
         "stage": "definitive",
         "confidence": "high",
         "reason": "It adopts anslag 1:20 Driftstöd för bio-CCS \"i form av omvänd auktionering\", with a bemyndigande of up to 36 billion kronor for 2026–2046. That is the funding the reverse auctions run on."
+      },
+      "haiku": {
+        "label": "match",
+        "confidence": "medium",
+        "reason": "Approves appropriation 1:20 Driftstöd för bio-CCS, a reverse-auction operating support for carbon capture, which implements the promised reverse-auction model. It covers bio-CCS only and does not show the two-auction target."
       }
     },
     "tido-oversyn-frihetsberovande-unga-hakning-kvarhallande::HBB1102": {
@@ -46,6 +57,11 @@
         "stage": "preparatory",
         "confidence": "high",
         "reason": "The directive orders exactly the review the promise describes: \"En översyn av regleringen om anhållande och häktning av personer som inte har fyllt 18 år\". It also covers more cases of kvarhållande of young suspects until they can be handed to guardians or social services."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "high",
+        "reason": "A directive orders a review of arrest and detention rules for under-18s and of time limits for holding suspected young offenders, including to allow holding in more cases. It is preparatory, with no legislation yet."
       }
     },
     "tido-mer-lonsamt-fran-bidrag-till-arbete::HA03100": {
@@ -59,6 +75,11 @@
         "stage": "preparatory",
         "confidence": "medium",
         "reason": "The spring budget states the goal (\"bidragssystemen vara utformade så att det är lönsamt att gå från bidrag till arbete\") and announces a bidragstak and lower tax on work. These are intentions and guidelines, not enacted measures."
+      },
+      "haiku": {
+        "label": "match",
+        "confidence": "medium",
+        "reason": "The 2023 spring budget bill announces a benefit reform (bidragstak, stricter qualification for welfare) and further tax cuts on work to make work pay more. This matches the promise's direction, though the measures are stated as conditional on the economy."
       }
     },
     "tido-bevara-bromma-flygplats::HDB367": {
@@ -72,6 +93,11 @@
         "stage": "background",
         "confidence": "medium",
         "reason": "This Arlanda inquiry only quotes the government's position (\"Bromma flygplats ska därför bevaras\") and describes Stockholm city ending its agreement for the airport. It takes no action to preserve Bromma."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "low",
+        "reason": "An SOU on Arlanda quotes the government stating that Bromma should be preserved. It also reports that Bromma's scheduled domestic traffic has ceased and that Stockholm city terminated its agreement with Swedavia, so the evidence is mixed and not a direct decision."
       }
     },
     "tido-allmanna-arvsfonden-inriktning::HD01KU1": {
@@ -85,6 +111,11 @@
         "stage": "background",
         "confidence": "low",
         "reason": "In a list of follow-ups to tillkännagivanden, the KU budget bet only mentions that a demokrativillkor for support from Allmänna arvsfonden has applied since 1 January 2025. It says nothing about an inquiry, resultatredovisning or redirecting funds to brottsofferarbete."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "medium",
+        "reason": "The committee report notes that a democracy condition for Allmänna arvsfonden grants has applied since 2025, and that a review of civil-society grant ordinances is ongoing. This is a prior step related to the promise, not the promised inquiry itself."
       }
     },
     "tido-sprakkrav-aldreomsorg::HBB144": {
@@ -98,6 +129,11 @@
         "stage": "preparatory",
         "confidence": "high",
         "reason": "The directive \"Uppdraget att utreda språkkrav för personal i äldreomsorgen\" asks for the required language level, measures to help staff reach it and författningsförslag. That is the promise itself."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "high",
+        "reason": "Kommittédirektiv 2023:44 tasking a special inquirer to analyse and propose language requirements for elderly-care staff. It prepares the promise (an inquiry directive) but is not the final proposal."
       }
     },
     "tido-breddat-agande-boende-sparande-pension::HD03159": {
@@ -111,6 +147,11 @@
         "stage": "preparatory",
         "confidence": "high",
         "reason": "The bill is about energy-efficiency targets and the EU directive on buildings' energy performance. It has nothing on broader ownership, saving or pensions."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "Proposition on energy efficiency targets and the EU energy performance of buildings directive. Nothing on widening ownership through housing, savings or pensions."
       }
     },
     "tido-utred-kommunala-utjamningssystemet::HCB350d2": {
@@ -124,6 +165,11 @@
         "stage": "preparatory",
         "confidence": "medium",
         "reason": "This is the final report of the inquiry into the kommunalekonomisk utjämning (dir. 2022:36), so it is the review of the equalisation system and it discusses incentive effects for high-tax municipalities. The directive predates the agreement, and högskatteproblematik is only one strand."
+      },
+      "haiku": {
+        "label": "match",
+        "confidence": "medium",
+        "reason": "SOU 2024:50 (Nätt och jämnt, del 2) is the completed review of the municipal equalisation system, and it includes proposals on measures against high and rising municipal tax rates, which is the high-tax problem the promise names."
       }
     },
     "tido-tydligare-kunskapsinriktning-styrdokument::HD01UbU8": {
@@ -137,6 +183,11 @@
         "stage": "background",
         "confidence": "medium",
         "reason": "A bet that rejects motions. Under \"Pågående arbete\" it describes SOU 2025:19 (\"Kunskap för alla – nya läroplaner med fokus på undervisning och lärande\") and the Skolverket assignment to draft new läroplaner. It refers to the reform but does not carry it out."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "medium",
+        "reason": "Committee report on general education that describes the curriculum reform path: SOU 2025:19 (Läroplansutredningen) and the Skolverket commission to prepare new curricula. It reflects the reform work but does not itself change the curricula."
       }
     },
     "tido-forvaringsdom::HBB174": {
@@ -150,6 +201,11 @@
         "stage": "preparatory",
         "confidence": "high",
         "reason": "The supplementary directive tells the inquiry to \"överväga om det bör införas en ny tidsobestämd frihetsberövande påföljd\", citing Danish and Norwegian förvaring. It prepares the förvaringsdom but does not introduce it."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "high",
+        "reason": "Tilläggsdirektiv 2023:74 to the inquiry on stronger societal protection. It asks the inquirer to consider an indefinite-term sanction for gang and dangerous offenders alongside life imprisonment, which prepares the förvaringsdom but is not a proposal to introduce it."
       }
     },
     "tido-reform-folkbildningsradet-medelstilldelning::HC03166": {
@@ -163,6 +219,11 @@
         "stage": "preparatory",
         "confidence": "high",
         "reason": "The public service bill mentions folkbildning only as part of the public service remit (\"folkbildning är en central del av public service-uppdraget\"). It does nothing about funding for folkbildning or Folkbildningsrådet."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "Proposition 2024/25:166 on a public service law and broadcasting guidelines. Folkbildning appears only as part of the programme mandate; nothing on reforming state folk-education grants or moving allocation away from Folkbildningsrådet."
       }
     },
     "tido-konkurrenskraftiga-bolags-och-kapitalskatter::HCB329": {
@@ -176,6 +237,11 @@
         "stage": "preparatory",
         "confidence": "low",
         "reason": "The Productivity Commission's interim report argues that capital taxation should be made more uniform and \"i vissa delar bedöms kunna höjas\" (section 13.5.5 \"Högre beskattning av vissa kapitalinkomster\"). It also plays down the importance of a competitive bolagsskatt, so it points the opposite way, but it is an expert input, not government action."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "medium",
+        "reason": "Productivity commission interim report (SOU 2024:29) that analyses corporate and capital taxation and argues for more uniform capital taxation, while noting that the corporate tax level has lost weight as a means of attracting investment. It discusses the topic but proposes no concrete competitiveness measure."
       }
     },
     "tido-elmarknad-utredning-likvardiga-spelregler::HD01NU25": {
@@ -189,6 +255,11 @@
         "stage": "definitive",
         "confidence": "medium",
         "reason": "The bet adopts a new elmarknadslag and ledningslag based on Elmarknadsutredningen, mostly implementing EU rules (aggregators, sistahandsleverantörer). It contains nothing on equal rules for all kraftslag or on pricing stödtjänster, and no new market-design inquiry."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "medium",
+        "reason": "Committee report on Prop. 2025/26:240, the new electricity market law that follows the Elmarknadsutredningen. It covers market rules and balancing and flexibility service compensation, which overlaps the promise, but the text does not show that this bill is the new inquiry the promise calls for, and it does not cover all of the promise's content."
       }
     },
     "tido-atgarder-mot-betygsinflation::HD03197": {
@@ -202,6 +273,11 @@
         "stage": "preparatory",
         "confidence": "high",
         "reason": "The bill proposes changes to the skollag for a new betygssystem with meritvärde partly based on \"resultatet från nationella slutprov\", explicitly to \"motverka betygsinflation\"."
+      },
+      "haiku": {
+        "label": "match",
+        "confidence": "high",
+        "reason": "Government bill Prop. 2025/26:197 'Ett likvärdigt betygssystem' amends the Education Act to counter grade inflation, with a new merit-value model that includes national final test results and a new grading scale."
       }
     },
     "tido-drivkrafter-aldre-stanna-i-arbetslivet::HDB370": {
@@ -215,6 +291,11 @@
         "stage": "preparatory",
         "confidence": "medium",
         "reason": "The inquiry proposes that \"las-ålder\" follow the riktålder for pension plus two years, extending the right to stay in employment. It covers one part of strengthening older workers' ability to stay, not the wider incentives."
+      },
+      "haiku": {
+        "label": "match",
+        "confidence": "medium",
+        "reason": "SOU 2025:70 proposes that the LAS age (the right to remain in employment) be set to the pension reference age plus two years and written into the law. This directly strengthens older workers' ability to stay in work, though it is an inquiry proposal rather than an enacted bill."
       }
     },
     "tido-isk-skattefri-grundniva-300000::HC01FiU1": {
@@ -228,6 +309,11 @@
         "stage": "definitive",
         "confidence": "high",
         "reason": "The budget framework decision includes the government's proposal that the skattefria grundnivån on ISK \"ska ... uppgå till 150 000 kronor fr.o.m. den 1 januari 2025 och till 300 000 kronor fr.o.m. den 1 januari 2026\"."
+      },
+      "haiku": {
+        "label": "match",
+        "confidence": "high",
+        "reason": "Finance committee report on the 2025 budget framework, which endorses the government's proposal for a tax-free basic level for ISK, capital insurance and PEPP savings. The level is 150 000 kr from 2025 and rises to 300 000 kr from 2026. The committee adds a third tax tier for the largest holdings."
       }
     },
     "tido-nationell-forlossningsplan::HC01SoU1": {
@@ -241,6 +327,11 @@
         "stage": "definitive",
         "confidence": "medium",
         "reason": "Adopted UO9 budget allocates 1.6 bn for 'förlossningsvård och kvinnors hälsa' and reports that Socialstyrelsen delivered a 'förslag till en nationell plan för förlossningsvården'. Supports the area but the plan itself is not adopted here."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "medium",
+        "reason": "Reports that Socialstyrelsen delivered a proposal for a national plan for birth care with goals and indicators, and that the government considers a related riksdag statement addressed. The plan itself is not adopted in this document."
       }
     },
     "tido-reform-elevhalsan-elevhalsogaranti::HCB130": {
@@ -254,6 +345,11 @@
         "stage": "preparatory",
         "confidence": "high",
         "reason": "Directive tasks an inquiry to 'föreslå en elevhälsogaranti', review the 'huvudmannaskap' of elevhälsan and improve cooperation with health care and social services. It covers the whole promise but only prepares it."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "high",
+        "reason": "A government directive tasks an inquiry with proposing an elevhälsogaranti and reviewing the huvudmannaskap of elevhälsan. This prepares the promise, and nothing is enacted."
       }
     },
     "tido-bistand-verktyg-mot-irreguljar-migration::HC031d8": {
@@ -267,6 +363,11 @@
         "stage": "preparatory",
         "confidence": "medium",
         "reason": "Budget bill states aid 'ska ... fokuseras för att utgöra ett verktyg för att motverka irreguljär migration, öka återvändandet och bidra till ... frivillig återvandring' together with tackling root causes. This is the promise's wording turned into the government's aid policy."
+      },
+      "haiku": {
+        "label": "match",
+        "confidence": "high",
+        "reason": "The 2025 budget bill states that aid should be focused as a tool to counter irregular migration, increase returns and support voluntary return. This directly matches the promise."
       }
     },
     "tido-begransa-ratten-till-tolk::HEB323": {
@@ -280,6 +381,11 @@
         "stage": "preparatory",
         "confidence": "high",
         "reason": "SOU 2026:23 proposes a new 'lag om tolkavgift' (in force 1 January 2028) after a free-interpreting period for newcomers, and discusses state quality control of interpreters. It is an inquiry proposal, not yet enacted."
+      },
+      "haiku": {
+        "label": "match",
+        "confidence": "medium",
+        "reason": "SOU 2026:23 proposes a tolkavgift (interpreter fee) with a draft law, which is the core of the promise to limit publicly funded interpreting. It is an inquiry proposal, not enacted, and the state quality-control element is less developed."
       }
     },
     "tido-forslag-starka-pensionarernas-ekonomi::HD01SfU13": {
@@ -293,6 +399,11 @@
         "stage": "background",
         "confidence": "medium",
         "reason": "Committee report that 'avslår samtliga motionsyrkanden' on pensions, noting only that the pension group will review the basic protection. It is not evidence of proposals to strengthen pensioners' finances."
+      },
+      "haiku": {
+        "label": "contradicts",
+        "confidence": "low",
+        "reason": "The committee rejects all motions on pensioners' economy, including bostadstillägg and pension grundskydd, and no government proposal is presented. It is on topic and shows no progress on the promise."
       }
     },
     "tido-anhorigsatsning-kontaktperson-anhoriglinje::HBB177": {
@@ -306,6 +417,11 @@
         "stage": "preparatory",
         "confidence": "high",
         "reason": "Directive asks for proposals on 'stöd i form av kontaktperson' to relatives, support for 'anhöriga som är barn' and staff skills, and 'en nationell anhöriglinje ... dygnet runt'. It covers every part but only prepares them."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "high",
+        "reason": "A directive asks an inquiry to propose contact-person support for relatives and how a national round-the-clock relatives helpline can be offered. It is preparatory, and nothing is decided yet."
       }
     },
     "tido-parlamentarisk-kommitte-valsystem-gemensamma-valsedlar::HB0392": {
@@ -319,6 +435,11 @@
         "stage": "preparatory",
         "confidence": "high",
         "reason": "Bill on rules for elections to the Sametinget (postal voting, envelopes). It has nothing about a parliamentary committee or shared ballots in the Swedish electoral system."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "Proposition 2023/24:92 on voting procedures for Sametinget elections. It does not set up a parliamentary committee on the electoral system and does not address joint ballot papers."
       }
     },
     "tido-oversyn-arvsratten-kusiner::HDB391": {
@@ -332,6 +453,11 @@
         "stage": "preparatory",
         "confidence": "medium",
         "reason": "SOU 2025:91 is the broad review of the Inheritance Code that the promise asks for, with chapter 4 'En arvsrätt för kusiner och andra avlägsnare släktingar'. Since the promise is only to review, the finished inquiry delivers it."
+      },
+      "haiku": {
+        "label": "match",
+        "confidence": "medium",
+        "reason": "SOU 2025:91 is the output of the broad review of inheritance law, and it explicitly covers the question of inheritance rights for cousins (concluding that they should not be introduced). This is the review the promise calls for, though the document is an inquiry report rather than a bill."
       }
     },
     "tido-statligt-ansvar-personlig-assistans::HB01SoU13": {
@@ -345,6 +471,11 @@
         "stage": "background",
         "confidence": "medium",
         "reason": "Report rejects motions on state responsibility for LSS, noting that SOU 2023:9 'bereds inom Regeringskansliet' and quoting the agreement. It describes status only and shows no measures."
+      },
+      "haiku": {
+        "label": "contradicts",
+        "confidence": "low",
+        "reason": "Committee report that rejects motions asking for an immediate state helhetsansvar for personal assistance and says no Riksdag initiative is needed while the SOU 2023:9 proposal is processed. It is on topic but shows no progress toward the stated aim of state responsibility."
       }
     },
     "tido-lojalitetsforklaring-medborgarskapsceremoni::HBB1129": {
@@ -358,6 +489,11 @@
         "stage": "preparatory",
         "confidence": "medium",
         "reason": "Directive tasks the inquiry to 'ta ställning till om det bör införas ett krav på medborgarskapssamtal, avläggande av lojalitetsförklaring eller liknande ceremoniellt inslag' as the final step. The promise is itself an inquiry, so this directive is that inquiry being started."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "high",
+        "reason": "Kommittédirektiv 2023:129 tasks an inquiry with assessing whether a loyalty declaration, citizenship conversation or similar mandatory ceremony should end the naturalisation process. It is the inquiry directive for the promise, not a proposal."
       }
     },
     "tido-ccs-styrmedel-cementfabriker-raffinaderier::HB0359": {
@@ -371,6 +507,11 @@
         "stage": "preparatory",
         "confidence": "medium",
         "reason": "The climate action plan (skr. 2023/24:59) reports that 'Energimyndigheten har ... fått i uppdrag att utreda och föreslå styrmedel för CCS och CCU' and that SGU was tasked to investigate 'lämpliga platser för permanent lagring av koldioxid'. Both parts of the promise are done; the document reports those decisions rather than being one."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "medium",
+        "reason": "Government communication 2023/24:59 (climate action plan) describing the existing Energimyndigheten assignment on CCS/CCU instruments and the SGU assignment to investigate storage sites. It reports on the commissions the promise names, but it is a plan rather than a decision on the instruments."
       }
     },
     "tido-forenklade-agarskiften-familjeforetag::HDB382": {
@@ -384,6 +525,11 @@
         "stage": "preparatory",
         "confidence": "low",
         "reason": "SOU 2025:82 reviews the land acquisition law to 'underlätta ... ägarskiften inom jordbruket'. This touches ownership transfers in one sector only, not family firms or transfers to staff in general."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "medium",
+        "reason": "SOU 2025:82 is mainly about rural land acquisition and housing. It proposes widening the family-relation exemption from the land acquisition law (parents and siblings), which eases some family transfers of farmland, but it does not address family businesses or employee ownership transfers generally."
       }
     },
     "tido-sjukforsakring-rehabilitering-avstamningstillfallen::HA01SfU1": {
@@ -397,6 +543,11 @@
         "stage": "definitive",
         "confidence": "low",
         "reason": "Adopted UO10 budget report notes that the government 'avser att sätta fokus på rehabilitering ... bl.a. genom tydligt definierade avstämningstillfällen'. It restates the intention but takes no concrete measure."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "medium",
+        "reason": "Finance committee report on the 2023 budget for UO10 that records the government's stated intent to focus sick insurance on rehabilitation and clearly defined checkpoints (avstamningstillfallen) to curb long sick leave. It only notes the intent and approves appropriations, so it prepares the reform rather than implementing it."
       }
     },
     "tido-sekretess-huvudregel-informationsdelning-brottsbekampning::HEB1104": {
@@ -410,6 +561,11 @@
         "stage": "preparatory",
         "confidence": "medium",
         "reason": "Directive 2026:104 asks whether 'sekretessen ... ska avskaffas mellan myndigheter' and how information sharing can be widened, building on lag (2025:170) on the duty to give information to law enforcement. It prepares a broader version of the promise."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "medium",
+        "reason": "Commission directive (dir. 2026) setting up an inquiry to examine abolishing secrecy between authorities and improving information sharing, including with private actors, to prevent and detect crime. It prepares the secrecy change but does not itself enact a main rule that all relevant information be shared with crime-fighting authorities, and it does not reference Ju 2022:03."
       }
     },
     "tido-genomfor-sou-2021-92-granskontroller::HD03275": {
@@ -423,6 +579,11 @@
         "stage": "preparatory",
         "confidence": "high",
         "reason": "Extra amending budget for Ukraine support and fuel and household relief. The only mention of 'gränsområden' concerns cross-border refuelling, with nothing on border surveillance or internal checks of foreigners."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "Extra amending budget for 2026 on Ukraine support, household relief and fuel tax measures. It does not reference SOU 2021:92, border surveillance or internal immigration controls."
       }
     },
     "tido-utbyggd-laddinfrastruktur::HEB333": {
@@ -436,6 +597,11 @@
         "stage": "preparatory",
         "confidence": "medium",
         "reason": "SOU 2026:33 proposes 'elkrediter' in the reduction obligation with a 'mer differentierad inriktning, med högre vikt på identifierade problemområden' for charging infrastructure. This touches the promise's focus but is an inquiry proposal about phasing out fossil fuels."
+      },
+      "haiku": {
+        "label": "contradicts",
+        "confidence": "low",
+        "reason": "SOU 2026:33 on fossil-free policy instruments. It proposes limiting the electricity credits for public charging in the reduktionsplikt over time, which weakens a funding route the promise relies on, though it also says those credits should be used more effectively and does not address the promise's specific split between charging posts and heavy transport."
       }
     },
     "tido-forbattrade-villkor-personaloptioner-forskningsincitament::HD01FiU1": {
@@ -449,6 +615,11 @@
         "stage": "background",
         "confidence": "medium",
         "reason": "Budget framework decision with no mention of 'personaloptioner'. The only R&D item, that the proposals in SOU 2025:3 on 'FoU-avdraget och expertskattereglerna' be implemented, is in Centerpartiet's rejected motion."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "medium",
+        "reason": "Finance committee report on the 2026 budget framework. It says the proposals in SOU 2025:3 on the R&D deduction and expert tax rules are to be implemented, which covers the research-incentive part of the promise. It contains nothing on employee stock options or retaining key staff."
       }
     },
     "tido-utredning-reformera-svenska-kraftnat::HD01UbU31": {
@@ -462,6 +633,11 @@
         "stage": "background",
         "confidence": "high",
         "reason": "Betänkandet handlar om etikprövning av forskning och nämner aldrig Svenska kraftnät; det delar bara nyckelordet 'myndighetsform'."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "The document is a committee report on ethics review of research involving people. It does not mention Svenska kraftnät."
       }
     },
     "tido-projekt-hogstaligor-konkurrenskraft::HEB1122": {
@@ -475,6 +651,11 @@
         "stage": "background",
         "confidence": "high",
         "reason": "Direktivet gäller sjöfartens konkurrenskraft och klimatomställning; varken fotboll, hockey eller idrott nämns."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "The directive concerns Swedish shipping competitiveness and climate transition. It contains no mention of elite football, elite hockey or a project for top leagues."
       }
     },
     "tido-public-service-oberoende-finansiering-tillstandsperiod::HD03121": {
@@ -488,6 +669,11 @@
         "stage": "background",
         "confidence": "high",
         "reason": "Skrivelsen om miljöräddning till sjöss nämner SVT bara som källa i fotnoter ('SVT Nyheter, \"Här tankas ryska skuggflottan\"')."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "The document is an Riksrevisionen report on environmental rescue after major maritime accidents. It has no content on public service media or its funding."
       }
     },
     "tido-battre-villkor-sma-foretag-312-regler::HEB356": {
@@ -501,6 +687,11 @@
         "stage": "background",
         "confidence": "high",
         "reason": "SOU 2026:56 gäller genomförandet av EU-direktivet om tillbörlig aktsamhet ('föreslå hur EU-direktivet om s.k. tillbörlig aktsamhet ska genomföras'), inte 3:12-reglerna eller villkoren för SMF att växa."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "SOU 2026:56 covers corporate due diligence (företagsansvar). It does not discuss 3:12 rules or growth and capital conditions for small firms, sharing only the phrase small and medium-sized enterprises."
       }
     },
     "tido-lagre-administrativa-kostnader-foretag::HD01MJU29": {
@@ -514,6 +705,11 @@
         "stage": "definitive",
         "confidence": "medium",
         "reason": "Riksdagen sa ja till 'flera regelförenklingar inom skogsbruket', t.ex. att samrådsanmälan bara krävs när föreskrifter anger det, vilket sänker skogsföretagens regelbörda. Det gäller bara en sektor, inte det breda reformarbetet för lägre administrativa kostnader."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "medium",
+        "reason": "The bill simplifies forestry regulation and caps forest owners' costs for knowledge gathering, which reduces administrative burden in one sector. It does not address administrative costs for businesses generally."
       }
     },
     "tido-djurvalfardsutredning-konkurrensforutsattningar-livsmedel::HEB1112": {
@@ -527,6 +723,11 @@
         "stage": "background",
         "confidence": "high",
         "reason": "Direktivet gäller industrins klimatomställning och konkurrenskraft; varken djurvälfärd eller livsmedelsproduktion nämns."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "Kommittédirektiv on industrial climate transition and competitiveness financing. No food-production, animal welfare or agricultural-policy content; the only trace is a consultation reference to Statens jordbruksverk."
       }
     },
     "tido-fler-langa-arbetsstipendier-kulturskapare::HD03170": {
@@ -540,6 +741,11 @@
         "stage": "background",
         "confidence": "high",
         "reason": "Propositionen om bostadsbidrag nämner stipendier bara som inkomst vid bidragsberäkning ('skattefria stipendier'), inte stöd till kulturutövare."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "Proposition on housing benefit (bostadsbidrag) accuracy. The only mentions of stipends concern tax treatment of grants in the income calculation, not support for individual cultural workers or work stipends."
       }
     },
     "tido-vidareutbildning-hogskolor-omstallningsuppdrag::HEB357": {
@@ -553,6 +759,11 @@
         "stage": "background",
         "confidence": "high",
         "reason": "SOU:n om akademisk frihet nämner livslångt lärande bara när den återger högskolelagens bestämmelser; den föreslår inget om vidareutbildning eller omställningsuppdraget."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "medium",
+        "reason": "SOU 2026:57 on academic freedom. It does not address further education for working people or universities' transition mission; the only lifelong-learning reference is to a consultation response title."
       }
     },
     "tido-regler-mot-godtycklig-nedstangning-karnkraft::HD01NU24": {
@@ -566,6 +777,11 @@
         "stage": "background",
         "confidence": "medium",
         "reason": "Betänkandet antar ändringar i miljöbalken för att möjliggöra ny kärnkraft på fler platser vid kusten. Det handlar inte om skydd mot politiskt framtvingad nedläggning eller om skadestånd."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "medium",
+        "reason": "Committee report on proposition 2025/26:160, which changes the environmental code to allow new nuclear plants at more coastal sites. It contains no rules against arbitrary shutdown, no right to operate and no compensation, so it shares the nuclear topic but not the promise."
       }
     },
     "tido-forenkla-arbetsmarknadspolitiska-insatser::HEB1106": {
@@ -579,6 +795,11 @@
         "stage": "background",
         "confidence": "high",
         "reason": "Direktivet gäller förenklingar för legala vapenägare och delar bara ordet 'förenkling' med löftet."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "Kommittédirektiv on simplifying legal firearms ownership. It contains no labour-market policy or employment-measure content."
       }
     },
     "tido-oversyn-bosattningslagen-etableringsboende::HD031": {
@@ -592,6 +813,11 @@
         "stage": "preparatory",
         "confidence": "medium",
         "reason": "Budgetpropositionen för 2026 aviserar 'ett nytt system för bosättning för vissa nyanlända' med 'tidsbegränsat etableringsboende' och att bostadssituationen ska beaktas vid fördelningen. Själva lagförslaget läggs i en separat proposition, så detta är bara en avisering."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "medium",
+        "reason": "Budget proposition 2025/26:1 announces a new settlement system for newly arrived immigrants with time-limited etableringsboende and more municipal influence. It signals the planned reform of the settlement law, but the implementing bill is separate and the document does not itself amend the law."
       }
     },
     "tido-stark-abortratten-i-regeringsformen::HEB358": {
@@ -605,6 +831,11 @@
         "stage": "background",
         "confidence": "high",
         "reason": "SOU 2026:58 'Markerna berättar och minns' nämner inte aborträtten och har inget med grundlagsutredningen om abort att göra."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "The document is the Sami truth commission's final report (SOU 2026:58) on state policy toward the Sami. It has nothing on abortion or the constitutional protection of abortion rights."
       }
     },
     "tido-studie-nya-medielandskapet-opinionsbildning::HD01UU17": {
@@ -618,6 +849,11 @@
         "stage": "background",
         "confidence": "high",
         "reason": "Betänkandet om humanitärt bistånd nämner varken medielandskapet, sociala plattformar eller opinionsbildning; det delar bara ordet 'transparens'."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "high",
+        "reason": "Foreign affairs committee report on humanitarian aid (Sida audit response). Nothing on media landscape, opinion formation or social platforms."
       }
     },
     "tido-motverka-felaktig-lakemedelsforskrivning::HCB182": {
@@ -631,6 +867,11 @@
         "stage": "preparatory",
         "confidence": "high",
         "reason": "Dir. 2024:82 ger en utredare i uppdrag att motverka felaktig förskrivning ('Uppdraget att motverka förskrivningar som felaktigt belastar läkemedelsförmånerna', tillsyn, den fria förskrivningsrätten). Det är bara ett utredningsdirektiv och nämner inte uttryckligen recepträtten för läkare som inte arbetar kliniskt."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "high",
+        "reason": "Commission directive (dir. 2024:82) to review documentation, restrictions and supervision of prescriptions in order to counter incorrect prescribing. It addresses the promise's goal and prepares measures, but does not cover the specific proposal to remove prescribing rights for long-inactive doctors."
       }
     },
     "tido-obligatorisk-samhallsintroduktion-och-samhallsorientering::HA031d14": {
@@ -644,6 +885,11 @@
         "stage": "preparatory",
         "confidence": "medium",
         "reason": "UO13 för 2023 aviserar att 'en utredning kommer att tillsättas för att föreslå förändringar som medför att samhällsintroduktion och samhällsorientering görs obligatorisk och att vissa offentliga ersättningar villkoras med deltagande'. Det är bara en avisering; SFI-delarna och provet omfattas inte."
+      },
+      "haiku": {
+        "label": "no_match",
+        "confidence": "medium",
+        "reason": "Budget bill for 2023 for UO13 on integration and establishment. It covers the same policy area and mentions a different inquiry on conditioning benefits through work, but it does not address mandatory samhällsintroduktion, a national curriculum, a final exam or SFI reform."
       }
     },
     "tido-armslangds-avstand-kulturpolitiken::HEB331": {
@@ -657,6 +903,11 @@
         "stage": "background",
         "confidence": "medium",
         "reason": "SOU:n om ett investeringsprogram för kultur nämner bara i förbigående att ett matchningssystem gör att 'principen om armlängds avstånd upprätthålls'. Den agerar inte på principen i kulturpolitiken."
+      },
+      "haiku": {
+        "label": "partial",
+        "confidence": "low",
+        "reason": "SOU 2026:31 on broader cultural financing. The arm's-length principle appears only in passing, as a feature that a proposed public matching-fund model would preserve. The topic is on point, but the principle is not a focus of the report."
       }
     },
     "tido-aterinfor-tjansteansvar-utredning::HD01JuU40": {
@@ -670,6 +921,11 @@
         "stage": "definitive",
         "confidence": "high",
         "reason": "Riksdagen antar prop. 2025/26:217 'Ett utökat straffrättsligt tjänstemannaansvar' med ett nytt brott, 'missbruk av offentlig ställning', och skärpt minimistraff för grovt tjänstefel. Det genomför det utvidgade tjänstemannaansvar som utredningen skulle föreslå."
+      },
+      "haiku": {
+        "label": "match",
+        "confidence": "medium",
+        "reason": "Justice committee report on Prop. 2025/26:217 'Ett utökat straffrättsligt tjänstemannaansvar', which the Riksdag adopts. It creates a new offence of abuse of public office covering any public service or activity and raises the minimum penalty for gross dereliction of duty. This implements the goal of stronger action against tjänstefel, though the bill is downstream of the inquiry the promise calls for."
       }
     }
   }
