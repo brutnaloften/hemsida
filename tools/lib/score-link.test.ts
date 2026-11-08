@@ -125,6 +125,31 @@ describe('linkPromise', () => {
     const second = linkPromise(promise, first.file, s, docs, new Set(), opts);
     expect(second.changed).toBe(false);
     expect(second.file).toBe(first.file);
+    expect(second.report).toEqual(first.report);
+  });
+
+  it('does not count score-only entries from earlier runs as keyword candidates', () => {
+    const prior = linkPromise(promise, undefined, scores({ A: 0.9 }), docs, new Set(), {
+      ...opts,
+      runName: 'old',
+    });
+    const r = linkPromise(promise, prior.file, scores({ A: 0.9, B: 0.1 }), docs, new Set(), opts);
+    expect(r.report).toMatchObject({ keyword_total: 0, high_in_keywords: 0 });
+    expect(r.report.high_missed).toEqual([{ dok_id: 'A', score: 0.9 }]);
+  });
+
+  it('adds the run label only to entries at or above the threshold', () => {
+    const r = linkPromise(
+      promise,
+      existingFile(['A', 'D']),
+      scores({ A: 0.8, D: 0.2 }),
+      docs,
+      new Set(),
+      opts,
+    );
+    expect(r.file.candidates[0]!.found_by).toContain('score:r1');
+    expect(r.file.candidates[1]!.found_by).toEqual(['keyword:x']);
+    expect(r.file.candidates[1]!.relevance).toBe(0.2);
   });
 
   it('reports no change and no file content when nothing scores high', () => {

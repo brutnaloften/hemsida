@@ -118,7 +118,11 @@ export function mergeCandidates(
     b.score - a.score || b.datum.localeCompare(a.datum);
   const before = existing?.candidates ?? [];
   // Existing entries are never reordered or evicted; new ones only fill free slots.
-  const free = Math.max(0, MAX_CANDIDATES - before.length);
+  // Score-only entries (found by a scoring run, see tools/link-scores.ts) do not use up slots.
+  const free = Math.max(
+    0,
+    MAX_CANDIDATES - before.filter((c) => c.found_by.some((l) => !l.startsWith('score:'))).length,
+  );
   const added = additions.sort(rank).slice(0, free);
   const candidates = [...before, ...added];
 

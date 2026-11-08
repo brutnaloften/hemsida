@@ -1,5 +1,5 @@
 /**
- * Link a scoring run's results to riksdag-candidates files (hemsida-4np.19).
+ * Link a scoring run's results to riksdag-candidates files.
  *
  * Input: `tools/out/runs/<name>/results.json` (document -> promise -> best chunk
  * score) plus document metadata from the ingest store. Output: for each promise,
@@ -35,8 +35,15 @@ export const resultsFileSchema = z.object({
 });
 export type ResultsFile = z.infer<typeof resultsFileSchema>;
 
+const SCORE_PREFIX = 'score:';
+
 export function scoreLabel(runName: string): string {
-  return `score:${runName}`;
+  return `${SCORE_PREFIX}${runName}`;
+}
+
+/** An entry is a keyword candidate when something other than a scoring run found it. */
+export function isKeywordCandidate(c: CandidateDocument): boolean {
+  return c.found_by.some((l) => !l.startsWith(SCORE_PREFIX));
 }
 
 export interface LinkOptions {
@@ -122,6 +129,10 @@ export function linkPromise(
   const label = scoreLabel(opts.runName);
   const before = existing?.candidates ?? [];
   const known = new Set(before.map((c) => c.dok_id));
+  const keywordIds = new Set(before.filter(isKeywordCandidate).map((c) => c.dok_id));
+  const keywordTotal = keywordIds.size;
+  // Score-only entries this run already added (a re-run), which use up top-k slots.
+  const ownScoreOnly = before.filter((c) => !isKeywordCandidate(c) && c.found_by.includes(label));
 
   const highAll = [...scoresByDoc.entries()]
     .filter(([, s]) => s >= opts.threshold)
@@ -130,28 +141,30 @@ export function linkPromise(
   const report: PromiseReport = {
     promise_id: promise.id,
     high: highAll.length,
-    high_in_keywords: highAll.filter(([id]) => known.has(id)).length,
+    high_in_keywords: highAll.filter(([id]) => keywordIds.has(id)).length,
     high_missed: [],
     keyword_low: [],
     keyword_unscored: 0,
-    keyword_total: before.length,
+    keyword_total: keywordTotal,
     added: 0,
     skipped_rejected: 0,
     skipped_unknown: 0,
   };
   for (const c of before) {
+    if (!isKeywordCandidate(c)) continue;
     const s = scoresByDoc.get(c.dok_id);
     if (s === undefined) report.keyword_unscored++;
     else if (s < opts.threshold) report.keyword_low.push({ dok_id: c.dok_id, score: round(s) });
   }
 
   let changed = false;
-  // Annotate existing entries (additive only).
+  // Annotate existing entries (additive only). The run label marks entries at or above the threshold.
   const annotated = before.map((c) => {
     const s = scoresByDoc.get(c.dok_id);
     if (s === undefined) return c;
-    const relevance = c.found_by.includes(label) ? (c.relevance ?? round(s)) : round(s);
-    const found_by = c.found_by.includes(label) ? c.found_by : [...c.found_by, label];
+    const hasLabel = c.found_by.includes(label);
+    const relevance = hasLabel ? (c.relevance ?? round(s)) : round(s);
+    const found_by = hasLabel || s < opts.threshold ? c.found_by : [...c.found_by, label];
     if (relevance === c.relevance && found_by === c.found_by) return c;
     changed = true;
     return { ...c, found_by, relevance };
@@ -159,8 +172,9 @@ export function linkPromise(
 
   const additions: CandidateDocument[] = [];
   for (const [id, s] of highAll) {
-    if (known.has(id)) continue;
+    if (keywordIds.has(id)) continue;
     report.high_missed.push({ dok_id: id, score: round(s) });
+    if (known.has(id)) continue; // a score-only entry already in the file
     if (rejected.has(rejectedKey(promise.id, id))) {
       report.skipped_rejected++;
       continue;
@@ -170,9 +184,11 @@ export function linkPromise(
       report.skipped_unknown++;
       continue;
     }
-    if (additions.length < opts.topK) additions.push(toScoredCandidate(doc, label, s));
+    if (ownScoreOnly.length + additions.length < opts.topK) {
+      additions.push(toScoredCandidate(doc, label, s));
+    }
   }
-  report.added = additions.length;
+  report.added = ownScoreOnly.length + additions.length;
   if (additions.length > 0) changed = true;
 
   if (!changed) {

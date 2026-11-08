@@ -17,6 +17,7 @@ import { existsSync, readdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
+import { z } from 'zod';
 import { loadJson, writeJson } from './lib/json.ts';
 import { candidateFileSchema, type SearchPromise } from './lib/riksdag-candidates.ts';
 import { defaultStorePath, loadStore } from './lib/riksdag-ingest.ts';
@@ -79,19 +80,22 @@ const byPromise = scoresByPromise(resultsFile.results);
 const today = new Date().toISOString().slice(0, 10);
 
 const promiseDir = resolve(termDir, 'promises');
-let promises: SearchPromise[] = readdirSync(promiseDir)
+const promiseFiles = readdirSync(promiseDir)
   .filter((f) => f.endsWith('.json'))
-  .sort()
-  .map((f) => loadJson(resolve(promiseDir, f)) as { id: string; term: string })
+  .sort();
+const promiseRowSchema = z.object({ id: z.string().min(1), term: z.string().min(1) });
+const allPromises = promiseFiles.map((f) =>
+  promiseRowSchema.parse(loadJson(resolve(promiseDir, f))),
+);
+const knownIds = new Set(allPromises.map((p) => p.id));
+let promises: SearchPromise[] = allPromises
   .filter((p) => byPromise.has(p.id))
   .map((p) => ({ id: p.id, term: p.term, keywords: [] }));
 if (values.promise) {
   promises = promises.filter((p) => p.id === values.promise);
   if (promises.length === 0) throw new Error(`No scored promise with id ${values.promise}`);
 }
-const unknownPromises = [...byPromise.keys()].filter(
-  (id) => !readdirSync(promiseDir).includes(`${id}.json`),
-);
+const unknownPromises = [...byPromise.keys()].filter((id) => !knownIds.has(id));
 if (unknownPromises.length > 0) {
   console.error(`${unknownPromises.length} scored promise ids have no promise file; ignored.`);
 }
