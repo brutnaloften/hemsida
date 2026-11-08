@@ -22,6 +22,7 @@ Bead `hemsida-4np.20`. For someone who helps backfill the Riksdag evidence on th
 - Node 24 (what CI uses; the tools run with `--experimental-strip-types`), pnpm (version pinned in `package.json`, via corepack) and `git`.
 - `gh` logged in (`gh auth login`). The cache tool was written against **gh 2.4.0, the minimum**: it uses `gh api --paginate`, `gh release download --pattern ... --dir` and `gh release create`. Newer versions work too. Check with `gh --version`.
 - `tar` and `zstd` on the PATH.
+- Fetch caches only with `tools/cache-archive.ts` from a checkout that includes the fix for non-ASCII (for example `ö`) file names in `riksdag-text` archives; pull `main` before step 1 (the fix is landing there shortly).
 - Claude Code installed and logged in with the subscription (`claude login`). Check that `echo "${ANTHROPIC_API_KEY:+set}"` prints nothing.
 - About 3 GB of disk (the text cache is 2.5 GB unpacked).
 
@@ -57,40 +58,40 @@ Scorer kinds: `jev` needs a `JEV_TOKEN` (from the maintainer; about $48 for the 
 node -e '
 const fs = require("fs");
 const c = JSON.parse(fs.readFileSync("tools/score-configs/tido-corpus-v1.json", "utf8"));
-c.name = "tido-corpus-haiku-v1";
+c.name = "tido-corpus-claude-v1";
 c.scorer = { kind: "claude", model: "claude-haiku-5-5" };
-c.budget = { max_cost_usd: 10, usd_per_million_tokens: 0.3 };
-fs.writeFileSync("tools/score-configs/tido-corpus-haiku-v1.json", JSON.stringify(c, null, 2) + "\n");'
+c.budget = { max_cost_usd: 10, usd_per_million_tokens: 0.3 }; // nominal; set the real cap with --max-cost
+fs.writeFileSync("tools/score-configs/tido-corpus-claude-v1.json", JSON.stringify(c, null, 2) + "\n");'
 ```
 
-For linking (maintainer, after step 4), copy `tools/link-configs/eval-v1.json` the same way and set `inputs.pairs` to `{ "kind": "candidates", "min_relevance": 0.5, "max_per_promise": 5 }` and `inputs.promises.id_prefix` to `tido-` (fields: `docs/link-harness.md`). Candidate-mode linking is not part of a helper's slice.
+For linking (maintainer, after step 4), copy `tools/link-configs/eval-v1.json` the same way and set `inputs.pairs` to `{ "kind": "candidates", "min_relevance": 0.5, "max_per_promise": 5 }` and `inputs.promises.id_prefix` to `tido-`, and give it a new `name` (it names the output directory under `tools/out/link-runs/`) (fields: `docs/link-harness.md`). Candidate-mode linking is not part of a helper's slice.
 
 ## 3. Score a slice
 
 Always dry-run first (no network, no login):
 
 ```sh
-pnpm score tools/score-configs/tido-corpus-haiku-v1.json --shard 2/5 --dry-run
+pnpm score tools/score-configs/tido-corpus-claude-v1.json --shard 2/20 --dry-run
 ```
 
-It prints the documents in the shard, requests, how many are already cached and the estimated cost; only uncached requests are sent. Shards are `i/n` (1-based) and disjoint: a document's shard depends only on its id, so the maintainer can hand `1/5` to `5/5` to five people with no overlap and no coordination. Then the real run:
+It prints the documents in the shard, requests, how many are already cached and the estimated cost; only uncached requests are sent. Shards are `i/n` (1-based) and disjoint: a document's shard depends only on its id, so the maintainer can hand `1/20` to `20/20` to as many people as there are slices with no overlap and no coordination. Then the real run:
 
 ```sh
-pnpm score tools/score-configs/tido-corpus-haiku-v1.json --shard 2/5 --concurrency 4
+pnpm score tools/score-configs/tido-corpus-claude-v1.json --shard 2/20 --concurrency 4
 ```
 
-- Output goes to `tools/out/runs/<name>-shard-2-of-5/`; results land in `tools/out/score-cache/`. `--max-cost <usd>` overrides the config cap.
-- **Interrupted or stopped runs resume**: run the same command again; finished requests are cache hits. A `budget_exceeded` stop (exit 1) resumes after raising `--max-cost`.
+- Output goes to `tools/out/runs/<name>-shard-2-of-20/`; results land in `tools/out/score-cache/`. Set `--max-cost <usd>` from the dry-run estimate plus about 50 percent headroom (the config cap of 10 is only a default).
+- **Interrupted or stopped runs resume**: run the same command again; finished requests are cache hits. **The budget cap is per run**, not cumulative (spend restarts at 0 each run), so every restart gets a fresh cap. A `budget_exceeded` stop (exit 1) means the estimate was too low: report it to the maintainer instead of restarting in a loop.
 - **Rate limits**: if requests fail with rate-limit or usage-limit errors, stop; do not loop. The window is per account and more concurrency does not help. Wait for the reset and re-run the same command. Partial progress is fine, the delta in step 5 contains what is done.
-- An unsharded whole-corpus run holds every document in memory (the `score` script sets a 12 GB heap); use shards.
+- An unsharded whole-corpus run holds every document in memory (the `score` script sets a 12 GB heap, so it needs a machine with that much free RAM); use shards.
 
 ## 4. Link scores to candidates (maintainer)
 
-`tools/link-scores.ts` reads one run's `results.json` and refuses an incomplete run, so a shard run alone is not enough. To link the whole corpus: `fetch score-cache` (everyone's deltas), run the **unsharded** config with `--dry-run` (the uncached request count must be 0, so the real run costs nothing), run it for real to produce `results.json`, then:
+`tools/link-scores.ts` reads one run's `results.json` and refuses an incomplete run, so a shard run alone is not enough. To link the whole corpus: `fetch score-cache` (everyone's deltas), run the **unsharded** config (needs a machine with room for the 12 GB heap) with `--dry-run` (the uncached request count must be 0, so the real run costs nothing), run it for real to produce `results.json`, then:
 
 ```sh
-node --experimental-strip-types tools/link-scores.ts --run tido-corpus-haiku-v1 --dry-run
-node --experimental-strip-types tools/link-scores.ts --run tido-corpus-haiku-v1
+node --experimental-strip-types tools/link-scores.ts --run tido-corpus-claude-v1 --dry-run
+node --experimental-strip-types tools/link-scores.ts --run tido-corpus-claude-v1
 ```
 
 This appends score hits (defaults `--threshold 0.55 --top-k 10`) to `src/data/2022-2026/riksdag-candidates/*.json` and writes `link-report.json` under the run directory (recall against the keyword candidates; details in `docs/riksdag-linking.md`, step 5b). A helper who only scored a slice stops at step 5.
