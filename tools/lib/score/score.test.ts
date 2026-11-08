@@ -256,6 +256,14 @@ describe('scorers', () => {
     expect(scorerFor('jev', 'jev-latest', true, {}).kind).toBe('jev');
     expect(() => scorerFor('jev', 'jev-latest', false, {})).toThrow(/JEV_TOKEN/);
   });
+  it('claude scorer refuses to run with a console API key set (it bills the subscription login, not the key)', () => {
+    expect(() => createScorer('claude', 'haiku', { ANTHROPIC_API_KEY: 'sk-x' })).toThrow(
+      /ANTHROPIC_API_KEY/,
+    );
+    expect(createScorer('claude', 'haiku', {}).kind).toBe('claude');
+    // A dry run needs no check and never scores.
+    expect(scorerFor('claude', 'haiku', true, { ANTHROPIC_API_KEY: 'sk-x' }).kind).toBe('claude');
+  });
 });
 
 describe('report', () => {
