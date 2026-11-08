@@ -22,7 +22,7 @@ Bead `hemsida-4np.20`. For someone who helps backfill the Riksdag evidence on th
 - Node 24 (what CI uses; the tools run with `--experimental-strip-types`), pnpm (version pinned in `package.json`, via corepack) and `git`.
 - `gh` logged in (`gh auth login`). The cache tool was written against **gh 2.4.0, the minimum**: it uses `gh api --paginate`, `gh release download --pattern ... --dir` and `gh release create`. Newer versions work too. Check with `gh --version`.
 - `tar` and `zstd` on the PATH.
-- Fetch caches only with `tools/cache-archive.ts` from a checkout that includes the fix for non-ASCII (for example `ö`) file names in `riksdag-text` archives; pull `main` before step 1 (the fix is landing there shortly).
+- Fetch caches only with `tools/cache-archive.ts` from a checkout that includes the fix for non-ASCII (for example `ö`) file names in `riksdag-text` archives; pull `main` before step 1.
 - Claude Code installed and logged in with the subscription (`claude login`). Check that `echo "${ANTHROPIC_API_KEY:+set}"` prints nothing.
 - About 3 GB of disk (the text cache is 2.5 GB unpacked).
 
@@ -80,7 +80,7 @@ It prints the documents in the shard, requests, how many are already cached and 
 pnpm score tools/score-configs/tido-corpus-claude-v1.json --shard 2/20 --concurrency 4
 ```
 
-- Output goes to `tools/out/runs/<name>-shard-2-of-20/`; results land in `tools/out/score-cache/`. Set `--max-cost <usd>` from the dry-run estimate plus about 50 percent headroom (the config cap of 10 is only a default).
+- Output goes to `tools/out/runs/<name>-shard-2-of-20/`; results land in `tools/out/score-cache/`. Set `--max-cost <usd>` from the dry-run estimate times 2-3 headroom (the estimate counts only prompt tokens, so real spend runs higher) (the config cap of 10 is only a default).
 - **Interrupted or stopped runs resume**: run the same command again; finished requests are cache hits. **The budget cap is per run**, not cumulative (spend restarts at 0 each run), so every restart gets a fresh cap. A `budget_exceeded` stop (exit 1) means the estimate was too low: report it to the maintainer instead of restarting in a loop.
 - **Rate limits**: if requests fail with rate-limit or usage-limit errors, stop; do not loop. The window is per account and more concurrency does not help. Wait for the reset and re-run the same command. Partial progress is fine, the delta in step 5 contains what is done.
 - An unsharded whole-corpus run holds every document in memory (the `score` script sets a 12 GB heap, so it needs a machine with that much free RAM); use shards.
