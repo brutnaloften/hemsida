@@ -1,6 +1,6 @@
 {
   "name": "haiku-eval-v1",
-  "scorer": { "kind": "claude", "model": "haiku" },
+  "scorer": { "kind": "claude", "model": "claude-haiku-5-5" },
   "question": {
     "template_version": "v1",
     "template": "Beskriver eller genomför dokumentet något som hör till detta vallöfte? Löfte: {title}. {text}"

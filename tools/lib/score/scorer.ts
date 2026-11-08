@@ -3,6 +3,7 @@
  * text with a probability each. Add a provider by implementing `Scorer` and registering it in `createScorer`.
  */
 import { query } from '@anthropic-ai/claude-agent-sdk';
+import { z } from 'zod';
 import { askJev, JevError } from '../jev.ts';
 
 export interface ScoreResult {
@@ -47,6 +48,70 @@ export function createJevScorer(token: string, model: string): Scorer {
   };
 }
 
+/** The parts of an Agent SDK `result` message the scorer reads (structural, so tests need no SDK). */
+export interface ClaudeResult {
+  subtype: string;
+  is_error: boolean;
+  api_error_status?: number | null;
+  result?: string;
+  errors?: string[];
+  structured_output?: unknown;
+  modelUsage: Record<
+    string,
+    {
+      inputTokens: number;
+      outputTokens: number;
+      cacheReadInputTokens: number;
+      cacheCreationInputTokens: number;
+    }
+  >;
+  usage: { input_tokens: number };
+}
+
+/** Positional question keys: promise ids can exceed the 64-character tool-schema property-name limit. */
+const claudeKey = (i: number): string => `q${i}`;
+
+/**
+ * Turn one Agent SDK result into answers keyed by the real question ids. API errors (including prompt too
+ * long) arrive as `subtype: 'success'` with `is_error: true`; only a 400 about length becomes `TooLongError`
+ * (the runner then halves the state), every other failure is a plain error carrying the SDK's message.
+ */
+export function parseClaudeResult(message: ClaudeResult, ids: readonly string[]): ScoreResult {
+  if (message.subtype !== 'success' || message.is_error) {
+    const detail = message.result ?? message.errors?.join('; ') ?? 'no detail';
+    const status = message.api_error_status ?? '-';
+    if (message.api_error_status === 400 && /too long|context|max_tokens/i.test(detail)) {
+      throw new TooLongError(`claude: ${detail}`);
+    }
+    throw new Error(`claude: ${message.subtype} (status ${status}): ${detail}`);
+  }
+  const shape = z.object(
+    Object.fromEntries(ids.map((_, i) => [claudeKey(i), z.number().min(0).max(1)])),
+  );
+  const parsed = shape.safeParse(message.structured_output);
+  if (!parsed.success) {
+    throw new Error(`claude: structured_output does not match the schema: ${parsed.error.message}`);
+  }
+  const byKey: Record<string, number> = parsed.data;
+  const answers = Object.fromEntries(ids.map((id, i) => [id, byKey[claudeKey(i)]!]));
+  // `usage.input_tokens` alone drastically undercounts once prompt caching kicks in (seen as low as single
+  // digits in testing) because most of the prompt lands in cache_read/cache_creation instead; sum every
+  // category of every model so the harness's cost accounting reflects the real request size.
+  const usages = Object.values(message.modelUsage);
+  const tokens = usages.length
+    ? usages.reduce(
+        (sum, u) =>
+          sum +
+          u.inputTokens +
+          u.outputTokens +
+          u.cacheReadInputTokens +
+          u.cacheCreationInputTokens,
+        0,
+      )
+    : message.usage.input_tokens;
+  return { answers, input_tokens: tokens };
+}
+
 /**
  * Runs the question through a local Claude Code login (`claude login`, a Pro/Max subscription) via the
  * Claude Agent SDK, instead of a billed API key. `model` is any Agent SDK model alias or id ('haiku',
@@ -59,12 +124,9 @@ export function createClaudeScorer(model: string): Scorer {
   return {
     kind: 'claude',
     async score(state, questions) {
-      // Promise ids can exceed the Anthropic tool-schema property-name limit (64 chars, e.g.
-      // "tido-utredning-utvidgade-mojligheter-aterkalla-uppehallstillstand" is 65), so the schema uses
-      // short positional keys and we map back to the real ids ourselves.
-      const ids = Object.entries(questions);
-      const keyOf = (i: number) => `q${i}`;
-      const lines = ids.map(([, q], i) => `- ${keyOf(i)}: ${q}`);
+      const entries = Object.entries(questions);
+      const ids = entries.map(([id]) => id);
+      const lines = entries.map(([, q], i) => `- ${claudeKey(i)}: ${q}`);
       const prompt =
         `Dokumenttext:\n\n${state}\n\n` +
         `Besvara varje fråga nedan med sannolikheten (0 till 1) att svaret är ja, baserat enbart på texten ovan.\n\n` +
@@ -72,9 +134,9 @@ export function createClaudeScorer(model: string): Scorer {
       const schema = {
         type: 'object',
         properties: Object.fromEntries(
-          ids.map((_, i) => [keyOf(i), { type: 'number', minimum: 0, maximum: 1 }]),
+          ids.map((_, i) => [claudeKey(i), { type: 'number', minimum: 0, maximum: 1 }]),
         ),
-        required: ids.map((_, i) => keyOf(i)),
+        required: ids.map((_, i) => claudeKey(i)),
         additionalProperties: false,
       };
 
@@ -83,7 +145,7 @@ export function createClaudeScorer(model: string): Scorer {
         options: {
           model,
           settingSources: [], // no CLAUDE.md / project settings bleeding into the scoring prompt
-          allowedTools: [], // pure completion, no tool use
+          tools: [], // pure completion: no built-in tools sent or callable
           maxTurns: 1,
           thinking: { type: 'disabled' },
           systemPrompt:
@@ -92,31 +154,7 @@ export function createClaudeScorer(model: string): Scorer {
         },
       })) {
         if (message.type !== 'result') continue;
-        if (message.subtype !== 'success') {
-          if (
-            message.subtype === 'error_max_turns' ||
-            message.subtype === 'error_during_execution'
-          ) {
-            throw new TooLongError(`claude: ${message.subtype}`);
-          }
-          throw new Error(`claude: ${message.subtype}`);
-        }
-        const out = message.structured_output;
-        if (!out || typeof out !== 'object') throw new Error('claude: no structured_output');
-        const byKey = out as Record<string, number>;
-        const answers = Object.fromEntries(ids.map(([id], i) => [id, byKey[keyOf(i)]!]));
-        // `usage.input_tokens` alone drastically undercounts once prompt caching kicks in (seen as low
-        // as single digits in testing) because most of the prompt lands in cache_read/cache_creation
-        // instead; sum every category `modelUsage` tracks so the harness's cost/budget accounting (which
-        // multiplies this by `budget.usd_per_million_tokens`) reflects the real request size.
-        const usage = Object.values(message.modelUsage)[0];
-        const tokens = usage
-          ? usage.inputTokens +
-            usage.outputTokens +
-            usage.cacheReadInputTokens +
-            usage.cacheCreationInputTokens
-          : message.usage.input_tokens;
-        return { answers, input_tokens: tokens };
+        return parseClaudeResult(message, ids);
       }
       throw new Error('claude: query() ended without a result message');
     },
@@ -164,9 +202,9 @@ export function createScorer(
     return createJevScorer(token, model);
   }
   if (kind === 'claude') {
-    if (env.ANTHROPIC_API_KEY) {
+    if (env.ANTHROPIC_API_KEY || env.ANTHROPIC_AUTH_TOKEN) {
       throw new Error(
-        'ANTHROPIC_API_KEY is set; the claude scorer runs through the local subscription login ' +
+        'ANTHROPIC_API_KEY or ANTHROPIC_AUTH_TOKEN is set; the claude scorer runs through the local subscription login ' +
           '(claude login), not a billed API key — unset it before running',
       );
     }
