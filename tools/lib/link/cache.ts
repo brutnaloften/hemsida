@@ -7,7 +7,7 @@ import { judgementSchema, type Judgement } from './judge.ts';
 
 export interface LinkCacheEntry {
   judgement: Judgement;
-  input_tokens: number;
+  tokens: number;
 }
 export interface LinkCache {
   has(key: string): boolean;
@@ -15,7 +15,17 @@ export interface LinkCache {
   put(key: string, entry: LinkCacheEntry): void;
 }
 
-const entrySchema = z.strictObject({ judgement: judgementSchema, input_tokens: z.number() });
+/** Entries written before the rename carry `input_tokens`; read them as `tokens`. */
+const entrySchema = z.preprocess(
+  (v) => {
+    if (v && typeof v === 'object' && 'input_tokens' in v && !('tokens' in v)) {
+      const { input_tokens, ...rest } = v as Record<string, unknown>;
+      return { ...rest, tokens: input_tokens };
+    }
+    return v;
+  },
+  z.strictObject({ judgement: judgementSchema, tokens: z.number() }),
+);
 
 export function createFileCache(dir: string): LinkCache {
   mkdirSync(dir, { recursive: true });

@@ -8,7 +8,7 @@ import { query } from '@anthropic-ai/claude-agent-sdk';
 import type Anthropic from '@anthropic-ai/sdk';
 import { z } from 'zod';
 import { evalLabelSchema, evalStageSchema } from '../../../src/schema/eval.ts';
-import { createClient } from '../claude.ts';
+import { createClient, isTransientApiError } from '../claude.ts';
 import type { ClaudeResult } from '../score/scorer.ts';
 import { confidenceSchema } from './config.ts';
 
@@ -41,7 +41,29 @@ export interface JudgeInput {
 }
 export interface JudgeResult {
   judgement: Judgement;
-  input_tokens: number;
+  /** All tokens of the call (input, output and cache), for the estimate-based guard and reporting. */
+  tokens: number;
+  /** Cost the provider reported (Agent SDK costUSD); absent when it does not, then the flat price applies. */
+  cost_usd?: number;
+}
+
+/** An error from a judge call carrying the HTTP status when known, so the runner can tell transient ones. */
+export class JudgeError extends Error {
+  status: number | null | undefined;
+  constructor(message: string, status?: number | null) {
+    super(message);
+    this.name = 'JudgeError';
+    this.status = status;
+  }
+}
+
+/** Rate limits, overload and server errors: skip the request and go on, a re-run retries it. */
+export function isTransientJudgeError(err: unknown): boolean {
+  if (isTransientApiError(err)) return true;
+  if (err instanceof JudgeError && typeof err.status === 'number') {
+    return err.status === 429 || err.status === 529 || err.status >= 500;
+  }
+  return false;
 }
 export interface Judge {
   kind: string;
@@ -68,8 +90,9 @@ export type ClaudeJudgeResult = Pick<
 export function parseClaudeJudgement(message: ClaudeJudgeResult): JudgeResult {
   if (message.subtype !== 'success' || message.is_error) {
     const detail = message.result ?? message.errors?.join('; ') ?? 'no detail';
-    throw new Error(
+    throw new JudgeError(
       `claude: ${message.subtype} (status ${message.api_error_status ?? '-'}): ${detail}`,
+      message.api_error_status,
     );
   }
   const parsed = judgementSchema.safeParse(message.structured_output);
@@ -85,7 +108,12 @@ export function parseClaudeJudgement(message: ClaudeJudgeResult): JudgeResult {
         0,
       )
     : message.usage.input_tokens;
-  return { judgement: parsed.data, input_tokens: tokens };
+  const costs = usages.map((u) => (u as { costUSD?: unknown }).costUSD);
+  const cost_usd =
+    costs.length && costs.every((c) => typeof c === 'number')
+      ? (costs as number[]).reduce((a, b) => a + b, 0)
+      : undefined;
+  return { judgement: parsed.data, tokens, ...(cost_usd === undefined ? {} : { cost_usd }) };
 }
 
 /**
@@ -135,7 +163,7 @@ export function parseApiJudgement(message: {
   const u = message.usage;
   return {
     judgement: parsed.data,
-    input_tokens:
+    tokens:
       u.input_tokens +
       u.output_tokens +
       (u.cache_read_input_tokens ?? 0) +
@@ -206,7 +234,7 @@ export function createFakeJudge(charsPerToken = 3): Judge {
           confidence: share >= 0.5 || share < 0.1 ? 'high' : 'medium',
           reason: `fake judge: ${Math.round(share * 100)}% of the promise words occur in the evidence`,
         },
-        input_tokens: Math.ceil(chars / charsPerToken),
+        tokens: Math.ceil(chars / charsPerToken),
       };
     },
   };
