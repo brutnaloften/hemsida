@@ -1,5 +1,5 @@
 import { execFileSync, spawnSync } from 'node:child_process';
-import { mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
@@ -19,9 +19,11 @@ import {
   scoreCacheCoverageFrom,
   sha256File,
   type CacheManifest,
+  ZSTD_READ,
 } from './cache-archive.ts';
 
 const hasTar = spawnSync('tar', ['--version']).status === 0;
+const hasZstd = spawnSync('zstd', ['--version']).status === 0;
 const hash = 'a'.repeat(64);
 const textCoverage = {
   kind: 'riksdag-text',
@@ -227,14 +229,14 @@ describe('verification', () => {
       mkdirSync(resolve(d, 'src'));
       writeFileSync(resolve(d, 'src', 'A1.xml'), 'ok');
       symlinkSync('/etc/hostname', resolve(d, 'src', 'B2.xml'));
-      const out = execFileSync(
-        'tar',
-        ['-cvf', resolve(d, 'x.tar'), '-C', resolve(d, 'src'), 'A1.xml', 'B2.xml'],
-        {
-          encoding: 'utf8',
-        },
-      );
-      expect(out).toContain('B2.xml');
+      execFileSync('tar', [
+        '-cf',
+        resolve(d, 'x.tar'),
+        '-C',
+        resolve(d, 'src'),
+        'A1.xml',
+        'B2.xml',
+      ]);
       const { entries, unparsed } = parseTarListing(
         execFileSync('tar', ['-tvf', resolve(d, 'x.tar')], { encoding: 'utf8' }),
       );
@@ -246,6 +248,76 @@ describe('verification', () => {
       expect(memberProblems(parseCacheManifest(manifest()), entries)).toEqual([
         'B2.xml is not a regular file (type l)',
       ]);
+    },
+  );
+  it('parses GNU tar and bsdtar listings in any locale, decoding escaped names', () => {
+    const listing = [
+      // GNU tar
+      '-rw-r--r-- user/wheel       3 2026-11-08 19:11 A1.xml',
+      'lrwxr-xr-x user/wheel       0 2026-11-08 19:11 B2.xml -> /etc/hosts',
+      'hrw-r--r-- user/wheel       0 2026-11-08 19:11 C3.xml link to A1.xml',
+      '-rw-r--r-- user/wheel       2 2026-11-08 19:11 HA01F\\303\\266U1.xml',
+      // bsdtar (macOS), C and Swedish locale, recent and old files
+      '-rw-r--r--  0 user  wheel       3 Nov  8 20:11 A1.xml',
+      'lrwxr-xr-x  0 user  wheel       0 nov.  8 20:11 B2.xml -> /etc/hosts',
+      'hrw-r--r--  0 user  wheel       0 Nov  8 20:11 C3.xml link to A1.xml',
+      '-rw-r--r--  0 user  wheel       2 Nov  8 20:11 HA01F\\303\\266U1.xml',
+      '-rw-r--r--  0 user  wheel       2 jan.  1  2019 HA01FöU2.xml',
+      '-rw-r--r--  0 user  wheel       2 Jan  1  2019 a\\\\303.xml',
+    ].join('\n');
+    const { entries, unparsed } = parseTarListing(listing);
+    expect(unparsed).toEqual([]);
+    expect(entries.map((e) => [e.name, e.type])).toEqual([
+      ['A1.xml', '-'],
+      ['B2.xml', 'l'],
+      ['C3.xml', 'h'],
+      ['HA01FöU1.xml', '-'],
+      ['A1.xml', '-'],
+      ['B2.xml', 'l'],
+      ['C3.xml', 'h'],
+      ['HA01FöU1.xml', '-'],
+      ['HA01FöU2.xml', '-'],
+      // An escaped backslash stays a backslash and is not read as an octal escape.
+      ['a\\303.xml', '-'],
+    ]);
+  });
+  it.skipIf(!hasTar || !hasZstd)(
+    'lists and unpacks a .tar.zst with the platform tar, also without a UTF-8 locale',
+    () => {
+      const d = tmp();
+      const files = ['A1.xml', 'HA01FöU1.xml'];
+      mkdirSync(resolve(d, 'src'));
+      for (const f of files) writeFileSync(resolve(d, 'src', f), f);
+      const archive = resolve(d, 'x.tar.zst');
+      execFileSync('tar', [
+        '--use-compress-program',
+        'zstd -3',
+        '-cf',
+        archive,
+        '-C',
+        resolve(d, 'src'),
+        ...files,
+      ]);
+      const env = { ...process.env, LC_ALL: 'C', LANG: 'C' };
+      const { entries, unparsed } = parseTarListing(
+        execFileSync('tar', ['--use-compress-program', ZSTD_READ, '-tvf', archive], {
+          encoding: 'utf8',
+          env,
+        }),
+      );
+      expect(unparsed).toEqual([]);
+      // bsdtar on macOS stores `ö` decomposed (NFD) although the file name on disk is NFC, so compare normalised;
+      // an undecoded `\303\266` escape would still fail here.
+      expect(entries.map((e) => [e.name.normalize('NFC'), e.type])).toEqual(
+        files.map((f) => [f, '-']),
+      );
+      mkdirSync(resolve(d, 'out'));
+      execFileSync(
+        'tar',
+        ['--use-compress-program', ZSTD_READ, '-xf', archive, '-C', resolve(d, 'out')],
+        { env },
+      );
+      expect(readFileSync(resolve(d, 'out', 'HA01FöU1.xml'), 'utf8')).toBe('HA01FöU1.xml');
     },
   );
 });

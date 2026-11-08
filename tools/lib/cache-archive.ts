@@ -269,19 +269,62 @@ export interface TarEntry {
   name: string;
 }
 
-/** Parse `tar -tvf` output (GNU tar). Symlinks and hard links keep their type; link targets are dropped. */
+/**
+ * `tar --use-compress-program` value for reading a `.tar.zst`. GNU tar appends `-d` itself when reading; bsdtar
+ * (macOS) runs the program exactly as given, so a bare `zstd` would compress the archive a second time and tar
+ * fails. Under GNU tar this becomes `zstd -d -d`, which still decompresses.
+ */
+export const ZSTD_READ = 'zstd -d';
+
+// GNU tar: `-rw-r--r-- user/group 952168 2026-11-05 14:33 HEB49.xml`
+const GNU_TAR_LINE = /^(\S)\S{9}\s+\S+\s+\d+\s+\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?\s+(.*)$/;
+// bsdtar (macOS): `-rw-r--r--  0 user group 952168 Nov  5 14:33 HEB49.xml` (a year instead of the time for old files)
+const BSD_TAR_LINE =
+  /^(\S)\S{9}\s+\d+\s+\S+\s+\S+\s+\d+\s+\S+\s+\d{1,2}\s+(?:\d{1,2}:\d{2}|\d{4})\s+(.*)$/;
+
+/**
+ * Undo tar's escaping of member names. Without a UTF-8 locale both GNU tar and bsdtar print non-ASCII bytes as
+ * octal escapes (`HA01F\303\266U1.xml` for `HA01FöU1.xml`) and a backslash as `\\`. Decoding at the byte level
+ * makes the listing independent of the caller's locale; any other escape leaves a backslash in the name, which
+ * no manifest file name allows.
+ */
+function unescapeTarName(name: string): string {
+  if (!name.includes('\\')) return name;
+  const src = Buffer.from(name, 'utf8');
+  const out: number[] = [];
+  const isOctal = (b: number | undefined) => b !== undefined && b >= 0x30 && b <= 0x37;
+  for (let i = 0; i < src.length; i++) {
+    if (src[i] === 0x5c && src[i + 1] === 0x5c) {
+      out.push(0x5c);
+      i++;
+    } else if (
+      src[i] === 0x5c &&
+      src[i + 1]! <= 0x33 &&
+      isOctal(src[i + 1]) &&
+      isOctal(src[i + 2]) &&
+      isOctal(src[i + 3])
+    ) {
+      out.push(parseInt(src.subarray(i + 1, i + 4).toString('latin1'), 8));
+      i += 3;
+    } else out.push(src[i]!);
+  }
+  return Buffer.from(out).toString('utf8');
+}
+
+/**
+ * Parse `tar -tvf` output from GNU tar or bsdtar, in any locale. Symlinks and hard links keep their type; link
+ * targets are dropped.
+ */
 export function parseTarListing(output: string): { entries: TarEntry[]; unparsed: string[] } {
   const entries: TarEntry[] = [];
   const unparsed: string[] = [];
   for (const line of output.split('\n').filter(Boolean)) {
-    const m = /^(\S)\S{9}\s+\S+\s+\d+\s+\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?\s+(.*)$/.exec(
-      line,
-    );
+    const m = GNU_TAR_LINE.exec(line) ?? BSD_TAR_LINE.exec(line);
     if (!m) unparsed.push(line);
     else
       entries.push({
         type: m[1]!,
-        name: m[2]!.replace(/ (?:->|link to) .*$/, '').replace(/^\.\//, ''),
+        name: unescapeTarName(m[2]!.replace(/ (?:->|link to) .*$/, '').replace(/^\.\//, '')),
       });
   }
   return { entries, unparsed };

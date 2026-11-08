@@ -46,6 +46,7 @@ import {
   linkCacheCoverageFrom,
   scoreCacheCoverageFrom,
   sha256File,
+  ZSTD_READ,
 } from './lib/cache-archive.ts';
 import { writeJsonAtomic } from './lib/json.ts';
 import { loadStore } from './lib/riksdag-ingest.ts';
@@ -248,7 +249,7 @@ async function fetchCache(name: CacheName): Promise<void> {
     try {
       const archive = downloadAsset(m.tag, m.archive.file, tmp);
       const listing = parseTarListing(
-        run('tar', ['--use-compress-program', 'zstd', '-tvf', archive]),
+        run('tar', ['--use-compress-program', ZSTD_READ, '-tvf', archive]),
       );
       const problems = [
         ...archiveProblems(m, archive),
@@ -260,7 +261,7 @@ async function fetchCache(name: CacheName): Promise<void> {
       // Unpack aside and move file by file, so an interrupted fetch never leaves a truncated entry in the cache.
       run('tar', [
         '--use-compress-program',
-        'zstd',
+        ZSTD_READ,
         '-xf',
         archive,
         '-C',
