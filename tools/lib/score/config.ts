@@ -9,7 +9,7 @@ export const scoreConfigSchema = z.strictObject({
   /** Run name; the manifest lands in `tools/out/runs/<name>/`. */
   name: z.string().regex(/^[a-z0-9][a-z0-9._-]*$/),
   scorer: z.strictObject({
-    kind: z.enum(['jev', 'fake']),
+    kind: z.enum(['jev', 'fake', 'claude']),
     model: z.string().min(1),
   }),
   question: z.strictObject({

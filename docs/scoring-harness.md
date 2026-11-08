@@ -17,7 +17,7 @@ The dry run prints the plan (documents, chunks, batches per chunk, requests), ho
 ## Config fields (`tools/score-configs/*.json`, unknown keys are errors)
 
 - `name`: run name; output goes to `tools/out/runs/<name>/`.
-- `scorer`: `{ kind: "jev" | "fake", model }`.
+- `scorer`: `{ kind: "jev" | "claude" | "fake", model }`. `claude` runs through a local `claude login` (Pro/Max subscription) via the Claude Agent SDK instead of a billed API key — unset `ANTHROPIC_API_KEY` or it refuses to run (that would silently bill the console key instead of the subscription). `model` is any Agent SDK model alias or id (`"haiku"`, `"claude-haiku-5-5"`, ...); pin a full id in committed configs, since the model string is part of every cache key and an alias silently changes meaning when it moves to a newer model. CI only runs `jev`/`fake`: `claude` needs an interactive subscription login and is noticeably slower and more token-hungry per request (Haiku burns several thousand "thinking" tokens per request even with `thinking: {type: 'disabled'}` in the request — that option doesn't currently seem to take effect through the Agent SDK). See `tools/score-configs/haiku-eval-v1.json`.
 - `question`: `template_version` (bump when the wording changes) and `template` with `{title}` and `{text}`.
 - `inputs.promises`: `term` and `id_prefix` (e.g. `tido-`; empty = all promises of the term).
 - `inputs.documents`: `{ kind: "eval-pairs", pairs_file }` (the distinct documents of an eval pairs file, whose labels feed the report) or `{ kind: "ids", ids, pairs_file? }`.
@@ -34,6 +34,8 @@ If the scorer rejects a request as too long, the runner splits the state in half
 ## Budget behaviour
 
 Before each uncached request the runner checks actual spend plus the estimates of requests in flight plus this request's estimate against `max_cost_usd`. If it would exceed the cap the run stops with `budget_exceeded` (exit code 1) and an explanation; everything completed is already cached, so raising the cap (`--max-cost`) and re-running continues where it stopped. Estimates use `chars_per_token`, so check the dry run against the first real token counts in the manifest and adjust.
+
+For the `claude` scorer there's no real per-token bill (it runs on a subscription login), so `max_cost_usd`/`usd_per_million_tokens` act as a nominal safety cap rather than real billing: `input_tokens` is the sum of every category the Agent SDK's `modelUsage` reports (input, output including thinking, cache read, cache write — plain `usage.input_tokens` alone drastically undercounts once prompt caching kicks in), and `usd_per_million_tokens` is a rough blended rate across those categories (Haiku 5.5 list price is $0.10/1M input vs $0.50/1M output, and output — mostly thinking — is a large share of the total here). The pre-run estimate (and the guard that uses it) counts only prompt characters, while the tokens recorded afterwards include output, thinking and cache, so the guard underestimates what a `claude` run really uses: size runs with the dry run's request count and the observed ~45 s per request per concurrency slot, not its dollar figure. Treat the dollar figure as directional; the real constraint running this scorer at scale is the account's rate-limit window, not money.
 
 ## Output
 

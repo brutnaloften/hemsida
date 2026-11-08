@@ -10,7 +10,15 @@ import { buildReport, type LabelledPair } from './report.ts';
 import { aggregateResults } from './results.ts';
 import { classifyPlan, runPlan } from './runner.ts';
 import { executeRun } from './run.ts';
-import { createFakeScorer, createScorer, scorerFor, type Scorer } from './scorer.ts';
+import {
+  createFakeScorer,
+  createScorer,
+  parseClaudeResult,
+  scorerFor,
+  TooLongError,
+  type ClaudeResult,
+  type Scorer,
+} from './scorer.ts';
 
 const baseConfig = {
   name: 'test-run',
@@ -255,6 +263,72 @@ describe('scorers', () => {
     // A dry run needs no token and never scores.
     expect(scorerFor('jev', 'jev-latest', true, {}).kind).toBe('jev');
     expect(() => scorerFor('jev', 'jev-latest', false, {})).toThrow(/JEV_TOKEN/);
+  });
+  it('claude scorer refuses to run with a console API key set (it bills the subscription login, not the key)', () => {
+    expect(() => createScorer('claude', 'haiku', { ANTHROPIC_API_KEY: 'sk-x' })).toThrow(
+      /ANTHROPIC_API_KEY/,
+    );
+    expect(createScorer('claude', 'haiku', {}).kind).toBe('claude');
+    expect(() => createScorer('claude', 'haiku', { ANTHROPIC_AUTH_TOKEN: 't' })).toThrow(
+      /ANTHROPIC_AUTH_TOKEN/,
+    );
+    // A dry run needs no check and never scores.
+    expect(scorerFor('claude', 'haiku', true, { ANTHROPIC_API_KEY: 'sk-x' }).kind).toBe('claude');
+  });
+  describe('parseClaudeResult', () => {
+    const usage = (n: number) => ({
+      inputTokens: n,
+      outputTokens: n,
+      cacheReadInputTokens: n,
+      cacheCreationInputTokens: n,
+    });
+    const ok = (over: Partial<ClaudeResult> = {}): ClaudeResult => ({
+      subtype: 'success',
+      is_error: false,
+      structured_output: { q0: 0.9, q1: 0.1 },
+      modelUsage: { 'claude-haiku-5-5': usage(10) },
+      usage: { input_tokens: 2 },
+      ...over,
+    });
+    const ids = ['a-very-long-promise-id', 'b'];
+    it('maps positional keys back to ids and sums every token category of every model', () => {
+      expect(parseClaudeResult(ok(), ids)).toEqual({
+        answers: { 'a-very-long-promise-id': 0.9, b: 0.1 },
+        input_tokens: 40,
+      });
+      const two = ok({ modelUsage: { x: usage(1), y: usage(2) } });
+      expect(parseClaudeResult(two, ids).input_tokens).toBe(12);
+      expect(parseClaudeResult(ok({ modelUsage: {} }), ids).input_tokens).toBe(2);
+    });
+    it('treats only a 400 about length as too long; every other failure keeps its message', () => {
+      const failed = (status: number, result: string, subtype = 'success') =>
+        ok({ subtype, is_error: true, api_error_status: status, result });
+      expect(() =>
+        parseClaudeResult(failed(400, 'prompt is too long: 250000 tokens'), ids),
+      ).toThrow(TooLongError);
+      expect(() => parseClaudeResult(failed(529, 'Overloaded'), ids)).toThrow(
+        /status 529.*Overloaded/,
+      );
+      expect(() => parseClaudeResult(failed(400, 'invalid schema'), ids)).not.toThrow(TooLongError);
+      expect(() =>
+        parseClaudeResult(
+          ok({ subtype: 'error_during_execution', is_error: true, errors: ['auth'] }),
+          ids,
+        ),
+      ).toThrow(/error_during_execution.*auth/);
+      expect(() =>
+        parseClaudeResult(ok({ subtype: 'error_max_turns', is_error: true }), ids),
+      ).not.toThrow(TooLongError);
+    });
+    it('rejects structured output that is missing a key or out of range', () => {
+      expect(() => parseClaudeResult(ok({ structured_output: { q0: 0.5 } }), ids)).toThrow(
+        /schema/,
+      );
+      expect(() => parseClaudeResult(ok({ structured_output: { q0: 1.5, q1: 0 } }), ids)).toThrow(
+        /schema/,
+      );
+      expect(() => parseClaudeResult(ok({ structured_output: undefined }), ids)).toThrow(/schema/);
+    });
   });
 });
 

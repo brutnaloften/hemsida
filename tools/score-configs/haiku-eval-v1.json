@@ -1,0 +1,19 @@
+{
+  "name": "haiku-eval-v1",
+  "scorer": { "kind": "claude", "model": "claude-haiku-5-5" },
+  "question": {
+    "template_version": "v1",
+    "template": "Beskriver eller genomför dokumentet något som hör till detta vallöfte? Löfte: {title}. {text}"
+  },
+  "inputs": {
+    "promises": { "term": "2022-2026", "id_prefix": "tido-" },
+    "documents": { "kind": "eval-pairs", "pairs_file": "src/data/2022-2026/eval/pairs.json" }
+  },
+  "chunk": { "max_chars": 40000 },
+  "limits": {
+    "max_request_tokens": 62000,
+    "max_state_plus_question_tokens": 32000,
+    "chars_per_token": 2.8
+  },
+  "budget": { "max_cost_usd": 10, "usd_per_million_tokens": 0.3 }
+}
