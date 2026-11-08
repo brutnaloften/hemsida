@@ -13,8 +13,8 @@ import { formatIssues } from './json.ts';
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 const sha256 = z.string().regex(/^[0-9a-f]{64}$/);
 const TAG_PATTERN = /^cache-[a-z-]+-\d{4}-\d{2}-\d{2}(-\d+)?$/;
-/** Cache entries are flat files with plain names; anything else is rejected before a tar is unpacked. */
-const fileName = z.string().regex(/^[A-Za-z0-9][A-Za-z0-9._-]*$/);
+/** Cache entries are flat files with plain names (letters incl. Swedish å/ä/ö, digits, . _ -); anything else is rejected before a tar is unpacked. */
+const fileName = z.string().regex(/^[\p{L}\p{N}][\p{L}\p{N}._-]*$/u);
 
 export const CACHE_NAMES = ['riksdag-text', 'score-cache', 'link-cache'] as const;
 export type CacheName = (typeof CACHE_NAMES)[number];
