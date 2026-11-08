@@ -35,6 +35,21 @@ export const scoreConfigSchema = z.strictObject({
         ids: z.array(z.string().min(1)).min(1),
         pairs_file: z.string().min(1).optional(),
       }),
+      /**
+       * Every document in the riksdag-text cache, titled from the Riksdag store of `promises.term`. `doktyper`
+       * keeps only those document types; `since` (YYYY-MM-DD) only documents with `datum` on or after it
+       * (incremental runs, e.g. from the riksdag-text watermark). Documents missing from the store have
+       * no type or date, so they are dropped when either filter is set.
+       */
+      z.strictObject({
+        kind: z.literal('cache'),
+        doktyper: z.array(z.string().min(1)).min(1).optional(),
+        since: z
+          .string()
+          .regex(/^\d{4}-\d{2}-\d{2}$/)
+          .optional(),
+        pairs_file: z.string().min(1).optional(),
+      }),
     ]),
   }),
   chunk: z.strictObject({ max_chars: z.number().int().min(2000) }),
