@@ -29,10 +29,10 @@ How a run works (plan, content-addressed cache, budget guard, config fields): `d
 
 Jev numbers: `docs/jev-spike.md`. Haiku numbers were measured on 2026-11-08 in the `hemsida-aah` spike (run manifest and report in `tools/out/runs/haiku-experiment-v1/`, not committed; the results are also kept in the `claude-scorer-spike` beads memory). Rerun `pnpm score tools/score-configs/haiku-eval-v1.json` to reproduce them.
 
-| Scorer                                                                  | AUC   | At threshold 0.5 (tp / fp / fn / tn) | At 0.7          | Cost and time                                                                       |
-| ----------------------------------------------------------------------- | ----- | ------------------------------------ | --------------- | ----------------------------------------------------------------------------------- |
-| `jev` (TypeSafe System One)                                             | 0.966 | 30 / 3 / 3 / 15                      | 26 / 0 / 7 / 18 | about $0.43 to $0.99 for the run, minutes (`docs/jev-spike.md`)                     |
-| `claude`, model `haiku` (5.5), Agent SDK on a Claude subscription login | 0.946 | 30 / 3 / 3 / 15                      | 25 / 2 / 8 / 16 | no money billed; about 90 minutes at concurrency 4; roughly $10 in list-price terms |
+| Scorer                                                                  | AUC   | At threshold 0.5 (tp / fp / fn / tn) | At 0.7          | Cost and time                                                                           |
+| ----------------------------------------------------------------------- | ----- | ------------------------------------ | --------------- | --------------------------------------------------------------------------------------- |
+| `jev` (TypeSafe System One)                                             | 0.966 | 30 / 3 / 3 / 15                      | 26 / 0 / 7 / 18 | $0.99 for the 274-question run ($0.43 with 50 questions), minutes (`docs/jev-spike.md`) |
+| `claude`, model `haiku` (5.5), Agent SDK on a Claude subscription login | 0.946 | 30 / 3 / 3 / 15                      | 25 / 2 / 8 / 16 | no money billed; about 90 minutes at concurrency 4; roughly $10 in list-price terms     |
 
 Findings worth keeping:
 

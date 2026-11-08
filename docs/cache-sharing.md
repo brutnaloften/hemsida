@@ -22,7 +22,7 @@ node --experimental-strip-types tools/cache-archive.ts pack score-cache --delta 
 
 Needs `gh` (logged in; `--repo owner/name` targets another repository), `tar` and `zstd`. `pack` writes `tools/out/cache-archives/<tag>/` first (`publish <dir>` uploads a directory you have checked), so nothing leaves the machine without `--publish` or an explicit `publish`.
 
-- **`fetch`** takes the newest snapshot (or `--tag`), follows the `base` chain, and for each snapshot checks the archive's size and sha256 and that it contains exactly the files the manifest lists (plain names only, so a tampered archive cannot write outside the directory). Existing files are never overwritten; a snapshot whose files are all present is skipped.
+- **`fetch`** takes the newest snapshot (or `--tag`), follows the `base` chain, and for each snapshot checks the archive's size and sha256 and that it contains exactly the files the manifest lists (plain names only, so a tampered archive cannot write outside the directory). Files are unpacked into a staging directory next to the destination (so its parent must be writable) and moved in one by one, so an interrupted fetch never leaves a truncated entry. Existing files are never overwritten; a snapshot whose files are all present is skipped.
 - **`pack --delta`** archives only files missing from the newest published snapshot (and its base chain) and records that snapshot as `base`. Use it for `score-cache`, which grows a little after every scoring run. `riksdag-text` is large and changes slowly, so a full snapshot every few months is simpler.
 - Level 19 compression is the default (a few minutes for `riksdag-text`); `--level 3` is fast.
 
