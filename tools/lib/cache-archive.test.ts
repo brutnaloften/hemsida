@@ -1,4 +1,5 @@
-import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { execFileSync, spawnSync } from 'node:child_process';
+import { mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
@@ -11,6 +12,7 @@ import {
   memberProblems,
   missingFrom,
   parseCacheManifest,
+  parseTarListing,
   resolveChain,
   riksdagTextCoverage,
   scoreCacheCoverageFrom,
@@ -18,6 +20,7 @@ import {
   type CacheManifest,
 } from './cache-archive.ts';
 
+const hasTar = spawnSync('tar', ['--version']).status === 0;
 const hash = 'a'.repeat(64);
 const textCoverage = {
   kind: 'riksdag-text',
@@ -164,14 +167,47 @@ describe('verification', () => {
     writeFileSync(p, 'hello!');
     expect(archiveProblems(m, p)).toHaveLength(2);
   });
-  it('requires the archive members to be exactly the manifest files', () => {
+  it('requires the archive members to be exactly the manifest files, each once, all regular files', () => {
     const m = parseCacheManifest(manifest());
-    expect(memberProblems(m, ['./A1.xml', 'B2.xml'])).toEqual([]);
-    expect(memberProblems(m, ['A1.xml', '../evil'])).toEqual([
+    const f = (name: string, type = '-') => ({ name, type });
+    expect(memberProblems(m, [f('A1.xml'), f('B2.xml')])).toEqual([]);
+    expect(memberProblems(m, [f('A1.xml'), f('../evil')])).toEqual([
       'unexpected member ../evil',
       'missing member B2.xml',
     ]);
+    expect(memberProblems(m, [f('A1.xml', 'l'), f('B2.xml'), f('B2.xml')])).toEqual([
+      'A1.xml is not a regular file (type l)',
+      'duplicate member B2.xml',
+    ]);
   });
+  it.skipIf(!hasTar)(
+    'rejects a symlink and a hard link that tar would unpack under a plain name',
+    () => {
+      const d = tmp();
+      mkdirSync(resolve(d, 'src'));
+      writeFileSync(resolve(d, 'src', 'A1.xml'), 'ok');
+      symlinkSync('/etc/hostname', resolve(d, 'src', 'B2.xml'));
+      const out = execFileSync(
+        'tar',
+        ['-cvf', resolve(d, 'x.tar'), '-C', resolve(d, 'src'), 'A1.xml', 'B2.xml'],
+        {
+          encoding: 'utf8',
+        },
+      );
+      expect(out).toContain('B2.xml');
+      const { entries, unparsed } = parseTarListing(
+        execFileSync('tar', ['-tvf', resolve(d, 'x.tar')], { encoding: 'utf8' }),
+      );
+      expect(unparsed).toEqual([]);
+      expect(entries.map((e) => [e.name, e.type])).toEqual([
+        ['A1.xml', '-'],
+        ['B2.xml', 'l'],
+      ]);
+      expect(memberProblems(parseCacheManifest(manifest()), entries)).toEqual([
+        'B2.xml is not a regular file (type l)',
+      ]);
+    },
+  );
 });
 
 describe('resolveChain', () => {
@@ -199,6 +235,10 @@ describe('resolveChain', () => {
       'cache-riksdag-text-2026-02-01',
       'cache-riksdag-text-2026-03-01',
     ]);
+  });
+  it('rejects a manifest that is not the tag asked for', async () => {
+    const tip = m('2026-02-01', 'cache-riksdag-text-2026-01-01');
+    await expect(resolveChain(tip, async () => m('2026-05-05', null))).rejects.toThrow(/asked for/);
   });
   it('rejects loops and a base of another cache', async () => {
     const a = m('2026-01-01', 'cache-riksdag-text-2026-02-01');

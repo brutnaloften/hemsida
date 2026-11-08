@@ -27,6 +27,8 @@ How a run works (plan, content-addressed cache, budget guard, config fields): `d
 
 ### Scorer results on the 51 eval pairs (same config, 535 requests, 274 questions each)
 
+Jev numbers: `docs/jev-spike.md`. Haiku numbers were measured on 2026-11-08 in the `hemsida-aah` spike (run manifest and report in `tools/out/runs/haiku-experiment-v1/`, not committed; the results are also kept in the `claude-scorer-spike` beads memory). Rerun `pnpm score tools/score-configs/haiku-eval-v1.json` to reproduce them.
+
 | Scorer                                                                  | AUC   | At threshold 0.5 (tp / fp / fn / tn) | At 0.7          | Cost and time                                                                       |
 | ----------------------------------------------------------------------- | ----- | ------------------------------------ | --------------- | ----------------------------------------------------------------------------------- |
 | `jev` (TypeSafe System One)                                             | 0.966 | 30 / 3 / 3 / 15                      | 26 / 0 / 7 / 18 | about $0.43 to $0.99 for the run, minutes (`docs/jev-spike.md`)                     |
@@ -34,12 +36,12 @@ How a run works (plan, content-addressed cache, budget guard, config fields): `d
 
 Findings worth keeping:
 
-- Haiku is competitive with Jev at the usual thresholds and slightly worse at the strict end. Jev is about 20x cheaper and far faster, so it stays the default (and the only scorer in CI).
+- Haiku is competitive with Jev at the usual thresholds and slightly worse at the strict end. Jev is about 10x cheaper than Haiku's list-price equivalent and far faster, so it stays the default (and the only scorer in CI).
 - `thinking: { type: 'disabled' }` had no effect through the Agent SDK (nor did `maxThinkingTokens: 0`, `effort: 'low'` or the `MAX_THINKING_TOKENS=0` environment variable in a small probe): every full request still spent roughly 2,000 to 11,000 thinking tokens and 8,000 to 18,000 output tokens. No zero-thinking Haiku run exists, so whether the score depends on thinking is unmeasured.
 - `usage.input_tokens` from the Agent SDK is near zero once prompt caching applies; the scorer sums `modelUsage` (input, output, cache read, cache write) instead.
 - Promise ids can be longer than the 64 characters Anthropic allows for tool-schema property names (one is 65), so the Claude scorer asks with positional keys (`q0`, `q1`, ...) and maps back.
 - The real limit for a subscription-billed scorer is the account's rate-limit window, not money, and local concurrency does not raise it. A whole-corpus run (3,547 documents, roughly 37,000 requests by scaling from the eval set; an upper-end guess, the eval documents are longer than average) would take days on one login; several people each scoring a slice and sharing `score-cache` deltas is the way to parallelise.
-- Whole-corpus scoring with Jev is estimated at a few dollars (`docs/jev-spike.md`, unmeasured).
+- Whole-corpus scoring with Jev is projected at about $27 for the 274 Tidö promises and about $135 for all 1,468 promises (`docs/jev-spike.md`, unmeasured).
 
 ## Where things live
 

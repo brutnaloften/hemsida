@@ -13,15 +13,16 @@
  */
 import { execFileSync } from 'node:child_process';
 import {
+  existsSync,
   mkdirSync,
   mkdtempSync,
   readdirSync,
   readFileSync,
+  renameSync,
   rmSync,
   statSync,
   writeFileSync,
 } from 'node:fs';
-import { existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -37,15 +38,16 @@ import {
   listCacheFiles,
   MANIFEST_ASSET,
   memberProblems,
+  parseTarListing,
   missingFrom,
   parseCacheManifest,
   resolveChain,
   riksdagTextCoverage,
   scoreCacheCoverageFrom,
   sha256File,
-  type StoreDoc,
 } from './lib/cache-archive.ts';
 import { writeJsonAtomic } from './lib/json.ts';
+import { loadStore } from './lib/riksdag-ingest.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const { values, positionals } = parseArgs({
@@ -62,6 +64,8 @@ const { values, positionals } = parseArgs({
   },
 });
 const [command, arg] = positionals;
+if (!/^\d{1,2}$/.test(values.level!) || Number(values.level) < 1 || Number(values.level) > 19)
+  throw new Error('--level must be an integer from 1 to 19');
 
 const run = (cmd: string, args: string[], opts: { input?: string } = {}): string =>
   execFileSync(cmd, args, {
@@ -100,7 +104,9 @@ function remoteManifest(tag: string): CacheManifest {
   const tmp = mkdtempSync(resolve(tmpdir(), 'cache-manifest-'));
   try {
     const file = downloadAsset(tag, MANIFEST_ASSET, tmp);
-    return parseCacheManifest(JSON.parse(readFileSync(file, 'utf8')), `manifest of ${tag}`);
+    const m = parseCacheManifest(JSON.parse(readFileSync(file, 'utf8')), `manifest of ${tag}`);
+    if (m.tag !== tag) throw new Error(`asked for ${tag} but the manifest is for ${m.tag}`);
+    return m;
   } finally {
     rmSync(tmp, { recursive: true, force: true });
   }
@@ -128,13 +134,8 @@ async function pack(name: CacheName): Promise<string> {
     name === 'riksdag-text'
       ? riksdagTextCoverage(
           all,
-          (
-            JSON.parse(
-              readFileSync(resolve(root, 'tools/out/riksdag-store', `${values.term}.json`), 'utf8'),
-            ) as {
-              documents: Record<string, StoreDoc>;
-            }
-          ).documents,
+          loadStore(resolve(root, 'tools/out/riksdag-store', `${values.term}.json`), values.term!)
+            .documents,
           values.term!,
         )
       : scoreCacheCoverageFrom(readRunManifests(), all.length);
@@ -238,31 +239,39 @@ async function fetchCache(name: CacheName): Promise<void> {
       continue;
     }
     const tmp = mkdtempSync(resolve(tmpdir(), 'cache-fetch-'));
+    const stage = mkdtempSync(resolve(dest, '..', '.cache-stage-'));
     try {
       const archive = downloadAsset(m.tag, m.archive.file, tmp);
+      const listing = parseTarListing(
+        run('tar', ['--use-compress-program', 'zstd', '-tvf', archive]),
+      );
       const problems = [
         ...archiveProblems(m, archive),
-        ...memberProblems(
-          m,
-          run('tar', ['--use-compress-program', 'zstd', '-tf', archive])
-            .split('\n')
-            .filter(Boolean),
-        ),
+        ...listing.unparsed.map((l) => `unreadable tar entry: ${l}`),
+        ...memberProblems(m, listing.entries),
       ];
       if (problems.length)
         throw new Error(`${m.tag} failed verification: ${problems.slice(0, 5).join('; ')}`);
+      // Unpack aside and move file by file, so an interrupted fetch never leaves a truncated entry in the cache.
       run('tar', [
         '--use-compress-program',
         'zstd',
         '-xf',
         archive,
         '-C',
-        dest,
-        '--skip-old-files',
+        stage,
+        '--no-same-owner',
       ]);
-      console.error(`${m.tag}: unpacked ${m.files.length} files into ${dest}`);
+      let added = 0;
+      for (const f of m.files) {
+        if (existsSync(resolve(dest, f))) continue;
+        renameSync(resolve(stage, f), resolve(dest, f));
+        added++;
+      }
+      console.error(`${m.tag}: ${added} new of ${m.files.length} files in ${dest}`);
     } finally {
       rmSync(tmp, { recursive: true, force: true });
+      rmSync(stage, { recursive: true, force: true });
     }
   }
 }

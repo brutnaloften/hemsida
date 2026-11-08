@@ -13,6 +13,7 @@ import { formatIssues } from './json.ts';
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 const sha256 = z.string().regex(/^[0-9a-f]{64}$/);
 /** Cache entries are flat files with plain names; anything else is rejected before a tar is unpacked. */
+const TAG_PATTERN = /^cache-[a-z-]+-\d{4}-\d{2}-\d{2}(-\d+)?$/;
 const fileName = z.string().regex(/^[A-Za-z0-9][A-Za-z0-9._-]*$/);
 
 export const CACHE_NAMES = ['riksdag-text', 'score-cache'] as const;
@@ -60,7 +61,7 @@ export const cacheManifestSchema = z
     version: z.literal(1),
     name: z.enum(CACHE_NAMES),
     /** Release tag: `cache-<name>-<createdAt>`. */
-    tag: z.string().regex(/^cache-[a-z-]+-\d{4}-\d{2}-\d{2}(-\d+)?$/),
+    tag: z.string().regex(TAG_PATTERN),
     createdAt: isoDate,
     archive: z.strictObject({
       file: z.string().regex(/^[A-Za-z0-9][A-Za-z0-9._-]*\.tar\.zst$/),
@@ -69,7 +70,7 @@ export const cacheManifestSchema = z
       compression: z.literal('zstd'),
     }),
     /** Tag of the snapshot this one extends (a delta holds only files missing from it); null = full snapshot. */
-    base: z.string().nullable(),
+    base: z.string().regex(TAG_PATTERN).nullable(),
     /** Files inside this archive, sorted. */
     files: z.array(fileName),
     uncompressedBytes: z.number().int().nonnegative(),
@@ -129,7 +130,9 @@ export function riksdagTextCoverage(
 ): RiksdagTextCoverage {
   const docs = allFiles.flatMap((f) => {
     const d = store[f.replace(/\.xml$/, '')];
-    return d ? [{ doktyp: d.doktyp, datum: d.datum.slice(0, 10) }] : [];
+    return d && /^\d{4}-\d{2}-\d{2}/.test(d.datum)
+      ? [{ doktyp: d.doktyp, datum: d.datum.slice(0, 10) }]
+      : [];
   });
   if (!docs.length)
     throw new Error(`no cached document is in the ${term} store; run ingest-riksdag first`);
@@ -197,14 +200,46 @@ export function archiveProblems(m: CacheManifest, archivePath: string): string[]
   return problems;
 }
 
-/** The archive's member list (`tar -t`) must be exactly the manifest's file list, nothing else. */
-export function memberProblems(m: CacheManifest, members: readonly string[]): string[] {
+export interface TarEntry {
+  /** First character of the `tar -tv` mode field: `-` regular file, `d`, `l` symlink, `h` hard link, ... */
+  type: string;
+  name: string;
+}
+
+/** Parse `tar -tvf` output (GNU tar). Symlinks and hard links keep their type; link targets are dropped. */
+export function parseTarListing(output: string): { entries: TarEntry[]; unparsed: string[] } {
+  const entries: TarEntry[] = [];
+  const unparsed: string[] = [];
+  for (const line of output.split('\n').filter(Boolean)) {
+    const m = /^(\S)\S{9}\s+\S+\s+\d+\s+\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?\s+(.*)$/.exec(
+      line,
+    );
+    if (!m) unparsed.push(line);
+    else
+      entries.push({
+        type: m[1]!,
+        name: m[2]!.replace(/ (?:->|link to) .*$/, '').replace(/^\.\//, ''),
+      });
+  }
+  return { entries, unparsed };
+}
+
+/**
+ * The archive must hold exactly the manifest's files, each once and each a regular file. Names alone are not
+ * enough: a symlink or hard link member called `a.xml` would be unpacked as a link to anything on the machine.
+ */
+export function memberProblems(m: CacheManifest, entries: readonly TarEntry[]): string[] {
   const want = new Set(m.files);
-  const got = new Set(members.map((f) => f.replace(/^\.\//, '')));
-  return [
-    ...[...got].filter((f) => !want.has(f)).map((f) => `unexpected member ${f}`),
-    ...[...want].filter((f) => !got.has(f)).map((f) => `missing member ${f}`),
-  ];
+  const seen = new Set<string>();
+  const problems: string[] = [];
+  for (const e of entries) {
+    if (e.type !== '-') problems.push(`${e.name} is not a regular file (type ${e.type})`);
+    else if (!want.has(e.name)) problems.push(`unexpected member ${e.name}`);
+    if (seen.has(e.name)) problems.push(`duplicate member ${e.name}`);
+    seen.add(e.name);
+  }
+  for (const f of want) if (!seen.has(f)) problems.push(`missing member ${f}`);
+  return problems;
 }
 
 /** Manifests from the oldest full snapshot to `tip`, following `base`. Throws on a missing link or a cycle. */
@@ -217,7 +252,9 @@ export async function resolveChain(
   for (let cur = tip; cur.base;) {
     if (seen.has(cur.base)) throw new Error(`cache manifest chain loops at ${cur.base}`);
     seen.add(cur.base);
-    cur = await load(cur.base);
+    const asked = cur.base;
+    cur = await load(asked);
+    if (cur.tag !== asked) throw new Error(`asked for ${asked} but the manifest is for ${cur.tag}`);
     if (cur.name !== tip.name)
       throw new Error(`base ${cur.tag} is a ${cur.name} snapshot, not ${tip.name}`);
     chain.unshift(cur);
