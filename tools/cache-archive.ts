@@ -1,9 +1,9 @@
 /**
  * Share the gitignored local caches as GitHub Release archives (hemsida-8l0). See docs/cache-sharing.md.
- *   node --experimental-strip-types tools/cache-archive.ts pack    <riksdag-text|score-cache> [--delta] [--publish] [--level 19] [--term 2022-2026]
+ *   node --experimental-strip-types tools/cache-archive.ts pack    <riksdag-text|score-cache|link-cache> [--delta] [--publish] [--level 19] [--term 2022-2026]
  *   node --experimental-strip-types tools/cache-archive.ts publish <tools/out/cache-archives/<tag>>
- *   node --experimental-strip-types tools/cache-archive.ts fetch   <riksdag-text|score-cache> [--tag <tag>] [--dest <dir>]
- *   node --experimental-strip-types tools/cache-archive.ts list    [<riksdag-text|score-cache>]
+ *   node --experimental-strip-types tools/cache-archive.ts fetch   <riksdag-text|score-cache|link-cache> [--tag <tag>] [--dest <dir>]
+ *   node --experimental-strip-types tools/cache-archive.ts list    [<riksdag-text|score-cache|link-cache>]
  * Add `--repo owner/name` to any command to target another repository (default: the checkout's remote).
  *
  * pack writes tools/out/cache-archives/<tag>/{<name>-<date>.tar.zst,cache-manifest.json}; with --delta only
@@ -43,6 +43,7 @@ import {
   parseCacheManifest,
   resolveChain,
   riksdagTextCoverage,
+  linkCacheCoverageFrom,
   scoreCacheCoverageFrom,
   sha256File,
 } from './lib/cache-archive.ts';
@@ -138,7 +139,9 @@ async function pack(name: CacheName): Promise<string> {
             .documents,
           values.term!,
         )
-      : scoreCacheCoverageFrom(readRunManifests(), all.length);
+      : name === 'score-cache'
+        ? scoreCacheCoverageFrom(readRunManifests('runs'), all.length)
+        : linkCacheCoverageFrom(readRunManifests('link-runs'), all.length);
 
   const date = new Date().toISOString().slice(0, 10);
   const taken = new Set(releaseTags());
@@ -192,8 +195,8 @@ async function pack(name: CacheName): Promise<string> {
   return outDir;
 }
 
-function readRunManifests(): unknown[] {
-  const runsDir = resolve(root, 'tools/out/runs');
+function readRunManifests(dir: 'runs' | 'link-runs'): unknown[] {
+  const runsDir = resolve(root, 'tools/out', dir);
   if (!existsSync(runsDir)) return [];
   return readdirSync(runsDir).flatMap((d) => {
     const p = resolve(runsDir, d, 'manifest.json');
@@ -209,7 +212,9 @@ function publish(outDir: string): void {
   const summary =
     c.kind === 'riksdag-text'
       ? `Riksdag document text, term ${c.term}, ${c.documentCount} documents dated ${c.documentsFrom} to ${c.documentsTo} (types: ${c.doktyper.join(', ')}).`
-      : `Scoring results for ${c.entryCount} requests from runs: ${c.runs.map((r) => `${r.name} (${r.scorerKind}/${r.model})`).join(', ')}.`;
+      : c.kind === 'score-cache'
+        ? `Scoring results for ${c.entryCount} requests from runs: ${c.runs.map((r) => `${r.name} (${r.scorerKind}/${r.model})`).join(', ')}.`
+        : `Linking judgements for ${c.entryCount} requests from runs: ${c.runs.map((r) => `${r.name} (${r.judgeKind}/${r.model})`).join(', ')}.`;
   const notes =
     `${summary}\n\n${manifest.base ? `Delta on \`${manifest.base}\`: unpack the base first (\`cache-archive fetch\` does this).` : 'Full snapshot.'}\n\n` +
     `Fetch with \`node --experimental-strip-types tools/cache-archive.ts fetch ${manifest.name}\`. See docs/cache-sharing.md.`;

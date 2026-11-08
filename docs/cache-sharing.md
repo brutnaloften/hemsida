@@ -32,6 +32,7 @@ One Zod schema, `cacheManifestSchema` in `tools/lib/cache-archive.ts`, is the on
 
 - `riksdag-text`: `term`, `doktyper`, `documentsFrom` and `documentsTo` (the publication dates, `datum` in the Riksdag store, of the oldest and newest cached document) and `documentCount`. **`documentsTo` is the watermark**: a later refresh only needs documents dated after it (minus the lookback `ingest-riksdag.ts` already uses, 14 days). It describes the whole cache at pack time, also in a delta.
 - `score-cache`: the scoring runs the entries belong to (`name`, `scorerKind`, `model`, `templateVersion`, `planHash`, `requestCount`, `status`, read from `tools/out/runs/*/manifest.json`) and `entryCount`. Cache keys are content hashes of scorer, model, question template version, text and questions, so an entry is valid for exactly the runs and configs that produce the same key: a changed template version or model never reuses it, and entries from different people merge without conflict.
+- `link-cache` (`tools/out/link-cache`, judgements of `tools/link.ts`, `docs/link-harness.md`): the linking runs (`name`, `judgeKind`, `model`, `templateVersion`, `planHash`, `requestCount`, `status`, read from `tools/out/link-runs/*/manifest.json`) and `entryCount`. Keys hash judge kind, model, template version, promise and evidence text, so entries from different people merge without conflict, like `score-cache`.
 
 Change the manifest shape by editing the schema (and its tests), bump `version`, and keep `fetch` able to read the old version or say clearly that it cannot.
 

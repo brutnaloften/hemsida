@@ -16,13 +16,14 @@ const TAG_PATTERN = /^cache-[a-z-]+-\d{4}-\d{2}-\d{2}(-\d+)?$/;
 /** Cache entries are flat files with plain names; anything else is rejected before a tar is unpacked. */
 const fileName = z.string().regex(/^[A-Za-z0-9][A-Za-z0-9._-]*$/);
 
-export const CACHE_NAMES = ['riksdag-text', 'score-cache'] as const;
+export const CACHE_NAMES = ['riksdag-text', 'score-cache', 'link-cache'] as const;
 export type CacheName = (typeof CACHE_NAMES)[number];
 
 /** Extension of the entries and default directory (relative to the repo root) of each cache. */
 export const CACHES: Record<CacheName, { dir: string; ext: string }> = {
   'riksdag-text': { dir: 'tools/out/riksdag-text', ext: '.xml' },
   'score-cache': { dir: 'tools/out/score-cache', ext: '.json' },
+  'link-cache': { dir: 'tools/out/link-cache', ext: '.json' },
 };
 
 const scoringRunSchema = z.strictObject({
@@ -35,6 +36,17 @@ const scoringRunSchema = z.strictObject({
   status: z.string(),
 });
 export type ScoringRun = z.infer<typeof scoringRunSchema>;
+
+const linkRunSchema = z.strictObject({
+  name: z.string(),
+  judgeKind: z.string(),
+  model: z.string(),
+  templateVersion: z.string(),
+  planHash: sha256,
+  requestCount: z.number().int().nonnegative(),
+  status: z.string(),
+});
+export type LinkRun = z.infer<typeof linkRunSchema>;
 
 const riksdagTextCoverageSchema = z.strictObject({
   kind: z.literal('riksdag-text'),
@@ -56,6 +68,13 @@ const scoreCacheCoverage = z.strictObject({
   entryCount: z.number().int().nonnegative(),
 });
 
+const linkCacheCoverage = z.strictObject({
+  kind: z.literal('link-cache'),
+  /** Linking runs (tools/out/link-runs/<name>/manifest.json) the entries come from. Keys are content hashes. */
+  runs: z.array(linkRunSchema),
+  entryCount: z.number().int().nonnegative(),
+});
+
 export const cacheManifestSchema = z
   .strictObject({
     version: z.literal(1),
@@ -74,7 +93,11 @@ export const cacheManifestSchema = z
     /** Files inside this archive, sorted. */
     files: z.array(fileName),
     uncompressedBytes: z.number().int().nonnegative(),
-    coverage: z.discriminatedUnion('kind', [riksdagTextCoverageSchema, scoreCacheCoverage]),
+    coverage: z.discriminatedUnion('kind', [
+      riksdagTextCoverageSchema,
+      scoreCacheCoverage,
+      linkCacheCoverage,
+    ]),
   })
   .refine((m) => m.coverage.kind === m.name, { message: 'coverage.kind must equal name' })
   .refine((m) => m.tag.startsWith(`cache-${m.name}-`), {
@@ -83,6 +106,7 @@ export const cacheManifestSchema = z
 export type CacheManifest = z.infer<typeof cacheManifestSchema>;
 export type RiksdagTextCoverage = z.infer<typeof riksdagTextCoverageSchema>;
 export type ScoreCacheCoverage = z.infer<typeof scoreCacheCoverage>;
+export type LinkCacheCoverage = z.infer<typeof linkCacheCoverage>;
 
 export const MANIFEST_ASSET = 'cache-manifest.json';
 
@@ -181,6 +205,45 @@ export function scoreCacheCoverageFrom(
   });
   return scoreCacheCoverage.parse({
     kind: 'score-cache',
+    runs: runs.sort((a, b) => a.name.localeCompare(b.name)),
+    entryCount,
+  });
+}
+
+const linkRunManifestSchema = z.looseObject({
+  config: z.looseObject({
+    name: z.string(),
+    judge: z.looseObject({ kind: z.string(), model: z.string() }),
+    template_version: z.string(),
+  }),
+  plan_hash: sha256,
+  status: z.string(),
+  request_count: z.number().int().nonnegative(),
+});
+
+/** Coverage of the link cache from the run manifests in `tools/out/link-runs/*` (unreadable ones are skipped). */
+export function linkCacheCoverageFrom(
+  runManifests: readonly unknown[],
+  entryCount: number,
+): LinkCacheCoverage {
+  const runs = runManifests.flatMap((raw): LinkRun[] => {
+    const m = linkRunManifestSchema.safeParse(raw);
+    if (!m.success) return [];
+    const { config } = m.data;
+    return [
+      {
+        name: config.name,
+        judgeKind: config.judge.kind,
+        model: config.judge.model,
+        templateVersion: config.template_version,
+        planHash: m.data.plan_hash,
+        requestCount: m.data.request_count,
+        status: m.data.status,
+      },
+    ];
+  });
+  return linkCacheCoverage.parse({
+    kind: 'link-cache',
     runs: runs.sort((a, b) => a.name.localeCompare(b.name)),
     entryCount,
   });
