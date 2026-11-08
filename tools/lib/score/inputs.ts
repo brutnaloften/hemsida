@@ -1,9 +1,10 @@
 /** Load the documents, promises and labelled pairs a config selects (hemsida-vzn). The only I/O besides the cache. */
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { evalFileSchema } from '../../../src/schema/eval.ts';
 import { parseRiksdagText } from '../riksdag-text.ts';
 import { defaultStorePath, loadStore } from '../riksdag-ingest.ts';
+import { inShard, type Shard } from './shard.ts';
 import type { ScoreConfig } from './config.ts';
 import type { LabelledPair } from './report.ts';
 import type { PlanDocument, PlanPromise } from './plan.ts';
@@ -50,8 +51,15 @@ export function loadInputs(
   config: ScoreConfig,
   root: string,
   textDir: string,
-  storePath?: string,
+  opts: {
+    storePath?: string;
+    /** Only load documents in this shard; out-of-shard text is never read. */
+    shard?: Shard;
+    /** Test seam for reading a cached document's XML. */
+    readText?: (path: string) => string;
+  } = {},
 ): RunInputs {
+  const readText = opts.readText ?? ((path: string) => readFileSync(path, 'utf8'));
   const docCfg = config.inputs.documents;
   const evalFile = docCfg.pairs_file
     ? evalFileSchema.parse(JSON.parse(readFileSync(resolve(root, docCfg.pairs_file), 'utf8')))
@@ -59,10 +67,12 @@ export function loadInputs(
   const titles = new Map(evalFile?.pairs.map((p) => [p.document_id, p.document_title]));
   let ids: string[];
   if (docCfg.kind === 'cache') {
-    const store = loadStore(
-      storePath ?? defaultStorePath(root, config.inputs.promises.term),
-      config.inputs.promises.term,
-    );
+    const storeFile = opts.storePath ?? defaultStorePath(root, config.inputs.promises.term);
+    if (!existsSync(storeFile))
+      throw new Error(
+        `Riksdag store ${storeFile} not found; run ingest-riksdag (or fetch the riksdag-store data) first`,
+      );
+    const store = loadStore(storeFile, config.inputs.promises.term);
     const selected = selectCacheDocuments(readdirSync(textDir), store.documents, docCfg);
     // Eval-pairs titles win so the eval requests keep their cache keys.
     for (const d of selected) if (!titles.has(d.id)) titles.set(d.id, d.title);
@@ -71,10 +81,15 @@ export function loadInputs(
     ids = docCfg.kind === 'ids' ? docCfg.ids : [...titles.keys()];
   }
 
+  if (opts.shard) {
+    const shard = opts.shard;
+    ids = ids.filter((id) => inShard(id, shard));
+  }
+
   const documents = ids.map((id) => {
     let raw: string;
     try {
-      raw = readFileSync(resolve(textDir, `${id}.xml`), 'utf8');
+      raw = readText(resolve(textDir, `${id}.xml`));
     } catch {
       throw new Error(`no cached text for document ${id} in ${textDir} (fetch it first)`);
     }

@@ -1,8 +1,9 @@
-import { readFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { parseScoreConfig } from './config.ts';
-import { selectCacheDocuments } from './inputs.ts';
+import { loadInputs, selectCacheDocuments } from './inputs.ts';
 import { inShard, parseShard, shardOf } from './shard.ts';
 
 const store = {
@@ -68,5 +69,54 @@ describe('tido-corpus-v1 config', () => {
     expect(corpus.question).toEqual(evalCfg.question);
     expect(corpus.scorer).toEqual(evalCfg.scorer);
     expect(corpus.chunk).toEqual(evalCfg.chunk);
+  });
+});
+
+describe('loadInputs sharding', () => {
+  it('never reads text of out-of-shard documents and fails without a store', () => {
+    const dir = mkdtempSync(resolve(tmpdir(), 'shard-'));
+    const ids = Array.from({ length: 40 }, (_, i) => `d${i}`);
+    const textDir = resolve(dir, 'text');
+    mkdirSync(textDir);
+    for (const id of ids) writeFileSync(resolve(textDir, `${id}.xml`), '');
+    const storeFile = resolve(dir, 'store.json');
+    const cfg = parseScoreConfig({
+      name: 't',
+      scorer: { kind: 'fake', model: 'fake' },
+      question: { template_version: 'v1', template: '{title} {text}' },
+      inputs: {
+        promises: { term: '2022-2026', id_prefix: 'tido-' },
+        documents: { kind: 'cache' },
+      },
+      chunk: { max_chars: 2000 },
+      limits: {
+        max_request_tokens: 62000,
+        max_state_plus_question_tokens: 32000,
+        chars_per_token: 2.8,
+      },
+      budget: { max_cost_usd: 1, usd_per_million_tokens: 0.042 },
+    });
+    const root = resolve(import.meta.dirname, '../../..');
+    expect(() => loadInputs(cfg, root, textDir, { storePath: storeFile })).toThrow(/not found/);
+    writeFileSync(
+      storeFile,
+      JSON.stringify({ version: 1, term: '2022-2026', cursors: {}, next_seq: 1, documents: {} }),
+    );
+    const shard = { index: 1, count: 3 };
+    const read: string[] = [];
+    const out = loadInputs(cfg, root, textDir, {
+      storePath: storeFile,
+      shard,
+      readText: (p) => {
+        read.push(p);
+        return '<dokument></dokument>';
+      },
+    });
+    const expected = ids.filter((id) => inShard(id, shard));
+    expect(expected.length).toBeGreaterThan(0);
+    expect(expected.length).toBeLessThan(ids.length);
+    expect(out.documents.map((d) => d.id).sort()).toEqual([...expected].sort());
+    expect(read.length).toBe(expected.length);
+    rmSync(dir, { recursive: true, force: true });
   });
 });
