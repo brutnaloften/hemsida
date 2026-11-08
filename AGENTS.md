@@ -22,6 +22,7 @@ The roadmap lives in beads as epics with child tasks and dependencies. `bd list 
 - `pnpm test` — run unit tests with vitest (also runs `tools/**/*.test.ts`, so run `pnpm install` in `tools/` too; the run prints a hint if it is missing)
 - `pnpm score <config>` — declarative scoring run (`--dry-run` first)
 - `pnpm typecheck` — `astro sync && tsc --noEmit` for the site (CI also runs it in `tools/`)
+- `node --experimental-strip-types tools/cache-archive.ts <pack|publish|fetch|list> <riksdag-text|score-cache>` — share the gitignored caches as GitHub Release archives (needs `gh`, `tar`, `zstd`; see `docs/cache-sharing.md`)
 
 oxfmt runs on staged files in the pre-commit hook (lint-staged).
 
@@ -42,6 +43,8 @@ oxfmt runs on staged files in the pre-commit hook (lint-staged).
 **UI components:** `src/components/ui/` contains shadcn/ui-style primitives (Badge, Input) and the domain components `VerdictBadge`, `AgreementBadge`, `PartyChip` and `TimelineMarker` (verdict and agreement colours are CSS variables in `globals.css`, contrast-tested in `src/lib/contrast.test.ts`), using Tailwind CSS v4 with CSS-variable-based theming (`src/styles/globals.css`). Dark mode is class-based: a `.dark` class on `<html>` (set by an inline script in `Layout.astro` from `localStorage` or `prefers-color-scheme`) toggles it via `@custom-variant dark` in `globals.css`.
 
 **Path aliases:** `@/*` maps to `./src/*` (configured in tsconfig.json).
+
+**Riksdag linking and cache sharing:** the end-to-end flow from ingest through keyword candidates, the hand-labelled eval set and exhaustive scoring to human-set evidence and verdicts, with each tool, artifact and scorer result, is in `docs/riksdag-linking.md`. `tools/out/riksdag-text` (2.5 GB) and `tools/out/score-cache` are gitignored but shared as `tar.zst` GitHub Release assets tagged `cache-<name>-<date>`, each with a `cache-manifest.json` whose Zod schema (`tools/lib/cache-archive.ts`) is the single source of truth: archive hash, file list, optional `base` snapshot for deltas, and coverage (for `riksdag-text` the document-date watermark; for `score-cache` the scoring runs, scorer, model and template version). Scorer `kind` and `model` are part of every score-cache key. Details and legal note in `docs/cache-sharing.md`.
 
 **CI:** `.github/workflows/ci.yml` runs build, typecheck, `fmt:check` and tests for the site, then typecheck for `tools/`. `deploy.yml` publishes to GitHub Pages on push to `main`.
 

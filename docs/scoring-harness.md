@@ -48,3 +48,7 @@ For the `claude` scorer there's no real per-token bill (it runs on a subscriptio
 ## Adding a scorer
 
 Implement `Scorer` from `tools/lib/score/scorer.ts` (`score(state, questions)` returns `{ answers, input_tokens }`; throw `TooLongError` to have the runner split the state), register it in `createScorer` and add the kind to the config enum. Tests use the deterministic `fake` scorer; there is no network in any test.
+
+## Sharing results
+
+The score cache (and the Riksdag text it needs) can be shared as release archives with a validated manifest, so a collaborator does not redo finished requests: `docs/cache-sharing.md`. How scoring fits into linking promises to Riksdag documents, with scorer results: `docs/riksdag-linking.md`.
