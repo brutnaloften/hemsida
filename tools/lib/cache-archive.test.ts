@@ -8,6 +8,7 @@ import {
   cacheManifestSchema,
   cacheTag,
   latestTag,
+  linkCacheCoverageFrom,
   listCacheFiles,
   memberProblems,
   missingFrom,
@@ -65,6 +66,15 @@ describe('manifest schema', () => {
       coverage: { kind: 'score-cache', runs: [], entryCount: 0 },
     });
     expect(parseCacheManifest(score).name).toBe('score-cache');
+    const link = manifest({
+      name: 'link-cache',
+      tag: 'cache-link-cache-2026-11-08',
+      coverage: { kind: 'link-cache', runs: [], entryCount: 0 },
+    });
+    expect(parseCacheManifest(link).name).toBe('link-cache');
+    expect(
+      latestTag(['cache-link-cache-2026-11-08', 'cache-score-cache-2026-11-09'], 'link-cache'),
+    ).toBe('cache-link-cache-2026-11-08');
   });
   it('rejects a coverage that does not match the name, a foreign tag and path-like file names', () => {
     expect(() =>
@@ -145,6 +155,31 @@ describe('files and coverage', () => {
         templateVersion: 'v1',
         planHash: hash,
         requestCount: 535,
+        status: 'complete',
+      },
+    ]);
+  });
+  it('summarises linking runs and skips unreadable run manifests', () => {
+    const run = {
+      config: {
+        name: 'link-eval-haiku-v1',
+        judge: { kind: 'claude', model: 'claude-haiku-5-5' },
+        template_version: 'v1',
+      },
+      plan_hash: hash,
+      status: 'complete',
+      request_count: 51,
+    };
+    const c = linkCacheCoverageFrom([run, { nonsense: true }], 51);
+    expect(c.entryCount).toBe(51);
+    expect(c.runs).toEqual([
+      {
+        name: 'link-eval-haiku-v1',
+        judgeKind: 'claude',
+        model: 'claude-haiku-5-5',
+        templateVersion: 'v1',
+        planHash: hash,
+        requestCount: 51,
         status: 'complete',
       },
     ]);

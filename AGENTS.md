@@ -21,8 +21,9 @@ The roadmap lives in beads as epics with child tasks and dependencies. `bd list 
 - `pnpm fmt:check` — check formatting without writing (for CI)
 - `pnpm test` — run unit tests with vitest (also runs `tools/**/*.test.ts`, so run `pnpm install` in `tools/` too; the run prints a hint if it is missing)
 - `pnpm score <config>` — declarative scoring run (`--dry-run` first)
+- `pnpm link-pairs <tools/link-configs/x.json>` — judge candidate promise/document pairs with a model of your choice (`--dry-run` first; `docs/link-harness.md`)
 - `pnpm typecheck` — `astro sync && tsc --noEmit` for the site (CI also runs it in `tools/`)
-- `node --experimental-strip-types tools/cache-archive.ts <pack|publish|fetch|list> <riksdag-text|score-cache>` — share the gitignored caches as GitHub Release archives (needs `gh`, `tar`, `zstd`; see `docs/cache-sharing.md`)
+- `node --experimental-strip-types tools/cache-archive.ts <pack|publish|fetch|list> <riksdag-text|score-cache|link-cache>` — share the gitignored caches as GitHub Release archives (needs `gh`, `tar`, `zstd`; see `docs/cache-sharing.md`)
 
 oxfmt runs on staged files in the pre-commit hook (lint-staged).
 
