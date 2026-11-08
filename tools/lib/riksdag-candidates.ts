@@ -42,6 +42,11 @@ export const candidateDocumentSchema = z.object({
   found_by: z.array(z.string()).min(1),
   /** Number of distinct queries that returned it (the ranking key). */
   score: z.number().int().positive(),
+  /**
+   * Scoring-harness probability (0..1) that the document belongs to the promise, set by
+   * `tools/link-scores.ts`. The run that produced it is named in `found_by` as `score:<run>`.
+   */
+  relevance: z.number().min(0).max(1).optional(),
 });
 export type CandidateDocument = z.infer<typeof candidateDocumentSchema>;
 
