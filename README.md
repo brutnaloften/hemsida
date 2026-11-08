@@ -19,6 +19,10 @@ pnpm dev
 
 Open [http://localhost:4321](http://localhost:4321) to see the site.
 
+## Verktyg och cachar
+
+Skript för att hämta och länka Riksdagens dokument ligger i `tools/` (se [`docs/riksdag-linking.md`](docs/riksdag-linking.md) för hela flödet, [`docs/scoring-harness.md`](docs/scoring-harness.md) för poängsättning). Stora lokala cachar under `tools/out/` (Riksdagens texter, poängresultat) delas som release-arkiv: `node --experimental-strip-types tools/cache-archive.ts fetch riksdag-text`, se [`docs/cache-sharing.md`](docs/cache-sharing.md).
+
 ## Stack
 
 - [Astro](https://astro.build/) — static site framework

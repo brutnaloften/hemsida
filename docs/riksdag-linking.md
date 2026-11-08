@@ -1,0 +1,48 @@
+# Linking promises to Riksdag documents: the pipeline
+
+Epic `hemsida-4np`. This is the map of how a promise gets its Riksdag evidence, which tool does each step, and where each artifact lives. The details are in the linked docs; this page exists so the whole flow is in one place.
+
+**Principle:** tools find and rank candidates and fill in objective evidence; a human sets every verdict, with written reasoning (`docs/data-model.md`). Nothing below sets a verdict.
+
+## Steps
+
+| #   | Step                     | Tool                                                                                    | Reads                                     | Writes                                                                                                                 | Committed?                             |
+| --- | ------------------------ | --------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| 1   | Ingest document metadata | `tools/ingest-riksdag.ts`                                                               | data.riksdagen.se                         | `tools/out/riksdag-store/<term>.json` (3,547 dir/sou/ds/prop/bet), `src/data/freshness.json`                           | freshness only                         |
+| 2   | Keyword candidates       | `tools/match-riksdag-candidates.ts` (local), `tools/search-riksdag-candidates.ts` (API) | store, promise `keywords` and `committee` | `src/data/<term>/riksdag-candidates/<promise-id>.json` (top 15 per promise)                                            | yes                                    |
+| 3   | Full text                | `tools/fetch-riksdag-text.ts`                                                           | `dokument/<id>.text`, 1 request/s         | `tools/out/riksdag-text/<dok_id>.xml` (2.5 GB)                                                                         | no, shared via `docs/cache-sharing.md` |
+| 4   | Eval set                 | `tools/prepare-eval-set.ts`, `build-eval-briefs.ts`, `label-eval-set.ts`                | candidates, full text                     | `src/data/<term>/eval/pairs.json` (51 hand-labelled pairs: match, partial, contradicts, no_match, plus document stage) | yes (`docs/eval-set.md`)               |
+| 5   | Exhaustive scoring       | `pnpm score <config>`                                                                   | promises, full text, eval labels          | `tools/out/runs/<name>/`, `tools/out/score-cache/`                                                                     | no, shared via `docs/cache-sharing.md` |
+| 6   | Decision-bearing text    | `tools/extract-tier1.ts`                                                                | cached text                               | `tools/out/riksdag-tier1/`                                                                                             | no                                     |
+| 7   | Matcher (LLM judge)      | planned: `hemsida-4np.5`                                                                | top-scoring pairs                         | candidate verdicts for review                                                                                          | -                                      |
+| 8   | Evidence and verdict     | review PRs                                                                              | candidates, `rejected-candidates.json`    | `evidence[]` and `verdict` in the promise files                                                                        | yes, one PR per change                 |
+
+Freshness: `tools/check-freshness.ts` and `tools/sync-freshness-issues.ts` open `data-stale` issues when a dataset is older than its rule (`tools/lib/freshness-check.ts`); the `/refresh-data` skill turns one into a PR.
+
+## Why scoring exists (step 5)
+
+Keyword matching (step 2) caps at 15 candidates per promise, loses on vocabulary mismatch and snippet-only text, and nothing measured what it missed. The scoring harness asks every document a yes/no question per promise ("does the document describe or carry out something belonging to this promise?"), takes the highest chunk score per document, and is judged against the hand-labelled pairs (step 4): AUC, precision and recall at thresholds, and the rank of each pair's own promise among all 274. The score says a document is about a promise, not whether it fulfils it, which stage it is, or that it decided anything; those need the stage axis and a second-stage reader.
+
+How a run works (plan, content-addressed cache, budget guard, config fields): `docs/scoring-harness.md`.
+
+### Scorer results on the 51 eval pairs (same config, 535 requests, 274 questions each)
+
+| Scorer                                                                  | AUC   | At threshold 0.5 (tp / fp / fn / tn) | At 0.7          | Cost and time                                                                       |
+| ----------------------------------------------------------------------- | ----- | ------------------------------------ | --------------- | ----------------------------------------------------------------------------------- |
+| `jev` (TypeSafe System One)                                             | 0.966 | 30 / 3 / 3 / 15                      | 26 / 0 / 7 / 18 | about $0.43 to $0.99 for the run, minutes (`docs/jev-spike.md`)                     |
+| `claude`, model `haiku` (5.5), Agent SDK on a Claude subscription login | 0.946 | 30 / 3 / 3 / 15                      | 25 / 2 / 8 / 16 | no money billed; about 90 minutes at concurrency 4; roughly $10 in list-price terms |
+
+Findings worth keeping:
+
+- Haiku is competitive with Jev at the usual thresholds and slightly worse at the strict end. Jev is about 20x cheaper and far faster, so it stays the default (and the only scorer in CI).
+- `thinking: { type: 'disabled' }` had no effect through the Agent SDK (nor did `maxThinkingTokens: 0`, `effort: 'low'` or the `MAX_THINKING_TOKENS=0` environment variable in a small probe): every full request still spent roughly 2,000 to 11,000 thinking tokens and 8,000 to 18,000 output tokens. No zero-thinking Haiku run exists, so whether the score depends on thinking is unmeasured.
+- `usage.input_tokens` from the Agent SDK is near zero once prompt caching applies; the scorer sums `modelUsage` (input, output, cache read, cache write) instead.
+- Promise ids can be longer than the 64 characters Anthropic allows for tool-schema property names (one is 65), so the Claude scorer asks with positional keys (`q0`, `q1`, ...) and maps back.
+- The real limit for a subscription-billed scorer is the account's rate-limit window, not money, and local concurrency does not raise it. A whole-corpus run (3,547 documents, roughly 37,000 requests by scaling from the eval set; an upper-end guess, the eval documents are longer than average) would take days on one login; several people each scoring a slice and sharing `score-cache` deltas is the way to parallelise.
+- Whole-corpus scoring with Jev is estimated at a few dollars (`docs/jev-spike.md`, unmeasured).
+
+## Where things live
+
+- Committed: promises and evidence (`src/data/<term>/promises/`), candidates (`riksdag-candidates/`), rejected pairs (`rejected-candidates.json`), the eval set (`eval/pairs.json`), scoring configs (`tools/score-configs/`), freshness (`src/data/freshness.json`).
+- Gitignored under `tools/out/`: the store, the full-text cache, the score cache and run manifests, evidence briefs, tier-1 extracts. Two of them are shared as release archives: `docs/cache-sharing.md`.
+- Schemas: promise and evidence in `src/schema/promise.ts`, eval in `src/schema/eval.ts`, rejected pairs in `src/schema/rejected.ts`, scoring config in `tools/lib/score/config.ts`, cache manifest in `tools/lib/cache-archive.ts`.
