@@ -87,6 +87,11 @@ describe('manifest schema', () => {
       expect(cacheManifestSchema.safeParse(manifest({ files: [bad] })).success).toBe(false);
     }
   });
+  it('accepts Swedish letters in file names (Riksdag ids such as HA01FöU1)', () => {
+    expect(
+      parseCacheManifest(manifest({ files: ['HA01FöU1.xml', 'H901FiU51.xml'] })).files,
+    ).toHaveLength(2);
+  });
   it('rejects unknown keys and bad dates', () => {
     expect(cacheManifestSchema.safeParse({ ...manifest(), extra: 1 }).success).toBe(false);
     expect(cacheManifestSchema.safeParse(manifest({ createdAt: '8 nov' })).success).toBe(false);
