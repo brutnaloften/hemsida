@@ -5,6 +5,7 @@
  */
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { z } from 'zod';
 import { evalFileSchema, type EvalFile } from '../../../src/schema/eval.ts';
 import { briefPath, briefSchema, renderBrief } from '../eval-brief.ts';
 import { candidateFileSchema, CANDIDATE_DOKTYPER } from '../riksdag-candidates.ts';
@@ -18,6 +19,12 @@ export interface LinkInputs {
   /** Evidence text of a pair (memoised per document). */
   evidenceFor: (pair: LinkPair) => string;
 }
+
+/** The only fields of a promise file the judge needs (v1 and v2 files both have them). */
+const promiseTextSchema = z.looseObject({
+  title: z.string().min(1),
+  description: z.string().min(1),
+});
 
 const TRUNCATION_MARK = '\n[... utdraget avkortat ...]';
 
@@ -145,7 +152,7 @@ export function loadLinkInputs(
   for (const id of new Set(pairs.map((p) => p.promise_id))) {
     const file = resolve(promiseDir, `${id}.json`);
     if (!existsSync(file)) throw new Error(`pair promise ${id} has no file ${file}`);
-    const p = JSON.parse(readFileSync(file, 'utf8')) as { title: string; description: string };
+    const p = promiseTextSchema.parse(JSON.parse(readFileSync(file, 'utf8')));
     promises.set(id, { id, title: p.title, text: p.description });
   }
 

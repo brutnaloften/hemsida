@@ -70,10 +70,11 @@ const outcome = await executeLinkRun({
 if (outcome.summary) {
   const s = outcome.summary;
   console.log(
-    `${s.status}: ${s.sent} sent, ${s.cached} cached, ${s.remaining} remaining; ` +
-      `${s.input_tokens} input tokens, $${s.cost_usd.toFixed(4)}`,
+    `${s.status}: ${s.sent} sent, ${s.cached} cached, ${s.remaining} remaining, ${s.skipped} skipped; ` +
+      `${s.tokens} tokens, $${s.cost_usd.toFixed(4)}`,
   );
   if (outcome.report) console.log('\n' + formatAgreementReport(outcome.report));
+  if (s.status === 'complete' && s.error) console.error(s.error);
   if (s.status !== 'complete') {
     console.error(s.error);
     process.exitCode = 1;

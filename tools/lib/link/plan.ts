@@ -40,12 +40,12 @@ export interface LinkPlan {
 }
 
 /**
- * Cache key of one judgement: judge kind and model, prompt version, the promise and a hash of the evidence
+ * Cache key of one judgement: judge kind and model, prompt version, a hash of the instructions text, the promise and a hash of the evidence
  * text. Pair ids and document titles are not in it (titles are part of the evidence), so any two pairs
  * that show the judge the same thing share an entry, across runs and people.
  */
 export function requestKey(
-  config: Pick<LinkConfig, 'judge' | 'template_version'>,
+  config: Pick<LinkConfig, 'judge' | 'template_version' | 'instructions'>,
   promise: Pick<LinkPromise, 'title' | 'text'>,
   evidence: string,
 ): string {
@@ -53,6 +53,7 @@ export function requestKey(
     stableJson({
       judge: config.judge,
       template_version: config.template_version,
+      instructions_sha256: sha256(config.instructions),
       promise: { title: promise.title, text: promise.text },
       evidence_sha256: sha256(evidence),
     }),

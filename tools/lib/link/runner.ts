@@ -3,7 +3,7 @@
  * cached is never sent again, so re-runs and resumes are free) and a hard budget guard.
  */
 import type { LinkCache } from './cache.ts';
-import type { Judge } from './judge.ts';
+import { isTransientJudgeError, type Judge } from './judge.ts';
 import type { LinkPlan } from './plan.ts';
 
 export interface LinkStatus {
@@ -35,6 +35,7 @@ export interface LinkRunOptions {
   onProgress?: (done: number, total: number) => void;
 }
 export interface LinkRunSummary {
+  /** `complete` also covers runs that skipped transient errors; see `skipped`. */
   status: 'complete' | 'budget_exceeded' | 'failed';
   error?: string;
   total: number;
@@ -42,7 +43,11 @@ export interface LinkRunSummary {
   sent: number;
   /** Requests neither cached nor sent (only when the run stopped early). */
   remaining: number;
-  input_tokens: number;
+  /** Requests skipped on a transient error (429, 529, 5xx); a re-run retries them. */
+  skipped: number;
+  /** All tokens of the sent requests (input, output, cache). */
+  tokens: number;
+  /** Spend: the judge's reported cost where it gives one, else tokens at the flat price. */
   cost_usd: number;
 }
 
@@ -55,7 +60,8 @@ export async function runLinkPlan(plan: LinkPlan, opts: LinkRunOptions): Promise
     cached: plan.requests.length - todo.length,
     sent: 0,
     remaining: todo.length,
-    input_tokens: 0,
+    skipped: 0,
+    tokens: 0,
     cost_usd: 0,
   };
   let next = 0;
@@ -82,12 +88,16 @@ export async function runLinkPlan(plan: LinkPlan, opts: LinkRunOptions): Promise
           promise: req.promise,
           evidence: req.evidence,
         });
-        opts.cache.put(req.key, { judgement: res.judgement, input_tokens: res.input_tokens });
+        opts.cache.put(req.key, { judgement: res.judgement, tokens: res.tokens });
         summary.sent++;
-        summary.input_tokens += res.input_tokens;
-        summary.cost_usd += res.input_tokens * price;
+        summary.tokens += res.tokens;
+        summary.cost_usd += res.cost_usd ?? res.tokens * price;
         opts.onProgress?.(summary.cached + summary.sent, summary.total);
       } catch (err) {
+        if (isTransientJudgeError(err)) {
+          summary.skipped++;
+          continue;
+        }
         stopped = true;
         if (summary.status === 'complete') {
           summary.status = 'failed';
@@ -102,5 +112,8 @@ export async function runLinkPlan(plan: LinkPlan, opts: LinkRunOptions): Promise
   const n = Math.max(1, Math.min(opts.concurrency ?? 4, todo.length || 1));
   await Promise.all(Array.from({ length: n }, () => worker()));
   summary.remaining = todo.length - summary.sent;
+  if (summary.skipped > 0 && summary.status === 'complete') {
+    summary.error = `${summary.skipped} request(s) skipped on transient API errors (429/529/5xx); re-run to retry them.`;
+  }
   return summary;
 }

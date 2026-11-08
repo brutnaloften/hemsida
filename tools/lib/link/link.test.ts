@@ -9,6 +9,7 @@ import { candidatePairs, loadLinkInputs, renderEvidence } from './inputs.ts';
 import {
   createFakeJudge,
   createJudge,
+  JudgeError,
   judgeFor,
   parseApiJudgement,
   parseClaudeJudgement,
@@ -126,8 +127,8 @@ describe('judges', () => {
         },
       },
     });
-    expect(r).toEqual({ judgement: good, input_tokens: 10 });
-    expect(parseClaudeJudgement({ ...base, modelUsage: {} }).input_tokens).toBe(5);
+    expect(r).toEqual({ judgement: good, tokens: 10 });
+    expect(parseClaudeJudgement({ ...base, modelUsage: {} }).tokens).toBe(5);
     expect(() =>
       parseClaudeJudgement({ ...base, structured_output: { label: 'maybe' }, modelUsage: {} }),
     ).toThrow(/schema/);
@@ -142,19 +143,40 @@ describe('judges', () => {
     ).toThrow(/429.*rate limited/);
   });
 
+  it('uses the cost the claude result reports', () => {
+    const m = (costUSD: number) => ({
+      inputTokens: 1,
+      outputTokens: 1,
+      cacheReadInputTokens: 0,
+      cacheCreationInputTokens: 0,
+      costUSD,
+    });
+    const r = parseClaudeJudgement({
+      subtype: 'success',
+      is_error: false,
+      structured_output: good,
+      usage,
+      modelUsage: { a: m(0.01), b: m(0.02) },
+    } as never);
+    expect(r.cost_usd).toBeCloseTo(0.03);
+  });
+
   it('parses an api response from the forced tool call', () => {
     const r = parseApiJudgement({
       content: [{ type: 'text' }, { type: 'tool_use', name: 'judgement', input: good }],
       usage: { ...usage, cache_read_input_tokens: 10, cache_creation_input_tokens: null },
     });
-    expect(r).toEqual({ judgement: good, input_tokens: 18 });
+    expect(r).toEqual({ judgement: good, tokens: 18 });
     expect(() => parseApiJudgement({ content: [], usage })).toThrow(/no valid judgement/);
   });
 });
 
 describe('plan and cache keys', () => {
-  const key = (c: Pick<LinkConfig, 'judge' | 'template_version'>, p = promise, e = 'ev') =>
-    requestKey(c, p, e);
+  const key = (
+    c: Pick<LinkConfig, 'judge' | 'template_version' | 'instructions'>,
+    p = promise,
+    e = 'ev',
+  ) => requestKey(c, p, e);
 
   it('key depends on judge kind, model, template version, promise and evidence text', () => {
     const k = key(config);
@@ -162,6 +184,7 @@ describe('plan and cache keys', () => {
     expect(key({ ...config, judge: { kind: 'claude', model: 'fake' } })).not.toBe(k);
     expect(key({ ...config, judge: { kind: 'fake', model: 'other' } })).not.toBe(k);
     expect(key({ ...config, template_version: 'v2' })).not.toBe(k);
+    expect(key({ ...config, instructions: config.instructions + ' edited' })).not.toBe(k);
     expect(key(config, { ...promise, text: 'changed' })).not.toBe(k);
     expect(key(config, promise, 'ev2')).not.toBe(k);
   });
@@ -217,6 +240,54 @@ describe('runner', () => {
     expect(s1).toMatchObject({ status: 'failed', sent: 1, remaining: 2, error: 'rate limited' });
     const s2 = await runLinkPlan(plan, { ...base, judge: fake, cache, concurrency: 1 });
     expect(s2).toMatchObject({ status: 'complete', sent: 2, cached: 1 });
+  });
+
+  it('skips transient errors (429/529/5xx) and continues, but stops on others', async () => {
+    const fake = createFakeJudge();
+    const failWith = (err: Error): Judge => {
+      let n = 0;
+      return {
+        kind: 'fake',
+        judge: async (i) => (++n === 1 ? Promise.reject(err) : fake.judge(i)),
+      };
+    };
+    for (const status of [429, 529, 503]) {
+      const cache = createMemoryCache();
+      const s = await runLinkPlan(plan, {
+        ...base,
+        judge: failWith(new JudgeError('overloaded', status)),
+        cache,
+        concurrency: 1,
+      });
+      expect(s).toMatchObject({ status: 'complete', sent: 2, skipped: 1, remaining: 1 });
+      const s2 = await runLinkPlan(plan, { ...base, judge: fake, cache, concurrency: 1 });
+      expect(s2).toMatchObject({ status: 'complete', sent: 1, skipped: 0 });
+    }
+    const s = await runLinkPlan(plan, {
+      ...base,
+      judge: failWith(new JudgeError('bad request', 400)),
+      cache: createMemoryCache(),
+      concurrency: 1,
+    });
+    expect(s).toMatchObject({ status: 'failed', sent: 0, skipped: 0 });
+  });
+
+  it('counts the cost the judge reports instead of the flat price', async () => {
+    const fake = createFakeJudge();
+    const judge: Judge = {
+      kind: 'fake',
+      judge: async (i) => ({ ...(await fake.judge(i)), cost_usd: 0.4 }),
+    };
+    const s = await runLinkPlan(plan, {
+      ...base,
+      judge,
+      cache: createMemoryCache(),
+      concurrency: 1,
+      maxCostUsd: 0.3,
+    });
+    // After one request at a reported $0.40 the next estimate is stopped by the $0.30 cap.
+    expect(s).toMatchObject({ status: 'budget_exceeded', sent: 1 });
+    expect(s.cost_usd).toBeCloseTo(0.4);
   });
 
   it('stops at the budget guard before spending beyond the cap', async () => {
@@ -394,6 +465,17 @@ describe('evidence and inputs', () => {
     );
     return root;
   }
+
+  it('rejects a promise file without a description instead of sending "undefined"', () => {
+    const root = fixtureRoot();
+    writeFileSync(
+      resolve(root, 'src/data/2022-2026/promises/p1.json'),
+      JSON.stringify({ title: promise.title }),
+    );
+    expect(() => loadLinkInputs(config, root, '/text', { readText: () => HD01SOU1_TEXT })).toThrow(
+      /description/,
+    );
+  });
 
   it('runs end to end offline with the fake judge: dry run first, then run, report and resume', async () => {
     const root = fixtureRoot();
