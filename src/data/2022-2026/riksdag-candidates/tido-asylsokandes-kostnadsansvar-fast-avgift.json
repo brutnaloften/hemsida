@@ -12,7 +12,11 @@
     "keyword:egenavgift",
     "keyword:mottagandedirektivet",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -24,8 +28,14 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU15.html",
-      "found_by": ["keyword:asylsökande", "all-keywords", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:asylsökande",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03300",
@@ -85,7 +95,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU14.html",
       "found_by": ["keyword:egenavgift", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HDB430",
@@ -145,7 +156,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0349.html",
       "found_by": ["keyword:asylsökande", "keyword:mottagandedirektivet"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HCB368",
@@ -181,7 +193,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU30.html",
       "found_by": ["committee:SfU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD01SfU35",
@@ -193,7 +206,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU35.html",
       "found_by": ["keyword:asylsökande"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.15
     }
   ]
 }

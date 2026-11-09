@@ -12,7 +12,12 @@
     "keyword:stipendier",
     "keyword:kulturutövare",
     "all-keywords",
-    "committee:KrU"
+    "committee:KrU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -30,7 +35,8 @@
         "all-keywords",
         "committee:KrU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.3
     },
     {
       "dok_id": "H903283",
@@ -70,8 +76,13 @@
       "titel": "Tillgång till kultur och kulturskaparnas villkor",
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HC01KrU6.html",
-      "found_by": ["keyword:kulturskapare", "keyword:kulturutövare"],
-      "score": 2
+      "found_by": [
+        "keyword:kulturskapare",
+        "keyword:kulturutövare",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HC0315",
@@ -83,7 +94,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0315.html",
       "found_by": ["keyword:konstnärsstöd", "keyword:stipendier"],
-      "score": 2
+      "score": 2,
+      "relevance": 0
     },
     {
       "dok_id": "HC031d18",
@@ -95,7 +107,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HC031d18.html",
       "found_by": ["keyword:arbetsstipendier", "keyword:kulturskapare"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HBB358",
@@ -131,7 +144,8 @@
       "organ": "Kulturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03287.html",
       "found_by": ["keyword:stipendier"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.45
     },
     {
       "dok_id": "HD0398",
@@ -204,6 +218,32 @@
       "url": "https://data.riksdagen.se/dokument/HD03170.html",
       "found_by": ["keyword:stipendier"],
       "score": 1
+    },
+    {
+      "dok_id": "HA01KrU8",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KrU8",
+      "datum": "2023-05-08",
+      "titel": "Kultur för alla",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HA01KrU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA031d18",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

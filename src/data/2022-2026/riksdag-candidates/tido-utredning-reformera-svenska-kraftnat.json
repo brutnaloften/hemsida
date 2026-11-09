@@ -12,7 +12,13 @@
     "keyword:uppdelning",
     "keyword:utredning",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -24,8 +30,14 @@
       "titel": "Nya lagar om elsystemet",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03240.html",
-      "found_by": ["keyword:Svenska kraftnät", "keyword:transmissionsnätet", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:Svenska kraftnät",
+        "keyword:transmissionsnätet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD01NU17",
@@ -48,8 +60,14 @@
       "titel": "Granskning av statsrådens tjänsteutövning och regeringsärendenas handläggning",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU10.html",
-      "found_by": ["keyword:Svenska kraftnät", "keyword:myndighetsform", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:Svenska kraftnät",
+        "keyword:myndighetsform",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB0358",
@@ -60,8 +78,14 @@
       "titel": "Riksrevisionens rapport om statens åtgärder för utveckling av elsystemet",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0358.html",
-      "found_by": ["keyword:Svenska kraftnät", "keyword:transmissionsnätet", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:Svenska kraftnät",
+        "keyword:transmissionsnätet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD031",
@@ -96,8 +120,13 @@
       "titel": "Spänning i tillvaron",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB347.html",
-      "found_by": ["keyword:Svenska kraftnät", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:Svenska kraftnät",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HC01NU12",
@@ -109,7 +138,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU12.html",
       "found_by": ["keyword:Svenska kraftnät", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HB01NU9",
@@ -120,8 +150,13 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
-      "found_by": ["keyword:Svenska kraftnät", "committee:NU"],
-      "score": 2
+      "found_by": [
+        "keyword:Svenska kraftnät",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01NU9",
@@ -133,7 +168,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU9.html",
       "found_by": ["keyword:Svenska kraftnät", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HEB360",
@@ -157,7 +193,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB348.html",
       "found_by": ["keyword:utredning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01UbU31",
@@ -169,7 +206,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU31.html",
       "found_by": ["keyword:myndighetsform"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SoU31",

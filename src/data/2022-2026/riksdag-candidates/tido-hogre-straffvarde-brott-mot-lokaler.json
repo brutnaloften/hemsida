@@ -12,7 +12,13 @@
     "keyword:skolor",
     "keyword:angrepp mot lokaler",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -61,7 +67,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB31.html",
       "found_by": ["keyword:SOU 2022:2", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HBB380",
@@ -73,7 +80,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB380.html",
       "found_by": ["keyword:SOU 2022:2", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.04
     },
     {
       "dok_id": "HA03106",
@@ -145,7 +153,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03297.html",
       "found_by": ["keyword:straffvärde"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD03293",
@@ -157,7 +166,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03293.html",
       "found_by": ["keyword:straffvärde"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01JuU42",
@@ -169,7 +179,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
       "found_by": ["committee:JuU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01UbU27",
@@ -181,7 +192,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU27.html",
       "found_by": ["keyword:skolor"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01UbU21",
@@ -194,6 +206,32 @@
       "url": "https://data.riksdagen.se/dokument/HD01UbU21.html",
       "found_by": ["keyword:skolor"],
       "score": 1
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

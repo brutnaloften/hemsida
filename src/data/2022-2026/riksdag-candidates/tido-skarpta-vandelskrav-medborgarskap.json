@@ -11,7 +11,14 @@
     "keyword:vandelsprövning",
     "keyword:brottslighet i EU",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -69,8 +76,14 @@
       "titel": "Skärpta krav för svenskt medborgarskap",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03175.html",
-      "found_by": ["keyword:hederlig vandel", "keyword:medborgarskap", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:hederlig vandel",
+        "keyword:medborgarskap",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HDB333",
@@ -93,8 +106,14 @@
       "titel": "Skärpta krav för svenskt medborgarskap",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB31.html",
-      "found_by": ["keyword:hederlig vandel", "keyword:medborgarskap", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:hederlig vandel",
+        "keyword:medborgarskap",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01SfU15",
@@ -106,7 +125,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU15.html",
       "found_by": ["keyword:hederlig vandel", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01SfU36",
@@ -142,7 +162,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB3114.html",
       "found_by": ["keyword:brottslighet i EU", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HDB399",
@@ -154,7 +175,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB399.html",
       "found_by": ["keyword:hederlig vandel", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HCB312",
@@ -165,8 +187,13 @@
       "titel": "Mål och mening med integration",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB312.html",
-      "found_by": ["keyword:hederlig vandel", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:hederlig vandel",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01SfU37",
@@ -178,7 +205,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
       "found_by": ["committee:SfU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03301",
@@ -190,7 +218,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03301.html",
       "found_by": ["keyword:vandelsprövning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01TU21",
@@ -203,6 +232,214 @@
       "url": "https://data.riksdagen.se/dokument/HD01TU21.html",
       "found_by": ["keyword:medborgarskap"],
       "score": 1
+    },
+    {
+      "dok_id": "HB03107",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "107",
+      "datum": "2024-03-19",
+      "titel": "Ändringar i medborgarskapslagen",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03107.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01KU20d3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU20",
+      "datum": "2025-01-01",
+      "titel": "Granskningsbetänkande - del 3",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU20d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB393d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "93",
+      "datum": "2025-08-28",
+      "titel": "En robust skogspolitik för aktivt skogsbruk, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB393d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01SfU4",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU4",
+      "datum": "2025-11-27",
+      "titel": "Utgiftsområde 8 Migration",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3121",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "121",
+      "datum": "2026-01-01",
+      "titel": "Bodelning och betänketid - en effektivare process",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3121.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3110",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "110",
+      "datum": "2025-11-10",
+      "titel": "Snabbare bredband i hela landet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB031d9",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03272",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "272",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den brottsförebyggande strategin Barriärer mot brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03272.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB339",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "39",
+      "datum": "2025-04-09",
+      "titel": "Digital teknik på lika villkor ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB339.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB163",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "63",
+      "datum": "2024-06-27",
+      "titel": "Tilläggsdirektiv till Utredningen om skärpta krav för att förvärva svenskt medborgarskap (Ju 2023:17)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB163.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB395",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "95",
+      "datum": "2025-09-05",
+      "titel": "Skärpta villkor för anhöriginvandring",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB395.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

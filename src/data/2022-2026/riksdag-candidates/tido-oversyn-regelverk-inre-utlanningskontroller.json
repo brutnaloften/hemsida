@@ -12,7 +12,15 @@
     "keyword:digitala media",
     "keyword:DNA-prov",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -53,8 +61,14 @@
       "titel": "Effektivare verktyg vid inre utlänningskontroll",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU6.html",
-      "found_by": ["keyword:inre utlänningskontroll", "keyword:tillståndslösa", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:inre utlänningskontroll",
+        "keyword:tillståndslösa",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.65
     },
     {
       "dok_id": "HB0312",
@@ -78,7 +92,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03227.html",
       "found_by": ["keyword:kroppsvisitation", "keyword:DNA-prov"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD03132",
@@ -90,7 +105,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03132.html",
       "found_by": ["keyword:kroppsvisitation", "keyword:DNA-prov"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HDB430",
@@ -125,8 +141,13 @@
       "titel": "Preskription av avlägsnandebeslut och vissa frågor om återreseförbud ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB310.html",
-      "found_by": ["keyword:digitala media", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:digitala media",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HBB1126",
@@ -162,7 +183,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03291.html",
       "found_by": ["keyword:digitala media"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD03294",
@@ -174,7 +196,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:kroppsvisitation"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03297",
@@ -186,7 +209,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03297.html",
       "found_by": ["keyword:DNA-prov"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03300",
@@ -199,6 +223,123 @@
       "url": "https://data.riksdagen.se/dokument/HD03300.html",
       "found_by": ["keyword:tillståndslösa"],
       "score": 1
+    },
+    {
+      "dok_id": "HB0368",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "68",
+      "datum": "2024-03-14",
+      "titel": "Barriärer mot brott – en socialpreventiv strategi mot kriminella nätverk och annan brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031d9",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d9",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01KrU8",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KrU8",
+      "datum": "2023-05-08",
+      "titel": "Kultur för alla",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HA01KrU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB031d9",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA03109",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "109",
+      "datum": "2023-04-25",
+      "titel": "Utökade polisiära befogenheter i gränsnära områden",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03109.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01SfU32",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU32",
+      "datum": "2026-06-11",
+      "titel": "Stärkt återvändandeverksamhet",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01JuU26",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU26",
+      "datum": "2023-06-13",
+      "titel": "Utökade polisiära befogenheter i gränsnära områden",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.75
     }
   ]
 }

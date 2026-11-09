@@ -12,7 +12,14 @@
     "keyword:prisområden",
     "keyword:elområden",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -30,9 +37,11 @@
         "keyword:prisområden",
         "keyword:elområden",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01NU9",
@@ -49,9 +58,11 @@
         "keyword:prisområden",
         "keyword:elområden",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01NU17",
@@ -85,9 +96,11 @@
         "keyword:samlat elprisområde",
         "keyword:prisområden",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01NU3",
@@ -98,8 +111,14 @@
       "titel": "Utgiftsområde 21 Energi",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
-      "found_by": ["keyword:prisområden", "all-keywords", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:prisområden",
+        "all-keywords",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01NU20",
@@ -135,7 +154,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
       "found_by": ["keyword:prisområden", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HB03105",
@@ -146,8 +166,14 @@
       "titel": "Energipolitikens långsiktiga inriktning",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03105.html",
-      "found_by": ["keyword:samlat elprisområde", "keyword:elområden", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:samlat elprisområde",
+        "keyword:elområden",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03240",
@@ -159,7 +185,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03240.html",
       "found_by": ["keyword:elpriser", "keyword:elområden"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD038",
@@ -171,7 +198,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD038.html",
       "found_by": ["keyword:elpriser", "keyword:elområden"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC03150",
@@ -183,7 +211,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03150.html",
       "found_by": ["keyword:elpriser", "keyword:elområden"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HB0358",
@@ -195,7 +224,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0358.html",
       "found_by": ["keyword:prisområden", "keyword:elområden"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD03275",

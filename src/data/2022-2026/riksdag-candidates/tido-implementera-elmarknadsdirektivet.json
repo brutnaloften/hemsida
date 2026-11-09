@@ -11,7 +11,15 @@
     "keyword:ellagen",
     "keyword:ansvarsfördelning",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -23,8 +31,14 @@
       "titel": "Nya lagar om elsystemet",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03240.html",
-      "found_by": ["keyword:elmarknadsdirektivet", "keyword:ellagen", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:elmarknadsdirektivet",
+        "keyword:ellagen",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC01NU12",
@@ -35,8 +49,14 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU12.html",
-      "found_by": ["keyword:elmarknadsdirektivet", "all-keywords", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:elmarknadsdirektivet",
+        "all-keywords",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01NU9",
@@ -47,8 +67,14 @@
       "titel": "Genomförande av elmarknadsdirektivet när det gäller leverans av el och aggregeringstjänster",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU9.html",
-      "found_by": ["keyword:elmarknadsdirektivet", "all-keywords", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:elmarknadsdirektivet",
+        "all-keywords",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01NU25",
@@ -83,8 +109,13 @@
       "titel": "Regelverket för framtidens el- och gasnät",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0326.html",
-      "found_by": ["keyword:elmarknadsdirektivet", "keyword:ellagen"],
-      "score": 2
+      "found_by": [
+        "keyword:elmarknadsdirektivet",
+        "keyword:ellagen",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD0316",
@@ -95,8 +126,13 @@
       "titel": "Förbättrad utformning av EU:s elmarknad",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0316.html",
-      "found_by": ["keyword:elmarknadsdirektivet", "keyword:ellagen"],
-      "score": 2
+      "found_by": [
+        "keyword:elmarknadsdirektivet",
+        "keyword:ellagen",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC0332",
@@ -107,8 +143,13 @@
       "titel": "Tillgång till mät- och förbrukningsuppgifter på elmarknaden",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0332.html",
-      "found_by": ["keyword:elmarknadsdirektivet", "keyword:ellagen"],
-      "score": 2
+      "found_by": [
+        "keyword:elmarknadsdirektivet",
+        "keyword:ellagen",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01NU9",
@@ -119,8 +160,9 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
-      "found_by": ["all-keywords", "committee:NU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:NU", "score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA03136",
@@ -168,7 +210,8 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HD01TU20.html",
       "found_by": ["keyword:ansvarsfördelning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03130",
@@ -180,7 +223,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03130.html",
       "found_by": ["keyword:implementering"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01UbU19",
@@ -193,6 +237,110 @@
       "url": "https://data.riksdagen.se/dokument/HD01UbU19.html",
       "found_by": ["keyword:ansvarsfördelning"],
       "score": 1
+    },
+    {
+      "dok_id": "HD01NU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU8",
+      "datum": "2025-11-12",
+      "titel": "Förbättrad utformning av EU:s elmarknad",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB397",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "97",
+      "datum": "2025-01-01",
+      "titel": "Mot en effektiv elektrifiering av transportsystemet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB397.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01NU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU9",
+      "datum": "2024-11-14",
+      "titel": "Tillgång till mät- och förbrukningsuppgifter på elmarknaden",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB347",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "47",
+      "datum": "2025-04-25",
+      "titel": "Spänning i tillvaron",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB347.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HBB364",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "64",
+      "datum": "2023-11-01",
+      "titel": "Ett förändrat regelverk för framtidens el- och gasnät ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB364.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

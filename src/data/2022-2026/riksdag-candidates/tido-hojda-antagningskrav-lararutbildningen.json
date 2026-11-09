@@ -12,7 +12,15 @@
     "keyword:kognitionsvetenskap",
     "keyword:karriärväxlare",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +36,11 @@
         "keyword:lärarutbildning",
         "keyword:ämneslärarutbildning",
         "keyword:kognitionsvetenskap",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HCB381",
@@ -45,9 +55,11 @@
         "keyword:antagningskrav",
         "keyword:ämneslärarutbildning",
         "keyword:kognitionsvetenskap",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HEB350",
@@ -70,8 +82,14 @@
       "titel": "Utveckla lärar- och förskollärarutbildningarna ",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HBB1111.html",
-      "found_by": ["keyword:ämneslärarutbildning", "keyword:kognitionsvetenskap", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:ämneslärarutbildning",
+        "keyword:kognitionsvetenskap",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HEB337",
@@ -94,8 +112,13 @@
       "titel": "Nya läroplaner – för en stark kunskapsskola",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03194.html",
-      "found_by": ["keyword:lärarutbildning", "keyword:kognitionsvetenskap"],
-      "score": 2
+      "found_by": [
+        "keyword:lärarutbildning",
+        "keyword:kognitionsvetenskap",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD03166",
@@ -143,7 +166,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU1.html",
       "found_by": ["all-keywords", "committee:UbU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HB031d17",
@@ -154,8 +178,13 @@
       "titel": "Budgetpropositionen för 2024 - Utgiftsområde 16 Utbildning och universitetsforskning",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HB031d17.html",
-      "found_by": ["keyword:ämneslärarutbildning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:ämneslärarutbildning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01UbU23",
@@ -204,6 +233,110 @@
       "url": "https://data.riksdagen.se/dokument/HD03195.html",
       "found_by": ["keyword:kognitionsvetenskap"],
       "score": 1
+    },
+    {
+      "dok_id": "HDB319",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "19",
+      "datum": "2025-02-26",
+      "titel": "Kunskap för alla ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB319.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HCB397",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "97",
+      "datum": "2025-01-01",
+      "titel": "Mot en effektiv elektrifiering av transportsystemet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB397.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03100",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "100",
+      "datum": "2026-04-13",
+      "titel": "2026 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB196",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "96",
+      "datum": "2026-08-27",
+      "titel": "Åtgärder för lämpliga klasstorlekar",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB196.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB388",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "88",
+      "datum": "2024-12-11",
+      "titel": "Säkerhetsprövningar ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01UbU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU11",
+      "datum": "2025-05-27",
+      "titel": "Lärare och elever",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03196",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "196",
+      "datum": "2025-06-24",
+      "titel": "Riksrevisionens rapport om lärosätenas arbete mot avhopp på bristyrkesutbildningar",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03196.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

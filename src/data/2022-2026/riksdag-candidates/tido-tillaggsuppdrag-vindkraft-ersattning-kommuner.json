@@ -12,7 +12,17 @@
     "keyword:incitament",
     "keyword:vindkraftsutbyggnad",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -36,8 +46,14 @@
       "titel": "Regional utvecklingspolitik",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU12.html",
-      "found_by": ["keyword:vindkraftsutbyggnad", "all-keywords", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:vindkraftsutbyggnad",
+        "all-keywords",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HA01NU17",
@@ -60,8 +76,14 @@
       "titel": "Övergripande miljöfrågor",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HA01MJU13.html",
-      "found_by": ["keyword:vindkraft", "keyword:Dir. 2022:27", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:vindkraft",
+        "keyword:Dir. 2022:27",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HBB318d2",
@@ -72,8 +94,14 @@
       "titel": "Värdet av vinden Kompensation, incitament och planering för en hållbar fortsatt utbyggnad av vindkraften, del 2",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB318d2.html",
-      "found_by": ["keyword:Dir. 2022:27", "keyword:incitament", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:Dir. 2022:27",
+        "keyword:incitament",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.92
     },
     {
       "dok_id": "HA01NU8",
@@ -96,8 +124,13 @@
       "titel": "Vindkraft i kommuner",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU20.html",
-      "found_by": ["keyword:vindkraft", "committee:NU"],
-      "score": 2
+      "found_by": [
+        "keyword:vindkraft",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01NU13",
@@ -108,8 +141,13 @@
       "titel": "Energipolitik",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
-      "found_by": ["keyword:vindkraft", "committee:NU"],
-      "score": 2
+      "found_by": [
+        "keyword:vindkraft",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01MJU7",
@@ -194,6 +232,305 @@
       "url": "https://data.riksdagen.se/dokument/HBB318.html",
       "found_by": ["keyword:vindkraft", "keyword:incitament"],
       "score": 2
+    },
+    {
+      "dok_id": "HBB370",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "70",
+      "datum": "2023-11-08",
+      "titel": "Ordning och reda - förstärkt och tillförlitlig byggkontroll",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB370.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HAB1135",
+      "doktyp": "dir",
+      "rm": "2022",
+      "beteckning": "135",
+      "datum": "2022-11-24",
+      "titel": "Tilläggsdirektiv till utredningen Stärkta incitament för utbyggd vindkraft (M 2022:03)",
+      "organ": "M-dep",
+      "url": "https://data.riksdagen.se/dokument/HAB1135.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HBB353d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "53",
+      "datum": "2023-09-14",
+      "titel": "En ändamålsenlig arbetsskadeförsäkring - för bättre ekonomisk trygghet, kunskap och rättssäkerhet, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB353d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01CU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "CU9",
+      "datum": "2023-02-28",
+      "titel": "Fastighetsrätt",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HA01CU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB340",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "40",
+      "datum": "2023-08-25",
+      "titel": "Förbättrade möjligheter för barn att utkräva sina rättigheter enligt barnkonventionen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB340.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB382",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "82",
+      "datum": "2023-12-06",
+      "titel": "Ökad kontroll över tandvårdssektorn ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD031d22",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01NU3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU3",
+      "datum": "2025-12-04",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC031d21",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB393",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "93",
+      "datum": "2023-12-13",
+      "titel": "Budgetprocessen i det finanspolitiska ramverket ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB393.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB329",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "29",
+      "datum": "2024-04-29",
+      "titel": "Goda möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB329.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01NU10",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU10",
+      "datum": "2025-02-13",
+      "titel": "Regional utvecklingspolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HBB391",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "91",
+      "datum": "2023-12-13",
+      "titel": "Penning- och finanspolitisk konjunkturstabilisering ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB391.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB343",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "43",
+      "datum": "2023-08-22",
+      "titel": "En samordnad registerkontroll för upphandlande myndigheter och enheter",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB343.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB01FiU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU20",
+      "datum": "2024-06-13",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB315d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "15",
+      "datum": "2026-03-04",
+      "titel": "Marken, vattnet, tankarna, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB315d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB330",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "30",
+      "datum": "2023-06-20",
+      "titel": "Ett trygghetssystem för alla - nytt regelverk för sjukpenninggrundande inkomst ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB330.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01NU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU18",
+      "datum": "2026-04-08",
+      "titel": "Tillståndsprövning enligt förnybartdirektivet",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC031d22",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01NU9",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU9",
+      "datum": "2024-03-26",
+      "titel": "Elmarknadsfrågor",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC01NU3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU3",
+      "datum": "2024-12-09",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

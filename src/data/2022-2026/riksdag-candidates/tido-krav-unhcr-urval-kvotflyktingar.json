@@ -12,7 +12,12 @@
     "keyword:integration",
     "keyword:HBTQ",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -102,7 +107,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU15.html",
       "found_by": ["all-keywords", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HA01SfU4",
@@ -114,7 +120,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU4.html",
       "found_by": ["all-keywords", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03308",
@@ -126,7 +133,8 @@
       "organ": "Arbetsmarknadsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03308.html",
       "found_by": ["keyword:HBTQ"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03301",
@@ -138,7 +146,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03301.html",
       "found_by": ["keyword:UNHCR"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HEB153",
@@ -162,7 +171,8 @@
       "organ": "Arbetsmarknadsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03266.html",
       "found_by": ["keyword:HBTQ"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03265",
@@ -174,7 +184,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03265.html",
       "found_by": ["keyword:UNHCR"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03233",
@@ -199,6 +210,19 @@
       "url": "https://data.riksdagen.se/dokument/HD03229.html",
       "found_by": ["keyword:UNHCR"],
       "score": 1
+    },
+    {
+      "dok_id": "HA031d9",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

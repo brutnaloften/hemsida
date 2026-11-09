@@ -12,7 +12,15 @@
     "keyword:transparens",
     "keyword:yttrandefrihet",
     "all-keywords",
-    "committee:KU"
+    "committee:KU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -32,7 +40,8 @@
         "all-keywords",
         "committee:KU"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.35
     },
     {
       "dok_id": "HC01KU24",
@@ -49,7 +58,8 @@
         "all-keywords",
         "committee:KU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.45
     },
     {
       "dok_id": "HB01KU9",
@@ -130,8 +140,13 @@
       "titel": "Budgetpropositionen för 2024 - Utgiftsområde 1 Rikets styrelse",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HB031d2.html",
-      "found_by": ["keyword:sociala plattformar", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:sociala plattformar",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB191",
@@ -143,7 +158,8 @@
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB191.html",
       "found_by": ["keyword:yttrandefrihet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03287",
@@ -155,7 +171,8 @@
       "organ": "Kulturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03287.html",
       "found_by": ["keyword:medielandskapet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01KU20",
@@ -167,7 +184,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU20.html",
       "found_by": ["keyword:opinionsbildning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01UU17",
@@ -179,7 +197,8 @@
       "organ": "UU",
       "url": "https://data.riksdagen.se/dokument/HD01UU17.html",
       "found_by": ["keyword:transparens"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HD03258",
@@ -203,7 +222,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU29.html",
       "found_by": ["keyword:opinionsbildning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03103",
@@ -216,6 +236,58 @@
       "url": "https://data.riksdagen.se/dokument/HD03103.html",
       "found_by": ["keyword:medielandskapet"],
       "score": 1
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB339",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "39",
+      "datum": "2023-06-30",
+      "titel": "En inre marknad för digitala tjänster - kompletteringar och ändringar i svensk rätt",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB339.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

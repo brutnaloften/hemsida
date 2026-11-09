@@ -12,7 +12,16 @@
     "keyword:sexualbrott mot barn",
     "keyword:preskriptionstid",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +38,11 @@
         "keyword:påföljdspreskription",
         "keyword:preskriptionstid",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC0359",
@@ -64,9 +75,11 @@
         "keyword:preskription",
         "keyword:SOU 2021:90",
         "keyword:preskriptionstid",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01JuU11",
@@ -94,8 +107,14 @@
       "titel": "Straffrättsliga frågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU20.html",
-      "found_by": ["keyword:påföljdspreskription", "all-keywords", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:påföljdspreskription",
+        "all-keywords",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01JuU18",
@@ -119,7 +138,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03210.html",
       "found_by": ["keyword:preskription", "keyword:preskriptionstid"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01JuU17",
@@ -142,8 +162,13 @@
       "titel": "Straffrättsliga frågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU10.html",
-      "found_by": ["keyword:sexualbrott mot barn", "committee:JuU"],
-      "score": 2
+      "found_by": [
+        "keyword:sexualbrott mot barn",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC03126",
@@ -178,8 +203,13 @@
       "titel": "Ny lag om internationella sanktioner",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB346.html",
-      "found_by": ["keyword:SOU 2021:90", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:SOU 2021:90",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HAB350",
@@ -202,8 +232,9 @@
       "titel": "Barnfrid - förstärkta åtgärder mot sexuella kränkningar av barn och barnpornografibrott",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1102.html",
-      "found_by": ["keyword:sexualbrott mot barn"],
-      "score": 1
+      "found_by": ["keyword:sexualbrott mot barn", "score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03293",
@@ -214,8 +245,152 @@
       "titel": "Skärpta regler för unga lagöverträdare",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03293.html",
-      "found_by": ["keyword:påföljdspreskription"],
-      "score": 1
+      "found_by": ["keyword:påföljdspreskription", "score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01JuU12",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU12",
+      "datum": "2025-02-14",
+      "titel": "Unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03297",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "297",
+      "datum": "2026-06-30",
+      "titel": "Ett nytt straffrättsligt påföljdssystem",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03297.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HD01JuU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU1",
+      "datum": "2025-11-28",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01AU8",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU8",
+      "datum": "2025-04-10",
+      "titel": "Arbetsmiljö",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HCB310",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "10",
+      "datum": "2024-02-05",
+      "titel": "Preskription av avlägsnandebeslut och vissa frågor om återreseförbud ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB310.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC03104",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "104",
+      "datum": "2025-02-25",
+      "titel": "Internationell verkställighet i brottmål",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03104.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB1112",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "112",
+      "datum": "2023-07-06",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB1112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03132",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "132",
+      "datum": "2026-02-19",
+      "titel": "Frihetsberövande påföljder för barn och unga",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03132.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

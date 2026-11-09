@@ -11,7 +11,13 @@
     "keyword:gränsområden",
     "keyword:bevakning",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -60,7 +66,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU6.html",
       "found_by": ["keyword:utlänningskontroll", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA01JuU26",
@@ -71,8 +78,13 @@
       "titel": "Utökade polisiära befogenheter i gränsnära områden",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU26.html",
-      "found_by": ["keyword:utlänningskontroll", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:utlänningskontroll",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA03109",
@@ -83,8 +95,13 @@
       "titel": "Utökade polisiära befogenheter i gränsnära områden",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HA03109.html",
-      "found_by": ["keyword:SOU 2021:92", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:SOU 2021:92",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HAB352",
@@ -119,8 +136,9 @@
       "titel": "Stärkt återvändandeverksamhet",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
-      "found_by": ["committee:SfU"],
-      "score": 1
+      "found_by": ["committee:SfU", "score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD03275",
@@ -144,7 +162,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU34.html",
       "found_by": ["committee:SfU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0
     },
     {
       "dok_id": "HD03249",
@@ -193,6 +212,19 @@
       "url": "https://data.riksdagen.se/dokument/HD03254.html",
       "found_by": ["keyword:bevakning"],
       "score": 1
+    },
+    {
+      "dok_id": "HDB357",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "57",
+      "datum": "2025-05-19",
+      "titel": "Polisiär beredskap i fred, kris och krig",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB357.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

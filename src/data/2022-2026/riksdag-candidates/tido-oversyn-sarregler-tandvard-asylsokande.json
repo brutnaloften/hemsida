@@ -12,7 +12,13 @@
     "keyword:uppehållstillstånd",
     "keyword:vård som inte kan anstå",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -102,7 +108,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU4.html",
       "found_by": ["keyword:tandvård", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HCB423",
@@ -113,8 +120,13 @@
       "titel": "Inhibition av verkställigheten ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB423.html",
-      "found_by": ["keyword:vård som inte kan anstå", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:vård som inte kan anstå",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HCB370",
@@ -150,7 +162,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
       "found_by": ["keyword:uppehållstillstånd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03293",
@@ -162,7 +175,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03293.html",
       "found_by": ["keyword:särregler"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SfU36",
@@ -186,7 +200,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU30.html",
       "found_by": ["keyword:uppehållstillstånd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01SfU35",
@@ -198,7 +213,60 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU35.html",
       "found_by": ["keyword:asylsökande"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB382",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "82",
+      "datum": "2023-12-06",
+      "titel": "Ökad kontroll över tandvårdssektorn ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD01SfU4",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU4",
+      "datum": "2025-11-27",
+      "titel": "Utgiftsområde 8 Migration",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD0399",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "99",
+      "datum": "2026-04-13",
+      "titel": "Vårändringsbudget för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

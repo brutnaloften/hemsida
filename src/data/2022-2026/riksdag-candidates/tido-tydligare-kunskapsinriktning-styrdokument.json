@@ -12,7 +12,17 @@
     "keyword:ämneskunskaper",
     "keyword:styrdokument",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -47,9 +57,11 @@
         "keyword:kursplaner",
         "keyword:kunskapsinriktning",
         "keyword:ämneskunskaper",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03196",
@@ -94,8 +106,14 @@
       "titel": "Ett likvärdigt betygssystem",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03197.html",
-      "found_by": ["keyword:läroplan", "keyword:kursplaner", "keyword:ämneskunskaper"],
-      "score": 3
+      "found_by": [
+        "keyword:läroplan",
+        "keyword:kursplaner",
+        "keyword:ämneskunskaper",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01UbU8",
@@ -106,8 +124,14 @@
       "titel": "Grundläggande om utbildning",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU8.html",
-      "found_by": ["keyword:kunskapsinriktning", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:kunskapsinriktning",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC03143",
@@ -118,8 +142,14 @@
       "titel": "En tioårig grundskola",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03143.html",
-      "found_by": ["keyword:läroplan", "keyword:kursplaner", "keyword:ämneskunskaper"],
-      "score": 3
+      "found_by": [
+        "keyword:läroplan",
+        "keyword:kursplaner",
+        "keyword:ämneskunskaper",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.7
     },
     {
       "dok_id": "HBB1173",
@@ -130,8 +160,14 @@
       "titel": "En tydligare kunskapsinriktning i läroplanerna",
       "organ": "U-dep",
       "url": "https://data.riksdagen.se/dokument/HBB1173.html",
-      "found_by": ["keyword:läroplan", "keyword:kunskapsinriktning", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:läroplan",
+        "keyword:kunskapsinriktning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01UbU26",
@@ -142,8 +178,13 @@
       "titel": "Ett likvärdigt betygssystem",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU26.html",
-      "found_by": ["keyword:ämneskunskaper", "committee:UbU"],
-      "score": 2
+      "found_by": [
+        "keyword:ämneskunskaper",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HD03195",
@@ -202,8 +243,13 @@
       "titel": "Kunskap för alla ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB319.html",
-      "found_by": ["keyword:kunskapsinriktning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kunskapsinriktning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC01UbU12",
@@ -214,8 +260,386 @@
       "titel": "Gymnasieskolan",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU12.html",
-      "found_by": ["all-keywords", "committee:UbU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:UbU", "score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 2,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01UbU10",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU10",
+      "datum": "2026-03-25",
+      "titel": "Gymnasieskolan",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d18",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB394",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "94",
+      "datum": "2026-01-01",
+      "titel": "En säkrare utrikesförvaltning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB49",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "9",
+      "datum": "2025-03-17",
+      "titel": "Ett nationellt mobilförbud i de obligatoriska skolformerna och fritidshemmet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB49.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB318d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "18",
+      "datum": "2025-02-19",
+      "titel": "Ett likvärdigt betygssystem, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB318d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01UbU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU17",
+      "datum": "2025-06-09",
+      "titel": "En tioårig grundskola",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB389d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "89",
+      "datum": "2025-08-29",
+      "titel": "En moderniserad fiskelagstiftning, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB389d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HEB34",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "4",
+      "datum": "2026-01-20",
+      "titel": "Rektor i fokus",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB34.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03100",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "100",
+      "datum": "2026-04-13",
+      "titel": "2026 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.98
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HB01UbU9",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "UbU9",
+      "datum": "2024-04-10",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3123",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "123",
+      "datum": "2026-01-01",
+      "titel": "Skärpta villkor för friskolesektorn - ytterligare förslag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3123.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC03100",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "100",
+      "datum": "2025-04-15",
+      "titel": "2025 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB393d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "93",
+      "datum": "2025-08-28",
+      "titel": "En robust skogspolitik för aktivt skogsbruk, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB393d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB329",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "29",
+      "datum": "2024-04-29",
+      "titel": "Goda möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB329.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HCB415",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "15",
+      "datum": "2024-08-13",
+      "titel": "Underlätta, utbilda, uppskatta - så erkänns ungas ideella engagemang",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB415.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB3121",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "121",
+      "datum": "2026-01-01",
+      "titel": "Bodelning och betänketid - en effektivare process",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3121.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC03196",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "196",
+      "datum": "2025-06-24",
+      "titel": "Riksrevisionens rapport om lärosätenas arbete mot avhopp på bristyrkesutbildningar",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03196.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB381",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "81",
+      "datum": "2024-12-03",
+      "titel": "Ämneskunskaper och lärarskicklighet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB381.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3110",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "110",
+      "datum": "2025-11-10",
+      "titel": "Snabbare bredband i hela landet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB374",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "74",
+      "datum": "2025-06-11",
+      "titel": "Ny reglering för den arbetsmarknadspolitiska verksamheten ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB374.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB384",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "84",
+      "datum": "2025-06-27",
+      "titel": "Hem för barn och unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB384.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB03100",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "100",
+      "datum": "2024-04-15",
+      "titel": "2024 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB339",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "39",
+      "datum": "2025-04-09",
+      "titel": "Digital teknik på lika villkor ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB339.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD0399",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "99",
+      "datum": "2026-04-13",
+      "titel": "Vårändringsbudget för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB341",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "41",
+      "datum": "2026-06-17",
+      "titel": "Jämställdhet i en föränderlig tid - nuläge och vägar framåt, del 1",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB341.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.65
     }
   ]
 }

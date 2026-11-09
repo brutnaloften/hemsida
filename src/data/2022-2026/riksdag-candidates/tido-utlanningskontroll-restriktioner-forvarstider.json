@@ -12,7 +12,14 @@
     "keyword:säkerhetshot",
     "keyword:utvisning",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -41,7 +48,8 @@
         "keyword:diplomatiska garantier",
         "all-keywords"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.12
     },
     {
       "dok_id": "HB01SfU8",
@@ -53,7 +61,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU8.html",
       "found_by": ["keyword:särskild utlänningskontroll", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.2
     },
     {
       "dok_id": "HA01JuU6",
@@ -80,8 +89,9 @@
       "titel": "Skärpta regler om uppsikt och förvar",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU31.html",
-      "found_by": ["keyword:förvar", "committee:SfU"],
-      "score": 2
+      "found_by": ["keyword:förvar", "committee:SfU", "score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD03267",
@@ -92,8 +102,13 @@
       "titel": "Stärkt skydd mot utlänningar som utgör kvalificerade säkerhetshot",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03267.html",
-      "found_by": ["keyword:säkerhetshot", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:säkerhetshot",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01SfU22",
@@ -116,8 +131,13 @@
       "titel": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB3114.html",
-      "found_by": ["keyword:särskild utlänningskontroll", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:särskild utlänningskontroll",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC01SfU22",
@@ -165,7 +185,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
       "found_by": ["keyword:utvisning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03291",
@@ -176,8 +197,9 @@
       "titel": "Uppföljning av den nationella strategin mot våldsbejakande extremism och terrorism",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03291.html",
-      "found_by": ["keyword:säkerhetshot"],
-      "score": 1
+      "found_by": ["keyword:säkerhetshot", "score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01KU45",
@@ -189,7 +211,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU45.html",
       "found_by": ["keyword:förvar"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01SfU33",
@@ -202,6 +225,175 @@
       "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
       "found_by": ["keyword:utvisning"],
       "score": 1
+    },
+    {
+      "dok_id": "HCB423",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "23",
+      "datum": "2024-11-04",
+      "titel": "Inhibition av verkställigheten ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB423.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA0338",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "38",
+      "datum": "2022-12-20",
+      "titel": "2022 års redogörelse för tillämpningen av lagen om särskild utlänningskontroll",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0338.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3123",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "123",
+      "datum": "2026-01-01",
+      "titel": "Skärpta villkor för friskolesektorn - ytterligare förslag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3123.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB178",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "78",
+      "datum": "2024-08-29",
+      "titel": "Tilläggsdirektiv till utredningen om stärkt skydd mot utlänningar som utgör kvalificerade säkerhetshot eller som har koppling till kriminella nätverk (Ju 2024:10)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB178.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03265",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "265",
+      "datum": "2026-04-30",
+      "titel": "Skärpta regler om uppsikt och förvar",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03265.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3121",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "121",
+      "datum": "2026-01-01",
+      "titel": "Bodelning och betänketid - en effektivare process",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3121.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB1119",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "119",
+      "datum": "2023-08-10",
+      "titel": "Moderna och ändamålsenliga regler för förvar",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1119.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

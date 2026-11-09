@@ -12,7 +12,14 @@
     "keyword:SGU",
     "keyword:lagringsplatser",
     "all-keywords",
-    "committee:MJU"
+    "committee:MJU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +36,11 @@
         "keyword:CCU",
         "keyword:lagringsplatser",
         "all-keywords",
-        "committee:MJU"
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.75
     },
     {
       "dok_id": "HC01MJU14",
@@ -107,8 +116,14 @@
       "titel": "Sekretess i vissa ärenden om strategiska nettonollprojekt",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03199.html",
-      "found_by": ["keyword:CCS", "keyword:koldioxidlagring", "keyword:lagringsplatser"],
-      "score": 3
+      "found_by": [
+        "keyword:CCS",
+        "keyword:koldioxidlagring",
+        "keyword:lagringsplatser",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB03105",
@@ -119,8 +134,14 @@
       "titel": "Energipolitikens långsiktiga inriktning",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03105.html",
-      "found_by": ["keyword:CCS", "keyword:CCU", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:CCS",
+        "keyword:CCU",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01MJU15",
@@ -144,7 +165,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HB01MJU1.html",
       "found_by": ["keyword:CCU", "committee:MJU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HEB411",
@@ -156,7 +178,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB411.html",
       "found_by": ["keyword:CCU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03101",
@@ -180,7 +203,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0390.html",
       "found_by": ["keyword:koldioxidlagring"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03158",
@@ -204,7 +228,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU16.html",
       "found_by": ["keyword:SGU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03167",
@@ -216,7 +241,86 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03167.html",
       "found_by": ["keyword:lagringsplatser"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HA031d21",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 20 Allmän miljö- och naturvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03194",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "194",
+      "datum": "2026-03-17",
+      "titel": "Nya läroplaner – för en stark kunskapsskola",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03194.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC031d21",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC031d25",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 24 Näringsliv",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d25.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA0399",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "99",
+      "datum": "2023-04-17",
+      "titel": "Vårändringsbudget för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

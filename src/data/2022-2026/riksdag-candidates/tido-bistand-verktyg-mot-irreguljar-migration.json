@@ -12,7 +12,15 @@
     "keyword:återvandring",
     "keyword:bistånd",
     "all-keywords",
-    "committee:UU"
+    "committee:UU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -40,9 +48,11 @@
         "keyword:biståndspolitik",
         "keyword:irreguljär migration",
         "keyword:grundorsaker",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01UU8",
@@ -113,8 +123,14 @@
       "titel": "Internationellt utvecklingsbistånd",
       "organ": "UU",
       "url": "https://data.riksdagen.se/dokument/HA01UU6.html",
-      "found_by": ["keyword:biståndspolitik", "all-keywords", "committee:UU"],
-      "score": 3
+      "found_by": [
+        "keyword:biståndspolitik",
+        "all-keywords",
+        "committee:UU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03262",
@@ -138,7 +154,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0397.html",
       "found_by": ["keyword:biståndspolitik", "keyword:bistånd"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HC01SfU18",
@@ -185,8 +202,9 @@
       "titel": "Utgiftsområde 7 Internationellt bistånd",
       "organ": "UU",
       "url": "https://data.riksdagen.se/dokument/HA01UU2.html",
-      "found_by": ["all-keywords", "committee:UU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:UU", "score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA031d8",
@@ -199,6 +217,123 @@
       "url": "https://data.riksdagen.se/dokument/HA031d8.html",
       "found_by": ["keyword:grundorsaker", "all-keywords"],
       "score": 2
+    },
+    {
+      "dok_id": "HC0361",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "61",
+      "datum": "2024-12-17",
+      "titel": "Internationellt bistånd genom multilaterala organisationer",
+      "organ": "Utrikesdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0361.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01KU20",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU20",
+      "datum": "2026-06-10",
+      "titel": "Granskningsbetänkande",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA031d9",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d9",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB031d9",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB156",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "56",
+      "datum": "2025-06-05",
+      "titel": "Nationell samordnare för arbetet med frivillig återvandring",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB156.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01KU20d3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU20",
+      "datum": "2026-01-01",
+      "titel": "Granskningsbetänkande - del 3",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU20d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB339",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "39",
+      "datum": "2025-04-09",
+      "titel": "Digital teknik på lika villkor ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB339.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0395",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "95",
+      "datum": "2024-03-19",
+      "titel": "Partnerskapsavtal mellan Europeiska unionen och dess medlemsstater och medlemmarna i organisationen för stater i Afrika, Karibien och Stillahavsområdet",
+      "organ": "Utrikesdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0395.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

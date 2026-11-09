@@ -12,7 +12,17 @@
     "keyword:rättigheter",
     "keyword:utsatta grupper",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -45,9 +55,11 @@
         "keyword:brottsoffer",
         "keyword:brottsofferstöd",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01JuU12",
@@ -82,8 +94,13 @@
       "titel": "Ett nytt brott och andra åtgärder mot människohandel ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB3119.html",
-      "found_by": ["keyword:utsatta grupper", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:utsatta grupper",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HD01JuU1",
@@ -94,8 +111,13 @@
       "titel": "Utgiftsområde 4 Rättsväsendet",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
-      "found_by": ["keyword:brottsofferstöd", "committee:JuU"],
-      "score": 2
+      "found_by": [
+        "keyword:brottsofferstöd",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01JuU11",
@@ -118,8 +140,13 @@
       "titel": "Frihet från våld, förtryck och utnyttjande",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB328.html",
-      "found_by": ["keyword:utsatta grupper", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:utsatta grupper",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HC0389",
@@ -130,8 +157,13 @@
       "titel": "En förebyggande socialtjänstlag – för ökade rättigheter, skyldigheter och möjligheter",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0389.html",
-      "found_by": ["keyword:brottsofferstöd", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:brottsofferstöd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HBB398",
@@ -142,8 +174,13 @@
       "titel": "Sexuellt utnyttjande i pornografiska syften ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB398.html",
-      "found_by": ["keyword:utsatta grupper", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:utsatta grupper",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HB0331",
@@ -167,7 +204,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:rättigheter"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01SfU29",
@@ -204,6 +242,331 @@
       "url": "https://data.riksdagen.se/dokument/HD01CU38.html",
       "found_by": ["keyword:brottsoffer"],
       "score": 1
+    },
+    {
+      "dok_id": "HD03291",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "291",
+      "datum": "2026-07-03",
+      "titel": "Uppföljning av den nationella strategin mot våldsbejakande extremism och terrorism",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03291.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB01JuU16",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU16",
+      "datum": "2024-04-08",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB397",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "97",
+      "datum": "2023-12-13",
+      "titel": "Ut ur utsatthet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB397.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB38",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "8",
+      "datum": "2023-02-21",
+      "titel": "Arbetslivskriminalitet - arbetet i Sverige, en bedömning av omfattningen, lärdomar från Danmark och Finland ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB38.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA031d5",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HAB370d2",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "70",
+      "datum": "2023-01-01",
+      "titel": "En uppväxt fri från våld, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB370d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB325",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "25",
+      "datum": "2025-03-03",
+      "titel": "Arbetslivskriminalitet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB325.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d6",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB1102",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "102",
+      "datum": "2026-08-27",
+      "titel": "Barnfrid - förstärkta åtgärder mot sexuella kränkningar av barn och barnpornografibrott",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1102.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03297",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "297",
+      "datum": "2026-06-30",
+      "titel": "Ett nytt straffrättsligt påföljdssystem",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03297.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0356",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "56",
+      "datum": "2024-01-08",
+      "titel": "Nationell strategi mot våldsbejakande extremism och terrorism – förebygga, förhindra, skydda och hantera",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0356.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HAB370",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "70",
+      "datum": "2023-01-01",
+      "titel": "En uppväxt fri från våld ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB370.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HD03222",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "222",
+      "datum": "2026-03-31",
+      "titel": "Ersättningsregler med brottsoffret i fokus",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03222.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB418",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "18",
+      "datum": "2023-06-21",
+      "titel": "Stärkt hyresrättsligt skydd för våldsutsatta kvinnor",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB418.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB334d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "34",
+      "datum": "2026-06-12",
+      "titel": "Nya nätbrott och andra åtgärder för genomförandet av direktivet om bekämpning av våld mot kvinnor och våld i nära relationer, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB334d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC0369",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "69",
+      "datum": "2024-12-17",
+      "titel": "Fördjupad uppföljning av arbetet med att förebygga och bekämpa mäns våld mot kvinnor",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0369.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03245",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "245",
+      "datum": "2026-04-14",
+      "titel": "Frihet från våld, förtryck och utnyttjande – En nationell strategi mot mäns våld mot kvinnor, våld i nära relationer, utnyttjande i prostitution och människohandel samt hedersrelaterat våld och förtryck",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03245.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB366d4",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 4",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

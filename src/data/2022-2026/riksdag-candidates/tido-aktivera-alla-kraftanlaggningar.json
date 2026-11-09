@@ -11,7 +11,14 @@
     "keyword:reservkraft",
     "keyword:elförsörjning",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -47,7 +54,8 @@
         "all-keywords",
         "committee:NU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.2
     },
     {
       "dok_id": "HC01NU19",
@@ -71,7 +79,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03240.html",
       "found_by": ["keyword:Svenska kraftnät", "keyword:elförsörjning"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HDB347",
@@ -83,7 +92,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB347.html",
       "found_by": ["keyword:Svenska kraftnät", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HC0334",
@@ -107,7 +117,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
       "found_by": ["keyword:Svenska kraftnät", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HA01NU17",
@@ -131,7 +142,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU9.html",
       "found_by": ["keyword:Svenska kraftnät", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HAB357",
@@ -143,7 +155,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HAB357.html",
       "found_by": ["keyword:kraftanläggningar", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03205",
@@ -155,7 +168,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03205.html",
       "found_by": ["keyword:reservkraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03158",
@@ -179,7 +193,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03172.html",
       "found_by": ["keyword:reservkraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03160",
@@ -203,7 +218,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0397.html",
       "found_by": ["keyword:elförsörjning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     }
   ]
 }

@@ -12,7 +12,16 @@
     "keyword:medelstilldelning",
     "keyword:studieförbund",
     "all-keywords",
-    "committee:KrU"
+    "committee:KrU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -31,7 +40,8 @@
         "all-keywords",
         "committee:KrU"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.4
     },
     {
       "dok_id": "HA01KrU10",
@@ -47,9 +57,11 @@
         "keyword:statsbidrag",
         "keyword:studieförbund",
         "all-keywords",
-        "committee:KrU"
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01KrU1",
@@ -66,7 +78,8 @@
         "all-keywords",
         "committee:KrU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.4
     },
     {
       "dok_id": "HC01KrU8",
@@ -93,9 +106,11 @@
         "keyword:folkbildning",
         "keyword:studieförbund",
         "all-keywords",
-        "committee:KrU"
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA0350",
@@ -123,8 +138,14 @@
       "titel": "Civila samhället, trossamfund och folkbildning",
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HD01KrU8.html",
-      "found_by": ["keyword:folkbildning", "all-keywords", "committee:KrU"],
-      "score": 3
+      "found_by": [
+        "keyword:folkbildning",
+        "all-keywords",
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC03166",
@@ -176,7 +197,8 @@
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HC01KrU4.html",
       "found_by": ["keyword:medelstilldelning", "committee:KrU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HB03119",
@@ -199,8 +221,9 @@
       "titel": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HB01KrU1.html",
-      "found_by": ["all-keywords", "committee:KrU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:KrU", "score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HBB1130",
@@ -211,8 +234,13 @@
       "titel": "Tilläggsdirektiv till utredningen om Styrning och uppföljning av folkbildningen - vägval inför framtiden (U 2022:01)",
       "organ": "U-dep",
       "url": "https://data.riksdagen.se/dokument/HBB1130.html",
-      "found_by": ["keyword:folkbildning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:folkbildning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01KrU1",
@@ -224,7 +252,190 @@
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HA01KrU1.html",
       "found_by": ["keyword:folkbildning", "committee:KrU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
+    },
+    {
+      "dok_id": "HCB364",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "64",
+      "datum": "2024-09-19",
+      "titel": "Motståndskraft i samhällsviktiga tjänster",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB364.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC031d18",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB397",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "97",
+      "datum": "2025-01-01",
+      "titel": "Mot en effektiv elektrifiering av transportsystemet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB397.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB372",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "72",
+      "datum": "2024-11-07",
+      "titel": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB347",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "47",
+      "datum": "2024-07-05",
+      "titel": "Digital myndighetspost",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB347.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB378",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "78",
+      "datum": "2025-01-01",
+      "titel": "Ett språkkrav för språkutveckling ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB378.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB388",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "88",
+      "datum": "2024-12-11",
+      "titel": "Säkerhetsprövningar ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB342",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "42",
+      "datum": "2024-06-13",
+      "titel": "Bildning, utbildning och delaktighet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB342.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA031d18",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HCB352",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "52",
+      "datum": "2024-07-05",
+      "titel": "Allmänna sammankomster och Sveriges säkerhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB352.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB371",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "71",
+      "datum": "2024-11-04",
+      "titel": "Reglering av hushållens skulder ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB371.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

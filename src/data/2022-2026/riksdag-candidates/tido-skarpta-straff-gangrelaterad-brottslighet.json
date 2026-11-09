@@ -12,7 +12,17 @@
     "keyword:utpressning",
     "keyword:Gängbrottsutredningen",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -46,9 +56,11 @@
         "keyword:straffskärpning",
         "keyword:utpressning",
         "keyword:Gängbrottsutredningen",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03297",
@@ -59,8 +71,14 @@
       "titel": "Ett nytt straffrättsligt påföljdssystem",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03297.html",
-      "found_by": ["keyword:gängbrottslighet", "keyword:straffskärpning", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:gängbrottslighet",
+        "keyword:straffskärpning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01JuU42",
@@ -71,8 +89,14 @@
       "titel": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
-      "found_by": ["keyword:straffskärpning", "all-keywords", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:straffskärpning",
+        "all-keywords",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03181",
@@ -84,7 +108,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03181.html",
       "found_by": ["keyword:gängbrottslighet", "keyword:vapenbrott", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD03293",
@@ -95,8 +120,13 @@
       "titel": "Skärpta regler för unga lagöverträdare",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03293.html",
-      "found_by": ["keyword:gängbrottslighet", "keyword:vapenbrott"],
-      "score": 2
+      "found_by": [
+        "keyword:gängbrottslighet",
+        "keyword:vapenbrott",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03246",
@@ -120,7 +150,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03213.html",
       "found_by": ["keyword:straffskärpning", "keyword:utpressning"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03141",
@@ -131,8 +162,13 @@
       "titel": "En ny vapenlag",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03141.html",
-      "found_by": ["keyword:vapenbrott", "keyword:utpressning"],
-      "score": 2
+      "found_by": [
+        "keyword:vapenbrott",
+        "keyword:utpressning",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HEB313",
@@ -155,8 +191,13 @@
       "titel": "En straffreform, del 3",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
-      "found_by": ["keyword:Gängbrottsutredningen", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:Gängbrottsutredningen",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.92
     },
     {
       "dok_id": "HC03175",
@@ -168,7 +209,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03175.html",
       "found_by": ["keyword:vapenbrott", "keyword:utpressning"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.12
     },
     {
       "dok_id": "HCB348",
@@ -180,7 +222,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB348.html",
       "found_by": ["keyword:Gängbrottsutredningen", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HCB348d2",
@@ -203,8 +246,351 @@
       "titel": "Skärpta straff för brott i kriminella nätverk",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU8.html",
-      "found_by": ["keyword:utpressning", "committee:JuU"],
-      "score": 2
+      "found_by": [
+        "keyword:utpressning",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB393",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "93",
+      "datum": "2024-12-20",
+      "titel": "Effektivare verktyg för att bekämpa brott av unga lagöverträdare ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB393.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB344",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "44",
+      "datum": "2023-11-08",
+      "titel": "En översyn av regleringen om frihetsberövande påföljder för unga ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB344.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HBB411",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "11",
+      "datum": "2023-04-28",
+      "titel": "Skjutvapen och explosiva varor ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB411.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HB01JuU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU20",
+      "datum": "2024-04-17",
+      "titel": "Straffrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB357",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "57",
+      "datum": "2023-10-04",
+      "titel": "Åtgärder för tryggare bostadsområden ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB357.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03100",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "100",
+      "datum": "2026-04-13",
+      "titel": "2026 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031d5",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01JuU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU1",
+      "datum": "2025-11-28",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HD031d6",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB167",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "67",
+      "datum": "2026-07-02",
+      "titel": "Riktade insatser mot kriminella organisationer - En särlagstiftning för gängkriminella",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB167.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03124",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "124",
+      "datum": "2025-03-27",
+      "titel": "Skärpt syn på sexuella kränkningar, bedrägerier mot äldre och brott med kön som hatbrottsmotiv",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03124.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA03100",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "100",
+      "datum": "2023-04-17",
+      "titel": "2023 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01JuU4",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU4",
+      "datum": "2023-12-07",
+      "titel": "Skjutvapen och explosiva varor – skärpta straff för de allvarligare brotten",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB366d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB31",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "1",
+      "datum": "2024-01-12",
+      "titel": "Ett starkare skydd för offentliganställda  mot våld, hot och trakasserier",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB31.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB377",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "77",
+      "datum": "2024-12-05",
+      "titel": "Ett modernt och anpassat regelverk för krigsmateriel",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB377.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01KU20d3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU20",
+      "datum": "2026-01-01",
+      "titel": "Granskningsbetänkande - del 3",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU20d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0333",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "33",
+      "datum": "2023-10-26",
+      "titel": "Skjutvapen och explosiva varor – skärpta straff för de allvarligare brotten",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0333.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB366d4",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 4",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

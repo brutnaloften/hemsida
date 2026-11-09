@@ -12,7 +12,14 @@
     "keyword:regleringsbrev",
     "keyword:identitetskontroller",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -61,7 +68,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0362.html",
       "found_by": ["keyword:inre gränskontroller", "keyword:identitetskontroller", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD03262",
@@ -120,8 +128,13 @@
       "titel": "Polisiär beredskap i fred, kris och krig",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB357.html",
-      "found_by": ["keyword:inre gränskontroller", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:inre gränskontroller",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HBB430",
@@ -157,7 +170,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
       "found_by": ["committee:SfU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD03261",
@@ -169,7 +183,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03261.html",
       "found_by": ["keyword:identitetskontroller"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03250",
@@ -194,6 +209,58 @@
       "url": "https://data.riksdagen.se/dokument/HD03249.html",
       "found_by": ["keyword:irreguljär migration"],
       "score": 1
+    },
+    {
+      "dok_id": "HB0356",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "56",
+      "datum": "2024-01-08",
+      "titel": "Nationell strategi mot våldsbejakande extremism och terrorism – förebygga, förhindra, skydda och hantera",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0356.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA01JuU10",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU10",
+      "datum": "2023-04-21",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA03109",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "109",
+      "datum": "2023-04-25",
+      "titel": "Utökade polisiära befogenheter i gränsnära områden",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03109.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HA01JuU26",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU26",
+      "datum": "2023-06-13",
+      "titel": "Utökade polisiära befogenheter i gränsnära områden",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

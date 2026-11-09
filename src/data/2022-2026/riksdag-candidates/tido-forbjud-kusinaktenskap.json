@@ -11,7 +11,16 @@
     "keyword:hedersrelaterat förtryck",
     "keyword:släktskap",
     "all-keywords",
-    "committee:CU"
+    "committee:CU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -58,8 +67,14 @@
       "titel": "Stärkt lagstiftning mot hedersrelaterat våld och förtryck",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03213.html",
-      "found_by": ["keyword:kusinäktenskap", "keyword:äktenskapsbalken", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:kusinäktenskap",
+        "keyword:äktenskapsbalken",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.92
     },
     {
       "dok_id": "HD01CU12",
@@ -94,8 +109,14 @@
       "titel": "Familjerätt",
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HA01CU6.html",
-      "found_by": ["keyword:kusinäktenskap", "all-keywords", "committee:CU"],
-      "score": 3
+      "found_by": [
+        "keyword:kusinäktenskap",
+        "all-keywords",
+        "committee:CU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.92
     },
     {
       "dok_id": "HDB359",
@@ -106,8 +127,13 @@
       "titel": "Stärkt lagstiftning mot hedersrelaterat våld och förtryck",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB359.html",
-      "found_by": ["keyword:kusinäktenskap", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kusinäktenskap",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HC0369",
@@ -118,8 +144,13 @@
       "titel": "Fördjupad uppföljning av arbetet med att förebygga och bekämpa mäns våld mot kvinnor",
       "organ": "Arbetsmarknadsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0369.html",
-      "found_by": ["keyword:kusinäktenskap", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kusinäktenskap",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HCB420",
@@ -130,8 +161,13 @@
       "titel": "Förbud mot äktenskap mellan kusiner och vissa andra nära släktingar ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB420.html",
-      "found_by": ["keyword:kusinäktenskap", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kusinäktenskap",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HEB1102",
@@ -142,8 +178,9 @@
       "titel": "Barnfrid - förstärkta åtgärder mot sexuella kränkningar av barn och barnpornografibrott",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1102.html",
-      "found_by": ["keyword:kusinäktenskap"],
-      "score": 1
+      "found_by": ["keyword:kusinäktenskap", "score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
     },
     {
       "dok_id": "HEB351",
@@ -167,7 +204,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
       "found_by": ["keyword:släktskap"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03301",
@@ -179,7 +217,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03301.html",
       "found_by": ["keyword:släktskap"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01CU34",
@@ -191,7 +230,8 @@
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HD01CU34.html",
       "found_by": ["committee:CU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03245",
@@ -202,8 +242,61 @@
       "titel": "Frihet från våld, förtryck och utnyttjande – En nationell strategi mot mäns våld mot kvinnor, våld i nära relationer, utnyttjande i prostitution och människohandel samt hedersrelaterat våld och förtryck",
       "organ": "Arbetsmarknadsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03245.html",
-      "found_by": ["keyword:kusinäktenskap"],
-      "score": 1
+      "found_by": ["keyword:kusinäktenskap", "score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB430",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2025-01-01",
+      "titel": "En lag om insatser inom socialtjänsten till vårdnadshavare, barn och unga när samtycke saknas ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB430.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.98
+    },
+    {
+      "dok_id": "HDB328",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "28",
+      "datum": "2025-03-10",
+      "titel": "Frihet från våld, förtryck och utnyttjande",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB328.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB427",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "27",
+      "datum": "2024-10-30",
+      "titel": "Kompletterande bestämmelser till EU:s förordning om politisk reklam ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB427.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

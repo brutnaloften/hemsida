@@ -12,7 +12,16 @@
     "keyword:omsorgspersonal",
     "keyword:kompetensförsörjning",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -24,8 +33,15 @@
       "titel": "Ett språkkrav inom äldreomsorgen",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU26.html",
-      "found_by": ["keyword:språkkrav", "keyword:äldreomsorg", "all-keywords", "committee:SoU"],
-      "score": 4
+      "found_by": [
+        "keyword:språkkrav",
+        "keyword:äldreomsorg",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD0393",
@@ -66,7 +82,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU22.html",
       "found_by": ["keyword:omsorgspersonal", "keyword:kompetensförsörjning", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HCB378",
@@ -77,8 +94,14 @@
       "titel": "Ett språkkrav för språkutveckling ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB378.html",
-      "found_by": ["keyword:språkkrav", "keyword:svenska språket", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:språkkrav",
+        "keyword:svenska språket",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01SoU20",
@@ -89,8 +112,14 @@
       "titel": "Äldreomsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU20.html",
-      "found_by": ["keyword:äldreomsorg", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:äldreomsorg",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB147",
@@ -102,7 +131,8 @@
       "organ": "S-dep",
       "url": "https://data.riksdagen.se/dokument/HEB147.html",
       "found_by": ["keyword:äldreomsorg", "keyword:omsorgspersonal"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01SoU21",
@@ -113,8 +143,13 @@
       "titel": "Äldreomsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU21.html",
-      "found_by": ["keyword:äldreomsorg", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:äldreomsorg",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01SoU21",
@@ -137,8 +172,9 @@
       "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
-      "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SoU", "score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA03141",
@@ -162,7 +198,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA03131.html",
       "found_by": ["keyword:äldreomsorg", "keyword:omsorgspersonal"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HBB144",
@@ -199,6 +236,175 @@
       "url": "https://data.riksdagen.se/dokument/HEB417.html",
       "found_by": ["keyword:svenska språket"],
       "score": 1
+    },
+    {
+      "dok_id": "HA031d10",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01SoU5",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU5",
+      "datum": "2023-11-27",
+      "titel": "Riksrevisionens rapport om lex Maria och lex Sarah",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC0389",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "89",
+      "datum": "2025-01-28",
+      "titel": "En förebyggande socialtjänstlag – för ökade rättigheter, skyldigheter och möjligheter",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0389.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB031d10",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.98
+    },
+    {
+      "dok_id": "HBB356",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "56",
+      "datum": "2023-09-20",
+      "titel": "Några smittskyddsfrågor inom socialtjänsten och socialförsäkringen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB356.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d27",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d27.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB312",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "12",
+      "datum": "2024-02-02",
+      "titel": "Mål och mening med integration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB312.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01SoU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

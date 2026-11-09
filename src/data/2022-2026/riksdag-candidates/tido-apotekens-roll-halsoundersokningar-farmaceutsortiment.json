@@ -12,7 +12,12 @@
     "keyword:hälsoundersökningar",
     "keyword:läkemedel",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +34,11 @@
         "keyword:receptfritt",
         "keyword:läkemedel",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03247",
@@ -150,7 +157,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU11.html",
       "found_by": ["keyword:apotek", "keyword:farmaceutsortiment", "all-keywords", "committee:SoU"],
-      "score": 4
+      "score": 4,
+      "relevance": 0.15
     },
     {
       "dok_id": "HDB371",
@@ -198,7 +206,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB362.html",
       "found_by": ["keyword:receptfritt", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD03294",
@@ -210,7 +219,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:hälsoundersökningar"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01FiU39",
@@ -234,7 +244,34 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HD01MJU26.html",
       "found_by": ["keyword:läkemedel"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031d10",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

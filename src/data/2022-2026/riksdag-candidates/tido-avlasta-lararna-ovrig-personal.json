@@ -12,7 +12,15 @@
     "keyword:elevhälsa",
     "keyword:speciallärare",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +36,11 @@
         "keyword:avlasta lärare",
         "keyword:speciallärare",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.8
     },
     {
       "dok_id": "HDB326",
@@ -45,9 +55,11 @@
         "keyword:övrig personal",
         "keyword:mentorer",
         "keyword:avlasta lärare",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03195",
@@ -94,8 +106,14 @@
       "titel": "Lärare och elever",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU11.html",
-      "found_by": ["keyword:avlasta lärare", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:avlasta lärare",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01UbU7",
@@ -179,7 +197,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03143.html",
       "found_by": ["keyword:elevhälsa", "keyword:speciallärare"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HDB38",
@@ -190,8 +209,13 @@
       "titel": "Bättre förutsättningar för trygghet och studiero i skolan ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB38.html",
-      "found_by": ["keyword:avlasta lärare", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:avlasta lärare",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA0354",
@@ -203,7 +227,99 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA0354.html",
       "found_by": ["keyword:mentorer", "keyword:speciallärare"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
+    },
+    {
+      "dok_id": "HD031d18",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01UbU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01JuU31",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU31",
+      "datum": "2024-05-31",
+      "titel": "Barriärer mot brott - en socialpreventiv strategi mot kriminella nätverk och annan brottslighet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU31.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0368",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "68",
+      "datum": "2024-03-14",
+      "titel": "Barriärer mot brott – en socialpreventiv strategi mot kriminella nätverk och annan brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HBB1154",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "154",
+      "datum": "2023-11-02",
+      "titel": "Varaktigt förbättrad trygghet och studiero i skolan",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1154.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA031d17",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

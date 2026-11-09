@@ -11,7 +11,15 @@
     "keyword:vittnesskydd",
     "keyword:straffreduktion",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +36,11 @@
         "keyword:kronvittne",
         "keyword:vittnesskydd",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD0375",
@@ -75,8 +85,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HC0375.html",
-      "found_by": ["keyword:anonyma vittnen", "keyword:straffreduktion", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:anonyma vittnen",
+        "keyword:straffreduktion",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HCB351",
@@ -87,8 +103,14 @@
       "titel": "En mer rättssäker och effektiv domstolsprocess",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB351.html",
-      "found_by": ["keyword:anonyma vittnen", "keyword:kronvittne", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:anonyma vittnen",
+        "keyword:kronvittne",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HBB367",
@@ -111,8 +133,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HA0375.html",
-      "found_by": ["keyword:kronvittne", "keyword:vittnesskydd", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:kronvittne",
+        "keyword:vittnesskydd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HAB1141",
@@ -147,8 +175,13 @@
       "titel": "Utgiftsområde 4 Rättsväsendet",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
-      "found_by": ["keyword:kronvittne", "committee:JuU"],
-      "score": 2
+      "found_by": [
+        "keyword:kronvittne",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB0375",
@@ -159,8 +192,13 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HB0375.html",
-      "found_by": ["keyword:vittnesskydd", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:vittnesskydd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.92
     },
     {
       "dok_id": "HB01JuU1",
@@ -183,8 +221,13 @@
       "titel": "Processrättsliga frågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU12.html",
-      "found_by": ["keyword:vittnesskydd", "committee:JuU"],
-      "score": 2
+      "found_by": [
+        "keyword:vittnesskydd",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03313",
@@ -209,6 +252,188 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
       "found_by": ["committee:JuU"],
       "score": 1
+    },
+    {
+      "dok_id": "HBB370",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "70",
+      "datum": "2023-11-08",
+      "titel": "Ordning och reda - förstärkt och tillförlitlig byggkontroll",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB370.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HBB382",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "82",
+      "datum": "2023-12-06",
+      "titel": "Ökad kontroll över tandvårdssektorn ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0368",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "68",
+      "datum": "2024-03-14",
+      "titel": "Barriärer mot brott – en socialpreventiv strategi mot kriminella nätverk och annan brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB368d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "68",
+      "datum": "2023-11-15",
+      "titel": "Som om vi aldrig funnits - exkludering och assimilering av tornedalingar, kväner och lantalaiset, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB368d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB125",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "25",
+      "datum": "2024-02-15",
+      "titel": "Tilläggsdirektiv till Utredningen om Anonyma vittnen (Ju 2022:17)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB125.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d6",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB393",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "93",
+      "datum": "2023-12-13",
+      "titel": "Budgetprocessen i det finanspolitiska ramverket ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB393.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01FiU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU20",
+      "datum": "2024-06-13",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB03100",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "100",
+      "datum": "2024-04-15",
+      "titel": "2024 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB3103",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "103",
+      "datum": "2024-01-01",
+      "titel": "Areella näringar vid vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB3103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB368",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "68",
+      "datum": "2023-11-15",
+      "titel": "Som om vi aldrig funnits - exkludering och assimilering av tornedalingar, kväner och lantalaiset ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

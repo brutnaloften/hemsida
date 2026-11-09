@@ -12,7 +12,13 @@
     "keyword:obevakad permission",
     "keyword:Kriminalvården",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -40,9 +46,11 @@
         "keyword:obevakad permission",
         "keyword:Kriminalvården",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01JuU15",
@@ -54,7 +62,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU15.html",
       "found_by": ["keyword:Kriminalvården", "all-keywords", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD03181",
@@ -65,8 +74,14 @@
       "titel": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03181.html",
-      "found_by": ["keyword:permission", "keyword:gängkriminella", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:permission",
+        "keyword:gängkriminella",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD0395",
@@ -77,8 +92,14 @@
       "titel": "Säkerhetsförvaring – en ny tidsobestämd frihetsberövande påföljd",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0395.html",
-      "found_by": ["keyword:permission", "keyword:obevakad permission", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:permission",
+        "keyword:obevakad permission",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01JuU35",
@@ -101,8 +122,13 @@
       "titel": "Frihetsberövande påföljder för barn och unga",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03132.html",
-      "found_by": ["keyword:permission", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:permission",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01JuU14",
@@ -149,8 +175,13 @@
       "titel": "Tilläggsdirektiv till Utredningen om ett förstärkt samhällsskydd och en minskad risk för återfall i brott (Ju 2022:10)",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HBB174.html",
-      "found_by": ["keyword:obevakad permission", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:obevakad permission",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB1119",
@@ -174,7 +205,8 @@
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB194.html",
       "found_by": ["keyword:gängkriminella"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HEB167",
@@ -186,7 +218,8 @@
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB167.html",
       "found_by": ["keyword:gängkriminella"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03274",
@@ -199,6 +232,58 @@
       "url": "https://data.riksdagen.se/dokument/HD03274.html",
       "found_by": ["keyword:gängkriminella"],
       "score": 1
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03297",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "297",
+      "datum": "2026-06-30",
+      "titel": "Ett nytt straffrättsligt påföljdssystem",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03297.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB348",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "48",
+      "datum": "2024-07-05",
+      "titel": "Ett ändamålsenligt samhällsskydd Volym 1",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB348.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HDB366d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

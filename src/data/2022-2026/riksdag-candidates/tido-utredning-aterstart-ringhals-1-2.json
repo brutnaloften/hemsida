@@ -12,7 +12,11 @@
     "keyword:planerbar elproduktion",
     "keyword:kraftvärmeverk",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -62,7 +66,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
       "found_by": ["keyword:kraftvärmeverk", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.4
     },
     {
       "dok_id": "HB0358",
@@ -74,7 +79,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0358.html",
       "found_by": ["keyword:planerbar elproduktion", "keyword:kraftvärmeverk", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.25
     },
     {
       "dok_id": "HA01NU9",
@@ -86,7 +92,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU9.html",
       "found_by": ["keyword:planerbar elproduktion", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HA01NU3",
@@ -170,7 +177,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
       "found_by": ["all-keywords", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HCB417",
@@ -194,7 +202,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
       "found_by": ["all-keywords", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HA01KU20d3",

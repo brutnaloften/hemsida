@@ -11,7 +11,14 @@
     "keyword:elavtal",
     "keyword:elhandel",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +35,11 @@
         "keyword:slutkundsmarknaden",
         "keyword:elavtal",
         "keyword:elhandel",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03240",
@@ -45,9 +54,11 @@
         "keyword:slutkundsmarknaden",
         "keyword:elavtal",
         "keyword:elhandel",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD0326",
@@ -64,7 +75,8 @@
         "keyword:elhandel",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.25
     },
     {
       "dok_id": "HA0359",
@@ -104,8 +116,13 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU12.html",
-      "found_by": ["keyword:slutkundsmarknaden", "keyword:elavtal"],
-      "score": 2
+      "found_by": [
+        "keyword:slutkundsmarknaden",
+        "keyword:elavtal",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01NU25",
@@ -153,7 +170,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU8.html",
       "found_by": ["keyword:elavtal"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD038",
@@ -165,7 +183,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD038.html",
       "found_by": ["keyword:elavtal"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD0316",
@@ -176,8 +195,9 @@
       "titel": "Förbättrad utformning av EU:s elmarknad",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0316.html",
-      "found_by": ["keyword:elavtal"],
-      "score": 1
+      "found_by": ["keyword:elavtal", "score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
     },
     {
       "dok_id": "HDB413",
@@ -201,7 +221,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03150.html",
       "found_by": ["keyword:elhandel"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HC03110",
@@ -213,7 +234,34 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03110.html",
       "found_by": ["keyword:elhandel"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
+    },
+    {
+      "dok_id": "HB03105",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "105",
+      "datum": "2024-03-19",
+      "titel": "Energipolitikens långsiktiga inriktning",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03105.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01NU9",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU9",
+      "datum": "2024-03-26",
+      "titel": "Elmarknadsfrågor",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

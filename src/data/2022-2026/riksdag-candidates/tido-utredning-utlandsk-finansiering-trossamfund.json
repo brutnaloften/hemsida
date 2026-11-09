@@ -12,7 +12,16 @@
     "keyword:extremism",
     "keyword:civilsamhället",
     "all-keywords",
-    "committee:KrU"
+    "committee:KrU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +38,11 @@
         "keyword:trossamfund",
         "keyword:civilsamhället",
         "all-keywords",
-        "committee:KrU"
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01KrU5",
@@ -59,8 +70,14 @@
       "titel": "Uppföljning av den nationella strategin mot våldsbejakande extremism och terrorism",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03291.html",
-      "found_by": ["keyword:islamism", "keyword:extremism", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:islamism",
+        "keyword:extremism",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB342",
@@ -71,8 +88,14 @@
       "titel": "Ett nytt regelverk för granskning av utländsk finansiering av trossamfund och andra verksamheter, del 1",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB342.html",
-      "found_by": ["keyword:utländsk finansiering", "keyword:islamism", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:utländsk finansiering",
+        "keyword:islamism",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01KrU8",
@@ -84,7 +107,8 @@
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HD01KrU8.html",
       "found_by": ["keyword:trossamfund", "keyword:civilsamhället", "committee:KrU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01KU28",
@@ -95,8 +119,14 @@
       "titel": "Fri- och rättigheter m.m.",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU28.html",
-      "found_by": ["keyword:utländsk finansiering", "keyword:islamism", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:utländsk finansiering",
+        "keyword:islamism",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.92
     },
     {
       "dok_id": "HC01KrU8",
@@ -144,7 +174,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0374.html",
       "found_by": ["keyword:islamism", "keyword:extremism"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.06
     },
     {
       "dok_id": "HD01KrU1",
@@ -156,7 +187,8 @@
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HD01KrU1.html",
       "found_by": ["keyword:trossamfund", "committee:KrU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HB01JuU20",
@@ -167,8 +199,13 @@
       "titel": "Straffrättsliga frågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU20.html",
-      "found_by": ["keyword:utländsk finansiering", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:utländsk finansiering",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB03119",
@@ -204,7 +241,125 @@
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HB01KrU1.html",
       "found_by": ["keyword:trossamfund", "committee:KrU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
+    },
+    {
+      "dok_id": "HD01KU21",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU21",
+      "datum": "2026-06-10",
+      "titel": "Behandlingen av riksdagens skrivelser",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA01KrU10",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KrU10",
+      "datum": "2023-05-26",
+      "titel": "Folkbildningsfrågor",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HA01KrU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HEB358d3",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "58",
+      "datum": "2026-09-30",
+      "titel": "Markerna berättar och minns",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB358d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB346",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "46",
+      "datum": "2026-07-02",
+      "titel": "Ett sammanhållet, robust och konkurrenskraftigt Sverige - framtidens politik för utveckling i landsbygder och regioner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB346.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0356",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "56",
+      "datum": "2024-01-08",
+      "titel": "Nationell strategi mot våldsbejakande extremism och terrorism – förebygga, förhindra, skydda och hantera",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0356.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC0346",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "46",
+      "datum": "2024-11-05",
+      "titel": "Nya uppgifter för centrum mot våldsbejakande extremism",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0346.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA031d18",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

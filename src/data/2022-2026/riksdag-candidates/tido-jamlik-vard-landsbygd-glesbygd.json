@@ -12,7 +12,16 @@
     "keyword:tillgänglighet",
     "keyword:jämlik vård",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -24,8 +33,15 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
-      "found_by": ["keyword:nära vård", "keyword:jämlik vård", "all-keywords", "committee:SoU"],
-      "score": 4
+      "found_by": [
+        "keyword:nära vård",
+        "keyword:jämlik vård",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01SoU16",
@@ -36,8 +52,15 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
-      "found_by": ["keyword:nära vård", "keyword:jämlik vård", "all-keywords", "committee:SoU"],
-      "score": 4
+      "found_by": [
+        "keyword:nära vård",
+        "keyword:jämlik vård",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01SoU14",
@@ -48,8 +71,15 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU14.html",
-      "found_by": ["keyword:nära vård", "keyword:jämlik vård", "all-keywords", "committee:SoU"],
-      "score": 4
+      "found_by": [
+        "keyword:nära vård",
+        "keyword:jämlik vård",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01SoU21",
@@ -61,7 +91,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU21.html",
       "found_by": ["keyword:glesbygd", "keyword:nära vård", "all-keywords", "committee:SoU"],
-      "score": 4
+      "score": 4,
+      "relevance": 0.5
     },
     {
       "dok_id": "HA01SoU12",
@@ -72,8 +103,15 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
-      "found_by": ["keyword:nära vård", "keyword:jämlik vård", "all-keywords", "committee:SoU"],
-      "score": 4
+      "found_by": [
+        "keyword:nära vård",
+        "keyword:jämlik vård",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HDB362d2",
@@ -85,7 +123,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB362d2.html",
       "found_by": ["keyword:nära vård", "keyword:jämlik vård", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HBB423",
@@ -96,8 +135,14 @@
       "titel": "Uppdrag att möjliggöra bättre tillgång till hälso- och sjukvård i hela landet genom främjande av etablering i glesbygd ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB423.html",
-      "found_by": ["keyword:glesbygd", "keyword:jämlik vård", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:glesbygd",
+        "keyword:jämlik vård",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB338",
@@ -109,7 +154,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB338.html",
       "found_by": ["keyword:nära vård", "keyword:jämlik vård"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HD01CU23",
@@ -132,8 +178,9 @@
       "titel": "Kompetensförsörjning, e-hälsa och beredskap",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU22.html",
-      "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SoU", "score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD03158",
@@ -157,7 +204,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03131.html",
       "found_by": ["keyword:landsbygd", "keyword:glesbygd"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01SoU23",
@@ -169,7 +217,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU23.html",
       "found_by": ["keyword:nära vård", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.12
     },
     {
       "dok_id": "HB031d10",
@@ -180,8 +229,13 @@
       "titel": "Budgetpropositionen för 2024 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HB031d10.html",
-      "found_by": ["keyword:jämlik vård", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:jämlik vård",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01KU45",
@@ -193,7 +247,138 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU45.html",
       "found_by": ["keyword:tillgänglighet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HA031d10",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC031d24",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d24.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB01SoU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU1",
+      "datum": "2023-12-06",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB362",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "62",
+      "datum": "2025-06-03",
+      "titel": "Ansvaret för hälso- och sjukvården",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB362.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB192",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "92",
+      "datum": "2026-08-13",
+      "titel": "Nationella principer för utbud av hälso- och sjukvård i hela landet",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB192.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01SoU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HCB433",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "33",
+      "datum": "2024-12-20",
+      "titel": "Det nödvändiga ska vara tillåtet - en lag om internationellt hälso- och sjukvårdsarbete",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB433.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

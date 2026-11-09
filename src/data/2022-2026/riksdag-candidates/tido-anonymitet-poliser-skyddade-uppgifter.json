@@ -12,7 +12,17 @@
     "keyword:offentlighetsprincipen",
     "keyword:hot och våld",
     "all-keywords",
-    "committee:KU"
+    "committee:KU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -49,7 +59,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0389.html",
       "found_by": ["keyword:anonymitet", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HCB31",
@@ -60,8 +71,13 @@
       "titel": "Ett starkare skydd för offentliganställda  mot våld, hot och trakasserier",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB31.html",
-      "found_by": ["keyword:hot och våld", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:hot och våld",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01KU25",
@@ -97,7 +113,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB356.html",
       "found_by": ["keyword:anonymitet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HEB1116",
@@ -109,7 +126,8 @@
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1116.html",
       "found_by": ["keyword:offentlighetsprincipen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HEB334",
@@ -133,7 +151,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU20.html",
       "found_by": ["committee:KU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01KU11",
@@ -145,7 +164,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU11.html",
       "found_by": ["keyword:offentlighetsprincipen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01TU22",
@@ -157,7 +177,8 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HD01TU22.html",
       "found_by": ["keyword:poliser"],
-      "score": 1
+      "score": 1,
+      "relevance": 0
     },
     {
       "dok_id": "HD01JuU28",
@@ -194,6 +215,318 @@
       "url": "https://data.riksdagen.se/dokument/HD03258.html",
       "found_by": ["keyword:offentlighetsprincipen"],
       "score": 1
+    },
+    {
+      "dok_id": "HB01JuU16",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU16",
+      "datum": "2024-04-08",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HC01KU23",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU23",
+      "datum": "2025-04-03",
+      "titel": "Offentlig förvaltning",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU23.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01JuU29",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU29",
+      "datum": "2025-05-14",
+      "titel": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU29.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.93
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01JuU15",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU15",
+      "datum": "2025-04-14",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01SoU18",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU18",
+      "datum": "2025-01-28",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01KU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KU8",
+      "datum": "2024-02-29",
+      "titel": "Offentlig förvaltning",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HB01KU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB01SkU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU15",
+      "datum": "2024-03-27",
+      "titel": "Skatteförfarande och folkbokföring",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01FiU40",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU40",
+      "datum": "2023-06-08",
+      "titel": "Riksrevisionens rapport om åtgärder med anledning av trakasserier, hot och våld vid statliga myndigheter",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU40.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01AU8",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU8",
+      "datum": "2025-04-10",
+      "titel": "Arbetsmiljö",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB03102",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "102",
+      "datum": "2024-03-19",
+      "titel": "Stärkt skydd för vissa polisanställda",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03102.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01JuU44",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU44",
+      "datum": "2026-06-12",
+      "titel": "En betald polisutbildning",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU44.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01JuU10",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU10",
+      "datum": "2023-04-21",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01SkU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU14",
+      "datum": "2026-02-26",
+      "titel": "Skatteförfarande, folkbokföring och tull",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HD01JuU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU16",
+      "datum": "2026-03-27",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01SoU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU18",
+      "datum": "2026-03-26",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03141",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "141",
+      "datum": "2025-03-18",
+      "titel": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03141.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HEB198",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "98",
+      "datum": "2026-08-27",
+      "titel": "Tilläggsdirektiv till utredningen om samordning och stöd vid placering av barn och unga (S 2025:08)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB198.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB128",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "28",
+      "datum": "2026-05-13",
+      "titel": "En modern och ändamålsenlig dataskyddsreglering för Skatteverkets och Tullverkets brottsbekämpande verksamheter samt ett stärkt skydd för personal vid Skatteverket, Tullverket och Kronofogdemyndigheten",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB128.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

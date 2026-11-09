@@ -12,7 +12,15 @@
     "keyword:subvention",
     "keyword:vindkraft",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +36,11 @@
         "keyword:havsbaserad vindkraft",
         "keyword:nätanslutning",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01NU14",
@@ -79,9 +89,11 @@
         "keyword:havsbaserad vindkraft",
         "keyword:elnätskollektivet",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.75
     },
     {
       "dok_id": "HC01NU19",
@@ -104,8 +116,14 @@
       "titel": "Vindkraft i havet ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB389.html",
-      "found_by": ["keyword:havsbaserad vindkraft", "keyword:vindkraft", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:havsbaserad vindkraft",
+        "keyword:vindkraft",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB01NU9",
@@ -116,8 +134,14 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
-      "found_by": ["keyword:elnätskollektivet", "all-keywords", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:elnätskollektivet",
+        "all-keywords",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.92
     },
     {
       "dok_id": "HD01NU17",
@@ -140,8 +164,13 @@
       "titel": "Energipolitik",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
-      "found_by": ["keyword:vindkraft", "committee:NU"],
-      "score": 2
+      "found_by": [
+        "keyword:vindkraft",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB347",
@@ -153,7 +182,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB347.html",
       "found_by": ["keyword:havsbaserad vindkraft", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HB0358",
@@ -164,8 +194,13 @@
       "titel": "Riksrevisionens rapport om statens åtgärder för utveckling av elsystemet",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0358.html",
-      "found_by": ["keyword:havsbaserad vindkraft", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:havsbaserad vindkraft",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01NU20",
@@ -177,7 +212,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU20.html",
       "found_by": ["keyword:vindkraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03249",
@@ -201,7 +237,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03242.html",
       "found_by": ["keyword:subvention"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03240",
@@ -212,8 +249,48 @@
       "titel": "Nya lagar om elsystemet",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03240.html",
-      "found_by": ["keyword:nätanslutning"],
-      "score": 1
+      "found_by": ["keyword:nätanslutning", "score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01KU20d3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU20",
+      "datum": "2025-01-01",
+      "titel": "Granskningsbetänkande - del 3",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU20d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01NU3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU3",
+      "datum": "2025-12-04",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

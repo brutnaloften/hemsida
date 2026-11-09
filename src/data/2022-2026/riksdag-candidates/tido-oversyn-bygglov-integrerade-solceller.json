@@ -11,7 +11,14 @@
     "keyword:solenergi",
     "keyword:plan- och bygglagen",
     "all-keywords",
-    "committee:CU"
+    "committee:CU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -35,8 +42,14 @@
       "titel": "Ett nytt regelverk för bygglov",
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03169.html",
-      "found_by": ["keyword:bygglov", "keyword:plan- och bygglagen", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:bygglov",
+        "keyword:plan- och bygglagen",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03209",
@@ -48,7 +61,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03209.html",
       "found_by": ["keyword:bygglov", "keyword:plan- och bygglagen"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD03180",
@@ -60,7 +74,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03180.html",
       "found_by": ["keyword:bygglov", "keyword:plan- och bygglagen"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD03159",
@@ -108,7 +123,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0316.html",
       "found_by": ["keyword:solceller", "keyword:solenergi"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HDB388",
@@ -120,7 +136,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB388.html",
       "found_by": ["keyword:plan- och bygglagen", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HC01CU13",
@@ -143,8 +160,9 @@
       "titel": "Planering och byggande",
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HC01CU14.html",
-      "found_by": ["all-keywords", "committee:CU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:CU", "score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 2,
+      "relevance": 0.92
     },
     {
       "dok_id": "HC03109",
@@ -191,8 +209,100 @@
       "titel": "Några förtydliganden och justeringar i de nya reglerna om bygglov",
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03312.html",
-      "found_by": ["keyword:bygglov"],
-      "score": 1
+      "found_by": ["keyword:bygglov", "score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA031d21",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 20 Allmän miljö- och naturvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HCB329",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "29",
+      "datum": "2024-04-29",
+      "titel": "Goda möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB329.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB398d2",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "98",
+      "datum": "2025-01-01",
+      "titel": "En ny samordnad miljöbedömnings- och tillståndsprövningsprocess, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB398d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01NU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU18",
+      "datum": "2026-04-08",
+      "titel": "Tillståndsprövning enligt förnybartdirektivet",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB01CU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "CU15",
+      "datum": "2024-03-27",
+      "titel": "Planering och byggande",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HB01CU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

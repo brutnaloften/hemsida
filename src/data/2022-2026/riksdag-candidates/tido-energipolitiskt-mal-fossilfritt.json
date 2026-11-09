@@ -12,7 +12,15 @@
     "keyword:teknikneutralitet",
     "keyword:leveranssäkerhetsmål",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -45,9 +53,11 @@
         "keyword:energipolitiskt mål",
         "keyword:förnybart",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01NU19",
@@ -76,7 +86,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB347.html",
       "found_by": ["keyword:energipolitiskt mål", "keyword:leveranssäkerhetsmål", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HC0372",
@@ -90,9 +101,11 @@
       "found_by": [
         "keyword:energipolitiskt mål",
         "keyword:förnybart",
-        "keyword:leveranssäkerhetsmål"
+        "keyword:leveranssäkerhetsmål",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.65
     },
     {
       "dok_id": "HB01NU14",
@@ -140,7 +153,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03148.html",
       "found_by": ["keyword:fossilfritt", "keyword:teknikneutralitet"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD01NU3",
@@ -152,7 +166,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
       "found_by": ["all-keywords", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HC03150",
@@ -164,7 +179,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03150.html",
       "found_by": ["keyword:förnybart", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HC01NU12",
@@ -175,8 +191,13 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU12.html",
-      "found_by": ["keyword:leveranssäkerhetsmål", "committee:NU"],
-      "score": 2
+      "found_by": [
+        "keyword:leveranssäkerhetsmål",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HB01NU9",
@@ -187,8 +208,13 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
-      "found_by": ["keyword:leveranssäkerhetsmål", "committee:NU"],
-      "score": 2
+      "found_by": [
+        "keyword:leveranssäkerhetsmål",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HB03105",
@@ -199,8 +225,13 @@
       "titel": "Energipolitikens långsiktiga inriktning",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03105.html",
-      "found_by": ["keyword:energipolitiskt mål", "keyword:leveranssäkerhetsmål"],
-      "score": 2
+      "found_by": [
+        "keyword:energipolitiskt mål",
+        "keyword:leveranssäkerhetsmål",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HB0359",
@@ -213,6 +244,110 @@
       "url": "https://data.riksdagen.se/dokument/HB0359.html",
       "found_by": ["keyword:fossilfritt", "keyword:förnybart"],
       "score": 2
+    },
+    {
+      "dok_id": "HB0358",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "58",
+      "datum": "2024-01-16",
+      "titel": "Riksrevisionens rapport om statens åtgärder för utveckling av elsystemet",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0358.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01MJU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU1",
+      "datum": "2023-12-11",
+      "titel": "Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA03100",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "100",
+      "datum": "2023-04-17",
+      "titel": "2023 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA0399",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "99",
+      "datum": "2023-04-17",
+      "titel": "Vårändringsbudget för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HB031d22",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB1155",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "155",
+      "datum": "2023-11-02",
+      "titel": "Ny kärnkraft i Sverige - ett andra steg",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1155.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

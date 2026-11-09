@@ -11,7 +11,15 @@
     "keyword:privatpersoner",
     "keyword:energibesparing",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -27,9 +35,11 @@
         "keyword:energieffektivisering",
         "keyword:energibesparing",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01NU19",
@@ -86,8 +96,14 @@
       "titel": "Utgiftsområde 21 Energi",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
-      "found_by": ["keyword:energistöd", "all-keywords", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:energistöd",
+        "all-keywords",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD031",
@@ -110,8 +126,13 @@
       "titel": "Ökade möjligheter till hemmaladdning av elfordon",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03148.html",
-      "found_by": ["keyword:energistöd", "keyword:energibesparing"],
-      "score": 2
+      "found_by": [
+        "keyword:energistöd",
+        "keyword:energibesparing",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HC01FiU32",
@@ -123,7 +144,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HC01FiU32.html",
       "found_by": ["keyword:privatpersoner", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HA01CU1",
@@ -135,7 +157,8 @@
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HA01CU1.html",
       "found_by": ["keyword:energieffektivisering", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD01FiU47",
@@ -183,7 +206,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03248.html",
       "found_by": ["keyword:energibesparing"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01FiU48",
@@ -208,6 +232,175 @@
       "url": "https://data.riksdagen.se/dokument/HD03101.html",
       "found_by": ["keyword:energieffektivisering"],
       "score": 1
+    },
+    {
+      "dok_id": "HA031d21",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 20 Allmän miljö- och naturvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01SkU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU11",
+      "datum": "2023-03-09",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01SkU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU9",
+      "datum": "2025-03-20",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01SkU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU13",
+      "datum": "2026-03-19",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03100",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "100",
+      "datum": "2026-04-13",
+      "titel": "2026 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03101",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "101",
+      "datum": "2024-04-15",
+      "titel": "Årsredovisning för staten 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01SkU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU11",
+      "datum": "2024-05-23",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01SkU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU13",
+      "datum": "2025-04-01",
+      "titel": "Företag, kapital och fastighet",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA03100",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "100",
+      "datum": "2023-04-17",
+      "titel": "2023 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB031d22",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03101",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "101",
+      "datum": "2025-04-15",
+      "titel": "Årsredovisning för staten 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d22",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01NU3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU3",
+      "datum": "2024-12-09",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

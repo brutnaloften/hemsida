@@ -12,7 +12,15 @@
     "keyword:socialtjänst",
     "keyword:brottsförebyggande",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +36,11 @@
         "keyword:föräldraansvar",
         "keyword:barn i riskzonen",
         "keyword:socialtjänst",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01SoU18",
@@ -45,9 +55,11 @@
         "keyword:tidiga insatser",
         "keyword:barn i riskzonen",
         "keyword:socialtjänst",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.7
     },
     {
       "dok_id": "HC0389",
@@ -59,7 +71,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0389.html",
       "found_by": ["keyword:föräldraansvar", "keyword:tidiga insatser", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.4
     },
     {
       "dok_id": "HCB430",
@@ -70,8 +83,14 @@
       "titel": "En lag om insatser inom socialtjänsten till vårdnadshavare, barn och unga när samtycke saknas ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB430.html",
-      "found_by": ["keyword:tidiga insatser", "keyword:barn i riskzonen", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:tidiga insatser",
+        "keyword:barn i riskzonen",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01SoU39",
@@ -82,8 +101,9 @@
       "titel": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU39.html",
-      "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SoU", "score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01SoU20",
@@ -106,8 +126,13 @@
       "titel": "Barn och unga inom socialtjänsten",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU19.html",
-      "found_by": ["keyword:socialtjänst", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:socialtjänst",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC0354",
@@ -118,8 +143,13 @@
       "titel": "Riksrevisionens rapport om statens insatser för barn som misstänks för grova brott",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0354.html",
-      "found_by": ["keyword:föräldraansvar", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:föräldraansvar",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HB01SoU17",
@@ -155,7 +185,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
       "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HA01SoU17",
@@ -204,6 +235,149 @@
       "url": "https://data.riksdagen.se/dokument/HD03313.html",
       "found_by": ["keyword:föräldraansvar"],
       "score": 1
+    },
+    {
+      "dok_id": "HBB357",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "57",
+      "datum": "2023-10-04",
+      "titel": "Åtgärder för tryggare bostadsområden ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB357.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB01JuU31",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU31",
+      "datum": "2024-05-31",
+      "titel": "Barriärer mot brott - en socialpreventiv strategi mot kriminella nätverk och annan brottslighet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU31.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB0368",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "68",
+      "datum": "2024-03-14",
+      "titel": "Barriärer mot brott – en socialpreventiv strategi mot kriminella nätverk och annan brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01JuU24",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU24",
+      "datum": "2025-03-21",
+      "titel": "Riksrevisionens rapport om statens insatser för barn som misstänks för grova brott",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU24.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03222",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "222",
+      "datum": "2026-03-31",
+      "titel": "Ersättningsregler med brottsoffret i fokus",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03222.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB03112",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "112",
+      "datum": "2024-03-21",
+      "titel": "Åtgärder för tryggare bostadsområden",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03272",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "272",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den brottsförebyggande strategin Barriärer mot brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03272.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB194",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "94",
+      "datum": "2023-06-22",
+      "titel": "Ersättningsregler med brottsoffret i fokus",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB194.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HAB360",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "60",
+      "datum": "2022-12-07",
+      "titel": "Sveriges tillgång till vaccin mot covid-19 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

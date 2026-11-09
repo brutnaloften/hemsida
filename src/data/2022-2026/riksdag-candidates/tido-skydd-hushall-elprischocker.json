@@ -12,7 +12,17 @@
     "keyword:elprisstöd",
     "keyword:högkostnadsskydd",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -36,8 +46,14 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU12.html",
-      "found_by": ["keyword:elprischocker", "all-keywords", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:elprischocker",
+        "all-keywords",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01FiU1",
@@ -108,8 +124,13 @@
       "titel": "Budgetpropositionen för 2024",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB031.html",
-      "found_by": ["keyword:elprisstöd", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:elprisstöd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HA01FiU20",
@@ -145,7 +166,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU2.html",
       "found_by": ["keyword:elprisstöd", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.01
     },
     {
       "dok_id": "HA031",
@@ -194,6 +216,279 @@
       "url": "https://data.riksdagen.se/dokument/HD01FiU45.html",
       "found_by": ["keyword:hushåll"],
       "score": 1
+    },
+    {
+      "dok_id": "HA031d21",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 20 Allmän miljö- och naturvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA03128",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "128",
+      "datum": "2023-06-29",
+      "titel": "Riksrevisionens rapport om tillämpningen av det finanspolitiska ramverket 2022",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03128.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HCB397",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "97",
+      "datum": "2025-01-01",
+      "titel": "Mot en effektiv elektrifiering av transportsystemet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB397.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB03101",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "101",
+      "datum": "2024-04-15",
+      "titel": "Årsredovisning för staten 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03100",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "100",
+      "datum": "2026-04-13",
+      "titel": "2026 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01KU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU16",
+      "datum": "2023-01-24",
+      "titel": "Sekretess vid Försäkringskassans handläggning av ärenden om elstöd samt slopad kontrolluppgiftsskyldighet",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01NU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU13",
+      "datum": "2026-02-26",
+      "titel": "Energipolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HD03240",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "240",
+      "datum": "2026-04-14",
+      "titel": "Nya lagar om elsystemet",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03240.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01NU3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU3",
+      "datum": "2025-12-04",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01FiU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU11",
+      "datum": "2022-12-08",
+      "titel": "Höständringsbudget för 2022",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA0348",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "48",
+      "datum": "2023-01-12",
+      "titel": "Sekretess vid Försäkringskassans handläggning av ärenden om elstöd samt slopad kontrolluppgiftsskyldighet",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0348.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01FiU20",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU20",
+      "datum": "2026-06-04",
+      "titel": "Riktlinjer för den ekonomiska politiken och budgetpolitiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD0316",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "16",
+      "datum": "2025-09-23",
+      "titel": "Förbättrad utformning av EU:s elmarknad",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0316.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB347",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "47",
+      "datum": "2025-04-25",
+      "titel": "Spänning i tillvaron",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB347.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA0352",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "52",
+      "datum": "2023-01-26",
+      "titel": "Extra ändringsbudget för 2023 – Stöd till Ukraina samt åtgärder riktade till företag och hushåll till följd av höga energipriser",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0352.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01NU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU9",
+      "datum": "2023-04-21",
+      "titel": "Genomförande av elmarknadsdirektivet när det gäller leverans av el och aggregeringstjänster",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA03100",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "100",
+      "datum": "2023-04-17",
+      "titel": "2023 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031d22",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01FiU31",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU31",
+      "datum": "2023-02-07",
+      "titel": "Extra ändringsbudget för 2023 – Stöd till Ukraina samt åtgärder riktade till företag och hushåll till följd av höga energipriser",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU31.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01NU9",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU9",
+      "datum": "2024-03-26",
+      "titel": "Elmarknadsfrågor",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

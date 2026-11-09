@@ -12,7 +12,14 @@
     "keyword:matematik",
     "keyword:utökad studietid",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +35,11 @@
         "keyword:timplan",
         "keyword:undervisningstid",
         "keyword:matematik",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB0379",
@@ -59,7 +68,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03194.html",
       "found_by": ["keyword:timplan", "keyword:matematik", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD03195",
@@ -83,7 +93,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU9.html",
       "found_by": ["keyword:utökad studietid", "all-keywords", "committee:UbU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HA01UbU5",
@@ -107,7 +118,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03198.html",
       "found_by": ["keyword:timplan", "keyword:matematik"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03196",
@@ -143,7 +155,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB344.html",
       "found_by": ["keyword:timplan", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HDB319",
@@ -155,7 +168,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB319.html",
       "found_by": ["keyword:timplan", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HDB39",
@@ -178,8 +192,13 @@
       "titel": "Bättre anpassad undervisningstid i grundskolan, specialskolan och sameskolan",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU5.html",
-      "found_by": ["keyword:undervisningstid", "committee:UbU"],
-      "score": 2
+      "found_by": [
+        "keyword:undervisningstid",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HD03292",
@@ -191,7 +210,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03292.html",
       "found_by": ["keyword:undervisningstid"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HEB413",
@@ -204,6 +224,71 @@
       "url": "https://data.riksdagen.se/dokument/HEB413.html",
       "found_by": ["keyword:timplan"],
       "score": 1
+    },
+    {
+      "dok_id": "HC01UbU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU17",
+      "datum": "2025-06-09",
+      "titel": "En tioårig grundskola",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB329",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "29",
+      "datum": "2024-04-29",
+      "titel": "Goda möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB329.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

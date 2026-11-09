@@ -12,7 +12,13 @@
     "keyword:avfallsförbränningsskatt",
     "keyword:bioolja",
     "all-keywords",
-    "committee:SkU"
+    "committee:SkU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -47,9 +53,11 @@
         "keyword:avfallsförbränningsskatt",
         "keyword:bioolja",
         "all-keywords",
-        "committee:SkU"
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB0358",
@@ -64,9 +72,11 @@
         "keyword:kraftvärme",
         "keyword:kraftvärmeskatt",
         "keyword:avfallsförbränningsskatt",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.8
     },
     {
       "dok_id": "HC01SkU15",
@@ -77,8 +87,14 @@
       "titel": "Punktskatt",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HC01SkU15.html",
-      "found_by": ["keyword:avfallsförbränningsskatt", "all-keywords", "committee:SkU"],
-      "score": 3
+      "found_by": [
+        "keyword:avfallsförbränningsskatt",
+        "all-keywords",
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.7
     },
     {
       "dok_id": "HA01NU17",
@@ -161,8 +177,13 @@
       "titel": "Energipolitikens långsiktiga inriktning",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03105.html",
-      "found_by": ["keyword:kraftvärme", "keyword:fjärrvärme"],
-      "score": 2
+      "found_by": [
+        "keyword:kraftvärme",
+        "keyword:fjärrvärme",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HA01FiU21",
@@ -210,7 +231,73 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB411.html",
       "found_by": ["keyword:bioolja"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
+    },
+    {
+      "dok_id": "HA031d21",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 20 Allmän miljö- och naturvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01NU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU13",
+      "datum": "2026-02-26",
+      "titel": "Energipolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01NU3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU3",
+      "datum": "2025-12-04",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01NU9",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU9",
+      "datum": "2024-03-26",
+      "titel": "Elmarknadsfrågor",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

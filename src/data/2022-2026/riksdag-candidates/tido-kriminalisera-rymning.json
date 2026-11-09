@@ -12,7 +12,14 @@
     "keyword:kriminalisering",
     "keyword:Kriminalvården",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -47,9 +54,11 @@
         "keyword:anstalt",
         "keyword:häkte",
         "keyword:kriminalisering",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01JuU35",
@@ -85,7 +94,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU15.html",
       "found_by": ["keyword:anstalt", "keyword:häkte", "keyword:Kriminalvården"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03185",
@@ -97,7 +107,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03185.html",
       "found_by": ["keyword:rymning", "keyword:anstalt", "keyword:häkte"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD0348",
@@ -109,7 +120,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0348.html",
       "found_by": ["keyword:rymning", "keyword:Kriminalvården", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HCB425",
@@ -121,7 +133,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB425.html",
       "found_by": ["keyword:anstalt", "keyword:häkte", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.04
     },
     {
       "dok_id": "HA01JuU13",
@@ -132,8 +145,14 @@
       "titel": "Kriminalvårdsfrågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU13.html",
-      "found_by": ["keyword:Kriminalvården", "all-keywords", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:Kriminalvården",
+        "all-keywords",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03297",
@@ -144,8 +163,9 @@
       "titel": "Ett nytt straffrättsligt påföljdssystem",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03297.html",
-      "found_by": ["keyword:rymning", "all-keywords"],
-      "score": 2
+      "found_by": ["keyword:rymning", "all-keywords", "score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD03209",
@@ -157,7 +177,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03209.html",
       "found_by": ["keyword:häkte", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.04
     },
     {
       "dok_id": "HEB1119",
@@ -193,7 +214,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
       "found_by": ["committee:JuU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01SfU29",
@@ -206,6 +228,71 @@
       "url": "https://data.riksdagen.se/dokument/HD01SfU29.html",
       "found_by": ["keyword:anstalt"],
       "score": 1
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HBB174",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "74",
+      "datum": "2023-06-01",
+      "titel": "Tilläggsdirektiv till Utredningen om ett förstärkt samhällsskydd och en minskad risk för återfall i brott (Ju 2022:10)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB174.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB348",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "48",
+      "datum": "2024-07-05",
+      "titel": "Ett ändamålsenligt samhällsskydd Volym 1",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB348.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

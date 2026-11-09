@@ -12,7 +12,17 @@
     "keyword:kunskapsuppföljning",
     "keyword:tidiga kunskapskontroller",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +39,11 @@
         "keyword:central rättning",
         "keyword:diagnostiska prov",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.85
     },
     {
       "dok_id": "HDB318",
@@ -46,9 +58,11 @@
         "keyword:digitala nationella prov",
         "keyword:central rättning",
         "keyword:diagnostiska prov",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01UbU10",
@@ -93,8 +107,14 @@
       "titel": "Ett likvärdigt betygssystem",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU26.html",
-      "found_by": ["keyword:digitala nationella prov", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:digitala nationella prov",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD0375",
@@ -117,8 +137,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HC0375.html",
-      "found_by": ["keyword:digitala nationella prov", "keyword:central rättning", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:digitala nationella prov",
+        "keyword:central rättning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01UbU5",
@@ -145,8 +171,14 @@
       "titel": "Riksrevisionens rapport om statens insatser för likvärdig betygssättning – skillnaden mellan betyg och resultat på nationella prov",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA0360.html",
-      "found_by": ["keyword:central rättning", "keyword:diagnostiska prov", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:central rättning",
+        "keyword:diagnostiska prov",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HDB344",
@@ -157,8 +189,13 @@
       "titel": "Förbättrat stöd i skolan ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB344.html",
-      "found_by": ["keyword:diagnostiska prov", "keyword:kunskapsuppföljning"],
-      "score": 2
+      "found_by": [
+        "keyword:diagnostiska prov",
+        "keyword:kunskapsuppföljning",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB0375",
@@ -169,8 +206,13 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HB0375.html",
-      "found_by": ["keyword:central rättning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:central rättning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.92
     },
     {
       "dok_id": "HA0375",
@@ -181,8 +223,13 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HA0375.html",
-      "found_by": ["keyword:digitala nationella prov", "keyword:central rättning"],
-      "score": 2
+      "found_by": [
+        "keyword:digitala nationella prov",
+        "keyword:central rättning",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HAB353d2",
@@ -217,8 +264,204 @@
       "titel": "Ett likvärdigt betygssystem",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03197.html",
-      "found_by": ["keyword:central rättning"],
-      "score": 1
+      "found_by": ["keyword:central rättning", "score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d18",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB319",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "19",
+      "datum": "2025-02-26",
+      "titel": "Kunskap för alla ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB319.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB318d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "18",
+      "datum": "2025-02-19",
+      "titel": "Ett likvärdigt betygssystem, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB318d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB328",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "28",
+      "datum": "2024-04-19",
+      "titel": "Offentlighetsprincipen eller insynslag, Allmänhetens insyn i enskilda aktörer inom skolväsendet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB328.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01UbU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC03143",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "143",
+      "datum": "2025-03-18",
+      "titel": "En tioårig grundskola",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03143.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB3123",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "123",
+      "datum": "2026-01-01",
+      "titel": "Skärpta villkor för friskolesektorn - ytterligare förslag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3123.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01UbU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "UbU1",
+      "datum": "2023-12-08",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d27",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d27.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA031d17",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01UbU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU8",
+      "datum": "2026-02-09",
+      "titel": "Grundläggande om utbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031d17",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB031d26",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB326",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "26",
+      "datum": "2025-03-03",
+      "titel": "Tid för undervisningsuppdraget",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB326.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.97
     }
   ]
 }

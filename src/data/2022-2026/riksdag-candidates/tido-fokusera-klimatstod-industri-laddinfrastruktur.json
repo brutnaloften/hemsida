@@ -12,7 +12,14 @@
     "keyword:Parisavtalet artikel 6",
     "keyword:klimatinvesteringar",
     "all-keywords",
-    "committee:MJU"
+    "committee:MJU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +35,11 @@
         "keyword:klimatstöd",
         "keyword:Parisavtalet artikel 6",
         "all-keywords",
-        "committee:MJU"
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA01MJU1",
@@ -122,8 +131,14 @@
       "titel": "Utgiftsområde 20 Klimat, miljö och natur",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HB01MJU1.html",
-      "found_by": ["keyword:laddinfrastruktur", "keyword:klimatinvesteringar", "committee:MJU"],
-      "score": 3
+      "found_by": [
+        "keyword:laddinfrastruktur",
+        "keyword:klimatinvesteringar",
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01MJU22",
@@ -146,8 +161,13 @@
       "titel": "Riksrevisionens rapport om internationella klimatinsatser",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03153.html",
-      "found_by": ["keyword:Parisavtalet artikel 6", "keyword:klimatinvesteringar"],
-      "score": 2
+      "found_by": [
+        "keyword:Parisavtalet artikel 6",
+        "keyword:klimatinvesteringar",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HD01MJU1",
@@ -158,8 +178,13 @@
       "titel": "Utgiftsområde 20 Klimat, miljö och natur",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HD01MJU1.html",
-      "found_by": ["keyword:klimatinvesteringar", "committee:MJU"],
-      "score": 2
+      "found_by": [
+        "keyword:klimatinvesteringar",
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HC01FiU21",
@@ -194,8 +219,13 @@
       "titel": "Utgiftsområde 20 Klimat, miljö och natur",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HC01MJU1.html",
-      "found_by": ["keyword:klimatinvesteringar", "committee:MJU"],
-      "score": 2
+      "found_by": [
+        "keyword:klimatinvesteringar",
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA01MJU16",
@@ -208,6 +238,175 @@
       "url": "https://data.riksdagen.se/dokument/HA01MJU16.html",
       "found_by": ["keyword:klimatinvesteringar", "committee:MJU"],
       "score": 2
+    },
+    {
+      "dok_id": "HA031d21",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 20 Allmän miljö- och naturvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.98
+    },
+    {
+      "dok_id": "HB03101",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "101",
+      "datum": "2024-04-15",
+      "titel": "Årsredovisning för staten 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01KU20",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU20",
+      "datum": "2026-06-10",
+      "titel": "Granskningsbetänkande",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031d22",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC0399",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "99",
+      "datum": "2025-04-15",
+      "titel": "Vårändringsbudget för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC03100",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "100",
+      "datum": "2025-04-15",
+      "titel": "2025 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d21",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD038",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "8",
+      "datum": "2025-10-28",
+      "titel": "Riksrevisionens rapport om LKAB:s omställning",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD038.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01TU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "TU1",
+      "datum": "2023-12-07",
+      "titel": "Utgiftsområde 22 Kommunikationer",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HB01TU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA0399",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "99",
+      "datum": "2023-04-17",
+      "titel": "Vårändringsbudget för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03101",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "101",
+      "datum": "2025-04-15",
+      "titel": "Årsredovisning för staten 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

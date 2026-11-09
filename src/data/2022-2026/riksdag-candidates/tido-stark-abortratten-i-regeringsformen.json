@@ -12,7 +12,15 @@
     "keyword:grundlagsutredning",
     "keyword:domstolarnas oberoende",
     "all-keywords",
-    "committee:KU"
+    "committee:KU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -64,9 +72,11 @@
         "keyword:grundlagsutredning",
         "keyword:domstolarnas oberoende",
         "all-keywords",
-        "committee:KU"
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.55
     },
     {
       "dok_id": "HB01KU13",
@@ -81,9 +91,11 @@
         "keyword:aborträtt",
         "keyword:grundlagsutredning",
         "all-keywords",
-        "committee:KU"
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01KU26",
@@ -111,8 +123,14 @@
       "titel": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0378.html",
-      "found_by": ["keyword:abort", "keyword:aborträtt", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:abort",
+        "keyword:aborträtt",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01KU16",
@@ -135,8 +153,14 @@
       "titel": "Författningsfrågor",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HA01KU30.html",
-      "found_by": ["keyword:grundlagsutredning", "keyword:domstolarnas oberoende", "committee:KU"],
-      "score": 3
+      "found_by": [
+        "keyword:grundlagsutredning",
+        "keyword:domstolarnas oberoende",
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HEB357",
@@ -160,7 +184,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03271.html",
       "found_by": ["keyword:abort", "keyword:aborträtt"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD01KU28",
@@ -172,7 +197,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU28.html",
       "found_by": ["keyword:aborträtt", "committee:KU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01KU2",
@@ -183,8 +209,13 @@
       "titel": "Stärkt skydd för demokratin och domstolarnas oberoende",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU2.html",
-      "found_by": ["keyword:regeringsformen", "keyword:domstolarnas oberoende"],
-      "score": 2
+      "found_by": [
+        "keyword:regeringsformen",
+        "keyword:domstolarnas oberoende",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HC01KU16",
@@ -208,7 +239,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB358.html",
       "found_by": ["keyword:grundlagsutredning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HEB354",
@@ -220,7 +252,164 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB354.html",
       "found_by": ["keyword:regeringsformen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.35
+    },
+    {
+      "dok_id": "HBB353d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "53",
+      "datum": "2023-09-14",
+      "titel": "En ändamålsenlig arbetsskadeförsäkring - för bättre ekonomisk trygghet, kunskap och rättssäkerhet, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB353d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB189",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "89",
+      "datum": "2023-06-15",
+      "titel": "Förändringar i abortlagstiftningen",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB189.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.88
+    },
+    {
+      "dok_id": "HDB310",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "10",
+      "datum": "2025-02-04",
+      "titel": "En förändrad abortlag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB310.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB356",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "56",
+      "datum": "2025-05-14",
+      "titel": "Stärkt skydd för domstolarnas och domarnas oberoende",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB356.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB031d2",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 1 Rikets styrelse",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03286",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "286",
+      "datum": "2026-06-16",
+      "titel": "Stärkt skydd för domstolarnas och domarnas oberoende",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03286.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03165",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "165",
+      "datum": "2025-04-28",
+      "titel": "Stärkt skydd för demokratin och domstolarnas oberoende",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03165.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HBB183",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "83",
+      "datum": "2023-06-15",
+      "titel": "Några frågor om grundläggande fri- och rättigheter",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB183.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB330",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "30",
+      "datum": "2023-06-20",
+      "titel": "Ett trygghetssystem för alla - nytt regelverk för sjukpenninggrundande inkomst ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB330.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

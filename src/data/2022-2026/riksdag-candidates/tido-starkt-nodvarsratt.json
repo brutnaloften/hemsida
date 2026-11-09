@@ -11,7 +11,13 @@
     "keyword:brottsbalken",
     "keyword:angrepp i hemmet",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -35,8 +41,14 @@
       "titel": "Tillträdesförbud - Delbetänkande av Utredningen om nödvärn, tillträdesförbud och preventiva vistelseförbud",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB348.html",
-      "found_by": ["keyword:nödvärn", "keyword:nödvärnsrätt", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:nödvärn",
+        "keyword:nödvärnsrätt",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB182",
@@ -47,8 +59,14 @@
       "titel": "En starkare nödvärnsrätt och ett effektivare tillträdesförbud",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HDB182.html",
-      "found_by": ["keyword:nödvärn", "keyword:nödvärnsrätt", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:nödvärn",
+        "keyword:nödvärnsrätt",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC03186",
@@ -72,7 +90,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU10.html",
       "found_by": ["keyword:nödvärnsrätt", "all-keywords", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01JuU11",
@@ -96,7 +115,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB394.html",
       "found_by": ["keyword:nödvärnsrätt", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01JuU5",
@@ -108,7 +128,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU5.html",
       "found_by": ["keyword:nödvärn", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HDB357",
@@ -120,7 +141,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB357.html",
       "found_by": ["keyword:nödvärnsrätt", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HEB352d2",
@@ -132,7 +154,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB352d2.html",
       "found_by": ["all-keywords"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD01JuU41",
@@ -156,7 +179,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03297.html",
       "found_by": ["keyword:brottsbalken"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03293",
@@ -168,7 +192,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03293.html",
       "found_by": ["keyword:brottsbalken"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HEB161",
@@ -179,8 +204,9 @@
       "titel": "Tilläggsdirektiv till Utredningen om nödvärn, tillträdesförbud och preventiva vistelseförbud (Ju 2025:18)",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB161.html",
-      "found_by": ["keyword:nödvärn"],
-      "score": 1
+      "found_by": ["keyword:nödvärn", "score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.92
     },
     {
       "dok_id": "HD01JuU40",
@@ -192,7 +218,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU40.html",
       "found_by": ["keyword:brottsbalken"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     }
   ]
 }

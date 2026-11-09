@@ -12,7 +12,15 @@
     "keyword:klimatnytta",
     "keyword:utvärdering",
     "all-keywords",
-    "committee:MJU"
+    "committee:MJU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -43,7 +51,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HD01MJU16.html",
       "found_by": ["keyword:klimatpolitik", "keyword:klimatnytta", "all-keywords", "committee:MJU"],
-      "score": 4
+      "score": 4,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD03122",
@@ -89,7 +98,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HD01MJU21.html",
       "found_by": ["keyword:styrmedel", "all-keywords", "committee:MJU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD03113",
@@ -137,7 +147,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03104.html",
       "found_by": ["keyword:beräkningskonventioner", "keyword:utvärdering"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.04
     },
     {
       "dok_id": "HD03153",
@@ -149,7 +160,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03153.html",
       "found_by": ["keyword:klimatpolitik", "keyword:klimatnytta"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD031d2",
@@ -173,7 +185,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB367.html",
       "found_by": ["keyword:styrmedel", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HB0359",
@@ -197,7 +210,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HA01MJU13.html",
       "found_by": ["all-keywords", "committee:MJU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HEB179",
@@ -210,6 +224,45 @@
       "url": "https://data.riksdagen.se/dokument/HEB179.html",
       "found_by": ["keyword:styrmedel"],
       "score": 1
+    },
+    {
+      "dok_id": "HA031d21",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 20 Allmän miljö- och naturvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB333",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "33",
+      "datum": "2026-05-28",
+      "titel": "Vägen mot utfasning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB333.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01MJU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU1",
+      "datum": "2023-12-11",
+      "titel": "Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

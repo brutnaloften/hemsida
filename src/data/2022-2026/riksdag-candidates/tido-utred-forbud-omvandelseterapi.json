@@ -11,7 +11,14 @@
     "keyword:hedersrelaterat förtryck",
     "keyword:religionsfrihet",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -44,9 +51,11 @@
         "keyword:omvändelseterapi",
         "keyword:hedersrelaterat förtryck",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB351",
@@ -81,8 +90,14 @@
       "titel": "Förstärkt skydd för den personliga integriteten - Behovet av åtgärder mot oskuldskontroller, oskuldsintyg och oskuldsingrepp samt omvändelseförsök",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB337.html",
-      "found_by": ["keyword:omvändelseterapi", "keyword:sexuell läggning", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:omvändelseterapi",
+        "keyword:sexuell läggning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.96
     },
     {
       "dok_id": "HC01UbU10",
@@ -154,7 +169,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03297.html",
       "found_by": ["keyword:religionsfrihet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HEB342",
@@ -166,7 +182,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB342.html",
       "found_by": ["keyword:religionsfrihet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.12
     },
     {
       "dok_id": "HEB341",
@@ -178,7 +195,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB341.html",
       "found_by": ["keyword:sexuell läggning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01JuU42",
@@ -190,7 +208,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
       "found_by": ["committee:JuU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01CU33",
@@ -203,6 +222,84 @@
       "url": "https://data.riksdagen.se/dokument/HD01CU33.html",
       "found_by": ["keyword:hedersrelaterat förtryck"],
       "score": 1
+    },
+    {
+      "dok_id": "HBB353d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "53",
+      "datum": "2023-09-14",
+      "titel": "En ändamålsenlig arbetsskadeförsäkring - för bättre ekonomisk trygghet, kunskap och rättssäkerhet, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB353d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031d5",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d6",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB3103",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "103",
+      "datum": "2024-01-01",
+      "titel": "Areella näringar vid vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB3103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB368",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "68",
+      "datum": "2023-11-15",
+      "titel": "Som om vi aldrig funnits - exkludering och assimilering av tornedalingar, kväner och lantalaiset ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HAB1136",
+      "doktyp": "dir",
+      "rm": "2022",
+      "beteckning": "136",
+      "datum": "2022-11-24",
+      "titel": "Tilläggsdirektiv till Utredningen om åtgärder mot kontroller av flickors och kvinnors sexualitet (Ju 2021:16)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HAB1136.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

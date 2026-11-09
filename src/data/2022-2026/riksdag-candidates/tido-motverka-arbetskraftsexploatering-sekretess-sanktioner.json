@@ -12,7 +12,17 @@
     "keyword:sanktioner",
     "keyword:arbetskraftsinvandring",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -44,9 +54,11 @@
       "found_by": [
         "keyword:arbetskraftsexploatering",
         "keyword:arbetskraftsinvandring",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01SfU11",
@@ -57,8 +69,14 @@
       "titel": "Arbetskraftsinvandring",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU11.html",
-      "found_by": ["keyword:arbetskraftsinvandring", "all-keywords", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:arbetskraftsinvandring",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.92
     },
     {
       "dok_id": "HA01SfU17",
@@ -69,8 +87,14 @@
       "titel": "Arbetskraftsinvandring",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU17.html",
-      "found_by": ["keyword:arbetskraftsinvandring", "all-keywords", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:arbetskraftsinvandring",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03313",
@@ -129,8 +153,13 @@
       "titel": "Nya regler för arbetskraftsinvandring m.m.",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB315.html",
-      "found_by": ["keyword:arbetskraftsinvandring", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:arbetskraftsinvandring",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01SfU24",
@@ -142,7 +171,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU24.html",
       "found_by": ["keyword:arbetsgivare"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HD01JuU12",
@@ -177,8 +207,9 @@
       "titel": "Offentlighet, sekretess och integritet",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU26.html",
-      "found_by": ["keyword:sekretess"],
-      "score": 1
+      "found_by": ["keyword:sekretess", "score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.75
     },
     {
       "dok_id": "HD01KU16",
@@ -203,6 +234,396 @@
       "url": "https://data.riksdagen.se/dokument/HD01SkU6.html",
       "found_by": ["keyword:sanktioner"],
       "score": 1
+    },
+    {
+      "dok_id": "HA0363",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "63",
+      "datum": "2023-02-21",
+      "titel": "Riksrevisionens rapport om spårbyte i migrationsprocessen – kontroller och uppföljning",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0363.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB38",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "8",
+      "datum": "2023-02-21",
+      "titel": "Arbetslivskriminalitet - arbetet i Sverige, en bedömning av omfattningen, lärdomar från Danmark och Finland ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB38.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01SfU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SfU9",
+      "datum": "2022-11-25",
+      "titel": "Ett höjt försörjningskrav för arbetskraftsinvandrare",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC0318",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "18",
+      "datum": "2024-09-24",
+      "titel": "Genomförande av det nya blåkortsdirektivet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0318.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB325",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "25",
+      "datum": "2025-03-03",
+      "titel": "Arbetslivskriminalitet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB325.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0385",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "85",
+      "datum": "2024-03-19",
+      "titel": "En ny lag om uppgiftsskyldighet för att motverka felaktiga utbetalningar från välfärdssystemen samt fusk, regelöverträdelser och brottslighet i arbetslivet",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0385.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB46",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "6",
+      "datum": "2023-03-20",
+      "titel": "Genomförande av det nya blåkortsdirektivet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB46.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03266",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "266",
+      "datum": "2026-06-02",
+      "titel": "En god arbetsmiljö i ett föränderligt arbetsliv – regeringens arbetsmiljöstrategi för 2026–2031",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03266.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB126",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "26",
+      "datum": "2024-02-22",
+      "titel": "Tilläggsdirektiv till Delegationen mot arbetslivskriminalitet (A 2021:04)",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB126.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HBB1146",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "146",
+      "datum": "2023-10-19",
+      "titel": "Förbättrade möjligheter till informationsutbyte mellan myndigheter",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1146.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01AU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "AU8",
+      "datum": "2024-04-18",
+      "titel": "Arbetsmiljö och arbetstid",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HB01AU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB393d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "93",
+      "datum": "2025-08-28",
+      "titel": "En robust skogspolitik för aktivt skogsbruk, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB393d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB393",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "93",
+      "datum": "2023-12-13",
+      "titel": "Budgetprocessen i det finanspolitiska ramverket ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB393.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d9",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01AU8",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU8",
+      "datum": "2025-04-10",
+      "titel": "Arbetsmiljö",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB01SkU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU15",
+      "datum": "2024-03-27",
+      "titel": "Skatteförfarande och folkbokföring",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01SkU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU13",
+      "datum": "2025-04-01",
+      "titel": "Företag, kapital och fastighet",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3119",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "119",
+      "datum": "2025-12-17",
+      "titel": "Ett nytt brott och andra åtgärder mot människohandel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3119.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB343",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "43",
+      "datum": "2023-08-22",
+      "titel": "En samordnad registerkontroll för upphandlande myndigheter och enheter",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB343.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB339",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "39",
+      "datum": "2025-04-09",
+      "titel": "Digital teknik på lika villkor ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB339.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB330",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "30",
+      "datum": "2023-06-20",
+      "titel": "Ett trygghetssystem för alla - nytt regelverk för sjukpenninggrundande inkomst ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB330.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB381",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "81",
+      "datum": "2025-06-18",
+      "titel": "En ny organisation av ekobrottsbekämpningen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB381.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

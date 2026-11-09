@@ -12,7 +12,16 @@
     "keyword:Sveriges Radio",
     "keyword:medieavgift",
     "all-keywords",
-    "committee:KrU"
+    "committee:KrU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -65,9 +74,11 @@
         "keyword:public service",
         "keyword:tillståndsperiod",
         "all-keywords",
-        "committee:KrU"
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HCB334",
@@ -129,8 +140,14 @@
       "titel": "Tillgång till kultur",
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HD01KrU5.html",
-      "found_by": ["keyword:public service", "keyword:SVT", "committee:KrU"],
-      "score": 3
+      "found_by": [
+        "keyword:public service",
+        "keyword:SVT",
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB3116",
@@ -141,8 +158,14 @@
       "titel": "Distribution av radio och tv i det nya medielandskapet",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB3116.html",
-      "found_by": ["keyword:public service", "keyword:tillståndsperiod", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:public service",
+        "keyword:tillståndsperiod",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA0383",
@@ -166,7 +189,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU20.html",
       "found_by": ["keyword:SVT", "keyword:Sveriges Radio"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03287",
@@ -178,7 +202,8 @@
       "organ": "Kulturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03287.html",
       "found_by": ["keyword:SVT"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD03284",
@@ -202,7 +227,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB315d2.html",
       "found_by": ["keyword:Sveriges Radio"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03121",
@@ -214,7 +240,8 @@
       "organ": "Försvarsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03121.html",
       "found_by": ["keyword:SVT"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03111",
@@ -226,7 +253,242 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03111.html",
       "found_by": ["keyword:SVT"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HCB364",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "64",
+      "datum": "2024-09-19",
+      "titel": "Motståndskraft i samhällsviktiga tjänster",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB364.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HC03197",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "197",
+      "datum": "2025-07-01",
+      "titel": "Kompletterande bestämmelser till EU:s mediefrihetsförordning",
+      "organ": "Kulturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03197.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01KU30",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU30",
+      "datum": "2026-03-26",
+      "titel": "Författningsfrågor",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU30.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB428",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "28",
+      "datum": "2024-11-05",
+      "titel": "Kompletterande bestämmelser till EU:s mediefrihetsförordning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB428.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC031d18",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01KU30",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU30",
+      "datum": "2023-04-21",
+      "titel": "Författningsfrågor",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU30.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB378",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "78",
+      "datum": "2025-01-01",
+      "titel": "Ett språkkrav för språkutveckling ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB378.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01KrU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KrU1",
+      "datum": "2024-11-29",
+      "titel": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HC01KrU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HD01KrU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KrU1",
+      "datum": "2025-11-28",
+      "titel": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HD01KrU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01KU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU18",
+      "datum": "2026-01-16",
+      "titel": "Tryck- och yttrandefrihet, massmediefrågor",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA031d18",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HCB352",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "52",
+      "datum": "2024-07-05",
+      "titel": "Allmänna sammankomster och Sveriges säkerhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB352.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01KrU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KrU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HA01KrU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB371",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "71",
+      "datum": "2024-11-04",
+      "titel": "Reglering av hushållens skulder ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB371.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

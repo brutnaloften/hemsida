@@ -12,7 +12,15 @@
     "keyword:undervisningstid",
     "keyword:integration",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +36,11 @@
         "keyword:nyanlända elever",
         "keyword:timplan",
         "keyword:undervisningstid",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03194",
@@ -42,7 +52,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03194.html",
       "found_by": ["keyword:nyanlända elever", "keyword:timplan", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD03195",
@@ -78,7 +89,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB319.html",
       "found_by": ["keyword:nyanlända elever", "keyword:timplan", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.45
     },
     {
       "dok_id": "HDB39",
@@ -114,7 +126,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU22.html",
       "found_by": ["keyword:kunskapsscreening", "committee:UbU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HDB344",
@@ -126,7 +139,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB344.html",
       "found_by": ["keyword:nyanlända elever", "keyword:timplan"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HCB394",
@@ -173,8 +187,13 @@
       "titel": "Mer obligatorisk undervisningstid för elever som behöver det",
       "organ": "U-dep",
       "url": "https://data.riksdagen.se/dokument/HBB1174.html",
-      "found_by": ["keyword:nyanlända elever", "keyword:undervisningstid"],
-      "score": 2
+      "found_by": [
+        "keyword:nyanlända elever",
+        "keyword:undervisningstid",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD03292",
@@ -186,7 +205,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03292.html",
       "found_by": ["keyword:undervisningstid"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HEB413",
@@ -199,6 +219,45 @@
       "url": "https://data.riksdagen.se/dokument/HEB413.html",
       "found_by": ["keyword:timplan"],
       "score": 1
+    },
+    {
+      "dok_id": "HD031d18",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB01UbU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "UbU11",
+      "datum": "2024-04-24",
+      "titel": "Lärare och elever",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

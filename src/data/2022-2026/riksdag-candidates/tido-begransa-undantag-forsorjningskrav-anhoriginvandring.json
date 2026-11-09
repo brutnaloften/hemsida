@@ -12,7 +12,15 @@
     "keyword:vidarebosatta",
     "keyword:undantag",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -24,8 +32,14 @@
       "titel": "Skärpta villkor för anhöriginvandring",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
-      "found_by": ["keyword:försörjningskrav", "keyword:anhöriginvandring", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:försörjningskrav",
+        "keyword:anhöriginvandring",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01SfU30",
@@ -37,7 +51,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU30.html",
       "found_by": ["keyword:vidarebosatta", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03262",
@@ -75,9 +90,11 @@
       "found_by": [
         "keyword:anhöriginvandring",
         "keyword:alternativt skyddsbehövande",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC01SfU18",
@@ -103,9 +120,11 @@
       "found_by": [
         "keyword:försörjningskrav",
         "keyword:anhöriginvandring",
-        "keyword:alternativt skyddsbehövande"
+        "keyword:alternativt skyddsbehövande",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03301",
@@ -116,8 +135,13 @@
       "titel": "Skärpta villkor för anhöriginvandring",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03301.html",
-      "found_by": ["keyword:försörjningskrav", "keyword:anhöriginvandring"],
-      "score": 2
+      "found_by": [
+        "keyword:försörjningskrav",
+        "keyword:anhöriginvandring",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03264",
@@ -153,7 +177,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0318.html",
       "found_by": ["keyword:försörjningskrav", "keyword:alternativt skyddsbehövande"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HB01SfU14",
@@ -188,8 +213,13 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU15.html",
-      "found_by": ["keyword:anhöriginvandring", "committee:SfU"],
-      "score": 2
+      "found_by": [
+        "keyword:anhöriginvandring",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01UbU31",
@@ -201,7 +231,112 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU31.html",
       "found_by": ["keyword:undantag"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HCB315",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "15",
+      "datum": "2024-02-15",
+      "titel": "Nya regler för arbetskraftsinvandring m.m.",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB315.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC031d9",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3110",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "110",
+      "datum": "2025-11-10",
+      "titel": "Snabbare bredband i hela landet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB399",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "99",
+      "datum": "2025-09-26",
+      "titel": "Ändring av permanent uppehållstillstånd för vissa utlänningar",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

@@ -12,7 +12,12 @@
     "keyword:kärnkraft",
     "keyword:forskningspolitik",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -75,8 +80,14 @@
       "titel": "Forskning och innovation på energiområdet för försörjningstrygghet, konkurrenskraft och klimatomställning",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0372.html",
-      "found_by": ["keyword:energiforskning", "keyword:fossilfria energislag", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:energiforskning",
+        "keyword:fossilfria energislag",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03101",
@@ -100,7 +111,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
       "found_by": ["keyword:fossilfria energislag", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01NU3",
@@ -112,7 +124,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
       "found_by": ["keyword:energiforskning", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD031",
@@ -209,6 +222,58 @@
       "url": "https://data.riksdagen.se/dokument/HB01NU3.html",
       "found_by": ["keyword:energiforskning", "committee:NU"],
       "score": 2
+    },
+    {
+      "dok_id": "HB03105",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "105",
+      "datum": "2024-03-19",
+      "titel": "Energipolitikens långsiktiga inriktning",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03105.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB397",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "97",
+      "datum": "2025-01-01",
+      "titel": "Mot en effektiv elektrifiering av transportsystemet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB397.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC031d22",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01NU3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU3",
+      "datum": "2024-12-09",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }
