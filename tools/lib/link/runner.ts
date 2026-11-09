@@ -41,7 +41,7 @@ export interface LinkRunSummary {
   total: number;
   cached: number;
   sent: number;
-  /** Requests neither cached nor sent (only when the run stopped early). */
+  /** Requests neither cached nor sent: the run stopped early, or requests were skipped. */
   remaining: number;
   /** Requests skipped on a transient error (429, 529, 5xx, error_max_turns); a re-run retries them. */
   skipped: number;
@@ -92,10 +92,11 @@ export async function runLinkPlan(plan: LinkPlan, opts: LinkRunOptions): Promise
         summary.sent++;
         summary.tokens += res.tokens;
         summary.cost_usd += res.cost_usd ?? res.tokens * price;
-        opts.onProgress?.(summary.cached + summary.sent, summary.total);
+        opts.onProgress?.(summary.cached + summary.sent + summary.skipped, summary.total);
       } catch (err) {
         if (isTransientJudgeError(err)) {
           summary.skipped++;
+          opts.onProgress?.(summary.cached + summary.sent + summary.skipped, summary.total);
           continue;
         }
         stopped = true;

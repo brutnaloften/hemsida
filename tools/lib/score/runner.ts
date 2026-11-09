@@ -41,7 +41,7 @@ export interface RunSummary {
   total: number;
   cached: number;
   sent: number;
-  /** Requests neither cached nor sent (only when the run stopped early). */
+  /** Requests neither cached nor sent: the run stopped early, or requests were skipped. */
   remaining: number;
   /** Requests skipped on a `SkippableScoreError`; they count as remaining and a re-run retries them. */
   skipped: number;
@@ -114,10 +114,11 @@ export async function runPlan(plan: Plan, opts: RunOptions): Promise<RunSummary>
         summary.api_requests += entry.api_requests;
         summary.input_tokens += entry.input_tokens;
         summary.cost_usd += entry.input_tokens * price;
-        opts.onProgress?.(summary.cached + summary.sent, summary.total);
+        opts.onProgress?.(summary.cached + summary.sent + summary.skipped, summary.total);
       } catch (err) {
         if (err instanceof SkippableScoreError) {
           summary.skipped++;
+          opts.onProgress?.(summary.cached + summary.sent + summary.skipped, summary.total);
           continue;
         }
         stopped = true;

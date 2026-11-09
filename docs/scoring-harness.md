@@ -31,7 +31,7 @@ Each document is chunked; promises (sorted by id) are packed into question batch
 
 If the scorer rejects a request as too long, the runner splits the state in half, asks both halves and keeps the max per question; the result is cached under the original key.
 
-A scorer can throw `SkippableScoreError` for a failure that concerns only that request: the runner skips it and goes on, the run still ends `complete` (exit 0) but with `skipped_count` in the manifest and a `N skipped` note, and a re-run sends the skipped requests again. The `claude` scorer does this for the Agent SDK's `error_max_turns` (it allows 3 turns so the SDK can retry structured output that failed validation; with 1 turn this happened about once per few hundred requests and aborted the run). Rate, usage and every other error still stop the run.
+A scorer can throw `SkippableScoreError` for a failure that concerns only that request: the runner skips it and goes on, the run still ends `complete` (exit 0) but with `skipped_count` in the manifest and a `N skipped` note, and a re-run sends the skipped requests again. The `claude` scorer does this for the Agent SDK's `error_max_turns` (it allows 3 turns so the SDK can retry structured output that failed validation; with 1 turn this happened about once per few hundred requests and aborted the run). Rate limits, usage limits and every other error except `TooLongError` (which splits, see above) still stop the run.
 
 ## Budget behaviour
 

@@ -187,8 +187,14 @@ describe('runner', () => {
     const total = plan().requests.length;
     const opts = { cache, maxCostUsd: 1, usdPerMillionTokens: 0.042, concurrency: 1 };
     const flaky = countingScorer(2, () => new SkippableScoreError('claude: error_max_turns'));
-    const first = await runPlan(plan(), { ...opts, scorer: flaky });
+    const progress: number[] = [];
+    const first = await runPlan(plan(), {
+      ...opts,
+      scorer: flaky,
+      onProgress: (done) => progress.push(done),
+    });
     expect(first).toMatchObject({ status: 'complete', sent: total - 1, skipped: 1, remaining: 1 });
+    expect(progress.at(-1)).toBe(total);
     expect(first.error).toMatch(/1 request\(s\) skipped/);
     expect(cache.size()).toBe(total - 1);
     const healthy = countingScorer();
