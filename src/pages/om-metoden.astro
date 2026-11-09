@@ -114,8 +114,9 @@ const stages = [
       <h2 class="text-xl font-semibold">Bevis och bedömning</h2>
       <p>
         Bevisen och bedömningen hålls isär. Dokumenten i tidslinjen är fakta som delvis kan hittas
-        automatiskt. Bedömningen, alltså hur långt löftet har uppfyllts, åtföljs av en skriftlig
-        motivering som hänvisar till dokumenten. Motivering krävs för alla bedömningar utom
+        automatiskt. Bedömningen, alltså hur långt löftet har uppfyllts, görs av en AI-modell (Claude), utan
+        granskning av en människa före publicering, och åtföljs av en skriftlig motivering som
+        hänvisar till dokumenten. Motivering krävs för alla bedömningar utom
         &quot;Inte bedömt&quot;. För &quot;Inga belägg funna&quot; ska motiveringen ange när och vad vi sökte efter. Tidigare bedömningar sparas så att det går att se hur bilden har förändrats.
       </p>
       <h3 class="text-lg font-medium pt-2">Bedömningsskalan</h3>
@@ -139,11 +140,11 @@ const stages = [
       <h2 class="text-xl font-semibold">Öppen och granskningsbar data</h2>
       <p>
         All data ligger som filer i ett öppet versionshanterat arkiv på GitHub, en fil per löfte. Varje
-        ändring av en bedömning görs som en pull request som kan granskas, vilket ger en offentlig
+        ändring av en bedömning görs som en pull request som går att granska i efterhand, vilket ger en offentlig
         historik över hur och varför bedömningarna har ändrats.
       </p>
       <p>
-        Om ett dokument har föreslagits som relevant för ett löfte men avvisats vid granskning sparas det
+        Om ett dokument har föreslagits som relevant för ett löfte men avvisats sparas det
         som ett avvisat förslag, så att samma dokument inte föreslås igen.
       </p>
     </section>

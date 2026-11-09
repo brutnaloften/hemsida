@@ -2,7 +2,7 @@
  * Judge interface of the linker (hemsida-4np.5). A judge reads one promise and the evidence text of one
  * document and answers with a relevance label, a document stage, a confidence and a reason. Add a provider by
  * implementing `Judge` and registering it in `createJudge`. Nothing here sets a verdict: judgements are
- * proposals for human review.
+ * proposals that feed the evidence step.
  */
 import { query } from '@anthropic-ai/claude-agent-sdk';
 import type Anthropic from '@anthropic-ai/sdk';

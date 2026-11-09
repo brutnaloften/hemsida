@@ -1,6 +1,6 @@
 /**
  * Declarative, resumable, budget-guarded linking run (hemsida-4np.5): a judge model reads each candidate
- * promise/document pair and proposes a relevance label and document stage for human review. See
+ * promise/document pair and proposes a relevance label and document stage for the evidence step. See
  * docs/link-harness.md.
  *   pnpm link-pairs tools/link-configs/eval-v1.json --dry-run
  *   pnpm link-pairs tools/link-configs/eval-v1.json [--max-cost 2] [--concurrency 2] [--limit 5] [--judge fake]

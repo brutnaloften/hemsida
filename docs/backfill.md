@@ -4,7 +4,7 @@ Bead `hemsida-4np.20`. For someone who helps backfill the Riksdag evidence on th
 
 **Ground rules**
 
-- Tools produce caches and candidate files. **Nobody sets a verdict or `evidence[]` here**; that is a reviewed human step (`docs/data-model.md`).
+- Tools produce caches and candidate files. **A helper who only scores a slice does not set a verdict or `evidence[]`**; the maintainer's Claude session does that in step 8 of `docs/riksdag-linking.md` (`docs/data-model.md`).
 - Never set `ANTHROPIC_API_KEY` or `ANTHROPIC_AUTH_TOKEN`. The `claude` scorer and judge refuse to run with either set (it would bill a console key instead of the subscription); `unset` them in the shell if they are exported.
 - Never `git add tools/out/`; it is gitignored and stays that way.
 - Nothing is uploaded unless you run `pack ... --publish` or `publish`.

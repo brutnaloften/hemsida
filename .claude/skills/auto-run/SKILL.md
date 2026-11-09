@@ -41,7 +41,7 @@ Stop and ask **only** when:
 - **The decision is a product-priority or editorial call** that changes what
   gets built or what the site claims — e.g. which promises count, how a
   verdict scale is defined, what a verdict on a specific promise should be.
-  Verdicts are human-set by design; propose them in a PR, do not merge them.
+  Claude sets verdicts itself (no human review step): open them as PRs with written reasoning that cites evidence, and merge them like other data PRs when the mode allows.
 - **The action is irreversible or outward-facing** — pushing to or
   force-pushing `main`, a history rewrite, deleting a remote branch that is not
   yours, changing repo or Pages settings.

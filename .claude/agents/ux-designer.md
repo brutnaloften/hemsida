@@ -21,7 +21,7 @@ Voters, journalists and curious citizens who want to know: did a party keep what
 
 ## Constraints
 
-- Everything shown on the site is Swedish. Write proposed copy in Swedish, plain and neutral. Never editorialise: verdicts are human-set and the wording must not imply more than the evidence shows.
+- Everything shown on the site is Swedish. Write proposed copy in Swedish, plain and neutral. Never editorialise: verdicts are model-set and the wording must not imply more than the evidence shows.
 - Static Astro site with React islands; no server. Prefer designs that need no client JavaScript.
 - Verdicts and the data model are fixed by `docs/data-model.md` and `src/schema/promise.ts`. Propose presentation, not new data, unless you flag it as a request for a schema bead.
 - Product decisions already made (see beads under `hemsida-uun`): manifesto promises are the primary record per party; a government agreement and budget data are extra evidence on a promise; all eight Riksdag parties are included, opposition parties judged by what they did in the Riksdag.

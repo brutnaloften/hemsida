@@ -1,6 +1,6 @@
 # Linking harness
 
-`tools/link.ts` (`pnpm link-pairs`, `pnpm link` is a pnpm built-in) is step 7 of `docs/riksdag-linking.md`: a judge model reads each candidate promise/document pair and proposes a relevance label (`match`, `partial`, `contradicts`, `no_match`), a document stage (`definitive`, `preparatory`, `background`), a confidence and a reason. Bead `hemsida-4np.5`. It is built like the scoring harness (`docs/scoring-harness.md`) and is model-agnostic: the model is a config field, so a collaborator runs it locally with whatever model and login they have. **Judgements are proposals; a human sets every verdict.**
+`tools/link.ts` (`pnpm link-pairs`, `pnpm link` is a pnpm built-in) is step 7 of `docs/riksdag-linking.md`: a judge model reads each candidate promise/document pair and proposes a relevance label (`match`, `partial`, `contradicts`, `no_match`), a document stage (`definitive`, `preparatory`, `background`), a confidence and a reason. Bead `hemsida-4np.5`. It is built like the scoring harness (`docs/scoring-harness.md`) and is model-agnostic: the model is a config field, so a collaborator runs it locally with whatever model and login they have. **Judgements are inputs to the evidence step (step 8 of `docs/riksdag-linking.md`), where Claude writes `evidence[]` and sets verdicts; a judgement alone is never a verdict.**
 
 ## Running
 

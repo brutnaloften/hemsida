@@ -4,7 +4,7 @@ Status: **draft for review** (bead `hemsida-bzj.1`). Open questions are listed a
 
 ## Principles
 
-- **Evidence and verdict are separate.** Evidence is a list of official documents, and the tooling can mostly fill it in. The verdict is set by a human, with written reasoning, and the evidence backs it up.
+- **Evidence and verdict are separate.** Evidence is a list of official documents, and the tooling can mostly fill it in. The verdict is set by Claude, with written reasoning, and the evidence backs it up. There is no human review step: the reasoning and the evidence constraints below are the safeguards, and git keeps every change revertable.
 - **Files in git.** One JSON file per promise. Every verdict change is a reviewable PR, which gives the site a public audit trail.
 - **References, not copies.** Evidence stores IDs and metadata for Riksdag documents, not their contents.
 - **One schema.** A single Zod module, imported by both the Astro content collection and the tooling.
@@ -144,12 +144,12 @@ Party codes: `S`, `M`, `SD`, `C`, `V`, `KD`, `L`, `MP`.
 
 ### Verdict
 
-Set by a human, with reasoning that cites evidence. `history` keeps earlier verdicts so the site can show how the assessment changed. Git keeps the full audit trail on top of that.
+Set by Claude, with reasoning that cites evidence. `history` keeps earlier verdicts so the site can show how the assessment changed. Git keeps the full audit trail on top of that.
 
 | Value                 | Swedish label     | Meaning                                                                      |
 | --------------------- | ----------------- | ---------------------------------------------------------------------------- |
 | `unassessed`          | Inte bedömt       | Nobody has looked yet; makes no claim about the world. The default           |
-| `no_evidence`         | Inga belägg funna | A human searched the Riksdag record and found nothing (see below)            |
+| `no_evidence`         | Inga belägg funna | The Riksdag record was searched and nothing found (see below)                |
 | `in_progress`         | Pågår             | Action under way (inquiry, proposal, bill), not yet decided or in force      |
 | `fulfilled`           | Uppfyllt          | Done as promised                                                             |
 | `partially_fulfilled` | Delvis uppfyllt   | Done, but substantially narrower or weaker than promised, or only some parts |
@@ -158,11 +158,11 @@ Set by a human, with reasoning that cites evidence. `history` keeps earlier verd
 | `broken`              | Brutet            | They did the opposite, or voted against it                                   |
 | `not_assessable`      | Ej bedömbart      | Too vague to assess                                                          |
 
-`unassessed` and `no_evidence` are deliberately different. `no_evidence` is a statement about our record, not about what the government did. Absence of evidence is not evidence of absence: `unassessed` only says the promise has not been reviewed, while `no_evidence` is a positive finding by a human who searched the Riksdag record and recorded that nothing was found. Its reasoning must state what was searched and when (committee, keywords, date). New promises and extraction candidates default to `unassessed`.
+`unassessed` and `no_evidence` are deliberately different. `no_evidence` is a statement about our record, not about what the government did. Absence of evidence is not evidence of absence: `unassessed` only says the promise has not been reviewed, while `no_evidence` is a positive finding that the Riksdag record was searched and nothing was found. Its reasoning must state what was searched and when (committee, keywords, date). New promises and extraction candidates default to `unassessed`.
 
 #### Evidence constraints on the verdict
 
-The verdict stays human-set, but the schema (`checkVerdictEvidence` in `src/schema/promise.ts`) limits which values the evidence allows. Only the current verdict is checked, not `history`. Only Riksdag evidence counts (`dir`, `sou`, `ds`, `prop`, `bet`, `sfs`, `mot`); `agreement` and `budget` evidence never qualify any verdict.
+The verdict is set by Claude, and the schema (`checkVerdictEvidence` in `src/schema/promise.ts`) limits which values the evidence allows. Only the current verdict is checked, not `history`. Only Riksdag evidence counts (`dir`, `sou`, `ds`, `prop`, `bet`, `sfs`, `mot`); `agreement` and `budget` evidence never qualify any verdict.
 
 | Verdict                                           | Enforced requirement                                                                                                                                                                                                            |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -218,7 +218,7 @@ A second evidence kind, `agreement`, records how a government agreement (Tidöav
 
 Rules:
 
-- **The outcome is not a verdict.** It describes the agreement text and never sets or implies the verdict, which stays a separate human call. Agreement evidence alone is never enough for `in_progress` or `fulfilled` (to be enforced with the other evidence-to-verdict constraints in `hemsida-bzj.7`).
+- **The outcome is not a verdict.** It describes the agreement text and never sets or implies the verdict, which stays a separate call. Agreement evidence alone is never enough for `in_progress` or `fulfilled` (to be enforced with the other evidence-to-verdict constraints in `hemsida-bzj.7`).
 - **Agreement is not a pipeline stage.** Stage derivation (dir → sou/ds → prop → bet → sfs) ignores it.
 - **References, not copies.** `promises` holds ids only. Riksdag evidence of the linked Tidö promises is not copied onto the manifesto promise; the site shows the linked promise's timeline inline.
 - **Schema checks:** `promises` is empty if and only if the outcome is `not_addressed`, and a promise has at most one agreement entry per `source`. A data test checks that every id in `promises` is a promise file in the same term and that `source` is a `government_agreement` source file.
@@ -292,7 +292,7 @@ The file is a flat array, one per term rather than one per promise: it is small,
 - **One sentence holds several promises.** Split into separate promise files that share the same `source.page`.
 - **A support party, not a government party.** `roles` records it (`SD: support`), so the site can distinguish "the government did not deliver" from "a support party voted against".
 - **Manifesto promise vs agreement.** A manifesto promise is its own promise file with its own verdict. The agreement is evidence on it: add one `agreement` entry for the agreement, linking the Tidö promise ids that cover it. A manifesto promise the agreement left out gets `not_addressed` with empty `promises`; the verdict is still set by a human (`not_addressed` does not make it `broken` or `abandoned`).
-- **Term ends.** Nothing is set automatically. In the term-close review PR a human assesses every remaining `unassessed` promise, and decides whether `no_evidence` / `in_progress` ones become `unfulfilled`, `broken` or something else. `unassessed` is never turned into `unfulfilled` by default: not having looked is not a finding.
+- **Term ends.** Nothing is set automatically. In the term-close PR Claude assesses every remaining `unassessed` promise, and decides whether `no_evidence` / `in_progress` ones become `unfulfilled`, `broken` or something else. `unassessed` is never turned into `unfulfilled` by default: not having looked is not a finding.
 
 ## Decision: JSON, not YAML
 
