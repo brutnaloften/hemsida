@@ -43,7 +43,7 @@ export interface LinkRunSummary {
   sent: number;
   /** Requests neither cached nor sent (only when the run stopped early). */
   remaining: number;
-  /** Requests skipped on a transient error (429, 529, 5xx); a re-run retries them. */
+  /** Requests skipped on a transient error (429, 529, 5xx, error_max_turns); a re-run retries them. */
   skipped: number;
   /** All tokens of the sent requests (input, output, cache). */
   tokens: number;
@@ -113,7 +113,7 @@ export async function runLinkPlan(plan: LinkPlan, opts: LinkRunOptions): Promise
   await Promise.all(Array.from({ length: n }, () => worker()));
   summary.remaining = todo.length - summary.sent;
   if (summary.skipped > 0 && summary.status === 'complete') {
-    summary.error = `${summary.skipped} request(s) skipped on transient API errors (429/529/5xx); re-run to retry them.`;
+    summary.error = `${summary.skipped} request(s) skipped on transient errors (429/529/5xx/error_max_turns); re-run to retry them.`;
   }
   return summary;
 }

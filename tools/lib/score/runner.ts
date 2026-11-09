@@ -4,7 +4,7 @@
  */
 import type { CacheEntry, ResultCache } from './cache.ts';
 import type { Plan, Request } from './plan.ts';
-import { TooLongError, type Scorer } from './scorer.ts';
+import { SkippableScoreError, TooLongError, type Scorer } from './scorer.ts';
 
 export interface PlanStatus {
   total: number;
@@ -35,6 +35,7 @@ export interface RunOptions {
   onProgress?: (done: number, total: number) => void;
 }
 export interface RunSummary {
+  /** `complete` also covers runs that skipped requests; see `skipped`. */
   status: 'complete' | 'budget_exceeded' | 'failed';
   error?: string;
   total: number;
@@ -42,6 +43,8 @@ export interface RunSummary {
   sent: number;
   /** Requests neither cached nor sent (only when the run stopped early). */
   remaining: number;
+  /** Requests skipped on a `SkippableScoreError`; they count as remaining and a re-run retries them. */
+  skipped: number;
   api_requests: number;
   input_tokens: number;
   cost_usd: number;
@@ -81,6 +84,7 @@ export async function runPlan(plan: Plan, opts: RunOptions): Promise<RunSummary>
     cached: plan.requests.length - todo.length,
     sent: 0,
     remaining: todo.length,
+    skipped: 0,
     api_requests: 0,
     input_tokens: 0,
     cost_usd: 0,
@@ -112,6 +116,10 @@ export async function runPlan(plan: Plan, opts: RunOptions): Promise<RunSummary>
         summary.cost_usd += entry.input_tokens * price;
         opts.onProgress?.(summary.cached + summary.sent, summary.total);
       } catch (err) {
+        if (err instanceof SkippableScoreError) {
+          summary.skipped++;
+          continue;
+        }
         stopped = true;
         if (summary.status === 'complete') {
           summary.status = 'failed';
@@ -126,5 +134,8 @@ export async function runPlan(plan: Plan, opts: RunOptions): Promise<RunSummary>
   const n = Math.max(1, Math.min(opts.concurrency ?? 4, todo.length || 1));
   await Promise.all(Array.from({ length: n }, () => worker()));
   summary.remaining = todo.length - summary.sent;
+  if (summary.skipped > 0 && summary.status === 'complete') {
+    summary.error = `${summary.skipped} request(s) skipped (error_max_turns); re-run to retry them.`;
+  }
   return summary;
 }
