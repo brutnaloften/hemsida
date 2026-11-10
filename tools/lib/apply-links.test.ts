@@ -53,6 +53,8 @@ describe('applyLinks', () => {
     )!;
     expect(r.evidence.map((e) => e.kind)).toEqual(['prop', 'bet']);
     expect(r.verdict.value).toBe('in_progress');
+    expect(r.verdict.assessedBy).toBe('ai');
+    expect(r.verdict.reasoning).not.toContain('AI-modell');
     expect(r.verdict.history).toHaveLength(1);
     expect(r.verdict.reasoning).toContain('Prop. 2025/26:207');
     expect(r.verdict.reasoning).toContain('Bet. 2025/26:SoU18');

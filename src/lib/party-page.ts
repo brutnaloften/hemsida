@@ -93,6 +93,7 @@ export interface PartyRow {
   area: string;
   href: string;
   verdict: PromiseRecord['verdict']['value'];
+  assessedBy?: 'ai' | 'human';
   /** Page in the source document. */
   page?: number;
   /** Outcome in the (first) agreement the party stands behind. */

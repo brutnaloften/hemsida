@@ -144,7 +144,7 @@ Party codes: `S`, `M`, `SD`, `C`, `V`, `KD`, `L`, `MP`.
 
 ### Verdict
 
-Set by Claude, with reasoning that cites evidence. `history` keeps earlier verdicts so the site can show how the assessment changed. Git keeps the full audit trail on top of that.
+Set by Claude, with reasoning that cites evidence. A verdict set by a model carries `assessedBy: "ai"` (optional; also allowed on `history` entries; `human` is reserved for a verdict a person set), and the site shows an AI tag with a hover warning next to it. The reasoning itself does not repeat that warning, nor that more documents may exist: the ingestion status is stated elsewhere on the site. `history` keeps earlier verdicts so the site can show how the assessment changed. Git keeps the full audit trail on top of that.
 
 | Value                 | Swedish label     | Meaning                                                                      |
 | --------------------- | ----------------- | ---------------------------------------------------------------------------- |

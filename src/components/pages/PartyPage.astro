@@ -42,6 +42,7 @@ const toRow =
       area: p.area,
       href: `${base}${promisePath(p.id)}`,
       verdict: p.verdict.value,
+      ...(p.verdict.assessedBy && { assessedBy: p.verdict.assessedBy }),
       ...(p.source.page !== undefined && { page: p.source.page }),
       ...(outcome && { outcome }),
       other,
