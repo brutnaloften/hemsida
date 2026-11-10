@@ -291,7 +291,7 @@ The file is a flat array, one per term rather than one per promise: it is small,
 - **Reversed later.** Add the reversing document as evidence and move the verdict (e.g. `fulfilled` → `broken`); the earlier verdict stays in `history`.
 - **One sentence holds several promises.** Split into separate promise files that share the same `source.page`.
 - **A support party, not a government party.** `roles` records it (`SD: support`), so the site can distinguish "the government did not deliver" from "a support party voted against".
-- **Manifesto promise vs agreement.** A manifesto promise is its own promise file with its own verdict. The agreement is evidence on it: add one `agreement` entry for the agreement, linking the Tidö promise ids that cover it. A manifesto promise the agreement left out gets `not_addressed` with empty `promises`; the verdict is still set by a human (`not_addressed` does not make it `broken` or `abandoned`).
+- **Manifesto promise vs agreement.** A manifesto promise is its own promise file with its own verdict. The agreement is evidence on it: add one `agreement` entry for the agreement, linking the Tidö promise ids that cover it. A manifesto promise the agreement left out gets `not_addressed` with empty `promises`; the verdict is still a separate call (`not_addressed` does not make it `broken` or `abandoned`).
 - **Term ends.** Nothing is set automatically. In the term-close PR Claude assesses every remaining `unassessed` promise, and decides whether `no_evidence` / `in_progress` ones become `unfulfilled`, `broken` or something else. `unassessed` is never turned into `unfulfilled` by default: not having looked is not a finding.
 
 ## Decision: JSON, not YAML
