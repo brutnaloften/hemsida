@@ -26,10 +26,37 @@
     "kompetensförsörjning"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2024:78 (Ett språkkrav för språkutveckling ). Dokumentet behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SoU26 (Ett språkkrav inom äldreomsorgen), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB378",
+      "designation": "SOU 2024:78",
+      "title": "Ett språkkrav för språkutveckling ",
+      "date": "2025-01-01",
+      "url": "https://data.riksdagen.se/dokument/HCB378.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU26",
+      "designation": "Bet. 2025/26:SoU26",
+      "title": "Ett språkkrav inom äldreomsorgen",
+      "date": "2026-03-19",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU26.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

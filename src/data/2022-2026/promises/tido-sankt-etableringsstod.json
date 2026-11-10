@@ -28,10 +28,47 @@
     "ekonomiskt bistånd"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:149 (En ny modell för kvalificering till socialförsäkring och ekonomiskt bistånd för nyanlända och icke-medborgare); SOU 2025:53 (Kvalificering till socialförsäkring och ekonomiskt bistånd för vissa grupper). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SkU35 (Vissa justeringar i inkomstskattelagen med anledning av förändrade ersättningar för nyanlända invandrare), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1149",
+      "designation": "Dir. 2023:149",
+      "title": "En ny modell för kvalificering till socialförsäkring och ekonomiskt bistånd för nyanlända och icke-medborgare",
+      "date": "2023-10-19",
+      "url": "https://data.riksdagen.se/dokument/HBB1149.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB353",
+      "designation": "SOU 2025:53",
+      "title": "Kvalificering till socialförsäkring och ekonomiskt bistånd för vissa grupper",
+      "date": "2025-04-30",
+      "url": "https://data.riksdagen.se/dokument/HDB353.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SkU35",
+      "designation": "Bet. 2025/26:SkU35",
+      "title": "Vissa justeringar i inkomstskattelagen med anledning av förändrade ersättningar för nyanlända invandrare",
+      "date": "2026-06-04",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU35.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -1,0 +1,32 @@
+{
+  "name": "link-tido-sonnet-v1",
+  "judge": {
+    "kind": "claude",
+    "model": "claude-sonnet-5-5"
+  },
+  "template_version": "v1",
+  "instructions": "You judge whether an official Swedish Riksdag document is evidence for a political promise. You get the promise and an extract of the document (type, title, the sections that carry its proposals or decisions, and for a betänkande the outcome of the vote). Judge only from what is shown. Answer with four fields.\n\nlabel (relevance, how much of the promise the document covers): match = direct evidence that the promise is being acted on and covers the promise as a whole (the proposal, bill, decision or inquiry implements or prepares exactly what was promised); partial = same topic but covers only part of the promise (one of several measures, a narrower scope, a smaller amount); contradicts = on topic but works against the promise (for example cuts the funding the promise relies on; merely lower spending elsewhere is not contradiction); no_match = unrelated or only shares keywords.\n\nstage (how far along the process the document is, independent of the label): definitive = a decision (a law, an adopted betänkande, an anslag); preparatory = a directive, SOU, Ds or proposal that prepares a measure and is not yet decided (a preparatory document that prepares the whole promised measure is still label match); background = only mentions the topic, or rejects motions about it.\n\nconfidence: high, medium or low. reason: one or two sentences in English that name what in the document supports the label.",
+  "inputs": {
+    "promises": {
+      "term": "2022-2026",
+      "id_prefix": "tido-"
+    },
+    "pairs": {
+      "kind": "candidates",
+      "min_relevance": 0.5,
+      "max_per_promise": 5
+    }
+  },
+  "evidence": {
+    "max_tokens": 12000,
+    "chars_per_token": 3
+  },
+  "thresholds": {
+    "accept_labels": ["match", "partial"],
+    "min_confidence": "medium"
+  },
+  "budget": {
+    "max_cost_usd": 30,
+    "usd_per_million_tokens": 3
+  }
+}

@@ -20,10 +20,27 @@
   "committee": "KrU",
   "keywords": ["kulturkanon", "expertkommittéer", "kulturarv", "kulturpolitik"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:180 (En svensk kulturkanon). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1180",
+      "designation": "Dir. 2023:180",
+      "title": "En svensk kulturkanon",
+      "date": "2023-12-21",
+      "url": "https://data.riksdagen.se/dokument/HBB1180.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

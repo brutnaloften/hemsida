@@ -26,10 +26,47 @@
     "försörjningskrav"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:25 (Tilläggsdirektiv till Utredningen om en behovsprövad arbetskraftsinvandring (Ju 2022:11)); SOU 2024:15 (Nya regler för arbetskraftsinvandring m.m.); Prop. 2025/26:87 (Nya regler för arbetskraftsinvandring). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB125",
+      "designation": "Dir. 2023:25",
+      "title": "Tilläggsdirektiv till Utredningen om en behovsprövad arbetskraftsinvandring (Ju 2022:11)",
+      "date": "2023-02-16",
+      "url": "https://data.riksdagen.se/dokument/HBB125.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB315",
+      "designation": "SOU 2024:15",
+      "title": "Nya regler för arbetskraftsinvandring m.m.",
+      "date": "2024-02-15",
+      "url": "https://data.riksdagen.se/dokument/HCB315.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0387",
+      "designation": "Prop. 2025/26:87",
+      "title": "Nya regler för arbetskraftsinvandring",
+      "date": "2025-12-16",
+      "url": "https://data.riksdagen.se/dokument/HD0387.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

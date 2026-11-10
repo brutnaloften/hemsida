@@ -20,10 +20,37 @@
   "committee": "CU",
   "keywords": ["solceller", "bygglov", "solenergi", "plan- och bygglagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2024/25:169 (Ett nytt regelverk för bygglov). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:NU18 (Tillståndsprövning enligt förnybartdirektivet), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC03169",
+      "designation": "Prop. 2024/25:169",
+      "title": "Ett nytt regelverk för bygglov",
+      "date": "2025-05-27",
+      "url": "https://data.riksdagen.se/dokument/HC03169.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01NU18",
+      "designation": "Bet. 2025/26:NU18",
+      "title": "Tillståndsprövning enligt förnybartdirektivet",
+      "date": "2026-04-08",
+      "url": "https://data.riksdagen.se/dokument/HD01NU18.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -26,10 +26,37 @@
     "kvalitetsbrister"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:123 (Skärpta villkor för friskolesektorn - ytterligare förslag); Prop. 2025/26:292 (Skärpta villkor för friskolesektorn). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB3123",
+      "designation": "SOU 2025:123",
+      "title": "Skärpta villkor för friskolesektorn - ytterligare förslag",
+      "date": "2026-01-01",
+      "url": "https://data.riksdagen.se/dokument/HDB3123.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03292",
+      "designation": "Prop. 2025/26:292",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HD03292.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

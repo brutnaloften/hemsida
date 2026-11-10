@@ -26,10 +26,27 @@
     "fristående skolor"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2024:28 (Offentlighetsprincipen eller insynslag, Allmänhetens insyn i enskilda aktörer inom skolväsendet ). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB328",
+      "designation": "SOU 2024:28",
+      "title": "Offentlighetsprincipen eller insynslag, Allmänhetens insyn i enskilda aktörer inom skolväsendet ",
+      "date": "2024-04-19",
+      "url": "https://data.riksdagen.se/dokument/HCB328.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

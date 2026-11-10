@@ -26,10 +26,47 @@
     "asyl"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:137 (Anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten); SOU 2025:99 (Ändring av permanent uppehållstillstånd för vissa utlänningar). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SfU30 (Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1137",
+      "designation": "Dir. 2023:137",
+      "title": "Anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten",
+      "date": "2023-10-02",
+      "url": "https://data.riksdagen.se/dokument/HBB1137.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB399",
+      "designation": "SOU 2025:99",
+      "title": "Ändring av permanent uppehållstillstånd för vissa utlänningar",
+      "date": "2025-09-26",
+      "url": "https://data.riksdagen.se/dokument/HDB399.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU30",
+      "designation": "Bet. 2025/26:SfU30",
+      "title": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "date": "2026-06-04",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU30.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

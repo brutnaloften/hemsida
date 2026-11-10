@@ -26,10 +26,37 @@
     "äktenskapsbalken"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:59 (Stärkt lagstiftning mot hedersrelaterat våld och förtryck); Prop. 2025/26:213 (Stärkt lagstiftning mot hedersrelaterat våld och förtryck). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB359",
+      "designation": "SOU 2025:59",
+      "title": "Stärkt lagstiftning mot hedersrelaterat våld och förtryck",
+      "date": "2025-05-22",
+      "url": "https://data.riksdagen.se/dokument/HDB359.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03213",
+      "designation": "Prop. 2025/26:213",
+      "title": "Stärkt lagstiftning mot hedersrelaterat våld och förtryck",
+      "date": "2026-03-19",
+      "url": "https://data.riksdagen.se/dokument/HD03213.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -20,10 +20,27 @@
   "committee": "SoU",
   "keywords": ["beroendevård", "missbruk", "beroendesjukdom", "sammanhållen vård", "regionerna"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:251 (En mer sammanhållen vård för personer med skadligt bruk eller beroende och andra psykiatriska tillstånd). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03251",
+      "designation": "Prop. 2025/26:251",
+      "title": "En mer sammanhållen vård för personer med skadligt bruk eller beroende och andra psykiatriska tillstånd",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03251.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -20,10 +20,37 @@
   "committee": "SfU",
   "keywords": ["återreseförbud", "utvisning", "avvisning", "utlänningslagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2024:10 (Preskription av avlägsnandebeslut och vissa frågor om återreseförbud ); Prop. 2025/26:235 (Skärpta regler om utvisning på grund av brott). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB310",
+      "designation": "SOU 2024:10",
+      "title": "Preskription av avlägsnandebeslut och vissa frågor om återreseförbud ",
+      "date": "2024-02-05",
+      "url": "https://data.riksdagen.se/dokument/HCB310.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03235",
+      "designation": "Prop. 2025/26:235",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HD03235.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

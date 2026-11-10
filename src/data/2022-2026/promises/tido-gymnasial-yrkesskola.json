@@ -26,10 +26,37 @@
     "näringsliv"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:198 (Bättre förutsättningar för yrkesutbildning). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:UbU27 (Bättre förutsättningar för yrkesutbildning), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03198",
+      "designation": "Prop. 2025/26:198",
+      "title": "Bättre förutsättningar för yrkesutbildning",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03198.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU27",
+      "designation": "Bet. 2025/26:UbU27",
+      "title": "Bättre förutsättningar för yrkesutbildning",
+      "date": "2026-05-22",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU27.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

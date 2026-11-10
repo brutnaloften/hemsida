@@ -26,10 +26,47 @@
     "skatteregler"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Prop. 2022/23:79 (Nedsättningen av arbetsgivaravgifterna för personer som arbetar med forskning eller utveckling – höjt tak för avdraget); SOU 2026:1 (Skatteincitament för forskning och utveckling). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2022/23:SfU19 (Nedsättningen av arbetsgivaravgifterna för personer som arbetar med forskning eller utveckling – höjt tak för avdraget), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA0379",
+      "designation": "Prop. 2022/23:79",
+      "title": "Nedsättningen av arbetsgivaravgifterna för personer som arbetar med forskning eller utveckling – höjt tak för avdraget",
+      "date": "2023-03-21",
+      "url": "https://data.riksdagen.se/dokument/HA0379.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01SfU19",
+      "designation": "Bet. 2022/23:SfU19",
+      "title": "Nedsättningen av arbetsgivaravgifterna för personer som arbetar med forskning eller utveckling – höjt tak för avdraget",
+      "date": "2023-05-26",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU19.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB31",
+      "designation": "SOU 2026:1",
+      "title": "Skatteincitament för forskning och utveckling",
+      "date": "2026-01-20",
+      "url": "https://data.riksdagen.se/dokument/HEB31.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

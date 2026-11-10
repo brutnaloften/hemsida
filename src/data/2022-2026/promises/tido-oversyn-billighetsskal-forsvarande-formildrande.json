@@ -26,10 +26,37 @@
     "straffmätning"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:66 (En straffreform, del 4); Prop. 2025/26:297 (Ett nytt straffrättsligt påföljdssystem). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB366d4",
+      "designation": "SOU 2025:66",
+      "title": "En straffreform, del 4",
+      "date": "2025-06-09",
+      "url": "https://data.riksdagen.se/dokument/HDB366d4.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03297",
+      "designation": "Prop. 2025/26:297",
+      "title": "Ett nytt straffrättsligt påföljdssystem",
+      "date": "2026-06-30",
+      "url": "https://data.riksdagen.se/dokument/HD03297.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

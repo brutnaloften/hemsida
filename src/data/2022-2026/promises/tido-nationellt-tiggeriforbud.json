@@ -26,10 +26,37 @@
     "ordningslagen"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2024:91 (Ett nationellt tiggeriförbud); SOU 2025:83 (Ett nationellt förbud mot tiggeri). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB191",
+      "designation": "Dir. 2024:91",
+      "title": "Ett nationellt tiggeriförbud",
+      "date": "2024-09-26",
+      "url": "https://data.riksdagen.se/dokument/HCB191.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB383",
+      "designation": "SOU 2025:83",
+      "title": "Ett nationellt förbud mot tiggeri",
+      "date": "2025-07-07",
+      "url": "https://data.riksdagen.se/dokument/HDB383.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

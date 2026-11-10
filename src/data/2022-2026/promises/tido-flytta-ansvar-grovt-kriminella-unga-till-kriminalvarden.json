@@ -26,10 +26,37 @@
     "unga kriminella"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2023:44 (En översyn av regleringen om frihetsberövande påföljder för unga ); Prop. 2025/26:132 (Frihetsberövande påföljder för barn och unga). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HBB344",
+      "designation": "SOU 2023:44",
+      "title": "En översyn av regleringen om frihetsberövande påföljder för unga ",
+      "date": "2023-11-08",
+      "url": "https://data.riksdagen.se/dokument/HBB344.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03132",
+      "designation": "Prop. 2025/26:132",
+      "title": "Frihetsberövande påföljder för barn och unga",
+      "date": "2026-02-19",
+      "url": "https://data.riksdagen.se/dokument/HD03132.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

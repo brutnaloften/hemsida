@@ -20,10 +20,37 @@
   "committee": "SkU",
   "keywords": ["drivmedelspriser", "bensinpris", "dieselpris", "reduktionsplikt", "energiskatt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2023/24:24 (Sänkt skatt på bensin och diesel och sänkt skatt på jordbruksdiesel). Dokumentet behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2023/24:MJU5 (Sänkning av reduktionsplikten för bensin och diesel), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HB0324",
+      "designation": "Prop. 2023/24:24",
+      "title": "Sänkt skatt på bensin och diesel och sänkt skatt på jordbruksdiesel",
+      "date": "2023-10-19",
+      "url": "https://data.riksdagen.se/dokument/HB0324.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01MJU5",
+      "designation": "Bet. 2023/24:MJU5",
+      "title": "Sänkning av reduktionsplikten för bensin och diesel",
+      "date": "2023-11-23",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU5.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

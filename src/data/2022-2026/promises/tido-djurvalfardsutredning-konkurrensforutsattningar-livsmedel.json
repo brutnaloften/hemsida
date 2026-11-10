@@ -26,10 +26,37 @@
     "konkurrenskraft"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:19 (Stärkt konkurrenskraft för livsmedelsproducenter och ett starkt djurskydd ); Dir. 2024:60 (Tilläggsdirektiv till Utredningen om stärkt konkurrenskraft för livsmedelsproducenter och ett starkt djurskydd (LI 2023:01)). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB119",
+      "designation": "Dir. 2023:19",
+      "title": "Stärkt konkurrenskraft för livsmedelsproducenter och ett starkt djurskydd ",
+      "date": "2023-02-09",
+      "url": "https://data.riksdagen.se/dokument/HBB119.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB160",
+      "designation": "Dir. 2024:60",
+      "title": "Tilläggsdirektiv till Utredningen om stärkt konkurrenskraft för livsmedelsproducenter och ett starkt djurskydd (LI 2023:01)",
+      "date": "2024-06-20",
+      "url": "https://data.riksdagen.se/dokument/HCB160.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

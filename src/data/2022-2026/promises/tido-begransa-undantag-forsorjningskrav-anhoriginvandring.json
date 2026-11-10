@@ -26,10 +26,47 @@
     "undantag"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Prop. 2023/24:18 (Vissa skärpta villkor för anhöriginvandring och begränsade möjligheter till uppehållstillstånd av humanitära skäl); SOU 2025:95 (Skärpta villkor för anhöriginvandring); Prop. 2025/26:301 (Skärpta villkor för anhöriginvandring). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HB0318",
+      "designation": "Prop. 2023/24:18",
+      "title": "Vissa skärpta villkor för anhöriginvandring och begränsade möjligheter till uppehållstillstånd av humanitära skäl",
+      "date": "2023-09-26",
+      "url": "https://data.riksdagen.se/dokument/HB0318.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB395",
+      "designation": "SOU 2025:95",
+      "title": "Skärpta villkor för anhöriginvandring",
+      "date": "2025-09-05",
+      "url": "https://data.riksdagen.se/dokument/HDB395.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03301",
+      "designation": "Prop. 2025/26:301",
+      "title": "Skärpta villkor för anhöriginvandring",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HD03301.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

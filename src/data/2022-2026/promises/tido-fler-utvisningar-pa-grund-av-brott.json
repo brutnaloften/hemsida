@@ -26,10 +26,37 @@
     "verkställighetshinder"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:235 (Skärpta regler om utvisning på grund av brott). Dokumentet behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2025/26:JuU1 (Utgiftsområde 4 Rättsväsendet), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU1",
+      "designation": "Bet. 2025/26:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2025-11-28",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03235",
+      "designation": "Prop. 2025/26:235",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HD03235.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

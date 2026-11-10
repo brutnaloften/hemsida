@@ -26,10 +26,37 @@
     "preskriptionstid"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2026:102 (Barnfrid - förstärkta åtgärder mot sexuella kränkningar av barn och barnpornografibrott). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2024/25:JuU22 (En modern straffrättslig preskriptionslagstiftning), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU22",
+      "designation": "Bet. 2024/25:JuU22",
+      "title": "En modern straffrättslig preskriptionslagstiftning",
+      "date": "2025-02-21",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU22.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1102",
+      "designation": "Dir. 2026:102",
+      "title": "Barnfrid - förstärkta åtgärder mot sexuella kränkningar av barn och barnpornografibrott",
+      "date": "2026-08-27",
+      "url": "https://data.riksdagen.se/dokument/HEB1102.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

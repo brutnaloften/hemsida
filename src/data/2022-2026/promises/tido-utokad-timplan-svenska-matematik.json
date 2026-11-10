@@ -20,10 +20,37 @@
   "committee": "UbU",
   "keywords": ["timplan", "undervisningstid", "svenska", "matematik", "utökad studietid"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2024/25:143 (En tioårig grundskola). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2023/24:UbU5 (Bättre anpassad undervisningstid i grundskolan, specialskolan och sameskolan), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HB01UbU5",
+      "designation": "Bet. 2023/24:UbU5",
+      "title": "Bättre anpassad undervisningstid i grundskolan, specialskolan och sameskolan",
+      "date": "2023-12-01",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU5.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03143",
+      "designation": "Prop. 2024/25:143",
+      "title": "En tioårig grundskola",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03143.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

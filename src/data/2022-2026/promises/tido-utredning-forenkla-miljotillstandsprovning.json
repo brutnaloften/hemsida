@@ -26,10 +26,27 @@
     "prövning"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:78 (Förenklade och förkortade tillståndsprocesser enligt miljöbalken). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB178",
+      "designation": "Dir. 2023:78",
+      "title": "Förenklade och förkortade tillståndsprocesser enligt miljöbalken",
+      "date": "2023-06-08",
+      "url": "https://data.riksdagen.se/dokument/HBB178.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

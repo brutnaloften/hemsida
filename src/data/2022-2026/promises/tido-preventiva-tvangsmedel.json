@@ -20,10 +20,37 @@
   "committee": "JuU",
   "keywords": ["preventiva tvångsmedel", "kriminella nätverk", "Ju 2021:15", "hemliga tvångsmedel"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2023/24:117 (Preventiva tvångsmedel för att förebygga och förhindra allvarliga brott). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2023/24:JuU24 (Preventiva tvångsmedel för att förebygga och förhindra allvarliga brott), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HB03117",
+      "designation": "Prop. 2023/24:117",
+      "title": "Preventiva tvångsmedel för att förebygga och förhindra allvarliga brott",
+      "date": "2024-04-03",
+      "url": "https://data.riksdagen.se/dokument/HB03117.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01JuU24",
+      "designation": "Bet. 2023/24:JuU24",
+      "title": "Preventiva tvångsmedel för att förebygga och förhindra allvarliga brott",
+      "date": "2024-06-11",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU24.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

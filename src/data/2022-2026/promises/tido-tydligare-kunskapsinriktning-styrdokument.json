@@ -20,10 +20,47 @@
   "committee": "UbU",
   "keywords": ["läroplan", "kursplaner", "kunskapsinriktning", "ämneskunskaper", "styrdokument"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:173 (En tydligare kunskapsinriktning i läroplanerna); SOU 2025:19 (Kunskap för alla ); Prop. 2025/26:194 (Nya läroplaner – för en stark kunskapsskola). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1173",
+      "designation": "Dir. 2023:173",
+      "title": "En tydligare kunskapsinriktning i läroplanerna",
+      "date": "2023-12-14",
+      "url": "https://data.riksdagen.se/dokument/HBB1173.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB319",
+      "designation": "SOU 2025:19",
+      "title": "Kunskap för alla ",
+      "date": "2025-02-26",
+      "url": "https://data.riksdagen.se/dokument/HDB319.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03194",
+      "designation": "Prop. 2025/26:194",
+      "title": "Nya läroplaner – för en stark kunskapsskola",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03194.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

@@ -26,10 +26,27 @@
     "glesbygd"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2023/24:1 (Budgetpropositionen för 2024 - Utgiftsområde 21 Energi). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HB031d22",
+      "designation": "Prop. 2023/24:1",
+      "title": "Budgetpropositionen för 2024 - Utgiftsområde 21 Energi",
+      "date": "2023-09-20",
+      "url": "https://data.riksdagen.se/dokument/HB031d22.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

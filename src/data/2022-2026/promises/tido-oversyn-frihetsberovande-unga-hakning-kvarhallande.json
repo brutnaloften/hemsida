@@ -20,10 +20,57 @@
   "committee": "JuU",
   "keywords": ["frihetsberövande", "unga brottsmisstänkta", "kvarhållande", "häktning unga", "LUL"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:102 (Utökade möjligheter att använda tvångsmedel mot barn och unga); SOU 2024:93 (Effektivare verktyg för att bekämpa brott av unga lagöverträdare ); Prop. 2024/25:175 (Hemliga och preventiva tvångsmedel när barn under 15 år begår brott); Prop. 2025/26:227 (Bättre möjligheter att utreda brott av unga lagöverträdare och några andra processrättsliga frågor). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1102",
+      "designation": "Dir. 2023:102",
+      "title": "Utökade möjligheter att använda tvångsmedel mot barn och unga",
+      "date": "2023-06-29",
+      "url": "https://data.riksdagen.se/dokument/HBB1102.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB393",
+      "designation": "SOU 2024:93",
+      "title": "Effektivare verktyg för att bekämpa brott av unga lagöverträdare ",
+      "date": "2024-12-20",
+      "url": "https://data.riksdagen.se/dokument/HCB393.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03175",
+      "designation": "Prop. 2024/25:175",
+      "title": "Hemliga och preventiva tvångsmedel när barn under 15 år begår brott",
+      "date": "2025-05-28",
+      "url": "https://data.riksdagen.se/dokument/HC03175.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03227",
+      "designation": "Prop. 2025/26:227",
+      "title": "Bättre möjligheter att utreda brott av unga lagöverträdare och några andra processrättsliga frågor",
+      "date": "2026-03-26",
+      "url": "https://data.riksdagen.se/dokument/HD03227.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

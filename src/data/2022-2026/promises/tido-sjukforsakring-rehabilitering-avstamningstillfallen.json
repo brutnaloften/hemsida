@@ -26,10 +26,37 @@
     "rehabiliteringskedjan"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:1 (Budgetpropositionen för 2026 - Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2022/23:SfU1 (Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HA01SfU1",
+      "designation": "Bet. 2022/23:SfU1",
+      "title": "Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD031d12",
+      "designation": "Prop. 2025/26:1",
+      "title": "Budgetpropositionen för 2026 - Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
+      "date": "2025-09-22",
+      "url": "https://data.riksdagen.se/dokument/HD031d12.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

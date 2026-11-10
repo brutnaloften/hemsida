@@ -26,10 +26,57 @@
     "skollagen"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:154 (Varaktigt förbättrad trygghet och studiero i skolan); SOU 2025:8 (Bättre förutsättningar för trygghet och studiero i skolan ); Prop. 2025/26:194 (Nya läroplaner – för en stark kunskapsskola). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2025/26:UbU22 (Bättre förutsättningar för trygghet och studiero i skolan), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1154",
+      "designation": "Dir. 2023:154",
+      "title": "Varaktigt förbättrad trygghet och studiero i skolan",
+      "date": "2023-11-02",
+      "url": "https://data.riksdagen.se/dokument/HBB1154.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB38",
+      "designation": "SOU 2025:8",
+      "title": "Bättre förutsättningar för trygghet och studiero i skolan ",
+      "date": "2025-01-29",
+      "url": "https://data.riksdagen.se/dokument/HDB38.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03194",
+      "designation": "Prop. 2025/26:194",
+      "title": "Nya läroplaner – för en stark kunskapsskola",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03194.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU22",
+      "designation": "Bet. 2025/26:UbU22",
+      "title": "Bättre förutsättningar för trygghet och studiero i skolan",
+      "date": "2026-05-22",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU22.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

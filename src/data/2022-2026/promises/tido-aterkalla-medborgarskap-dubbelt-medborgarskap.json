@@ -25,10 +25,37 @@
     "oriktiga uppgifter"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:83 (Några frågor om grundläggande fri- och rättigheter); Prop. 2025/26:78 (En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB183",
+      "designation": "Dir. 2023:83",
+      "title": "Några frågor om grundläggande fri- och rättigheter",
+      "date": "2023-06-15",
+      "url": "https://data.riksdagen.se/dokument/HBB183.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0378",
+      "designation": "Prop. 2025/26:78",
+      "title": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
+      "date": "2025-12-05",
+      "url": "https://data.riksdagen.se/dokument/HD0378.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

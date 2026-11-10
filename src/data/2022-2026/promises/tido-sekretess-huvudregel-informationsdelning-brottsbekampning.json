@@ -26,10 +26,37 @@
     "arbetslivskriminalitet"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:11 (Tilläggsdirektiv till Utredningen om förbättrade möjligheter att utbyta information med brottsbekämpande myndigheter (Ju 2022:03)); Prop. 2024/25:65 (Ökat informationsflöde till brottsbekämpningen). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB111",
+      "designation": "Dir. 2023:11",
+      "title": "Tilläggsdirektiv till Utredningen om förbättrade möjligheter att utbyta information med brottsbekämpande myndigheter (Ju 2022:03)",
+      "date": "2023-01-26",
+      "url": "https://data.riksdagen.se/dokument/HBB111.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0365",
+      "designation": "Prop. 2024/25:65",
+      "title": "Ökat informationsflöde till brottsbekämpningen",
+      "date": "2024-11-28",
+      "url": "https://data.riksdagen.se/dokument/HC0365.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

@@ -20,10 +20,37 @@
   "committee": "KU",
   "keywords": ["valsystem", "valsedlar", "gemensamma valsedlar", "Valmyndigheten", "valdeltagande"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2025:65 (Tilläggsdirektiv till Valsedelskommittén (Ju 2024:04)); SOU 2026:2 (710 miljoner skäl till reformer). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB165",
+      "designation": "Dir. 2025:65",
+      "title": "Tilläggsdirektiv till Valsedelskommittén (Ju 2024:04)",
+      "date": "2025-06-19",
+      "url": "https://data.riksdagen.se/dokument/HDB165.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB32",
+      "designation": "SOU 2026:2",
+      "title": "710 miljoner skäl till reformer",
+      "date": "2026-01-16",
+      "url": "https://data.riksdagen.se/dokument/HEB32.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

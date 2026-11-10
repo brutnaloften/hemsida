@@ -20,10 +20,47 @@
   "committee": "SoU",
   "keywords": ["hemabort", "abort", "medicinsk abort", "kvinnors hälsa"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:89 (Förändringar i abortlagstiftningen); SOU 2025:10 (En förändrad abortlag); Prop. 2025/26:271 (En förändrad abortlag). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB189",
+      "designation": "Dir. 2023:89",
+      "title": "Förändringar i abortlagstiftningen",
+      "date": "2023-06-15",
+      "url": "https://data.riksdagen.se/dokument/HBB189.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB310",
+      "designation": "SOU 2025:10",
+      "title": "En förändrad abortlag",
+      "date": "2025-02-04",
+      "url": "https://data.riksdagen.se/dokument/HDB310.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03271",
+      "designation": "Prop. 2025/26:271",
+      "title": "En förändrad abortlag",
+      "date": "2026-05-26",
+      "url": "https://data.riksdagen.se/dokument/HD03271.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

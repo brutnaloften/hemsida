@@ -26,10 +26,37 @@
     "studieförbund"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:130 (Tilläggsdirektiv till utredningen om Styrning och uppföljning av folkbildningen - vägval inför framtiden (U 2022:01)); SOU 2024:42 (Bildning, utbildning och delaktighet). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1130",
+      "designation": "Dir. 2023:130",
+      "title": "Tilläggsdirektiv till utredningen om Styrning och uppföljning av folkbildningen - vägval inför framtiden (U 2022:01)",
+      "date": "2023-09-14",
+      "url": "https://data.riksdagen.se/dokument/HBB1130.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB342",
+      "designation": "SOU 2024:42",
+      "title": "Bildning, utbildning och delaktighet",
+      "date": "2024-06-13",
+      "url": "https://data.riksdagen.se/dokument/HCB342.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

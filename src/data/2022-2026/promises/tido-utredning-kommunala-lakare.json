@@ -26,10 +26,37 @@
     "läkare"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2024:72 (Stärkt medicinsk kompetens i kommunal hälso- och sjukvård); Prop. 2025/26:216 (Stärkt medicinsk kompetens i kommunal hälso- och sjukvård). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB372",
+      "designation": "SOU 2024:72",
+      "title": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
+      "date": "2024-11-07",
+      "url": "https://data.riksdagen.se/dokument/HCB372.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03216",
+      "designation": "Prop. 2025/26:216",
+      "title": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HD03216.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

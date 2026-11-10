@@ -26,10 +26,37 @@
     "spårbyte"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Ds 2024:31 (Bättre migrationsrättsliga regler för forskare och studenter ). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SfU23 (Bättre migrationsrättsliga regler för forskare och doktorander samt åtgärder för att motverka missbruk av uppehållstillstånd för studier), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "ds",
+      "dok_id": "HCB431",
+      "designation": "Ds 2024:31",
+      "title": "Bättre migrationsrättsliga regler för forskare och studenter ",
+      "date": "2025-01-01",
+      "url": "https://data.riksdagen.se/dokument/HCB431.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU23",
+      "designation": "Bet. 2025/26:SfU23",
+      "title": "Bättre migrationsrättsliga regler för forskare och doktorander samt åtgärder för att motverka missbruk av uppehållstillstånd för studier",
+      "date": "2026-04-23",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU23.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }
