@@ -24,10 +24,10 @@ Freshness: `tools/check-freshness.ts` and `tools/sync-freshness-issues.ts` open 
 
 `node --experimental-strip-types tools/apply-links.ts --run <link-run> --id-prefix tido- [--dry-run]` (rules in `tools/lib/apply-links.ts`, tested) reads a judged link run and, for each promise still `unassessed` without Riksdag evidence, adds the pairs the judge proposed as `evidence[]` (one entry per document; `match` is `full`, `partial` is `partial`) and sets the verdict:
 
-- `in_progress` when the evidence includes a dir, sou, ds or prop, with Swedish reasoning that lists the documents and says the assessment is model-made;
+- `in_progress` when the evidence includes a dir, sou, ds or prop, with Swedish reasoning that lists the documents, and `assessedBy: "ai"` (the site shows the AI tag; the reasoning carries no disclaimer);
 - otherwise the promise stays `unassessed` (a betänkande alone may only reject motions).
 
-It never sets `fulfilled` (needs an `sfs` entry, which the store does not hold yet), `no_evidence` (needs an exhaustive search) or `broken` (`contradicts` labels are reported, not applied). Promises with another verdict or existing Riksdag evidence are skipped, so reruns and edits are safe. Run `pnpm fmt` afterwards.
+Skrivelser (the store files them under `prop`) and pairs the judge staged as `background` are not used as evidence. It never sets `fulfilled` (needs an `sfs` entry, which the store does not hold yet), `no_evidence` (needs an exhaustive search) or `broken` (`contradicts` labels are reported, not applied). Promises with another verdict or existing Riksdag evidence are skipped, so reruns and edits are safe. Run `pnpm fmt` afterwards.
 
 ## Why scoring exists (step 5)
 

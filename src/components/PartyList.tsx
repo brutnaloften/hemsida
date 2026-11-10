@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { AgreementBadge } from '@/components/ui/agreement-badge';
 import { Input } from '@/components/ui/input';
+import { AiTag } from '@/components/ui/ai-tag';
 import { VerdictBadge } from '@/components/ui/verdict-badge';
 import {
   filterPartyRows,
@@ -201,6 +202,7 @@ export default function PartyList({ rows, areas, agreement }: Props) {
                         <AgreementBadge outcome={r.outcome} source={agreement} />
                       )}
                       <VerdictBadge verdict={r.verdict} />
+                      {r.assessedBy === 'ai' && <AiTag align="right" />}
                     </span>
                   </a>
                 </li>

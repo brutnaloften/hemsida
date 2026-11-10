@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import type { GetStaticPaths } from 'astro';
 import Layout from '../../layouts/Layout.astro';
+import { AiTag } from '@/components/ui/ai-tag';
 import { VerdictBadge } from '@/components/ui/verdict-badge';
 import { AgreementBadge } from '@/components/ui/agreement-badge';
 import { PartyChip } from '@/components/ui/party-chip';
@@ -128,6 +129,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
           <div class="flex flex-wrap items-center gap-3">
             <h2 id="bedomning" class="text-sm font-semibold uppercase tracking-wider">Vår bedömning</h2>
             <VerdictBadge verdict={verdict.value} size="box" />
+            {verdict.assessedBy === 'ai' && <AiTag />}
           </div>
           {
             assessed ? (
@@ -346,6 +348,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                   <li>
                     <span class="text-muted-foreground">{h.date}</span>{' '}
                     <VerdictBadge verdict={h.value} />
+                    {h.assessedBy === 'ai' && <AiTag />}
                   </li>
                 ))}
               </ul>

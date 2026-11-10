@@ -218,8 +218,13 @@ export const evidenceSchema = z.discriminatedUnion('kind', [
   budgetEvidenceSchema,
 ]);
 
+/** Who set a verdict. Absent means the origin is not recorded (older verdicts and `unassessed`). */
+export const ASSESSED_BY = ['ai', 'human'] as const;
+
 const verdictEntry = z.object({
   value: verdictValueSchema,
+  /** `ai` marks a verdict set by a model; the site shows an AI tag with a warning next to it. */
+  assessedBy: z.enum(ASSESSED_BY).optional(),
   reasoning: z.string().default(''),
   date: isoDate,
 });

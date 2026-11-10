@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { AgreementBadge } from '@/components/ui/agreement-badge';
 import { Input } from '@/components/ui/input';
 import { PartyChip } from '@/components/ui/party-chip';
+import { AiTag } from '@/components/ui/ai-tag';
 import { VerdictBadge } from '@/components/ui/verdict-badge';
 import { useDebounce } from '@/hooks/useDebounce';
 import {
@@ -34,6 +35,7 @@ export interface LofterRow {
   /** Role per party in the selected term, from the term record. */
   roles: Record<string, (typeof ROLES)[number]>;
   verdict: (typeof VERDICTS)[number];
+  assessedBy?: 'ai' | 'human';
   outcome?: AgreementOutcome;
   /** Text the fuzzy search runs over. */
   search: string;
@@ -276,6 +278,7 @@ export default function LofterList({ rows, areas, agreement }: Props) {
                     <AgreementBadge outcome={r.outcome} source={agreement} />
                   )}
                   <VerdictBadge verdict={r.verdict} />
+                  {r.assessedBy === 'ai' && <AiTag align="right" />}
                 </span>
               </a>
             </li>

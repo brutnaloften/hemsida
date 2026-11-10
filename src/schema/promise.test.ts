@@ -63,6 +63,33 @@ describe('promiseSchema', () => {
     expect(p.evidence[0]!.note).toBeNull();
   });
 
+  it('accepts assessedBy ai or human on a verdict and its history, and rejects other values', () => {
+    const verdict = (assessedBy: string) => ({
+      ...valid,
+      verdict: {
+        value: 'in_progress',
+        assessedBy,
+        reasoning: 'Prop. 1',
+        date: '2026-01-01',
+        history: [{ value: 'unassessed', assessedBy, reasoning: '', date: '2022-10-14' }],
+      },
+      evidence: [
+        {
+          kind: 'prop',
+          dok_id: 'X1',
+          designation: 'Prop. 1',
+          title: 'T',
+          date: '2026-01-01',
+          url: 'https://data.riksdagen.se/dokument/X1.html',
+          relevance: 'full',
+        },
+      ],
+    });
+    expect(promiseSchema.safeParse(verdict('ai')).success).toBe(true);
+    expect(promiseSchema.safeParse(verdict('human')).success).toBe(true);
+    expect(promiseSchema.safeParse(verdict('robot')).success).toBe(false);
+  });
+
   it('rejects unknown verdict values', () => {
     const bad = { ...valid, verdict: { ...valid.verdict, value: 'Uppfyllt' } };
     expect(promiseSchema.safeParse(bad).success).toBe(false);

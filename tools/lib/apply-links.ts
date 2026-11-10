@@ -2,7 +2,7 @@
  * Step 8 of docs/riksdag-linking.md: turn judged promise/document pairs into `evidence[]` and a
  * verdict on a promise. Pure; tools/apply-links.ts does the file I/O.
  *
- * Rules (deliberately conservative, a model sets the verdict and no human reviews it):
+ * Rules (deliberately conservative, a model sets the verdict and no human reviews it, so the verdict is tagged `assessedBy: 'ai'`):
  *  - evidence = the pairs the judge proposed (match or partial at the configured confidence)
  *    whose stage is not `background`, skrivelser excluded, one entry per document; `match` becomes relevance `full`, `partial` becomes `partial`;
  *  - the verdict is `in_progress` when the evidence includes a dir, sou, ds or prop, otherwise
@@ -134,13 +134,13 @@ export function applyLinks(
     decided.length > 0
       ? `Riksdagen har även fattat beslut i ${list(decided)}, men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.`
       : 'Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.',
-    'Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.',
   ].join(' ');
 
   return {
     evidence,
     verdict: {
       value: 'in_progress',
+      assessedBy: 'ai',
       reasoning,
       date: today,
       history: [
