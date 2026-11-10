@@ -20,10 +20,37 @@
   "committee": "SfU",
   "keywords": ["felaktiga utbetalningar", "kartläggning", "kommuner", "regioner", "välfärdsbrott"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: SOU 2025:20 (Kommunal anslutning till Utbetalningsmyndighetens verksamhet ); Prop. 2025/26:161 (Förbättrade förutsättningar för kommuner att motverka felaktiga utbetalningar från välfärdssystemen). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB320",
+      "designation": "SOU 2025:20",
+      "title": "Kommunal anslutning till Utbetalningsmyndighetens verksamhet ",
+      "date": "2025-02-20",
+      "url": "https://data.riksdagen.se/dokument/HDB320.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03161",
+      "designation": "Prop. 2025/26:161",
+      "title": "Förbättrade förutsättningar för kommuner att motverka felaktiga utbetalningar från välfärdssystemen",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03161.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

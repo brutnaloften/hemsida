@@ -26,10 +26,37 @@
     "sjukvård"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: SOU 2026:38 (Behovsstyrd vård). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU16",
+      "designation": "Bet. 2025/26:SoU16",
+      "title": "Hälso- och sjukvårdens organisation",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB338",
+      "designation": "SOU 2026:38",
+      "title": "Behovsstyrd vård",
+      "date": "2026-06-17",
+      "url": "https://data.riksdagen.se/dokument/HEB338.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

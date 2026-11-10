@@ -20,10 +20,27 @@
   "committee": "JuU",
   "keywords": ["provokativa åtgärder", "sexualbrott på internet", "brottsbekämpning", "polisen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Dir. 2024:44 (Stärkt brottsbekämpning genom lagreglering av provokation). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB144",
+      "designation": "Dir. 2024:44",
+      "title": "Stärkt brottsbekämpning genom lagreglering av provokation",
+      "date": "2024-05-02",
+      "url": "https://data.riksdagen.se/dokument/HCB144.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

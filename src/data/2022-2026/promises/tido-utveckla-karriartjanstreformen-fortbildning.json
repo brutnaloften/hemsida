@@ -20,10 +20,47 @@
   "committee": "UbU",
   "keywords": ["karriärtjänster", "förstelärare", "lektorer", "fortbildning", "lärarrollen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Prop. 2022/23:54 (Nationellt professionsprogram för rektorer, lärare och förskollärare). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2022/23:UbU13 (Nationellt professionsprogram för rektorer, lärare och förskollärare); Bet. 2024/25:UbU1 (Utgiftsområde 16 Utbildning och universitetsforskning), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA0354",
+      "designation": "Prop. 2022/23:54",
+      "title": "Nationellt professionsprogram för rektorer, lärare och förskollärare",
+      "date": "2023-01-31",
+      "url": "https://data.riksdagen.se/dokument/HA0354.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01UbU13",
+      "designation": "Bet. 2022/23:UbU13",
+      "title": "Nationellt professionsprogram för rektorer, lärare och förskollärare",
+      "date": "2023-05-25",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU13.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01UbU1",
+      "designation": "Bet. 2024/25:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU1.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

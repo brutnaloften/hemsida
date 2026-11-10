@@ -26,10 +26,47 @@
     "demokratiska värderingar"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Prop. 2023/24:162 (Redovisning av fördelning av medel från Allmänna arvsfonden under budgetåret 2023); Dir. 2026:12 (En reform av Allmänna arvsfonden för stärkt legitimitet och struktur). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2023/24:KrU7 (Statens stöd till trossamfund och civilsamhället), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HB01KrU7",
+      "designation": "Bet. 2023/24:KrU7",
+      "title": "Statens stöd till trossamfund och civilsamhället",
+      "date": "2024-06-13",
+      "url": "https://data.riksdagen.se/dokument/HB01KrU7.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB03162",
+      "designation": "Prop. 2023/24:162",
+      "title": "Redovisning av fördelning av medel från Allmänna arvsfonden under budgetåret 2023",
+      "date": "2024-06-26",
+      "url": "https://data.riksdagen.se/dokument/HB03162.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB112",
+      "designation": "Dir. 2026:12",
+      "title": "En reform av Allmänna arvsfonden för stärkt legitimitet och struktur",
+      "date": "2026-02-26",
+      "url": "https://data.riksdagen.se/dokument/HEB112.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

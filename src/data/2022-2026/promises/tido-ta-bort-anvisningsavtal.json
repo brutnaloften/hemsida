@@ -20,10 +20,37 @@
   "committee": "NU",
   "keywords": ["anvisningsavtal", "slutkundsmarknaden", "elavtal", "elhandel"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Prop. 2025/26:240 (Nya lagar om elsystemet). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HC01NU12",
+      "designation": "Bet. 2024/25:NU12",
+      "title": "Elmarknadsfrågor",
+      "date": "2025-03-06",
+      "url": "https://data.riksdagen.se/dokument/HC01NU12.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03240",
+      "designation": "Prop. 2025/26:240",
+      "title": "Nya lagar om elsystemet",
+      "date": "2026-04-14",
+      "url": "https://data.riksdagen.se/dokument/HD03240.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

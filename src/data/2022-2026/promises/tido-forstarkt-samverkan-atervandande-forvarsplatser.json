@@ -26,10 +26,37 @@
     "Migrationsverket"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Prop. 2025/26:265 (Skärpta regler om uppsikt och förvar). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SfU31 (Skärpta regler om uppsikt och förvar), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03265",
+      "designation": "Prop. 2025/26:265",
+      "title": "Skärpta regler om uppsikt och förvar",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03265.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU31",
+      "designation": "Bet. 2025/26:SfU31",
+      "title": "Skärpta regler om uppsikt och förvar",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU31.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

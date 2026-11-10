@@ -26,10 +26,57 @@
     "Gängbrottsutredningen"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Prop. 2022/23:53 (Skärpta straff för brott i kriminella nätverk); Ds 2023:11 (Skjutvapen och explosiva varor ); SOU 2025:66 (En straffreform, del 3). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:JuU1 (Utgiftsområde 4 Rättsväsendet), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA0353",
+      "designation": "Prop. 2022/23:53",
+      "title": "Skärpta straff för brott i kriminella nätverk",
+      "date": "2023-01-31",
+      "url": "https://data.riksdagen.se/dokument/HA0353.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HBB411",
+      "designation": "Ds 2023:11",
+      "title": "Skjutvapen och explosiva varor ",
+      "date": "2023-04-28",
+      "url": "https://data.riksdagen.se/dokument/HBB411.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB366d3",
+      "designation": "SOU 2025:66",
+      "title": "En straffreform, del 3",
+      "date": "2025-06-09",
+      "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU1",
+      "designation": "Bet. 2025/26:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2025-11-28",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

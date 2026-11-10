@@ -26,10 +26,47 @@
     "informationsutbyte"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Dir. 2023:90 (Översyn av Ekobrottsmyndigheten - förbättrade förutsättningar att bekämpa den ekonomiska brottsligheten); SOU 2025:75 (Folkbokföringsverksamhet, biometri och brottsbekämpning); SOU 2025:81 (En ny organisation av ekobrottsbekämpningen). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB190",
+      "designation": "Dir. 2023:90",
+      "title": "Översyn av Ekobrottsmyndigheten - förbättrade förutsättningar att bekämpa den ekonomiska brottsligheten",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB190.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB375",
+      "designation": "SOU 2025:75",
+      "title": "Folkbokföringsverksamhet, biometri och brottsbekämpning",
+      "date": "2025-06-17",
+      "url": "https://data.riksdagen.se/dokument/HDB375.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB381",
+      "designation": "SOU 2025:81",
+      "title": "En ny organisation av ekobrottsbekämpningen",
+      "date": "2025-06-18",
+      "url": "https://data.riksdagen.se/dokument/HDB381.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

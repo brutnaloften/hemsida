@@ -26,10 +26,27 @@
     "forskningspolitik"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Prop. 2024/25:72 (Forskning och innovation på energiområdet för försörjningstrygghet, konkurrenskraft och klimatomställning). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC0372",
+      "designation": "Prop. 2024/25:72",
+      "title": "Forskning och innovation på energiområdet för försörjningstrygghet, konkurrenskraft och klimatomställning",
+      "date": "2024-12-19",
+      "url": "https://data.riksdagen.se/dokument/HC0372.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

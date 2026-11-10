@@ -20,10 +20,57 @@
   "committee": "NU",
   "keywords": ["elmarknadsdirektivet", "implementering", "ellagen", "ansvarsfördelning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: SOU 2025:47 (Spänning i tillvaron); Prop. 2025/26:16 (Förbättrad utformning av EU:s elmarknad); Prop. 2025/26:240 (Nya lagar om elsystemet). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2022/23:NU9 (Genomförande av elmarknadsdirektivet när det gäller leverans av el och aggregeringstjänster), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HA01NU9",
+      "designation": "Bet. 2022/23:NU9",
+      "title": "Genomförande av elmarknadsdirektivet när det gäller leverans av el och aggregeringstjänster",
+      "date": "2023-04-21",
+      "url": "https://data.riksdagen.se/dokument/HA01NU9.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB347",
+      "designation": "SOU 2025:47",
+      "title": "Spänning i tillvaron",
+      "date": "2025-04-25",
+      "url": "https://data.riksdagen.se/dokument/HDB347.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0316",
+      "designation": "Prop. 2025/26:16",
+      "title": "Förbättrad utformning av EU:s elmarknad",
+      "date": "2025-09-23",
+      "url": "https://data.riksdagen.se/dokument/HD0316.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03240",
+      "designation": "Prop. 2025/26:240",
+      "title": "Nya lagar om elsystemet",
+      "date": "2026-04-14",
+      "url": "https://data.riksdagen.se/dokument/HD03240.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

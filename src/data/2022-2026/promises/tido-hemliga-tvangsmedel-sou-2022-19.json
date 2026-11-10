@@ -20,10 +20,37 @@
   "committee": "JuU",
   "keywords": ["hemliga tvångsmedel", "SOU 2022:19", "brottsbekämpning", "tvångsmedel"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Prop. 2023/24:117 (Preventiva tvångsmedel för att förebygga och förhindra allvarliga brott). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2022/23:JuU31 (Hemliga tvångsmedel - effektiva verktyg för att förhindra och utreda allvarliga brott), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU31",
+      "designation": "Bet. 2022/23:JuU31",
+      "title": "Hemliga tvångsmedel - effektiva verktyg för att förhindra och utreda allvarliga brott",
+      "date": "2023-09-07",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU31.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB03117",
+      "designation": "Prop. 2023/24:117",
+      "title": "Preventiva tvångsmedel för att förebygga och förhindra allvarliga brott",
+      "date": "2024-04-03",
+      "url": "https://data.riksdagen.se/dokument/HB03117.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

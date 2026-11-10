@@ -20,6 +20,15 @@ Epic `hemsida-4np`. This is the map of how a promise gets its Riksdag evidence, 
 
 Freshness: `tools/check-freshness.ts` and `tools/sync-freshness-issues.ts` open `data-stale` issues when a dataset is older than its rule (`tools/lib/freshness-check.ts`); the `/refresh-data` skill turns one into a PR.
 
+## Evidence and verdicts (step 8)
+
+`node --experimental-strip-types tools/apply-links.ts --run <link-run> --id-prefix tido- [--dry-run]` (rules in `tools/lib/apply-links.ts`, tested) reads a judged link run and, for each promise still `unassessed` without Riksdag evidence, adds the pairs the judge proposed as `evidence[]` (one entry per document; `match` is `full`, `partial` is `partial`) and sets the verdict:
+
+- `in_progress` when the evidence includes a dir, sou, ds or prop, with Swedish reasoning that lists the documents and says the assessment is model-made;
+- otherwise the promise stays `unassessed` (a betänkande alone may only reject motions).
+
+It never sets `fulfilled` (needs an `sfs` entry, which the store does not hold yet), `no_evidence` (needs an exhaustive search) or `broken` (`contradicts` labels are reported, not applied). Promises with another verdict or existing Riksdag evidence are skipped, so reruns and edits are safe. Run `pnpm fmt` afterwards.
+
 ## Why scoring exists (step 5)
 
 Keyword matching (step 2) caps at 15 candidates per promise, loses on vocabulary mismatch and snippet-only text, and nothing measured what it missed. The scoring harness asks every document a yes/no question per promise ("does the document describe or carry out something belonging to this promise?"), takes the highest chunk score per document, and is judged against the hand-labelled pairs (step 4): AUC, precision and recall at thresholds, and the rank of each pair's own promise among all 274. The score says a document is about a promise, not whether it fulfils it, which stage it is, or that it decided anything; those need the stage axis and a second-stage reader.

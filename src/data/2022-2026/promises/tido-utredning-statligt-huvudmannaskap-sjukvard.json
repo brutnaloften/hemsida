@@ -26,10 +26,47 @@
     "regionalisering"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: SOU 2025:62 (Ansvaret för hälso- och sjukvården); SOU 2025:62 (Ansvaret för hälso- och sjukvården, del 2). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB362",
+      "designation": "SOU 2025:62",
+      "title": "Ansvaret för hälso- och sjukvården",
+      "date": "2025-06-03",
+      "url": "https://data.riksdagen.se/dokument/HDB362.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB362d2",
+      "designation": "SOU 2025:62",
+      "title": "Ansvaret för hälso- och sjukvården, del 2",
+      "date": "2025-06-03",
+      "url": "https://data.riksdagen.se/dokument/HDB362d2.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SoU16",
+      "designation": "Bet. 2024/25:SoU16",
+      "title": "Hälso- och sjukvårdens organisation",
+      "date": "2025-06-04",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

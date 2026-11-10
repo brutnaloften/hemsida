@@ -20,10 +20,57 @@
   "committee": "JuU",
   "keywords": ["Tullverket", "befogenheter", "stöldgods", "gränskontroll", "brottsbekämpning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Prop. 2023/24:132 (Ny tullbefogenhetslag); Prop. 2024/25:129 (Skärpta åtgärder mot utförsel av stöldgods). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2024/25:SkU21 (Skärpta åtgärder mot utförsel av stöldgods), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU10",
+      "designation": "Bet. 2022/23:JuU10",
+      "title": "Polisfrågor",
+      "date": "2023-04-21",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU10.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB03132",
+      "designation": "Prop. 2023/24:132",
+      "title": "Ny tullbefogenhetslag",
+      "date": "2024-04-16",
+      "url": "https://data.riksdagen.se/dokument/HB03132.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03129",
+      "designation": "Prop. 2024/25:129",
+      "title": "Skärpta åtgärder mot utförsel av stöldgods",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03129.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SkU21",
+      "designation": "Bet. 2024/25:SkU21",
+      "title": "Skärpta åtgärder mot utförsel av stöldgods",
+      "date": "2025-05-22",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU21.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

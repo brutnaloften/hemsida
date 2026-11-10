@@ -20,10 +20,47 @@
   "committee": "CU",
   "keywords": ["arvsrätt", "arvsrätt för kusiner", "ärvdabalken", "arv"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Dir. 2024:28 (En arvs- och testamentsrätt i tiden); SOU 2025:91 (Nya regler om arv och testamente). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB128",
+      "designation": "Dir. 2024:28",
+      "title": "En arvs- och testamentsrätt i tiden",
+      "date": "2024-02-29",
+      "url": "https://data.riksdagen.se/dokument/HCB128.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SoU8",
+      "designation": "Bet. 2024/25:SoU8",
+      "title": "Riksrevisionens rapport om Allmänna arvsfonden",
+      "date": "2024-12-13",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU8.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB391",
+      "designation": "SOU 2025:91",
+      "title": "Nya regler om arv och testamente",
+      "date": "2025-08-29",
+      "url": "https://data.riksdagen.se/dokument/HDB391.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

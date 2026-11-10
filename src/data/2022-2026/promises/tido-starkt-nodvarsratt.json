@@ -20,10 +20,37 @@
   "committee": "JuU",
   "keywords": ["nödvärn", "nödvärnsrätt", "brottsbalken", "angrepp i hemmet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Dir. 2025:82 (En starkare nödvärnsrätt och ett effektivare tillträdesförbud); Dir. 2026:61 (Tilläggsdirektiv till Utredningen om nödvärn, tillträdesförbud och preventiva vistelseförbud (Ju 2025:18)). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB182",
+      "designation": "Dir. 2025:82",
+      "title": "En starkare nödvärnsrätt och ett effektivare tillträdesförbud",
+      "date": "2025-09-11",
+      "url": "https://data.riksdagen.se/dokument/HDB182.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB161",
+      "designation": "Dir. 2026:61",
+      "title": "Tilläggsdirektiv till Utredningen om nödvärn, tillträdesförbud och preventiva vistelseförbud (Ju 2025:18)",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HEB161.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

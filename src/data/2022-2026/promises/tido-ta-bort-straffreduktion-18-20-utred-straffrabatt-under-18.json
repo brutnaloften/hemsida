@@ -26,10 +26,37 @@
     "ungdomsreduktion"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Dir. 2023:112 (Skärpta regler för unga lagöverträdare); Prop. 2025/26:293 (Skärpta regler för unga lagöverträdare). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1112",
+      "designation": "Dir. 2023:112",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2023-07-06",
+      "url": "https://data.riksdagen.se/dokument/HBB1112.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03293",
+      "designation": "Prop. 2025/26:293",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2026-06-30",
+      "url": "https://data.riksdagen.se/dokument/HD03293.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

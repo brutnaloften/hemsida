@@ -20,10 +20,37 @@
   "committee": "UbU",
   "keywords": ["anmälningsplikt", "brott i skolan", "skolans brottsförebyggande roll", "skollagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: SOU 2024:17 (Skolor mot brott); Prop. 2024/25:160 (Skolor mot brott). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB317",
+      "designation": "SOU 2024:17",
+      "title": "Skolor mot brott",
+      "date": "2024-03-07",
+      "url": "https://data.riksdagen.se/dokument/HCB317.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03160",
+      "designation": "Prop. 2024/25:160",
+      "title": "Skolor mot brott",
+      "date": "2025-04-16",
+      "url": "https://data.riksdagen.se/dokument/HC03160.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -26,10 +26,47 @@
     "straffskärpningsgrund"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: SOU 2025:66 (En straffreform, del 3). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:JuU1 (Utgiftsområde 4 Rättsväsendet); Bet. 2025/26:JuU42 (Dubbla straff för brott i kriminella nätverk och skärpta straffskalor), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB366d3",
+      "designation": "SOU 2025:66",
+      "title": "En straffreform, del 3",
+      "date": "2025-06-09",
+      "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU1",
+      "designation": "Bet. 2025/26:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2025-11-28",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU42",
+      "designation": "Bet. 2025/26:JuU42",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

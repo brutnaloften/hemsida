@@ -26,10 +26,27 @@
     "integration"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Dir. 2023:174 (Mer obligatorisk undervisningstid för elever som behöver det). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1174",
+      "designation": "Dir. 2023:174",
+      "title": "Mer obligatorisk undervisningstid för elever som behöver det",
+      "date": "2023-12-14",
+      "url": "https://data.riksdagen.se/dokument/HBB1174.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

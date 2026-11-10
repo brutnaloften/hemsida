@@ -26,10 +26,67 @@
     "likvärdig bedömning"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: SOU 2025:18 (Ett likvärdigt betygssystem); SOU 2025:18 (Ett likvärdigt betygssystem, del 2); Prop. 2025/26:197 (Ett likvärdigt betygssystem). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2025/26:UbU26 (Ett likvärdigt betygssystem), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB318",
+      "designation": "SOU 2025:18",
+      "title": "Ett likvärdigt betygssystem",
+      "date": "2025-02-19",
+      "url": "https://data.riksdagen.se/dokument/HDB318.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB318d2",
+      "designation": "SOU 2025:18",
+      "title": "Ett likvärdigt betygssystem, del 2",
+      "date": "2025-02-19",
+      "url": "https://data.riksdagen.se/dokument/HDB318d2.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU8",
+      "designation": "Bet. 2025/26:UbU8",
+      "title": "Grundläggande om utbildning",
+      "date": "2026-02-09",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU8.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03197",
+      "designation": "Prop. 2025/26:197",
+      "title": "Ett likvärdigt betygssystem",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03197.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU26",
+      "designation": "Bet. 2025/26:UbU26",
+      "title": "Ett likvärdigt betygssystem",
+      "date": "2026-06-03",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU26.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

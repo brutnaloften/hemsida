@@ -26,10 +26,37 @@
     "kontroll av vissa utlänningar"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Dir. 2024:78 (Tilläggsdirektiv till utredningen om stärkt skydd mot utlänningar som utgör kvalificerade säkerhetshot eller som har koppling till kriminella nätverk (Ju 2024:10)); SOU 2025:114 (Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB178",
+      "designation": "Dir. 2024:78",
+      "title": "Tilläggsdirektiv till utredningen om stärkt skydd mot utlänningar som utgör kvalificerade säkerhetshot eller som har koppling till kriminella nätverk (Ju 2024:10)",
+      "date": "2024-08-29",
+      "url": "https://data.riksdagen.se/dokument/HCB178.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3114",
+      "designation": "SOU 2025:114",
+      "title": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
+      "date": "2025-12-03",
+      "url": "https://data.riksdagen.se/dokument/HDB3114.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

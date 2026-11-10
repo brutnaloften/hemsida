@@ -20,10 +20,27 @@
   "committee": "SoU",
   "keywords": ["digital infrastruktur", "hälsodata", "e-hälsa", "vårdkedjan", "journalsystem"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: SOU 2026:6 (En nationell digital infrastruktur i hälso- och sjukvården ). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HEB36",
+      "designation": "SOU 2026:6",
+      "title": "En nationell digital infrastruktur i hälso- och sjukvården ",
+      "date": "2026-01-20",
+      "url": "https://data.riksdagen.se/dokument/HEB36.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

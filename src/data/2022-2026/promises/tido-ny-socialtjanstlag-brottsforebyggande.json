@@ -26,10 +26,57 @@
     "nyrekrytering"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Prop. 2024/25:89 (En förebyggande socialtjänstlag – för ökade rättigheter, skyldigheter och möjligheter); Prop. 2025/26:295 (Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HB01SoU18",
+      "designation": "Bet. 2023/24:SoU18",
+      "title": "Barn och unga inom socialtjänsten",
+      "date": "2024-03-21",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU18.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0389",
+      "designation": "Prop. 2024/25:89",
+      "title": "En förebyggande socialtjänstlag – för ökade rättigheter, skyldigheter och möjligheter",
+      "date": "2025-01-28",
+      "url": "https://data.riksdagen.se/dokument/HC0389.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SoU19",
+      "designation": "Bet. 2024/25:SoU19",
+      "title": "Barn och unga inom socialtjänsten",
+      "date": "2025-02-27",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU19.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03295",
+      "designation": "Prop. 2025/26:295",
+      "title": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "date": "2026-06-30",
+      "url": "https://data.riksdagen.se/dokument/HD03295.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

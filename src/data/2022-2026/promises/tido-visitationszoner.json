@@ -20,10 +20,37 @@
   "committee": "JuU",
   "keywords": ["visitationszoner", "visitation", "vapen", "sprängmedel", "polisens befogenheter"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Ds 2023:31 (Säkerhetszoner - ökade möjligheter för polisen att visitera för att förebygga brott ); Prop. 2023/24:84 (Säkerhetszoner). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "ds",
+      "dok_id": "HBB431",
+      "designation": "Ds 2023:31",
+      "title": "Säkerhetszoner - ökade möjligheter för polisen att visitera för att förebygga brott ",
+      "date": "2023-12-15",
+      "url": "https://data.riksdagen.se/dokument/HBB431.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0384",
+      "designation": "Prop. 2023/24:84",
+      "title": "Säkerhetszoner",
+      "date": "2024-03-05",
+      "url": "https://data.riksdagen.se/dokument/HB0384.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

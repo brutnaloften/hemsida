@@ -26,10 +26,47 @@
     "utvisning"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: SOU 2025:114 (Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen); Prop. 2025/26:265 (Skärpta regler om uppsikt och förvar); Prop. 2025/26:267 (Stärkt skydd mot utlänningar som utgör kvalificerade säkerhetshot). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB3114",
+      "designation": "SOU 2025:114",
+      "title": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
+      "date": "2025-12-03",
+      "url": "https://data.riksdagen.se/dokument/HDB3114.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03265",
+      "designation": "Prop. 2025/26:265",
+      "title": "Skärpta regler om uppsikt och förvar",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03265.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03267",
+      "designation": "Prop. 2025/26:267",
+      "title": "Stärkt skydd mot utlänningar som utgör kvalificerade säkerhetshot",
+      "date": "2026-05-07",
+      "url": "https://data.riksdagen.se/dokument/HD03267.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

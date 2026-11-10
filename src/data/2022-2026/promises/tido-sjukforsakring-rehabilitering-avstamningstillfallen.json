@@ -26,10 +26,67 @@
     "rehabiliteringskedjan"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Prop. 2025/26:1 (Budgetpropositionen för 2026 - Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2022/23:SfU1 (Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HA01SfU1",
+      "designation": "Bet. 2022/23:SfU1",
+      "title": "Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01SfU14",
+      "designation": "Bet. 2022/23:SfU14",
+      "title": "Socialförsäkringsfrågor",
+      "date": "2023-04-13",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU14.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01AU9",
+      "designation": "Bet. 2022/23:AU9",
+      "title": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "date": "2023-04-20",
+      "url": "https://data.riksdagen.se/dokument/HA01AU9.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01SfU13",
+      "designation": "Bet. 2023/24:SfU13",
+      "title": "Socialförsäkringsfrågor",
+      "date": "2024-05-13",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU13.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD031d12",
+      "designation": "Prop. 2025/26:1",
+      "title": "Budgetpropositionen för 2026 - Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
+      "date": "2025-09-22",
+      "url": "https://data.riksdagen.se/dokument/HD031d12.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

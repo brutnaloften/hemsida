@@ -25,10 +25,57 @@
     "upprepad brottslighet"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Prop. 2022/23:53 (Skärpta straff för brott i kriminella nätverk); SOU 2024:48 (Ett ändamålsenligt samhällsskydd Volym 1); Prop. 2025/26:181 (Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott); Prop. 2025/26:297 (Ett nytt straffrättsligt påföljdssystem). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "date": "2026-11-10",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA0353",
+      "designation": "Prop. 2022/23:53",
+      "title": "Skärpta straff för brott i kriminella nätverk",
+      "date": "2023-01-31",
+      "url": "https://data.riksdagen.se/dokument/HA0353.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB348",
+      "designation": "SOU 2024:48",
+      "title": "Ett ändamålsenligt samhällsskydd Volym 1",
+      "date": "2024-07-05",
+      "url": "https://data.riksdagen.se/dokument/HCB348.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03181",
+      "designation": "Prop. 2025/26:181",
+      "title": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03181.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03297",
+      "designation": "Prop. 2025/26:297",
+      "title": "Ett nytt straffrättsligt påföljdssystem",
+      "date": "2026-06-30",
+      "url": "https://data.riksdagen.se/dokument/HD03297.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }
