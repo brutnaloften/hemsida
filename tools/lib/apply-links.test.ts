@@ -59,6 +59,23 @@ describe('applyLinks', () => {
     expect(promiseSchema.safeParse({ ...base, ...r }).success).toBe(true);
   });
 
+  it('drops background pairs and skrivelser', () => {
+    const skr = {
+      ...doc('S1', 'prop', '2026-01-01', '9'),
+      text: 'X Regeringens skrivelse 2025/26:9',
+    };
+    const d2 = new Map(docs).set('S1', skr);
+    expect(
+      applyLinks(base, [pair('P1', { stage: 'background' }), pair('S1')], d2, '2026-11-10'),
+    ).toBeNull();
+  });
+
+  it('uses singular wording for one document', () => {
+    const r = applyLinks(base, [pair('P1')], docs, '2026-11-10')!;
+    expect(r.verdict.reasoning).toContain('Ett dokument i riksdagens register');
+    expect(r.verdict.reasoning).toContain('Dokumentet behandlar hela löftet.');
+  });
+
   it('keeps unassessed when only a betänkande is evidence', () => {
     const r = applyLinks(base, [pair('B1', { label: 'partial' })], docs, '2026-11-10')!;
     expect(r.verdict.value).toBe('unassessed');

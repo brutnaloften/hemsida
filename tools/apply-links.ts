@@ -51,7 +51,9 @@ for (const r of rows as {
 const store = loadJson(defaultStorePath(root, values.term!)) as {
   documents: Record<string, StoreDocument>;
 };
-const docs = new Map(Object.values(store.documents).map((d) => [d.dok_id, d]));
+const docs = new Map(
+  Object.values(store.documents).map((d) => [d.dok_id, { ...d, text: d.text?.slice(0, 600) }]),
+);
 
 const dir = resolve(root, 'src/data', values.term!, 'promises');
 let changed = 0;

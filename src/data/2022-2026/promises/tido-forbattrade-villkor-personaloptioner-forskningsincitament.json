@@ -27,7 +27,7 @@
   ],
   "verdict": {
     "value": "in_progress",
-    "reasoning": "Riksdagens dokument visar att åtgärden pågår: Prop. 2022/23:79 (Nedsättningen av arbetsgivaravgifterna för personer som arbetar med forskning eller utveckling – höjt tak för avdraget); SOU 2026:1 (Skatteincitament för forskning och utveckling). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2022/23:SfU19 (Nedsättningen av arbetsgivaravgifterna för personer som arbetar med forskning eller utveckling – höjt tak för avdraget), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Prop. 2022/23:79 (Nedsättningen av arbetsgivaravgifterna för personer som arbetar med forskning eller utveckling – höjt tak för avdraget); SOU 2026:1 (Skatteincitament för forskning och utveckling). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2022/23:SfU19 (Nedsättningen av arbetsgivaravgifterna för personer som arbetar med forskning eller utveckling – höjt tak för avdraget), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt. Bedömningen är gjord av en AI-modell utan granskning av en människa. Genomsökningen av riksdagens dokument är ännu inte komplett, så fler dokument kan finnas.",
     "date": "2026-11-10",
     "history": [
       {
@@ -38,16 +38,6 @@
     ]
   },
   "evidence": [
-    {
-      "kind": "bet",
-      "dok_id": "HA01SkU11",
-      "designation": "Bet. 2022/23:SkU11",
-      "title": "Inkomstskatt",
-      "date": "2023-03-09",
-      "url": "https://data.riksdagen.se/dokument/HA01SkU11.html",
-      "relevance": "partial",
-      "note": null
-    },
     {
       "kind": "prop",
       "dok_id": "HA0379",
@@ -65,16 +55,6 @@
       "title": "Nedsättningen av arbetsgivaravgifterna för personer som arbetar med forskning eller utveckling – höjt tak för avdraget",
       "date": "2023-05-26",
       "url": "https://data.riksdagen.se/dokument/HA01SfU19.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "bet",
-      "dok_id": "HB01SkU11",
-      "designation": "Bet. 2023/24:SkU11",
-      "title": "Inkomstskatt",
-      "date": "2024-05-23",
-      "url": "https://data.riksdagen.se/dokument/HB01SkU11.html",
       "relevance": "partial",
       "note": null
     },
