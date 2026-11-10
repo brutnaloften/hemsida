@@ -12,7 +12,17 @@
     "keyword:utvisning ur klassrum",
     "keyword:skollagen",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +38,11 @@
         "keyword:disciplinära åtgärder",
         "keyword:utvisning ur klassrum",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03196",
@@ -77,8 +89,14 @@
       "titel": "Lärare och elever",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU11.html",
-      "found_by": ["keyword:lärares befogenheter", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:lärares befogenheter",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.7
     },
     {
       "dok_id": "HDB49",
@@ -89,8 +107,14 @@
       "titel": "Ett nationellt mobilförbud i de obligatoriska skolformerna och fritidshemmet",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB49.html",
-      "found_by": ["keyword:lärares befogenheter", "keyword:disciplinära åtgärder", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:lärares befogenheter",
+        "keyword:disciplinära åtgärder",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01UbU11",
@@ -101,8 +125,14 @@
       "titel": "Lärare och elever",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU11.html",
-      "found_by": ["keyword:lärares befogenheter", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:lärares befogenheter",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.75
     },
     {
       "dok_id": "HA01UbU6",
@@ -113,8 +143,14 @@
       "titel": "Grundläggande om utbildning",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU6.html",
-      "found_by": ["keyword:lärares befogenheter", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:lärares befogenheter",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD03193",
@@ -137,8 +173,13 @@
       "titel": "Bättre förutsättningar för trygghet och studiero i skolan ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB38.html",
-      "found_by": ["keyword:disciplinära åtgärder", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:disciplinära åtgärder",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.98
     },
     {
       "dok_id": "HEB357",
@@ -162,7 +203,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03292.html",
       "found_by": ["keyword:skollagen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01UbU26",
@@ -174,7 +216,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU26.html",
       "found_by": ["keyword:skollagen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01UbU24",
@@ -198,7 +241,203 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU28.html",
       "found_by": ["keyword:skollagen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
+    },
+    {
+      "dok_id": "HDB319",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "19",
+      "datum": "2025-02-26",
+      "titel": "Kunskap för alla ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB319.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d18",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC0354",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "54",
+      "datum": "2024-11-25",
+      "titel": "Riksrevisionens rapport om statens insatser för barn som misstänks för grova brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0354.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB328",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "28",
+      "datum": "2024-04-19",
+      "titel": "Offentlighetsprincipen eller insynslag, Allmänhetens insyn i enskilda aktörer inom skolväsendet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB328.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HEB34",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "4",
+      "datum": "2026-01-20",
+      "titel": "Rektor i fokus",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB34.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB1154",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "154",
+      "datum": "2023-11-02",
+      "titel": "Varaktigt förbättrad trygghet och studiero i skolan",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1154.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD03194",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "194",
+      "datum": "2026-03-17",
+      "titel": "Nya läroplaner – för en stark kunskapsskola",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03194.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03197",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "197",
+      "datum": "2026-03-17",
+      "titel": "Ett likvärdigt betygssystem",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03197.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01UbU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU8",
+      "datum": "2026-02-09",
+      "titel": "Grundläggande om utbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB381",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "81",
+      "datum": "2024-12-03",
+      "titel": "Ämneskunskaper och lärarskicklighet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB381.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03272",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "272",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den brottsförebyggande strategin Barriärer mot brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03272.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

@@ -12,7 +12,12 @@
     "keyword:idrottspolitik",
     "keyword:konkurrenskraft",
     "all-keywords",
-    "committee:KrU"
+    "committee:KrU",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -37,7 +42,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB346.html",
       "found_by": ["keyword:elitfotboll", "keyword:idrottspolitik"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HEB1112",
@@ -61,7 +67,8 @@
       "organ": "LI-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1122.html",
       "found_by": ["keyword:konkurrenskraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HEB186",
@@ -85,7 +92,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB346.html",
       "found_by": ["keyword:konkurrenskraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01FiU40",
@@ -97,7 +105,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU40.html",
       "found_by": ["keyword:konkurrenskraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HEB127",
@@ -133,7 +142,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB3117.html",
       "found_by": ["keyword:konkurrenskraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01KrU1",
@@ -145,7 +155,8 @@
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HD01KrU1.html",
       "found_by": ["keyword:idrottspolitik"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD031d19",
@@ -181,7 +192,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d21.html",
       "found_by": ["keyword:idrottspolitik"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC01NU23",

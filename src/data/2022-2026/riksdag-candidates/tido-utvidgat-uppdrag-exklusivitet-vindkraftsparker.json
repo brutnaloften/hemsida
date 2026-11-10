@@ -12,7 +12,16 @@
     "keyword:Svenska kraftnät",
     "keyword:havsbaserad vindkraft",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +38,11 @@
         "keyword:exklusivitet",
         "keyword:Svenska kraftnät",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01NU12",
@@ -48,7 +59,8 @@
         "keyword:havsbaserad vindkraft",
         "committee:NU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.35
     },
     {
       "dok_id": "HCB389",
@@ -63,9 +75,11 @@
         "keyword:vindkraftsparker",
         "keyword:exklusivitet",
         "keyword:havsbaserad vindkraft",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.75
     },
     {
       "dok_id": "HA01NU9",
@@ -80,9 +94,11 @@
         "keyword:Svenska kraftnät",
         "keyword:havsbaserad vindkraft",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01NU17",
@@ -122,7 +138,8 @@
         "keyword:Svenska kraftnät",
         "keyword:havsbaserad vindkraft"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA01NU17",
@@ -146,7 +163,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
       "found_by": ["keyword:vindkraftsparker", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HC01NU19",
@@ -170,7 +188,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB347.html",
       "found_by": ["keyword:Svenska kraftnät", "keyword:havsbaserad vindkraft"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HCB311",
@@ -182,7 +201,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB311.html",
       "found_by": ["keyword:havsbaserad vindkraft", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HBB161",
@@ -218,7 +238,21 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03130.html",
       "found_by": ["keyword:vindkraftsparker"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

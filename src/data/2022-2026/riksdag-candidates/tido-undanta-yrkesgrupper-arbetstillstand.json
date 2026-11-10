@@ -12,7 +12,14 @@
     "keyword:lönekrav",
     "keyword:bemyndigande",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -47,9 +54,11 @@
         "keyword:yrkesgrupper",
         "keyword:arbetstillstånd",
         "keyword:lönekrav",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC01SfU15",
@@ -72,8 +81,15 @@
       "titel": "Arbetskraftsinvandring",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU11.html",
-      "found_by": ["keyword:arbetstillstånd", "keyword:lönekrav", "all-keywords", "committee:SfU"],
-      "score": 4
+      "found_by": [
+        "keyword:arbetstillstånd",
+        "keyword:lönekrav",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC0392",
@@ -96,8 +112,14 @@
       "titel": "Nya regler för arbetskraftsinvandring m.m.",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB315.html",
-      "found_by": ["keyword:personliga assistenter", "keyword:lönekrav", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:personliga assistenter",
+        "keyword:lönekrav",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.98
     },
     {
       "dok_id": "HA01SfU9",
@@ -109,7 +131,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU9.html",
       "found_by": ["keyword:arbetstillstånd", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03284",
@@ -168,8 +191,9 @@
       "titel": "Arbetskraftsinvandring",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU17.html",
-      "found_by": ["all-keywords", "committee:SfU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SfU", "score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01SfU37",
@@ -181,7 +205,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
       "found_by": ["keyword:lönekrav"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01SfU35",
@@ -193,7 +218,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU35.html",
       "found_by": ["keyword:arbetstillstånd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03271",
@@ -205,7 +231,99 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03271.html",
       "found_by": ["keyword:yrkesgrupper"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HBB125",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "25",
+      "datum": "2023-02-16",
+      "titel": "Tilläggsdirektiv till Utredningen om en behovsprövad arbetskraftsinvandring (Ju 2022:11)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB125.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.99
+    },
+    {
+      "dok_id": "HC0318",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "18",
+      "datum": "2024-09-24",
+      "titel": "Genomförande av det nya blåkortsdirektivet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0318.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB325",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "25",
+      "datum": "2025-03-03",
+      "titel": "Arbetslivskriminalitet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB325.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA031d9",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB031d9",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB399",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "99",
+      "datum": "2025-09-26",
+      "titel": "Ändring av permanent uppehållstillstånd för vissa utlänningar",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

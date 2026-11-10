@@ -12,7 +12,17 @@
     "keyword:förlossning",
     "keyword:regionala skillnader",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -47,9 +57,11 @@
         "keyword:förlossningsplan",
         "keyword:förlossning",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01SoU13",
@@ -65,9 +77,11 @@
         "keyword:barnmorsketeam",
         "keyword:förlossning",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01SoU1",
@@ -99,9 +113,11 @@
         "keyword:förlossningsplan",
         "keyword:barnmorsketeam",
         "keyword:regionala skillnader",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01SoU17",
@@ -124,8 +140,14 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU14.html",
-      "found_by": ["keyword:förlossningsplan", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:förlossningsplan",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01SoU12",
@@ -136,8 +158,14 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
-      "found_by": ["keyword:förlossningsplan", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:förlossningsplan",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01SoU8",
@@ -149,7 +177,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU8.html",
       "found_by": ["keyword:förlossningsplan", "all-keywords", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD031d11",
@@ -160,8 +189,13 @@
       "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d11.html",
-      "found_by": ["keyword:förlossningsvård", "keyword:förlossning"],
-      "score": 2
+      "found_by": [
+        "keyword:förlossningsvård",
+        "keyword:förlossning",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01SoU16",
@@ -172,8 +206,13 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
-      "found_by": ["keyword:förlossningsvård", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:förlossningsvård",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC0375",
@@ -184,8 +223,13 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HC0375.html",
-      "found_by": ["keyword:förlossningsvård", "keyword:förlossning"],
-      "score": 2
+      "found_by": [
+        "keyword:förlossningsvård",
+        "keyword:förlossning",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01SoU16",
@@ -208,8 +252,13 @@
       "titel": "Budgetpropositionen för 2024 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HB031d10.html",
-      "found_by": ["keyword:regionala skillnader", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:regionala skillnader",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01FiU3",
@@ -222,6 +271,136 @@
       "url": "https://data.riksdagen.se/dokument/HA01FiU3.html",
       "found_by": ["keyword:förlossningsplan", "all-keywords"],
       "score": 2
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB362",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "62",
+      "datum": "2025-06-03",
+      "titel": "Ansvaret för hälso- och sjukvården",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB362.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01SoU22",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU22",
+      "datum": "2026-03-20",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA03100",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "100",
+      "datum": "2023-04-17",
+      "titel": "2023 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01SoU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01SoU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU16",
+      "datum": "2026-04-01",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HEB341",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "41",
+      "datum": "2026-06-17",
+      "titel": "Jämställdhet i en föränderlig tid - nuläge och vägar framåt, del 1",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB341.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

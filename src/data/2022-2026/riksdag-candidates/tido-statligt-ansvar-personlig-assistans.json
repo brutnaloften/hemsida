@@ -12,7 +12,17 @@
     "keyword:assistansersättning",
     "keyword:funktionshinder",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -75,8 +85,14 @@
       "titel": "Stöd till personer med funktionsnedsättning",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU15.html",
-      "found_by": ["keyword:personlig assistans", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:personlig assistans",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01SoU21",
@@ -87,8 +103,14 @@
       "titel": "Stöd till personer med funktionsnedsättning",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU21.html",
-      "found_by": ["keyword:personlig assistans", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:personlig assistans",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03294",
@@ -100,7 +122,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:assistansersättning", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SoU1",
@@ -124,7 +147,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0361.html",
       "found_by": ["keyword:assistansersättning", "keyword:funktionshinder"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01SoU15",
@@ -148,7 +172,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0389.html",
       "found_by": ["keyword:funktionshinder", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HC01SoU1",
@@ -160,7 +185,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
       "found_by": ["keyword:assistansersättning", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HB01SoU26",
@@ -172,7 +198,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU26.html",
       "found_by": ["keyword:personlig assistans", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HB01SoU1",
@@ -184,7 +211,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
       "found_by": ["keyword:assistansersättning", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HBB39",
@@ -209,6 +237,279 @@
       "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
       "found_by": ["keyword:assistansersättning", "committee:SoU"],
       "score": 2
+    },
+    {
+      "dok_id": "HEB133",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "33",
+      "datum": "2026-05-21",
+      "titel": "Ett tydligare regelverk för långsiktiga och stabila förutsättningar för personlig assistans",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB133.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB370",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "70",
+      "datum": "2023-11-08",
+      "titel": "Ordning och reda - förstärkt och tillförlitlig byggkontroll",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB370.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA031d10",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB353d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "53",
+      "datum": "2023-09-14",
+      "titel": "En ändamålsenlig arbetsskadeförsäkring - för bättre ekonomisk trygghet, kunskap och rättssäkerhet, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB353d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB340",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "40",
+      "datum": "2023-08-25",
+      "titel": "Förbättrade möjligheter för barn att utkräva sina rättigheter enligt barnkonventionen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB340.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB382",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "82",
+      "datum": "2023-12-06",
+      "titel": "Ökad kontroll över tandvårdssektorn ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031d10",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB368d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "68",
+      "datum": "2023-11-15",
+      "titel": "Som om vi aldrig funnits - exkludering och assimilering av tornedalingar, kväner och lantalaiset, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB368d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03100",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "100",
+      "datum": "2025-04-15",
+      "titel": "2025 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB350",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "50",
+      "datum": "2024-07-05",
+      "titel": "Nätt och jämnt",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB350.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB391",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "91",
+      "datum": "2023-12-13",
+      "titel": "Penning- och finanspolitisk konjunkturstabilisering ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB391.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB343",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "43",
+      "datum": "2023-08-22",
+      "titel": "En samordnad registerkontroll för upphandlande myndigheter och enheter",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB343.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB3103",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "103",
+      "datum": "2024-01-01",
+      "titel": "Areella näringar vid vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB3103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB330",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "30",
+      "datum": "2023-06-20",
+      "titel": "Ett trygghetssystem för alla - nytt regelverk för sjukpenninggrundande inkomst ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB330.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD03136",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "136",
+      "datum": "2026-02-23",
+      "titel": "Kvalificering till socialförsäkringen",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03136.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

@@ -12,7 +12,15 @@
     "keyword:illegala vapen",
     "keyword:Polismyndigheten",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +36,11 @@
         "keyword:vapenlagen",
         "keyword:vapenlicens",
         "keyword:illegala vapen",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01JuU14",
@@ -58,8 +68,14 @@
       "titel": "En ny vapenlag",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU10.html",
-      "found_by": ["keyword:vapenlagen", "keyword:vapenlicens", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:vapenlagen",
+        "keyword:vapenlicens",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.65
     },
     {
       "dok_id": "HD0375",
@@ -82,8 +98,14 @@
       "titel": "Vapenfrågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU18.html",
-      "found_by": ["keyword:vapenlicens", "keyword:illegala vapen", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:vapenlicens",
+        "keyword:illegala vapen",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HC01JuU17",
@@ -94,8 +116,14 @@
       "titel": "Vapenfrågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU17.html",
-      "found_by": ["keyword:vapenlicens", "keyword:illegala vapen", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:vapenlicens",
+        "keyword:illegala vapen",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HDB350",
@@ -106,8 +134,14 @@
       "titel": "En ny nationell myndighet för viltförvaltning",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB350.html",
-      "found_by": ["keyword:vapenlicens", "keyword:jakt- och viltvårdsmyndighet", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:vapenlicens",
+        "keyword:jakt- och viltvårdsmyndighet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HCB331",
@@ -134,8 +168,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HB0375.html",
-      "found_by": ["keyword:vapenlicens", "keyword:jakt- och viltvårdsmyndighet", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:vapenlicens",
+        "keyword:jakt- och viltvårdsmyndighet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01JuU17",
@@ -146,8 +186,14 @@
       "titel": "Vapenfrågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU17.html",
-      "found_by": ["keyword:illegala vapen", "all-keywords", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:illegala vapen",
+        "all-keywords",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC0375",
@@ -158,8 +204,13 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HC0375.html",
-      "found_by": ["keyword:jakt- och viltvårdsmyndighet", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:jakt- och viltvårdsmyndighet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01JuU25",
@@ -170,8 +221,9 @@
       "titel": "Genomförande av ändringarna i vapendirektivet",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU25.html",
-      "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:JuU", "score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA0375",
@@ -182,8 +234,13 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HA0375.html",
-      "found_by": ["keyword:vapenlicens", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:vapenlicens",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HEB1106",
@@ -207,7 +264,216 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03290.html",
       "found_by": ["keyword:vapenlagen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
+    },
+    {
+      "dok_id": "HCB1105",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "105",
+      "datum": "2024-11-07",
+      "titel": "Tilläggsdirektiv till Utredningen om en ny jakt- och viltvårdsmyndighet (LI 2023:06)",
+      "organ": "LI-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB1105.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB355",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "55",
+      "datum": "2024-09-24",
+      "titel": "En översyn av 23 kap. brottsbalken",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB355.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB150",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "50",
+      "datum": "2023-03-30",
+      "titel": "Tilläggsdirektiv till 2022 års vapenutredning (Ju 2022:04)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB150.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031d5",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB331d2",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "31",
+      "datum": "2024-05-13",
+      "titel": "En ändamålsenlig vapenlagstiftning, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB331d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HBB1108",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "108",
+      "datum": "2023-07-06",
+      "titel": "En ny jakt- och viltvårdsmyndighet",
+      "organ": "Landsbygds- och infrastrukturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB1108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB378",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "78",
+      "datum": "2025-01-01",
+      "titel": "Ett språkkrav för språkutveckling ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB378.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01MJU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU12",
+      "datum": "2023-03-23",
+      "titel": "Jakt och viltvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB377",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "77",
+      "datum": "2024-12-05",
+      "titel": "Ett modernt och anpassat regelverk för krigsmateriel",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB377.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB384",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "84",
+      "datum": "2025-06-27",
+      "titel": "Hem för barn och unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB384.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03228",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "228",
+      "datum": "2026-04-01",
+      "titel": "Ett modernt och anpassat regelverk för krigsmateriel",
+      "organ": "Utrikesdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03228.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB352",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "52",
+      "datum": "2024-07-05",
+      "titel": "Allmänna sammankomster och Sveriges säkerhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB352.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB0333",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "33",
+      "datum": "2023-10-26",
+      "titel": "Skjutvapen och explosiva varor – skärpta straff för de allvarligare brotten",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0333.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

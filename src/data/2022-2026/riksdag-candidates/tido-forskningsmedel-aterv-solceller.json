@@ -11,7 +11,12 @@
     "keyword:energiforskning",
     "keyword:solenergi",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -41,7 +46,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
       "found_by": ["keyword:energiforskning", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.1
     },
     {
       "dok_id": "HC01NU3",
@@ -53,7 +59,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
       "found_by": ["keyword:energiforskning", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HA01NU17",
@@ -101,7 +108,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0316.html",
       "found_by": ["keyword:solceller", "keyword:solenergi"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD031",
@@ -137,7 +145,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0372.html",
       "found_by": ["keyword:energiforskning", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HB01MJU17",
@@ -148,8 +157,13 @@
       "titel": "Cirkulär och giftfri ekonomi och Riksrevisionens rapport om hantering av uttjänta solcellspaneler och vindturbinblad",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HB01MJU17.html",
-      "found_by": ["keyword:återvinning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:återvinning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01NU3",
@@ -172,8 +186,13 @@
       "titel": "Riksrevisionens rapport om hantering av uttjänta solcellspaneler och vindturbinblad",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0349.html",
-      "found_by": ["keyword:solceller", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:solceller",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03282",
@@ -185,7 +204,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03282.html",
       "found_by": ["keyword:solenergi"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01MJU19",
@@ -198,6 +218,19 @@
       "url": "https://data.riksdagen.se/dokument/HD01MJU19.html",
       "found_by": ["keyword:återvinning"],
       "score": 1
+    },
+    {
+      "dok_id": "HCB367",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "67",
+      "datum": "2024-10-02",
+      "titel": "Om ekonomiska styrmedel för en mer cirkulär ekonomi ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

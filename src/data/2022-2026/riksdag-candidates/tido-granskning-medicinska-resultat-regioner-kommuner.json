@@ -12,7 +12,14 @@
     "keyword:medicinska resultat",
     "keyword:tillsyn",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -25,7 +32,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
       "found_by": ["keyword:vårdanalys", "all-keywords", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HC01SoU22",
@@ -49,7 +57,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB338.html",
       "found_by": ["keyword:vårdanalys", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01SoU1",
@@ -84,8 +93,13 @@
       "titel": "Ansvaret för hälso- och sjukvården, del 2",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB362d2.html",
-      "found_by": ["keyword:medicinska resultat", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:medicinska resultat",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HC01SoU1",
@@ -96,8 +110,13 @@
       "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
-      "found_by": ["keyword:medicinska resultat", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:medicinska resultat",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA01SoU17",
@@ -120,8 +139,13 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
-      "found_by": ["keyword:medicinska resultat", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:medicinska resultat",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01SoU14",
@@ -145,7 +169,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03305.html",
       "found_by": ["keyword:tillsyn"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03294",
@@ -157,7 +182,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:vårdanalys"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03288",
@@ -181,7 +207,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU20.html",
       "found_by": ["keyword:granskning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SoU28",
@@ -193,7 +220,21 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU28.html",
       "found_by": ["keyword:IVO"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.15
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

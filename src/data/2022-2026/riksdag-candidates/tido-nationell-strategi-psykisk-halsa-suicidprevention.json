@@ -12,7 +12,17 @@
     "keyword:självmord",
     "keyword:folkhälsa",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -30,9 +40,11 @@
         "keyword:självmord",
         "keyword:folkhälsa",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01SoU15",
@@ -61,8 +73,15 @@
       "titel": "Folkhälsa",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU12.html",
-      "found_by": ["keyword:psykisk hälsa", "keyword:folkhälsa", "all-keywords", "committee:SoU"],
-      "score": 4
+      "found_by": [
+        "keyword:psykisk hälsa",
+        "keyword:folkhälsa",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01SoU7",
@@ -85,8 +104,14 @@
       "titel": "Det handlar om livet – nationell strategi inom området psykisk hälsa och suicidprevention",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0377.html",
-      "found_by": ["keyword:psykisk hälsa", "keyword:suicidprevention", "keyword:självmord"],
-      "score": 3
+      "found_by": [
+        "keyword:psykisk hälsa",
+        "keyword:suicidprevention",
+        "keyword:självmord",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.98
     },
     {
       "dok_id": "HA01SoU20",
@@ -97,8 +122,14 @@
       "titel": "Folkhälsa",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU20.html",
-      "found_by": ["keyword:folkhälsa", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:folkhälsa",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01SoU16",
@@ -109,8 +140,13 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
-      "found_by": ["keyword:psykisk hälsa", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:psykisk hälsa",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01SoU1",
@@ -145,8 +181,13 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU14.html",
-      "found_by": ["keyword:psykisk hälsa", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:psykisk hälsa",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01SoU1",
@@ -157,8 +198,13 @@
       "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
-      "found_by": ["keyword:folkhälsa", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:folkhälsa",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HAB370d2",
@@ -170,7 +216,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HAB370d2.html",
       "found_by": ["keyword:nationell strategi", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HAB370",
@@ -181,8 +228,13 @@
       "titel": "En uppväxt fri från våld ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HAB370.html",
-      "found_by": ["keyword:nationell strategi", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:nationell strategi",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03272",
@@ -193,8 +245,9 @@
       "titel": "Uppföljning av den brottsförebyggande strategin Barriärer mot brott",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03272.html",
-      "found_by": ["keyword:suicidprevention"],
-      "score": 1
+      "found_by": ["keyword:suicidprevention", "score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03283",
@@ -205,8 +258,373 @@
       "titel": "Ungdomspolitisk skrivelse",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03283.html",
-      "found_by": ["keyword:suicidprevention"],
-      "score": 1
+      "found_by": ["keyword:suicidprevention", "score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01SoU21",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU21",
+      "datum": "2024-05-07",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA031d10",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HA01SoU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU12",
+      "datum": "2023-04-24",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01SfU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SfU14",
+      "datum": "2023-04-13",
+      "titel": "Socialförsäkringsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB031d10",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB13",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "3",
+      "datum": "2023-01-19",
+      "titel": "Översyn av vissa frågor inom det suicidpreventiva området",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB0368",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "68",
+      "datum": "2024-03-14",
+      "titel": "Barriärer mot brott – en socialpreventiv strategi mot kriminella nätverk och annan brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03266",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "266",
+      "datum": "2026-06-02",
+      "titel": "En god arbetsmiljö i ett föränderligt arbetsliv – regeringens arbetsmiljöstrategi för 2026–2031",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03266.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB373",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "73",
+      "datum": "2025-06-10",
+      "titel": "En arbetsmiljöstrategi för ett förändrat arbetsliv ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB373.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD03251",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "251",
+      "datum": "2026-04-30",
+      "titel": "En mer sammanhållen vård för personer med skadligt bruk eller beroende och andra psykiatriska tillstånd",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03251.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB328",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "28",
+      "datum": "2025-03-10",
+      "titel": "Frihet från våld, förtryck och utnyttjande",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB328.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01SoU22",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU22",
+      "datum": "2026-03-20",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB352d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "52",
+      "datum": "2026-08-18",
+      "titel": "En reform av den statliga barn- och ungdomsvården, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB352d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03132",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "132",
+      "datum": "2026-02-19",
+      "titel": "Frihetsberövande påföljder för barn och unga",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03132.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01TU15",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "TU15",
+      "datum": "2026-04-09",
+      "titel": "Järnvägs- och kollektivtrafikfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HD01TU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB348d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "48",
+      "datum": "2025-04-23",
+      "titel": "Stärkt pandemiberedskap, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB348d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01SoU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01SoU16",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU16",
+      "datum": "2025-06-04",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB338",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "38",
+      "datum": "2026-06-17",
+      "titel": "Behovsstyrd vård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB338.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA031d18",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HEB341",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "41",
+      "datum": "2026-06-17",
+      "titel": "Jämställdhet i en föränderlig tid - nuläge och vägar framåt, del 1",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB341.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

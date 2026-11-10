@@ -12,7 +12,16 @@
     "keyword:munhälsa",
     "keyword:äldre",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -67,9 +76,11 @@
         "keyword:högkostnadsskydd",
         "keyword:munhälsa",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.92
     },
     {
       "dok_id": "HD03300",
@@ -113,9 +124,11 @@
         "keyword:tandvård",
         "keyword:högkostnadsskydd",
         "keyword:munhälsa",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01SoU12",
@@ -150,8 +163,14 @@
       "titel": "Riksrevisionens rapport om tandvårdsstödet",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03219.html",
-      "found_by": ["keyword:högkostnadsskydd", "keyword:tandvårdsreform", "keyword:munhälsa"],
-      "score": 3
+      "found_by": [
+        "keyword:högkostnadsskydd",
+        "keyword:tandvårdsreform",
+        "keyword:munhälsa",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB03158",
@@ -162,8 +181,14 @@
       "titel": "Ändrad åldersgräns för avgiftsfri tandvård",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03158.html",
-      "found_by": ["keyword:tandvård", "keyword:munhälsa", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:tandvård",
+        "keyword:munhälsa",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.92
     },
     {
       "dok_id": "HA01SoU15",
@@ -198,8 +223,13 @@
       "titel": "Förbättrade levnadsvillkor för utlänningar med tillfälligt skydd",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU5.html",
-      "found_by": ["keyword:tandvårdsreform", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:tandvårdsreform",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD03275",
@@ -223,7 +253,216 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU25.html",
       "found_by": ["keyword:äldre"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HA031d10",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB382",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "82",
+      "datum": "2023-12-06",
+      "titel": "Ökad kontroll över tandvårdssektorn ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HB031d10",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01SoU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU1",
+      "datum": "2023-12-06",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03100",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "100",
+      "datum": "2026-04-13",
+      "titel": "2026 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HBB310",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "10",
+      "datum": "2023-11-08",
+      "titel": "Tandvårdens stöd till våldsutsatta patienter ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB310.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.98
+    },
+    {
+      "dok_id": "HC03100",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "100",
+      "datum": "2025-04-15",
+      "titel": "2025 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB378",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "78",
+      "datum": "2025-01-01",
+      "titel": "Ett språkkrav för språkutveckling ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB378.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC01SoU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD0399",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "99",
+      "datum": "2026-04-13",
+      "titel": "Vårändringsbudget för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB371",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "71",
+      "datum": "2024-11-04",
+      "titel": "Reglering av hushållens skulder ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB371.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

@@ -11,7 +11,17 @@
     "keyword:suicidprevention",
     "keyword:forskning",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -23,8 +33,14 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
-      "found_by": ["keyword:psykisk hälsa", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:psykisk hälsa",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01SoU12",
@@ -36,7 +52,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU12.html",
       "found_by": ["keyword:psykisk hälsa", "keyword:suicidprevention", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01SoU1",
@@ -71,8 +88,14 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU14.html",
-      "found_by": ["keyword:psykisk hälsa", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:psykisk hälsa",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01SoU15",
@@ -120,7 +143,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU12.html",
       "found_by": ["keyword:psykisk hälsa", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HC0377",
@@ -132,7 +156,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0377.html",
       "found_by": ["keyword:psykisk hälsa", "keyword:suicidprevention"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HC0372",
@@ -144,7 +169,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0372.html",
       "found_by": ["keyword:forskningsprogram", "keyword:forskning"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HB01SoU21",
@@ -155,8 +181,9 @@
       "titel": "Kompetensförsörjning, e-hälsa och beredskap",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU21.html",
-      "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SoU", "score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HB0375",
@@ -167,8 +194,13 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HB0375.html",
-      "found_by": ["keyword:suicidprevention", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:suicidprevention",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01SoU20",
@@ -179,8 +211,9 @@
       "titel": "Folkhälsa",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU20.html",
-      "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SoU", "score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03272",
@@ -192,7 +225,138 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03272.html",
       "found_by": ["keyword:suicidprevention"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
+    },
+    {
+      "dok_id": "HA031d10",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD031d18",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01SfU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SfU14",
+      "datum": "2023-04-13",
+      "titel": "Socialförsäkringsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01SoU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU12",
+      "datum": "2023-04-24",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB01UbU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "UbU15",
+      "datum": "2024-02-15",
+      "titel": "Forskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB031d10",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01UbU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UbU11",
+      "datum": "2023-06-02",
+      "titel": "Forskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

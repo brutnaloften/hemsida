@@ -12,7 +12,13 @@
     "keyword:föräldrasamtal",
     "keyword:socialtjänstlagen",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -54,8 +60,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HC0375.html",
-      "found_by": ["keyword:24-timmarsgaranti", "keyword:barn gripits", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:24-timmarsgaranti",
+        "keyword:barn gripits",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB0375",
@@ -66,8 +78,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HB0375.html",
-      "found_by": ["keyword:24-timmarsgaranti", "keyword:barn gripits", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:24-timmarsgaranti",
+        "keyword:barn gripits",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA0375",
@@ -78,8 +96,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HA0375.html",
-      "found_by": ["keyword:24-timmarsgaranti", "keyword:barn gripits", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:24-timmarsgaranti",
+        "keyword:barn gripits",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HEB351",
@@ -102,8 +126,13 @@
       "titel": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03295.html",
-      "found_by": ["keyword:socialtjänsten", "keyword:socialtjänstlagen"],
-      "score": 2
+      "found_by": [
+        "keyword:socialtjänsten",
+        "keyword:socialtjänstlagen",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC01SoU23",
@@ -139,7 +168,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU19.html",
       "found_by": ["keyword:socialtjänsten", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HC01SoU18",
@@ -151,7 +181,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU18.html",
       "found_by": ["keyword:socialtjänsten", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HCB387",
@@ -175,7 +206,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU18.html",
       "found_by": ["keyword:socialtjänsten", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB0368",
@@ -186,8 +218,13 @@
       "titel": "Barriärer mot brott – en socialpreventiv strategi mot kriminella nätverk och annan brottslighet",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0368.html",
-      "found_by": ["keyword:24-timmarsgaranti", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:24-timmarsgaranti",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HB01SoU6",
@@ -200,6 +237,58 @@
       "url": "https://data.riksdagen.se/dokument/HB01SoU6.html",
       "found_by": ["keyword:socialtjänstlagen", "committee:SoU"],
       "score": 2
+    },
+    {
+      "dok_id": "HCB430",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2025-01-01",
+      "titel": "En lag om insatser inom socialtjänsten till vårdnadshavare, barn och unga när samtycke saknas ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB430.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HAB372",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "72",
+      "datum": "2023-01-01",
+      "titel": "Tillgång till försäljningsuppgifter om humanläkemedel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HAB360",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "60",
+      "datum": "2022-12-07",
+      "titel": "Sveriges tillgång till vaccin mot covid-19 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

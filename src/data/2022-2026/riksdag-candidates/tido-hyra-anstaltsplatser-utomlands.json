@@ -12,7 +12,17 @@
     "keyword:Kriminalvården",
     "keyword:utvisning",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -63,9 +73,11 @@
         "keyword:anstaltsplatser utomlands",
         "keyword:Kriminalvården",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03185",
@@ -80,9 +92,11 @@
         "keyword:anstaltsplatser utomlands",
         "keyword:hyra fängelseplatser",
         "keyword:platsbrist",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01JuU29",
@@ -111,7 +125,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU28.html",
       "found_by": ["keyword:hyra fängelseplatser", "all-keywords", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.12
     },
     {
       "dok_id": "HDB41",
@@ -150,8 +165,14 @@
       "titel": "Kriminalvårdsfrågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU13.html",
-      "found_by": ["keyword:anstaltsplatser utomlands", "keyword:Kriminalvården", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:anstaltsplatser utomlands",
+        "keyword:Kriminalvården",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01JuU48",
@@ -175,7 +196,8 @@
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HD01CU25.html",
       "found_by": ["keyword:platsbrist", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD031d6",
@@ -186,8 +208,13 @@
       "titel": "Budgetpropositionen för 2026 - Utgiftsområde 4 Rättsväsendet",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d6.html",
-      "found_by": ["keyword:anstaltsplatser utomlands", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:anstaltsplatser utomlands",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC01JuU19",
@@ -199,7 +226,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU19.html",
       "found_by": ["keyword:hyra fängelseplatser", "keyword:Kriminalvården"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HB01JuU1",
@@ -224,6 +252,149 @@
       "url": "https://data.riksdagen.se/dokument/HEB1119.html",
       "found_by": ["keyword:Kriminalvården"],
       "score": 1
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HA031d5",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01JuU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU1",
+      "datum": "2025-11-28",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HD01KU11",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU11",
+      "datum": "2026-06-09",
+      "titel": "Justitieombudsmännens ämbetsberättelse",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB180",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "80",
+      "datum": "2025-08-28",
+      "titel": "En översyn av häkteslagen och fängelselagen i syfte att underlätta för Kriminalvårdens expansion",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB180.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB424",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "24",
+      "datum": "2025-10-15",
+      "titel": "Utdelningsbart överskott i inkomstpensionssystemet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB424.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB44",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "4",
+      "datum": "2025-02-10",
+      "titel": "En ny lag om unga lagöverträdare",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB44.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD01KU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU1",
+      "datum": "2025-11-28",
+      "titel": "Utgiftsområde 1 Rikets styrelse",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03209",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "209",
+      "datum": "2026-03-17",
+      "titel": "En snabbare utbyggnad av kriminalvårdsanstalter och häkten",
+      "organ": "Landsbygds- och infrastrukturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03209.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

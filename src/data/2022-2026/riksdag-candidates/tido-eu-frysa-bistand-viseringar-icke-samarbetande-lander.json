@@ -12,7 +12,17 @@
     "keyword:återtagande",
     "keyword:tredjeländer",
     "all-keywords",
-    "committee:UU"
+    "committee:UU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -54,7 +64,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0318.html",
       "found_by": ["keyword:återtagande", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HB01UU2",
@@ -90,7 +101,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU41.html",
       "found_by": ["keyword:tredjeländer"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HD01UU10",
@@ -102,7 +114,8 @@
       "organ": "UU",
       "url": "https://data.riksdagen.se/dokument/HD01UU10.html",
       "found_by": ["committee:UU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01FiU38",
@@ -114,7 +127,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU38.html",
       "found_by": ["keyword:EU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HD03261",
@@ -126,7 +140,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03261.html",
       "found_by": ["keyword:viseringar"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03248",
@@ -138,7 +153,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03248.html",
       "found_by": ["keyword:återtagande"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD03249",
@@ -174,7 +190,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03223.html",
       "found_by": ["keyword:återtagande"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03200",
@@ -198,7 +215,164 @@
       "organ": "UU",
       "url": "https://data.riksdagen.se/dokument/HD01UU14.html",
       "found_by": ["committee:UU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
+    },
+    {
+      "dok_id": "HC03115",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "115",
+      "datum": "2025-03-06",
+      "titel": "Verksamheten i Europeiska unionen under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA01UU2",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UU2",
+      "datum": "2022-12-15",
+      "titel": "Utgiftsområde 7 Internationellt bistånd",
+      "organ": "UU",
+      "url": "https://data.riksdagen.se/dokument/HA01UU2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d8",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 7 Internationellt bistånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031d9",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d9",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01SfU15",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SfU15",
+      "datum": "2023-04-12",
+      "titel": "Migrationsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031d9",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01KU20d3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU20",
+      "datum": "2026-01-01",
+      "titel": "Granskningsbetänkande - del 3",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU20d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0395",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "95",
+      "datum": "2024-03-19",
+      "titel": "Partnerskapsavtal mellan Europeiska unionen och dess medlemsstater och medlemmarna i organisationen för stater i Afrika, Karibien och Stillahavsområdet",
+      "organ": "Utrikesdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0395.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

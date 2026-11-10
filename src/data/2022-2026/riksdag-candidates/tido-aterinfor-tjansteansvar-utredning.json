@@ -12,7 +12,15 @@
     "keyword:tjänstemän",
     "keyword:straffansvar",
     "all-keywords",
-    "committee:KU"
+    "committee:KU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -30,9 +38,11 @@
         "keyword:myndighetsutövning",
         "keyword:tjänstemän",
         "keyword:straffansvar",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01JuU40",
@@ -43,8 +53,14 @@
       "titel": "Ett utökat straffrättsligt tjänstemannaansvar",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU40.html",
-      "found_by": ["keyword:tjänstemannaansvar", "keyword:tjänstefel", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:tjänstemannaansvar",
+        "keyword:tjänstefel",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01KU11",
@@ -55,8 +71,14 @@
       "titel": "Justitieombudsmännens ämbetsberättelse",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU11.html",
-      "found_by": ["keyword:tjänstemän", "all-keywords", "committee:KU"],
-      "score": 3
+      "found_by": [
+        "keyword:tjänstemän",
+        "all-keywords",
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD0375",
@@ -139,8 +161,13 @@
       "titel": "Offentlig förvaltning",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU29.html",
-      "found_by": ["keyword:tjänstemannaansvar", "committee:KU"],
-      "score": 2
+      "found_by": [
+        "keyword:tjänstemannaansvar",
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB313",
@@ -175,8 +202,13 @@
       "titel": "Offentlig förvaltning",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HC01KU23.html",
-      "found_by": ["keyword:tjänstemannaansvar", "committee:KU"],
-      "score": 2
+      "found_by": [
+        "keyword:tjänstemannaansvar",
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HCB114",
@@ -201,6 +233,201 @@
       "url": "https://data.riksdagen.se/dokument/HD03313.html",
       "found_by": ["keyword:tjänstemän"],
       "score": 1
+    },
+    {
+      "dok_id": "HDB394",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "94",
+      "datum": "2026-01-01",
+      "titel": "En säkrare utrikesförvaltning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01JuU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU20",
+      "datum": "2024-04-17",
+      "titel": "Straffrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB356",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "56",
+      "datum": "2025-05-14",
+      "titel": "Stärkt skydd för domstolarnas och domarnas oberoende",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB356.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01JuU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU1",
+      "datum": "2025-11-28",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HD031d6",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB393d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "93",
+      "datum": "2025-08-28",
+      "titel": "En robust skogspolitik för aktivt skogsbruk, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB393d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3110",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "110",
+      "datum": "2025-11-10",
+      "titel": "Snabbare bredband i hela landet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

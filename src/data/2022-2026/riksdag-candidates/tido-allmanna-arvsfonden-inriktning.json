@@ -12,7 +12,13 @@
     "keyword:resultatredovisning",
     "keyword:demokratiska värderingar",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -59,7 +65,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU8.html",
       "found_by": ["keyword:allmänna arvsfonden", "keyword:arvsfonden", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.4
     },
     {
       "dok_id": "HB01SoU4",
@@ -94,8 +101,13 @@
       "titel": "Ett nytt regelverk för granskning av utländsk finansiering av trossamfund och andra verksamheter, del 1",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB342.html",
-      "found_by": ["keyword:demokratiska värderingar", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:demokratiska värderingar",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HEB334",
@@ -119,7 +131,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU1.html",
       "found_by": ["keyword:resultatredovisning", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD01SoU9",
@@ -131,7 +144,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU9.html",
       "found_by": ["keyword:arvsfonden", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD01SoU4",
@@ -143,7 +157,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU4.html",
       "found_by": ["keyword:arvsfonden", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HC01SoU6",
@@ -178,8 +193,13 @@
       "titel": "Redovisning av fördelning av medel från Allmänna arvsfonden under budgetåret 2023",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03162.html",
-      "found_by": ["keyword:allmänna arvsfonden", "keyword:arvsfonden"],
-      "score": 2
+      "found_by": [
+        "keyword:allmänna arvsfonden",
+        "keyword:arvsfonden",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HB03119",
@@ -204,6 +224,58 @@
       "url": "https://data.riksdagen.se/dokument/HA01SoU2.html",
       "found_by": ["keyword:arvsfonden", "committee:SoU"],
       "score": 2
+    },
+    {
+      "dok_id": "HEB112",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "12",
+      "datum": "2026-02-26",
+      "titel": "En reform av Allmänna arvsfonden för stärkt legitimitet och struktur",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01KrU7",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KrU7",
+      "datum": "2024-06-13",
+      "titel": "Statens stöd till trossamfund och civilsamhället",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HB01KrU7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

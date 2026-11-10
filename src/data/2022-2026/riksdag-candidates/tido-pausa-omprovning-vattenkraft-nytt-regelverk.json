@@ -12,7 +12,15 @@
     "keyword:nationell prövningsplan",
     "keyword:vattenverksamhet",
     "all-keywords",
-    "committee:MJU"
+    "committee:MJU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -36,8 +44,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HC0375.html",
-      "found_by": ["keyword:vattenkraft", "keyword:miljötillstånd", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:vattenkraft",
+        "keyword:miljötillstånd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.92
     },
     {
       "dok_id": "HD01CU41",
@@ -72,8 +86,13 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HB0375.html",
-      "found_by": ["keyword:miljötillstånd", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:miljötillstånd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01CU13",
@@ -84,8 +103,13 @@
       "titel": "Hushållningen med mark- och vattenområden",
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HA01CU13.html",
-      "found_by": ["keyword:vattenverksamhet", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:vattenverksamhet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01JuU37",
@@ -97,7 +121,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU37.html",
       "found_by": ["keyword:omprövning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03242",
@@ -109,7 +134,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03242.html",
       "found_by": ["keyword:vattenverksamhet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03240",
@@ -121,7 +147,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03240.html",
       "found_by": ["keyword:omprövning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03238",
@@ -145,7 +172,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03185.html",
       "found_by": ["keyword:omprövning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03170",
@@ -169,7 +197,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03171.html",
       "found_by": ["keyword:miljötillstånd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03153",
@@ -181,7 +210,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03153.html",
       "found_by": ["keyword:vattenkraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01CU20",
@@ -194,6 +224,162 @@
       "url": "https://data.riksdagen.se/dokument/HD01CU20.html",
       "found_by": ["keyword:vattenverksamhet"],
       "score": 1
+    },
+    {
+      "dok_id": "HB03105",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "105",
+      "datum": "2024-03-19",
+      "titel": "Energipolitikens långsiktiga inriktning",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03105.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01NU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU13",
+      "datum": "2026-02-26",
+      "titel": "Energipolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d22",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HAB372",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "72",
+      "datum": "2023-01-01",
+      "titel": "Tillgång till försäljningsuppgifter om humanläkemedel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA01MJU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU17",
+      "datum": "2023-05-02",
+      "titel": "Naturvård och biologisk mångfald",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC031d21",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB398d2",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "98",
+      "datum": "2025-01-01",
+      "titel": "En ny samordnad miljöbedömnings- och tillståndsprövningsprocess, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB398d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01CU15",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "CU15",
+      "datum": "2025-04-24",
+      "titel": "Hushållningen med mark- och vattenområden",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HC01CU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01MJU21",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU21",
+      "datum": "2025-06-10",
+      "titel": "Nämdöskärgårdens nationalpark och naturvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC031d22",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01NU3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU3",
+      "datum": "2024-12-09",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

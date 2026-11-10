@@ -12,7 +12,15 @@
     "keyword:nedläggning",
     "keyword:kärnkraftverk",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -72,8 +80,13 @@
       "titel": "Energipolitik",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
-      "found_by": ["keyword:kärnkraftverk", "committee:NU"],
-      "score": 2
+      "found_by": [
+        "keyword:kärnkraftverk",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HC01NU20",
@@ -97,7 +110,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03150.html",
       "found_by": ["keyword:kärnkraft", "keyword:kärnkraftverk"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HB0319",
@@ -109,7 +123,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0319.html",
       "found_by": ["keyword:kärnkraft", "keyword:kärnkraftverk"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.04
     },
     {
       "dok_id": "HEB360",
@@ -133,7 +148,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03292.html",
       "found_by": ["keyword:nedläggning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HEB159",
@@ -157,7 +173,8 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HD01TU20.html",
       "found_by": ["keyword:nedläggning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01FöU19",
@@ -193,7 +210,73 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU20.html",
       "found_by": ["all-keywords"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
+    },
+    {
+      "dok_id": "HEB358d3",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "58",
+      "datum": "2026-09-30",
+      "titel": "Markerna berättar och minns",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB358d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB354",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "54",
+      "datum": "2026-08-17",
+      "titel": "Stärkt egendomsskydd i regeringsformen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB354.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB189",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "89",
+      "datum": "2025-10-02",
+      "titel": "Ersättning vid avveckling av kärnkraftsreaktorer till följd av politiska beslut",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB189.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC031d22",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01NU3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU3",
+      "datum": "2024-12-09",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

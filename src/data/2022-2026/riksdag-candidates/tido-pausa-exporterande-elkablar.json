@@ -12,7 +12,15 @@
     "keyword:prisområden",
     "keyword:utlandsförbindelser",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -30,9 +38,11 @@
         "keyword:prisområden",
         "keyword:utlandsförbindelser",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01NU13",
@@ -50,7 +60,8 @@
         "all-keywords",
         "committee:NU"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.25
     },
     {
       "dok_id": "HA01NU9",
@@ -66,9 +77,11 @@
         "keyword:elexport",
         "keyword:prisområden",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC01NU19",
@@ -95,9 +108,11 @@
         "keyword:Hansa Powerbridge",
         "keyword:prisområden",
         "keyword:utlandsförbindelser",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01NU3",
@@ -109,7 +124,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
       "found_by": ["keyword:prisområden", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.08
     },
     {
       "dok_id": "HDB347",
@@ -121,7 +137,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB347.html",
       "found_by": ["keyword:Hansa Powerbridge", "keyword:utlandsförbindelser", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC01NU12",
@@ -132,8 +149,14 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU12.html",
-      "found_by": ["keyword:elkablar", "keyword:prisområden", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:elkablar",
+        "keyword:prisområden",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01NU3",
@@ -168,8 +191,13 @@
       "titel": "Utgiftsområde 21 Energi",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
-      "found_by": ["keyword:prisområden", "committee:NU"],
-      "score": 2
+      "found_by": [
+        "keyword:prisområden",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA01NU17",
@@ -193,7 +221,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB318d2.html",
       "found_by": ["keyword:elexport", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HA031d22",
@@ -217,7 +246,21 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03240.html",
       "found_by": ["keyword:utlandsförbindelser"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
+    },
+    {
+      "dok_id": "HC031d22",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

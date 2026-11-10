@@ -12,7 +12,16 @@
     "keyword:gemensamma jordbrukspolitiken",
     "keyword:konkurrenskraft",
     "all-keywords",
-    "committee:MJU"
+    "committee:MJU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -46,9 +55,11 @@
         "keyword:djurvälfärd",
         "keyword:djurhållningskrav",
         "all-keywords",
-        "committee:MJU"
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01MJU10",
@@ -80,9 +91,11 @@
         "keyword:djurvälfärd",
         "keyword:djurhållningskrav",
         "all-keywords",
-        "committee:MJU"
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01MJU9",
@@ -97,9 +110,11 @@
         "keyword:djurvälfärd",
         "keyword:djurhållningskrav",
         "all-keywords",
-        "committee:MJU"
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03113",
@@ -126,8 +141,14 @@
       "titel": "En utvidgad insamling och utlämning av djurhälsodata samt jordbrukspolitik",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HC01MJU20.html",
-      "found_by": ["keyword:gemensamma jordbrukspolitiken", "all-keywords", "committee:MJU"],
-      "score": 3
+      "found_by": [
+        "keyword:gemensamma jordbrukspolitiken",
+        "all-keywords",
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HA01MJU18",
@@ -138,8 +159,14 @@
       "titel": "Livsmedelspolitik",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HA01MJU18.html",
-      "found_by": ["keyword:djurhållningskrav", "all-keywords", "committee:MJU"],
-      "score": 3
+      "found_by": [
+        "keyword:djurhållningskrav",
+        "all-keywords",
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HEB127",
@@ -186,8 +213,13 @@
       "titel": "Jakt och viltvård",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HC01MJU7.html",
-      "found_by": ["keyword:djurhållningskrav", "committee:MJU"],
-      "score": 2
+      "found_by": [
+        "keyword:djurhållningskrav",
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01MJU2",
@@ -224,6 +256,175 @@
       "url": "https://data.riksdagen.se/dokument/HEB1112.html",
       "found_by": ["keyword:konkurrenskraft"],
       "score": 1
+    },
+    {
+      "dok_id": "HCB364",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "64",
+      "datum": "2024-09-19",
+      "titel": "Motståndskraft i samhällsviktiga tjänster",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB364.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC031d24",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d24.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB119",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "19",
+      "datum": "2023-02-09",
+      "titel": "Stärkt konkurrenskraft för livsmedelsproducenter och ett starkt djurskydd ",
+      "organ": "Landsbygds- och infrastrukturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB119.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB378",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "78",
+      "datum": "2025-01-01",
+      "titel": "Ett språkkrav för språkutveckling ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB378.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01MJU2",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU2",
+      "datum": "2025-12-04",
+      "titel": "Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB364",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "64",
+      "datum": "2025-06-05",
+      "titel": "En ny kontrollorganisation i livsmedelskedjan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB364.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB160",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "60",
+      "datum": "2024-06-20",
+      "titel": "Tilläggsdirektiv till Utredningen om stärkt konkurrenskraft för livsmedelsproducenter och ett starkt djurskydd (LI 2023:01)",
+      "organ": "LI-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB160.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB371",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "71",
+      "datum": "2024-11-04",
+      "titel": "Reglering av hushållens skulder ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB371.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

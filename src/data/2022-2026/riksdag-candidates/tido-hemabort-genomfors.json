@@ -11,7 +11,14 @@
     "keyword:medicinsk abort",
     "keyword:kvinnors hälsa",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -46,9 +53,11 @@
         "keyword:medicinsk abort",
         "keyword:kvinnors hälsa",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03271",
@@ -59,8 +68,15 @@
       "titel": "En förändrad abortlag",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03271.html",
-      "found_by": ["keyword:hemabort", "keyword:abort", "keyword:medicinsk abort", "all-keywords"],
-      "score": 4
+      "found_by": [
+        "keyword:hemabort",
+        "keyword:abort",
+        "keyword:medicinsk abort",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC01SoU17",
@@ -72,7 +88,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU17.html",
       "found_by": ["keyword:hemabort", "keyword:kvinnors hälsa", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HC0375",
@@ -83,8 +100,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HC0375.html",
-      "found_by": ["keyword:abort", "keyword:medicinsk abort", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:abort",
+        "keyword:medicinsk abort",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB310",
@@ -95,8 +118,14 @@
       "titel": "En förändrad abortlag",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB310.html",
-      "found_by": ["keyword:hemabort", "keyword:medicinsk abort", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:hemabort",
+        "keyword:medicinsk abort",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01SoU16",
@@ -119,8 +148,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HB0375.html",
-      "found_by": ["keyword:abort", "keyword:medicinsk abort", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:abort",
+        "keyword:medicinsk abort",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HBB189",
@@ -131,8 +166,14 @@
       "titel": "Förändringar i abortlagstiftningen",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HBB189.html",
-      "found_by": ["keyword:hemabort", "keyword:medicinsk abort", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:hemabort",
+        "keyword:medicinsk abort",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.92
     },
     {
       "dok_id": "HD0375",
@@ -168,7 +209,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
       "found_by": ["keyword:kvinnors hälsa", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.08
     },
     {
       "dok_id": "HC01KU25",
@@ -203,8 +245,104 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HA0375.html",
-      "found_by": ["keyword:medicinsk abort", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:medicinsk abort",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3123",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "123",
+      "datum": "2026-01-01",
+      "titel": "Skärpta villkor för friskolesektorn - ytterligare förslag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3123.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB384",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "84",
+      "datum": "2025-06-27",
+      "titel": "Hem för barn och unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB384.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB339",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "39",
+      "datum": "2025-04-09",
+      "titel": "Digital teknik på lika villkor ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB339.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

@@ -12,7 +12,16 @@
     "keyword:statlig finansiering",
     "keyword:skolfinansiering",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -54,8 +63,15 @@
       "titel": "Övergripande skolfrågor",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU9.html",
-      "found_by": ["keyword:skolpeng", "keyword:likvärdig skola", "all-keywords", "committee:UbU"],
-      "score": 4
+      "found_by": [
+        "keyword:skolpeng",
+        "keyword:likvärdig skola",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.75
     },
     {
       "dok_id": "HA01UbU12",
@@ -66,8 +82,15 @@
       "titel": "Riksrevisionens rapport Skolpengen – effektivitet och konsekvenser",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU12.html",
-      "found_by": ["keyword:skolpeng", "keyword:skolfinansiering", "all-keywords", "committee:UbU"],
-      "score": 4
+      "found_by": [
+        "keyword:skolpeng",
+        "keyword:skolfinansiering",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HAB353d2",
@@ -143,8 +166,13 @@
       "titel": "Skärpta villkor för friskolesektorn - ytterligare förslag",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB3123.html",
-      "found_by": ["keyword:skolpeng", "keyword:likvärdig skola"],
-      "score": 2
+      "found_by": [
+        "keyword:skolpeng",
+        "keyword:likvärdig skola",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HEB360",
@@ -180,7 +208,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03292.html",
       "found_by": ["keyword:skolpeng"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03161",
@@ -192,7 +221,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03161.html",
       "found_by": ["keyword:skolpeng"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03103",
@@ -205,6 +235,240 @@
       "url": "https://data.riksdagen.se/dokument/HD03103.html",
       "found_by": ["keyword:skolpengsnorm"],
       "score": 1
+    },
+    {
+      "dok_id": "HDB394",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "94",
+      "datum": "2026-01-01",
+      "titel": "En säkrare utrikesförvaltning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB123",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "23",
+      "datum": "2025-03-06",
+      "titel": "Tilläggsdirektiv till Utredningen om en nationell skolpengsnorm för ökad likvärdighet (U 2023:05)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB123.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HDB389d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "89",
+      "datum": "2025-08-29",
+      "titel": "En moderniserad fiskelagstiftning, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB389d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB350",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "50",
+      "datum": "2024-07-05",
+      "titel": "Nätt och jämnt",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB350.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB393d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "93",
+      "datum": "2025-08-28",
+      "titel": "En robust skogspolitik för aktivt skogsbruk, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB393d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB329",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "29",
+      "datum": "2024-04-29",
+      "titel": "Goda möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB329.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB3121",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "121",
+      "datum": "2026-01-01",
+      "titel": "Bodelning och betänketid - en effektivare process",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3121.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3110",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "110",
+      "datum": "2025-11-10",
+      "titel": "Snabbare bredband i hela landet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HDB384",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "84",
+      "datum": "2025-06-27",
+      "titel": "Hem för barn och unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB384.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3105",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "105",
+      "datum": "2025-10-01",
+      "titel": "Om överföring av Första AP-fondens verksamhet och tillgångar till Tredje och Fjärde AP-fonderna",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3105.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

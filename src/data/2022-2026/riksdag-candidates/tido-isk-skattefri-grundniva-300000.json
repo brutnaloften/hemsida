@@ -12,7 +12,14 @@
     "keyword:skattefri grundnivå",
     "keyword:sparande",
     "all-keywords",
-    "committee:SkU"
+    "committee:SkU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -58,8 +65,14 @@
       "titel": "2026 års ekonomiska vårproposition",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03100.html",
-      "found_by": ["keyword:investeringssparkonto", "keyword:skattefri grundnivå", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:investeringssparkonto",
+        "keyword:skattefri grundnivå",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01SkU15",
@@ -70,8 +83,14 @@
       "titel": "Företag, kapital och fastighet",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HD01SkU15.html",
-      "found_by": ["keyword:skattefri grundnivå", "all-keywords", "committee:SkU"],
-      "score": 3
+      "found_by": [
+        "keyword:skattefri grundnivå",
+        "all-keywords",
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC01SkU13",
@@ -82,8 +101,14 @@
       "titel": "Företag, kapital och fastighet",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HC01SkU13.html",
-      "found_by": ["keyword:skattefri grundnivå", "all-keywords", "committee:SkU"],
-      "score": 3
+      "found_by": [
+        "keyword:skattefri grundnivå",
+        "all-keywords",
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC031",
@@ -146,8 +171,9 @@
       "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB3117.html",
-      "found_by": ["keyword:ISK", "all-keywords"],
-      "score": 2
+      "found_by": ["keyword:ISK", "all-keywords", "score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD0369",
@@ -194,8 +220,9 @@
       "titel": "Goda möjligheter till ökat välstånd",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB329.html",
-      "found_by": ["keyword:ISK", "all-keywords"],
-      "score": 2
+      "found_by": ["keyword:ISK", "all-keywords", "score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA01SkU12",
@@ -207,7 +234,112 @@
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HA01SkU12.html",
       "found_by": ["keyword:investeringssparkonto", "committee:SkU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
+    },
+    {
+      "dok_id": "HC01SkU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU9",
+      "datum": "2025-03-20",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HC03100",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "100",
+      "datum": "2025-04-15",
+      "titel": "2025 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC01FiU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU20",
+      "datum": "2025-06-12",
+      "titel": "Riktlinjer för den ekonomiska politiken och budgetpolitiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01SkU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU11",
+      "datum": "2024-05-23",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01FiU20",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU20",
+      "datum": "2026-06-04",
+      "titel": "Riktlinjer för den ekonomiska politiken och budgetpolitiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01FiU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU20",
+      "datum": "2024-06-13",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01SkU22",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU22",
+      "datum": "2025-06-10",
+      "titel": "Redovisning av skatteutgifter 2025",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HCB371",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "71",
+      "datum": "2024-11-04",
+      "titel": "Reglering av hushållens skulder ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB371.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

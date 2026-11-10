@@ -11,7 +11,16 @@
     "keyword:systemhotande brott",
     "keyword:oriktiga uppgifter",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -60,9 +69,11 @@
       "found_by": [
         "keyword:återkallelse av medborgarskap",
         "keyword:dubbla medborgarskap",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB151",
@@ -108,9 +119,11 @@
       "found_by": [
         "keyword:återkallelse av medborgarskap",
         "keyword:dubbla medborgarskap",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.7
     },
     {
       "dok_id": "HB01KU13",
@@ -124,9 +137,11 @@
       "found_by": [
         "keyword:återkallelse av medborgarskap",
         "keyword:dubbla medborgarskap",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01KU25",
@@ -149,8 +164,13 @@
       "titel": "Några frågor om grundläggande fri- och rättigheter",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HBB183.html",
-      "found_by": ["keyword:dubbla medborgarskap", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:dubbla medborgarskap",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01KU26",
@@ -174,7 +194,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
       "found_by": ["committee:SfU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01SfU36",
@@ -222,7 +243,164 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03210.html",
       "found_by": ["keyword:oriktiga uppgifter"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
+    },
+    {
+      "dok_id": "HD03291",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "291",
+      "datum": "2026-07-03",
+      "titel": "Uppföljning av den nationella strategin mot våldsbejakande extremism och terrorism",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03291.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB358d3",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "58",
+      "datum": "2026-09-30",
+      "titel": "Markerna berättar och minns",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB358d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HC01KU20d3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU20",
+      "datum": "2025-01-01",
+      "titel": "Granskningsbetänkande - del 3",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU20d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB346",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "46",
+      "datum": "2026-07-02",
+      "titel": "Ett sammanhållet, robust och konkurrenskraftigt Sverige - framtidens politik för utveckling i landsbygder och regioner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB346.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB0356",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "56",
+      "datum": "2024-01-08",
+      "titel": "Nationell strategi mot våldsbejakande extremism och terrorism – förebygga, förhindra, skydda och hantera",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0356.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HEB341d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "41",
+      "datum": "2026-06-17",
+      "titel": "Jämställdhet i en föränderlig tid - nuläge och vägar framåt, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB341d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HD03175",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "175",
+      "datum": "2026-03-12",
+      "titel": "Skärpta krav för svenskt medborgarskap",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03175.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3114",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "114",
+      "datum": "2025-12-03",
+      "titel": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3114.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03272",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "272",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den brottsförebyggande strategin Barriärer mot brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03272.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB399",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "99",
+      "datum": "2025-09-26",
+      "titel": "Ändring av permanent uppehållstillstånd för vissa utlänningar",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

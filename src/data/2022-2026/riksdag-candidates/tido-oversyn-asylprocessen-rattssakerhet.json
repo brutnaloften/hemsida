@@ -12,7 +12,15 @@
     "keyword:tolkar",
     "keyword:tillsynsfunktion",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -48,8 +56,14 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU15.html",
-      "found_by": ["keyword:asylprocessen", "all-keywords", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:asylprocessen",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01SfU12",
@@ -60,8 +74,14 @@
       "titel": "Riksrevisionens rapport om offentliga biträden i migrationsärenden",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU12.html",
-      "found_by": ["keyword:asylprocessen", "keyword:rättssäkerhet", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:asylprocessen",
+        "keyword:rättssäkerhet",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.75
     },
     {
       "dok_id": "HD01SfU16",
@@ -84,8 +104,13 @@
       "titel": "Skärpta krav för offentliga biträden och höjda kompetenskrav för tolkar i migrationsärenden",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU6.html",
-      "found_by": ["keyword:rättssäkerhet", "keyword:tolkar"],
-      "score": 2
+      "found_by": [
+        "keyword:rättssäkerhet",
+        "keyword:tolkar",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC03195",
@@ -96,8 +121,13 @@
       "titel": "Skärpta krav för offentliga biträden och höjda kompetenskrav för tolkar i migrationsärenden",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03195.html",
-      "found_by": ["keyword:offentliga biträden", "keyword:tolkar"],
-      "score": 2
+      "found_by": [
+        "keyword:offentliga biträden",
+        "keyword:tolkar",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01SfU18",
@@ -121,7 +151,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB340.html",
       "found_by": ["keyword:offentliga biträden", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HA0324",
@@ -132,8 +163,13 @@
       "titel": "Riksrevisionens rapport om offentliga biträden i migrationsärenden",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HA0324.html",
-      "found_by": ["keyword:offentliga biträden", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:offentliga biträden",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB1100",
@@ -157,7 +193,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:offentliga biträden"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03295",
@@ -169,7 +206,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03295.html",
       "found_by": ["keyword:offentliga biträden"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD03288",
@@ -194,6 +232,110 @@
       "url": "https://data.riksdagen.se/dokument/HD03284.html",
       "found_by": ["keyword:tolkar"],
       "score": 1
+    },
+    {
+      "dok_id": "HBB414",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "14",
+      "datum": "2023-06-12",
+      "titel": "En översyn av vissa frågor om offentliga biträden",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB414.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB1137",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "137",
+      "datum": "2023-10-02",
+      "titel": "Anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1137.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01SfU4",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SfU4",
+      "datum": "2024-12-03",
+      "titel": "Utgiftsområde 8 Migration",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01KU11",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU11",
+      "datum": "2026-06-09",
+      "titel": "Justitieombudsmännens ämbetsberättelse",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC031d9",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB1115",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "115",
+      "datum": "2024-11-21",
+      "titel": "Tilläggsdirektiv till Utredningen om anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten (Ju 2023:18)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB1115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01SfU30",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU30",
+      "datum": "2026-06-04",
+      "titel": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU30.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

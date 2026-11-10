@@ -12,7 +12,15 @@
     "keyword:laborationsutrustning",
     "keyword:likvärdighet",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +37,11 @@
         "keyword:skolbibliotek",
         "keyword:läromedel",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD03292",
@@ -48,7 +58,8 @@
         "keyword:laborationsutrustning",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.15
     },
     {
       "dok_id": "HC03143",
@@ -63,9 +74,11 @@
         "keyword:garanterad undervisningstid",
         "keyword:skolbibliotek",
         "keyword:läromedel",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01UbU6",
@@ -122,8 +135,13 @@
       "titel": "Grundläggande om utbildning",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU8.html",
-      "found_by": ["keyword:läromedel", "committee:UbU"],
-      "score": 2
+      "found_by": [
+        "keyword:läromedel",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HDB326",
@@ -135,7 +153,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB326.html",
       "found_by": ["keyword:garanterad undervisningstid", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HDB319",
@@ -146,8 +165,13 @@
       "titel": "Kunskap för alla ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB319.html",
-      "found_by": ["keyword:garanterad undervisningstid", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:garanterad undervisningstid",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HB01UbU10",
@@ -207,7 +231,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU26.html",
       "found_by": ["keyword:likvärdighet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03158",
@@ -220,6 +245,123 @@
       "url": "https://data.riksdagen.se/dokument/HD03158.html",
       "found_by": ["keyword:skolbibliotek"],
       "score": 1
+    },
+    {
+      "dok_id": "HD031d18",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01UbU3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU3",
+      "datum": "2024-11-15",
+      "titel": "Stärkta skolbibliotek",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01UbU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU17",
+      "datum": "2025-06-09",
+      "titel": "En tioårig grundskola",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03194",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "194",
+      "datum": "2026-03-17",
+      "titel": "Nya läroplaner – för en stark kunskapsskola",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03194.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01KrU8",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KrU8",
+      "datum": "2023-05-08",
+      "titel": "Kultur för alla",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HA01KrU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB384",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "84",
+      "datum": "2025-06-27",
+      "titel": "Hem för barn och unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB384.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

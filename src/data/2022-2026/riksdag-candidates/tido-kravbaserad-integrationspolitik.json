@@ -12,7 +12,14 @@
     "keyword:skyldigheter",
     "keyword:etablering",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +35,11 @@
         "keyword:integrationspolitik",
         "keyword:kravbaserad",
         "keyword:integration",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC01AU5",
@@ -53,8 +62,13 @@
       "titel": "Integration",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU8.html",
-      "found_by": ["keyword:integrationspolitik", "keyword:integration"],
-      "score": 2
+      "found_by": [
+        "keyword:integrationspolitik",
+        "keyword:integration",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HDB355",
@@ -65,8 +79,13 @@
       "titel": "En reformerad samhällsorientering för bättre integration",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB355.html",
-      "found_by": ["keyword:kravbaserad", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kravbaserad",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC01AU1",
@@ -101,8 +120,13 @@
       "titel": "Mål och mening med integration",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB312.html",
-      "found_by": ["keyword:kravbaserad", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kravbaserad",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB031",
@@ -113,8 +137,13 @@
       "titel": "Budgetpropositionen för 2024",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB031.html",
-      "found_by": ["keyword:integrationspolitik", "keyword:kravbaserad"],
-      "score": 2
+      "found_by": [
+        "keyword:integrationspolitik",
+        "keyword:kravbaserad",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HBB1101",
@@ -186,7 +215,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
       "found_by": ["committee:SfU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03300",
@@ -199,6 +229,279 @@
       "url": "https://data.riksdagen.se/dokument/HD03300.html",
       "found_by": ["keyword:skyldigheter"],
       "score": 1
+    },
+    {
+      "dok_id": "HC01AU6",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU6",
+      "datum": "2025-03-03",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03100",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "100",
+      "datum": "2025-04-15",
+      "titel": "2025 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB0368",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "68",
+      "datum": "2024-03-14",
+      "titel": "Barriärer mot brott – en socialpreventiv strategi mot kriminella nätverk och annan brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HBB1169",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "169",
+      "datum": "2023-12-14",
+      "titel": "En förbättrad samhällsorientering för nyanlända",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1169.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.98
+    },
+    {
+      "dok_id": "HC01FiU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU20",
+      "datum": "2025-06-12",
+      "titel": "Riktlinjer för den ekonomiska politiken och budgetpolitiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB393d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "93",
+      "datum": "2025-08-28",
+      "titel": "En robust skogspolitik för aktivt skogsbruk, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB393d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB328",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "28",
+      "datum": "2025-03-10",
+      "titel": "Frihet från våld, förtryck och utnyttjande",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB328.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03175",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "175",
+      "datum": "2026-03-12",
+      "titel": "Skärpta krav för svenskt medborgarskap",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03175.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3110",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "110",
+      "datum": "2025-11-10",
+      "titel": "Snabbare bredband i hela landet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB031d17",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB399",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "99",
+      "datum": "2025-09-26",
+      "titel": "Ändring av permanent uppehållstillstånd för vissa utlänningar",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01AU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU14",
+      "datum": "2026-06-04",
+      "titel": "Tidsbegränsat boende för vissa nyanlända invandrare – en ny lag om bosättning",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB31",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "1",
+      "datum": "2025-01-14",
+      "titel": "Skärpta krav för svenskt medborgarskap",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB31.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HEB323",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "23",
+      "datum": "2026-03-31",
+      "titel": "Tolkavgift och förbud mot barntolkning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB323.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HCB352",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "52",
+      "datum": "2024-07-05",
+      "titel": "Allmänna sammankomster och Sveriges säkerhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB352.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB353",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "53",
+      "datum": "2025-04-30",
+      "titel": "Kvalificering till socialförsäkring och ekonomiskt bistånd för vissa grupper",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB353.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

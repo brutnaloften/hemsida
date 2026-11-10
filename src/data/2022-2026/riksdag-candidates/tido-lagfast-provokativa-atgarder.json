@@ -11,7 +11,13 @@
     "keyword:brottsbekämpning",
     "keyword:polisen",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -27,9 +33,11 @@
         "keyword:provokativa åtgärder",
         "keyword:sexualbrott på internet",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01JuU26",
@@ -69,7 +77,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU18.html",
       "found_by": ["keyword:brottsbekämpning", "keyword:polisen", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.03
     },
     {
       "dok_id": "HCB144",
@@ -83,9 +92,11 @@
       "found_by": [
         "keyword:provokativa åtgärder",
         "keyword:sexualbrott på internet",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HEB1102",
@@ -96,8 +107,13 @@
       "titel": "Barnfrid - förstärkta åtgärder mot sexuella kränkningar av barn och barnpornografibrott",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1102.html",
-      "found_by": ["keyword:provokativa åtgärder", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:provokativa åtgärder",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD03274",
@@ -132,8 +148,9 @@
       "titel": "Polisfrågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU16.html",
-      "found_by": ["keyword:polisen", "committee:JuU"],
-      "score": 2
+      "found_by": ["keyword:polisen", "committee:JuU", "score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03103",
@@ -180,8 +197,13 @@
       "titel": "En översyn av 23 kap. brottsbalken",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB355.html",
-      "found_by": ["keyword:provokativa åtgärder", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:provokativa åtgärder",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HA01JuU11",
@@ -205,7 +227,112 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HD01TU22.html",
       "found_by": ["keyword:polisen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01JuU15",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU15",
+      "datum": "2025-04-14",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3123",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "123",
+      "datum": "2026-01-01",
+      "titel": "Skärpta villkor för friskolesektorn - ytterligare förslag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3123.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3110",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "110",
+      "datum": "2025-11-10",
+      "titel": "Snabbare bredband i hela landet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3121",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "121",
+      "datum": "2026-01-01",
+      "titel": "Bodelning och betänketid - en effektivare process",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3121.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

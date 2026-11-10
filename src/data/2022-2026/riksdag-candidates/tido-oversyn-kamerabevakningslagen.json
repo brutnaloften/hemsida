@@ -12,7 +12,16 @@
     "keyword:tillstånd",
     "keyword:kommuner",
     "all-keywords",
-    "committee:KU"
+    "committee:KU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -36,8 +45,14 @@
       "titel": "Offentlighet, sekretess och integritet",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU26.html",
-      "found_by": ["keyword:kamerabevakningslagen", "all-keywords", "committee:KU"],
-      "score": 3
+      "found_by": [
+        "keyword:kamerabevakningslagen",
+        "all-keywords",
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD03150",
@@ -97,7 +112,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU16.html",
       "found_by": ["keyword:polisen", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC0327",
@@ -144,8 +160,13 @@
       "titel": "Utökade polisiära befogenheter i gränsnära områden",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU26.html",
-      "found_by": ["keyword:kamerabevakning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kamerabevakning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HA01JuU12",
@@ -156,8 +177,13 @@
       "titel": "Processrättsliga frågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU12.html",
-      "found_by": ["keyword:kamerabevakning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kamerabevakning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01SoU40",
@@ -194,6 +220,253 @@
       "url": "https://data.riksdagen.se/dokument/HD03288.html",
       "found_by": ["keyword:kommuner"],
       "score": 1
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB430",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2025-01-01",
+      "titel": "En lag om insatser inom socialtjänsten till vårdnadshavare, barn och unga när samtycke saknas ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB430.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.98
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03100",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "100",
+      "datum": "2025-04-15",
+      "titel": "2025 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB357",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "57",
+      "datum": "2025-05-19",
+      "titel": "Polisiär beredskap i fred, kris och krig",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB357.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA031d5",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB01JuU21",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU21",
+      "datum": "2024-04-09",
+      "titel": "Processrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB378",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "78",
+      "datum": "2025-01-01",
+      "titel": "Ett språkkrav för språkutveckling ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB378.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d6",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB1165",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "165",
+      "datum": "2023-12-07",
+      "titel": "Åtgärder för att minska läktarvåld och andra ordningsstörningar vid idrottsarrangemang",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1165.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB346",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "46",
+      "datum": "2025-04-29",
+      "titel": "Tryggare idrottsarrangemang",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB346.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB427",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "27",
+      "datum": "2024-10-30",
+      "titel": "Kompletterande bestämmelser till EU:s förordning om politisk reklam ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB427.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA03109",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "109",
+      "datum": "2023-04-25",
+      "titel": "Utökade polisiära befogenheter i gränsnära områden",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03109.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03272",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "272",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den brottsförebyggande strategin Barriärer mot brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03272.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB339",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "39",
+      "datum": "2025-04-09",
+      "titel": "Digital teknik på lika villkor ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB339.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB352",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "52",
+      "datum": "2024-07-05",
+      "titel": "Allmänna sammankomster och Sveriges säkerhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB352.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

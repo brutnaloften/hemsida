@@ -12,7 +12,17 @@
     "keyword:kriminella organisationer",
     "keyword:utvidgat förverkande",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +39,11 @@
         "keyword:omvänd bevisbörda",
         "keyword:kriminella organisationer",
         "keyword:utvidgat förverkande",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HEB310",
@@ -79,9 +91,11 @@
       "found_by": [
         "keyword:förverkande",
         "keyword:omvänd bevisbörda",
-        "keyword:utvidgat förverkande"
+        "keyword:utvidgat förverkande",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HBB399",
@@ -104,8 +118,14 @@
       "titel": "Processrättsliga frågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU12.html",
-      "found_by": ["keyword:SOU 2021:100", "all-keywords", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:SOU 2021:100",
+        "all-keywords",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01JuU12",
@@ -129,7 +149,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU28.html",
       "found_by": ["keyword:förverkande", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC01JuU3",
@@ -152,8 +173,9 @@
       "titel": "Straffrättsliga frågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU20.html",
-      "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:JuU", "score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HAB348",
@@ -213,7 +235,281 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03144.html",
       "found_by": ["keyword:förverkande"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.25
+    },
+    {
+      "dok_id": "HCB393",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "93",
+      "datum": "2024-12-20",
+      "titel": "Effektivare verktyg för att bekämpa brott av unga lagöverträdare ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB393.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB344",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "44",
+      "datum": "2024-06-14",
+      "titel": "Stärkt kontroll av fusk i livsmedelskedjan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB344.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HA031d5",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB346",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "46",
+      "datum": "2024-07-05",
+      "titel": "Ny lag om internationella sanktioner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB346.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01JuU8",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU8",
+      "datum": "2024-11-21",
+      "titel": "Kompletterande förslag med anledning av en ny förverkandelagstiftning",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03129",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "129",
+      "datum": "2025-03-18",
+      "titel": "Skärpta åtgärder mot utförsel av stöldgods",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03129.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC0331",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "31",
+      "datum": "2024-10-15",
+      "titel": "Kompletterande förslag med anledning av en ny förverkandelagstiftning",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0331.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB03132",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "132",
+      "datum": "2024-04-16",
+      "titel": "Ny tullbefogenhetslag",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03132.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC03104",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "104",
+      "datum": "2025-02-25",
+      "titel": "Internationell verkställighet i brottmål",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03104.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB03112",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "112",
+      "datum": "2024-03-21",
+      "titel": "Åtgärder för tryggare bostadsområden",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HDB3114",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "114",
+      "datum": "2025-12-03",
+      "titel": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3114.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01SkU19",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU19",
+      "datum": "2026-02-17",
+      "titel": "Kontroller av kontanta medel vid den inre gränsen",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU19.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB314",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "14",
+      "datum": "2025-02-26",
+      "titel": "En skärpt miljöstraffrätt och ett effektivt sanktionssystem",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB314.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB320",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "20",
+      "datum": "2026-03-05",
+      "titel": "Belägg för broms?",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB320.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB381",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "81",
+      "datum": "2025-06-18",
+      "titel": "En ny organisation av ekobrottsbekämpningen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB381.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB031d4",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 3 Skatt, tull och exekution",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

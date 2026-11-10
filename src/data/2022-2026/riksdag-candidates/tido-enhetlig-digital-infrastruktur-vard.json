@@ -12,7 +12,17 @@
     "keyword:vårdkedjan",
     "keyword:journalsystem",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -24,8 +34,15 @@
       "titel": "Kompetensförsörjning, e-hälsa och beredskap",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU22.html",
-      "found_by": ["keyword:e-hälsa", "keyword:journalsystem", "all-keywords", "committee:SoU"],
-      "score": 4
+      "found_by": [
+        "keyword:e-hälsa",
+        "keyword:journalsystem",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01SoU22",
@@ -65,8 +82,14 @@
       "titel": "En nationell digital infrastruktur i hälso- och sjukvården ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB36.html",
-      "found_by": ["keyword:digital infrastruktur", "keyword:journalsystem", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:digital infrastruktur",
+        "keyword:journalsystem",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB371",
@@ -101,8 +124,14 @@
       "titel": "Kompetensförsörjning, e-hälsa och beredskap",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU21.html",
-      "found_by": ["keyword:e-hälsa", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:e-hälsa",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03310",
@@ -114,7 +143,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03310.html",
       "found_by": ["keyword:hälsodata", "keyword:journalsystem"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD01SoU16",
@@ -125,8 +155,13 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
-      "found_by": ["keyword:vårdkedjan", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:vårdkedjan",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HDB348",
@@ -137,8 +172,13 @@
       "titel": "Stärkt pandemiberedskap",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB348.html",
-      "found_by": ["keyword:digital infrastruktur", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:digital infrastruktur",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC0375",
@@ -149,8 +189,13 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HC0375.html",
-      "found_by": ["keyword:hälsodata", "keyword:vårdkedjan"],
-      "score": 2
+      "found_by": [
+        "keyword:hälsodata",
+        "keyword:vårdkedjan",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC0377",
@@ -162,7 +207,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0377.html",
       "found_by": ["keyword:e-hälsa", "keyword:vårdkedjan"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HC0340",
@@ -197,8 +243,464 @@
       "titel": "Ett sammanhållet, robust och konkurrenskraftigt Sverige - framtidens politik för utveckling i landsbygder och regioner",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB346.html",
-      "found_by": ["keyword:digital infrastruktur"],
-      "score": 1
+      "found_by": ["keyword:digital infrastruktur", "score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA031d10",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01TU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "TU8",
+      "datum": "2026-02-05",
+      "titel": "Digitaliserings- och postfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HD01TU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB01SoU7",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU7",
+      "datum": "2024-04-25",
+      "titel": "Riksrevisionens rapport om det nationella smittskyddet",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB364",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "64",
+      "datum": "2024-09-19",
+      "titel": "Motståndskraft i samhällsviktiga tjänster",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB364.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB13",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "3",
+      "datum": "2026-01-08",
+      "titel": "Samordnare för att korta vårdköerna i hälso- och sjukvården",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01SoU12",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU12",
+      "datum": "2025-01-23",
+      "titel": "Folkhälsa",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB383",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "83",
+      "datum": "2023-12-07",
+      "titel": "Samordnat juridiskt stöd och vägledning för hälso- och sjukvårdens digitalisering ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB383.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HB031d10",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01SoU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU1",
+      "datum": "2023-12-06",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB396",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "96",
+      "datum": "2023-12-19",
+      "titel": "En reform för datadelning ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB389d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "89",
+      "datum": "2025-08-29",
+      "titel": "En moderniserad fiskelagstiftning, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB389d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB358d3",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "58",
+      "datum": "2026-09-30",
+      "titel": "Markerna berättar och minns",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB358d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.93
+    },
+    {
+      "dok_id": "HBB313",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "13",
+      "datum": "2023-03-31",
+      "titel": "Patientöversikter inom EES och Sverige ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB313.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB372",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "72",
+      "datum": "2024-11-07",
+      "titel": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB362",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "62",
+      "datum": "2025-06-03",
+      "titel": "Ansvaret för hälso- och sjukvården",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB362.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB347",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "47",
+      "datum": "2024-07-05",
+      "titel": "Digital myndighetspost",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB347.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB378",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "78",
+      "datum": "2025-01-01",
+      "titel": "Ett språkkrav för språkutveckling ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB378.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB01SoU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU14",
+      "datum": "2024-06-03",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB341d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "41",
+      "datum": "2026-06-17",
+      "titel": "Jämställdhet i en föränderlig tid - nuläge och vägar framåt, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB341d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB371d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "71",
+      "datum": "2025-06-17",
+      "titel": "Fortsatt utveckling av en nationell läkemedelslista, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB371d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB362d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "62",
+      "datum": "2025-06-03",
+      "titel": "Ansvaret för hälso- och sjukvården, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB362d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC01SoU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD0399",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "99",
+      "datum": "2026-04-13",
+      "titel": "Vårändringsbudget för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB320",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "20",
+      "datum": "2026-03-05",
+      "titel": "Belägg för broms?",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB320.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01SoU16",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU16",
+      "datum": "2025-06-04",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB371",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "71",
+      "datum": "2024-11-04",
+      "titel": "Reglering av hushållens skulder ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB371.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

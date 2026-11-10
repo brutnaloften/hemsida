@@ -12,7 +12,15 @@
     "keyword:barn",
     "keyword:missbruk",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -25,7 +33,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:närstående", "keyword:barn", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01SoU34",
@@ -48,8 +57,14 @@
       "titel": "En mer sammanhållen vård för personer med skadligt bruk eller beroende och andra psykiatriska tillstånd",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03251.html",
-      "found_by": ["keyword:närstående", "keyword:beroende", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:närstående",
+        "keyword:beroende",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01SoU25",
@@ -61,7 +76,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU25.html",
       "found_by": ["keyword:närstående", "all-keywords", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD0360",
@@ -97,7 +113,8 @@
       "organ": "Arbetsmarknadsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0369.html",
       "found_by": ["keyword:stödlinjer", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HB01CU20",
@@ -145,7 +162,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU38.html",
       "found_by": ["keyword:barn"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SoU39",
@@ -157,7 +175,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU39.html",
       "found_by": ["keyword:barn"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03284",
@@ -194,6 +213,123 @@
       "url": "https://data.riksdagen.se/dokument/HD01AU13.html",
       "found_by": ["keyword:stödlinjer"],
       "score": 1
+    },
+    {
+      "dok_id": "HA01SoU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU12",
+      "datum": "2023-04-24",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01SoU18",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU18",
+      "datum": "2025-01-28",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB0368",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "68",
+      "datum": "2024-03-14",
+      "titel": "Barriärer mot brott – en socialpreventiv strategi mot kriminella nätverk och annan brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB362",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "62",
+      "datum": "2023-11-08",
+      "titel": "Vi kan bättre! Kunskapsbaserad narkotikapolitik med liv och hälsa i fokus ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB362.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01SoU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU13",
+      "datum": "2026-01-23",
+      "titel": "Alkohol, narkotika, dopning, tobak och spel",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01SoU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU18",
+      "datum": "2026-03-26",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01SoU16",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU16",
+      "datum": "2025-06-04",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01KrU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KrU8",
+      "datum": "2026-03-19",
+      "titel": "Civila samhället, trossamfund och folkbildning",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HD01KrU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

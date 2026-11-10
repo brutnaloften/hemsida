@@ -12,7 +12,16 @@
     "keyword:Skatteverket",
     "keyword:folkbokföringsfusk",
     "all-keywords",
-    "committee:SkU"
+    "committee:SkU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -42,8 +51,15 @@
       "titel": "Skatteförfarande och folkbokföring",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HB01SkU15.html",
-      "found_by": ["keyword:folkräkning", "keyword:folkbokföring", "all-keywords", "committee:SkU"],
-      "score": 4
+      "found_by": [
+        "keyword:folkräkning",
+        "keyword:folkbokföring",
+        "all-keywords",
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01SkU1",
@@ -100,8 +116,14 @@
       "titel": "Utökade befogenheter för Skatteverket inom folkbokföringsverksamheten",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03261.html",
-      "found_by": ["keyword:samordningsnummer", "keyword:Skatteverket", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:samordningsnummer",
+        "keyword:Skatteverket",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01SkU1",
@@ -149,7 +171,8 @@
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HD01SkU14.html",
       "found_by": ["keyword:folkbokföring", "committee:SkU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD0388",
@@ -160,8 +183,13 @@
       "titel": "Framtidens dataskydd vid Skatteverket, Tullverket och Kronofogdemyndigheten",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0388.html",
-      "found_by": ["keyword:samordningsnummer", "keyword:Skatteverket"],
-      "score": 2
+      "found_by": [
+        "keyword:samordningsnummer",
+        "keyword:Skatteverket",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HBB1134",
@@ -172,8 +200,13 @@
       "titel": "Utökade befogenheter för Skatteverket inom brottsbekämpning och folkbokföring",
       "organ": "Fi-dep",
       "url": "https://data.riksdagen.se/dokument/HBB1134.html",
-      "found_by": ["keyword:folkbokföring", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:folkbokföring",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HA01SkU1",
@@ -197,7 +230,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03295.html",
       "found_by": ["keyword:samordningsnummer"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03250",
@@ -210,6 +244,201 @@
       "url": "https://data.riksdagen.se/dokument/HD03250.html",
       "found_by": ["keyword:samordningsnummer"],
       "score": 1
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC031d4",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 3 Skatt, tull och exekution",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB325",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "25",
+      "datum": "2025-03-03",
+      "titel": "Arbetslivskriminalitet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB325.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB3110",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "110",
+      "datum": "2025-11-10",
+      "titel": "Snabbare bredband i hela landet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA0341",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "41",
+      "datum": "2022-12-28",
+      "titel": "Bättre möjligheter för Skatteverket att göra dataanalyser och urval i folkbokföringsverksamheten",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0341.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB031d4",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 3 Skatt, tull och exekution",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB375",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "75",
+      "datum": "2025-06-17",
+      "titel": "Folkbokföringsverksamhet, biometri och brottsbekämpning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03136",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "136",
+      "datum": "2026-02-23",
+      "titel": "Kvalificering till socialförsäkringen",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03136.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

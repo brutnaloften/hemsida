@@ -11,7 +11,16 @@
     "keyword:kommunerna",
     "keyword:Arbetsförmedlingen",
     "all-keywords",
-    "committee:AU"
+    "committee:AU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -41,7 +50,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU14.html",
       "found_by": ["keyword:kommunerna", "all-keywords", "committee:AU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01AU6",
@@ -77,7 +87,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HC01AU3.html",
       "found_by": ["keyword:Arbetsförmedlingen", "all-keywords", "committee:AU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HEB188",
@@ -101,7 +112,8 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HD01TU20.html",
       "found_by": ["keyword:ansvarsfördelning", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01AU2",
@@ -113,7 +125,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU2.html",
       "found_by": ["keyword:Arbetsförmedlingen", "committee:AU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.08
     },
     {
       "dok_id": "HC01AU11",
@@ -125,7 +138,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HC01AU11.html",
       "found_by": ["keyword:kommunerna", "keyword:Arbetsförmedlingen"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HC01AU6",
@@ -136,8 +150,9 @@
       "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HC01AU6.html",
-      "found_by": ["all-keywords", "committee:AU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:AU", "score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01AU10",
@@ -149,7 +164,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HB01AU10.html",
       "found_by": ["keyword:Arbetsförmedlingen", "committee:AU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0
     },
     {
       "dok_id": "HCB48",
@@ -161,7 +177,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB48.html",
       "found_by": ["keyword:Arbetsförmedlingen", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HB01AU3",
@@ -172,8 +189,9 @@
       "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HB01AU3.html",
-      "found_by": ["all-keywords", "committee:AU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:AU", "score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03288",
@@ -197,7 +215,86 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
       "found_by": ["keyword:Arbetsförmedlingen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HD03201",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "201",
+      "datum": "2026-03-17",
+      "titel": "Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03201.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01AU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU9",
+      "datum": "2023-04-20",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01AU7",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "AU7",
+      "datum": "2024-05-08",
+      "titel": "Integration",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HB01AU7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB37",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "7",
+      "datum": "2023-02-07",
+      "titel": "På egna ben - Utvecklad samverkan för individers etablering på arbetsmarknaden",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB37.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB394",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "94",
+      "datum": "2023-12-14",
+      "titel": "Förändring genom försök - Försöksverksamhet i den kommunala sektorn ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

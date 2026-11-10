@@ -12,7 +12,16 @@
     "keyword:vårduppdrag",
     "keyword:huvudmannaskap",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -63,9 +72,11 @@
         "keyword:elevhälsogaranti",
         "keyword:vårduppdrag",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HCB130",
@@ -93,8 +104,14 @@
       "titel": "Förbättrat stöd i skolan ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB344.html",
-      "found_by": ["keyword:elevhälsogaranti", "keyword:vårduppdrag", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:elevhälsogaranti",
+        "keyword:vårduppdrag",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01UbU11",
@@ -105,8 +122,14 @@
       "titel": "Lärare och elever",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU11.html",
-      "found_by": ["keyword:elevhälsogaranti", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:elevhälsogaranti",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01UbU7",
@@ -142,7 +165,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03132.html",
       "found_by": ["keyword:vårduppdrag", "keyword:huvudmannaskap"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HDB162",
@@ -153,8 +177,13 @@
       "titel": "Tilläggsdirektiv till Utredningen om en förbättrad elevhälsa (U 2024:01)",
       "organ": "U-dep",
       "url": "https://data.riksdagen.se/dokument/HDB162.html",
-      "found_by": ["keyword:elevhälsa", "keyword:elevhälsogaranti"],
-      "score": 2
+      "found_by": [
+        "keyword:elevhälsa",
+        "keyword:elevhälsogaranti",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03311",
@@ -178,7 +207,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03292.html",
       "found_by": ["keyword:elevhälsa"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HEB338",
@@ -189,8 +219,9 @@
       "titel": "Behovsstyrd vård",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB338.html",
-      "found_by": ["all-keywords"],
-      "score": 1
+      "found_by": ["all-keywords", "score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD01TU15",
@@ -202,7 +233,8 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HD01TU15.html",
       "found_by": ["keyword:samverkansavtal"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03195",
@@ -215,6 +247,227 @@
       "url": "https://data.riksdagen.se/dokument/HD03195.html",
       "found_by": ["keyword:elevhälsa"],
       "score": 1
+    },
+    {
+      "dok_id": "HCB193",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "93",
+      "datum": "2024-09-26",
+      "titel": "Tilläggsdirektiv till Utredningen om en förbättrad (U 2024:01)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB193.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD031d18",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA01SoU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU12",
+      "datum": "2023-04-24",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC03143",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "143",
+      "datum": "2025-03-18",
+      "titel": "En tioårig grundskola",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03143.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01UbU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB317",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "17",
+      "datum": "2024-03-07",
+      "titel": "Skolor mot brott",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB317.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB34",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "4",
+      "datum": "2026-01-20",
+      "titel": "Rektor i fokus",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB34.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.98
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HDB3123",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "123",
+      "datum": "2026-01-01",
+      "titel": "Skärpta villkor för friskolesektorn - ytterligare förslag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3123.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3121",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "121",
+      "datum": "2026-01-01",
+      "titel": "Bodelning och betänketid - en effektivare process",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3121.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB384",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "84",
+      "datum": "2025-06-27",
+      "titel": "Hem för barn och unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB384.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB118",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "18",
+      "datum": "2025-02-27",
+      "titel": "Tilläggsdirektiv till Utredningen om en förbättrad elevhälsa (U 2024:01)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB118.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01SoU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.98
     }
   ]
 }

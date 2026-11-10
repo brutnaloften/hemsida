@@ -12,7 +12,16 @@
     "keyword:stödinsatser",
     "keyword:elever med behov",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -65,9 +74,11 @@
         "keyword:speciallärare",
         "keyword:särskilda undervisningsgrupper",
         "keyword:stödinsatser",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD03192",
@@ -109,9 +120,11 @@
       "found_by": [
         "keyword:särskilda undervisningsgrupper",
         "keyword:elever med behov",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01UbU7",
@@ -158,8 +171,13 @@
       "titel": "Nya läroplaner – för en stark kunskapsskola",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03194.html",
-      "found_by": ["keyword:rektor", "keyword:elever med behov"],
-      "score": 2
+      "found_by": [
+        "keyword:rektor",
+        "keyword:elever med behov",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD03197",
@@ -170,8 +188,13 @@
       "titel": "Ett likvärdigt betygssystem",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03197.html",
-      "found_by": ["keyword:rektor", "keyword:elever med behov"],
-      "score": 2
+      "found_by": [
+        "keyword:rektor",
+        "keyword:elever med behov",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD01UbU9",
@@ -194,8 +217,13 @@
       "titel": "Lärare och elever",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU11.html",
-      "found_by": ["keyword:speciallärare", "committee:UbU"],
-      "score": 2
+      "found_by": [
+        "keyword:speciallärare",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HDB326",
@@ -207,7 +235,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB326.html",
       "found_by": ["keyword:elever med behov", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HB01UbU11",
@@ -218,8 +247,165 @@
       "titel": "Lärare och elever",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU11.html",
-      "found_by": ["all-keywords", "committee:UbU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:UbU", "score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 2,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB193",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "93",
+      "datum": "2024-09-26",
+      "titel": "Tilläggsdirektiv till Utredningen om en förbättrad (U 2024:01)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB193.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01UbU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0368",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "68",
+      "datum": "2024-03-14",
+      "titel": "Barriärer mot brott – en socialpreventiv strategi mot kriminella nätverk och annan brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB350",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "50",
+      "datum": "2024-07-05",
+      "titel": "Nätt och jämnt",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB350.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB193",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "93",
+      "datum": "2025-10-23",
+      "titel": "Nya utbildningsvägar och fler möjligheter till behörighet att undervisa inom det specialpedagogiska området",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB193.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031d17",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA03100",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "100",
+      "datum": "2023-04-17",
+      "titel": "2023 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01FiU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU20",
+      "datum": "2024-06-13",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB03100",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "100",
+      "datum": "2024-04-15",
+      "titel": "2024 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB3105",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "105",
+      "datum": "2025-10-01",
+      "titel": "Om överföring av Första AP-fondens verksamhet och tillgångar till Tredje och Fjärde AP-fonderna",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3105.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

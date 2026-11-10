@@ -12,7 +12,17 @@
     "keyword:databaser",
     "keyword:informationsutbyte",
     "all-keywords",
-    "committee:KU"
+    "committee:KU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -48,8 +58,13 @@
       "titel": "Ett register för alla bostadsrätter",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03112.html",
-      "found_by": ["keyword:direktåtkomst", "keyword:register"],
-      "score": 2
+      "found_by": [
+        "keyword:direktåtkomst",
+        "keyword:register",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HDB345",
@@ -73,7 +88,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0388.html",
       "found_by": ["keyword:direktåtkomst", "keyword:databaser"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01KU6",
@@ -96,8 +112,13 @@
       "titel": "En ny organisation av ekobrottsbekämpningen",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB381.html",
-      "found_by": ["keyword:brottsbekämpande myndigheter", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:brottsbekämpande myndigheter",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HBB369",
@@ -121,7 +142,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03310.html",
       "found_by": ["keyword:direktåtkomst"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HEB1104",
@@ -145,7 +167,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03290.html",
       "found_by": ["keyword:direktåtkomst"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD01KU20",
@@ -157,7 +180,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU20.html",
       "found_by": ["committee:KU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03263",
@@ -193,7 +217,424 @@
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HD01CU28.html",
       "found_by": ["keyword:register"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
+    },
+    {
+      "dok_id": "HBB370",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "70",
+      "datum": "2023-11-08",
+      "titel": "Ordning och reda - förstärkt och tillförlitlig byggkontroll",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB370.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC0365",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "65",
+      "datum": "2024-11-28",
+      "titel": "Ökat informationsflöde till brottsbekämpningen",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0365.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03291",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "291",
+      "datum": "2026-07-03",
+      "titel": "Uppföljning av den nationella strategin mot våldsbejakande extremism och terrorism",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03291.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HEB310d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "10",
+      "datum": "2026-02-18",
+      "titel": "Ökade möjligheter till tillgångsinriktad brottsbekämpning, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB310d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03261",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "261",
+      "datum": "2026-05-07",
+      "titel": "Utökade befogenheter för Skatteverket inom folkbokföringsverksamheten",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03261.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB410",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "10",
+      "datum": "2025-04-09",
+      "titel": "En ändamålsenlig hantering av tillstånd och tillsyn av explosiva varor - slutredovisning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB410.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA01JuU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU16",
+      "datum": "2023-05-04",
+      "titel": "Terrorism",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HEB1102",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "102",
+      "datum": "2026-08-27",
+      "titel": "Barnfrid - förstärkta åtgärder mot sexuella kränkningar av barn och barnpornografibrott",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1102.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD0348",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "48",
+      "datum": "2025-11-18",
+      "titel": "En modern lagstiftning för Kriminalvårdens personuppgiftsbehandling",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0348.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01JuU10",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU10",
+      "datum": "2023-04-21",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC01JuU18",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU18",
+      "datum": "2025-01-31",
+      "titel": "Biometri i brottsbekämpningen",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3110",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "110",
+      "datum": "2025-11-10",
+      "titel": "Snabbare bredband i hela landet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03132",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "132",
+      "datum": "2024-04-16",
+      "titel": "Ny tullbefogenhetslag",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03132.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB332",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "32",
+      "datum": "2025-04-02",
+      "titel": "Vissa förändringar av jaktlagstiftningen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB332.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB358d2",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "58",
+      "datum": "2024-09-02",
+      "titel": "Ett nytt regelverk mot penningtvätt och finansiering av terrorism, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB358d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3114",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "114",
+      "datum": "2025-12-03",
+      "titel": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3114.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB343",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "43",
+      "datum": "2023-08-22",
+      "titel": "En samordnad registerkontroll för upphandlande myndigheter och enheter",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB343.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HCB361",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "61",
+      "datum": "2024-09-02",
+      "titel": "Effektivare kontrollmöjligheter i systemen för rot, rut, grön teknik och personalliggare",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB361.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB342",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "42",
+      "datum": "2025-04-11",
+      "titel": "Säkerhetsskyddslagen - ytterligare kompletteringar",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB342.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB358",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "58",
+      "datum": "2024-09-02",
+      "titel": "Ett nytt regelverk mot penningtvätt och finansiering av terrorism",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB358.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HBB1158",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "158",
+      "datum": "2023-11-20",
+      "titel": "Skärpta krav på hederligt levnadssätt och ökade möjligheter till återkallelse av uppehållstillstånd",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1158.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB375",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "75",
+      "datum": "2025-06-17",
+      "titel": "Folkbokföringsverksamhet, biometri och brottsbekämpning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB190",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "90",
+      "datum": "2023-06-22",
+      "titel": "Översyn av Ekobrottsmyndigheten - förbättrade förutsättningar att bekämpa den ekonomiska brottsligheten",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB190.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

@@ -11,7 +11,17 @@
     "keyword:företagsstöd",
     "keyword:välfärdsbrottslighet",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,7 +39,8 @@
         "keyword:välfärdsbrottslighet",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.2
     },
     {
       "dok_id": "HC03187",
@@ -69,8 +80,14 @@
       "titel": "Bidragsspärr och sanktionsavgift i socialförsäkringen",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03210.html",
-      "found_by": ["keyword:bidragsbrottslagen", "keyword:bidragsbrott", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:bidragsbrottslagen",
+        "keyword:bidragsbrott",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01SfU26",
@@ -106,7 +123,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03292.html",
       "found_by": ["keyword:välfärdsbrottslighet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03274",
@@ -154,7 +172,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03201.html",
       "found_by": ["keyword:välfärdsbrottslighet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03103",
@@ -178,7 +197,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU26.html",
       "found_by": ["keyword:företagsstöd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01NU14",
@@ -190,7 +210,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU14.html",
       "found_by": ["keyword:företagsstöd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.35
     },
     {
       "dok_id": "HEB44",
@@ -203,6 +224,344 @@
       "url": "https://data.riksdagen.se/dokument/HEB44.html",
       "found_by": ["all-keywords"],
       "score": 1
+    },
+    {
+      "dok_id": "HD01FiU12",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU12",
+      "datum": "2025-11-13",
+      "titel": "Ett effektivt straffrättsligt skydd för statliga stöd till företag",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HB031d3",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 2 Samhällsekonomi och finansförvaltning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB38",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "8",
+      "datum": "2023-02-21",
+      "titel": "Arbetslivskriminalitet - arbetet i Sverige, en bedömning av omfattningen, lärdomar från Danmark och Finland ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB38.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01JuU42",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU42",
+      "datum": "2026-06-11",
+      "titel": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB339",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "39",
+      "datum": "2026-06-17",
+      "titel": "Ett nytt system för återkrav inom socialförsäkringen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB339.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB352",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "52",
+      "datum": "2023-09-07",
+      "titel": "Ett stärkt och samlat skydd av välfärdssystemen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB352.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB320",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "20",
+      "datum": "2025-02-20",
+      "titel": "Kommunal anslutning till Utbetalningsmyndighetens verksamhet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB320.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HAB364",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "64",
+      "datum": "2022-11-15",
+      "titel": "En ny ordning för asylsökandes boende",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB364.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d4",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 2 Samhällsekonomi och finansförvaltning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HAB372",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "72",
+      "datum": "2023-01-01",
+      "titel": "Tillgång till försäljningsuppgifter om humanläkemedel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB325",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "25",
+      "datum": "2025-03-03",
+      "titel": "Arbetslivskriminalitet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB325.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01FiU2",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU2",
+      "datum": "2023-12-14",
+      "titel": "Utgiftsområde 2 Samhällsekonomi och finansförvaltning",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB426",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "26",
+      "datum": "2025-11-07",
+      "titel": "Administrativa sanktioner i den arbetsmarknadspolitiska verksamheten och i arbetslöshetsförsäkringen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB426.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA01JuU10",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU10",
+      "datum": "2023-04-21",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01SkU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU14",
+      "datum": "2026-02-26",
+      "titel": "Skatteförfarande, folkbokföring och tull",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB366d3",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 3",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HBB3103",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "103",
+      "datum": "2024-01-01",
+      "titel": "Areella näringar vid vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB3103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HAB360",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "60",
+      "datum": "2022-12-07",
+      "titel": "Sveriges tillgång till vaccin mot covid-19 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB334",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "34",
+      "datum": "2023-07-05",
+      "titel": "Bolag och brott - några åtgärder mot oseriösa företag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB334.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

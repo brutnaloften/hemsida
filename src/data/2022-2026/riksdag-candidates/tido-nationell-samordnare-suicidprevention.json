@@ -11,7 +11,16 @@
     "keyword:självmord",
     "keyword:samordning",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -27,9 +36,11 @@
         "keyword:suicidprevention",
         "keyword:självmord",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01SoU1",
@@ -77,7 +88,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0377.html",
       "found_by": ["keyword:suicidprevention", "keyword:självmord"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB01SoU15",
@@ -113,7 +125,8 @@
       "organ": "S-dep",
       "url": "https://data.riksdagen.se/dokument/HEB198.html",
       "found_by": ["keyword:samordning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03272",
@@ -125,7 +138,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03272.html",
       "found_by": ["keyword:suicidprevention"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03283",
@@ -137,7 +151,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03283.html",
       "found_by": ["keyword:suicidprevention"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03269",
@@ -173,7 +188,8 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HD01TU15.html",
       "found_by": ["keyword:självmord"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01SoU16",
@@ -185,7 +201,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
       "found_by": ["committee:SoU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD01SoU22",
@@ -196,8 +213,87 @@
       "titel": "Kompetensförsörjning, e-hälsa och beredskap",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU22.html",
-      "found_by": ["committee:SoU"],
-      "score": 1
+      "found_by": ["committee:SoU", "score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01SoU21",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU21",
+      "datum": "2024-05-07",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01SfU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SfU14",
+      "datum": "2023-04-13",
+      "titel": "Socialförsäkringsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01SoU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU12",
+      "datum": "2023-04-24",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01SoU20",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU20",
+      "datum": "2023-04-04",
+      "titel": "Folkhälsa",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

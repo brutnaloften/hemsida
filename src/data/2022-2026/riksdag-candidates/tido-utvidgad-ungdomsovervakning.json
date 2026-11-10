@@ -12,7 +12,16 @@
     "keyword:kroppsvisitation",
     "keyword:husrannsakan",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -47,9 +56,11 @@
         "keyword:påföljd",
         "keyword:unga",
         "keyword:kroppsvisitation",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD01JuU37",
@@ -66,7 +77,8 @@
         "all-keywords",
         "committee:JuU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD01JuU30",
@@ -90,7 +102,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:ungdomsövervakning", "keyword:kroppsvisitation", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03246",
@@ -114,7 +127,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03227.html",
       "found_by": ["keyword:unga", "keyword:kroppsvisitation", "keyword:husrannsakan"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD03293",
@@ -125,8 +139,13 @@
       "titel": "Skärpta regler för unga lagöverträdare",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03293.html",
-      "found_by": ["keyword:ungdomsövervakning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:ungdomsövervakning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03295",
@@ -137,8 +156,13 @@
       "titel": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03295.html",
-      "found_by": ["keyword:ungdomsövervakning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:ungdomsövervakning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD03263",
@@ -174,7 +198,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0395.html",
       "found_by": ["keyword:ungdomsövervakning", "keyword:påföljd"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.06
     },
     {
       "dok_id": "HCB339",
@@ -210,7 +235,229 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU38.html",
       "found_by": ["keyword:unga"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HCB393",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "93",
+      "datum": "2024-12-20",
+      "titel": "Effektivare verktyg för att bekämpa brott av unga lagöverträdare ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB393.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB344",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "44",
+      "datum": "2023-11-08",
+      "titel": "En översyn av regleringen om frihetsberövande påföljder för unga ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB344.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01JuU12",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU12",
+      "datum": "2025-02-14",
+      "titel": "Unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HCB430",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2025-01-01",
+      "titel": "En lag om insatser inom socialtjänsten till vårdnadshavare, barn och unga när samtycke saknas ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB430.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01JuU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU1",
+      "datum": "2025-11-28",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB378",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "78",
+      "datum": "2025-01-01",
+      "titel": "Ett språkkrav för språkutveckling ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB378.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB354",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "54",
+      "datum": "2024-08-29",
+      "titel": "Vägar till ett tryggare samhälle",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB354.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD031d6",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB44",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "4",
+      "datum": "2025-02-10",
+      "titel": "En ny lag om unga lagöverträdare",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB44.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB366d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB1112",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "112",
+      "datum": "2023-07-06",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB1112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3114",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "114",
+      "datum": "2025-12-03",
+      "titel": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3114.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01KU20d3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU20",
+      "datum": "2026-01-01",
+      "titel": "Granskningsbetänkande - del 3",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU20d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB352",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "52",
+      "datum": "2024-07-05",
+      "titel": "Allmänna sammankomster och Sveriges säkerhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB352.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

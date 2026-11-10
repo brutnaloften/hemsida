@@ -12,7 +12,17 @@
     "keyword:LUL",
     "keyword:barn",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +38,11 @@
         "keyword:hemliga tvångsmedel",
         "keyword:under 15 år",
         "keyword:LUL",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03246",
@@ -65,8 +77,14 @@
       "titel": "Effektivare verktyg för att bekämpa brott av unga lagöverträdare ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB393.html",
-      "found_by": ["keyword:hemliga tvångsmedel", "keyword:under 15 år", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:hemliga tvångsmedel",
+        "keyword:under 15 år",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03294",
@@ -78,7 +96,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:under 15 år", "keyword:barn"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03293",
@@ -89,8 +108,13 @@
       "titel": "Skärpta regler för unga lagöverträdare",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03293.html",
-      "found_by": ["keyword:under 15 år", "keyword:LUL"],
-      "score": 2
+      "found_by": [
+        "keyword:under 15 år",
+        "keyword:LUL",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01JuU37",
@@ -102,7 +126,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU37.html",
       "found_by": ["keyword:barn", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01JuU13",
@@ -125,8 +150,13 @@
       "titel": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB3114.html",
-      "found_by": ["keyword:hemliga tvångsmedel", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:hemliga tvångsmedel",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01JuU24",
@@ -137,8 +167,9 @@
       "titel": "Riksrevisionens rapport om statens insatser för barn som misstänks för grova brott",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU24.html",
-      "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:JuU", "score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HDB44",
@@ -149,8 +180,13 @@
       "titel": "En ny lag om unga lagöverträdare",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB44.html",
-      "found_by": ["keyword:lagen om unga lagöverträdare", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:lagen om unga lagöverträdare",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.92
     },
     {
       "dok_id": "HB03144",
@@ -198,7 +234,190 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU38.html",
       "found_by": ["keyword:barn"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HD03291",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "291",
+      "datum": "2026-07-03",
+      "titel": "Uppföljning av den nationella strategin mot våldsbejakande extremism och terrorism",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03291.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC0354",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "54",
+      "datum": "2024-11-25",
+      "titel": "Riksrevisionens rapport om statens insatser för barn som misstänks för grova brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0354.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03141",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "141",
+      "datum": "2026-02-17",
+      "titel": "En ny vapenlag",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03141.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB310d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "10",
+      "datum": "2026-02-18",
+      "titel": "Ökade möjligheter till tillgångsinriktad brottsbekämpning, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB310d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03297",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "297",
+      "datum": "2026-06-30",
+      "titel": "Ett nytt straffrättsligt påföljdssystem",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03297.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB0356",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "56",
+      "datum": "2024-01-08",
+      "titel": "Nationell strategi mot våldsbejakande extremism och terrorism – förebygga, förhindra, skydda och hantera",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0356.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB120",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "20",
+      "datum": "2026-03-26",
+      "titel": "Tilläggsdirektiv till Utredningen om hemliga och preventiva tvångsmedel (Ju 2025:04)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01JuU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU16",
+      "datum": "2026-03-27",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HBB1102",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "102",
+      "datum": "2023-06-29",
+      "titel": "Utökade möjligheter att använda tvångsmedel mot barn och unga",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB1102.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD0382",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "82",
+      "datum": "2025-12-16",
+      "titel": "Redovisning av användningen av hemliga tvångsmedel under 2024",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03272",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "272",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den brottsförebyggande strategin Barriärer mot brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03272.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD03227",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "227",
+      "datum": "2026-03-26",
+      "titel": "Bättre möjligheter att utreda brott av unga lagöverträdare och några andra processrättsliga frågor",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03227.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

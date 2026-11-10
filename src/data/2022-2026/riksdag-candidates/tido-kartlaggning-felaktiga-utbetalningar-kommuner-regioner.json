@@ -12,7 +12,17 @@
     "keyword:regioner",
     "keyword:välfärdsbrott",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -25,7 +35,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03164.html",
       "found_by": ["keyword:kommuner", "keyword:regioner", "keyword:välfärdsbrott"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD03288",
@@ -49,7 +60,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU35.html",
       "found_by": ["keyword:regioner", "keyword:välfärdsbrott"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD03161",
@@ -60,8 +72,13 @@
       "titel": "Förbättrade förutsättningar för kommuner att motverka felaktiga utbetalningar från välfärdssystemen",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03161.html",
-      "found_by": ["keyword:kommuner", "keyword:välfärdsbrott"],
-      "score": 2
+      "found_by": [
+        "keyword:kommuner",
+        "keyword:välfärdsbrott",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.92
     },
     {
       "dok_id": "HD01SoU6",
@@ -73,7 +90,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU6.html",
       "found_by": ["keyword:kommuner", "keyword:regioner"],
-      "score": 2
+      "score": 2,
+      "relevance": 0
     },
     {
       "dok_id": "HDB320",
@@ -84,8 +102,13 @@
       "titel": "Kommunal anslutning till Utbetalningsmyndighetens verksamhet ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB320.html",
-      "found_by": ["keyword:felaktiga utbetalningar", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:felaktiga utbetalningar",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HCB324",
@@ -108,8 +131,13 @@
       "titel": "Ett stärkt och samlat skydd av välfärdssystemen ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB352.html",
-      "found_by": ["keyword:felaktiga utbetalningar", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:felaktiga utbetalningar",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.65
     },
     {
       "dok_id": "HBB347",
@@ -133,7 +161,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU14.html",
       "found_by": ["keyword:välfärdsbrott", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HEB1108",
@@ -145,7 +174,8 @@
       "organ": "S-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1108.html",
       "found_by": ["keyword:välfärdsbrott"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HEB344",
@@ -181,7 +211,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03290.html",
       "found_by": ["keyword:kartläggning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HEB339",
@@ -193,7 +224,177 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB339.html",
       "found_by": ["keyword:felaktiga utbetalningar"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
+    },
+    {
+      "dok_id": "HB031d3",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 2 Samhällsekonomi och finansförvaltning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC01SoU18",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU18",
+      "datum": "2025-01-28",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3123",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "123",
+      "datum": "2026-01-01",
+      "titel": "Skärpta villkor för friskolesektorn - ytterligare förslag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3123.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d27",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d27.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01JuU10",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU10",
+      "datum": "2023-04-21",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3110",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "110",
+      "datum": "2025-11-10",
+      "titel": "Snabbare bredband i hela landet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

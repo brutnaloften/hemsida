@@ -12,7 +12,16 @@
     "keyword:gränskontroll",
     "keyword:brottsbekämpning",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -24,8 +33,14 @@
       "titel": "Skärpta åtgärder mot utförsel av stöldgods",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HC01SkU21.html",
-      "found_by": ["keyword:Tullverket", "keyword:stöldgods", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:Tullverket",
+        "keyword:stöldgods",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC01SkU2",
@@ -36,8 +51,14 @@
       "titel": "Ny tullbefogenhetslag",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HC01SkU2.html",
-      "found_by": ["keyword:Tullverket", "keyword:befogenheter", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:Tullverket",
+        "keyword:befogenheter",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01JuU26",
@@ -49,7 +70,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU26.html",
       "found_by": ["keyword:befogenheter", "all-keywords", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA03109",
@@ -61,7 +83,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HA03109.html",
       "found_by": ["keyword:befogenheter", "keyword:gränskontroll", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HEB328",
@@ -72,8 +95,13 @@
       "titel": "Tillgång till passageraruppgifter  i brottsbekämpningen",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB328.html",
-      "found_by": ["keyword:brottsbekämpning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:brottsbekämpning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD01KU5",
@@ -85,7 +113,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU5.html",
       "found_by": ["keyword:befogenheter", "keyword:gränskontroll"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC03129",
@@ -96,8 +125,13 @@
       "titel": "Skärpta åtgärder mot utförsel av stöldgods",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03129.html",
-      "found_by": ["keyword:stöldgods", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:stöldgods",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03291",
@@ -109,7 +143,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03291.html",
       "found_by": ["keyword:gränskontroll"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01SkU30",
@@ -133,7 +168,8 @@
       "organ": "Fi-dep",
       "url": "https://data.riksdagen.se/dokument/HEB128.html",
       "found_by": ["keyword:Tullverket"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD03261",
@@ -145,7 +181,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03261.html",
       "found_by": ["keyword:befogenheter"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01JuU32",
@@ -193,7 +230,424 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU16.html",
       "found_by": ["committee:JuU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
+    },
+    {
+      "dok_id": "HA01SkU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU14",
+      "datum": "2023-04-13",
+      "titel": "Punktskatt och tull",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01JuU16",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU16",
+      "datum": "2024-04-08",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03293",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "293",
+      "datum": "2026-06-30",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03293.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB432",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "32",
+      "datum": "2025-12-19",
+      "titel": "Polisens och Tullverkets användning av AI för biometrisk fjärridentifiering i efterhand ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB432.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC0365",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "65",
+      "datum": "2024-11-28",
+      "titel": "Ökat informationsflöde till brottsbekämpningen",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0365.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01JuU15",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU15",
+      "datum": "2025-04-14",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03141",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "141",
+      "datum": "2026-02-17",
+      "titel": "En ny vapenlag",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03141.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HAB364",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "64",
+      "datum": "2022-11-15",
+      "titel": "En ny ordning för asylsökandes boende",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB364.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB310d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "10",
+      "datum": "2026-02-18",
+      "titel": "Ökade möjligheter till tillgångsinriktad brottsbekämpning, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB310d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC031d4",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 3 Skatt, tull och exekution",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HAB372",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "72",
+      "datum": "2023-01-01",
+      "titel": "Tillgång till försäljningsuppgifter om humanläkemedel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA031d5",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB03132",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "132",
+      "datum": "2024-04-16",
+      "titel": "Ny tullbefogenhetslag",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03132.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HA01JuU10",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU10",
+      "datum": "2023-04-21",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01SkU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU14",
+      "datum": "2026-02-26",
+      "titel": "Skatteförfarande, folkbokföring och tull",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD0381",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "81",
+      "datum": "2025-12-16",
+      "titel": "Kontroller av kontanta medel vid den inre gränsen",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0381.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA0353",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "53",
+      "datum": "2023-01-31",
+      "titel": "Skärpta straff för brott i kriminella nätverk",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0353.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01SkU19",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU19",
+      "datum": "2026-02-17",
+      "titel": "Kontroller av kontanta medel vid den inre gränsen",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU19.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB03100",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "100",
+      "datum": "2024-04-15",
+      "titel": "2024 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03272",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "272",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den brottsförebyggande strategin Barriärer mot brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03272.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB3103",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "103",
+      "datum": "2024-01-01",
+      "titel": "Areella näringar vid vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB3103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03227",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "227",
+      "datum": "2026-03-26",
+      "titel": "Bättre möjligheter att utreda brott av unga lagöverträdare och några andra processrättsliga frågor",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03227.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB366d3",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 3",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB031d4",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 3 Skatt, tull och exekution",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HAB360",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "60",
+      "datum": "2022-12-07",
+      "titel": "Sveriges tillgång till vaccin mot covid-19 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB381",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "81",
+      "datum": "2025-06-18",
+      "titel": "En ny organisation av ekobrottsbekämpningen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB381.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

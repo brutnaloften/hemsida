@@ -12,7 +12,9 @@
     "keyword:departementspromemoria",
     "keyword:irreguljär migration",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20"
   ],
   "candidates": [
     {
@@ -24,8 +26,14 @@
       "titel": "Tillfälliga förbud att transportera personer utan giltiga identitetshandlingar till Sverige",
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0362.html",
-      "found_by": ["keyword:gränskontroller", "keyword:identitetskontroller", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:gränskontroller",
+        "keyword:identitetskontroller",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03262",
@@ -133,7 +141,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03261.html",
       "found_by": ["keyword:identitetskontroller"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03250",

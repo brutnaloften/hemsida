@@ -12,7 +12,12 @@
     "keyword:socialsekreterare",
     "keyword:insatsstyrka",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -45,9 +50,11 @@
         "keyword:social insatsstyrka",
         "keyword:socialtjänsten",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB01SoU1",
@@ -59,7 +66,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
       "found_by": ["keyword:social insatsstyrka", "all-keywords", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA01SoU18",
@@ -106,8 +114,14 @@
       "titel": "Polisfrågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU10.html",
-      "found_by": ["keyword:social insatsstyrka", "keyword:insatsstyrka", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:social insatsstyrka",
+        "keyword:insatsstyrka",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03295",
@@ -119,7 +133,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03295.html",
       "found_by": ["keyword:socialtjänsten", "keyword:socialsekreterare"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HDB323",
@@ -203,7 +218,47 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:socialsekreterare"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
+    },
+    {
+      "dok_id": "HC01JuU12",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU12",
+      "datum": "2025-02-14",
+      "titel": "Unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HCB317",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "17",
+      "datum": "2024-03-07",
+      "titel": "Skolor mot brott",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB317.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01JuU24",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU24",
+      "datum": "2025-03-21",
+      "titel": "Riksrevisionens rapport om statens insatser för barn som misstänks för grova brott",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU24.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

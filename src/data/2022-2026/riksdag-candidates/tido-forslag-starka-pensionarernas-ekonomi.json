@@ -11,7 +11,16 @@
     "keyword:pensionärernas ekonomi",
     "keyword:garantipension",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -30,7 +39,8 @@
         "all-keywords",
         "committee:SfU"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.25
     },
     {
       "dok_id": "HB01SfU2",
@@ -48,7 +58,8 @@
         "all-keywords",
         "committee:SfU"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01SfU13",
@@ -93,8 +104,14 @@
       "titel": "Utdelning av överskott i inkomstpensionssystemet",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU25.html",
-      "found_by": ["keyword:pensionärernas ekonomi", "all-keywords", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:pensionärernas ekonomi",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01SfU2",
@@ -106,7 +123,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU2.html",
       "found_by": ["keyword:pensionärer", "keyword:garantipension", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA01SfU11",
@@ -129,8 +147,13 @@
       "titel": "2026 års ekonomiska vårproposition",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03100.html",
-      "found_by": ["keyword:pensionärer", "keyword:garantipension"],
-      "score": 2
+      "found_by": [
+        "keyword:pensionärer",
+        "keyword:garantipension",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD03101",
@@ -153,8 +176,13 @@
       "titel": "Budgetpropositionen för 2026 - Utgiftsområde 11 Ekonomisk trygghet vid ålderdom",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d13.html",
-      "found_by": ["keyword:pensionärernas ekonomi", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:pensionärernas ekonomi",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HDB341",
@@ -165,8 +193,13 @@
       "titel": "Pensionsnivåer och pensionsavgiften",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB341.html",
-      "found_by": ["keyword:pensionärernas ekonomi", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:pensionärernas ekonomi",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HC01SfU13",
@@ -178,7 +211,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU13.html",
       "found_by": ["keyword:pension", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HC031d12",
@@ -189,8 +223,13 @@
       "titel": "Budgetpropositionen för 2025 - Utgiftsområde 11 Ekonomisk trygghet vid ålderdom",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HC031d12.html",
-      "found_by": ["keyword:pensionärernas ekonomi", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:pensionärernas ekonomi",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC031d29",
@@ -201,8 +240,13 @@
       "titel": "Budgetpropositionen för 2025 - Ålderspensionssystemet vid sidan av statens budget",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HC031d29.html",
-      "found_by": ["keyword:pensionärernas ekonomi", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:pensionärernas ekonomi",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HB01SfU9",
@@ -213,8 +257,308 @@
       "titel": "Pensioner",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU9.html",
-      "found_by": ["keyword:pension", "committee:SfU"],
-      "score": 2
+      "found_by": ["keyword:pension", "committee:SfU", "score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 2,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA031d12",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 11 Ekonomisk trygghet vid ålderdom",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD0332",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "32",
+      "datum": "2025-10-16",
+      "titel": "Sänkt skatt på arbetsinkomster, pension och sjuk- och aktivitetsersättning",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0332.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC01SkU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU9",
+      "datum": "2025-03-20",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB430",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2025-01-01",
+      "titel": "En lag om insatser inom socialtjänsten till vårdnadshavare, barn och unga när samtycke saknas ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB430.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031d70",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Ålderspensionssystemet - ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d70.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC03100",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "100",
+      "datum": "2025-04-15",
+      "titel": "2025 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HEB349",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "49",
+      "datum": "2026-08-26",
+      "titel": "Traditionell eller rationell",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB349.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01SoU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU20",
+      "datum": "2024-04-05",
+      "titel": "Äldreomsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD03169",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "169",
+      "datum": "2026-03-10",
+      "titel": "Utdelning av överskott i inkomstpensionssystemet",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03169.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HDB424",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "24",
+      "datum": "2025-10-15",
+      "titel": "Utdelningsbart överskott i inkomstpensionssystemet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB424.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031d29",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Ålderspensionssystemet vid sidan av statens budget",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d29.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3121",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "121",
+      "datum": "2026-01-01",
+      "titel": "Bodelning och betänketid - en effektivare process",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3121.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB03100",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "100",
+      "datum": "2024-04-15",
+      "titel": "2024 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01SoU21",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU21",
+      "datum": "2026-02-25",
+      "titel": "Äldreomsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB0342",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "42",
+      "datum": "2023-11-28",
+      "titel": "Riksrevisionens rapport om förändrade inkomstskatteregler 2011–2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0342.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

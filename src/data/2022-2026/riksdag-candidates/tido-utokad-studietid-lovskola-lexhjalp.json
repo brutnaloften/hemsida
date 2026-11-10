@@ -12,7 +12,14 @@
     "keyword:skoldagar",
     "keyword:statsbidrag",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +35,11 @@
         "keyword:lovskola",
         "keyword:extra studietid",
         "keyword:skoldagar",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HCB394",
@@ -82,8 +91,14 @@
       "titel": "Grundläggande om utbildning",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU8.html",
-      "found_by": ["keyword:läxhjälp", "keyword:skoldagar", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:läxhjälp",
+        "keyword:skoldagar",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.7
     },
     {
       "dok_id": "HB01UbU11",
@@ -94,8 +109,14 @@
       "titel": "Lärare och elever",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU11.html",
-      "found_by": ["keyword:läxhjälp", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:läxhjälp",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB0379",
@@ -119,7 +140,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03295.html",
       "found_by": ["keyword:lovskola", "keyword:extra studietid"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD03195",
@@ -179,7 +201,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB430.html",
       "found_by": ["keyword:extra studietid", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HB01UbU9",
@@ -191,7 +214,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU9.html",
       "found_by": ["all-keywords", "committee:UbU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HBB1174",
@@ -202,8 +226,169 @@
       "titel": "Mer obligatorisk undervisningstid för elever som behöver det",
       "organ": "U-dep",
       "url": "https://data.riksdagen.se/dokument/HBB1174.html",
-      "found_by": ["keyword:extra studietid", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:extra studietid",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB350",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "50",
+      "datum": "2024-07-05",
+      "titel": "Nätt och jämnt",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB350.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD03194",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "194",
+      "datum": "2026-03-17",
+      "titel": "Nya läroplaner – för en stark kunskapsskola",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03194.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB329",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "29",
+      "datum": "2024-04-29",
+      "titel": "Goda möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB329.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA031d17",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA03100",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "100",
+      "datum": "2023-04-17",
+      "titel": "2023 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB031d26",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB318",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "18",
+      "datum": "2025-02-19",
+      "titel": "Ett likvärdigt betygssystem",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB318.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD0399",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "99",
+      "datum": "2026-04-13",
+      "titel": "Vårändringsbudget för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

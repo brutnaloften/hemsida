@@ -12,7 +12,17 @@
     "keyword:blåljussabotage",
     "keyword:brottsbalken",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +39,11 @@
         "keyword:missfirmelse mot tjänsteman",
         "keyword:blåljussabotage",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC01JuU29",
@@ -46,9 +58,11 @@
         "keyword:våld mot tjänsteman",
         "keyword:missfirmelse mot tjänsteman",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.92
     },
     {
       "dok_id": "HA01JuU27",
@@ -96,9 +110,11 @@
       "found_by": [
         "keyword:våld mot tjänsteman",
         "keyword:missfirmelse mot tjänsteman",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01AU8",
@@ -112,9 +128,11 @@
       "found_by": [
         "keyword:missfirmelse mot tjänsteman",
         "keyword:blåljussabotage",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HCB31",
@@ -128,9 +146,11 @@
       "found_by": [
         "keyword:våld mot tjänsteman",
         "keyword:missfirmelse mot tjänsteman",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01AU8",
@@ -174,7 +194,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU40.html",
       "found_by": ["keyword:brottsbalken", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HDB346",
@@ -186,7 +207,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB346.html",
       "found_by": ["keyword:blåljussabotage", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD01JuU41",
@@ -210,7 +232,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03297.html",
       "found_by": ["keyword:brottsbalken"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD03293",
@@ -222,7 +245,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03293.html",
       "found_by": ["keyword:brottsbalken"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01TU22",
@@ -234,7 +258,294 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HD01TU22.html",
       "found_by": ["keyword:poliser"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
+    },
+    {
+      "dok_id": "HD03291",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "291",
+      "datum": "2026-07-03",
+      "titel": "Uppföljning av den nationella strategin mot våldsbejakande extremism och terrorism",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03291.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01KU23",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU23",
+      "datum": "2025-04-03",
+      "titel": "Offentlig förvaltning",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU23.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01JuU10",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU10",
+      "datum": "2025-04-23",
+      "titel": "Straffrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB01JuU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU20",
+      "datum": "2024-04-17",
+      "titel": "Straffrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB421",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "21",
+      "datum": "2025-10-13",
+      "titel": "Förbättrade förutsättningar för operativt militärt samarbete",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB421.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB430",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2025-01-01",
+      "titel": "En lag om insatser inom socialtjänsten till vårdnadshavare, barn och unga när samtycke saknas ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB430.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD03134",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "134",
+      "datum": "2026-02-24",
+      "titel": "ILO:s konvention om avskaffande av våld och trakasserier i arbetslivet och ILO:s konvention om en säker och hälsosam arbetsmiljö",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03134.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA031d5",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC03100",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "100",
+      "datum": "2025-04-15",
+      "titel": "2025 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB378",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "78",
+      "datum": "2025-01-01",
+      "titel": "Ett språkkrav för språkutveckling ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB378.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01FiU40",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU40",
+      "datum": "2023-06-08",
+      "titel": "Riksrevisionens rapport om åtgärder med anledning av trakasserier, hot och våld vid statliga myndigheter",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU40.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01AU8",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU8",
+      "datum": "2025-04-10",
+      "titel": "Arbetsmiljö",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03222",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "222",
+      "datum": "2026-03-31",
+      "titel": "Ersättningsregler med brottsoffret i fokus",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03222.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB366d3",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 3",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB194",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "94",
+      "datum": "2023-06-22",
+      "titel": "Ersättningsregler med brottsoffret i fokus",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB194.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB366d4",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 4",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

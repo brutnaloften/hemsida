@@ -12,7 +12,13 @@
     "keyword:SFI",
     "keyword:nyanlända",
     "all-keywords",
-    "committee:AU"
+    "committee:AU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -27,9 +33,11 @@
       "found_by": [
         "keyword:etableringsersättning",
         "keyword:etableringstillägg",
-        "keyword:nyanlända"
+        "keyword:nyanlända",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01AU8",
@@ -40,8 +48,14 @@
       "titel": "Integration",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU8.html",
-      "found_by": ["keyword:nyanlända", "all-keywords", "committee:AU"],
-      "score": 3
+      "found_by": [
+        "keyword:nyanlända",
+        "all-keywords",
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01AU6",
@@ -64,8 +78,13 @@
       "titel": "Vissa justeringar i inkomstskattelagen med anledning av förändrade ersättningar för nyanlända invandrare",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HD01SkU35.html",
-      "found_by": ["keyword:etableringstillägg", "keyword:nyanlända"],
-      "score": 2
+      "found_by": [
+        "keyword:etableringstillägg",
+        "keyword:nyanlända",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.88
     },
     {
       "dok_id": "HD03207",
@@ -77,7 +96,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03207.html",
       "found_by": ["keyword:aktivitetskrav", "keyword:SFI"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD03175",
@@ -89,7 +109,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03175.html",
       "found_by": ["keyword:etableringsersättning", "keyword:SFI"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD031",
@@ -112,8 +133,13 @@
       "titel": "Kvalificering till socialförsäkring och ekonomiskt bistånd för vissa grupper",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB353.html",
-      "found_by": ["keyword:etableringstillägg", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:etableringstillägg",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HDB315",
@@ -173,7 +199,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU14.html",
       "found_by": ["keyword:nyanlända"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD01SoU29",
@@ -198,6 +225,71 @@
       "url": "https://data.riksdagen.se/dokument/HD03101.html",
       "found_by": ["keyword:etableringsersättning"],
       "score": 1
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB312",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "12",
+      "datum": "2024-02-02",
+      "titel": "Mål och mening med integration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB312.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01AU7",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "AU7",
+      "datum": "2024-05-08",
+      "titel": "Integration",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HB01AU7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB1149",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "149",
+      "datum": "2023-10-19",
+      "titel": "En ny modell för kvalificering till socialförsäkring och ekonomiskt bistånd för nyanlända och icke-medborgare",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1149.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.92
     }
   ]
 }

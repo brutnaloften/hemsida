@@ -12,7 +12,16 @@
     "keyword:SMR",
     "keyword:små modulära reaktorer",
     "all-keywords",
-    "committee:MJU"
+    "committee:MJU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -63,9 +72,11 @@
         "keyword:kärnkraft",
         "keyword:tio reaktorer",
         "keyword:små modulära reaktorer",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.75
     },
     {
       "dok_id": "HEB340",
@@ -101,7 +112,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03150.html",
       "found_by": ["keyword:kärnkraft", "keyword:SMR", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.45
     },
     {
       "dok_id": "HDB37",
@@ -148,8 +160,9 @@
       "titel": "En mer ändamålsenlig prövning av kärntekniska anläggningar",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03171.html",
-      "found_by": ["keyword:SMR", "all-keywords"],
-      "score": 2
+      "found_by": ["keyword:SMR", "all-keywords", "score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01NU13",
@@ -160,8 +173,13 @@
       "titel": "Energipolitik",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
-      "found_by": ["keyword:SMR", "keyword:små modulära reaktorer"],
-      "score": 2
+      "found_by": [
+        "keyword:SMR",
+        "keyword:små modulära reaktorer",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01NU20",
@@ -185,7 +203,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0372.html",
       "found_by": ["keyword:SMR", "keyword:små modulära reaktorer"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB01NU14",
@@ -210,6 +229,279 @@
       "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
       "found_by": ["keyword:tio reaktorer", "committee:MJU"],
       "score": 2
+    },
+    {
+      "dok_id": "HB0358",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "58",
+      "datum": "2024-01-16",
+      "titel": "Riksrevisionens rapport om statens åtgärder för utveckling av elsystemet",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0358.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB03105",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "105",
+      "datum": "2024-03-19",
+      "titel": "Energipolitikens långsiktiga inriktning",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03105.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031d22",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA031d7",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3123",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "123",
+      "datum": "2026-01-01",
+      "titel": "Skärpta villkor för friskolesektorn - ytterligare förslag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3123.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d21",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB393d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "93",
+      "datum": "2025-08-28",
+      "titel": "En robust skogspolitik för aktivt skogsbruk, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB393d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01FiU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU20",
+      "datum": "2025-06-12",
+      "titel": "Riktlinjer för den ekonomiska politiken och budgetpolitiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB3110",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "110",
+      "datum": "2025-11-10",
+      "titel": "Snabbare bredband i hela landet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA03100",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "100",
+      "datum": "2023-04-17",
+      "titel": "2023 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HA01FöU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FöU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "organ": "FöU",
+      "url": "https://data.riksdagen.se/dokument/HA01FöU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB031d22",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB1155",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "155",
+      "datum": "2023-11-02",
+      "titel": "Ny kärnkraft i Sverige - ett andra steg",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1155.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB01NU9",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU9",
+      "datum": "2024-03-26",
+      "titel": "Elmarknadsfrågor",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

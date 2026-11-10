@@ -12,7 +12,17 @@
     "keyword:kriminella nätverk",
     "keyword:straffskärpningsgrund",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -48,9 +58,11 @@
         "keyword:straffskärpning",
         "keyword:kriminella nätverk",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.98
     },
     {
       "dok_id": "HA0353",
@@ -65,9 +77,11 @@
         "keyword:straffskärpning",
         "keyword:kriminella nätverk",
         "keyword:straffskärpningsgrund",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01JuU11",
@@ -103,7 +117,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU30.html",
       "found_by": ["keyword:straffskärpning", "keyword:straffskärpningsgrund", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.1
     },
     {
       "dok_id": "HA01JuU8",
@@ -114,8 +129,14 @@
       "titel": "Skärpta straff för brott i kriminella nätverk",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU8.html",
-      "found_by": ["keyword:gängkriminalitet", "all-keywords", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:gängkriminalitet",
+        "all-keywords",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01JuU41",
@@ -138,8 +159,13 @@
       "titel": "Ett nytt straffrättsligt påföljdssystem",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03297.html",
-      "found_by": ["keyword:dubbla straff", "keyword:straffskärpning"],
-      "score": 2
+      "found_by": [
+        "keyword:dubbla straff",
+        "keyword:straffskärpning",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03246",
@@ -163,7 +189,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03213.html",
       "found_by": ["keyword:straffskärpning", "keyword:straffskärpningsgrund"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD0323",
@@ -175,7 +202,8 @@
       "organ": "Arbetsmarknadsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0323.html",
       "found_by": ["keyword:straffskärpning", "keyword:straffskärpningsgrund"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HDB366d3",
@@ -186,8 +214,13 @@
       "titel": "En straffreform, del 3",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
-      "found_by": ["keyword:kriminella nätverk", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kriminella nätverk",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC03124",
@@ -199,7 +232,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03124.html",
       "found_by": ["keyword:straffskärpning", "keyword:straffskärpningsgrund"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HB01JuU20",
@@ -210,8 +244,373 @@
       "titel": "Straffrättsliga frågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU20.html",
-      "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:JuU", "score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 2,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HD03293",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "293",
+      "datum": "2026-06-30",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03293.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HCB393",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "93",
+      "datum": "2024-12-20",
+      "titel": "Effektivare verktyg för att bekämpa brott av unga lagöverträdare ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB393.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01KU20",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU20",
+      "datum": "2026-06-10",
+      "titel": "Granskningsbetänkande",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD03100",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "100",
+      "datum": "2026-04-13",
+      "titel": "2026 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB389d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "89",
+      "datum": "2025-08-29",
+      "titel": "En moderniserad fiskelagstiftning, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB389d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA031d5",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.93
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB194",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "94",
+      "datum": "2026-08-20",
+      "titel": "Tilläggsdirektiv till utredningen om riktade insatser mot kriminella organisationer - en särlagstiftning för gängkriminella (Ju 2026:11)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB194.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01JuU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU1",
+      "datum": "2025-11-28",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD031d6",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HEB1102",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "102",
+      "datum": "2026-08-27",
+      "titel": "Barnfrid - förstärkta åtgärder mot sexuella kränkningar av barn och barnpornografibrott",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1102.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03181",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "181",
+      "datum": "2026-03-17",
+      "titel": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03181.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HEB167",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "67",
+      "datum": "2026-07-02",
+      "titel": "Riktade insatser mot kriminella organisationer - En särlagstiftning för gängkriminella",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB167.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA03100",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "100",
+      "datum": "2023-04-17",
+      "titel": "2023 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HDB3119",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "119",
+      "datum": "2025-12-17",
+      "titel": "Ett nytt brott och andra åtgärder mot människohandel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3119.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB366d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03132",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "132",
+      "datum": "2026-02-19",
+      "titel": "Frihetsberövande påföljder för barn och unga",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03132.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3114",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "114",
+      "datum": "2025-12-03",
+      "titel": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3114.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB348",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "48",
+      "datum": "2024-07-05",
+      "titel": "Ett ändamålsenligt samhällsskydd Volym 1",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB348.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01KU20d3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU20",
+      "datum": "2026-01-01",
+      "titel": "Granskningsbetänkande - del 3",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU20d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HEB334d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "34",
+      "datum": "2026-06-12",
+      "titel": "Nya nätbrott och andra åtgärder för genomförandet av direktivet om bekämpning av våld mot kvinnor och våld i nära relationer, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB334d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HDB314",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "14",
+      "datum": "2025-02-26",
+      "titel": "En skärpt miljöstraffrätt och ett effektivt sanktionssystem",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB314.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB366d4",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 4",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD03217",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "217",
+      "datum": "2026-04-09",
+      "titel": "Ett utökat straffrättsligt tjänstemannaansvar",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03217.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01JuU15",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU15",
+      "datum": "2026-04-02",
+      "titel": "Kriminalvårdsfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD0395",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "95",
+      "datum": "2026-01-22",
+      "titel": "Säkerhetsförvaring – en ny tidsobestämd frihetsberövande påföljd",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0395.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

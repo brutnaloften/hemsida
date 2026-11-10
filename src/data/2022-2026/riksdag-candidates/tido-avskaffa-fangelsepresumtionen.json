@@ -12,7 +12,16 @@
     "keyword:straffvärde",
     "keyword:brottsbalken",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -48,8 +57,14 @@
       "titel": "Ett nytt straffrättsligt påföljdssystem",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03297.html",
-      "found_by": ["keyword:påföljdsval", "keyword:straffvärde", "keyword:brottsbalken"],
-      "score": 3
+      "found_by": [
+        "keyword:påföljdsval",
+        "keyword:straffvärde",
+        "keyword:brottsbalken",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03293",
@@ -60,8 +75,14 @@
       "titel": "Skärpta regler för unga lagöverträdare",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03293.html",
-      "found_by": ["keyword:påföljdsval", "keyword:straffvärde", "keyword:brottsbalken"],
-      "score": 3
+      "found_by": [
+        "keyword:påföljdsval",
+        "keyword:straffvärde",
+        "keyword:brottsbalken",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03218",
@@ -85,7 +106,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03138.html",
       "found_by": ["keyword:fängelsepresumtionen", "keyword:påföljdsval", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC03141",
@@ -97,7 +119,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03141.html",
       "found_by": ["keyword:fängelsepresumtionen", "keyword:påföljdsval", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HA0353",
@@ -109,7 +132,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HA0353.html",
       "found_by": ["keyword:fängelsepresumtionen", "keyword:påföljdsval", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01JuU40",
@@ -121,7 +145,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU40.html",
       "found_by": ["keyword:fängelse", "keyword:brottsbalken"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03246",
@@ -145,7 +170,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03181.html",
       "found_by": ["keyword:påföljdsval", "keyword:straffvärde"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.12
     },
     {
       "dok_id": "HEB313",
@@ -169,7 +195,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB31.html",
       "found_by": ["keyword:fängelsepresumtionen", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA01JuU20",
@@ -181,7 +208,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU20.html",
       "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HA0373",
@@ -193,7 +221,177 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HA0373.html",
       "found_by": ["keyword:fängelsepresumtionen", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
+    },
+    {
+      "dok_id": "HDB394",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "94",
+      "datum": "2026-01-01",
+      "titel": "En säkrare utrikesförvaltning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD03100",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "100",
+      "datum": "2026-04-13",
+      "titel": "2026 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031d6",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HEB1102",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "102",
+      "datum": "2026-08-27",
+      "titel": "Barnfrid - förstärkta åtgärder mot sexuella kränkningar av barn och barnpornografibrott",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1102.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB393d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "93",
+      "datum": "2025-08-28",
+      "titel": "En robust skogspolitik för aktivt skogsbruk, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB393d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3119",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "119",
+      "datum": "2025-12-17",
+      "titel": "Ett nytt brott och andra åtgärder mot människohandel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3119.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB366d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB366d4",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 4",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3120",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "120",
+      "datum": "2025-12-15",
+      "titel": "Effektivare organisering och genomförande av statlig väg och järnväg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

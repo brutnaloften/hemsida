@@ -12,7 +12,12 @@
     "keyword:nedläggning",
     "keyword:Swedavia",
     "all-keywords",
-    "committee:TU"
+    "committee:TU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -62,7 +67,8 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HD01TU20.html",
       "found_by": ["keyword:Bromma", "keyword:nedläggning", "all-keywords", "committee:TU"],
-      "score": 4
+      "score": 4,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01NU4",
@@ -114,8 +120,14 @@
       "titel": "Statens framtida roll som ägare och förvaltare av flygplatser samt Bromma flygplats funktion",
       "organ": "LI-dep",
       "url": "https://data.riksdagen.se/dokument/HDB155.html",
-      "found_by": ["keyword:Bromma flygplats", "keyword:Bromma", "keyword:flygplats"],
-      "score": 3
+      "found_by": [
+        "keyword:Bromma flygplats",
+        "keyword:Bromma",
+        "keyword:flygplats",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC0375",
@@ -126,8 +138,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HC0375.html",
-      "found_by": ["keyword:Bromma", "keyword:flygplats", "keyword:Swedavia"],
-      "score": 3
+      "found_by": [
+        "keyword:Bromma",
+        "keyword:flygplats",
+        "keyword:Swedavia",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01TU14",
@@ -138,8 +156,14 @@
       "titel": "Luftfartsfrågor",
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HB01TU14.html",
-      "found_by": ["keyword:Bromma flygplats", "all-keywords", "committee:TU"],
-      "score": 3
+      "found_by": [
+        "keyword:Bromma flygplats",
+        "all-keywords",
+        "committee:TU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01TU11",
@@ -174,8 +198,13 @@
       "titel": "Arlanda - en viktig port för det svenska välståndet",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB367.html",
-      "found_by": ["keyword:Bromma flygplats", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:Bromma flygplats",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA0375",
@@ -186,8 +215,13 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HA0375.html",
-      "found_by": ["keyword:Bromma flygplats", "keyword:Bromma"],
-      "score": 2
+      "found_by": [
+        "keyword:Bromma flygplats",
+        "keyword:Bromma",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HBB43",
@@ -211,7 +245,60 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03312.html",
       "found_by": ["keyword:flygplats"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HA03140",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "140",
+      "datum": "2023-06-20",
+      "titel": "2023 års redogörelse för företag med statligt ägande",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03140.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01TU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "TU1",
+      "datum": "2022-12-14",
+      "titel": "Utgiftsområde 22 Kommunikationer",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HA01TU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB1178",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "178",
+      "datum": "2023-12-20",
+      "titel": "Stärkt konkurrenskraft för Arlanda flygplats genom ökad kapacitet och förbättrad tillgänglighet till och från flygplatsen",
+      "organ": "LI-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1178.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

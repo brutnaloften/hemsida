@@ -12,7 +12,17 @@
     "keyword:anhörigstöd",
     "keyword:barn som anhöriga",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -61,8 +71,15 @@
       "titel": "Socialtjänstens arbete",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU18.html",
-      "found_by": ["keyword:anhöriglinje", "keyword:anhörigstöd", "all-keywords", "committee:SoU"],
-      "score": 4
+      "found_by": [
+        "keyword:anhöriglinje",
+        "keyword:anhörigstöd",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01SoU18",
@@ -77,9 +94,11 @@
         "keyword:anhöriga",
         "keyword:anhöriglinje",
         "keyword:barn som anhöriga",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HBB177",
@@ -107,8 +126,14 @@
       "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d11.html",
-      "found_by": ["keyword:anhöriglinje", "keyword:barn som anhöriga", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:anhöriglinje",
+        "keyword:barn som anhöriga",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HB01SoU17",
@@ -131,8 +156,14 @@
       "titel": "Vi kan bättre! Kunskapsbaserad narkotikapolitik med liv och hälsa i fokus ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB362.html",
-      "found_by": ["keyword:anhöriglinje", "keyword:barn som anhöriga", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:anhöriglinje",
+        "keyword:barn som anhöriga",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01SoU25",
@@ -143,8 +174,13 @@
       "titel": "Stärkta insatser för äldre och för de som vårdar eller stöder närstående",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU25.html",
-      "found_by": ["keyword:anhörigstöd", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:anhörigstöd",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HC031",
@@ -167,8 +203,13 @@
       "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HC031d10.html",
-      "found_by": ["keyword:anhöriglinje", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:anhöriglinje",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01SoU17",
@@ -204,7 +245,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
       "found_by": ["keyword:anhöriga"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03295",
@@ -216,7 +258,190 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03295.html",
       "found_by": ["keyword:kontaktperson"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
+    },
+    {
+      "dok_id": "HCB364",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "64",
+      "datum": "2024-09-19",
+      "titel": "Motståndskraft i samhällsviktiga tjänster",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB364.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03283",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "283",
+      "datum": "2026-06-16",
+      "titel": "Ungdomspolitisk skrivelse",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03283.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB378",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "78",
+      "datum": "2025-01-01",
+      "titel": "Ett språkkrav för språkutveckling ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB378.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB388",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "88",
+      "datum": "2024-12-11",
+      "titel": "Säkerhetsprövningar ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d27",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d27.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD03251",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "251",
+      "datum": "2026-04-30",
+      "titel": "En mer sammanhållen vård för personer med skadligt bruk eller beroende och andra psykiatriska tillstånd",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03251.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA01SoU21",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU21",
+      "datum": "2023-05-30",
+      "titel": "Stöd till personer med funktionsnedsättning",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB341d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "41",
+      "datum": "2026-06-17",
+      "titel": "Jämställdhet i en föränderlig tid - nuläge och vägar framåt, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB341d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01SoU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU1",
+      "datum": "2024-12-04",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB371",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "71",
+      "datum": "2024-11-04",
+      "titel": "Reglering av hushållens skulder ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB371.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

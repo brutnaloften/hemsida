@@ -11,7 +11,15 @@
     "keyword:företagsskatt",
     "keyword:konkurrenskraft",
     "all-keywords",
-    "committee:SkU"
+    "committee:SkU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -36,7 +44,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03125.html",
       "found_by": ["keyword:bolagsskatt", "keyword:kapitalskatt", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.03
     },
     {
       "dok_id": "HB031",
@@ -48,7 +57,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB031.html",
       "found_by": ["keyword:kapitalskatt", "keyword:företagsskatt", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD031d2",
@@ -83,8 +93,13 @@
       "titel": "Förenkla och förbättra!",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB336.html",
-      "found_by": ["keyword:kapitalskatt", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kapitalskatt",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HCB329",
@@ -95,8 +110,13 @@
       "titel": "Goda möjligheter till ökat välstånd",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB329.html",
-      "found_by": ["keyword:kapitalskatt", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kapitalskatt",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HBB385",
@@ -120,7 +140,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB318d2.html",
       "found_by": ["keyword:företagsskatt", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HEB1112",
@@ -144,7 +165,8 @@
       "organ": "LI-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1122.html",
       "found_by": ["keyword:konkurrenskraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HEB346",
@@ -156,7 +178,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB346.html",
       "found_by": ["keyword:konkurrenskraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD01FiU40",
@@ -168,7 +191,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU40.html",
       "found_by": ["keyword:konkurrenskraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HEB127",
@@ -193,6 +217,149 @@
       "url": "https://data.riksdagen.se/dokument/HD0398.html",
       "found_by": ["keyword:bolagsskatt"],
       "score": 1
+    },
+    {
+      "dok_id": "HD01SkU15",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU15",
+      "datum": "2026-03-04",
+      "titel": "Företag, kapital och fastighet",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA01SkU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU11",
+      "datum": "2023-03-09",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01SkU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU9",
+      "datum": "2025-03-20",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB337",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "37",
+      "datum": "2024-05-31",
+      "titel": "Förbättrade ränteavdragsregler för företag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB337.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01FiU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU20",
+      "datum": "2025-06-12",
+      "titel": "Riktlinjer för den ekonomiska politiken och budgetpolitiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01SkU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU13",
+      "datum": "2025-04-01",
+      "titel": "Företag, kapital och fastighet",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB01SkU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU11",
+      "datum": "2024-05-23",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01FiU20",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU20",
+      "datum": "2026-06-04",
+      "titel": "Riktlinjer för den ekonomiska politiken och budgetpolitiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA03100",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "100",
+      "datum": "2023-04-17",
+      "titel": "2023 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01NU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU16",
+      "datum": "2023-05-05",
+      "titel": "Näringspolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01SkU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU12",
+      "datum": "2023-04-27",
+      "titel": "Företag, kapital och fastighet",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.75
     }
   ]
 }

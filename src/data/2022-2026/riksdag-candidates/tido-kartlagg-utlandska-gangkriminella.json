@@ -11,7 +11,14 @@
     "keyword:kartläggning",
     "keyword:utvisning",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -60,7 +67,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU16.html",
       "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HA01JuU1",
@@ -84,7 +92,8 @@
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB194.html",
       "found_by": ["keyword:gängkriminella"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01SfU37",
@@ -96,7 +105,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
       "found_by": ["keyword:utvisning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HEB167",
@@ -108,7 +118,8 @@
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB167.html",
       "found_by": ["keyword:gängkriminella"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03295",
@@ -120,7 +131,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03295.html",
       "found_by": ["all-keywords"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03301",
@@ -132,7 +144,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03301.html",
       "found_by": ["keyword:utländska medborgare"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03274",
@@ -156,7 +169,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03290.html",
       "found_by": ["keyword:kartläggning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01JuU45",
@@ -180,7 +194,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU44.html",
       "found_by": ["keyword:kartläggning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HD01FiU45",
@@ -193,6 +208,19 @@
       "url": "https://data.riksdagen.se/dokument/HD01FiU45.html",
       "found_by": ["keyword:kartläggning"],
       "score": 1
+    },
+    {
+      "dok_id": "HDB3114",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "114",
+      "datum": "2025-12-03",
+      "titel": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3114.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

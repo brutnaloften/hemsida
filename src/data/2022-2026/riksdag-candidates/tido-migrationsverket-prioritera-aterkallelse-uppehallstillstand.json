@@ -11,7 +11,14 @@
     "keyword:Migrationsverket",
     "keyword:regleringsbrev",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -41,7 +48,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU23.html",
       "found_by": ["keyword:uppehållstillstånd", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HC01SfU11",
@@ -89,7 +97,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU8.html",
       "found_by": ["keyword:återkallelse", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD03284",
@@ -125,7 +134,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU4.html",
       "found_by": ["keyword:Migrationsverket", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD039",
@@ -161,7 +171,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
       "found_by": ["keyword:uppehållstillstånd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03289",
@@ -197,7 +208,99 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU30.html",
       "found_by": ["keyword:uppehållstillstånd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA031d9",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01SfU4",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SfU4",
+      "datum": "2024-12-03",
+      "titel": "Utgiftsområde 8 Migration",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC031d9",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3114",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "114",
+      "datum": "2025-12-03",
+      "titel": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3114.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB399",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "99",
+      "datum": "2025-09-26",
+      "titel": "Ändring av permanent uppehållstillstånd för vissa utlänningar",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB1158",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "158",
+      "datum": "2023-11-20",
+      "titel": "Skärpta krav på hederligt levnadssätt och ökade möjligheter till återkallelse av uppehållstillstånd",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1158.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

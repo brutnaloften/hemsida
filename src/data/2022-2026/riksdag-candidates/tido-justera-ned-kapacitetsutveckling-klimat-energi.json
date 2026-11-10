@@ -11,7 +11,14 @@
     "keyword:energiomställning",
     "keyword:anslag",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -24,7 +31,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU20.html",
       "found_by": ["keyword:kapacitetsutveckling", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD03153",
@@ -36,7 +44,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03153.html",
       "found_by": ["keyword:energiomställning", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01NU3",
@@ -48,7 +57,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
       "found_by": ["keyword:utgiftsområde 21", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD031d9",
@@ -72,7 +82,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
       "found_by": ["keyword:utgiftsområde 21", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HC031d22",
@@ -84,7 +95,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HC031d22.html",
       "found_by": ["keyword:utgiftsområde 21", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HA01NU17",
@@ -120,7 +132,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU19.html",
       "found_by": ["committee:NU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HD01FiU48",
@@ -144,7 +157,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03240.html",
       "found_by": ["keyword:energiomställning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01FiU22",
@@ -168,7 +182,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0397.html",
       "found_by": ["keyword:kapacitetsutveckling"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03137",
@@ -192,7 +207,34 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
       "found_by": ["committee:NU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
+    },
+    {
+      "dok_id": "HB03101",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "101",
+      "datum": "2024-04-15",
+      "titel": "Årsredovisning för staten 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB031d22",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

@@ -12,7 +12,14 @@
     "keyword:specialistvård",
     "keyword:vårdgaranti",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -30,9 +37,11 @@
         "keyword:psykiatri",
         "keyword:vårdgaranti",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC01SoU16",
@@ -48,9 +57,11 @@
         "keyword:specialistvård",
         "keyword:vårdgaranti",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01SoU12",
@@ -66,9 +77,11 @@
         "keyword:primärvård",
         "keyword:specialistvård",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB338",
@@ -83,9 +96,11 @@
         "keyword:fast läkarkontakt",
         "keyword:specialistvård",
         "keyword:vårdgaranti",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD0319",
@@ -113,8 +128,14 @@
       "titel": "Nästa steg för en god och nära vård",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU23.html",
-      "found_by": ["keyword:fast läkarkontakt", "keyword:primärvård", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:fast läkarkontakt",
+        "keyword:primärvård",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD01SoU1",
@@ -137,8 +158,14 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU14.html",
-      "found_by": ["keyword:fast läkarkontakt", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:fast läkarkontakt",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01SoU1",
@@ -150,7 +177,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
       "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HBB427",
@@ -185,8 +213,9 @@
       "titel": "En mer sammanhållen vård för personer med skadligt bruk eller beroende och andra psykiatriska tillstånd",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03251.html",
-      "found_by": ["keyword:psykiatri"],
-      "score": 1
+      "found_by": ["keyword:psykiatri", "score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD03101",
@@ -210,7 +239,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03216.html",
       "found_by": ["keyword:primärvård"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01SoU17",
@@ -223,6 +253,84 @@
       "url": "https://data.riksdagen.se/dokument/HD01SoU17.html",
       "found_by": ["committee:SoU"],
       "score": 1
+    },
+    {
+      "dok_id": "HCB150",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "50",
+      "datum": "2024-05-23",
+      "titel": "Bättre styrning för en tillgänglig och jämlik hälso- och sjukvård med god kontinuitet",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB150.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HA031d10",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB031d10",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC031d10",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB01SoU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU20",
+      "datum": "2024-04-05",
+      "titel": "Äldreomsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

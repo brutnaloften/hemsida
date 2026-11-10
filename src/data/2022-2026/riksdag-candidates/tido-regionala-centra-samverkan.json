@@ -12,7 +12,15 @@
     "keyword:sjukhusstruktur",
     "keyword:vårdköer",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +37,11 @@
         "keyword:regionala centra",
         "keyword:sjukhusstruktur",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB362d2",
@@ -43,7 +53,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB362d2.html",
       "found_by": ["keyword:regionala cancercenter", "keyword:sjukhusstruktur", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HEB192",
@@ -55,7 +66,8 @@
       "organ": "S-dep",
       "url": "https://data.riksdagen.se/dokument/HEB192.html",
       "found_by": ["keyword:sjukhusstruktur", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03284",
@@ -91,7 +103,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB362.html",
       "found_by": ["keyword:sjukhusstruktur", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HC01AU8",
@@ -103,7 +116,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HC01AU8.html",
       "found_by": ["keyword:regionala centra", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HDB325",
@@ -115,7 +129,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB325.html",
       "found_by": ["keyword:regionala centra", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.04
     },
     {
       "dok_id": "HB01AU10",
@@ -127,7 +142,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HB01AU10.html",
       "found_by": ["keyword:regionala centra", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0
     },
     {
       "dok_id": "HB01SoU8",
@@ -139,7 +155,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU8.html",
       "found_by": ["keyword:vårdköer", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HCB314",
@@ -163,7 +180,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB38.html",
       "found_by": ["keyword:regionala centra", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01SoU16",
@@ -175,7 +193,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
       "found_by": ["committee:SoU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01SoU17",
@@ -199,7 +218,34 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB322.html",
       "found_by": ["keyword:samverkan"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.15
+    },
+    {
+      "dok_id": "HA031d10",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01SoU16",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU16",
+      "datum": "2025-06-04",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

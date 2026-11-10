@@ -12,7 +12,11 @@
     "keyword:bosättningslagen",
     "keyword:kvotflyktingar",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -46,7 +50,8 @@
         "keyword:bosättningslagen",
         "keyword:kvotflyktingar"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HDB335",
@@ -142,7 +147,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0318.html",
       "found_by": ["keyword:vidarebosättning", "keyword:kvotflyktingar"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01AU14",
@@ -154,7 +160,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU14.html",
       "found_by": ["keyword:bosättningslagen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD03229",
@@ -178,7 +185,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU8.html",
       "found_by": ["keyword:bosättningslagen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD0392",
@@ -190,7 +198,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0392.html",
       "found_by": ["keyword:kvotflyktingar"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01AU1",
@@ -203,6 +212,19 @@
       "url": "https://data.riksdagen.se/dokument/HD01AU1.html",
       "found_by": ["keyword:kvotflyktingar"],
       "score": 1
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

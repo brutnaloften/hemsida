@@ -12,7 +12,14 @@
     "keyword:generationsmålet",
     "keyword:God bebyggd miljö",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -30,7 +37,8 @@
         "keyword:God bebyggd miljö",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD031d22",
@@ -42,7 +50,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d22.html",
       "found_by": ["keyword:generationsmålet", "keyword:God bebyggd miljö", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.1
     },
     {
       "dok_id": "HB0359",
@@ -138,7 +147,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HA031d21.html",
       "found_by": ["keyword:God bebyggd miljö", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03288",
@@ -162,7 +172,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03286.html",
       "found_by": ["keyword:instruktion"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01TU20",
@@ -174,7 +185,8 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HD01TU20.html",
       "found_by": ["keyword:generationsmålet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HEB333",
@@ -186,7 +198,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB333.html",
       "found_by": ["all-keywords"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01MJU22",
@@ -199,6 +212,45 @@
       "url": "https://data.riksdagen.se/dokument/HD01MJU22.html",
       "found_by": ["keyword:Energimyndigheten"],
       "score": 1
+    },
+    {
+      "dok_id": "HB03105",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "105",
+      "datum": "2024-03-19",
+      "titel": "Energipolitikens långsiktiga inriktning",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03105.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC0372",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "72",
+      "datum": "2024-12-19",
+      "titel": "Forskning och innovation på energiområdet för försörjningstrygghet, konkurrenskraft och klimatomställning",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.75
     }
   ]
 }

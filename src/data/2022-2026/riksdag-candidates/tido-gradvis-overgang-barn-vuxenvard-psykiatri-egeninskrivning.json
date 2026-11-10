@@ -12,7 +12,13 @@
     "keyword:vårdplats",
     "keyword:patientens önskemål",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -24,8 +30,15 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
-      "found_by": ["keyword:psykiatri", "keyword:vårdplats", "all-keywords", "committee:SoU"],
-      "score": 4
+      "found_by": [
+        "keyword:psykiatri",
+        "keyword:vårdplats",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA01SoU12",
@@ -40,9 +53,11 @@
         "keyword:vårdplats",
         "keyword:patientens önskemål",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB338",
@@ -53,8 +68,14 @@
       "titel": "Behovsstyrd vård",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB338.html",
-      "found_by": ["keyword:vårdplats", "keyword:patientens önskemål", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:vårdplats",
+        "keyword:patientens önskemål",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD031d11",
@@ -65,8 +86,14 @@
       "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d11.html",
-      "found_by": ["keyword:psykiatri", "keyword:vårdplats", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:psykiatri",
+        "keyword:vårdplats",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.75
     },
     {
       "dok_id": "HB01SoU14",
@@ -77,8 +104,14 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU14.html",
-      "found_by": ["keyword:vårdplats", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:vårdplats",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.98
     },
     {
       "dok_id": "HD01SoU1",
@@ -102,7 +135,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB384.html",
       "found_by": ["keyword:vårdplats", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HDB310",
@@ -114,7 +148,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB310.html",
       "found_by": ["keyword:vårdplats", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC031d10",
@@ -126,7 +161,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HC031d10.html",
       "found_by": ["keyword:vårdplats", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03271",
@@ -138,7 +174,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03271.html",
       "found_by": ["keyword:vårdplats"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03251",
@@ -150,7 +187,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03251.html",
       "found_by": ["keyword:psykiatri"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03101",
@@ -197,8 +235,9 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
-      "found_by": ["committee:SoU"],
-      "score": 1
+      "found_by": ["committee:SoU", "score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

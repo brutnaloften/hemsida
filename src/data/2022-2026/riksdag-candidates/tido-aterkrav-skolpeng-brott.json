@@ -12,7 +12,12 @@
     "keyword:ekonomisk brottslighet",
     "keyword:huvudman",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +34,11 @@
         "keyword:återkrav",
         "keyword:friskolor",
         "keyword:huvudman",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01UbU9",
@@ -42,8 +49,15 @@
       "titel": "Övergripande skolfrågor",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU9.html",
-      "found_by": ["keyword:skolpeng", "keyword:friskolor", "all-keywords", "committee:UbU"],
-      "score": 4
+      "found_by": [
+        "keyword:skolpeng",
+        "keyword:friskolor",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01UbU12",
@@ -55,7 +69,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU12.html",
       "found_by": ["keyword:skolpeng", "keyword:friskolor", "keyword:huvudman", "committee:UbU"],
-      "score": 4
+      "score": 4,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01UbU30",
@@ -126,8 +141,9 @@
       "titel": "Skärpta villkor för friskolesektorn - ytterligare förslag",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB3123.html",
-      "found_by": ["keyword:skolpeng", "all-keywords"],
-      "score": 2
+      "found_by": ["keyword:skolpeng", "all-keywords", "score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB337",
@@ -151,7 +167,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB320.html",
       "found_by": ["keyword:skolpeng", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HA01UbU5",
@@ -187,7 +204,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB339.html",
       "found_by": ["keyword:återkrav"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD01JuU42",
@@ -199,7 +217,73 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
       "found_by": ["keyword:ekonomisk brottslighet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3108",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "108",
+      "datum": "2025-11-13",
+      "titel": "Ett datalyft mot fel, fusk och frånvaro",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3108.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB388",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-07-11",
+      "titel": "Tidigt besked om lämplig användning av mark och vatten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB388.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

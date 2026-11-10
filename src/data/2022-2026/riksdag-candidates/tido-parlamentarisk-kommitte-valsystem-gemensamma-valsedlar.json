@@ -12,7 +12,15 @@
     "keyword:Valmyndigheten",
     "keyword:valdeltagande",
     "all-keywords",
-    "committee:KU"
+    "committee:KU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -69,7 +77,8 @@
         "keyword:valdeltagande",
         "all-keywords"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.05
     },
     {
       "dok_id": "HB01KU12",
@@ -85,9 +94,11 @@
         "keyword:valsedlar",
         "keyword:gemensamma valsedlar",
         "all-keywords",
-        "committee:KU"
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01KU23",
@@ -103,9 +114,11 @@
         "keyword:gemensamma valsedlar",
         "keyword:valdeltagande",
         "all-keywords",
-        "committee:KU"
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.85
     },
     {
       "dok_id": "HEB32",
@@ -120,9 +133,11 @@
         "keyword:valsystem",
         "keyword:gemensamma valsedlar",
         "keyword:valdeltagande",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01KU4",
@@ -151,7 +166,8 @@
         "keyword:Valmyndigheten",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.1
     },
     {
       "dok_id": "HC0362",
@@ -163,7 +179,8 @@
       "organ": "Kulturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0362.html",
       "found_by": ["keyword:valsystem", "keyword:valsedlar", "keyword:Valmyndigheten"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.03
     },
     {
       "dok_id": "HCB124",
@@ -187,7 +204,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03185.html",
       "found_by": ["keyword:valsedlar", "keyword:Valmyndigheten"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD0375",
@@ -211,7 +229,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0388.html",
       "found_by": ["keyword:valsedlar", "keyword:Valmyndigheten"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01KU1",
@@ -223,7 +242,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU1.html",
       "found_by": ["keyword:valdeltagande", "committee:KU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.04
     },
     {
       "dok_id": "HEB187",
@@ -234,8 +254,74 @@
       "titel": "Tilläggsdirektiv till Valsedelskommittén (Ju 2024:04)",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB187.html",
-      "found_by": ["keyword:gemensamma valsedlar"],
-      "score": 1
+      "found_by": ["keyword:gemensamma valsedlar", "score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01KU23",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU23",
+      "datum": "2025-04-03",
+      "titel": "Offentlig förvaltning",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU23.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.98
+    },
+    {
+      "dok_id": "HB01KU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KU8",
+      "datum": "2024-02-29",
+      "titel": "Offentlig förvaltning",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HB01KU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB165",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "65",
+      "datum": "2025-06-19",
+      "titel": "Tilläggsdirektiv till Valsedelskommittén (Ju 2024:04)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB165.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

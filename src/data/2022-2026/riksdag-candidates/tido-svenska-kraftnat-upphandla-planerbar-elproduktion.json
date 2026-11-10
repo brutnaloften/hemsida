@@ -12,7 +12,14 @@
     "keyword:driftsäkerhet",
     "keyword:regleringsbrev",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +35,11 @@
         "keyword:Svenska kraftnät",
         "keyword:planerbar elproduktion",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01NU9",
@@ -45,9 +54,11 @@
         "keyword:Svenska kraftnät",
         "keyword:planerbar elproduktion",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01NU17",
@@ -71,7 +82,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03150.html",
       "found_by": ["keyword:planerbar elproduktion", "keyword:driftsäkerhet", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.25
     },
     {
       "dok_id": "HB03105",
@@ -83,7 +95,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03105.html",
       "found_by": ["keyword:planerbar elproduktion", "keyword:driftsäkerhet", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HB0358",
@@ -95,7 +108,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0358.html",
       "found_by": ["keyword:Svenska kraftnät", "keyword:planerbar elproduktion", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HA01NU3",
@@ -119,7 +133,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03240.html",
       "found_by": ["keyword:Svenska kraftnät", "keyword:driftsäkerhet"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01KU10",
@@ -131,7 +146,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU10.html",
       "found_by": ["keyword:Svenska kraftnät", "keyword:regleringsbrev"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.08
     },
     {
       "dok_id": "HDB347",
@@ -142,8 +158,13 @@
       "titel": "Spänning i tillvaron",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB347.html",
-      "found_by": ["keyword:Svenska kraftnät", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:Svenska kraftnät",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB01NU9",
@@ -154,8 +175,13 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
-      "found_by": ["keyword:Svenska kraftnät", "committee:NU"],
-      "score": 2
+      "found_by": [
+        "keyword:Svenska kraftnät",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01NU5",
@@ -204,6 +230,58 @@
       "url": "https://data.riksdagen.se/dokument/HD01MJU22.html",
       "found_by": ["keyword:Energimyndigheten"],
       "score": 1
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01NU3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU3",
+      "datum": "2025-12-04",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3117",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "117",
+      "datum": "2025-12-10",
+      "titel": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01NU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU11",
+      "datum": "2025-01-16",
+      "titel": "En kapacitetsmekanism för elmarknaden",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

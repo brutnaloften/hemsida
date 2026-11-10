@@ -12,7 +12,12 @@
     "keyword:asyl",
     "keyword:utlänningslagen",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -105,7 +110,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU12.html",
       "found_by": ["keyword:humanitär skyddsgrund", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.02
     },
     {
       "dok_id": "HB01SfU4",
@@ -117,7 +123,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU4.html",
       "found_by": ["keyword:humanitär skyddsgrund", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HA01SfU15",
@@ -129,7 +136,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU15.html",
       "found_by": ["keyword:humanitär skyddsgrund", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HA01SfU4",
@@ -141,7 +149,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HA01SfU4.html",
       "found_by": ["keyword:humanitär skyddsgrund", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01SfU37",
@@ -153,7 +162,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
       "found_by": ["keyword:skyddsgrund", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD01SfU32",
@@ -165,7 +175,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
       "found_by": ["keyword:utlänningslagen", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01AU8",
@@ -177,7 +188,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU8.html",
       "found_by": ["keyword:humanitär skyddsgrund", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01FiU47",
@@ -201,7 +213,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU45.html",
       "found_by": ["keyword:utlänningslagen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SfU33",
@@ -214,6 +227,32 @@
       "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
       "found_by": ["keyword:utlänningslagen"],
       "score": 1
+    },
+    {
+      "dok_id": "HB0318",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "18",
+      "datum": "2023-09-26",
+      "titel": "Vissa skärpta villkor för anhöriginvandring och begränsade möjligheter till uppehållstillstånd av humanitära skäl",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0318.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.92
     }
   ]
 }

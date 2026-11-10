@@ -12,7 +12,16 @@
     "keyword:nyanlända",
     "keyword:tolkförmedling",
     "all-keywords",
-    "committee:KU"
+    "committee:KU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +38,11 @@
         "keyword:tolkavgift",
         "keyword:offentligt finansierad tolk",
         "keyword:tolkförmedling",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.9
     },
     {
       "dok_id": "HEB323",
@@ -46,9 +57,11 @@
         "keyword:tolkavgift",
         "keyword:offentligt finansierad tolk",
         "keyword:tolkförmedling",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01KU29",
@@ -63,9 +76,11 @@
         "keyword:tolkavgift",
         "keyword:offentligt finansierad tolk",
         "all-keywords",
-        "committee:KU"
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01KU23",
@@ -80,9 +95,11 @@
         "keyword:tolkavgift",
         "keyword:offentligt finansierad tolk",
         "all-keywords",
-        "committee:KU"
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HDB116",
@@ -93,8 +110,14 @@
       "titel": "En översyn av vissa tolkfrågor",
       "organ": "A-dep",
       "url": "https://data.riksdagen.se/dokument/HDB116.html",
-      "found_by": ["keyword:offentligt finansierad tolk", "keyword:tolkförmedling", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:offentligt finansierad tolk",
+        "keyword:tolkförmedling",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HEB334",
@@ -117,8 +140,13 @@
       "titel": "Skärpta krav för offentliga biträden och höjda kompetenskrav för tolkar i migrationsärenden",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03195.html",
-      "found_by": ["keyword:tolk", "keyword:tolkförmedling"],
-      "score": 2
+      "found_by": [
+        "keyword:tolk",
+        "keyword:tolkförmedling",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01SoU22",
@@ -154,7 +182,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB341.html",
       "found_by": ["all-keywords"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01KU20",
@@ -166,7 +195,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU20.html",
       "found_by": ["committee:KU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01AU14",
@@ -178,7 +208,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU14.html",
       "found_by": ["keyword:nyanlända"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SkU35",
@@ -190,7 +221,8 @@
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HD01SkU35.html",
       "found_by": ["keyword:nyanlända"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HEB331",
@@ -215,6 +247,84 @@
       "url": "https://data.riksdagen.se/dokument/HEB329.html",
       "found_by": ["keyword:tolkavgift"],
       "score": 1
+    },
+    {
+      "dok_id": "HA01SoU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU12",
+      "datum": "2023-04-24",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HB03128",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "128",
+      "datum": "2024-04-09",
+      "titel": "En arbetslöshetsförsäkring baserad på inkomster",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03128.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB358d3",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "58",
+      "datum": "2026-09-30",
+      "titel": "Markerna berättar och minns",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB358d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.93
+    },
+    {
+      "dok_id": "HBB1137",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "137",
+      "datum": "2023-10-02",
+      "titel": "Anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1137.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HEB346",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "46",
+      "datum": "2026-07-02",
+      "titel": "Ett sammanhållet, robust och konkurrenskraftigt Sverige - framtidens politik för utveckling i landsbygder och regioner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB346.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HEB341d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "41",
+      "datum": "2026-06-17",
+      "titel": "Jämställdhet i en föränderlig tid - nuläge och vägar framåt, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB341d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

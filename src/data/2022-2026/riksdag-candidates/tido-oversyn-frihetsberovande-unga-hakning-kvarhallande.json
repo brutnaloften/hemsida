@@ -12,7 +12,16 @@
     "keyword:häktning unga",
     "keyword:LUL",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +37,11 @@
         "keyword:unga brottsmisstänkta",
         "keyword:kvarhållande",
         "keyword:LUL",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03227",
@@ -41,8 +52,14 @@
       "titel": "Bättre möjligheter att utreda brott av unga lagöverträdare och några andra processrättsliga frågor",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03227.html",
-      "found_by": ["keyword:kvarhållande", "keyword:LUL", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:kvarhållande",
+        "keyword:LUL",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01JuU19",
@@ -89,8 +106,13 @@
       "titel": "Frihetsberövande påföljder för barn och unga",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03132.html",
-      "found_by": ["keyword:frihetsberövande", "keyword:LUL"],
-      "score": 2
+      "found_by": [
+        "keyword:frihetsberövande",
+        "keyword:LUL",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HEB310",
@@ -113,8 +135,13 @@
       "titel": "En lag om insatser inom socialtjänsten till vårdnadshavare, barn och unga när samtycke saknas ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB430.html",
-      "found_by": ["keyword:unga brottsmisstänkta", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:unga brottsmisstänkta",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HCB393",
@@ -125,8 +152,13 @@
       "titel": "Effektivare verktyg för att bekämpa brott av unga lagöverträdare ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB393.html",
-      "found_by": ["keyword:unga brottsmisstänkta", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:unga brottsmisstänkta",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HBB1102",
@@ -137,8 +169,13 @@
       "titel": "Utökade möjligheter att använda tvångsmedel mot barn och unga",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HBB1102.html",
-      "found_by": ["keyword:unga brottsmisstänkta", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:unga brottsmisstänkta",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-8-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA0378",
@@ -173,8 +210,9 @@
       "titel": "Skärpta regler för unga lagöverträdare",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03293.html",
-      "found_by": ["keyword:LUL"],
-      "score": 1
+      "found_by": ["keyword:LUL", "score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD03295",
@@ -186,7 +224,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03295.html",
       "found_by": ["keyword:LUL"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD01JuU37",
@@ -198,7 +237,177 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU37.html",
       "found_by": ["committee:JuU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.4
+    },
+    {
+      "dok_id": "HBB344",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "44",
+      "datum": "2023-11-08",
+      "titel": "En översyn av regleringen om frihetsberövande påföljder för unga ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB344.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0354",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "54",
+      "datum": "2024-11-25",
+      "titel": "Riksrevisionens rapport om statens insatser för barn som misstänks för grova brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0354.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01JuU15",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU15",
+      "datum": "2025-04-14",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB368d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "68",
+      "datum": "2023-11-15",
+      "titel": "Som om vi aldrig funnits - exkludering och assimilering av tornedalingar, kväner och lantalaiset, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB368d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB393",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "93",
+      "datum": "2023-12-13",
+      "titel": "Budgetprocessen i det finanspolitiska ramverket ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB393.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HCB354",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "54",
+      "datum": "2024-08-29",
+      "titel": "Vägar till ett tryggare samhälle",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB354.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01JuU24",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU24",
+      "datum": "2025-03-21",
+      "titel": "Riksrevisionens rapport om statens insatser för barn som misstänks för grova brott",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU24.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB44",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "4",
+      "datum": "2025-02-10",
+      "titel": "En ny lag om unga lagöverträdare",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB44.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.75
     }
   ]
 }

@@ -12,7 +12,13 @@
     "keyword:avstämningstillfällen",
     "keyword:rehabiliteringskedjan",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -49,9 +55,11 @@
         "keyword:avstämningstillfällen",
         "keyword:rehabiliteringskedjan",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.92
     },
     {
       "dok_id": "HA01SfU14",
@@ -68,9 +76,11 @@
         "keyword:avstämningstillfällen",
         "keyword:rehabiliteringskedjan",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01SfU18",
@@ -103,9 +113,11 @@
         "keyword:rehabilitering",
         "keyword:avstämningstillfällen",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD031d12",
@@ -119,9 +131,11 @@
       "found_by": [
         "keyword:avstämningstillfällen",
         "keyword:rehabiliteringskedjan",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.92
     },
     {
       "dok_id": "HC0371",
@@ -184,8 +198,13 @@
       "titel": "Arbetsprövning med bibehållen sjukpenning",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0353.html",
-      "found_by": ["keyword:sjukskrivning", "keyword:rehabiliteringskedjan"],
-      "score": 2
+      "found_by": [
+        "keyword:sjukskrivning",
+        "keyword:rehabiliteringskedjan",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HCB326",
@@ -196,8 +215,13 @@
       "titel": "En utvärdering av förändringar i sjukförsäkringens regelverk under 2021 och 2022",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB326.html",
-      "found_by": ["keyword:sjukförsäkring", "keyword:rehabiliteringskedjan"],
-      "score": 2
+      "found_by": [
+        "keyword:sjukförsäkring",
+        "keyword:rehabiliteringskedjan",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01SfU1",
@@ -233,7 +257,151 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03301.html",
       "found_by": ["keyword:sjukförsäkring"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HBB353d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "53",
+      "datum": "2023-09-14",
+      "titel": "En ändamålsenlig arbetsskadeförsäkring - för bättre ekonomisk trygghet, kunskap och rättssäkerhet, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB353d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB120",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "20",
+      "datum": "2023-02-09",
+      "titel": "Tilläggsdirektiv till utredningen Sjukförsäkringen i förändring - en utvärdering (S 2022:07)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB120.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HBB368d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "68",
+      "datum": "2023-11-15",
+      "titel": "Som om vi aldrig funnits - exkludering och assimilering av tornedalingar, kväner och lantalaiset, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB368d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03266",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "266",
+      "datum": "2026-06-02",
+      "titel": "En god arbetsmiljö i ett föränderligt arbetsliv – regeringens arbetsmiljöstrategi för 2026–2031",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03266.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA0375",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "75",
+      "datum": "2023-03-14",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01AU6",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU6",
+      "datum": "2025-03-03",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01SfU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU9",
+      "datum": "2026-01-21",
+      "titel": "Arbetsprövning med bibehållen sjukpenning",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA01AU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU9",
+      "datum": "2023-04-20",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA03103",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "103",
+      "datum": "2023-03-14",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB352",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "52",
+      "datum": "2024-07-05",
+      "titel": "Allmänna sammankomster och Sveriges säkerhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB352.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

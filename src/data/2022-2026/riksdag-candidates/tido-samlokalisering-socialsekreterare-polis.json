@@ -12,7 +12,12 @@
     "keyword:socialtjänst",
     "keyword:unga",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -36,8 +41,14 @@
       "titel": "En förebyggande socialtjänstlag – för ökade rättigheter, skyldigheter och möjligheter",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0389.html",
-      "found_by": ["keyword:socialsekreterare", "keyword:samlokalisering", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:socialsekreterare",
+        "keyword:samlokalisering",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD03295",
@@ -49,7 +60,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03295.html",
       "found_by": ["keyword:socialsekreterare", "keyword:socialtjänst"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HEB334",
@@ -97,7 +109,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU15.html",
       "found_by": ["keyword:polisstation", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HA01SoU17",
@@ -133,7 +146,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU38.html",
       "found_by": ["keyword:unga"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01SoU39",
@@ -145,7 +159,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU39.html",
       "found_by": ["keyword:unga"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03294",
@@ -157,7 +172,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:socialsekreterare"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03289",
@@ -194,6 +210,19 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
       "found_by": ["keyword:unga"],
       "score": 1
+    },
+    {
+      "dok_id": "HB0368",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "68",
+      "datum": "2024-03-14",
+      "titel": "Barriärer mot brott – en socialpreventiv strategi mot kriminella nätverk och annan brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

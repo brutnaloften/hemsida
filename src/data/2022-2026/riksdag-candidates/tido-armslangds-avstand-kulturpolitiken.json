@@ -11,7 +11,16 @@
     "keyword:kulturens oberoende",
     "keyword:kulturstöd",
     "all-keywords",
-    "committee:KrU"
+    "committee:KrU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -29,9 +38,11 @@
         "keyword:kulturens oberoende",
         "keyword:kulturstöd",
         "all-keywords",
-        "committee:KrU"
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01KrU5",
@@ -46,9 +57,11 @@
         "keyword:armlängds avstånd",
         "keyword:kulturens oberoende",
         "all-keywords",
-        "committee:KrU"
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01KrU6",
@@ -63,9 +76,11 @@
         "keyword:armlängds avstånd",
         "keyword:kulturstöd",
         "all-keywords",
-        "committee:KrU"
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01KrU7",
@@ -89,7 +104,8 @@
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HB01KrU10.html",
       "found_by": ["keyword:kulturpolitik", "all-keywords", "committee:KrU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HBB358",
@@ -124,8 +140,13 @@
       "titel": "Bildning, utbildning och delaktighet",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB342.html",
-      "found_by": ["keyword:armlängds avstånd", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:armlängds avstånd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HB01NU19",
@@ -149,7 +170,8 @@
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HB01KrU1.html",
       "found_by": ["keyword:armlängds avstånd", "committee:KrU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HA01KrU6",
@@ -160,8 +182,9 @@
       "titel": "Kulturarvsfrågor",
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HA01KrU6.html",
-      "found_by": ["all-keywords", "committee:KrU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:KrU", "score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA01KrU1",
@@ -173,7 +196,8 @@
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HA01KrU1.html",
       "found_by": ["keyword:armlängds avstånd", "committee:KrU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD03287",
@@ -184,8 +208,9 @@
       "titel": "Ny politisk inriktning för ett starkare filmland",
       "organ": "Kulturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03287.html",
-      "found_by": ["keyword:armlängds avstånd"],
-      "score": 1
+      "found_by": ["keyword:armlängds avstånd", "score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01KU20",
@@ -197,7 +222,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU20.html",
       "found_by": ["keyword:armlängds avstånd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD01NU14",
@@ -209,7 +235,125 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU14.html",
       "found_by": ["keyword:kulturstöd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
+    },
+    {
+      "dok_id": "HC01KrU7",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KrU7",
+      "datum": "2025-04-04",
+      "titel": "Litteratur, språk och konstarter",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HC01KrU7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HBB1180",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "180",
+      "datum": "2023-12-21",
+      "titel": "En svensk kulturkanon",
+      "organ": "Ku-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1180.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC031d18",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB01KrU4",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KrU4",
+      "datum": "2024-02-21",
+      "titel": "Folkbildning",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HB01KrU4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB110",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "10",
+      "datum": "2024-01-25",
+      "titel": "En översyn av den nationella filmpolitiken",
+      "organ": "Ku-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01KrU4",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KrU4",
+      "datum": "2025-02-17",
+      "titel": "Public service, film och dataspel",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HC01KrU4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01KrU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KrU1",
+      "datum": "2025-11-28",
+      "titel": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HD01KrU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031d18",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01KrU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KrU8",
+      "datum": "2026-03-19",
+      "titel": "Civila samhället, trossamfund och folkbildning",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HD01KrU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

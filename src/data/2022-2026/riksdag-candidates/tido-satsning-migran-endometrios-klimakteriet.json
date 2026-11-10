@@ -12,7 +12,15 @@
     "keyword:kvinnors hälsa",
     "keyword:jämställd vård",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -32,7 +40,8 @@
         "keyword:jämställd vård",
         "all-keywords"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01SoU17",
@@ -66,9 +75,11 @@
         "keyword:kvinnors hälsa",
         "keyword:jämställd vård",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.55
     },
     {
       "dok_id": "HC01SoU17",
@@ -84,9 +95,11 @@
         "keyword:klimakteriet",
         "keyword:kvinnors hälsa",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.65
     },
     {
       "dok_id": "HEB341d2",
@@ -103,7 +116,8 @@
         "keyword:kvinnors hälsa",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD031d11",
@@ -114,8 +128,14 @@
       "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d11.html",
-      "found_by": ["keyword:migrän", "keyword:endometrios", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:migrän",
+        "keyword:endometrios",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01SoU1",
@@ -127,7 +147,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
       "found_by": ["keyword:endometrios", "keyword:jämställd vård", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HB01SoU16",
@@ -151,7 +172,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03122.html",
       "found_by": ["keyword:migrän", "keyword:endometrios", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.03
     },
     {
       "dok_id": "HA01SoU13",
@@ -162,8 +184,14 @@
       "titel": "Prioriteringar inom hälso- och sjukvården",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU13.html",
-      "found_by": ["keyword:endometrios", "keyword:kvinnors hälsa", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:endometrios",
+        "keyword:kvinnors hälsa",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-10-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD01SoU1",
@@ -198,8 +226,13 @@
       "titel": "Budgetpropositionen för 2025 - Utgiftsområde 9 Hälsovård, sjukvård och social  omsorg",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HC031d10.html",
-      "found_by": ["keyword:kvinnors hälsa", "keyword:jämställd vård"],
-      "score": 2
+      "found_by": [
+        "keyword:kvinnors hälsa",
+        "keyword:jämställd vård",
+        "score:tido-corpus-claude-v1-shard-5-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB0375",
@@ -211,7 +244,8 @@
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HB0375.html",
       "found_by": ["keyword:klimakteriet", "keyword:jämställd vård"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HB01SoU1",
@@ -223,7 +257,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
       "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     }
   ]
 }

@@ -12,7 +12,16 @@
     "keyword:förskrivningsrätt",
     "keyword:patientsäkerhet",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -28,9 +37,11 @@
         "keyword:läkemedelsförskrivning",
         "keyword:förskrivningsrätt",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01SoU14",
@@ -62,9 +73,11 @@
         "keyword:läkemedelsförskrivning",
         "keyword:recept",
         "keyword:förskrivningsrätt",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03271",
@@ -76,7 +89,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03271.html",
       "found_by": ["keyword:läkare", "keyword:förskrivningsrätt", "keyword:patientsäkerhet"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HEB319",
@@ -99,8 +113,14 @@
       "titel": "Riksrevisionens rapport om läkemedelsförskrivningen – statens styrning och tillsyn",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU2.html",
-      "found_by": ["keyword:läkemedelsförskrivning", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:läkemedelsförskrivning",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03247",
@@ -148,7 +168,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB363.html",
       "found_by": ["keyword:patientsäkerhet", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01SoU22",
@@ -196,7 +217,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:läkare"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03295",
@@ -208,7 +230,190 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03295.html",
       "found_by": ["keyword:läkare"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
+    },
+    {
+      "dok_id": "HD031d11",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB358d3",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "58",
+      "datum": "2026-09-30",
+      "titel": "Markerna berättar och minns",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB358d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB123",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "23",
+      "datum": "2026-03-26",
+      "titel": "Ett utökat och stärkt statligt ansvar för läkemedel och vaccin",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB123.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HEB346",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "46",
+      "datum": "2026-07-02",
+      "titel": "Ett sammanhållet, robust och konkurrenskraftigt Sverige - framtidens politik för utveckling i landsbygder och regioner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB346.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB1102",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "102",
+      "datum": "2024-10-31",
+      "titel": "Tilläggsdirektiv till Utredningen om en översyn av vissa frågor om dokumentation, begränsningar och tillsyn avseende läkemedelsförskrivningar (S 2024:07)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB1102.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC01FiU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU9",
+      "datum": "2024-10-17",
+      "titel": "Riksrevisorns årliga rapport 2024",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB341d2",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "41",
+      "datum": "2026-06-17",
+      "titel": "Jämställdhet i en föränderlig tid - nuläge och vägar framåt, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB341d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB362",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "62",
+      "datum": "2023-11-08",
+      "titel": "Vi kan bättre! Kunskapsbaserad narkotikapolitik med liv och hälsa i fokus ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB362.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB343",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "43",
+      "datum": "2025-04-15",
+      "titel": "Säkerställ tillgången till läkemedel",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB343.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB0375",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "75",
+      "datum": "2024-03-19",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB320",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "20",
+      "datum": "2026-03-05",
+      "titel": "Belägg för broms?",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB320.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB323",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "23",
+      "datum": "2026-03-31",
+      "titel": "Tolkavgift och förbud mot barntolkning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB323.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

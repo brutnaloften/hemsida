@@ -11,7 +11,16 @@
     "keyword:rättegångsbalken",
     "keyword:fängelse",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -27,9 +36,11 @@
         "keyword:obligatorisk häktning",
         "keyword:häktning",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-2-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01JuU8",
@@ -44,9 +55,11 @@
         "keyword:obligatorisk häktning",
         "keyword:häktning",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-6-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB01JuU21",
@@ -58,7 +71,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU21.html",
       "found_by": ["keyword:häktning", "all-keywords", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD03293",
@@ -70,7 +84,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03293.html",
       "found_by": ["keyword:häktning", "keyword:rättegångsbalken"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HD03246",
@@ -106,7 +121,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d6.html",
       "found_by": ["keyword:obligatorisk häktning", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01JuU29",
@@ -118,7 +134,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU29.html",
       "found_by": ["keyword:obligatorisk häktning", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HCB348",
@@ -130,7 +147,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB348.html",
       "found_by": ["keyword:obligatorisk häktning", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HB01JuU1",
@@ -154,7 +172,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU14.html",
       "found_by": ["keyword:obligatorisk häktning", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HA01JuU11",
@@ -202,7 +221,86 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03298.html",
       "found_by": ["keyword:rättegångsbalken"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
+    },
+    {
+      "dok_id": "HDB366d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA0353",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "53",
+      "datum": "2023-01-31",
+      "titel": "Skärpta straff för brott i kriminella nätverk",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0353.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB366d3",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 3",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA01JuU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU12",
+      "datum": "2023-03-23",
+      "titel": "Processrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB366d4",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform, del 4",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD03217",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "217",
+      "datum": "2026-04-09",
+      "titel": "Ett utökat straffrättsligt tjänstemannaansvar",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03217.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

@@ -12,7 +12,16 @@
     "keyword:sprängmedel",
     "keyword:polisens befogenheter",
     "all-keywords",
-    "committee:JuU"
+    "committee:JuU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -37,7 +46,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU15.html",
       "found_by": ["keyword:polisens befogenheter", "all-keywords", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.4
     },
     {
       "dok_id": "HB01JuU13",
@@ -48,8 +58,14 @@
       "titel": "Säkerhetszoner",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU13.html",
-      "found_by": ["keyword:vapen", "all-keywords", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:vapen",
+        "all-keywords",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-4-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HBB431",
@@ -60,8 +76,14 @@
       "titel": "Säkerhetszoner - ökade möjligheter för polisen att visitera för att förebygga brott ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB431.html",
-      "found_by": ["keyword:visitationszoner", "keyword:polisens befogenheter", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:visitationszoner",
+        "keyword:polisens befogenheter",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01JuU10",
@@ -73,7 +95,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU10.html",
       "found_by": ["keyword:polisens befogenheter", "all-keywords", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD01JuU1",
@@ -85,7 +108,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
       "found_by": ["keyword:visitationszoner", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HDB357",
@@ -97,7 +121,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB357.html",
       "found_by": ["keyword:polisens befogenheter", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.12
     },
     {
       "dok_id": "HC01JuU1",
@@ -120,8 +145,13 @@
       "titel": "Säkerhetszoner",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0384.html",
-      "found_by": ["keyword:visitationszoner", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:visitationszoner",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01JuU1",
@@ -145,7 +175,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03294.html",
       "found_by": ["keyword:visitation"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.04
     },
     {
       "dok_id": "HD01JuU10",
@@ -157,7 +188,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU10.html",
       "found_by": ["keyword:vapen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0
     },
     {
       "dok_id": "HD03256",
@@ -180,8 +212,9 @@
       "titel": "2026 års ekonomiska vårproposition",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03100.html",
-      "found_by": ["keyword:visitationszoner"],
-      "score": 1
+      "found_by": ["keyword:visitationszoner", "score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01JuU16",
@@ -193,7 +226,86 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU16.html",
       "found_by": ["keyword:polisens befogenheter"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.5
+    },
+    {
+      "dok_id": "HB0367",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "67",
+      "datum": "2024-02-01",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB357",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "57",
+      "datum": "2023-10-04",
+      "titel": "Åtgärder för tryggare bostadsområden ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB357.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC0375",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "75",
+      "datum": "2025-03-18",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01FiU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU20",
+      "datum": "2024-06-13",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB03100",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "100",
+      "datum": "2024-04-15",
+      "titel": "2024 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01KU20d3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU20",
+      "datum": "2026-01-01",
+      "titel": "Granskningsbetänkande - del 3",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU20d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

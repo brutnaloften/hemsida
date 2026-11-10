@@ -12,7 +12,16 @@
     "keyword:högskolor",
     "keyword:livslångt lärande",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-5-of-20",
+    "score:tido-corpus-claude-v1-shard-6-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-8-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -48,8 +57,13 @@
       "titel": "Stärkt patientsäkerhet genom rätt kompetens - utifrån hälso- och sjukvårdens och tandvårdens behov ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB363.html",
-      "found_by": ["keyword:livslångt lärande", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:livslångt lärande",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-9-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HC01UbU15",
@@ -73,7 +87,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU1.html",
       "found_by": ["keyword:högskolor", "committee:UbU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HB01UbU14",
@@ -84,8 +99,9 @@
       "titel": "Högskolan",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU14.html",
-      "found_by": ["all-keywords", "committee:UbU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:UbU", "score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HBB331",
@@ -97,7 +113,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB331.html",
       "found_by": ["keyword:livslångt lärande", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HA01UbU9",
@@ -109,7 +126,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU9.html",
       "found_by": ["keyword:livslångt lärande", "committee:UbU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HA01UbU3",
@@ -120,8 +138,13 @@
       "titel": "Studiestöd",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU3.html",
-      "found_by": ["keyword:vidareutbildning", "committee:UbU"],
-      "score": 2
+      "found_by": [
+        "keyword:vidareutbildning",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HEB357",
@@ -145,7 +168,8 @@
       "organ": "KN-dep",
       "url": "https://data.riksdagen.se/dokument/HEB181.html",
       "found_by": ["keyword:omställning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0
     },
     {
       "dok_id": "HD01NU27",
@@ -157,7 +181,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU27.html",
       "found_by": ["keyword:omställning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SkU23",
@@ -181,7 +206,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03197.html",
       "found_by": ["keyword:vidareutbildning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03194",
@@ -193,7 +219,177 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03194.html",
       "found_by": ["keyword:vidareutbildning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
+    },
+    {
+      "dok_id": "HD031d18",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-1-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01SkU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU11",
+      "datum": "2023-03-09",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01SkU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU13",
+      "datum": "2026-03-19",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01SkU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU9",
+      "datum": "2025-03-20",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01UbU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "UbU1",
+      "datum": "2023-12-08",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01SkU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU11",
+      "datum": "2024-05-23",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB312",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "12",
+      "datum": "2025-02-04",
+      "titel": "AI-kommissionens Färdplan för Sverige",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB312.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA031d17",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031d17",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB03111",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "111",
+      "datum": "2024-04-09",
+      "titel": "Strategi för företag i kulturella och kreativa branscher",
+      "organ": "Kulturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03111.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB031",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB03168",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "168",
+      "datum": "2024-09-09",
+      "titel": "Ett effektivare omställningsstudiestöd",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03168.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

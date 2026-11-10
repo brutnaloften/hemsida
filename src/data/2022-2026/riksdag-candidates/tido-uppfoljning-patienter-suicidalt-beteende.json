@@ -11,7 +11,14 @@
     "keyword:vårdprocess",
     "keyword:suicidprevention",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "score:tido-corpus-claude-v1-shard-1-of-20",
+    "score:tido-corpus-claude-v1-shard-2-of-20",
+    "score:tido-corpus-claude-v1-shard-3-of-20",
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-7-of-20",
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-10-of-20"
   ],
   "candidates": [
     {
@@ -23,8 +30,14 @@
       "titel": "Det handlar om livet – nationell strategi inom området psykisk hälsa och suicidprevention",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0377.html",
-      "found_by": ["keyword:suicidalt beteende", "keyword:suicidprevention", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:suicidalt beteende",
+        "keyword:suicidprevention",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-3-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HA01SoU20",
@@ -35,8 +48,14 @@
       "titel": "Folkhälsa",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU20.html",
-      "found_by": ["keyword:suicidalt beteende", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:suicidalt beteende",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-7-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03272",
@@ -48,7 +67,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03272.html",
       "found_by": ["keyword:uppföljning", "keyword:suicidprevention"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HEB338",
@@ -60,7 +80,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB338.html",
       "found_by": ["keyword:vårdprocess", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01SoU17",
@@ -84,7 +105,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB315d2.html",
       "found_by": ["keyword:suicidalt beteende", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01SoU12",
@@ -95,8 +117,13 @@
       "titel": "Folkhälsa",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU12.html",
-      "found_by": ["keyword:suicidprevention", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:suicidprevention",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-1-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD01SoU1",
@@ -167,8 +194,9 @@
       "titel": "Hälso- och sjukvårdens organisation",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
-      "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SoU", "score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB352d2",
@@ -180,7 +208,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB352d2.html",
       "found_by": ["all-keywords"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03291",
@@ -192,7 +221,47 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03291.html",
       "found_by": ["keyword:uppföljning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
+    },
+    {
+      "dok_id": "HA01SfU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SfU14",
+      "datum": "2023-04-13",
+      "titel": "Socialförsäkringsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC03103",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "103",
+      "datum": "2025-03-18",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2024",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HC03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01SoU16",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU16",
+      "datum": "2025-06-04",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }
