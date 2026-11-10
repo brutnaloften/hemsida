@@ -14,7 +14,7 @@ export interface PairResult {
   promise_id: string;
   document_id: string;
   judgement: Judgement;
-  /** The judgement passes the configured thresholds: a candidate for human review, never a verdict. */
+  /** The judgement passes the configured thresholds: a candidate for evidence, never a verdict by itself. */
   proposed: boolean;
 }
 

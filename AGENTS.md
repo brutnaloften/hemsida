@@ -6,7 +6,7 @@ Shared project instructions for Claude Code (via `CLAUDE.md`, which imports this
 
 Brutna Löften — a Swedish-language static site that tracks political promises. Built with Astro, deployed to GitHub Pages on push to `main`.
 
-**Direction (in transition):** promises are collected once per term from a fixed source (starting with Tidöavtalet, 2022–2026), then tracked against official Riksdag documents from data.riksdagen.se. Each promise gets an objective evidence timeline (dir, SOU, prop, bet/votering, SFS) plus a human-set verdict with reasoning. Data stays as files in git so every verdict change goes through a reviewable PR. The old news-discovery pipeline is being retired.
+**Direction (in transition):** promises are collected once per term from a fixed source (starting with Tidöavtalet, 2022–2026), then tracked against official Riksdag documents from data.riksdagen.se. Each promise gets an objective evidence timeline (dir, SOU, prop, bet/votering, SFS) plus a verdict with written reasoning. Claude (the model) finds the evidence and sets the verdicts; there is no human review step, so every verdict states its reasoning and cites its evidence. Data stays as files in git so every verdict change goes through a PR that can be inspected and reverted. The old news-discovery pipeline is being retired.
 
 ## Roadmap
 
@@ -45,7 +45,7 @@ oxfmt runs on staged files in the pre-commit hook (lint-staged).
 
 **Path aliases:** `@/*` maps to `./src/*` (configured in tsconfig.json).
 
-**Riksdag linking and cache sharing:** the end-to-end flow from ingest through keyword candidates, the hand-labelled eval set and exhaustive scoring to human-set evidence and verdicts, with each tool, artifact and scorer result, is in `docs/riksdag-linking.md`. `tools/out/riksdag-text` (2.5 GB) and `tools/out/score-cache` are gitignored but shared as `tar.zst` GitHub Release assets tagged `cache-<name>-<date>`, each with a `cache-manifest.json` whose Zod schema (`tools/lib/cache-archive.ts`) is the single source of truth: archive hash, file list, optional `base` snapshot for deltas, and coverage (for `riksdag-text` the document-date watermark; for `score-cache` the scoring runs, scorer, model and template version). Scorer `kind` and `model` are part of every score-cache key. Details and legal note in `docs/cache-sharing.md`.
+**Riksdag linking and cache sharing:** the end-to-end flow from ingest through keyword candidates, the hand-labelled eval set and exhaustive scoring to model-set evidence and verdicts, with each tool, artifact and scorer result, is in `docs/riksdag-linking.md`. `tools/out/riksdag-text` (2.5 GB) and `tools/out/score-cache` are gitignored but shared as `tar.zst` GitHub Release assets tagged `cache-<name>-<date>`, each with a `cache-manifest.json` whose Zod schema (`tools/lib/cache-archive.ts`) is the single source of truth: archive hash, file list, optional `base` snapshot for deltas, and coverage (for `riksdag-text` the document-date watermark; for `score-cache` the scoring runs, scorer, model and template version). Scorer `kind` and `model` are part of every score-cache key. Details and legal note in `docs/cache-sharing.md`.
 
 **CI:** `.github/workflows/ci.yml` runs build, typecheck, `fmt:check` and tests for the site, then typecheck for `tools/`. `deploy.yml` publishes to GitHub Pages on push to `main`.
 
@@ -65,6 +65,7 @@ pnpm (pinned via `packageManager` field in package.json).
 - **Quality gates before opening a PR:** `pnpm build`, `pnpm fmt:check`, and `pnpm test`.
 - **Tests:** prefer tests for new logic (schemas, tooling, data transforms). UI-only changes may rely on `pnpm build`.
 - **Data changes:** once seeding is done, every promise or verdict change gets its own PR. During initial seeding (e.g. the Tidöavtalet import) bulk PRs are fine.
+- **Verdicts and evidence are model-set.** There is no human review step. Claude writes `evidence[]` and sets verdicts, each with written reasoning that cites its evidence, one PR per change, within the schema constraints (`checkVerdictEvidence`). Prefer `unassessed` or `no_evidence` over a guess; use the `code-reviewer` subagent as the independent check.
 - **Language:** code, comments, commits, PRs and beads in English; everything shown on the site in Swedish.
 - **No hardcoded agreement names:** Tidöavtalet is only the first source. Site copy, labels and code must not assume a single agreement or term; take names from the `sources` data (e.g. its title or short title) and write generic wording ("avtal", "uppgörelser") where no specific source is meant.
 - **Authority:** Claude may commit, push branches, open/update/close PRs and close beads without asking. Never push to or force-push `main`; never merge outside independent mode.

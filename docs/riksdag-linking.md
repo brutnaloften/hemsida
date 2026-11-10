@@ -2,7 +2,7 @@
 
 Epic `hemsida-4np`. This is the map of how a promise gets its Riksdag evidence, which tool does each step, and where each artifact lives. The details are in the linked docs; this page exists so the whole flow is in one place.
 
-**Principle:** tools find and rank candidates and fill in objective evidence; a human sets every verdict, with written reasoning (`docs/data-model.md`). Nothing below sets a verdict.
+**Principle:** tools find and rank candidates, the judge (step 7) labels pairs, and Claude writes `evidence[]` and sets verdicts with written reasoning (`docs/data-model.md`). There is no human review step. Steps 1 to 7 produce no verdict; step 8 does.
 
 ## Steps
 
@@ -16,7 +16,7 @@ Epic `hemsida-4np`. This is the map of how a promise gets its Riksdag evidence, 
 | 5b  | Link scores to candidates | `tools/link-scores.ts`                                                                  | `tools/out/runs/<name>/results.json`, store | `riksdag-candidates/<promise-id>.json` (score hits appended), `tools/out/runs/<name>/link-report.json`                               | candidates yes, report no              |
 | 6   | Decision-bearing text     | `tools/extract-tier1.ts`                                                                | cached text                                 | `tools/out/riksdag-tier1/`                                                                                                           | no                                     |
 | 7   | Matcher (LLM judge)       | `tools/link.ts` (`pnpm link-pairs`, `docs/link-harness.md`)                             | candidates, tier-1 text, promises           | `tools/out/link-runs/<name>/` (label, stage, confidence, reason per pair; agreement report vs the eval set), `tools/out/link-cache/` | no, shared via `docs/cache-sharing.md` |
-| 8   | Evidence and verdict      | review PRs                                                                              | candidates, `rejected-candidates.json`      | `evidence[]` and `verdict` in the promise files                                                                                      | yes, one PR per change                 |
+| 8   | Evidence and verdict      | Claude, one PR per change                                                               | candidates, `rejected-candidates.json`      | `evidence[]` and `verdict` in the promise files                                                                                      | yes, one PR per change                 |
 
 Freshness: `tools/check-freshness.ts` and `tools/sync-freshness-issues.ts` open `data-stale` issues when a dataset is older than its rule (`tools/lib/freshness-check.ts`); the `/refresh-data` skill turns one into a PR.
 

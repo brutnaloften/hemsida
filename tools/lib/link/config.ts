@@ -52,7 +52,7 @@ export const linkConfigSchema = z.strictObject({
     briefs_dir: z.string().min(1).optional(),
   }),
   thresholds: z.strictObject({
-    /** Labels that make a judgement a proposal for human review. */
+    /** Labels that make a judgement a proposal for the evidence step. */
     accept_labels: z.array(evalLabelSchema).min(1),
     /** A proposal needs at least this confidence. */
     min_confidence: confidenceSchema,
