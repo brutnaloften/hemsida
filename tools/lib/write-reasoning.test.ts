@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   buildReasoningPrompt,
+  reasoningInstructions,
   reasoningKey,
   reasoningProblems,
   type ReasoningItem,
@@ -102,6 +103,25 @@ describe('write-reasoning', () => {
     expect(reasoningProblems(`${ok} Gjord av en AI-modell.`, [])).toContain('mentions AI');
     expect(reasoningProblems(`${ok} Fler dokument kan finnas.`, [])).toContain(
       'adds a completeness caveat',
+    );
+  });
+
+  it('describes a contradicting document and only changes the instructions for such promises', () => {
+    const item = {
+      kind: 'sou',
+      date: '2025-01-10',
+      title: 'T',
+      note: '',
+      relevance: 'full',
+    } as const;
+    const against = { ...item, relevance: 'contradicts' } as const;
+    const prompt = buildReasoningPrompt({ title: 'T', description: 'D' }, [against]);
+    expect(prompt).toContain('Motverkar löftet');
+    expect(reasoningInstructions([item])).not.toContain('Motverkar löftet');
+    expect(reasoningInstructions([item, against])).toContain('Motverkar löftet');
+    expect(reasoningKey('a', 'p', reasoningInstructions([item]))).toBe(reasoningKey('a', 'p'));
+    expect(reasoningKey('a', 'p', reasoningInstructions([against]))).not.toBe(
+      reasoningKey('a', 'p'),
     );
   });
 });

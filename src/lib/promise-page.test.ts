@@ -65,6 +65,19 @@ describe('buildTimelineSteps', () => {
     ]);
   });
 
+  it('shows a contradicting document without letting it fill its stage', () => {
+    const against = { ...doc('sou', '2025-01-01'), relevance: 'contradicts' } as Evidence;
+    expect(types([against])).toEqual([
+      'promise',
+      'missing:dir',
+      'missing:utredning',
+      'document:utredning',
+      'missing:prop',
+      'missing:bet',
+      'missing:sfs',
+    ]);
+  });
+
   it('has no agreement step without agreement evidence', () => {
     expect(types([])).not.toContain('agreement');
   });

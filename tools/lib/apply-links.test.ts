@@ -27,6 +27,7 @@ const doc = (dok_id: string, doktyp: string, datum: string, beteckning = '1'): S
 const docs = new Map([
   ['P1', doc('P1', 'prop', '2026-03-17', '207')],
   ['B1', doc('B1', 'bet', '2026-05-01', 'SoU18')],
+  ['S1', doc('S1', 'sou', '2025-01-10', '1')],
 ]);
 const pair = (document_id: string, over: Partial<JudgedPair> = {}): JudgedPair => ({
   promise_id: 'tido-x',
@@ -234,5 +235,59 @@ describe('applyLinks', () => {
     const first = applyLinks(base, [pair('P1')], docs, '2026-11-10')!;
     const again = { ...base, evidence: first.evidence };
     expect(applyLinks(again, [pair('P1')], docs, '2026-11-10')).toBeNull();
+  });
+
+  describe('contradicts', () => {
+    const against = (id: string, over: Partial<JudgedPair> = {}) =>
+      pair(id, { label: 'contradicts', ...over });
+
+    it('adds a contradicting document next to planning evidence without counting it', () => {
+      const r = applyLinks(base, [pair('P1'), against('S1')], docs, '2026-11-10')!;
+      expect(r.evidence.map((e) => [e.kind, (e as { relevance: string }).relevance])).toEqual([
+        ['sou', 'contradicts'],
+        ['prop', 'full'],
+      ]);
+      expect(r.verdict.value).toBe('in_progress');
+      expect(r.verdict.reasoning).toContain('motverkar löftet');
+      expect(promiseSchema.safeParse({ ...base, ...r }).success).toBe(true);
+    });
+
+    it('does not use a contradicting dir/sou/ds/prop as the planning that sets in_progress', () => {
+      expect(applyLinks(base, [against('S1')], docs, '2026-11-10')).toBeNull();
+      // Bet is full evidence but no planning, so there is still no verdict.
+      const r = applyLinks(base, [pair('B1'), against('S1')], docs, '2026-11-10')!;
+      expect(r.verdict.value).toBe('unassessed');
+      expect(r.evidence.map((e) => e.kind)).toEqual(['bet']);
+    });
+
+    it('skips background contradicts and unproposed pairs', () => {
+      const r = applyLinks(
+        base,
+        [pair('P1'), against('S1', { stage: 'background' })],
+        docs,
+        '2026-11-10',
+      )!;
+      expect(r.evidence.map((e) => e.kind)).toEqual(['prop']);
+    });
+
+    it('falls an AI verdict back to unassessed when only a contradicting document remains', () => {
+      const first = applyLinks(base, [pair('P1'), against('S1')], docs, '2026-11-10')!;
+      const promise = promiseSchema.parse({ ...base, ...first });
+      const r = applyLinks(
+        promise,
+        [pair('P1', { label: 'no_match' }), against('S1')],
+        docs,
+        '2026-11-11',
+      )!;
+      expect(r.verdict.value).toBe('unassessed');
+      expect(r.evidence.map((e) => e.kind)).toEqual(['sou']);
+    });
+
+    it('is idempotent on a rerun', () => {
+      const pairs = [pair('P1'), against('S1')];
+      const first = applyLinks(base, pairs, docs, '2026-11-10')!;
+      const promise = promiseSchema.parse({ ...base, ...first });
+      expect(applyLinks(promise, pairs, docs, '2026-11-11')).toBeNull();
+    });
   });
 });

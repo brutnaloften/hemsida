@@ -27,7 +27,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i september 2023 en utredning i uppdrag att se över skärpta krav för svenskt medborgarskap. Utredningen ska bland annat ta ställning till om ett obligatoriskt ceremoniellt inslag, till exempel ett medborgarskapssamtal eller en lojalitetsförklaring, ska införas som sista steg. Dokumenten visar uppdraget men inget beslut om själva inslaget.",
+    "reasoning": "Regeringen gav i september 2023 en utredning i uppdrag att pröva ett obligatoriskt avslutande moment för medborgarskap, till exempel lojalitetsförklaring eller medborgarskapssamtal. Utredningen lämnade i januari 2025 sitt betänkande. Det motverkar löftet genom att föreslå att inget sådant krav ska införas och att ceremonier inte ska innehålla lojalitetsförklaring, ed eller samtal.",
     "date": "2026-11-11",
     "history": [
       {
@@ -46,6 +46,16 @@
       "date": "2023-09-07",
       "url": "https://data.riksdagen.se/dokument/HBB1129.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB31",
+      "designation": "SOU 2025:1",
+      "title": "Skärpta krav för svenskt medborgarskap",
+      "date": "2025-01-14",
+      "url": "https://data.riksdagen.se/dokument/HDB31.html",
+      "relevance": "contradicts",
       "note": null
     }
   ]

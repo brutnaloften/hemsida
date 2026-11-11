@@ -339,6 +339,19 @@ describe('promiseSchema', () => {
       expect(messages(make('in_progress', 'Pågår.', []))[0]).toContain('in_progress requires');
     });
 
+    it('accepts relevance contradicts but never counts it toward a verdict', () => {
+      const against = (kind: string) => ev(kind, { relevance: 'contradicts' });
+      expect(ok(make('unassessed', '', [against('prop')]))).toBe(true);
+      // A contradicting prop does not qualify in_progress, a full one next to it does.
+      expect(ok(make('in_progress', 'Pågår.', [against('prop')]))).toBe(false);
+      expect(
+        ok(make('in_progress', 'Pågår.', [against('prop'), { ...ev('sou'), dok_id: 'D2' }])),
+      ).toBe(true);
+      expect(ok(make('fulfilled', 'Klart.', [against('sfs')]))).toBe(false);
+      // Nor does it document a broken promise, even when the reasoning cites it.
+      expect(ok(make('broken', 'Beteckning prop motverkar.', [against('prop')]))).toBe(false);
+    });
+
     it('fulfilled needs sfs evidence', () => {
       expect(ok(make('fulfilled', 'Lag i kraft.', [ev('sfs')]))).toBe(true);
       for (const kind of ['dir', 'sou', 'ds', 'prop', 'bet', 'mot']) {

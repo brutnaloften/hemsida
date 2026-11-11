@@ -16,9 +16,9 @@ import { parseArgs } from 'node:util';
 import { loadJson, writeJson, writeJsonAtomic } from './lib/json.ts';
 import { isRiksdagEvidence, promiseSchema } from './lib/schema.ts';
 import {
-  REASONING_INSTRUCTIONS,
   REASONING_JSON_SCHEMA,
   buildReasoningPrompt,
+  reasoningInstructions,
   reasoningKey,
   reasoningProblems,
   reasoningSchema,
@@ -63,6 +63,7 @@ interface Job {
   file: string;
   raw: object;
   prompt: string;
+  instructions: string;
   key: string;
   designations: string[];
 }
@@ -88,11 +89,13 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
       (e.kind === 'bet' ? 'Riksdagens beslut om en proposition som hör till löftet.' : ''),
   }));
   const prompt = buildReasoningPrompt(p, items);
+  const instructions = reasoningInstructions(items);
   jobs.push({
     file,
     raw: rawPromise,
     prompt,
-    key: reasoningKey(values.model!, prompt),
+    instructions,
+    key: reasoningKey(values.model!, prompt, instructions),
     designations: riksdag.map((e) => e.designation),
   });
 }
@@ -124,7 +127,7 @@ async function write(job: Job): Promise<void> {
         tools: [],
         maxTurns: 1,
         thinking: { type: 'disabled' },
-        systemPrompt: REASONING_INSTRUCTIONS,
+        systemPrompt: job.instructions,
         outputFormat: { type: 'json_schema', schema: REASONING_JSON_SCHEMA },
       },
     })) {

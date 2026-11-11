@@ -9,6 +9,10 @@
  *    the promise stays `unassessed` (a betänkande alone may only reject motions);
  *  - never `fulfilled` (needs an sfs entry the store does not have), never `no_evidence` (the
  *    search must be exhaustive first) and never `broken` (a `contradicts` label is only reported);
+ *  - a `contradicts` pair (proposed, stage not `background`) becomes evidence with relevance
+ *    `contradicts` ("Motverkar") only when the promise also has full/partial planning evidence or
+ *    the document is already evidence on it; it never counts toward the verdict, never pulls in a
+ *    deciding betänkande and a promise whose only evidence works against it stays \`unassessed\`;
  *  - the betänkande that decided a linked proposition (from `decidedBy`, derived from the
  *    betänkande's own references, see decided-by.ts) is added as evidence with stage definitive;
  *  - eligible promises are `unassessed` ones (existing Riksdag evidence stays, new documents are merged
@@ -46,6 +50,9 @@ export interface JudgedPair {
 }
 
 const PLANNING = new Set(['dir', 'sou', 'ds', 'prop']);
+
+/** Evidence that counts toward a verdict: everything except a document working against the promise. */
+const isSupporting = (e: RiksdagEvidence): boolean => e.relevance !== 'contradicts';
 
 /**
  * The store files a regeringens skrivelse under doktyp `prop`, but it proposes nothing and the
@@ -91,7 +98,8 @@ export function evidenceFor(
     title: doc.titel,
     date: doc.datum,
     url: doc.url,
-    relevance: pair.label === 'match' ? 'full' : 'partial',
+    relevance:
+      pair.label === 'match' ? 'full' : pair.label === 'contradicts' ? 'contradicts' : 'partial',
     note: null,
   };
 }
@@ -129,18 +137,22 @@ export function applyLinks(
   if (!rerunAi && promise.verdict.value !== 'unassessed') return null;
   const existingRiksdag = promise.evidence.filter(isRiksdagEvidence);
   // Unassessed with a dir/sou/ds/prop already attached was curated by someone: leave it.
-  if (!rerunAi && promise.evidence.filter(isRiksdagEvidence).some((e) => PLANNING.has(e.kind)))
-    return null;
+  if (!rerunAi && existingRiksdag.some((e) => isSupporting(e) && PLANNING.has(e.kind))) return null;
   const otherEvidence = promise.evidence.filter((e) => !isRiksdagEvidence(e));
 
   const byDoc = new Map<string, { pair: JudgedPair; doc: StoreDocument }>();
+  const against = new Map<string, { pair: JudgedPair; doc: StoreDocument }>();
   for (const pair of pairs) {
-    if (!pair.proposed || (pair.label !== 'match' && pair.label !== 'partial')) continue;
+    if (!pair.proposed || pair.label === 'no_match') continue;
     // `background` = only mentions the topic or rejects motions about it: not evidence of action.
     if (pair.stage === 'background') continue;
     const doc = docs.get(pair.document_id);
     if (!doc || !['dir', 'sou', 'ds', 'prop', 'bet'].includes(doc.doktyp) || isSkrivelse(doc))
       continue;
+    if (pair.label === 'contradicts') {
+      against.set(doc.dok_id, { pair, doc });
+      continue;
+    }
     const seen = byDoc.get(doc.dok_id);
     if (!seen || (seen.pair.label === 'partial' && pair.label === 'match')) {
       byDoc.set(doc.dok_id, { pair, doc });
@@ -166,12 +178,27 @@ export function applyLinks(
   const entries = [...byDoc.values()].sort(
     (a, b) => a.doc.datum.localeCompare(b.doc.datum) || a.doc.dok_id.localeCompare(b.doc.dok_id),
   );
-  const fresh = entries.map((e) => evidenceFor(e.pair, e.doc));
+  const planning = entries.filter((e) => PLANNING.has(e.doc.doktyp));
+  // A document working against the promise is only shown next to evidence that something is
+  // being done, or when it was already shown (its judgement still stands); a full/partial
+  // judgement of the same document wins.
+  const judged = new Set(pairs.map((p) => p.document_id));
+  const showAgainst = (id: string) =>
+    planning.length > 0 ||
+    existingRiksdag.some(
+      (e) => isSupporting(e) && PLANNING.has(e.kind) && (!rerunAi || !judged.has(e.dok_id)),
+    ) ||
+    existingRiksdag.some((e) => e.dok_id === id);
+  const contradicting = [...against.values()]
+    .filter((e) => !byDoc.has(e.doc.dok_id) && showAgainst(e.doc.dok_id))
+    .sort(
+      (a, b) => a.doc.datum.localeCompare(b.doc.datum) || a.doc.dok_id.localeCompare(b.doc.dok_id),
+    );
+  const fresh = [...entries, ...contradicting].map((e) => evidenceFor(e.pair, e.doc));
   // An AI verdict's evidence is exactly what the judgements support now; for an unassessed promise
   // the evidence already there stays and new documents are added.
   // Evidence no judgement in this run mentions came from elsewhere (an earlier run, a hand edit):
   // only what the judge now rejects is dropped.
-  const judged = new Set(pairs.map((p) => p.document_id));
   const unjudged = existingRiksdag.filter((e) => !judged.has(e.dok_id));
   const riksdag: RiksdagEvidence[] = rerunAi
     ? [...unjudged, ...fresh.filter((f) => !unjudged.some((x) => x.dok_id === f.dok_id))].sort(
@@ -183,10 +210,9 @@ export function applyLinks(
       ].sort((a, b) => a.date.localeCompare(b.date) || a.dok_id.localeCompare(b.dok_id));
   const evidence: Evidence[] = [...otherEvidence, ...riksdag];
 
-  const planning = entries.filter((e) => PLANNING.has(e.doc.doktyp));
   const hasPlanning = rerunAi
-    ? planning.length > 0 || unjudged.some((e) => PLANNING.has(e.kind))
-    : planning.length > 0 || riksdag.some((e) => PLANNING.has(e.kind));
+    ? planning.length > 0 || unjudged.some((e) => isSupporting(e) && PLANNING.has(e.kind))
+    : planning.length > 0 || riksdag.some((e) => isSupporting(e) && PLANNING.has(e.kind));
   const sameEvidence =
     JSON.stringify(riksdag.map((e) => [e.dok_id, e.relevance])) ===
     JSON.stringify(existingRiksdag.map((e) => [e.dok_id, e.relevance]));
@@ -213,6 +239,7 @@ export function applyLinks(
   const full = planning.some((e) => e.pair.label === 'match');
   const list = (xs: typeof entries) =>
     xs.map((e) => `${designationOf(e.doc)} (${e.doc.titel})`).join('; ');
+  const opposed = contradicting.filter((e) => riksdag.some((r) => r.dok_id === e.doc.dok_id));
   const reasoning = [
     `${planning.length === 1 ? 'Ett dokument' : 'Dokument'} i riksdagens register visar att åtgärden pågår: ${list(planning)}.`,
     full
@@ -222,10 +249,15 @@ export function applyLinks(
       : planning.length === 1
         ? 'Dokumentet behandlar bara en del av löftet.'
         : 'Dokumenten behandlar bara delar av löftet.',
+    opposed.length > 0
+      ? `${opposed.length === 1 ? 'Ett dokument' : 'Dokument'} motverkar löftet: ${list(opposed)}.`
+      : '',
     decided.length > 0
       ? `Riksdagen har även fattat beslut i ${list(decided)}, men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.`
       : 'Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.',
-  ].join(' ');
+  ]
+    .filter((t) => t !== '')
+    .join(' ');
 
   // Same value as before: update in place. A changed value moves the earlier verdict to history.
   const sameValue = rerunAi && promise.verdict.value === 'in_progress';

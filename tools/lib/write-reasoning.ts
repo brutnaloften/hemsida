@@ -26,6 +26,22 @@ Regler:
 - Skriv inte "AI" och inte "bedömningen". Inga rubriker, inga punktlistor, ingen värdering av om löftet är bra eller dåligt.
 - Högst 450 tecken.`;
 
+/**
+ * Added to the instructions only for a promise with a document that works against it
+ * (relevance `contradicts`, "Motverkar"), so the cached texts of every other promise stay valid.
+ * Worded to pass reasoningProblems: it steers away from "inte"/"ej" constructions.
+ */
+export const AGAINST_INSTRUCTIONS = `
+
+Ett eller flera dokument är markerade "Motverkar löftet". Det betyder att dokumentet föreslår eller beslutar något som går åt motsatt håll eller försvårar det som löftet gäller. Det räknas inte som ett steg framåt och påverkar inte bedömningen. Beskriv det i en egen mening med orden "motverkar löftet" eller "går åt motsatt håll", med datum och vad dokumentet föreslår (till exempel "Ett förslag i november 2025 motverkar löftet genom att ..."). Använd de andra dokumenten för vad som hänt hittills. Skriv aldrig att löftet är brutet eller svikit. Max 550 tecken i så fall.`;
+
+/** The system prompt for a promise: the base instructions plus the extra rule when needed. */
+export function reasoningInstructions(items: readonly ReasoningItem[]): string {
+  return items.some((i) => i.relevance === 'contradicts')
+    ? REASONING_INSTRUCTIONS + AGAINST_INSTRUCTIONS
+    : REASONING_INSTRUCTIONS;
+}
+
 export const reasoningSchema = z.strictObject({ reasoning: z.string().min(20).max(700) });
 export const REASONING_JSON_SCHEMA = {
   type: 'object',
@@ -38,7 +54,7 @@ export interface ReasoningItem {
   kind: string;
   date: string;
   title: string;
-  relevance: 'full' | 'partial';
+  relevance: 'full' | 'partial' | 'contradicts';
   /** How far along the document is: a betänkande is only a decision when `definitive`. */
   stage?: 'definitive' | 'preparatory' | 'background';
   /** The judge's English note on what the document says (may be empty). */
@@ -52,6 +68,12 @@ const KIND_SV: Record<string, string> = {
   prop: 'proposition',
   bet: 'riksdagens betänkande (beslut)',
 };
+
+const RELEVANCE_SV = {
+  full: 'Täcker hela löftet',
+  partial: 'Täcker en del av löftet',
+  contradicts: 'Motverkar löftet',
+} as const;
 
 function kindLabel(i: ReasoningItem): string {
   if (i.kind === 'bet') {
@@ -67,15 +89,19 @@ export function buildReasoningPrompt(
   const docs = items
     .map(
       (i, n) =>
-        `${n + 1}. ${kindLabel(i)}, ${i.date}: "${i.title}". Täcker ${i.relevance === 'full' ? 'hela löftet' : 'en del av löftet'}. Anteckning: ${i.note || '(saknas)'}`,
+        `${n + 1}. ${kindLabel(i)}, ${i.date}: "${i.title}". ${RELEVANCE_SV[i.relevance]}. Anteckning: ${i.note || '(saknas)'}`,
     )
     .join('\n');
   return `Löfte: ${promise.title}\n${promise.description}\n\nDokument:\n${docs}`;
 }
 
-export function reasoningKey(model: string, prompt: string): string {
+export function reasoningKey(
+  model: string,
+  prompt: string,
+  instructions: string = REASONING_INSTRUCTIONS,
+): string {
   return createHash('sha256')
-    .update(JSON.stringify([model, REASONING_TEMPLATE_VERSION, REASONING_INSTRUCTIONS, prompt]))
+    .update(JSON.stringify([model, REASONING_TEMPLATE_VERSION, instructions, prompt]))
     .digest('hex');
 }
 
