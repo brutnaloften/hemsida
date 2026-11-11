@@ -48,8 +48,9 @@ describe('split-promises', () => {
     expect(p.parties).toEqual(['M']);
   });
 
-  it('makes a part whose slug starts with utred an inquiry', () => {
-    expect(buildPart(parent, part('utred-x')).type).toBe('inquiry');
+  it('uses the type the plan gives a part, else the parent type', () => {
+    expect(buildPart(parent, { ...part('utred-x'), type: 'inquiry' }).type).toBe('inquiry');
+    expect(buildPart(parent, part('y')).type).toBe('legislative');
   });
 
   it('points links at every part and keeps order and uniqueness', () => {
@@ -61,6 +62,16 @@ describe('split-promises', () => {
     expect(json.evidence[0].promises).toEqual(['a', 'tido-1', 'tido-2', 'b']);
     expect(json.link.promises).toEqual(['tido-1', 'tido-2']);
     expect(replacePromiseId(json, 'tido-x', ['tido-1'])).toBe(false);
+  });
+
+  it('links the owner of a link only to the parts the plan names, for promises and candidates', () => {
+    const targets = (owner?: string) => (owner === 'val-1' ? ['tido-1'] : ['tido-1', 'tido-2']);
+    const promise = { id: 'val-1', evidence: [{ kind: 'agreement', promises: ['tido-x'] }] };
+    const candidate = { promise: { id: 'val-2' }, link: { promises: ['tido-x'] } };
+    expect(replacePromiseId(promise, 'tido-x', ['tido-1', 'tido-2'], targets)).toBe(true);
+    expect(replacePromiseId(candidate, 'tido-x', ['tido-1', 'tido-2'], targets)).toBe(true);
+    expect(promise.evidence[0].promises).toEqual(['tido-1']);
+    expect(candidate.link.promises).toEqual(['tido-1', 'tido-2']);
   });
 
   it('rejects plans with one part, bad slugs or duplicate ids', () => {
@@ -75,5 +86,15 @@ describe('split-promises', () => {
       ]),
     ).toHaveLength(1);
     expect(partId(part('a'))).toBe('tido-a');
+    const bad = [
+      {
+        id: 'tido-x',
+        reason: '',
+        parts: [part('a'), part('b')],
+        redirect: 'zzz',
+        links: { o: ['q'] },
+      },
+    ];
+    expect(validatePlan(bad)).toHaveLength(2);
   });
 });

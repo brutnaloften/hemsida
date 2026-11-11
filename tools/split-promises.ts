@@ -18,7 +18,7 @@ import {
   partId,
   replacePromiseId,
   validatePlan,
-  type SplitPlanEntry,
+  splitPlanSchema,
 } from './lib/split-promises.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -31,7 +31,7 @@ const { values } = parseArgs({
 });
 if (!values.plan) throw new Error('usage: split-promises.ts --plan <file> [--dry-run]');
 const dry = values['dry-run']!;
-const plan = loadJson(resolve(root, values.plan)) as SplitPlanEntry[];
+const plan = splitPlanSchema.parse(loadJson(resolve(root, values.plan)));
 const problems = validatePlan(plan);
 if (problems.length) throw new Error(problems.join('\n'));
 
@@ -63,6 +63,16 @@ for (const entry of plan) {
   }
   const parent = promiseSchema.parse(loadJson(parentFile));
   const ids = entry.parts.map(partId);
+  // A part may keep the parent's id; it is already split once the file holds that part's own quote.
+  const keeper = entry.parts.find((p) => partId(p) === entry.id);
+  if (keeper && parent.source.quote === keeper.quote) {
+    console.log(`skip ${entry.id}: already split`);
+    continue;
+  }
+  for (const part of entry.parts) {
+    if (partId(part) !== entry.id && existsSync(resolve(promiseDir, `${partId(part)}.json`)))
+      throw new Error(`${partId(part)} already exists; it would be overwritten`);
+  }
   const candFile = resolve(candDir, `${entry.id}.json`);
   const cand = existsSync(candFile) ? (loadJson(candFile) as Record<string, unknown>) : undefined;
   for (const part of entry.parts) {
@@ -78,12 +88,16 @@ for (const entry of plan) {
   for (const file of linkFiles) {
     if (!existsSync(file)) continue;
     const json = loadJson(file);
-    if (replacePromiseId(json, entry.id, ids)) {
+    const links = entry.links ?? {};
+    const targets = (owner: string | undefined) =>
+      owner && links[owner] ? links[owner].map((slug) => `tido-${slug}`) : ids;
+    if (replacePromiseId(json, entry.id, ids, targets)) {
       relinked++;
       if (!dry) writeJson(file, json);
     }
   }
-  if (!ids.includes(entry.id)) redirects[`/lofte/${entry.id}`] = `/lofte/${ids[0]}/`;
+  if (!ids.includes(entry.id))
+    redirects[`/lofte/${entry.id}`] = `/lofte/tido-${entry.redirect ?? entry.parts[0].slug}/`;
   if (!dry) {
     // A part may keep the parent's id (the first commitment of the original wording).
     if (!ids.includes(entry.id)) {
