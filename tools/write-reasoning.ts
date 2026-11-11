@@ -76,10 +76,13 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     date: e.date,
     title: e.title,
     relevance: e.relevance,
-    ...(judgementBy.get(`${p.id}:${e.dok_id}`)?.stage && {
-      stage: judgementBy.get(`${p.id}:${e.dok_id}`)!.stage!,
-    }),
-    note: judgementBy.get(`${p.id}:${e.dok_id}`)?.reason ?? '',
+    // A betänkande without a judgement was added because it decides a linked proposition.
+    ...(judgementBy.get(`${p.id}:${e.dok_id}`)?.stage
+      ? { stage: judgementBy.get(`${p.id}:${e.dok_id}`)!.stage! }
+      : e.kind === 'bet' && { stage: 'definitive' as const }),
+    note:
+      judgementBy.get(`${p.id}:${e.dok_id}`)?.reason ??
+      (e.kind === 'bet' ? 'Riksdagens beslut om en proposition som hör till löftet.' : ''),
   }));
   const prompt = buildReasoningPrompt(p, items);
   jobs.push({

@@ -63,8 +63,9 @@ for (const d of Object.values(store.documents)) {
   if (d.doktyp !== 'bet') continue;
   try {
     addDecisions(decidedBy, d.dok_id, readFileSync(resolve(textDir, `${d.dok_id}.xml`), 'utf-8'));
-  } catch {
+  } catch (e) {
     // no fetched XML for this document: no decision link from it
+    if ((e as NodeJS.ErrnoException).code !== 'ENOENT') throw e;
   }
 }
 

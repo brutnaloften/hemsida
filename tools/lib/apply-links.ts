@@ -73,6 +73,13 @@ export function designationOf(d: StoreDocument): string {
   }
 }
 
+/** Budget propositions are handled by one betänkande per utgiftsområde, none of them "the" decision. */
+export function isBudgetProp(d: StoreDocument): boolean {
+  return d.doktyp === 'prop' && (d.beteckning === '1' || /^Budgetpropositionen/.test(d.titel));
+}
+
+const MAX_DECIDING_BETS = 4;
+
 export function evidenceFor(
   pair: JudgedPair,
   doc: StoreDocument,
@@ -142,8 +149,11 @@ export function applyLinks(
 
   // A proposition's deciding betänkande is evidence next to it, with the proposition's relevance.
   for (const { pair, doc } of [...byDoc.values()]) {
-    if (doc.doktyp !== 'prop') continue;
-    for (const betId of decidedBy.get(doc.dok_id) ?? []) {
+    if (doc.doktyp !== 'prop' || isBudgetProp(doc)) continue;
+    const deciding = decidedBy.get(doc.dok_id) ?? [];
+    // Many deciding bets means a budget-like bill whose every utskott handles a slice of it.
+    if (deciding.length > MAX_DECIDING_BETS) continue;
+    for (const betId of deciding) {
       const bet = docs.get(betId);
       if (!bet || bet.doktyp !== 'bet' || byDoc.has(bet.dok_id)) continue;
       byDoc.set(bet.dok_id, {
@@ -159,8 +169,14 @@ export function applyLinks(
   const fresh = entries.map((e) => evidenceFor(e.pair, e.doc));
   // An AI verdict's evidence is exactly what the judgements support now; for an unassessed promise
   // the evidence already there stays and new documents are added.
+  // Evidence no judgement in this run mentions came from elsewhere (an earlier run, a hand edit):
+  // only what the judge now rejects is dropped.
+  const judged = new Set(pairs.map((p) => p.document_id));
+  const unjudged = existingRiksdag.filter((e) => !judged.has(e.dok_id));
   const riksdag: RiksdagEvidence[] = rerunAi
-    ? fresh
+    ? [...unjudged, ...fresh.filter((f) => !unjudged.some((x) => x.dok_id === f.dok_id))].sort(
+        (a, b) => a.date.localeCompare(b.date) || a.dok_id.localeCompare(b.dok_id),
+      )
     : [
         ...existingRiksdag,
         ...fresh.filter((f) => !existingRiksdag.some((x) => x.dok_id === f.dok_id)),
@@ -169,7 +185,7 @@ export function applyLinks(
 
   const planning = entries.filter((e) => PLANNING.has(e.doc.doktyp));
   const hasPlanning = rerunAi
-    ? planning.length > 0
+    ? planning.length > 0 || unjudged.some((e) => PLANNING.has(e.kind))
     : planning.length > 0 || riksdag.some((e) => PLANNING.has(e.kind));
   const sameEvidence =
     JSON.stringify(riksdag.map((e) => [e.dok_id, e.relevance])) ===

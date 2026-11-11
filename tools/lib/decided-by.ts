@@ -6,7 +6,7 @@
 
 /** Proposition dok_ids a betänkande handles (empty for any other document type). */
 export function propsHandledBy(xml: string): string[] {
-  if (!/<doktyp>bet<\/doktyp>/.test(xml.slice(0, 3000))) return [];
+  if (!/<doktyp>bet<\/doktyp>/.test(xml.slice(0, xml.indexOf('</dokument>')))) return [];
   const ids = new Set<string>();
   for (const block of xml.split('<referens>').slice(1)) {
     const body = block.split('</referens>')[0];
