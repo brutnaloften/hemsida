@@ -9,6 +9,8 @@
  *    the promise stays `unassessed` (a betänkande alone may only reject motions);
  *  - never `fulfilled` (needs an sfs entry the store does not have), never `no_evidence` (the
  *    search must be exhaustive first) and never `broken` (a `contradicts` label is only reported);
+ *  - the betänkande that decided a linked proposition (from `decidedBy`, derived from the
+ *    betänkande's own references, see decided-by.ts) is added as evidence with stage definitive;
  *  - eligible promises are `unassessed` ones (existing Riksdag evidence stays, new documents are merged
  *    in by dok_id; one that already has a dir/sou/ds/prop is treated as curated and skipped) and ones
  *    whose verdict is tagged `assessedBy: 'ai'`, which are recomputed (their Riksdag evidence is
@@ -114,6 +116,7 @@ export function applyLinks(
   pairs: readonly JudgedPair[],
   docs: ReadonlyMap<string, StoreDocument>,
   today: string,
+  decidedBy: ReadonlyMap<string, readonly string[]> = new Map(),
 ): Applied | null {
   const rerunAi = promise.verdict.assessedBy === 'ai';
   if (!rerunAi && promise.verdict.value !== 'unassessed') return null;
@@ -134,6 +137,19 @@ export function applyLinks(
     const seen = byDoc.get(doc.dok_id);
     if (!seen || (seen.pair.label === 'partial' && pair.label === 'match')) {
       byDoc.set(doc.dok_id, { pair, doc });
+    }
+  }
+
+  // A proposition's deciding betänkande is evidence next to it, with the proposition's relevance.
+  for (const { pair, doc } of [...byDoc.values()]) {
+    if (doc.doktyp !== 'prop') continue;
+    for (const betId of decidedBy.get(doc.dok_id) ?? []) {
+      const bet = docs.get(betId);
+      if (!bet || bet.doktyp !== 'bet' || byDoc.has(bet.dok_id)) continue;
+      byDoc.set(bet.dok_id, {
+        pair: { ...pair, document_id: betId, stage: 'definitive' },
+        doc: bet,
+      });
     }
   }
 

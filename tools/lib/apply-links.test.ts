@@ -61,6 +61,24 @@ describe('applyLinks', () => {
     expect(promiseSchema.safeParse({ ...base, ...r }).success).toBe(true);
   });
 
+  it('adds the betänkande that decided a linked proposition, with the proposition relevance', () => {
+    const r = applyLinks(
+      base,
+      [pair('P1', { label: 'partial' })],
+      docs,
+      '2026-11-10',
+      new Map([['P1', ['B1', 'MISSING']]]),
+    )!;
+    expect(r.evidence.map((e) => [e.kind, (e as { relevance: string }).relevance])).toEqual([
+      ['prop', 'partial'],
+      ['bet', 'partial'],
+    ]);
+    expect(r.verdict.reasoning).toContain('Riksdagen har även fattat beslut i Bet. 2025/26:SoU18');
+    // Not added when the proposition itself is not linked.
+    const none = applyLinks(base, [pair('B1')], docs, '2026-11-10', new Map([['P1', ['B1']]]));
+    expect(none?.verdict.value ?? 'unassessed').toBe('unassessed');
+  });
+
   it('drops background pairs and skrivelser', () => {
     const skr = {
       ...doc('S1', 'prop', '2026-01-01', '9'),
