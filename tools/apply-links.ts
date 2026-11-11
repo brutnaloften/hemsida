@@ -1,6 +1,8 @@
 /**
  * Write evidence and verdicts from a judged link run (step 8 of docs/riksdag-linking.md).
- *   node --experimental-strip-types tools/apply-links.ts --run <name> [--term 2022-2026]
+ *   node --experimental-strip-types tools/apply-links.ts --run <name>[,<name>...] [--term 2022-2026]
+ *     (several runs, comma separated: for a promise judged in more than one, the later run replaces
+ *      the earlier, so give the main run first and a split re-link last)
  *     [--id-prefix tido-] [--today YYYY-MM-DD] [--dry-run]
  *     [--sfs-store tools/out/sfs-store/<term>.json --sfs-run <name | path to results.json>
  *      [--sfs-overrides tools/sfs-overrides.json]]

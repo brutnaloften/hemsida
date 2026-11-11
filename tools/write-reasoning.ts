@@ -2,7 +2,11 @@
  * Replace the placeholder reasoning of model-set verdicts with plain Swedish.
  *   node --experimental-strip-types tools/write-reasoning.ts --run <link-run> [--term 2022-2026]
  *     [--id-prefix tido-] [--only <promise-id>] [--model claude-sonnet-5-5] [--concurrency 4]
- *     [--limit n] [--dry-run]
+ *     [--limit n] [--dry-run] [--pin <promise-id> --text <hand-written reasoning>]
+ * A hand-corrected text is kept with --pin: it is validated, stored in the cache under the promise's
+ * current prompt key and recorded with that key in tools/reasoning-pins.json (committed). Every run
+ * re-applies the pins whose key still matches, so a rerun reproduces the text; once the evidence
+ * changes the key changes, the pin is reported as stale and the model writes a new text.
  * Runs through the local Claude Code login (Agent SDK), refuses an API key like the other claude tools.
  * Results are cached in tools/out/reasoning-cache by hash of model, prompt version, promise and
  * evidence, so a rerun only pays for promises whose evidence changed (a cached text that fails the
@@ -36,6 +40,8 @@ const { values } = parseArgs({
     concurrency: { type: 'string', default: '4' },
     limit: { type: 'string' },
     only: { type: 'string' },
+    pin: { type: 'string' },
+    text: { type: 'string' },
     'dry-run': { type: 'boolean', default: false },
   },
 });
@@ -110,9 +116,34 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     lawInForce: hasLawInForce(items, today),
   });
 }
+const cachePath = (k: string) => resolve(cacheDir, `${k}.json`);
+const pinsPath = resolve(root, 'tools/reasoning-pins.json');
+const pins: Record<string, { key: string; reasoning: string }> = existsSync(pinsPath)
+  ? (loadJson(pinsPath) as typeof pins)
+  : {};
+if (values.pin) {
+  const job = jobs.find((j) => j.file === `${values.pin}.json`);
+  if (!job || !values.text)
+    throw new Error(`--pin needs --text and a reasoned promise ${values.pin}`);
+  const problems = reasoningProblems(values.text, job.designations, job.lawInForce);
+  if (problems.length > 0) throw new Error(`pinned text rejected: ${problems.join(', ')}`);
+  pins[values.pin] = { key: job.key, reasoning: values.text };
+  writeJson(pinsPath, pins);
+}
+for (const job of jobs) {
+  const id = job.file.replace(/\.json$/, '');
+  const pin = pins[id];
+  if (!pin) continue;
+  if (pin.key !== job.key) {
+    console.warn(`pin for ${id} is stale (evidence changed); the model writes a new text`);
+    continue;
+  }
+  const problems = reasoningProblems(pin.reasoning, job.designations, job.lawInForce);
+  if (problems.length > 0) throw new Error(`pin for ${id} rejected: ${problems.join(', ')}`);
+  writeJsonAtomic(cachePath(job.key), { reasoning: pin.reasoning });
+}
 const limit = values.limit ? Number(values.limit) : jobs.length;
 const todo = jobs.slice(0, limit);
-const cachePath = (k: string) => resolve(cacheDir, `${k}.json`);
 // A cached text that no longer passes the rules (they get stricter) is written again.
 const cachedText = (j: Job): string | undefined =>
   existsSync(cachePath(j.key))
