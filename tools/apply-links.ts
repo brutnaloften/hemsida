@@ -4,11 +4,12 @@
  *     [--id-prefix tido-] [--today YYYY-MM-DD] [--dry-run]
  * Rules and limits: tools/lib/apply-links.ts. Run `pnpm fmt` afterwards.
  */
-import { readdirSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { applyLinks, type JudgedPair, type StoreDocument } from './lib/apply-links.ts';
+import { addDecisions } from './lib/decided-by.ts';
 import { loadJson, writeJson } from './lib/json.ts';
 import { defaultStorePath } from './lib/riksdag-ingest.ts';
 import { promiseSchema } from './lib/schema.ts';
@@ -55,6 +56,19 @@ const docs = new Map(
   Object.values(store.documents).map((d) => [d.dok_id, { ...d, text: d.text?.slice(0, 600) }]),
 );
 
+// prop -> deciding betänkanden, from the betänkanden's own references in the fetched XML.
+const decidedBy = new Map<string, string[]>();
+const textDir = resolve(root, 'tools/out/riksdag-text');
+for (const d of Object.values(store.documents)) {
+  if (d.doktyp !== 'bet') continue;
+  try {
+    addDecisions(decidedBy, d.dok_id, readFileSync(resolve(textDir, `${d.dok_id}.xml`), 'utf-8'));
+  } catch (e) {
+    // no fetched XML for this document: no decision link from it
+    if ((e as NodeJS.ErrnoException).code !== 'ENOENT') throw e;
+  }
+}
+
 const dir = resolve(root, 'src/data', values.term!, 'promises');
 let changed = 0;
 let inProgress = 0;
@@ -67,7 +81,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
   if (!pairs) continue;
   const raw = loadJson(resolve(dir, file));
   const promise = promiseSchema.parse(raw);
-  const applied = applyLinks(promise, pairs, docs, values.today!);
+  const applied = applyLinks(promise, pairs, docs, values.today!, decidedBy);
   if (!applied) continue;
   const next = promiseSchema.parse({ ...(raw as object), ...applied });
   changed++;

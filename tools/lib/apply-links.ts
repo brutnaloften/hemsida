@@ -9,6 +9,8 @@
  *    the promise stays `unassessed` (a betänkande alone may only reject motions);
  *  - never `fulfilled` (needs an sfs entry the store does not have), never `no_evidence` (the
  *    search must be exhaustive first) and never `broken` (a `contradicts` label is only reported);
+ *  - the betänkande that decided a linked proposition (from `decidedBy`, derived from the
+ *    betänkande's own references, see decided-by.ts) is added as evidence with stage definitive;
  *  - eligible promises are `unassessed` ones (existing Riksdag evidence stays, new documents are merged
  *    in by dok_id; one that already has a dir/sou/ds/prop is treated as curated and skipped) and ones
  *    whose verdict is tagged `assessedBy: 'ai'`, which are recomputed (their Riksdag evidence is
@@ -71,6 +73,13 @@ export function designationOf(d: StoreDocument): string {
   }
 }
 
+/** Budget propositions are handled by one betänkande per utgiftsområde, none of them "the" decision. */
+export function isBudgetProp(d: StoreDocument): boolean {
+  return d.doktyp === 'prop' && (d.beteckning === '1' || /^Budgetpropositionen/.test(d.titel));
+}
+
+const MAX_DECIDING_BETS = 4;
+
 export function evidenceFor(
   pair: JudgedPair,
   doc: StoreDocument,
@@ -114,6 +123,7 @@ export function applyLinks(
   pairs: readonly JudgedPair[],
   docs: ReadonlyMap<string, StoreDocument>,
   today: string,
+  decidedBy: ReadonlyMap<string, readonly string[]> = new Map(),
 ): Applied | null {
   const rerunAi = promise.verdict.assessedBy === 'ai';
   if (!rerunAi && promise.verdict.value !== 'unassessed') return null;
@@ -137,14 +147,36 @@ export function applyLinks(
     }
   }
 
+  // A proposition's deciding betänkande is evidence next to it, with the proposition's relevance.
+  for (const { pair, doc } of [...byDoc.values()]) {
+    if (doc.doktyp !== 'prop' || isBudgetProp(doc)) continue;
+    const deciding = decidedBy.get(doc.dok_id) ?? [];
+    // Many deciding bets means a budget-like bill whose every utskott handles a slice of it.
+    if (deciding.length > MAX_DECIDING_BETS) continue;
+    for (const betId of deciding) {
+      const bet = docs.get(betId);
+      if (!bet || bet.doktyp !== 'bet' || byDoc.has(bet.dok_id)) continue;
+      byDoc.set(bet.dok_id, {
+        pair: { ...pair, document_id: betId, stage: 'definitive' },
+        doc: bet,
+      });
+    }
+  }
+
   const entries = [...byDoc.values()].sort(
     (a, b) => a.doc.datum.localeCompare(b.doc.datum) || a.doc.dok_id.localeCompare(b.doc.dok_id),
   );
   const fresh = entries.map((e) => evidenceFor(e.pair, e.doc));
   // An AI verdict's evidence is exactly what the judgements support now; for an unassessed promise
   // the evidence already there stays and new documents are added.
+  // Evidence no judgement in this run mentions came from elsewhere (an earlier run, a hand edit):
+  // only what the judge now rejects is dropped.
+  const judged = new Set(pairs.map((p) => p.document_id));
+  const unjudged = existingRiksdag.filter((e) => !judged.has(e.dok_id));
   const riksdag: RiksdagEvidence[] = rerunAi
-    ? fresh
+    ? [...unjudged, ...fresh.filter((f) => !unjudged.some((x) => x.dok_id === f.dok_id))].sort(
+        (a, b) => a.date.localeCompare(b.date) || a.dok_id.localeCompare(b.dok_id),
+      )
     : [
         ...existingRiksdag,
         ...fresh.filter((f) => !existingRiksdag.some((x) => x.dok_id === f.dok_id)),
@@ -153,7 +185,7 @@ export function applyLinks(
 
   const planning = entries.filter((e) => PLANNING.has(e.doc.doktyp));
   const hasPlanning = rerunAi
-    ? planning.length > 0
+    ? planning.length > 0 || unjudged.some((e) => PLANNING.has(e.kind))
     : planning.length > 0 || riksdag.some((e) => PLANNING.has(e.kind));
   const sameEvidence =
     JSON.stringify(riksdag.map((e) => [e.dok_id, e.relevance])) ===

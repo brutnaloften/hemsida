@@ -28,7 +28,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i januari 2023 fram ett förslag om skärpta straff för olaga hot, rån och utpressning. En statlig utredning föreslog i juni 2025 en ny straffskärpningsregel för brott kopplade till kriminella nätverk och högre lägstastraff för bedrägeri och ocker. I april 2026 föreslog regeringen dubbelt straffvärde för sådana brott och skärpta straffskalor. Dokumenten visar förslag, inget beslut.",
+    "reasoning": "Regeringen föreslog i januari 2023 högre straff för olaga hot, rån och utpressning, och riksdagen fattade beslut i maj 2023. En statlig utredning från juni 2025 föreslog en ny straffskärpningsregel för brott i kriminella nätverk och högre minimistraff för bedrägeri och ocker. I april 2026 föreslog regeringen dubbla straff för sådana brott och skärpta straffskalor, och riksdagen fattade beslut i juni 2026.",
     "date": "2026-11-11",
     "history": [
       {
@@ -50,6 +50,16 @@
       "note": null
     },
     {
+      "kind": "bet",
+      "dok_id": "HA01JuU8",
+      "designation": "Bet. 2022/23:JuU8",
+      "title": "Skärpta straff för brott i kriminella nätverk",
+      "date": "2023-05-03",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU8.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "sou",
       "dok_id": "HDB366",
       "designation": "SOU 2025:66",
@@ -66,6 +76,16 @@
       "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
       "date": "2026-04-09",
       "url": "https://data.riksdagen.se/dokument/HD03218.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU42",
+      "designation": "Bet. 2025/26:JuU42",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
       "relevance": "full",
       "note": null
     }

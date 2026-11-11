@@ -61,6 +61,56 @@ describe('applyLinks', () => {
     expect(promiseSchema.safeParse({ ...base, ...r }).success).toBe(true);
   });
 
+  it('adds the betänkande that decided a linked proposition, with the proposition relevance', () => {
+    const r = applyLinks(
+      base,
+      [pair('P1', { label: 'partial' })],
+      docs,
+      '2026-11-10',
+      new Map([['P1', ['B1', 'MISSING']]]),
+    )!;
+    expect(r.evidence.map((e) => [e.kind, (e as { relevance: string }).relevance])).toEqual([
+      ['prop', 'partial'],
+      ['bet', 'partial'],
+    ]);
+    expect(r.verdict.reasoning).toContain('Riksdagen har även fattat beslut i Bet. 2025/26:SoU18');
+    // Not added when the proposition itself is not linked.
+    const none = applyLinks(base, [pair('B1')], docs, '2026-11-10', new Map([['P1', ['B1']]]));
+    expect(none?.verdict.value ?? 'unassessed').toBe('unassessed');
+  });
+
+  it('does not add deciding bets for budget propositions or bills with many of them', () => {
+    const budget = doc('P0', 'prop', '2024-09-20', '1');
+    const all = new Map(docs).set('P0', budget);
+    for (const n of ['B2', 'B3', 'B4', 'B5', 'B6']) all.set(n, doc(n, 'bet', '2024-12-01', n));
+    const r = applyLinks(base, [pair('P0')], all, '2026-11-10', new Map([['P0', ['B2']]]))!;
+    expect(r.evidence.map((e) => e.kind)).toEqual(['prop']);
+    const many = applyLinks(
+      base,
+      [pair('P1')],
+      all,
+      '2026-11-10',
+      new Map([['P1', ['B2', 'B3', 'B4', 'B5', 'B6']]]),
+    )!;
+    expect(many.evidence.map((e) => e.kind)).toEqual(['prop']);
+  });
+
+  it('keeps evidence of an AI verdict that no judgement in the run mentions', () => {
+    const first = applyLinks(
+      base,
+      [pair('P1'), pair('B1', { stage: 'definitive' })],
+      docs,
+      '2026-11-09',
+    )!;
+    const rerun = applyLinks(
+      { ...base, ...first },
+      [pair('P1', { label: 'partial' })],
+      docs,
+      '2026-11-10',
+    )!;
+    expect(rerun.evidence.map((e) => e.kind)).toEqual(['prop', 'bet']);
+  });
+
   it('drops background pairs and skrivelser', () => {
     const skr = {
       ...doc('S1', 'prop', '2026-01-01', '9'),
@@ -107,7 +157,12 @@ describe('applyLinks', () => {
     expect(second.evidence.map((e) => e.kind)).toEqual(['prop', 'bet']);
     expect(second.verdict.history).toHaveLength(1);
     expect(second.verdict.date).toBe('2026-11-12');
-    const gone = applyLinks(earlier, [pair('B1', { label: 'partial' })], docs, '2026-11-12')!;
+    const gone = applyLinks(
+      earlier,
+      [pair('P1', { label: 'no_match', proposed: false }), pair('B1', { label: 'partial' })],
+      docs,
+      '2026-11-12',
+    )!;
     expect(gone.verdict.value).toBe('unassessed');
     expect(gone.verdict.assessedBy).toBeUndefined();
     expect(gone.evidence.map((e) => e.kind)).toEqual(['bet']);
@@ -119,7 +174,12 @@ describe('applyLinks', () => {
   it('falls back to unassessed when an AI verdict has no proposed pairs left', () => {
     const first = applyLinks(base, [pair('P1')], docs, '2026-11-10')!;
     const earlier = { ...base, ...first } as typeof base;
-    const gone = applyLinks(earlier, [], docs, '2026-11-12')!;
+    const gone = applyLinks(
+      earlier,
+      [pair('P1', { label: 'no_match', proposed: false })],
+      docs,
+      '2026-11-12',
+    )!;
     expect(gone.verdict.value).toBe('unassessed');
     expect(gone.evidence).toHaveLength(0);
     expect(gone.verdict.history.at(-1)).toMatchObject({ value: 'in_progress' });

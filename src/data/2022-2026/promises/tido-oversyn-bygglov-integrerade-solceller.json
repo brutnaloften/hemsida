@@ -22,7 +22,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Riksdagen biföll i december 2022 budgeten för energiområdet och ställde sig positiv till regeringens avsikt att se över bygglovskraven för integrerade solceller, utan någon konkret åtgärd. I maj 2025 föreslog regeringen att bygglov inte ska krävas för fasadändringar på en- och tvåbostadshus, vilket inkluderar solceller. Dokumenten visar förslag, inget beslut, och täcker bara små hus.",
+    "reasoning": "Riksdagen ställde sig i december 2022, i budgetbeslutet för energi, positiv till regeringens avsikt att se över bygglovskraven för integrerade solceller. Regeringen föreslog i maj 2025 att bygglov inte ska krävas för fasadändringar på en- och tvåbostadshus, bland annat solceller, och riksdagen fattade beslut om det nya regelverket i oktober 2025. Det gäller bara små hus; andra integrerade solceller nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
@@ -50,6 +50,16 @@
       "title": "Ett nytt regelverk för bygglov",
       "date": "2025-05-27",
       "url": "https://data.riksdagen.se/dokument/HC03169.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01CU2",
+      "designation": "Bet. 2025/26:CU2",
+      "title": "Ett nytt regelverk för bygglov",
+      "date": "2025-10-17",
+      "url": "https://data.riksdagen.se/dokument/HD01CU2.html",
       "relevance": "partial",
       "note": null
     }
