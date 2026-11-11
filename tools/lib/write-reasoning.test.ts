@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   buildReasoningPrompt,
+  hasLawInForce,
   reasoningInstructions,
   reasoningKey,
   reasoningProblems,
@@ -123,5 +124,57 @@ describe('write-reasoning', () => {
     expect(reasoningKey('a', 'p', reasoningInstructions([against]))).not.toBe(
       reasoningKey('a', 'p'),
     );
+  });
+
+  describe('laws (SFS)', () => {
+    const today = '2026-11-11';
+    const law: ReasoningItem = {
+      kind: 'sfs',
+      date: '2026-07-01',
+      title: 'Lag om aktivitetskrav',
+      relevance: 'full',
+      note: '',
+    };
+    const future = { ...law, date: '2027-01-01' };
+
+    it('labels laws with their in-force date and leaves the in_progress instructions unchanged', () => {
+      expect(buildReasoningPrompt({ title: 'T', description: 'D' }, [law], today)).toContain(
+        'lag (SFS), trädde i kraft 2026-07-01',
+      );
+      expect(buildReasoningPrompt({ title: 'T', description: 'D' }, [future], today)).toContain(
+        'träder i kraft 2027-01-01',
+      );
+      expect(reasoningInstructions([item], 'in_progress', today)).toBe(
+        reasoningInstructions([item]),
+      );
+      expect(reasoningKey('a', 'p', reasoningInstructions([item], 'in_progress', today))).toBe(
+        reasoningKey('a', 'p'),
+      );
+    });
+
+    it('describes the verdict meaning per value', () => {
+      expect(reasoningInstructions([item, law], 'fulfilled', today)).toContain('uppfyllt');
+      expect(reasoningInstructions([item, law], 'partially_fulfilled', today)).toContain(
+        'delvis uppfyllt',
+      );
+      expect(reasoningInstructions([item, future], 'in_progress', today)).toContain(
+        'inte trätt i kraft',
+      );
+    });
+
+    it('only accepts in-force phrasing when a law is in force', () => {
+      const text = 'Lagen som genomför löftet trädde i kraft den 1 juli 2026.';
+      expect(hasLawInForce([law], today)).toBe(true);
+      expect(hasLawInForce([future, item], today)).toBe(false);
+      expect(reasoningProblems(text, [], false)).toContain('claims a law is in force');
+      expect(reasoningProblems(text, [], true)).toEqual([]);
+      expect(reasoningProblems('Lagen träder i kraft den 1 januari 2027.', [], false)).toEqual([]);
+    });
+
+    it('rejects SFS designations', () => {
+      expect(reasoningProblems('Lagen SFS 2025:625 trädde i kraft i juli.', [], true)).toContain(
+        'names an SFS designation',
+      );
+    });
   });
 });
