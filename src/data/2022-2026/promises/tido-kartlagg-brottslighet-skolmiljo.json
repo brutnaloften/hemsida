@@ -1,0 +1,47 @@
+{
+  "id": "tido-kartlagg-brottslighet-skolmiljo",
+  "term": "2022-2026",
+  "title": "Myndighetsuppdrag om brottslighet i skolmiljön",
+  "description": "Ett myndighetsuppdrag ges att kartlägga förekomsten av brottslighet i skolmiljön.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 52,
+    "quote": "Myndighetsuppdrag ges att kartlägga förekomsten av brottslighet i skolmiljön."
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "legislative",
+  "area": "Skola och utbildning",
+  "committee": "UbU",
+  "keywords": ["obehöriga", "jourskolor", "akutskolor", "sekretess", "brottslighet i skolan"],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning lade i mars 2024 fram förslaget \"Skolor mot brott\". Den föreslår att varje skola tar fram en lägesbild över brott och att Brå får i uppdrag att sammanställa och analysera dem. Det täcker en del av löftet om att kartlägga brott i skolmiljön. Dokumenten visar förslag, inget beslut, och ett särskilt myndighetsuppdrag nämns inte.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB317",
+      "designation": "SOU 2024:17",
+      "title": "Skolor mot brott",
+      "date": "2024-03-07",
+      "url": "https://data.riksdagen.se/dokument/HCB317.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
+}

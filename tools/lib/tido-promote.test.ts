@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { loadJson } from './json.ts';
 import { promiseSchema, type PromiseRecord } from './schema.ts';
+import { partId, type SplitPlanEntry } from './split-promises.ts';
 import { MERGES, promote, remapLinkPromises, type Candidate } from './tido-promote.ts';
 
 const dataDir = resolve(import.meta.dirname, '../../src/data/2022-2026');
@@ -43,10 +44,15 @@ describe('promote', () => {
 
 describe('committed promise files', () => {
   it('has the files the script generates', () => {
+    // Promises split afterwards (tools/split-plans) replace their parent by their parts.
+    const splits = readdirSync(resolve(import.meta.dirname, '../split-plans')).flatMap(
+      (f) => loadJson(resolve(import.meta.dirname, '../split-plans', f)) as SplitPlanEntry[],
+    );
+    const parents = new Set(splits.map((e) => `${e.id}.json`));
+    const parts = splits.flatMap((e) => e.parts.map((p) => `${partId(p)}.json`));
+    const generated = promote(candidates).promises.map((p) => `${p.id}.json`);
     expect([...tidoFiles].sort()).toEqual(
-      promote(candidates)
-        .promises.map((p) => `${p.id}.json`)
-        .sort(),
+      [...new Set([...generated.filter((f) => !parents.has(f)), ...parts])].sort(),
     );
   });
 

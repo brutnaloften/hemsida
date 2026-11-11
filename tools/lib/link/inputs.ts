@@ -144,6 +144,8 @@ export function loadLinkInputs(
       labels,
     });
   }
+  const only = config.inputs.promises.ids ? new Set(config.inputs.promises.ids) : undefined;
+  if (only) pairs = pairs.filter((p) => only.has(p.promise_id));
   pairs.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   if (opts.limit !== undefined) pairs = pairs.slice(0, opts.limit);
 

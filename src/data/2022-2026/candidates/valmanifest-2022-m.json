@@ -413,7 +413,7 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-fjarr-och-kraftvarmestrategi-skatteoversyn"],
+      "promises": ["tido-fjarr-kraftvarmestrategi", "tido-oversyn-skatter-kraftvarme"],
       "outcome": "weakened",
       "note": "Avtalet ser bara över avfallsförbränningsskatten, den tas inte bort.",
       "rationale": "Tidö s. 15: kraftvärmeskatten, avfallsförbränningsskatten och skatten på bioolja ses över."
@@ -1548,7 +1548,11 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-lvu-oftare-och-aklagare-omhandertagande"],
+      "promises": [
+        "tido-lvu-anvands-oftare",
+        "tido-utred-lvu-utokade-omhandertaganden",
+        "tido-aklagare-omedelbart-omhandertagande"
+      ],
       "outcome": "included",
       "note": null,
       "rationale": "Tidö s. 23: LVU ska användas oftare för att skydda barn."
@@ -2039,7 +2043,8 @@
     },
     "link": {
       "promises": [
-        "tido-ta-bort-straffreduktion-18-20-utred-straffrabatt-under-18",
+        "tido-ta-bort-straffreduktion-over-18",
+        "tido-utred-straffrabatt-under-18",
         "tido-avskaffa-mangdrabatt"
       ],
       "outcome": "included",
@@ -3169,7 +3174,11 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-lvu-oftare-och-aklagare-omhandertagande"],
+      "promises": [
+        "tido-lvu-anvands-oftare",
+        "tido-utred-lvu-utokade-omhandertaganden",
+        "tido-aklagare-omedelbart-omhandertagande"
+      ],
       "outcome": "weakened",
       "note": "Avtalet vill använda LVU oftare för barn i kriminella miljöer, men nämner inte uttryckligen unga lagöverträdare.",
       "rationale": "Osäker: p23: LVU ska användas oftare för att skydda barn från kriminella miljöer; bredare men inte uttryckligen lagöverträdare."
@@ -3389,7 +3398,8 @@
     },
     "link": {
       "promises": [
-        "tido-ta-bort-straffreduktion-18-20-utred-straffrabatt-under-18",
+        "tido-ta-bort-straffreduktion-over-18",
+        "tido-utred-straffrabatt-under-18",
         "tido-ungdomsfangelser"
       ],
       "outcome": "included",
@@ -3602,7 +3612,9 @@
     },
     "link": {
       "promises": [
-        "tido-kortare-tillstandsprocess-snabbspar-karnkraft",
+        "tido-tillstandsprocess",
+        "tido-ansokningsavgift",
+        "tido-typgodkannande",
         "tido-lagandringar-ny-karnkraft-miljobalken"
       ],
       "outcome": "weakened",
@@ -3674,7 +3686,7 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-fjarr-och-kraftvarmestrategi-skatteoversyn"],
+      "promises": ["tido-fjarr-kraftvarmestrategi", "tido-oversyn-skatter-kraftvarme"],
       "outcome": "weakened",
       "note": "Avtalet lovar endast en översyn av avfallsförbränningsskatten, inte ett avskaffande.",
       "rationale": "p15: avfallsförbränningsskatten ses över."
@@ -3884,7 +3896,10 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-fokusera-klimatstod-industri-laddinfrastruktur"],
+      "promises": [
+        "tido-fokusera-klimatstod-industri-laddinfrastruktur",
+        "tido-program-internationella-klimatinvesteringar"
+      ],
       "outcome": "weakened",
       "note": "Avtalet säger bara att klimatstödet ska fokuseras på industrins omställning; Industriklivet nämns inte och någon fortsatt satsning utlovas inte uttryckligen.",
       "rationale": "Osäker: p17: medel fokuseras på industrins omställning; Industriklivet nämns inte vid namn."
@@ -5538,7 +5553,11 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-lvu-oftare-och-aklagare-omhandertagande"],
+      "promises": [
+        "tido-lvu-anvands-oftare",
+        "tido-utred-lvu-utokade-omhandertaganden",
+        "tido-aklagare-omedelbart-omhandertagande"
+      ],
       "outcome": "included",
       "note": null,
       "rationale": "Tidö s. 23: LVU används oftare för att skydda barn från bl.a. kriminella miljöer och utökade möjligheter att omhänderta barn utreds."
@@ -6776,7 +6795,11 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-hemabort-genomfors", "tido-stark-abortratten-i-regeringsformen"],
+      "promises": [
+        "tido-hemabort-genomfors",
+        "tido-fullfolj-grundlagsutredning-domstolarnas-oberoende",
+        "tido-abortratt-skydd-regeringsformen"
+      ],
       "outcome": "included",
       "note": null,
       "rationale": "Tidö s. 9: hemabort genomförs; s. 62: grundlagsutredning om skydd för rätten till abort i regeringsformen."
@@ -8435,7 +8458,10 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-stark-abortratten-i-regeringsformen"],
+      "promises": [
+        "tido-fullfolj-grundlagsutredning-domstolarnas-oberoende",
+        "tido-abortratt-skydd-regeringsformen"
+      ],
       "outcome": "weakened",
       "note": "Avtalet nämner endast att den pågående grundlagsutredningen om domstolarnas oberoende fullföljs.",
       "rationale": "Osäker: Tidö: den pågående grundlagsutredningen om domstolarnas oberoende fullföljs."

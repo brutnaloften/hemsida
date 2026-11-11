@@ -1,0 +1,53 @@
+{
+  "id": "tido-metodstod-kunskapsscreening",
+  "term": "2022-2026",
+  "title": "Myndighetsuppdrag om metodstöd för snabbare kunskapsscreening av nyanlända elever",
+  "description": "Myndighetsuppdrag om metodstöd för snabbare kunskapsscreening av elever som kommer till Sverige under pågående skolår.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 55,
+    "quote": "Myndighetsuppdrag om metodstöd för snabbare kunskapsscreening av elever som kommer till Sverige under pågående skolåren."
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "legislative",
+  "area": "Skola och utbildning",
+  "committee": "UbU",
+  "keywords": [
+    "nyanlända elever",
+    "kunskapsscreening",
+    "timplan",
+    "undervisningstid",
+    "integration"
+  ],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i januari 2025 att Skolverket ska ta fram ett nationellt kartläggningsmaterial för att bedöma nyanlända elevers behov av svenska som andraspråk, med stöd för införandet. Det täcker bara språkbehov. Metodstöd för snabbare kunskapsscreening av elever som kommer under pågående skolår nämns inte i dokumentet, som visar förslag men inget beslut.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB39",
+      "designation": "SOU 2025:9",
+      "title": "På språklig grund ",
+      "date": "2025-01-31",
+      "url": "https://data.riksdagen.se/dokument/HDB39.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
+}

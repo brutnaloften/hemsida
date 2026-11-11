@@ -46,10 +46,13 @@ if (process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN)
 
 type Judgement = { reason: string; stage?: 'definitive' | 'preparatory' | 'background' };
 type Row = { promise_id: string; document_id: string; judgement: Judgement };
-const raw = loadJson(resolve(root, 'tools/out/link-runs', values.run, 'results.json')) as
-  | Row[]
-  | { results: Row[] };
-const rows = Array.isArray(raw) ? raw : raw.results;
+// Several runs may be given, comma separated (e.g. the main run and a re-link of split promises).
+const rows = values.run.split(',').flatMap((run) => {
+  const raw = loadJson(resolve(root, 'tools/out/link-runs', run, 'results.json')) as
+    | Row[]
+    | { results: Row[] };
+  return Array.isArray(raw) ? raw : raw.results;
+});
 const judgementBy = new Map(rows.map((r) => [`${r.promise_id}:${r.document_id}`, r.judgement]));
 
 const cacheDir = resolve(root, 'tools/out/reasoning-cache');

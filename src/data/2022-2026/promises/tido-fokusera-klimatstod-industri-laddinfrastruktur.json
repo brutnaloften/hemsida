@@ -1,12 +1,12 @@
 {
   "id": "tido-fokusera-klimatstod-industri-laddinfrastruktur",
   "term": "2022-2026",
-  "title": "Fokusera klimatstöd på industrins omställning och laddinfrastruktur",
-  "description": "Budgeten ses över i relevanta delar för att fokusera medel på stöd med störst påverkan på utsläppsminskningar, det vill säga industrins omställning och laddinfrastruktur, och ett program för internationella klimatinvesteringar enligt Parisavtalets artikel sex utvecklas.",
+  "title": "Fokusera klimatstödet på industrins omställning och laddinfrastruktur",
+  "description": "Budgeten ses över i relevanta delar för att fokusera medlen på de stöd som har störst påverkan på utsläppsminskningen: industrins omställning och laddinfrastrukturen.",
   "source": {
     "id": "tidoavtalet",
     "page": 17,
-    "quote": "Budgeten ses över i relevanta delar i syfte att fokusera medlen till de stöd som har"
+    "quote": "Budgeten ses över i relevanta delar i syfte att fokusera medlen till de stöd som har störst påverkan på de centrala utmaningarna för att minska utsläppen av växthusgaser: industrins omställning – såväl befintliga verksamheter som banbrytande tekniker – samt laddinfrastrukturen för att möjliggöra transporternas elektrifiering."
   },
   "parties": ["M", "KD", "L", "SD"],
   "roles": {
@@ -28,7 +28,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen föreslog i november 2022 medel till bland annat Industriklivet och internationella klimatinvesteringar. Riksdagen beslutade i december 2022 om mer pengar till Industriklivet och laddinfrastruktur samt om fortsatta internationella klimatinvesteringar enligt Parisavtalet. I april 2025 föreslogs, och i juni 2025 beslutades, en flytt av medel till Industriklivet. Ett nytt program för artikel sex nämns inte i dokumenten.",
+    "reasoning": "Riksdagen beslutade i december 2022 om budgeten för miljö- och naturvård, med mer pengar till Industriklivet och Klimatklivet (laddinfrastruktur). Budgeten för 2024 lyfte samma två områden men stödde också andra åtgärder. I april 2025 föreslog regeringen att 2,19 miljarder kronor flyttas till Industriklivet, och riksdagen beslutade i juni 2025. Laddinfrastruktur nämns inte i det förslaget.",
     "date": "2026-11-11",
     "history": [
       {
@@ -40,16 +40,6 @@
   },
   "evidence": [
     {
-      "kind": "prop",
-      "dok_id": "HA031d21",
-      "designation": "Prop. 2022/23:1",
-      "title": "Budgetpropositionen för 2023 - Utgiftsområde 20 Allmän miljö- och naturvård",
-      "date": "2022-11-08",
-      "url": "https://data.riksdagen.se/dokument/HA031d21.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
       "kind": "bet",
       "dok_id": "HA01MJU1",
       "designation": "Bet. 2022/23:MJU1",
@@ -57,6 +47,16 @@
       "date": "2022-12-15",
       "url": "https://data.riksdagen.se/dokument/HA01MJU1.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01MJU1",
+      "designation": "Bet. 2023/24:MJU1",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2023-12-11",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU1.html",
+      "relevance": "partial",
       "note": null
     },
     {

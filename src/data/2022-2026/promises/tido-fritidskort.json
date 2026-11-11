@@ -1,0 +1,87 @@
+{
+  "id": "tido-fritidskort",
+  "term": "2022-2026",
+  "title": "Genomför satsningen på fritidskort",
+  "description": "Satsningen på fritidskort genomförs.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 23,
+    "quote": "satsningen på fritidskort genomförs"
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "budget",
+  "area": "Kriminalpolitik",
+  "committee": "SoU",
+  "keywords": [
+    "föräldrastödsprogram",
+    "fritidskort",
+    "kommuner",
+    "föräldrastöd",
+    "förebyggande",
+    "barns utsatthet",
+    "fritidsaktiviteter",
+    "barnfattigdom",
+    "barn"
+  ],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i december 2022 om pengar till ett fritidskort för barn, som en första budgetsatsning. I juli 2024 presenterades ett departementsförslag om kortet, och i april 2025 lade regeringen fram en proposition med förslag till lag. Riksdagen biföll propositionen i juni 2025. Dokumenten visar ingen författning kopplad till löftet.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HA01SoU1",
+      "designation": "Bet. 2022/23:SoU1",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HCB416",
+      "designation": "Ds 2024:16",
+      "title": "Ett fritidskort för barn och unga ",
+      "date": "2024-07-05",
+      "url": "https://data.riksdagen.se/dokument/HCB416.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03157",
+      "designation": "Prop. 2024/25:157",
+      "title": "Ett fritidskort för barn och unga – en aktiv och meningsfull fritid i gemenskap med andra",
+      "date": "2025-04-15",
+      "url": "https://data.riksdagen.se/dokument/HC03157.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SoU29",
+      "designation": "Bet. 2024/25:SoU29",
+      "title": "Ett fritidskort för barn och unga – en aktiv och meningsfull fritid i gemenskap med andra",
+      "date": "2025-06-11",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU29.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
+}

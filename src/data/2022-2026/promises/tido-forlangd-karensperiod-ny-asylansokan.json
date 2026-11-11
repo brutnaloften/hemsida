@@ -1,0 +1,67 @@
+{
+  "id": "tido-forlangd-karensperiod-ny-asylansokan",
+  "term": "2022-2026",
+  "title": "Förläng tiden innan en ny asylansökan kan göras efter avslag",
+  "description": "Tiden innan det är möjligt för en sökande att på nytt söka asyl efter ett avslag ska förlängas.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 33,
+    "quote": "Tiden innan det är möjligt för en sökande att på nytt söka asyl efter ett avslag ska förlängas."
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "legislative",
+  "area": "Migration och integration",
+  "committee": "SfU",
+  "keywords": ["preskription", "utvisningsbeslut", "avvisning", "ny asylansökan", "återreseförbud"],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En utredning föreslog i februari 2024 längre preskriptionstid för avlägsnandebeslut, från fyra till fem år, som börjar gälla vid utresa. Regeringen lade i januari 2025 fram ett förslag om längre återreseförbud och slut på spårbyte efter avslag. Riksdagen beslutade i mars 2025 om ändrade preskriptionsregler och längre preskriptionstid, vilket skjuter upp en ny prövning. Någon direkt förlängd väntetid för ny ansökan nämns inte i dokumenten.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB310",
+      "designation": "SOU 2024:10",
+      "title": "Preskription av avlägsnandebeslut och vissa frågor om återreseförbud ",
+      "date": "2024-02-05",
+      "url": "https://data.riksdagen.se/dokument/HCB310.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0392",
+      "designation": "Prop. 2024/25:92",
+      "title": "Preskription av avlägsnandebeslut och vissa frågor om återreseförbud",
+      "date": "2025-01-23",
+      "url": "https://data.riksdagen.se/dokument/HC0392.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SfU17",
+      "designation": "Bet. 2024/25:SfU17",
+      "title": "Preskription av avlägsnandebeslut, avskaffande av spårbyte och vissa frågor om återreseförbud",
+      "date": "2025-03-04",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU17.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
+}
