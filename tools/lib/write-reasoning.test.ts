@@ -171,6 +171,30 @@ describe('write-reasoning', () => {
       expect(reasoningProblems('Lagen träder i kraft den 1 januari 2027.', [], false)).toEqual([]);
     });
 
+    it('gives in_progress with a law already in force its own instructions', () => {
+      const ins = reasoningInstructions([item, law], 'in_progress', today);
+      expect(ins).not.toContain('ingen författning är kopplad');
+      expect(ins).toContain('har trätt i kraft på det angivna datumet');
+      expect(ins).not.toContain('Skriv inte att den gäller');
+      const both = reasoningInstructions([item, law, future], 'in_progress', today);
+      expect(both).toContain('gäller bara den lagen');
+      expect(reasoningInstructions([item], 'in_progress', today)).toContain(
+        'ingen författning är kopplad',
+      );
+    });
+
+    it('widens the in-force pattern but not negated phrasing', () => {
+      for (const t of [
+        'Lagen har nu trätt i kraft.',
+        'Lagen började gälla i juli.',
+        'Den gäller från 1 juli.',
+      ])
+        expect(reasoningProblems(t, [], false)).toContain('claims a law is in force');
+      expect(
+        reasoningProblems('Det framgår inte att lagen har trätt i kraft.', [], false),
+      ).not.toContain('claims a law is in force');
+    });
+
     it('rejects SFS designations', () => {
       expect(reasoningProblems('Lagen SFS 2025:625 trädde i kraft i juli.', [], true)).toContain(
         'names an SFS designation',

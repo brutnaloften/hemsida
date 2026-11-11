@@ -92,6 +92,12 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
       judgementBy.get(`${p.id}:${e.dok_id}`)?.reason ??
       (e.kind === 'bet' ? 'Riksdagens beslut om en proposition som hör till löftet.' : ''),
   }));
+  if (p.verdict.value !== 'in_progress' && !hasLawInForce(items, today)) {
+    console.warn(
+      `WARNING ${file}: verdict ${p.verdict.value} but no sfs evidence in force on ${today}; skipped`,
+    );
+    continue;
+  }
   const prompt = buildReasoningPrompt(p, items, today);
   const instructions = reasoningInstructions(items, p.verdict.value, today);
   jobs.push({
