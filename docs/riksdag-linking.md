@@ -66,3 +66,5 @@ It prints a recall summary and writes `tools/out/runs/<name>/link-report.json`: 
 - Committed: promises and evidence (`src/data/<term>/promises/`), candidates (`riksdag-candidates/`), rejected pairs (`rejected-candidates.json`), the eval set (`eval/pairs.json`), scoring configs (`tools/score-configs/`), freshness (`src/data/freshness.json`).
 - Gitignored under `tools/out/`: the store, the full-text cache, the score cache and run manifests, evidence briefs, tier-1 extracts. Two of them are shared as release archives: `docs/cache-sharing.md`.
 - Schemas: promise and evidence in `src/schema/promise.ts`, eval in `src/schema/eval.ts`, rejected pairs in `src/schema/rejected.ts`, scoring config in `tools/lib/score/config.ts`, cache manifest in `tools/lib/cache-archive.ts`.
+
+The policy behind step 8 (when a verdict may be `in_progress`, `fulfilled`, `partially_fulfilled` or `broken`, how compound promises are split, and how documents that work against a promise are shown) is in `docs/data-model.md`, "Rules for setting a verdict from evidence".

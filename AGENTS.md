@@ -65,6 +65,7 @@ pnpm (pinned via `packageManager` field in package.json).
 - **Quality gates before opening a PR:** `pnpm build`, `pnpm fmt:check`, and `pnpm test`.
 - **Tests:** prefer tests for new logic (schemas, tooling, data transforms). UI-only changes may rely on `pnpm build`.
 - **Data changes:** once seeding is done, every promise or verdict change gets its own PR. During initial seeding (e.g. the Tidöavtalet import) bulk PRs are fine.
+- **Verdict rules** (what sets `in_progress`, `fulfilled`, `partially_fulfilled`, `broken`, splitting of compound promises, "Motverkar") are in `docs/data-model.md` under "Rules for setting a verdict from evidence". Follow them when setting or reviewing verdicts.
 - **Verdicts and evidence are model-set.** There is no human review step. Claude writes `evidence[]` and sets verdicts, each with written reasoning that cites its evidence, one PR per change, within the schema constraints (`checkVerdictEvidence`). Prefer `unassessed` or `no_evidence` over a guess; use the `code-reviewer` subagent as the independent check.
 - **Language:** code, comments, commits, PRs and beads in English; everything shown on the site in Swedish.
 - **No hardcoded agreement names:** Tidöavtalet is only the first source. Site copy, labels and code must not assume a single agreement or term; take names from the `sources` data (e.g. its title or short title) and write generic wording ("avtal", "uppgörelser") where no specific source is meant.
