@@ -51,3 +51,7 @@ Swedish Copyright Act section 9 excludes laws, decisions, official reports and s
 ## Note on scorer kinds in keys
 
 The scorer's `kind` and `model` are part of every cache key. Results produced by a throwaway script with another `kind` do not match a later first-class scorer's keys; re-key them once by building both plans and copying each file to the new key (the plans' requests line up one to one) instead of paying for the run again. This was done for the 535 Haiku requests of the spike (`claude-haiku-experiment` to `claude`).
+
+## SFS store and judge cache
+
+`tools/out/sfs-store`, `tools/out/sfsr-cache` and `tools/out/sfs-judge-cache` are not shared as archives: they are small, the ingest is one request per proposition plus the hits at 1 request/s and the judge cache costs subscription usage to rebuild. They are gitignored like the rest of `tools/out/`.
