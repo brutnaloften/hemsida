@@ -40,7 +40,7 @@ const valid = {
     },
     {
       kind: 'sfs',
-      dok_id: 'SFS2023-300',
+      dok_id: 'sfs-2023-300',
       designation: 'SFS 2023:300',
       title: 'Lag om skärpta straff',
       date: '2023-06-01',
@@ -292,8 +292,8 @@ describe('promiseSchema', () => {
   describe('verdict-evidence constraints', () => {
     const ev = (kind: string, extra: object = {}) => ({
       kind,
-      dok_id: `D-${kind}`,
-      designation: `Beteckning ${kind}`,
+      dok_id: kind === 'sfs' ? 'sfs-2023-300' : `D-${kind}`,
+      designation: kind === 'sfs' ? 'SFS 2023:300' : `Beteckning ${kind}`,
       title: 'Titel',
       date: '2023-03-02',
       url: 'https://data.riksdagen.se/dokument/x',
@@ -322,7 +322,7 @@ describe('promiseSchema', () => {
     it('needs no evidence for unassessed, not_assessable and the other free verdicts', () => {
       expect(ok(make('unassessed', '', []))).toBe(true);
       expect(ok(make('not_assessable', 'För vagt.', []))).toBe(true);
-      for (const v of ['partially_fulfilled', 'unfulfilled', 'abandoned']) {
+      for (const v of ['unfulfilled', 'abandoned']) {
         expect(ok(make(v, 'Motivering.', [])), v).toBe(true);
       }
     });
@@ -358,6 +358,40 @@ describe('promiseSchema', () => {
         expect(ok(make('fulfilled', 'Klart.', [ev(kind)])), kind).toBe(false);
       }
       expect(ok(make('fulfilled', 'Klart.', []))).toBe(false);
+    });
+
+    it('fulfilled and partially_fulfilled need an sfs entry in force at the verdict date', () => {
+      for (const v of ['fulfilled', 'partially_fulfilled']) {
+        expect(ok(make(v, 'Lag i kraft.', [ev('sfs', { date: '2024-01-01' })])), v).toBe(true);
+        expect(ok(make(v, 'Motivering.', [])), v).toBe(false);
+        expect(ok(make(v, 'Motivering.', [ev('prop')])), v).toBe(false);
+        // verdict.date is 2024-01-01; a law taking effect later was not in force yet.
+        const later = make(v, 'Motivering.', [ev('sfs', { date: '2024-01-02' })]);
+        expect(ok(later), v).toBe(false);
+        expect(messages(later)[0]).toContain('on or before the verdict date');
+        // An earlier in-force law next to a later one is enough.
+        const both = [
+          ev('sfs', { date: '2024-01-02' }),
+          ev('sfs', { dok_id: 'sfs-2022-1', designation: 'SFS 2022:1', date: '2023-01-01' }),
+        ];
+        expect(ok(make(v, 'Motivering.', both)), v).toBe(true);
+      }
+    });
+
+    it('does not check history entries against the evidence', () => {
+      const p = make('in_progress', 'Pågår.', [ev('prop')]);
+      const history = [{ value: 'partially_fulfilled', reasoning: 'Äldre.', date: '2023-01-01' }];
+      expect(ok({ ...p, verdict: { ...p.verdict, history } })).toBe(true);
+    });
+
+    it('validates the sfs dok_id format and that the designation matches it', () => {
+      const good = make('fulfilled', 'Klart.', [ev('sfs')]);
+      expect(ok(good)).toBe(true);
+      const bad = (extra: object) => make('unassessed', '', [ev('sfs', extra)]);
+      expect(ok(bad({ dok_id: 'sfs-2025-625', designation: 'SFS 2025:625' }))).toBe(true);
+      expect(ok(bad({ dok_id: 'sfs-2025-625', designation: 'SFS 2025:62' }))).toBe(false);
+      expect(ok(bad({ dok_id: 'SFS2025-625', designation: 'SFS 2025:625' }))).toBe(false);
+      expect(ok(bad({ dok_id: 'sfs-25-625', designation: 'SFS 25:625' }))).toBe(false);
     });
 
     it('agreement evidence alone never allows in_progress, fulfilled or broken', () => {

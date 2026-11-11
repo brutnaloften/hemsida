@@ -181,6 +181,22 @@ const riksdagEvidenceSchema = z
         message: 'votes are only allowed on kind bet',
       });
     }
+    if (e.kind === 'sfs') {
+      const m = /^sfs-(\d{4})-(\d+)$/.exec(e.dok_id);
+      if (!m) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['dok_id'],
+          message: 'an sfs dok_id must look like sfs-<YYYY>-<N>, e.g. sfs-2025-625',
+        });
+      } else if (e.designation !== `SFS ${m[1]}:${m[2]}`) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['designation'],
+          message: `an sfs designation must be 'SFS ${m[1]}:${m[2]}' to match its dok_id`,
+        });
+      }
+    }
   });
 
 /**
@@ -268,7 +284,7 @@ const MIN_SEARCH_NOTE_LENGTH = 30;
  */
 function checkVerdictEvidence(
   p: {
-    verdict: { value: string; reasoning: string };
+    verdict: { value: string; reasoning: string; date: string };
     evidence: Evidence[];
     committee?: string | undefined;
     keywords: string[];
@@ -286,10 +302,14 @@ function checkVerdictEvidence(
       'verdict in_progress requires Riksdag evidence of kind dir, sou, ds or prop (agreement and budget evidence do not count)',
     );
   }
-  if (value === 'fulfilled' && !riksdag.some((e) => e.kind === 'sfs')) {
-    fail(
-      'verdict fulfilled requires Riksdag evidence of kind sfs (agreement and budget evidence do not count)',
-    );
+  if (value === 'fulfilled' || value === 'partially_fulfilled') {
+    // The law must have been in force when the verdict was set (sfs date = in-force date).
+    const inForce = riksdag.some((e) => e.kind === 'sfs' && e.date <= p.verdict.date);
+    if (!inForce) {
+      fail(
+        `verdict ${value} requires Riksdag evidence of kind sfs dated on or before the verdict date (a law in force when the verdict was set; agreement and budget evidence do not count)`,
+      );
+    }
   }
   if (value === 'broken') {
     const hasVote = riksdag.some((e) => e.kind === 'bet' && e.votes !== undefined);
