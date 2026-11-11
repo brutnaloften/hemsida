@@ -26,15 +26,21 @@
     "nyrekrytering"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i januari 2025 fram ett förslag om en ny, mer förebyggande socialtjänstlag, och riksdagen biföll den i maj 2025. Lagen reglerar socialnämndens brottsförebyggande arbete och tillåter öppna insatser utan behovsprövning. Att ta människor ur kriminalitet och familjecentraler nämns inte i dokumenten. Ett beslut om indragna förmåner för den som undanhåller sig straff täcker också en del.",
+    "reasoning": "Regeringen föreslog i januari 2025 en ny, mer förebyggande socialtjänstlag, och riksdagen beslutade om den i maj 2025. Lagen trädde i kraft 1 juli 2025. Den ger socialnämnden i uppgift att förebygga brottslighet och tillåter öppna insatser utan behovsprövning. Att ta människor ur kriminalitet och stöd vid familjecentraler nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i januari 2025 fram ett förslag om en ny, mer förebyggande socialtjänstlag, och riksdagen biföll den i maj 2025. Lagen reglerar socialnämndens brottsförebyggande arbete och tillåter öppna insatser utan behovsprövning. Att ta människor ur kriminalitet och familjecentraler nämns inte i dokumenten. Ett beslut om indragna förmåner för den som undanhåller sig straff täcker också en del.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -66,6 +72,16 @@
       "title": "Indragna eller minskade socialförsäkringsförmåner för den som undanhåller sig verkställighet av häktning eller frihetsberövande påföljd",
       "date": "2025-05-27",
       "url": "https://data.riksdagen.se/dokument/HC01SfU21.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-400",
+      "designation": "SFS 2025:400",
+      "title": "Socialtjänstlag (2025:400)",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025400.html",
       "relevance": "partial",
       "note": null
     }

@@ -26,15 +26,21 @@
     "Kriminalvården"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i juni 2023 tilläggsdirektiv om att inskränka permission för brottsaktiva i kriminella nätverk, begränsa obevakade permissioner och stärka brottsoffrets perspektiv. Utredningen föreslog i juli 2024 begränsningar för medlemmar i kriminella grupper. Regeringen lade i mars 2026 fram ett förslag om att gängkoppling ska beaktas, och riksdagen beslutade i maj 2026. Allmänt permissionsförbud, brottsofferhänsyn och obevakad permission nämns inte i dokumenten.",
+    "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att se över permissionsreglerna. Efter ett lagförslag beslutade riksdagen i maj 2026 om ändringar som trädde i kraft 2 juli 2026: en ändring i fängelselagen kräver att gängkopplingar och beteende vägs in vid permission. Förbud mot permission för aktiva gängkriminella, hänsyn till brottsoffer och begränsad obevakad permission nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i juni 2023 tilläggsdirektiv om att inskränka permission för brottsaktiva i kriminella nätverk, begränsa obevakade permissioner och stärka brottsoffrets perspektiv. Utredningen föreslog i juli 2024 begränsningar för medlemmar i kriminella grupper. Regeringen lade i mars 2026 fram ett förslag om att gängkoppling ska beaktas, och riksdagen beslutade i maj 2026. Allmänt permissionsförbud, brottsofferhänsyn och obevakad permission nämns inte i dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -78,6 +84,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU38.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-927",
+      "designation": "SFS 2026:927",
+      "title": "Lag (2026:927) om ändring i fängelselagen (2010:610)",
+      "date": "2026-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2026927.html",
+      "relevance": "partial",
+      "note": "Texten visar ingen huvudregel om att aktiva gängkriminella aldrig får permission, ingen särskild hänsyn till brottsoffret och ingen inskränkning av obevakade permissioner."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-928",
+      "designation": "SFS 2026:928",
+      "title": "Lag (2026:928) om ändring i lagen (2026:252) om verkställighet av säkerhetsförvaring",
+      "date": "2026-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2026928.html",
+      "relevance": "partial",
+      "note": "Någon huvudregel om att permission aldrig ges till aktiva gängkriminella, hänsyn till brottsoffret och inskränkta möjligheter till obevakad permission framgår inte, och lagen gäller bara säkerhetsförvaring, inte fängelse i övrigt."
     }
   ]
 }

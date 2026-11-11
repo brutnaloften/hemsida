@@ -22,7 +22,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i januari 2024 en utredare i uppdrag att föreslå hur anvisade elavtal ska avvecklas. I april 2026 föreslog regeringen i en proposition att reglerna om anvisningsavtal tas bort och ersätts av en leveransskyldig sistahandsleverantör. Riksdagen biföll förslaget i juni 2026. Dokumenten täcker hela löftet, men ingen författning är kopplad till det.",
+    "reasoning": "Regeringen gav i januari 2024 en utredare i uppdrag att föreslå hur anvisade elavtal avvecklas. I april 2026 föreslog regeringen att reglerna om anvisningsavtal tas bort och ersätts av en sistahandsleverantör, och riksdagen biföll det i juni 2026. Elmarknadslagen är beslutad och träder i kraft 1 januari 2027. Införandelagen, som täcker en del av löftet, träder i kraft 1 juli 2027.",
     "date": "2026-11-11",
     "history": [
       {
@@ -62,6 +62,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01NU25.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1281",
+      "designation": "SFS 2026:1281",
+      "title": "Elmarknadslag (2026:1281)",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261281.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1282",
+      "designation": "SFS 2026:1282",
+      "title": "Lag (2026:1282) om införande av elmarknadslagen (2026:1281)",
+      "date": "2027-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261282.html",
+      "relevance": "partial",
+      "note": "Anvisningsfunktionen avskaffas inte helt utan ersätts av en annan sistahandsmekanism."
     }
   ]
 }

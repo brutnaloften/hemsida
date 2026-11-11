@@ -20,15 +20,21 @@
   "committee": "JuU",
   "keywords": ["ungdomsfängelse", "sluten ungdomsvård", "SiS", "Kriminalvården", "ungdomshem"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i november 2023 att Kriminalvården ska verkställa fängelse för unga under 18 i särskilda enheter i stället för SiS. Regeringen lade i februari 2026 fram en proposition om att flytta verkställigheten till Kriminalvården, och riksdagen fattade beslut i maj 2026. Särskilda ungdomsfängelser, längre maxtid och överflyttning till vanlig anstalt vid 18 år nämns inte i dokumenten.",
+    "reasoning": "Riksdagen beslutade i maj 2026, efter en utredning 2023 och ett lagförslag i februari 2026, om ändringar i brottsbalken och fängelselagen. De trädde i kraft 1 juli 2026. Kriminalvården tar över från SiS och sluten ungdomsvård avskaffas, med barn på särskilda avdelningar inom fängelse. Egna ungdomsfängelser och längre maxtid ingår inte i förslaget, och överflyttning vid 18 nämns inte.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i november 2023 att Kriminalvården ska verkställa fängelse för unga under 18 i särskilda enheter i stället för SiS. Regeringen lade i februari 2026 fram en proposition om att flytta verkställigheten till Kriminalvården, och riksdagen fattade beslut i maj 2026. Särskilda ungdomsfängelser, längre maxtid och överflyttning till vanlig anstalt vid 18 år nämns inte i dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -37,7 +43,7 @@
       "kind": "sou",
       "dok_id": "HBB344",
       "designation": "SOU 2023:44",
-      "title": "En översyn av regleringen om frihetsberövande påföljder för unga ",
+      "title": "En översyn av regleringen om frihetsberövande påföljder för unga",
       "date": "2023-11-08",
       "url": "https://data.riksdagen.se/dokument/HBB344.html",
       "relevance": "partial",
@@ -62,6 +68,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-516",
+      "designation": "SFS 2026:516",
+      "title": "Lag (2026:516) om ändring i brottsbalken",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026516.html",
+      "relevance": "partial",
+      "note": "Lagen inrättar inte själva ungdomsfängelserna eller barn- och ungdomsavdelningarna och gör inte Kriminalvården till huvudman. Förlängd maxtid och överflyttning till vanlig anstalt vid 18 års ålder framgår inte heller av texten. De delarna ligger i andra lagar i propositionen, till exempel fängelselagen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-530",
+      "designation": "SFS 2026:530",
+      "title": "Lag (2026:530) om ändring i fängelselagen (2010:610)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026530.html",
+      "relevance": "partial",
+      "note": "Lagen visar inte att sluten ungdomsvård och SiS ungdomshem ersätts, att maxtiden förlängs eller att den som fyller 18 flyttas till vanlig anstalt. Den inrättar heller inga fristående ungdomsfängelser, utan avdelningar."
     }
   ]
 }

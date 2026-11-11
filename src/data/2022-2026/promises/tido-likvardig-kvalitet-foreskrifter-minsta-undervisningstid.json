@@ -26,15 +26,21 @@
     "likvärdighet"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i juli 2024 fram ett förslag om stärkta skolbibliotek, och riksdagen beslutade om ändringar i skollagen och bibliotekslagen i november 2024. Det täcker bara tillgång till skolbibliotek. Minsta undervisningstid, laborationsutrustning, skolgårdar, elevhälsa och läromedel nämns inte i dokumenten, och inga föreskrifter finns bland dem.",
+    "reasoning": "Regeringen lade i juli 2024 fram ett förslag om stärkta skolbibliotek, och riksdagen godkände ändringarna i november 2024. Två ändringar i skollagen trädde i kraft 1 juli 2025 och ger elever tillgång till skolbibliotek. Minsta undervisningstid, laborationsutrustning, skolgårdar, elevhälsa och läromedel nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i juli 2024 fram ett förslag om stärkta skolbibliotek, och riksdagen beslutade om ändringar i skollagen och bibliotekslagen i november 2024. Det täcker bara tillgång till skolbibliotek. Minsta undervisningstid, laborationsutrustning, skolgårdar, elevhälsa och läromedel nämns inte i dokumenten, och inga föreskrifter finns bland dem.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -68,6 +74,26 @@
       "url": "https://data.riksdagen.se/dokument/HC01UbU3.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1072",
+      "designation": "SFS 2024:1072",
+      "title": "Lag (2024:1072) om ändring i skollagen (2010:800)",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241072.html",
+      "relevance": "partial",
+      "note": "Minsta garanterad undervisningstid, laborationsutrustning, skolgårdar, elevhälsa och läromedel samt föreskrifter eller myndighetsuppdrag om dessa täcks inte."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1075",
+      "designation": "SFS 2024:1075",
+      "title": "Lag (2024:1075) om ändring i skollagen (2010:800)",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241075.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte föreskrifter om minsta garanterad undervisningstid, laborationsutrustning, skolgårdar, elevhälsa och läromedel."
     }
   ]
 }

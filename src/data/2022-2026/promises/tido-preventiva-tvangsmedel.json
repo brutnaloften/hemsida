@@ -20,15 +20,21 @@
   "committee": "JuU",
   "keywords": ["preventiva tvångsmedel", "kriminella nätverk", "Ju 2021:15", "hemliga tvångsmedel"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i oktober 2022 att preventiva tvångsmedel ska kunna användas mer mot allvarlig brottslighet i kriminella nätverk, och en andra utredning följde i oktober 2023. Regeringen lade fram förslag om hemliga tvångsmedel i juni 2023 och om preventiva tvångsmedel i april 2024. Riksdagen fattade beslut i september 2023 och juni 2024. Dessa täcker delar av löftet; tilläggsdirektivet till utredningen nämns inte i dokumenten.",
+    "reasoning": "Utredningen föreslog i oktober 2022 och oktober 2023 fler preventiva tvångsmedel mot brott i kriminella nätverk. Riksdagen beslutade 2023 och 2024 om regeringens förslag, och ändringar i flera lagar trädde i kraft 1 oktober 2023 och 1 september 2024. Lagarna täcker bara en del av löftet; en annan lag träder i kraft först 2028. Hur utredningens förslag i övrigt hanteras nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i oktober 2022 att preventiva tvångsmedel ska kunna användas mer mot allvarlig brottslighet i kriminella nätverk, och en andra utredning följde i oktober 2023. Regeringen lade fram förslag om hemliga tvångsmedel i juni 2023 och om preventiva tvångsmedel i april 2024. Riksdagen fattade beslut i september 2023 och juni 2024. Dessa täcker delar av löftet; tilläggsdirektivet till utredningen nämns inte i dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -37,7 +43,7 @@
       "kind": "sou",
       "dok_id": "HAB352",
       "designation": "SOU 2022:52",
-      "title": "Utökade möjligheter att använda preventiva tvångsmedel ",
+      "title": "Utökade möjligheter att använda preventiva tvångsmedel",
       "date": "2022-10-25",
       "url": "https://data.riksdagen.se/dokument/HAB352.html",
       "relevance": "full",
@@ -64,10 +70,30 @@
       "note": null
     },
     {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-537",
+      "designation": "SFS 2023:537",
+      "title": "Lag (2023:537) om ändring i lagen (2007:979) om åtgärder för att förhindra vissa särskilt allvarliga brott",
+      "date": "2023-10-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023537.html",
+      "relevance": "partial",
+      "note": "Löftets formulering om tilläggsdirektiv till utredningen Ju 2021:15 genomförs inte av lagen, och texten visar inte att alla preventiva tvångsmedel eller att upptäcka brottslig verksamhet omfattas."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-540",
+      "designation": "SFS 2023:540",
+      "title": "Lag (2023:540) om ändring i lagen (2020:62) om hemlig dataavläsning",
+      "date": "2023-10-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023540.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte själv de preventiva tvångsmedlen mot kriminella nätverk, eftersom de regleras i lagen (2007:979). Tilläggsdirektiven till utredningen genomförs inte heller."
+    },
+    {
       "kind": "sou",
       "dok_id": "HBB360",
       "designation": "SOU 2023:60",
-      "title": "Utökade möjligheter att använda preventiva tvångsmedel 2 ",
+      "title": "Utökade möjligheter att använda preventiva tvångsmedel 2",
       "date": "2023-10-13",
       "url": "https://data.riksdagen.se/dokument/HBB360.html",
       "relevance": "full",
@@ -92,6 +118,56 @@
       "url": "https://data.riksdagen.se/dokument/HB01JuU24.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-560",
+      "designation": "SFS 2024:560",
+      "title": "Lag (2024:560) om ändring i lagen (2007:979) om åtgärder för att förhindra vissa särskilt allvarliga brott",
+      "date": "2024-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/2024560.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att lagen riktar in sig på att förhindra och upptäcka brottslig verksamhet i kriminella nätverk, och den innehåller inga tilläggsdirektiv till utredningen Ju 2021:15."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-564",
+      "designation": "SFS 2024:564",
+      "title": "Lag (2024:564) om ändring i lagen (2012:278) om inhämtning av uppgifter om elektronisk kommunikation i de brottsbekämpande myndigheternas underrättelseverksamhet",
+      "date": "2024-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/2024564.html",
+      "relevance": "partial",
+      "note": "Övriga preventiva tvångsmedel (som hemlig rumsavlyssning, husrannsakan och genomsökning på distans) ligger i andra lagar, och ingen särskild inriktning på kriminella nätverk framgår."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-566",
+      "designation": "SFS 2024:566",
+      "title": "Lag (2024:566) om ändring i lagen (2020:62) om hemlig dataavläsning",
+      "date": "2024-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/2024566.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte tilläggsdirektiv till utredningen Ju 2021:15 och omfattar bara hemlig dataavläsning, inte övriga preventiva tvångsmedel eller särskilt kriminella nätverk."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-567",
+      "designation": "SFS 2024:567",
+      "title": "Lag (2024:567) om ändring i lagen (2022:700) om särskild kontroll av vissa utlänningar",
+      "date": "2024-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/2024567.html",
+      "relevance": "partial",
+      "note": "Lagen rör inte tvångsmedel mot kriminella nätverk i allmänhet; de övriga utökningarna ligger i andra lagar och tilläggsdirektivet till utredningen genomförs inte här."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-562",
+      "designation": "SFS 2024:562",
+      "title": "Lag (2024:562) om ändring i lagen (2007:979) om åtgärder för att förhindra vissa särskilt allvarliga brott",
+      "date": "2028-10-01",
+      "url": "https://svenskforfattningssamling.se/doc/2024562.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att lagen särskilt riktar sig mot kriminella nätverk, och den ger inget direktiv till utredningen. Den träder i kraft först 2028 och verkar ändra eller upphäva bestämmelser i en senare version av lagen."
     }
   ]
 }

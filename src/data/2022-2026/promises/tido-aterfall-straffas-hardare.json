@@ -25,15 +25,21 @@
     "upprepad brottslighet"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Utredningar föreslog 2023 och juli 2024 hårdare regler för upprepad brottslighet, bland annat att straffet vid återfall kan överstiga straffskalan med sex år i stället för fyra. Regeringen lade i mars och april 2026 fram propositioner om återfall och skärpta straffskalor, och riksdagen beslutade i maj och juni 2026. Reformen av reglerna i 26 kap. 2 § brottsbalken nämns inte i dokumenten.",
+    "reasoning": "Utredningar 2023 och 2024 föreslog hårdare straff vid återfall. Regeringen lade i mars och april 2026 fram propositioner, och riksdagen beslutade i maj och juni 2026. Två ändringar i brottsbalken trädde i kraft 2 juli och 1 augusti 2026. Dokumenten visar skärpta regler vid återfall, men inte att straffet vid upprepade återfall kan gå över den vanliga straffskalan eller att reglerna som begränsar fängelsestraffets längd ändras.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Utredningar föreslog 2023 och juli 2024 hårdare regler för upprepad brottslighet, bland annat att straffet vid återfall kan överstiga straffskalan med sex år i stället för fyra. Regeringen lade i mars och april 2026 fram propositioner om återfall och skärpta straffskalor, och riksdagen beslutade i maj och juni 2026. Reformen av reglerna i 26 kap. 2 § brottsbalken nämns inte i dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -107,6 +113,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-924",
+      "designation": "SFS 2026:924",
+      "title": "Lag (2026:924) om ändring i brottsbalken",
+      "date": "2026-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2026924.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att straffet vid upprepade återfall kan överstiga straffskalan eller att de begränsande reglerna i 26 kap. 2 § reformeras."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1318",
+      "designation": "SFS 2026:1318",
+      "title": "Lag (2026:1318) om ändring i brottsbalken",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261318.html",
+      "relevance": "partial",
+      "note": "Texten visar ingen särskild skärpning av straffet för återfall i brott som sådant, och inte heller någon reform av återfallsreglerna utöver de allmänna reglerna om flerfaldig brottslighet."
     }
   ]
 }

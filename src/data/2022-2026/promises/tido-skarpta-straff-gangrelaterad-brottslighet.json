@@ -26,15 +26,21 @@
     "Gängbrottsutredningen"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen föreslog i januari 2023 högre straff för olaga hot, rån och utpressning, och riksdagen fattade beslut i maj 2023. En statlig utredning från juni 2025 föreslog en ny straffskärpningsregel för brott i kriminella nätverk och högre minimistraff för bedrägeri och ocker. I april 2026 föreslog regeringen dubbla straff för sådana brott och skärpta straffskalor, och riksdagen fattade beslut i juni 2026.",
+    "reasoning": "Riksdagen beslutade i maj 2023 om skärpta straff för bland annat olaga hot, rån och utpressning, och ändringar i brottsbalken trädde i kraft 1 juli 2023. Efter ett förslag i april 2026 om dubbla straff för brott i kriminella nätverk och skärpta straffskalor trädde nya lagändringar i kraft 1 augusti 2026. Vapenbrott, övergrepp i rättssak, bedrägeri och ocker nämns inte i 2023 års förslag.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen föreslog i januari 2023 högre straff för olaga hot, rån och utpressning, och riksdagen fattade beslut i maj 2023. En statlig utredning från juni 2025 föreslog en ny straffskärpningsregel för brott i kriminella nätverk och högre minimistraff för bedrägeri och ocker. I april 2026 föreslog regeringen dubbla straff för sådana brott och skärpta straffskalor, och riksdagen fattade beslut i juni 2026.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -58,6 +64,26 @@
       "url": "https://data.riksdagen.se/dokument/HA01JuU8.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-257",
+      "designation": "SFS 2023:257",
+      "title": "Lag (2023:257) om ändring i brottsbalken",
+      "date": "2023-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023257.html",
+      "relevance": "partial",
+      "note": "Lagen visar inte skärpta straff för vapenbrott, övergrepp i rättssak, bedrägeri och ocker, som nämns i löftet."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-258",
+      "designation": "SFS 2023:258",
+      "title": "Lag (2023:258) om ändring i narkotikastrafflagen (1968:64)",
+      "date": "2023-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023258.html",
+      "relevance": "partial",
+      "note": "Lagen rör inte de uppräknade brotten vapenbrott, övergrepp i rättssak, utpressning, bedrägeri, ocker, rån och olaga hot, och inte någon bredare skärpning av straffen för gängbrott."
     },
     {
       "kind": "sou",
@@ -88,6 +114,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1318",
+      "designation": "SFS 2026:1318",
+      "title": "Lag (2026:1318) om ändring i brottsbalken",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261318.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att alla de uppräknade brotten (vapenbrott, ocker, bedrägeri m.fl.) skärps, och vapenbrott ligger i en annan lag än brottsbalken. Gängbrottsutredningen som utgångspunkt framgår inte heller."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1321",
+      "designation": "SFS 2026:1321",
+      "title": "Lag (2026:1321) om ändring i lagen (2000:1225) om straff för smuggling",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261321.html",
+      "relevance": "partial",
+      "note": "Lagen täcker inte de flesta brott som löftet nämner, som övergrepp i rättssak, utpressning, bedrägeri, ocker, rån och olaga hot. Dessa regleras i andra lagar."
     }
   ]
 }

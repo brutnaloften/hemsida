@@ -20,15 +20,21 @@
   "committee": "KU",
   "keywords": ["kamerabevakning", "kamerabevakningslagen", "polisen", "tillstånd", "kommuner"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i april 2024 att kommuner och andra slipper tillstånd för kamerabevakning och att polisens möjligheter utökas. Regeringen lade i januari 2025 fram ett förslag om färre tillstånd och bevakning på fler platser, och riksdagen godkände ändringarna i mars 2025. Kommunernas utökade rätt, sänkta krav på polisen och polisens utökade uppdrag på längre sikt nämns inte i detalj i dokumenten.",
+    "reasoning": "En statlig utredning föreslog i april 2024 att tillståndskravet för kamerabevakning slopas och att polisens möjligheter utökas. Regeringen lade fram ett förslag i januari 2025 och riksdagen biföll det i mars 2025. Lagändringen trädde i kraft 1 april 2025: tillståndskravet tas bort och brottsbekämpande myndigheter får kamerabevaka på fler platser. Dokumenten visar inte att polisens uppdrag utökas på längre sikt.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i april 2024 att kommuner och andra slipper tillstånd för kamerabevakning och att polisens möjligheter utökas. Regeringen lade i januari 2025 fram ett förslag om färre tillstånd och bevakning på fler platser, och riksdagen godkände ändringarna i mars 2025. Kommunernas utökade rätt, sänkta krav på polisen och polisens utökade uppdrag på längre sikt nämns inte i detalj i dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -72,6 +78,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01JuU27.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-220",
+      "designation": "SFS 2025:220",
+      "title": "Lag (2025:220) om ändring i kamerabevakningslagen (2018:1200)",
+      "date": "2025-04-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025220.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att polisens uppdrag utökas på längre sikt."
     }
   ]
 }

@@ -26,15 +26,21 @@
     "försörjningskrav"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i februari 2023 utredningen i uppdrag att föreslå att arbetstillstånd normalt kräver en lön motsvarande medianlönen. Utredningen föreslog i februari 2024 ett lönekrav på minst medianlön, med undantag för bristyrken. Regeringen föreslog i december 2025 ett lönekrav med vissa undantag, och riksdagen fattade beslut i mars 2026. Att gränsen är just medianlönen framgår inte av de två sista dokumenten.",
+    "reasoning": "Regeringen gav i februari 2023 en utredning i uppdrag att föreslå medianlön som grund för arbetstillstånd, och utredningen föreslog det i februari 2024. Regeringen föreslog i december 2025 ett lönekrav med undantag för vissa yrken, riksdagen beslutade i mars 2026 och ändringen i utlänningslagen trädde i kraft 1 juni 2026. Dokumenten visar inte att kravet är just medianlönen.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i februari 2023 utredningen i uppdrag att föreslå att arbetstillstånd normalt kräver en lön motsvarande medianlönen. Utredningen föreslog i februari 2024 ett lönekrav på minst medianlön, med undantag för bristyrken. Regeringen föreslog i december 2025 ett lönekrav med vissa undantag, och riksdagen fattade beslut i mars 2026. Att gränsen är just medianlönen framgår inte av de två sista dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -78,6 +84,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01SfU12.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-295",
+      "designation": "SFS 2026:295",
+      "title": "Lag (2026:295) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-06-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026295.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att lönekravet är satt till medianlön i normalfallet. Vissa yrkesgrupper kan dessutom undantas från kravet."
     }
   ]
 }

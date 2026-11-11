@@ -26,15 +26,21 @@
     "hot och våld"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i februari 2023 en utredning i uppdrag att föreslå minskad exponering av offentliganställdas namn och starkare skydd för uppgifter om dem och anhöriga. Riksdagen beslutade i april 2024 att vissa polisanställda kan få en annan beteckning än namn, och i maj 2025 om ett starkare skydd för offentliganställda. Skyddade uppgifter för poliser och deras familjer nämns inte i dokumenten.",
+    "reasoning": "Riksdagen beslutade i april 2024 att polisanställdas namn i vissa fall kan ersättas med en annan beteckning, och ändringar i polislagen och sekretesslagen trädde i kraft 30 april 2024. I juli 2025 trädde ändringar i sekretess- och förvaltningslagen i kraft om att utelämna beslutsfattarens namn. Dokumenten visar inte skyddade uppgifter för familj eller andra yrkesgrupper.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i februari 2023 en utredning i uppdrag att föreslå minskad exponering av offentliganställdas namn och starkare skydd för uppgifter om dem och anhöriga. Riksdagen beslutade i april 2024 att vissa polisanställda kan få en annan beteckning än namn, och i maj 2025 om ett starkare skydd för offentliganställda. Skyddade uppgifter för poliser och deras familjer nämns inte i dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -80,6 +86,26 @@
       "note": null
     },
     {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-223",
+      "designation": "SFS 2024:223",
+      "title": "Lag (2024:223) om ändring i polislagen (1984:387)",
+      "date": "2024-04-30",
+      "url": "https://svenskforfattningssamling.se/doc/2024223.html",
+      "relevance": "partial",
+      "note": "Lagen omfattar inte andra myndigheter, andra utsatta yrkeskategorier eller skyddade uppgifter för familjen, och den innehåller inte själva sekretessen. Möjligheten är dessutom begränsad till fem år."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-225",
+      "designation": "SFS 2024:225",
+      "title": "Lag (2024:225) om ändring i offentlighets- och sekretesslagen (2009:400)",
+      "date": "2024-04-30",
+      "url": "https://svenskforfattningssamling.se/doc/2024225.html",
+      "relevance": "partial",
+      "note": "Anonymisering för beslutsfattare vid andra myndigheter, skydd för andra utsatta yrkeskategorier och skyddade uppgifter för familjemedlemmar; skyddet gäller bara en snäv grupp inom Polismyndigheten."
+    },
+    {
       "kind": "prop",
       "dok_id": "HC03141",
       "designation": "Prop. 2024/25:141",
@@ -98,6 +124,26 @@
       "url": "https://data.riksdagen.se/dokument/HC01JuU29.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-581",
+      "designation": "SFS 2025:581",
+      "title": "Lag (2025:581) om ändring i offentlighets- och sekretesslagen (2009:400)",
+      "date": "2025-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2025581.html",
+      "relevance": "partial",
+      "note": "Lagen visar inte särskild anonymisering av beslutsfattare i Polisen, skyddade uppgifter för poliser och andra utsatta yrkeskategorier eller skydd för deras familjer; utelämnande av namn i underrättelser ligger i förvaltningslagen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-582",
+      "designation": "SFS 2025:582",
+      "title": "Lag (2025:582) om ändring i förvaltningslagen (2017:900)",
+      "date": "2025-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2025582.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte skyddade uppgifter för poliser och andra utsatta yrkeskategorier och deras familjer, och inte heller ökad anonymisering av uppgifter i offentliga handlingar generellt."
     }
   ]
 }

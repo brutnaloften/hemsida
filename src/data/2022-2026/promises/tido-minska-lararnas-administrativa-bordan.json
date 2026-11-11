@@ -26,15 +26,21 @@
     "lärares arbetstid"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i mars 2025 minskade dokumentationskrav, bland annat färre utvecklingssamtal och utvecklingsplaner som bara gäller kunskaper, samt enklare regler om kränkande behandling. Regeringen lade i mars 2026 fram ett liknande förslag, och riksdagen beslutade i maj 2026 om lärares tid för undervisning och mindre rapportering av kränkande behandling till rektor. Dokumenten nämner inte en bred regelöversyn eller begränsade utvecklingsplaner i beslutet.",
+    "reasoning": "Utredningen föreslog i mars 2025 mindre dokumentation och enklare regler om kränkande behandling. Regeringen lade fram ett förslag i mars 2026, och riksdagen beslutade i maj 2026. En skollagsändring trädde i kraft 1 augusti 2026 och minskar rapporteringen av kränkande behandling till rektor. Två andra lagar om dokumentation träder i kraft först 2027 och 2028, och en bred regelöversyn nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i mars 2025 minskade dokumentationskrav, bland annat färre utvecklingssamtal och utvecklingsplaner som bara gäller kunskaper, samt enklare regler om kränkande behandling. Regeringen lade i mars 2026 fram ett liknande förslag, och riksdagen beslutade i maj 2026 om lärares tid för undervisning och mindre rapportering av kränkande behandling till rektor. Dokumenten nämner inte en bred regelöversyn eller begränsade utvecklingsplaner i beslutet.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -88,6 +94,36 @@
       "url": "https://data.riksdagen.se/dokument/HD01UbU26.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1096",
+      "designation": "SFS 2026:1096",
+      "title": "Lag (2026:1096) om ändring i skollagen (2010:800)",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261096.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte den breda regelöversynen i övrigt eller de begränsade kraven på elevnära dokumentation som individuella utvecklingsplaner och utvecklingssamtal. De ändringarna ligger i andra lagar i propositionen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1097",
+      "designation": "SFS 2026:1097",
+      "title": "Lag (2026:1097) om ändring i skollagen (2010:800)",
+      "date": "2027-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261097.html",
+      "relevance": "partial",
+      "note": "Lagen genomför ingen bred regelöversyn och ändrar inte reglerna om arbetet mot kränkande behandling, som ligger i en annan lag i propositionen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1243",
+      "designation": "SFS 2026:1243",
+      "title": "Lag (2026:1243) om ändring i skollagen (2010:800)",
+      "date": "2028-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/20261243.html",
+      "relevance": "partial",
+      "note": "Någon bred regelöversyn av lärarnas administrativa börda i övrigt ingår inte, och individuella utvecklingsplaner avskaffas inte helt utan begränsas."
     }
   ]
 }

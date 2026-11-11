@@ -30,15 +30,21 @@
     "myndighetsdelning"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i november 2024 bredare insamling och lagring av fingeravtryck och bilder, lägre åldersgräns (från 14 till 6 år) och vidare användning av Migrationsverkets register samt kontroll mot identitetshandlingar eller register. Regeringen lade i april 2026 fram en proposition om mer användning av fingeravtryck och foton, och riksdagen beslutade i juni 2026 om den. DNA, en central databas och tilläggsdirektivet nämns inte i dokumenten.",
+    "reasoning": "En statlig utredning föreslog i november 2024 bredare insamling av fingeravtryck och foton, lägre åldersgräns (från 14 till 6 år) och vidare användning av Migrationsverkets register. Regeringen lade fram en proposition i april 2026, riksdagen beslutade i juni 2026 och ändringar i flera lagar trädde i kraft 13 juli 2026. DNA, en central databas och ett tilläggsdirektiv nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i november 2024 bredare insamling och lagring av fingeravtryck och bilder, lägre åldersgräns (från 14 till 6 år) och vidare användning av Migrationsverkets register samt kontroll mot identitetshandlingar eller register. Regeringen lade i april 2026 fram en proposition om mer användning av fingeravtryck och foton, och riksdagen beslutade i juni 2026 om den. DNA, en central databas och tilläggsdirektivet nämns inte i dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -47,7 +53,7 @@
       "kind": "sou",
       "dok_id": "HCB380",
       "designation": "SOU 2024:80",
-      "title": "Vissa åtgärder för stärkt återvändandeverksamhet och utlänningskontroll ",
+      "title": "Vissa åtgärder för stärkt återvändandeverksamhet och utlänningskontroll",
       "date": "2024-11-26",
       "url": "https://data.riksdagen.se/dokument/HCB380.html",
       "relevance": "partial",
@@ -72,6 +78,56 @@
       "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1338",
+      "designation": "SFS 2026:1338",
+      "title": "Lag (2026:1338) om ändring i lagen (2001:82) om svenskt medborgarskap",
+      "date": "2026-07-13",
+      "url": "https://svenskforfattningssamling.se/doc/20261338.html",
+      "relevance": "partial",
+      "note": "DNA, insamling och registrering av biometri vid uppehållstillstånd, sänkt åldersgräns, utökat utbyte mellan myndigheter och kontroll mot en central databas ingår inte. Tilläggsdirektivet till utredningen genomförs inte heller."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1339",
+      "designation": "SFS 2026:1339",
+      "title": "Lag (2026:1339) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-07-13",
+      "url": "https://svenskforfattningssamling.se/doc/20261339.html",
+      "relevance": "partial",
+      "note": "Insamling och sparande av DNA och andra biometriska uppgifter i sökbara register, sänkt åldersgräns för inhämtning och utökad delning av biometriska register mellan myndigheter framgår inte. Själva tilläggsdirektivet till utredningen ingår inte heller."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1340",
+      "designation": "SFS 2026:1340",
+      "title": "Lag (2026:1340) om ändring i utlänningsdatalagen (2016:27)",
+      "date": "2026-07-13",
+      "url": "https://svenskforfattningssamling.se/doc/20261340.html",
+      "relevance": "partial",
+      "note": "Texten visar inget om DNA, sänkt åldersgräns för inhämtning, insamling i sökbara register för uppehållstillståndssökande eller kontroll mot identitetshandlingar eller en central databas. Löftets tilläggsdirektiv till utredningen genomförs inte heller."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1341",
+      "designation": "SFS 2026:1341",
+      "title": "Lag (2026:1341) om ändring i lagen (2018:1693) om polisens behandling av personuppgifter inom brottsdatalagens område",
+      "date": "2026-07-13",
+      "url": "https://svenskforfattningssamling.se/doc/20261341.html",
+      "relevance": "partial",
+      "note": "Insamling av DNA och sänkt åldersgräns, sökbara biometriska register, utökat delande mellan myndigheter samt kontroll av fingeravtryck och bild mot identitetshandlingar eller en central databas framgår inte av texten."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1342",
+      "designation": "SFS 2026:1342",
+      "title": "Lag (2026:1342) om ändring i lagen (2022:700) om särskild kontroll av vissa utlänningar",
+      "date": "2026-07-13",
+      "url": "https://svenskforfattningssamling.se/doc/20261342.html",
+      "relevance": "partial",
+      "note": "DNA, sänkt åldersgräns för inhämtning, sökbara register för alla tredjelandsmedborgare som ansöker om uppehållstillstånd, utökad delning mellan myndigheter och kontroll mot identitetshandlingar eller central databas vid myndighetskontakt."
     }
   ]
 }

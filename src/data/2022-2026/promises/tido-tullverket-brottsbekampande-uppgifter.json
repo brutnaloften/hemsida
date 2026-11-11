@@ -20,15 +20,21 @@
   "committee": "JuU",
   "keywords": ["Tullverket", "befogenheter", "stöldgods", "gränskontroll", "brottsbekämpning"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En utredning föreslog i december 2023 att utförsel av stöldgods ska bli brott och att Tullverket ska få nya befogenheter. Regeringen lade i april 2024 fram förslag om en ny tullbefogenhetslag, som riksdagen biföll i september 2024. I mars 2025 föreslog regeringen att utförsel av stöldgods kriminaliseras, och riksdagen biföll det i maj 2025. Dokumenten visar ingen författning kopplad till löftet.",
+    "reasoning": "En ny tullbefogenhetslag trädde i kraft i november 2024 och ger Tullverket utökade befogenheter och en större brottsbekämpande roll. I september 2025 trädde lagändringar i kraft som gör utförsel av stöldgods straffbar och ändrar tullbefogenhetslagen. Dokumenten visar inte hur Tullverkets uppdrag i övrigt har setts över eller utökats.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En utredning föreslog i december 2023 att utförsel av stöldgods ska bli brott och att Tullverket ska få nya befogenheter. Regeringen lade i april 2024 fram förslag om en ny tullbefogenhetslag, som riksdagen biföll i september 2024. I mars 2025 föreslog regeringen att utförsel av stöldgods kriminaliseras, och riksdagen biföll det i maj 2025. Dokumenten visar ingen författning kopplad till löftet.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -37,7 +43,7 @@
       "kind": "sou",
       "dok_id": "HBB399",
       "designation": "SOU 2023:99",
-      "title": "Nya tullrättsliga sanktioner och skärpta åtgärder mot utförsel av stöldgods ",
+      "title": "Nya tullrättsliga sanktioner och skärpta åtgärder mot utförsel av stöldgods",
       "date": "2023-12-19",
       "url": "https://data.riksdagen.se/dokument/HBB399.html",
       "relevance": "full",
@@ -64,6 +70,16 @@
       "note": null
     },
     {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-710",
+      "designation": "SFS 2024:710",
+      "title": "Tullbefogenhetslag (2024:710)",
+      "date": "2024-11-07",
+      "url": "https://svenskforfattningssamling.se/doc/2024710.html",
+      "relevance": "partial",
+      "note": "Kriminalisering av utförsel av stöldgods ingår inte i denna lag, och en bredare översyn av Tullverkets uppdrag nämns inte i texten."
+    },
+    {
       "kind": "prop",
       "dok_id": "HC03129",
       "designation": "Prop. 2024/25:129",
@@ -82,6 +98,46 @@
       "url": "https://data.riksdagen.se/dokument/HC01SkU21.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-638",
+      "designation": "SFS 2025:638",
+      "title": "Lag (2025:638) om ändring i brottsbalken",
+      "date": "2025-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025638.html",
+      "relevance": "partial",
+      "note": "Lagen utökar inte själv Tullverkets verksamhetsområde eller uppdrag och befogenheter; det ligger i andra lagar i propositionen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-639",
+      "designation": "SFS 2025:639",
+      "title": "Lag (2025:639) om ändring i lagen (1974:1065) om visst stöldgods m.m.",
+      "date": "2025-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025639.html",
+      "relevance": "partial",
+      "note": "Själva kriminaliseringen av utförsel av stöldgods finns i en annan lag (brottsbalken), och översynen av Tullverkets övergripande uppdrag och befogenheter genomförs inte här."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-645",
+      "designation": "SFS 2025:645",
+      "title": "Lag (2025:645) om ändring i lagen (2000:1225) om straff för smuggling",
+      "date": "2025-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025645.html",
+      "relevance": "partial",
+      "note": "Lagen innehåller inte själva kriminaliseringen av utförsel av stöldgods, som ligger i brottsbalken. Den innehåller inte heller någon bred översyn av Tullverkets uppdrag och befogenheter eller en generell utökning av verksamhetsområdet."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-648",
+      "designation": "SFS 2025:648",
+      "title": "Lag (2025:648) om ändring i tullbefogenhetslagen (2024:710)",
+      "date": "2025-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025648.html",
+      "relevance": "partial",
+      "note": "Själva kriminaliseringen av utförsel av stöldgods ligger i en annan lag (brottsbalken), och någon bred översyn av Tullverkets uppdrag och befogenheter ingår inte i denna lag."
     }
   ]
 }

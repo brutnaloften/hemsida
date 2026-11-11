@@ -22,7 +22,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i februari 2023 fram ett förslag om att genomföra delar av elmarknadsdirektivet (leverans av el och aggregering), och riksdagen beslutade om det i april 2023. En utredning föreslog i april 2025 tydligare ansvar mellan nätägare, och i april 2026 lade regeringen fram förslag om en ny elmarknadslag med tydligare roller. Riksdagen fattade beslut i juni 2026.",
+    "reasoning": "En ändring i ellagen trädde i kraft 1 juni 2023 och genomför delar av direktivet: krav på elleverantörer, aggregeringstjänster och balansansvar. Resten av direktivet bereddes därefter i en utredning i april 2025 och en proposition i april 2026 om en ny elmarknadslag med tydligare roller. Riksdagen beslutade om den i juni 2026, och elmarknadslagen träder i kraft 1 januari 2027.",
     "date": "2026-11-11",
     "history": [
       {
@@ -54,6 +54,16 @@
       "note": null
     },
     {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-238",
+      "designation": "SFS 2023:238",
+      "title": "Lag (2023:238) om ändring i ellagen (1997:857)",
+      "date": "2023-06-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023238.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "sou",
       "dok_id": "HDB347",
       "designation": "SOU 2025:47",
@@ -80,6 +90,16 @@
       "title": "Nya lagar om elsystemet",
       "date": "2026-06-08",
       "url": "https://data.riksdagen.se/dokument/HD01NU25.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1281",
+      "designation": "SFS 2026:1281",
+      "title": "Elmarknadslag (2026:1281)",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261281.html",
       "relevance": "full",
       "note": null
     }

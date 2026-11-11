@@ -26,15 +26,21 @@
     "brottsbalken"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i februari 2023 en utredning tilläggsdirektiv om hårdare straff för våld och hot mot tjänsteman, ett nytt brott för förolämpning av tjänsteman och en översyn av blåljussabotage. Utredningen föreslog detta i januari 2024, regeringen lade fram en proposition i mars 2025 och riksdagen fattade beslut i maj 2025. Det gäller alla offentliganställda, inte bara poliser. Blåljussabotage och ersättningsregler för poliser nämns inte i förslagen.",
+    "reasoning": "Regeringen föreslog i mars 2025 skärpta straff för brott mot tjänstemän och ett nytt brott, förolämpning mot tjänsteman. Riksdagen beslutade i maj 2025, och ändringen i brottsbalken trädde i kraft den 2 juli 2025. Skyddet gäller tjänstemän i allmänhet och inte poliser särskilt. En översyn av straffet för blåljussabotage och skärpta ersättningsregler för poliser nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i februari 2023 en utredning tilläggsdirektiv om hårdare straff för våld och hot mot tjänsteman, ett nytt brott för förolämpning av tjänsteman och en översyn av blåljussabotage. Utredningen föreslog detta i januari 2024, regeringen lade fram en proposition i mars 2025 och riksdagen fattade beslut i maj 2025. Det gäller alla offentliganställda, inte bara poliser. Blåljussabotage och ersättningsregler för poliser nämns inte i förslagen.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -78,6 +84,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01JuU29.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-579",
+      "designation": "SFS 2025:579",
+      "title": "Lag (2025:579) om ändring i brottsbalken",
+      "date": "2025-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2025579.html",
+      "relevance": "partial",
+      "note": "Lagen visar ingen översyn av straffet för blåljussabotage och ingen skärpning av ersättningsreglerna för poliser som drabbats av brott. Skyddet gäller tjänstemän generellt och inte poliser särskilt."
     }
   ]
 }
