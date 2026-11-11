@@ -120,6 +120,10 @@ for (const [i, d] of props.entries()) {
   for (const base of hits) {
     const html = await getPage(`bet-${base.replace(':', '-')}.html`, registerUrl(base));
     if (!html) continue;
+    if (html.includes('Inga träffar')) {
+      console.warn(`  warning: register has no page for ${base} (hit of ${ref}), skipped`);
+      continue;
+    }
     for (const law of matchingLaws(parseRegisterPage(html), ref, resolveProp)) {
       const key = sfsKey(law.sfs);
       laws[key] = law;
