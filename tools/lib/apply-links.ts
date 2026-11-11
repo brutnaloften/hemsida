@@ -90,19 +90,36 @@ export interface Applied {
   verdict: PromiseRecord['verdict'];
 }
 
-/** Returns null when the promise must not be touched or has no proposed pair. */
+type VerdictEntry = PromiseRecord['verdict']['history'][number];
+
+const asHistory = (v: PromiseRecord['verdict']): VerdictEntry => ({
+  value: v.value,
+  ...(v.assessedBy ? { assessedBy: v.assessedBy } : {}),
+  reasoning: v.reasoning,
+  date: v.date,
+});
+
+/**
+ * Returns null when the promise must not be touched or nothing would change.
+ *
+ * Eligible: `unassessed` promises (Riksdag evidence already there is kept and new documents are
+ * merged in by dok_id) and promises whose verdict this tool set earlier (`assessedBy: "ai"`), which
+ * are recomputed from the newest judgements: their Riksdag evidence is replaced, and the earlier
+ * verdict goes to `history` when its value changes. Any other verdict is left alone.
+ */
 export function applyLinks(
   promise: PromiseRecord,
   pairs: readonly JudgedPair[],
   docs: ReadonlyMap<string, StoreDocument>,
   today: string,
 ): Applied | null {
-  // A verdict this tool set earlier (assessedBy ai) is recomputed from the newest judgements, so a
-  // later backfill reaches it; anything else with a verdict or Riksdag evidence is left alone.
-  const rerun = promise.verdict.assessedBy === 'ai';
-  const hasRiksdag = promise.evidence.some(isRiksdagEvidence);
-  if (!rerun && (promise.verdict.value !== 'unassessed' || hasRiksdag)) return null;
-  const kept = rerun ? promise.evidence.filter((e) => !isRiksdagEvidence(e)) : promise.evidence;
+  const rerunAi = promise.verdict.assessedBy === 'ai';
+  if (!rerunAi && promise.verdict.value !== 'unassessed') return null;
+  const existingRiksdag = promise.evidence.filter(isRiksdagEvidence);
+  // Unassessed with a dir/sou/ds/prop already attached was curated by someone: leave it.
+  if (!rerunAi && promise.evidence.filter(isRiksdagEvidence).some((e) => PLANNING.has(e.kind)))
+    return null;
+  const otherEvidence = promise.evidence.filter((e) => !isRiksdagEvidence(e));
 
   const byDoc = new Map<string, { pair: JudgedPair; doc: StoreDocument }>();
   for (const pair of pairs) {
@@ -117,38 +134,59 @@ export function applyLinks(
       byDoc.set(doc.dok_id, { pair, doc });
     }
   }
-  if (byDoc.size === 0) return null;
 
   const entries = [...byDoc.values()].sort(
     (a, b) => a.doc.datum.localeCompare(b.doc.datum) || a.doc.dok_id.localeCompare(b.doc.dok_id),
   );
-  const riksdag = entries.map((e) => evidenceFor(e.pair, e.doc));
-  const evidence: Evidence[] = [...kept, ...riksdag];
+  const fresh = entries.map((e) => evidenceFor(e.pair, e.doc));
+  // An AI verdict's evidence is exactly what the judgements support now; for an unassessed promise
+  // the evidence already there stays and new documents are added.
+  const riksdag: RiksdagEvidence[] = rerunAi
+    ? fresh
+    : [
+        ...existingRiksdag,
+        ...fresh.filter((f) => !existingRiksdag.some((x) => x.dok_id === f.dok_id)),
+      ].sort((a, b) => a.date.localeCompare(b.date) || a.dok_id.localeCompare(b.dok_id));
+  const evidence: Evidence[] = [...otherEvidence, ...riksdag];
 
   const planning = entries.filter((e) => PLANNING.has(e.doc.doktyp));
-  if (planning.length === 0) {
-    const verdict = rerun
-      ? {
-          value: 'unassessed' as const,
+  const hasPlanning = rerunAi
+    ? planning.length > 0
+    : planning.length > 0 || riksdag.some((e) => PLANNING.has(e.kind));
+  const sameEvidence =
+    JSON.stringify(riksdag.map((e) => [e.dok_id, e.relevance])) ===
+    JSON.stringify(existingRiksdag.map((e) => [e.dok_id, e.relevance]));
+
+  if (!hasPlanning) {
+    // Nothing that shows action. An AI verdict falls back to unassessed (and keeps its old text in
+    // history); an unassessed promise only gains evidence.
+    if (rerunAi) {
+      return {
+        evidence,
+        verdict: {
+          value: 'unassessed',
           reasoning: '',
           date: today,
-          history: promise.verdict.history,
-        }
-      : promise.verdict;
-    return { evidence, verdict };
+          history: [...promise.verdict.history, asHistory(promise.verdict)],
+        },
+      };
+    }
+    return riksdag.length === 0 || sameEvidence ? null : { evidence, verdict: promise.verdict };
   }
+  if (rerunAi && sameEvidence && promise.verdict.value === 'in_progress') return null;
 
+  const planningDocs = planning.length > 0 ? planning : entries;
   const decided = entries.filter((e) => e.doc.doktyp === 'bet' && e.pair.stage === 'definitive');
   const full = planning.some((e) => e.pair.label === 'match');
   const list = (xs: typeof entries) =>
     xs.map((e) => `${designationOf(e.doc)} (${e.doc.titel})`).join('; ');
   const reasoning = [
-    `${planning.length === 1 ? 'Ett dokument' : 'Dokument'} i riksdagens register visar att åtgärden pågår: ${list(planning)}.`,
+    `${planningDocs.length === 1 ? 'Ett dokument' : 'Dokument'} i riksdagens register visar att åtgärden pågår: ${list(planningDocs)}.`,
     full
-      ? planning.length === 1
+      ? planningDocs.length === 1
         ? 'Dokumentet behandlar hela löftet.'
         : 'Minst ett av dokumenten behandlar hela löftet.'
-      : planning.length === 1
+      : planningDocs.length === 1
         ? 'Dokumentet behandlar bara en del av löftet.'
         : 'Dokumenten behandlar bara delar av löftet.',
     decided.length > 0
@@ -156,6 +194,8 @@ export function applyLinks(
       : 'Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.',
   ].join(' ');
 
+  // Same value as before: update in place. A changed value moves the earlier verdict to history.
+  const sameValue = rerunAi && promise.verdict.value === 'in_progress';
   return {
     evidence,
     verdict: {
@@ -163,16 +203,9 @@ export function applyLinks(
       assessedBy: 'ai',
       reasoning,
       date: today,
-      history: rerun
+      history: sameValue
         ? promise.verdict.history
-        : [
-            ...promise.verdict.history,
-            {
-              value: promise.verdict.value,
-              reasoning: promise.verdict.reasoning,
-              date: promise.verdict.date,
-            },
-          ],
+        : [...promise.verdict.history, asHistory(promise.verdict)],
     },
   };
 }

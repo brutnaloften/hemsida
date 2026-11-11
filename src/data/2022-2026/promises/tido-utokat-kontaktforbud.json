@@ -26,12 +26,39 @@
     "vittnesskydd"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i februari 2024 större områden för särskilt utvidgade kontaktförbud, husrannsakan för att delge beslut och fler kontaktförbud inför rättegångar, även med elektronisk övervakning. Regeringen lade i mars 2025 fram ett förslag med större områden, husrannsakan och skydd för målsägande och vittnen. Riksdagen biföll förslaget i maj 2025, men dokumenten visar inte vilka delar som beslutet gäller. Elektronisk övervakning nämns inte i förslaget.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB313",
+      "designation": "SOU 2024:13",
+      "title": "En effektivare kontaktförbudslagstiftning ",
+      "date": "2024-02-12",
+      "url": "https://data.riksdagen.se/dokument/HCB313.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03123",
+      "designation": "Prop. 2024/25:123",
+      "title": "Kontaktförbud – ett utökat skydd för utsatta personer",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03123.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HC01JuU31",

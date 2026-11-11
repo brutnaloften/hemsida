@@ -26,12 +26,49 @@
     "platssamverkan"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att föreslå författningsstöd för obligatorisk samverkan mellan kommun och fastighetsägare i bostadsområden (BID). Utredningen föreslog i januari 2025 en ny lag om avgift för områdessamverkan. Regeringen lade i mars 2026 fram ett lagförslag, och riksdagens betänkande kom i maj 2026. Dokumenten täcker hela löftet.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB199",
+      "designation": "Dir. 2023:99",
+      "title": "Åtgärder för stärkt trygghet i den byggda miljön",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB199.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB35",
+      "designation": "SOU 2025:5",
+      "title": "Avgift för områdessamverkan",
+      "date": "2025-01-17",
+      "url": "https://data.riksdagen.se/dokument/HDB35.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03157",
+      "designation": "Prop. 2025/26:157",
+      "title": "Lag om avgift för områdessamverkan",
+      "date": "2026-03-10",
+      "url": "https://data.riksdagen.se/dokument/HD03157.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HD01CU36",

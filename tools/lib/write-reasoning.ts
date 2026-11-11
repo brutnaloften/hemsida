@@ -8,7 +8,7 @@
 import { createHash } from 'node:crypto';
 import { z } from 'zod';
 
-export const REASONING_TEMPLATE_VERSION = 'v1';
+export const REASONING_TEMPLATE_VERSION = 'v3';
 
 export const REASONING_INSTRUCTIONS = `Du skriver motiveringen till en bedömning på en svensk granskningssajt som följer upp politiska löften. Läsaren är en vanlig medborgare utan förkunskaper.
 
@@ -20,6 +20,7 @@ Skriv två eller tre korta meningar på klarspråk:
 
 Regler:
 - Nämn inga dokumentbeteckningar, dokument-id, SOU- eller propositionsnummer. Beskriv dokumenten med ord och datum; de listas i tidslinjen bredvid.
+- Du ser bara de dokument som har kopplats till löftet, inte alla dokument som finns. Att ett beslut, en lag eller ett förslag inte nämns betyder alltså inte att det saknas. Skriv därför aldrig att något "inte har beslutats", "inte antagits", "ännu inte lagts fram" eller att "inga beslut" finns. Du får skriva att just de angivna dokumenten visar förslag men inget beslut ("dokumenten visar förslag, inget beslut"), men aldrig att inget beslut finns. Beskriv bara vad de angivna dokumenten visar och vilka delar av löftet de täcker; om delar av löftet inte nämns i dokumenten, skriv att dokumenten inte tar upp dem ("nämns inte i dokumenten").
 - Påstå inget som dokumenten och anteckningarna inte visar. Skriv inte att något är genomfört eller i kraft om det inte framgår. Gissa inte.
 - Skriv inga varningar och inga reservationer om att fler dokument kan finnas.
 - Skriv inte "AI" och inte "bedömningen". Inga rubriker, inga punktlistor, ingen värdering av om löftet är bra eller dåligt.
@@ -38,6 +39,8 @@ export interface ReasoningItem {
   date: string;
   title: string;
   relevance: 'full' | 'partial';
+  /** How far along the document is: a betänkande is only a decision when `definitive`. */
+  stage?: 'definitive' | 'preparatory' | 'background';
   /** The judge's English note on what the document says (may be empty). */
   note: string;
 }
@@ -50,6 +53,13 @@ const KIND_SV: Record<string, string> = {
   bet: 'riksdagens betänkande (beslut)',
 };
 
+function kindLabel(i: ReasoningItem): string {
+  if (i.kind === 'bet') {
+    return i.stage === 'definitive' ? 'riksdagens betänkande (beslut)' : 'riksdagens betänkande';
+  }
+  return KIND_SV[i.kind] ?? i.kind;
+}
+
 export function buildReasoningPrompt(
   promise: { title: string; description: string },
   items: readonly ReasoningItem[],
@@ -57,7 +67,7 @@ export function buildReasoningPrompt(
   const docs = items
     .map(
       (i, n) =>
-        `${n + 1}. ${KIND_SV[i.kind] ?? i.kind}, ${i.date}: "${i.title}". Täcker ${i.relevance === 'full' ? 'hela löftet' : 'en del av löftet'}. Anteckning: ${i.note || '(saknas)'}`,
+        `${n + 1}. ${kindLabel(i)}, ${i.date}: "${i.title}". Täcker ${i.relevance === 'full' ? 'hela löftet' : 'en del av löftet'}. Anteckning: ${i.note || '(saknas)'}`,
     )
     .join('\n');
   return `Löfte: ${promise.title}\n${promise.description}\n\nDokument:\n${docs}`;
@@ -69,6 +79,10 @@ export function reasoningKey(model: string, prompt: string): string {
     .digest('hex');
 }
 
+const NOT_DECIDED_CLAIM =
+  /(inte|ännu inte|aldrig)\s+(har\s+)?(ännu\s+)?(beslutat|beslutats|antagit|antagits|fattat|lagts fram|lagt fram|biträtt|biföllit|biföllits|genomförts|genomfört)|inga\s+(beslut|förslag|författningar)|saknar\s+(beslut|förslag)|(inte|ej)\s+(ännu\s+)?(klart|beslutad|antagen)|\bingen\s+(lag|författning)\s+(har|finns)/i;
+const NO_DECISION_NOUN = /\b(inte|ej)\s+(något|ett)\s+beslut|\binget\s+beslut/i;
+
 /** Rejects text that name-drops documents or breaks the rules the prompt sets. */
 export function reasoningProblems(text: string, designations: readonly string[]): string[] {
   const problems: string[] = [];
@@ -76,6 +90,19 @@ export function reasoningProblems(text: string, designations: readonly string[])
   if (/\b(Prop\.|Bet\.|SOU|Dir\.|Ds)\s?\d{4}/.test(text)) problems.push('names a designation');
   if (/\bAI\b|AI-modell/.test(text)) problems.push('mentions AI');
   if (/fler dokument|kan finnas/i.test(text)) problems.push('adds a completeness caveat');
+  // The model only sees linked documents, so it cannot know that nothing else was decided or proposed.
+  // A sentence that is explicitly about the listed documents may say they show no decision.
+  const aboutListedDocuments = /\bdokument(en|et)?\b/i;
+  for (const sentence of text.split(/(?<=[.!?])\s+/)) {
+    if (NOT_DECIDED_CLAIM.test(sentence)) {
+      problems.push('claims something was not decided or proposed');
+      break;
+    }
+    if (NO_DECISION_NOUN.test(sentence) && !aboutListedDocuments.test(sentence)) {
+      problems.push('claims there is no decision');
+      break;
+    }
+  }
   if (text.length > 600) problems.push('too long');
   return problems;
 }

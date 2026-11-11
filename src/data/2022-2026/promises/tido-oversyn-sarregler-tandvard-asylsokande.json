@@ -26,12 +26,39 @@
     "vård som inte kan anstå"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i oktober 2023 en utredare i uppdrag att se över hur särreglerna för tandvård till asylsökande kan tas bort. Utredningen föreslog i oktober 2024 att de tas bort delvis, med medelsprövning för vuxna. Regeringen lade i juni 2026 fram ett förslag om att vuxna med inkomst eller tillgångar ska betala, och riksdagen biföll det i augusti 2026. Rätten till tandvård som inte kan anstå ändras inte.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1138",
+      "designation": "Dir. 2023:138",
+      "title": "Tilläggsdirektiv till Utredningen om stärkt stöd till tandvård för våldsutsatta och ökad kontroll över tandvårdssektorn (S 2022:12)",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HBB1138.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB370",
+      "designation": "SOU 2024:70",
+      "title": "Tiotandvård",
+      "date": "2024-10-25",
+      "url": "https://data.riksdagen.se/dokument/HCB370.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HD01SfU4",
@@ -40,6 +67,26 @@
       "date": "2025-11-27",
       "url": "https://data.riksdagen.se/dokument/HD01SfU4.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03300",
+      "designation": "Prop. 2025/26:300",
+      "title": "Skyldighet att betala för tandvård – nya regler för vissa utlänningar",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HD03300.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU40",
+      "designation": "Bet. 2025/26:SoU40",
+      "title": "Skyldighet att betala för tandvård – nya regler för vissa utlänningar",
+      "date": "2026-08-07",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU40.html",
+      "relevance": "full",
       "note": null
     }
   ]

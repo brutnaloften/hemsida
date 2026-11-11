@@ -1,7 +1,8 @@
 /**
  * Replace the placeholder reasoning of model-set verdicts with plain Swedish.
  *   node --experimental-strip-types tools/write-reasoning.ts --run <link-run> [--term 2022-2026]
- *     [--id-prefix tido-] [--model claude-sonnet-5-5] [--concurrency 4] [--limit n] [--dry-run]
+ *     [--id-prefix tido-] [--only <promise-id>] [--model claude-sonnet-5-5] [--concurrency 4]
+ *     [--limit n] [--dry-run]
  * Runs through the local Claude Code login (Agent SDK), refuses an API key like the other claude tools.
  * Results are cached in tools/out/reasoning-cache by hash of model, prompt version, promise and
  * evidence, so a rerun only pays for promises whose evidence changed. Run `pnpm fmt` afterwards.
@@ -32,6 +33,7 @@ const { values } = parseArgs({
     model: { type: 'string', default: 'claude-sonnet-5-5' },
     concurrency: { type: 'string', default: '4' },
     limit: { type: 'string' },
+    only: { type: 'string' },
     'dry-run': { type: 'boolean', default: false },
   },
 });
@@ -41,12 +43,13 @@ if (process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN)
     'ANTHROPIC_API_KEY/ANTHROPIC_AUTH_TOKEN is set; unset it to use the subscription login',
   );
 
-type Row = { promise_id: string; document_id: string; judgement: { reason: string } };
+type Judgement = { reason: string; stage?: 'definitive' | 'preparatory' | 'background' };
+type Row = { promise_id: string; document_id: string; judgement: Judgement };
 const raw = loadJson(resolve(root, 'tools/out/link-runs', values.run, 'results.json')) as
   | Row[]
   | { results: Row[] };
 const rows = Array.isArray(raw) ? raw : raw.results;
-const noteBy = new Map(rows.map((r) => [`${r.promise_id}:${r.document_id}`, r.judgement.reason]));
+const judgementBy = new Map(rows.map((r) => [`${r.promise_id}:${r.document_id}`, r.judgement]));
 
 const cacheDir = resolve(root, 'tools/out/reasoning-cache');
 mkdirSync(cacheDir, { recursive: true });
@@ -62,6 +65,7 @@ interface Job {
 const jobs: Job[] = [];
 for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
   if (!file.replace(/\.json$/, '').startsWith(values['id-prefix']!)) continue;
+  if (values.only && file !== `${values.only}.json`) continue;
   const rawPromise = loadJson(resolve(dir, file)) as { verdict: unknown };
   const p = promiseSchema.parse(rawPromise);
   if (p.verdict.assessedBy !== 'ai' || p.verdict.value !== 'in_progress') continue;
@@ -71,7 +75,10 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     date: e.date,
     title: e.title,
     relevance: e.relevance,
-    note: noteBy.get(`${p.id}:${e.dok_id}`) ?? '',
+    ...(judgementBy.get(`${p.id}:${e.dok_id}`)?.stage && {
+      stage: judgementBy.get(`${p.id}:${e.dok_id}`)!.stage!,
+    }),
+    note: judgementBy.get(`${p.id}:${e.dok_id}`)?.reason ?? '',
   }));
   const prompt = buildReasoningPrompt(p, items);
   jobs.push({
@@ -92,7 +99,7 @@ console.log(
 if (values['dry-run']) process.exit(0);
 
 async function write(job: Job): Promise<void> {
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  for (let attempt = 1; attempt <= 4; attempt++) {
     for await (const message of query({
       prompt: job.prompt,
       options: {
@@ -131,7 +138,12 @@ await Promise.all(
   Array.from({ length: Math.max(1, Number(values.concurrency)) }, async () => {
     while (next < uncached.length) {
       const job = uncached[next++]!;
-      await write(job);
+      try {
+        await write(job);
+      } catch (err) {
+        // One failed request must not lose the others; a rerun retries it.
+        console.error(`${job.file}: ${err instanceof Error ? err.message : String(err)}`);
+      }
       if (++done % 20 === 0) console.log(`${done}/${uncached.length}`);
     }
   }),

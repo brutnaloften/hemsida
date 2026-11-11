@@ -26,12 +26,29 @@
     "inhibition"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juli 2023 en utredning i uppdrag att föreslå kvalitetsmått för tillsynen och se över reglerna om inhibition vid indraget tillstånd. I april 2025 föreslog utredningen bland annat att Skolinspektionen ska få intervjua elever utan vårdnadshavares samtycke och lättare kunna dra in tillstånd. Fler oanmälda inspektioner och domstolens hänsyn till elevers risk nämns inte i förslagen.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1109",
+      "designation": "Dir. 2023:109",
+      "title": "Tilläggsdirektiv till Utredningen om vinst i skolan (U 2022:08)",
+      "date": "2023-07-06",
+      "url": "https://data.riksdagen.se/dokument/HBB1109.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HB01UbU1",
@@ -39,6 +56,16 @@
       "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
       "date": "2023-12-08",
       "url": "https://data.riksdagen.se/dokument/HB01UbU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB337",
+      "designation": "SOU 2025:37",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2025-04-08",
+      "url": "https://data.riksdagen.se/dokument/HDB337.html",
       "relevance": "partial",
       "note": null
     }

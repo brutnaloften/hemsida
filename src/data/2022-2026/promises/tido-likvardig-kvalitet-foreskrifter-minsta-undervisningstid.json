@@ -26,12 +26,29 @@
     "likvärdighet"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i juli 2024 fram ett förslag om stärkta skolbibliotek, och riksdagen beslutade i november 2024 om ändringar i skollagen och bibliotekslagen om tillgång till skolbibliotek och bemanning. Det täcker bara skolbiblioteksdelen. Minsta undervisningstid, laborationsutrustning, skolgårdar, elevhälsa och läromedel nämns inte i dokumenten.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HB03164",
+      "designation": "Prop. 2023/24:164",
+      "title": "Stärkta skolbibliotek",
+      "date": "2024-07-30",
+      "url": "https://data.riksdagen.se/dokument/HB03164.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HC01UbU3",

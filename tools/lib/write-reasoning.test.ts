@@ -28,6 +28,43 @@ describe('write-reasoning', () => {
     expect(reasoningKey('a', 'p')).toMatch(/^[0-9a-f]{64}$/);
   });
 
+  it('labels a betänkande as a decision only when its stage is definitive', () => {
+    const bet = { ...item, kind: 'bet' };
+    const decided = buildReasoningPrompt({ title: 'T', description: 'D' }, [
+      { ...bet, stage: 'definitive' },
+    ]);
+    const other = buildReasoningPrompt({ title: 'T', description: 'D' }, [
+      { ...bet, stage: 'preparatory' },
+    ]);
+    expect(decided).toContain('betänkande (beslut)');
+    expect(other).not.toContain('(beslut)');
+  });
+
+  it('rejects claims that something was not decided or proposed', () => {
+    const base = 'Regeringen lade i mars 2026 fram ett förslag om aktivitetskrav.';
+    for (const bad of [
+      'Riksdagen har inte beslutat om förslaget.',
+      'Förslaget har ännu inte antagits.',
+      'Inga beslut har fattats.',
+      'Något förslag har inte lagts fram.',
+    ]) {
+      expect(reasoningProblems(`${base} ${bad}`, [])).toContain(
+        'claims something was not decided or proposed',
+      );
+    }
+    expect(
+      reasoningProblems(`${base} Utbildning av personal nämns inte i dokumenten.`, []),
+    ).toEqual([]);
+    // A sentence about the listed documents may say they show no decision; a flat claim may not.
+    expect(
+      reasoningProblems(`${base} Båda dokumenten visar förslag och inte något beslut.`, []),
+    ).toEqual([]);
+    expect(reasoningProblems(`${base} Riksdagen har inte fattat något beslut.`, [])).not.toEqual(
+      [],
+    );
+    expect(reasoningProblems(`${base} Det finns inget beslut.`, [])).not.toEqual([]);
+  });
+
   it('rejects designations, AI mentions and completeness caveats', () => {
     const ok =
       'Regeringen lade i mars 2026 fram ett förslag om aktivitetskrav för försörjningsstöd.';

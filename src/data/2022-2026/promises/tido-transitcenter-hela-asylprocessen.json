@@ -20,28 +20,22 @@
   "committee": "SfU",
   "keywords": ["transitcenter", "ankomstcenter", "EBO", "Ju 2021:12", "asylprocessen"],
   "verdict": {
-    "value": "in_progress",
-    "assessedBy": "ai",
-    "reasoning": "En statlig utredning presenterade i november 2022 ett betänkande om en ny ordning för asylsökandes boende. Det täcker bara en del av löftet. Av underlaget framgår inte att tilläggsdirektiv om transitcenter för hela asylprocessen har getts eller att reglerna om eget boende har avskaffats.",
-    "date": "2026-11-10",
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning presenterade i november 2022 ett betänkande om en ny ordning för asylsökandes boende. Det täcker bara en del av löftet. Av underlaget framgår inte att tilläggsdirektiv om transitcenter för hela asylprocessen har getts eller att reglerna om eget boende har avskaffats.",
+        "date": "2026-11-10"
       }
     ]
   },
-  "evidence": [
-    {
-      "kind": "sou",
-      "dok_id": "HAB364",
-      "designation": "SOU 2022:64",
-      "title": "En ny ordning för asylsökandes boende",
-      "date": "2022-11-15",
-      "url": "https://data.riksdagen.se/dokument/HAB364.html",
-      "relevance": "partial",
-      "note": null
-    }
-  ]
+  "evidence": []
 }
