@@ -176,6 +176,28 @@ The verdict is set by Claude, and the schema (`checkVerdictEvidence` in `src/sch
 
 The `no_evidence` check is pragmatic: it cannot verify that a search really happened, only that one is recorded with a date and a search target.
 
+#### Rules for setting a verdict from evidence
+
+These are the working rules for the model that sets verdicts. `checkVerdictEvidence` enforces the evidence floors above; the rest is policy that the reasoning has to be consistent with. One verdict value per promise: there are no combination values such as "partially fulfilled / rest in progress". The reasoning says which part is done and which is still moving.
+
+- **`in_progress`**: at least one dir, sou, ds or prop is linked and nothing is in force yet, or a law covers only a small part while the main part is still being worked on. A betänkande alone only rejects motions and is not enough.
+- **`fulfilled`**: a law (an `sfs` entry) implements the whole commitment as worded. Only for a commitment that is delivered by a law; promises that need no law (budget, agency instructions) wait for their own evidence tiers (ESV outcome data).
+- **`partially_fulfilled`**: a law is in force but covers only some parts of the commitment, or is clearly weaker than promised. If a proposition for the remaining part is still pending, lean towards `in_progress`, because delivery is not finished.
+- **`broken`**: needs an explicit contrary act, such as a vote against the promise or a law that does the opposite. A betänkande that rejects motions about the topic, a document that works against the promise (`motverkar`, below) or part of a promise being undelivered is not enough. Never set automatically from judge labels.
+- **`no_evidence`**: only after an exhaustive search over a fully ingested term, with the reasoning stating when and what was searched. Never set from a partial backfill.
+- **`unfulfilled`, `abandoned`**: only in the term-close review.
+- **Prefer `unassessed` over a guess.**
+- **Reasoning** is plain Swedish for a reader, not a list of designations. It describes what the documents show in words (who proposed what, when, and whether riksdagen decided). It makes no claim about what does not exist beyond the listed documents ("no decision found") until the term is fully ingested and linked (`hemsida-5n3`), and it does not mention AI or that more documents may exist.
+- **Deciding betänkande.** The betänkande that decided a linked proposition (from its own `behandlar` references) is added as evidence next to the proposition, except for budget propositions and bills with many deciding betänkanden.
+
+#### Compound promises
+
+A promise is split into one promise per commitment when the agreement text lists the parts as separate commitments that can be delivered independently, so each part can have its own verdict and `partially_fulfilled` is reserved for one commitment delivered in a weaker form. A package with a single goal (for example one review with three aims) stays one promise. The test is the agreement text, not the number of "och" in the title. Split promises share the same `source.page`, each carries its own quote, and evidence is linked again per part.
+
+#### Documents that work against a promise ("Motverkar")
+
+A document that works against a promise (the judge label `contradicts`) is shown in the timeline as "Motverkar" once the schema supports it (`hemsida-kma`). It never sets a verdict on its own and never makes a promise `broken`.
+
 ### Evidence
 
 A reference to an official document that bears on the promise.
