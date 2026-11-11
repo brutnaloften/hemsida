@@ -4,6 +4,7 @@ import {
   applyLinks,
   designationOf,
   evidenceFor,
+  mergeRunPairs,
   sfsJudgements,
   type JudgedPair,
   type SfsInput,
@@ -47,6 +48,37 @@ const pair = (document_id: string, over: Partial<JudgedPair> = {}): JudgedPair =
   confidence: 'high',
   proposed: true,
   ...over,
+});
+
+describe('mergeRunPairs', () => {
+  const pair = (
+    promise_id: string,
+    document_id: string,
+    label: JudgedPair['label'],
+  ): JudgedPair => ({
+    promise_id,
+    document_id,
+    label,
+    stage: 'definitive',
+    confidence: 'medium',
+    proposed: label === 'match',
+  });
+
+  it('lets a later run replace an earlier one per promise, keeping the rest', () => {
+    const main = [pair('a', 'D1', 'match'), pair('a', 'D2', 'partial'), pair('b', 'D3', 'match')];
+    const split = [pair('a', 'D1', 'partial'), pair('c', 'D4', 'match')];
+    const merged = mergeRunPairs([main, split]);
+    expect(merged.get('a')?.map((p) => `${p.document_id}:${p.label}`)).toEqual(['D1:partial']);
+    expect(merged.get('b')?.length).toBe(1);
+    expect(merged.get('c')?.length).toBe(1);
+  });
+
+  it('is order dependent: the last run wins', () => {
+    const one = [pair('a', 'D1', 'match')];
+    const two = [pair('a', 'D1', 'partial')];
+    expect(mergeRunPairs([one, two]).get('a')?.[0].label).toBe('partial');
+    expect(mergeRunPairs([two, one]).get('a')?.[0].label).toBe('match');
+  });
 });
 
 describe('applyLinks', () => {

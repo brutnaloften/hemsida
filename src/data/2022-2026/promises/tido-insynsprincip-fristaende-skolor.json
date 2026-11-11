@@ -28,7 +28,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i mars 2023 en utredning i uppdrag att föreslå mer insyn i fristående skolor. Utredningen föreslog i april 2024 offentlighetsprincip för dem. Regeringen lade i mars 2026 fram ett förslag om det, med lättnadsregler för små huvudmän, och riksdagen biföll det i maj 2026. Dokumenten täcker hela löftet, men ingen författning är kopplad till det.",
+    "reasoning": "Regeringen gav i mars 2023 en utredning i uppdrag att föreslå insyn i fristående skolor, och utredningen la fram förslag i april 2024. Regeringen föreslog i mars 2026 offentlighetsprincip för enskilda huvudmän i skolan, och riksdagen biföll det i maj 2026. Tre lagändringar är beslutade: två träder i kraft 1 januari 2027 och en 1 januari 2029. Tillsammans täcker de delar av löftet.",
     "date": "2026-11-11",
     "history": [
       {
@@ -53,7 +53,7 @@
       "kind": "sou",
       "dok_id": "HCB328",
       "designation": "SOU 2024:28",
-      "title": "Offentlighetsprincipen eller insynslag, Allmänhetens insyn i enskilda aktörer inom skolväsendet ",
+      "title": "Offentlighetsprincipen eller insynslag, Allmänhetens insyn i enskilda aktörer inom skolväsendet",
       "date": "2024-04-19",
       "url": "https://data.riksdagen.se/dokument/HCB328.html",
       "relevance": "full",
@@ -78,6 +78,36 @@
       "url": "https://data.riksdagen.se/dokument/HD01UbU20.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-714",
+      "designation": "SFS 2026:714",
+      "title": "Lag (2026:714) om ändring i offentlighets- och sekretesslagen (2009:400)",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026714.html",
+      "relevance": "partial",
+      "note": "Mindre huvudmän får lättnader och lagen ensam genomför inte arkivreglerna eller skollagsändringarna. Pedagogisk insyn nämns inte särskilt, och reglerna börjar gälla först 2027."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-716",
+      "designation": "SFS 2026:716",
+      "title": "Lag (2026:716) om ändring i skollagen (2010:800)",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026716.html",
+      "relevance": "partial",
+      "note": "Texten visar inte särskilda åtgärder för ekonomisk och pedagogisk insyn utöver rätten att ta del av allmänna handlingar. Mindre huvudmän har lättnader och de första två åren gäller lättnader för alla."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-715",
+      "designation": "SFS 2026:715",
+      "title": "Lag (2026:715) om ändring i arkivlagen (1990:782)",
+      "date": "2029-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026715.html",
+      "relevance": "partial",
+      "note": "Själva rätten att ta del av allmänna handlingar och sekretessreglerna ligger i andra lagar; ekonomisk och pedagogisk insyn utöver arkivhållningen genomförs inte här."
     }
   ]
 }

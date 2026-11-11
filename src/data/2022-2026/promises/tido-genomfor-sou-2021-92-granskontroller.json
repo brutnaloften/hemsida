@@ -20,15 +20,21 @@
   "committee": "SfU",
   "keywords": ["SOU 2021:92", "utlänningskontroll", "gränsområden", "bevakning"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen föreslog i april 2023 utökade polisiära befogenheter i gränsnära områden, och riksdagen beslutade om det i juni 2023. Hösten 2023 följde förslag och riksdagsbeslut om kroppsvisitation och beslag av id-handlingar vid inre utlänningskontroll. Ett förslag från april 2026 om skärpta kontrollregler och ett riksdagsbeslut i juni 2026 täcker bara en del av löftet.",
+    "reasoning": "Riksdagen beslutade i juni 2023 om utökade polisiära befogenheter i gränsnära områden, bland annat kroppsvisitation och fordonsundersökning för att hitta id-handlingar. Lagarna trädde i kraft 1 augusti 2023, och fler ändringar följde 2024 och 2026. Dokumenten visar att kamerabevakning och inre utlänningskontroll har fått regler, men att förslagen i utredningen genomförs fullt ut framgår inte.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen föreslog i april 2023 utökade polisiära befogenheter i gränsnära områden, och riksdagen beslutade om det i juni 2023. Hösten 2023 följde förslag och riksdagsbeslut om kroppsvisitation och beslag av id-handlingar vid inre utlänningskontroll. Ett förslag från april 2026 om skärpta kontrollregler och ett riksdagsbeslut i juni 2026 täcker bara en del av löftet.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -54,6 +60,36 @@
       "note": null
     },
     {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-474",
+      "designation": "SFS 2023:474",
+      "title": "Lag (2023:474) om polisiära befogenheter i gränsnära områden",
+      "date": "2023-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023474.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-476",
+      "designation": "SFS 2023:476",
+      "title": "Lag (2023:476) om ändring i utlänningslagen (2005:716)",
+      "date": "2023-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023476.html",
+      "relevance": "partial",
+      "note": "De huvudsakliga befogenheterna, bland annat brottsförebyggande ingripanden och utökad kamerabevakning, finns i andra lagar i propositionen. Övriga förslag i SOU 2021:92 omfattas inte av den här lagen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-477",
+      "designation": "SFS 2023:477",
+      "title": "Lag (2023:477) om ändring i kamerabevakningslagen (2018:1200)",
+      "date": "2023-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023477.html",
+      "relevance": "partial",
+      "note": "De utökade polisiära befogenheterna för inre utlänningskontroller och brottsförebyggande ingripanden, som ligger i andra lagar i propositionen, ingår inte i denna lag."
+    },
+    {
       "kind": "prop",
       "dok_id": "HB0312",
       "designation": "Prop. 2023/24:12",
@@ -74,6 +110,16 @@
       "note": null
     },
     {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-735",
+      "designation": "SFS 2023:735",
+      "title": "Lag (2023:735) om ändring i utlänningslagen (2005:716)",
+      "date": "2024-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023735.html",
+      "relevance": "partial",
+      "note": "Övriga delar av SOU 2021:92, bland annat effektivare bevakning och andra åtgärder i gränsområden, genomförs inte i denna lag."
+    },
+    {
       "kind": "prop",
       "dok_id": "HD03263",
       "designation": "Prop. 2025/26:263",
@@ -92,6 +138,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1339",
+      "designation": "SFS 2026:1339",
+      "title": "Lag (2026:1339) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-07-13",
+      "url": "https://svenskforfattningssamling.se/doc/20261339.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att bevakningsdelen och de särskilda gränsområdesåtgärderna i SOU 2021:92 genomförs, och inte alla förslag i utredningen täcks."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1342",
+      "designation": "SFS 2026:1342",
+      "title": "Lag (2026:1342) om ändring i lagen (2022:700) om särskild kontroll av vissa utlänningar",
+      "date": "2026-07-13",
+      "url": "https://svenskforfattningssamling.se/doc/20261342.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att förslagen om effektivare bevakning eller övriga delar av SOU 2021:92 (till exempel i gränsområden) genomförs i just den här lagen."
     }
   ]
 }

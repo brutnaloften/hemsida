@@ -26,15 +26,21 @@
     "irreguljär migration"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i december 2023 fram ett förslag om en lag som låter regeringen tillfälligt förbjuda transporter av personer utan giltig legitimation till Sverige. Riksdagen biföll förslaget i februari 2024, med sanktionsavgifter för transportörer. Det täcker delen om identitetskontroller vid transporter. Promemorian om bredare användning av gränskontroller nämns inte i dokumenten.",
+    "reasoning": "Regeringen lade i december 2023 fram ett förslag om att kunna förbjuda transporter av personer utan giltig legitimation till Sverige. Riksdagen biföll det i februari 2024, och lagen trädde i kraft den 1 mars 2024. Lagen ger regeringen rätt att tillfälligt förbjuda sådana transporter, med sanktionsavgifter för transportörer. Den promemoria om bredare användning av gränskontroller som utlovades nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i december 2023 fram ett förslag om en lag som låter regeringen tillfälligt förbjuda transporter av personer utan giltig legitimation till Sverige. Riksdagen biföll förslaget i februari 2024, med sanktionsavgifter för transportörer. Det täcker delen om identitetskontroller vid transporter. Promemorian om bredare användning av gränskontroller nämns inte i dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -58,6 +64,16 @@
       "url": "https://data.riksdagen.se/dokument/HB01JuU11.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-70",
+      "designation": "SFS 2024:70",
+      "title": "Lag (2024:70) om tillfälliga förbud att transportera personer utan giltiga identitetshandlingar till Sverige",
+      "date": "2024-03-01",
+      "url": "https://svenskforfattningssamling.se/doc/202470.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte en bredare stärkning av gränskontroller i övrigt och själva promemorian. Den är en befogenhet som kräver en allvarlig fara, inte ett generellt återinförande, och den anger inte uttryckligen buss-, tåg- och passagerarfartyg. Propositionen kom också 2024, inte 2023."
     }
   ]
 }

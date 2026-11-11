@@ -20,15 +20,21 @@
   "committee": "SfU",
   "keywords": ["preskription", "utvisningsbeslut", "avvisning", "ny asylansökan", "återreseförbud"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i februari 2024 att tiden för avvisnings- och utvisningsbeslut förlängs från fyra till fem år och räknas från att personen lämnat landet. Full avskaffning avvisades. Regeringen föreslog i januari 2025 fem år, eller längre med återreseförbud. Riksdagens utskott tillstyrkte det i mars 2025. Dokumenten täcker hela löftet, men ingen författning är kopplad.",
+    "reasoning": "En utredning föreslog i februari 2024 att preskriptionstiden för utvisnings- och avvisningsbeslut förlängs från fyra till fem år, men avvisade att helt avskaffa den. Regeringen lade fram ett förslag i januari 2025 och riksdagen biföll det i mars 2025. Ändringen i utlänningslagen trädde i kraft 1 april 2025 och täcker förlängd tid. Avskaffad preskriptionstid nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i februari 2024 att tiden för avvisnings- och utvisningsbeslut förlängs från fyra till fem år och räknas från att personen lämnat landet. Full avskaffning avvisades. Regeringen föreslog i januari 2025 fem år, eller längre med återreseförbud. Riksdagens utskott tillstyrkte det i mars 2025. Dokumenten täcker hela löftet, men ingen författning är kopplad.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -37,7 +43,7 @@
       "kind": "sou",
       "dok_id": "HCB310",
       "designation": "SOU 2024:10",
-      "title": "Preskription av avlägsnandebeslut och vissa frågor om återreseförbud ",
+      "title": "Preskription av avlägsnandebeslut och vissa frågor om återreseförbud",
       "date": "2024-02-05",
       "url": "https://data.riksdagen.se/dokument/HCB310.html",
       "relevance": "full",
@@ -62,6 +68,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01SfU17.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-225",
+      "designation": "SFS 2025:225",
+      "title": "Lag (2025:225) om ändring i utlänningslagen (2005:716)",
+      "date": "2025-04-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025225.html",
+      "relevance": "partial",
+      "note": "Preskriptionstiden avskaffas inte helt, och lagen innehåller även andra åtgärder (längre återreseförbud, spårbyte) som inte rör löftet; att alla beslutstyper omfattas framgår inte tydligt."
     }
   ]
 }

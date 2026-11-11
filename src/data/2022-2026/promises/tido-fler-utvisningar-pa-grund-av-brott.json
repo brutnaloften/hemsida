@@ -26,15 +26,21 @@
     "verkställighetshinder"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i maj 2024 en utredning i uppdrag att skärpa reglerna om utvisning vid brott, och utredningen lade fram förslag i maj 2025. Regeringen föreslog i april 2026 skärpta regler, och riksdagen biföll förslaget i juni 2026: utvisning vid straff strängare än böter, längre återreseförbud och åklagarplikt. Domstolar kan inte längre döma till utvisning på eget initiativ, och utvisningsmen nämns inte.",
+    "reasoning": "Regeringen lade i april 2026 fram en proposition efter utredningen, och riksdagen biföll den i juni 2026. En lag om ändring i utlänningslagen trädde i kraft 1 september 2026. Beslutet gäller utvisning vid straff strängare än böter, att verkställighetshinder inte prövas, längre återreseförbud och åklagares skyldighet att yrka utvisning. Utvisningsmen och lättare utvisning av återfallsbrottslingar nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i maj 2024 en utredning i uppdrag att skärpa reglerna om utvisning vid brott, och utredningen lade fram förslag i maj 2025. Regeringen föreslog i april 2026 skärpta regler, och riksdagen biföll förslaget i juni 2026: utvisning vid straff strängare än böter, längre återreseförbud och åklagarplikt. Domstolar kan inte längre döma till utvisning på eget initiativ, och utvisningsmen nämns inte.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -78,6 +84,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1259",
+      "designation": "SFS 2026:1259",
+      "title": "Lag (2026:1259) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261259.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att utvisningsmen utmönstras som straffmildrande (en fråga för brottsbalken). Åklagarens skyldighet att yrka utvisning vid åtal kan ligga i en annan lag, och en särskild skärpning för återfallsbrottslingar nämns inte."
     }
   ]
 }

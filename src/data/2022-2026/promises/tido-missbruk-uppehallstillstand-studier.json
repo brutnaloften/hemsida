@@ -26,15 +26,21 @@
     "spårbyte"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En promemoria från januari 2025 föreslog begränsningar av studenters rätt att arbeta och strängare krav på studieframsteg. Regeringen lade i februari 2026 fram en proposition med liknande åtgärder, och riksdagen biföll den i april 2026, bland annat en gräns på 15 arbetstimmar per vecka. Det täcker arbetsdelen. Kartläggning, fler avslagsgrunder och begränsad ansökan inifrån Sverige nämns inte i dokumenten.",
+    "reasoning": "Regeringen lade i februari 2026 fram ett förslag om att begränsa studenters rätt att arbeta och skärpa kraven på studieframgång. Riksdagen biföll det i april 2026, bland annat en gräns på 15 arbetstimmar per vecka, och en lagändring trädde i kraft 11 juni 2026. Kartläggning, vidgade avslagsgrunder vid misstanke om missbruk och begränsad ansökan inifrån Sverige nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En promemoria från januari 2025 föreslog begränsningar av studenters rätt att arbeta och strängare krav på studieframsteg. Regeringen lade i februari 2026 fram en proposition med liknande åtgärder, och riksdagen biföll den i april 2026, bland annat en gräns på 15 arbetstimmar per vecka. Det täcker arbetsdelen. Kartläggning, fler avslagsgrunder och begränsad ansökan inifrån Sverige nämns inte i dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -43,7 +49,7 @@
       "kind": "ds",
       "dok_id": "HCB431",
       "designation": "Ds 2024:31",
-      "title": "Bättre migrationsrättsliga regler för forskare och studenter ",
+      "title": "Bättre migrationsrättsliga regler för forskare och studenter",
       "date": "2025-01-01",
       "url": "https://data.riksdagen.se/dokument/HCB431.html",
       "relevance": "partial",
@@ -68,6 +74,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01SfU23.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-457",
+      "designation": "SFS 2026:457",
+      "title": "Lag (2026:457) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-06-11",
+      "url": "https://svenskforfattningssamling.se/doc/2026457.html",
+      "relevance": "partial",
+      "note": "Texten visar ingen kartläggning av missbruk, ingen utökad möjlighet att avslå ansökningar vid misstanke om missbruk och inga begränsningar i rätten att ansöka inifrån Sverige för studerande (förslaget utökar i stället möjligheterna för forskare och doktorander)."
     }
   ]
 }

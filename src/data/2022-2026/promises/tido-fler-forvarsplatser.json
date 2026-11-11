@@ -26,15 +26,21 @@
     "Migrationsverket"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i februari 2025 fotboja som alternativ till förvar och särskilda säkerhetsavdelningar på Migrationsverkets förvar. Regeringen lade i april 2026 fram ett förslag om detta, och riksdagen godkände i juni 2026 nya former av uppsikt med elektronisk övervakning. Fler förvarsplatser nämns inte i dokumenten, och säkerhet i förvar nämns inte i riksdagens beslut.",
+    "reasoning": "Utredningen föreslog i februari 2025 fotboja som alternativ till förvar och säkerhetsavdelningar. Regeringen lade fram ett förslag i april 2026, och riksdagen beslutade i juni om nya former av uppsikt med elektronisk övervakning. En lag trädde i kraft 21 juli 2026 och täcker en del av löftet. Fler förvarsplatser nämns inte i dokumenten. En annan lag träder i kraft 1 december 2027.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i februari 2025 fotboja som alternativ till förvar och särskilda säkerhetsavdelningar på Migrationsverkets förvar. Regeringen lade i april 2026 fram ett förslag om detta, och riksdagen godkände i juni 2026 nya former av uppsikt med elektronisk övervakning. Fler förvarsplatser nämns inte i dokumenten, och säkerhet i förvar nämns inte i riksdagens beslut.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -68,6 +74,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01SfU31.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1425",
+      "designation": "SFS 2026:1425",
+      "title": "Lag (2026:1425) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-07-21",
+      "url": "https://svenskforfattningssamling.se/doc/20261425.html",
+      "relevance": "partial",
+      "note": "Lagen ökar inte själva antalet förvarsplatser och innehåller inga åtgärder för ökad kapacitet. Den reglerar bara förutsättningarna och formerna för uppsikt och förvar."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1427",
+      "designation": "SFS 2026:1427",
+      "title": "Lag (2026:1427) om ändring i utlänningslagen (2005:716)",
+      "date": "2027-12-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261427.html",
+      "relevance": "partial",
+      "note": "Lagen ökar inte antalet förvarsplatser och framgår inte som en åtgärd för ökad säkerhet i Migrationsverkets förvar; det finns inget om att utöka platser."
     }
   ]
 }

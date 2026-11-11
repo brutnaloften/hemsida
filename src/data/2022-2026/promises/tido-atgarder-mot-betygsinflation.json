@@ -28,7 +28,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att föreslå åtgärder mot betygsinflation. Utredningen föreslog i februari 2025 att varje skolas genomsnittliga betyg kopplas till resultaten på nationella prov. Regeringen lade i mars 2026 fram ett förslag om ändringar i skollagen, och riksdagen biföll det i juni 2026. Dokumenten täcker hela löftet, men ingen författning är kopplad till det.",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att föreslå åtgärder mot betygsinflation. Utredningen lade i februari 2025 fram förslag om att koppla skolors betyg till resultaten på nationella prov. Regeringen föreslog i mars 2026 ändringar i skollagen och riksdagen beslutade om dem i juni 2026. Tre lagändringar är beslutade och träder i kraft 2 juli 2028, 1 juli 2030 och 1 januari 2031.",
     "date": "2026-11-11",
     "history": [
       {
@@ -88,6 +88,36 @@
       "url": "https://data.riksdagen.se/dokument/HD01UbU26.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1243",
+      "designation": "SFS 2026:1243",
+      "title": "Lag (2026:1243) om ändring i skollagen (2010:800)",
+      "date": "2028-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/20261243.html",
+      "relevance": "partial",
+      "note": "Den specifika kopplingen mellan en skolas genomsnittliga resultat på nationella prov och genomsnittlig betygsnivå samt myndighetsuppdragen framgår inte av texten."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1244",
+      "designation": "SFS 2026:1244",
+      "title": "Lag (2026:1244) om ändring i skollagen (2010:800)",
+      "date": "2030-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261244.html",
+      "relevance": "partial",
+      "note": "Lagen täcker inte hela åtagandet: övriga skolformer och huvuddelarna av reformen ligger i andra lagar i propositionen, och myndighetsuppdrag ingår inte här."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1245",
+      "designation": "SFS 2026:1245",
+      "title": "Lag (2026:1245) om ändring i skollagen (2010:800)",
+      "date": "2031-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261245.html",
+      "relevance": "partial",
+      "note": "Lagen genomför bara en del av reformen och träder i kraft först 2031; övriga delar av betygsreformen och de myndighetsuppdrag som löftet nämner ligger i andra lagar eller beslut."
     }
   ]
 }

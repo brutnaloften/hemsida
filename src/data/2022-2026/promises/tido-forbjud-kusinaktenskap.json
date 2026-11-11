@@ -20,15 +20,21 @@
   "committee": "CU",
   "keywords": ["kusinäktenskap", "äktenskapsbalken", "hedersrelaterat förtryck", "släktskap"],
   "verdict": {
-    "value": "in_progress",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "I oktober 2024 föreslog en departementspromemoria ett förbud mot äktenskap mellan kusiner och vissa andra nära släktingar, utan dispens och utan erkännande av utländska kusinäktenskap. Regeringen lade i mars 2026 fram en proposition med ett undantagslöst förbud. Riksdagen biföll propositionen i maj 2026. Dokumenten täcker hela löftet.",
+    "reasoning": "Regeringen presenterade i oktober 2024 en promemoria om förbud mot äktenskap mellan kusiner, och la i mars 2026 fram en proposition. Riksdagen biföll förslaget i maj 2026. Lagen innebär att kusiner inte får gifta sig, utan undantag, och att sådana äktenskap från utlandet inte erkänns. Lagen som genomför löftet trädde i kraft den 1 juli 2026.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "I oktober 2024 föreslog en departementspromemoria ett förbud mot äktenskap mellan kusiner och vissa andra nära släktingar, utan dispens och utan erkännande av utländska kusinäktenskap. Regeringen lade i mars 2026 fram en proposition med ett undantagslöst förbud. Riksdagen biföll propositionen i maj 2026. Dokumenten täcker hela löftet.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -37,7 +43,7 @@
       "kind": "ds",
       "dok_id": "HCB420",
       "designation": "Ds 2024:20",
-      "title": "Förbud mot äktenskap mellan kusiner och vissa andra nära släktingar ",
+      "title": "Förbud mot äktenskap mellan kusiner och vissa andra nära släktingar",
       "date": "2024-10-09",
       "url": "https://data.riksdagen.se/dokument/HCB420.html",
       "relevance": "full",
@@ -60,6 +66,16 @@
       "title": "Förbud mot kusinäktenskap och äktenskap mellan andra nära släktingar",
       "date": "2026-05-19",
       "url": "https://data.riksdagen.se/dokument/HD01CU33.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-947",
+      "designation": "SFS 2026:947",
+      "title": "Lag (2026:947) om ändring i äktenskapsbalken",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026947.html",
       "relevance": "full",
       "note": null
     }

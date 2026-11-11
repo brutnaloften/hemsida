@@ -26,15 +26,21 @@
     "mobbning"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i november 2023 en utredare i uppdrag att föreslå bland annat förväntansdokument och konsekvenstrappa. Utredningen föreslog i januari 2025 skolregler med konsekvenstrappa. Regeringen lade i mars 2026 fram ett förslag, och riksdagen beslutade i maj 2026 om ändringar i skollagen om skolregler och förväntansdokument. Underskrift av elever och föräldrar samt nolltolerans nämns inte i besluten.",
+    "reasoning": "Regeringen utredde frågan från november 2023, och i mars 2026 lades en proposition fram. Riksdagen beslutade i maj 2026 om ändringar i skollagen, bland annat skolregler och förväntansdokument. Lagen trädde i kraft 1 augusti 2026. Dokumenten nämner inte underskrift av elever och föräldrar eller nolltolerans mot klotter och skadegörelse.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i november 2023 en utredare i uppdrag att föreslå bland annat förväntansdokument och konsekvenstrappa. Utredningen föreslog i januari 2025 skolregler med konsekvenstrappa. Regeringen lade i mars 2026 fram ett förslag, och riksdagen beslutade i maj 2026 om ändringar i skollagen om skolregler och förväntansdokument. Underskrift av elever och föräldrar samt nolltolerans nämns inte i besluten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -53,7 +59,7 @@
       "kind": "sou",
       "dok_id": "HDB38",
       "designation": "SOU 2025:8",
-      "title": "Bättre förutsättningar för trygghet och studiero i skolan ",
+      "title": "Bättre förutsättningar för trygghet och studiero i skolan",
       "date": "2025-01-29",
       "url": "https://data.riksdagen.se/dokument/HDB38.html",
       "relevance": "full",
@@ -78,6 +84,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01UbU22.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1198",
+      "designation": "SFS 2026:1198",
+      "title": "Lag (2026:1198) om ändring i skollagen (2010:800)",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261198.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att elever och föräldrar ska skriva på dokumentet, och inte uttryckligen en konsekvenstrappa eller nolltolerans mot mobbning, kränkningar, klotter och skadegörelse."
     }
   ]
 }

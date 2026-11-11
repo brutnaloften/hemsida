@@ -20,15 +20,21 @@
   "committee": "JuU",
   "keywords": ["osjälvständiga brottsformer", "medhjälp", "anstiftan", "stämpling", "förberedelse"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att se över och modernisera reglerna om bland annat försök, medhjälp och anstiftan. Utredningen lade i september 2024 fram förslag. I november 2025 kom en proposition om utvidgat straffansvar för försök, förberedelse och stämpling, och riksdagen beslutade om den i februari 2026. Det täcker en del av löftet; medhjälp, anstiftan och underlåtenhet att avslöja brott nämns inte i dem.",
+    "reasoning": "Regeringen tillsatte en utredning i juni 2023, och den lade fram förslag i september 2024. Riksdagen beslutade i februari 2026 om ett utvidgat straffansvar för försök, förberedelse och stämpling, och ändringar i brottsbalken trädde i kraft 1 april och 1 juli 2026. Medhjälp, anstiftan och underlåtenhet att avslöja brott nämns inte i dessa dokument.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att se över och modernisera reglerna om bland annat försök, medhjälp och anstiftan. Utredningen lade i september 2024 fram förslag. I november 2025 kom en proposition om utvidgat straffansvar för försök, förberedelse och stämpling, och riksdagen beslutade om den i februari 2026. Det täcker en del av löftet; medhjälp, anstiftan och underlåtenhet att avslöja brott nämns inte i dem.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -72,6 +78,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU19.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-93",
+      "designation": "SFS 2026:93",
+      "title": "Lag (2026:93) om ändring i brottsbalken",
+      "date": "2026-04-01",
+      "url": "https://svenskforfattningssamling.se/doc/202693.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte ändringar av förberedelse, stämpling, medhjälp, anstiftan eller underlåtenhet att avslöja och förhindra brott, och inte någon bredare översyn och modernisering."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-94",
+      "designation": "SFS 2026:94",
+      "title": "Lag (2026:94) om ändring i brottsbalken",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/202694.html",
+      "relevance": "partial",
+      "note": "Försöksansvaret (23 kap. 1 §, egen lag) ingår inte, och texten visar ingen översyn av medhjälp, anstiftan eller underlåtenhet att avslöja och förhindra brott."
     }
   ]
 }

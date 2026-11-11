@@ -65,6 +65,21 @@ export interface JudgedPair {
   proposed: boolean;
 }
 
+/**
+ * Combine the judged pairs of several link runs given in order. A promise judged in more than one run
+ * (a split part that the main run also judged) takes the pairs of the LATER run only, so applying the
+ * runs together gives the same result however often they are applied.
+ */
+export function mergeRunPairs(runs: readonly (readonly JudgedPair[])[]): Map<string, JudgedPair[]> {
+  const merged = new Map<string, JudgedPair[]>();
+  for (const pairs of runs) {
+    const fromRun = new Map<string, JudgedPair[]>();
+    for (const p of pairs) fromRun.set(p.promise_id, [...(fromRun.get(p.promise_id) ?? []), p]);
+    for (const [id, list] of fromRun) merged.set(id, list);
+  }
+  return merged;
+}
+
 const PLANNING = new Set(['dir', 'sou', 'ds', 'prop']);
 
 /** Evidence that counts toward a verdict: everything except a document working against the promise. */

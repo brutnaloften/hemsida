@@ -20,15 +20,21 @@
   "committee": "UbU",
   "keywords": ["anmälningsplikt", "brott i skolan", "skolans brottsförebyggande roll", "skollagen"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i februari 2023 en utredning i uppdrag att föreslå anmälningsplikt och lagstadgad brottsförebyggande roll för skolor. Utredningen lade fram förslag i mars 2024, och riksdagen beslutade i maj 2025 om ett nytt skollagskapitel och en skyldighet för rektorn att anmäla misstänkta brott till polisen. Skyldigheten har undantag och gäller brott i skolverksamhet; \"på eller i anslutning till skolområdet\" framgår inte tydligt.",
+    "reasoning": "Regeringen lade i april 2025 fram ett förslag om ett nytt kapitel i skollagen om skolans brottsförebyggande arbete och en skyldighet för rektor att anmäla misstänkta brott till polisen. Riksdagen biföll det i maj 2025 och ändringarna trädde i kraft 1 juli 2025 respektive 1 juli 2026. Skyldigheten gäller brott begångna av elever i skolans verksamhet, med undantag för övervägande skäl. Brott på eller vid skolområdet i övrigt nämns inte.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i februari 2023 en utredning i uppdrag att föreslå anmälningsplikt och lagstadgad brottsförebyggande roll för skolor. Utredningen lade fram förslag i mars 2024, och riksdagen beslutade i maj 2025 om ett nytt skollagskapitel och en skyldighet för rektorn att anmäla misstänkta brott till polisen. Skyldigheten har undantag och gäller brott i skolverksamhet; \"på eller i anslutning till skolområdet\" framgår inte tydligt.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -82,6 +88,36 @@
       "url": "https://data.riksdagen.se/dokument/HC01UbU17.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-625",
+      "designation": "SFS 2025:625",
+      "title": "Lag (2025:625) om ändring i skollagen (2010:800)",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025625.html",
+      "relevance": "partial",
+      "note": "Anmälningsplikten är inte ovillkorlig (\"alltid\") eftersom övervägande skäl får tala emot, och den gäller bara brott av elever i samband med verksamheten, inte alla brott på eller i anslutning till skolområdet."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-729",
+      "designation": "SFS 2025:729",
+      "title": "Lag (2025:729) om ändring i skollagen (2010:800)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025729.html",
+      "relevance": "partial",
+      "note": "Anmälningsskyldigheten är inte ovillkorlig (\"alltid\"), gäller bara brott som kan misstänkas ha begåtts av elever och i samband med verksamheten, och nämner inte uttryckligen brott i anslutning till skolområdet."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-730",
+      "designation": "SFS 2025:730",
+      "title": "Lag (2025:730) om ändring i skollagen (2010:800)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025730.html",
+      "relevance": "partial",
+      "note": "Anmälningsplikten är inte ovillkorlig (\"alltid\"), omfattar bara brott misstänkt begångna av elever i samband med verksamheten, inte brott i anslutning till skolområdet, och lagstadgad brottsförebyggande roll framgår bara delvis."
     }
   ]
 }

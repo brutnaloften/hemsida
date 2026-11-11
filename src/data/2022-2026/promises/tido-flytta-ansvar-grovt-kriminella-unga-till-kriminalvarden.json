@@ -26,15 +26,21 @@
     "unga kriminella"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i februari 2026 fram ett förslag om att barn och unga ska dömas till fängelse i stället för sluten ungdomsvård, och att Kriminalvården tar över verkställigheten från Statens institutionsstyrelse. Riksdagen biföll förslaget i maj 2025. Det gäller bara frihetsberövade unga; ansvar som flyttas från kommunerna nämns inte i dokumenten.",
+    "reasoning": "Regeringen lade i februari 2026 fram ett förslag om att barn och unga ska dömas till fängelse i stället för sluten ungdomsvård, och riksdagen beslutade om det i maj 2026. Ändringar i brottsbalken och fängelselagen trädde i kraft den 1 juli 2026, och Kriminalvården tar över verkställigheten från Sis. Det gäller dömda unga; flytten av ansvaret från kommunerna nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i februari 2026 fram ett förslag om att barn och unga ska dömas till fängelse i stället för sluten ungdomsvård, och att Kriminalvården tar över verkställigheten från Statens institutionsstyrelse. Riksdagen biföll förslaget i maj 2025. Det gäller bara frihetsberövade unga; ansvar som flyttas från kommunerna nämns inte i dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -58,6 +64,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-516",
+      "designation": "SFS 2026:516",
+      "title": "Lag (2026:516) om ändring i brottsbalken",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026516.html",
+      "relevance": "partial",
+      "note": "Själva överföringen av verkställighetsansvaret från Statens institutionsstyrelse till Kriminalvården, med särskilda barn- och ungdomsavdelningar, regleras i andra lagar i propositionen och inte i denna brottsbalksändring."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-530",
+      "designation": "SFS 2026:530",
+      "title": "Lag (2026:530) om ändring i fängelselagen (2010:610)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026530.html",
+      "relevance": "partial",
+      "note": "Lagen ensam genomför inte hela flytten: ansvaret flyttas inte från kommunerna, den avser alla barn och unga som dömts till frihetsberövande och inte bara de tyngst kriminella, och själva påföljdsändringen och upphävandet av lagen om sluten ungdomsvård ligger i andra lagar."
     }
   ]
 }

@@ -13,6 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import {
   applyLinks,
+  mergeRunPairs,
   sfsJudgements,
   type JudgedPair,
   type SfsInput,
@@ -42,37 +43,42 @@ const { values } = parseArgs({
 });
 if (!values.run) throw new Error('usage: apply-links.ts --run <name> [--dry-run]');
 
-const results = loadJson(resolve(root, 'tools/out/link-runs', values.run, 'results.json')) as {
-  results?: { promise_id: string; document_id: string; judgement: object; proposed: boolean }[];
-};
-// `proposed` in results.json only covers the config's accept_labels (match, partial). A `contradicts`
-// judgement is shown as "Motverkar" evidence next to other evidence, at the same minimum confidence.
-const manifest = loadJson(resolve(root, 'tools/out/link-runs', values.run, 'manifest.json')) as {
-  config: { thresholds: { min_confidence: (typeof CONFIDENCES)[number] } };
-};
-const minConfidence = CONFIDENCES.indexOf(manifest.config.thresholds.min_confidence);
-const rows = Array.isArray(results) ? results : (results.results ?? []);
-const pairsBy = new Map<string, JudgedPair[]>();
-for (const r of rows as {
+type ResultRow = {
   promise_id: string;
   document_id: string;
   judgement: Omit<JudgedPair, 'promise_id' | 'document_id' | 'proposed'>;
   proposed: boolean;
-}[]) {
-  const list = pairsBy.get(r.promise_id) ?? [];
-  list.push({
-    promise_id: r.promise_id,
-    document_id: r.document_id,
-    label: r.judgement.label,
-    stage: r.judgement.stage,
-    confidence: r.judgement.confidence,
-    proposed:
-      r.proposed ||
-      (r.judgement.label === 'contradicts' &&
-        CONFIDENCES.indexOf(r.judgement.confidence) >= minConfidence),
-  });
-  pairsBy.set(r.promise_id, list);
+};
+// Several runs may be given, comma separated (the main run, then a re-link of split promises). For a
+// promise judged in more than one run the LATER run replaces the earlier one completely, so applying
+// them one after another with separate invocations no longer flip-flops.
+const runPairs: JudgedPair[][] = [];
+for (const run of values.run.split(',')) {
+  const results = loadJson(resolve(root, 'tools/out/link-runs', run, 'results.json')) as
+    | ResultRow[]
+    | { results?: ResultRow[] };
+  // `proposed` in results.json only covers the config's accept_labels (match, partial). A `contradicts`
+  // judgement is shown as "Motverkar" evidence next to other evidence, at the same minimum confidence.
+  const manifest = loadJson(resolve(root, 'tools/out/link-runs', run, 'manifest.json')) as {
+    config: { thresholds: { min_confidence: (typeof CONFIDENCES)[number] } };
+  };
+  const minConfidence = CONFIDENCES.indexOf(manifest.config.thresholds.min_confidence);
+  const rows = Array.isArray(results) ? results : (results.results ?? []);
+  runPairs.push(
+    rows.map((r) => ({
+      promise_id: r.promise_id,
+      document_id: r.document_id,
+      label: r.judgement.label,
+      stage: r.judgement.stage,
+      confidence: r.judgement.confidence,
+      proposed:
+        r.proposed ||
+        (r.judgement.label === 'contradicts' &&
+          CONFIDENCES.indexOf(r.judgement.confidence) >= minConfidence),
+    })),
+  );
 }
+const pairsBy = mergeRunPairs(runPairs);
 
 const store = loadJson(defaultStorePath(root, values.term!)) as {
   documents: Record<string, StoreDocument>;

@@ -28,7 +28,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i december 2023 en utredning i uppdrag att föreslå mer undervisningstid för elever som behöver det. Utredningar om förstärkningsundervisning (december 2024) och om svenska för nyanlända (januari 2025) följde, och i mars 2026 kom ett förslag om nya läroplaner som riksdagen beslutade om i maj 2026. Dokumenten täcker delar av löftet, men en koncentrerad timplan för centrala ämnen nämns inte.",
+    "reasoning": "Regeringen gav i december 2023 en utredning i uppdrag att föreslå mer undervisningstid för elever som behöver det. Utredningar föreslog 2024 och 2025 förstärkningsundervisning och en ny kursplan i svenska som andraspråk för nyanlända. Riksdagen beslutade i maj och juni 2026 om nya läroplaner och betyg, och två lagändringar i skollagen träder i kraft i juli 2028. Dokumenten visar ingen koncentrerad timplan för centrala ämnen.",
     "date": "2026-11-11",
     "history": [
       {
@@ -53,7 +53,7 @@
       "kind": "sou",
       "dok_id": "HCB394",
       "designation": "SOU 2024:94",
-      "title": "Förstärkningsundervisning i skolan ",
+      "title": "Förstärkningsundervisning i skolan",
       "date": "2024-12-20",
       "url": "https://data.riksdagen.se/dokument/HCB394.html",
       "relevance": "partial",
@@ -63,7 +63,7 @@
       "kind": "sou",
       "dok_id": "HDB39",
       "designation": "SOU 2025:9",
-      "title": "På språklig grund ",
+      "title": "På språklig grund",
       "date": "2025-01-31",
       "url": "https://data.riksdagen.se/dokument/HDB39.html",
       "relevance": "partial",
@@ -98,6 +98,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01UbU26.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1242",
+      "designation": "SFS 2026:1242",
+      "title": "Lag (2026:1242) om ändring i skollagen (2010:800)",
+      "date": "2028-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261242.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att undervisningstiden utökas för nyanlända elever eller att timplanen koncentreras till centrala ämnen den första tiden."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1243",
+      "designation": "SFS 2026:1243",
+      "title": "Lag (2026:1243) om ändring i skollagen (2010:800)",
+      "date": "2028-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/20261243.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att undervisningstiden för nyanlända utökas eller att timplanen koncentreras till centrala ämnen den första tiden."
     }
   ]
 }

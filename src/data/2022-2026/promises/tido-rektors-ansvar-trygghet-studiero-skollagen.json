@@ -26,15 +26,21 @@
     "ordningsregler"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i januari 2025 att rektors ansvar för trygghet och studiero tydliggörs i skollagen, att placering och avstängning kan gälla längre och att rektor beslutar om ordningsregler. Regeringen lade i mars 2026 fram ett förslag, och riksdagen biföll det i maj 2026. Besluten täcker tydligare ansvar, skolövergripande ordningsregler och skarpare åtgärder. Längre avstängning och att rektor flyttar elever framgår inte.",
+    "reasoning": "En statlig utredning föreslog i januari 2025 att rektors ansvar för trygghet och studiero förtydligas i skollagen, med längre placering och avstängning samt ordningsregler som rektor beslutar. Regeringen lade i mars 2026 fram ett förslag och riksdagen beslutade i maj 2026. En lagändring i skollagen trädde i kraft 1 augusti 2026. Ansvar, skolövergripande ordningsregler och skärpta åtgärder täcks. Längre åtgärder och att rektor flyttar elever framgår inte.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i januari 2025 att rektors ansvar för trygghet och studiero tydliggörs i skollagen, att placering och avstängning kan gälla längre och att rektor beslutar om ordningsregler. Regeringen lade i mars 2026 fram ett förslag, och riksdagen biföll det i maj 2026. Besluten täcker tydligare ansvar, skolövergripande ordningsregler och skarpare åtgärder. Längre avstängning och att rektor flyttar elever framgår inte.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -43,7 +49,7 @@
       "kind": "sou",
       "dok_id": "HDB38",
       "designation": "SOU 2025:8",
-      "title": "Bättre förutsättningar för trygghet och studiero i skolan ",
+      "title": "Bättre förutsättningar för trygghet och studiero i skolan",
       "date": "2025-01-29",
       "url": "https://data.riksdagen.se/dokument/HDB38.html",
       "relevance": "full",
@@ -68,6 +74,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01UbU22.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1198",
+      "designation": "SFS 2026:1198",
+      "title": "Lag (2026:1198) om ändring i skollagen (2010:800)",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261198.html",
+      "relevance": "partial",
+      "note": "Texten visar inte uttryckligen att rektors huvudansvar skrivs in som sådant, att åtgärderna kan beslutas för längre tid, att rektor får flytta elever eller att skolledningen beslutar om reglerna."
     }
   ]
 }

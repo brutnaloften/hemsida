@@ -20,15 +20,21 @@
   "committee": "JuU",
   "keywords": ["rymning", "anstalt", "häkte", "kriminalisering", "Kriminalvården"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning lade i juli 2024 fram ett förslag om att göra rymning från fängelse, sluten ungdomsvård, häkte och förvar straffbart. Regeringen föreslog i mars 2026 en ändring i brottsbalken om rymning, och riksdagens betänkande i maj 2026 tillstyrker förslaget för anstalt, häkte, sluten ungdomsvård och förvar. Dokumenten täcker hela löftet, men ingen författning är kopplad till det.",
+    "reasoning": "Regeringen lade i mars 2026 fram ett förslag om att kriminalisera rymning, och riksdagen biföll det i maj 2026. En lagändring i brottsbalken trädde i kraft den 2 juli 2026. Den gäller rymning från anstalt, häkte, sluten ungdomsvård och Migrationsverkets förvar. Dokumenten tar inte upp övriga frihetsberövande åtgärder, så löftet täcks bara delvis.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning lade i juli 2024 fram ett förslag om att göra rymning från fängelse, sluten ungdomsvård, häkte och förvar straffbart. Regeringen föreslog i mars 2026 en ändring i brottsbalken om rymning, och riksdagens betänkande i maj 2026 tillstyrker förslaget för anstalt, häkte, sluten ungdomsvård och förvar. Dokumenten täcker hela löftet, men ingen författning är kopplad till det.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -62,6 +68,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU38.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-924",
+      "designation": "SFS 2026:924",
+      "title": "Lag (2026:924) om ändring i brottsbalken",
+      "date": "2026-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2026924.html",
+      "relevance": "partial",
+      "note": "Rymning kriminaliseras bara från vissa former av frihetsberövande, så alla övriga frihetsberövande åtgärder som löftet nämner täcks inte."
     }
   ]
 }

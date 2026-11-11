@@ -26,15 +26,21 @@
     "högpresterande elever"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Riksdagen beslutade i december 2022 om pengar till fler och bättre spetsklasser. Regeringen lade i februari 2024 fram ett förslag om att reglera spetsutbildning i grundskolan i skollagen, och riksdagen biföll i maj 2024 en permanent spetsutbildning i grundskolan. Gymnasiet och en utökning till fler teoretiska ämnen täcks inte tydligt, och förordningsändringar nämns inte i dokumenten.",
+    "reasoning": "Regeringen föreslog i februari 2024 att riksrekryterande spetsutbildning i grundskolan skulle regleras i skollagen, och riksdagen biföll det i maj 2024. Två lagändringar trädde i kraft i juli 2024 och juli 2025. Dokumenten visar ändringar i skollagen, inte i förordning. Att utbildningen blir permanent och utökas till alla teoretiska ämnen, även på gymnasiet, nämns inte tydligt i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Riksdagen beslutade i december 2022 om pengar till fler och bättre spetsklasser. Regeringen lade i februari 2024 fram ett förslag om att reglera spetsutbildning i grundskolan i skollagen, och riksdagen biföll i maj 2024 en permanent spetsutbildning i grundskolan. Gymnasiet och en utökning till fler teoretiska ämnen täcks inte tydligt, och förordningsändringar nämns inte i dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -68,6 +74,26 @@
       "url": "https://data.riksdagen.se/dokument/HB01UbU16.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-410",
+      "designation": "SFS 2024:410",
+      "title": "Lag (2024:410) om ändring i skollagen (2010:800)",
+      "date": "2024-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2024410.html",
+      "relevance": "partial",
+      "note": "Reglering av riksrekryterande spetsutbildning i gymnasieskolan ingår bara som en bedömning i propositionen och inte i lagen. Löftet gällde också förordningsändringar, medan detta är en lagändring."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-411",
+      "designation": "SFS 2024:411",
+      "title": "Lag (2024:411) om ändring i skollagen (2010:800)",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2024411.html",
+      "relevance": "partial",
+      "note": "Lagen permanentar inte uttryckligen försöksverksamheten och reglerar inte riksrekryterande spetsutbildning i gymnasieskolan, som bara bedöms böra regleras. Löftet gäller förordningsändringar, inte lagändringar."
     }
   ]
 }

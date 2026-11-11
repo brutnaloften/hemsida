@@ -26,15 +26,21 @@
     "kontrollerande beteende"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i juli 2023 att oskuldskontroller och oskuldsingrepp ska kriminaliseras. Regeringen lade i juni 2025 fram ett förslag om att även oskuldsintyg ska kriminaliseras, och riksdagen fattade beslut i oktober 2025. Dokumenten täcker bara oskuldsförbuden. Kontrollerande beteende, skärpta straff för hedersförtryck och äktenskapstvång, vite och längre preskriptionstid nämns inte.",
+    "reasoning": "En utredning föreslog i juli 2023 att oskuldskontroller och oskuldsingrepp ska bli brott. Regeringen lade i juni 2025 fram ett förslag som även omfattade oskuldsintyg, och riksdagen beslutade om det i oktober 2025. Ändringarna trädde i kraft 1 december 2025. Skärpta straff för hedersförtryck och äktenskapstvång, vite, preskriptionstid och kontrollerande beteende nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i juli 2023 att oskuldskontroller och oskuldsingrepp ska kriminaliseras. Regeringen lade i juni 2025 fram ett förslag om att även oskuldsintyg ska kriminaliseras, och riksdagen fattade beslut i oktober 2025. Dokumenten täcker bara oskuldsförbuden. Kontrollerande beteende, skärpta straff för hedersförtryck och äktenskapstvång, vite och längre preskriptionstid nämns inte.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -68,6 +74,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU3.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-1010",
+      "designation": "SFS 2025:1010",
+      "title": "Lag (2025:1010) om ändring i lagen (1982:316) med förbud mot könsstympning av kvinnor",
+      "date": "2025-12-01",
+      "url": "https://svenskforfattningssamling.se/doc/20251010.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte kriminalisering av kontrollerande beteende, oskuldskontroller eller oskuldsintyg (ligger i brottsbalken), skärpt straffskala för hedersförtryck och äktenskapstvång, vite för vårdnadshavare eller förlängd preskriptionstid."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-962",
+      "designation": "SFS 2025:962",
+      "title": "Lag (2025:962) om ändring i brottsbalken",
+      "date": "2025-12-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025962.html",
+      "relevance": "partial",
+      "note": "Kriminalisering av kontrollerande beteende, skärpt straffskala för hedersförtryck och äktenskapstvång, vite för vårdnadshavare som inte medverkar till att barn återförs och förlängd preskriptionstid framgår inte. Oskuldsingrepp regleras i en annan lag."
     }
   ]
 }

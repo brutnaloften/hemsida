@@ -20,15 +20,21 @@
   "committee": "JuU",
   "keywords": ["visitationszoner", "visitation", "vapen", "sprängmedel", "polisens befogenheter"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen presenterade i december 2023 en promemoria och i mars 2024 en proposition om säkerhetszoner, där polisen får utökade befogenheter att visitera efter vapen och besluten kan överklagas. Riksdagen fattade beslut i frågan i april 2024. Dokumenten visar att det är polisen och inte åklagare som beslutar, och en utvärdering efter tre år nämns inte.",
+    "reasoning": "Regeringen föreslog i december 2023 och mars 2024 säkerhetszoner där polisen får utökade befogenheter att visitera efter vapen. Riksdagen beslutade om detta i april 2024, och ändringen i polislagen trädde i kraft den 25 april 2024. Det är en svagare variant: polisen, inte åklagare, beslutar om zonerna. Utvärdering efter tre år nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen presenterade i december 2023 en promemoria och i mars 2024 en proposition om säkerhetszoner, där polisen får utökade befogenheter att visitera efter vapen och besluten kan överklagas. Riksdagen fattade beslut i frågan i april 2024. Dokumenten visar att det är polisen och inte åklagare som beslutar, och en utvärdering efter tre år nämns inte.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -37,7 +43,7 @@
       "kind": "ds",
       "dok_id": "HBB431",
       "designation": "Ds 2023:31",
-      "title": "Säkerhetszoner - ökade möjligheter för polisen att visitera för att förebygga brott ",
+      "title": "Säkerhetszoner - ökade möjligheter för polisen att visitera för att förebygga brott",
       "date": "2023-12-15",
       "url": "https://data.riksdagen.se/dokument/HBB431.html",
       "relevance": "partial",
@@ -62,6 +68,16 @@
       "url": "https://data.riksdagen.se/dokument/HB01JuU13.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-200",
+      "designation": "SFS 2024:200",
+      "title": "Lag (2024:200) om ändring i polislagen (1984:387)",
+      "date": "2024-04-25",
+      "url": "https://svenskforfattningssamling.se/doc/2024200.html",
+      "relevance": "partial",
+      "note": "Beslut fattas av Polismyndigheten och inte av åklagare, och texten nämner ingen utvärdering efter tre år. Sprängmedel nämns inte uttryckligen, bara vapen och andra farliga föremål."
     }
   ]
 }

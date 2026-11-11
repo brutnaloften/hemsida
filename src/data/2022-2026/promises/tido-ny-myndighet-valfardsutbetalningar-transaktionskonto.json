@@ -28,7 +28,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i december 2022 fram ett förslag om Utbetalningsmyndigheten och ett transaktionskonto, och riksdagen biföll det i juni 2023. Det gäller bara utbetalningar från vissa statliga myndigheter och handlar om att förhindra felaktiga utbetalningar. En utredning från februari 2025 föreslår att kommuner och regioner ansluts, men inte att myndigheten ansvarar för alla utbetalningar.",
+    "reasoning": "Regeringen lade i december 2022 fram ett förslag om Utbetalningsmyndigheten, och riksdagen biföll det i juni 2023. Lagen om transaktionskonto trädde i kraft 1 januari 2024 och gäller bara utbetalningar från vissa statliga myndigheter. I februari 2025 föreslog en utredning att kommuner och regioner ansluts, men inte att myndigheten ansvarar för alla utbetalningar; det är ett förslag utan beslut.",
     "date": "2026-11-11",
     "history": [
       {
@@ -60,10 +60,20 @@
       "note": null
     },
     {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-454",
+      "designation": "SFS 2023:454",
+      "title": "Lag (2023:454) om transaktionskonto vid Utbetalningsmyndigheten",
+      "date": "2024-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023454.html",
+      "relevance": "partial",
+      "note": "Lagen gör inte myndigheten ansvarig för alla utbetalningar från både kommunal och statlig nivå. Transaktionskontot gäller bara vissa statliga myndigheter, och själva inrättandet av myndigheten ligger utanför lagen."
+    },
+    {
       "kind": "sou",
       "dok_id": "HDB320",
       "designation": "SOU 2025:20",
-      "title": "Kommunal anslutning till Utbetalningsmyndighetens verksamhet ",
+      "title": "Kommunal anslutning till Utbetalningsmyndighetens verksamhet",
       "date": "2025-02-20",
       "url": "https://data.riksdagen.se/dokument/HDB320.html",
       "relevance": "partial",

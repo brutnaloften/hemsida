@@ -20,15 +20,21 @@
   "committee": "JuU",
   "keywords": ["brottsskadeersättning", "skadestånd", "brottsoffer", "felaktigt frihetsberövande"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i mars 2025 att brottsoffer inte ska behöva driva in skadeståndet själva och att ersättning för frihetsberövande oftare ska kunna nekas eller sättas ned. Regeringen lade i mars 2026 fram ett förslag med samma innehåll, och riksdagen fattade beslut i maj 2026. Dokumenten täcker båda delarna av löftet, men ingen författning är kopplad till löftet.",
+    "reasoning": "En statlig utredning föreslog i mars 2025 att brottsoffer inte själva ska behöva driva in skadeståndet och att ersättning vid frihetsberövande lättare kan nekas eller sättas ned. Regeringen lade fram ett förslag i mars 2026 och riksdagen beslutade i maj 2026. Ändringar i brottsskadelagen och lagen om ersättning vid frihetsberövanden trädde i kraft 1 september 2026, tillsammans med följdändringar i rättegångsbalken och utsökningsbalken. Dokumenten visar bara att delar av löftet genomförts.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i mars 2025 att brottsoffer inte ska behöva driva in skadeståndet själva och att ersättning för frihetsberövande oftare ska kunna nekas eller sättas ned. Regeringen lade i mars 2026 fram ett förslag med samma innehåll, och riksdagen fattade beslut i maj 2026. Dokumenten täcker båda delarna av löftet, men ingen författning är kopplad till löftet.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -62,6 +68,46 @@
       "url": "https://data.riksdagen.se/dokument/HD01CU38.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1204",
+      "designation": "SFS 2026:1204",
+      "title": "Lag (2026:1204) om ändring i rättegångsbalken",
+      "date": "2026-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261204.html",
+      "relevance": "partial",
+      "note": "Själva ändringarna i brottsskadelagen och ersättningsreglerna samt nedsättning eller nekande av ersättning för felaktigt frihetsberövande ligger i andra lagar, och texten visar inte vad just dessa rättegångsbalksparagrafer ändrar."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1206",
+      "designation": "SFS 2026:1206",
+      "title": "Lag (2026:1206) om ändring i utsökningsbalken",
+      "date": "2026-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261206.html",
+      "relevance": "partial",
+      "note": "Lagen innehåller inte den huvudsakliga ändringen att brottsoffret får brottsskadeersättning utan att först vända sig till gärningspersonen, och inte heller reglerna om att ersättning för felaktigt frihetsberövande kan nekas eller sättas ned."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1209",
+      "designation": "SFS 2026:1209",
+      "title": "Lag (2026:1209) om ändring i lagen (1998:714) om ersättning vid frihetsberövanden och andra tvångsåtgärder",
+      "date": "2026-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261209.html",
+      "relevance": "partial",
+      "note": "Delen om att minska brottsoffrets ansvar att själv driva in skadeståndet genomförs inte i denna lag utan i brottsskadelagen och andra lagar i propositionen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1211",
+      "designation": "SFS 2026:1211",
+      "title": "Lag (2026:1211) om ändring i brottsskadelagen (2014:322)",
+      "date": "2026-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261211.html",
+      "relevance": "partial",
+      "note": "Den del som gäller att ersättning för felaktigt frihetsberövande kan nekas eller sättas ned i vissa fall, som ligger i en annan lag (1998:714), samt övriga delar av översynen."
     }
   ]
 }
