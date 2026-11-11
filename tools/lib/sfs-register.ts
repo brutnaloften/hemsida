@@ -98,13 +98,53 @@ export function classifySearchPage(html: string): SearchPage {
   throw new Error('unrecognised SFS register search page (no Totalt, no register page, no hits)');
 }
 
+export interface SearchHits {
+  /** Base acts to fetch a register page for. */
+  bases: string[];
+  /** Register pages the search itself returned (a single hit, alone or as the last page). */
+  direct: RegisterPage[];
+  total: number;
+}
+
+/**
+ * All hits of a search given its first page and a way to fetch page `n`. A search with one hit,
+ * and a last page with one remaining hit, come back as that act's register page and not as a list.
+ * Throws when the listed hits do not add up to the reported total.
+ */
+export async function collectSearchHits(
+  firstHtml: string,
+  fetchPage: (n: number) => Promise<string>,
+): Promise<SearchHits> {
+  const first = classifySearchPage(firstHtml);
+  if (first.kind === 'none') return { bases: [], direct: [], total: 0 };
+  if (first.kind === 'direct')
+    return { bases: [], direct: [parseRegisterPage(firstHtml)], total: 1 };
+  const bases = [...first.bases];
+  const direct: RegisterPage[] = [];
+  const pageCount = Math.ceil(first.total / SEARCH_PAGE_SIZE);
+  for (let n = 2; n <= pageCount; n++) {
+    const html = await fetchPage(n);
+    const more = classifySearchPage(html);
+    if (more.kind === 'direct') direct.push(parseRegisterPage(html));
+    else if (more.kind === 'list') {
+      for (const b of more.bases) if (!bases.includes(b)) bases.push(b);
+    } else throw new Error(`page ${n} of ${pageCount} has no hits`);
+  }
+  if (bases.length + direct.length !== first.total) {
+    throw new Error(
+      `search reports ${first.total} hits but ${bases.length + direct.length} were listed`,
+    );
+  }
+  return { bases, direct, total: first.total };
+}
+
 /** URL of result page `page` (1-based) of a search. */
 export function searchPageUrl(rm: string, nr: string, page: number): string {
   return page <= 1 ? searchUrl(rm, nr) : `${searchUrl(rm, nr)}&page=${page}`;
 }
 
 const REF =
-  /\b([Pp]rop|[Bb]et|[Rr]skr)\b\.?|(\d{4}\/\d{2})(?::\s*|(?=[A-ZÅÄÖ]))([A-Za-zÅÄÖåäö]*\d+)|(?:\boch|,)\s+((?:[A-ZÅÄÖ][A-Za-zåäö]*)?\d+)\b(?![/:])/g;
+  /\b([Pp]rop|[Bb]et|[Rr]skr)\b\.?|(\d{4}\/\d{2})(?::\s*|(?=[A-ZÅÄÖ]))([A-Za-zÅÄÖåäö]*\d+)|(?<=(?:\d{4}\/\d{2}:|\boch\s+)[A-Za-zÅÄÖåäö]*\d+\s*)(?:\boch|,)\s+((?:[A-ZÅÄÖ][A-Za-zåäö]*)?\d+)\b(?![/:])/g;
 
 /**
  * Split a Förarbeten line into propositions, betänkanden and riksdagsskrivelser. Each reference

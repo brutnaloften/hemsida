@@ -7,7 +7,7 @@
  * `/sfsr/adv?fritext=<rm>:<nr>`, fetches the register page of each hit once, and keeps the
  * entries whose Förarbeten cite exactly that proposition. Requests are sequential, one per
  * second; every raw page is cached in tools/out/sfsr-cache/ so a re-run (or a resumed run) only
- * fetches what is missing (`--refresh` refetches the cached searches of propositions that had no
+ * fetches what is missing (`--refresh` refetches the cached searches and register pages for propositions that had no
  * law in the previous store). Searches with more than 30 hits are read page by page; a single
  * hit comes back as the register page itself. Output: tools/out/sfs-store/<term>.json (gitignored). See
  * docs/riksdag-api.md ("SFS register").
@@ -21,7 +21,7 @@ import { isBudgetProp, isSkrivelse, type StoreDocument } from './lib/apply-links
 import { writeJsonAtomic } from './lib/json.ts';
 import { defaultStorePath, loadStore } from './lib/riksdag-ingest.ts';
 import {
-  classifySearchPage,
+  collectSearchHits,
   matchingLaws,
   mergeLaw,
   parseRegisterPage,
@@ -81,10 +81,18 @@ let lastStart = Number.NEGATIVE_INFINITY;
 let fetched = 0;
 
 /** Cached GET with a 1 request/s throttle and a few retries on 429/5xx. */
-async function getPage(cacheName: string, url: string, ignoreCache = false): Promise<string> {
+const refreshed = new Set<string>();
+
+/** Cached GET; returns null for a page that is not cached in a dry run. `ignoreCache` refetches once per run. */
+async function getPage(
+  cacheName: string,
+  url: string,
+  ignoreCache = false,
+): Promise<string | null> {
   const file = resolve(cacheDir, cacheName);
-  if (!ignoreCache && existsSync(file)) return readFileSync(file, 'utf8');
-  if (dryRun) return '';
+  const skipCache = ignoreCache && !refreshed.has(cacheName);
+  if (!skipCache && existsSync(file)) return readFileSync(file, 'utf8');
+  if (dryRun) return null;
   let delay = 2000;
   for (let attempt = 0; ; attempt++) {
     const wait = lastStart + MIN_INTERVAL_MS - Date.now();
@@ -103,6 +111,7 @@ async function getPage(cacheName: string, url: string, ignoreCache = false): Pro
       const text = await res.text();
       mkdirSync(cacheDir, { recursive: true });
       writeFileSync(file, text);
+      refreshed.add(cacheName);
       fetched++;
       return text;
     }
@@ -129,49 +138,41 @@ for (const [i, d] of props.entries()) {
   // Refetch a cached search page only for props that had no law in the previous store.
   const stale = refresh && !previous?.byProp[d.dok_id];
   const searchHtml = await getPage(`adv-${safe}.html`, searchUrl(d.rm, d.beteckning), stale);
-  const first = classifySearchPage(searchHtml);
-  const pages: RegisterPage[] = [];
-  let hitCount = 0;
-  if (first.kind === 'direct') {
-    // exactly one hit: the register answered with that act's page itself
-    pages.push(parseRegisterPage(searchHtml));
-    hitCount = 1;
-  } else if (first.kind === 'list') {
-    const bases = [...first.bases];
-    let direct = 0;
-    const pageCount = Math.ceil(first.total / SEARCH_PAGE_SIZE);
-    for (let n = 2; n <= pageCount; n++) {
-      const moreHtml = await getPage(
-        `adv-${safe}-p${n}.html`,
-        searchPageUrl(d.rm, d.beteckning, n),
-        stale,
-      );
-      const more = classifySearchPage(moreHtml);
-      if (more.kind === 'direct') {
-        // a last page with a single hit is rendered as that act's register page, like a 1-hit search
-        pages.push(parseRegisterPage(moreHtml));
-        direct++;
-      } else if (more.kind === 'list') {
-        for (const b of more.bases) if (!bases.includes(b)) bases.push(b);
-      } else {
-        throw new Error(`${ref}: page ${n} of ${pageCount} has no hits`);
-      }
+  if (searchHtml === null) {
+    console.log(`[${i + 1}/${props.length}] ${d.dok_id} Prop. ${ref}: not cached (dry run)`);
+    continue;
+  }
+  const pageHtml = new Map<number, string>();
+  let missing = false;
+  const search = await collectSearchHits(searchHtml, async (n) => {
+    const html = await getPage(
+      `adv-${safe}-p${n}.html`,
+      searchPageUrl(d.rm, d.beteckning, n),
+      stale,
+    );
+    if (html === null) {
+      missing = true;
+      return '<div>Inga träffar</div>';
     }
-    if (bases.length + direct !== first.total) {
-      throw new Error(
-        `${ref}: search reports ${first.total} hits but ${bases.length + direct} were listed`,
-      );
+    pageHtml.set(n, html);
+    return html;
+  }).catch((err: unknown) => {
+    throw new Error(`${ref}: ${err instanceof Error ? err.message : String(err)}`);
+  });
+  if (missing) {
+    console.log(`[${i + 1}/${props.length}] ${d.dok_id} Prop. ${ref}: pages not cached (dry run)`);
+    continue;
+  }
+  const pages: RegisterPage[] = [...search.direct];
+  const hitCount = search.total;
+  for (const base of search.bases) {
+    const html = await getPage(`bet-${base.replace(':', '-')}.html`, registerUrl(base), stale);
+    if (html === null) continue;
+    if (html.includes('Inga träffar')) {
+      console.warn(`  warning: register has no page for ${base} (hit of ${ref}), skipped`);
+      continue;
     }
-    hitCount = bases.length + direct;
-    for (const base of bases) {
-      const html = await getPage(`bet-${base.replace(':', '-')}.html`, registerUrl(base));
-      if (!html) continue;
-      if (html.includes('Inga träffar')) {
-        console.warn(`  warning: register has no page for ${base} (hit of ${ref}), skipped`);
-        continue;
-      }
-      pages.push(parseRegisterPage(html));
-    }
+    pages.push(parseRegisterPage(html));
   }
   const keys: string[] = [];
   for (const page of pages) {
