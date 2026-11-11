@@ -77,6 +77,21 @@ describe('write-reasoning', () => {
     expect(reasoningProblems(`${base} Riksdagen ska ta ställning till förslaget.`, [])).not.toEqual(
       [],
     );
+    // A sentence that mixes an investigation with a pending decision, or only mentions the
+    // investigation in passing, is still rejected.
+    for (const mixed of [
+      'Utredningen ska ta ställning till frågan och riksdagen ska ta ställning till förslaget.',
+      'Utredaren ska lämna förslag, men riksdagen ska ännu besluta om saken.',
+      'Uppdraget ska redovisas i juni; frågan ska prövas av riksdagen.',
+      'Förslagen från utredningen ska behandlas av riksdagen i vår.',
+      'Lagförslaget efter utredningen ska prövas av riksdagen.',
+      'Betänkandet om uppdraget ska behandlas i kammaren.',
+      'Frågan i direktivet ska avgöras av riksdagen.',
+      'Riksdagen och kommittén ska besluta om saken.',
+      'Utredningen ska ta ställning till om riksdagen ska besluta.',
+    ]) {
+      expect(reasoningProblems(`${base} ${mixed}`, []), mixed).not.toEqual([]);
+    }
   });
 
   it('rejects designations, AI mentions and completeness caveats', () => {
