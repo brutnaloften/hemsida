@@ -20,7 +20,15 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -46,7 +54,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU34.html",
       "found_by": ["keyword:beroende", "all-keywords", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD03251",
@@ -88,8 +97,14 @@
       "titel": "Stärkta insatser för äldre och för de som vårdar eller stöder närstående",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0360.html",
-      "found_by": ["keyword:närstående", "keyword:stödlinjer", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:närstående",
+        "keyword:stödlinjer",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD0319",
@@ -101,7 +116,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0319.html",
       "found_by": ["keyword:stödlinjer", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC0369",
@@ -126,7 +142,8 @@
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HB01CU20.html",
       "found_by": ["keyword:närstående", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.01
     },
     {
       "dok_id": "HA01SkU4",
@@ -138,7 +155,8 @@
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HA01SkU4.html",
       "found_by": ["keyword:beroende", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0
     },
     {
       "dok_id": "HEB351",
@@ -150,7 +168,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB351.html",
       "found_by": ["keyword:stödlinjer"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.07
     },
     {
       "dok_id": "HD01SoU38",
@@ -188,7 +207,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03284.html",
       "found_by": ["keyword:missbruk"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HEB334",
@@ -200,7 +220,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB334.html",
       "found_by": ["keyword:stödlinjer"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01AU13",
@@ -212,7 +233,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU13.html",
       "found_by": ["keyword:stödlinjer"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HA01SoU12",
@@ -330,6 +352,71 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.85
+    },
+    {
+      "dok_id": "HAB354",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "54",
+      "datum": "2022-10-14",
+      "titel": "Naloxon kan rädda liv ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB354.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01SoU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU16",
+      "datum": "2023-04-26",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01SoU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU11",
+      "datum": "2024-03-13",
+      "titel": "Alkohol, narkotika, dopning, tobak och spel",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB360",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "60",
+      "datum": "2024-08-29",
+      "titel": "Stärkt stöd till anhöriga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

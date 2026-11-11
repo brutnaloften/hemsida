@@ -21,7 +21,11 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20"
   ],
   "candidates": [
     {
@@ -65,7 +69,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
       "found_by": ["keyword:suicidprevention", "all-keywords", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC0360",
@@ -76,8 +81,14 @@
       "titel": "Forskning och innovation för framtid, nyfikenhet och nytta",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0360.html",
-      "found_by": ["keyword:forskningsprogram", "keyword:forskning", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:forskningsprogram",
+        "keyword:forskning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01SoU14",
@@ -106,8 +117,14 @@
       "titel": "Folkhälsa",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU15.html",
-      "found_by": ["keyword:psykisk hälsa", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:psykisk hälsa",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01UbU13",
@@ -119,7 +136,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU13.html",
       "found_by": ["keyword:forskningsprogram", "keyword:forskning"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01SoU7",
@@ -131,7 +149,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU7.html",
       "found_by": ["keyword:psykisk hälsa", "keyword:suicidprevention"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HC01SoU12",
@@ -357,6 +376,32 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB366",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "66",
+      "datum": "2025-01-01",
+      "titel": "Livsviktigt lärande",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB366.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01UbU15",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU15",
+      "datum": "2025-05-21",
+      "titel": "Forskning och innovation för framtid, nyfikenhet och nytta",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

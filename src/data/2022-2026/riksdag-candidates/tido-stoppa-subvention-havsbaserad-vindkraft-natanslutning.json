@@ -20,7 +20,11 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -55,9 +59,11 @@
         "keyword:havsbaserad vindkraft",
         "keyword:elnätskollektivet",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.7
     },
     {
       "dok_id": "HA01NU17",
@@ -72,9 +78,11 @@
         "keyword:havsbaserad vindkraft",
         "keyword:elnätskollektivet",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.7
     },
     {
       "dok_id": "HA01NU9",
@@ -104,8 +112,14 @@
       "titel": "Energipolitik",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
-      "found_by": ["keyword:elnätskollektivet", "all-keywords", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:elnätskollektivet",
+        "all-keywords",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HCB389",
@@ -152,8 +166,9 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU17.html",
-      "found_by": ["all-keywords", "committee:NU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:NU", "score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD01NU13",
@@ -225,7 +240,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03249.html",
       "found_by": ["keyword:subvention"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03242",
@@ -291,6 +307,45 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01MJU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU15",
+      "datum": "2024-05-06",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01KU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU20",
+      "datum": "2025-06-10",
+      "titel": "Granskningsbetänkande",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

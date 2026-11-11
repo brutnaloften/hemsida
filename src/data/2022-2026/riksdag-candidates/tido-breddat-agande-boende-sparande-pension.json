@@ -19,7 +19,17 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -32,7 +42,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HA01FiU20.html",
       "found_by": ["keyword:bostadsägande", "all-keywords", "committee:FiU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.08
     },
     {
       "dok_id": "HEB360",
@@ -44,7 +55,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB360.html",
       "found_by": ["keyword:breddat ägande", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03159",
@@ -56,7 +68,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03159.html",
       "found_by": ["keyword:bostadsägande", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03119",
@@ -67,8 +80,13 @@
       "titel": "Utveckling av makrotillsynsområdet",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03119.html",
-      "found_by": ["keyword:bostadsägande", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:bostadsägande",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01FiU1",
@@ -79,8 +97,13 @@
       "titel": "Statens budget 2025 – Rambeslutet",
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
-      "found_by": ["keyword:sparande", "committee:FiU"],
-      "score": 2
+      "found_by": [
+        "keyword:sparande",
+        "committee:FiU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HCB371",
@@ -104,8 +127,13 @@
       "titel": "Hyresrätt m.m.",
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HA01CU14.html",
-      "found_by": ["keyword:breddat ägande", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:breddat ägande",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HA01SkU11",
@@ -133,8 +161,13 @@
       "titel": "En paneuropeisk privat pensionsprodukt",
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HA01FiU14.html",
-      "found_by": ["keyword:pensionssparande", "committee:FiU"],
-      "score": 2
+      "found_by": [
+        "keyword:pensionssparande",
+        "committee:FiU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD01FiU47",
@@ -146,7 +179,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU47.html",
       "found_by": ["keyword:sparande"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SkU30",
@@ -158,7 +192,8 @@
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HD01SkU30.html",
       "found_by": ["keyword:sparande"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01FiU21",
@@ -209,7 +244,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU48.html",
       "found_by": ["keyword:sparande"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HCB383d2",
@@ -520,6 +556,318 @@
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HD01SkU3.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HCB383",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "83",
+      "datum": "2024-12-11",
+      "titel": "Fler vägar till att äga sitt boende ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB383.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HD03188",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "188",
+      "datum": "2026-03-17",
+      "titel": "Lag om hyrköp av bostad",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03188.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HC0398",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "98",
+      "datum": "2025-04-15",
+      "titel": "Redovisning av skatteutgifter 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0398.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d20",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB031d19",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d19.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01CU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "CU13",
+      "datum": "2025-04-04",
+      "titel": "Bostadspolitik",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HC01CU13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01CU10",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "CU10",
+      "datum": "2023-04-05",
+      "titel": "Bostadspolitik",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HA01CU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB0359",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "59",
+      "datum": "2023-12-21",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0359.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB162",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "62",
+      "datum": "2023-05-11",
+      "titel": "Fler vägar till att äga sitt boende",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB162.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB398d3",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "98",
+      "datum": "2025-01-01",
+      "titel": "En ny samordnad miljöbedömnings- och tillståndsprövningsprocess, del 3",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB398d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD0398",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "98",
+      "datum": "2026-04-13",
+      "titel": "Redovisning av skatteutgifter 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0398.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01CU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU18",
+      "datum": "2026-03-27",
+      "titel": "Bostadspolitik",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01SkU12",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU12",
+      "datum": "2024-03-21",
+      "titel": "Företag, kapital och fastighet",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01FiU22",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU22",
+      "datum": "2026-03-12",
+      "titel": "Finansiell stabilitet och finansmarknadsfrågor",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HD01CU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU14",
+      "datum": "2026-03-06",
+      "titel": "Hyresrätt m.m.",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01CU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "CU1",
+      "datum": "2023-12-07",
+      "titel": "Utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HB01CU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
       "score": 1,
       "relevance": 0.55
     }

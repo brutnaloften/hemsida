@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2024:72 (Stärkt medicinsk kompetens i kommunal hälso- och sjukvård); Prop. 2025/26:216 (Stärkt medicinsk kompetens i kommunal hälso- och sjukvård). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att föreslå hur kommuner kan anställa läkare och hur yrket blir mer attraktivt i kommunal vård. Utredningen lämnade förslag i november 2024. Regeringen lade fram en proposition i april 2026 och riksdagen beslutade i maj 2026 om en lag som låter kommuner anställa läkare. Åtgärder för att locka fler läkare och krav på en medicinskt ledningsansvarig läkare i varje kommun nämns inte i besluten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB198",
+      "designation": "Dir. 2023:98",
+      "title": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB198.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HCB372",
@@ -56,6 +66,16 @@
       "title": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
       "date": "2026-04-01",
       "url": "https://data.riksdagen.se/dokument/HD03216.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU32",
+      "designation": "Bet. 2025/26:SoU32",
+      "title": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
+      "date": "2026-05-29",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU32.html",
       "relevance": "partial",
       "note": null
     }

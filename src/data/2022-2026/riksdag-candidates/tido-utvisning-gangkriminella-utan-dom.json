@@ -18,7 +18,17 @@
     "score:tido-corpus-claude-v1-shard-3-of-20",
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -49,7 +59,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU45.html",
       "found_by": ["keyword:utvisning", "keyword:säkerhetshot"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD01SfU33",
@@ -61,7 +72,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
       "found_by": ["keyword:utvisning", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.04
     },
     {
       "dok_id": "HD03262",
@@ -73,7 +85,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "found_by": ["keyword:lag (2022:700)", "keyword:kontroll av vissa utlänningar"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01SfU22",
@@ -85,7 +98,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU22.html",
       "found_by": ["keyword:utvisning", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC03195",
@@ -110,7 +124,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU17.html",
       "found_by": ["keyword:utvisning", "keyword:säkerhetshot"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC0337",
@@ -122,7 +137,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0337.html",
       "found_by": ["keyword:lag (2022:700)", "keyword:kontroll av vissa utlänningar"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HB03108",
@@ -147,7 +163,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB360.html",
       "found_by": ["keyword:lag (2022:700)", "keyword:kontroll av vissa utlänningar"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HBB332",
@@ -159,7 +176,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB332.html",
       "found_by": ["keyword:lag (2022:700)", "keyword:kontroll av vissa utlänningar"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HAB350",
@@ -171,7 +189,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HAB350.html",
       "found_by": ["keyword:lag (2022:700)", "keyword:kontroll av vissa utlänningar"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HEB194",
@@ -289,6 +308,136 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01JuU29",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU29",
+      "datum": "2024-04-25",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU29.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB333",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "33",
+      "datum": "2025-04-01",
+      "titel": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB333.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03274",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "274",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03274.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03263",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "263",
+      "datum": "2026-04-30",
+      "titel": "Stärkt återvändandeverksamhet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03263.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB149",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "49",
+      "datum": "2024-05-23",
+      "titel": "Stärkt skydd mot utlänningar som utgör kvalificerade säkerhetshot eller som har koppling till kriminella nätverk",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB149.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HC031d5",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HEB321",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "21",
+      "datum": "2026-03-18",
+      "titel": "Återkallelse av svenskt medborgarskap",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB321.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01SfU18",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SfU18",
+      "datum": "2025-04-14",
+      "titel": "Migrationsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

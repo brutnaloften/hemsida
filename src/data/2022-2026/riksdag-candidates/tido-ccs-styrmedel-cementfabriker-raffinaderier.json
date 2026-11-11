@@ -19,7 +19,15 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -56,9 +64,11 @@
         "keyword:koldioxidlagring",
         "keyword:lagringsplatser",
         "all-keywords",
-        "committee:MJU"
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA01MJU16",
@@ -74,9 +84,11 @@
         "keyword:koldioxidlagring",
         "keyword:lagringsplatser",
         "all-keywords",
-        "committee:MJU"
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC031",
@@ -93,7 +105,8 @@
         "keyword:lagringsplatser",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.4
     },
     {
       "dok_id": "HB0359",
@@ -104,8 +117,15 @@
       "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0359.html",
-      "found_by": ["keyword:CCS", "keyword:CCU", "keyword:lagringsplatser", "all-keywords"],
-      "score": 4
+      "found_by": [
+        "keyword:CCS",
+        "keyword:CCU",
+        "keyword:lagringsplatser",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.92
     },
     {
       "dok_id": "HC03199",
@@ -152,8 +172,13 @@
       "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
-      "found_by": ["keyword:CCU", "keyword:lagringsplatser"],
-      "score": 2
+      "found_by": [
+        "keyword:CCU",
+        "keyword:lagringsplatser",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01MJU1",
@@ -191,7 +216,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03101.html",
       "found_by": ["keyword:CCS"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD0390",
@@ -216,7 +242,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03158.html",
       "found_by": ["keyword:SGU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01NU16",
@@ -319,6 +346,84 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB031.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031d21",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB031d25",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 24 Näringsliv",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d25.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01FiU21",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU21",
+      "datum": "2023-06-15",
+      "titel": "Vårändringsbudget för 2023",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01TU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "TU11",
+      "datum": "2023-05-26",
+      "titel": "Luftfartsfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HA01TU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA01NU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU1",
+      "datum": "2022-12-15",
+      "titel": "Utgiftsområde 24 Näringsliv",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01MJU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU1",
+      "datum": "2022-12-15",
+      "titel": "Utgiftsområde 20 Allmän miljö- och naturvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
       "score": 1,
       "relevance": 0.85
     }

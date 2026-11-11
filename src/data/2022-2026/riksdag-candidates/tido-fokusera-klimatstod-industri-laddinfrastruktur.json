@@ -19,7 +19,17 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -54,9 +64,11 @@
         "keyword:industriklivet",
         "keyword:klimatinvesteringar",
         "all-keywords",
-        "committee:MJU"
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03101",
@@ -70,9 +82,11 @@
       "found_by": [
         "keyword:industriklivet",
         "keyword:laddinfrastruktur",
-        "keyword:klimatinvesteringar"
+        "keyword:klimatinvesteringar",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD031",
@@ -83,8 +97,14 @@
       "titel": "Budgetpropositionen för 2026",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
-      "found_by": ["keyword:industriklivet", "keyword:laddinfrastruktur", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:industriklivet",
+        "keyword:laddinfrastruktur",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.7
     },
     {
       "dok_id": "HC01MJU14",
@@ -96,7 +116,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HC01MJU14.html",
       "found_by": ["keyword:klimatinvesteringar", "all-keywords", "committee:MJU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HB01MJU15",
@@ -107,8 +128,14 @@
       "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
-      "found_by": ["keyword:Parisavtalet artikel 6", "all-keywords", "committee:MJU"],
-      "score": 3
+      "found_by": [
+        "keyword:Parisavtalet artikel 6",
+        "all-keywords",
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB0359",
@@ -119,8 +146,14 @@
       "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0359.html",
-      "found_by": ["keyword:industriklivet", "keyword:Parisavtalet artikel 6", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:industriklivet",
+        "keyword:Parisavtalet artikel 6",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01MJU1",
@@ -150,7 +183,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HD01MJU22.html",
       "found_by": ["keyword:Parisavtalet artikel 6", "committee:MJU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD03153",
@@ -195,8 +229,13 @@
       "titel": "Vårändringsbudget för 2025",
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HC01FiU21.html",
-      "found_by": ["keyword:industriklivet", "keyword:klimatinvesteringar"],
-      "score": 2
+      "found_by": [
+        "keyword:industriklivet",
+        "keyword:klimatinvesteringar",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HC01MJU15",
@@ -208,7 +247,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HC01MJU15.html",
       "found_by": ["keyword:industriklivet", "committee:MJU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC01MJU1",
@@ -236,8 +276,13 @@
       "titel": "Klimatpolitik",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HA01MJU16.html",
-      "found_by": ["keyword:klimatinvesteringar", "committee:MJU"],
-      "score": 2
+      "found_by": [
+        "keyword:klimatinvesteringar",
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HA031d21",
@@ -407,6 +452,149 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HEB1112",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "112",
+      "datum": "2026-09-03",
+      "titel": "Främjande av industrins klimatomställning och konkurrenskraft",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC0366",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "66",
+      "datum": "2024-12-10",
+      "titel": "Sveriges genomförande av Agenda 2030",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0366.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB031d21",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC0384",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "84",
+      "datum": "2025-01-16",
+      "titel": "Riksrevisionens rapport om Industriklivet",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0384.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01FiU21",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU21",
+      "datum": "2023-06-15",
+      "titel": "Vårändringsbudget för 2023",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HEB332",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "32",
+      "datum": "2026-06-02",
+      "titel": "Att säga ja! Kommunernas förutsättningar att ta emot stora företagsetableringar och företagsexpansioner ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB332.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01TU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "TU11",
+      "datum": "2025-03-27",
+      "titel": "Vägtrafik- och fordonsfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HC01TU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

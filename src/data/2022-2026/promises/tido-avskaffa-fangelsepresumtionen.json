@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:66 (En straffreform, del 4); Prop. 2025/26:297 (Ett nytt straffrättsligt påföljdssystem). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen lade i juni 2026 fram ett förslag om ett nytt påföljdssystem där presumtionen mot fängelse tas bort och villkorligt fängelse införs. Riksdagen biföll förslaget i augusti 2026. Dokumenten täcker hela löftet, men lagen ska träda i kraft den dag regeringen bestämmer, och ikraftträdandet framgår inte.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,22 +34,22 @@
   },
   "evidence": [
     {
-      "kind": "sou",
-      "dok_id": "HDB366d4",
-      "designation": "SOU 2025:66",
-      "title": "En straffreform, del 4",
-      "date": "2025-06-09",
-      "url": "https://data.riksdagen.se/dokument/HDB366d4.html",
-      "relevance": "full",
-      "note": null
-    },
-    {
       "kind": "prop",
       "dok_id": "HD03297",
       "designation": "Prop. 2025/26:297",
       "title": "Ett nytt straffrättsligt påföljdssystem",
       "date": "2026-06-30",
       "url": "https://data.riksdagen.se/dokument/HD03297.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU48",
+      "designation": "Bet. 2025/26:JuU48",
+      "title": "Ett nytt straffrättsligt påföljdssystem",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
       "relevance": "full",
       "note": null
     }

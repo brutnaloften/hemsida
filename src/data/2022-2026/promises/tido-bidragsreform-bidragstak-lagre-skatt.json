@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:201 (Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SoU30 (Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning presenterade i februari 2025 ett förslag till bidragstak för försörjningsstöd. Taket sätts så att stödet högst motsvarar 80 procent av disponibel inkomst vid en lön på 22 000 kronor. Utredningen råder att taket införs först efter individualisering. Dokumenten visar förslag, inget beslut. Sänkt skatt för låg- och medelinkomsttagare och aktivitetskravet nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,22 +40,12 @@
   },
   "evidence": [
     {
-      "kind": "prop",
-      "dok_id": "HD03201",
-      "designation": "Prop. 2025/26:201",
-      "title": "Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete",
-      "date": "2026-03-17",
-      "url": "https://data.riksdagen.se/dokument/HD03201.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "bet",
-      "dok_id": "HD01SoU30",
-      "designation": "Bet. 2025/26:SoU30",
-      "title": "Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete",
-      "date": "2026-05-20",
-      "url": "https://data.riksdagen.se/dokument/HD01SoU30.html",
+      "kind": "sou",
+      "dok_id": "HDB315",
+      "designation": "SOU 2025:15",
+      "title": "Stärkta drivkrafter och möjligheter för biståndsmottagare",
+      "date": "2025-02-26",
+      "url": "https://data.riksdagen.se/dokument/HDB315.html",
       "relevance": "partial",
       "note": null
     }

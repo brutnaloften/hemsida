@@ -20,10 +20,38 @@
   "committee": "UbU",
   "keywords": ["elevhälsa", "elevhälsogaranti", "samverkansavtal", "vårduppdrag", "huvudmannaskap"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i mars 2024 en utredare i uppdrag att se över elevhälsan, med alla delar av löftet. I november 2025 lade utredningen fram förslag om ett starkare vårduppdrag, en elevhälsogaranti med bedömning inom sju dagar och obligatoriska samverkansöverenskommelser med regionen. Huvudmannaskapet bedömdes som lämpligt som det är. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB130",
+      "designation": "Dir. 2024:30",
+      "title": "En förbättrad elevhälsa",
+      "date": "2024-03-07",
+      "url": "https://data.riksdagen.se/dokument/HCB130.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3113",
+      "designation": "SOU 2025:113",
+      "title": "En förbättrad elevhälsa",
+      "date": "2025-11-26",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

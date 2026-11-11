@@ -20,12 +20,29 @@
   "committee": "SoU",
   "keywords": ["apotek", "farmaceutsortiment", "receptfritt", "hälsoundersökningar", "läkemedel"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2026 fram ett förslag om en mellankategori av receptfria läkemedel som kräver särskild rådgivning av farmaceut. Riksdagen beslutade i juni 2026 i enlighet med förslaget. Det motsvarar farmaceutsortimentet, men hälsoundersökningar och andra tjänster på apotek nämns inte i dokumenten.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03247",
+      "designation": "Prop. 2025/26:247",
+      "title": "Receptfria läkemedel med krav på särskild rådgivning",
+      "date": "2026-04-28",
+      "url": "https://data.riksdagen.se/dokument/HD03247.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HD01SoU35",

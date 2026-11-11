@@ -18,7 +18,13 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -30,8 +36,15 @@
       "titel": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU38.html",
-      "found_by": ["keyword:permission", "keyword:brottsoffer", "all-keywords", "committee:JuU"],
-      "score": 4
+      "found_by": [
+        "keyword:permission",
+        "keyword:brottsoffer",
+        "all-keywords",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01JuU13",
@@ -111,7 +124,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU35.html",
       "found_by": ["keyword:permission", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03132",
@@ -140,7 +154,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU14.html",
       "found_by": ["keyword:Kriminalvården", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HCB348d2",
@@ -151,8 +166,13 @@
       "titel": "Ett ändamålsenligt samhällsskydd Volym 2",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB348d2.html",
-      "found_by": ["keyword:obevakad permission", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:obevakad permission",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01JuU17",
@@ -163,8 +183,9 @@
       "titel": "Kriminalvårdsfrågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU17.html",
-      "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:JuU", "score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HBB174",
@@ -193,7 +214,8 @@
       "organ": "S-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1119.html",
       "found_by": ["keyword:Kriminalvården"],
-      "score": 1
+      "score": 1,
+      "relevance": 0
     },
     {
       "dok_id": "HEB194",
@@ -231,7 +253,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03274.html",
       "found_by": ["keyword:gängkriminella"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HA0375",

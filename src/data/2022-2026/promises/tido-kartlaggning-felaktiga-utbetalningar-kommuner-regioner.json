@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:20 (Kommunal anslutning till Utbetalningsmyndighetens verksamhet ); Prop. 2025/26:161 (Förbättrade förutsättningar för kommuner att motverka felaktiga utbetalningar från välfärdssystemen). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i maj 2023 en utredare i uppdrag att kartlägga felaktiga utbetalningar från kommuner och regioner. I februari 2025 redovisade utredningen en enkät till alla kommuner och regioner om bland annat välfärdsutbetalningar, skolpeng och föreningsbidrag. I juli 2026 kom ett nytt direktiv om behovet av att behandla personuppgifter, vilket bara delvis rör löftet.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,6 +33,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB163",
+      "designation": "Dir. 2023:63",
+      "title": "Kommunal anslutning till Utbetalningsmyndighetens verksamhet",
+      "date": "2023-05-11",
+      "url": "https://data.riksdagen.se/dokument/HBB163.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HDB320",
@@ -44,12 +54,12 @@
       "note": null
     },
     {
-      "kind": "prop",
-      "dok_id": "HD03161",
-      "designation": "Prop. 2025/26:161",
-      "title": "Förbättrade förutsättningar för kommuner att motverka felaktiga utbetalningar från välfärdssystemen",
-      "date": "2026-03-17",
-      "url": "https://data.riksdagen.se/dokument/HD03161.html",
+      "kind": "dir",
+      "dok_id": "HEB170",
+      "designation": "Dir. 2026:70",
+      "title": "Förbättrade möjligheter att behandla personuppgifter för att motverka felaktiga utbetalningar och missbruk av myndigheters processer",
+      "date": "2026-07-09",
+      "url": "https://data.riksdagen.se/dokument/HEB170.html",
       "relevance": "partial",
       "note": null
     }

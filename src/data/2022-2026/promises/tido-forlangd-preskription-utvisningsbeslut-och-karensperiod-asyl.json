@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2024:10 (Preskription av avlägsnandebeslut och vissa frågor om återreseförbud ). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i februari 2024 att preskriptionstiden för avlägsnandebeslut förlängs från fyra till fem år och räknas från att personen lämnat landet. Regeringen lade i januari 2025 fram ett liknande förslag med längre återreseförbud, och riksdagen antog ändringar i utlänningslagen i mars 2025. Dokumenten tar inte tydligt upp en längre väntetid innan ny asylansökan.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,6 +40,26 @@
       "title": "Preskription av avlägsnandebeslut och vissa frågor om återreseförbud ",
       "date": "2024-02-05",
       "url": "https://data.riksdagen.se/dokument/HCB310.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0392",
+      "designation": "Prop. 2024/25:92",
+      "title": "Preskription av avlägsnandebeslut och vissa frågor om återreseförbud",
+      "date": "2025-01-23",
+      "url": "https://data.riksdagen.se/dokument/HC0392.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SfU17",
+      "designation": "Bet. 2024/25:SfU17",
+      "title": "Preskription av avlägsnandebeslut, avskaffande av spårbyte och vissa frågor om återreseförbud",
+      "date": "2025-03-04",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU17.html",
       "relevance": "full",
       "note": null
     }

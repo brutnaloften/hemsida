@@ -21,7 +21,16 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -38,9 +47,11 @@
         "keyword:påföljd",
         "keyword:återfall",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01JuU11",
@@ -56,9 +67,11 @@
         "keyword:återfall",
         "keyword:livstidsstraff",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01JuU8",
@@ -70,7 +83,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU8.html",
       "found_by": ["keyword:återfall", "keyword:livstidsstraff", "all-keywords", "committee:JuU"],
-      "score": 4
+      "score": 4,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03218",
@@ -81,8 +95,14 @@
       "titel": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03218.html",
-      "found_by": ["keyword:samhällsfara", "keyword:livstidsstraff", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:samhällsfara",
+        "keyword:livstidsstraff",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD0395",
@@ -160,7 +180,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU11.html",
       "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03181",
@@ -249,7 +270,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
       "found_by": ["keyword:påföljd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03293",
@@ -445,6 +467,240 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB01JuU29",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU29",
+      "datum": "2024-04-25",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU29.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB366",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB11",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "1",
+      "datum": "2026-01-08",
+      "titel": "En översyn av straffprocessen",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB348d2",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "48",
+      "datum": "2024-07-05",
+      "titel": "Ett ändamålsenligt samhällsskydd Volym 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB348d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3113",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "113",
+      "datum": "2025-11-26",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01JuU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU17",
+      "datum": "2024-04-17",
+      "titel": "Kriminalvårdsfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD03252",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "252",
+      "datum": "2026-04-23",
+      "titel": "En begränsning av rätten till socialförsäkringsförmåner för den som avtjänar fängelsestraff i kontrollerat boende eller som avtjänar säkerhetsförvaring",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03252.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB1113",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "113",
+      "datum": "2026-09-03",
+      "titel": "Kvinnofrid - förstärkta åtgärder mot mäns våld mot kvinnor",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03274",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "274",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03274.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB382",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "82",
+      "datum": "2024-12-05",
+      "titel": "Ökad va-beredskap ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01SfU29",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU29",
+      "datum": "2026-06-04",
+      "titel": "En begränsning av rätten till socialförsäkringsförmåner för den som avtjänar fängelsestraff i kontrollerat boende eller som avtjänar säkerhetsförvaring",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU29.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB376",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "76",
+      "datum": "2024-11-18",
+      "titel": "Från överskottsmål till balansmål",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB376.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03246",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "246",
+      "datum": "2026-04-16",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03246.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

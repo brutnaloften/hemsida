@@ -17,7 +17,15 @@
     "score:tido-corpus-claude-v1-shard-3-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -35,7 +43,8 @@
         "all-keywords",
         "committee:SoU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.35
     },
     {
       "dok_id": "HC01SoU19",
@@ -78,8 +87,14 @@
       "titel": "Socialtjänstens ansvar för våldsutsatta m.m.",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU18.html",
-      "found_by": ["keyword:social insatsstyrka", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:social insatsstyrka",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01SoU17",
@@ -90,8 +105,14 @@
       "titel": "Barn och unga inom socialtjänsten",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
-      "found_by": ["keyword:social insatsstyrka", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:social insatsstyrka",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01SoU16",
@@ -102,8 +123,14 @@
       "titel": "Socialtjänstens arbete",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU16.html",
-      "found_by": ["keyword:social insatsstyrka", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:social insatsstyrka",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01JuU10",
@@ -146,7 +173,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB323.html",
       "found_by": ["keyword:insatsstyrka", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HC01SoU20",
@@ -158,7 +186,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU20.html",
       "found_by": ["keyword:socialtjänsten", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HCB343",
@@ -169,8 +198,13 @@
       "titel": "Staten och kommunsektorn - samverkan, självstyrelse, styrning",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB343.html",
-      "found_by": ["keyword:social insatsstyrka", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:social insatsstyrka",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01SoU17",
@@ -182,7 +216,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU17.html",
       "found_by": ["keyword:socialtjänsten", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HA01JuU1",
@@ -194,7 +229,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU1.html",
       "found_by": ["keyword:social insatsstyrka", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HEB418",
@@ -205,8 +241,9 @@
       "titel": "Slutredovisning av tilläggsuppdraget om stärkt samverkan mellan socialtjänst och barn- och ungdomspsykiatri i brottsförebyggande syfte",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB418.html",
-      "found_by": ["keyword:brottsförebyggande"],
-      "score": 1
+      "found_by": ["keyword:brottsförebyggande", "score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD03294",
@@ -259,6 +296,58 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HAB367",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "67",
+      "datum": "2022-12-12",
+      "titel": "Vägar till ett tryggare samhälle ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HCB330",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2024-05-08",
+      "titel": "En statlig ordning med brottsförebyggande åtgärder för barn och unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB330.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3107",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "107",
+      "datum": "2025-11-03",
+      "titel": "Sveriges nationella klimatmål - uppdaterat etappmål till 2030 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3107.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB419",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "19",
+      "datum": "2025-06-17",
+      "titel": "Slutredovisning av uppdraget om förstärkningsteam inom socialtjänsten",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB419.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

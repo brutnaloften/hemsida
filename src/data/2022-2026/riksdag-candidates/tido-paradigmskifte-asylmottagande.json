@@ -20,7 +20,16 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -37,9 +46,11 @@
         "keyword:tillfälligt skydd",
         "keyword:EU-miniminivå",
         "keyword:asylpolitik",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01SfU30",
@@ -82,8 +93,14 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU16.html",
-      "found_by": ["keyword:asylpolitik", "all-keywords", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:asylpolitik",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.75
     },
     {
       "dok_id": "HA01SfU15",
@@ -125,8 +142,13 @@
       "titel": "En ny mottagandelag",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03229.html",
-      "found_by": ["keyword:asylmottagande", "keyword:tillfälligt skydd"],
-      "score": 2
+      "found_by": [
+        "keyword:asylmottagande",
+        "keyword:tillfälligt skydd",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HD01SfU4",
@@ -167,8 +189,13 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU18.html",
-      "found_by": ["keyword:asylpolitik", "committee:SfU"],
-      "score": 2
+      "found_by": [
+        "keyword:asylpolitik",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HDB335",
@@ -180,7 +207,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB335.html",
       "found_by": ["keyword:asylmottagande", "keyword:tillfälligt skydd"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HCB368",
@@ -191,8 +219,13 @@
       "titel": "Mottagandelagen ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB368.html",
-      "found_by": ["keyword:asylmottagande", "keyword:tillfälligt skydd"],
-      "score": 2
+      "found_by": [
+        "keyword:asylmottagande",
+        "keyword:tillfälligt skydd",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.65
     },
     {
       "dok_id": "HB01SfU14",
@@ -203,8 +236,13 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU14.html",
-      "found_by": ["keyword:asylpolitik", "committee:SfU"],
-      "score": 2
+      "found_by": [
+        "keyword:asylpolitik",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01SfU4",
@@ -228,8 +266,13 @@
       "titel": "Budgetpropositionen för 2023",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA031.html",
-      "found_by": ["keyword:asylmottagande", "keyword:paradigmskifte"],
-      "score": 2
+      "found_by": [
+        "keyword:asylmottagande",
+        "keyword:paradigmskifte",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC0349",
@@ -399,6 +442,162 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB331",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "31",
+      "datum": "2025-04-09",
+      "titel": "Utmönstring av permanent uppehållstillstånd och vissa anpassningar till miniminivån enligt EU:s migrations- och asylpakt",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB331.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD031d10",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD03264",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "264",
+      "datum": "2026-04-30",
+      "titel": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03264.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01FiU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU1",
+      "datum": "2023-11-24",
+      "titel": "Statens budget 2024 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB430d2",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "30",
+      "datum": "2025-11-25",
+      "titel": "Migrations- och asylpakten, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB430d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB430",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "30",
+      "datum": "2025-11-25",
+      "titel": "Migrations- och asylpakten ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB430.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01AU6",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU6",
+      "datum": "2023-02-17",
+      "titel": "Integration",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB341",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "41",
+      "datum": "2024-06-14",
+      "titel": "Styrkraft för lyckad integration ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB341.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01FiU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU1",
+      "datum": "2022-12-12",
+      "titel": "Statens budget 2023 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

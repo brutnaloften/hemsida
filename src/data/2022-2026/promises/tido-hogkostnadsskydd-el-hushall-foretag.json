@@ -20,10 +20,9 @@
   "committee": "NU",
   "keywords": ["högkostnadsskydd", "elpris", "elprisstöd", "hushåll", "företag"],
   "verdict": {
-    "value": "in_progress",
-    "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Prop. 2022/23:48 (Sekretess vid Försäkringskassans handläggning av ärenden om elstöd samt slopad kontrolluppgiftsskyldighet); Prop. 2022/23:52 (Extra ändringsbudget för 2023 – Stöd till Ukraina samt åtgärder riktade till företag och hushåll till följd av höga energipriser); Prop. 2022/23:107 (Vissa förfarandefrågor för elstöd till företag). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,32 +33,12 @@
   },
   "evidence": [
     {
-      "kind": "prop",
-      "dok_id": "HA0348",
-      "designation": "Prop. 2022/23:48",
-      "title": "Sekretess vid Försäkringskassans handläggning av ärenden om elstöd samt slopad kontrolluppgiftsskyldighet",
-      "date": "2023-01-12",
-      "url": "https://data.riksdagen.se/dokument/HA0348.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "prop",
-      "dok_id": "HA0352",
-      "designation": "Prop. 2022/23:52",
-      "title": "Extra ändringsbudget för 2023 – Stöd till Ukraina samt åtgärder riktade till företag och hushåll till följd av höga energipriser",
-      "date": "2023-01-26",
-      "url": "https://data.riksdagen.se/dokument/HA0352.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "prop",
-      "dok_id": "HA03107",
-      "designation": "Prop. 2022/23:107",
-      "title": "Vissa förfarandefrågor för elstöd till företag",
-      "date": "2023-04-18",
-      "url": "https://data.riksdagen.se/dokument/HA03107.html",
+      "kind": "bet",
+      "dok_id": "HA01FiU1",
+      "designation": "Bet. 2022/23:FiU1",
+      "title": "Statens budget 2023 – Rambeslutet",
+      "date": "2022-12-12",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
       "relevance": "partial",
       "note": null
     }

@@ -18,7 +18,16 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -34,9 +43,11 @@
         "keyword:allmänna arvsfonden",
         "keyword:arvsfonden",
         "keyword:brottsofferarbete",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC03191",
@@ -51,9 +62,11 @@
         "keyword:allmänna arvsfonden",
         "keyword:arvsfonden",
         "keyword:brottsofferarbete",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC01SoU8",
@@ -77,8 +90,14 @@
       "titel": "Redovisning av fördelning av medel från Allmänna arvsfonden under budgetåret 2022",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU4.html",
-      "found_by": ["keyword:arvsfonden", "keyword:brottsofferarbete", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:arvsfonden",
+        "keyword:brottsofferarbete",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.75
     },
     {
       "dok_id": "HA03134",
@@ -89,8 +108,14 @@
       "titel": "Redovisning av fördelning av medel från Allmänna arvsfonden under budgetåret 2022",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA03134.html",
-      "found_by": ["keyword:allmänna arvsfonden", "keyword:brottsofferarbete", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:allmänna arvsfonden",
+        "keyword:brottsofferarbete",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HEB342",
@@ -119,7 +144,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB334.html",
       "found_by": ["keyword:brottsofferarbete", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD01KU1",
@@ -170,7 +196,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU6.html",
       "found_by": ["keyword:arvsfonden", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HB03153",
@@ -181,8 +208,13 @@
       "titel": "Riksrevisionens rapport om Allmänna arvsfonden",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03153.html",
-      "found_by": ["keyword:allmänna arvsfonden", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:allmänna arvsfonden",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB03162",
@@ -210,8 +242,13 @@
       "titel": "Statens stöd till trossamfund och civilsamhället – enhetliga och rättssäkra villkor",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03119.html",
-      "found_by": ["keyword:allmänna arvsfonden", "keyword:demokratiska värderingar"],
-      "score": 2
+      "found_by": [
+        "keyword:allmänna arvsfonden",
+        "keyword:demokratiska värderingar",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01SoU2",
@@ -223,7 +260,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU2.html",
       "found_by": ["keyword:arvsfonden", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HEB112",
@@ -276,6 +314,32 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01KrU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KrU5",
+      "datum": "2023-03-01",
+      "titel": "Civila samhället, inklusive trossamfund",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HA01KrU5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031d3",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 1 Rikets styrelse",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

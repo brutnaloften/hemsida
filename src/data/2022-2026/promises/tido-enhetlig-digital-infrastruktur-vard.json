@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2026:6 (En nationell digital infrastruktur i hälso- och sjukvården ). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i maj 2024 gemensamma lösningar för att dela hälsodata mellan vårdgivare, men la inte fram själva den tekniska infrastrukturen. I januari 2026 presenterade den nationella samordnaren sin slutrapport om en nationell digital infrastruktur som ska ersätta och komplettera regionernas. Dokumenten visar underlag och förslag, inget beslut eller lagförslag.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,6 +33,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB333",
+      "designation": "SOU 2024:33",
+      "title": "Delad hälsodata - dubbel nytta ",
+      "date": "2024-05-07",
+      "url": "https://data.riksdagen.se/dokument/HCB333.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HEB36",

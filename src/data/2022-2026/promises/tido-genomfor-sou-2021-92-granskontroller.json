@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2022/23:109 (Utökade polisiära befogenheter i gränsnära områden). Dokumentet behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2022/23:JuU26 (Utökade polisiära befogenheter i gränsnära områden); Bet. 2025/26:SfU32 (Stärkt återvändandeverksamhet), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen lade i april 2023 fram ett förslag om utökade polisiära befogenheter i gränsnära områden, och riksdagen beslutade om det i juni 2023. I september 2023 och april 2026 kom förslag om kroppsvisitation och skärpta regler för inre utlänningskontroll. Dessa täcker bara en del av löftet; dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -54,12 +54,22 @@
       "note": null
     },
     {
-      "kind": "bet",
-      "dok_id": "HD01SfU32",
-      "designation": "Bet. 2025/26:SfU32",
+      "kind": "prop",
+      "dok_id": "HB0312",
+      "designation": "Prop. 2023/24:12",
+      "title": "Effektivare verktyg vid inre utlänningskontroll",
+      "date": "2023-09-19",
+      "url": "https://data.riksdagen.se/dokument/HB0312.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03263",
+      "designation": "Prop. 2025/26:263",
       "title": "Stärkt återvändandeverksamhet",
-      "date": "2026-06-11",
-      "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03263.html",
       "relevance": "partial",
       "note": null
     }

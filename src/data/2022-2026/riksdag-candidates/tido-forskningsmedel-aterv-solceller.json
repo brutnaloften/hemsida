@@ -16,7 +16,14 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -34,7 +41,8 @@
         "keyword:solenergi",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01NU3",
@@ -71,8 +79,14 @@
       "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
-      "found_by": ["keyword:energiforskning", "all-keywords", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:energiforskning",
+        "all-keywords",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01NU3",
@@ -84,7 +98,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
       "found_by": ["keyword:energiforskning", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03118",
@@ -96,7 +111,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03118.html",
       "found_by": ["keyword:solceller", "keyword:solenergi"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD0316",
@@ -121,7 +137,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
       "found_by": ["keyword:solenergi", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HC03109",
@@ -133,7 +150,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03109.html",
       "found_by": ["keyword:solceller", "keyword:solenergi"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC0372",
@@ -175,7 +193,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU3.html",
       "found_by": ["keyword:energiforskning", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HB0349",
@@ -217,7 +236,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HD01MJU19.html",
       "found_by": ["keyword:återvinning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HCB367",

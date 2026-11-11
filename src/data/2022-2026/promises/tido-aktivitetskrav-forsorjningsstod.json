@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:207 (Aktivitetskrav för mottagare av försörjningsstöd). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen presenterade i november 2024 en promemoria om aktivitetskrav i försörjningsstödet, anpassat efter arbetsförmåga och med arbetsplatsförlagda aktiviteter. I mars 2026 lade regeringen fram en proposition, och riksdagen beslutade i maj 2026 om ett aktivitetskrav. Samhällsnyttiga insatser och formuleringen \"fullt bidrag\" nämns inte uttryckligen. En promemoria från september 2026 om barntillsyn täcker bara en följdfråga.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,6 +40,16 @@
   },
   "evidence": [
     {
+      "kind": "ds",
+      "dok_id": "HCB429",
+      "designation": "Ds 2024:29",
+      "title": "Aktivitetskrav inom försörjningsstödet - för arbete, egenförsörjning och nationell likformighet ",
+      "date": "2024-11-25",
+      "url": "https://data.riksdagen.se/dokument/HCB429.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "prop",
       "dok_id": "HD03207",
       "designation": "Prop. 2025/26:207",
@@ -47,6 +57,26 @@
       "date": "2026-03-17",
       "url": "https://data.riksdagen.se/dokument/HD03207.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU29",
+      "designation": "Bet. 2025/26:SoU29",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU29.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HEB419",
+      "designation": "Ds 2026:19",
+      "title": "Utökad tillsyn över barn vars föräldrar omfattas av aktivitetskrav enligt socialtjänstlagen ",
+      "date": "2026-09-07",
+      "url": "https://data.riksdagen.se/dokument/HEB419.html",
+      "relevance": "partial",
       "note": null
     }
   ]

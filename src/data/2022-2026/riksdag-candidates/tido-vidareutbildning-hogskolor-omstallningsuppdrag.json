@@ -21,7 +21,17 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -33,8 +43,14 @@
       "titel": "Högskolan",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU14.html",
-      "found_by": ["keyword:högskolor", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:högskolor",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HA01UbU10",
@@ -45,8 +61,14 @@
       "titel": "Högskolan",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU10.html",
-      "found_by": ["keyword:livslångt lärande", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:livslångt lärande",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HDB363",
@@ -75,7 +97,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU15.html",
       "found_by": ["keyword:lärosäten", "keyword:högskolor"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HC01UbU1",
@@ -156,7 +179,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB357.html",
       "found_by": ["keyword:livslångt lärande"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HEB181",
@@ -194,7 +218,8 @@
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HD01SkU23.html",
       "found_by": ["keyword:omställning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HD03197",
@@ -390,6 +415,175 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0359",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "59",
+      "datum": "2023-12-21",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0359.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01UbU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU1",
+      "datum": "2025-12-08",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB01MJU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU15",
+      "datum": "2024-05-06",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC031d17",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HAB353d2",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "53",
+      "datum": "2022-11-08",
+      "titel": "Statens ansvar för skolan - ett besluts- och kunskapsunderlag - Volym 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB353d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA01UbU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UbU1",
+      "datum": "2022-12-14",
+      "titel": "Utgiftsområde 16 Utbildning och  universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01AU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU9",
+      "datum": "2026-02-20",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB327",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "27",
+      "datum": "2025-03-04",
+      "titel": "En socionomutbildning i tiden ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB327.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01UbU12",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU12",
+      "datum": "2026-03-17",
+      "titel": "Högskolan",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

@@ -19,7 +19,16 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -36,9 +45,11 @@
         "keyword:läromedel",
         "keyword:en lärobok per elev",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01UbU6",
@@ -56,7 +67,8 @@
         "all-keywords",
         "committee:UbU"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01UbU8",
@@ -99,7 +111,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU10.html",
       "found_by": ["keyword:läromedel", "all-keywords", "committee:UbU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HB0321",
@@ -110,8 +123,14 @@
       "titel": "Stärkt tillgång till läromedel",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0321.html",
-      "found_by": ["keyword:läroböcker", "keyword:läromedel", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:läroböcker",
+        "keyword:läromedel",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA01UbU6",
@@ -166,7 +185,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU11.html",
       "found_by": ["keyword:läroböcker", "committee:UbU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC01UbU13",
@@ -203,8 +223,13 @@
       "titel": "Budgetpropositionen för 2025 - Utgiftsområde 16 Utbildning och universitetsforskning",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HC031d17.html",
-      "found_by": ["keyword:en lärobok per elev", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:en lärobok per elev",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01UbU1",
@@ -215,8 +240,9 @@
       "titel": "Utgiftsområde 16 Utbildning och  universitetsforskning",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
-      "found_by": ["all-keywords", "committee:UbU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:UbU", "score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HD03193",
@@ -228,7 +254,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03193.html",
       "found_by": ["keyword:läroböcker"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD031d18",
@@ -305,6 +332,84 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0399.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01UbU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU1",
+      "datum": "2025-12-08",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01FiU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU1",
+      "datum": "2022-12-12",
+      "titel": "Statens budget 2023 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
       "score": 1,
       "relevance": 0.6
     }

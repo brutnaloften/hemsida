@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2026:38 (Behovsstyrd vård). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i oktober 2025 utredningen Behovsstyrd vård i uppdrag att föreslå nationella principer för ersättning och avgifter, byggda på behovsprincipen. Utredningen redovisade i juni 2026 främst bedömningar, bland annat en gemensam funktion för stat och regioner. Den tar upp digital vård utanför regionen samt avgifter i primärvård och för hjälpmedel; dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB194",
+      "designation": "Dir. 2025:94",
+      "title": "Tilläggsdirektiv till utredningen Behovsstyrd vård (S 2024:05)",
+      "date": "2025-10-23",
+      "url": "https://data.riksdagen.se/dokument/HDB194.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HEB338",

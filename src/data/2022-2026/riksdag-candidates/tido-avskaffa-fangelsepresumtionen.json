@@ -21,7 +21,14 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -34,7 +41,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
       "found_by": ["keyword:fängelse", "keyword:påföljdsval", "all-keywords", "committee:JuU"],
-      "score": 4
+      "score": 4,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01JuU48",
@@ -45,8 +53,14 @@
       "titel": "Ett nytt straffrättsligt påföljdssystem",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
-      "found_by": ["keyword:fängelse", "all-keywords", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:fängelse",
+        "all-keywords",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03297",
@@ -93,8 +107,14 @@
       "titel": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03218.html",
-      "found_by": ["keyword:påföljdsval", "keyword:straffvärde", "keyword:brottsbalken"],
-      "score": 3
+      "found_by": [
+        "keyword:påföljdsval",
+        "keyword:straffvärde",
+        "keyword:brottsbalken",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03138",
@@ -157,8 +177,13 @@
       "titel": "Skärpta regler för unga lagöverträdare",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03246.html",
-      "found_by": ["keyword:påföljdsval", "keyword:straffvärde"],
-      "score": 2
+      "found_by": [
+        "keyword:påföljdsval",
+        "keyword:straffvärde",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03181",
@@ -183,7 +208,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB313.html",
       "found_by": ["keyword:fängelsepresumtionen", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HCB31",
@@ -392,6 +418,188 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB366",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB11",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "1",
+      "datum": "2026-01-08",
+      "titel": "En översyn av straffprocessen",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01JuU11",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU11",
+      "datum": "2026-03-26",
+      "titel": "Straffrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3113",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "113",
+      "datum": "2025-11-26",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB01JuU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU17",
+      "datum": "2024-04-17",
+      "titel": "Kriminalvårdsfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01JuU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU11",
+      "datum": "2023-03-09",
+      "titel": "Straffrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB1115",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "115",
+      "datum": "2023-07-20",
+      "titel": "En översyn av straffskalorna samt ett reformerat och mer rättvist påföljdssystem",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB1115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB334",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "34",
+      "datum": "2026-06-12",
+      "titel": "Nya nätbrott och andra åtgärder för genomförandet av direktivet om bekämpning av våld mot kvinnor och våld i nära relationer",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB334.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB414",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "14",
+      "datum": "2026-07-02",
+      "titel": "En skärpt syn på involvering av underåriga i brottslighet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB414.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

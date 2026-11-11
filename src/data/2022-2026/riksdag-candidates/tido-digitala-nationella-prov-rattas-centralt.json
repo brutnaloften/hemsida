@@ -22,7 +22,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -77,9 +86,11 @@
         "keyword:digitala nationella prov",
         "keyword:central rättning",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01UbU15",
@@ -94,9 +105,11 @@
         "keyword:central rättning",
         "keyword:diagnostiska prov",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01UbU26",
@@ -125,8 +138,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD0375.html",
-      "found_by": ["keyword:digitala nationella prov", "keyword:central rättning", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:digitala nationella prov",
+        "keyword:central rättning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC0375",
@@ -160,7 +179,8 @@
         "keyword:tidiga kunskapskontroller",
         "committee:UbU"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.45
     },
     {
       "dok_id": "HA0360",
@@ -240,8 +260,13 @@
       "titel": "Statens ansvar för skolan - ett besluts- och kunskapsunderlag - Volym 2",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HAB353d2.html",
-      "found_by": ["keyword:kunskapsuppföljning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kunskapsuppföljning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01UbU24",
@@ -252,8 +277,12 @@
       "titel": "Förbättrat stöd i skolan",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU24.html",
-      "found_by": ["keyword:tidiga kunskapskontroller"],
-      "score": 1
+      "found_by": [
+        "keyword:tidiga kunskapskontroller",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 1,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD03197",
@@ -462,6 +491,136 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.97
+    },
+    {
+      "dok_id": "HAB353",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "53",
+      "datum": "2022-11-08",
+      "titel": "Statens ansvar för skolan - ett besluts- och kunskapsunderlag - Volym 1",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB353.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB350",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "50",
+      "datum": "2026-08-14",
+      "titel": "En ny speciallärarutbildning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB350.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01UbU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU1",
+      "datum": "2025-12-08",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC031d17",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01UbU10",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU10",
+      "datum": "2025-05-06",
+      "titel": "Grundläggande om utbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01UbU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UbU1",
+      "datum": "2022-12-14",
+      "titel": "Utgiftsområde 16 Utbildning och  universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.93
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD03195",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "195",
+      "datum": "2026-03-17",
+      "titel": "Förbättrat stöd i skolan",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03195.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB1109",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "109",
+      "datum": "2023-07-06",
+      "titel": "Tilläggsdirektiv till Utredningen om vinst i skolan (U 2022:08)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1109.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC031d26",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

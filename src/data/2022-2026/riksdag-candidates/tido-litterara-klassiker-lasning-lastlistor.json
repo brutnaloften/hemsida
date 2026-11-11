@@ -21,7 +21,14 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -34,7 +41,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03195.html",
       "found_by": ["keyword:läsning", "keyword:läsförståelse", "keyword:kursplaner"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD03194",
@@ -63,8 +71,14 @@
       "titel": "Budgetpropositionen för 2025 - Utgiftsområde 16 Utbildning och universitetsforskning",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HC031d17.html",
-      "found_by": ["keyword:läslistor", "keyword:läsförståelse", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:läslistor",
+        "keyword:läsförståelse",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB01UbU10",
@@ -76,7 +90,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU10.html",
       "found_by": ["keyword:läslistor", "all-keywords", "committee:UbU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01UbU23",
@@ -88,7 +103,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU23.html",
       "found_by": ["keyword:kursplaner", "committee:UbU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HD03196",
@@ -100,7 +116,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03196.html",
       "found_by": ["keyword:läsning", "keyword:kursplaner"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD03166",
@@ -112,7 +129,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03166.html",
       "found_by": ["keyword:läsförståelse", "keyword:kursplaner"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01KrU7",
@@ -197,7 +215,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03164.html",
       "found_by": ["keyword:läsning", "keyword:läsförståelse"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HB01KrU8",
@@ -347,6 +366,32 @@
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HB01KrU1.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB031d18",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB358",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "58",
+      "datum": "2025-06-02",
+      "titel": "En stärkt hästnäring",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB358.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
       "score": 1,
       "relevance": 0.6
     }

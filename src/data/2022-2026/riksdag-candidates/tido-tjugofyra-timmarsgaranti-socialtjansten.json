@@ -18,7 +18,12 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -37,7 +42,8 @@
         "all-keywords",
         "committee:SoU"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD0375",
@@ -48,8 +54,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD0375.html",
-      "found_by": ["keyword:24-timmarsgaranti", "keyword:barn gripits", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:24-timmarsgaranti",
+        "keyword:barn gripits",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC0375",
@@ -115,7 +127,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB351.html",
       "found_by": ["keyword:föräldrasamtal", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03295",
@@ -144,7 +157,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU23.html",
       "found_by": ["keyword:socialtjänstlagen", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HC01SoU20",
@@ -156,7 +170,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU20.html",
       "found_by": ["keyword:socialtjänsten", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HC01SoU19",
@@ -194,7 +209,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB387.html",
       "found_by": ["keyword:föräldrasamtal", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HB01SoU18",
@@ -236,7 +252,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU6.html",
       "found_by": ["keyword:socialtjänstlagen", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HCB430",
@@ -289,6 +306,45 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01SoU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU17",
+      "datum": "2024-06-04",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HA01SoU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU17",
+      "datum": "2023-06-08",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.93
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

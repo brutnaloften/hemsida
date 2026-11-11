@@ -18,7 +18,17 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -36,9 +46,11 @@
         "keyword:rehabilitering",
         "keyword:rehabiliteringskedjan",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01SfU13",
@@ -96,9 +108,11 @@
         "keyword:rehabilitering",
         "keyword:rehabiliteringskedjan",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01SfU1",
@@ -146,8 +160,14 @@
       "titel": "Riksrevisionens rapport om Försäkringskassans användning av övervägande skäl vid 180 dagars sjukskrivning",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0371.html",
-      "found_by": ["keyword:sjukskrivning", "keyword:rehabiliteringskedjan", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:sjukskrivning",
+        "keyword:rehabiliteringskedjan",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01SfU1",
@@ -158,8 +178,14 @@
       "titel": "Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU1.html",
-      "found_by": ["keyword:rehabilitering", "all-keywords", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:rehabilitering",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HC031d11",
@@ -173,9 +199,11 @@
       "found_by": [
         "keyword:avstämningstillfällen",
         "keyword:rehabiliteringskedjan",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01SfU1",
@@ -186,8 +214,13 @@
       "titel": "Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU1.html",
-      "found_by": ["keyword:rehabilitering", "committee:SfU"],
-      "score": 2
+      "found_by": [
+        "keyword:rehabilitering",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD0353",
@@ -232,8 +265,13 @@
       "titel": "Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU1.html",
-      "found_by": ["keyword:rehabilitering", "committee:SfU"],
-      "score": 2
+      "found_by": [
+        "keyword:rehabilitering",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HBB348",
@@ -244,8 +282,13 @@
       "titel": "Rätt förutsättningar för sjukskrivning",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB348.html",
-      "found_by": ["keyword:sjukskrivning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:sjukskrivning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03301",
@@ -402,6 +445,149 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HA03101",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "101",
+      "datum": "2023-04-17",
+      "titel": "Årsredovisning för staten 2022",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB433",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "33",
+      "datum": "2023-12-15",
+      "titel": "Karenstak och högriskskydd - en översyn av karensavdraget och förslag på utökade undantag ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB433.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB399",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "99",
+      "datum": "2023-12-19",
+      "titel": "Nya tullrättsliga sanktioner och skärpta åtgärder mot utförsel av stöldgods ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01SoU22",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU22",
+      "datum": "2025-04-02",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA031d11",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HB031d11",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB365",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "65",
+      "datum": "2023-10-27",
+      "titel": "Bättre information om hyresbostäder ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB365.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01AU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU9",
+      "datum": "2026-02-20",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

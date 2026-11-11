@@ -20,7 +20,14 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -91,8 +98,14 @@
       "titel": "Konstarter, språk och bibliotek",
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HD01KrU7.html",
-      "found_by": ["keyword:kulturstöd", "all-keywords", "committee:KrU"],
-      "score": 3
+      "found_by": [
+        "keyword:kulturstöd",
+        "all-keywords",
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01KrU10",
@@ -116,8 +129,14 @@
       "titel": "Kultursamhället - utvecklad samverkan mellan stat, region och kommun",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB358.html",
-      "found_by": ["keyword:armlängds avstånd", "keyword:kulturstöd", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:armlängds avstånd",
+        "keyword:kulturstöd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.92
     },
     {
       "dok_id": "HEB331",
@@ -128,8 +147,13 @@
       "titel": "Ett investeringsprogram för kultur",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB331.html",
-      "found_by": ["keyword:kulturstöd", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kulturstöd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HCB342",
@@ -158,7 +182,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU19.html",
       "found_by": ["keyword:kulturpolitik", "keyword:kulturstöd"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.12
     },
     {
       "dok_id": "HB01KrU1",
@@ -354,6 +379,84 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HB031d18",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB324",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "24",
+      "datum": "2025-03-04",
+      "titel": "Publiken i fokus",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB324.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB154",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "54",
+      "datum": "2026-06-18",
+      "titel": "En finansieringsstruktur för att stärka filmbranschen",
+      "organ": "Ku-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB154.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3100",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "100",
+      "datum": "2025-10-01",
+      "titel": "Åtgärder mot illegal ip-tv",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d19",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d19.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HDB392",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "92",
+      "datum": "2025-09-02",
+      "titel": "En kulturkanon för Sverige",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB392.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

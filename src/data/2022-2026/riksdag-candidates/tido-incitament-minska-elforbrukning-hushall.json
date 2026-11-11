@@ -18,7 +18,13 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -31,7 +37,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU48.html",
       "found_by": ["keyword:hushåll", "keyword:elpris", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03240",
@@ -82,7 +89,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03159.html",
       "found_by": ["keyword:energibesparing", "keyword:incitament"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD03148",
@@ -159,7 +167,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
       "found_by": ["keyword:elförbrukning", "keyword:incitament"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HC01NU19",
@@ -171,7 +180,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
       "found_by": ["keyword:energibesparing", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HC01NU11",
@@ -196,7 +206,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
       "found_by": ["keyword:energibesparing", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HB03105",
@@ -236,6 +247,45 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
       "score": 1,
       "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01NU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU17",
+      "datum": "2023-05-25",
+      "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d23",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d23.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01FiU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU1",
+      "datum": "2022-12-12",
+      "titel": "Statens budget 2023 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

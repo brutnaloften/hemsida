@@ -27,8 +27,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Prop. 2022/23:53 (Skärpta straff för brott i kriminella nätverk); SOU 2024:48 (Ett ändamålsenligt samhällsskydd Volym 1); Prop. 2025/26:181 (Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott); Prop. 2025/26:297 (Ett nytt straffrättsligt påföljdssystem). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i juli 2024 hårdare regler vid återfall, bland annat att straffskalan kan överskridas med sex år i stället för fyra. Regeringen lade i mars 2026 fram ett förslag om att återfall ska väga tyngre vid straffmätningen. Det täcker en del av löftet. Dokumenten visar förslag, inget beslut, och en reform av 26 kap. 2 § brottsbalken nämns inte.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,12 +39,12 @@
   },
   "evidence": [
     {
-      "kind": "prop",
-      "dok_id": "HA0353",
-      "designation": "Prop. 2022/23:53",
-      "title": "Skärpta straff för brott i kriminella nätverk",
-      "date": "2023-01-31",
-      "url": "https://data.riksdagen.se/dokument/HA0353.html",
+      "kind": "sou",
+      "dok_id": "HBB31",
+      "designation": "SOU 2023:1",
+      "title": "Skärpta straff för flerfaldig brottslighet",
+      "date": "2023-01-25",
+      "url": "https://data.riksdagen.se/dokument/HBB31.html",
       "relevance": "partial",
       "note": null
     },
@@ -55,6 +55,16 @@
       "title": "Ett ändamålsenligt samhällsskydd Volym 1",
       "date": "2024-07-05",
       "url": "https://data.riksdagen.se/dokument/HCB348.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB348d2",
+      "designation": "SOU 2024:48",
+      "title": "Ett ändamålsenligt samhällsskydd Volym 2",
+      "date": "2024-07-05",
+      "url": "https://data.riksdagen.se/dokument/HCB348d2.html",
       "relevance": "partial",
       "note": null
     },
@@ -70,11 +80,11 @@
     },
     {
       "kind": "prop",
-      "dok_id": "HD03297",
-      "designation": "Prop. 2025/26:297",
-      "title": "Ett nytt straffrättsligt påföljdssystem",
-      "date": "2026-06-30",
-      "url": "https://data.riksdagen.se/dokument/HD03297.html",
+      "dok_id": "HD03218",
+      "designation": "Prop. 2025/26:218",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03218.html",
       "relevance": "partial",
       "note": null
     }

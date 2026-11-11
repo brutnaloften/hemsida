@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:78 (En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i mars 2025 en utredning i uppdrag att föreslå straffansvar för deltagande i och samröre med kriminella sammanslutningar. I februari 2026 lade utredningen fram förslag på nya brott i brottsbalken, kopplade till grundlagsändringen om föreningsfrihet. Dokumenten visar förslag, inget beslut. Utvärdering efter tre år nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,13 +40,23 @@
   },
   "evidence": [
     {
-      "kind": "prop",
-      "dok_id": "HD0378",
-      "designation": "Prop. 2025/26:78",
-      "title": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
-      "date": "2025-12-05",
-      "url": "https://data.riksdagen.se/dokument/HD0378.html",
-      "relevance": "partial",
+      "kind": "dir",
+      "dok_id": "HDB128",
+      "designation": "Dir. 2025:28",
+      "title": "Kriminalisering av deltagande i kriminella sammanslutningar",
+      "date": "2025-03-13",
+      "url": "https://data.riksdagen.se/dokument/HDB128.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB313",
+      "designation": "SOU 2026:13",
+      "title": "Straffansvar för deltagande i och samröre med kriminella sammanslutningar",
+      "date": "2026-02-17",
+      "url": "https://data.riksdagen.se/dokument/HEB313.html",
+      "relevance": "full",
       "note": null
     }
   ]

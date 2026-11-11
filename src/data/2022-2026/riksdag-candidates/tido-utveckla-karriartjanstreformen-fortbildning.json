@@ -20,7 +20,15 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -37,9 +45,11 @@
         "keyword:förstelärare",
         "keyword:fortbildning",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.6
     },
     {
       "dok_id": "HEB351",
@@ -54,9 +64,11 @@
         "keyword:karriärtjänster",
         "keyword:förstelärare",
         "keyword:lektorer",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB01UbU11",
@@ -106,7 +118,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB357.html",
       "found_by": ["keyword:lektorer", "keyword:lärarrollen"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD03166",
@@ -118,7 +131,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03166.html",
       "found_by": ["keyword:förstelärare", "keyword:fortbildning"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01UbU11",
@@ -143,7 +157,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB39.html",
       "found_by": ["keyword:lärarrollen", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB031d17",
@@ -167,8 +182,13 @@
       "titel": "Statens ansvar för skolan - ett besluts- och kunskapsunderlag - Volym 1",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HAB353.html",
-      "found_by": ["keyword:förstelärare", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:förstelärare",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01UbU25",
@@ -180,7 +200,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU25.html",
       "found_by": ["keyword:lärarrollen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01UbU23",
@@ -192,7 +213,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU23.html",
       "found_by": ["keyword:lärarrollen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.45
     },
     {
       "dok_id": "HD03249",
@@ -204,7 +226,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03249.html",
       "found_by": ["keyword:fortbildning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03262",
@@ -216,7 +239,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "found_by": ["keyword:fortbildning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03247",
@@ -228,7 +252,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03247.html",
       "found_by": ["keyword:fortbildning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD031d18",
@@ -307,6 +332,97 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-7-of-20"],
       "score": 1,
       "relevance": 0.75
+    },
+    {
+      "dok_id": "HD01UbU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU16",
+      "datum": "2026-02-06",
+      "titel": "Riksrevisionens rapport om systemet för lärarlegitimation",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01UbU4",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU4",
+      "datum": "2024-11-14",
+      "titel": "Ändring av ikraftträdande av bestämmelser i skollagen om det nationella professionsprogrammet",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC031d17",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HAB353d2",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "53",
+      "datum": "2022-11-08",
+      "titel": "Statens ansvar för skolan - ett besluts- och kunskapsunderlag - Volym 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB353d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA01UbU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UbU1",
+      "datum": "2022-12-14",
+      "titel": "Utgiftsområde 16 Utbildning och  universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

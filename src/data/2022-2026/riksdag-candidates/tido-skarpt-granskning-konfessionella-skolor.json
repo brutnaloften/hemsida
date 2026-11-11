@@ -19,7 +19,14 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -36,9 +43,11 @@
         "keyword:Skolinspektionen",
         "keyword:oanmälda besök",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01UbU10",
@@ -53,9 +62,11 @@
         "keyword:konfessionella skolor",
         "keyword:oanmälda besök",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01UbU7",
@@ -66,8 +77,14 @@
       "titel": "Övergripande skolfrågor",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU7.html",
-      "found_by": ["keyword:konfessionella skolor", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:konfessionella skolor",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.7
     },
     {
       "dok_id": "HC01UbU9",
@@ -78,8 +95,14 @@
       "titel": "Övergripande skolfrågor",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU9.html",
-      "found_by": ["keyword:konfessionella skolor", "keyword:Skolinspektionen", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:konfessionella skolor",
+        "keyword:Skolinspektionen",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01UbU9",
@@ -168,8 +191,9 @@
       "titel": "Grundläggande om utbildning",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU10.html",
-      "found_by": ["all-keywords", "committee:UbU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:UbU", "score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HDB337",
@@ -181,7 +205,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB337.html",
       "found_by": ["keyword:oanmälda besök", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HC0375",
@@ -210,7 +235,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
       "found_by": ["keyword:konfessionella skolor", "committee:UbU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HEB351",
@@ -222,7 +248,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB351.html",
       "found_by": ["all-keywords"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01UbU30",
@@ -234,7 +261,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU30.html",
       "found_by": ["keyword:Skolinspektionen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01UbU1",
@@ -339,6 +367,58 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB153",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "53",
+      "datum": "2026-06-16",
+      "titel": "Religiös radikalisering med fokus på politisk islam - konsekvenser för demokratin, integration och utanförskap",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB153.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3115",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "115",
+      "datum": "2025-12-10",
+      "titel": "Kompletterande bestämmelser till EU:s cyberresiliensförordning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB131",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "31",
+      "datum": "2025-03-20",
+      "titel": "Ökade insatser för att motverka hedersrelaterat våld och förtryck i förskolan, skolan och fritidshemmet",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB131.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01KU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU1",
+      "datum": "2024-11-29",
+      "titel": "Utgiftsområde 1 Rikets styrelse",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.75
     }
   ]
 }

@@ -18,7 +18,14 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -31,7 +38,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU11.html",
       "found_by": ["keyword:gängkriminella", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HDB354",
@@ -43,7 +51,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB354.html",
       "found_by": ["keyword:utländska medborgare", "keyword:utvisning"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HB01JuU29",
@@ -55,7 +64,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU29.html",
       "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HA01JuU16",
@@ -80,7 +90,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU1.html",
       "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HEB194",
@@ -157,7 +168,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03274.html",
       "found_by": ["keyword:gängkriminella"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03290",
@@ -182,7 +194,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU45.html",
       "found_by": ["keyword:utvisning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01JuU44",
@@ -207,7 +220,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU45.html",
       "found_by": ["keyword:kartläggning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HDB3114",
@@ -221,6 +235,45 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
       "score": 1,
       "relevance": 0.8
+    },
+    {
+      "dok_id": "HEB313",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "13",
+      "datum": "2026-02-17",
+      "titel": "Straffansvar för deltagande i och samröre med kriminella sammanslutningar",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB313.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB321",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "21",
+      "datum": "2026-03-18",
+      "titel": "Återkallelse av svenskt medborgarskap",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB321.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB311",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "11",
+      "datum": "2025-01-28",
+      "titel": "Straffbarhetsåldern",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB311.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

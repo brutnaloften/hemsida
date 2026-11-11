@@ -32,8 +32,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Ds 2024:30 (En lag om insatser inom socialtjänsten till vårdnadshavare, barn och unga när samtycke saknas ); Prop. 2025/26:222 (Ersättningsregler med brottsoffret i fokus); Prop. 2025/26:295 (Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "I januari 2025 la en departementspromemoria fram förslag om tidiga insatser och bindande krav på vårdnadshavare när samtycke saknas. I mars 2025 föreslog en utredning högre tak för föräldrars skadeståndsansvar, och i mars 2026 lade regeringen fram en proposition om det. Ändrade ekonomiska konsekvenser för föräldrar i form av indragna bidrag föreslås inte.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -54,22 +54,22 @@
       "note": null
     },
     {
+      "kind": "sou",
+      "dok_id": "HDB323",
+      "designation": "SOU 2025:23",
+      "title": "Ersättningsregler med brottsoffret i fokus",
+      "date": "2025-03-19",
+      "url": "https://data.riksdagen.se/dokument/HDB323.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "prop",
       "dok_id": "HD03222",
       "designation": "Prop. 2025/26:222",
       "title": "Ersättningsregler med brottsoffret i fokus",
       "date": "2026-03-31",
       "url": "https://data.riksdagen.se/dokument/HD03222.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "prop",
-      "dok_id": "HD03295",
-      "designation": "Prop. 2025/26:295",
-      "title": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
-      "date": "2026-06-30",
-      "url": "https://data.riksdagen.se/dokument/HD03295.html",
       "relevance": "partial",
       "note": null
     }

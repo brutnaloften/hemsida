@@ -32,8 +32,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2025:75 (Folkbokföringsverksamhet, biometri och brottsbekämpning). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i november 2024 att fingeravtryck och foton samlas in och sparas i större utsträckning, att åldersgränsen sänks från 14 till 6 år och att Migrationsverkets register används mer. Regeringen lade i april 2026 fram en proposition om ökad användning av fingeravtryck och foton. DNA, central databas och tilläggsdirektivet nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -45,11 +45,21 @@
   "evidence": [
     {
       "kind": "sou",
-      "dok_id": "HDB375",
-      "designation": "SOU 2025:75",
-      "title": "Folkbokföringsverksamhet, biometri och brottsbekämpning",
-      "date": "2025-06-17",
-      "url": "https://data.riksdagen.se/dokument/HDB375.html",
+      "dok_id": "HCB380",
+      "designation": "SOU 2024:80",
+      "title": "Vissa åtgärder för stärkt återvändandeverksamhet och utlänningskontroll ",
+      "date": "2024-11-26",
+      "url": "https://data.riksdagen.se/dokument/HCB380.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03263",
+      "designation": "Prop. 2025/26:263",
+      "title": "Stärkt återvändandeverksamhet",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03263.html",
       "relevance": "partial",
       "note": null
     }

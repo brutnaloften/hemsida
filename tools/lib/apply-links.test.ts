@@ -95,6 +95,79 @@ describe('applyLinks', () => {
     ).toBeNull();
   });
 
+  it('recomputes an AI-set verdict from newer judgements and keeps its history', () => {
+    const first = applyLinks(base, [pair('P1')], docs, '2026-11-10')!;
+    const earlier = { ...base, ...first } as typeof base;
+    const second = applyLinks(
+      earlier,
+      [pair('P1'), pair('B1', { stage: 'definitive' })],
+      docs,
+      '2026-11-12',
+    )!;
+    expect(second.evidence.map((e) => e.kind)).toEqual(['prop', 'bet']);
+    expect(second.verdict.history).toHaveLength(1);
+    expect(second.verdict.date).toBe('2026-11-12');
+    const gone = applyLinks(earlier, [pair('B1', { label: 'partial' })], docs, '2026-11-12')!;
+    expect(gone.verdict.value).toBe('unassessed');
+    expect(gone.verdict.assessedBy).toBeUndefined();
+    expect(gone.evidence.map((e) => e.kind)).toEqual(['bet']);
+    // The earlier AI verdict is kept in history when the value changes.
+    expect(gone.verdict.history).toHaveLength(2);
+    expect(gone.verdict.history.at(-1)).toMatchObject({ value: 'in_progress', assessedBy: 'ai' });
+  });
+
+  it('falls back to unassessed when an AI verdict has no proposed pairs left', () => {
+    const first = applyLinks(base, [pair('P1')], docs, '2026-11-10')!;
+    const earlier = { ...base, ...first } as typeof base;
+    const gone = applyLinks(earlier, [], docs, '2026-11-12')!;
+    expect(gone.verdict.value).toBe('unassessed');
+    expect(gone.evidence).toHaveLength(0);
+    expect(gone.verdict.history.at(-1)).toMatchObject({ value: 'in_progress' });
+  });
+
+  it('returns null when a rerun changes nothing', () => {
+    const first = applyLinks(base, [pair('P1')], docs, '2026-11-10')!;
+    const earlier = { ...base, ...first } as typeof base;
+    expect(applyLinks(earlier, [pair('P1')], docs, '2026-11-12')).toBeNull();
+  });
+
+  it('merges new planning documents into an unassessed promise that only had a betänkande', () => {
+    const betOnly = applyLinks(base, [pair('B1', { label: 'partial' })], docs, '2026-11-10')!;
+    const earlier = { ...base, ...betOnly } as typeof base;
+    expect(earlier.verdict.value).toBe('unassessed');
+    const later = applyLinks(
+      earlier,
+      [pair('B1', { label: 'partial' }), pair('P1')],
+      docs,
+      '2026-11-12',
+    )!;
+    expect(later.evidence.map((e) => e.kind)).toEqual(['prop', 'bet']);
+    expect(later.verdict.value).toBe('in_progress');
+    expect(later.verdict.history).toHaveLength(1);
+  });
+
+  it('keeps agreement evidence on a rerun and leaves a human-set verdict alone', () => {
+    const agreement = {
+      kind: 'agreement' as const,
+      source: 'tidoavtalet',
+      date: '2022-10-14',
+      promises: ['tido-x'],
+      outcome: 'included' as const,
+      note: null,
+    };
+    const first = applyLinks({ ...base, evidence: [agreement] }, [pair('P1')], docs, '2026-11-10')!;
+    const earlier = { ...base, ...first } as typeof base;
+    const again = applyLinks(
+      earlier,
+      [pair('P1'), pair('B1', { stage: 'definitive' })],
+      docs,
+      '2026-11-12',
+    )!;
+    expect(again.evidence.map((e) => e.kind)).toEqual(['agreement', 'prop', 'bet']);
+    const human = { ...earlier, verdict: { ...earlier.verdict, assessedBy: 'human' as const } };
+    expect(applyLinks(human, [pair('P1')], docs, '2026-11-12')).toBeNull();
+  });
+
   it('leaves promises with an existing verdict or Riksdag evidence alone', () => {
     const decided = { ...base, verdict: { ...base.verdict, value: 'broken' as const } };
     expect(applyLinks(decided, [pair('P1')], docs, '2026-11-10')).toBeNull();

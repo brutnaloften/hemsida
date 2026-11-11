@@ -20,7 +20,15 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -32,8 +40,14 @@
       "titel": "Straffansvar för deltagande i och samröre med kriminella sammanslutningar",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB313.html",
-      "found_by": ["keyword:kriminella organisationer", "keyword:samröre", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:kriminella organisationer",
+        "keyword:samröre",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HDB128",
@@ -44,8 +58,13 @@
       "titel": "Kriminalisering av deltagande i kriminella sammanslutningar",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HDB128.html",
-      "found_by": ["keyword:kriminalisering", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kriminalisering",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HDB32",
@@ -56,8 +75,13 @@
       "titel": "Några frågor om grundläggande fri- och rättigheter ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB32.html",
-      "found_by": ["keyword:kriminella organisationer", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kriminella organisationer",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HCB355",
@@ -99,7 +123,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HAB352.html",
       "found_by": ["keyword:kriminella organisationer", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD03286",
@@ -123,8 +148,9 @@
       "titel": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU34.html",
-      "found_by": ["keyword:grundlagsändring"],
-      "score": 1
+      "found_by": ["keyword:grundlagsändring", "score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.75
     },
     {
       "dok_id": "HD03264",
@@ -136,7 +162,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03264.html",
       "found_by": ["keyword:samröre"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01KU33",
@@ -148,7 +175,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU33.html",
       "found_by": ["keyword:grundlagsändring"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HD01KU32",
@@ -173,7 +201,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03218.html",
       "found_by": ["keyword:samröre"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD03235",
@@ -210,8 +239,9 @@
       "titel": "Straffrättsliga frågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU11.html",
-      "found_by": ["committee:JuU"],
-      "score": 1
+      "found_by": ["committee:JuU", "score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.92
     },
     {
       "dok_id": "HB0367",
@@ -394,6 +424,123 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01JuU29",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU29",
+      "datum": "2024-04-25",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU29.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03274",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "274",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03274.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB357",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "57",
+      "datum": "2026-09-11",
+      "titel": "Akademisk frihet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB357.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB321",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "21",
+      "datum": "2026-03-18",
+      "titel": "Återkallelse av svenskt medborgarskap",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB321.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HEB156",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "56",
+      "datum": "2026-06-18",
+      "titel": "Grundlagsskydd för rätten till domstolsprövning",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB156.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HEB414",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "14",
+      "datum": "2026-07-02",
+      "titel": "En skärpt syn på involvering av underåriga i brottslighet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB414.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01KU26",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU26",
+      "datum": "2023-05-05",
+      "titel": "Fri- och rättigheter m.m.",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.65
     }
   ]
 }

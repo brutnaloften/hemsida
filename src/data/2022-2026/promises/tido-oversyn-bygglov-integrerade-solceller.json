@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2024/25:169 (Ett nytt regelverk för bygglov). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:NU18 (Tillståndsprövning enligt förnybartdirektivet), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Riksdagen biföll i december 2022 budgeten för energiområdet och ställde sig positiv till regeringens avsikt att se över bygglovskraven för integrerade solceller, utan någon konkret åtgärd. I maj 2025 föreslog regeringen att bygglov inte ska krävas för fasadändringar på en- och tvåbostadshus, vilket inkluderar solceller. Dokumenten visar förslag, inget beslut, och täcker bara små hus.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,22 +34,22 @@
   },
   "evidence": [
     {
+      "kind": "bet",
+      "dok_id": "HA01NU3",
+      "designation": "Bet. 2022/23:NU3",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "prop",
       "dok_id": "HC03169",
       "designation": "Prop. 2024/25:169",
       "title": "Ett nytt regelverk för bygglov",
       "date": "2025-05-27",
       "url": "https://data.riksdagen.se/dokument/HC03169.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "bet",
-      "dok_id": "HD01NU18",
-      "designation": "Bet. 2025/26:NU18",
-      "title": "Tillståndsprövning enligt förnybartdirektivet",
-      "date": "2026-04-08",
-      "url": "https://data.riksdagen.se/dokument/HD01NU18.html",
       "relevance": "partial",
       "note": null
     }

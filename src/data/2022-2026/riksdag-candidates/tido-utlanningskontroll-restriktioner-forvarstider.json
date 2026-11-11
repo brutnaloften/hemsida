@@ -19,7 +19,16 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -31,8 +40,15 @@
       "titel": "Stärkt skydd mot utlänningar som utgör kvalificerade säkerhetshot",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU45.html",
-      "found_by": ["keyword:förvar", "keyword:säkerhetshot", "keyword:utvisning", "all-keywords"],
-      "score": 4
+      "found_by": [
+        "keyword:förvar",
+        "keyword:säkerhetshot",
+        "keyword:utvisning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01JuU10",
@@ -78,7 +94,8 @@
         "keyword:diplomatiska garantier",
         "all-keywords"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01SfU31",
@@ -120,7 +137,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU22.html",
       "found_by": ["keyword:utvisning", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HDB3114",
@@ -149,7 +167,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU22.html",
       "found_by": ["keyword:förvar", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01SfU17",
@@ -161,7 +180,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU17.html",
       "found_by": ["keyword:säkerhetshot", "keyword:utvisning"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HDB316",
@@ -172,8 +192,9 @@
       "titel": "Ett nytt regelverk för uppsikt och förvar",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB316.html",
-      "found_by": ["keyword:förvar", "all-keywords"],
-      "score": 2
+      "found_by": ["keyword:förvar", "all-keywords", "score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01SfU37",
@@ -224,7 +245,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
       "found_by": ["keyword:utvisning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HCB423",
@@ -394,6 +416,149 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB333",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "33",
+      "datum": "2025-04-01",
+      "titel": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB333.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0336",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "36",
+      "datum": "2023-11-07",
+      "titel": "Vissa ändringar i regelverket om säkerhetsärenden enligt utlänningslagen",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0336.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB380",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "80",
+      "datum": "2024-11-26",
+      "titel": "Vissa åtgärder för stärkt återvändandeverksamhet och utlänningskontroll ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB380.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3115",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "115",
+      "datum": "2025-12-10",
+      "titel": "Kompletterande bestämmelser till EU:s cyberresiliensförordning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB430",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "30",
+      "datum": "2025-11-25",
+      "titel": "Migrations- och asylpakten ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB430.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD03263",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "263",
+      "datum": "2026-04-30",
+      "titel": "Stärkt återvändandeverksamhet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03263.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB149",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "49",
+      "datum": "2024-05-23",
+      "titel": "Stärkt skydd mot utlänningar som utgör kvalificerade säkerhetshot eller som har koppling till kriminella nätverk",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB149.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC031d5",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

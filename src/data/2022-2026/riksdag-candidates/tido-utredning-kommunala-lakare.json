@@ -21,7 +21,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -39,9 +48,11 @@
         "keyword:medicinskt ledningsansvarig",
         "keyword:äldreomsorg",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01SoU32",
@@ -52,8 +63,15 @@
       "titel": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU32.html",
-      "found_by": ["keyword:kommunala läkare", "keyword:läkare", "all-keywords", "committee:SoU"],
-      "score": 4
+      "found_by": [
+        "keyword:kommunala läkare",
+        "keyword:läkare",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.92
     },
     {
       "dok_id": "HA01SoU12",
@@ -138,7 +156,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB336.html",
       "found_by": ["keyword:medicinskt ledningsansvarig", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HDB348",
@@ -175,8 +194,13 @@
       "titel": "Äldreomsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU21.html",
-      "found_by": ["keyword:äldreomsorg", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:äldreomsorg",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HCB372",
@@ -445,6 +469,136 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.85
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD0319",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "19",
+      "datum": "2025-09-30",
+      "titel": "Nästa steg för en god och nära vård",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0319.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA03141",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "141",
+      "datum": "2023-09-05",
+      "titel": "Riksrevisionens rapport om lex Maria och lex Sarah",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03141.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HCB398d3",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "98",
+      "datum": "2025-01-01",
+      "titel": "En ny samordnad miljöbedömnings- och tillståndsprövningsprocess, del 3",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB398d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB382",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "82",
+      "datum": "2024-12-05",
+      "titel": "Ökad va-beredskap ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB198",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "98",
+      "datum": "2023-06-22",
+      "titel": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB198.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HCB373",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "73",
+      "datum": "2024-11-07",
+      "titel": "Juridiska personers förvärv av lantbruksegendom genom testamente",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB373.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB343",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "43",
+      "datum": "2024-06-24",
+      "titel": "Staten och kommunsektorn - samverkan, självstyrelse, styrning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB343.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB394",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "94",
+      "datum": "2024-12-20",
+      "titel": "Förstärkningsundervisning i skolan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

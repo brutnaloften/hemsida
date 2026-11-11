@@ -20,7 +20,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -39,7 +48,8 @@
         "keyword:klimatnytta",
         "all-keywords"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01MJU16",
@@ -69,7 +79,8 @@
         "keyword:utvärdering",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.4
     },
     {
       "dok_id": "HC031",
@@ -86,7 +97,8 @@
         "keyword:klimatnytta",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01MJU21",
@@ -110,8 +122,14 @@
       "titel": "Riksrevisionens rapport om statens insatser för jordbrukets klimatomställning",
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03113.html",
-      "found_by": ["keyword:klimatpolitik", "keyword:styrmedel", "keyword:klimatnytta"],
-      "score": 3
+      "found_by": [
+        "keyword:klimatpolitik",
+        "keyword:styrmedel",
+        "keyword:klimatnytta",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01MJU14",
@@ -123,7 +141,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HC01MJU14.html",
       "found_by": ["keyword:klimatpolitik", "all-keywords", "committee:MJU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HA01MJU16",
@@ -134,8 +153,14 @@
       "titel": "Klimatpolitik",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HA01MJU16.html",
-      "found_by": ["keyword:klimatpolitik", "all-keywords", "committee:MJU"],
-      "score": 3
+      "found_by": [
+        "keyword:klimatpolitik",
+        "all-keywords",
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03104",
@@ -173,7 +198,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d2.html",
       "found_by": ["keyword:beräkningskonventioner", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HCB367",
@@ -197,8 +223,13 @@
       "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0359.html",
-      "found_by": ["keyword:klimatpolitik", "keyword:klimatnytta"],
-      "score": 2
+      "found_by": [
+        "keyword:klimatpolitik",
+        "keyword:klimatnytta",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HA01MJU13",
@@ -223,7 +254,8 @@
       "organ": "KN-dep",
       "url": "https://data.riksdagen.se/dokument/HEB179.html",
       "found_by": ["keyword:styrmedel"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HA031d21",
@@ -263,6 +295,110 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-4-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01FiU20",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU20",
+      "datum": "2023-06-15",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01MJU15",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU15",
+      "datum": "2025-04-09",
+      "titel": "Riksrevisionens rapport om Industriklivet",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01MJU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU15",
+      "datum": "2024-05-06",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC0384",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "84",
+      "datum": "2025-01-16",
+      "titel": "Riksrevisionens rapport om Industriklivet",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0384.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB313",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "13",
+      "datum": "2025-02-10",
+      "titel": "En effektivare organisering av mindre myndigheter - analys och förslag ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB313.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01MJU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU1",
+      "datum": "2022-12-15",
+      "titel": "Utgiftsområde 20 Allmän miljö- och naturvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB198",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "98",
+      "datum": "2024-10-24",
+      "titel": "Styrmedel för att bidra till en utfasning av fossila bränslen och att nå Sveriges klimatåtaganden i EU",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB198.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

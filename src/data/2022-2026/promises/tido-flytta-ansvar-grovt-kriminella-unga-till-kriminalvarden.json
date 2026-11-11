@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2023:44 (En översyn av regleringen om frihetsberövande påföljder för unga ); Prop. 2025/26:132 (Frihetsberövande påföljder för barn och unga). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen lade i februari 2026 fram ett förslag om att barn och unga ska dömas till fängelse i stället för sluten ungdomsvård, och att Kriminalvården tar över verkställigheten från Statens institutionsstyrelse. Riksdagen biföll förslaget i maj 2025. Det gäller bara frihetsberövade unga; ansvar som flyttas från kommunerna nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,22 +40,22 @@
   },
   "evidence": [
     {
-      "kind": "sou",
-      "dok_id": "HBB344",
-      "designation": "SOU 2023:44",
-      "title": "En översyn av regleringen om frihetsberövande påföljder för unga ",
-      "date": "2023-11-08",
-      "url": "https://data.riksdagen.se/dokument/HBB344.html",
-      "relevance": "full",
-      "note": null
-    },
-    {
       "kind": "prop",
       "dok_id": "HD03132",
       "designation": "Prop. 2025/26:132",
       "title": "Frihetsberövande påföljder för barn och unga",
       "date": "2026-02-19",
       "url": "https://data.riksdagen.se/dokument/HD03132.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU30",
+      "designation": "Bet. 2025/26:JuU30",
+      "title": "Frihetsberövande påföljder för barn och unga",
+      "date": "2026-05-05",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
       "relevance": "partial",
       "note": null
     }

@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2023/24:117 (Preventiva tvångsmedel för att förebygga och förhindra allvarliga brott). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2023/24:JuU24 (Preventiva tvångsmedel för att förebygga och förhindra allvarliga brott), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En utredning föreslog i oktober 2022 att preventiva tvångsmedel ska kunna användas mer för att stoppa grov brottslighet i kriminella nätverk. Regeringen lade fram förslag om hemliga tvångsmedel i juni 2023 och om preventiva tvångsmedel i april 2024. Utredningen la i oktober 2023 fram fler förslag. Dokumenten visar förslag, inget beslut. Tilläggsdirektivet nämns inte.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,22 +34,42 @@
   },
   "evidence": [
     {
+      "kind": "sou",
+      "dok_id": "HAB352",
+      "designation": "SOU 2022:52",
+      "title": "Utökade möjligheter att använda preventiva tvångsmedel ",
+      "date": "2022-10-25",
+      "url": "https://data.riksdagen.se/dokument/HAB352.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA03126",
+      "designation": "Prop. 2022/23:126",
+      "title": "Hemliga tvångsmedel – effektiva verktyg för att förhindra och utreda allvarliga brott",
+      "date": "2023-06-01",
+      "url": "https://data.riksdagen.se/dokument/HA03126.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB360",
+      "designation": "SOU 2023:60",
+      "title": "Utökade möjligheter att använda preventiva tvångsmedel 2 ",
+      "date": "2023-10-13",
+      "url": "https://data.riksdagen.se/dokument/HBB360.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "prop",
       "dok_id": "HB03117",
       "designation": "Prop. 2023/24:117",
       "title": "Preventiva tvångsmedel för att förebygga och förhindra allvarliga brott",
       "date": "2024-04-03",
       "url": "https://data.riksdagen.se/dokument/HB03117.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "bet",
-      "dok_id": "HB01JuU24",
-      "designation": "Bet. 2023/24:JuU24",
-      "title": "Preventiva tvångsmedel för att förebygga och förhindra allvarliga brott",
-      "date": "2024-06-11",
-      "url": "https://data.riksdagen.se/dokument/HB01JuU24.html",
       "relevance": "partial",
       "note": null
     }

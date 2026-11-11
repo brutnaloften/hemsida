@@ -19,7 +19,16 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -51,7 +60,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0338.html",
       "found_by": ["keyword:ägarskiften", "keyword:familjeföretag", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HCB373",
@@ -62,8 +72,14 @@
       "titel": "Juridiska personers förvärv av lantbruksegendom genom testamente",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB373.html",
-      "found_by": ["keyword:generationsskifte", "keyword:familjeföretag", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:generationsskifte",
+        "keyword:familjeföretag",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD031",
@@ -74,8 +90,13 @@
       "titel": "Budgetpropositionen för 2026",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
-      "found_by": ["keyword:ägarskiften", "keyword:familjeföretag"],
-      "score": 2
+      "found_by": [
+        "keyword:ägarskiften",
+        "keyword:familjeföretag",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD031d2",
@@ -86,8 +107,13 @@
       "titel": "Budgetpropositionen för 2026 - Finansplanen ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d2.html",
-      "found_by": ["keyword:ägarskiften", "keyword:familjeföretag"],
-      "score": 2
+      "found_by": [
+        "keyword:ägarskiften",
+        "keyword:familjeföretag",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HB01SkU12",
@@ -98,8 +124,9 @@
       "titel": "Företag, kapital och fastighet",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HB01SkU12.html",
-      "found_by": ["all-keywords", "committee:SkU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SkU", "score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01NU16",
@@ -141,7 +168,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03158.html",
       "found_by": ["keyword:ägarskiften"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.45
     },
     {
       "dok_id": "HD03115",
@@ -153,7 +181,8 @@
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD03115.html",
       "found_by": ["keyword:generationsskifte"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03171",
@@ -191,7 +220,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0377.html",
       "found_by": ["keyword:generationsskifte"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01MJU2",
@@ -215,8 +245,9 @@
       "titel": "Förbättrat regelverk om beskattning av skog",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0369.html",
-      "found_by": ["keyword:generationsskifte"],
-      "score": 1
+      "found_by": ["keyword:generationsskifte", "score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD01SkU15",
@@ -412,6 +443,149 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.85
+    },
+    {
+      "dok_id": "HC0398",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "98",
+      "datum": "2025-04-15",
+      "titel": "Redovisning av skatteutgifter 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0398.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB110",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "10",
+      "datum": "2023-01-26",
+      "titel": "Tilläggsdirektiv till Kommittén om förenklad beskattning av ägare till fåmansföretag (Fi 2022:04)",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HA0398",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "98",
+      "datum": "2023-04-17",
+      "titel": "Redovisning av skatteutgifter 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0398.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031d25",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 24 Näringsliv",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d25.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB356",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "56",
+      "datum": "2024-08-29",
+      "titel": "Animalieproduktion med hög konkurrenskraft och gott djurskydd ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB356.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01NU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU17",
+      "datum": "2025-04-16",
+      "titel": "Näringspolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01MJU2",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU2",
+      "datum": "2023-12-07",
+      "titel": "Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01NU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU1",
+      "datum": "2022-12-15",
+      "titel": "Utgiftsområde 24 Näringsliv",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

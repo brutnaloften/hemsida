@@ -17,7 +17,12 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -33,9 +38,11 @@
         "keyword:humanitär skyddsgrund",
         "keyword:skyddsgrund",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01SfU18",
@@ -50,9 +57,11 @@
         "keyword:humanitär skyddsgrund",
         "keyword:skyddsgrund",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.7
     },
     {
       "dok_id": "HB01SfU14",
@@ -69,7 +78,8 @@
         "all-keywords",
         "committee:SfU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.35
     },
     {
       "dok_id": "HB01SfU5",
@@ -84,9 +94,11 @@
         "keyword:humanitär skyddsgrund",
         "keyword:utlänningslagen",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03262",
@@ -98,7 +110,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "found_by": ["keyword:asyl", "keyword:utlänningslagen", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB01SfU12",
@@ -201,7 +214,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU47.html",
       "found_by": ["keyword:utskottsinitiativ"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01KU45",
@@ -226,7 +240,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
       "found_by": ["keyword:utlänningslagen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HB0318",

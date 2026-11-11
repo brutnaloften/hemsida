@@ -17,7 +17,15 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -53,9 +61,11 @@
         "keyword:lojalitetsförklaring",
         "keyword:medborgarskapsceremoni",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01AU5",
@@ -72,7 +82,8 @@
         "keyword:medborgarskapsceremoni",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.4
     },
     {
       "dok_id": "HBB1129",
@@ -87,9 +98,11 @@
         "keyword:lojalitetsförklaring",
         "keyword:medborgarskapssamtal",
         "keyword:medborgarskapsceremoni",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HCB312",
@@ -119,7 +132,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU28.html",
       "found_by": ["keyword:medborgarskapsceremoni", "keyword:medborgarskap"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01TU21",
@@ -131,7 +145,8 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HD01TU21.html",
       "found_by": ["keyword:medborgarskap"],
-      "score": 1
+      "score": 1,
+      "relevance": 0
     },
     {
       "dok_id": "HD01KU34",
@@ -143,7 +158,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU34.html",
       "found_by": ["keyword:medborgarskap"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HEB321",
@@ -155,7 +171,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB321.html",
       "found_by": ["keyword:medborgarskap"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD03175",
@@ -193,7 +210,8 @@
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HDB151.html",
       "found_by": ["keyword:medborgarskap"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HDB333",
@@ -204,8 +222,9 @@
       "titel": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB333.html",
-      "found_by": ["keyword:lojalitetsförklaring"],
-      "score": 1
+      "found_by": ["keyword:lojalitetsförklaring", "score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
     },
     {
       "dok_id": "HCB163",
@@ -230,7 +249,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU15.html",
       "found_by": ["keyword:medborgarskap"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HC03103",
@@ -296,6 +316,110 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB32",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "2",
+      "datum": "2025-01-15",
+      "titel": "Några frågor om grundläggande fri- och rättigheter ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB32.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB358",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "58",
+      "datum": "2025-06-02",
+      "titel": "En stärkt hästnäring",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB358.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3115",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "115",
+      "datum": "2025-12-10",
+      "titel": "Kompletterande bestämmelser till EU:s cyberresiliensförordning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB372",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "72",
+      "datum": "2025-06-13",
+      "titel": "Verktyg för en mer likvärdig resursfördelning till skolan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3107",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "107",
+      "datum": "2025-11-03",
+      "titel": "Sveriges nationella klimatmål - uppdaterat etappmål till 2030 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3107.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

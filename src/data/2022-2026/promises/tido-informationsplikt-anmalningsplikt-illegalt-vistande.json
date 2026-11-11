@@ -26,12 +26,29 @@
     "skuggsamhället"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i november 2024 att myndigheter som Arbetsförmedlingen, Försäkringskassan och Skatteverket ska vara skyldiga att anmäla personer utan uppehållsrätt till Polisen, som kan lämna uppgifterna till Migrationsverket. Utredningen resonerade också om undantag för bland annat sjukvård, skolan och socialtjänsten. Riksdagens betänkande från juni 2026 om stärkt återvändandeverksamhet täcker också löftet, men ingen författning är kopplad till det.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB380",
+      "designation": "SOU 2024:80",
+      "title": "Vissa åtgärder för stärkt återvändandeverksamhet och utlänningskontroll ",
+      "date": "2024-11-26",
+      "url": "https://data.riksdagen.se/dokument/HCB380.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HD01SfU32",

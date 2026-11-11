@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2026:102 (Barnfrid - förstärkta åtgärder mot sexuella kränkningar av barn och barnpornografibrott). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2024/25:JuU22 (En modern straffrättslig preskriptionslagstiftning), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen lade i november 2024 fram ett förslag om en ny preskriptionslagstiftning med längre preskriptionstider, och riksdagen biföll det i februari 2025. I augusti 2026 gav regeringen en utredning i uppdrag att föreslå att sexualbrott mot barn inte ska preskriberas. Ytterligare utredning om påföljdspreskription och omvandling av ungdomspåföljder nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC0359",
+      "designation": "Prop. 2024/25:59",
+      "title": "En modern straffrättslig preskriptionslagstiftning",
+      "date": "2024-11-28",
+      "url": "https://data.riksdagen.se/dokument/HC0359.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HC01JuU22",

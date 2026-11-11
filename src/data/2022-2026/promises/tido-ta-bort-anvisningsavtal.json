@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:240 (Nya lagar om elsystemet). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i januari 2024 en utredare i uppdrag att föreslå hur anvisade elavtal ska avvecklas. I april 2026 föreslog regeringen i en proposition att reglerna om anvisningsavtal tas bort och ersätts av en leveransskyldig sistahandsleverantör. Riksdagen biföll förslaget i juni 2026. Dokumenten täcker hela löftet, men ingen författning är kopplad till det.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,12 +34,32 @@
   },
   "evidence": [
     {
+      "kind": "dir",
+      "dok_id": "HCB112",
+      "designation": "Dir. 2024:12",
+      "title": "Ett elsystem med tydligt systemansvar, hög leveranssäkerhet och långsiktiga planeringsförutsättningar",
+      "date": "2024-01-25",
+      "url": "https://data.riksdagen.se/dokument/HCB112.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "prop",
       "dok_id": "HD03240",
       "designation": "Prop. 2025/26:240",
       "title": "Nya lagar om elsystemet",
       "date": "2026-04-14",
       "url": "https://data.riksdagen.se/dokument/HD03240.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01NU25",
+      "designation": "Bet. 2025/26:NU25",
+      "title": "Nya lagar om elsystemet",
+      "date": "2026-06-08",
+      "url": "https://data.riksdagen.se/dokument/HD01NU25.html",
       "relevance": "full",
       "note": null
     }

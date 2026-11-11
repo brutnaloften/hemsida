@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:47 (Spänning i tillvaron); Prop. 2025/26:16 (Förbättrad utformning av EU:s elmarknad); Prop. 2025/26:240 (Nya lagar om elsystemet). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2022/23:NU9 (Genomförande av elmarknadsdirektivet när det gäller leverans av el och aggregeringstjänster), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen lade i februari 2023 fram ett förslag om att genomföra delar av elmarknadsdirektivet (leverans av el och aggregering), och riksdagen biföll det i april 2023. En utredning föreslog i april 2025 tydligare ansvar mellan systemoperatörer, och i april 2026 lade regeringen fram förslag till en ny elmarknadslag med tydligare roller. Dokumenten visar förslag på hela löftet, men inget beslut om det.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,6 +33,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA0359",
+      "designation": "Prop. 2022/23:59",
+      "title": "Genomförande av elmarknadsdirektivet när det gäller leverans av el och aggregeringstjänster",
+      "date": "2023-02-14",
+      "url": "https://data.riksdagen.se/dokument/HA0359.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HA01NU9",
@@ -50,16 +60,6 @@
       "title": "Spänning i tillvaron",
       "date": "2025-04-25",
       "url": "https://data.riksdagen.se/dokument/HDB347.html",
-      "relevance": "full",
-      "note": null
-    },
-    {
-      "kind": "prop",
-      "dok_id": "HD0316",
-      "designation": "Prop. 2025/26:16",
-      "title": "Förbättrad utformning av EU:s elmarknad",
-      "date": "2025-09-23",
-      "url": "https://data.riksdagen.se/dokument/HD0316.html",
       "relevance": "full",
       "note": null
     },

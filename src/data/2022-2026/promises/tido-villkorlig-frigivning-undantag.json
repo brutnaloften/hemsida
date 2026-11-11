@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:74 (Tilläggsdirektiv till Utredningen om ett förstärkt samhällsskydd och en minskad risk för återfall i brott (Ju 2022:10)); SOU 2024:48 (Ett ändamålsenligt samhällsskydd Volym 1); Prop. 2025/26:34 (Skärpta regler för villkorlig frigivning). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning lade i juli 2024 fram överväganden om villkorlig frigivning, bland annat om särskilda skäl och tre fjärdedelar av straffet, men avrådde från den modellen. Regeringen föreslog i oktober 2025 skärpta regler, och riksdagen beslutade i november 2025 att höja gränsen från två tredjedelar till tre fjärdedelar stegvis och göra det lättare att skjuta upp frigivning. Att frigivning blir undantag utan särskilda skäl nämns inte i besluten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,16 +39,6 @@
     ]
   },
   "evidence": [
-    {
-      "kind": "dir",
-      "dok_id": "HBB174",
-      "designation": "Dir. 2023:74",
-      "title": "Tilläggsdirektiv till Utredningen om ett förstärkt samhällsskydd och en minskad risk för återfall i brott (Ju 2022:10)",
-      "date": "2023-06-01",
-      "url": "https://data.riksdagen.se/dokument/HBB174.html",
-      "relevance": "full",
-      "note": null
-    },
     {
       "kind": "sou",
       "dok_id": "HCB348",
@@ -60,12 +50,32 @@
       "note": null
     },
     {
+      "kind": "sou",
+      "dok_id": "HCB348d2",
+      "designation": "SOU 2024:48",
+      "title": "Ett ändamålsenligt samhällsskydd Volym 2",
+      "date": "2024-07-05",
+      "url": "https://data.riksdagen.se/dokument/HCB348d2.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "prop",
       "dok_id": "HD0334",
       "designation": "Prop. 2025/26:34",
       "title": "Skärpta regler för villkorlig frigivning",
       "date": "2025-10-16",
       "url": "https://data.riksdagen.se/dokument/HD0334.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU8",
+      "designation": "Bet. 2025/26:JuU8",
+      "title": "Skärpta regler för villkorlig frigivning",
+      "date": "2025-11-28",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU8.html",
       "relevance": "partial",
       "note": null
     }

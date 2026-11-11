@@ -22,7 +22,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -38,9 +47,11 @@
         "keyword:personlig assistans",
         "keyword:LSS",
         "keyword:funktionshinder",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD0315",
@@ -57,7 +68,8 @@
         "keyword:assistansersättning",
         "keyword:funktionshinder"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.2
     },
     {
       "dok_id": "HB01SoU13",
@@ -72,9 +84,11 @@
         "keyword:personlig assistans",
         "keyword:assistansersättning",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01SoU15",
@@ -134,8 +148,13 @@
       "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
-      "found_by": ["keyword:assistansersättning", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:assistansersättning",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD0361",
@@ -159,8 +178,13 @@
       "titel": "Stöd till personer med funktionsnedsättning",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU15.html",
-      "found_by": ["keyword:personlig assistans", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:personlig assistans",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC0389",
@@ -223,8 +247,13 @@
       "titel": "Ett statligt huvudmannaskap för personlig assistans, Ökad likvärdighet, långsiktighet och kvalitet ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB39.html",
-      "found_by": ["keyword:personlig assistans", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:personlig assistans",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01SoU1",
@@ -236,7 +265,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
       "found_by": ["keyword:assistansersättning", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HEB133",
@@ -510,6 +540,227 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB348",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "48",
+      "datum": "2023-08-31",
+      "titel": "Rätt förutsättningar för sjukskrivning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB348.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB399",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "99",
+      "datum": "2023-12-19",
+      "titel": "Nya tullrättsliga sanktioner och skärpta åtgärder mot utförsel av stöldgods ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB325",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "25",
+      "datum": "2023-05-30",
+      "titel": "Kunskapskrav för permanent uppehållstillstånd ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB325.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB312",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "12",
+      "datum": "2023-03-20",
+      "titel": "Förstärkt skydd för demokratin och domstolarnas oberoende ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB312.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB365",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "65",
+      "datum": "2023-10-27",
+      "titel": "Bättre information om hyresbostäder ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB365.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB3102",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "102",
+      "datum": "2024-01-01",
+      "titel": "Finansiella instrument i distribuerade liggare och vissa frågor om värdepappersavveckling",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB3102.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HBB347",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "47",
+      "datum": "2023-08-30",
+      "titel": "En utvecklad arbetsgivardeklaration - åtgärder mot missbruk av välfärdssystemen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB347.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HBB354",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "54",
+      "datum": "2023-09-04",
+      "titel": "Centraliseringen av administrativa tjänster till Statens servicecenter - en utvärdering",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB354.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB140",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "40",
+      "datum": "2025-04-16",
+      "titel": "Effektivare åtgärder mot välfärdsbrott och ökad förutsebarhet inom personlig assistans",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB140.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB385",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "85",
+      "datum": "2025-07-07",
+      "titel": "Ökad tydlighet, stärkt samverkan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB385.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB3100",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "100",
+      "datum": "2023-12-22",
+      "titel": "Framtidens dataskydd Vid Skatteverket, Tullverket och Kronofogden ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB3100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB398d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "98",
+      "datum": "2023-12-15",
+      "titel": "Sexuellt utnyttjande i pornografiska syften, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB398d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3111",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "111",
+      "datum": "2025-11-25",
+      "titel": "Rättssäkerhetens pris",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3111.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

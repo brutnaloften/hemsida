@@ -20,10 +20,28 @@
   "committee": "SfU",
   "keywords": ["säkra ursprungsländer", "säkra länder", "Migrationsverket", "asylprövning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade den 30 april 2026 fram en proposition om att anpassa svensk rätt till EU:s migrations- och asylpakt. Den innehåller ett avsnitt om säkra länder och berör därmed reglerna. Dokumentet visar förslag, inget beslut. Att länder där bara delar är säkra ska kunna föras upp på listan, och att ansvaret för listan flyttas från Migrationsverket till Regeringskansliet, nämns inte i dokumentet.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03262",
+      "designation": "Prop. 2025/26:262",
+      "title": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03262.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -19,7 +19,12 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -70,7 +75,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU17.html",
       "found_by": ["keyword:Svenska kraftnät", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HC03150",
@@ -121,7 +127,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
       "found_by": ["keyword:planerbar elproduktion", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD03240",
@@ -193,7 +200,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU5.html",
       "found_by": ["keyword:planerbar elproduktion", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HA01NU17",
@@ -205,7 +213,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
       "found_by": ["keyword:planerbar elproduktion", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HA0359",
@@ -217,7 +226,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA0359.html",
       "found_by": ["keyword:Svenska kraftnät", "keyword:driftsäkerhet"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01MJU22",
@@ -229,7 +239,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HD01MJU22.html",
       "found_by": ["keyword:Energimyndigheten"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HC03103",
@@ -282,6 +293,19 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HC0348",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "48",
+      "datum": "2024-11-12",
+      "titel": "En kapacitetsmekanism för elmarknaden",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0348.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

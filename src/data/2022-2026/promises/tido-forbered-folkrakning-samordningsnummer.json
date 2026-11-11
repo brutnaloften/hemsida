@@ -26,10 +26,9 @@
     "folkbokföringsfusk"
   ],
   "verdict": {
-    "value": "in_progress",
-    "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2022/23:41 (Bättre möjligheter för Skatteverket att göra dataanalyser och urval i folkbokföringsverksamheten). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,12 +39,22 @@
   },
   "evidence": [
     {
-      "kind": "prop",
-      "dok_id": "HA0341",
-      "designation": "Prop. 2022/23:41",
-      "title": "Bättre möjligheter för Skatteverket att göra dataanalyser och urval i folkbokföringsverksamheten",
-      "date": "2022-12-28",
-      "url": "https://data.riksdagen.se/dokument/HA0341.html",
+      "kind": "bet",
+      "dok_id": "HA01SkU1",
+      "designation": "Bet. 2022/23:SkU1",
+      "title": "Utgiftsområde 3 Skatt, tull och exekution",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SkU1",
+      "designation": "Bet. 2025/26:SkU1",
+      "title": "Utgiftsområde 3 Skatt, tull och exekution",
+      "date": "2025-11-27",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU1.html",
       "relevance": "partial",
       "note": null
     }

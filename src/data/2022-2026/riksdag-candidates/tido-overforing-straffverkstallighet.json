@@ -21,7 +21,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -87,7 +96,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB313.html",
       "found_by": ["keyword:överföring av straffverkställighet", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HC01JuU14",
@@ -98,8 +108,13 @@
       "titel": "Kriminalvårdsfrågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU14.html",
-      "found_by": ["keyword:Kriminalvården", "committee:JuU"],
-      "score": 2
+      "found_by": [
+        "keyword:Kriminalvården",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HC01JuU19",
@@ -123,8 +138,13 @@
       "titel": "Hyra anstaltsplatser utomlands ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB41.html",
-      "found_by": ["keyword:överföring av straffverkställighet", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:överföring av straffverkställighet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HCB348d2",
@@ -135,8 +155,13 @@
       "titel": "Ett ändamålsenligt samhällsskydd Volym 2",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB348d2.html",
-      "found_by": ["keyword:överföring av straffverkställighet", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:överföring av straffverkställighet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HB0367",
@@ -165,7 +190,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB421.html",
       "found_by": ["keyword:överföring av straffverkställighet", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA031d5",
@@ -193,8 +219,13 @@
       "titel": "Budgetpropositionen för 2023",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA031.html",
-      "found_by": ["keyword:överföring av straffverkställighet", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:överföring av straffverkställighet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB1119",
@@ -206,7 +237,8 @@
       "organ": "S-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1119.html",
       "found_by": ["keyword:Kriminalvården"],
-      "score": 1
+      "score": 1,
+      "relevance": 0
     },
     {
       "dok_id": "HD01JuU48",
@@ -218,7 +250,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
       "found_by": ["committee:JuU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01JuU41",
@@ -230,7 +263,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
       "found_by": ["committee:JuU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HDB412",
@@ -452,6 +486,175 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01JuU29",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU29",
+      "datum": "2024-04-25",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU29.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01JuU34",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU34",
+      "datum": "2026-05-07",
+      "titel": "Nordisk verkställighet i brottmål",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU34.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HB01JuU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU17",
+      "datum": "2024-04-17",
+      "titel": "Kriminalvårdsfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB430",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "30",
+      "datum": "2025-11-25",
+      "titel": "Migrations- och asylpakten ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB430.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03274",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "274",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03274.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC031d5",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD03246",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "246",
+      "datum": "2026-04-16",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03246.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01JuU35",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU35",
+      "datum": "2026-05-28",
+      "titel": "Tillfällig verkställighet av svenska fängelsestraff utomlands",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU35.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB0337",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "37",
+      "datum": "2023-11-14",
+      "titel": "Ändringar i regelverket om överlämnande enligt en europeisk och nordisk arresteringsorder",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0337.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB310",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "10",
+      "datum": "2026-02-18",
+      "titel": "Ökade möjligheter till tillgångsinriktad brottsbekämpning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB310.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03285",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "285",
+      "datum": "2026-06-15",
+      "titel": "Hörande och tillfälligt överförande vid handläggning av en arresteringsorder",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03285.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

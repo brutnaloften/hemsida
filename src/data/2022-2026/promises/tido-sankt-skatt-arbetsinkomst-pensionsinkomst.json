@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Prop. 2023/24:1 (Budgetpropositionen för 2024); Prop. 2025/26:32 (Sänkt skatt på arbetsinkomster, pension och sjuk- och aktivitetsersättning). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen lade i september 2023 fram ett förslag om starkare jobbskatteavdrag och högre grundavdrag för pensionärer. Budgetpropositionerna för 2025 och 2026 tar upp ändringar i skattelagstiftningen, men utan att tydligt visa sänkt skatt på arbets- och pensionsinkomster. I oktober 2025 föreslog regeringen lägre skatt på arbetsinkomster, pension samt sjuk- och aktivitetsersättning. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -35,11 +35,41 @@
   "evidence": [
     {
       "kind": "prop",
-      "dok_id": "HB031",
-      "designation": "Prop. 2023/24:1",
-      "title": "Budgetpropositionen för 2024",
-      "date": "2023-09-20",
-      "url": "https://data.riksdagen.se/dokument/HB031.html",
+      "dok_id": "HB0313",
+      "designation": "Prop. 2023/24:13",
+      "title": "Vissa förslag om sänkt skatt på arbetsinkomster och pension",
+      "date": "2023-09-28",
+      "url": "https://data.riksdagen.se/dokument/HB0313.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC031",
+      "designation": "Prop. 2024/25:1",
+      "title": "Budgetpropositionen för 2025",
+      "date": "2024-09-19",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD031",
+      "designation": "Prop. 2025/26:1",
+      "title": "Budgetpropositionen för 2026",
+      "date": "2025-09-22",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD031d2",
+      "designation": "Prop. 2025/26:1",
+      "title": "Budgetpropositionen för 2026 - Finansplanen ",
+      "date": "2025-09-22",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
       "relevance": "partial",
       "note": null
     },

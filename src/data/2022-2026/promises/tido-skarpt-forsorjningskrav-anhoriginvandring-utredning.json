@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:95 (Skärpta villkor för anhöriginvandring); Prop. 2025/26:301 (Skärpta villkor för anhöriginvandring). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SfU37 (Skärpta villkor för anhöriginvandring), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i juli 2024 en utredare i uppdrag att se över försörjningskrav och villkor vid anhöriginvandring. Utredningen föreslog i september 2025 skärpta försörjningskrav, krav även vid förlängning, krav på försäkringsskydd i vissa fall och en snävare anhörigkrets. Riksdagen biföll i augusti 2026 ett förslag med dessa delar. Dokumenten nämner ingen författning.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,6 +40,16 @@
   },
   "evidence": [
     {
+      "kind": "dir",
+      "dok_id": "HCB168",
+      "designation": "Dir. 2024:68",
+      "title": "Skärpta villkor för anhöriginvandring",
+      "date": "2024-07-11",
+      "url": "https://data.riksdagen.se/dokument/HCB168.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "sou",
       "dok_id": "HDB395",
       "designation": "SOU 2025:95",
@@ -47,16 +57,6 @@
       "date": "2025-09-05",
       "url": "https://data.riksdagen.se/dokument/HDB395.html",
       "relevance": "full",
-      "note": null
-    },
-    {
-      "kind": "prop",
-      "dok_id": "HD03301",
-      "designation": "Prop. 2025/26:301",
-      "title": "Skärpta villkor för anhöriginvandring",
-      "date": "2026-06-25",
-      "url": "https://data.riksdagen.se/dokument/HD03301.html",
-      "relevance": "partial",
       "note": null
     },
     {

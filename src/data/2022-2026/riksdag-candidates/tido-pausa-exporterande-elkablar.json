@@ -20,7 +20,11 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -93,7 +97,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
       "found_by": ["keyword:elexport", "keyword:prisområden", "all-keywords", "committee:NU"],
-      "score": 4
+      "score": 4,
+      "relevance": 0.2
     },
     {
       "dok_id": "HB0358",
@@ -168,7 +173,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
       "found_by": ["keyword:Hansa Powerbridge", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HC01NU20",
@@ -180,7 +186,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU20.html",
       "found_by": ["keyword:prisområden", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC01NU3",
@@ -209,7 +216,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
       "found_by": ["keyword:elexport", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HBB318d2",
@@ -234,7 +242,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HA031d22.html",
       "found_by": ["keyword:Hansa Powerbridge", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD03240",
@@ -261,6 +270,19 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01NU3",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU3",
+      "datum": "2023-12-08",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

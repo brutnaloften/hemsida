@@ -20,7 +20,12 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -71,7 +76,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
       "found_by": ["keyword:kraftslag", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC03150",
@@ -168,7 +174,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU25.html",
       "found_by": ["keyword:elmarknaden", "keyword:elmarknadsutredning"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD01NU17",
@@ -179,8 +186,13 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU17.html",
-      "found_by": ["keyword:elmarknadsutredning", "committee:NU"],
-      "score": 2
+      "found_by": [
+        "keyword:elmarknadsutredning",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD01NU13",
@@ -205,7 +217,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU10.html",
       "found_by": ["keyword:elmarknadsutredning", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01NU8",
@@ -242,8 +255,13 @@
       "titel": "Budgetpropositionen för 2025",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC031.html",
-      "found_by": ["keyword:elmarknadsutredning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:elmarknadsutredning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HCB397",
@@ -309,6 +327,71 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01MJU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU15",
+      "datum": "2024-05-06",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB112",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "12",
+      "datum": "2024-01-25",
+      "titel": "Ett elsystem med tydligt systemansvar, hög leveranssäkerhet och långsiktiga planeringsförutsättningar",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB01NU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU14",
+      "datum": "2024-05-20",
+      "titel": "Energipolitikens långsiktiga inriktning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

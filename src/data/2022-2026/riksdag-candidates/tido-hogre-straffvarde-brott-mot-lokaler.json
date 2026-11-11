@@ -18,7 +18,14 @@
     "score:tido-corpus-claude-v1-shard-3-of-20",
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20"
   ],
   "candidates": [
     {
@@ -31,7 +38,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU11.html",
       "found_by": ["keyword:SOU 2022:2", "all-keywords", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD0375",
@@ -43,7 +51,8 @@
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD0375.html",
       "found_by": ["keyword:SOU 2022:2", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HDB387",
@@ -55,7 +64,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB387.html",
       "found_by": ["keyword:SOU 2022:2", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HCB31",
@@ -93,7 +103,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HA03106.html",
       "found_by": ["keyword:SOU 2022:2", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HA0386",
@@ -105,7 +116,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA0386.html",
       "found_by": ["keyword:SOU 2022:2", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HEB357",
@@ -117,7 +129,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB357.html",
       "found_by": ["keyword:SOU 2022:2"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01UbU30",
@@ -129,7 +142,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU30.html",
       "found_by": ["keyword:skolor"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01JuU41",
@@ -141,7 +155,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
       "found_by": ["committee:JuU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03297",
@@ -205,7 +220,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU21.html",
       "found_by": ["keyword:skolor"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HB0375",

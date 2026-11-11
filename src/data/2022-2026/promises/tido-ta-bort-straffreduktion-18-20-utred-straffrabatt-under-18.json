@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:112 (Skärpta regler för unga lagöverträdare); Prop. 2025/26:293 (Skärpta regler för unga lagöverträdare). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Två statliga utredningar lade i juli 2024 och januari 2025 fram förslag om att slopa straffreduktionen för 18–20-åringar, minska den för 15–17-åringar och sänka straffbarhetsåldern för allvarliga brott. Regeringen lade fram en proposition med samma innehåll i april och i juni 2026, och ett riksdagsbeslut i augusti 2026 omfattar åtgärderna. Dokumenten visar dock ingen författning kopplad till löftet.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,12 +40,32 @@
   },
   "evidence": [
     {
-      "kind": "dir",
-      "dok_id": "HBB1112",
-      "designation": "Dir. 2023:112",
+      "kind": "sou",
+      "dok_id": "HCB339",
+      "designation": "SOU 2024:39",
+      "title": "Skärpta regler om ungdomsövervakning  och straffreduktion för unga",
+      "date": "2024-07-05",
+      "url": "https://data.riksdagen.se/dokument/HCB339.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB311",
+      "designation": "SOU 2025:11",
+      "title": "Straffbarhetsåldern",
+      "date": "2025-01-28",
+      "url": "https://data.riksdagen.se/dokument/HDB311.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03246",
+      "designation": "Prop. 2025/26:246",
       "title": "Skärpta regler för unga lagöverträdare",
-      "date": "2023-07-06",
-      "url": "https://data.riksdagen.se/dokument/HBB1112.html",
+      "date": "2026-04-16",
+      "url": "https://data.riksdagen.se/dokument/HD03246.html",
       "relevance": "full",
       "note": null
     },
@@ -57,6 +77,16 @@
       "date": "2026-06-30",
       "url": "https://data.riksdagen.se/dokument/HD03293.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU41",
+      "designation": "Bet. 2025/26:JuU41",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "relevance": "partial",
       "note": null
     }
   ]

@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2025:20 (Kommunal anslutning till Utbetalningsmyndighetens verksamhet ). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2022/23:FiU35 (Utbetalningsmyndigheten), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen lade i december 2022 fram ett förslag om Utbetalningsmyndigheten och ett transaktionskonto, och riksdagen biföll det i juni 2023. Det gäller bara utbetalningar från vissa statliga myndigheter och handlar om att förhindra felaktiga utbetalningar. En utredning från februari 2025 föreslår att kommuner och regioner ansluts, men inte att myndigheten ansvarar för alla utbetalningar.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA0334",
+      "designation": "Prop. 2022/23:34",
+      "title": "Utbetalningsmyndigheten",
+      "date": "2022-12-19",
+      "url": "https://data.riksdagen.se/dokument/HA0334.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HA01FiU35",

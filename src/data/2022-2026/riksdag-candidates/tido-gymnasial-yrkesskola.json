@@ -21,7 +21,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -106,8 +115,14 @@
       "titel": "Växla yrke som vuxen - en reformerad vuxenutbildning och en ny yrkesskola för vuxna ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB316.html",
-      "found_by": ["keyword:yrkesskola", "keyword:arbetsplatsförlagd utbildning", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:yrkesskola",
+        "keyword:arbetsplatsförlagd utbildning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01UbU12",
@@ -118,8 +133,14 @@
       "titel": "Gymnasieskolan",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU12.html",
-      "found_by": ["keyword:yrkesskola", "keyword:gymnasieskolan", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:yrkesskola",
+        "keyword:gymnasieskolan",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01UbU8",
@@ -130,8 +151,14 @@
       "titel": "Gymnasieskolan",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU8.html",
-      "found_by": ["keyword:gymnasieskolan", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:gymnasieskolan",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HDB315",
@@ -143,7 +170,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB315.html",
       "found_by": ["keyword:arbetsplatsförlagd utbildning", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HCB374",
@@ -154,8 +182,13 @@
       "titel": "Fler vägar till arbetslivet",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB374.html",
-      "found_by": ["keyword:arbetsplatsförlagd utbildning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:arbetsplatsförlagd utbildning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01UbU13",
@@ -236,7 +269,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU24.html",
       "found_by": ["keyword:gymnasieskolan"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HDB319",
@@ -367,6 +401,136 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
       "score": 1,
       "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01UbU11",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU11",
+      "datum": "2026-01-23",
+      "titel": "Vuxenutbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB1114",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "114",
+      "datum": "2023-07-13",
+      "titel": "Tilläggsdirektiv till Utredningen om fler vägar till arbetslivet (U 2022:03)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1114.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB1110",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "110",
+      "datum": "2023-07-06",
+      "titel": "Tilläggsdirektiv till Yrkesvuxutredningen (U 2022:05)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB0399",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "99",
+      "datum": "2024-04-15",
+      "titel": "Vårändringsbudget för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01UbU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU1",
+      "datum": "2025-12-08",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC031d17",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01AU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU9",
+      "datum": "2026-02-20",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.65
     }
   ]
 }

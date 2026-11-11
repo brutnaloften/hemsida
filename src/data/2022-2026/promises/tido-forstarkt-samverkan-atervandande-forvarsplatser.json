@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:265 (Skärpta regler om uppsikt och förvar). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SfU31 (Skärpta regler om uppsikt och förvar), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Två utredningar föreslog i oktober 2024 och februari 2025 bland annat boendeskyldighet, elektronisk övervakning som komplement till förvar och säkerhetsavdelningar. Regeringen lade i april 2026 fram en proposition om skärpta regler om uppsikt och förvar, och riksdagen biföll den i juni 2026. Det täcker boendeskyldighet, övervakning och ändrade förvarsregler. Fler förvarsplatser och förstärkt samverkan mellan myndigheterna nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,26 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB368",
+      "designation": "SOU 2024:68",
+      "title": "Mottagandelagen ",
+      "date": "2024-10-15",
+      "url": "https://data.riksdagen.se/dokument/HCB368.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB316",
+      "designation": "SOU 2025:16",
+      "title": "Ett nytt regelverk för uppsikt och förvar",
+      "date": "2025-02-18",
+      "url": "https://data.riksdagen.se/dokument/HDB316.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "prop",
       "dok_id": "HD03265",

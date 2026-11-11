@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2024:31 (En ändamålsenlig vapenlagstiftning, del 2); SOU 2025:50 (En ny nationell myndighet för viltförvaltning); Prop. 2025/26:141 (En ny vapenlag). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Utredningen om vapenlagstiftningen presenterades i maj 2024 med förslag på en ny vapenlag och uppdelade straffbestämmelser för lagliga och illegala vapen. I maj 2025 föreslogs en ny viltförvaltningsmyndighet och, som alternativ, att den tar över licensprövningen, men utredningen anser att polisen ska behålla den.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB331",
+      "designation": "SOU 2024:31",
+      "title": "En ändamålsenlig vapenlagstiftning",
+      "date": "2024-05-13",
+      "url": "https://data.riksdagen.se/dokument/HCB331.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HCB331d2",
@@ -56,16 +66,6 @@
       "title": "En ny nationell myndighet för viltförvaltning",
       "date": "2025-05-08",
       "url": "https://data.riksdagen.se/dokument/HDB350.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "prop",
-      "dok_id": "HD03141",
-      "designation": "Prop. 2025/26:141",
-      "title": "En ny vapenlag",
-      "date": "2026-02-17",
-      "url": "https://data.riksdagen.se/dokument/HD03141.html",
       "relevance": "partial",
       "note": null
     }

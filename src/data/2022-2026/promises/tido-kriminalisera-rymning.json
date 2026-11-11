@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:74 (Tilläggsdirektiv till Utredningen om ett förstärkt samhällsskydd och en minskad risk för återfall i brott (Ju 2022:10)); SOU 2024:48 (Ett ändamålsenligt samhällsskydd Volym 1); Prop. 2025/26:181 (Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning lade i juli 2024 fram ett förslag om att göra rymning från fängelse, sluten ungdomsvård, häkte och förvar straffbart. Regeringen föreslog i mars 2026 en ändring i brottsbalken om rymning, och riksdagens betänkande i maj 2026 tillstyrker förslaget för anstalt, häkte, sluten ungdomsvård och förvar. Dokumenten täcker hela löftet, men ingen författning är kopplad till det.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,16 +33,6 @@
     ]
   },
   "evidence": [
-    {
-      "kind": "dir",
-      "dok_id": "HBB174",
-      "designation": "Dir. 2023:74",
-      "title": "Tilläggsdirektiv till Utredningen om ett förstärkt samhällsskydd och en minskad risk för återfall i brott (Ju 2022:10)",
-      "date": "2023-06-01",
-      "url": "https://data.riksdagen.se/dokument/HBB174.html",
-      "relevance": "full",
-      "note": null
-    },
     {
       "kind": "sou",
       "dok_id": "HCB348",
@@ -60,6 +50,16 @@
       "title": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
       "date": "2026-03-17",
       "url": "https://data.riksdagen.se/dokument/HD03181.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU38",
+      "designation": "Bet. 2025/26:JuU38",
+      "title": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
+      "date": "2026-05-27",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU38.html",
       "relevance": "full",
       "note": null
     }

@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2024:44 (Stärkt brottsbekämpning genom lagreglering av provokation). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i maj 2024 en utredare i uppdrag att föreslå en lag om provokation och bedöma när provokativa åtgärder är möjliga och lämpliga, bland annat vid sexualbrott på internet. I november 2025 lade utredningen fram ett förslag till en lag om särskilda provokativa åtgärder, som bland annat gäller sexualbrott mot barn. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,6 +40,16 @@
       "title": "Stärkt brottsbekämpning genom lagreglering av provokation",
       "date": "2024-05-02",
       "url": "https://data.riksdagen.se/dokument/HCB144.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3109",
+      "designation": "SOU 2025:109",
+      "title": "Särskilda provokativa åtgärder ",
+      "date": "2025-11-04",
+      "url": "https://data.riksdagen.se/dokument/HDB3109.html",
       "relevance": "full",
       "note": null
     }

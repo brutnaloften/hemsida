@@ -20,7 +20,17 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -57,9 +67,11 @@
         "keyword:anstaltsplatser",
         "keyword:häktesplatser",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03209",
@@ -144,7 +156,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03246.html",
       "found_by": ["keyword:anstaltsplatser", "keyword:frivård"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HD03218",
@@ -155,8 +168,13 @@
       "titel": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03218.html",
-      "found_by": ["keyword:anstaltsplatser", "keyword:platsbrist"],
-      "score": 2
+      "found_by": [
+        "keyword:anstaltsplatser",
+        "keyword:platsbrist",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD03185",
@@ -181,7 +199,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03137.html",
       "found_by": ["keyword:frivård", "keyword:platsbrist"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03132",
@@ -206,7 +225,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03202.html",
       "found_by": ["keyword:anstaltsplatser", "keyword:frivård"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HC01JuU19",
@@ -235,7 +255,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB41.html",
       "found_by": ["keyword:anstaltsplatser", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HB01JuU17",
@@ -246,8 +267,9 @@
       "titel": "Kriminalvårdsfrågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU17.html",
-      "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:JuU", "score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HCB393",
@@ -651,6 +673,357 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01JuU29",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU29",
+      "datum": "2024-04-25",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU29.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB01FiU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU1",
+      "datum": "2023-11-24",
+      "titel": "Statens budget 2024 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01JuU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU1",
+      "datum": "2024-11-29",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB348d2",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "48",
+      "datum": "2024-07-05",
+      "titel": "Ett ändamålsenligt samhällsskydd Volym 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB348d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HBB421",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "21",
+      "datum": "2023-07-05",
+      "titel": "En modern lagstiftning för Kriminal­vårdens person­uppgifts­behandling",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB421.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0399",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "99",
+      "datum": "2024-04-15",
+      "titel": "Vårändringsbudget för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01JuU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01JuU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU1",
+      "datum": "2023-11-30",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA03106",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "106",
+      "datum": "2023-04-25",
+      "titel": "Skärpt syn på brott mot journalister och vissa andra samhällsnyttiga funktioner",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03106.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB110",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "10",
+      "datum": "2025-02-13",
+      "titel": "Nationell samordnare för Kriminalvårdens expansion",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB110.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HB031d5",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03274",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "274",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03274.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB136",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "36",
+      "datum": "2026-05-21",
+      "titel": "Tilläggsdirektiv till Utredningen om nationell samordnare för Kriminalvårdens expansion (Ju 2025:03)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB136.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d5",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HC0329",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "29",
+      "datum": "2024-11-05",
+      "titel": "Riksrevisionens rapport om Kriminalvårdens behandlingsverksamhet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0329.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC01FiU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU1",
+      "datum": "2024-11-22",
+      "titel": "Statens budget 2025 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01FiU21",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU21",
+      "datum": "2025-06-05",
+      "titel": "Vårändringsbudget för 2025",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01JuU30",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU30",
+      "datum": "2026-05-05",
+      "titel": "Frihetsberövande påföljder för barn och unga",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01JuU48",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU48",
+      "datum": "2026-08-12",
+      "titel": "Ett nytt straffrättsligt påföljdssystem",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01FiU21",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU21",
+      "datum": "2024-05-31",
+      "titel": "Vårändringsbudget för 2024",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD03101",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "101",
+      "datum": "2026-04-13",
+      "titel": "Årsredovisning för staten 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

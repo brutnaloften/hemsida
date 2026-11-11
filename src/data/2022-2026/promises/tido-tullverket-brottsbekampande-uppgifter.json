@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Prop. 2023/24:132 (Ny tullbefogenhetslag); Prop. 2024/25:129 (Skärpta åtgärder mot utförsel av stöldgods). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2024/25:SkU21 (Skärpta åtgärder mot utförsel av stöldgods), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En utredning föreslog i december 2023 att utförsel av stöldgods ska bli brott och att Tullverket ska få nya befogenheter. Regeringen lade i april 2024 fram en ny tullbefogenhetslag och i mars 2025 ett förslag om utförselhäleri och utökade uppgifter för Tullverket. Riksdagen biföll i maj 2025 lagändringarna om stöldgods, smuggling och tullbefogenheter. Någon bredare utökning av Tullverkets brottsbekämpande uppdrag framgår inte av besluten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,6 +33,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HBB399",
+      "designation": "SOU 2023:99",
+      "title": "Nya tullrättsliga sanktioner och skärpta åtgärder mot utförsel av stöldgods ",
+      "date": "2023-12-19",
+      "url": "https://data.riksdagen.se/dokument/HBB399.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "prop",
       "dok_id": "HB03132",

@@ -17,7 +17,12 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -30,7 +35,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB35.html",
       "found_by": ["keyword:elitfotboll", "keyword:elithockey"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HDB346",
@@ -55,7 +61,8 @@
       "organ": "KN-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1112.html",
       "found_by": ["keyword:konkurrenskraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HEB1122",
@@ -80,7 +87,8 @@
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB186.html",
       "found_by": ["keyword:elitfotboll"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.15
     },
     {
       "dok_id": "HEB346",
@@ -118,7 +126,8 @@
       "organ": "LI-dep",
       "url": "https://data.riksdagen.se/dokument/HEB127.html",
       "found_by": ["keyword:konkurrenskraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03158",
@@ -130,7 +139,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03158.html",
       "found_by": ["keyword:idrottspolitik"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HDB3117",
@@ -168,7 +178,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d19.html",
       "found_by": ["keyword:idrottspolitik"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD031d25",
@@ -180,7 +191,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d25.html",
       "found_by": ["keyword:idrottspolitik"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD031d21",
@@ -205,7 +217,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU23.html",
       "found_by": ["keyword:konkurrenskraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     }
   ]
 }

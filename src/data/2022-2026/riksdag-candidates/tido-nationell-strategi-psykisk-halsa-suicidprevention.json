@@ -22,7 +22,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -60,9 +69,11 @@
         "keyword:nationell strategi",
         "keyword:folkhälsa",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01SoU12",
@@ -92,8 +103,14 @@
       "titel": "Det handlar om livet – nationell strategi inom området psykisk hälsa och suicidprevention",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU7.html",
-      "found_by": ["keyword:psykisk hälsa", "keyword:suicidprevention", "keyword:självmord"],
-      "score": 3
+      "found_by": [
+        "keyword:psykisk hälsa",
+        "keyword:suicidprevention",
+        "keyword:självmord",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC0377",
@@ -157,8 +174,13 @@
       "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
-      "found_by": ["keyword:suicidprevention", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:suicidprevention",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HCB366",
@@ -169,8 +191,13 @@
       "titel": "Livsviktigt lärande",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB366.html",
-      "found_by": ["keyword:psykisk hälsa", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:psykisk hälsa",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01SoU14",
@@ -625,6 +652,214 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01SoU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU20",
+      "datum": "2025-03-12",
+      "titel": "Socialtjänstens ansvar för våldsutsatta m.m.",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC0366",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "66",
+      "datum": "2024-12-10",
+      "titel": "Sveriges genomförande av Agenda 2030",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0366.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01SoU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU17",
+      "datum": "2023-06-08",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB01FiU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU1",
+      "datum": "2023-11-24",
+      "titel": "Statens budget 2024 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03269",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "269",
+      "datum": "2026-06-02",
+      "titel": "Riksrevisionens rapport statens arbete mot problem med spel om pengar",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03269.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB418",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "18",
+      "datum": "2026-09-03",
+      "titel": "Slutredovisning av tilläggsuppdraget om stärkt samverkan mellan socialtjänst och barn- och ungdomspsykiatri i brottsförebyggande syfte",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB418.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD0319",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "19",
+      "datum": "2025-09-30",
+      "titel": "Nästa steg för en god och nära vård",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0319.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01SoU22",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU22",
+      "datum": "2025-04-02",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01UbU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU9",
+      "datum": "2026-03-05",
+      "titel": "Lärare och elever",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01SoU17",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU17",
+      "datum": "2026-04-01",
+      "titel": "Prioriteringar inom hälso- och sjukvården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC01SoU15",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU15",
+      "datum": "2025-03-10",
+      "titel": "Stöd till personer med funktionsnedsättning",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB343",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "43",
+      "datum": "2024-06-24",
+      "titel": "Staten och kommunsektorn - samverkan, självstyrelse, styrning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB343.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01SoU34",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU34",
+      "datum": "2026-06-04",
+      "titel": "En mer sammanhållen vård för personer med skadligt bruk eller beroende och andra psykiatriska tillstånd",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU34.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

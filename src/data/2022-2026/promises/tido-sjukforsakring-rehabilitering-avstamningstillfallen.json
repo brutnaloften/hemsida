@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:1 (Budgetpropositionen för 2026 - Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2022/23:SfU1 (Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen lade i november 2022 fram budgetförslag för sjukpenning, rehabilitering och sjukskrivningsprocessen. Riksdagen beslutade i december 2022 om anslagen, med inriktning på rehabilitering och tydliga avstämningstillfällen. En utredning från augusti 2023 föreslår bättre sjukskrivning och återgång i arbete. Själva avstämningstillfällena och åtgärder mot långa sjukskrivningar nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA031d11",
+      "designation": "Prop. 2022/23:1",
+      "title": "Budgetpropositionen för 2023 - Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
+      "date": "2022-11-08",
+      "url": "https://data.riksdagen.se/dokument/HA031d11.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HA01SfU1",
@@ -50,12 +60,12 @@
       "note": null
     },
     {
-      "kind": "prop",
-      "dok_id": "HD031d12",
-      "designation": "Prop. 2025/26:1",
-      "title": "Budgetpropositionen för 2026 - Utgiftsområde 10 Ekonomisk trygghet vid sjukdom och funktionsnedsättning",
-      "date": "2025-09-22",
-      "url": "https://data.riksdagen.se/dokument/HD031d12.html",
+      "kind": "sou",
+      "dok_id": "HBB348",
+      "designation": "SOU 2023:48",
+      "title": "Rätt förutsättningar för sjukskrivning",
+      "date": "2023-08-31",
+      "url": "https://data.riksdagen.se/dokument/HBB348.html",
       "relevance": "partial",
       "note": null
     }

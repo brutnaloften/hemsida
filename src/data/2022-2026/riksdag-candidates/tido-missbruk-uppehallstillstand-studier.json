@@ -21,7 +21,13 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20"
   ],
   "candidates": [
     {
@@ -66,7 +72,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU17.html",
       "found_by": ["keyword:arbetstillstånd", "keyword:spårbyte", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HB03121",
@@ -77,8 +84,14 @@
       "titel": "Riksrevisionens rapport om systemet för återkallelser av uppehållstillstånd",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03121.html",
-      "found_by": ["keyword:uppehållstillstånd för studier", "keyword:spårbyte", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:uppehållstillstånd för studier",
+        "keyword:spårbyte",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01SfU11",
@@ -108,7 +121,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03284.html",
       "found_by": ["keyword:missbruk", "keyword:arbetstillstånd"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03262",
@@ -120,7 +134,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "found_by": ["keyword:spårbyte", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01SfU12",
@@ -132,7 +147,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU12.html",
       "found_by": ["keyword:arbetstillstånd", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD03146",
@@ -143,8 +159,13 @@
       "titel": "Bättre migrationsrättsliga regler för forskare och doktorander samt åtgärder för att motverka missbruk av uppehållstillstånd för studier",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03146.html",
-      "found_by": ["keyword:missbruk", "keyword:uppehållstillstånd för studier"],
-      "score": 2
+      "found_by": [
+        "keyword:missbruk",
+        "keyword:uppehållstillstånd för studier",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01SfU15",
@@ -156,7 +177,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU15.html",
       "found_by": ["keyword:spårbyte", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HDB333",
@@ -168,7 +190,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB333.html",
       "found_by": ["keyword:uppehållstillstånd för studier", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HC03117",
@@ -197,7 +220,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0392.html",
       "found_by": ["keyword:spårbyte", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HCB315",
@@ -328,6 +352,45 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB170",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "70",
+      "datum": "2026-07-09",
+      "titel": "Förbättrade möjligheter att behandla personuppgifter för att motverka felaktiga utbetalningar och missbruk av myndigheters processer",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB170.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01SfU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SfU17",
+      "datum": "2024-05-23",
+      "titel": "Riksrevisionens rapport om systemet för återkallelser av uppehållstillstånd",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01SfU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU16",
+      "datum": "2026-04-09",
+      "titel": "Migrationsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

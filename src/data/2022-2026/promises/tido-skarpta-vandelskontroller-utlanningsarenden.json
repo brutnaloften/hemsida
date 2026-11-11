@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:158 (Skärpta krav på hederligt levnadssätt och ökade möjligheter till återkallelse av uppehållstillstånd). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i april 2025 skärpta och tydligare vandelskrav för uppehållstillstånd. Regeringen lade i april 2026 fram en proposition med stramare vandelskrav i utlänningslagen. Dokumenten visar förslag, inget beslut. Uppdraget till Migrationsverket att prioritera vandelskontroller och jämförelsen med andra länder nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,13 +34,23 @@
   },
   "evidence": [
     {
-      "kind": "dir",
-      "dok_id": "HBB1158",
-      "designation": "Dir. 2023:158",
-      "title": "Skärpta krav på hederligt levnadssätt och ökade möjligheter till återkallelse av uppehållstillstånd",
-      "date": "2023-11-20",
-      "url": "https://data.riksdagen.se/dokument/HBB1158.html",
-      "relevance": "full",
+      "kind": "sou",
+      "dok_id": "HDB333",
+      "designation": "SOU 2025:33",
+      "title": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "date": "2025-04-01",
+      "url": "https://data.riksdagen.se/dokument/HDB333.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03264",
+      "designation": "Prop. 2025/26:264",
+      "title": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03264.html",
+      "relevance": "partial",
       "note": null
     }
   ]

@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2024:53 (Stöd till invandrares utvandring). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i oktober 2023 en utredare i uppdrag att kartlägga insatser för återvandring i Sverige och andra länder, föreslå ekonomiska incitament och stöd samt lagstiftning. Utredningen redovisade i augusti 2024 sitt betänkande med kartläggning av bland annat Danmark, Norge och Tyskland. Den avråder från stora ekonomiska incitament. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1151",
+      "designation": "Dir. 2023:151",
+      "title": "Översyn av incitamentsstrukturerna för frivillig återvandring",
+      "date": "2023-10-26",
+      "url": "https://data.riksdagen.se/dokument/HBB1151.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HCB353",

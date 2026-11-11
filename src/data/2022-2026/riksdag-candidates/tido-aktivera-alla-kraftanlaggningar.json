@@ -18,7 +18,12 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -37,7 +42,8 @@
         "all-keywords",
         "committee:NU"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC01NU12",
@@ -67,7 +73,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
       "found_by": ["keyword:kraftanläggningar", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03240",
@@ -105,7 +112,8 @@
       "organ": "Försvarsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0334.html",
       "found_by": ["keyword:reservkraft", "keyword:elförsörjning"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HB01NU9",
@@ -130,7 +138,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
       "found_by": ["all-keywords", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HA01NU9",
@@ -181,7 +190,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03158.html",
       "found_by": ["keyword:elförsörjning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03172",
@@ -206,7 +216,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03160.html",
       "found_by": ["keyword:elförsörjning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD0397",
@@ -220,6 +231,19 @@
       "found_by": ["keyword:elförsörjning"],
       "score": 1,
       "relevance": 0.02
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

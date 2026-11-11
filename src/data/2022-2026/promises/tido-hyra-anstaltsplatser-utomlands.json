@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:185 (Tillfällig verkställighet av svenska fängelsestraff utomlands). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "I januari 2025 presenterades en promemoria om att hyra anstaltsplatser i andra EU- och EES-länder, med förslag på författningsändringar. I mars 2026 lade regeringen fram ett förslag om verkställighet av fängelsestraff i Estland, och riksdagen biföll det i maj 2026. Det täcker tillfällig platsbrist. En permanent ordning och utvisningsdömda nämns inte i de senare dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,12 +40,32 @@
   },
   "evidence": [
     {
+      "kind": "ds",
+      "dok_id": "HDB41",
+      "designation": "Ds 2025:1",
+      "title": "Hyra anstaltsplatser utomlands ",
+      "date": "2025-01-29",
+      "url": "https://data.riksdagen.se/dokument/HDB41.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "prop",
       "dok_id": "HD03185",
       "designation": "Prop. 2025/26:185",
       "title": "Tillfällig verkställighet av svenska fängelsestraff utomlands",
       "date": "2026-03-17",
       "url": "https://data.riksdagen.se/dokument/HD03185.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU35",
+      "designation": "Bet. 2025/26:JuU35",
+      "title": "Tillfällig verkställighet av svenska fängelsestraff utomlands",
+      "date": "2026-05-28",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU35.html",
       "relevance": "partial",
       "note": null
     }

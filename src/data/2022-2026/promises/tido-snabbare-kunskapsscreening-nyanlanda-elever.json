@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:174 (Mer obligatorisk undervisningstid för elever som behöver det). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning lade i januari 2025 fram förslag om en ny nybörjarkurs i svenska som andraspråk och ett nationellt kartläggningsmaterial från Skolverket för nyanlända elever. Det rör kunskapsscreeningen. Utökad undervisningstid och en koncentrerad timplan för centrala ämnen nämns inte i dokumentet, som visar förslag men inget beslut.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,12 +40,12 @@
   },
   "evidence": [
     {
-      "kind": "dir",
-      "dok_id": "HBB1174",
-      "designation": "Dir. 2023:174",
-      "title": "Mer obligatorisk undervisningstid för elever som behöver det",
-      "date": "2023-12-14",
-      "url": "https://data.riksdagen.se/dokument/HBB1174.html",
+      "kind": "sou",
+      "dok_id": "HDB39",
+      "designation": "SOU 2025:9",
+      "title": "På språklig grund ",
+      "date": "2025-01-31",
+      "url": "https://data.riksdagen.se/dokument/HDB39.html",
       "relevance": "partial",
       "note": null
     }

@@ -26,10 +26,38 @@
     "mottagandedirektivet"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 utredningen om det initiala mottagandet i uppdrag att se över om asylsökande kan få bidra mer till kostnaderna för boende och vård inom EU-rätten. Utredningen redovisade i oktober 2024 att en större kostnadsandel inte är förenlig med EU-rätten. En fast avgift tas inte upp särskilt i dokumenten.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB193",
+      "designation": "Dir. 2023:93",
+      "title": "Tilläggsdirektiv till Utredningen om ett ordnat initialt mottagande av asylsökande (Ju 2021:12)",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB193.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB368",
+      "designation": "SOU 2024:68",
+      "title": "Mottagandelagen ",
+      "date": "2024-10-15",
+      "url": "https://data.riksdagen.se/dokument/HCB368.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

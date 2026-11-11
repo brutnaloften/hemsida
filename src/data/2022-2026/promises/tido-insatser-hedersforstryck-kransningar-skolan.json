@@ -20,10 +20,38 @@
   "committee": "UbU",
   "keywords": ["hedersrelaterat förtryck", "kränkningar", "Skolverket", "metodstöd", "HBTQ"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i mars 2025 en utredare i uppdrag att se över insatser mot hedersrelaterat våld och förtryck i skolan, inklusive stöd till personal och till elever som kränks på grund av kön, sexuell läggning eller könsidentitet. Utredningen föreslog i augusti 2026 att hedersrelaterade kränkningar ska räknas som kränkande behandling och att Skolverket tar fram stödmaterial. Dokumenten visar förslag, inget beslut. Kränkningar på grund av kön, sexuell läggning eller könsidentitet och metodstöd till lärare nämns inte i förslagen.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB131",
+      "designation": "Dir. 2025:31",
+      "title": "Ökade insatser för att motverka hedersrelaterat våld och förtryck i förskolan, skolan och fritidshemmet",
+      "date": "2025-03-20",
+      "url": "https://data.riksdagen.se/dokument/HDB131.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB351",
+      "designation": "SOU 2026:51",
+      "title": "Fri att lära och leva",
+      "date": "2026-08-17",
+      "url": "https://data.riksdagen.se/dokument/HEB351.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

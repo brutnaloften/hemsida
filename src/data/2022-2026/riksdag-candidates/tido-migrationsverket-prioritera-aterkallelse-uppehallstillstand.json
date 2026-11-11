@@ -18,7 +18,15 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -36,7 +44,8 @@
         "all-keywords",
         "committee:SfU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01SfU23",
@@ -61,7 +70,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU11.html",
       "found_by": ["keyword:Migrationsverket", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB01SfU17",
@@ -72,8 +82,14 @@
       "titel": "Riksrevisionens rapport om systemet för återkallelser av uppehållstillstånd",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU17.html",
-      "found_by": ["keyword:återkallelse", "all-keywords", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:återkallelse",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB03121",
@@ -84,8 +100,14 @@
       "titel": "Riksrevisionens rapport om systemet för återkallelser av uppehållstillstånd",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03121.html",
-      "found_by": ["keyword:återkallelse", "keyword:uppehållstillstånd", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:återkallelse",
+        "keyword:uppehållstillstånd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01SfU8",
@@ -109,8 +131,13 @@
       "titel": "Riksrevisionens rapport om Migrationsverkets kontroller av arbetstillstånd – stor risk för fel och missbruk",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03284.html",
-      "found_by": ["keyword:Migrationsverket", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:Migrationsverket",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD01SfU22",
@@ -122,7 +149,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU22.html",
       "found_by": ["all-keywords", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01SfU4",
@@ -146,8 +174,13 @@
       "titel": "Riksrevisionens rapport om Migrationsverkets hantering av medborgarskapsärenden",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD039.html",
-      "found_by": ["keyword:Migrationsverket", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:Migrationsverket",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HC01SfU22",
@@ -159,7 +192,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU22.html",
       "found_by": ["keyword:Migrationsverket", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SfU37",
@@ -184,7 +218,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03289.html",
       "found_by": ["keyword:återkallelse"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SkU30",
@@ -196,7 +231,8 @@
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HD01SkU30.html",
       "found_by": ["keyword:Migrationsverket"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01SfU30",
@@ -301,6 +337,97 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB333",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "33",
+      "datum": "2025-04-01",
+      "titel": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB333.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03264",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "264",
+      "datum": "2026-04-30",
+      "titel": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03264.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031d10",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB430d2",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "30",
+      "datum": "2025-11-25",
+      "titel": "Migrations- och asylpakten, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB430d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.97
     }
   ]
 }

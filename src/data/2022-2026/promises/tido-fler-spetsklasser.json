@@ -26,10 +26,48 @@
     "högpresterande elever"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i december 2022 om pengar till fler och bättre spetsklasser. Regeringen lade i februari 2024 fram ett förslag om att reglera spetsutbildning i grundskolan i skollagen, och riksdagen biföll i maj 2024 en permanent spetsutbildning i grundskolan. Gymnasiet och en utökning till fler teoretiska ämnen täcks inte tydligt, och förordningsändringar nämns inte i dokumenten.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HA01UbU1",
+      "designation": "Bet. 2022/23:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och  universitetsforskning",
+      "date": "2022-12-14",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0379",
+      "designation": "Prop. 2023/24:79",
+      "title": "Att lättare få läsa i snabbare takt och på en högre nivå",
+      "date": "2024-02-27",
+      "url": "https://data.riksdagen.se/dokument/HB0379.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01UbU16",
+      "designation": "Bet. 2023/24:UbU16",
+      "title": "Att lättare få läsa i snabbare takt och på en högre nivå",
+      "date": "2024-05-20",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU16.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

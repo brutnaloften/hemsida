@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:74 (Tilläggsdirektiv till Utredningen om ett förstärkt samhällsskydd och en minskad risk för återfall i brott (Ju 2022:10)); SOU 2024:48 (Ett ändamålsenligt samhällsskydd Volym 1); Prop. 2025/26:95 (Säkerhetsförvaring – en ny tidsobestämd frihetsberövande påföljd). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i juli 2024 en ny tidsobestämd påföljd för personer med hög risk för återfall i allvarlig brottslighet. Regeringen lade i januari 2026 fram ett förslag om säkerhetsförvaring, alltså en ny tidsobestämd frihetsberövande påföljd. Riksdagen biföll förslaget i mars 2026. Livstidsstraffet ligger kvar vid sidan av den nya påföljden.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,16 +33,6 @@
     ]
   },
   "evidence": [
-    {
-      "kind": "dir",
-      "dok_id": "HBB174",
-      "designation": "Dir. 2023:74",
-      "title": "Tilläggsdirektiv till Utredningen om ett förstärkt samhällsskydd och en minskad risk för återfall i brott (Ju 2022:10)",
-      "date": "2023-06-01",
-      "url": "https://data.riksdagen.se/dokument/HBB174.html",
-      "relevance": "full",
-      "note": null
-    },
     {
       "kind": "sou",
       "dok_id": "HCB348",
@@ -60,6 +50,16 @@
       "title": "Säkerhetsförvaring – en ny tidsobestämd frihetsberövande påföljd",
       "date": "2026-01-22",
       "url": "https://data.riksdagen.se/dokument/HD0395.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU27",
+      "designation": "Bet. 2025/26:JuU27",
+      "title": "Säkerhetsförvaring – en ny tidsobestämd frihetsberövande påföljd",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU27.html",
       "relevance": "full",
       "note": null
     }

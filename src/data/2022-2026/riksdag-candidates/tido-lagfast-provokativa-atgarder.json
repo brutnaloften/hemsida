@@ -17,7 +17,15 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -48,8 +56,14 @@
       "titel": "Polisens arbete mot sexuella övergrepp mot barn i digitala miljöer",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU26.html",
-      "found_by": ["keyword:provokativa åtgärder", "keyword:polisen", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:provokativa åtgärder",
+        "keyword:polisen",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HDB3109",
@@ -63,9 +77,11 @@
       "found_by": [
         "keyword:provokativa åtgärder",
         "keyword:sexualbrott på internet",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC01JuU18",
@@ -124,8 +140,13 @@
       "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03274.html",
-      "found_by": ["keyword:provokativa åtgärder", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:provokativa åtgärder",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01JuU28",
@@ -137,7 +158,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU28.html",
       "found_by": ["keyword:polisen", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01JuU16",
@@ -161,8 +183,13 @@
       "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD03103.html",
-      "found_by": ["keyword:provokativa åtgärder", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:provokativa åtgärder",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC01JuU27",
@@ -174,7 +201,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU27.html",
       "found_by": ["keyword:brottsbekämpning", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC01JuU9",
@@ -186,7 +214,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU9.html",
       "found_by": ["keyword:brottsbekämpning", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HCB355",
@@ -215,7 +244,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU11.html",
       "found_by": ["keyword:sexualbrott på internet", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01TU22",
@@ -333,6 +363,71 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3112",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "112",
+      "datum": "2026-01-01",
+      "titel": "Verktyg för skydd av EU-medel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3113",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "113",
+      "datum": "2025-11-26",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3115",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "115",
+      "datum": "2025-12-10",
+      "titel": "Kompletterande bestämmelser till EU:s cyberresiliensförordning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01JuU17",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU17",
+      "datum": "2026-01-30",
+      "titel": "Processrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB3111",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "111",
+      "datum": "2025-11-25",
+      "titel": "Rättssäkerhetens pris",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3111.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.98
     }
   ]
 }

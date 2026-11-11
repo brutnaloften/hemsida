@@ -18,7 +18,12 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20"
   ],
   "candidates": [
     {
@@ -93,7 +98,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU17.html",
       "found_by": ["keyword:vårdprocess", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HEB315d2",
@@ -135,7 +141,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
       "found_by": ["keyword:suicidprevention", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HCB366",
@@ -146,8 +153,13 @@
       "titel": "Livsviktigt lärande",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB366.html",
-      "found_by": ["keyword:suicidalt beteende", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:suicidalt beteende",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB01SoU22",
@@ -159,7 +171,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU22.html",
       "found_by": ["keyword:suicidalt beteende", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.08
     },
     {
       "dok_id": "HB03103",
@@ -170,8 +183,13 @@
       "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HB03103.html",
-      "found_by": ["keyword:suicidalt beteende", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:suicidalt beteende",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB01SoU15",
@@ -182,8 +200,9 @@
       "titel": "Folkhälsa",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU15.html",
-      "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SoU", "score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01SoU12",

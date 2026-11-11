@@ -21,7 +21,15 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -57,9 +65,11 @@
         "keyword:utländsk finansiering",
         "keyword:civilsamhället",
         "all-keywords",
-        "committee:KrU"
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03291",
@@ -137,8 +147,14 @@
       "titel": "Civila samhället, trossamfund och folkbildning",
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HC01KrU8.html",
-      "found_by": ["keyword:trossamfund", "keyword:civilsamhället", "committee:KrU"],
-      "score": 3
+      "found_by": [
+        "keyword:trossamfund",
+        "keyword:civilsamhället",
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01KU25",
@@ -149,8 +165,14 @@
       "titel": "Fri- och rättigheter",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HC01KU25.html",
-      "found_by": ["keyword:utländsk finansiering", "keyword:islamism", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:utländsk finansiering",
+        "keyword:islamism",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB342d2",
@@ -161,8 +183,13 @@
       "titel": "Ett nytt regelverk för granskning av utländsk finansiering av trossamfund och andra verksamheter, del 2",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB342d2.html",
-      "found_by": ["keyword:utländsk finansiering", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:utländsk finansiering",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD0374",
@@ -216,8 +243,13 @@
       "titel": "Statens stöd till trossamfund och civilsamhället – enhetliga och rättssäkra villkor",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03119.html",
-      "found_by": ["keyword:trossamfund", "keyword:civilsamhället"],
-      "score": 2
+      "found_by": [
+        "keyword:trossamfund",
+        "keyword:civilsamhället",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01KrU2",
@@ -229,7 +261,8 @@
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HB01KrU2.html",
       "found_by": ["keyword:civilsamhället", "committee:KrU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HB01KrU1",
@@ -360,6 +393,110 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB152",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "52",
+      "datum": "2025-05-28",
+      "titel": "Ett regelverk för att motverka utländsk finansiering av verksamheter med antidemokratiska syften",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB152.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB153",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "53",
+      "datum": "2026-06-16",
+      "titel": "Religiös radikalisering med fokus på politisk islam - konsekvenser för demokratin, integration och utanförskap",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB153.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB357",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "57",
+      "datum": "2026-09-11",
+      "titel": "Akademisk frihet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB357.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB03163",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "163",
+      "datum": "2024-07-08",
+      "titel": "Nationell säkerhetsstrategi",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03163.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA01KU26",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU26",
+      "datum": "2023-05-05",
+      "titel": "Fri- och rättigheter m.m.",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01JuU18",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU18",
+      "datum": "2024-04-12",
+      "titel": "Våldsbrott och brottsoffer",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

@@ -22,7 +22,13 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -104,8 +110,14 @@
       "titel": "Barn och unga inom socialtjänsten",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
-      "found_by": ["keyword:placerade barn", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:placerade barn",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01SoU38",
@@ -155,8 +167,9 @@
       "titel": "Barn och unga inom socialtjänsten",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU19.html",
-      "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SoU", "score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03194",
@@ -214,8 +227,13 @@
       "titel": "För barn och unga i samhällsvård, del 2",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB366d2.html",
-      "found_by": ["keyword:placerade barn", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:placerade barn",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB352d3",
@@ -226,8 +244,9 @@
       "titel": "En reform av den statliga barn- och ungdomsvården, del 3",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB352d3.html",
-      "found_by": ["keyword:placerade barn"],
-      "score": 1
+      "found_by": ["keyword:placerade barn", "score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.75
     },
     {
       "dok_id": "HEB352d2",
@@ -410,6 +429,84 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01SoU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU20",
+      "datum": "2025-03-12",
+      "titel": "Socialtjänstens ansvar för våldsutsatta m.m.",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB3113",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "113",
+      "datum": "2025-11-26",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB0331",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "31",
+      "datum": "2023-10-31",
+      "titel": "Stärkta rättigheter för barn och vuxna i skyddat boende",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0331.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB352",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "52",
+      "datum": "2026-08-18",
+      "titel": "En reform av den statliga barn- och ungdomsvården",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB352.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

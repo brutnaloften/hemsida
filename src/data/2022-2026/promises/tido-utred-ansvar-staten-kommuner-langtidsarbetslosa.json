@@ -20,10 +20,28 @@
   "committee": "AU",
   "keywords": ["ansvarsfördelning", "långtidsarbetslösa", "kommunerna", "Arbetsförmedlingen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning lämnade i februari 2025 sitt betänkande om stärkta drivkrafter och möjligheter för biståndsmottagare. Utredningens uppdrag omfattade bland annat att analysera ansvarsfördelningen mellan staten och kommunerna för långtidsarbetslösa. Det är dock bara en del av ett bredare uppdrag om försörjningsstöd, och dokumenten visar inga särskilda slutsatser om just ansvarsfördelningen.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB315",
+      "designation": "SOU 2025:15",
+      "title": "Stärkta drivkrafter och möjligheter för biståndsmottagare",
+      "date": "2025-02-26",
+      "url": "https://data.riksdagen.se/dokument/HDB315.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

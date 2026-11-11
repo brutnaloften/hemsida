@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2025:38 (Att omhänderta barn och unga). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i november 2023 en utredning i uppdrag att se över när barn kan tas om hand enligt LVU, bland annat vid hedersförtryck och kriminella miljöer, och att pröva om åklagare ska kunna besluta om omedelbart omhändertagande. Utredningen föreslog i april 2025 vidgade möjligheter att omhänderta barn i sådana hem. Åklagarnas beslutsrätt och en oftare användning av LVU tas inte upp i förslagen.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1160",
+      "designation": "Dir. 2023:160",
+      "title": "Stärkt barnrättsperspektiv i LVU och en översyn av grunderna för vård",
+      "date": "2023-11-30",
+      "url": "https://data.riksdagen.se/dokument/HBB1160.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HDB338",

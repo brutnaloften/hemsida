@@ -26,10 +26,28 @@
     "minderåriga"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2023 fram ett förslag om att målsägandebiträde eller särskild företrädare ska kunna förordnas även när den misstänkte är under 15 år. Det täcker den del av löftet som gäller juridiskt stöd till brottsoffer. En huvudregel om att polis eller socialtjänst ska utreda påverkan från äldre nämns inte i dokumenten. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA0378",
+      "designation": "Prop. 2022/23:78",
+      "title": "Förbättrade åtgärder när barn misstänks för brott",
+      "date": "2023-03-14",
+      "url": "https://data.riksdagen.se/dokument/HA0378.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

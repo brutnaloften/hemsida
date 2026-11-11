@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:66 (En straffreform, del 3); SOU 2025:66 (En straffreform, del 4); Prop. 2025/26:297 (Ett nytt straffrättsligt påföljdssystem). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En utredning föreslog i januari 2023 hårdare straff för flera brott, så att varje tillkommande brott väger tyngre. I juni 2025 föreslog en ny utredning att brott mot liv och hälsa som huvudregel ska få fullt genomslag. I juni 2026 lade regeringen fram en proposition där fler brott ger högre straff. Dokumenten visar förslag, inget beslut. Full straffvärdering för de tre allvarligaste brotten nämns inte i propositionen.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -41,21 +41,31 @@
   "evidence": [
     {
       "kind": "sou",
-      "dok_id": "HDB366d3",
-      "designation": "SOU 2025:66",
-      "title": "En straffreform, del 3",
-      "date": "2025-06-09",
-      "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
+      "dok_id": "HBB31",
+      "designation": "SOU 2023:1",
+      "title": "Skärpta straff för flerfaldig brottslighet",
+      "date": "2023-01-25",
+      "url": "https://data.riksdagen.se/dokument/HBB31.html",
       "relevance": "partial",
       "note": null
     },
     {
       "kind": "sou",
-      "dok_id": "HDB366d4",
+      "dok_id": "HDB366",
       "designation": "SOU 2025:66",
-      "title": "En straffreform, del 4",
+      "title": "En straffreform",
       "date": "2025-06-09",
-      "url": "https://data.riksdagen.se/dokument/HDB366d4.html",
+      "url": "https://data.riksdagen.se/dokument/HDB366.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB366d3",
+      "designation": "SOU 2025:66",
+      "title": "En straffreform, del 3",
+      "date": "2025-06-09",
+      "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
       "relevance": "partial",
       "note": null
     },

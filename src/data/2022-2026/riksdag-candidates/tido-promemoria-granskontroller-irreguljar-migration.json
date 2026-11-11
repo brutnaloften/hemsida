@@ -14,7 +14,16 @@
     "all-keywords",
     "committee:SfU",
     "score:tido-corpus-claude-v1-shard-1-of-20",
-    "score:tido-corpus-claude-v1-shard-4-of-20"
+    "score:tido-corpus-claude-v1-shard-4-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -45,7 +54,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "found_by": ["keyword:irreguljär migration", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HDB430",
@@ -57,7 +67,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB430.html",
       "found_by": ["keyword:gränskontroller", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HDB430d2",
@@ -69,7 +80,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB430d2.html",
       "found_by": ["keyword:irreguljär migration", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HC03176",
@@ -81,7 +93,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03176.html",
       "found_by": ["keyword:gränskontroller", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC01SfU18",
@@ -93,7 +106,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU18.html",
       "found_by": ["keyword:irreguljär migration", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HB03138",
@@ -105,7 +119,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03138.html",
       "found_by": ["keyword:identitetskontroller", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HBB430",
@@ -116,8 +131,13 @@
       "titel": "Anpassning av svensk rätt till den reviderade VIS-förordningen ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB430.html",
-      "found_by": ["keyword:irreguljär migration", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:irreguljär migration",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD03274",
@@ -129,7 +149,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03274.html",
       "found_by": ["keyword:identitetskontroller"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03261",
@@ -154,7 +175,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03250.html",
       "found_by": ["keyword:identitetskontroller"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03249",
@@ -166,7 +188,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03249.html",
       "found_by": ["keyword:irreguljär migration"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03258",
@@ -178,7 +201,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03258.html",
       "found_by": ["keyword:departementspromemoria"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SfU16",
@@ -190,7 +214,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU16.html",
       "found_by": ["committee:SfU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03191",
@@ -202,7 +227,21 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03191.html",
       "found_by": ["keyword:departementspromemoria"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
+    },
+    {
+      "dok_id": "HB01JuU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU11",
+      "datum": "2024-02-08",
+      "titel": "Tillfälliga förbud att transportera personer utan giltiga identitetshandlingar till Sverige",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

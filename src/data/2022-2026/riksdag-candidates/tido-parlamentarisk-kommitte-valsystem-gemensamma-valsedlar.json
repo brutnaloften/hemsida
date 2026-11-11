@@ -20,7 +20,11 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20"
   ],
   "candidates": [
     {
@@ -38,9 +42,11 @@
         "keyword:Valmyndigheten",
         "keyword:valdeltagande",
         "all-keywords",
-        "committee:KU"
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC01KU13",
@@ -57,9 +63,11 @@
         "keyword:gemensamma valsedlar",
         "keyword:valdeltagande",
         "all-keywords",
-        "committee:KU"
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC03181",
@@ -148,8 +156,15 @@
       "titel": "Säkerhet och tillgänglighet vid val",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HD01KU4.html",
-      "found_by": ["keyword:valsedlar", "keyword:Valmyndigheten", "all-keywords", "committee:KU"],
-      "score": 4
+      "found_by": [
+        "keyword:valsedlar",
+        "keyword:Valmyndigheten",
+        "all-keywords",
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB0392",
@@ -191,8 +206,14 @@
       "titel": "Översyn av valsedelsystemet",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HCB124.html",
-      "found_by": ["keyword:valsystem", "keyword:gemensamma valsedlar", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:valsystem",
+        "keyword:gemensamma valsedlar",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03185",
@@ -216,8 +237,13 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD0375.html",
-      "found_by": ["keyword:valsedlar", "keyword:Valmyndigheten"],
-      "score": 2
+      "found_by": [
+        "keyword:valsedlar",
+        "keyword:Valmyndigheten",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD0388",
@@ -322,6 +348,19 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
       "score": 1,
       "relevance": 0.95
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.98
     }
   ]
 }

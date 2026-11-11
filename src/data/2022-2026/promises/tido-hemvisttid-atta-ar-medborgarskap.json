@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:1 (Skärpta krav för svenskt medborgarskap); Prop. 2025/26:175 (Skärpta krav för svenskt medborgarskap). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i september 2023 en utredare i uppdrag att föreslå längre hemvisttid för medborgarskap, med minst åtta år som utgångspunkt. Utredningen föreslog i januari 2025 åtta år, med kortare tid för vissa grupper. Regeringen lade i mars 2026 fram en proposition om skärpta hemvistkrav, och riksdagen biföll den i april 2026. Åtta-årsgränsen nämns inte uttryckligen i propositionen eller beslutet.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,6 +33,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1129",
+      "designation": "Dir. 2023:129",
+      "title": "Skärpta krav för att förvärva svenskt medborgarskap",
+      "date": "2023-09-07",
+      "url": "https://data.riksdagen.se/dokument/HBB1129.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HDB31",
@@ -51,6 +61,16 @@
       "date": "2026-03-12",
       "url": "https://data.riksdagen.se/dokument/HD03175.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU28",
+      "designation": "Bet. 2025/26:SfU28",
+      "title": "Skärpta krav för svenskt medborgarskap",
+      "date": "2026-04-28",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU28.html",
+      "relevance": "full",
       "note": null
     }
   ]

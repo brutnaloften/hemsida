@@ -20,7 +20,14 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -36,9 +43,11 @@
         "keyword:långtidsarbetslösa",
         "keyword:Arbetsförmedlingen",
         "all-keywords",
-        "committee:AU"
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD01AU14",
@@ -63,7 +72,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU6.html",
       "found_by": ["keyword:Arbetsförmedlingen", "all-keywords", "committee:AU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD0372",
@@ -75,7 +85,8 @@
       "organ": "Arbetsmarknadsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0372.html",
       "found_by": ["keyword:långtidsarbetslösa", "keyword:Arbetsförmedlingen", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HC01AU3",
@@ -100,7 +111,8 @@
       "organ": "A-dep",
       "url": "https://data.riksdagen.se/dokument/HEB188.html",
       "found_by": ["keyword:långtidsarbetslösa", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01TU20",
@@ -203,7 +215,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03288.html",
       "found_by": ["keyword:kommunerna"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01SfU32",
@@ -295,6 +308,110 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HB01SoU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU17",
+      "datum": "2024-06-04",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB315",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "15",
+      "datum": "2025-02-26",
+      "titel": "Stärkta drivkrafter och möjligheter för biståndsmottagare",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB315.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HA01SoU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU16",
+      "datum": "2023-04-26",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC01AU5",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU5",
+      "datum": "2025-02-13",
+      "titel": "Integration",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB429",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "29",
+      "datum": "2024-11-25",
+      "titel": "Aktivitetskrav inom försörjningsstödet - för arbete, egenförsörjning och nationell likformighet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB429.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB315d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "15",
+      "datum": "2025-02-26",
+      "titel": "Stärkta drivkrafter och möjligheter för biståndsmottagare, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB315d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HBB170",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "70",
+      "datum": "2023-06-08",
+      "titel": "Tilläggsdirektiv till Utredningen om drivkrafter och möjligheter i försörjningsstödet (S 2022:16)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB170.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB324",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "24",
+      "datum": "2023-05-31",
+      "titel": "Etablering för fler Jämställda möjligheter till integration ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB324.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

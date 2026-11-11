@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:123 (Skärpta villkor för friskolesektorn - ytterligare förslag); Prop. 2025/26:292 (Skärpta villkor för friskolesektorn). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i juli 2023 en utredning i uppdrag att föreslå en sanktionstrappa för friskolor. Utredningen föreslog i april 2025 sanktionsavgifter, skärpta viten, förbud mot värdeöverföring vid brister och tvångsförvaltning. I juni 2026 lades en proposition fram med sanktionsavgifter, värdeöverföringsförbud och statliga åtgärder i undantagsfall. Skärpta viten och byte av ledning nämns inte i propositionen.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,26 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1109",
+      "designation": "Dir. 2023:109",
+      "title": "Tilläggsdirektiv till Utredningen om vinst i skolan (U 2022:08)",
+      "date": "2023-07-06",
+      "url": "https://data.riksdagen.se/dokument/HBB1109.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB337",
+      "designation": "SOU 2025:37",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2025-04-08",
+      "url": "https://data.riksdagen.se/dokument/HDB337.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HDB3123",

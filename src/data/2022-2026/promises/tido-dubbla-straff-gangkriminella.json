@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2025:66 (En straffreform, del 3). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:JuU1 (Utgiftsområde 4 Rättsväsendet); Bet. 2025/26:JuU42 (Dubbla straff för brott i kriminella nätverk och skärpta straffskalor), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen lade i april 2026 fram ett förslag om en ny straffskärpningsregel för brott med koppling till kriminella nätverk, där straffvärdet bedöms som dubbelt. Riksdagen biföll förslaget i juni 2026, tillsammans med skärpta straffskalor för ett femtiotal brott. Dokumenten täcker hela löftet, men ingen författning är kopplad till det.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,23 +40,13 @@
   },
   "evidence": [
     {
-      "kind": "sou",
-      "dok_id": "HDB366d3",
-      "designation": "SOU 2025:66",
-      "title": "En straffreform, del 3",
-      "date": "2025-06-09",
-      "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "bet",
-      "dok_id": "HD01JuU1",
-      "designation": "Bet. 2025/26:JuU1",
-      "title": "Utgiftsområde 4 Rättsväsendet",
-      "date": "2025-11-28",
-      "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
-      "relevance": "partial",
+      "kind": "prop",
+      "dok_id": "HD03218",
+      "designation": "Prop. 2025/26:218",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03218.html",
+      "relevance": "full",
       "note": null
     },
     {

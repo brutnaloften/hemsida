@@ -21,7 +21,12 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -110,7 +115,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU17.html",
       "found_by": ["keyword:vindkraftsparker", "keyword:Svenska kraftnät", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB01NU14",
@@ -122,7 +128,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU14.html",
       "found_by": ["keyword:vindkraftsparker", "keyword:havsbaserad vindkraft", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.4
     },
     {
       "dok_id": "HB0358",
@@ -150,8 +157,14 @@
       "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
-      "found_by": ["keyword:havsbaserad vindkraft", "all-keywords", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:havsbaserad vindkraft",
+        "all-keywords",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD01NU13",
@@ -176,7 +189,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
       "found_by": ["keyword:vindkraftsparker", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HDB347",
@@ -214,7 +228,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HBB161.html",
       "found_by": ["keyword:exklusivitet", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01NU24",
@@ -226,7 +241,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU24.html",
       "found_by": ["committee:NU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03130",
@@ -253,6 +269,19 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB325",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "25",
+      "datum": "2023-05-30",
+      "titel": "Kunskapskrav för permanent uppehållstillstånd ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB325.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

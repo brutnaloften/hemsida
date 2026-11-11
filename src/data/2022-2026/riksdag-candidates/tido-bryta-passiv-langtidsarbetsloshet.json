@@ -20,7 +20,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -55,9 +64,11 @@
         "keyword:långtidsarbetslöshet",
         "keyword:sökaktivitet",
         "keyword:arbetsplatsnära insatser",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01AU2",
@@ -72,9 +83,11 @@
         "keyword:sökaktivitet",
         "keyword:arbetsplatsnära insatser",
         "all-keywords",
-        "committee:AU"
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01AU8",
@@ -103,8 +116,14 @@
       "titel": "Integration",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HC01AU5.html",
-      "found_by": ["keyword:arbetsplatsnära insatser", "all-keywords", "committee:AU"],
-      "score": 3
+      "found_by": [
+        "keyword:arbetsplatsnära insatser",
+        "all-keywords",
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.75
     },
     {
       "dok_id": "HB01AU2",
@@ -115,8 +134,14 @@
       "titel": "Utgiftsområde 14 Arbetsmarknad och arbetsliv",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HB01AU2.html",
-      "found_by": ["keyword:arbetsmarknadspolitik", "all-keywords", "committee:AU"],
-      "score": 3
+      "found_by": [
+        "keyword:arbetsmarknadspolitik",
+        "all-keywords",
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB031",
@@ -163,8 +188,13 @@
       "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU9.html",
-      "found_by": ["keyword:arbetsmarknadspolitik", "committee:AU"],
-      "score": 2
+      "found_by": [
+        "keyword:arbetsmarknadspolitik",
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD0372",
@@ -175,8 +205,13 @@
       "titel": "Riksrevisionens rapport om Arbetsförmedlingens stöd till personer med funktionsnedsättning",
       "organ": "Arbetsmarknadsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0372.html",
-      "found_by": ["keyword:långtidsarbetslöshet", "keyword:arbetsmarknadspolitik"],
-      "score": 2
+      "found_by": [
+        "keyword:långtidsarbetslöshet",
+        "keyword:arbetsmarknadspolitik",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD01AU2",
@@ -234,8 +269,13 @@
       "titel": "Etablering för fler Jämställda möjligheter till integration ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB324.html",
-      "found_by": ["keyword:arbetsplatsnära insatser", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:arbetsplatsnära insatser",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA01AU6",
@@ -246,8 +286,13 @@
       "titel": "Integration",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HA01AU6.html",
-      "found_by": ["keyword:långtidsarbetslöshet", "committee:AU"],
-      "score": 2
+      "found_by": [
+        "keyword:långtidsarbetslöshet",
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03207",
@@ -599,6 +644,344 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA031d15",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01SoU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU17",
+      "datum": "2024-06-04",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB188",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "88",
+      "datum": "2026-08-06",
+      "titel": "Åtgärder mot långtidsarbetslöshet",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB188.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB01FiU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU1",
+      "datum": "2023-11-24",
+      "titel": "Statens budget 2024 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01FiU20",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU20",
+      "datum": "2023-06-15",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB419",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "19",
+      "datum": "2026-09-07",
+      "titel": "Utökad tillsyn över barn vars föräldrar omfattas av aktivitetskrav enligt socialtjänstlagen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB419.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB031d14",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB315",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "15",
+      "datum": "2025-02-26",
+      "titel": "Stärkta drivkrafter och möjligheter för biståndsmottagare",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB315.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB03165",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "165",
+      "datum": "2024-09-03",
+      "titel": "Riksrevisionens rapport om kortutbildade arbetssökandes övergång till reguljär utbildning",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03165.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01SoU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU16",
+      "datum": "2023-04-26",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01AU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "AU1",
+      "datum": "2023-12-08",
+      "titel": "Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HB01AU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB429",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "29",
+      "datum": "2024-11-25",
+      "titel": "Aktivitetskrav inom försörjningsstödet - för arbete, egenförsörjning och nationell likformighet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB429.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01SoU29",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU29",
+      "datum": "2026-05-20",
+      "titel": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU29.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB315d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "15",
+      "datum": "2025-02-26",
+      "titel": "Stärkta drivkrafter och möjligheter för biståndsmottagare, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB315d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC01AU2",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU2",
+      "datum": "2024-12-05",
+      "titel": "Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01FiU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU1",
+      "datum": "2024-11-22",
+      "titel": "Statens budget 2025 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3107",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "107",
+      "datum": "2025-11-03",
+      "titel": "Sveriges nationella klimatmål - uppdaterat etappmål till 2030 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3107.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB1101",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "101",
+      "datum": "2023-06-29",
+      "titel": "Tilläggsdirektiv till Utredningen om en målstyrd integrationspolitik (Ju 2022:05)",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d15",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

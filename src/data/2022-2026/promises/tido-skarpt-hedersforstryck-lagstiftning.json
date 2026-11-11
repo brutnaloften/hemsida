@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2022:136 (Tilläggsdirektiv till Utredningen om åtgärder mot kontroller av flickors och kvinnors sexualitet (Ju 2021:16)); SOU 2023:37 (Förstärkt skydd för den personliga integriteten - Behovet av åtgärder mot oskuldskontroller, oskuldsintyg och oskuldsingrepp samt omvändelseförsök); Prop. 2025/26:213 (Stärkt lagstiftning mot hedersrelaterat våld och förtryck). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i juli 2023 att oskuldskontroller och oskuldsingrepp ska bli brott. I juni 2025 lade regeringen fram ett förslag om att även oskuldsintyg kriminaliseras. Dokumenten täcker bara den delen av löftet. Kontrollerande beteende, skärpta straff för hedersförtryck och äktenskapstvång, vite och längre preskriptionstid nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,16 +39,6 @@
     ]
   },
   "evidence": [
-    {
-      "kind": "dir",
-      "dok_id": "HAB1136",
-      "designation": "Dir. 2022:136",
-      "title": "Tilläggsdirektiv till Utredningen om åtgärder mot kontroller av flickors och kvinnors sexualitet (Ju 2021:16)",
-      "date": "2022-11-24",
-      "url": "https://data.riksdagen.se/dokument/HAB1136.html",
-      "relevance": "partial",
-      "note": null
-    },
     {
       "kind": "sou",
       "dok_id": "HBB337",
@@ -61,11 +51,11 @@
     },
     {
       "kind": "prop",
-      "dok_id": "HD03213",
-      "designation": "Prop. 2025/26:213",
-      "title": "Stärkt lagstiftning mot hedersrelaterat våld och förtryck",
-      "date": "2026-03-19",
-      "url": "https://data.riksdagen.se/dokument/HD03213.html",
+      "dok_id": "HC03189",
+      "designation": "Prop. 2024/25:189",
+      "title": "Kriminalisering av oskuldskontroller, oskuldsintyg och oskuldsingrepp",
+      "date": "2025-06-17",
+      "url": "https://data.riksdagen.se/dokument/HC03189.html",
       "relevance": "partial",
       "note": null
     }

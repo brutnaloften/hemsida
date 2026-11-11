@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:66 (En straffreform, del 4); Prop. 2025/26:297 (Ett nytt straffrättsligt påföljdssystem). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i juni 2025 att vissa billighetsskäl tas bort och att de som finns kvar förtydligas. Regeringen lade i juni 2026 fram en proposition med samma inriktning, och riksdagen biföll den i augusti 2026. Det täcker billighetsskälen. En översyn av försvårande och förmildrande omständigheter nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -41,12 +41,12 @@
   "evidence": [
     {
       "kind": "sou",
-      "dok_id": "HDB366d4",
+      "dok_id": "HDB366",
       "designation": "SOU 2025:66",
-      "title": "En straffreform, del 4",
+      "title": "En straffreform",
       "date": "2025-06-09",
-      "url": "https://data.riksdagen.se/dokument/HDB366d4.html",
-      "relevance": "full",
+      "url": "https://data.riksdagen.se/dokument/HDB366.html",
+      "relevance": "partial",
       "note": null
     },
     {
@@ -56,6 +56,16 @@
       "title": "Ett nytt straffrättsligt påföljdssystem",
       "date": "2026-06-30",
       "url": "https://data.riksdagen.se/dokument/HD03297.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU48",
+      "designation": "Bet. 2025/26:JuU48",
+      "title": "Ett nytt straffrättsligt påföljdssystem",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
       "relevance": "partial",
       "note": null
     }

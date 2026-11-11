@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:78 (Förenklade och förkortade tillståndsprocesser enligt miljöbalken). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att förenkla och förkorta miljötillståndsprövningen, bland annat genom att pröva om en enda statlig myndighet kan föra statens talan. Utredningen lämnade i januari 2025 sitt betänkande med förslag om en samordnad prövningsprocess och begränsad talerätt för myndigheter. Dokumenten visar förslag, inget beslut. Hur Miljöprövningsutredningens förslag genomförs framgår inte tydligt.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -46,6 +46,16 @@
       "title": "Förenklade och förkortade tillståndsprocesser enligt miljöbalken",
       "date": "2023-06-08",
       "url": "https://data.riksdagen.se/dokument/HBB178.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB398",
+      "designation": "SOU 2024:98",
+      "title": "En ny samordnad miljöbedömnings- och tillståndsprövningsprocess ",
+      "date": "2025-01-01",
+      "url": "https://data.riksdagen.se/dokument/HCB398.html",
       "relevance": "full",
       "note": null
     }

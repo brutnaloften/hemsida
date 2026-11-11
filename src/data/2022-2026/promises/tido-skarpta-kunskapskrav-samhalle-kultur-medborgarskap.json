@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:1 (Skärpta krav för svenskt medborgarskap); Prop. 2025/26:175 (Skärpta krav för svenskt medborgarskap). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i september 2023 en utredare i uppdrag att föreslå vilka ytterligare kunskaper om samhälle och kultur som ska krävas för medborgarskap. I januari 2025 föreslog utredningen bland annat ett utökat samhällskunskapsprov med medierollen och barns rättigheter. I mars 2026 föreslog regeringen ett krav på tillräckliga kunskaper i svenska och om samhället, tillsammans med andra skärpningar. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,6 +33,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1129",
+      "designation": "Dir. 2023:129",
+      "title": "Skärpta krav för att förvärva svenskt medborgarskap",
+      "date": "2023-09-07",
+      "url": "https://data.riksdagen.se/dokument/HBB1129.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HDB31",

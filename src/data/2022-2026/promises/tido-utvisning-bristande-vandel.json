@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:158 (Skärpta krav på hederligt levnadssätt och ökade möjligheter till återkallelse av uppehållstillstånd); SOU 2025:114 (Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i april 2025 att krav på vandel återinförs i utlänningslagen, med fler skäl att neka eller återkalla uppehållstillstånd och att avvisa utlänningar. Riksdagen beslutade i juni 2026 om skärpta vandelskrav för uppehållstillstånd. Dokumenten täcker bara en del av löftet: utvisning på grund av bristande vandel som sådan nämns inte i dem.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,22 +40,22 @@
   },
   "evidence": [
     {
-      "kind": "dir",
-      "dok_id": "HBB1158",
-      "designation": "Dir. 2023:158",
-      "title": "Skärpta krav på hederligt levnadssätt och ökade möjligheter till återkallelse av uppehållstillstånd",
-      "date": "2023-11-20",
-      "url": "https://data.riksdagen.se/dokument/HBB1158.html",
-      "relevance": "full",
+      "kind": "sou",
+      "dok_id": "HDB333",
+      "designation": "SOU 2025:33",
+      "title": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "date": "2025-04-01",
+      "url": "https://data.riksdagen.se/dokument/HDB333.html",
+      "relevance": "partial",
       "note": null
     },
     {
-      "kind": "sou",
-      "dok_id": "HDB3114",
-      "designation": "SOU 2025:114",
-      "title": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
-      "date": "2025-12-03",
-      "url": "https://data.riksdagen.se/dokument/HDB3114.html",
+      "kind": "bet",
+      "dok_id": "HD01SfU36",
+      "designation": "Bet. 2025/26:SfU36",
+      "title": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU36.html",
       "relevance": "partial",
       "note": null
     }

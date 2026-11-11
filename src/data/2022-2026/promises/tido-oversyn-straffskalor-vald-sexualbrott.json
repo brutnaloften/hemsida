@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:66 (En straffreform, del 3); SOU 2025:66 (En straffreform, del 4); Prop. 2025/26:297 (Ett nytt straffrättsligt påföljdssystem). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2025/26:JuU42 (Dubbla straff för brott i kriminella nätverk och skärpta straffskalor), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning från juni 2025 föreslog en bred översyn av straffskalor och straffmätning och skärpta straff för våldsbrott och sexualbrott. Regeringen föreslog i april 2026 skärpta straffskalor och livstid som gemensamt straff för grova upprepade våld- och sexualbrott. I juni 2026 följde ett förslag om nytt påföljdssystem. Angrepp mot poliser nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -35,31 +35,21 @@
   "evidence": [
     {
       "kind": "sou",
-      "dok_id": "HDB366d3",
+      "dok_id": "HDB366",
       "designation": "SOU 2025:66",
-      "title": "En straffreform, del 3",
+      "title": "En straffreform",
       "date": "2025-06-09",
-      "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
+      "url": "https://data.riksdagen.se/dokument/HDB366.html",
       "relevance": "full",
       "note": null
     },
     {
-      "kind": "sou",
-      "dok_id": "HDB366d4",
-      "designation": "SOU 2025:66",
-      "title": "En straffreform, del 4",
-      "date": "2025-06-09",
-      "url": "https://data.riksdagen.se/dokument/HDB366d4.html",
-      "relevance": "full",
-      "note": null
-    },
-    {
-      "kind": "bet",
-      "dok_id": "HD01JuU42",
-      "designation": "Bet. 2025/26:JuU42",
+      "kind": "prop",
+      "dok_id": "HD03218",
+      "designation": "Prop. 2025/26:218",
       "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
-      "date": "2026-06-11",
-      "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03218.html",
       "relevance": "full",
       "note": null
     },

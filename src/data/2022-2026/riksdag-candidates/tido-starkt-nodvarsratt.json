@@ -17,7 +17,12 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20"
   ],
   "candidates": [
     {
@@ -29,8 +34,14 @@
       "titel": "Preventiva vistelseförbud",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB362.html",
-      "found_by": ["keyword:nödvärn", "keyword:nödvärnsrätt", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:nödvärn",
+        "keyword:nödvärnsrätt",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HEB348",
@@ -78,7 +89,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03186.html",
       "found_by": ["keyword:nödvärn", "keyword:nödvärnsrätt", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HA01JuU10",
@@ -102,8 +114,13 @@
       "titel": "Straffrättsliga frågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU11.html",
-      "found_by": ["keyword:nödvärnsrätt", "committee:JuU"],
-      "score": 2
+      "found_by": [
+        "keyword:nödvärnsrätt",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HDB394",
@@ -167,7 +184,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
       "found_by": ["committee:JuU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03297",
@@ -220,6 +238,45 @@
       "found_by": ["keyword:brottsbalken"],
       "score": 1,
       "relevance": 0.02
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB425",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "25",
+      "datum": "2023-09-05",
+      "titel": "Polisens rätt att skjuta - En ny reglering om laga befogenhet att använda skjutvapen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB425.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01JuU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU11",
+      "datum": "2023-03-09",
+      "titel": "Straffrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

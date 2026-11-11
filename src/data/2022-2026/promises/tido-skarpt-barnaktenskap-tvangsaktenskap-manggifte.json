@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:59 (Stärkt lagstiftning mot hedersrelaterat våld och förtryck); Prop. 2025/26:213 (Stärkt lagstiftning mot hedersrelaterat våld och förtryck). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i januari 2024 en utredare i uppdrag att se över högre straff, fler ansvariga och erkännande av månggiften. Utredningen föreslog i maj 2025 högre straff för barnäktenskapsbrott och tvångsäktenskap samt att vissa utländska äktenskap inte längre erkänns. Regeringen lade i mars 2026 fram ett liknande förslag, och riksdagen biföll det i maj 2026. Ogiltigförklaring av fullmaktsäktenskap och prövning av månggiften före 2021 nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB18",
+      "designation": "Dir. 2024:8",
+      "title": "Förstärkta åtgärder mot hedersrelaterat våld och förtryck",
+      "date": "2024-01-18",
+      "url": "https://data.riksdagen.se/dokument/HCB18.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HDB359",
@@ -57,6 +67,16 @@
       "date": "2026-03-19",
       "url": "https://data.riksdagen.se/dokument/HD03213.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU43",
+      "designation": "Bet. 2025/26:JuU43",
+      "title": "Stärkt lagstiftning mot hedersrelaterat våld och förtryck",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU43.html",
+      "relevance": "full",
       "note": null
     }
   ]

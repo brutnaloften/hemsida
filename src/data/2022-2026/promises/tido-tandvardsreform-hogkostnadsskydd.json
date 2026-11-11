@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:27 (Ett förstärkt högkostnadsskydd för tandvård). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i oktober 2023 en utredare i uppdrag att föreslå hur tandvårdens högkostnadsskydd kan likna det i övrig vård, med prioritet för äldre med sämst munhälsa. I oktober 2025 lades en proposition fram om en ny särskild tandvårdsersättning och en prioriteringsprincip för dem med störst behov. Äldre med sämst munhälsa nämns inte särskilt i propositionen.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,6 +33,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1138",
+      "designation": "Dir. 2023:138",
+      "title": "Tilläggsdirektiv till Utredningen om stärkt stöd till tandvård för våldsutsatta och ökad kontroll över tandvårdssektorn (S 2022:12)",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HBB1138.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "prop",
       "dok_id": "HD0327",

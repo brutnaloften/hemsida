@@ -19,7 +19,15 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -55,9 +63,11 @@
         "keyword:anonyma vittnen",
         "keyword:kronvittne",
         "keyword:straffreduktion",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.92
     },
     {
       "dok_id": "HD01JuU17",
@@ -72,9 +82,11 @@
         "keyword:kronvittne",
         "keyword:straffreduktion",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC0375",
@@ -121,8 +133,14 @@
       "titel": "Anonyma vittnen ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB367.html",
-      "found_by": ["keyword:anonyma vittnen", "keyword:kronvittne", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:anonyma vittnen",
+        "keyword:kronvittne",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA0375",
@@ -151,8 +169,14 @@
       "titel": "Anonyma vittnen",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HAB1141.html",
-      "found_by": ["keyword:anonyma vittnen", "keyword:kronvittne", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:anonyma vittnen",
+        "keyword:kronvittne",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03218",
@@ -164,7 +188,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03218.html",
       "found_by": ["keyword:kronvittne", "keyword:straffreduktion"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD01JuU1",
@@ -209,8 +234,13 @@
       "titel": "Utgiftsområde 4 Rättsväsendet",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU1.html",
-      "found_by": ["keyword:anonyma vittnen", "committee:JuU"],
-      "score": 2
+      "found_by": [
+        "keyword:anonyma vittnen",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HA01JuU12",
@@ -239,7 +269,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03313.html",
       "found_by": ["keyword:vittnesskydd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01JuU48",
@@ -251,7 +282,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
       "found_by": ["committee:JuU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.12
     },
     {
       "dok_id": "HBB370",
@@ -434,6 +466,188 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.85
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB399",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "99",
+      "datum": "2023-12-19",
+      "titel": "Nya tullrättsliga sanktioner och skärpta åtgärder mot utförsel av stöldgods ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB313",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "13",
+      "datum": "2026-02-17",
+      "titel": "Straffansvar för deltagande i och samröre med kriminella sammanslutningar",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB313.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HD01JuU11",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU11",
+      "datum": "2026-03-26",
+      "titel": "Straffrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB378",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "78",
+      "datum": "2023-11-30",
+      "titel": "Hemlig dataavläsning - utvärdering och permanent lagstiftning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB378.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03274",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "274",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03274.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB031d5",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HBB385",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "85",
+      "datum": "2023-12-13",
+      "titel": "Långtidsutredningen 2023 - Finanspolitisk konjunkturstabilisering ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB385.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC0320",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "20",
+      "datum": "2024-10-01",
+      "titel": "Anonyma vittnen",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0320.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HBB3102",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "102",
+      "datum": "2024-01-01",
+      "titel": "Finansiella instrument i distribuerade liggare och vissa frågor om värdepappersavveckling",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB3102.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB387",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "87",
+      "datum": "2023-12-13",
+      "titel": "Drivkrafter bakom globala trender i den neutrala räntan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB398d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "98",
+      "datum": "2023-12-15",
+      "titel": "Sexuellt utnyttjande i pornografiska syften, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB398d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC01KU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU20",
+      "datum": "2025-06-10",
+      "titel": "Granskningsbetänkande",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

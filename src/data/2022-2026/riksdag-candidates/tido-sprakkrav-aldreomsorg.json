@@ -21,7 +21,17 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -56,9 +66,11 @@
         "keyword:språkkrav",
         "keyword:äldreomsorg",
         "keyword:omsorgspersonal",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01SoU22",
@@ -69,8 +81,15 @@
       "titel": "Äldreomsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU22.html",
-      "found_by": ["keyword:språkkrav", "keyword:äldreomsorg", "all-keywords", "committee:SoU"],
-      "score": 4
+      "found_by": [
+        "keyword:språkkrav",
+        "keyword:äldreomsorg",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01SoU22",
@@ -161,7 +180,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU21.html",
       "found_by": ["keyword:äldreomsorg", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB01SoU1",
@@ -185,8 +205,13 @@
       "titel": "Riksrevisionens rapport om lex Maria och lex Sarah",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA03141.html",
-      "found_by": ["keyword:omsorgspersonal", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:omsorgspersonal",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA03131",
@@ -210,8 +235,13 @@
       "titel": "Språkkrav för personal i äldreomsorgen",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HBB144.html",
-      "found_by": ["keyword:språkkrav", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:språkkrav",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01SoU1",
@@ -222,8 +252,9 @@
       "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
-      "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SoU", "score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB417",
@@ -235,7 +266,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB417.html",
       "found_by": ["keyword:svenska språket"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HA031d10",
@@ -403,6 +435,136 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01SoU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU1",
+      "datum": "2025-12-03",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.98
+    },
+    {
+      "dok_id": "HCB398d3",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "98",
+      "datum": "2025-01-01",
+      "titel": "En ny samordnad miljöbedömnings- och tillståndsprövningsprocess, del 3",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB398d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB382",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "82",
+      "datum": "2024-12-05",
+      "titel": "Ökad va-beredskap ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB166",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "66",
+      "datum": "2024-07-04",
+      "titel": "Tilläggsdirektiv till Utredningen om språkkrav för personal i äldreomsorgen (S 2023:03)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB166.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD0360",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "60",
+      "datum": "2025-11-25",
+      "titel": "Stärkta insatser för äldre och för de som vårdar eller stöder närstående",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB394",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "94",
+      "datum": "2024-12-20",
+      "titel": "Förstärkningsundervisning i skolan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
       "score": 1,
       "relevance": 0.6
     }

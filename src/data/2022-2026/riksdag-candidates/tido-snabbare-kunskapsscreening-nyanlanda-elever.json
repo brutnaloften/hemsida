@@ -20,7 +20,12 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -65,7 +70,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03195.html",
       "found_by": ["keyword:timplan", "keyword:undervisningstid", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HC01UbU10",
@@ -77,7 +83,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU10.html",
       "found_by": ["keyword:timplan", "all-keywords", "committee:UbU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HDB319",
@@ -101,8 +108,14 @@
       "titel": "På språklig grund ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB39.html",
-      "found_by": ["keyword:nyanlända elever", "keyword:timplan", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:nyanlända elever",
+        "keyword:timplan",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.92
     },
     {
       "dok_id": "HA01UbU7",
@@ -114,7 +127,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU7.html",
       "found_by": ["keyword:nyanlända elever", "all-keywords", "committee:UbU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01UbU22",
@@ -151,8 +165,13 @@
       "titel": "Förstärkningsundervisning i skolan ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB394.html",
-      "found_by": ["keyword:nyanlända elever", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:nyanlända elever",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HCB374",
@@ -164,7 +183,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB374.html",
       "found_by": ["keyword:nyanlända elever", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HB0379",
@@ -176,7 +196,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0379.html",
       "found_by": ["keyword:timplan", "keyword:undervisningstid"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.06
     },
     {
       "dok_id": "HBB1174",
@@ -218,7 +239,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB413.html",
       "found_by": ["keyword:timplan"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD031d18",

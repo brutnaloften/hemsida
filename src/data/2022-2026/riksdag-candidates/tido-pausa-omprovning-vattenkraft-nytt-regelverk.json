@@ -20,7 +20,17 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -32,8 +42,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD0375.html",
-      "found_by": ["keyword:vattenkraft", "keyword:miljötillstånd", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:vattenkraft",
+        "keyword:miljötillstånd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC0375",
@@ -62,8 +78,13 @@
       "titel": "Undantag från krav enligt art- och habitatdirektivet vid vattenkraftens omprövning",
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HD01CU41.html",
-      "found_by": ["keyword:vattenkraft", "keyword:omprövning"],
-      "score": 2
+      "found_by": [
+        "keyword:vattenkraft",
+        "keyword:omprövning",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD03202",
@@ -74,8 +95,13 @@
       "titel": "Undantag från krav enligt art- och habitatdirektivet vid vattenkraftens omprövning",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03202.html",
-      "found_by": ["keyword:vattenkraft", "keyword:omprövning"],
-      "score": 2
+      "found_by": [
+        "keyword:vattenkraft",
+        "keyword:omprövning",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB0375",
@@ -160,7 +186,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03238.html",
       "found_by": ["keyword:vattenverksamhet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD03185",
@@ -185,7 +212,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03170.html",
       "found_by": ["keyword:omprövning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03171",
@@ -222,8 +250,9 @@
       "titel": "Hushållningen med mark- och vattenområden",
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HD01CU20.html",
-      "found_by": ["keyword:vattenverksamhet"],
-      "score": 1
+      "found_by": ["keyword:vattenverksamhet", "score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB03105",
@@ -380,6 +409,149 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.8
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB031d21",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01NU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU17",
+      "datum": "2023-05-25",
+      "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01CU16",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "CU16",
+      "datum": "2024-04-19",
+      "titel": "Hushållningen med mark- och vattenområden",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HB01CU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC01NU19",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU19",
+      "datum": "2025-04-29",
+      "titel": "Energipolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01FiU21",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU21",
+      "datum": "2023-06-15",
+      "titel": "Vårändringsbudget för 2023",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03140",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "140",
+      "datum": "2024-09-03",
+      "titel": "2024 års redogörelse för företag med statligt ägande",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03140.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD03158",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "158",
+      "datum": "2026-03-17",
+      "titel": "Hela Sverige ska fungera – politik för starkare landsbygder",
+      "organ": "Landsbygds- och infrastrukturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03158.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB01NU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU14",
+      "datum": "2024-05-20",
+      "titel": "Energipolitikens långsiktiga inriktning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03118",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "118",
+      "datum": "2026-02-05",
+      "titel": "Tillståndsprövning enligt förnybartdirektivet",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03118.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }
