@@ -18,6 +18,7 @@ import { isRiksdagEvidence, promiseSchema } from './lib/schema.ts';
 import {
   REASONING_JSON_SCHEMA,
   buildReasoningPrompt,
+  hasLawInForce,
   reasoningInstructions,
   reasoningKey,
   reasoningProblems,
@@ -66,14 +67,17 @@ interface Job {
   instructions: string;
   key: string;
   designations: string[];
+  lawInForce: boolean;
 }
+const REASONED_VERDICTS: readonly string[] = ['in_progress', 'fulfilled', 'partially_fulfilled'];
+const today = new Date().toISOString().slice(0, 10);
 const jobs: Job[] = [];
 for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
   if (!file.replace(/\.json$/, '').startsWith(values['id-prefix']!)) continue;
   if (values.only && file !== `${values.only}.json`) continue;
   const rawPromise = loadJson(resolve(dir, file)) as { verdict: unknown };
   const p = promiseSchema.parse(rawPromise);
-  if (p.verdict.assessedBy !== 'ai' || p.verdict.value !== 'in_progress') continue;
+  if (p.verdict.assessedBy !== 'ai' || !REASONED_VERDICTS.includes(p.verdict.value)) continue;
   const riksdag = p.evidence.filter(isRiksdagEvidence);
   const items: ReasoningItem[] = riksdag.map((e) => ({
     kind: e.kind,
@@ -88,8 +92,14 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
       judgementBy.get(`${p.id}:${e.dok_id}`)?.reason ??
       (e.kind === 'bet' ? 'Riksdagens beslut om en proposition som hör till löftet.' : ''),
   }));
-  const prompt = buildReasoningPrompt(p, items);
-  const instructions = reasoningInstructions(items);
+  if (p.verdict.value !== 'in_progress' && !hasLawInForce(items, today)) {
+    console.warn(
+      `WARNING ${file}: verdict ${p.verdict.value} but no sfs evidence in force on ${today}; skipped`,
+    );
+    continue;
+  }
+  const prompt = buildReasoningPrompt(p, items, today);
+  const instructions = reasoningInstructions(items, p.verdict.value, today);
   jobs.push({
     file,
     raw: rawPromise,
@@ -97,6 +107,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     instructions,
     key: reasoningKey(values.model!, prompt, instructions),
     designations: riksdag.map((e) => e.designation),
+    lawInForce: hasLawInForce(items, today),
   });
 }
 const limit = values.limit ? Number(values.limit) : jobs.length;
@@ -109,7 +120,7 @@ const cachedText = (j: Job): string | undefined =>
     : undefined;
 const usable = (j: Job): boolean => {
   const text = cachedText(j);
-  return text !== undefined && reasoningProblems(text, j.designations).length === 0;
+  return text !== undefined && reasoningProblems(text, j.designations, j.lawInForce).length === 0;
 };
 const uncached = todo.filter((j) => !usable(j));
 console.log(
@@ -139,7 +150,7 @@ async function write(job: Job): Promise<void> {
       }
       const parsed = reasoningSchema.safeParse(message.structured_output);
       if (!parsed.success) break;
-      const problems = reasoningProblems(parsed.data.reasoning, job.designations);
+      const problems = reasoningProblems(parsed.data.reasoning, job.designations, job.lawInForce);
       if (problems.length === 0) {
         writeJsonAtomic(cachePath(job.key), parsed.data);
         return;
