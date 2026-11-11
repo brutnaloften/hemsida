@@ -176,6 +176,12 @@ describe('write-reasoning', () => {
       expect(ins).not.toContain('ingen författning är kopplad');
       expect(ins).toContain('har trätt i kraft på det angivna datumet');
       expect(ins).not.toContain('Skriv inte att den gäller');
+      expect(reasoningInstructions([item, future], 'in_progress', today)).not.toContain(
+        'ingen författning är kopplad',
+      );
+      expect(reasoningInstructions([item, law, future], 'fulfilled', today)).toContain(
+        'gäller bara den lagen',
+      );
       const both = reasoningInstructions([item, law, future], 'in_progress', today);
       expect(both).toContain('gäller bara den lagen');
       expect(reasoningInstructions([item], 'in_progress', today)).toContain(
@@ -193,6 +199,17 @@ describe('write-reasoning', () => {
       expect(
         reasoningProblems('Det framgår inte att lagen har trätt i kraft.', [], false),
       ).not.toContain('claims a law is in force');
+    });
+
+    it('only exempts negation attached to the in-force claim', () => {
+      for (const t of [
+        'Lagen, som inte omfattar äldre fall, trädde i kraft den 1 juli 2026.',
+        'Regeringen har inte ändrat förslaget och lagen gäller sedan juli.',
+      ])
+        expect(reasoningProblems(t, [], false)).toContain('claims a law is in force');
+      expect(reasoningProblems('Lagen har ännu inte trätt i kraft.', [], false)).not.toContain(
+        'claims a law is in force',
+      );
     });
 
     it('rejects SFS designations', () => {

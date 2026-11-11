@@ -46,7 +46,7 @@ const LAW_INSTRUCTIONS: Record<string, string> = {
 Bedömningen är i det här fallet satt till uppfyllt: en lag (SFS) har beslutats och trätt i kraft och genomför löftet i sin helhet. Det går före beskrivningen av bedömningen ovan. Beskriv vad lagen innebär och skriv att lagen trädde i kraft på det angivna datumet ("Lagen som genomför löftet trädde i kraft den <datum>"). Nämn inget lagnummer.`,
   partially_fulfilled: `
 
-Bedömningen är i det här fallet satt till delvis uppfyllt: en lag (SFS) har trätt i kraft men genomför bara en del av löftet eller en svagare variant av det. Det går före beskrivningen av bedömningen ovan. Beskriv vad lagen innebär och när den trädde i kraft, och med hjälp av anteckningen vad den täcker och vad den inte täcker av det som löftet gäller. Nämn inget lagnummer.`,
+Bedömningen är i det här fallet satt till delvis uppfyllt: en lag (SFS) har trätt i kraft men genomför bara en del av löftet eller en svagare variant av det. Det går före beskrivningen av bedömningen ovan. Beskriv vad lagen innebär och när den trädde i kraft, och med hjälp av anteckningen vad lagen täcker av det som löftet gäller. Skriv att de angivna dokumenten visar att resten fortfarande bereds eller inte ingår i lagen. Nämn inget lagnummer.`,
   in_progress_law_in_force: `
 
 En lag (SFS) som hör till löftet har trätt i kraft på det angivna datumet. Beskriv vad den lagen täcker. Dokumenten visar också att resten av löftet fortfarande bereds. Nämn inget lagnummer.`,
@@ -54,6 +54,9 @@ En lag (SFS) som hör till löftet har trätt i kraft på det angivna datumet. B
 
 En lag (SFS) som hör till löftet är beslutad men har ännu inte trätt i kraft. Skriv att lagen är beslutad och att den träder i kraft på det angivna datumet. Skriv inte att den gäller eller har trätt i kraft. Nämn inget lagnummer.`,
 };
+
+const FUTURE_LAW_NOTE =
+  ' En annan lag är beslutad men har ännu inte trätt i kraft; formuleringen "träder i kraft" gäller bara den lagen och du får inte skriva att den gäller.';
 
 /**
  * The system prompt for a promise: the base instructions plus the extra rules when needed. A law in
@@ -68,21 +71,20 @@ export function reasoningInstructions(
   const laws = items.filter((i) => i.kind === 'sfs');
   const inForce = laws.some((i) => i.date <= today);
   // With a law in force, "ingen författning är kopplad till löftet" would contradict the evidence.
-  let out = inForce
-    ? REASONING_INSTRUCTIONS.replace(
-        'Bedömningen är redan satt (pågår: åtgärden är under beredning eller beslutad, men ingen författning är kopplad till löftet).',
-        'Bedömningen är redan satt.',
-      )
-    : REASONING_INSTRUCTIONS;
+  let out =
+    laws.length > 0
+      ? REASONING_INSTRUCTIONS.replace(
+          'Bedömningen är redan satt (pågår: åtgärden är under beredning eller beslutad, men ingen författning är kopplad till löftet).',
+          'Bedömningen är redan satt.',
+        )
+      : REASONING_INSTRUCTIONS;
   if (items.some((i) => i.relevance === 'contradicts')) out += AGAINST_INSTRUCTIONS;
   if (verdict === 'fulfilled' || verdict === 'partially_fulfilled') {
     out += LAW_INSTRUCTIONS[verdict];
+    if (laws.some((i) => i.date > today)) out += FUTURE_LAW_NOTE;
   } else if (inForce) {
     out += LAW_INSTRUCTIONS.in_progress_law_in_force;
-    if (laws.some((i) => i.date > today)) {
-      out +=
-        ' En annan lag är beslutad men har ännu inte trätt i kraft; formuleringen "träder i kraft" gäller bara den lagen och du får inte skriva att den gäller.';
-    }
+    if (laws.some((i) => i.date > today)) out += FUTURE_LAW_NOTE;
   } else if (laws.length > 0) {
     out += LAW_INSTRUCTIONS.in_progress;
   }
@@ -182,7 +184,8 @@ const NO_DECISION_NOUN = /\b(inte|ej)\s+(något|ett)\s+beslut|\binget\s+beslut/i
 const IN_FORCE_CLAIM =
   /\btr[äa]dde\s+i\s+kraft|\b(?:har|hade)\s+(?:nu\s+)?trätt\s+i\s+kraft|\bträtt\s+i\s+kraft|\bgäller\s+(?:sedan|från)|\bgäller\s+nu|\bär\s+i\s+kraft|\bi\s+kraft\s+sedan|\bbörjade\s+gälla/i;
 /** "Framgår inte att lagen har trätt i kraft" is not a claim that it did. */
-const NEGATED_IN_FORCE = /\b(inte|ej|aldrig)\b[^.!?]*(?:i\s+kraft|gäller)/i;
+const NEGATED_IN_FORCE =
+  /framgår\s+(?:inte|ej)\s+att[^.!?]*?(?:i\s+kraft|gäller)|\b(?:inte|ej)\s+(?:ännu\s+)?(?:(?:har|hade)\s+)?(?:trätt\s+i\s+kraft|trädde\s+i\s+kraft|i\s+kraft|gäller)|\bännu\s+inte\s+(?:(?:har|hade)\s+)?(?:trätt\s+)?i\s+kraft|\bännu\s+inte\s+trätt\s+i\s+kraft/gi;
 
 /**
  * Rejects text that name-drops documents or breaks the rules the prompt sets. `lawInForce` says that
@@ -200,7 +203,7 @@ export function reasoningProblems(
   if (/\bSFS\s?\d{4}:\d+/.test(text)) problems.push('names an SFS designation');
   if (
     !lawInForce &&
-    text.split(/(?<=[.!?])\s+/).some((x) => IN_FORCE_CLAIM.test(x) && !NEGATED_IN_FORCE.test(x))
+    text.split(/(?<=[.!?])\s+/).some((x) => IN_FORCE_CLAIM.test(x.replace(NEGATED_IN_FORCE, '')))
   )
     problems.push('claims a law is in force');
   if (/\bAI\b|AI-modell/.test(text)) problems.push('mentions AI');
