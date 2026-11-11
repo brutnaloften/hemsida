@@ -70,7 +70,7 @@ describe('write-reasoning', () => {
     // What an investigation was told to look into is not a pending decision.
     expect(
       reasoningProblems(
-        `${base} Utredningen skulle ta ställning till flera frågor. Utredaren ska ta ställning till regler om tillstånd.`,
+        `${base} Utredningen ska ta ställning till flera frågor. Utredaren ska behandla regler om tillstånd.`,
         [],
       ),
     ).toEqual([]);
