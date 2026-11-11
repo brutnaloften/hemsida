@@ -81,6 +81,9 @@ export function reasoningKey(model: string, prompt: string): string {
 
 const NOT_DECIDED_CLAIM =
   /(inte|ännu inte|aldrig)\s+(har\s+)?(ännu\s+)?(beslutat|beslutats|antagit|antagits|fattat|lagts fram|lagt fram|biträtt|biföllit|biföllits|genomförts|genomfört)|inga\s+(beslut|förslag|författningar)|saknar\s+(beslut|förslag)|(inte|ej)\s+(ännu\s+)?(klart|beslutad|antagen)|\bingen\s+(lag|författning)\s+(har|finns)|ska\s+(ännu\s+)?(ta\s+ställning|behandla[sr]?|besluta[sr]?|prövas|avgöras)|väntar\s+(ännu\s+)?på|inväntar|\bhar\s+ännu\s+inte|\bännu\s+inte\s+(klart|avgjort)|återstår\s+(att\s+)?(besluta|fatta|anta)|\b(kvar|är)\s+(att\s+)?(besluta|behandla)/i;
+/** What an investigation was told to do ("utredaren ska ta ställning till") is not a pending decision. */
+const MANDATE_SUBJECT =
+  /\b(utredning(en)?|utredare(n)?|kommitté(n)?|uppdraget|direktivet|utredarna)\s+ska\b/i;
 const NO_DECISION_NOUN = /\b(inte|ej)\s+(något|ett)\s+beslut|\binget\s+beslut/i;
 
 /** Rejects text that name-drops documents or breaks the rules the prompt sets. */
@@ -94,7 +97,13 @@ export function reasoningProblems(text: string, designations: readonly string[])
   // A sentence that is explicitly about the listed documents may say they show no decision.
   const aboutListedDocuments = /\bdokument(en|et)?\b/i;
   for (const sentence of text.split(/(?<=[.!?])\s+/)) {
-    if (NOT_DECIDED_CLAIM.test(sentence)) {
+    const claim = MANDATE_SUBJECT.test(sentence)
+      ? sentence.replace(
+          /\bska\s+(ännu\s+)?(ta\s+ställning|behandla[sr]?|besluta[sr]?|prövas|avgöras)/gi,
+          '',
+        )
+      : sentence;
+    if (NOT_DECIDED_CLAIM.test(claim)) {
       problems.push('claims something was not decided or proposed');
       break;
     }

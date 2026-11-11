@@ -67,6 +67,16 @@ describe('write-reasoning', () => {
       [],
     );
     expect(reasoningProblems(`${base} Det finns inget beslut.`, [])).not.toEqual([]);
+    // What an investigation was told to look into is not a pending decision.
+    expect(
+      reasoningProblems(
+        `${base} Utredningen skulle ta ställning till flera frågor. Utredaren ska ta ställning till regler om tillstånd.`,
+        [],
+      ),
+    ).toEqual([]);
+    expect(reasoningProblems(`${base} Riksdagen ska ta ställning till förslaget.`, [])).not.toEqual(
+      [],
+    );
   });
 
   it('rejects designations, AI mentions and completeness caveats', () => {
