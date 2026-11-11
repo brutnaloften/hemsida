@@ -30,7 +30,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i oktober 2023 en kommitté i uppdrag att föreslå hur rätten till ekonomiskt bistånd kan tas bort eller begränsas för nyanlända med etableringsersättning. I april 2025 föreslog en utredning att rätten till kompletterande bistånd tas bort för andra grupper än skyddsbehövande. Det täcker bara en del av löftet; lägre etableringsersättning, avskaffat etableringstillägg och krav på aktivt deltagande i SFI nämns inte i dokumenten.",
+    "reasoning": "Regeringen gav i oktober 2023 en utredare i uppdrag att föreslå hur rätten till ekonomiskt bistånd kan tas bort eller begränsas för nyanlända med etableringsersättning. En utredning i april 2025 föreslog att rätten till kompletterande bistånd tas bort för vissa grupper. Sänkt ersättning, avskaffat etableringstillägg och aktivitetskrav nämns inte. En utredning i juni 2024 motverkar löftet genom att föreslå höjd ersättning.",
     "date": "2026-11-11",
     "history": [
       {
@@ -49,6 +49,16 @@
       "date": "2023-10-19",
       "url": "https://data.riksdagen.se/dokument/HBB1149.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB341",
+      "designation": "SOU 2024:41",
+      "title": "Styrkraft för lyckad integration",
+      "date": "2024-06-14",
+      "url": "https://data.riksdagen.se/dokument/HCB341.html",
+      "relevance": "contradicts",
       "note": null
     },
     {

@@ -273,6 +273,9 @@
   --agreement-not_addressed-bg: transparent;
   --agreement-not_addressed-border: #c4b5fd;
   --agreement-not_addressed-fg: #4c1d95;
+  --evidence-contradicts-bg: #ffedd5;
+  --evidence-contradicts-border: #c2410c;
+  --evidence-contradicts-fg: #7c2d12;
 }
 
 .dark {
@@ -318,6 +321,9 @@
   --agreement-not_addressed-bg: transparent;
   --agreement-not_addressed-border: #c4b5fd;
   --agreement-not_addressed-fg: #ddd6fe;
+  --evidence-contradicts-bg: #431407;
+  --evidence-contradicts-border: #fb923c;
+  --evidence-contradicts-fg: #fed7aa;
 }
 
 /* In @layer components so utilities such as text-sm and px-3 can override badge defaults. */
@@ -344,6 +350,14 @@
   .verdict-badge[data-verdict="no_evidence"],
   .agreement-badge[data-outcome="contradicted"] {
     border-style: dashed;
+  }
+  .evidence-against {
+    background-color: var(--evidence-contradicts-bg);
+    color: var(--evidence-contradicts-fg);
+    border: 1px dashed var(--evidence-contradicts-border);
+    border-radius: 0.25rem;
+    padding: 0 0.375rem;
+    font-weight: 600;
   }
   .verdict-badge[data-verdict="unassessed"] {
     background-color: var(--verdict-unassessed-bg);

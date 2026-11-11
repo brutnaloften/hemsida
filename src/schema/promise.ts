@@ -157,7 +157,11 @@ const riksdagEvidenceSchema = z
     title: z.string().min(1),
     date: isoDate,
     url: z.url(),
-    relevance: z.enum(['full', 'partial']),
+    /**
+     * `contradicts` marks a document that works against the promise ("Motverkar"). It is shown in
+     * the timeline but never counts toward a verdict (see checkVerdictEvidence).
+     */
+    relevance: z.enum(['full', 'partial', 'contradicts']),
     note: z.string().nullable().default(null),
     votes: z.partialRecord(partySchema, z.enum(VOTE_VALUES)).optional(),
     figures: z.array(evidenceFigureSchema).optional(),
@@ -272,7 +276,8 @@ function checkVerdictEvidence(
   ctx: z.core.$RefinementCtx,
 ): void {
   const { value, reasoning } = p.verdict;
-  const riksdag = p.evidence.filter(isRiksdagEvidence);
+  // A document that works against the promise never qualifies a verdict.
+  const riksdag = p.evidence.filter(isRiksdagEvidence).filter((e) => e.relevance !== 'contradicts');
   const fail = (message: string) =>
     ctx.addIssue({ code: 'custom', path: ['verdict', 'value'], message });
 

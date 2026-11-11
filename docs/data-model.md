@@ -196,7 +196,7 @@ A promise is split into one promise per commitment when the agreement text lists
 
 #### Documents that work against a promise ("Motverkar")
 
-A document that works against a promise (the judge label `contradicts`) is shown in the timeline as "Motverkar" once the schema supports it (`hemsida-kma`). It never sets a verdict on its own and never makes a promise `broken`.
+A document that works against a promise (the judge label `contradicts`) is stored as Riksdag evidence with `relevance: contradicts` and shown in the timeline with the label "Motverkar" (distinct colour, dashed outline). It never counts toward a verdict: `checkVerdictEvidence` ignores it, so it cannot qualify `in_progress`, `fulfilled` or `broken`, and it does not fill a pipeline stage in the timeline. `apply-links` writes it on any eligible promise, but a promise whose only evidence works against it stays `unassessed`.
 
 ### Evidence
 
@@ -210,7 +210,7 @@ A reference to an official document that bears on the promise.
 | `title`       | string         | Document title (Swedish, as published)                                                                                                  |
 | `date`        | ISO date       | Publication or decision date                                                                                                            |
 | `url`         | URL            | Link to the document                                                                                                                    |
-| `relevance`   | enum           | `full` (addresses the whole promise) or `partial` (one part of it)                                                                      |
+| `relevance`   | enum           | `full` (addresses the whole promise), `partial` (one part of it) or `contradicts` (works against it, "Motverkar", see above)            |
 | `note`        | string \| null | Optional Swedish note, e.g. what part is covered or what was watered down                                                               |
 | `votes`       | object?        | For `bet` only, later (`hemsida-4np`): party → `yes` / `no` / `abstain` / `absent`                                                      |
 | `figures`     | array?         | For `bet` and `prop` only: prose budget intentions found in the text, see "Evidence figures" below                                      |

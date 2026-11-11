@@ -9,6 +9,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { applyLinks, type JudgedPair, type StoreDocument } from './lib/apply-links.ts';
+import { CONFIDENCES } from './lib/link/config.ts';
 import { addDecisions } from './lib/decided-by.ts';
 import { loadJson, writeJson } from './lib/json.ts';
 import { defaultStorePath } from './lib/riksdag-ingest.ts';
@@ -29,6 +30,12 @@ if (!values.run) throw new Error('usage: apply-links.ts --run <name> [--dry-run]
 const results = loadJson(resolve(root, 'tools/out/link-runs', values.run, 'results.json')) as {
   results?: { promise_id: string; document_id: string; judgement: object; proposed: boolean }[];
 };
+// `proposed` in results.json only covers the config's accept_labels (match, partial). A `contradicts`
+// judgement is shown as "Motverkar" evidence next to other evidence, at the same minimum confidence.
+const manifest = loadJson(resolve(root, 'tools/out/link-runs', values.run, 'manifest.json')) as {
+  config: { thresholds: { min_confidence: (typeof CONFIDENCES)[number] } };
+};
+const minConfidence = CONFIDENCES.indexOf(manifest.config.thresholds.min_confidence);
 const rows = Array.isArray(results) ? results : (results.results ?? []);
 const pairsBy = new Map<string, JudgedPair[]>();
 for (const r of rows as {
@@ -44,7 +51,10 @@ for (const r of rows as {
     label: r.judgement.label,
     stage: r.judgement.stage,
     confidence: r.judgement.confidence,
-    proposed: r.proposed,
+    proposed:
+      r.proposed ||
+      (r.judgement.label === 'contradicts' &&
+        CONFIDENCES.indexOf(r.judgement.confidence) >= minConfidence),
   });
   pairsBy.set(r.promise_id, list);
 }

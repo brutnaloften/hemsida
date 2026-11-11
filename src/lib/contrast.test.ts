@@ -102,6 +102,15 @@ describe.each(['light', 'dark'] as const)('contrast (%s)', (theme) => {
     }
   });
 
+  it('the Motverkar evidence label reaches 4.5:1', () => {
+    const fg = badges['--evidence-contradicts-fg'];
+    for (const surface of [ground, base['--muted']]) {
+      const bg = bgOf(badges['--evidence-contradicts-bg'], surface);
+      expect(ratio(fg, bg)).toBeGreaterThanOrEqual(4.5);
+    }
+    expect(ratio(badges['--evidence-contradicts-border'], ground)).toBeGreaterThanOrEqual(3);
+  });
+
   it('the dashed outline of unassessed badges reaches 3:1 against the ground (WCAG 1.4.11)', () => {
     expect(ratio(badges['--verdict-unassessed-border'], ground)).toBeGreaterThanOrEqual(3);
   });

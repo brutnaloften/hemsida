@@ -82,7 +82,9 @@ export function buildTimelineSteps(
   const docs = promise.evidence.filter(isRiksdagEvidence).sort(byDate);
   for (const stage of PIPELINE_STAGES) {
     const inStage = docs.filter((d) => stageOf(d.kind) === stage);
-    if (inStage.length === 0) steps.push({ type: 'missing', stage, label: MISSING_LABELS[stage] });
+    // A document that works against the promise is shown but does not fill the stage.
+    if (inStage.every((d) => d.relevance === 'contradicts'))
+      steps.push({ type: 'missing', stage, label: MISSING_LABELS[stage] });
     for (const evidence of inStage) steps.push({ type: 'document', stage, evidence });
   }
 
