@@ -296,7 +296,7 @@ export function createClaudeCoverageJudge(model: string): CoverageJudge {
           model,
           settingSources: [],
           tools: [],
-          maxTurns: 1,
+          maxTurns: 3, // structured output occasionally needs a second turn (error_max_turns at 1)
           thinking: { type: 'disabled' },
           systemPrompt: instructions,
           outputFormat: { type: 'json_schema', schema: COVERAGE_JSON_SCHEMA },
