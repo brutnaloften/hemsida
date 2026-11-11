@@ -10,7 +10,7 @@ import { z } from 'zod';
 import type { SfsLaw, SfsStore } from './sfs-register.ts';
 import { sha256, stableJson } from './score/plan.ts';
 
-export const SFS_JUDGE_TEMPLATE_VERSION = 'v1';
+export const SFS_JUDGE_TEMPLATE_VERSION = 'v3';
 
 export const coverageLabelSchema = z.enum(['full', 'partial', 'weaker', 'none']);
 export type CoverageLabel = z.infer<typeof coverageLabelSchema>;
@@ -52,6 +52,11 @@ Välj en etikett:
 - none: lagen ligger i samma proposition men rör inte det här åtagandet (typiskt för en proposition med många lagändringar).
 
 Regler:
+- Bedöm ENDAST vad just den här lagen gör, med dess rubrik och omfattning i registerposten som utgångspunkt. Propositionstexten är sammanhang, inte poäng: att propositionen som helhet genomför löftet gör inte varje lag i den till en genomförare av löftet.
+- Svara none när åtgärden ligger i en annan lag i samma proposition, eller när lagen bara är en följdändring eller konsekvensändring (till exempel en hänvisning, ett sekretessstöd, en sunset-bestämmelse eller en upphävd paragraf) som inte själv genomför något av löftet.
+- Svara none också när lagen ändrar många paragrafer i en lag av andra skäl än löftet (till exempel ny struktur, nya begrepp eller omnumrering) och texten inte visar att just löftets åtgärd finns i den lagen; lagens omfattning är då ett tecken på omfattande omarbetning, inte på att löftet genomförs.
+- Om lagen bara gäller en del av den målgrupp, de verksamheter eller de fall som löftet omfattar (till exempel bara vissa byggnadstyper) är det partial, aldrig full.
+- Svara full bara när lagen själv, enligt sin rubrik och omfattning och propositionens beskrivning av den, genomför hela åtagandet. Om undantag gör att bara en del av målgruppen eller åtgärden täcks är det partial.
 - Påstå ingenting som inte står i texten du fått. Om texten inte visar att en del av löftet genomförs räknas den delen som saknad. Gissa inte.
 - Lagens omfattning (vilka paragrafer som ändras) är bara ett stöd; avgörande är vad propositionen och utskottets förslag säger att lagen innebär.
 - Bedöm bara om lagen genomför åtagandet, inte om den är bra eller om den har börjat gälla.
@@ -77,7 +82,12 @@ export interface PlannableDoc {
   doktyp: string;
   rm: string;
   beteckning: string;
+  titel?: string | undefined;
 }
+
+/** Budget propositions are handled slice by slice; no single law implements a promise from them. */
+export const isBudgetDoc = (d: PlannableDoc): boolean =>
+  d.doktyp === 'prop' && (d.beteckning === '1' || /^Budgetpropositionen/.test(d.titel ?? ''));
 
 export interface SfsPair {
   /** `<promise_id>::<sfs-key>`, e.g. `tido-x::sfs-2025-625`. */
@@ -104,6 +114,7 @@ export function planSfsPairs(
   const betByRef = new Map(
     docs.filter((d) => d.doktyp === 'bet').map((d) => [`${d.rm}:${d.beteckning}`, d.dok_id]),
   );
+  const budget = new Set(docs.filter(isBudgetDoc).map((d) => d.dok_id));
   const pairs: SfsPair[] = [];
   for (const p of promises) {
     if (p.type !== 'legislative') continue;
@@ -112,7 +123,8 @@ export function planSfsPairs(
     const linked = new Set(
       p.evidence
         .filter((e) => e.kind === 'prop' && (e.relevance === 'full' || e.relevance === 'partial'))
-        .map((e) => e.dok_id!),
+        .map((e) => e.dok_id!)
+        .filter((id) => !budget.has(id)),
     );
     const byLaw = new Map<string, Set<string>>();
     for (const propId of [...linked].sort()) {
@@ -169,10 +181,16 @@ export function buildPrompt(i: JudgeInput): string {
   return parts.join('\n\n');
 }
 
-/** Content-addressed key: model, template version, instructions and the exact prompt text. */
-export function judgeKey(model: string, prompt: string, instructions: string): string {
+/** Content-addressed key: judge kind (a fake run never fills real keys), model, template version, instructions and the exact prompt text. */
+export function judgeKey(
+  kind: string,
+  model: string,
+  prompt: string,
+  instructions: string,
+): string {
   return sha256(
     stableJson({
+      judge_kind: kind,
       model,
       template_version: SFS_JUDGE_TEMPLATE_VERSION,
       instructions_sha256: sha256(instructions),
@@ -205,7 +223,8 @@ export function changedProposal(
 ): string | null {
   const full = sections.map((s) => s.text).join('\n\n');
   const at = full.search(/Utskottets förslag till riksdagsbeslut/i);
-  const passage = at >= 0 ? full.slice(at) : full;
+  if (at < 0) return null;
+  const passage = full.slice(at);
   const hasChange = /med (de |den )?ändring(ar)? som (följer av|framgår av)|med följande ändring/i;
   if (!hasChange.test(passage)) return null;
   return passage.slice(0, maxChars);
@@ -371,7 +390,8 @@ export interface SfsRequest {
   estimated_cost_usd: number;
 }
 export interface RunSummary {
-  status: 'complete' | 'budget_exceeded' | 'failed';
+  /** `incomplete`: finished, but some requests were skipped on transient errors. */
+  status: 'complete' | 'incomplete' | 'budget_exceeded' | 'failed';
   error?: string;
   total: number;
   cached: number;
@@ -393,6 +413,7 @@ export async function runRequests(
     instructions: string;
     cache: CoverageCache;
     concurrency?: number;
+    /** Cap for this call; the CLI passes the run's cap minus what earlier calls under the same name spent. */
     maxCostUsd: number;
     onProgress?: (done: number, total: number) => void;
   },
@@ -444,6 +465,10 @@ export async function runRequests(
   }
   const n = Math.max(1, Math.min(opts.concurrency ?? 4, todo.length || 1));
   await Promise.all(Array.from({ length: n }, () => worker()));
+  if (s.skipped > 0 && s.status === 'complete') {
+    s.status = 'incomplete';
+    s.error = `${s.skipped} request(s) skipped on transient API errors; re-run to retry them`;
+  }
   return s;
 }
 
@@ -457,6 +482,8 @@ export interface SfsResult {
   covered_sv: string;
   missing_sv: string;
   reason: string;
+  /** Template version of the prompt that produced this judgement. */
+  template_version: string;
 }
 
 /** Results of every request that has a cached judgement, in pair order. */
@@ -483,7 +510,29 @@ export function collectResults(
       covered_sv: hit.coverage.covered_sv,
       missing_sv: hit.coverage.missing_sv,
       reason: hit.coverage.reason,
+      template_version: SFS_JUDGE_TEMPLATE_VERSION,
     });
   }
   return { results, missing };
+}
+
+/**
+ * Re-judging with a stricter prompt: pairs the earlier run labelled in `rerunLabels` (or never judged)
+ * are sent again; the others keep their earlier result (the stricter prompt only moves labels towards
+ * none, so a none or weaker label stays). `kept` carries each kept result with its own template version.
+ */
+export function splitByEarlierRun(
+  pairs: readonly SfsPair[],
+  earlier: readonly SfsResult[],
+  rerunLabels: ReadonlySet<string>,
+): { rerun: SfsPair[]; kept: SfsResult[] } {
+  const byId = new Map(earlier.map((r) => [r.id, r]));
+  const rerun: SfsPair[] = [];
+  const kept: SfsResult[] = [];
+  for (const p of pairs) {
+    const old = byId.get(p.id);
+    if (!old || rerunLabels.has(old.label)) rerun.push(p);
+    else kept.push(old);
+  }
+  return { rerun, kept };
 }

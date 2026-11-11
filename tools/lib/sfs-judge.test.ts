@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import {
   SFS_JUDGE_INSTRUCTIONS,
+  SFS_JUDGE_TEMPLATE_VERSION,
+  splitByEarlierRun,
   buildPrompt,
   changedProposal,
   collectResults,
@@ -112,14 +114,21 @@ describe('prompt and key', () => {
     ).toContain('UTSKOTTETS FÖRSLAG');
   });
 
+  it('cache key includes the judge kind, so a fake run never fills real keys', () => {
+    const p = buildPrompt(input);
+    expect(judgeKey('fake', 'm', p, SFS_JUDGE_INSTRUCTIONS)).not.toBe(
+      judgeKey('claude', 'm', p, SFS_JUDGE_INSTRUCTIONS),
+    );
+  });
+
   it('cache key changes with model, instructions and prompt text', () => {
     const p = buildPrompt(input);
-    const k = judgeKey('m', p, SFS_JUDGE_INSTRUCTIONS);
+    const k = judgeKey('claude', 'm', p, SFS_JUDGE_INSTRUCTIONS);
     expect(k).toMatch(/^[0-9a-f]{64}$/);
-    expect(judgeKey('m', p, SFS_JUDGE_INSTRUCTIONS)).toBe(k);
-    expect(judgeKey('m2', p, SFS_JUDGE_INSTRUCTIONS)).not.toBe(k);
-    expect(judgeKey('m', p + 'x', SFS_JUDGE_INSTRUCTIONS)).not.toBe(k);
-    expect(judgeKey('m', p, SFS_JUDGE_INSTRUCTIONS + 'x')).not.toBe(k);
+    expect(judgeKey('claude', 'm', p, SFS_JUDGE_INSTRUCTIONS)).toBe(k);
+    expect(judgeKey('claude', 'm2', p, SFS_JUDGE_INSTRUCTIONS)).not.toBe(k);
+    expect(judgeKey('claude', 'm', p + 'x', SFS_JUDGE_INSTRUCTIONS)).not.toBe(k);
+    expect(judgeKey('claude', 'm', p, SFS_JUDGE_INSTRUCTIONS + 'x')).not.toBe(k);
   });
 
   it('renderTier1 puts the proposal first and cuts', () => {
@@ -146,6 +155,13 @@ describe('prompt and key', () => {
       },
     ];
     expect(changedProposal(changed, 500)).toMatch(/^Utskottets förslag/);
+    // no heading: nothing, even when the text mentions a change
+    expect(
+      changedProposal(
+        [{ heading: '', text: 'Bifall med de ändringar som följer av bilagan.' }],
+        500,
+      ),
+    ).toBeNull();
   });
 });
 
@@ -248,7 +264,7 @@ describe('runRequests', () => {
       judge: mkJudge(529),
       cache: createMemoryCoverageCache(),
     });
-    expect(t.status).toBe('complete');
+    expect(t.status).toBe('incomplete');
     expect(t.skipped).toBe(1);
     const f = await runRequests([mk('a', 0.01)], {
       ...base,
@@ -259,5 +275,80 @@ describe('runRequests', () => {
   });
   it('estimates a positive cost', () => {
     expect(estimateCostUsd('x'.repeat(3000), 'y'.repeat(3000))).toBeGreaterThan(0);
+  });
+});
+
+describe('v2 additions', () => {
+  it('the prompt tells the judge to assess only this law and bumps the template version', () => {
+    expect(SFS_JUDGE_INSTRUCTIONS).toMatch(/ENDAST vad just den här lagen gör/);
+    expect(SFS_JUDGE_INSTRUCTIONS).toMatch(/följdändring/);
+    expect(SFS_JUDGE_TEMPLATE_VERSION).toBe('v3');
+  });
+
+  it('skips budget propositions as pair sources', () => {
+    const store = { laws: sfs.laws, byProp: { B1: ['sfs-2025-3'], P3: ['sfs-2025-3'] } };
+    const pairs = planSfsPairs(
+      [prom('a', 'legislative', [propEv('B1')]), prom('b', 'legislative', [propEv('P3')])],
+      store,
+      [
+        {
+          dok_id: 'B1',
+          doktyp: 'prop',
+          rm: '2024/25',
+          beteckning: '1',
+          titel: 'Budgetpropositionen',
+        },
+      ],
+    );
+    expect(pairs.map((p) => p.id)).toEqual(['b::sfs-2025-3']);
+  });
+
+  it('re-judges earlier full/partial and unjudged pairs, keeps none/weaker', () => {
+    const pair = (id: string) => ({ id, promise_id: 'p', sfs_key: 'k', prop_ids: [], bet_ids: [] });
+    const old = (id: string, label: 'full' | 'partial' | 'weaker' | 'none') => ({
+      id,
+      promise_id: 'p',
+      sfs: 's',
+      sfs_dok_id: 'k',
+      label,
+      confidence: 'high' as const,
+      covered_sv: '',
+      missing_sv: '',
+      reason: 'r',
+      template_version: 'v1',
+    });
+    const { rerun, kept } = splitByEarlierRun(
+      ['a', 'b', 'c', 'd', 'e'].map(pair),
+      [old('a', 'full'), old('b', 'partial'), old('c', 'none'), old('d', 'weaker')],
+      new Set(['full', 'partial']),
+    );
+    expect(rerun.map((p) => p.id)).toEqual(['a', 'b', 'e']);
+    expect(kept.map((r) => r.id)).toEqual(['c', 'd']);
+    expect(kept[0]!.template_version).toBe('v1');
+  });
+
+  it('marks a run incomplete when requests were skipped on transient errors', async () => {
+    const s = await runRequests(
+      [
+        {
+          pair: { id: 'a', promise_id: 'p', sfs_key: 'k', prop_ids: [], bet_ids: [] },
+          key: 'a'.padEnd(64, '0'),
+          prompt: 'x',
+          estimated_cost_usd: 0.01,
+        },
+      ],
+      {
+        judge: {
+          kind: 'x',
+          judge: async () => {
+            throw new JudgeError('overloaded', 529);
+          },
+        },
+        instructions: 'i',
+        cache: createMemoryCoverageCache(),
+        maxCostUsd: 1,
+      },
+    );
+    expect(s.status).toBe('incomplete');
   });
 });

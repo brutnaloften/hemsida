@@ -11,7 +11,7 @@
  * promise file. `--out-dir` also locates the inputs (riksdag-store, sfs-store, riksdag-tier1,
  * riksdag-text), so a worktree can point it at the main checkout's tools/out.
  */
-import { existsSync, mkdirSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
@@ -30,6 +30,8 @@ import {
   coverageSchema,
   createCoverageJudge,
   estimateCostUsd,
+  splitByEarlierRun,
+  type SfsResult,
   judgeKey,
   planSfsPairs,
   renderTier1,
@@ -37,7 +39,6 @@ import {
   type CoverageCache,
   type SfsRequest,
 } from './lib/sfs-judge.ts';
-import { readdirSync } from 'node:fs';
 import { z } from 'zod';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -54,6 +55,8 @@ const { values } = parseArgs({
     concurrency: { type: 'string', default: '4' },
     'max-cost': { type: 'string', default: '15' },
     'out-dir': { type: 'string', default: resolve(root, 'tools/out') },
+    'pairs-from': { type: 'string' },
+    labels: { type: 'string', default: 'full,partial' },
     'dry-run': { type: 'boolean', default: false },
   },
 });
@@ -108,7 +111,29 @@ function sectionsOf(dokId: string): { heading: string; text: string }[] {
   return sections;
 }
 
-const requests: SfsRequest[] = pairs.map((pair) => {
+// --pairs-from <results.json>: only pairs the earlier run labelled --labels (default full,partial) or never
+// judged are sent; the rest keep their earlier result (with that file's template version) in the output.
+let kept: SfsResult[] = [];
+let toJudge = pairs;
+if (values['pairs-from']) {
+  const file = z
+    .object({ template_version: z.string(), results: z.array(z.looseObject({ id: z.string() })) })
+    .parse(loadJson(resolve(values['pairs-from'])));
+  const earlier = file.results.map((r) => ({
+    template_version: file.template_version,
+    ...r,
+  })) as SfsResult[];
+  ({ rerun: toJudge, kept } = splitByEarlierRun(
+    pairs,
+    earlier,
+    new Set(values.labels!.split(',')),
+  ));
+  console.log(
+    `--pairs-from: ${toJudge.length} pairs to judge, ${kept.length} keep their earlier label`,
+  );
+}
+
+const requests: SfsRequest[] = toJudge.map((pair) => {
   const promise = promiseById.get(pair.promise_id)!;
   const law = sfs.laws[pair.sfs_key]!;
   const propTexts = pair.prop_ids.map((id) => ({
@@ -137,7 +162,7 @@ const requests: SfsRequest[] = pairs.map((pair) => {
   });
   return {
     pair,
-    key: judgeKey(values.model!, prompt, SFS_JUDGE_INSTRUCTIONS),
+    key: judgeKey(values.judge!, values.model!, prompt, SFS_JUDGE_INSTRUCTIONS),
     prompt,
     estimated_cost_usd: estimateCostUsd(prompt, SFS_JUDGE_INSTRUCTIONS),
   };
@@ -158,13 +183,24 @@ const cache: CoverageCache = {
   },
 };
 
+// The cap is overall for a run name: spend of earlier calls is recorded in manifest.json and subtracted.
+const runDir = resolve(outDir, 'sfs-judge-runs', name);
+const manifestPath = resolve(runDir, 'manifest.json');
+const priorSpend = existsSync(manifestPath)
+  ? (z.looseObject({ cumulative_cost_usd: z.number().optional() }).parse(loadJson(manifestPath))
+      .cumulative_cost_usd ?? 0)
+  : 0;
+const remainingCap = maxCost - priorSpend;
+
 const todo = requests.filter((r) => !cache.has(r.key));
 const estimate = todo.reduce((a, r) => a + r.estimated_cost_usd, 0);
 console.log(
-  `${new Set(pairs.map((p) => p.promise_id)).size} promises, ${pairs.length} pairs, ${pairs.length - todo.length} cached, ` +
-    `${todo.length} to send; estimated $${estimate.toFixed(2)} (cap $${maxCost}, template ${SFS_JUDGE_TEMPLATE_VERSION}, model ${values.model})`,
+  `${new Set(pairs.map((p) => p.promise_id)).size} promises, ${pairs.length} pairs (${requests.length} to judge, ${kept.length} kept from the earlier run), ${requests.length - todo.length} cached, ` +
+    `${todo.length} to send; estimated $${estimate.toFixed(2)} (overall cap for run ${name}: $${maxCost}, already spent $${priorSpend.toFixed(2)}; template ${SFS_JUDGE_TEMPLATE_VERSION}, model ${values.model})`,
 );
 if (dryRun) process.exit(0);
+if (remainingCap <= 0)
+  throw new Error(`run ${name} has already spent $${priorSpend.toFixed(2)} of its $${maxCost} cap`);
 
 const judge = createCoverageJudge(values.judge!, values.model!);
 const summary = await runRequests(requests, {
@@ -172,14 +208,16 @@ const summary = await runRequests(requests, {
   instructions: SFS_JUDGE_INSTRUCTIONS,
   cache,
   concurrency: Number(values.concurrency),
-  maxCostUsd: maxCost,
+  maxCostUsd: remainingCap,
   onProgress: (done, total) => {
     if (done % 10 === 0 || done === total) console.log(`${done}/${total}`);
   },
 });
 
-const { results, missing } = collectResults(requests, cache, sfs.laws);
-const dir = resolve(outDir, 'sfs-judge-runs', name);
+const collected = collectResults(requests, cache, sfs.laws);
+const missing = collected.missing;
+const results = [...kept, ...collected.results].sort((a, b) => (a.id < b.id ? -1 : 1));
+const dir = runDir;
 mkdirSync(dir, { recursive: true });
 writeJsonAtomic(resolve(dir, 'results.json'), {
   term,
@@ -188,7 +226,13 @@ writeJsonAtomic(resolve(dir, 'results.json'), {
   complete: missing === 0,
   results,
 });
-writeJsonAtomic(resolve(dir, 'manifest.json'), { ...summary, missing, judge_kind: judge.kind });
+writeJsonAtomic(resolve(dir, 'manifest.json'), {
+  ...summary,
+  missing,
+  judge_kind: judge.kind,
+  max_cost_usd: maxCost,
+  cumulative_cost_usd: priorSpend + summary.cost_usd,
+});
 const counts: Record<string, number> = {};
 for (const r of results) counts[r.label] = (counts[r.label] ?? 0) + 1;
 console.log(
