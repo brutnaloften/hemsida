@@ -173,7 +173,8 @@
     "link": {
       "promises": [
         "tido-avskaffa-mangdrabatt",
-        "tido-ta-bort-straffreduktion-18-20-utred-straffrabatt-under-18",
+        "tido-ta-bort-straffreduktion-over-18",
+        "tido-utred-straffrabatt-under-18",
         "tido-villkorlig-frigivning-undantag"
       ],
       "outcome": "weakened",
@@ -402,7 +403,7 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-ta-bort-straffreduktion-18-20-utred-straffrabatt-under-18"],
+      "promises": ["tido-utred-straffrabatt-under-18"],
       "outcome": "weakened",
       "note": "Avtalet anger att en utredning ska se över straffrabatten för under 18 år och samtidigt överväga en sänkning av straffmyndighetsåldern.",
       "rationale": "Avtalet anger att en utredning ska se över straffrabatten för under 18 år och samtidigt överväga en sänkning av straffmyndighetsåldern."
@@ -2883,7 +2884,8 @@
       "promises": [
         "tido-lagandringar-ny-karnkraft-miljobalken",
         "tido-karnkraft-kreditgarantier-400-miljarder",
-        "tido-kortare-tillstandsprocess-snabbspar-karnkraft"
+        "tido-tillstandsprocess",
+        "tido-typgodkannande"
       ],
       "outcome": "weakened",
       "note": "Avtalet anger lagändringar för att möjliggöra ny kärnkraft, statliga kreditgarantier, kortare tillståndsprocess och att regelverk skyndsamt ska utvecklas så att små modulära reaktorer (SMR) kan byggas. En färdplan nämns inte.",
@@ -2954,7 +2956,7 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-fjarr-och-kraftvarmestrategi-skatteoversyn"],
+      "promises": ["tido-fjarr-kraftvarmestrategi"],
       "outcome": "weakened",
       "note": "Avtalet anger att en ny fjärr- och kraftvärmestrategi tas fram.",
       "rationale": "Avtalet anger att en ny fjärr- och kraftvärmestrategi tas fram."

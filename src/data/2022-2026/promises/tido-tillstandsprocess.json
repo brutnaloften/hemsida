@@ -1,0 +1,68 @@
+{
+  "id": "tido-tillstandsprocess",
+  "term": "2022-2026",
+  "title": "Kortare tillståndsprocess och snabbspår för ny kärnkraft",
+  "description": "Endast en myndighet får vara part i ett tillståndsärende, ett snabbspår för ny kärnkraft införs i miljöbalken och Strålsäkerhetsmyndigheten får i uppdrag att föreslå hur processen kan kortas kraftigt.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 15,
+    "quote": "Inför en ny regel i miljöbalken som innebär att endast en myndighet får vara part i ett tillståndsärende."
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "legislative",
+  "area": "Energi",
+  "committee": "MJU",
+  "keywords": [
+    "tillståndsprocess",
+    "snabbspår",
+    "kärnkraft",
+    "Strålsäkerhetsmyndigheten",
+    "miljöbalken",
+    "ansökningsavgift",
+    "typgodkännande",
+    "kärnkraftreaktorer",
+    "mark- och miljödomstolar",
+    "tillståndsprövning"
+  ],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning i januari 2025 föreslog åtgärder för effektivare tillståndsprövning av ny kärnkraft: en begränsad prövning enligt miljöbalken, ett principbeslut och Strålsäkerhetsmyndigheten som beslutande myndighet. En ny utredning i oktober 2025 handlar mest om kärnavfallssystemet och vad prövningen omfattar. Att bara en myndighet blir part, ett uttryckligt snabbspår i miljöbalken och ett uppdrag till myndigheten nämns inte i dokumenten.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB37",
+      "designation": "SOU 2025:7",
+      "title": "Ny kärnkraft i Sverige",
+      "date": "2025-01-16",
+      "url": "https://data.riksdagen.se/dokument/HDB37.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3104",
+      "designation": "SOU 2025:104",
+      "title": "Ny kärnkraft i Sverige ",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HDB3104.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
+}

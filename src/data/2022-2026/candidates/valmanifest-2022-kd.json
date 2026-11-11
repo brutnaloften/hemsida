@@ -238,7 +238,7 @@
       "evidence": []
     },
     "link": {
-      "promises": ["tido-foraldrastodsprogram-alla-kommuner-fritidskort"],
+      "promises": ["tido-foraldrastod-alla-kommuner"],
       "outcome": "included",
       "note": "Avtalet bygger ut föräldrastödsprogram med målet att det ska finnas i alla kommuner.",
       "rationale": "Tidö p23: parental support programmes in all municipalities."
@@ -801,10 +801,7 @@
       "evidence": []
     },
     "link": {
-      "promises": [
-        "tido-foraldrastodsprogram-alla-kommuner-fritidskort",
-        "tido-utredning-foraldraansvar"
-      ],
+      "promises": ["tido-foraldrastod-alla-kommuner", "tido-utredning-foraldraansvar"],
       "outcome": "weakened",
       "note": "Avtalet har som mål att föräldrastödsprogram ska finnas i alla kommuner, men gör det inte obligatoriskt.",
       "rationale": "Tidö p23: goal of programmes in all municipalities, not an obligation."
@@ -1014,10 +1011,7 @@
       "evidence": []
     },
     "link": {
-      "promises": [
-        "tido-mellantvang-socialtjanstlagen",
-        "tido-lvu-oftare-och-aklagare-omhandertagande"
-      ],
+      "promises": ["tido-mellantvang-socialtjanstlagen", "tido-lvu-anvands-oftare"],
       "outcome": "included",
       "note": "Avtalet ger socialtjänsten utökade befogenheter till tidiga och obligatoriska insatser och använder LVU oftare.",
       "rationale": "Tidö p23: mellantvång in socialtjänstlagen; LVU used more often."

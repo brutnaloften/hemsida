@@ -477,6 +477,19 @@ describe('evidence and inputs', () => {
     );
   });
 
+  it('keeps only the promises named in inputs.promises.ids', () => {
+    const root = fixtureRoot();
+    const only = (ids: string[]) =>
+      loadLinkInputs(
+        { ...config, inputs: { ...config.inputs, promises: { ...config.inputs.promises, ids } } },
+        root,
+        '/text',
+        { readText: () => HD01SOU1_TEXT },
+      ).pairs;
+    expect(only(['p1']).map((p) => p.id)).toEqual(['p1::d1', 'p1::d2']);
+    expect(only(['other'])).toEqual([]);
+  });
+
   it('runs end to end offline with the fake judge: dry run first, then run, report and resume', async () => {
     const root = fixtureRoot();
     const inputs = loadLinkInputs(config, root, '/text', { readText: () => HD01SOU1_TEXT });

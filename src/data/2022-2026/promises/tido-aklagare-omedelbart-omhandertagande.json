@@ -1,0 +1,63 @@
+{
+  "id": "tido-aklagare-omedelbart-omhandertagande",
+  "term": "2022-2026",
+  "title": "Åklagare ska kunna besluta om omedelbart omhändertagande enligt LVU",
+  "description": "Åklagare ska kunna ansöka och fatta beslut om omedelbart omhändertagande enligt LVU.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 23,
+    "quote": "Åklagare ska kunna ansöka och fatta beslut om omedelbart omhändertagande enligt lagen om vård av unga (LVU)."
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "legislative",
+  "area": "Kriminalpolitik",
+  "committee": "SoU",
+  "keywords": [
+    "LVU",
+    "lagen om vård av unga",
+    "omedelbart omhändertagande",
+    "åklagare",
+    "hedersförtryck"
+  ],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i november 2023 en utredare i uppdrag att analysera om åklagare ska kunna besluta om omedelbart omhändertagande enligt LVU. I februari 2026 föreslog utredningen bara en begränsad reservbefogenhet: tillfälliga beslut i högst 24 timmar när ingen socialtjänstbeslutsfattare nås. Någon bred åklagarbefogenhet föreslås inte, och åklagares möjlighet att ansöka nämns inte i dokumenten. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1160",
+      "designation": "Dir. 2023:160",
+      "title": "Stärkt barnrättsperspektiv i LVU och en översyn av grunderna för vård",
+      "date": "2023-11-30",
+      "url": "https://data.riksdagen.se/dokument/HBB1160.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB38",
+      "designation": "SOU 2026:8",
+      "title": "Rättssäker samhällsvård för barn och unga",
+      "date": "2026-02-11",
+      "url": "https://data.riksdagen.se/dokument/HEB38.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
+}

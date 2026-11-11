@@ -26,6 +26,8 @@ export const linkConfigSchema = z.strictObject({
       term: z.string().min(1),
       /** Only promises whose id starts with this prefix (e.g. `val2022-`). Empty string = all. */
       id_prefix: z.string(),
+      /** Only these promise ids (on top of the prefix); for re-linking promises that were split. */
+      ids: z.array(z.string().min(1)).min(1).optional(),
     }),
     pairs: z.discriminatedUnion('kind', [
       /** The pairs of the eval file; its hand labels feed the agreement report. */

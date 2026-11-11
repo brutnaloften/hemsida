@@ -1,0 +1,53 @@
+{
+  "id": "tido-samverkan-atervandande",
+  "term": "2022-2026",
+  "title": "Förstärkt samverkansuppdrag för återvändandeverksamheten",
+  "description": "Migrationsverket, Polismyndigheten, Skatteverket och Kriminalvården ges ett förstärkt uppdrag att samverka om återvändandeverksamheten, med resurser om det behövs.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 34,
+    "quote": "Migrationsverket, Polismyndigheten, Skatteverket och Kriminalvården ska ges ett förstärkt uppdrag att samverka när det gäller återvändandeverksamheten, och resurser för detta ändamål om så behövs."
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "other_action",
+  "area": "Migration och integration",
+  "committee": "SfU",
+  "keywords": [
+    "återvändande",
+    "förvarsplatser",
+    "boendeskyldighet",
+    "elektronisk övervakning",
+    "Migrationsverket"
+  ],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i februari 2025 ett nytt regelverk för uppsikt och förvar, för att göra återvändandeprocessen mer effektiv. Utredningen räknar på kostnader för Migrationsverket, Polismyndigheten och Kriminalvården. Dokumenten visar förslag, inget beslut. Ett förstärkt uppdrag för myndigheterna, Skatteverket inkluderat, att samverka om återvändande nämns inte i dokumenten.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB316",
+      "designation": "SOU 2025:16",
+      "title": "Ett nytt regelverk för uppsikt och förvar",
+      "date": "2025-02-18",
+      "url": "https://data.riksdagen.se/dokument/HDB316.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
+}

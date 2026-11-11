@@ -1,0 +1,63 @@
+{
+  "id": "tido-juridiskt-stod-brottsoffer",
+  "term": "2022-2026",
+  "title": "Juridiskt stöd till brottsoffer när gärningsmannen inte är straffmyndig",
+  "description": "Brottsoffer ska ha rätt till juridiskt stöd även i de fall den misstänkte gärningsmannen inte är straffmyndig.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 23,
+    "quote": "Brottsoffer ska ha rätt till juridiskt stöd även i de fall den misstänkte gärningsmannen inte är straffmyndig."
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "legislative",
+  "area": "Kriminalpolitik",
+  "committee": "JuU",
+  "keywords": [
+    "brottsoffer",
+    "målsägandebiträde",
+    "straffmyndighet",
+    "påverkan från äldre",
+    "minderåriga"
+  ],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2023 fram ett förslag om att brottsoffer ska kunna få målsägandebiträde eller särskild företrädare när den misstänkte är under 15 år, och riksdagen fattade beslut om förslaget i maj 2023.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA0378",
+      "designation": "Prop. 2022/23:78",
+      "title": "Förbättrade åtgärder när barn misstänks för brott",
+      "date": "2023-03-14",
+      "url": "https://data.riksdagen.se/dokument/HA0378.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU21",
+      "designation": "Bet. 2022/23:JuU21",
+      "title": "Förbättrade åtgärder när barn misstänks för brott",
+      "date": "2023-05-11",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU21.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
+}

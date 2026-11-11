@@ -1,0 +1,58 @@
+{
+  "id": "tido-ansokningsavgift",
+  "term": "2022-2026",
+  "title": "Sänkt ansökningsavgift för nya kärnkraftreaktorer",
+  "description": "Den höga ansökningsavgiften för nya kärnkraftreaktorer ses över för att kraftigt sättas ned, och vid behov skjuts mer medel till mark- och miljödomstolarna.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 15,
+    "quote": "Den höga ansökningsavgiften för nya kärnkraftreaktorer ses över för att kraftigt sättas ned."
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "legislative",
+  "area": "Energi",
+  "committee": "MJU",
+  "keywords": [
+    "tillståndsprocess",
+    "snabbspår",
+    "kärnkraft",
+    "Strålsäkerhetsmyndigheten",
+    "miljöbalken",
+    "ansökningsavgift",
+    "typgodkännande",
+    "kärnkraftreaktorer",
+    "mark- och miljödomstolar",
+    "tillståndsprövning"
+  ],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning från januari 2025 gick igenom ansökningsavgiften för nya kärnkraftreaktorer. Den föreslår kraftigt sänkta och differentierade avgifter hos Strålsäkerhetsmyndigheten. Dokumentet visar förslag, inget beslut. Extra medel till mark- och miljödomstolarna nämns inte i dokumentet.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB37",
+      "designation": "SOU 2025:7",
+      "title": "Ny kärnkraft i Sverige",
+      "date": "2025-01-16",
+      "url": "https://data.riksdagen.se/dokument/HDB37.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
+}

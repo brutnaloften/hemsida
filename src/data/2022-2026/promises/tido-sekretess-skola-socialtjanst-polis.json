@@ -1,0 +1,97 @@
+{
+  "id": "tido-sekretess-skola-socialtjanst-polis",
+  "term": "2022-2026",
+  "title": "Se över sekretessregler för informationsutbyte skola, socialtjänst och polis",
+  "description": "Sekretessreglerna ses över för att möjliggöra informationsutbyte mellan skola, socialtjänst och polis i ärenden som gäller unga.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 52,
+    "quote": "Översyn av sekretessreglerna görs för att möjliggöra informationsutbyte mellan skola, socialtjänst och polis i ärenden som gäller unga."
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "inquiry",
+  "area": "Skola och utbildning",
+  "committee": "UbU",
+  "keywords": ["obehöriga", "jourskolor", "akutskolor", "sekretess", "brottslighet i skolan"],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i augusti 2023 Skolsäkerhetsutredningen i uppdrag att kartlägga och föreslå ändrade sekretessregler för informationsutbyte mellan skola, socialtjänst och polis. Utredningen föreslog i december 2024 sekretessbrytande regler för just detta. Riksdagen beslutade i maj 2025 om ändringar i skollagen och sekretesslagen, men dokumenten visar inte att de gäller utbyte mellan alla tre.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HBB328",
+      "designation": "SOU 2023:28",
+      "title": "Samhället mot skolattacker ",
+      "date": "2023-06-16",
+      "url": "https://data.riksdagen.se/dokument/HBB328.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1120",
+      "designation": "Dir. 2023:120",
+      "title": "Tilläggsdirektiv till Skolsäkerhetsutredningen (U 2022:04)",
+      "date": "2023-08-10",
+      "url": "https://data.riksdagen.se/dokument/HBB1120.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB17",
+      "designation": "Dir. 2024:7",
+      "title": "Tilläggsdirektiv till Skolsäkerhetsutredningen (U 2022:04)",
+      "date": "2024-01-18",
+      "url": "https://data.riksdagen.se/dokument/HCB17.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB363",
+      "designation": "SOU 2024:63",
+      "title": "Ökat informationsutbyte mellan myndigheter ",
+      "date": "2024-09-03",
+      "url": "https://data.riksdagen.se/dokument/HCB363.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB387",
+      "designation": "SOU 2024:87",
+      "title": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "date": "2024-12-18",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01UbU21",
+      "designation": "Bet. 2024/25:UbU21",
+      "title": "Skolor mot brott",
+      "date": "2025-05-23",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU21.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "tido-oversyn-skatter-kraftvarme",
+  "term": "2022-2026",
+  "title": "Översyn av kraftvärmeskatten, avfallsförbränningsskatten och skatten på bioolja",
+  "description": "Kraftvärmeskatten, avfallsförbränningsskatten och skatten på bioolja ses över för att skapa bättre förutsättningar för kraftvärmen.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 15,
+    "quote": "Kraftvärmeskatten, avfallsförbränningsskatten och skatten på bioolja ses över för att skapa bättre förutsättningar för kraftvärmen."
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "other_action",
+  "area": "Energi",
+  "committee": "SkU",
+  "keywords": [
+    "kraftvärme",
+    "fjärrvärme",
+    "kraftvärmeskatt",
+    "avfallsförbränningsskatt",
+    "bioolja"
+  ],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i november 2022 i budgetpropositionen att skatten på avfallsförbränning upphävs, och lade samma månad fram ett förslag om att bränsle i kraftvärme och annan värmeproduktion undantas från koldioxidskatt. Riksdagen fattade i december 2022 beslut om budgetens ramar. Dokumenten visar ingen samlad översyn av kraftvärmeskatten eller skatten på bioolja; de nämns inte.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA031",
+      "designation": "Prop. 2022/23:1",
+      "title": "Budgetpropositionen för 2023",
+      "date": "2022-11-08",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA0317",
+      "designation": "Prop. 2022/23:17",
+      "title": "Tillfälligt sänkt skatt på drivmedel och sänkt skatt på bränslen i viss värmeproduktion",
+      "date": "2022-11-15",
+      "url": "https://data.riksdagen.se/dokument/HA0317.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01FiU1",
+      "designation": "Bet. 2022/23:FiU1",
+      "title": "Statens budget 2023 – Rambeslutet",
+      "date": "2022-12-12",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
+}

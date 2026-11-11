@@ -1,0 +1,103 @@
+{
+  "id": "tido-utred-straffrabatt-under-18",
+  "term": "2022-2026",
+  "title": "Utred straffrabatten för under 18 år och sänkt straffmyndighetsålder",
+  "description": "En utredning ska se över straffrabatten för de under 18 år och samtidigt överväga en sänkning av straffmyndighetsåldern.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 23,
+    "quote": "En utredning ska se över straffrabatten för de under 18 år och samtidigt överväga en sänkning av straffmyndighetsåldern."
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "inquiry",
+  "area": "Kriminalpolitik",
+  "committee": "JuU",
+  "keywords": [
+    "straffreduktion",
+    "straffmyndighetsålder",
+    "unga lagöverträdare",
+    "straffrabatt",
+    "ungdomsreduktion"
+  ],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juli 2023 en utredare i uppdrag att se över straffrabatten och överväga lägre straffmyndighetsålder. Utredningar lades fram i juli 2024 (straffrabatten) och januari 2025 (straffbarhetsåldern, 14 år för allvarliga brott). Regeringen föreslog i april och juni 2026 lägre ålder och mindre rabatt, och riksdagen beslutade om detta i augusti 2026. Någon författning är inte kopplad till löftet.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1112",
+      "designation": "Dir. 2023:112",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2023-07-06",
+      "url": "https://data.riksdagen.se/dokument/HBB1112.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB339",
+      "designation": "SOU 2024:39",
+      "title": "Skärpta regler om ungdomsövervakning  och straffreduktion för unga",
+      "date": "2024-07-05",
+      "url": "https://data.riksdagen.se/dokument/HCB339.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB311",
+      "designation": "SOU 2025:11",
+      "title": "Straffbarhetsåldern",
+      "date": "2025-01-28",
+      "url": "https://data.riksdagen.se/dokument/HDB311.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03246",
+      "designation": "Prop. 2025/26:246",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2026-04-16",
+      "url": "https://data.riksdagen.se/dokument/HD03246.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03293",
+      "designation": "Prop. 2025/26:293",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2026-06-30",
+      "url": "https://data.riksdagen.se/dokument/HD03293.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU41",
+      "designation": "Bet. 2025/26:JuU41",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
+}

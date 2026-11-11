@@ -1,0 +1,73 @@
+{
+  "id": "tido-fler-forvarsplatser",
+  "term": "2022-2026",
+  "title": "Fler förvarsplatser, elektronisk övervakning och ökad säkerhet i förvar",
+  "description": "Antalet förvarsplatser ökar och kompletteras med alternativ om elektronisk eller annan övervakning, och säkerheten på Migrationsverkets förvar ökar.",
+  "source": {
+    "id": "tidoavtalet",
+    "page": 34,
+    "quote": "Antalet förvarsplatser ska öka och kompletteras med alternativ om elektronisk eller annan övervakning av personer som väntar på verkställighet."
+  },
+  "parties": ["M", "KD", "L", "SD"],
+  "roles": {
+    "M": "government",
+    "KD": "government",
+    "L": "government",
+    "SD": "support"
+  },
+  "type": "legislative",
+  "area": "Migration och integration",
+  "committee": "SfU",
+  "keywords": [
+    "återvändande",
+    "förvarsplatser",
+    "boendeskyldighet",
+    "elektronisk övervakning",
+    "Migrationsverket"
+  ],
+  "verdict": {
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i februari 2025 fotboja som alternativ till förvar och särskilda säkerhetsavdelningar på Migrationsverkets förvar. Regeringen lade i april 2026 fram ett förslag om detta, och riksdagen godkände i juni 2026 nya former av uppsikt med elektronisk övervakning. Fler förvarsplatser nämns inte i dokumenten, och säkerhet i förvar nämns inte i riksdagens beslut.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB316",
+      "designation": "SOU 2025:16",
+      "title": "Ett nytt regelverk för uppsikt och förvar",
+      "date": "2025-02-18",
+      "url": "https://data.riksdagen.se/dokument/HDB316.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03265",
+      "designation": "Prop. 2025/26:265",
+      "title": "Skärpta regler om uppsikt och förvar",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03265.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU31",
+      "designation": "Bet. 2025/26:SfU31",
+      "title": "Skärpta regler om uppsikt och förvar",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU31.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
+}
