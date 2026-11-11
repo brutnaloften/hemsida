@@ -47,6 +47,10 @@ describe('write-reasoning', () => {
       'Förslaget har ännu inte antagits.',
       'Inga beslut har fattats.',
       'Något förslag har inte lagts fram.',
+      'Förslaget är en proposition som riksdagen ska ta ställning till.',
+      'Riksdagen ska behandla förslaget.',
+      'Man väntar på beslut.',
+      'Riksdagen har ännu inte röstat.',
     ]) {
       expect(reasoningProblems(`${base} ${bad}`, [])).toContain(
         'claims something was not decided or proposed',

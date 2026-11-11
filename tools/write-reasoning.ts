@@ -5,7 +5,8 @@
  *     [--limit n] [--dry-run]
  * Runs through the local Claude Code login (Agent SDK), refuses an API key like the other claude tools.
  * Results are cached in tools/out/reasoning-cache by hash of model, prompt version, promise and
- * evidence, so a rerun only pays for promises whose evidence changed. Run `pnpm fmt` afterwards.
+ * evidence, so a rerun only pays for promises whose evidence changed (a cached text that fails the
+ * current validator is written again). Run `pnpm fmt` afterwards.
  */
 import { query } from '@anthropic-ai/claude-agent-sdk';
 import { existsSync, mkdirSync, readdirSync, readFileSync } from 'node:fs';
@@ -92,7 +93,16 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
 const limit = values.limit ? Number(values.limit) : jobs.length;
 const todo = jobs.slice(0, limit);
 const cachePath = (k: string) => resolve(cacheDir, `${k}.json`);
-const uncached = todo.filter((j) => !existsSync(cachePath(j.key)));
+// A cached text that no longer passes the rules (they get stricter) is written again.
+const cachedText = (j: Job): string | undefined =>
+  existsSync(cachePath(j.key))
+    ? reasoningSchema.parse(JSON.parse(readFileSync(cachePath(j.key), 'utf8'))).reasoning
+    : undefined;
+const usable = (j: Job): boolean => {
+  const text = cachedText(j);
+  return text !== undefined && reasoningProblems(text, j.designations).length === 0;
+};
+const uncached = todo.filter((j) => !usable(j));
 console.log(
   `${todo.length} promises, ${todo.length - uncached.length} cached, ${uncached.length} to write`,
 );
@@ -151,7 +161,7 @@ await Promise.all(
 
 let updated = 0;
 for (const job of todo) {
-  if (!existsSync(cachePath(job.key))) continue;
+  if (!usable(job)) continue;
   const { reasoning } = reasoningSchema.parse(JSON.parse(readFileSync(cachePath(job.key), 'utf8')));
   const doc = job.raw as { verdict: { reasoning: string } };
   if (doc.verdict.reasoning === reasoning) continue;

@@ -9,9 +9,11 @@
  *    the promise stays `unassessed` (a betänkande alone may only reject motions);
  *  - never `fulfilled` (needs an sfs entry the store does not have), never `no_evidence` (the
  *    search must be exhaustive first) and never `broken` (a `contradicts` label is only reported);
- *  - promises that already have a verdict other than `unassessed` or Riksdag evidence are left
- *    alone, except verdicts tagged `assessedBy: 'ai'`, which are recomputed (their Riksdag evidence is
- *    replaced and the verdict history is kept), so a later backfill reaches them and hand edits are safe.
+ *  - eligible promises are `unassessed` ones (existing Riksdag evidence stays, new documents are merged
+ *    in by dok_id; one that already has a dir/sou/ds/prop is treated as curated and skipped) and ones
+ *    whose verdict is tagged `assessedBy: 'ai'`, which are recomputed (their Riksdag evidence is
+ *    replaced and the earlier verdict goes to history when its value changes), so a later backfill
+ *    reaches them; any other verdict is left alone, which keeps hand edits safe.
  */
 import {
   isRiksdagEvidence,
@@ -175,18 +177,17 @@ export function applyLinks(
   }
   if (rerunAi && sameEvidence && promise.verdict.value === 'in_progress') return null;
 
-  const planningDocs = planning.length > 0 ? planning : entries;
   const decided = entries.filter((e) => e.doc.doktyp === 'bet' && e.pair.stage === 'definitive');
   const full = planning.some((e) => e.pair.label === 'match');
   const list = (xs: typeof entries) =>
     xs.map((e) => `${designationOf(e.doc)} (${e.doc.titel})`).join('; ');
   const reasoning = [
-    `${planningDocs.length === 1 ? 'Ett dokument' : 'Dokument'} i riksdagens register visar att åtgärden pågår: ${list(planningDocs)}.`,
+    `${planning.length === 1 ? 'Ett dokument' : 'Dokument'} i riksdagens register visar att åtgärden pågår: ${list(planning)}.`,
     full
-      ? planningDocs.length === 1
+      ? planning.length === 1
         ? 'Dokumentet behandlar hela löftet.'
         : 'Minst ett av dokumenten behandlar hela löftet.'
-      : planningDocs.length === 1
+      : planning.length === 1
         ? 'Dokumentet behandlar bara en del av löftet.'
         : 'Dokumenten behandlar bara delar av löftet.',
     decided.length > 0
