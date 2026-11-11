@@ -95,7 +95,7 @@ A document that promises come from.
   "keywords": ["gängbrott", "straffskärpning", "kriminella nätverk"],
   "verdict": {
     "value": "fulfilled",
-    "reasoning": "Lagen trädde i kraft 2023-07-01 (SFS 2023:xxx) …",
+    "reasoning": "Straffskärpningen för gängbrott trädde i kraft 2023-07-01 …",
     "date": "2023-07-01",
     "history": [{ "value": "in_progress", "reasoning": "…", "date": "2023-03-02" }]
   },
@@ -181,9 +181,9 @@ The `no_evidence` check is pragmatic: it cannot verify that a search really happ
 These are the working rules for the model that sets verdicts. `checkVerdictEvidence` enforces the evidence floors above; the rest is policy that the reasoning has to be consistent with. One verdict value per promise: there are no combination values such as "partially fulfilled / rest in progress". The reasoning says which part is done and which is still moving.
 
 - **How the law is found.** A law is never searched for by title. It is reached through a proposition that is already evidence on the promise: the SFS register lists the Förarbeten of every law (`Prop. <rm>:<nr>`), and `ingest-sfs` records which laws cite which proposition (`docs/riksdag-api.md`, "SFS register"). The SFS judge then labels how much of the promise each law delivers (`full`, `partial`, `weaker`, `none`; `docs/riksdag-linking.md`). Only `legislative` promises are considered; budget propositions and skrivelser are excluded, and `none` laws and laws with no in-force date are not added as evidence. A law is **in force** when its `Ikraft` date is on or before the verdict date (the same condition `checkVerdictEvidence` enforces for `fulfilled` and `partially_fulfilled`).
-- **`in_progress`**: at least one dir, sou, ds or prop is linked and nothing is in force yet. It also applies when a law is in force but work is pending: another linked proposition with no law in force, or a linked dir, sou or ds dated after the newest proposition that has a law in force. A `full` judged below `high` confidence is unconfirmed, so it stays `in_progress` with the sfs entry attached. A betänkande alone only rejects motions and is not enough.
+- **`in_progress`**: at least one dir, sou, ds or prop is linked and nothing is in force yet. It also applies when a law is in force but work is pending: another linked proposition with no law in force, or a linked dir, sou or ds dated after the newest proposition that has a law in force. A `full` judged below `high` confidence is unconfirmed: when it is the only law evidence the promise stays `in_progress` with the sfs entry attached (next to an in-force `partial` or `weaker` law the result is `partially_fulfilled`). A proposition whose only laws have no in-force date counts as having no law in force. A betänkande alone only rejects motions and is not enough.
 - **`fulfilled`**: nothing pending, a law judged `full` at `high` confidence is in force, no linked law is judged `weaker`, and every linked law judged `full`, `partial` or `weaker` is in force (a future or undated law on the same proposition blocks it). Only for a commitment delivered by a law; promises that need no law (budget, agency instructions) wait for their own evidence tiers (ESV outcome data).
-- **`partially_fulfilled`**: nothing pending and a law is in force, but either a `weaker` or `partial` law is all there is, or a high-confidence `full` is blocked as above (a weaker law, or another linked law not yet in force).
+- **`partially_fulfilled`**: nothing pending and a law is in force and at least one of these holds: an in-force law is judged `partial` or `weaker`, or a high-confidence `full` is blocked from `fulfilled` (a `weaker` law is linked, or another linked law is not yet in force or has no in-force date). A lone `full` below `high` confidence does not qualify (`in_progress`).
 - **Overrides.** The judge's lone `full` is not fully reliable, so `tools/sfs-overrides.json` can replace the label for a promise/law pair before any rule runs. The rules above are implemented in `tools/lib/apply-links.ts` (tested); that file's header comment is the authoritative statement.
 - **Out of scope for the law step**: `outcome`, `budget`, `other_action` and `vague` promises never get `fulfilled` or `partially_fulfilled` from `apply-links`.
 - **`broken`**: needs an explicit contrary act, such as a vote against the promise or a law that does the opposite. A betänkande that rejects motions about the topic, a document that works against the promise (`motverkar`, below) or part of a promise being undelivered is not enough. Never set automatically from judge labels.
@@ -311,10 +311,10 @@ The file is a flat array, one per term rather than one per promise: it is small,
 
 ## Edge cases
 
-- **The promise is an inquiry.** Use type `inquiry`. Once the kommittédirektiv exists, the verdict is `fulfilled`. Any later legislation is extra evidence but doesn't change the verdict.
-- **A bill is watered down.** The evidence is `relevance: full`, the verdict is `partially_fulfilled`, and the reasoning or `note` says what's missing.
+- **The promise is an inquiry.** Use type `inquiry`. The intended rule (the directive exists, so `fulfilled`) is currently impossible: `checkVerdictEvidence` requires an in-force `sfs` entry for `fulfilled`, so an inquiry promise stays `in_progress` with the directive as evidence. Tracked in bead `hemsida-02a` ("Inquiry promises can never be fulfilled").
+- **A bill is watered down.** The law is written as `relevance: partial` (a weaker law is also `partial`, with the gap in `note`), the verdict is `partially_fulfilled`, and the reasoning says what is missing.
 - **Several laws for one promise.** Each law is its own evidence entry, typically `relevance: partial`. The verdict reflects the whole.
-- **A promise not to do something** ("inte höja skatten"). The verdict stays `in_progress` during the term. At term end it becomes `fulfilled` if nothing contradicting happened, otherwise `broken` with the contradicting evidence.
+- **A promise not to do something** ("inte höja skatten"). Such a promise is met by not legislating, so there is no law to cite. Today it stays `in_progress` (or `unassessed`) until a term-end review; `fulfilled` needs an in-force `sfs` entry, so it cannot be set for a promise with no law, and `broken` needs a contrary act with evidence. The term-close review decides what to do with these.
 - **Reversed later.** Add the reversing document as evidence and move the verdict (e.g. `fulfilled` → `broken`); the earlier verdict stays in `history`.
 - **One sentence holds several promises.** Split into separate promise files that share the same `source.page`.
 - **A support party, not a government party.** `roles` records it (`SD: support`), so the site can distinguish "the government did not deliver" from "a support party voted against".

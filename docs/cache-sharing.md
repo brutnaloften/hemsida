@@ -54,4 +54,4 @@ The scorer's `kind` and `model` are part of every cache key. Results produced by
 
 ## SFS store and judge cache
 
-`tools/out/sfs-store`, `tools/out/sfsr-cache` and `tools/out/sfs-judge-cache` are not shared as archives: they are small, the ingest is one request per proposition plus the hits at 1 request/s and the judge cache costs subscription usage to rebuild. They are gitignored like the rest of `tools/out/`.
+`tools/out/sfs-store`, `tools/out/sfsr-cache` and `tools/out/sfs-judge-cache` are not shared as archives yet. They are gitignored like the rest of `tools/out/`.

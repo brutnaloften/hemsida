@@ -24,7 +24,7 @@ The roadmap lives in beads as epics with child tasks and dependencies. `bd list 
 - `pnpm link-pairs <tools/link-configs/x.json>` — judge candidate promise/document pairs with a model of your choice (`--dry-run` first; `docs/link-harness.md`)
 - `pnpm typecheck` — `astro sync && tsc --noEmit` for the site (CI also runs it in `tools/`)
 - `node --experimental-strip-types tools/ingest-sfs.ts [--term T] [--dry-run]` — build the prop -> SFS index in `tools/out/sfs-store/<term>.json` from the SFS register (1 request/s, cached; `docs/riksdag-api.md`)
-- `node --experimental-strip-types tools/judge-sfs.ts --name <run> [--id-prefix tido-] [--dry-run]` — judge how much of a legislative promise each enacted law delivers (full/partial/weaker/none) with a model of your choice through the local Claude login; cached, `--max-cost` is an overall cap per run (`docs/riksdag-linking.md`, "The SFS step end to end")
+- `node --experimental-strip-types tools/judge-sfs.ts [--name <run>] [--id-prefix tido-] [--dry-run]` — judge how much of a legislative promise each enacted law delivers (full/partial/weaker/none) with a model of your choice through the local Claude login; cached, `--max-cost` is an overall cap per run (`docs/riksdag-linking.md`, "The SFS step end to end")
 - `node --experimental-strip-types tools/cache-archive.ts <pack|publish|fetch|list> <riksdag-text|score-cache|link-cache>` — share the gitignored caches as GitHub Release archives (needs `gh`, `tar`, `zstd`; see `docs/cache-sharing.md`)
 
 oxfmt runs on staged files in the pre-commit hook (lint-staged).
