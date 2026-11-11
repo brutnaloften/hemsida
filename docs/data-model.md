@@ -196,7 +196,7 @@ A promise is split into one promise per commitment when the agreement text lists
 
 #### Documents that work against a promise ("Motverkar")
 
-A document that works against a promise (the judge label `contradicts`) is stored as Riksdag evidence with `relevance: contradicts` and shown in the timeline with the label "Motverkar" (distinct colour, dashed outline). It never counts toward a verdict: `checkVerdictEvidence` ignores it, so it cannot qualify `in_progress`, `fulfilled` or `broken`, and it does not fill a pipeline stage in the timeline. `apply-links` writes it only next to full/partial planning evidence (or when it is already evidence), so a promise whose only evidence works against it stays `unassessed`.
+A document that works against a promise (the judge label `contradicts`) is stored as Riksdag evidence with `relevance: contradicts` and shown in the timeline with the label "Motverkar" (distinct colour, dashed outline). It never counts toward a verdict: `checkVerdictEvidence` ignores it, so it cannot qualify `in_progress`, `fulfilled` or `broken`, and it does not fill a pipeline stage in the timeline. `apply-links` writes it on any eligible promise, but a promise whose only evidence works against it stays `unassessed`.
 
 ### Evidence
 

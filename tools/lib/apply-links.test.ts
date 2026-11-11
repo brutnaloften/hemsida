@@ -135,14 +135,9 @@ describe('applyLinks', () => {
     expect(r.evidence).toHaveLength(1);
   });
 
-  it('ignores unproposed, contradicting and unknown pairs', () => {
+  it('ignores unproposed and unknown pairs', () => {
     expect(
-      applyLinks(
-        base,
-        [pair('P1', { proposed: false }), pair('B1', { label: 'contradicts' }), pair('ZZ')],
-        docs,
-        '2026-11-10',
-      ),
+      applyLinks(base, [pair('P1', { proposed: false }), pair('ZZ')], docs, '2026-11-10'),
     ).toBeNull();
   });
 
@@ -253,11 +248,17 @@ describe('applyLinks', () => {
     });
 
     it('does not use a contradicting dir/sou/ds/prop as the planning that sets in_progress', () => {
-      expect(applyLinks(base, [against('S1')], docs, '2026-11-10')).toBeNull();
+      // Only a contradicting document: shown as evidence, the promise stays unassessed.
+      const only = applyLinks(base, [against('S1')], docs, '2026-11-10')!;
+      expect(only.verdict.value).toBe('unassessed');
+      expect(only.evidence.map((e) => [e.kind, (e as { relevance: string }).relevance])).toEqual([
+        ['sou', 'contradicts'],
+      ]);
+      expect(promiseSchema.safeParse({ ...base, ...only }).success).toBe(true);
       // Bet is full evidence but no planning, so there is still no verdict.
       const r = applyLinks(base, [pair('B1'), against('S1')], docs, '2026-11-10')!;
       expect(r.verdict.value).toBe('unassessed');
-      expect(r.evidence.map((e) => e.kind)).toEqual(['bet']);
+      expect(r.evidence.map((e) => e.kind)).toEqual(['sou', 'bet']);
     });
 
     it('skips background contradicts and unproposed pairs', () => {

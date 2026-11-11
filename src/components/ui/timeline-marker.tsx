@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 
-export type TimelineStep = 'promise' | 'agreement' | 'document' | 'missing';
+export type TimelineStep = 'promise' | 'agreement' | 'document' | 'against' | 'missing';
 
 // The `top-*` offsets centre each marker on the first 20 px line (text-sm) of its entry.
 const MARKERS: Record<TimelineStep, string> = {
@@ -8,6 +8,8 @@ const MARKERS: Record<TimelineStep, string> = {
   agreement:
     'top-[3px] size-3.5 border-2 border-[var(--agreement-weakened-border)] bg-[var(--agreement-weakened-bg)]',
   document: 'top-[3px] size-3.5 rounded-full border-[3px] border-foreground bg-background',
+  against:
+    'top-[3px] size-3.5 rotate-45 border-2 border-dashed border-[var(--evidence-contradicts-border)] bg-background',
   // Opaque background: a transparent marker lets the connector line show through the ring.
   missing: 'top-1 size-3 rounded-full border-2 border-dashed border-[var(--dashed)] bg-background',
 };

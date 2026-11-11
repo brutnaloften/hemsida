@@ -224,7 +224,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                   )}
                   {s.type === 'document' && (
                     <>
-                      <TimelineMarker step="document" />
+                      <TimelineMarker step={s.evidence.relevance === 'contradicts' ? 'against' : 'document'} />
                       <RiksdagEntry entry={s.evidence} />
                       {s.evidence.kind === 'bet' && s.evidence.votes && (
                         <details class="mt-2 text-sm">

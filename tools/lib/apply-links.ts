@@ -10,9 +10,9 @@
  *  - never `fulfilled` (needs an sfs entry the store does not have), never `no_evidence` (the
  *    search must be exhaustive first) and never `broken` (a `contradicts` label is only reported);
  *  - a `contradicts` pair (proposed, stage not `background`) becomes evidence with relevance
- *    `contradicts` ("Motverkar") only when the promise also has full/partial planning evidence or
- *    the document is already evidence on it; it never counts toward the verdict, never pulls in a
- *    deciding betänkande and a promise whose only evidence works against it stays \`unassessed\`;
+ *    `contradicts` ("Motverkar") on any eligible promise; it never counts toward the verdict, never
+ *    pulls in a deciding betänkande, and a promise whose only evidence works against it stays
+ *    `unassessed`;
  *  - the betänkande that decided a linked proposition (from `decidedBy`, derived from the
  *    betänkande's own references, see decided-by.ts) is added as evidence with stage definitive;
  *  - eligible promises are `unassessed` ones (existing Riksdag evidence stays, new documents are merged
@@ -95,7 +95,7 @@ export function evidenceFor(
     kind: doc.doktyp as RiksdagEvidence['kind'],
     dok_id: doc.dok_id,
     designation: designationOf(doc),
-    title: doc.titel,
+    title: doc.titel.trim(),
     date: doc.datum,
     url: doc.url,
     relevance:
@@ -179,18 +179,11 @@ export function applyLinks(
     (a, b) => a.doc.datum.localeCompare(b.doc.datum) || a.doc.dok_id.localeCompare(b.doc.dok_id),
   );
   const planning = entries.filter((e) => PLANNING.has(e.doc.doktyp));
-  // A document working against the promise is only shown next to evidence that something is
-  // being done, or when it was already shown (its judgement still stands); a full/partial
-  // judgement of the same document wins.
+  // A document working against the promise is evidence on any eligible promise, but a full/partial
+  // judgement of the same document wins. It never counts toward the verdict (see hasPlanning).
   const judged = new Set(pairs.map((p) => p.document_id));
-  const showAgainst = (id: string) =>
-    planning.length > 0 ||
-    existingRiksdag.some(
-      (e) => isSupporting(e) && PLANNING.has(e.kind) && (!rerunAi || !judged.has(e.dok_id)),
-    ) ||
-    existingRiksdag.some((e) => e.dok_id === id);
   const contradicting = [...against.values()]
-    .filter((e) => !byDoc.has(e.doc.dok_id) && showAgainst(e.doc.dok_id))
+    .filter((e) => !byDoc.has(e.doc.dok_id))
     .sort(
       (a, b) => a.doc.datum.localeCompare(b.doc.datum) || a.doc.dok_id.localeCompare(b.doc.dok_id),
     );
