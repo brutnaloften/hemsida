@@ -21,6 +21,7 @@ import {
 } from './lib/apply-links.ts';
 import { CONFIDENCES } from './lib/link/config.ts';
 import { addDecisions } from './lib/decided-by.ts';
+import { SFS_JUDGE_TEMPLATE_VERSION } from './lib/sfs-judge.ts';
 import { loadJson, writeJson } from './lib/json.ts';
 import { defaultStorePath } from './lib/riksdag-ingest.ts';
 import { isRiksdagEvidence, promiseSchema } from './lib/schema.ts';
@@ -33,6 +34,7 @@ const { values } = parseArgs({
     'id-prefix': { type: 'string', default: '' },
     today: { type: 'string', default: new Date().toISOString().slice(0, 10) },
     'dry-run': { type: 'boolean', default: false },
+    list: { type: 'boolean', default: false },
     'sfs-store': { type: 'string' },
     'sfs-run': { type: 'string' },
     'sfs-overrides': { type: 'string', default: resolve(root, 'tools/sfs-overrides.json') },
@@ -107,7 +109,9 @@ if (values['sfs-store']) {
     .results;
   const overrides = loadJson(resolve(values['sfs-overrides']!)) as Record<string, SfsOverride>;
   const stale = (sfsResults as readonly { label: string; template_version?: string }[]).filter(
-    (r) => (r.label === 'full' || r.label === 'partial') && r.template_version !== 'v3',
+    (r) =>
+      (r.label === 'full' || r.label === 'partial') &&
+      r.template_version !== SFS_JUDGE_TEMPLATE_VERSION,
   );
   if (stale.length > 0) {
     console.warn(
@@ -138,6 +142,17 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
   const next = promiseSchema.parse({ ...(raw as object), ...applied });
   changed++;
   entries += applied.evidence.length - promise.evidence.length;
+  if (values.list) {
+    const later = /(nyare dokument|Nyare dokument)/.test(next.verdict.reasoning)
+      ? ' [later doc]'
+      : '';
+    console.log(`${id}: ${next.verdict.value}${later}`);
+    if (later) {
+      for (const e of next.evidence.filter(isRiksdagEvidence)) {
+        console.log(`    ${e.date} ${e.designation} ${e.relevance} ${e.title.slice(0, 100)}`);
+      }
+    }
+  }
   counts[next.verdict.value] = (counts[next.verdict.value] ?? 0) + 1;
   if (next.verdict.value === 'fulfilled' && next.verdict.value !== promise.verdict.value) {
     const laws = next.evidence

@@ -37,6 +37,7 @@ const docs = new Map([
   ['P1', doc('P1', 'prop', '2026-03-17', '207')],
   ['B1', doc('B1', 'bet', '2026-05-01', 'SoU18')],
   ['S1', doc('S1', 'sou', '2025-01-10', '1')],
+  ['S2', doc('S2', 'sou', '2026-06-01', '2')],
 ]);
 const pair = (document_id: string, over: Partial<JudgedPair> = {}): JudgedPair => ({
   promise_id: 'tido-x',
@@ -359,10 +360,56 @@ describe('applyLinks with SFS', () => {
     valid(r);
   });
 
-  it('does not set fulfilled on a full at medium confidence', () => {
+  it('keeps in_progress for a full below high confidence, with the sfs entry and neutral reasoning', () => {
     const r = run(sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'medium'] }))!;
-    expect(r.verdict.value).toBe('partially_fulfilled');
+    expect(r.verdict.value).toBe('in_progress');
+    expect((r.evidence.find((e) => e.kind === 'sfs') as { relevance: string }).relevance).toBe(
+      'full',
+    );
+    expect(r.verdict.reasoning).not.toContain('bara en del');
+    expect(r.verdict.reasoning).toContain('trädde i kraft 2026-07-01');
     valid(r);
+  });
+
+  it('a linked dir/sou/ds newer than the newest enacted proposition keeps in_progress', () => {
+    const sfs = sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['partial', 'high'] });
+    const r = run(sfs, [pair('P1'), pair('S2')])!;
+    expect(r.verdict.value).toBe('in_progress');
+    expect(r.verdict.reasoning).toContain('SOU 2025/26:2');
+    // An older inquiry (before the proposition) does not.
+    expect(run(sfs, [pair('P1'), pair('S1')])!.verdict.value).toBe('partially_fulfilled');
+  });
+
+  it('a law judged weaker blocks fulfilled', () => {
+    const r = run(
+      sfsFor(
+        { P1: ['sfs-2026-100', 'sfs-2026-101'] },
+        { 'sfs-2026-100': ['full', 'high'], 'sfs-2026-101': ['weaker', 'high'] },
+      ),
+    )!;
+    expect(r.verdict.value).toBe('partially_fulfilled');
+    expect(r.verdict.reasoning).toContain('Lagarna genomför bara en del');
+  });
+
+  it('a future law on the same proposition blocks fulfilled', () => {
+    const r = run(
+      sfsFor(
+        { P1: ['sfs-2026-100', 'sfs-2027-5'] },
+        { 'sfs-2026-100': ['full', 'high'], 'sfs-2027-5': ['partial', 'high'] },
+      ),
+    )!;
+    expect(r.verdict.value).toBe('partially_fulfilled');
+    expect(sfsOf(r)).toHaveLength(2);
+  });
+
+  it('an undated judged law on the same proposition blocks fulfilled', () => {
+    const r = run(
+      sfsFor(
+        { P1: ['sfs-2026-100', 'sfs-2026-200'] },
+        { 'sfs-2026-100': ['full', 'high'], 'sfs-2026-200': ['partial', 'high'] },
+      ),
+    )!;
+    expect(r.verdict.value).toBe('partially_fulfilled');
   });
 
   it('sets partially_fulfilled for a partial law in force, with the gap in note and reasoning', () => {
