@@ -24,6 +24,7 @@ The roadmap lives in beads as epics with child tasks and dependencies. `bd list 
 - `pnpm link-pairs <tools/link-configs/x.json>` — judge candidate promise/document pairs with a model of your choice (`--dry-run` first; `docs/link-harness.md`)
 - `pnpm typecheck` — `astro sync && tsc --noEmit` for the site (CI also runs it in `tools/`)
 - `node --experimental-strip-types tools/ingest-sfs.ts [--term T] [--dry-run]` — build the prop -> SFS index in `tools/out/sfs-store/<term>.json` from the SFS register (1 request/s, cached; `docs/riksdag-api.md`)
+- `node --experimental-strip-types tools/judge-sfs.ts [--name <run>] [--id-prefix tido-] [--dry-run]` — judge how much of a legislative promise each enacted law delivers (full/partial/weaker/none) with a model of your choice through the local Claude login; cached, `--max-cost` is an overall cap per run (`docs/riksdag-linking.md`, "The SFS step end to end")
 - `node --experimental-strip-types tools/cache-archive.ts <pack|publish|fetch|list> <riksdag-text|score-cache|link-cache>` — share the gitignored caches as GitHub Release archives (needs `gh`, `tar`, `zstd`; see `docs/cache-sharing.md`)
 
 oxfmt runs on staged files in the pre-commit hook (lint-staged).
@@ -46,7 +47,7 @@ oxfmt runs on staged files in the pre-commit hook (lint-staged).
 
 **Path aliases:** `@/*` maps to `./src/*` (configured in tsconfig.json).
 
-**Riksdag linking and cache sharing:** the end-to-end flow from ingest through keyword candidates, the hand-labelled eval set and exhaustive scoring to model-set evidence and verdicts, with each tool, artifact and scorer result, is in `docs/riksdag-linking.md`. `tools/out/riksdag-text` (2.5 GB) and `tools/out/score-cache` are gitignored but shared as `tar.zst` GitHub Release assets tagged `cache-<name>-<date>`, each with a `cache-manifest.json` whose Zod schema (`tools/lib/cache-archive.ts`) is the single source of truth: archive hash, file list, optional `base` snapshot for deltas, and coverage (for `riksdag-text` the document-date watermark; for `score-cache` the scoring runs, scorer, model and template version). Scorer `kind` and `model` are part of every score-cache key. Details and legal note in `docs/cache-sharing.md`.
+**Riksdag linking and cache sharing:** the end-to-end flow from ingest through keyword candidates, the hand-labelled eval set and exhaustive scoring to model-set evidence and verdicts (laws from the SFS register, ingest-sfs then judge-sfs, are what allow `fulfilled` and `partially_fulfilled`), with each tool, artifact and scorer result, is in `docs/riksdag-linking.md`. `tools/out/riksdag-text` (2.5 GB) and `tools/out/score-cache` are gitignored but shared as `tar.zst` GitHub Release assets tagged `cache-<name>-<date>`, each with a `cache-manifest.json` whose Zod schema (`tools/lib/cache-archive.ts`) is the single source of truth: archive hash, file list, optional `base` snapshot for deltas, and coverage (for `riksdag-text` the document-date watermark; for `score-cache` the scoring runs, scorer, model and template version). Scorer `kind` and `model` are part of every score-cache key. Details and legal note in `docs/cache-sharing.md`.
 
 **CI:** `.github/workflows/ci.yml` runs build, typecheck, `fmt:check` and tests for the site, then typecheck for `tools/`. `deploy.yml` publishes to GitHub Pages on push to `main`.
 
