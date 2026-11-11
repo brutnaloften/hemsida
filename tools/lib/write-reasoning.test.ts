@@ -158,7 +158,7 @@ describe('write-reasoning', () => {
         'delvis uppfyllt',
       );
       expect(reasoningInstructions([item, future], 'in_progress', today)).toContain(
-        'inte trätt i kraft',
+        'träder i kraft ett senare datum',
       );
     });
 
@@ -205,8 +205,15 @@ describe('write-reasoning', () => {
       for (const t of [
         'Lagen, som inte omfattar äldre fall, trädde i kraft den 1 juli 2026.',
         'Regeringen har inte ändrat förslaget och lagen gäller sedan juli.',
+        'Det framgår inte att regeringen ändrat förslaget, men lagen trädde i kraft den 1 juli.',
+        'Det framgår inte att något ändrats och lagen har trätt i kraft.',
       ])
         expect(reasoningProblems(t, [], false)).toContain('claims a law is in force');
+      for (const t of [
+        'Det framgår inte att lagen har trätt i kraft.',
+        'Lagen trädde inte i kraft.',
+      ])
+        expect(reasoningProblems(t, [], false)).not.toContain('claims a law is in force');
       expect(reasoningProblems('Lagen har ännu inte trätt i kraft.', [], false)).not.toContain(
         'claims a law is in force',
       );
