@@ -1,6 +1,15 @@
 import { describe, expect, it } from 'vitest';
 import { promiseSchema } from './schema.ts';
-import { applyLinks, designationOf, type JudgedPair, type StoreDocument } from './apply-links.ts';
+import {
+  applyLinks,
+  designationOf,
+  evidenceFor,
+  sfsJudgements,
+  type JudgedPair,
+  type SfsInput,
+  type SfsLabel,
+  type StoreDocument,
+} from './apply-links.ts';
 
 const base = promiseSchema.parse({
   id: 'tido-x',
@@ -290,5 +299,224 @@ describe('applyLinks', () => {
       const promise = promiseSchema.parse({ ...base, ...first });
       expect(applyLinks(promise, pairs, docs, '2026-11-11')).toBeNull();
     });
+  });
+});
+
+describe('applyLinks with SFS', () => {
+  const sdocs = new Map([
+    ...docs,
+    ['P2', doc('P2', 'prop', '2025-09-01', '50')],
+    ['PB', { ...doc('PB', 'prop', '2025-09-20', '1'), titel: 'Budgetpropositionen för 2026' }],
+  ]);
+  const today = '2026-11-10';
+  const laws = {
+    'sfs-2026-100': { sfs: '2026:100', title: 'Lag (2026:100) om X', ikraft: '2026-07-01' },
+    'sfs-2026-101': { sfs: '2026:101', title: 'Lag (2026:101) om Y', ikraft: '2026-07-01' },
+    'sfs-2027-5': { sfs: '2027:5', title: 'Lag (2027:5) om Z', ikraft: '2027-01-01' },
+    'sfs-2026-200': { sfs: '2026:200', title: 'Lag (2026:200) om W', ikraft: null },
+  };
+  const sfsFor = (
+    byProp: Record<string, string[]>,
+    labels: Record<string, [SfsLabel, 'high' | 'medium' | 'low']>,
+    overrides: Record<string, { label: SfsLabel; reason: string }> = {},
+  ): SfsInput => ({
+    laws,
+    byProp,
+    judgements: sfsJudgements(
+      Object.entries(labels).map(([key, [label, confidence]]) => ({
+        id: `tido-x::${key}`,
+        label,
+        confidence,
+        missing_sv: label === 'full' ? '' : 'Reglerna gäller bara en del.',
+      })),
+      overrides,
+    ),
+  });
+  const run = (sfs: SfsInput, pairs = [pair('P1')], promise: typeof base = base, d = today) =>
+    applyLinks(promise, pairs, sdocs, d, new Map(), sfs);
+  const sfsOf = (r: NonNullable<ReturnType<typeof run>>) =>
+    r.evidence.filter((e) => e.kind === 'sfs') as { dok_id: string; date: string }[];
+  const valid = (r: NonNullable<ReturnType<typeof run>>, p = base) =>
+    expect(promiseSchema.safeParse({ ...p, ...r }).success).toBe(true);
+
+  it('sets fulfilled for a law judged full at high confidence that is in force', () => {
+    const r = run(sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] }))!;
+    expect(r.verdict.value).toBe('fulfilled');
+    expect(r.verdict.assessedBy).toBe('ai');
+    expect(r.evidence.find((e) => e.kind === 'sfs')).toEqual({
+      kind: 'sfs',
+      dok_id: 'sfs-2026-100',
+      designation: 'SFS 2026:100',
+      title: 'Lag (2026:100) om X',
+      date: '2026-07-01',
+      url: 'https://svenskforfattningssamling.se/doc/2026100.html',
+      relevance: 'full',
+      note: null,
+    });
+    expect(r.verdict.reasoning).toContain('SFS 2026:100');
+    expect(r.verdict.reasoning).toContain('2026-07-01');
+    expect(r.verdict.reasoning).not.toContain('Ingen SFS-författning');
+    valid(r);
+  });
+
+  it('does not set fulfilled on a full at medium confidence', () => {
+    const r = run(sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'medium'] }))!;
+    expect(r.verdict.value).toBe('partially_fulfilled');
+    valid(r);
+  });
+
+  it('sets partially_fulfilled for a partial law in force, with the gap in note and reasoning', () => {
+    const r = run(sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['partial', 'high'] }))!;
+    expect(r.verdict.value).toBe('partially_fulfilled');
+    const e = r.evidence.find((x) => x.kind === 'sfs') as { relevance: string; note: string };
+    expect(e.relevance).toBe('partial');
+    expect(e.note).toBe('Reglerna gäller bara en del.');
+    expect(r.verdict.reasoning).toContain('Reglerna gäller bara en del.');
+    valid(r);
+  });
+
+  it('treats a weaker law as partial evidence', () => {
+    const r = run(sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['weaker', 'high'] }))!;
+    expect(r.verdict.value).toBe('partially_fulfilled');
+    expect((r.evidence.find((x) => x.kind === 'sfs') as { relevance: string }).relevance).toBe(
+      'partial',
+    );
+  });
+
+  it('stays in_progress while another linked proposition has no law in force', () => {
+    const sfs = sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] });
+    const r = run(sfs, [pair('P1'), pair('P2')])!;
+    expect(r.verdict.value).toBe('in_progress');
+    expect(sfsOf(r)).toHaveLength(1);
+    expect(r.verdict.reasoning).toContain('Prop. 2025/26:50');
+    valid(r);
+  });
+
+  it('ignores a budget proposition when looking for pending propositions', () => {
+    const sfs = sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] });
+    expect(run(sfs, [pair('P1'), pair('PB')])!.verdict.value).toBe('fulfilled');
+  });
+
+  it('counts a proposition whose only law was judged none as having a law in force', () => {
+    const sfs = sfsFor(
+      { P1: ['sfs-2026-100'], P2: ['sfs-2026-101'] },
+      { 'sfs-2026-100': ['full', 'high'], 'sfs-2026-101': ['none', 'high'] },
+    );
+    const r = run(sfs, [pair('P1'), pair('P2')])!;
+    expect(r.verdict.value).toBe('fulfilled');
+    expect(sfsOf(r).map((e) => e.dok_id)).toEqual(['sfs-2026-100']);
+  });
+
+  it('keeps in_progress for a law with a future in-force date and names the date', () => {
+    const r = run(sfsFor({ P1: ['sfs-2027-5'] }, { 'sfs-2027-5': ['full', 'high'] }))!;
+    expect(r.verdict.value).toBe('in_progress');
+    expect(sfsOf(r)[0]!.date).toBe('2027-01-01');
+    expect(r.verdict.reasoning).toContain('2027-01-01');
+    valid(r);
+  });
+
+  it('a law becomes in force on its date: same inputs, later today', () => {
+    const sfs = sfsFor({ P1: ['sfs-2027-5'] }, { 'sfs-2027-5': ['full', 'high'] });
+    expect(run(sfs, [pair('P1')], base, '2027-01-01')!.verdict.value).toBe('fulfilled');
+    expect(run(sfs, [pair('P1')], base, '2026-12-31')!.verdict.value).toBe('in_progress');
+  });
+
+  it('adds no sfs entry for a law without in-force date and stays in_progress', () => {
+    const r = run(sfsFor({ P1: ['sfs-2026-200'] }, { 'sfs-2026-200': ['full', 'high'] }))!;
+    expect(r.verdict.value).toBe('in_progress');
+    expect(sfsOf(r)).toHaveLength(0);
+    expect(r.verdict.reasoning).toContain('Ingen SFS-författning');
+  });
+
+  it('a future law never lifts the verdict when another law is in force and pending props exist', () => {
+    const sfs = sfsFor(
+      { P1: ['sfs-2026-100'], P2: ['sfs-2027-5'] },
+      { 'sfs-2026-100': ['full', 'high'], 'sfs-2027-5': ['full', 'high'] },
+    );
+    const r = run(sfs, [pair('P1'), pair('P2')])!;
+    expect(r.verdict.value).toBe('in_progress');
+    expect(sfsOf(r)).toHaveLength(2);
+  });
+
+  it('adds no sfs evidence for coverage none or a missing judgement', () => {
+    const sfs = sfsFor(
+      { P1: ['sfs-2026-100', 'sfs-2026-101'] },
+      { 'sfs-2026-100': ['none', 'high'] },
+    );
+    const r = run(sfs)!;
+    expect(r.verdict.value).toBe('in_progress');
+    expect(sfsOf(r)).toHaveLength(0);
+  });
+
+  it('does not handle sfs for non-legislative promises', () => {
+    const budgetPromise = promiseSchema.parse({ ...base, type: 'budget' });
+    const sfs = sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] });
+    const r = run(sfs, [pair('P1')], budgetPromise)!;
+    expect(r.verdict.value).toBe('in_progress');
+    expect(sfsOf(r)).toHaveLength(0);
+  });
+
+  it('only uses laws reached through linked propositions', () => {
+    const sfs = sfsFor({ P2: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] });
+    const r = run(sfs)!;
+    expect(r.verdict.value).toBe('in_progress');
+    expect(sfsOf(r)).toHaveLength(0);
+  });
+
+  it('overrides replace the judge label before the rules run', () => {
+    const labels: Record<string, [SfsLabel, 'high']> = { 'sfs-2026-100': ['full', 'high'] };
+    const byProp = { P1: ['sfs-2026-100'] };
+    const none = run(
+      sfsFor(byProp, labels, { 'tido-x::sfs-2026-100': { label: 'none', reason: 'wrong' } }),
+    )!;
+    expect(none.verdict.value).toBe('in_progress');
+    expect(sfsOf(none)).toHaveLength(0);
+    const partial = run(
+      sfsFor(byProp, labels, { 'tido-x::sfs-2026-100': { label: 'partial', reason: 'part' } }),
+    )!;
+    expect(partial.verdict.value).toBe('partially_fulfilled');
+  });
+
+  it('is idempotent and keeps earlier verdicts in history when the value changes', () => {
+    const sfs = sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] });
+    const first = run(sfs)!;
+    const promise = promiseSchema.parse({ ...base, ...first });
+    expect(run(sfs, [pair('P1')], promise, '2026-11-12')).toBeNull();
+    // An override downgrades it: the fulfilled verdict goes to history.
+    const down = run(
+      sfsFor(
+        { P1: ['sfs-2026-100'] },
+        { 'sfs-2026-100': ['full', 'high'] },
+        {
+          'tido-x::sfs-2026-100': { label: 'partial', reason: 'r' },
+        },
+      ),
+      [pair('P1')],
+      promise,
+      '2026-11-12',
+    )!;
+    expect(down.verdict.value).toBe('partially_fulfilled');
+    expect(down.verdict.history.map((h) => h.value)).toEqual(['unassessed', 'fulfilled']);
+    // A law that is no longer judged is dropped again.
+    const dropped = run(sfsFor({ P1: ['sfs-2026-100'] }, {}), [pair('P1')], promise, '2026-11-12')!;
+    expect(dropped.verdict.value).toBe('in_progress');
+    expect(sfsOf(dropped)).toHaveLength(0);
+  });
+
+  it('leaves hand-set verdicts alone', () => {
+    const hand = promiseSchema.parse({
+      ...base,
+      evidence: [evidenceFor(pair('P1'), sdocs.get('P1')!)],
+      verdict: { value: 'in_progress', reasoning: 'Handskriven bedömning.', date: '2026-01-01' },
+    });
+    const sfs = sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] });
+    expect(run(sfs, [pair('P1')], hand)).toBeNull();
+  });
+
+  it('without sfs input nothing changes and existing sfs evidence stays', () => {
+    const first = run(sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] }))!;
+    const promise = promiseSchema.parse({ ...base, ...first });
+    expect(applyLinks(promise, [pair('P1')], sdocs, today)).toBeNull();
+    expect(promise.verdict.value).toBe('fulfilled');
   });
 });
