@@ -70,34 +70,81 @@ export function parseSearchResults(html: string): string[] {
   return out;
 }
 
-const REF = /([Pp]rop|[Bb]et|[Rr]skr)\.|(\d{4}\/\d{2})(?::\s*|(?=[A-ZÅÄÖ]))([A-Za-zÅÄÖåäö]*\d+)/g;
+/** Hits per page of `/sfsr/adv`. */
+export const SEARCH_PAGE_SIZE = 30;
+
+export type SearchPage =
+  | { kind: 'none' }
+  /** Exactly one hit: the register redirects straight to that act's register page. */
+  | { kind: 'direct' }
+  | { kind: 'list'; total: number; bases: string[] };
+
+/**
+ * Classify the first page of an advanced search: no hits, a single hit shown as the register page
+ * itself (marker `SFS-nummer ·`, no `Totalt`), or a list with `Totalt N träffar` (30 per page, the
+ * rest behind `&page=N`). Anything else throws, so a markup change never silently loses hits.
+ */
+export function classifySearchPage(html: string): SearchPage {
+  if (html.includes('Inga träffar')) return { kind: 'none' };
+  const total = /Totalt\s*<strong>(\d+)<\/strong>\s*tr/.exec(html)?.[1];
+  if (total) {
+    const bases = parseSearchResults(html);
+    if (bases.length === 0 || bases.length > SEARCH_PAGE_SIZE) {
+      throw new Error(`search page lists ${bases.length} hits for a total of ${total}`);
+    }
+    return { kind: 'list', total: Number(total), bases };
+  }
+  if (/SFS-nummer\s*·/.test(html.replace(/<[^>]+>/g, ' '))) return { kind: 'direct' };
+  throw new Error('unrecognised SFS register search page (no Totalt, no register page, no hits)');
+}
+
+/** URL of result page `page` (1-based) of a search. */
+export function searchPageUrl(rm: string, nr: string, page: number): string {
+  return page <= 1 ? searchUrl(rm, nr) : `${searchUrl(rm, nr)}&page=${page}`;
+}
+
+const REF =
+  /\b([Pp]rop|[Bb]et|[Rr]skr)\b\.?|(\d{4}\/\d{2})(?::\s*|(?=[A-ZÅÄÖ]))([A-Za-zÅÄÖåäö]*\d+)|(?:\boch|,)\s+((?:[A-ZÅÄÖ][A-Za-zåäö]*)?\d+)\b(?![/:])/g;
 
 /**
  * Split a Förarbeten line into propositions, betänkanden and riksdagsskrivelser. Each reference
  * belongs to the keyword in front of it, so `Prop. 2024/25:143 och prop. 2024/25:160` yields two
- * props, a bare `2023/24:164 och prop. 2023/24:166` attaches the first number to the preceding
- * keyword, and `rskr. 2024/25:160` is never a prop. Everything that is not such a reference
- * (EU directives, `utg.omr.` notes) is kept in `other`.
+ * props and `rskr. 2024/25:160` is never a prop. The register is hand-typed, so the parser also
+ * accepts a keyword without a dot (`bet 2024/25:NU6`), the typo `rop.`, a shorthand continuation
+ * in the same riksmöte (`Prop. 2004/05:170 och 172`), and a leading reference with no keyword
+ * (`2023/24:164 och prop. 2023/24:166`), which is the proposition whose `Prop.` was dropped.
+ * Everything that is not such a reference (EU directives, `utg.omr.` notes) goes to `other`.
  */
 export function parseForarbeten(raw: string): Forarbeten {
-  const text = clean(raw);
+  const text = clean(raw).replace(/\brop\./g, 'Prop.');
   const result: Forarbeten = { props: [], bets: [], rskr: [], other: [] };
   const target = { prop: result.props, bet: result.bets, rskr: result.rskr } as const;
   let current: keyof typeof target | null = null;
+  let rm: string | null = null;
+  const add = (kind: keyof typeof target, ref: string) => {
+    if (!target[kind].includes(ref)) target[kind].push(ref);
+  };
   for (const m of text.matchAll(REF)) {
     if (m[1]) {
       current = m[1].toLowerCase() as keyof typeof target;
-    } else if (current) {
-      const ref = `${m[2]}:${m[3]}`;
-      if (!target[current].includes(ref)) target[current].push(ref);
+    } else if (m[2]) {
+      rm = m[2];
+      add(current ?? 'prop', `${m[2]}:${m[3]}`);
+    } else if (m[4] && current && rm) {
+      add(current, `${rm}:${m[4]}`);
     }
   }
-  const rest = text
+  result.other = text
     .split(/,| och /)
     .map((s) => s.trim().replace(/\.$/, ''))
-    .filter((s) => s && !/^(prop|bet|rskr)\.?\s*\d/i.test(s) && !/^\d{4}\/\d{2}[:A-ZÅÄÖ]/.test(s))
-    .filter((s) => !/^(prop|bet|rskr)\.?\s*[A-Za-zÅÄÖ]*\d*$/i.test(s));
-  result.other = rest;
+    .filter(
+      (s) =>
+        s &&
+        !/^(prop|bet|rskr)\b\.?\s*([A-Za-zÅÄÖ]*\d|\d{4}\/\d{2})/i.test(s) &&
+        !/^\d{4}\/\d{2}[:A-ZÅÄÖ]/.test(s) &&
+        !/^(?:[A-ZÅÄÖ][A-Za-zåäö]*)?\d+$/.test(s) &&
+        !/^(prop|bet|rskr)\.?$/i.test(s),
+    );
   return result;
 }
 
@@ -202,4 +249,24 @@ export function matchingLaws(
     });
   }
   return out;
+}
+
+/**
+ * Merge two records of the same law (an act can appear on several register pages: its own, and
+ * the "upph." entry on the page of the act it replaced). The record where the act is its own base
+ * wins; empty fields (title, in-force date) are filled from the other, and the
+ * proposition, bet and rskr lists are unioned.
+ */
+export function mergeLaw(a: SfsLaw, b: SfsLaw): SfsLaw {
+  const [main, other] = b.sfs === b.base_sfs && a.sfs !== a.base_sfs ? [b, a] : [a, b];
+  const union = (x: string[], y: string[]) => [...new Set([...x, ...y])];
+  return {
+    ...main,
+    title: main.title || other.title,
+    omfattning: main.omfattning,
+    ikraft: main.ikraft ?? other.ikraft,
+    props: union(main.props, other.props),
+    bets: union(main.bets, other.bets),
+    rskr: union(main.rskr, other.rskr),
+  };
 }

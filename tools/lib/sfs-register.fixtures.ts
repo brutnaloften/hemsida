@@ -378,3 +378,262 @@ export const ADV_SEARCH_HTML = `<div class="search-results">
 </body>
 </html>
 `;
+
+/** Search for Prop. 2023/24:18 had exactly one hit, so the register returned that act's page directly. */
+export const DIRECT_HIT_HTML = `<div class="search-results">
+        <div class="search-more">
+            &nbsp;
+        </div>
+        <div class="search-main">
+            <div class="search-results-header">
+                <div class="search-hits">
+                    Post <strong>1</strong> av <strong>1</strong> träffar
+                </div>
+
+                <div class="search-results-opts-top">
+                    <div class="search-results-all">
+                        <a href="/sfsr/adv?fritext=2023%2f24%3a18">
+                            Sökresultat
+                        </a>
+                    </div>
+
+                    <div class="search-results-steps">
+                        <div class="search-results-prev">
+                        
+                                <div class="arrow-bk"></div>
+                                Föregående
+                        
+                        </div>
+                        ·
+                        <div class="search-results-next">
+                        
+                                Nästa
+                                <div class="arrow-fwd"></div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-results-content">
+                
+
+                <div class="result-inner-box bold">
+                    SFS-nummer ·
+                    2005:716 ·
+                    <a href="/sfst?bet=2005:716">
+                        Visa fulltext
+                    </a>
+                </div>
+                
+                <div class="result-inner-box">
+                    <span class="bold">Utl&#228;nningslag (2005:716)</span>
+                </div>
+
+
+                
+                <div class="result-inner-box">
+                    <span class="bold">Departement:</span> Justitiedepartementet L7
+                </div>
+                
+                <div class="result-inner-box">
+                    <span class="bold">Ikraft:</span> 2006-03-31 &#246;verg.best.
+                </div>
+                
+                <div class="result-inner-box">
+                    <span class="bold">Förarbeten:</span> Prop. 2004/05:170 och 172, bet. 2004/05:SfU17 och 18, rskr. 
+2005/06:1 och 2,
+EGTP056/1964 s850, EUTL158/2004 s77,
+EGTL149/2001 s34, EGTL187/2001 s45, EGTL212/2001 s12, 
+EGTL328/2002 s17, EUTL31/2003 s18, EUTL50/2003 s1
+                </div>
+                
+                <div class="result-inner-box">
+                    <span class="bold">CELEX-nr:</span> 31964L0221, 32004L0038, 32001L0040, 32001L0051, 32001L0055, 32002L0090, 32003L0009, 32003R0343
+                </div>
+                
+
+                <div class="result-inner-sub-box-container">
+                    <div class="result-inner-sub-box-header">Ändring, SFS 2023:652</div>
+                    
+                    <div class="result-inner-sub-box">
+                        <span class="bold">Rubrik:</span> Lag (2023:652) om &#228;ndring i utl&#228;nningslagen (2005:716)
+                    </div>
+                    
+                    <div class="result-inner-sub-box">
+                        <span class="bold">Omfattning:</span> &#228;ndr. 5 kap. 3, 3 a, 3 d, 6, 17 a &#167;&#167;
+                    </div>
+                    
+                    <div class="result-inner-sub-box">
+                        <span class="bold">Ikraft:</span> 2023-12-01
+                    </div>
+                    
+                    <div class="result-inner-sub-box">
+                        <span class="bold">Förarbeten:</span> Prop. 2023/24:18, bet. 2023/24:SfU5, rskr. 2023/24:18
+                    </div>
+                    
+                </div>
+                
+
+                <div class="search-results-footer">
+                <div class="search-results-opts-bot">
+                    <div class="search-results-all">
+                        <a href="/sfsr/adv?fritext=2023%2f24%3a18">
+                            Sökresultat
+                        </a>
+                    </div>
+
+                    <div class="search-results-steps">
+                        <div class="search-results-prev">
+                        
+                                <div class="arrow-bk"></div>
+                                Föregående
+                        
+                        </div>
+                        ·
+                        <div class="search-results-next">
+                        
+                                Nästa
+                                <div class="arrow-fwd"></div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+`;
+
+/** First page of the 262-hit search for 2022/23:2, trimmed to three hits (total and page links kept). */
+export const LIST_PAGE1_HTML = `<div class="search-results">
+            <div class="search-more">
+                &nbsp;
+            </div>
+            <div class="search-results-main">
+                <div class="search-results-header">
+                    <div class="search-hits">
+                        Totalt <strong>262</strong> träffar
+                    </div>
+                    <div class="search-sorting">
+                        
+                        <div class="search-sorting-type">
+                            
+                            <input name="sort" type="radio" value="asc" id="search-sorting-asc"  />
+                            <label for="search-sorting-asc">Stigande</label>
+                        </div>
+                        <div class="search-sorting-type">
+                            <input name="sort" type="radio" value="desc" id="search-sorting-desc" checked />
+                            <label for="search-sorting-desc">Fallande</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-results-content">
+                    
+                    <div class="search-hit">
+                        <div class="arrow-fwd"></div>
+                        <div class="search-hit-info">
+                            <div class="search-hit-info-header">
+                                <a href="/sfsr/adv?fritext=2022/23:2&amp;post_id=1">
+                                    Lag (2023:730) om grupptalan till skydd f&#246;r konsumenters kollektiva intressen
+                                </a>
+                            </div>
+                            <div class="search-hit-info-num">
+                                SFS-nummer: 2023:730
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="search-hit">
+                        <div class="arrow-fwd"></div>
+                        <div class="search-hit-info">
+                            <div class="search-hit-info-header">
+                                <a href="/sfsr/adv?fritext=2022/23:2&amp;post_id=2">
+                                    Lag (2023:692) om dispositionsr&#228;tt till ledarhund
+                                </a>
+                            </div>
+                            <div class="search-hit-info-num">
+                                SFS-nummer: 2023:692
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+</div>
+</div>
+<div class="search-results-footer">
+                    <div class="search-opt-prev">
+                        
+                        <div class="arrow-bk"></div>
+                        <div class="search-opt-bk">Föregående</div>
+                        
+                    </div>
+                    <div class="search-opt-next">
+                        
+                        <a href="/sfsr/adv?fritext=2022%2f23%3a2&amp;page=2">
+                            <div class="arrow-fwd"></div>
+                            <div class="search-opt-fwd">Nästa</div>
+                        </a>
+                        
+                    </div>
+                    <div class="search-opt-pages">
+                        
+                        <div class="search-page active">
+                            1-30
+                            
+                        </div>
+                        
+                        <div class="search-page">
+                            
+                            <a href="/sfsr/adv?fritext=2022%2f23%3a2&amp;page=2">
+                                31-60
+                            </a>
+                            
+                        </div>
+                        
+                        <div class="search-page">
+                            
+                            <a href="/sfsr/adv?fritext=2022%2f23%3a2&amp;page=3">
+                                61-90
+                            </a>
+                            
+                        </div>
+                        
+                        <div class="search-page">
+                            
+                            <a href="/sfsr/adv?fritext=2022%2f23%3a2&amp;page=4">
+                                91-120
+                            </a>
+                            
+                        </div>
+                        
+                        <div class="search-page">
+                            
+                            <a href="/sfsr/adv?fritext=2022%2f23%3a2&amp;page=5">
+                                121-150
+                            </a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </form>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+`;

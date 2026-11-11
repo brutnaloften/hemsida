@@ -1,13 +1,15 @@
 /**
  * Build the proposition -> SFS index for a term from Regeringskansliets SFS-register.
  *   node --experimental-strip-types tools/ingest-sfs.ts [--term 2022-2026] [--limit N]
- *     [--prop <dok_id>] [--dry-run] [--riksdag-store <path>] [--cache <dir>] [--out <dir>]
+ *     [--prop <dok_id>] [--dry-run] [--refresh] [--riksdag-store <path>] [--cache <dir>] [--out <dir>]
  *
  * For every non-budget, non-skrivelse proposition in tools/out/riksdag-store/<term>.json it runs
  * `/sfsr/adv?fritext=<rm>:<nr>`, fetches the register page of each hit once, and keeps the
  * entries whose Förarbeten cite exactly that proposition. Requests are sequential, one per
  * second; every raw page is cached in tools/out/sfsr-cache/ so a re-run (or a resumed run) only
- * fetches what is missing. Output: tools/out/sfs-store/<term>.json (gitignored). See
+ * fetches what is missing (`--refresh` refetches the cached searches of propositions that had no
+ * law in the previous store). Searches with more than 30 hits are read page by page; a single
+ * hit comes back as the register page itself. Output: tools/out/sfs-store/<term>.json (gitignored). See
  * docs/riksdag-api.md ("SFS register").
  */
 
@@ -19,19 +21,25 @@ import { isBudgetProp, isSkrivelse, type StoreDocument } from './lib/apply-links
 import { writeJsonAtomic } from './lib/json.ts';
 import { defaultStorePath, loadStore } from './lib/riksdag-ingest.ts';
 import {
+  classifySearchPage,
   matchingLaws,
+  mergeLaw,
   parseRegisterPage,
-  parseSearchResults,
   registerUrl,
+  searchPageUrl,
   searchUrl,
+  SEARCH_PAGE_SIZE,
   sfsKey,
   sfsStoreSchema,
+  type RegisterPage,
   type SfsLaw,
   type SfsStore,
 } from './lib/sfs-register.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const USER_AGENT = 'brutna-loften-tools (sequential, 1 request/s, cached)';
+const USER_AGENT =
+  'brutna-loften-tools (+https://github.com/brutnaloften/hemsida; sequential, 1 request/s, cached)';
+const TIMEOUT_MS = 30_000;
 const MIN_INTERVAL_MS = 1000;
 
 const { values } = parseArgs({
@@ -40,6 +48,7 @@ const { values } = parseArgs({
     limit: { type: 'string' },
     prop: { type: 'string' },
     'dry-run': { type: 'boolean', default: false },
+    refresh: { type: 'boolean', default: false },
     'riksdag-store': { type: 'string' },
     cache: { type: 'string', default: resolve(root, 'tools/out/sfsr-cache') },
     out: { type: 'string', default: resolve(root, 'tools/out/sfs-store') },
@@ -47,6 +56,7 @@ const { values } = parseArgs({
 });
 const term = values.term!;
 const dryRun = values['dry-run']!;
+const refresh = values.refresh!;
 const cacheDir = resolve(values.cache!);
 const outPath = resolve(values.out!, `${term}.json`);
 const riksdagStore = loadStore(
@@ -71,9 +81,9 @@ let lastStart = Number.NEGATIVE_INFINITY;
 let fetched = 0;
 
 /** Cached GET with a 1 request/s throttle and a few retries on 429/5xx. */
-async function getPage(cacheName: string, url: string): Promise<string> {
+async function getPage(cacheName: string, url: string, ignoreCache = false): Promise<string> {
   const file = resolve(cacheDir, cacheName);
-  if (existsSync(file)) return readFileSync(file, 'utf8');
+  if (!ignoreCache && existsSync(file)) return readFileSync(file, 'utf8');
   if (dryRun) return '';
   let delay = 2000;
   for (let attempt = 0; ; attempt++) {
@@ -82,7 +92,10 @@ async function getPage(cacheName: string, url: string): Promise<string> {
     lastStart = Date.now();
     let res: Response | undefined;
     try {
-      res = await fetch(url, { headers: { 'User-Agent': USER_AGENT } });
+      res = await fetch(url, {
+        headers: { 'User-Agent': USER_AGENT },
+        signal: AbortSignal.timeout(TIMEOUT_MS),
+      });
     } catch (err) {
       if (attempt >= 3) throw err;
     }
@@ -104,29 +117,67 @@ async function getPage(cacheName: string, url: string): Promise<string> {
   }
 }
 
+const previous = existsSync(outPath)
+  ? sfsStoreSchema.parse(JSON.parse(readFileSync(outPath, 'utf8')))
+  : undefined;
 const laws: Record<string, SfsLaw> = {};
 const byProp: Record<string, string[]> = {};
 
 for (const [i, d] of props.entries()) {
   const ref = `${d.rm}:${d.beteckning}`;
   const safe = ref.replace(/[/:]/g, '-');
-  const searchHtml = await getPage(`adv-${safe}.html`, searchUrl(d.rm, d.beteckning));
-  const hits = parseSearchResults(searchHtml);
-  const total = /Totalt\s*<strong>(\d+)<\/strong>\s*tr/.exec(searchHtml)?.[1];
-  if (total && Number(total) !== hits.length) {
-    console.warn(`  warning: ${ref} reports ${total} hits but the page lists ${hits.length}`);
+  // Refetch a cached search page only for props that had no law in the previous store.
+  const stale = refresh && !previous?.byProp[d.dok_id];
+  const searchHtml = await getPage(`adv-${safe}.html`, searchUrl(d.rm, d.beteckning), stale);
+  const first = classifySearchPage(searchHtml);
+  const pages: RegisterPage[] = [];
+  let hitCount = 0;
+  if (first.kind === 'direct') {
+    // exactly one hit: the register answered with that act's page itself
+    pages.push(parseRegisterPage(searchHtml));
+    hitCount = 1;
+  } else if (first.kind === 'list') {
+    const bases = [...first.bases];
+    let direct = 0;
+    const pageCount = Math.ceil(first.total / SEARCH_PAGE_SIZE);
+    for (let n = 2; n <= pageCount; n++) {
+      const moreHtml = await getPage(
+        `adv-${safe}-p${n}.html`,
+        searchPageUrl(d.rm, d.beteckning, n),
+        stale,
+      );
+      const more = classifySearchPage(moreHtml);
+      if (more.kind === 'direct') {
+        // a last page with a single hit is rendered as that act's register page, like a 1-hit search
+        pages.push(parseRegisterPage(moreHtml));
+        direct++;
+      } else if (more.kind === 'list') {
+        for (const b of more.bases) if (!bases.includes(b)) bases.push(b);
+      } else {
+        throw new Error(`${ref}: page ${n} of ${pageCount} has no hits`);
+      }
+    }
+    if (bases.length + direct !== first.total) {
+      throw new Error(
+        `${ref}: search reports ${first.total} hits but ${bases.length + direct} were listed`,
+      );
+    }
+    hitCount = bases.length + direct;
+    for (const base of bases) {
+      const html = await getPage(`bet-${base.replace(':', '-')}.html`, registerUrl(base));
+      if (!html) continue;
+      if (html.includes('Inga träffar')) {
+        console.warn(`  warning: register has no page for ${base} (hit of ${ref}), skipped`);
+        continue;
+      }
+      pages.push(parseRegisterPage(html));
+    }
   }
   const keys: string[] = [];
-  for (const base of hits) {
-    const html = await getPage(`bet-${base.replace(':', '-')}.html`, registerUrl(base));
-    if (!html) continue;
-    if (html.includes('Inga träffar')) {
-      console.warn(`  warning: register has no page for ${base} (hit of ${ref}), skipped`);
-      continue;
-    }
-    for (const law of matchingLaws(parseRegisterPage(html), ref, resolveProp)) {
+  for (const page of pages) {
+    for (const law of matchingLaws(page, ref, resolveProp)) {
       const key = sfsKey(law.sfs);
-      laws[key] = law;
+      laws[key] = laws[key] ? mergeLaw(laws[key], law) : law;
       if (!keys.includes(key)) keys.push(key);
     }
   }
@@ -134,7 +185,7 @@ for (const [i, d] of props.entries()) {
     byProp[d.dok_id] = keys;
   }
   console.log(
-    `[${i + 1}/${props.length}] ${d.dok_id} Prop. ${ref}: ${hits.length} hits, ${keys.length} laws`,
+    `[${i + 1}/${props.length}] ${d.dok_id} Prop. ${ref}: ${hitCount} hits, ${keys.length} laws`,
   );
 }
 

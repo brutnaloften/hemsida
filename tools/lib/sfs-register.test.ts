@@ -1,14 +1,24 @@
 import { describe, expect, it } from 'vitest';
 import {
+  classifySearchPage,
   matchingLaws,
+  mergeLaw,
   parseForarbeten,
   parseIkraft,
   parseRegisterPage,
   parseSearchResults,
+  searchPageUrl,
+  type SfsLaw,
   sfsDocUrl,
   sfsKey,
 } from './sfs-register.ts';
-import { ADV_SEARCH_HTML, CYBERSAKERHETSLAG_HTML, SKOLLAG_HTML } from './sfs-register.fixtures.ts';
+import {
+  ADV_SEARCH_HTML,
+  CYBERSAKERHETSLAG_HTML,
+  DIRECT_HIT_HTML,
+  LIST_PAGE1_HTML,
+  SKOLLAG_HTML,
+} from './sfs-register.fixtures.ts';
 
 describe('parseSearchResults', () => {
   it('returns the base act numbers of the hits', () => {
@@ -96,7 +106,7 @@ describe('parseForarbeten', () => {
     expect(
       parseForarbeten('2023/24:164 och prop. 2023/24:166, bet. 2024/25:UbU4,  rskr. 2024/25:40')
         .props,
-    ).toEqual(['2023/24:166']);
+    ).toEqual(['2023/24:164', '2023/24:166']);
     const f = parseForarbeten(
       'Prop. 2013/14:112, prop. 2013/14:191, bet. 2013/14:UbU22, rskr.2013/14:291, rådets direktiv 2005/36/EG',
     );
@@ -124,5 +134,82 @@ describe('helpers', () => {
   it('builds keys and urls', () => {
     expect(sfsKey('2025:625')).toBe('sfs-2025-625');
     expect(sfsDocUrl('2025:625')).toBe('https://svenskforfattningssamling.se/doc/2025625.html');
+  });
+});
+
+describe('parseForarbeten, hand-typed variants', () => {
+  it('accepts the typo rop. and keywords without a dot', () => {
+    const f = parseForarbeten('rop. 2023/24:83, bet 2023/24:NU6, rskr 2023/24:120');
+    expect(f.props).toEqual(['2023/24:83']);
+    expect(f.bets).toEqual(['2023/24:NU6']);
+    expect(f.rskr).toEqual(['2023/24:120']);
+  });
+
+  it('expands a shorthand continuation in the same riksmöte', () => {
+    const f = parseForarbeten(
+      'Prop. 2004/05:170 och 172, bet. 2004/05:SfU17 och SfU18, rskr. 2004/05:300 och 358',
+    );
+    expect(f.props).toEqual(['2004/05:170', '2004/05:172']);
+    expect(f.bets).toEqual(['2004/05:SfU17', '2004/05:SfU18']);
+    expect(f.rskr).toEqual(['2004/05:300', '2004/05:358']);
+    expect(f.other).toEqual([]);
+  });
+});
+
+describe('classifySearchPage', () => {
+  it('recognises a list with a total', () => {
+    const p = classifySearchPage(LIST_PAGE1_HTML);
+    expect(p).toMatchObject({ kind: 'list', total: 262 });
+  });
+
+  it('recognises a single hit shown as the register page itself', () => {
+    expect(classifySearchPage(DIRECT_HIT_HTML)).toEqual({ kind: 'direct' });
+    const page = parseRegisterPage(DIRECT_HIT_HTML);
+    expect(page.base.sfs).toBe('2005:716');
+    const laws = matchingLaws(page, '2023/24:18', () => 'HB0318');
+    expect(laws.map((l) => l.sfs)).toEqual(['2023:652']);
+  });
+
+  it('recognises no hits and throws on anything else', () => {
+    expect(classifySearchPage('<div>Inga träffar</div>')).toEqual({ kind: 'none' });
+    expect(() => classifySearchPage('<html>changed markup</html>')).toThrow(/unrecognised/);
+  });
+
+  it('builds paged urls', () => {
+    expect(searchPageUrl('2022/23', '2', 1)).toBe(
+      'https://rkrattsbaser.gov.se/sfsr/adv?fritext=2022/23:2',
+    );
+    expect(searchPageUrl('2022/23', '2', 3)).toMatch(/fritext=2022\/23:2&page=3$/);
+  });
+});
+
+describe('mergeLaw', () => {
+  const own: SfsLaw = {
+    sfs: '2023:200',
+    title: 'Mervärdesskattelag (2023:200)',
+    base_sfs: '2023:200',
+    omfattning: null,
+    ikraft: '2023-07-01',
+    props: ['HB0357'],
+    bets: [],
+    rskr: [],
+    url: 'u',
+  };
+  const upph: SfsLaw = {
+    ...own,
+    title: '',
+    base_sfs: '1994:200',
+    ikraft: null,
+    omfattning: 'upph.',
+    props: ['HB0357', 'HB0358'],
+  };
+
+  it('prefers the entry where the act is its own base, in either order', () => {
+    for (const m of [mergeLaw(upph, own), mergeLaw(own, upph)]) {
+      expect(m.title).toBe('Mervärdesskattelag (2023:200)');
+      expect(m.base_sfs).toBe('2023:200');
+      expect(m.ikraft).toBe('2023-07-01');
+      expect(m.props).toEqual(expect.arrayContaining(['HB0357', 'HB0358']));
+    }
   });
 });
