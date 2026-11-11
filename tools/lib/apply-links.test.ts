@@ -95,6 +95,24 @@ describe('applyLinks', () => {
     ).toBeNull();
   });
 
+  it('recomputes an AI-set verdict from newer judgements and keeps its history', () => {
+    const first = applyLinks(base, [pair('P1')], docs, '2026-11-10')!;
+    const earlier = { ...base, ...first } as typeof base;
+    const second = applyLinks(
+      earlier,
+      [pair('P1'), pair('B1', { stage: 'definitive' })],
+      docs,
+      '2026-11-12',
+    )!;
+    expect(second.evidence.map((e) => e.kind)).toEqual(['prop', 'bet']);
+    expect(second.verdict.history).toHaveLength(1);
+    expect(second.verdict.date).toBe('2026-11-12');
+    const gone = applyLinks(earlier, [pair('B1', { label: 'partial' })], docs, '2026-11-12')!;
+    expect(gone.verdict.value).toBe('unassessed');
+    expect(gone.verdict.assessedBy).toBeUndefined();
+    expect(gone.evidence.map((e) => e.kind)).toEqual(['bet']);
+  });
+
   it('leaves promises with an existing verdict or Riksdag evidence alone', () => {
     const decided = { ...base, verdict: { ...base.verdict, value: 'broken' as const } };
     expect(applyLinks(decided, [pair('P1')], docs, '2026-11-10')).toBeNull();

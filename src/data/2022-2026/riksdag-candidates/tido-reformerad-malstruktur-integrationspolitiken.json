@@ -17,7 +17,16 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -52,9 +61,11 @@
         "keyword:integrationspolitik",
         "keyword:integration",
         "all-keywords",
-        "committee:AU"
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01AU7",
@@ -84,8 +95,14 @@
       "titel": "Utgiftsområde 13 Integration och jämställdhet",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HB01AU1.html",
-      "found_by": ["keyword:integration", "all-keywords", "committee:AU"],
-      "score": 3
+      "found_by": [
+        "keyword:integration",
+        "all-keywords",
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HA01AU6",
@@ -96,8 +113,14 @@
       "titel": "Integration",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HA01AU6.html",
-      "found_by": ["keyword:integration", "all-keywords", "committee:AU"],
-      "score": 3
+      "found_by": [
+        "keyword:integration",
+        "all-keywords",
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01AU1",
@@ -108,8 +131,13 @@
       "titel": "Utgiftsområde 13 Integration och jämställdhet",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU1.html",
-      "found_by": ["keyword:integration", "committee:AU"],
-      "score": 2
+      "found_by": [
+        "keyword:integration",
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01AU1",
@@ -120,8 +148,13 @@
       "titel": "Utgiftsområde 13 Integration och jämställdhet",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HC01AU1.html",
-      "found_by": ["keyword:integration", "committee:AU"],
-      "score": 2
+      "found_by": [
+        "keyword:integration",
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HC031d14",
@@ -132,8 +165,13 @@
       "titel": "Budgetpropositionen för 2025 - Utgiftsområde 13 Integration och jämställdhet",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HC031d14.html",
-      "found_by": ["keyword:integration", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:integration",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HCB341",
@@ -144,8 +182,13 @@
       "titel": "Styrkraft för lyckad integration ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB341.html",
-      "found_by": ["keyword:målstruktur", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:målstruktur",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB153",
@@ -157,7 +200,8 @@
       "organ": "A-dep",
       "url": "https://data.riksdagen.se/dokument/HEB153.html",
       "found_by": ["keyword:integration"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01SfU30",
@@ -195,7 +239,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "found_by": ["keyword:anpassning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03103",
@@ -206,8 +251,9 @@
       "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD03103.html",
-      "found_by": ["keyword:integrationspolitik"],
-      "score": 1
+      "found_by": ["keyword:integrationspolitik", "score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03142",
@@ -219,7 +265,8 @@
       "organ": "Försvarsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03142.html",
       "found_by": ["keyword:målstruktur"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC03103",
@@ -324,6 +371,214 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB0399",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "99",
+      "datum": "2024-04-15",
+      "titel": "Vårändringsbudget för 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB031d14",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB382",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "82",
+      "datum": "2024-12-05",
+      "titel": "Ökad va-beredskap ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB168",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "68",
+      "datum": "2025-07-03",
+      "titel": "Förbättrad integration och minskat utanförskap",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB168.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB142",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "42",
+      "datum": "2023-03-30",
+      "titel": "Tilläggsdirektiv till Utredningen om en förbättrad arbetsmarknadsetablering för utrikes födda kvinnor (Ju 2022:05)",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB142.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HDB335",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "35",
+      "datum": "2025-04-02",
+      "titel": "Etableringsboendelagen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB335.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB368",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "68",
+      "datum": "2024-10-15",
+      "titel": "Mottagandelagen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB39",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "9",
+      "datum": "2025-01-31",
+      "titel": "På språklig grund ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB39.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB358",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "58",
+      "datum": "2023-09-27",
+      "titel": "Kultursamhället - utvecklad samverkan mellan stat, region och kommun",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB358.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB360",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "60",
+      "datum": "2024-08-29",
+      "titel": "Stärkt stöd till anhöriga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB373",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "73",
+      "datum": "2024-11-07",
+      "titel": "Juridiska personers förvärv av lantbruksegendom genom testamente",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB373.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB1101",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "101",
+      "datum": "2023-06-29",
+      "titel": "Tilläggsdirektiv till Utredningen om en målstyrd integrationspolitik (Ju 2022:05)",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HBB324",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "24",
+      "datum": "2023-05-31",
+      "titel": "Etablering för fler Jämställda möjligheter till integration ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB324.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD031d15",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01FiU21",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU21",
+      "datum": "2024-05-31",
+      "titel": "Vårändringsbudget för 2024",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

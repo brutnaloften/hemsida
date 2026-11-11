@@ -26,10 +26,28 @@
     "socialt arbete"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i mars 2025 att examensmålen för socionomutbildningen ändras, så att studenterna ska visa kunskap om att förebygga ungdomskriminalitet och återfall. Det är ett förslag och inte beslutat. Utredningen föreslår ingen specialisering på ungdomsbrott och inga särskilda forskningsmedel, så de delarna av löftet saknas.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB327",
+      "designation": "SOU 2025:27",
+      "title": "En socionomutbildning i tiden ",
+      "date": "2025-03-04",
+      "url": "https://data.riksdagen.se/dokument/HDB327.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

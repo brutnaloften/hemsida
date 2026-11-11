@@ -16,7 +16,16 @@
     "score:tido-corpus-claude-v1-shard-1-of-20",
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -46,8 +55,13 @@
       "titel": "Skyldighet att betala för tandvård – nya regler för vissa utlänningar",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03300.html",
-      "found_by": ["keyword:mottagandedirektivet", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:mottagandedirektivet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD03262",
@@ -58,8 +72,13 @@
       "titel": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
-      "found_by": ["keyword:mottagandedirektivet", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:mottagandedirektivet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01SfU16",
@@ -71,7 +90,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU16.html",
       "found_by": ["keyword:mottagandedirektivet", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03229",
@@ -82,8 +102,13 @@
       "titel": "En ny mottagandelag",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03229.html",
-      "found_by": ["keyword:mottagandedirektivet", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:mottagandedirektivet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD01SfU14",
@@ -107,8 +132,13 @@
       "titel": "Migrations- och asylpakten ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB430.html",
-      "found_by": ["keyword:mottagandedirektivet", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:mottagandedirektivet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HC01SfU18",
@@ -120,7 +150,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU18.html",
       "found_by": ["keyword:asylsökande", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HDB316",
@@ -132,7 +163,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB316.html",
       "found_by": ["keyword:mottagandedirektivet", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01SfU11",
@@ -144,7 +176,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU11.html",
       "found_by": ["keyword:asylsökande", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC0349",
@@ -168,8 +201,13 @@
       "titel": "Mottagandelagen ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB368.html",
-      "found_by": ["keyword:mottagandedirektivet", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:mottagandedirektivet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.93
     },
     {
       "dok_id": "HB01SfU14",
@@ -181,7 +219,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU14.html",
       "found_by": ["keyword:asylsökande", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD01SfU30",
@@ -208,6 +247,58 @@
       "found_by": ["keyword:asylsökande"],
       "score": 1,
       "relevance": 0.15
+    },
+    {
+      "dok_id": "HBB193",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "93",
+      "datum": "2023-06-22",
+      "titel": "Tilläggsdirektiv till Utredningen om ett ordnat initialt mottagande av asylsökande (Ju 2021:12)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB193.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB430d2",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "30",
+      "datum": "2025-11-25",
+      "titel": "Migrations- och asylpakten, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB430d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA01AU6",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU6",
+      "datum": "2023-02-17",
+      "titel": "Integration",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB370",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "70",
+      "datum": "2024-10-25",
+      "titel": "Tiotandvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB370.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

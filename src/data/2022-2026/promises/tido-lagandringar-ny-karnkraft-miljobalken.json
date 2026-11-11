@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:171 (En mer ändamålsenlig prövning av kärntekniska anläggningar). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Riksdagen beslutade i november 2023 att förbudet mot nya reaktorer på nya platser och gränsen på tio reaktorer ska tas bort. Regeringen lade i mars 2026 fram ett förslag som förenklar prövningen av kärntekniska anläggningar. Förbudet mot att återstarta stängda reaktorer och regler för små modulära reaktorer omfattas inte av dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,6 +33,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HB01NU5",
+      "designation": "Bet. 2023/24:NU5",
+      "title": "Ny kärnkraft i Sverige",
+      "date": "2023-11-23",
+      "url": "https://data.riksdagen.se/dokument/HB01NU5.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "prop",
       "dok_id": "HD03171",

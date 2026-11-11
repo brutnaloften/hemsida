@@ -27,8 +27,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:83 (Några frågor om grundläggande fri- och rättigheter); Prop. 2025/26:78 (En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En utredning föreslog i januari 2025 en grundlagsändring, och i maj 2025 fick en utredare i uppdrag att ta fram regler om att återkalla medborgarskap. Regeringen föreslog grundlagsändringen i december 2025, och en utredning la i mars 2026 fram förslag till lagregler. Riksdagen fattade i maj 2026 ett första, vilande beslut om grundlagsändringen. Lagregler om återkallelse är ännu inte beslutade.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,12 +39,22 @@
   },
   "evidence": [
     {
+      "kind": "sou",
+      "dok_id": "HDB32",
+      "designation": "SOU 2025:2",
+      "title": "Några frågor om grundläggande fri- och rättigheter ",
+      "date": "2025-01-15",
+      "url": "https://data.riksdagen.se/dokument/HDB32.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "dir",
-      "dok_id": "HBB183",
-      "designation": "Dir. 2023:83",
-      "title": "Några frågor om grundläggande fri- och rättigheter",
-      "date": "2023-06-15",
-      "url": "https://data.riksdagen.se/dokument/HBB183.html",
+      "dok_id": "HDB151",
+      "designation": "Dir. 2025:51",
+      "title": "Återkallelse av medborgarskap i vissa fall",
+      "date": "2025-05-22",
+      "url": "https://data.riksdagen.se/dokument/HDB151.html",
       "relevance": "full",
       "note": null
     },
@@ -56,6 +66,26 @@
       "date": "2025-12-05",
       "url": "https://data.riksdagen.se/dokument/HD0378.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB321",
+      "designation": "SOU 2026:21",
+      "title": "Återkallelse av svenskt medborgarskap",
+      "date": "2026-03-18",
+      "url": "https://data.riksdagen.se/dokument/HEB321.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01KU34",
+      "designation": "Bet. 2025/26:KU34",
+      "title": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
+      "date": "2026-05-11",
+      "url": "https://data.riksdagen.se/dokument/HD01KU34.html",
+      "relevance": "full",
       "note": null
     }
   ]

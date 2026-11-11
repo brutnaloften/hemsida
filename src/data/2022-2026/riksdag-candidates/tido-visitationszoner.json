@@ -21,7 +21,13 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -34,7 +40,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU28.html",
       "found_by": ["keyword:visitation", "keyword:vapen", "all-keywords", "committee:JuU"],
-      "score": 4
+      "score": 4,
+      "relevance": 0.01
     },
     {
       "dok_id": "HC01JuU15",
@@ -134,7 +141,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
       "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HB0384",
@@ -163,7 +171,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU1.html",
       "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03294",
@@ -201,7 +210,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03256.html",
       "found_by": ["keyword:visitation"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03100",
@@ -306,6 +316,71 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01JuU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01KU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KU20",
+      "datum": "2024-05-31",
+      "titel": "Granskningsbetänkande",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HB01KU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB031d5",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03274",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "274",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03274.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01KU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU20",
+      "datum": "2025-06-10",
+      "titel": "Granskningsbetänkande",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

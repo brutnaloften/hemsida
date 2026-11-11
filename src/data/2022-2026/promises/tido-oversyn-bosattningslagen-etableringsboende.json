@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:215 (Tidsbegränsat boende för vissa nyanlända invandrare – en ny lag om bosättning). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i februari 2024 en utredning i uppdrag att ersätta bosättningslagen med ett system där kommunerna får mer inflytande. I april 2025 föreslog utredningen en ny lag med bostadssituationen som fördelningsfaktor och etableringsboende i 36 månader. Regeringen lade i mars 2026 fram en proposition med samma innehåll. Förslaget täcker hela löftet, men något beslut har inte fattats.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,26 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB122",
+      "designation": "Dir. 2024:22",
+      "title": "Ett nytt system för bosättning för vissa nyanlända",
+      "date": "2024-02-15",
+      "url": "https://data.riksdagen.se/dokument/HCB122.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB335",
+      "designation": "SOU 2025:35",
+      "title": "Etableringsboendelagen",
+      "date": "2025-04-02",
+      "url": "https://data.riksdagen.se/dokument/HDB335.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "prop",
       "dok_id": "HD03215",

@@ -20,7 +20,14 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -37,9 +44,11 @@
         "keyword:äktenskapsbalken",
         "keyword:hedersrelaterat förtryck",
         "keyword:släktskap",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.98
     },
     {
       "dok_id": "HD01CU33",
@@ -54,9 +63,11 @@
         "keyword:kusinäktenskap",
         "keyword:hedersrelaterat förtryck",
         "all-keywords",
-        "committee:CU"
+        "committee:CU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03213",
@@ -86,7 +97,8 @@
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HD01CU12.html",
       "found_by": ["keyword:äktenskapsbalken", "all-keywords", "committee:CU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01CU7",
@@ -97,8 +109,14 @@
       "titel": "Familjerätt",
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HC01CU7.html",
-      "found_by": ["keyword:kusinäktenskap", "all-keywords", "committee:CU"],
-      "score": 3
+      "found_by": [
+        "keyword:kusinäktenskap",
+        "all-keywords",
+        "committee:CU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01CU6",
@@ -192,7 +210,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB351.html",
       "found_by": ["keyword:hedersrelaterat förtryck"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01SfU37",
@@ -297,6 +316,84 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
       "score": 1,
       "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01SoU18",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU18",
+      "datum": "2023-06-15",
+      "titel": "Socialtjänstens ansvar för våldsutsatta m.m.",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB031d5",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB1103",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "103",
+      "datum": "2026-08-27",
+      "titel": "Stärkt stöd till personer som utsätts för hedersrelaterat våld och förtryck",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC031d5",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01JuU18",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU18",
+      "datum": "2024-04-12",
+      "titel": "Våldsbrott och brottsoffer",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB327",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "27",
+      "datum": "2025-03-04",
+      "titel": "En socionomutbildning i tiden ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB327.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

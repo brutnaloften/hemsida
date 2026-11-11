@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2025:26 (Tid för undervisningsuppdraget). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i mars 2025 minskade dokumentationskrav, bland annat färre utvecklingssamtal och individuella utvecklingsplaner som bara rör kunskaper, samt enklare regler om kränkande behandling. Regeringen lade i mars 2026 fram ett lagförslag om detta, och riksdagen beslutade i maj 2026 om tid för undervisningsuppdraget och minskad rapportering av kränkande behandling till rektor. Beslutet nämner ingen bred regelöversyn eller gränser för dokumentation.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -47,6 +47,36 @@
       "date": "2025-03-03",
       "url": "https://data.riksdagen.se/dokument/HDB326.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU1",
+      "designation": "Bet. 2025/26:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2025-12-08",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03196",
+      "designation": "Prop. 2025/26:196",
+      "title": "Tid för undervisningsuppdraget",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03196.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU25",
+      "designation": "Bet. 2025/26:UbU25",
+      "title": "Tid för undervisningsuppdraget",
+      "date": "2026-05-29",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU25.html",
+      "relevance": "partial",
       "note": null
     }
   ]

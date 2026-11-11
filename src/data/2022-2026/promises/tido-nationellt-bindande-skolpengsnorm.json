@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2025:23 (Tilläggsdirektiv till Utredningen om en nationell skolpengsnorm för ökad likvärdighet (U 2023:05)). Dokumentet behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2022/23:UbU12 (Riksrevisionens rapport Skolpengen – effektivitet och konsekvenser), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Riksdagen la i mars 2023 en skrivelse till handlingarna och noterade regeringens syn att steg bör tas mot en bindande skolpengsnorm. I november 2023 tillsattes en utredare som ska föreslå en modell, och i mars 2025 förlängdes tiden för delbetänkandet. Utredningen föreslog i juni 2025 dock bara en vägledande norm, inte en bindande. Inget beslut om att införa en bindande norm har fattats.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -51,12 +51,32 @@
     },
     {
       "kind": "dir",
+      "dok_id": "HBB1153",
+      "designation": "Dir. 2023:153",
+      "title": "En nationell skolpengsnorm för ökad likvärdighet",
+      "date": "2023-11-02",
+      "url": "https://data.riksdagen.se/dokument/HBB1153.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
       "dok_id": "HDB123",
       "designation": "Dir. 2025:23",
       "title": "Tilläggsdirektiv till Utredningen om en nationell skolpengsnorm för ökad likvärdighet (U 2023:05)",
       "date": "2025-03-06",
       "url": "https://data.riksdagen.se/dokument/HDB123.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB372",
+      "designation": "SOU 2025:72",
+      "title": "Verktyg för en mer likvärdig resursfördelning till skolan",
+      "date": "2025-06-13",
+      "url": "https://data.riksdagen.se/dokument/HDB372.html",
+      "relevance": "partial",
       "note": null
     }
   ]

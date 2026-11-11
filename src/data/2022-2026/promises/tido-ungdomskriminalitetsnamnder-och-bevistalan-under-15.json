@@ -26,10 +26,28 @@
     "gängmiljöer"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Utredningen om ungdomskriminalitetsnämnder enligt dansk modell lämnade i maj 2024 sitt slutbetänkande, med förslag om en statlig ordning med brottsförebyggande åtgärder för barn och unga. Det täcker den första delen av löftet, att slutföra utredningen. Dokumenten visar inget beslut om nämnderna och inget om att bevistalan mot barn under 15 år ska användas i fler fall.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB330",
+      "designation": "SOU 2024:30",
+      "title": "En statlig ordning med brottsförebyggande åtgärder för barn och unga",
+      "date": "2024-05-08",
+      "url": "https://data.riksdagen.se/dokument/HCB330.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

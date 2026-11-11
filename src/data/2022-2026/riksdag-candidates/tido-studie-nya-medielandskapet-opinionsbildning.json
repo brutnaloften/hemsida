@@ -20,7 +20,13 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20"
   ],
   "candidates": [
     {
@@ -76,7 +82,8 @@
         "all-keywords",
         "committee:KU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.35
     },
     {
       "dok_id": "HA01KU27",
@@ -91,9 +98,11 @@
         "keyword:sociala plattformar",
         "keyword:yttrandefrihet",
         "all-keywords",
-        "committee:KU"
+        "committee:KU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB01KU20",
@@ -105,7 +114,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HB01KU20.html",
       "found_by": ["all-keywords", "committee:KU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.08
     },
     {
       "dok_id": "HCB334",
@@ -117,7 +127,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB334.html",
       "found_by": ["keyword:medielandskapet", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HB01KU3",
@@ -129,7 +140,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HB01KU3.html",
       "found_by": ["keyword:medielandskapet", "committee:KU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HB031d2",
@@ -210,7 +222,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03258.html",
       "found_by": ["keyword:opinionsbildning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01KU29",
@@ -235,7 +248,8 @@
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD03103.html",
       "found_by": ["keyword:medielandskapet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.5
     },
     {
       "dok_id": "HDB3117",
@@ -288,6 +302,19 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3124",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "124",
+      "datum": "2026-01-01",
+      "titel": "Åtgärder för en mer hållbar konsumtion ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3124.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

@@ -17,7 +17,13 @@
     "score:tido-corpus-claude-v1-shard-3-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -54,9 +60,11 @@
         "keyword:farmaceutsortiment",
         "keyword:receptfritt",
         "keyword:läkemedel",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC01SoU14",
@@ -72,9 +80,11 @@
         "keyword:receptfritt",
         "keyword:läkemedel",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01SoU12",
@@ -90,9 +100,11 @@
         "keyword:receptfritt",
         "keyword:läkemedel",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01SoU15",
@@ -108,9 +120,11 @@
         "keyword:farmaceutsortiment",
         "keyword:receptfritt",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01SoU6",
@@ -128,7 +142,8 @@
         "all-keywords",
         "committee:SoU"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01SoU14",
@@ -143,9 +158,11 @@
         "keyword:farmaceutsortiment",
         "keyword:läkemedel",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01SoU11",
@@ -169,8 +186,14 @@
       "titel": "Fortsatt utveckling av en nationell läkemedelslista",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB371.html",
-      "found_by": ["keyword:farmaceutsortiment", "keyword:receptfritt", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:farmaceutsortiment",
+        "keyword:receptfritt",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03199",
@@ -182,7 +205,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03199.html",
       "found_by": ["keyword:apotek", "keyword:receptfritt"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HBB3101",
@@ -194,7 +218,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB3101.html",
       "found_by": ["keyword:apotek", "keyword:receptfritt"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HBB362",
@@ -232,7 +257,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU39.html",
       "found_by": ["keyword:apotek"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01MJU26",
@@ -272,6 +298,19 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-3-of-20"],
       "score": 1,
       "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

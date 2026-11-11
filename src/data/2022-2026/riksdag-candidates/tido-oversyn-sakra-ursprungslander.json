@@ -17,7 +17,14 @@
     "score:tido-corpus-claude-v1-shard-3-of-20",
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20"
   ],
   "candidates": [
     {
@@ -33,9 +40,11 @@
         "keyword:säkra ursprungsländer",
         "keyword:säkra länder",
         "keyword:asylprövning",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD01SfU16",
@@ -50,9 +59,11 @@
         "keyword:säkra ursprungsländer",
         "keyword:asylprövning",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.7
     },
     {
       "dok_id": "HDB430",
@@ -67,9 +78,11 @@
         "keyword:säkra ursprungsländer",
         "keyword:säkra länder",
         "keyword:asylprövning",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HDB430d2",
@@ -80,8 +93,14 @@
       "titel": "Migrations- och asylpakten, del 2",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB430d2.html",
-      "found_by": ["keyword:säkra ursprungsländer", "keyword:säkra länder", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:säkra ursprungsländer",
+        "keyword:säkra länder",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01SfU17",
@@ -93,7 +112,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU17.html",
       "found_by": ["keyword:asylprövning", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC0349",
@@ -123,7 +143,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB368.html",
       "found_by": ["keyword:säkra länder", "keyword:asylprövning", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.2
     },
     {
       "dok_id": "HA01SfU13",
@@ -161,7 +182,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB331.html",
       "found_by": ["keyword:säkra ursprungsländer", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HC01SfU11",
@@ -173,7 +195,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU11.html",
       "found_by": ["keyword:Migrationsverket", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HCB315",
@@ -226,6 +249,19 @@
       "found_by": ["keyword:asylprövning", "all-keywords"],
       "score": 2,
       "relevance": 0.03
+    },
+    {
+      "dok_id": "HD03115",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "115",
+      "datum": "2026-03-12",
+      "titel": "Verksamheten i Europeiska unionen under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

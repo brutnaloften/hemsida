@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:180 (En svensk kulturkanon). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Kulturkanonkommittén lade i september 2025 fram sin utredning. Fristående expertgrupper valde ut 100 verk inom tio områden, vilket motsvarar löftet om expertkommittéer som föreslår en svensk kulturkanon. Förslaget är ett underlag och inte beslutat, och ingen författning är kopplad till löftet.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,12 +34,12 @@
   },
   "evidence": [
     {
-      "kind": "dir",
-      "dok_id": "HBB1180",
-      "designation": "Dir. 2023:180",
-      "title": "En svensk kulturkanon",
-      "date": "2023-12-21",
-      "url": "https://data.riksdagen.se/dokument/HBB1180.html",
+      "kind": "sou",
+      "dok_id": "HDB392",
+      "designation": "SOU 2025:92",
+      "title": "En kulturkanon för Sverige",
+      "date": "2025-09-02",
+      "url": "https://data.riksdagen.se/dokument/HDB392.html",
       "relevance": "full",
       "note": null
     }

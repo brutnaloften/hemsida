@@ -17,7 +17,13 @@
     "score:tido-corpus-claude-v1-shard-3-of-20",
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -33,9 +39,11 @@
         "keyword:energiforskning",
         "keyword:fossilfria energislag",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01NU17",
@@ -50,9 +58,11 @@
         "keyword:energiforskning",
         "keyword:fossilfria energislag",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01NU3",
@@ -67,9 +77,11 @@
         "keyword:energiforskning",
         "keyword:fossilfria energislag",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC0372",
@@ -99,7 +111,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03101.html",
       "found_by": ["keyword:energiforskning", "keyword:forskningspolitik"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01NU13",
@@ -137,7 +150,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
       "found_by": ["keyword:forskningspolitik", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HC01UbU15",
@@ -149,7 +163,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU15.html",
       "found_by": ["keyword:forskningsproposition", "keyword:forskningspolitik"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HC01NU19",
@@ -161,7 +176,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
       "found_by": ["keyword:fossilfria energislag", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HC031",
@@ -172,8 +188,13 @@
       "titel": "Budgetpropositionen för 2025",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC031.html",
-      "found_by": ["keyword:energiforskning", "keyword:forskningspolitik"],
-      "score": 2
+      "found_by": [
+        "keyword:energiforskning",
+        "keyword:forskningspolitik",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01NU14",
@@ -185,7 +206,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU14.html",
       "found_by": ["keyword:fossilfria energislag", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB01MJU15",
@@ -196,8 +218,13 @@
       "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
-      "found_by": ["keyword:fossilfria energislag", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:fossilfria energislag",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB0359",
@@ -208,8 +235,13 @@
       "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0359.html",
-      "found_by": ["keyword:fossilfria energislag", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:fossilfria energislag",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01NU3",
@@ -221,7 +253,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU3.html",
       "found_by": ["keyword:energiforskning", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HB03105",

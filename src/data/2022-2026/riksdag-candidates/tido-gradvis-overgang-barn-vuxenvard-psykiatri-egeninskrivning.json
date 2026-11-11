@@ -18,7 +18,11 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -123,7 +127,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
       "found_by": ["keyword:psykiatri", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HDB384",
@@ -200,7 +205,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03101.html",
       "found_by": ["keyword:psykiatri"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01SoU14",
@@ -212,7 +218,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU14.html",
       "found_by": ["committee:SoU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD0319",
@@ -224,7 +231,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0319.html",
       "found_by": ["keyword:psykiatri"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.15
     },
     {
       "dok_id": "HC01SoU16",

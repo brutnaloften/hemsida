@@ -20,7 +20,11 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -79,7 +83,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03284.html",
       "found_by": ["keyword:regionala centra", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SoU1",
@@ -91,7 +96,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
       "found_by": ["keyword:vårdköer", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HDB362",
@@ -168,7 +174,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB314.html",
       "found_by": ["keyword:regionala centra", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HBB38",
@@ -206,7 +213,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU17.html",
       "found_by": ["committee:SoU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.25
     },
     {
       "dok_id": "HEB322",
@@ -244,6 +252,19 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB343",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "43",
+      "datum": "2024-06-24",
+      "titel": "Staten och kommunsektorn - samverkan, självstyrelse, styrning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB343.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
       "score": 1,
       "relevance": 0.8
     }

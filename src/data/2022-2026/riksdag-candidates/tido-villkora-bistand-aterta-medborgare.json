@@ -20,7 +20,15 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -51,8 +59,14 @@
       "titel": "Internationellt bistånd",
       "organ": "UU",
       "url": "https://data.riksdagen.se/dokument/HB01UU8.html",
-      "found_by": ["keyword:biståndspolitik", "all-keywords", "committee:UU"],
-      "score": 3
+      "found_by": [
+        "keyword:biståndspolitik",
+        "all-keywords",
+        "committee:UU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01UU10",
@@ -64,7 +78,8 @@
       "organ": "UU",
       "url": "https://data.riksdagen.se/dokument/HA01UU10.html",
       "found_by": ["keyword:villkorat bistånd", "all-keywords", "committee:UU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01KU20",
@@ -106,7 +121,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03249.html",
       "found_by": ["keyword:återtagande", "keyword:samarbete"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03262",
@@ -118,7 +134,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "found_by": ["keyword:återtagande", "keyword:återvändande"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01SfU16",
@@ -129,8 +146,13 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU16.html",
-      "found_by": ["keyword:villkorat bistånd", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:villkorat bistånd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD03229",
@@ -142,7 +164,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03229.html",
       "found_by": ["keyword:villkorat bistånd", "keyword:återvändande"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01UU8",
@@ -154,7 +177,8 @@
       "organ": "UU",
       "url": "https://data.riksdagen.se/dokument/HD01UU8.html",
       "found_by": ["keyword:biståndspolitik", "committee:UU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01KU20d3",
@@ -182,8 +206,13 @@
       "titel": "Utgiftsområde 7 Internationellt bistånd",
       "organ": "UU",
       "url": "https://data.riksdagen.se/dokument/HD01UU2.html",
-      "found_by": ["keyword:biståndspolitik", "committee:UU"],
-      "score": 2
+      "found_by": [
+        "keyword:biståndspolitik",
+        "committee:UU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HC01SfU18",
@@ -194,8 +223,13 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU18.html",
-      "found_by": ["keyword:villkorat bistånd", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:villkorat bistånd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HC01UU2",
@@ -206,8 +240,13 @@
       "titel": "Utgiftsområde 7 Internationellt bistånd",
       "organ": "UU",
       "url": "https://data.riksdagen.se/dokument/HC01UU2.html",
-      "found_by": ["keyword:biståndspolitik", "committee:UU"],
-      "score": 2
+      "found_by": [
+        "keyword:biståndspolitik",
+        "committee:UU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HC031d8",
@@ -288,6 +327,123 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HB031d9.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB031d8",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 7 Internationellt bistånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD031d10",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d9",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 7 Internationellt bistånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01SfU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SfU14",
+      "datum": "2024-05-10",
+      "titel": "Migrationsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB372",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "72",
+      "datum": "2025-06-13",
+      "titel": "Verktyg för en mer likvärdig resursfördelning till skolan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB385",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "85",
+      "datum": "2025-07-07",
+      "titel": "Ökad tydlighet, stärkt samverkan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB385.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031d8",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 7 Internationellt bistånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.93
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
       "score": 1,
       "relevance": 0.9
     }

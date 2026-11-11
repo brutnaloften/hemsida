@@ -22,7 +22,14 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -39,9 +46,11 @@
         "keyword:förlossningsplan",
         "keyword:barnmorsketeam",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01SoU17",
@@ -96,9 +105,11 @@
         "keyword:förlossningsplan",
         "keyword:barnmorsketeam",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA031d10",
@@ -128,8 +139,14 @@
       "titel": "Prioriteringar inom hälso- och sjukvården",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU17.html",
-      "found_by": ["keyword:förlossningsvård", "keyword:förlossning", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:förlossningsvård",
+        "keyword:förlossning",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB01SoU14",
@@ -240,8 +257,13 @@
       "titel": "Prioriteringar inom hälso- och sjukvården",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU16.html",
-      "found_by": ["keyword:förlossning", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:förlossning",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB031d10",
@@ -270,7 +292,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HA01FiU3.html",
       "found_by": ["keyword:förlossningsplan", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.01
     },
     {
       "dok_id": "HA0375",
@@ -401,6 +424,71 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01SoU22",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU22",
+      "datum": "2025-04-02",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB343",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "43",
+      "datum": "2024-06-24",
+      "titel": "Staten och kommunsektorn - samverkan, självstyrelse, styrning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB343.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

@@ -17,7 +17,14 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -35,9 +42,11 @@
         "keyword:nedläggning",
         "keyword:Swedavia",
         "all-keywords",
-        "committee:TU"
+        "committee:TU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01TU13",
@@ -53,9 +62,11 @@
         "keyword:Bromma",
         "keyword:Swedavia",
         "all-keywords",
-        "committee:TU"
+        "committee:TU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01TU20",
@@ -83,9 +94,11 @@
         "keyword:Bromma flygplats",
         "keyword:Bromma",
         "keyword:Swedavia",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB360",
@@ -96,8 +109,14 @@
       "titel": "Sveriges flygplatser i en förändrad omvärld",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB360.html",
-      "found_by": ["keyword:Bromma flygplats", "keyword:nedläggning", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:Bromma flygplats",
+        "keyword:nedläggning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD0375",
@@ -108,8 +127,14 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD0375.html",
-      "found_by": ["keyword:Bromma", "keyword:flygplats", "keyword:Swedavia"],
-      "score": 3
+      "found_by": [
+        "keyword:Bromma",
+        "keyword:flygplats",
+        "keyword:Swedavia",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HDB155",
@@ -174,8 +199,14 @@
       "titel": "Luftfartsfrågor",
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HA01TU11.html",
-      "found_by": ["keyword:Bromma flygplats", "all-keywords", "committee:TU"],
-      "score": 3
+      "found_by": [
+        "keyword:Bromma flygplats",
+        "all-keywords",
+        "committee:TU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03103",
@@ -186,8 +217,13 @@
       "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD03103.html",
-      "found_by": ["keyword:Bromma", "keyword:flygplats"],
-      "score": 2
+      "found_by": [
+        "keyword:Bromma",
+        "keyword:flygplats",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HDB367",
@@ -232,8 +268,13 @@
       "titel": "Statens ansvar för det svenska flygplatssystemet",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB43.html",
-      "found_by": ["keyword:Bromma flygplats", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:Bromma flygplats",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD03312",
@@ -299,6 +340,19 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
       "score": 1,
       "relevance": 0.85
+    },
+    {
+      "dok_id": "HA031d23",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 22 Kommunikationer",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d23.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.97
     }
   ]
 }

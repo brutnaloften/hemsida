@@ -20,10 +20,48 @@
   "committee": "SoU",
   "keywords": ["anhöriga", "anhöriglinje", "kontaktperson", "anhörigstöd", "barn som anhöriga"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att föreslå stöd till anhöriga, bland annat en kontaktperson och en nationell anhöriglinje. Utredningen föreslog i augusti 2024 en anhörigkontakt och stöd till barn som anhöriga, men ingen ny dygnet runt-linje. I november 2025 lade regeringen fram ett förslag om stödkontakt och stöd till barn. Förslaget saknar anhöriglinje och utbildning av personal som möter barn.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB177",
+      "designation": "Dir. 2023:77",
+      "title": "Ett stärkt stöd till anhöriga till långvarigt eller allvarligt sjuka",
+      "date": "2023-06-08",
+      "url": "https://data.riksdagen.se/dokument/HBB177.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB360",
+      "designation": "SOU 2024:60",
+      "title": "Stärkt stöd till anhöriga",
+      "date": "2024-08-29",
+      "url": "https://data.riksdagen.se/dokument/HCB360.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0360",
+      "designation": "Prop. 2025/26:60",
+      "title": "Stärkta insatser för äldre och för de som vårdar eller stöder närstående",
+      "date": "2025-11-25",
+      "url": "https://data.riksdagen.se/dokument/HD0360.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:174 (Mer obligatorisk undervisningstid för elever som behöver det). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i december 2023 en utredare i uppdrag att föreslå obligatorisk lovskola, extra studietid och läxhjälp i lägre årskurser, med författningsförslag och statsbidrag. Utredningen föreslog i december 2024 en försöksverksamhet med obligatorisk förstärkningsundervisning och en statligt finansierad sommarskola, men avvisade utökad lovskola och extra studietid. Inget beslut har fattats.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -41,6 +41,16 @@
       "date": "2023-12-14",
       "url": "https://data.riksdagen.se/dokument/HBB1174.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB394",
+      "designation": "SOU 2024:94",
+      "title": "Förstärkningsundervisning i skolan ",
+      "date": "2024-12-20",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "relevance": "partial",
       "note": null
     }
   ]

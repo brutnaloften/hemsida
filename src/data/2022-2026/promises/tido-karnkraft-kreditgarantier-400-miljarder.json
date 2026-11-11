@@ -30,8 +30,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Prop. 2023/24:1 (Budgetpropositionen för 2024 - Utgiftsområde 21 Energi); Prop. 2024/25:1 (Budgetpropositionen för 2025 - Utgiftsområde 21 Energi). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2024/25:NU3 (Utgiftsområde 21 Energi), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Riksdagen biföll i december 2023 att särskilda kreditgarantier bara för ny kärnkraft ska inrättas, med generösare villkor än de gröna. I september 2024 bad regeringen i budgetförslaget om rätt att ge garantier på upp till 400 miljarder kronor, och riksdagen godkände i december 2024 ett bemyndigande för lån till ny kärnkraft. Beloppet i beslutet och översynen av de gröna garantierna framgår inte.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -42,13 +42,13 @@
   },
   "evidence": [
     {
-      "kind": "prop",
-      "dok_id": "HB031d22",
-      "designation": "Prop. 2023/24:1",
-      "title": "Budgetpropositionen för 2024 - Utgiftsområde 21 Energi",
-      "date": "2023-09-20",
-      "url": "https://data.riksdagen.se/dokument/HB031d22.html",
-      "relevance": "full",
+      "kind": "bet",
+      "dok_id": "HB01NU3",
+      "designation": "Bet. 2023/24:NU3",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2023-12-08",
+      "url": "https://data.riksdagen.se/dokument/HB01NU3.html",
+      "relevance": "partial",
       "note": null
     },
     {

@@ -20,7 +20,15 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -36,9 +44,11 @@
         "keyword:koldioxidinfångning",
         "keyword:omvända auktioner",
         "all-keywords",
-        "committee:MJU"
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01MJU15",
@@ -53,9 +63,11 @@
         "keyword:koldioxidinfångning",
         "keyword:omvända auktioner",
         "all-keywords",
-        "committee:MJU"
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01MJU16",
@@ -70,9 +82,11 @@
         "keyword:koldioxidinfångning",
         "keyword:omvända auktioner",
         "all-keywords",
-        "committee:MJU"
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01MJU16",
@@ -119,8 +133,14 @@
       "titel": "Utgiftsområde 20 Allmän miljö- och naturvård",
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HA01MJU1.html",
-      "found_by": ["keyword:omvända auktioner", "all-keywords", "committee:MJU"],
-      "score": 3
+      "found_by": [
+        "keyword:omvända auktioner",
+        "all-keywords",
+        "committee:MJU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB333",
@@ -157,8 +177,13 @@
       "titel": "Budgetpropositionen för 2026",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
-      "found_by": ["keyword:CCS", "keyword:Energimyndigheten"],
-      "score": 2
+      "found_by": [
+        "keyword:CCS",
+        "keyword:Energimyndigheten",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01MJU15",
@@ -170,7 +195,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HC01MJU15.html",
       "found_by": ["keyword:Energimyndigheten", "committee:MJU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC031",
@@ -181,8 +207,13 @@
       "titel": "Budgetpropositionen för 2025",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC031.html",
-      "found_by": ["keyword:CCS", "keyword:koldioxidinfångning"],
-      "score": 2
+      "found_by": [
+        "keyword:CCS",
+        "keyword:koldioxidinfångning",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HC031d21",
@@ -211,7 +242,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HB01MJU8.html",
       "found_by": ["keyword:Energimyndigheten", "committee:MJU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HB031",
@@ -355,6 +387,97 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HC0366",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "66",
+      "datum": "2024-12-10",
+      "titel": "Sveriges genomförande av Agenda 2030",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0366.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031d21",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB0359",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "59",
+      "datum": "2023-12-21",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0359.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03101",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "101",
+      "datum": "2026-04-13",
+      "titel": "Årsredovisning för staten 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA01FiU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU1",
+      "datum": "2022-12-12",
+      "titel": "Statens budget 2023 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

@@ -20,7 +20,15 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -114,8 +122,13 @@
       "titel": "Socialtjänstens ansvar för våldsutsatta m.m.",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU20.html",
-      "found_by": ["keyword:socialtjänst", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:socialtjänst",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01SoU19",
@@ -160,8 +173,13 @@
       "titel": "Socialtjänstens arbete",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU17.html",
-      "found_by": ["keyword:socialtjänst", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:socialtjänst",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01JuU19",
@@ -173,7 +191,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU19.html",
       "found_by": ["keyword:barn i riskzonen", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HB01SoU1",
@@ -197,8 +216,13 @@
       "titel": "Barn och unga inom socialtjänsten",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
-      "found_by": ["keyword:tidiga insatser", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:tidiga insatser",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01JuU15",
@@ -210,7 +234,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU15.html",
       "found_by": ["keyword:barn i riskzonen", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HAB367",
@@ -222,7 +247,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HAB367.html",
       "found_by": ["keyword:tidiga insatser", "keyword:barn i riskzonen"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HD03313",
@@ -234,7 +260,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03313.html",
       "found_by": ["keyword:föräldraansvar"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HBB357",
@@ -378,6 +405,162 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01CU38",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU38",
+      "datum": "2026-05-26",
+      "titel": "Ersättningsregler med brottsoffret i fokus",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU38.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB415",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "15",
+      "datum": "2023-09-11",
+      "titel": "Fler verktyg i socialtjänsternas arbete för att förebygga brott och stärka skyddet för barn",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB415.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01CU10",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "CU10",
+      "datum": "2025-02-07",
+      "titel": "Ersättningsrätt samt insolvens- och utsökningsrätt",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HC01CU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB330",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2024-05-08",
+      "titel": "En statlig ordning med brottsförebyggande åtgärder för barn och unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB330.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01SoU18",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU18",
+      "datum": "2023-06-15",
+      "titel": "Socialtjänstens ansvar för våldsutsatta m.m.",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01SoU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU16",
+      "datum": "2023-04-26",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3111",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "111",
+      "datum": "2025-11-25",
+      "titel": "Rättssäkerhetens pris",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3111.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB311",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "11",
+      "datum": "2025-01-28",
+      "titel": "Straffbarhetsåldern",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB311.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB323",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "23",
+      "datum": "2025-03-19",
+      "titel": "Ersättningsregler med brottsoffret i fokus",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB323.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01SoU19",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU19",
+      "datum": "2026-03-26",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU19.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

@@ -19,7 +19,13 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -115,9 +121,11 @@
         "keyword:fast läkarkontakt",
         "keyword:primärvård",
         "keyword:psykiatri",
-        "keyword:vårdgaranti"
+        "keyword:vårdgaranti",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01SoU23",
@@ -147,7 +155,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
       "found_by": ["keyword:psykiatri", "all-keywords", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HB01SoU14",
@@ -190,7 +199,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB427.html",
       "found_by": ["keyword:fast läkarkontakt", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HEB418",
@@ -202,7 +212,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB418.html",
       "found_by": ["keyword:specialistvård"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03251",
@@ -227,7 +238,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03101.html",
       "found_by": ["keyword:psykiatri"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03216",
@@ -252,7 +264,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU17.html",
       "found_by": ["committee:SoU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HCB150",
@@ -331,6 +344,19 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

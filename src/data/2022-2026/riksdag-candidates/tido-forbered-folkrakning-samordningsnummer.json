@@ -21,7 +21,17 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -38,9 +48,11 @@
         "keyword:folkbokföring",
         "keyword:Skatteverket",
         "all-keywords",
-        "committee:SkU"
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB01SkU15",
@@ -74,9 +86,11 @@
         "keyword:folkräkning",
         "keyword:folkbokföringsfusk",
         "all-keywords",
-        "committee:SkU"
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01SkU8",
@@ -87,8 +101,15 @@
       "titel": "Bättre möjligheter för Skatteverket att göra dataanalyser och urval i folkbokföringsverksamheten",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HA01SkU8.html",
-      "found_by": ["keyword:folkräkning", "keyword:folkbokföring", "all-keywords", "committee:SkU"],
-      "score": 4
+      "found_by": [
+        "keyword:folkräkning",
+        "keyword:folkbokföring",
+        "all-keywords",
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.8
     },
     {
       "dok_id": "HA01SkU4",
@@ -103,9 +124,11 @@
         "keyword:samordningsnummer",
         "keyword:folkbokföring",
         "all-keywords",
-        "committee:SkU"
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD03261",
@@ -134,8 +157,14 @@
       "titel": "Utgiftsområde 3 Skatt, tull och exekution",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HD01SkU1.html",
-      "found_by": ["keyword:folkräkning", "all-keywords", "committee:SkU"],
-      "score": 3
+      "found_by": [
+        "keyword:folkräkning",
+        "all-keywords",
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01SkU12",
@@ -146,8 +175,14 @@
       "titel": "Skatteförfarande, folkbokföring och tull",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HC01SkU12.html",
-      "found_by": ["keyword:folkbokföring", "all-keywords", "committee:SkU"],
-      "score": 3
+      "found_by": [
+        "keyword:folkbokföring",
+        "all-keywords",
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01SkU1",
@@ -158,8 +193,14 @@
       "titel": "Utgiftsområde 3 Skatt, tull och exekution",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HC01SkU1.html",
-      "found_by": ["keyword:folkräkning", "all-keywords", "committee:SkU"],
-      "score": 3
+      "found_by": [
+        "keyword:folkräkning",
+        "all-keywords",
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD01SkU14",
@@ -217,8 +258,13 @@
       "titel": "Utgiftsområde 3 Skatt, tull och exekution",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HA01SkU1.html",
-      "found_by": ["keyword:folkräkning", "committee:SkU"],
-      "score": 2
+      "found_by": [
+        "keyword:folkräkning",
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03295",
@@ -243,7 +289,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03250.html",
       "found_by": ["keyword:samordningsnummer"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.35
     },
     {
       "dok_id": "HB0367",
@@ -439,6 +486,227 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA0334",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "34",
+      "datum": "2022-12-19",
+      "titel": "Utbetalningsmyndigheten",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0334.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB363",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "63",
+      "datum": "2024-09-03",
+      "titel": "Ökat informationsutbyte mellan myndigheter ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB363.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3112",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "112",
+      "datum": "2026-01-01",
+      "titel": "Verktyg för skydd av EU-medel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3113",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "113",
+      "datum": "2025-11-26",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3115",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "115",
+      "datum": "2025-12-10",
+      "titel": "Kompletterande bestämmelser till EU:s cyberresiliensförordning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA031d3",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 2 Samhällsekonomi och finansförvaltning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d5",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 3 Skatt, tull och exekution",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA031d4",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 3 Skatt, tull och exekution",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HBB365",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "65",
+      "datum": "2023-10-27",
+      "titel": "Bättre information om hyresbostäder ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB365.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HDB3107",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "107",
+      "datum": "2025-11-03",
+      "titel": "Sveriges nationella klimatmål - uppdaterat etappmål till 2030 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3107.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB397d4",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "97",
+      "datum": "2025-09-25",
+      "titel": "Krishantering och ändrade rörelseregler för försäkringsföretag, del 4",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB397d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

@@ -18,7 +18,15 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -66,8 +74,14 @@
       "titel": "Integration",
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HA01AU6.html",
-      "found_by": ["keyword:nyanlända", "all-keywords", "committee:AU"],
-      "score": 3
+      "found_by": [
+        "keyword:nyanlända",
+        "all-keywords",
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01SkU35",
@@ -121,8 +135,13 @@
       "titel": "Budgetpropositionen för 2026",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
-      "found_by": ["keyword:etableringstillägg", "keyword:aktivitetskrav"],
-      "score": 2
+      "found_by": [
+        "keyword:etableringstillägg",
+        "keyword:aktivitetskrav",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HDB353",
@@ -151,7 +170,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB315.html",
       "found_by": ["keyword:etableringstillägg", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HCB429",
@@ -163,7 +183,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB429.html",
       "found_by": ["keyword:aktivitetskrav", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HCB341",
@@ -174,8 +195,13 @@
       "titel": "Styrkraft för lyckad integration ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB341.html",
-      "found_by": ["keyword:etableringstillägg", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:etableringstillägg",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HEB419",
@@ -187,7 +213,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB419.html",
       "found_by": ["keyword:aktivitetskrav"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01AU14",
@@ -212,7 +239,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU29.html",
       "found_by": ["keyword:aktivitetskrav"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD03101",
@@ -224,7 +252,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03101.html",
       "found_by": ["keyword:etableringsersättning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HA0375",
@@ -290,6 +319,136 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.92
+    },
+    {
+      "dok_id": "HDB3124",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "124",
+      "datum": "2026-01-01",
+      "titel": "Åtgärder för en mer hållbar konsumtion ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3124.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01AU5",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU5",
+      "datum": "2025-02-13",
+      "titel": "Integration",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01AU2",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU2",
+      "datum": "2022-12-15",
+      "titel": "Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB368",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "68",
+      "datum": "2024-10-15",
+      "titel": "Mottagandelagen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB1101",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "101",
+      "datum": "2023-06-29",
+      "titel": "Tilläggsdirektiv till Utredningen om en målstyrd integrationspolitik (Ju 2022:05)",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB324",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "24",
+      "datum": "2023-05-31",
+      "titel": "Etablering för fler Jämställda möjligheter till integration ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB324.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

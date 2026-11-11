@@ -21,7 +21,14 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -38,9 +45,11 @@
         "keyword:arbetstillstånd",
         "keyword:försörjningskrav",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD0387",
@@ -76,9 +85,11 @@
         "keyword:medianlön",
         "keyword:arbetstillstånd",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01SfU15",
@@ -93,9 +104,11 @@
         "keyword:arbetskraftsinvandring",
         "keyword:medianlön",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.7
     },
     {
       "dok_id": "HB01SfU11",
@@ -144,8 +157,14 @@
       "titel": "Riksrevisionens rapport om Migrationsverkets kontroller av arbetstillstånd – stor risk för fel och missbruk",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03284.html",
-      "found_by": ["keyword:arbetskraftsinvandring", "keyword:arbetstillstånd", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:arbetskraftsinvandring",
+        "keyword:arbetstillstånd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC0318",
@@ -205,8 +224,13 @@
       "titel": "Ett höjt försörjningskrav för arbetskraftsinvandrare",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/H903284.html",
-      "found_by": ["keyword:försörjningskrav", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:försörjningskrav",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01SfU37",
@@ -257,7 +281,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU28.html",
       "found_by": ["keyword:försörjningskrav"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HA0363",
@@ -414,6 +439,136 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB333",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "33",
+      "datum": "2025-04-01",
+      "titel": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB333.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB382",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "82",
+      "datum": "2024-12-05",
+      "titel": "Ökad va-beredskap ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC0392",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "92",
+      "datum": "2025-01-23",
+      "titel": "Preskription av avlägsnandebeslut och vissa frågor om återreseförbud",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0392.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB360",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "60",
+      "datum": "2024-08-29",
+      "titel": "Stärkt stöd till anhöriga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB376",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "76",
+      "datum": "2024-11-18",
+      "titel": "Från överskottsmål till balansmål",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB376.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB373",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "73",
+      "datum": "2024-11-07",
+      "titel": "Juridiska personers förvärv av lantbruksegendom genom testamente",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB373.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB394",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "94",
+      "datum": "2024-12-20",
+      "titel": "Förstärkningsundervisning i skolan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

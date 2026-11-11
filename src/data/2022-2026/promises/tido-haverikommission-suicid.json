@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:3 (Översyn av vissa frågor inom det suicidpreventiva området). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i januari 2023 en utredare i uppdrag att föreslå ett nationellt system för att granska vad som hänt efter ett självmord, uttryckligen likt en haverikommission. I mars 2026 lade regeringen fram ett lagförslag om en nationell utredningsfunktion som ska utreda alla barns självmord och får utreda vuxnas. Förslaget är inte beslutat och nämner inte socialtjänst, skola, polis och sjukvård uttryckligen.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,6 +40,16 @@
       "title": "Översyn av vissa frågor inom det suicidpreventiva området",
       "date": "2023-01-19",
       "url": "https://data.riksdagen.se/dokument/HBB13.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03190",
+      "designation": "Prop. 2025/26:190",
+      "title": "En nationell utredningsfunktion för att förebygga suicid",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03190.html",
       "relevance": "full",
       "note": null
     }

@@ -20,10 +20,48 @@
   "committee": "SoU",
   "keywords": ["BVC", "språkscreening", "språkförskola", "utsatta områden", "nyanlända barn"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i november 2025 tilläggsdirektiv till utredningen om språkförskola. Utredningen föreslog i juni 2026 en obligatorisk språkbedömning vid tre års ålder, men inte obligatorisk förskola. I september 2026 föreslog en promemoria att regionerna ska identifiera barn med behov av språkstöd inom BVC. Förslaget är inte beslutat. Utökade BVC-program saknas.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB1102",
+      "designation": "Dir. 2025:102",
+      "title": "Tilläggsdirektiv till Utredningen om en likvärdig förskola av god kvalitet med obligatorisk språkförskola (U 2024:04)",
+      "date": "2025-11-27",
+      "url": "https://data.riksdagen.se/dokument/HDB1102.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB337",
+      "designation": "SOU 2026:37",
+      "title": "Förutsättningar för en likvärdig och språkutvecklande förskola",
+      "date": "2026-06-17",
+      "url": "https://data.riksdagen.se/dokument/HEB337.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HEB417",
+      "designation": "Ds 2026:17",
+      "title": "Identifiering av barn i behov av stöd för att utveckla sina färdigheter i svenska språket ",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB417.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

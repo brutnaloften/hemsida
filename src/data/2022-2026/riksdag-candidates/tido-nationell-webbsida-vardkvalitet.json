@@ -21,7 +21,15 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -109,7 +117,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0348.html",
       "found_by": ["keyword:vårdkvalitet", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HBB362",
@@ -147,7 +156,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB352.html",
       "found_by": ["keyword:vårdkvalitet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HEB337",
@@ -159,7 +169,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB337.html",
       "found_by": ["keyword:öppna jämförelser"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HEB338",
@@ -197,7 +208,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03249.html",
       "found_by": ["keyword:webbsida"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03216",
@@ -302,6 +314,97 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01SoU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU1",
+      "datum": "2025-12-03",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01FiU26",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU26",
+      "datum": "2023-04-04",
+      "titel": "Kommunala frågor",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01SoU22",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU22",
+      "datum": "2025-04-02",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01SoU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU3",
+      "datum": "2022-11-17",
+      "titel": "Vissa frågor inom hälso- och sjukvårdsområdet",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01SoU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01SoU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU14",
+      "datum": "2023-04-24",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

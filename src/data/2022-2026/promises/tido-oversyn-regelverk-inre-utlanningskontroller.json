@@ -32,8 +32,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2022/23:109 (Utökade polisiära befogenheter i gränsnära områden). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SfU32 (Stärkt återvändandeverksamhet), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i augusti 2023 en utredare i uppdrag att se över reglerna för inre utlänningskontroller, och en utredning med förslag lades fram i november 2024. I september 2023 och april 2026 lade regeringen fram propositioner om bland annat kroppsvisitation och beslag av id-handlingar samt av mobiltelefoner. Riksdagen har inte beslutat, och DNA, bagage och omhändertagande av personer återstår.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -44,22 +44,42 @@
   },
   "evidence": [
     {
+      "kind": "dir",
+      "dok_id": "HBB1126",
+      "designation": "Dir. 2023:126",
+      "title": "Tilläggsdirektiv till Utredningen om stärkt återvändandeverksamhet (Ju 2022:12)",
+      "date": "2023-08-30",
+      "url": "https://data.riksdagen.se/dokument/HBB1126.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "prop",
-      "dok_id": "HA03109",
-      "designation": "Prop. 2022/23:109",
-      "title": "Utökade polisiära befogenheter i gränsnära områden",
-      "date": "2023-04-25",
-      "url": "https://data.riksdagen.se/dokument/HA03109.html",
+      "dok_id": "HB0312",
+      "designation": "Prop. 2023/24:12",
+      "title": "Effektivare verktyg vid inre utlänningskontroll",
+      "date": "2023-09-19",
+      "url": "https://data.riksdagen.se/dokument/HB0312.html",
       "relevance": "partial",
       "note": null
     },
     {
-      "kind": "bet",
-      "dok_id": "HD01SfU32",
-      "designation": "Bet. 2025/26:SfU32",
+      "kind": "sou",
+      "dok_id": "HCB380",
+      "designation": "SOU 2024:80",
+      "title": "Vissa åtgärder för stärkt återvändandeverksamhet och utlänningskontroll ",
+      "date": "2024-11-26",
+      "url": "https://data.riksdagen.se/dokument/HCB380.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03263",
+      "designation": "Prop. 2025/26:263",
       "title": "Stärkt återvändandeverksamhet",
-      "date": "2026-06-11",
-      "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03263.html",
       "relevance": "partial",
       "note": null
     }

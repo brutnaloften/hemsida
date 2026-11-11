@@ -16,7 +16,14 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -52,9 +59,11 @@
         "keyword:DNA-test",
         "keyword:anhöriginvandring",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01SfU18",
@@ -69,9 +78,11 @@
         "keyword:släktskap",
         "keyword:anhöriginvandring",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03301",
@@ -101,7 +112,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU14.html",
       "found_by": ["keyword:anhöriginvandring", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HDB395",
@@ -129,8 +141,13 @@
       "titel": "Skärpta villkor för anhöriginvandring",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HCB168.html",
-      "found_by": ["keyword:anhöriginvandring", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:anhöriginvandring",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01SoU38",
@@ -155,7 +172,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU34.html",
       "found_by": ["keyword:anknytning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HD01SfU21",
@@ -180,7 +198,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "found_by": ["keyword:DNA-test"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD03190",
@@ -192,7 +211,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03190.html",
       "found_by": ["keyword:släktskap"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD0375",
@@ -203,8 +223,9 @@
       "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD0375.html",
-      "found_by": ["all-keywords"],
-      "score": 1
+      "found_by": ["all-keywords", "score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD03154",
@@ -216,7 +237,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03154.html",
       "found_by": ["keyword:släktskap"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03150",
@@ -228,7 +250,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03150.html",
       "found_by": ["keyword:DNA-test"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.06
     },
     {
       "dok_id": "HC03103",
@@ -294,6 +317,19 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
       "score": 1,
       "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

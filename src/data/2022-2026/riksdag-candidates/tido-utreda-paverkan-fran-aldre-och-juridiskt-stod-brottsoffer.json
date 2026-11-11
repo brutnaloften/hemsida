@@ -19,7 +19,13 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -85,7 +91,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03246.html",
       "found_by": ["keyword:straffmyndighet", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01JuU12",
@@ -97,7 +104,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU12.html",
       "found_by": ["keyword:brottsoffer", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC01JuU11",
@@ -109,7 +117,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU11.html",
       "found_by": ["keyword:brottsoffer", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HC0354",
@@ -146,8 +155,13 @@
       "titel": "Förbättrade åtgärder när barn misstänks för brott",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HA0378.html",
-      "found_by": ["keyword:målsägandebiträde", "keyword:straffmyndighet"],
-      "score": 2
+      "found_by": [
+        "keyword:målsägandebiträde",
+        "keyword:straffmyndighet",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD03298",
@@ -211,7 +225,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03276.html",
       "found_by": ["keyword:minderåriga"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01JuU38",
@@ -223,7 +238,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU38.html",
       "found_by": ["keyword:brottsoffer"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HCB393",
@@ -328,6 +344,71 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB311",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "11",
+      "datum": "2025-01-28",
+      "titel": "Straffbarhetsåldern",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB311.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HEB414",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "14",
+      "datum": "2026-07-02",
+      "titel": "En skärpt syn på involvering av underåriga i brottslighet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB414.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HB01JuU18",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU18",
+      "datum": "2024-04-12",
+      "titel": "Våldsbrott och brottsoffer",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

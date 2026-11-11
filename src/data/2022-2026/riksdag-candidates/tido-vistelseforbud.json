@@ -21,7 +21,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -34,7 +43,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU18.html",
       "found_by": ["keyword:hedersrelaterade brott", "all-keywords", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HA01SoU18",
@@ -48,9 +58,11 @@
       "found_by": [
         "keyword:hedersrelaterade brott",
         "keyword:våld i nära relation",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01JuU16",
@@ -156,8 +168,9 @@
       "titel": "Straffrättsliga frågor",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU11.html",
-      "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:JuU", "score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01JuU1",
@@ -168,8 +181,9 @@
       "titel": "Utgiftsområde 4 Rättsväsendet",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU1.html",
-      "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:JuU", "score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB362",
@@ -180,8 +194,9 @@
       "titel": "Preventiva vistelseförbud",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB362.html",
-      "found_by": ["keyword:vistelseförbud"],
-      "score": 1
+      "found_by": ["keyword:vistelseförbud", "score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
     },
     {
       "dok_id": "HEB351",
@@ -193,7 +208,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB351.html",
       "found_by": ["keyword:hedersrelaterade brott"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01JuU41",
@@ -205,7 +221,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
       "found_by": ["keyword:gängkriminalitet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.15
     },
     {
       "dok_id": "HEB348",
@@ -388,6 +405,136 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01JuU14",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU14",
+      "datum": "2025-04-23",
+      "titel": "Kriminalvårdsfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HD01JuU12",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU12",
+      "datum": "2026-03-20",
+      "titel": "Våldsbrott och brottsoffer",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB348d2",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "48",
+      "datum": "2024-07-05",
+      "titel": "Ett ändamålsenligt samhällsskydd Volym 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB348d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01JuU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU17",
+      "datum": "2024-04-17",
+      "titel": "Kriminalvårdsfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB339",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "39",
+      "datum": "2024-07-05",
+      "titel": "Skärpta regler om ungdomsövervakning  och straffreduktion för unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB339.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB01KU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KU20",
+      "datum": "2024-05-31",
+      "titel": "Granskningsbetänkande",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HB01KU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB417",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "17",
+      "datum": "2023-06-30",
+      "titel": "Vistelseförbud på allmän plats och vissa andra platser",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB417.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.97
     }
   ]
 }

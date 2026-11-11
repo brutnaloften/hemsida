@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2024:36 (Förenkla och förbättra!). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i januari 2023 en kommitté i uppdrag att se över 3:12-reglerna så att små och medelstora företag får bättre villkor att växa, anställa och attrahera kapital. I juni 2024 lade utredningen fram förslag, bland annat högre grundbelopp och att lönekravet och kapitalandelskravet tas bort. Förslagen är ännu inte beslutade.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB110",
+      "designation": "Dir. 2023:10",
+      "title": "Tilläggsdirektiv till Kommittén om förenklad beskattning av ägare till fåmansföretag (Fi 2022:04)",
+      "date": "2023-01-26",
+      "url": "https://data.riksdagen.se/dokument/HBB110.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HCB336",

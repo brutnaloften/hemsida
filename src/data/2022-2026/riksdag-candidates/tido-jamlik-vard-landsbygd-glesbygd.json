@@ -21,7 +21,15 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -167,7 +175,8 @@
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HD01CU23.html",
       "found_by": ["keyword:landsbygd", "keyword:glesbygd"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01SoU22",
@@ -191,8 +200,13 @@
       "titel": "Hela Sverige ska fungera – politik för starkare landsbygder",
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03158.html",
-      "found_by": ["keyword:landsbygd", "keyword:glesbygd"],
-      "score": 2
+      "found_by": [
+        "keyword:landsbygd",
+        "keyword:glesbygd",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03131",
@@ -379,6 +393,201 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01SoU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU1",
+      "datum": "2025-12-03",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d25",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d25.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01SoU14",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU14",
+      "datum": "2025-02-03",
+      "titel": "Läkemedel och tandvård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01NU21",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU21",
+      "datum": "2026-05-12",
+      "titel": "Hela Sverige ska fungera – politik för starkare landsbygder",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HBB427",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "27",
+      "datum": "2023-09-13",
+      "titel": "Effektiv och behovsbaserad digital vård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB427.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HBB429",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "29",
+      "datum": "2023-10-02",
+      "titel": "2018 års ändringar i fördraget om internationell järnvägstrafik",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB429.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD0319",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "19",
+      "datum": "2025-09-30",
+      "titel": "Nästa steg för en god och nära vård",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0319.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01SoU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB370",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "70",
+      "datum": "2024-10-25",
+      "titel": "Tiotandvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB370.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01SoU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU14",
+      "datum": "2023-04-24",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

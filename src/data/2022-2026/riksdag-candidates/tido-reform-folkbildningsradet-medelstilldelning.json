@@ -21,7 +21,16 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -90,8 +99,15 @@
       "titel": "Civila samhället, trossamfund och folkbildning",
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HC01KrU8.html",
-      "found_by": ["keyword:folkbildning", "keyword:statsbidrag", "all-keywords", "committee:KrU"],
-      "score": 4
+      "found_by": [
+        "keyword:folkbildning",
+        "keyword:statsbidrag",
+        "all-keywords",
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01KrU4",
@@ -125,9 +141,11 @@
         "keyword:folkbildning",
         "keyword:Folkbildningsrådet",
         "keyword:studieförbund",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01KrU8",
@@ -161,7 +179,8 @@
         "keyword:Folkbildningsrådet",
         "keyword:medelstilldelning"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD03101",
@@ -173,7 +192,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03101.html",
       "found_by": ["keyword:folkbildning", "keyword:studieförbund"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD031d19",
@@ -184,8 +204,13 @@
       "titel": "Budgetpropositionen för 2026 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d19.html",
-      "found_by": ["keyword:medelstilldelning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:medelstilldelning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HC01KrU4",
@@ -210,7 +235,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB03119.html",
       "found_by": ["keyword:Folkbildningsrådet", "keyword:studieförbund"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HB01KrU1",
@@ -436,6 +462,162 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HB031d18",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB398d3",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "98",
+      "datum": "2025-01-01",
+      "titel": "En ny samordnad miljöbedömnings- och tillståndsprövningsprocess, del 3",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB398d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB382",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "82",
+      "datum": "2024-12-05",
+      "titel": "Ökad va-beredskap ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB368",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "68",
+      "datum": "2024-10-15",
+      "titel": "Mottagandelagen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB360",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "60",
+      "datum": "2024-08-29",
+      "titel": "Stärkt stöd till anhöriga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB376",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "76",
+      "datum": "2024-11-18",
+      "titel": "Från överskottsmål till balansmål",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB376.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB373",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "73",
+      "datum": "2024-11-07",
+      "titel": "Juridiska personers förvärv av lantbruksegendom genom testamente",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB373.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB394",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "94",
+      "datum": "2024-12-20",
+      "titel": "Förstärkningsundervisning i skolan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01KU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU20",
+      "datum": "2025-06-10",
+      "titel": "Granskningsbetänkande",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

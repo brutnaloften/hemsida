@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2022:135 (Tilläggsdirektiv till utredningen Stärkta incitament för utbyggd vindkraft (M 2022:03)); SOU 2023:18 (Värdet av vinden Kompensation, incitament och planering för en hållbar fortsatt utbyggnad av vindkraften, del 2). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i november 2022 utredningen om stärkta incitament för vindkraft i uppdrag att också se över hur verksamhetsutövarna ska finansiera kommunernas incitament. Utredningen redovisade i april 2023 förslag om bland annat delning av intäkter med närboende, men inget sätt för verksamhetsutövare att ersätta kommunerna. I april 2026 lade regeringen fram ett lagförslag där ersättningen går till närboende, inte kommuner.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -51,12 +51,22 @@
     },
     {
       "kind": "sou",
-      "dok_id": "HBB318d2",
+      "dok_id": "HBB318",
       "designation": "SOU 2023:18",
-      "title": "Värdet av vinden Kompensation, incitament och planering för en hållbar fortsatt utbyggnad av vindkraften, del 2",
+      "title": "Värdet av vinden Kompensation, incitament och planering för en hållbar fortsatt utbyggnad av vindkraften",
       "date": "2023-04-28",
-      "url": "https://data.riksdagen.se/dokument/HBB318d2.html",
-      "relevance": "full",
+      "url": "https://data.riksdagen.se/dokument/HBB318.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03239",
+      "designation": "Prop. 2025/26:239",
+      "title": "Vindkraft i kommuner",
+      "date": "2026-04-14",
+      "url": "https://data.riksdagen.se/dokument/HD03239.html",
+      "relevance": "partial",
       "note": null
     }
   ]

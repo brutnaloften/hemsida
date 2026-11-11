@@ -21,7 +21,17 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -88,7 +98,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU32.html",
       "found_by": ["keyword:allmänspecialister", "keyword:vårdcentral"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.04
     },
     {
       "dok_id": "HD03216",
@@ -126,7 +137,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB37.html",
       "found_by": ["keyword:distriktssköterskor", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HDB396",
@@ -137,8 +149,13 @@
       "titel": "Fler möjligheter till ökat välstånd",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB396.html",
-      "found_by": ["keyword:distriktssköterskor", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:distriktssköterskor",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD0319",
@@ -149,8 +166,13 @@
       "titel": "Nästa steg för en god och nära vård",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0319.html",
-      "found_by": ["keyword:primärvård", "keyword:vårdcentral"],
-      "score": 2
+      "found_by": [
+        "keyword:primärvård",
+        "keyword:vårdcentral",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HDB363",
@@ -188,7 +210,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB39.html",
       "found_by": ["keyword:distriktssköterskor", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HBB366d2",
@@ -200,7 +223,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB366d2.html",
       "found_by": ["keyword:allmänspecialister", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HEB159",
@@ -212,7 +236,8 @@
       "organ": "KN-dep",
       "url": "https://data.riksdagen.se/dokument/HEB159.html",
       "found_by": ["keyword:utbyggnad"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HEB338",
@@ -382,6 +407,97 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.92
+    },
+    {
+      "dok_id": "HD01SoU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU1",
+      "datum": "2025-12-03",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC0366",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "66",
+      "datum": "2024-12-10",
+      "titel": "Sveriges genomförande av Agenda 2030",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0366.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03158",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "158",
+      "datum": "2026-03-17",
+      "titel": "Hela Sverige ska fungera – politik för starkare landsbygder",
+      "organ": "Landsbygds- och infrastrukturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03158.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB343",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "43",
+      "datum": "2024-06-24",
+      "titel": "Staten och kommunsektorn - samverkan, självstyrelse, styrning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB343.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

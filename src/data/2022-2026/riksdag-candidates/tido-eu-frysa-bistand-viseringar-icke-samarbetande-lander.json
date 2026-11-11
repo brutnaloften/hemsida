@@ -22,7 +22,14 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -40,7 +47,8 @@
         "keyword:tredjeländer",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.15
     },
     {
       "dok_id": "HC03176",
@@ -52,7 +60,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03176.html",
       "found_by": ["keyword:viseringar", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HC0318",
@@ -77,7 +86,8 @@
       "organ": "UU",
       "url": "https://data.riksdagen.se/dokument/HB01UU2.html",
       "found_by": ["keyword:frysa bistånd", "committee:UU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03274",
@@ -89,7 +99,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03274.html",
       "found_by": ["keyword:återtagande"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01FiU41",
@@ -166,7 +177,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03249.html",
       "found_by": ["keyword:återtagande"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03260",
@@ -178,7 +190,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03260.html",
       "found_by": ["keyword:återtagande"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03223",
@@ -203,7 +216,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03200.html",
       "found_by": ["keyword:tredjeländer"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01UU14",
@@ -373,6 +387,97 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d10",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031d8",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 7 Internationellt bistånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD03115",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "115",
+      "datum": "2026-03-12",
+      "titel": "Verksamheten i Europeiska unionen under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03115",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "115",
+      "datum": "2024-03-07",
+      "titel": "Verksamheten i Europeiska unionen under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB01SfU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SfU14",
+      "datum": "2024-05-10",
+      "titel": "Migrationsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01SfU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU16",
+      "datum": "2026-04-09",
+      "titel": "Migrationsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA03115",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "115",
+      "datum": "2023-03-16",
+      "titel": "Verksamheten i Europeiska unionen under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

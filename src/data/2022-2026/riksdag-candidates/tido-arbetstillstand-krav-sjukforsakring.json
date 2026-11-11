@@ -17,7 +17,13 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -33,9 +39,11 @@
         "keyword:arbetstillstånd",
         "keyword:arbetskraftsinvandring",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD0387",
@@ -66,7 +74,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03284.html",
       "found_by": ["keyword:arbetstillstånd", "keyword:arbetskraftsinvandring", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.2
     },
     {
       "dok_id": "HCB315",
@@ -127,7 +136,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU15.html",
       "found_by": ["keyword:arbetstillstånd", "keyword:arbetskraftsinvandring"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HB01SfU11",
@@ -314,6 +324,58 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB333",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "33",
+      "datum": "2025-04-01",
+      "titel": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB333.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC0392",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "92",
+      "datum": "2025-01-23",
+      "titel": "Preskription av avlägsnandebeslut och vissa frågor om återreseförbud",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0392.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB1114",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "114",
+      "datum": "2026-09-03",
+      "titel": "Straffrättsliga åtgärder mot användande av illegal arbetskraft",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1114.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

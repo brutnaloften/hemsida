@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2024/25:143 (En tioårig grundskola). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2023/24:UbU5 (Bättre anpassad undervisningstid i grundskolan, specialskolan och sameskolan), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Riksdagen beslutade i december 2023 att ta bort elevens val för att frigöra undervisningstid till ämnen som behöver mer tid. I december 2024 föreslog en utredning extra förstärkningsundervisning i svenska och matematik. Regeringen lade i mars 2025 fram ett förslag om tioårig grundskola med fler undervisningstimmar. Inget av detta kopplar utökningen till lättare administration eller tydligare undervisningsskyldighet.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,6 +40,16 @@
       "title": "Bättre anpassad undervisningstid i grundskolan, specialskolan och sameskolan",
       "date": "2023-12-01",
       "url": "https://data.riksdagen.se/dokument/HB01UbU5.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB394",
+      "designation": "SOU 2024:94",
+      "title": "Förstärkningsundervisning i skolan ",
+      "date": "2024-12-20",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
       "relevance": "partial",
       "note": null
     },

@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:83 (Några frågor om grundläggande fri- och rättigheter); Prop. 2025/26:78 (En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap); Prop. 2025/26:286 (Stärkt skydd för domstolarnas och domarnas oberoende). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i januari 2025 att rätten till abort skrivs in i regeringsformen. Regeringen lade i december 2025 fram ett förslag om det, och riksdagen biföll det i maj 2026 som vilande grundlag. Det sker alltså genom ett lagförslag, inte en ny grundlagsutredning. Utredningen om domstolarnas oberoende nämns inte i dokumenten.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,13 +40,13 @@
   },
   "evidence": [
     {
-      "kind": "dir",
-      "dok_id": "HBB183",
-      "designation": "Dir. 2023:83",
-      "title": "Några frågor om grundläggande fri- och rättigheter",
-      "date": "2023-06-15",
-      "url": "https://data.riksdagen.se/dokument/HBB183.html",
-      "relevance": "partial",
+      "kind": "sou",
+      "dok_id": "HDB32",
+      "designation": "SOU 2025:2",
+      "title": "Några frågor om grundläggande fri- och rättigheter ",
+      "date": "2025-01-15",
+      "url": "https://data.riksdagen.se/dokument/HDB32.html",
+      "relevance": "full",
       "note": null
     },
     {
@@ -60,12 +60,12 @@
       "note": null
     },
     {
-      "kind": "prop",
-      "dok_id": "HD03286",
-      "designation": "Prop. 2025/26:286",
-      "title": "Stärkt skydd för domstolarnas och domarnas oberoende",
-      "date": "2026-06-16",
-      "url": "https://data.riksdagen.se/dokument/HD03286.html",
+      "kind": "bet",
+      "dok_id": "HD01KU34",
+      "designation": "Bet. 2025/26:KU34",
+      "title": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
+      "date": "2026-05-11",
+      "url": "https://data.riksdagen.se/dokument/HD01KU34.html",
       "relevance": "partial",
       "note": null
     }

@@ -21,7 +21,17 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -51,8 +61,14 @@
       "titel": "Hemlig dataavläsning - utvärdering och permanent lagstiftning",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB378.html",
-      "found_by": ["keyword:hemliga tvångsmedel", "keyword:SOU 2022:19", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:hemliga tvångsmedel",
+        "keyword:SOU 2022:19",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HBB360",
@@ -63,8 +79,14 @@
       "titel": "Utökade möjligheter att använda preventiva tvångsmedel 2 ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB360.html",
-      "found_by": ["keyword:hemliga tvångsmedel", "keyword:SOU 2022:19", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:hemliga tvångsmedel",
+        "keyword:SOU 2022:19",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA03126",
@@ -75,8 +97,14 @@
       "titel": "Hemliga tvångsmedel – effektiva verktyg för att förhindra och utreda allvarliga brott",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HA03126.html",
-      "found_by": ["keyword:hemliga tvångsmedel", "keyword:SOU 2022:19", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:hemliga tvångsmedel",
+        "keyword:SOU 2022:19",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01JuU12",
@@ -105,8 +133,14 @@
       "titel": "Utökade möjligheter att använda preventiva tvångsmedel ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HAB352.html",
-      "found_by": ["keyword:hemliga tvångsmedel", "keyword:SOU 2022:19", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:hemliga tvångsmedel",
+        "keyword:SOU 2022:19",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HAB350",
@@ -117,8 +151,14 @@
       "titel": "Bättre möjligheter att verkställa frihetsberövanden ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HAB350.html",
-      "found_by": ["keyword:hemliga tvångsmedel", "keyword:SOU 2022:19", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:hemliga tvångsmedel",
+        "keyword:SOU 2022:19",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01JuU25",
@@ -130,7 +170,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU25.html",
       "found_by": ["keyword:tvångsmedel", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HEB313",
@@ -141,8 +182,13 @@
       "titel": "Straffansvar för deltagande i och samröre med kriminella sammanslutningar",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB313.html",
-      "found_by": ["keyword:SOU 2022:19", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:SOU 2022:19",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HC03175",
@@ -201,7 +247,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB332.html",
       "found_by": ["keyword:SOU 2022:19", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HBB322",
@@ -212,8 +259,13 @@
       "titel": "Datalagring och åtkomst till elektronisk information ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB322.html",
-      "found_by": ["keyword:SOU 2022:19", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:SOU 2022:19",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD01JuU37",
@@ -500,6 +552,227 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HAB348",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "48",
+      "datum": "2022-09-05",
+      "titel": "Tullverkets rättsliga befogenheter i en ny tid ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB348.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC0351",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "51",
+      "datum": "2024-11-12",
+      "titel": "Hemlig dataavläsning mot allvarliga brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0351.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC0364",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "64",
+      "datum": "2024-12-10",
+      "titel": "Redovisning av användningen av hemliga tvångsmedel under 2023",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0364.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB366",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "66",
+      "datum": "2025-06-09",
+      "titel": "En straffreform",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB366.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HA01JuU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU5",
+      "datum": "2023-02-07",
+      "titel": "Redovisning av användningen av hemliga tvångsmedel under 2021",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01JuU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HEB140",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "40",
+      "datum": "2026-05-28",
+      "titel": "Tilläggsdirektiv till Utredningen om hemliga och preventiva tvångsmedel (Ju 2025:04)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB140.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB399",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "99",
+      "datum": "2023-12-19",
+      "titel": "Nya tullrättsliga sanktioner och skärpta åtgärder mot utförsel av stöldgods ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB399.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01JuU21",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU21",
+      "datum": "2025-02-21",
+      "titel": "Hemlig dataavläsning mot allvarliga brott",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03274",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "274",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03274.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01JuU26",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU26",
+      "datum": "2024-05-23",
+      "titel": "Bättre möjligheter att verkställa frihetsberövanden",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB387",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "87",
+      "datum": "2023-12-13",
+      "titel": "Drivkrafter bakom globala trender i den neutrala räntan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB01SkU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU1",
+      "datum": "2023-11-30",
+      "titel": "Utgiftsområde 3 Skatt, tull och exekution",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HAB365",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "65",
+      "datum": "2022-11-29",
+      "titel": "En ny lag om stöd vid korttidsarbete - ett mer förutsägbart, förenklat och stärkt regelverk ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB365.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

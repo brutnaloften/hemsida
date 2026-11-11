@@ -26,10 +26,58 @@
     "utvidgat förverkande"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i maj 2024 en ny förverkandelagstiftning med självständigt förverkande av tillgångar som inte står i proportion till lagliga inkomster, och riksdagen godkände den i september 2024. En ny utredning från februari 2026 prövade omvänd bevisbörda men föreslog ingen sådan, bara en modell. Någon särskild förverkandegrund för medlemmar i kriminella organisationer saknas.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HBB399",
+      "designation": "SOU 2023:99",
+      "title": "Nya tullrättsliga sanktioner och skärpta åtgärder mot utförsel av stöldgods ",
+      "date": "2023-12-19",
+      "url": "https://data.riksdagen.se/dokument/HBB399.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB03144",
+      "designation": "Prop. 2023/24:144",
+      "title": "En ny förverkandelagstiftning",
+      "date": "2024-05-28",
+      "url": "https://data.riksdagen.se/dokument/HB03144.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU3",
+      "designation": "Bet. 2024/25:JuU3",
+      "title": "En ny förverkandelagstiftning",
+      "date": "2024-09-26",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB310",
+      "designation": "SOU 2026:10",
+      "title": "Ökade möjligheter till tillgångsinriktad brottsbekämpning",
+      "date": "2026-02-18",
+      "url": "https://data.riksdagen.se/dokument/HEB310.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

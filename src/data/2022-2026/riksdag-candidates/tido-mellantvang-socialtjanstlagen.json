@@ -21,7 +21,16 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -58,9 +67,11 @@
         "keyword:socialtjänstlagen",
         "keyword:obligatoriska insatser",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01SoU26",
@@ -77,7 +88,8 @@
         "all-keywords",
         "committee:SoU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC01SoU19",
@@ -124,8 +136,14 @@
       "titel": "Socialtjänstens ansvar för våldsutsatta m.m.",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU18.html",
-      "found_by": ["keyword:obligatoriska insatser", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:obligatoriska insatser",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01SoU17",
@@ -136,8 +154,14 @@
       "titel": "Barn och unga inom socialtjänsten",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
-      "found_by": ["keyword:obligatoriska insatser", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:obligatoriska insatser",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03295",
@@ -196,7 +220,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
       "found_by": ["keyword:mellantvång", "keyword:barn"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD01SoU19",
@@ -207,8 +232,9 @@
       "titel": "Barn och unga inom socialtjänsten",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU19.html",
-      "found_by": ["keyword:barn", "committee:SoU"],
-      "score": 2
+      "found_by": ["keyword:barn", "committee:SoU", "score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD03132",
@@ -237,7 +263,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU23.html",
       "found_by": ["keyword:socialtjänstlagen", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HC01SoU18",
@@ -489,6 +516,318 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01SoU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU17",
+      "datum": "2024-06-04",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01SoU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU1",
+      "datum": "2025-12-03",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01SoU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU20",
+      "datum": "2025-03-12",
+      "titel": "Socialtjänstens ansvar för våldsutsatta m.m.",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HAB367",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "67",
+      "datum": "2022-12-12",
+      "titel": "Vägar till ett tryggare samhälle ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HEB418",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "18",
+      "datum": "2026-09-03",
+      "titel": "Slutredovisning av tilläggsuppdraget om stärkt samverkan mellan socialtjänst och barn- och ungdomspsykiatri i brottsförebyggande syfte",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB418.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB3112",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "112",
+      "datum": "2026-01-01",
+      "titel": "Verktyg för skydd av EU-medel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01SfU17",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU17",
+      "datum": "2026-03-12",
+      "titel": "Ekonomisk familjepolitik",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HCB47",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "7",
+      "datum": "2024-05-13",
+      "titel": "Avskildhet vid dygnsvilan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB47.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01JuU11",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU11",
+      "datum": "2026-03-26",
+      "titel": "Straffrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB330",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2024-05-08",
+      "titel": "En statlig ordning med brottsförebyggande åtgärder för barn och unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB330.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB429",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "29",
+      "datum": "2023-10-02",
+      "titel": "2018 års ändringar i fördraget om internationell järnvägstrafik",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB429.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3115",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "115",
+      "datum": "2025-12-10",
+      "titel": "Kompletterande bestämmelser till EU:s cyberresiliensförordning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC0389d2",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "89",
+      "datum": "2025-01-28",
+      "titel": "En förebyggande socialtjänstlag - för ökade rättigheter, skyldigheter och möjligheter - del 2",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0389d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB372",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "72",
+      "datum": "2025-06-13",
+      "titel": "Verktyg för en mer likvärdig resursfördelning till skolan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01JuU41",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU41",
+      "datum": "2026-08-12",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3107",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "107",
+      "datum": "2025-11-03",
+      "titel": "Sveriges nationella klimatmål - uppdaterat etappmål till 2030 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3107.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3111",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "111",
+      "datum": "2025-11-25",
+      "titel": "Rättssäkerhetens pris",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3111.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03246",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "246",
+      "datum": "2026-04-16",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03246.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB327",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "27",
+      "datum": "2025-03-04",
+      "titel": "En socionomutbildning i tiden ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB327.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB323",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "23",
+      "datum": "2025-03-19",
+      "titel": "Ersättningsregler med brottsoffret i fokus",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB323.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

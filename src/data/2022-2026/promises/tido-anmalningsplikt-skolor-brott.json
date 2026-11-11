@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2024:17 (Skolor mot brott); Prop. 2024/25:160 (Skolor mot brott). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i februari 2023 en utredning i uppdrag att föreslå anmälningsplikt och ett lagstadgat brottsförebyggande ansvar för skolor. Utredningen föreslog detta i mars 2024, och riksdagen antog i maj 2025 ett nytt skollagskapitel och en skyldighet för rektor att anmäla misstänkta brott. Skyldigheten gäller främst elevers brott i skolverksamheten och har undantag, så den täcker inte alla brott på eller vid skolområdet.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,6 +33,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB122",
+      "designation": "Dir. 2023:22",
+      "title": "Tilläggsdirektiv till utredningen om att säkerheten i skolan ska förbättras (U 2022:04)",
+      "date": "2023-02-09",
+      "url": "https://data.riksdagen.se/dokument/HBB122.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HCB317",
@@ -51,6 +61,16 @@
       "date": "2025-04-16",
       "url": "https://data.riksdagen.se/dokument/HC03160.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01UbU21",
+      "designation": "Bet. 2024/25:UbU21",
+      "title": "Skolor mot brott",
+      "date": "2025-05-23",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU21.html",
+      "relevance": "full",
       "note": null
     }
   ]

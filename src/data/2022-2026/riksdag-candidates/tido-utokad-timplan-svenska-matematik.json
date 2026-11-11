@@ -19,7 +19,12 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -56,7 +61,8 @@
         "keyword:matematik",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03194",
@@ -81,7 +87,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03195.html",
       "found_by": ["keyword:timplan", "keyword:undervisningstid", "keyword:matematik"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.4
     },
     {
       "dok_id": "HB01UbU9",
@@ -105,8 +112,14 @@
       "titel": "Övergripande skolfrågor",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU5.html",
-      "found_by": ["keyword:utökad studietid", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:utökad studietid",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03198",
@@ -130,8 +143,13 @@
       "titel": "Tid för undervisningsuppdraget",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03196.html",
-      "found_by": ["keyword:undervisningstid", "keyword:matematik"],
-      "score": 2
+      "found_by": [
+        "keyword:undervisningstid",
+        "keyword:matematik",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01UbU10",
@@ -143,7 +161,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU10.html",
       "found_by": ["keyword:timplan", "committee:UbU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HDB344",
@@ -181,7 +200,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB39.html",
       "found_by": ["keyword:timplan", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HB01UbU5",
@@ -223,7 +243,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB413.html",
       "found_by": ["keyword:timplan"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.15
     },
     {
       "dok_id": "HC01UbU17",
@@ -289,6 +310,45 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB394",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "94",
+      "datum": "2024-12-20",
+      "titel": "Förstärkningsundervisning i skolan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

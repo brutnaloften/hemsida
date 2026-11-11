@@ -12,7 +12,13 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -170,6 +176,110 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB1102",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "102",
+      "datum": "2025-11-27",
+      "titel": "Tilläggsdirektiv till Utredningen om en likvärdig förskola av god kvalitet med obligatorisk språkförskola (U 2024:04)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB1102.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01UbU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU9",
+      "datum": "2025-04-23",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB337",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "37",
+      "datum": "2026-06-17",
+      "titel": "Förutsättningar för en likvärdig och språkutvecklande förskola",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB337.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD0367",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "67",
+      "datum": "2025-11-25",
+      "titel": "Riksrevisionens rapport om likvärdighet i förskolan – statens stöd, uppföljning och tillsyn",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01UbU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UbU5",
+      "datum": "2023-04-21",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HEB417",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "17",
+      "datum": "2026-09-03",
+      "titel": "Identifiering av barn i behov av stöd för att utveckla sina färdigheter i svenska språket ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB417.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB324",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "24",
+      "datum": "2023-05-31",
+      "titel": "Etablering för fler Jämställda möjligheter till integration ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB324.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

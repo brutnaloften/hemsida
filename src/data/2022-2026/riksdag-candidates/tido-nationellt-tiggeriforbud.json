@@ -21,7 +21,14 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20"
   ],
   "candidates": [
     {
@@ -73,7 +80,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03264.html",
       "found_by": ["keyword:tiggeriförbud", "keyword:tiggeri", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03103",
@@ -84,8 +92,14 @@
       "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HD03103.html",
-      "found_by": ["keyword:tiggeriförbud", "keyword:tiggeri", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:tiggeriförbud",
+        "keyword:tiggeri",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.98
     },
     {
       "dok_id": "HDB3119",
@@ -133,7 +147,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU32.html",
       "found_by": ["keyword:ordningslagen", "committee:JuU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.01
     },
     {
       "dok_id": "HD01JuU16",
@@ -175,7 +190,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03313.html",
       "found_by": ["keyword:tiggeri"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD01UbU22",
@@ -200,7 +216,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU12.html",
       "found_by": ["committee:JuU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01NU16",
@@ -238,7 +255,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03150.html",
       "found_by": ["keyword:tiggeri"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HDB394",
@@ -356,6 +374,110 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.98
+    },
+    {
+      "dok_id": "HDB333",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "33",
+      "datum": "2025-04-01",
+      "titel": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB333.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3112",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "112",
+      "datum": "2026-01-01",
+      "titel": "Verktyg för skydd av EU-medel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3113",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "113",
+      "datum": "2025-11-26",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3115",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "115",
+      "datum": "2025-12-10",
+      "titel": "Kompletterande bestämmelser till EU:s cyberresiliensförordning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.99
+    },
+    {
+      "dok_id": "HDB3107",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "107",
+      "datum": "2025-11-03",
+      "titel": "Sveriges nationella klimatmål - uppdaterat etappmål till 2030 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3107.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.99
+    },
+    {
+      "dok_id": "HDB3111",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "111",
+      "datum": "2025-11-25",
+      "titel": "Rättssäkerhetens pris",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3111.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.99
+    },
+    {
+      "dok_id": "HDB397d4",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "97",
+      "datum": "2025-09-25",
+      "titel": "Krishantering och ändrade rörelseregler för försäkringsföretag, del 4",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB397d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

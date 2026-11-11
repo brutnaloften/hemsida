@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2023/24:24 (Sänkt skatt på bensin och diesel och sänkt skatt på jordbruksdiesel). Dokumentet behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2023/24:MJU5 (Sänkning av reduktionsplikten för bensin och diesel), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen föreslog i oktober 2023 lägre reduktionsplikt för bensin och diesel, och riksdagen beslutade det i november 2023 för att hålla nere priserna. I oktober 2024 föreslog regeringen sänkt skatt på bensin och diesel för 2025 och 2026. Riksdagen beslutade i juni 2026 om en tillfällig skattesänkning på 2,40 kr per liter 1 juli–30 november 2026.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -35,11 +35,11 @@
   "evidence": [
     {
       "kind": "prop",
-      "dok_id": "HB0324",
-      "designation": "Prop. 2023/24:24",
-      "title": "Sänkt skatt på bensin och diesel och sänkt skatt på jordbruksdiesel",
-      "date": "2023-10-19",
-      "url": "https://data.riksdagen.se/dokument/HB0324.html",
+      "dok_id": "HB0328",
+      "designation": "Prop. 2023/24:28",
+      "title": "Sänkning av reduktionsplikten för bensin och diesel",
+      "date": "2023-10-17",
+      "url": "https://data.riksdagen.se/dokument/HB0328.html",
       "relevance": "full",
       "note": null
     },
@@ -51,6 +51,36 @@
       "date": "2023-11-23",
       "url": "https://data.riksdagen.se/dokument/HB01MJU5.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0330",
+      "designation": "Prop. 2024/25:30",
+      "title": "Sänkt skatt på bensin och diesel",
+      "date": "2024-10-17",
+      "url": "https://data.riksdagen.se/dokument/HC0330.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03275",
+      "designation": "Prop. 2025/26:275",
+      "title": "Extra ändringsbudget för 2026 – Stöd till Ukraina samt stöd till hushåll och andra åtgärder med anledning av kriget i Mellanöstern",
+      "date": "2026-05-28",
+      "url": "https://data.riksdagen.se/dokument/HD03275.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01FiU47",
+      "designation": "Bet. 2025/26:FiU47",
+      "title": "Extra ändringsbudget för 2026 – Stöd till Ukraina samt stöd till hushåll och andra åtgärder med anledning av kriget i Mellanöstern",
+      "date": "2026-06-16",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU47.html",
+      "relevance": "full",
       "note": null
     }
   ]

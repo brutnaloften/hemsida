@@ -19,7 +19,12 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -63,7 +68,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0359.html",
       "found_by": ["keyword:fossilfria energikällor", "keyword:generationsmålet", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HB031d21",
@@ -74,8 +80,14 @@
       "titel": "Budgetpropositionen för 2024 - Utgiftsområde 20 Klimat, miljö och natur",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HB031d21.html",
-      "found_by": ["keyword:fossilfria energikällor", "keyword:God bebyggd miljö", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:fossilfria energikällor",
+        "keyword:God bebyggd miljö",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD03122",
@@ -87,7 +99,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03122.html",
       "found_by": ["keyword:Energimyndigheten", "keyword:instruktion"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HDB321",
@@ -99,7 +112,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB321.html",
       "found_by": ["keyword:God bebyggd miljö", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.08
     },
     {
       "dok_id": "HCB382",
@@ -111,7 +125,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB382.html",
       "found_by": ["keyword:God bebyggd miljö", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HB01MJU15",
@@ -123,7 +138,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
       "found_by": ["keyword:fossilfria energikällor", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA01NU17",
@@ -135,7 +151,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
       "found_by": ["keyword:fossilfria energikällor", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA031d21",
@@ -160,7 +177,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03288.html",
       "found_by": ["keyword:instruktion"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03286",
@@ -211,7 +229,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HD01MJU22.html",
       "found_by": ["keyword:Energimyndigheten"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HB03105",
@@ -251,6 +270,19 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.75
+    },
+    {
+      "dok_id": "HA031d22",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

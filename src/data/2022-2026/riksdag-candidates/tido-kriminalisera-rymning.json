@@ -19,7 +19,13 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -36,9 +42,11 @@
         "keyword:anstalt",
         "keyword:häkte",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03181",
@@ -70,7 +78,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU35.html",
       "found_by": ["keyword:anstalt", "all-keywords", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD01JuU30",
@@ -82,7 +91,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
       "found_by": ["keyword:anstalt", "all-keywords", "committee:JuU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01JuU15",
@@ -190,7 +200,8 @@
       "organ": "S-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1119.html",
       "found_by": ["keyword:Kriminalvården"],
-      "score": 1
+      "score": 1,
+      "relevance": 0
     },
     {
       "dok_id": "HD03302",
@@ -202,7 +213,8 @@
       "organ": "Försvarsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03302.html",
       "found_by": ["keyword:rymning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01JuU42",
@@ -227,7 +239,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU29.html",
       "found_by": ["keyword:anstalt"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HA0375",
@@ -291,6 +304,71 @@
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HB0375.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB348d2",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "48",
+      "datum": "2024-07-05",
+      "titel": "Ett ändamålsenligt samhällsskydd Volym 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB348d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 1
+    },
+    {
+      "dok_id": "HCB47",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "7",
+      "datum": "2024-05-13",
+      "titel": "Avskildhet vid dygnsvilan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB47.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HDB311",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "11",
+      "datum": "2025-01-28",
+      "titel": "Straffbarhetsåldern",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB311.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
       "score": 1,
       "relevance": 0.9
     }

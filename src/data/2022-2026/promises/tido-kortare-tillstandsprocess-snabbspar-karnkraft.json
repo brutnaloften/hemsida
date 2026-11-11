@@ -31,10 +31,38 @@
     "tillståndsprövning"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i januari 2025 en effektivare tillståndsprocess för ny kärnkraft och betydligt lägre, differentierade ansökningsavgifter hos Strålsäkerhetsmyndigheten. En ny utredning i oktober 2025 handlar mest om avfallssystemet och förtydligar vad prövningen av en ny reaktor ska omfatta. Regeln om en myndighet som part, snabbspåret, typgodkännandet och mer medel till domstolarna saknas.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB37",
+      "designation": "SOU 2025:7",
+      "title": "Ny kärnkraft i Sverige",
+      "date": "2025-01-16",
+      "url": "https://data.riksdagen.se/dokument/HDB37.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3104",
+      "designation": "SOU 2025:104",
+      "title": "Ny kärnkraft i Sverige ",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HDB3104.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

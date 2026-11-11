@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2022:64 (En ny ordning för asylsökandes boende); Ds 2024:23 (Inhibition av verkställigheten ). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SfU35 (En ny mottagandelag), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Flera utredningar föreslog 2022 och 2024 att asylsökande ska få arbeta utan arbetstillstånd först efter en viss tid eller under vissa villkor. I november 2025 kom även ett förslag om begränsad arbetsmarknadsåtkomst i samband med EU:s asylpakt. Riksdagen biföll i maj 2026 regeringens förslag att undantaget från arbetstillstånd tidigast gäller efter sex månader. Ingen författning är dock kopplad till löftet.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -44,12 +44,22 @@
       "note": null
     },
     {
+      "kind": "sou",
+      "dok_id": "HCB368",
+      "designation": "SOU 2024:68",
+      "title": "Mottagandelagen ",
+      "date": "2024-10-15",
+      "url": "https://data.riksdagen.se/dokument/HCB368.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "ds",
-      "dok_id": "HCB423",
-      "designation": "Ds 2024:23",
-      "title": "Inhibition av verkställigheten ",
-      "date": "2024-11-04",
-      "url": "https://data.riksdagen.se/dokument/HCB423.html",
+      "dok_id": "HDB430",
+      "designation": "Ds 2025:30",
+      "title": "Migrations- och asylpakten ",
+      "date": "2025-11-25",
+      "url": "https://data.riksdagen.se/dokument/HDB430.html",
       "relevance": "partial",
       "note": null
     },

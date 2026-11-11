@@ -35,8 +35,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:137 (Anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten); Dir. 2024:115 (Tilläggsdirektiv till Utredningen om anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten (Ju 2023:18)); Prop. 2025/26:301 (Skärpta villkor för anhöriginvandring). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SfU30 (Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i oktober 2023 en utredare i uppdrag att anpassa asylreglerna till EU:s miniminivå, och utredningar lades fram 2024 och 2025. Regeringen föreslog i april 2026 bland annat att permanenta uppehållstillstånd tas bort och att rätten till offentligt biträde begränsas. Riksdagen biföll förslaget i juni 2026. Skärpta bevisregler och begränsningar av anhöriginvandring saknas.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -57,12 +57,32 @@
       "note": null
     },
     {
-      "kind": "dir",
-      "dok_id": "HCB1115",
-      "designation": "Dir. 2024:115",
-      "title": "Tilläggsdirektiv till Utredningen om anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten (Ju 2023:18)",
-      "date": "2024-11-21",
-      "url": "https://data.riksdagen.se/dokument/HCB1115.html",
+      "kind": "sou",
+      "dok_id": "HCB368",
+      "designation": "SOU 2024:68",
+      "title": "Mottagandelagen ",
+      "date": "2024-10-15",
+      "url": "https://data.riksdagen.se/dokument/HCB368.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB331",
+      "designation": "SOU 2025:31",
+      "title": "Utmönstring av permanent uppehållstillstånd och vissa anpassningar till miniminivån enligt EU:s migrations- och asylpakt",
+      "date": "2025-04-09",
+      "url": "https://data.riksdagen.se/dokument/HDB331.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03262",
+      "designation": "Prop. 2025/26:262",
+      "title": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "relevance": "partial",
       "note": null
     },
@@ -73,16 +93,6 @@
       "title": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
       "date": "2026-06-04",
       "url": "https://data.riksdagen.se/dokument/HD01SfU30.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "prop",
-      "dok_id": "HD03301",
-      "designation": "Prop. 2025/26:301",
-      "title": "Skärpta villkor för anhöriginvandring",
-      "date": "2026-06-25",
-      "url": "https://data.riksdagen.se/dokument/HD03301.html",
       "relevance": "partial",
       "note": null
     }

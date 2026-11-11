@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:19 (Stärkt konkurrenskraft för livsmedelsproducenter och ett starkt djurskydd ); Dir. 2024:60 (Tilläggsdirektiv till Utredningen om stärkt konkurrenskraft för livsmedelsproducenter och ett starkt djurskydd (LI 2023:01)). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning presenterade i augusti 2024 en översyn av hur svensk animalieproduktion kan få bättre konkurrenskraft med bibehållna höga krav på djurhållning. Den behandlar också EU:s jordbruksstöd och regler. Utredningen täcker hela löftet, men förslagen har inte beslutats och ingen författning är kopplad till dem.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,22 +40,12 @@
   },
   "evidence": [
     {
-      "kind": "dir",
-      "dok_id": "HBB119",
-      "designation": "Dir. 2023:19",
-      "title": "Stärkt konkurrenskraft för livsmedelsproducenter och ett starkt djurskydd ",
-      "date": "2023-02-09",
-      "url": "https://data.riksdagen.se/dokument/HBB119.html",
-      "relevance": "full",
-      "note": null
-    },
-    {
-      "kind": "dir",
-      "dok_id": "HCB160",
-      "designation": "Dir. 2024:60",
-      "title": "Tilläggsdirektiv till Utredningen om stärkt konkurrenskraft för livsmedelsproducenter och ett starkt djurskydd (LI 2023:01)",
-      "date": "2024-06-20",
-      "url": "https://data.riksdagen.se/dokument/HCB160.html",
+      "kind": "sou",
+      "dok_id": "HCB356",
+      "designation": "SOU 2024:56",
+      "title": "Animalieproduktion med hög konkurrenskraft och gott djurskydd ",
+      "date": "2024-08-29",
+      "url": "https://data.riksdagen.se/dokument/HCB356.html",
       "relevance": "full",
       "note": null
     }

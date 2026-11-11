@@ -19,7 +19,14 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -85,8 +92,13 @@
       "titel": "Nya lagar om elsystemet",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU25.html",
-      "found_by": ["keyword:elmarknadsdirektivet", "keyword:ellagen"],
-      "score": 2
+      "found_by": [
+        "keyword:elmarknadsdirektivet",
+        "keyword:ellagen",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01NU17",
@@ -97,8 +109,9 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU17.html",
-      "found_by": ["all-keywords", "committee:NU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:NU", "score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD0326",
@@ -174,7 +187,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA03136.html",
       "found_by": ["keyword:elmarknadsdirektivet", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA0359",
@@ -185,8 +199,13 @@
       "titel": "Genomförande av elmarknadsdirektivet när det gäller leverans av el och aggregeringstjänster",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA0359.html",
-      "found_by": ["keyword:elmarknadsdirektivet", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:elmarknadsdirektivet",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03288",
@@ -198,7 +217,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03288.html",
       "found_by": ["keyword:implementering"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01TU20",
@@ -236,7 +256,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU19.html",
       "found_by": ["keyword:ansvarsfördelning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01NU8",
@@ -339,6 +360,84 @@
       "organ": "Statsrådsberedningen",
       "url": "https://data.riksdagen.se/dokument/HB0375.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03115",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "115",
+      "datum": "2026-03-12",
+      "titel": "Verksamheten i Europeiska unionen under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03115",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "115",
+      "datum": "2024-03-07",
+      "titel": "Verksamheten i Europeiska unionen under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01NU10",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU10",
+      "datum": "2025-11-20",
+      "titel": "Regelverket för framtidens el- och gasnät",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB112",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "12",
+      "datum": "2024-01-25",
+      "titel": "Ett elsystem med tydligt systemansvar, hög leveranssäkerhet och långsiktiga planeringsförutsättningar",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA03115",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "115",
+      "datum": "2023-03-16",
+      "titel": "Verksamheten i Europeiska unionen under 2022",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HA03115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
       "score": 1,
       "relevance": 0.6
     }

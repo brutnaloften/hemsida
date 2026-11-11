@@ -22,7 +22,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -38,9 +47,11 @@
         "keyword:föräldrastödsprogram",
         "keyword:föräldrastöd",
         "all-keywords",
-        "committee:SoU"
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01SoU19",
@@ -51,8 +62,14 @@
       "titel": "Barn och unga inom socialtjänsten",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU19.html",
-      "found_by": ["keyword:föräldrastödsprogram", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:föräldrastödsprogram",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01SoU23",
@@ -64,7 +81,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU23.html",
       "found_by": ["keyword:förebyggande", "all-keywords", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.2
     },
     {
       "dok_id": "HA01SoU18",
@@ -75,8 +93,14 @@
       "titel": "Socialtjänstens ansvar för våldsutsatta m.m.",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU18.html",
-      "found_by": ["keyword:föräldrastödsprogram", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:föräldrastödsprogram",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03295",
@@ -105,7 +129,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB37.html",
       "found_by": ["keyword:föräldrastödsprogram", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD031d11",
@@ -198,7 +223,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU26.html",
       "found_by": ["keyword:föräldrastödsprogram", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0
     },
     {
       "dok_id": "HD01SoU38",
@@ -223,7 +249,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03288.html",
       "found_by": ["keyword:kommuner"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01JuU47",
@@ -235,7 +262,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU47.html",
       "found_by": ["keyword:föräldrastödsprogram"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HD01SoU12",
@@ -650,6 +678,292 @@
       "organ": "Arbetsmarknadsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03245.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03157",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "157",
+      "datum": "2025-04-15",
+      "titel": "Ett fritidskort för barn och unga – en aktiv och meningsfull fritid i gemenskap med andra",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03157.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HB01SoU13",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU13",
+      "datum": "2024-06-05",
+      "titel": "Stöd till personer med funktionsnedsättning",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01SoU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU1",
+      "datum": "2025-12-03",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB416",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "16",
+      "datum": "2024-07-05",
+      "titel": "Ett fritidskort för barn och unga ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB416.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HB031d18",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HAB367",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "67",
+      "datum": "2022-12-12",
+      "titel": "Vägar till ett tryggare samhälle ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB01SoU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU15",
+      "datum": "2024-03-13",
+      "titel": "Folkhälsa",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01SoU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU20",
+      "datum": "2025-03-12",
+      "titel": "Socialtjänstens ansvar för våldsutsatta m.m.",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC0366",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "66",
+      "datum": "2024-12-10",
+      "titel": "Sveriges genomförande av Agenda 2030",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0366.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB358",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "58",
+      "datum": "2025-06-02",
+      "titel": "En stärkt hästnäring",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB358.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01KrU8",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KrU8",
+      "datum": "2025-04-17",
+      "titel": "Civila samhället, trossamfund och folkbildning",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HC01KrU8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01KrU6",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KrU6",
+      "datum": "2024-04-15",
+      "titel": "Idrott och friluftsliv",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HB01KrU6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB329",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "29",
+      "datum": "2023-11-08",
+      "titel": "Varje rörelse räknas - hur skapar vi ett samhälle som främjar fysisk aktivitet? ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB329.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01KrU6",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KrU6",
+      "datum": "2026-03-19",
+      "titel": "Idrott, friluftsliv och spel",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HD01KrU6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03158",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "158",
+      "datum": "2026-03-17",
+      "titel": "Hela Sverige ska fungera – politik för starkare landsbygder",
+      "organ": "Landsbygds- och infrastrukturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03158.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3111",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "111",
+      "datum": "2025-11-25",
+      "titel": "Rättssäkerhetens pris",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3111.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01SoU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HD031d19",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d19.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01KrU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KrU11",
+      "datum": "2023-04-25",
+      "titel": "Idrott- och friluftslivsfrågor",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HA01KrU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03101",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "101",
+      "datum": "2026-04-13",
+      "titel": "Årsredovisning för staten 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
       "score": 1,
       "relevance": 0.6
     }

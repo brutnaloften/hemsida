@@ -22,7 +22,17 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -38,9 +48,11 @@
         "keyword:miniminivå",
         "keyword:EU-rätten",
         "keyword:mottagandevillkor",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01SfU30",
@@ -69,8 +81,14 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU18.html",
-      "found_by": ["keyword:mottagandevillkor", "all-keywords", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:mottagandevillkor",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HC01SfU4",
@@ -107,8 +125,14 @@
       "titel": "Mottagandelagen ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB368.html",
-      "found_by": ["keyword:asylsökandes rättigheter", "keyword:mottagandevillkor", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:asylsökandes rättigheter",
+        "keyword:mottagandevillkor",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01SfU37",
@@ -136,8 +160,13 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU16.html",
-      "found_by": ["keyword:mottagandevillkor", "committee:SfU"],
-      "score": 2
+      "found_by": [
+        "keyword:mottagandevillkor",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03159",
@@ -149,7 +178,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03159.html",
       "found_by": ["keyword:miniminivå", "keyword:bevisbörda"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SfU4",
@@ -177,8 +207,13 @@
       "titel": "Migrations- och asylpakten ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB430.html",
-      "found_by": ["keyword:mottagandevillkor", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:mottagandevillkor",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB399",
@@ -206,8 +241,13 @@
       "titel": "Utmönstring av permanent uppehållstillstånd och vissa anpassningar till miniminivån enligt EU:s migrations- och asylpakt",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB331.html",
-      "found_by": ["keyword:asylsökandes rättigheter", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:asylsökandes rättigheter",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HCB370",
@@ -219,7 +259,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB370.html",
       "found_by": ["keyword:mottagandevillkor", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HBB1137",
@@ -562,6 +603,409 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d10",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB193",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "93",
+      "datum": "2023-06-22",
+      "titel": "Tilläggsdirektiv till Utredningen om ett ordnat initialt mottagande av asylsökande (Ju 2021:12)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB193.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB333",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "33",
+      "datum": "2025-04-01",
+      "titel": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB333.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HD03264",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "264",
+      "datum": "2026-04-30",
+      "titel": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03264.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03229",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "229",
+      "datum": "2026-03-31",
+      "titel": "En ny mottagandelag",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03229.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HB01FiU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU1",
+      "datum": "2023-11-24",
+      "titel": "Statens budget 2024 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB316",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "16",
+      "datum": "2025-02-18",
+      "titel": "Ett nytt regelverk för uppsikt och förvar",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB316.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB358",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "58",
+      "datum": "2025-06-02",
+      "titel": "En stärkt hästnäring",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB358.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3112",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "112",
+      "datum": "2026-01-01",
+      "titel": "Verktyg för skydd av EU-medel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB397d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "97",
+      "datum": "2025-09-25",
+      "titel": "Krishantering och ändrade rörelseregler för försäkringsföretag, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB397d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB41",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "1",
+      "datum": "2025-01-29",
+      "titel": "Hyra anstaltsplatser utomlands ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB41.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB3113",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "113",
+      "datum": "2025-11-26",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB430d2",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "30",
+      "datum": "2025-11-25",
+      "titel": "Migrations- och asylpakten, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB430d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03145",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "145",
+      "datum": "2026-02-19",
+      "titel": "Inhibition av verkställigheten – en ny ordning för vissa utlänningar vid tillfälliga verkställighetshinder",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03145.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01SfU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SfU14",
+      "datum": "2024-05-10",
+      "titel": "Migrationsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03263",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "263",
+      "datum": "2026-04-30",
+      "titel": "Stärkt återvändandeverksamhet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03263.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB372",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "72",
+      "datum": "2025-06-13",
+      "titel": "Verktyg för en mer likvärdig resursfördelning till skolan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01AU6",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU6",
+      "datum": "2023-02-17",
+      "titel": "Integration",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU6.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3107",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "107",
+      "datum": "2025-11-03",
+      "titel": "Sveriges nationella klimatmål - uppdaterat etappmål till 2030 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3107.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB3111",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "111",
+      "datum": "2025-11-25",
+      "titel": "Rättssäkerhetens pris",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3111.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB168",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "68",
+      "datum": "2024-07-11",
+      "titel": "Skärpta villkor för anhöriginvandring",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB168.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB349",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "49",
+      "datum": "2025-04-23",
+      "titel": "Säkerhetspolisens behandling av personuppgifter",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB349.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB373",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "73",
+      "datum": "2024-11-07",
+      "titel": "Juridiska personers förvärv av lantbruksegendom genom testamente",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB373.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01SfU5",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SfU5",
+      "datum": "2023-10-30",
+      "titel": "Vissa skärpta villkor för anhöriginvandring och begränsade möjligheter till uppehållstillstånd av humanitära skäl",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

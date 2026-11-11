@@ -21,7 +21,14 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -38,9 +45,11 @@
         "keyword:språkscreening",
         "keyword:språkförskola",
         "keyword:nyanlända barn",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.9
     },
     {
       "dok_id": "HEB417",
@@ -55,9 +64,11 @@
         "keyword:BVC",
         "keyword:språkscreening",
         "keyword:språkförskola",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01AU14",
@@ -95,7 +106,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU19.html",
       "found_by": ["keyword:BVC", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD01UbU9",
@@ -107,7 +119,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU9.html",
       "found_by": ["keyword:språkscreening", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD0367",
@@ -119,7 +132,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0367.html",
       "found_by": ["keyword:språkförskola", "keyword:nyanlända barn"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HC01UbU11",
@@ -170,7 +184,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HB01AU1.html",
       "found_by": ["keyword:språkscreening", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HA01SoU17",
@@ -182,7 +197,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
       "found_by": ["keyword:BVC", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HA01SoU1",
@@ -193,8 +209,9 @@
       "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
-      "found_by": ["keyword:BVC", "committee:SoU"],
-      "score": 2
+      "found_by": ["keyword:BVC", "committee:SoU", "score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HEB418",
@@ -206,7 +223,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB418.html",
       "found_by": ["keyword:BVC"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD03215",
@@ -402,6 +420,58 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB1102",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "102",
+      "datum": "2025-11-27",
+      "titel": "Tilläggsdirektiv till Utredningen om en likvärdig förskola av god kvalitet med obligatorisk språkförskola (U 2024:04)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB1102.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB155",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "55",
+      "datum": "2026-06-25",
+      "titel": "Stärkt ställning för det svenska språket",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB155.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01UbU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU9",
+      "datum": "2025-04-23",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD031d15",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

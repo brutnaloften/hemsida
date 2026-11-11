@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:123 (Skärpta villkor för friskolesektorn - ytterligare förslag); Prop. 2025/26:292 (Skärpta villkor för friskolesektorn). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i april 2025 ett femårigt förbud mot vinstutdelning när en friskola startas eller byter ägare. Regeringen lade i juni 2026 fram ett förslag om ett förbud mot värdeöverföringar vid nyetablering och ägarbyte, och riksdagen biföll det i augusti 2026. Dokumenten täcker hela löftet, men ingen författning är kopplad till det.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -35,12 +35,12 @@
   "evidence": [
     {
       "kind": "sou",
-      "dok_id": "HDB3123",
-      "designation": "SOU 2025:123",
-      "title": "Skärpta villkor för friskolesektorn - ytterligare förslag",
-      "date": "2026-01-01",
-      "url": "https://data.riksdagen.se/dokument/HDB3123.html",
-      "relevance": "partial",
+      "dok_id": "HDB337",
+      "designation": "SOU 2025:37",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2025-04-08",
+      "url": "https://data.riksdagen.se/dokument/HDB337.html",
+      "relevance": "full",
       "note": null
     },
     {
@@ -50,6 +50,16 @@
       "title": "Skärpta villkor för friskolesektorn",
       "date": "2026-06-25",
       "url": "https://data.riksdagen.se/dokument/HD03292.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU30",
+      "designation": "Bet. 2025/26:UbU30",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU30.html",
       "relevance": "full",
       "note": null
     }

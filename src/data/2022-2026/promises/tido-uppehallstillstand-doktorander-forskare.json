@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2024:15 (Nya regler för arbetskraftsinvandring m.m.); Ds 2024:31 (Bättre migrationsrättsliga regler för forskare och studenter ). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i februari 2024 särskilda regler för forskare och doktorander, men tog inte upp tillstånd efter en viss tids anställning. I januari 2025 föreslog en promemoria att forskare och doktorander ska få permanent uppehållstillstånd efter tre år i stället för fyra. Regeringen lade i februari 2026 fram en proposition med detta, men något riksdagsbeslut framgår inte.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -56,6 +56,16 @@
       "title": "Bättre migrationsrättsliga regler för forskare och studenter ",
       "date": "2025-01-01",
       "url": "https://data.riksdagen.se/dokument/HCB431.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03146",
+      "designation": "Prop. 2025/26:146",
+      "title": "Bättre migrationsrättsliga regler för forskare och doktorander samt åtgärder för att motverka missbruk av uppehållstillstånd för studier",
+      "date": "2026-02-24",
+      "url": "https://data.riksdagen.se/dokument/HD03146.html",
       "relevance": "full",
       "note": null
     }

@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2024:7 (Tilläggsdirektiv till Skolsäkerhetsutredningen (U 2022:04)); SOU 2024:17 (Skolor mot brott); Prop. 2024/25:160 (Skolor mot brott). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Utredare föreslog 2023–2024 bland annat att skolor ska hindra obehöriga, att brottsligheten kartläggs på varje skola med Brå som sammanställare, och att sekretessen bryts för informationsutbyte mellan skola, socialtjänst och polis. Regeringen föreslog i april 2025 att rektorer ska förhindra obehörigt tillträde. Förslagen täcker stängda skolor, kartläggning och sekretess, men inget gäller akutskolor.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,12 +34,22 @@
   },
   "evidence": [
     {
+      "kind": "sou",
+      "dok_id": "HBB328",
+      "designation": "SOU 2023:28",
+      "title": "Samhället mot skolattacker ",
+      "date": "2023-06-16",
+      "url": "https://data.riksdagen.se/dokument/HBB328.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "dir",
-      "dok_id": "HCB17",
-      "designation": "Dir. 2024:7",
+      "dok_id": "HBB1120",
+      "designation": "Dir. 2023:120",
       "title": "Tilläggsdirektiv till Skolsäkerhetsutredningen (U 2022:04)",
-      "date": "2024-01-18",
-      "url": "https://data.riksdagen.se/dokument/HCB17.html",
+      "date": "2023-08-10",
+      "url": "https://data.riksdagen.se/dokument/HBB1120.html",
       "relevance": "partial",
       "note": null
     },
@@ -50,6 +60,16 @@
       "title": "Skolor mot brott",
       "date": "2024-03-07",
       "url": "https://data.riksdagen.se/dokument/HCB317.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB387",
+      "designation": "SOU 2024:87",
+      "title": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "date": "2024-12-18",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
       "relevance": "partial",
       "note": null
     },

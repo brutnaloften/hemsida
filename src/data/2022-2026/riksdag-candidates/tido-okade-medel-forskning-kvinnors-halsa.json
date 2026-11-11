@@ -19,7 +19,15 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -37,7 +45,8 @@
         "all-keywords",
         "committee:SoU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.4
     },
     {
       "dok_id": "HC01SoU16",
@@ -159,7 +168,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
       "found_by": ["keyword:kvinnosjukdomar", "all-keywords", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD01UbU13",
@@ -171,7 +181,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU13.html",
       "found_by": ["keyword:forskning", "keyword:kvinnosjukdomar"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01SoU1",
@@ -183,7 +194,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
       "found_by": ["keyword:kvinnors hälsa", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HC01UbU15",
@@ -194,8 +206,13 @@
       "titel": "Forskning och innovation för framtid, nyfikenhet och nytta",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU15.html",
-      "found_by": ["keyword:kvinnosjukdomar", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kvinnosjukdomar",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC01SfU20",
@@ -207,7 +224,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU20.html",
       "found_by": ["keyword:kvinnosjukdomar", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HC01SoU17",
@@ -346,6 +364,110 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HA031d14",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 13 Jämställdhet och nyanlända invandrares etablering",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC0360",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "60",
+      "datum": "2024-12-12",
+      "titel": "Forskning och innovation för framtid, nyfikenhet och nytta",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB361d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "61",
+      "datum": "2025-06-02",
+      "titel": "Sveriges internationella adoptionsverksamhet, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB361d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01SoU16",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU16",
+      "datum": "2024-06-05",
+      "titel": "Prioriteringar inom hälso- och sjukvården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB031d14",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

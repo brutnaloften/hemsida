@@ -19,7 +19,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -56,9 +65,11 @@
         "keyword:medborgarskap",
         "keyword:medborgarskapslagen",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD039",
@@ -75,7 +86,8 @@
         "keyword:medborgarskapslagen",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.4
     },
     {
       "dok_id": "HDB31",
@@ -111,7 +123,8 @@
         "all-keywords",
         "committee:SfU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.1
     },
     {
       "dok_id": "HA01SfU15",
@@ -157,8 +170,13 @@
       "titel": "Återkallelse av svenskt medborgarskap",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB321.html",
-      "found_by": ["keyword:medborgarskap", "keyword:medborgarskapslagen"],
-      "score": 2
+      "found_by": [
+        "keyword:medborgarskap",
+        "keyword:medborgarskapslagen",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD0378",
@@ -182,8 +200,9 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU14.html",
-      "found_by": ["all-keywords", "committee:SfU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SfU", "score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HBB1129",
@@ -194,8 +213,13 @@
       "titel": "Skärpta krav för att förvärva svenskt medborgarskap",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HBB1129.html",
-      "found_by": ["keyword:SOU 2021:2", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:SOU 2021:2",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HBB325",
@@ -206,8 +230,13 @@
       "titel": "Kunskapskrav för permanent uppehållstillstånd ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB325.html",
-      "found_by": ["keyword:SOU 2021:2", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:SOU 2021:2",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD01TU21",
@@ -219,7 +248,8 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HD01TU21.html",
       "found_by": ["keyword:medborgarskap"],
-      "score": 1
+      "score": 1,
+      "relevance": 0
     },
     {
       "dok_id": "HD01SfU30",
@@ -244,7 +274,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU23.html",
       "found_by": ["keyword:samhällskunskap"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HDB3117",
@@ -388,6 +419,240 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d10",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB358",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "58",
+      "datum": "2025-06-02",
+      "titel": "En stärkt hästnäring",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB358.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3115",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "115",
+      "datum": "2025-12-10",
+      "titel": "Kompletterande bestämmelser till EU:s cyberresiliensförordning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3113",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "113",
+      "datum": "2025-11-26",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB365",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "65",
+      "datum": "2025-05-28",
+      "titel": "En mer flexibel hyresmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB365.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03262",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "262",
+      "datum": "2026-04-30",
+      "titel": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03262.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB372",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "72",
+      "datum": "2025-06-13",
+      "titel": "Verktyg för en mer likvärdig resursfördelning till skolan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01SfU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU16",
+      "datum": "2026-04-09",
+      "titel": "Migrationsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB3107",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "107",
+      "datum": "2025-11-03",
+      "titel": "Sveriges nationella klimatmål - uppdaterat etappmål till 2030 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3107.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB349",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "49",
+      "datum": "2025-04-23",
+      "titel": "Säkerhetspolisens behandling av personuppgifter",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB349.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01KU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU20",
+      "datum": "2025-06-10",
+      "titel": "Granskningsbetänkande",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01SfU18",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SfU18",
+      "datum": "2025-04-14",
+      "titel": "Migrationsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

@@ -22,7 +22,17 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -35,7 +45,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03191.html",
       "found_by": ["keyword:anonymitet", "keyword:offentlighetsprincipen"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HDB390",
@@ -47,7 +58,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB390.html",
       "found_by": ["keyword:skyddade personuppgifter", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HC0389",
@@ -89,7 +101,8 @@
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HA01KU25.html",
       "found_by": ["keyword:offentlighetsprincipen", "committee:KU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HA0386",
@@ -100,8 +113,13 @@
       "titel": "Riksrevisionens rapport om åtgärder med anledning av trakasserier, hot och våld vid statliga myndigheter",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA0386.html",
-      "found_by": ["keyword:hot och våld", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:hot och våld",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HEB356",
@@ -139,7 +157,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB334.html",
       "found_by": ["all-keywords"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01KU20",
@@ -190,7 +209,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU28.html",
       "found_by": ["keyword:poliser"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01UbU20",
@@ -202,7 +222,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU20.html",
       "found_by": ["keyword:offentlighetsprincipen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03258",
@@ -214,7 +235,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03258.html",
       "found_by": ["keyword:offentlighetsprincipen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HB01JuU16",
@@ -527,6 +549,305 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03237",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "237",
+      "datum": "2026-04-14",
+      "titel": "En betald polisutbildning",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03237.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB01SoU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU17",
+      "datum": "2024-06-04",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01KU24",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU24",
+      "datum": "2023-04-21",
+      "titel": "Offentlig förvaltning",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU24.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB116",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "16",
+      "datum": "2023-02-02",
+      "titel": "Tilläggsdirektiv till Utredningen om åtgärder för att minska offentliganställdas utsatthet (Ju 2022:02)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB116.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB425",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "25",
+      "datum": "2025-10-21",
+      "titel": "En betald polisutbildning ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB425.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB387",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "87",
+      "datum": "2025-07-28",
+      "titel": "Straffrättsliga åtgärder mot korruption och tjänstefel",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01JuU28",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU28",
+      "datum": "2024-04-23",
+      "titel": "Stärkt skydd för vissa polisanställda",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU28.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD03274",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "274",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03274.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC01KU7",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU7",
+      "datum": "2025-01-16",
+      "titel": "Offentlighet, sekretess och integritet",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01SkU12",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU12",
+      "datum": "2025-03-27",
+      "titel": "Skatteförfarande, folkbokföring och tull",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HCB382",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "82",
+      "datum": "2024-12-05",
+      "titel": "Ökad va-beredskap ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC03186",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "186",
+      "datum": "2025-06-10",
+      "titel": "Polisens användning av skjutvapen",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03186.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01JuU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU11",
+      "datum": "2023-03-09",
+      "titel": "Straffrättsliga frågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d5",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB360",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "60",
+      "datum": "2024-08-29",
+      "titel": "Stärkt stöd till anhöriga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HCB376",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "76",
+      "datum": "2024-11-18",
+      "titel": "Från överskottsmål till balansmål",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB376.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB327",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "27",
+      "datum": "2025-03-04",
+      "titel": "En socionomutbildning i tiden ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB327.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01TU10",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "TU10",
+      "datum": "2023-05-12",
+      "titel": "Vägtrafik- och fordonsfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HA01TU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB323",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "23",
+      "datum": "2025-03-19",
+      "titel": "Ersättningsregler med brottsoffret i fokus",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB323.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

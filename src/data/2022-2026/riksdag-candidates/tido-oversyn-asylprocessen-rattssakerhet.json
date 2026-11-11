@@ -20,7 +20,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -32,8 +41,14 @@
       "titel": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
-      "found_by": ["keyword:asylprocessen", "keyword:offentliga biträden", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:asylprocessen",
+        "keyword:offentliga biträden",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.75
     },
     {
       "dok_id": "HB01SfU14",
@@ -44,8 +59,14 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU14.html",
-      "found_by": ["keyword:asylprocessen", "all-keywords", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:asylprocessen",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA01SfU15",
@@ -92,8 +113,13 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU16.html",
-      "found_by": ["keyword:asylprocessen", "committee:SfU"],
-      "score": 2
+      "found_by": [
+        "keyword:asylprocessen",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01JuU6",
@@ -138,8 +164,13 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU18.html",
-      "found_by": ["keyword:asylprocessen", "committee:SfU"],
-      "score": 2
+      "found_by": [
+        "keyword:asylprocessen",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HBB340",
@@ -180,8 +211,9 @@
       "titel": "Nationell samordnare för frågor om religiös konversion i asylprocessen",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1100.html",
-      "found_by": ["keyword:asylprocessen"],
-      "score": 1
+      "found_by": ["keyword:asylprocessen", "score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD03294",
@@ -219,7 +251,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03288.html",
       "found_by": ["keyword:tolkar"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03284",
@@ -231,7 +264,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03284.html",
       "found_by": ["keyword:tolkar"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HBB414",
@@ -336,6 +370,136 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB331",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "31",
+      "datum": "2025-04-09",
+      "titel": "Utmönstring av permanent uppehållstillstånd och vissa anpassningar till miniminivån enligt EU:s migrations- och asylpakt",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB331.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD031d10",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01KU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KU11",
+      "datum": "2024-05-03",
+      "titel": "Justitieombudsmännens ämbetsberättelse",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HB01KU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB430d2",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "30",
+      "datum": "2025-11-25",
+      "titel": "Migrations- och asylpakten, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB430d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB430",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "30",
+      "datum": "2025-11-25",
+      "titel": "Migrations- och asylpakten ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB430.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03263",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "263",
+      "datum": "2026-04-30",
+      "titel": "Stärkt återvändandeverksamhet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03263.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

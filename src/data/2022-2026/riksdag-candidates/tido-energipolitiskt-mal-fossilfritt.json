@@ -20,7 +20,16 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -38,7 +47,8 @@
         "keyword:teknikneutralitet",
         "keyword:leveranssäkerhetsmål"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01NU13",
@@ -72,9 +82,11 @@
         "keyword:energipolitiskt mål",
         "keyword:leveranssäkerhetsmål",
         "all-keywords",
-        "committee:NU"
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HDB347",
@@ -116,8 +128,14 @@
       "titel": "Energipolitikens långsiktiga inriktning",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU14.html",
-      "found_by": ["keyword:leveranssäkerhetsmål", "all-keywords", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:leveranssäkerhetsmål",
+        "all-keywords",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA01NU17",
@@ -128,8 +146,14 @@
       "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
-      "found_by": ["keyword:energipolitiskt mål", "all-keywords", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:energipolitiskt mål",
+        "all-keywords",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01NU17",
@@ -141,7 +165,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU17.html",
       "found_by": ["keyword:leveranssäkerhetsmål", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD03148",
@@ -242,8 +267,13 @@
       "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0359.html",
-      "found_by": ["keyword:fossilfritt", "keyword:förnybart"],
-      "score": 2
+      "found_by": [
+        "keyword:fossilfritt",
+        "keyword:förnybart",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB0358",
@@ -348,6 +378,123 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01FiU20",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU20",
+      "datum": "2023-06-15",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB031d21",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01MJU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU15",
+      "datum": "2024-05-06",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB422",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "22",
+      "datum": "2025-09-24",
+      "titel": "Sweden's Tenth National Report under the Convention on Nuclear Safety",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB422.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA031d22",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB37",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "7",
+      "datum": "2025-01-16",
+      "titel": "Ny kärnkraft i Sverige",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB37.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HA01FiU21",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU21",
+      "datum": "2023-06-15",
+      "titel": "Vårändringsbudget för 2023",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HA01NU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU3",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01KU20d3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU20",
+      "datum": "2023-06-07",
+      "titel": "Granskningsbetänkande del 3",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU20d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }

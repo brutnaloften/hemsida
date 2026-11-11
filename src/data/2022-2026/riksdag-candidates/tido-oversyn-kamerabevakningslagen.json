@@ -21,7 +21,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -34,7 +43,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU28.html",
       "found_by": ["keyword:polisen", "keyword:tillstånd", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD01KU26",
@@ -64,7 +74,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03150.html",
       "found_by": ["keyword:kamerabevakningslagen", "keyword:polisen", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.45
     },
     {
       "dok_id": "HC01JuU27",
@@ -75,8 +86,14 @@
       "titel": "Kamerabevakning i brottsbekämpning och annan offentlig verksamhet – utökade möjligheter och ett enklare förfarande",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HC01JuU27.html",
-      "found_by": ["keyword:kamerabevakning", "keyword:kamerabevakningslagen", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:kamerabevakning",
+        "keyword:kamerabevakningslagen",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC0393",
@@ -87,8 +104,14 @@
       "titel": "Kamerabevakning i brottsbekämpning och annan offentlig verksamhet – utökade möjligheter och ett enklare förfarande",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0393.html",
-      "found_by": ["keyword:kamerabevakning", "keyword:kamerabevakningslagen", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:kamerabevakning",
+        "keyword:kamerabevakningslagen",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03254",
@@ -99,8 +122,13 @@
       "titel": "Förbättrade förutsättningar för operativt militärt samarbete",
       "organ": "Försvarsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03254.html",
-      "found_by": ["keyword:kamerabevakning", "keyword:kamerabevakningslagen"],
-      "score": 2
+      "found_by": [
+        "keyword:kamerabevakning",
+        "keyword:kamerabevakningslagen",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD01JuU16",
@@ -125,7 +153,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0327.html",
       "found_by": ["keyword:kamerabevakningslagen", "keyword:tillstånd"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.03
     },
     {
       "dok_id": "HCB411",
@@ -136,8 +165,13 @@
       "titel": "Förbättrade möjligheter för polisen att använda kamerabevakning",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB411.html",
-      "found_by": ["keyword:kamerabevakning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kamerabevakning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HCB327",
@@ -148,8 +182,13 @@
       "titel": "Kamerabevakning i offentlig verksamhet - lättnader och utökade möjligheter",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB327.html",
-      "found_by": ["keyword:kamerabevakning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kamerabevakning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01JuU26",
@@ -195,7 +234,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU40.html",
       "found_by": ["keyword:tillstånd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HEB166",
@@ -206,8 +246,9 @@
       "titel": "Förbättrade möjligheter att bedriva kamerabevakning",
       "organ": "Ju-dep",
       "url": "https://data.riksdagen.se/dokument/HEB166.html",
-      "found_by": ["keyword:kamerabevakning"],
-      "score": 1
+      "found_by": ["keyword:kamerabevakning", "score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03288",
@@ -219,7 +260,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03288.html",
       "found_by": ["keyword:kommuner"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HB0367",
@@ -467,6 +509,253 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01JuU29",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU29",
+      "datum": "2024-04-25",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU29.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB339",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "39",
+      "datum": "2024-07-05",
+      "titel": "Skärpta regler om ungdomsövervakning  och straffreduktion för unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB339.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB1182",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "182",
+      "datum": "2023-12-21",
+      "titel": "Tilläggsdirektiv till 2023 års kamerabevakningsutredning (Ju 2023:01)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1182.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB382",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "82",
+      "datum": "2024-12-05",
+      "titel": "Ökad va-beredskap ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03274",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "274",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03274.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB178",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "78",
+      "datum": "2026-07-23",
+      "titel": "Ökad trygghet på gator och torg",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB178.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HCB368",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "68",
+      "datum": "2024-10-15",
+      "titel": "Mottagandelagen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB376",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "76",
+      "datum": "2024-11-18",
+      "titel": "Från överskottsmål till balansmål",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB376.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB373",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "73",
+      "datum": "2024-11-07",
+      "titel": "Juridiska personers förvärv av lantbruksegendom genom testamente",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB373.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB360",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "60",
+      "datum": "2024-08-29",
+      "titel": "Stärkt stöd till anhöriga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB349",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "49",
+      "datum": "2025-04-23",
+      "titel": "Säkerhetspolisens behandling av personuppgifter",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB349.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB140",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "40",
+      "datum": "2023-03-23",
+      "titel": "Lättnader för kamerabevakning i vissa verksamheter",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB140.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HCB394",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "94",
+      "datum": "2024-12-20",
+      "titel": "Förstärkningsundervisning i skolan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03208",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "208",
+      "datum": "2026-03-17",
+      "titel": "Integritet och ny teknik 2020–2024",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03208.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB47",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "7",
+      "datum": "2025-03-20",
+      "titel": "Polisens användning av AI för ansiktsigenkänning i realtid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB47.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

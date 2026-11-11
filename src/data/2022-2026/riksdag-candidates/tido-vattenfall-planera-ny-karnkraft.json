@@ -18,7 +18,13 @@
     "score:tido-corpus-claude-v1-shard-3-of-20",
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20"
   ],
   "candidates": [
     {
@@ -30,8 +36,14 @@
       "titel": "Rätt till ersättning vid avveckling av kärnkraft på grund av politiska beslut - Reaktorer som inte tagits i drift",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB347.html",
-      "found_by": ["keyword:ny kärnkraft", "keyword:Ringhals", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:ny kärnkraft",
+        "keyword:Ringhals",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.75
     },
     {
       "dok_id": "HD03171",
@@ -86,8 +98,14 @@
       "titel": "Ny kärnkraft i Sverige",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU5.html",
-      "found_by": ["keyword:ny kärnkraft", "keyword:Ringhals", "committee:NU"],
-      "score": 3
+      "found_by": [
+        "keyword:ny kärnkraft",
+        "keyword:Ringhals",
+        "committee:NU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HA01NU17",
@@ -99,7 +117,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
       "found_by": ["keyword:statsrådsgrupp", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HA01NU4",
@@ -111,7 +130,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU4.html",
       "found_by": ["keyword:statsrådsgrupp", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.1
     },
     {
       "dok_id": "HEB340",
@@ -123,7 +143,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB340.html",
       "found_by": ["keyword:Ringhals", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01NU24",
@@ -135,7 +156,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU24.html",
       "found_by": ["keyword:ny kärnkraft", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01NU3",
@@ -160,7 +182,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB37.html",
       "found_by": ["keyword:ny kärnkraft", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HB01NU4",
@@ -172,7 +195,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU4.html",
       "found_by": ["all-keywords", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03303",
@@ -184,7 +208,8 @@
       "organ": "Försvarsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03303.html",
       "found_by": ["keyword:Vattenfall"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03140",
@@ -195,8 +220,9 @@
       "titel": "2026 års redogörelse för företag med statligt ägande",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03140.html",
-      "found_by": ["keyword:Vattenfall"],
-      "score": 1
+      "found_by": ["keyword:Vattenfall", "score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.8
     },
     {
       "dok_id": "HEB341",
@@ -234,6 +260,71 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU21.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031d23",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d23.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB03140",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "140",
+      "datum": "2024-09-03",
+      "titel": "2024 års redogörelse för företag med statligt ägande",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03140.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
       "score": 1,
       "relevance": 0.6
     }

@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2024:55 (En översyn av 23 kap. brottsbalken); Prop. 2025/26:49 (Ett utvidgat straffansvar för försök, förberedelse och stämpling till brott). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att se över och modernisera reglerna om bland annat försök, förberedelse, stämpling, medhjälp och anstiftan. Utredningen lade fram förslag i september 2024. I november 2025 föreslog regeringen ett utvidgat straffansvar för försök, förberedelse och stämpling, men det saknas beslut, och förslag om medhjälp, anstiftan och underlåtenhet att avslöja brott finns inte i propositionen.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,6 +33,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB185",
+      "designation": "Dir. 2023:85",
+      "title": "En översyn av de osjälvständiga brottsformerna",
+      "date": "2023-06-15",
+      "url": "https://data.riksdagen.se/dokument/HBB185.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HCB355",

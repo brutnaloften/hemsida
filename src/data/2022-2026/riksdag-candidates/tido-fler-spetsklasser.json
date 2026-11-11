@@ -18,7 +18,12 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -36,9 +41,11 @@
         "keyword:riksrekryterande",
         "keyword:högpresterande elever",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.95
     },
     {
       "dok_id": "HC01UbU11",
@@ -74,9 +81,11 @@
         "keyword:spetsklasser",
         "keyword:riksrekryterande",
         "keyword:högpresterande elever",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB318",
@@ -109,9 +118,11 @@
         "keyword:spetsutbildning",
         "keyword:spetsklasser",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01UbU8",
@@ -126,9 +137,11 @@
         "keyword:spetsklasser",
         "keyword:högpresterande elever",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01UbU1",
@@ -143,9 +156,11 @@
         "keyword:spetsklasser",
         "keyword:högpresterande elever",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HEB413",
@@ -159,9 +174,11 @@
       "found_by": [
         "keyword:spetsutbildning",
         "keyword:riksrekryterande",
-        "keyword:försöksverksamhet"
+        "keyword:försöksverksamhet",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HB01UbU1",
@@ -203,8 +220,13 @@
       "titel": "Lärare och elever",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU9.html",
-      "found_by": ["keyword:spetsutbildning", "committee:UbU"],
-      "score": 2
+      "found_by": [
+        "keyword:spetsutbildning",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD031d18",
@@ -262,8 +284,13 @@
       "titel": "Budgetpropositionen för 2023",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA031.html",
-      "found_by": ["keyword:spetsklasser", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:spetsklasser",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA03100",
@@ -275,6 +302,19 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA03100.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-8-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01FiU20",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU20",
+      "datum": "2023-06-15",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
       "score": 1,
       "relevance": 0.6
     }

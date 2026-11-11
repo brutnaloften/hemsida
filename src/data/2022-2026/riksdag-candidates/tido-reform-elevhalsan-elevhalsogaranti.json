@@ -21,7 +21,17 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -38,9 +48,11 @@
         "keyword:elevhälsogaranti",
         "keyword:samverkansavtal",
         "keyword:vårduppdrag",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01UbU9",
@@ -55,9 +67,11 @@
         "keyword:elevhälsogaranti",
         "keyword:vårduppdrag",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01UbU11",
@@ -91,9 +105,11 @@
         "keyword:elevhälsa",
         "keyword:elevhälsogaranti",
         "keyword:vårduppdrag",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HDB344",
@@ -140,8 +156,14 @@
       "titel": "Lärare och elever",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU7.html",
-      "found_by": ["keyword:elevhälsogaranti", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:elevhälsogaranti",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HEB352d3",
@@ -153,7 +175,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB352d3.html",
       "found_by": ["keyword:vårduppdrag", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD03132",
@@ -195,7 +218,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03311.html",
       "found_by": ["keyword:samverkansavtal"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03292",
@@ -246,7 +270,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03195.html",
       "found_by": ["keyword:elevhälsa"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.35
     },
     {
       "dok_id": "HCB193",
@@ -468,6 +493,188 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.98
+    },
+    {
+      "dok_id": "HDB3124",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "124",
+      "datum": "2026-01-01",
+      "titel": "Åtgärder för en mer hållbar konsumtion ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3124.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01SoU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU17",
+      "datum": "2023-06-08",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HAB367",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "67",
+      "datum": "2022-12-12",
+      "titel": "Vägar till ett tryggare samhälle ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB367.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3115",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "115",
+      "datum": "2025-12-10",
+      "titel": "Kompletterande bestämmelser till EU:s cyberresiliensförordning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01UbU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU1",
+      "datum": "2025-12-08",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB351",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "51",
+      "datum": "2026-08-17",
+      "titel": "Fri att lära och leva",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB351.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3100",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "100",
+      "datum": "2025-10-01",
+      "titel": "Åtgärder mot illegal ip-tv",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3100.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB385",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "85",
+      "datum": "2025-07-07",
+      "titel": "Ökad tydlighet, stärkt samverkan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB385.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB395",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "95",
+      "datum": "2023-12-19",
+      "titel": "Uppföljning för utveckling ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB395.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01UbU7",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU7",
+      "datum": "2026-02-23",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

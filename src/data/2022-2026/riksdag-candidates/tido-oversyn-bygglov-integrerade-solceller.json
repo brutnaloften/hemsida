@@ -18,7 +18,15 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -30,8 +38,15 @@
       "titel": "Tillståndsprövning enligt förnybartdirektivet",
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03118.html",
-      "found_by": ["keyword:solceller", "keyword:bygglov", "keyword:solenergi", "all-keywords"],
-      "score": 4
+      "found_by": [
+        "keyword:solceller",
+        "keyword:bygglov",
+        "keyword:solenergi",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC03169",
@@ -87,7 +102,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03159.html",
       "found_by": ["keyword:solenergi", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HD01CU19",
@@ -99,7 +115,8 @@
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HD01CU19.html",
       "found_by": ["keyword:bygglov", "committee:CU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01CU2",
@@ -111,7 +128,8 @@
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HD01CU2.html",
       "found_by": ["keyword:bygglov", "committee:CU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD0316",
@@ -149,7 +167,8 @@
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HC01CU13.html",
       "found_by": ["all-keywords", "committee:CU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC01CU14",
@@ -174,7 +193,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03109.html",
       "found_by": ["keyword:solceller", "keyword:solenergi"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC031",
@@ -186,7 +206,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC031.html",
       "found_by": ["keyword:solceller", "keyword:solenergi"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HA01CU12",
@@ -197,8 +218,9 @@
       "titel": "Planering och byggande",
       "organ": "CU",
       "url": "https://data.riksdagen.se/dokument/HA01CU12.html",
-      "found_by": ["all-keywords", "committee:CU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:CU", "score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03312",
@@ -303,6 +325,123 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01KrU5",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KrU5",
+      "datum": "2024-02-22",
+      "titel": "Kulturarv",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HB01KrU5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC03131",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "131",
+      "datum": "2025-03-18",
+      "titel": "Nya regler för datacenter och hållbara bränslen samt en ny reduktionsplikt",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03131.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031d22",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01NU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU17",
+      "datum": "2023-05-25",
+      "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01NU19",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU19",
+      "datum": "2025-04-29",
+      "titel": "Energipolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01NU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU3",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB413",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "13",
+      "datum": "2025-06-13",
+      "titel": "Rätt att installera laddpunkt hemma ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB413.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

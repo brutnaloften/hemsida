@@ -22,7 +22,15 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -34,8 +42,14 @@
       "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
-      "found_by": ["keyword:sjukvård", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:sjukvård",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01SoU1",
@@ -46,8 +60,14 @@
       "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
-      "found_by": ["keyword:prestationsbaserad ersättning", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:prestationsbaserad ersättning",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HA01SoU3",
@@ -59,7 +79,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU3.html",
       "found_by": ["keyword:prestationsbaserad ersättning", "all-keywords", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.4
     },
     {
       "dok_id": "HEB338",
@@ -101,7 +122,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB343.html",
       "found_by": ["keyword:prestationsbaserad ersättning", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HCB39",
@@ -113,7 +135,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB39.html",
       "found_by": ["keyword:prestationsbaserad ersättning", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB01SoU1",
@@ -137,8 +160,13 @@
       "titel": "Riksrevisionens rapport om statens arbete med väntetider i vården",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0348.html",
-      "found_by": ["keyword:prestationsbaserad ersättning", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:prestationsbaserad ersättning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HA01SoU12",
@@ -189,7 +217,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03274.html",
       "found_by": ["keyword:uppföljning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03272",
@@ -214,7 +243,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03288.html",
       "found_by": ["keyword:styrning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HA031d10",
@@ -436,6 +466,149 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01SoU14",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU14",
+      "datum": "2025-02-03",
+      "titel": "Läkemedel och tandvård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB3112",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "112",
+      "datum": "2026-01-01",
+      "titel": "Verktyg för skydd av EU-medel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB397d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "97",
+      "datum": "2025-09-25",
+      "titel": "Krishantering och ändrade rörelseregler för försäkringsföretag, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB397d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01FiU26",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU26",
+      "datum": "2023-04-04",
+      "titel": "Kommunala frågor",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01SoU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU14",
+      "datum": "2026-01-27",
+      "titel": "Läkemedel och tandvård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HBB376d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "76",
+      "datum": "2023-11-22",
+      "titel": "Vidareanvändning av hälsodata för vård och klinisk forskning, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB376d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HDB372",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "72",
+      "datum": "2025-06-13",
+      "titel": "Verktyg för en mer likvärdig resursfördelning till skolan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

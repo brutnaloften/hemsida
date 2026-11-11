@@ -21,7 +21,14 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -56,9 +63,11 @@
         "keyword:modersmålsundervisning",
         "keyword:modersmål",
         "keyword:minoritetsspråk",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01UbU10",
@@ -69,8 +78,15 @@
       "titel": "Grundläggande om utbildning",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU10.html",
-      "found_by": ["keyword:modersmål", "keyword:minoritetsspråk", "all-keywords", "committee:UbU"],
-      "score": 4
+      "found_by": [
+        "keyword:modersmål",
+        "keyword:minoritetsspråk",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC03143",
@@ -123,7 +139,8 @@
         "keyword:minoritetsspråk",
         "keyword:kunskapsutveckling"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD03194",
@@ -148,7 +165,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA03132.html",
       "found_by": ["keyword:modersmålsundervisning", "keyword:minoritetsspråk", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB01UbU10",
@@ -159,8 +177,9 @@
       "titel": "Grundläggande om utbildning",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU10.html",
-      "found_by": ["all-keywords", "committee:UbU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:UbU", "score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HBB1175",
@@ -171,8 +190,13 @@
       "titel": "Införande av grundläggande svenska och översyn av modersmåls-undervisningen",
       "organ": "U-dep",
       "url": "https://data.riksdagen.se/dokument/HBB1175.html",
-      "found_by": ["keyword:modersmål", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:modersmål",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HB01UbU3",
@@ -184,7 +208,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU3.html",
       "found_by": ["keyword:modersmålsundervisning", "keyword:minoritetsspråk"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03292",
@@ -209,7 +234,8 @@
       "organ": "A-dep",
       "url": "https://data.riksdagen.se/dokument/HEB153.html",
       "found_by": ["keyword:integration"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03280",
@@ -314,6 +340,71 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.95
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01UbU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU1",
+      "datum": "2025-12-08",
+      "titel": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01UbU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU9",
+      "datum": "2025-04-23",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB39",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "9",
+      "datum": "2025-01-31",
+      "titel": "På språklig grund ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB39.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.97
     }
   ]
 }

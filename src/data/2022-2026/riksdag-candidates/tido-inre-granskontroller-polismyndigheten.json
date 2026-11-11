@@ -19,7 +19,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -32,7 +41,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU18.html",
       "found_by": ["keyword:irreguljär migration", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HDB333",
@@ -44,7 +54,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB333.html",
       "found_by": ["keyword:inre gränskontroller", "keyword:gränspolis", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB01JuU11",
@@ -56,7 +67,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU11.html",
       "found_by": ["keyword:inre gränskontroller", "keyword:gränspolis", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.3
     },
     {
       "dok_id": "HB0362",
@@ -81,7 +93,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "found_by": ["keyword:irreguljär migration", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03137",
@@ -93,7 +106,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03137.html",
       "found_by": ["keyword:gränspolis", "keyword:regleringsbrev"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HDB430d2",
@@ -105,7 +119,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB430d2.html",
       "found_by": ["keyword:irreguljär migration", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD039",
@@ -117,7 +132,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD039.html",
       "found_by": ["keyword:gränspolis", "keyword:identitetskontroller"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HDB357",
@@ -146,7 +162,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB430.html",
       "found_by": ["keyword:irreguljär migration", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03274",
@@ -158,7 +175,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03274.html",
       "found_by": ["keyword:identitetskontroller"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01SfU32",
@@ -196,7 +214,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03250.html",
       "found_by": ["keyword:identitetskontroller"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03249",
@@ -208,7 +227,8 @@
       "organ": "Utrikesdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03249.html",
       "found_by": ["keyword:irreguljär migration"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HB0356",
@@ -261,6 +281,32 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB380",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "80",
+      "datum": "2024-11-26",
+      "titel": "Vissa åtgärder för stärkt återvändandeverksamhet och utlänningskontroll ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB380.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d5",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

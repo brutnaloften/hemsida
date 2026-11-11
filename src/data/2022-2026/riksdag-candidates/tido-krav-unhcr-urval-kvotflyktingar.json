@@ -17,7 +17,13 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -35,7 +41,8 @@
         "keyword:urvalskriterier",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.45
     },
     {
       "dok_id": "HD01SfU16",
@@ -46,8 +53,14 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU16.html",
-      "found_by": ["keyword:kvotflyktingar", "all-keywords", "committee:SfU"],
-      "score": 3
+      "found_by": [
+        "keyword:kvotflyktingar",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD01AU1",
@@ -59,7 +72,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HD01AU1.html",
       "found_by": ["keyword:kvotflyktingar", "keyword:integration"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01SfU18",
@@ -71,7 +85,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU18.html",
       "found_by": ["all-keywords", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HC01AU1",
@@ -83,7 +98,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HC01AU1.html",
       "found_by": ["keyword:kvotflyktingar", "keyword:integration"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HB01SfU14",
@@ -95,7 +111,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU14.html",
       "found_by": ["all-keywords", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HA01SfU15",
@@ -159,7 +176,8 @@
       "organ": "A-dep",
       "url": "https://data.riksdagen.se/dokument/HEB153.html",
       "found_by": ["keyword:integration"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD03266",
@@ -197,7 +215,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03233.html",
       "found_by": ["keyword:urvalskriterier"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03229",
@@ -209,7 +228,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03229.html",
       "found_by": ["keyword:UNHCR"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HA031d9",

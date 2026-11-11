@@ -10,9 +10,15 @@
  *  - never `fulfilled` (needs an sfs entry the store does not have), never `no_evidence` (the
  *    search must be exhaustive first) and never `broken` (a `contradicts` label is only reported);
  *  - promises that already have a verdict other than `unassessed` or Riksdag evidence are left
- *    alone, so a rerun and hand edits are safe.
+ *    alone, except verdicts tagged `assessedBy: 'ai'`, which are recomputed (their Riksdag evidence is
+ *    replaced and the verdict history is kept), so a later backfill reaches them and hand edits are safe.
  */
-import type { Evidence, PromiseRecord, RiksdagEvidence } from './schema.ts';
+import {
+  isRiksdagEvidence,
+  type Evidence,
+  type PromiseRecord,
+  type RiksdagEvidence,
+} from './schema.ts';
 
 export interface StoreDocument {
   dok_id: string;
@@ -91,8 +97,12 @@ export function applyLinks(
   docs: ReadonlyMap<string, StoreDocument>,
   today: string,
 ): Applied | null {
-  const hasRiksdag = promise.evidence.some((e) => e.kind !== 'agreement' && e.kind !== 'budget');
-  if (promise.verdict.value !== 'unassessed' || hasRiksdag) return null;
+  // A verdict this tool set earlier (assessedBy ai) is recomputed from the newest judgements, so a
+  // later backfill reaches it; anything else with a verdict or Riksdag evidence is left alone.
+  const rerun = promise.verdict.assessedBy === 'ai';
+  const hasRiksdag = promise.evidence.some(isRiksdagEvidence);
+  if (!rerun && (promise.verdict.value !== 'unassessed' || hasRiksdag)) return null;
+  const kept = rerun ? promise.evidence.filter((e) => !isRiksdagEvidence(e)) : promise.evidence;
 
   const byDoc = new Map<string, { pair: JudgedPair; doc: StoreDocument }>();
   for (const pair of pairs) {
@@ -113,10 +123,20 @@ export function applyLinks(
     (a, b) => a.doc.datum.localeCompare(b.doc.datum) || a.doc.dok_id.localeCompare(b.doc.dok_id),
   );
   const riksdag = entries.map((e) => evidenceFor(e.pair, e.doc));
-  const evidence: Evidence[] = [...promise.evidence, ...riksdag];
+  const evidence: Evidence[] = [...kept, ...riksdag];
 
   const planning = entries.filter((e) => PLANNING.has(e.doc.doktyp));
-  if (planning.length === 0) return { evidence, verdict: promise.verdict };
+  if (planning.length === 0) {
+    const verdict = rerun
+      ? {
+          value: 'unassessed' as const,
+          reasoning: '',
+          date: today,
+          history: promise.verdict.history,
+        }
+      : promise.verdict;
+    return { evidence, verdict };
+  }
 
   const decided = entries.filter((e) => e.doc.doktyp === 'bet' && e.pair.stage === 'definitive');
   const full = planning.some((e) => e.pair.label === 'match');
@@ -143,14 +163,16 @@ export function applyLinks(
       assessedBy: 'ai',
       reasoning,
       date: today,
-      history: [
-        ...promise.verdict.history,
-        {
-          value: promise.verdict.value,
-          reasoning: promise.verdict.reasoning,
-          date: promise.verdict.date,
-        },
-      ],
+      history: rerun
+        ? promise.verdict.history
+        : [
+            ...promise.verdict.history,
+            {
+              value: promise.verdict.value,
+              reasoning: promise.verdict.reasoning,
+              date: promise.verdict.date,
+            },
+          ],
     },
   };
 }

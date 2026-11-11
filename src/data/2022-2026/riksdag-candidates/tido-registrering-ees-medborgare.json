@@ -20,7 +20,12 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20"
   ],
   "candidates": [
     {
@@ -53,7 +58,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "found_by": ["keyword:EES-medborgare", "keyword:uppehållsrätt", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD01SfU37",
@@ -91,7 +97,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03264.html",
       "found_by": ["keyword:EES-medborgare", "keyword:uppehållsrätt"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03265",
@@ -116,7 +123,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03229.html",
       "found_by": ["keyword:uppehållsrätt", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03136",
@@ -141,7 +149,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB316.html",
       "found_by": ["keyword:tre månader", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HDB14",
@@ -222,7 +231,8 @@
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HD01SkU22.html",
       "found_by": ["keyword:registrering"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC03103",
@@ -325,6 +335,32 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB353.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
       "score": 1,
       "relevance": 0.95
     }

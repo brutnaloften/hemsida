@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2024:1 (Ett starkare skydd för offentliganställda  mot våld, hot och trakasserier); Prop. 2024/25:141 (Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2024/25:JuU29 (Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i februari 2023 en utredning tilläggsdirektiv om skärpta straff för våld och hot mot tjänsteman, ett nytt brott för förolämpning av tjänsteman och en översyn av straffet för blåljussabotage. Utredningen föreslog i januari 2024 skärpta straff och ett nytt brott, och regeringen lade fram ett förslag om detta i mars 2025. Straffet för blåljussabotage och ersättningsreglerna för poliser saknas i förslagen.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB116",
+      "designation": "Dir. 2023:16",
+      "title": "Tilläggsdirektiv till Utredningen om åtgärder för att minska offentliganställdas utsatthet (Ju 2022:02)",
+      "date": "2023-02-02",
+      "url": "https://data.riksdagen.se/dokument/HBB116.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HCB31",
@@ -56,16 +66,6 @@
       "title": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
       "date": "2025-03-18",
       "url": "https://data.riksdagen.se/dokument/HC03141.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "bet",
-      "dok_id": "HC01JuU29",
-      "designation": "Bet. 2024/25:JuU29",
-      "title": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
-      "date": "2025-05-14",
-      "url": "https://data.riksdagen.se/dokument/HC01JuU29.html",
       "relevance": "partial",
       "note": null
     }

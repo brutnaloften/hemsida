@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:18 (Ett likvärdigt betygssystem); SOU 2025:18 (Ett likvärdigt betygssystem, del 2); Prop. 2025/26:197 (Ett likvärdigt betygssystem). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2025/26:UbU26 (Ett likvärdigt betygssystem), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att föreslå åtgärder mot betygsinflation. I februari 2025 föreslog utredningen att varje skolas genomsnittliga betyg ska knytas till resultaten på nationella prov. Regeringen lade i mars 2026 fram ett förslag om ändringar i skollagen, och riksdagen beslutade i juni 2026 om ett nytt meritvärde med kalibrerade betyg. Det täcker hela löftet.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB195",
+      "designation": "Dir. 2023:95",
+      "title": "Likvärdiga betyg och meritvärden",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB195.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "sou",
       "dok_id": "HDB318",

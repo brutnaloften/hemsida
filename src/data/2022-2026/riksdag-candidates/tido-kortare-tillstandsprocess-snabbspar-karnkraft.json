@@ -22,7 +22,17 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -35,7 +45,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03160.html",
       "found_by": ["keyword:kärnkraft", "keyword:Strålsäkerhetsmyndigheten", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.1
     },
     {
       "dok_id": "HC01NU18",
@@ -47,7 +58,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HC01NU18.html",
       "found_by": ["keyword:tillståndsprocess", "keyword:snabbspår", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.2
     },
     {
       "dok_id": "HEB347",
@@ -59,7 +71,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB347.html",
       "found_by": ["keyword:kärnkraft", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HEB340",
@@ -70,8 +83,13 @@
       "titel": "Ny kärnkraft i Sverige– moderna regler för beredskap och skadeståndsansvar",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB340.html",
-      "found_by": ["keyword:kärnkraft", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kärnkraft",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01NU24",
@@ -83,7 +101,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU24.html",
       "found_by": ["keyword:kärnkraft", "keyword:miljöbalken"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD01NU27",
@@ -133,8 +152,13 @@
       "titel": "Ny kärnkraft i Sverige",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB37.html",
-      "found_by": ["keyword:kärnkraft", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kärnkraft",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01NU5",
@@ -145,8 +169,13 @@
       "titel": "Ny kärnkraft i Sverige",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HB01NU5.html",
-      "found_by": ["keyword:kärnkraft", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kärnkraft",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HBB178",
@@ -174,8 +203,13 @@
       "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
-      "found_by": ["keyword:snabbspår", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:snabbspår",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB1110",
@@ -187,7 +221,8 @@
       "organ": "KN-dep",
       "url": "https://data.riksdagen.se/dokument/HEB1110.html",
       "found_by": ["keyword:miljöbalken"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD03305",
@@ -212,7 +247,8 @@
       "organ": "KN-dep",
       "url": "https://data.riksdagen.se/dokument/HEB159.html",
       "found_by": ["keyword:kärnkraft"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.25
     },
     {
       "dok_id": "HDB394",
@@ -577,6 +613,513 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB333",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "33",
+      "datum": "2025-04-01",
+      "titel": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB333.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB398",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "98",
+      "datum": "2025-01-01",
+      "titel": "En ny samordnad miljöbedömnings- och tillståndsprövningsprocess ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB398.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03238",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "238",
+      "datum": "2026-04-14",
+      "titel": "Ny myndighet för miljöprövning",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03238.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB3104",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "104",
+      "datum": "2025-10-07",
+      "titel": "Ny kärnkraft i Sverige ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3104.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC01FöU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FöU1",
+      "datum": "2024-11-28",
+      "titel": "Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "organ": "FöU",
+      "url": "https://data.riksdagen.se/dokument/HC01FöU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HC01MJU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU9",
+      "datum": "2025-02-25",
+      "titel": "Övergripande miljöfrågor",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01FöU19",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FöU19",
+      "datum": "2026-06-10",
+      "titel": "Kärnämneskontroll och bedömningar av överensstämmelse med säkerhets- och strålskyddskrav i verksamhet med strålning",
+      "organ": "FöU",
+      "url": "https://data.riksdagen.se/dokument/HD01FöU19.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB358",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "58",
+      "datum": "2025-06-02",
+      "titel": "En stärkt hästnäring",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB358.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB397d2",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "97",
+      "datum": "2025-09-25",
+      "titel": "Krishantering och ändrade rörelseregler för försäkringsföretag, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB397d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB031d21",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3112",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "112",
+      "datum": "2026-01-01",
+      "titel": "Verktyg för skydd av EU-medel ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3112.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01MJU4",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU4",
+      "datum": "2024-10-18",
+      "titel": "Steg på vägen mot en mer effektiv miljöprövning",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3115",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "115",
+      "datum": "2025-12-10",
+      "titel": "Kompletterande bestämmelser till EU:s cyberresiliensförordning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0359",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "59",
+      "datum": "2023-12-21",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0359.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3113",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "113",
+      "datum": "2025-11-26",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB01MJU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU15",
+      "datum": "2024-05-06",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01FöU4",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FöU4",
+      "datum": "2025-03-26",
+      "titel": "Samhällets krisberedskap",
+      "organ": "FöU",
+      "url": "https://data.riksdagen.se/dokument/HC01FöU4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01NU19",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU19",
+      "datum": "2025-04-29",
+      "titel": "Energipolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB365",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "65",
+      "datum": "2025-05-28",
+      "titel": "En mer flexibel hyresmarknad",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB365.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD031d8",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d8.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB398d3",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "98",
+      "datum": "2025-01-01",
+      "titel": "En ny samordnad miljöbedömnings- och tillståndsprövningsprocess, del 3",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB398d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01FöU7",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FöU7",
+      "datum": "2024-04-08",
+      "titel": "Samhällets krisberedskap",
+      "organ": "FöU",
+      "url": "https://data.riksdagen.se/dokument/HB01FöU7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC031d7",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d3",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 1 Rikets styrelse",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HDB3107",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "107",
+      "datum": "2025-11-03",
+      "titel": "Sveriges nationella klimatmål - uppdaterat etappmål till 2030 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3107.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB3111",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "111",
+      "datum": "2025-11-25",
+      "titel": "Rättssäkerhetens pris",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3111.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB397d4",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "97",
+      "datum": "2025-09-25",
+      "titel": "Krishantering och ändrade rörelseregler för försäkringsföretag, del 4",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB397d4.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB349",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "49",
+      "datum": "2025-04-23",
+      "titel": "Säkerhetspolisens behandling av personuppgifter",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB349.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB311",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "11",
+      "datum": "2025-01-28",
+      "titel": "Straffbarhetsåldern",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB311.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB327",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "27",
+      "datum": "2025-03-04",
+      "titel": "En socionomutbildning i tiden ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB327.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB361",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "61",
+      "datum": "2025-06-02",
+      "titel": "Sveriges internationella adoptionsverksamhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB361.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01MJU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU1",
+      "datum": "2022-12-15",
+      "titel": "Utgiftsområde 20 Allmän miljö- och naturvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.65
+    },
+    {
+      "dok_id": "HC01NU14",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU14",
+      "datum": "2025-03-04",
+      "titel": "Forskning och innovation på energiområdet för försörjningstrygghet, konkurrenskraft och klimatomställning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01NU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU20",
+      "datum": "2025-05-16",
+      "titel": "Finansiering och riskdelning vid investeringar i ny kärnkraft",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.55
     }
   ]
 }

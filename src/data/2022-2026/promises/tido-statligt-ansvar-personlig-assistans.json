@@ -26,10 +26,28 @@
     "funktionshinder"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning lade i november 2023 fram ett förslag om att staten, genom Försäkringskassan, ska ta över hela ansvaret för beslut om och finansiering av personlig assistans enligt LSS från och med 1 januari 2026. Utredningen är den som löftet syftar på och täcker hela löftet. Det är ett förslag som ännu inte har beslutats.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HBB39",
+      "designation": "SOU 2023:9",
+      "title": "Ett statligt huvudmannaskap för personlig assistans, Ökad likvärdighet, långsiktighet och kvalitet ",
+      "date": "2023-11-08",
+      "url": "https://data.riksdagen.se/dokument/HBB39.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

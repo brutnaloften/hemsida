@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2024:93 (Effektivare verktyg för att bekämpa brott av unga lagöverträdare ); Prop. 2025/26:293 (Skärpta regler för unga lagöverträdare). Dokumenten behandlar bara delar av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i november 2023 tilläggsdirektiv om att skärpta regler för ungdomsövervakning skulle utredas snabbare. En utredning föreslog i juli 2024 en ny påföljd, utvidgad ungdomsövervakning, med fotboja och mer kontroll från Kriminalvården. I april 2026 lade regeringen fram ett förslag om skärpt ungdomsövervakning och ändrade regler om hemliga tvångsmedel. Polisens utvidgade befogenheter att kroppsvisitera och göra husrannsakan saknas hittills.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,22 +34,32 @@
   },
   "evidence": [
     {
+      "kind": "dir",
+      "dok_id": "HBB1156",
+      "designation": "Dir. 2023:156",
+      "title": "Tilläggsdirektiv till Utredningen om skärpta regler för unga lagöverträdare (Ju 2023:13)",
+      "date": "2023-11-09",
+      "url": "https://data.riksdagen.se/dokument/HBB1156.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "sou",
-      "dok_id": "HCB393",
-      "designation": "SOU 2024:93",
-      "title": "Effektivare verktyg för att bekämpa brott av unga lagöverträdare ",
-      "date": "2024-12-20",
-      "url": "https://data.riksdagen.se/dokument/HCB393.html",
+      "dok_id": "HCB339",
+      "designation": "SOU 2024:39",
+      "title": "Skärpta regler om ungdomsövervakning  och straffreduktion för unga",
+      "date": "2024-07-05",
+      "url": "https://data.riksdagen.se/dokument/HCB339.html",
       "relevance": "partial",
       "note": null
     },
     {
       "kind": "prop",
-      "dok_id": "HD03293",
-      "designation": "Prop. 2025/26:293",
+      "dok_id": "HD03246",
+      "designation": "Prop. 2025/26:246",
       "title": "Skärpta regler för unga lagöverträdare",
-      "date": "2026-06-30",
-      "url": "https://data.riksdagen.se/dokument/HD03293.html",
+      "date": "2026-04-16",
+      "url": "https://data.riksdagen.se/dokument/HD03246.html",
       "relevance": "partial",
       "note": null
     }

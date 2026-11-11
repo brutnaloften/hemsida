@@ -21,7 +21,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -37,9 +46,11 @@
         "keyword:papperslösa",
         "keyword:irreguljär migration",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD03262",
@@ -51,7 +62,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "found_by": ["keyword:skuggsamhället", "keyword:irreguljär migration", "all-keywords"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HB01SfU14",
@@ -63,7 +75,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU14.html",
       "found_by": ["keyword:papperslösa", "all-keywords", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SfU32",
@@ -91,8 +104,9 @@
       "titel": "Migrationsfrågor",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU16.html",
-      "found_by": ["all-keywords", "committee:SfU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:SfU", "score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD01SfU4",
@@ -116,8 +130,13 @@
       "titel": "Budgetpropositionen för 2026 - Utgiftsområde 8 Migration",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d10.html",
-      "found_by": ["keyword:irreguljär migration", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:irreguljär migration",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HC01SfU4",
@@ -168,7 +187,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03313.html",
       "found_by": ["keyword:papperslösa"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.12
     },
     {
       "dok_id": "HD01SfU37",
@@ -206,7 +226,8 @@
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HD01JuU45.html",
       "found_by": ["keyword:utvisning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SfU33",
@@ -218,7 +239,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
       "found_by": ["keyword:utvisning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HC0349",
@@ -568,6 +590,292 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB334.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB193",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "93",
+      "datum": "2023-06-22",
+      "titel": "Tilläggsdirektiv till Utredningen om ett ordnat initialt mottagande av asylsökande (Ju 2021:12)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB193.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB380",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "80",
+      "datum": "2024-11-26",
+      "titel": "Vissa åtgärder för stärkt återvändandeverksamhet och utlänningskontroll ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB380.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03229",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "229",
+      "datum": "2026-03-31",
+      "titel": "En ny mottagandelag",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03229.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01SkU28",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU28",
+      "datum": "2024-06-03",
+      "titel": "Riksrevisionens rapport Svart på vitt – rotavdragets kostnader och effekter",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU28.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA01UU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UU5",
+      "datum": "2023-06-01",
+      "titel": "Nordiskt samarbete inklusive Arktis",
+      "organ": "UU",
+      "url": "https://data.riksdagen.se/dokument/HA01UU5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01JuU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU1",
+      "datum": "2024-11-29",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD0379",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "79",
+      "datum": "2025-12-11",
+      "titel": "Riksrevisionens rapport om Skatteverkets åtgärder mot svartarbete",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0379.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01SkU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 3 Skatt, tull och exekution",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03263",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "263",
+      "datum": "2026-04-30",
+      "titel": "Stärkt återvändandeverksamhet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03263.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01SkU12",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU12",
+      "datum": "2025-03-27",
+      "titel": "Skatteförfarande, folkbokföring och tull",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC038",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "8",
+      "datum": "2024-09-17",
+      "titel": "Bolag och brott",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC038.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01SfU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SfU11",
+      "datum": "2025-01-23",
+      "titel": "En ny ordning för asylsökandes boende",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB03163",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "163",
+      "datum": "2024-07-08",
+      "titel": "Nationell säkerhetsstrategi",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03163.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB368",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "68",
+      "datum": "2024-10-15",
+      "titel": "Mottagandelagen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC03180",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "180",
+      "datum": "2025-05-28",
+      "titel": "Ökat informationsutbyte mellan myndigheter – en ny sekretessbrytande bestämmelse",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03180.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d15",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
       "score": 1,
       "relevance": 0.6
     }

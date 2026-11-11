@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:137 (Anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten); SOU 2025:99 (Ändring av permanent uppehållstillstånd för vissa utlänningar). Minst ett av dokumenten behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i oktober 2023 en utredning i uppdrag att se över när permanenta uppehållstillstånd kan ändras till tidsbegränsade. Utredningen föreslog i april 2025 att permanenta tillstånd fasas ut för nya beslut, och i september 2025 lade den fram ett förslag om att ändra befintliga tillstånd. Regeringen föreslog i april 2026 att permanenta tillstånd tas bort, men inte att befintliga tillstånd omvandlas. Riksdagen har inte beslutat.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -51,12 +51,32 @@
     },
     {
       "kind": "sou",
+      "dok_id": "HDB331",
+      "designation": "SOU 2025:31",
+      "title": "Utmönstring av permanent uppehållstillstånd och vissa anpassningar till miniminivån enligt EU:s migrations- och asylpakt",
+      "date": "2025-04-09",
+      "url": "https://data.riksdagen.se/dokument/HDB331.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
       "dok_id": "HDB399",
       "designation": "SOU 2025:99",
       "title": "Ändring av permanent uppehållstillstånd för vissa utlänningar",
       "date": "2025-09-26",
       "url": "https://data.riksdagen.se/dokument/HDB399.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03262",
+      "designation": "Prop. 2025/26:262",
+      "title": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03262.html",
+      "relevance": "partial",
       "note": null
     }
   ]

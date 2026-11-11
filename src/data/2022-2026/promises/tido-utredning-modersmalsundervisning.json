@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2024:72 (Tilläggsdirektiv till Utredningen om införande av grundläggande svenska och översyn av modersmålsundervisningen (U 2023:08)). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i december 2023 en utredare i uppdrag att se över modersmålsundervisningen så att den inte påverkar integration eller elevernas svenskkunskaper negativt, med hänsyn till de nationella minoritetsspråken. Utredningen lämnade sitt slutbetänkande i januari 2025 och fann ingen negativ effekt. Något beslut om åtgärder har ännu inte fattats.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -41,11 +41,21 @@
   "evidence": [
     {
       "kind": "dir",
-      "dok_id": "HCB172",
-      "designation": "Dir. 2024:72",
-      "title": "Tilläggsdirektiv till Utredningen om införande av grundläggande svenska och översyn av modersmålsundervisningen (U 2023:08)",
-      "date": "2024-08-22",
-      "url": "https://data.riksdagen.se/dokument/HCB172.html",
+      "dok_id": "HBB1175",
+      "designation": "Dir. 2023:175",
+      "title": "Införande av grundläggande svenska och översyn av modersmåls-undervisningen",
+      "date": "2023-12-14",
+      "url": "https://data.riksdagen.se/dokument/HBB1175.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB39",
+      "designation": "SOU 2025:9",
+      "title": "På språklig grund ",
+      "date": "2025-01-31",
+      "url": "https://data.riksdagen.se/dokument/HDB39.html",
       "relevance": "full",
       "note": null
     }

@@ -20,10 +20,58 @@
   "committee": "KU",
   "keywords": ["kamerabevakning", "kamerabevakningslagen", "polisen", "tillstånd", "kommuner"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i april 2024 att kommuner och andra ska slippa tillstånd för kamerabevakning och att polisens möjligheter ska utökas. Regeringen lade i januari 2025 fram ett förslag om färre tillstånd och bevakning på fler platser, och riksdagen godkände det i mars 2025. Dokumenten visar inte hur kommunernas rätt, lägre krav på polisen eller polisens utökade uppdrag på sikt är utformade.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB327",
+      "designation": "SOU 2024:27",
+      "title": "Kamerabevakning i offentlig verksamhet - lättnader och utökade möjligheter",
+      "date": "2024-04-17",
+      "url": "https://data.riksdagen.se/dokument/HCB327.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HCB411",
+      "designation": "Ds 2024:11",
+      "title": "Förbättrade möjligheter för polisen att använda kamerabevakning",
+      "date": "2024-06-04",
+      "url": "https://data.riksdagen.se/dokument/HCB411.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0393",
+      "designation": "Prop. 2024/25:93",
+      "title": "Kamerabevakning i brottsbekämpning och annan offentlig verksamhet – utökade möjligheter och ett enklare förfarande",
+      "date": "2025-01-28",
+      "url": "https://data.riksdagen.se/dokument/HC0393.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU27",
+      "designation": "Bet. 2024/25:JuU27",
+      "title": "Kamerabevakning i brottsbekämpning och annan offentlig verksamhet – utökade möjligheter och ett enklare förfarande",
+      "date": "2025-03-11",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU27.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

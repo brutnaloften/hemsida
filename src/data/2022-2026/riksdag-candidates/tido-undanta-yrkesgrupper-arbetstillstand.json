@@ -19,7 +19,14 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20"
   ],
   "candidates": [
     {
@@ -37,9 +44,11 @@
         "keyword:arbetstillstånd",
         "keyword:lönekrav",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD0387",
@@ -69,8 +78,15 @@
       "titel": "Arbetskraftsinvandring",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU15.html",
-      "found_by": ["keyword:arbetstillstånd", "keyword:lönekrav", "all-keywords", "committee:SfU"],
-      "score": 4
+      "found_by": [
+        "keyword:arbetstillstånd",
+        "keyword:lönekrav",
+        "all-keywords",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01SfU11",
@@ -100,8 +116,14 @@
       "titel": "Preskription av avlägsnandebeslut och vissa frågor om återreseförbud",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0392.html",
-      "found_by": ["keyword:yrkesgrupper", "keyword:lönekrav", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:yrkesgrupper",
+        "keyword:lönekrav",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HCB315",
@@ -143,8 +165,13 @@
       "titel": "Riksrevisionens rapport om Migrationsverkets kontroller av arbetstillstånd – stor risk för fel och missbruk",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03284.html",
-      "found_by": ["keyword:arbetstillstånd", "keyword:lönekrav"],
-      "score": 2
+      "found_by": [
+        "keyword:arbetstillstånd",
+        "keyword:lönekrav",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01SfU15",
@@ -155,8 +182,13 @@
       "titel": "Arbetskraftsinvandring",
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU15.html",
-      "found_by": ["keyword:lönekrav", "committee:SfU"],
-      "score": 2
+      "found_by": [
+        "keyword:lönekrav",
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01SfU17",
@@ -168,7 +200,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU17.html",
       "found_by": ["keyword:arbetstillstånd", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC01SfU6",
@@ -180,7 +213,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU6.html",
       "found_by": ["keyword:yrkesgrupper", "keyword:arbetstillstånd"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA01SfU17",
@@ -322,6 +356,97 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB399.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB422",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "22",
+      "datum": "2023-07-05",
+      "titel": "Sveriges tillträde till vissa Natoavtal",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB422.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB382",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "82",
+      "datum": "2024-12-05",
+      "titel": "Ökad va-beredskap ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB373",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "73",
+      "datum": "2024-11-07",
+      "titel": "Juridiska personers förvärv av lantbruksegendom genom testamente",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB373.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB376",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "76",
+      "datum": "2024-11-18",
+      "titel": "Från överskottsmål till balansmål",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB376.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
       "score": 1,
       "relevance": 0.6
     }

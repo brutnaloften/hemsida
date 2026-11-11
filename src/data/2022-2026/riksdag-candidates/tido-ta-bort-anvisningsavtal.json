@@ -18,7 +18,12 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -91,9 +96,11 @@
         "keyword:slutkundsmarknaden",
         "keyword:elavtal",
         "keyword:elhandel",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HCB112",
@@ -104,8 +111,14 @@
       "titel": "Ett elsystem med tydligt systemansvar, hög leveranssäkerhet och långsiktiga planeringsförutsättningar",
       "organ": "KN-dep",
       "url": "https://data.riksdagen.se/dokument/HCB112.html",
-      "found_by": ["keyword:anvisningsavtal", "keyword:slutkundsmarknaden", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:anvisningsavtal",
+        "keyword:slutkundsmarknaden",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01NU12",
@@ -133,8 +146,9 @@
       "titel": "Nya lagar om elsystemet",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU25.html",
-      "found_by": ["keyword:elavtal"],
-      "score": 1
+      "found_by": ["keyword:elavtal", "score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD03233",
@@ -146,7 +160,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03233.html",
       "found_by": ["keyword:slutkundsmarknaden"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01NU17",
@@ -157,8 +172,9 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU17.html",
-      "found_by": ["keyword:elavtal"],
-      "score": 1
+      "found_by": ["keyword:elavtal", "score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD01NU8",
@@ -209,7 +225,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB413.html",
       "found_by": ["keyword:elhandel"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC03150",

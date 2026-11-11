@@ -18,7 +18,16 @@
     "score:tido-corpus-claude-v1-shard-3-of-20",
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -35,9 +44,11 @@
         "keyword:avfallsförbränningsskatt",
         "keyword:bioolja",
         "all-keywords",
-        "committee:SkU"
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.8
     },
     {
       "dok_id": "HA01SkU14",
@@ -105,8 +116,14 @@
       "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
-      "found_by": ["keyword:kraftvärmeskatt", "keyword:bioolja", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:kraftvärmeskatt",
+        "keyword:bioolja",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01NU3",
@@ -117,8 +134,14 @@
       "titel": "Utgiftsområde 21 Energi",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
-      "found_by": ["keyword:kraftvärmeskatt", "keyword:bioolja", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:kraftvärmeskatt",
+        "keyword:bioolja",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HA031",
@@ -129,8 +152,14 @@
       "titel": "Budgetpropositionen för 2023",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA031.html",
-      "found_by": ["keyword:kraftvärme", "keyword:avfallsförbränningsskatt", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:kraftvärme",
+        "keyword:avfallsförbränningsskatt",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01NU17",
@@ -141,8 +170,13 @@
       "titel": "Elmarknadsfrågor",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU17.html",
-      "found_by": ["keyword:kraftvärme", "keyword:kraftvärmeskatt"],
-      "score": 2
+      "found_by": [
+        "keyword:kraftvärme",
+        "keyword:kraftvärmeskatt",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD01SkU16",
@@ -154,7 +188,8 @@
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HD01SkU16.html",
       "found_by": ["all-keywords", "committee:SkU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD031",
@@ -165,8 +200,13 @@
       "titel": "Budgetpropositionen för 2026",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
-      "found_by": ["keyword:kraftvärme", "keyword:fjärrvärme"],
-      "score": 2
+      "found_by": [
+        "keyword:kraftvärme",
+        "keyword:fjärrvärme",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.7
     },
     {
       "dok_id": "HB03105",
@@ -195,7 +235,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HA01FiU21.html",
       "found_by": ["keyword:kraftvärmeskatt", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HA01FiU1",
@@ -206,8 +247,13 @@
       "titel": "Statens budget 2023 – Rambeslutet",
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
-      "found_by": ["keyword:avfallsförbränningsskatt", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:avfallsförbränningsskatt",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HA0317",
@@ -218,8 +264,13 @@
       "titel": "Tillfälligt sänkt skatt på drivmedel och sänkt skatt på bränslen i viss värmeproduktion",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA0317.html",
-      "found_by": ["keyword:kraftvärme", "keyword:bioolja"],
-      "score": 2
+      "found_by": [
+        "keyword:kraftvärme",
+        "keyword:bioolja",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HEB411",
@@ -298,6 +349,110 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01MJU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU9",
+      "datum": "2025-02-25",
+      "titel": "Övergripande miljöfrågor",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01NU19",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU19",
+      "datum": "2025-04-29",
+      "titel": "Energipolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA031d22",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01MJU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU15",
+      "datum": "2024-05-06",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01SkU2",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU2",
+      "datum": "2022-10-20",
+      "titel": "BNP-indexering av skatterna på kemikalier i viss elektronik och avfallsförbränning",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01NU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU14",
+      "datum": "2024-05-20",
+      "titel": "Energipolitikens långsiktiga inriktning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03118",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "118",
+      "datum": "2026-02-05",
+      "titel": "Tillståndsprövning enligt förnybartdirektivet",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03118.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.75
     }
   ]
 }

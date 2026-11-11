@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2025:66 (En straffreform, del 2); SOU 2025:66 (En straffreform, del 3); SOU 2025:66 (En straffreform, del 4). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:JuU42 (Dubbla straff för brott i kriminella nätverk och skärpta straffskalor), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i juli 2023 en utredare i uppdrag att se över straffskalorna, bland annat så att häktning blir huvudregel i fler fall vid allvarlig brottslighet. Utredningen föreslog i juni 2025 att detta utvidgas till fler brott och försök till brott med minst fyra års straff. Riksdagen biföll detta i juni 2026. Ingen sänkning av gränsen till ett års fängelse har visats.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,22 +34,22 @@
   },
   "evidence": [
     {
-      "kind": "sou",
-      "dok_id": "HDB366d2",
-      "designation": "SOU 2025:66",
-      "title": "En straffreform, del 2",
-      "date": "2025-06-09",
-      "url": "https://data.riksdagen.se/dokument/HDB366d2.html",
+      "kind": "dir",
+      "dok_id": "HBB1115",
+      "designation": "Dir. 2023:115",
+      "title": "En översyn av straffskalorna samt ett reformerat och mer rättvist påföljdssystem",
+      "date": "2023-07-20",
+      "url": "https://data.riksdagen.se/dokument/HBB1115.html",
       "relevance": "partial",
       "note": null
     },
     {
       "kind": "sou",
-      "dok_id": "HDB366d3",
+      "dok_id": "HDB366",
       "designation": "SOU 2025:66",
-      "title": "En straffreform, del 3",
+      "title": "En straffreform",
       "date": "2025-06-09",
-      "url": "https://data.riksdagen.se/dokument/HDB366d3.html",
+      "url": "https://data.riksdagen.se/dokument/HDB366.html",
       "relevance": "partial",
       "note": null
     },

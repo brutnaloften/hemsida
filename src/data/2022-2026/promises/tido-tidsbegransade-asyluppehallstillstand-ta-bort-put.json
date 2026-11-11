@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:137 (Anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten); SOU 2025:99 (Ändring av permanent uppehållstillstånd för vissa utlänningar). Minst ett av dokumenten behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SfU30 (Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Statliga utredningar lade i april och september 2025 fram förslag om att ta bort permanenta uppehållstillstånd och byta ut redan beviljade mot tidsbegränsade. Regeringen föreslog det i en proposition i april 2026, och riksdagen biföll förslaget i juni 2026. Ingen författning är kopplad till löftet, och det nya systemet utifrån skyddsstatus täcks inte fullt ut. Tidsmålet våren 2024 passerades.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,12 +40,12 @@
   },
   "evidence": [
     {
-      "kind": "dir",
-      "dok_id": "HBB1137",
-      "designation": "Dir. 2023:137",
-      "title": "Anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten",
-      "date": "2023-10-02",
-      "url": "https://data.riksdagen.se/dokument/HBB1137.html",
+      "kind": "sou",
+      "dok_id": "HDB331",
+      "designation": "SOU 2025:31",
+      "title": "Utmönstring av permanent uppehållstillstånd och vissa anpassningar till miniminivån enligt EU:s migrations- och asylpakt",
+      "date": "2025-04-09",
+      "url": "https://data.riksdagen.se/dokument/HDB331.html",
       "relevance": "full",
       "note": null
     },
@@ -56,6 +56,16 @@
       "title": "Ändring av permanent uppehållstillstånd för vissa utlänningar",
       "date": "2025-09-26",
       "url": "https://data.riksdagen.se/dokument/HDB399.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03262",
+      "designation": "Prop. 2025/26:262",
+      "title": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03262.html",
       "relevance": "partial",
       "note": null
     },

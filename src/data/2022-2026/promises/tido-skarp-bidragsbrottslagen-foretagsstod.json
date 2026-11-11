@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: SOU 2023:52 (Ett stärkt och samlat skydd av välfärdssystemen ); Prop. 2025/26:210 (Bidragsspärr och sanktionsavgift i socialförsäkringen). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:FiU12 (Ett effektivt straffrättsligt skydd för statliga stöd till företag), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En statlig utredning föreslog i mars 2024 en ny lag om subventionsbrott som ger statligt företagsstöd ett straffrättsligt skydd. Regeringen lade i juni 2025 fram ett förslag om detta, och riksdagen biföll det i november 2025, inklusive en skyldighet att anmäla felaktiga utbetalningar. Det gäller stöd till företag. Själva bidragsbrottslagen skärps inte, eftersom en ny lag skapas.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -35,12 +35,22 @@
   "evidence": [
     {
       "kind": "sou",
-      "dok_id": "HBB352",
-      "designation": "SOU 2023:52",
-      "title": "Ett stärkt och samlat skydd av välfärdssystemen ",
-      "date": "2023-09-07",
-      "url": "https://data.riksdagen.se/dokument/HBB352.html",
+      "dok_id": "HCB324",
+      "designation": "SOU 2024:24",
+      "title": "Ett effektivt straffrättsligt skydd för statliga stöd till företag",
+      "date": "2024-03-26",
+      "url": "https://data.riksdagen.se/dokument/HCB324.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03187",
+      "designation": "Prop. 2024/25:187",
+      "title": "Ett effektivt straffrättsligt skydd för statliga stöd till företag",
+      "date": "2025-06-24",
+      "url": "https://data.riksdagen.se/dokument/HC03187.html",
+      "relevance": "full",
       "note": null
     },
     {
@@ -50,16 +60,6 @@
       "title": "Ett effektivt straffrättsligt skydd för statliga stöd till företag",
       "date": "2025-11-13",
       "url": "https://data.riksdagen.se/dokument/HD01FiU12.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "prop",
-      "dok_id": "HD03210",
-      "designation": "Prop. 2025/26:210",
-      "title": "Bidragsspärr och sanktionsavgift i socialförsäkringen",
-      "date": "2026-03-19",
-      "url": "https://data.riksdagen.se/dokument/HD03210.html",
       "relevance": "partial",
       "note": null
     }

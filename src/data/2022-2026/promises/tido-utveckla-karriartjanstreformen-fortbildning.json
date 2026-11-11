@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2022/23:54 (Nationellt professionsprogram för rektorer, lärare och förskollärare). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2022/23:UbU13 (Nationellt professionsprogram för rektorer, lärare och förskollärare); Bet. 2024/25:UbU1 (Utgiftsområde 16 Utbildning och universitetsforskning), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Riksdagen beslutade i december 2022 om budgeten för utbildning, med medel till bidrag för lärarlöner inom karriärstegsreformen och 50 miljoner kronor mer till fortbildning av lärare. Regeringen föreslog i januari 2023 ett nationellt professionsprogram, och riksdagen biföll det i maj 2023. Programmet utvecklar reformen och ger en struktur för kompetensutveckling, men ledarskap och konflikthantering nämns inte särskilt.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,6 +33,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HA01UbU1",
+      "designation": "Bet. 2022/23:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och  universitetsforskning",
+      "date": "2022-12-14",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "prop",
       "dok_id": "HA0354",
@@ -50,16 +60,6 @@
       "title": "Nationellt professionsprogram för rektorer, lärare och förskollärare",
       "date": "2023-05-25",
       "url": "https://data.riksdagen.se/dokument/HA01UbU13.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "bet",
-      "dok_id": "HC01UbU1",
-      "designation": "Bet. 2024/25:UbU1",
-      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
-      "date": "2024-12-04",
-      "url": "https://data.riksdagen.se/dokument/HC01UbU1.html",
       "relevance": "partial",
       "note": null
     }

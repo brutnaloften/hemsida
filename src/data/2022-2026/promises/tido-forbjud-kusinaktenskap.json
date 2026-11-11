@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Ds 2024:20 (Förbud mot äktenskap mellan kusiner och vissa andra nära släktingar ). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "En promemoria med förslag om förbud mot äktenskap mellan kusiner presenterades i oktober 2024. Regeringen lade i mars 2026 fram en proposition om ett undantagslöst förbud, och riksdagen biföll den i maj 2026. Förbudet gäller även utländska kusinäktenskap. Dokumenten täcker hela löftet, men ingen ändrad lagtext är kopplad till löftet.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,6 +40,26 @@
       "title": "Förbud mot äktenskap mellan kusiner och vissa andra nära släktingar ",
       "date": "2024-10-09",
       "url": "https://data.riksdagen.se/dokument/HCB420.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03154",
+      "designation": "Prop. 2025/26:154",
+      "title": "Förbud mot kusinäktenskap och äktenskap mellan andra nära släktingar",
+      "date": "2026-03-12",
+      "url": "https://data.riksdagen.se/dokument/HD03154.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01CU33",
+      "designation": "Bet. 2025/26:CU33",
+      "title": "Förbud mot kusinäktenskap och äktenskap mellan andra nära släktingar",
+      "date": "2026-05-19",
+      "url": "https://data.riksdagen.se/dokument/HD01CU33.html",
       "relevance": "full",
       "note": null
     }

@@ -20,7 +20,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -37,9 +46,11 @@
         "keyword:dubbla medborgarskap",
         "keyword:systemhotande brott",
         "keyword:oriktiga uppgifter",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01KU34",
@@ -53,9 +64,11 @@
       "found_by": [
         "keyword:återkallelse av medborgarskap",
         "keyword:dubbla medborgarskap",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD0378",
@@ -87,9 +100,11 @@
       "found_by": [
         "keyword:återkallelse av medborgarskap",
         "keyword:dubbla medborgarskap",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HDB32",
@@ -103,9 +118,11 @@
       "found_by": [
         "keyword:återkallelse av medborgarskap",
         "keyword:dubbla medborgarskap",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB31",
@@ -152,8 +169,13 @@
       "titel": "Fri- och rättigheter",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HC01KU25.html",
-      "found_by": ["keyword:återkallelse av medborgarskap", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:återkallelse av medborgarskap",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HBB183",
@@ -181,8 +203,13 @@
       "titel": "Fri- och rättigheter m.m.",
       "organ": "KU",
       "url": "https://data.riksdagen.se/dokument/HA01KU26.html",
-      "found_by": ["keyword:återkallelse av medborgarskap", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:återkallelse av medborgarskap",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01SfU32",
@@ -207,7 +234,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU36.html",
       "found_by": ["committee:SfU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SfU26",
@@ -219,7 +247,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU26.html",
       "found_by": ["committee:SfU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD01SfU28",
@@ -231,7 +260,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU28.html",
       "found_by": ["committee:SfU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03210",
@@ -399,6 +429,97 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB399.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB331",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "31",
+      "datum": "2025-04-09",
+      "titel": "Utmönstring av permanent uppehållstillstånd och vissa anpassningar till miniminivån enligt EU:s migrations- och asylpakt",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB331.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD03274",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "274",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03274.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB357",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "57",
+      "datum": "2026-09-11",
+      "titel": "Akademisk frihet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB357.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01KU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU20",
+      "datum": "2025-06-10",
+      "titel": "Granskningsbetänkande",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HC01SfU18",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SfU18",
+      "datum": "2025-04-14",
+      "titel": "Migrationsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
       "score": 1,
       "relevance": 0.6
     }

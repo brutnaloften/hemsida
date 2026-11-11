@@ -19,7 +19,16 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -69,8 +78,14 @@
       "titel": "Stärkt återvändandeverksamhet",
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03263.html",
-      "found_by": ["keyword:olovligt vistande", "keyword:nödbistånd", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:olovligt vistande",
+        "keyword:nödbistånd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01SoU23",
@@ -82,7 +97,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU23.html",
       "found_by": ["keyword:nödbistånd", "keyword:socialtjänstlagen", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.15
     },
     {
       "dok_id": "HDB315d2",
@@ -93,8 +109,14 @@
       "titel": "Stärkta drivkrafter och möjligheter för biståndsmottagare, del 2",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB315d2.html",
-      "found_by": ["keyword:ekonomiskt bistånd", "keyword:olovligt vistande", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:ekonomiskt bistånd",
+        "keyword:olovligt vistande",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB315",
@@ -105,8 +127,14 @@
       "titel": "Stärkta drivkrafter och möjligheter för biståndsmottagare",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB315.html",
-      "found_by": ["keyword:ekonomiskt bistånd", "keyword:nödbistånd", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:ekonomiskt bistånd",
+        "keyword:nödbistånd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HCB368",
@@ -117,8 +145,14 @@
       "titel": "Mottagandelagen ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB368.html",
-      "found_by": ["keyword:ekonomiskt bistånd", "keyword:nödbistånd", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:ekonomiskt bistånd",
+        "keyword:nödbistånd",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD01SoU30",
@@ -159,8 +193,13 @@
       "titel": "Socialtjänstens arbete",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU16.html",
-      "found_by": ["keyword:socialtjänstlagen", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:socialtjänstlagen",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HEB419",
@@ -172,7 +211,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB419.html",
       "found_by": ["keyword:socialtjänstlagen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SoU39",
@@ -197,7 +237,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU40.html",
       "found_by": ["committee:SoU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD03295",
@@ -221,8 +262,9 @@
       "titel": "Skyldighet att betala för tandvård – nya regler för vissa utlänningar",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03300.html",
-      "found_by": ["keyword:ekonomiskt bistånd"],
-      "score": 1
+      "found_by": ["keyword:ekonomiskt bistånd", "score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD031d11",
@@ -338,6 +380,123 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB3120.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01SoU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU17",
+      "datum": "2024-06-04",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.98
+    },
+    {
+      "dok_id": "HD03229",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "229",
+      "datum": "2026-03-31",
+      "titel": "En ny mottagandelag",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03229.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB3113",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "113",
+      "datum": "2025-11-26",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB190",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "90",
+      "datum": "2024-09-26",
+      "titel": "Tilläggsdirektiv till Utredningen om drivkrafter och möjligheter i försörjningsstödet (S 2022:16)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB190.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HCB370",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "70",
+      "datum": "2024-10-25",
+      "titel": "Tiotandvård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB370.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
       "score": 1,
       "relevance": 0.6
     }

@@ -18,7 +18,16 @@
     "score:tido-corpus-claude-v1-shard-3-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -34,9 +43,11 @@
         "keyword:tandvård",
         "keyword:särregler",
         "keyword:vård som inte kan anstå",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HD01SoU40",
@@ -47,8 +58,14 @@
       "titel": "Skyldighet att betala för tandvård – nya regler för vissa utlänningar",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU40.html",
-      "found_by": ["keyword:tandvård", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:tandvård",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HA01SoU15",
@@ -59,8 +76,14 @@
       "titel": "Läkemedel och tandvård",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU15.html",
-      "found_by": ["keyword:tandvård", "all-keywords", "committee:SoU"],
-      "score": 3
+      "found_by": [
+        "keyword:tandvård",
+        "all-keywords",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03145",
@@ -72,7 +95,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03145.html",
       "found_by": ["keyword:vård som inte kan anstå", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01SoU14",
@@ -83,8 +107,13 @@
       "titel": "Läkemedel och tandvård",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU14.html",
-      "found_by": ["keyword:tandvård", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:tandvård",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HCB380",
@@ -96,7 +125,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB380.html",
       "found_by": ["keyword:vård som inte kan anstå", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HC01SoU4",
@@ -137,8 +167,13 @@
       "titel": "Tiotandvård",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB370.html",
-      "found_by": ["keyword:vård som inte kan anstå", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:vård som inte kan anstå",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01SoU12",
@@ -149,8 +184,13 @@
       "titel": "Läkemedel och tandvård",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU12.html",
-      "found_by": ["keyword:tandvård", "committee:SoU"],
-      "score": 2
+      "found_by": [
+        "keyword:tandvård",
+        "committee:SoU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01SfU37",
@@ -188,7 +228,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU36.html",
       "found_by": ["keyword:uppehållstillstånd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SfU30",
@@ -267,6 +308,84 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01SoU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU1",
+      "datum": "2025-12-03",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD031d10",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 8 Migration",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC01SoU14",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU14",
+      "datum": "2025-02-03",
+      "titel": "Läkemedel och tandvård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HBB1138",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "138",
+      "datum": "2023-10-05",
+      "titel": "Tilläggsdirektiv till Utredningen om stärkt stöd till tandvård för våldsutsatta och ökad kontroll över tandvårdssektorn (S 2022:12)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1138.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

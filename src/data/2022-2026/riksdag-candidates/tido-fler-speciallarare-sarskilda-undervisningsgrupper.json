@@ -21,7 +21,15 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -39,9 +47,11 @@
         "keyword:rektor",
         "keyword:stödinsatser",
         "keyword:elever med behov",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.92
     },
     {
       "dok_id": "HD01UbU24",
@@ -57,9 +67,11 @@
         "keyword:särskilda undervisningsgrupper",
         "keyword:stödinsatser",
         "all-keywords",
-        "committee:UbU"
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.8
     },
     {
       "dok_id": "HC03143",
@@ -90,7 +102,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03192.html",
       "found_by": ["keyword:speciallärare", "keyword:rektor", "keyword:stödinsatser"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.03
     },
     {
       "dok_id": "HDB3113",
@@ -104,9 +117,11 @@
       "found_by": [
         "keyword:särskilda undervisningsgrupper",
         "keyword:elever med behov",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HDB344",
@@ -135,8 +150,14 @@
       "titel": "Lärare och elever",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU7.html",
-      "found_by": ["keyword:särskilda undervisningsgrupper", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:särskilda undervisningsgrupper",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HEB350",
@@ -147,8 +168,13 @@
       "titel": "En ny speciallärarutbildning",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB350.html",
-      "found_by": ["keyword:elever med behov", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:elever med behov",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD03193",
@@ -160,7 +186,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03193.html",
       "found_by": ["keyword:särskilda undervisningsgrupper", "keyword:rektor"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HD03194",
@@ -205,8 +232,13 @@
       "titel": "Lärare och elever",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU9.html",
-      "found_by": ["keyword:speciallärare", "committee:UbU"],
-      "score": 2
+      "found_by": [
+        "keyword:speciallärare",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC01UbU11",
@@ -406,6 +438,214 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3124",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "124",
+      "datum": "2026-01-01",
+      "titel": "Åtgärder för en mer hållbar konsumtion ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3124.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC0366",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "66",
+      "datum": "2024-12-10",
+      "titel": "Sveriges genomförande av Agenda 2030",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0366.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01FiU20",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU20",
+      "datum": "2023-06-15",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB130",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2024-03-07",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB130.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB3115",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "115",
+      "datum": "2025-12-10",
+      "titel": "Kompletterande bestämmelser till EU:s cyberresiliensförordning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3115.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01UbU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU9",
+      "datum": "2025-04-23",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU9.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01FiU21",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU21",
+      "datum": "2023-06-15",
+      "titel": "Vårändringsbudget för 2023",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HDB372",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "72",
+      "datum": "2025-06-13",
+      "titel": "Verktyg för en mer likvärdig resursfördelning till skolan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01UbU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UbU1",
+      "datum": "2022-12-14",
+      "titel": "Utgiftsområde 16 Utbildning och  universitetsforskning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01UbU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UbU5",
+      "datum": "2023-04-21",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01UbU7",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU7",
+      "datum": "2026-02-23",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB349",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "49",
+      "datum": "2025-04-23",
+      "titel": "Säkerhetspolisens behandling av personuppgifter",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB349.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01FiU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU1",
+      "datum": "2022-12-12",
+      "titel": "Statens budget 2023 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.85
     }
   ]
 }

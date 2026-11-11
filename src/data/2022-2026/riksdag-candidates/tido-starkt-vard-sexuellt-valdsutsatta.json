@@ -21,7 +21,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -33,8 +42,14 @@
       "titel": "Nya nätbrott och andra åtgärder för genomförandet av direktivet om bekämpning av våld mot kvinnor och våld i nära relationer",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB334.html",
-      "found_by": ["keyword:sexuellt våld", "keyword:traumamottagning", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:sexuellt våld",
+        "keyword:traumamottagning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HBB398",
@@ -63,8 +78,14 @@
       "titel": "Sexuellt utnyttjande i pornografiska syften, del 2",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB398d2.html",
-      "found_by": ["keyword:sexuellt våld", "keyword:traumamottagning", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:sexuellt våld",
+        "keyword:traumamottagning",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HBB397",
@@ -124,7 +145,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU20.html",
       "found_by": ["keyword:våldsutsatta", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HDB328",
@@ -153,7 +175,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU19.html",
       "found_by": ["keyword:våldsutsatta", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HCB321",
@@ -178,7 +201,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU18.html",
       "found_by": ["keyword:våldsutsatta", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.5
     },
     {
       "dok_id": "HAB370",
@@ -233,7 +257,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03304.html",
       "found_by": ["keyword:våldsutsatta"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HA031d10",
@@ -494,6 +519,162 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01SoU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU1",
+      "datum": "2025-12-03",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD01JuU12",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU12",
+      "datum": "2026-03-20",
+      "titel": "Våldsbrott och brottsoffer",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB031d14",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC01SoU22",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU22",
+      "datum": "2025-04-02",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01JuU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU11",
+      "datum": "2025-04-11",
+      "titel": "Våldsbrott och brottsoffer",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU11.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01SoU17",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU17",
+      "datum": "2026-04-01",
+      "titel": "Prioriteringar inom hälso- och sjukvården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HA01SoU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031d15",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01SoU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU14",
+      "datum": "2023-04-24",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HB01JuU18",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU18",
+      "datum": "2024-04-12",
+      "titel": "Våldsbrott och brottsoffer",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

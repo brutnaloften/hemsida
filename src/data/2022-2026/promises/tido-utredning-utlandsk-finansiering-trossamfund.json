@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2026:42 (Ett nytt regelverk för granskning av utländsk finansiering av trossamfund och andra verksamheter, del 1). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i maj 2025 en utredare i uppdrag att föreslå regler mot utländsk finansiering av trossamfund och andra verksamheter med antidemokratiska syften. I juni 2026 lade utredningen fram sitt förslag i två delar, bland annat med en granskande myndighet, sanktioner och straffansvar. Förslagen är ännu inte beslutade. Åtgärder mot offentliga medel till föreningar med islamistiska eller separatistiska kopplingar ingår inte.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,6 +34,16 @@
   },
   "evidence": [
     {
+      "kind": "dir",
+      "dok_id": "HDB152",
+      "designation": "Dir. 2025:52",
+      "title": "Ett regelverk för att motverka utländsk finansiering av verksamheter med antidemokratiska syften",
+      "date": "2025-05-28",
+      "url": "https://data.riksdagen.se/dokument/HDB152.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "sou",
       "dok_id": "HEB342",
       "designation": "SOU 2026:42",
@@ -41,6 +51,16 @@
       "date": "2026-06-23",
       "url": "https://data.riksdagen.se/dokument/HEB342.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB342d2",
+      "designation": "SOU 2026:42",
+      "title": "Ett nytt regelverk för granskning av utländsk finansiering av trossamfund och andra verksamheter, del 2",
+      "date": "2026-06-23",
+      "url": "https://data.riksdagen.se/dokument/HEB342d2.html",
+      "relevance": "full",
       "note": null
     }
   ]

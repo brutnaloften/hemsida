@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:1 (Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen lämnade en nationell strategi för psykisk hälsa och suicidprevention till riksdagen, och i maj 2025 lade riksdagen skrivelsen till handlingarna. Strategin innehåller en handlingsplan och ett uppdrag om genomförande. I budgetförslaget för 2026 föreslogs att det nuvarande suicidpreventiva programmet ersätts av strategins mål, men något beslut om det syns inte.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -33,6 +33,16 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HC01SoU7",
+      "designation": "Bet. 2024/25:SoU7",
+      "title": "Det handlar om livet – nationell strategi inom området psykisk hälsa och suicidprevention",
+      "date": "2025-05-20",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU7.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "prop",
       "dok_id": "HD031d11",

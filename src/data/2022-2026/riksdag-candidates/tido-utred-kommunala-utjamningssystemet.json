@@ -19,7 +19,15 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -31,8 +39,14 @@
       "titel": "Kommunala frågor",
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU26.html",
-      "found_by": ["keyword:kommunalt utjämningssystem", "all-keywords", "committee:FiU"],
-      "score": 3
+      "found_by": [
+        "keyword:kommunalt utjämningssystem",
+        "all-keywords",
+        "committee:FiU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.75
     },
     {
       "dok_id": "HC01FiU26",
@@ -43,8 +57,14 @@
       "titel": "Kommunala frågor",
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HC01FiU26.html",
-      "found_by": ["keyword:kommunalt utjämningssystem", "all-keywords", "committee:FiU"],
-      "score": 3
+      "found_by": [
+        "keyword:kommunalt utjämningssystem",
+        "all-keywords",
+        "committee:FiU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD01SkU13",
@@ -68,8 +88,13 @@
       "titel": "Utgiftsområde 25 Allmänna bidrag till kommuner",
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU3.html",
-      "found_by": ["keyword:utjämning", "committee:FiU"],
-      "score": 2
+      "found_by": [
+        "keyword:utjämning",
+        "committee:FiU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.75
     },
     {
       "dok_id": "HC01TU11",
@@ -81,7 +106,8 @@
       "organ": "TU",
       "url": "https://data.riksdagen.se/dokument/HC01TU11.html",
       "found_by": ["keyword:kommunalekonomi", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC01SkU9",
@@ -170,7 +196,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HB01FiU3.html",
       "found_by": ["keyword:utjämning", "committee:FiU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA01NU8",
@@ -181,8 +208,13 @@
       "titel": "Riksrevisionens rapport om den regionala utvecklingspolitiken",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU8.html",
-      "found_by": ["keyword:kommunalt utjämningssystem", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:kommunalt utjämningssystem",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HA01FiU3",
@@ -193,8 +225,13 @@
       "titel": "Utgiftsområde 25 Allmänna bidrag till kommuner",
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HA01FiU3.html",
-      "found_by": ["keyword:utjämning", "committee:FiU"],
-      "score": 2
+      "found_by": [
+        "keyword:utjämning",
+        "committee:FiU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HD01FiU30",
@@ -206,7 +243,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU30.html",
       "found_by": ["committee:FiU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD03101",
@@ -218,7 +256,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03101.html",
       "found_by": ["keyword:utjämning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.15
     },
     {
       "dok_id": "HCB117",
@@ -414,6 +453,214 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HAB356",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "56",
+      "datum": "2022-11-01",
+      "titel": "En tryggad försörjning av metaller och mineral ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB356.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB01NU12",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU12",
+      "datum": "2024-05-02",
+      "titel": "Regional utveckling",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD01NU21",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU21",
+      "datum": "2026-05-12",
+      "titel": "Hela Sverige ska fungera – politik för starkare landsbygder",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU21.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01FiU26",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU26",
+      "datum": "2023-04-04",
+      "titel": "Kommunala frågor",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB01FiU26",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU26",
+      "datum": "2024-02-16",
+      "titel": "Kommunala frågor",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HBB39",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "9",
+      "datum": "2023-11-08",
+      "titel": "Ett statligt huvudmannaskap för personlig assistans, Ökad likvärdighet, långsiktighet och kvalitet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB39.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB372",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "72",
+      "datum": "2025-06-13",
+      "titel": "Verktyg för en mer likvärdig resursfördelning till skolan",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB372.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA031d26",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HCB36",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "6",
+      "datum": "2024-01-25",
+      "titel": "Steg mot stärkt kapacitet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB36.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HC031d26",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HCB394",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "94",
+      "datum": "2024-12-20",
+      "titel": "Förstärkningsundervisning i skolan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

@@ -18,7 +18,12 @@
     "score:tido-corpus-claude-v1-shard-3-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -49,7 +54,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HD01NU17.html",
       "found_by": ["keyword:Svenska kraftnät", "keyword:transmissionsnätet", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01KU10",
@@ -97,7 +103,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
       "found_by": ["keyword:transmissionsnätet", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01UbU15",
@@ -109,7 +116,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU15.html",
       "found_by": ["keyword:myndighetsform", "keyword:utredning"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HDB347",
@@ -181,7 +189,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB360.html",
       "found_by": ["keyword:myndighetsform"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HEB348",
@@ -219,7 +228,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU31.html",
       "found_by": ["keyword:utredning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03260",
@@ -231,7 +241,8 @@
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03260.html",
       "found_by": ["keyword:myndighetsform"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     }
   ]
 }

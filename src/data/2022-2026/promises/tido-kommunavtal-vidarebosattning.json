@@ -26,10 +26,38 @@
     "kvotflyktingar"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i februari 2024 en utredning i uppdrag att föreslå ett nytt bosättningssystem med större kommunalt inflytande, och att se över hur kvotflyktingar fördelas utifrån integrationskapacitet. Utredningen lade i april 2025 fram ett förslag om en ny lag där kommunerna påverkar mottagandet av nyanlända. Förslaget gäller dock inte avtal mellan kommuner och Migrationsverket om kvotflyktingar, och regeringens fastställande av totalen efter samråd saknas.",
+    "date": "2026-11-11",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB122",
+      "designation": "Dir. 2024:22",
+      "title": "Ett nytt system för bosättning för vissa nyanlända",
+      "date": "2024-02-15",
+      "url": "https://data.riksdagen.se/dokument/HCB122.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB335",
+      "designation": "SOU 2025:35",
+      "title": "Etableringsboendelagen",
+      "date": "2025-04-02",
+      "url": "https://data.riksdagen.se/dokument/HDB335.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2025:44 (Förbättrat stöd i skolan ). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Riksdagen beslutade i december 2022 om budgeten för utbildning, med ökade pengar till speciallärare, specialpedagogiska insatser och särskilda undervisningsgrupper: 400 miljoner kronor 2023, stigande till 800 miljoner 2025. Regeringen lade i mars 2026 fram ett förslag som ska göra det enklare att besluta om stöd i mindre undervisningsgrupper. Rektorns ökade frihet att utforma grupperna nämns inte.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,12 +40,22 @@
   },
   "evidence": [
     {
-      "kind": "sou",
-      "dok_id": "HDB344",
-      "designation": "SOU 2025:44",
-      "title": "Förbättrat stöd i skolan ",
-      "date": "2025-04-10",
-      "url": "https://data.riksdagen.se/dokument/HDB344.html",
+      "kind": "bet",
+      "dok_id": "HA01UbU1",
+      "designation": "Bet. 2022/23:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och  universitetsforskning",
+      "date": "2022-12-14",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03195",
+      "designation": "Prop. 2025/26:195",
+      "title": "Förbättrat stöd i skolan",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03195.html",
       "relevance": "partial",
       "note": null
     }

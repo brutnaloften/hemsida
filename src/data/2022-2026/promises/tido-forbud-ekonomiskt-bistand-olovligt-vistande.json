@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:201 (Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i september 2024 en utredning i uppdrag att föreslå ett förbud mot ekonomiskt bistånd till personer som vistas olovligt i landet, med undantag för akuta nödsituationer. Utredningen redovisade sitt arbete i februari 2025. I mars 2026 lade regeringen fram ett lagförslag om att bistånd bara ges till personer som vistas lagligt i Sverige. Förslaget är inte beslutat, och nödbistånd och civilsamhällets stöd nämns inte i det som framgår.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -39,6 +39,26 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB190",
+      "designation": "Dir. 2024:90",
+      "title": "Tilläggsdirektiv till Utredningen om drivkrafter och möjligheter i försörjningsstödet (S 2022:16)",
+      "date": "2024-09-26",
+      "url": "https://data.riksdagen.se/dokument/HCB190.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB315",
+      "designation": "SOU 2025:15",
+      "title": "Stärkta drivkrafter och möjligheter för biståndsmottagare",
+      "date": "2025-02-26",
+      "url": "https://data.riksdagen.se/dokument/HDB315.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "prop",
       "dok_id": "HD03201",

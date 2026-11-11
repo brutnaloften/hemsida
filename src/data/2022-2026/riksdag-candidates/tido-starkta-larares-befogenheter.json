@@ -22,7 +22,17 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -53,8 +63,14 @@
       "titel": "Tid för undervisningsuppdraget",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03196.html",
-      "found_by": ["keyword:lärares befogenheter", "keyword:dokumentation", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:lärares befogenheter",
+        "keyword:dokumentation",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.6
     },
     {
       "dok_id": "HD01UbU9",
@@ -65,8 +81,14 @@
       "titel": "Lärare och elever",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU9.html",
-      "found_by": ["keyword:lärares befogenheter", "all-keywords", "committee:UbU"],
-      "score": 3
+      "found_by": [
+        "keyword:lärares befogenheter",
+        "all-keywords",
+        "committee:UbU",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HD01UbU16",
@@ -78,7 +100,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU16.html",
       "found_by": ["keyword:lärares befogenheter", "all-keywords", "committee:UbU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.12
     },
     {
       "dok_id": "HC01UbU11",
@@ -161,8 +184,13 @@
       "titel": "Bättre förutsättningar för trygghet och studiero i skolan",
       "organ": "Utbildningsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03193.html",
-      "found_by": ["keyword:disciplinära åtgärder", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:disciplinära åtgärder",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-13-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HDB38",
@@ -191,7 +219,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB357.html",
       "found_by": ["keyword:disciplinära åtgärder"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03292",
@@ -229,7 +258,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU24.html",
       "found_by": ["keyword:skollagen"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD01UbU28",
@@ -438,6 +468,162 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HEB350",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "50",
+      "datum": "2026-08-14",
+      "titel": "En ny speciallärarutbildning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB350.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD01UbU23",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU23",
+      "datum": "2026-05-28",
+      "titel": "Nya läroplaner – för en stark kunskapsskola",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU23.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HDB396",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "96",
+      "datum": "2025-10-01",
+      "titel": "Fler möjligheter till ökat välstånd",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB396.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HC01UbU10",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU10",
+      "datum": "2025-05-06",
+      "titel": "Grundläggande om utbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU10.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HA01UbU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UbU5",
+      "datum": "2023-04-21",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD01UbU7",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU7",
+      "datum": "2026-02-23",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD03195",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "195",
+      "datum": "2026-03-17",
+      "titel": "Förbättrat stöd i skolan",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03195.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.7
     }
   ]
 }

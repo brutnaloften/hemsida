@@ -21,7 +21,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -39,9 +48,11 @@
         "keyword:SVT",
         "keyword:Sveriges Radio",
         "all-keywords",
-        "committee:KrU"
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
       ],
-      "score": 6
+      "score": 6,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC03166",
@@ -57,9 +68,11 @@
         "keyword:tillståndsperiod",
         "keyword:SVT",
         "keyword:Sveriges Radio",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.97
     },
     {
       "dok_id": "HC01KrU4",
@@ -93,9 +106,11 @@
         "keyword:public service",
         "keyword:tillståndsperiod",
         "keyword:Sveriges Radio",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01KrU3",
@@ -110,9 +125,11 @@
         "keyword:public service",
         "keyword:Sveriges Radio",
         "all-keywords",
-        "committee:KrU"
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-12-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01KrU9",
@@ -127,9 +144,11 @@
         "keyword:public service",
         "keyword:Sveriges Radio",
         "all-keywords",
-        "committee:KrU"
+        "committee:KrU",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD01KrU5",
@@ -176,8 +195,14 @@
       "titel": "Innehållsvillkor för public service på internet",
       "organ": "Kulturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HA0383.html",
-      "found_by": ["keyword:public service", "keyword:tillståndsperiod", "keyword:Sveriges Radio"],
-      "score": 3
+      "found_by": [
+        "keyword:public service",
+        "keyword:tillståndsperiod",
+        "keyword:Sveriges Radio",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD01KU20",
@@ -215,7 +240,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03284.html",
       "found_by": ["keyword:tillståndsperiod"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HEB315d2",
@@ -489,6 +515,266 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HDB3124",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "124",
+      "datum": "2026-01-01",
+      "titel": "Åtgärder för en mer hållbar konsumtion ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3124.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB031d18",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HBB127",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "27",
+      "datum": "2023-02-23",
+      "titel": "Långsiktiga villkor för ett hållfast och oberoende public service",
+      "organ": "Kulturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB127.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB339",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "39",
+      "datum": "2024-07-05",
+      "titel": "Skärpta regler om ungdomsövervakning  och straffreduktion för unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB339.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB398d3",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "98",
+      "datum": "2025-01-01",
+      "titel": "En ny samordnad miljöbedömnings- och tillståndsprövningsprocess, del 3",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB398d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01KU34",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU34",
+      "datum": "2023-05-05",
+      "titel": "Innehållsvillkor för public service på internet",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU34.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HCB382",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "82",
+      "datum": "2024-12-05",
+      "titel": "Ökad va-beredskap ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA01KU27",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU27",
+      "datum": "2023-03-21",
+      "titel": "Tryck- och yttrandefrihet, massmediefrågor",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU27.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB368",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "68",
+      "datum": "2024-10-15",
+      "titel": "Mottagandelagen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB368.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d19",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d19.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HC01KU16",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU16",
+      "datum": "2025-04-30",
+      "titel": "Författningsfrågor",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU16.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB373",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "73",
+      "datum": "2024-11-07",
+      "titel": "Juridiska personers förvärv av lantbruksegendom genom testamente",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB373.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB376",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "76",
+      "datum": "2024-11-18",
+      "titel": "Från överskottsmål till balansmål",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB376.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB387",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "87",
+      "datum": "2024-12-18",
+      "titel": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HCB360",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "60",
+      "datum": "2024-08-29",
+      "titel": "Stärkt stöd till anhöriga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB360.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB169",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "69",
+      "datum": "2025-07-03",
+      "titel": "Tilläggsdirektiv till Distributionsutredningen 2024 (Ku 2024:02)",
+      "organ": "Ku-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB169.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.75
+    },
+    {
+      "dok_id": "HCB394",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "94",
+      "datum": "2024-12-20",
+      "titel": "Förstärkningsundervisning i skolan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

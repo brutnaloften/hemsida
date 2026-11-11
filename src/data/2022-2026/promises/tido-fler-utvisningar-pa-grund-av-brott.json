@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:235 (Skärpta regler om utvisning på grund av brott). Dokumentet behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2025/26:JuU1 (Utgiftsområde 4 Rättsväsendet), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i maj 2024 en utredning i uppdrag att skärpa reglerna om utvisning på grund av brott. Utredningen lade fram sina förslag i maj 2025, och regeringen presenterade en proposition i april 2026. Riksdagen biföll den i juni 2026: utvisning blir möjlig vid straff strängare än böter, verkställighetshinder beaktas inte, återreseförbuden förlängs och åklagare måste yrka utvisning. Domstolar kan inte längre döma till utvisning på eget initiativ.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,13 +40,23 @@
   },
   "evidence": [
     {
-      "kind": "bet",
-      "dok_id": "HD01JuU1",
-      "designation": "Bet. 2025/26:JuU1",
-      "title": "Utgiftsområde 4 Rättsväsendet",
-      "date": "2025-11-28",
-      "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
-      "relevance": "partial",
+      "kind": "dir",
+      "dok_id": "HCB142",
+      "designation": "Dir. 2024:42",
+      "title": "Skärpt regelverk om utvisning på grund av brott",
+      "date": "2024-05-02",
+      "url": "https://data.riksdagen.se/dokument/HCB142.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB354",
+      "designation": "SOU 2025:54",
+      "title": "Ett skärpt regelverk om utvisning på grund av brott",
+      "date": "2025-05-14",
+      "url": "https://data.riksdagen.se/dokument/HDB354.html",
+      "relevance": "full",
       "note": null
     },
     {
@@ -56,6 +66,16 @@
       "title": "Skärpta regler om utvisning på grund av brott",
       "date": "2026-04-01",
       "url": "https://data.riksdagen.se/dokument/HD03235.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU33",
+      "designation": "Bet. 2025/26:SfU33",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
       "relevance": "full",
       "note": null
     }

@@ -20,7 +20,17 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -95,7 +105,8 @@
         "all-keywords",
         "committee:UbU"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.5
     },
     {
       "dok_id": "HB0321",
@@ -110,9 +121,11 @@
         "keyword:skolbibliotek",
         "keyword:läromedel",
         "keyword:laborationsutrustning",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC01UbU10",
@@ -124,7 +137,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HC01UbU10.html",
       "found_by": ["keyword:garanterad undervisningstid", "keyword:läromedel", "committee:UbU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.35
     },
     {
       "dok_id": "HD01UbU8",
@@ -182,8 +196,13 @@
       "titel": "Grundläggande om utbildning",
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HB01UbU10.html",
-      "found_by": ["keyword:skolbibliotek", "keyword:läromedel"],
-      "score": 2
+      "found_by": [
+        "keyword:skolbibliotek",
+        "keyword:läromedel",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.55
     },
     {
       "dok_id": "HA01UbU5",
@@ -195,7 +214,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HA01UbU5.html",
       "found_by": ["all-keywords", "committee:UbU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.45
     },
     {
       "dok_id": "HD01UbU30",
@@ -207,7 +227,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU30.html",
       "found_by": ["committee:UbU"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HEB337",
@@ -219,7 +240,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB337.html",
       "found_by": ["keyword:likvärdighet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.4
     },
     {
       "dok_id": "HD01UbU26",
@@ -243,8 +265,9 @@
       "titel": "Hela Sverige ska fungera – politik för starkare landsbygder",
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03158.html",
-      "found_by": ["keyword:skolbibliotek"],
-      "score": 1
+      "found_by": ["keyword:skolbibliotek", "score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.7
     },
     {
       "dok_id": "HD031d18",
@@ -360,6 +383,149 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB3120.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB113",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "13",
+      "datum": "2024-02-01",
+      "titel": "En reform av den statliga barn- och ungdomsvården för en trygg och kvalitativ vård",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HB03164",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "164",
+      "datum": "2024-07-30",
+      "titel": "Stärkta skolbibliotek",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03164.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HDB3113",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "113",
+      "datum": "2025-11-26",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD03196",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "196",
+      "datum": "2026-03-17",
+      "titel": "Tid för undervisningsuppdraget",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03196.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB382",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "82",
+      "datum": "2024-12-05",
+      "titel": "Ökad va-beredskap ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB382.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HAB353d2",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "53",
+      "datum": "2022-11-08",
+      "titel": "Statens ansvar för skolan - ett besluts- och kunskapsunderlag - Volym 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB353d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01UbU7",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU7",
+      "datum": "2026-02-23",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU7.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
       "score": 1,
       "relevance": 0.6
     }

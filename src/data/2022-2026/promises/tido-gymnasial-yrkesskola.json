@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:198 (Bättre förutsättningar för yrkesutbildning). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:UbU27 (Bättre förutsättningar för yrkesutbildning), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i juli 2023 utredaren tilläggsdirektiv att föreslå en gymnasial yrkesskola i nära samverkan med näringslivet och med arbetsplatsförlagt lärande. I februari 2024 föreslog en utredning en yrkesskola för vuxna, och i november 2024 föreslog utredningen nya nationella yrkesprogram med minst 15 veckors arbetsplatsförlagt lärande. Förslagen är utredningar och inget beslut har fattats.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -40,23 +40,33 @@
   },
   "evidence": [
     {
-      "kind": "prop",
-      "dok_id": "HD03198",
-      "designation": "Prop. 2025/26:198",
-      "title": "Bättre förutsättningar för yrkesutbildning",
-      "date": "2026-03-17",
-      "url": "https://data.riksdagen.se/dokument/HD03198.html",
+      "kind": "dir",
+      "dok_id": "HBB1114",
+      "designation": "Dir. 2023:114",
+      "title": "Tilläggsdirektiv till Utredningen om fler vägar till arbetslivet (U 2022:03)",
+      "date": "2023-07-13",
+      "url": "https://data.riksdagen.se/dokument/HBB1114.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB316",
+      "designation": "SOU 2024:16",
+      "title": "Växla yrke som vuxen - en reformerad vuxenutbildning och en ny yrkesskola för vuxna ",
+      "date": "2024-02-19",
+      "url": "https://data.riksdagen.se/dokument/HCB316.html",
       "relevance": "partial",
       "note": null
     },
     {
-      "kind": "bet",
-      "dok_id": "HD01UbU27",
-      "designation": "Bet. 2025/26:UbU27",
-      "title": "Bättre förutsättningar för yrkesutbildning",
-      "date": "2026-05-22",
-      "url": "https://data.riksdagen.se/dokument/HD01UbU27.html",
-      "relevance": "partial",
+      "kind": "sou",
+      "dok_id": "HCB374",
+      "designation": "SOU 2024:74",
+      "title": "Fler vägar till arbetslivet",
+      "date": "2024-11-22",
+      "url": "https://data.riksdagen.se/dokument/HCB374.html",
+      "relevance": "full",
       "note": null
     }
   ]

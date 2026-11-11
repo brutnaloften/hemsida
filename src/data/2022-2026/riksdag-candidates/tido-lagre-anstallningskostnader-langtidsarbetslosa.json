@@ -17,7 +17,13 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -33,9 +39,11 @@
         "keyword:långtidsarbetslösa",
         "keyword:anställningsstöd",
         "all-keywords",
-        "committee:AU"
+        "committee:AU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.85
     },
     {
       "dok_id": "HB01AU3",
@@ -65,8 +73,14 @@
       "titel": "Riksrevisionens rapport om kontrollen av subventionerade anställningar",
       "organ": "Arbetsmarknadsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HB0382.html",
-      "found_by": ["keyword:anställningsstöd", "keyword:lönesubvention", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:anställningsstöd",
+        "keyword:lönesubvention",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.75
     },
     {
       "dok_id": "HA01AU9",
@@ -96,7 +110,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
       "found_by": ["keyword:långtidsarbetslösa", "keyword:anställningskostnader"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HDB329",
@@ -121,7 +136,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB429.html",
       "found_by": ["keyword:lönesubvention", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HCB316",
@@ -133,7 +149,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB316.html",
       "found_by": ["keyword:lönesubvention", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HBB324",
@@ -145,7 +162,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB324.html",
       "found_by": ["keyword:lönesubvention", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.4
     },
     {
       "dok_id": "HBB37",
@@ -170,7 +188,8 @@
       "organ": "A-dep",
       "url": "https://data.riksdagen.se/dokument/HEB188.html",
       "found_by": ["keyword:långtidsarbetslösa"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD03100",
@@ -195,7 +214,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03101.html",
       "found_by": ["keyword:anställningsstöd"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03201",
@@ -339,6 +359,32 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.7
+    },
+    {
+      "dok_id": "HA031d15",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.95
     }
   ]
 }

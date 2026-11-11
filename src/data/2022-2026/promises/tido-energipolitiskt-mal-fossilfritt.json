@@ -28,8 +28,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2022/23:99 (Vårändringsbudget för 2023). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen föreslog i april 2023 i vårändringsbudgeten att målet för elproduktion ska ändras från 100 procent förnybart till 100 procent fossilfritt 2040. Riksdagen biföll det i juni 2023 och betonade teknikneutralitet. Ett leveranssäkerhetsmål för elförsörjningen med systemoperatören som ansvarig saknas fortfarande.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -46,6 +46,16 @@
       "title": "Vårändringsbudget för 2023",
       "date": "2023-04-17",
       "url": "https://data.riksdagen.se/dokument/HA0399.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01FiU21",
+      "designation": "Bet. 2022/23:FiU21",
+      "title": "Vårändringsbudget för 2023",
+      "date": "2023-06-15",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU21.html",
       "relevance": "partial",
       "note": null
     }

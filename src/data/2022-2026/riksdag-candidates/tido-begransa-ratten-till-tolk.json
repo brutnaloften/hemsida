@@ -21,7 +21,15 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -129,7 +137,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB334.html",
       "found_by": ["keyword:tolkavgift", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC03195",
@@ -157,8 +166,13 @@
       "titel": "Kompetensförsörjning, e-hälsa och beredskap",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU22.html",
-      "found_by": ["keyword:offentligt finansierad tolk", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:offentligt finansierad tolk",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HEB337",
@@ -170,7 +184,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB337.html",
       "found_by": ["all-keywords"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HEB341",
@@ -234,7 +249,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB331.html",
       "found_by": ["keyword:tolkavgift"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HEB329",
@@ -246,7 +262,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB329.html",
       "found_by": ["keyword:tolkavgift"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HA01SoU12",
@@ -323,6 +340,97 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB341d2.html",
       "found_by": ["score:tido-corpus-claude-v1-shard-6-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HDB331",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "31",
+      "datum": "2025-04-09",
+      "titel": "Utmönstring av permanent uppehållstillstånd och vissa anpassningar till miniminivån enligt EU:s migrations- och asylpakt",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB331.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HA01KU24",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU24",
+      "datum": "2023-04-21",
+      "titel": "Offentlig förvaltning",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU24.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB155",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "55",
+      "datum": "2026-06-25",
+      "titel": "Stärkt ställning för det svenska språket",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB155.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01SfU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SfU14",
+      "datum": "2024-05-10",
+      "titel": "Migrationsfrågor",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HEB357",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "57",
+      "datum": "2026-09-11",
+      "titel": "Akademisk frihet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB357.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031d15",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
       "score": 1,
       "relevance": 0.85
     }

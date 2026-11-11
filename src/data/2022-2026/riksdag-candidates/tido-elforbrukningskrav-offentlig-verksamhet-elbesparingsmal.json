@@ -19,7 +19,12 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -45,7 +50,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
       "found_by": ["keyword:elbesparing", "all-keywords", "committee:NU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.5
     },
     {
       "dok_id": "HD031",
@@ -57,7 +63,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
       "found_by": ["keyword:elförbrukning", "keyword:Energimyndigheten"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HC03150",
@@ -108,7 +115,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HD01MJU24.html",
       "found_by": ["keyword:myndigheter"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HEB333",
@@ -133,7 +141,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB410.html",
       "found_by": ["keyword:offentlig verksamhet"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01MJU22",
@@ -145,7 +154,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HD01MJU22.html",
       "found_by": ["keyword:Energimyndigheten"],
-      "score": 1
+      "score": 1,
+      "relevance": 0
     },
     {
       "dok_id": "HD01MJU25",
@@ -157,7 +167,8 @@
       "organ": "MJU",
       "url": "https://data.riksdagen.se/dokument/HD01MJU25.html",
       "found_by": ["keyword:myndigheter"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.01
     },
     {
       "dok_id": "HD01MJU20",
@@ -182,7 +193,8 @@
       "organ": "Klimat- och näringslivsdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03238.html",
       "found_by": ["keyword:myndigheter"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD03240",
@@ -207,7 +219,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0398.html",
       "found_by": ["keyword:elförbrukning"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HB031d22",
@@ -221,6 +234,32 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.55
+    },
+    {
+      "dok_id": "HA01NU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU17",
+      "datum": "2023-05-25",
+      "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA031d22",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

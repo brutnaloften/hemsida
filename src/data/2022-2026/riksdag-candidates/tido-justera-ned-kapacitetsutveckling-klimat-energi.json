@@ -18,7 +18,13 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -70,7 +76,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d9.html",
       "found_by": ["keyword:kapacitetsutveckling", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.05
     },
     {
       "dok_id": "HC01NU3",
@@ -107,8 +114,9 @@
       "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
-      "found_by": ["all-keywords", "committee:NU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:NU", "score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 2,
+      "relevance": 0.9
     },
     {
       "dok_id": "HA01NU3",
@@ -120,7 +128,8 @@
       "organ": "NU",
       "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
       "found_by": ["keyword:utgiftsområde 21", "committee:NU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD01NU19",
@@ -145,7 +154,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU48.html",
       "found_by": ["keyword:utgiftsområde 21"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.05
     },
     {
       "dok_id": "HD03240",
@@ -170,7 +180,8 @@
       "organ": "FiU",
       "url": "https://data.riksdagen.se/dokument/HD01FiU22.html",
       "found_by": ["keyword:kapacitetsutveckling"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.03
     },
     {
       "dok_id": "HD0397",
@@ -195,7 +206,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03137.html",
       "found_by": ["keyword:kapacitetsutveckling"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01NU13",
@@ -235,6 +247,32 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HA03101",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "101",
+      "datum": "2023-04-17",
+      "titel": "Årsredovisning för staten 2022",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03101.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01NU3",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU3",
+      "datum": "2023-12-08",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.65
     }
   ]
 }

@@ -18,7 +18,14 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-9-of-20"
+    "score:tido-corpus-claude-v1-shard-9-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -37,7 +44,8 @@
         "keyword:flyktingkvot",
         "all-keywords"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01SfU16",
@@ -53,9 +61,11 @@
         "keyword:vidarebosättning",
         "keyword:900 per år",
         "all-keywords",
-        "committee:SfU"
+        "committee:SfU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB0318",
@@ -102,8 +112,14 @@
       "titel": "Etableringsboendelagen",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB335.html",
-      "found_by": ["keyword:900 per år", "keyword:flyktingkvot", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:900 per år",
+        "keyword:flyktingkvot",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HB01SfU14",
@@ -115,7 +131,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HB01SfU14.html",
       "found_by": ["keyword:vidarebosättning", "keyword:900 per år", "committee:SfU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.05
     },
     {
       "dok_id": "HBB325",
@@ -126,8 +143,14 @@
       "titel": "Kunskapskrav för permanent uppehållstillstånd ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB325.html",
-      "found_by": ["keyword:900 per år", "keyword:flyktingkvot", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:900 per år",
+        "keyword:flyktingkvot",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-16-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.85
     },
     {
       "dok_id": "HD03215",
@@ -169,7 +192,8 @@
       "organ": "Justitiedepartementet",
       "url": "https://data.riksdagen.se/dokument/HC03176.html",
       "found_by": ["keyword:kvotflyktingar", "keyword:vidarebosättning"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.02
     },
     {
       "dok_id": "HC01SfU18",
@@ -181,7 +205,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HC01SfU18.html",
       "found_by": ["keyword:vidarebosättning", "committee:SfU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HDB331",
@@ -193,7 +218,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB331.html",
       "found_by": ["keyword:flyktingkvot", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HCB392",
@@ -231,7 +257,8 @@
       "organ": "AU",
       "url": "https://data.riksdagen.se/dokument/HC01AU1.html",
       "found_by": ["keyword:kvotflyktingar", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HA031d9",
@@ -245,6 +272,71 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
       "score": 1,
       "relevance": 0.95
+    },
+    {
+      "dok_id": "HC031d14",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d14.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD01AU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU1",
+      "datum": "2025-12-09",
+      "titel": "Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HA01AU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU1",
+      "datum": "2022-12-15",
+      "titel": "Utgiftsområde 13 Jämställdhet och nyanlända invandrares etablering",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD031d15",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Utgiftsområde 13 Integration och jämställdhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d15.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

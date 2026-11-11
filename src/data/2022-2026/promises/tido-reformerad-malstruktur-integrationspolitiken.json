@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2024:12 (Mål och mening med integration). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Regeringen gav i juni 2023 utredaren i tilläggsdirektiv i uppdrag att föreslå ett nytt integrationspolitiskt mål med indikatorer, utifrån Tidöavtalets skrivning. I april 2024 föreslog regeringen i vårändringsbudgeten att riksdagen godkänner målet för integrationspolitiken, och i juni 2024 lämnade utredningen sin rapport med fem delmål. Det framgår inte att ett beslut om den nya målstrukturen har fattats.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,13 +34,33 @@
   },
   "evidence": [
     {
-      "kind": "sou",
-      "dok_id": "HCB312",
-      "designation": "SOU 2024:12",
-      "title": "Mål och mening med integration",
-      "date": "2024-02-02",
-      "url": "https://data.riksdagen.se/dokument/HCB312.html",
+      "kind": "dir",
+      "dok_id": "HBB1101",
+      "designation": "Dir. 2023:101",
+      "title": "Tilläggsdirektiv till Utredningen om en målstyrd integrationspolitik (Ju 2022:05)",
+      "date": "2023-06-29",
+      "url": "https://data.riksdagen.se/dokument/HBB1101.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0399",
+      "designation": "Prop. 2023/24:99",
+      "title": "Vårändringsbudget för 2024",
+      "date": "2024-04-15",
+      "url": "https://data.riksdagen.se/dokument/HB0399.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB341",
+      "designation": "SOU 2024:41",
+      "title": "Styrkraft för lyckad integration ",
+      "date": "2024-06-14",
+      "url": "https://data.riksdagen.se/dokument/HCB341.html",
+      "relevance": "partial",
       "note": null
     }
   ]

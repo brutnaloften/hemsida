@@ -22,7 +22,16 @@
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-13-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -39,9 +48,11 @@
         "keyword:SiS",
         "keyword:ungdomshem",
         "all-keywords",
-        "committee:JuU"
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
       ],
-      "score": 5
+      "score": 5,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD03132",
@@ -71,8 +82,14 @@
       "titel": "Begränsningar och kontroll i fråga om elektroniska kommunikationstjänster och besök på särskilda ungdomshem",
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HB01SoU25.html",
-      "found_by": ["keyword:SiS", "keyword:ungdomshem", "all-keywords"],
-      "score": 3
+      "found_by": [
+        "keyword:SiS",
+        "keyword:ungdomshem",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.8
     },
     {
       "dok_id": "HB0381",
@@ -119,8 +136,14 @@
       "titel": "Unga lagöverträdare",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HA01JuU15.html",
-      "found_by": ["keyword:ungdomsfängelse", "all-keywords", "committee:JuU"],
-      "score": 3
+      "found_by": [
+        "keyword:ungdomsfängelse",
+        "all-keywords",
+        "committee:JuU",
+        "score:tido-corpus-claude-v1-shard-20-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03294",
@@ -162,7 +185,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU5.html",
       "found_by": ["keyword:SiS", "keyword:ungdomshem"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HCB426",
@@ -173,8 +197,13 @@
       "titel": "Ökad trygghet och säkerhet på särskilda ungdomshem och LVM-hem ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HCB426.html",
-      "found_by": ["keyword:sluten ungdomsvård", "keyword:ungdomshem"],
-      "score": 2
+      "found_by": [
+        "keyword:sluten ungdomsvård",
+        "keyword:ungdomshem",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.6
     },
     {
       "dok_id": "HC0340",
@@ -185,8 +214,13 @@
       "titel": "Riksrevisionens rapport om SiS särskilda ungdomshem",
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0340.html",
-      "found_by": ["keyword:SiS", "keyword:ungdomshem"],
-      "score": 2
+      "found_by": [
+        "keyword:SiS",
+        "keyword:ungdomshem",
+        "score:tido-corpus-claude-v1-shard-14-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC0341",
@@ -198,7 +232,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0341.html",
       "found_by": ["keyword:sluten ungdomsvård", "keyword:ungdomshem"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HB01JuU19",
@@ -209,8 +244,9 @@
       "titel": "Unga lagöverträdare",
       "organ": "JuU",
       "url": "https://data.riksdagen.se/dokument/HB01JuU19.html",
-      "found_by": ["all-keywords", "committee:JuU"],
-      "score": 2
+      "found_by": ["all-keywords", "committee:JuU", "score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 2,
+      "relevance": 0.92
     },
     {
       "dok_id": "HA01SoU24",
@@ -566,6 +602,305 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-9-of-20"],
       "score": 1,
       "relevance": 0.85
+    },
+    {
+      "dok_id": "HD031",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB01JuU29",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU29",
+      "datum": "2024-04-25",
+      "titel": "Motståndskraft och handlingskraft – en nationell strategi mot organiserad brottslighet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU29.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-11-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01SoU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU17",
+      "datum": "2023-06-08",
+      "titel": "Barn och unga inom socialtjänsten",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.93
+    },
+    {
+      "dok_id": "HA01FiU20",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU20",
+      "datum": "2023-06-15",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU20.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HD0375",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "75",
+      "datum": "2026-03-17",
+      "titel": "Riksdagens skrivelser till regeringen – åtgärder under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD0375.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HC01JuU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU1",
+      "datum": "2024-11-29",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB113",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "13",
+      "datum": "2024-02-01",
+      "titel": "En reform av den statliga barn- och ungdomsvården för en trygg och kvalitativ vård",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB113.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HCB348d2",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "48",
+      "datum": "2024-07-05",
+      "titel": "Ett ändamålsenligt samhällsskydd Volym 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB348d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-13-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB03103",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "103",
+      "datum": "2024-03-19",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2023",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HB03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB339",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "39",
+      "datum": "2024-07-05",
+      "titel": "Skärpta regler om ungdomsövervakning  och straffreduktion för unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB339.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HCB47",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "7",
+      "datum": "2024-05-13",
+      "titel": "Avskildhet vid dygnsvilan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB47.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HB01JuU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU1",
+      "datum": "2023-11-30",
+      "titel": "Utgiftsområde 4 Rättsväsendet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.7
+    },
+    {
+      "dok_id": "HB031d5",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD03274",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "274",
+      "datum": "2026-06-23",
+      "titel": "Uppföljning av den nationella strategin mot organiserad brottslighet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03274.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HD03103",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "103",
+      "datum": "2026-03-17",
+      "titel": "Kommittéberättelse – kommittéernas verksamhet under 2025",
+      "organ": "Statsrådsberedningen",
+      "url": "https://data.riksdagen.se/dokument/HD03103.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-16-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HD031d2",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "1",
+      "datum": "2025-09-22",
+      "titel": "Budgetpropositionen för 2026 - Finansplanen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HD031d2.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HC031d5",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 4 Rättsväsendet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d5.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HD01JuU41",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU41",
+      "datum": "2026-08-12",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.95
+    },
+    {
+      "dok_id": "HEB352d3",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "52",
+      "datum": "2026-08-18",
+      "titel": "En reform av den statliga barn- och ungdomsvården, del 3",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB352d3.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.92
+    },
+    {
+      "dok_id": "HD01JuU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU13",
+      "datum": "2026-01-16",
+      "titel": "Unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU13.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-18-of-20"],
+      "score": 1,
+      "relevance": 0.8
+    },
+    {
+      "dok_id": "HD03246",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "246",
+      "datum": "2026-04-16",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03246.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HDB311",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "11",
+      "datum": "2025-01-28",
+      "titel": "Straffbarhetsåldern",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB311.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-19-of-20"],
+      "score": 1,
+      "relevance": 0.88
+    },
+    {
+      "dok_id": "HDB327",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "27",
+      "datum": "2025-03-04",
+      "titel": "En socionomutbildning i tiden ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB327.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.8
     }
   ]
 }

@@ -22,8 +22,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2025:89 (Ersättning vid avveckling av kärnkraftsreaktorer till följd av politiska beslut). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
-    "date": "2026-11-10",
+    "reasoning": "Riksdagen sa i december 2022 i ett budgetbeslut att den är positiv till nya regler som ger rätt till drift så länge anläggningarna är i gott skick. Regeringen gav i oktober 2025 en utredare i uppdrag att föreslå ersättning vid politiskt beslutad avveckling. I juli 2026 föreslog utredningen ersättning, men bara för reaktorer som inte tagits i drift. Skydd mot nedstängning saknas och inget förslag är beslutat.",
+    "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
@@ -34,12 +34,32 @@
   },
   "evidence": [
     {
+      "kind": "bet",
+      "dok_id": "HA01NU3",
+      "designation": "Bet. 2022/23:NU3",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "dir",
       "dok_id": "HDB189",
       "designation": "Dir. 2025:89",
       "title": "Ersättning vid avveckling av kärnkraftsreaktorer till följd av politiska beslut",
       "date": "2025-10-02",
       "url": "https://data.riksdagen.se/dokument/HDB189.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB347",
+      "designation": "SOU 2026:47",
+      "title": "Rätt till ersättning vid avveckling av kärnkraft på grund av politiska beslut - Reaktorer som inte tagits i drift",
+      "date": "2026-07-02",
+      "url": "https://data.riksdagen.se/dokument/HEB347.html",
       "relevance": "partial",
       "note": null
     }

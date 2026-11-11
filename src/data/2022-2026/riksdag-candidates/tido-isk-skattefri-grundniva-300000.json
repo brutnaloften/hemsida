@@ -19,7 +19,14 @@
     "score:tido-corpus-claude-v1-shard-5-of-20",
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-8-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-17-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -35,9 +42,11 @@
         "keyword:investeringssparkonto",
         "keyword:schablonintäkt",
         "keyword:skattefri grundnivå",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.9
     },
     {
       "dok_id": "HC01FiU1",
@@ -52,9 +61,11 @@
         "keyword:investeringssparkonto",
         "keyword:skattefri grundnivå",
         "keyword:sparande",
-        "all-keywords"
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-18-of-20"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03100",
@@ -122,9 +133,11 @@
       "found_by": [
         "keyword:investeringssparkonto",
         "keyword:schablonintäkt",
-        "keyword:skattefri grundnivå"
+        "keyword:skattefri grundnivå",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
       ],
-      "score": 3
+      "score": 3,
+      "relevance": 0.97
     },
     {
       "dok_id": "HB01SkU12",
@@ -135,8 +148,14 @@
       "titel": "Företag, kapital och fastighet",
       "organ": "SkU",
       "url": "https://data.riksdagen.se/dokument/HB01SkU12.html",
-      "found_by": ["keyword:skattefri grundnivå", "all-keywords", "committee:SkU"],
-      "score": 3
+      "found_by": [
+        "keyword:skattefri grundnivå",
+        "all-keywords",
+        "committee:SkU",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.9
     },
     {
       "dok_id": "HD0398",
@@ -147,8 +166,13 @@
       "titel": "Redovisning av skatteutgifter 2026",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0398.html",
-      "found_by": ["keyword:investeringssparkonto", "keyword:schablonintäkt"],
-      "score": 2
+      "found_by": [
+        "keyword:investeringssparkonto",
+        "keyword:schablonintäkt",
+        "score:tido-corpus-claude-v1-shard-15-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.95
     },
     {
       "dok_id": "HD03186",
@@ -160,7 +184,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03186.html",
       "found_by": ["keyword:ISK", "keyword:investeringssparkonto"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.25
     },
     {
       "dok_id": "HDB3117",
@@ -185,7 +210,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0369.html",
       "found_by": ["keyword:investeringssparkonto", "keyword:schablonintäkt"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD031d2",
@@ -196,8 +222,13 @@
       "titel": "Budgetpropositionen för 2026 - Finansplanen ",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d2.html",
-      "found_by": ["keyword:skattefri grundnivå", "all-keywords"],
-      "score": 2
+      "found_by": [
+        "keyword:skattefri grundnivå",
+        "all-keywords",
+        "score:tido-corpus-claude-v1-shard-17-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.85
     },
     {
       "dok_id": "HC0398",
@@ -208,8 +239,13 @@
       "titel": "Redovisning av skatteutgifter 2025",
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HC0398.html",
-      "found_by": ["keyword:schablonintäkt", "keyword:skattefri grundnivå"],
-      "score": 2
+      "found_by": [
+        "keyword:schablonintäkt",
+        "keyword:skattefri grundnivå",
+        "score:tido-corpus-claude-v1-shard-11-of-20"
+      ],
+      "score": 2,
+      "relevance": 0.92
     },
     {
       "dok_id": "HCB329",
@@ -340,6 +376,45 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01SkU34",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU34",
+      "datum": "2026-06-02",
+      "titel": "Redovisning av skatteutgifter 2026",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU34.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
+      "score": 1,
+      "relevance": 0.55
+    },
+    {
+      "dok_id": "HA031",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-20-of-20"],
+      "score": 1,
+      "relevance": 0.97
     }
   ]
 }

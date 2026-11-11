@@ -17,7 +17,13 @@
     "score:tido-corpus-claude-v1-shard-4-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-16-of-20",
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -53,7 +59,8 @@
         "keyword:stipendier",
         "all-keywords"
       ],
-      "score": 4
+      "score": 4,
+      "relevance": 0.15
     },
     {
       "dok_id": "HD031d19",
@@ -64,8 +71,14 @@
       "titel": "Budgetpropositionen för 2026 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HD031d19.html",
-      "found_by": ["keyword:arbetsstipendier", "keyword:kulturskapare", "keyword:stipendier"],
-      "score": 3
+      "found_by": [
+        "keyword:arbetsstipendier",
+        "keyword:kulturskapare",
+        "keyword:stipendier",
+        "score:tido-corpus-claude-v1-shard-19-of-20"
+      ],
+      "score": 3,
+      "relevance": 0.75
     },
     {
       "dok_id": "HC01KrU6",
@@ -120,7 +133,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HBB358.html",
       "found_by": ["keyword:arbetsstipendier", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD03299",
@@ -132,7 +146,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03299.html",
       "found_by": ["keyword:kulturutövare"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03287",
@@ -157,7 +172,8 @@
       "organ": "Finansdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD0398.html",
       "found_by": ["keyword:stipendier"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HD01SfU18",
@@ -169,7 +185,8 @@
       "organ": "SfU",
       "url": "https://data.riksdagen.se/dokument/HD01SfU18.html",
       "found_by": ["keyword:kulturutövare"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.25
     },
     {
       "dok_id": "HD01KrU10",
@@ -181,7 +198,8 @@
       "organ": "KrU",
       "url": "https://data.riksdagen.se/dokument/HD01KrU10.html",
       "found_by": ["keyword:kulturskapare"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03158",
@@ -193,7 +211,8 @@
       "organ": "Landsbygds- och infrastrukturdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03158.html",
       "found_by": ["keyword:kulturskapare"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.2
     },
     {
       "dok_id": "HD01UbU12",
@@ -205,7 +224,8 @@
       "organ": "UbU",
       "url": "https://data.riksdagen.se/dokument/HD01UbU12.html",
       "found_by": ["keyword:kulturutövare"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD03170",
@@ -217,7 +237,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03170.html",
       "found_by": ["keyword:stipendier"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.02
     },
     {
       "dok_id": "HA01KrU8",
@@ -244,6 +265,19 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.8
+    },
+    {
+      "dok_id": "HB031d18",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d18.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
     }
   ]
 }

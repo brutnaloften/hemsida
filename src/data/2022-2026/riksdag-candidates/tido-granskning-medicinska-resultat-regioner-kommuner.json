@@ -19,7 +19,13 @@
     "score:tido-corpus-claude-v1-shard-6-of-20",
     "score:tido-corpus-claude-v1-shard-7-of-20",
     "score:tido-corpus-claude-v1-shard-9-of-20",
-    "score:tido-corpus-claude-v1-shard-10-of-20"
+    "score:tido-corpus-claude-v1-shard-10-of-20",
+    "score:tido-corpus-claude-v1-shard-11-of-20",
+    "score:tido-corpus-claude-v1-shard-12-of-20",
+    "score:tido-corpus-claude-v1-shard-14-of-20",
+    "score:tido-corpus-claude-v1-shard-15-of-20",
+    "score:tido-corpus-claude-v1-shard-19-of-20",
+    "score:tido-corpus-claude-v1-shard-20-of-20"
   ],
   "candidates": [
     {
@@ -45,7 +51,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HC01SoU22.html",
       "found_by": ["keyword:vårdanalys", "all-keywords", "committee:SoU"],
-      "score": 3
+      "score": 3,
+      "relevance": 0.2
     },
     {
       "dok_id": "HEB338",
@@ -70,7 +77,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
       "found_by": ["keyword:medicinska resultat", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.15
     },
     {
       "dok_id": "HDB396",
@@ -82,7 +90,8 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HDB396.html",
       "found_by": ["keyword:vårdanalys", "all-keywords"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.35
     },
     {
       "dok_id": "HDB362d2",
@@ -128,7 +137,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU17.html",
       "found_by": ["keyword:vårdanalys", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.3
     },
     {
       "dok_id": "HA01SoU12",
@@ -157,7 +167,8 @@
       "organ": "SoU",
       "url": "https://data.riksdagen.se/dokument/HA01SoU14.html",
       "found_by": ["all-keywords", "committee:SoU"],
-      "score": 2
+      "score": 2,
+      "relevance": 0.1
     },
     {
       "dok_id": "HD03305",
@@ -195,7 +206,8 @@
       "organ": "Socialdepartementet",
       "url": "https://data.riksdagen.se/dokument/HD03288.html",
       "found_by": ["keyword:IVO"],
-      "score": 1
+      "score": 1,
+      "relevance": 0.08
     },
     {
       "dok_id": "HD01KU20",
@@ -235,6 +247,32 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
       "score": 1,
       "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01SoU22",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU22",
+      "datum": "2023-03-13",
+      "titel": "Äldreomsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU22.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-12-of-20"],
+      "score": 1,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HA01FiU26",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU26",
+      "datum": "2023-04-04",
+      "titel": "Kommunala frågor",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU26.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-14-of-20"],
+      "score": 1,
+      "relevance": 0.9
     }
   ]
 }
