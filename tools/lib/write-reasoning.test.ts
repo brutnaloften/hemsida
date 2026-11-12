@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   buildReasoningPrompt,
   hasLawInForce,
+  absenceSentences,
   reasoningInstructions,
   reasoningKey,
   reasoningProblems,
@@ -60,7 +61,7 @@ describe('write-reasoning', () => {
     }
     expect(
       reasoningProblems(`${base} Utbildning av personal nämns inte i dokumenten.`, []),
-    ).toEqual([]);
+    ).toEqual(['makes an absence claim']);
     // A sentence about the listed documents may say they show no decision; a flat claim may not.
     expect(
       reasoningProblems(`${base} Båda dokumenten visar förslag och inte något beslut.`, []),
@@ -339,10 +340,14 @@ describe('write-reasoning', () => {
     it('rejects absence claims only when flagged', () => {
       const t =
         'Regeringen gav i januari 2025 ett uppdrag om X. Finansieringen nämns inte i dokumenten.';
-      expect(reasoningProblems(t, [], false, undefined, false, true)).toContain(
+      expect(reasoningProblems(t, [], false, undefined, false, true, true)).toContain(
         'makes an absence claim',
       );
-      expect(reasoningProblems(t, [])).not.toContain('makes an absence claim');
+      // Manifesto (legacy) rule: a legislative text may still say it; Tidö texts never may.
+      expect(reasoningProblems(t, [], false, undefined, false, false, true)).not.toContain(
+        'makes an absence claim',
+      );
+      expect(reasoningProblems(t, [])).toContain('makes an absence claim');
     });
   });
 
@@ -430,5 +435,40 @@ describe('write-reasoning', () => {
         expect(reasoningProblems(`${ok} ${bad}`, [], false, undefined, true), bad).not.toEqual([]);
       }
     });
+  });
+
+  it('bans absence claims, even when a law note lists what the law lacks', () => {
+    const ok = 'Regeringen lade i mars 2026 fram ett förslag om aktivitetskrav.';
+    for (const bad of [
+      'Utbildning av personal nämns inte i dokumenten.',
+      'Egna ungdomsfängelser nämns inte.',
+      'En fast avgift tas inte upp särskilt i dokumenten.',
+      'Ikraftträdandet framgår inte.',
+      'Det som saknas är en översyn.',
+      'Dokumenten saknar förslag om avgift.',
+      'Det finns inget om avgift.',
+      'Lagen täcker våld och hot men inte blåljussabotage.',
+      'Dokumenten täcker bara den delen, inte översynen.',
+      'Förslaget gäller inte ledarskap.',
+      'Dokumenten visar inte att uppdraget utökas.',
+      'Utredningen föreslår ingen sådan regel.',
+    ]) {
+      expect(reasoningProblems(`${ok} ${bad}`, []), bad).toContain('makes an absence claim');
+    }
+    expect(reasoningProblems(ok, [])).toEqual([]);
+    for (const fine of [
+      'Dokumenten visar förslag, inget beslut.',
+      'Dokumenten täcker bara en del av löftet.',
+      'Lagen gäller bara vissa grupper.',
+    ])
+      expect(absenceSentences(fine), fine).toEqual([]);
+    expect(absenceSentences(`${ok} Avgiften nämns inte.`)).toEqual(['Avgiften nämns inte.']);
+    const law = { ...item, kind: 'sfs', relevance: 'partial' as const, note: 'Ingen maxtid.' };
+    expect(reasoningInstructions([law], 'partially_fulfilled')).toContain(
+      'Skriv aldrig vad som saknas',
+    );
+    expect(reasoningInstructions([law], 'partially_fulfilled')).not.toContain(
+      'enligt underlaget saknas i lagen',
+    );
   });
 });
