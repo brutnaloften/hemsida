@@ -8,7 +8,7 @@
 import type { AgreementOutcome, Evidence, PromiseRecord } from '@/schema/promise';
 import { agreementName, ROLES } from '@/schema/promise';
 import type { Term } from '@/schema/term';
-import { agreementOutcomeCounts, assessedCount } from '@/lib/party-stats';
+import { agreementOutcomeCounts, agreementPointStats, assessedCount } from '@/lib/party-stats';
 import { isAgreement, isRiksdag } from '@/lib/timeline';
 import { manifestoOnly, outcomeCountsText } from '@/lib/manifesto';
 
@@ -43,8 +43,11 @@ export interface AgreementInfo {
 export interface PartyCardData {
   party: string;
   role: Role;
+  /** The party's manifesto promises ("vallöften"). */
   promises: number;
   assessed: number;
+  /** Per agreement the party stands behind: its points in the agreement and how many are assessed. */
+  agreementPoints: { agreement: AgreementInfo; points: number; assessed: number }[];
   /** Per agreement the party stands behind: its manifesto promises split by outcome. */
   agreementSplits: {
     agreement: AgreementInfo;
@@ -54,6 +57,7 @@ export interface PartyCardData {
 }
 
 export interface StartModel {
+  /** Hero numbers count every promise in the term: manifesto, agreement points and pledges. */
   keyNumbers: { promises: number; parties: number; assessed: number; riksdagDocuments: number };
   roleGroups: { role: Role; label: string; parties: string[] }[];
   agreements: AgreementInfo[];
@@ -97,7 +101,7 @@ export function buildStartModel(
       parties: s.parties,
     };
   });
-  // Same rule as the Partier table: party counts are manifesto promises only.
+  // Party counts are manifesto promises only (as on the Partier table); the hero counts all.
   const own = manifestoOnly(promises, sources);
 
   const riksdagDocs = new Set<string>();
@@ -120,6 +124,12 @@ export function buildStartModel(
           role,
           promises: mine.length,
           assessed: assessedCount(mine),
+          agreementPoints: agreements
+            .filter((a) => a.parties.includes(party))
+            .map((agreement) => ({
+              agreement,
+              ...agreementPointStats(promises, agreement.id, party),
+            })),
           agreementSplits: agreements
             .filter((a) => a.parties.includes(party))
             .map((agreement) => {
@@ -136,9 +146,9 @@ export function buildStartModel(
 
   return {
     keyNumbers: {
-      promises: own.length,
+      promises: promises.length,
       parties: partiesInTerm.length,
-      assessed: assessedCount(own),
+      assessed: assessedCount(promises),
       riksdagDocuments: riksdagDocs.size,
     },
     roleGroups: cardGroups.map((g) => ({

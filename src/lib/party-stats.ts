@@ -40,6 +40,19 @@ export function assessedCount(promises: readonly Pick<PartyPromise, 'verdict'>[]
 }
 
 /**
+ * Agreement points a party stands behind: promises whose own source is the agreement and that
+ * list the party. `assessed` counts those with a real verdict.
+ */
+export function agreementPointStats(
+  promises: readonly (Pick<PartyPromise, 'verdict' | 'parties'> & { source: { id: string } })[],
+  agreementId: string,
+  party: string,
+): { points: number; assessed: number } {
+  const mine = promises.filter((p) => p.source.id === agreementId && p.parties.includes(party));
+  return { points: mine.length, assessed: assessedCount(mine) };
+}
+
+/**
  * Count of a party's promises per agreement outcome, always containing every outcome (zero when
  * absent). Only promises with an agreement evidence entry are counted (in practice manifesto
  * promises compared to the agreement); a promise with several agreement entries counts once,
