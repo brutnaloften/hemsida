@@ -28,7 +28,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i november 2023 en utredare i uppdrag att föreslå båda delarna, och utredningen lade fram dem i januari 2025. Riksdagen beslutade i maj 2026 att ta bort kravet på skriftlig dokumentation vid utvisning och kvarsittning. Att läraren bestämmer över undervisningen finns i en proposition om nya läroplaner från mars 2026, och riksdagen beslutade om den i maj 2026. Två lagändringar i skollagen träder i kraft 1 och 2 juli 2028.",
+    "reasoning": "Regeringen föreslog i mars 2026 att skollagen ska ange att undervisningen bestäms och leds av lärare. Riksdagen beslutade i maj 2026 att ta bort kravet på skriftlig dokumentation vid utvisning och kvarsittning. En ändring i skollagen trädde i kraft 1 augusti 2026 och täcker en del av löftet. Två lagar till är beslutade och träder i kraft i juli 2028. Resten av löftet bereds fortfarande.",
     "date": "2026-11-11",
     "history": [
       {
@@ -111,13 +111,23 @@
     },
     {
       "kind": "sfs",
+      "dok_id": "sfs-2026-1198",
+      "designation": "SFS 2026:1198",
+      "title": "Lag (2026:1198) om ändring i skollagen (2010:800)",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261198.html",
+      "relevance": "partial",
+      "note": "Texten visar inte tydligt att det i författning slås fast att läraren beslutar om undervisningen och dess uppläggning, och inte heller att dokumentationskravet för mindre långtgående åtgärder helt tas bort."
+    },
+    {
+      "kind": "sfs",
       "dok_id": "sfs-2026-1242",
       "designation": "SFS 2026:1242",
       "title": "Lag (2026:1242) om ändring i skollagen (2010:800)",
       "date": "2028-07-01",
       "url": "https://svenskforfattningssamling.se/doc/20261242.html",
       "relevance": "partial",
-      "note": "Texten visar inte att kravet på skriftlig dokumentation av mindre långtgående disciplinära åtgärder, som att visa ut en elev tillfälligt, tas bort."
+      "note": "Texten visar inte att kravet på skriftlig dokumentation av mindre långtgående disciplinära åtgärder, som tillfällig utvisning, tas bort."
     },
     {
       "kind": "sfs",
@@ -127,7 +137,7 @@
       "date": "2028-07-02",
       "url": "https://svenskforfattningssamling.se/doc/20261243.html",
       "relevance": "partial",
-      "note": "Borttagandet av kravet på skriftlig dokumentation av mindre långtgående disciplinära åtgärder, till exempel tillfälligt utvisande, syns inte i lagen eller propositionssammanfattningen."
+      "note": "Texten visar inte att kravet på skriftlig dokumentation av mindre långtgående disciplinära åtgärder (t.ex. tillfälligt utvisande) tas bort."
     }
   ]
 }

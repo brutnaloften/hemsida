@@ -26,9 +26,9 @@
     "platssamverkan"
   ],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Efter ett utredningsuppdrag 2023 och ett förslag i januari 2025 lade regeringen i mars 2026 fram en proposition, och riksdagen beslutade i maj 2026. Lagen om avgift för områdessamverkan trädde i kraft 1 augusti 2026 och låter fastighetsägare dela på kostnaderna för långsiktigt områdesarbete. Samverkan blir dock inte ett obligatoriskt gemensamt ansvar för alla fastighetsägare: den kräver kvalificerad majoritet och bygger på frivilligt initiativ.",
+    "reasoning": "Efter ett utredningsuppdrag 2023 och ett förslag i januari 2025 lade regeringen i mars 2026 fram en proposition, och riksdagen beslutade i maj 2026. Lagen om avgift för områdessamverkan trädde i kraft 1 augusti 2026 och låter en godkänd huvudman ta ut en obligatorisk avgift av alla berörda fastighetsägare för långsiktigt områdesarbete. Avgiften kräver ett godkännande med kvalificerad majoritet, så att lagen fullt ut motsvarar löftet är ännu inte bekräftat.",
     "date": "2026-11-11",
     "history": [
       {
@@ -40,6 +40,12 @@
         "value": "in_progress",
         "assessedBy": "ai",
         "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att föreslå författningsstöd för obligatoriskt samarbete mellan kommuner och fastighetsägare i bostadsområden. Utredningen föreslog i januari 2025 en ny lag om obligatorisk avgift för områdessamverkan (BID). Regeringen lade i mars 2026 fram ett lagförslag och riksdagen fattade beslut i maj 2026. Hela löftet täcks, men dokumenten visar ingen kopplad författning.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "Efter ett utredningsuppdrag 2023 och ett förslag i januari 2025 lade regeringen i mars 2026 fram en proposition, och riksdagen beslutade i maj 2026. Lagen om avgift för områdessamverkan trädde i kraft 1 augusti 2026 och låter fastighetsägare dela på kostnaderna för långsiktigt områdesarbete. Samverkan blir dock inte ett obligatoriskt gemensamt ansvar för alla fastighetsägare: den kräver kvalificerad majoritet och bygger på frivilligt initiativ.",
         "date": "2026-11-11"
       }
     ]
@@ -92,8 +98,8 @@
       "title": "Lag (2026:955) om avgift för områdessamverkan",
       "date": "2026-08-01",
       "url": "https://svenskforfattningssamling.se/doc/2026955.html",
-      "relevance": "partial",
-      "note": "Samverkan är inte ett obligatoriskt gemensamt ansvar för alla fastighetsägare; den kräver kvalificerad majoritet, kommunal godkännande av huvudman och bygger på frivilligt initiativ."
+      "relevance": "full",
+      "note": null
     }
   ]
 }

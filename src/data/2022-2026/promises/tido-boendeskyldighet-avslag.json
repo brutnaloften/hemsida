@@ -28,7 +28,7 @@
   "verdict": {
     "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Utredningar föreslog 2024 och 2025 en boendeskyldighet och vistelseskyldighet för personer som inte tagits i förvar. Riksdagen beslutade i juni 2026 om skärpta regler om uppsikt, och en ändring i utlänningslagen trädde i kraft i juli 2026. En ny mottagandelag gäller från oktober 2026 och täcker bara en del. Att reglerna uttryckligen gäller personer med avslag framgår inte av dokumenten. En annan lag träder i kraft i december 2027.",
+    "reasoning": "Riksdagen beslutade i juni 2026 att uppsikt i utlänningslagen kan innebära boendeskyldighet eller vistelseskyldighet som alternativ till förvar. Ändringar i utlänningslagen och en ny mottagandelag har trätt i kraft sedan juli och oktober 2026. Dokumenten visar inte att reglerna gäller just personer med avslag som inte tagits i förvar. En ytterligare ändring träder i kraft i december 2027.",
     "date": "2026-11-11",
     "history": [
       {
@@ -112,8 +112,18 @@
       "title": "Lag (2026:1425) om ändring i utlänningslagen (2005:716)",
       "date": "2026-07-21",
       "url": "https://svenskforfattningssamling.se/doc/20261425.html",
-      "relevance": "full",
-      "note": null
+      "relevance": "partial",
+      "note": "Texten visar ingen generell boendeskyldighet för alla med avslag som inte tagits i förvar. Vistelseskyldigheten beslutas villkorat i det enskilda fallet och är inte uttryckligen en boendeskyldighet. Delar träder i kraft först 2027."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1426",
+      "designation": "SFS 2026:1426",
+      "title": "Lag (2026:1426) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-10-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261426.html",
+      "relevance": "partial",
+      "note": "Texten visar ingen boendeskyldighet med restriktioner för rörelsefrihet för personer med avslag som inte tagits i förvar. Den vistelseskyldigheten (förstärkt uppsikt) ligger i det andra lagförslaget (10 a kap.)."
     },
     {
       "kind": "sfs",
@@ -123,7 +133,7 @@
       "date": "2026-10-01",
       "url": "https://svenskforfattningssamling.se/doc/2026999.html",
       "relevance": "partial",
-      "note": "Texten visar ingen boendeskyldighet med rörelserestriktioner specifikt för personer som fått avslag men inte tagits i förvar; anmälningsskyldigheten är svagare än en boendeskyldighet."
+      "note": "Texten visar ingen uttrycklig boendeskyldighet med rörelserestriktioner specifikt för personer som fått avslag men inte tagits i förvar; områdesbegränsningen riktas mot asylsökande."
     },
     {
       "kind": "sfs",
@@ -133,7 +143,7 @@
       "date": "2027-12-01",
       "url": "https://svenskforfattningssamling.se/doc/20261427.html",
       "relevance": "partial",
-      "note": "Texten visar inte att det blir en generell boendeskyldighet för alla med avslag som inte tagits i förvar. Förstärkt uppsikt är en uppsiktsform som tillämpas efter en prövning, och den heter vistelseskyldighet, inte boendeskyldighet."
+      "note": "Texten visar inte att det är en generell boendeskyldighet som specifikt gäller alla med avslag som inte tagits i förvar. Uppsikt är en prövad möjlighet och inte en skyldighet för hela gruppen."
     }
   ]
 }

@@ -28,7 +28,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen föreslog i november 2024 ett aktivitetskrav för vuxna som får försörjningsstöd, och lade i mars 2026 fram en proposition. Riksdagen biföll den i maj 2026. En lag om ändring i socialtjänstlagen trädde i kraft 1 juli 2026 och täcker en del av löftet. Ett förslag från september 2026 om barntillsyn för berörda föräldrar visar att arbetet fortsätter, men det är bara ett förslag.",
+    "reasoning": "Efter en promemoria i november 2024 och en proposition i mars 2026 biföll riksdagen i maj 2026 ett aktivitetskrav för försörjningsstöd, anpassat till förmågan. En ändring i socialtjänstlagen trädde i kraft 1 juli 2026 och täcker en del av löftet. Barntillsyn för berörda föräldrar bereds i en promemoria från september 2026. Samhällsnyttiga insatser nämns inte uttryckligen i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
@@ -77,7 +77,7 @@
       "date": "2026-07-01",
       "url": "https://svenskforfattningssamling.se/doc/2026730.html",
       "relevance": "partial",
-      "note": "Kravet gäller bara dem som fått försörjningsstöd i minst tre sammanhängande månader, inte alla, och texten visar inte uttryckligen att samhällsnyttiga insatser införs eller att kravet avgränsas till arbetsmarknadsskäl."
+      "note": "Kravet gäller inte alla som uppbär försörjningsstöd av arbetsmarknadsskäl: det finns en tremånadersgräns och flera undantag. Texten visar heller inget om att fullt bidrag villkoras (minskat bidrag) eller om särskilda samhällsnyttiga insatser."
     },
     {
       "kind": "ds",
@@ -88,6 +88,16 @@
       "url": "https://data.riksdagen.se/dokument/HEB419.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-733",
+      "designation": "SFS 2026:733",
+      "title": "Lag (2026:733) om ändring i socialtjänstlagen (2025:400)",
+      "date": "2028-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026733.html",
+      "relevance": "partial",
+      "note": "Själva aktivitetskravet (skyldighet för socialnämnden att kräva deltagande, samhällsnyttiga insatser och kopplingen till fullt bidrag) finns i den andra lagen i propositionen, inte i denna lag."
     }
   ]
 }

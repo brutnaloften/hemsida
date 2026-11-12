@@ -20,15 +20,21 @@
   "committee": "MJU",
   "keywords": ["miljöbalken", "kärnkraft", "tio reaktorer", "SMR", "små modulära reaktorer"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Riksdagen beslutade i november 2023 att ta bort miljöbalkens förbud mot nya reaktorer på nya platser och gränsen på tio reaktorer. Regeringen lade i mars 2026 fram ett förslag om enklare prövning av kärntekniska anläggningar, och riksdagen fattade beslut om det i april 2026. Återstart av stängda reaktorer och regler för SMR nämns inte i dokumenten.",
+    "reasoning": "Riksdagen biföll i november 2023 att ta bort miljöbalkens förbud mot nya reaktorer på nya platser och gränsen på tio reaktorer. Regeringen föreslog i mars 2026 enklare prövning av kärntekniska anläggningar. Riksdagen beslutade om det i april, och en ändring i lagen om kärnteknisk verksamhet trädde i kraft 17 juni 2026. Återstart av stängda reaktorer och regler för SMR nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Riksdagen beslutade i november 2023 att ta bort miljöbalkens förbud mot nya reaktorer på nya platser och gränsen på tio reaktorer. Regeringen lade i mars 2026 fram ett förslag om enklare prövning av kärntekniska anläggningar, och riksdagen fattade beslut om det i april 2026. Återstart av stängda reaktorer och regler för SMR nämns inte i dokumenten.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -62,6 +68,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01NU19.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-587",
+      "designation": "SFS 2026:587",
+      "title": "Lag (2026:587) om ändring i lagen (1984:3) om kärnteknisk verksamhet",
+      "date": "2026-06-17",
+      "url": "https://svenskforfattningssamling.se/doc/2026587.html",
+      "relevance": "partial",
+      "note": "Borttagandet av miljöbalkens förbud mot nya reaktorer på nya platser och mot fler än tio reaktorer ligger i miljöbalkslagen, och inget i texten visar särskilda regler för små modulära reaktorer (SMR)."
     }
   ]
 }

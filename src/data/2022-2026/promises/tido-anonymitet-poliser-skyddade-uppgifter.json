@@ -28,7 +28,7 @@
   "verdict": {
     "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Riksdagen beslutade i april 2024 att polisanställdas namn i vissa fall kan ersättas med en annan beteckning, och ändringar i polislagen och sekretesslagen trädde i kraft 30 april 2024. I juli 2025 trädde ändringar i sekretess- och förvaltningslagen i kraft om att utelämna beslutsfattarens namn. Dokumenten visar inte skyddade uppgifter för familj eller andra yrkesgrupper.",
+    "reasoning": "Lagändringar trädde i kraft 30 april 2024: vissa polisanställda som arbetar mot organiserad brottslighet får använda en annan beteckning än sitt namn, och identitetsröjande uppgifter skyddas av sekretess. Från 2 juli 2025 gäller även ändringar som stärker skyddet för offentliganställda. Lagarna gäller bara delar av löftet; skyddade uppgifter för familj och andra yrkesgrupper nämns inte i dokumenten. En tredje lag träder i kraft 2029.",
     "date": "2026-11-11",
     "history": [
       {
@@ -93,7 +93,7 @@
       "date": "2024-04-30",
       "url": "https://svenskforfattningssamling.se/doc/2024223.html",
       "relevance": "partial",
-      "note": "Lagen omfattar inte andra myndigheter, andra utsatta yrkeskategorier eller skyddade uppgifter för familjen, och den innehåller inte själva sekretessen. Möjligheten är dessutom begränsad till fem år."
+      "note": "Lagen omfattar bara polisanställda, inte beslutsfattare vid andra myndigheter eller andra utsatta yrkeskategorier, och ger inga skyddade uppgifter (t.ex. folkbokföring) för familjen; sekretessen ligger i en annan lag och möjligheten är tidsbegränsad och villkorad."
     },
     {
       "kind": "sfs",
@@ -103,7 +103,7 @@
       "date": "2024-04-30",
       "url": "https://svenskforfattningssamling.se/doc/2024225.html",
       "relevance": "partial",
-      "note": "Anonymisering för beslutsfattare vid andra myndigheter, skydd för andra utsatta yrkeskategorier och skyddade uppgifter för familjemedlemmar; skyddet gäller bara en snäv grupp inom Polismyndigheten."
+      "note": "Lagen omfattar bara anställda vid Polismyndigheten, inte beslutsfattare vid andra myndigheter eller andra utsatta yrkeskategorier, och ger inga skyddade uppgifter för familjen."
     },
     {
       "kind": "prop",
@@ -133,7 +133,7 @@
       "date": "2025-07-02",
       "url": "https://svenskforfattningssamling.se/doc/2025581.html",
       "relevance": "partial",
-      "note": "Lagen visar inte särskild anonymisering av beslutsfattare i Polisen, skyddade uppgifter för poliser och andra utsatta yrkeskategorier eller skydd för deras familjer; utelämnande av namn i underrättelser ligger i förvaltningslagen."
+      "note": "Lagen innehåller ingen ökad anonymisering av beslutsfattare i Polis och andra myndigheter i offentliga handlingar, och inga skyddade uppgifter för poliser och andra utsatta yrkeskategorier samt deras familjer i allmänhet."
     },
     {
       "kind": "sfs",
@@ -143,7 +143,17 @@
       "date": "2025-07-02",
       "url": "https://svenskforfattningssamling.se/doc/2025582.html",
       "relevance": "partial",
-      "note": "Lagen genomför inte skyddade uppgifter för poliser och andra utsatta yrkeskategorier och deras familjer, och inte heller ökad anonymisering av uppgifter i offentliga handlingar generellt."
+      "note": "Lagen genomför inte anonymisering av uppgifter i offentliga handlingar i övrigt eller skyddade uppgifter för poliser och andra utsatta yrkeskategorier och deras familjer."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-224",
+      "designation": "SFS 2024:224",
+      "title": "Lag (2024:224) om ändring i polislagen (1984:387)",
+      "date": "2029-04-30",
+      "url": "https://svenskforfattningssamling.se/doc/2024224.html",
+      "relevance": "partial",
+      "note": "Lagen genomför själv ingen utökad anonymisering eller några skyddade uppgifter för poliser, andra myndigheters beslutsfattare eller andra utsatta yrkeskategorier och deras familjer. Den införande bestämmelsen och sekretessen finns i andra lagar i propositionen."
     }
   ]
 }

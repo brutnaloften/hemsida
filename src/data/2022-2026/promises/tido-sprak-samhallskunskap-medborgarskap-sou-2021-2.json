@@ -26,15 +26,21 @@
     "medborgarskapslagen"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i mars 2026 fram ett förslag om skärpta krav för medborgarskap, med krav på kunskaper i svenska och om det svenska samhället. Riksdagen biföll förslaget i april 2026, och en ändring i medborgarskapslagen trädde i kraft i juni 2026. En andra lagändring träder i kraft i oktober 2027 och täcker en del av löftet. Dokumenten visar att resten av löftet fortfarande bereds.",
+    "reasoning": "Regeringen lade i mars 2026 fram ett förslag om skärpta krav för medborgarskap, med krav på kunskaper i svenska och om samhället. Riksdagen biföll förslaget i april 2026, och en lagändring trädde i kraft 6 juni 2026. Dokumenten visar inte vilka delar av löftet den lagen täcker. En andra lagändring träder i kraft 1 oktober 2027.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i mars 2026 fram ett förslag om skärpta krav för medborgarskap, med krav på kunskaper i svenska och om det svenska samhället. Riksdagen biföll förslaget i april 2026, och en ändring i medborgarskapslagen trädde i kraft i juni 2026. En andra lagändring träder i kraft i oktober 2027 och täcker en del av löftet. Dokumenten visar att resten av löftet fortfarande bereds.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -66,8 +72,8 @@
       "title": "Lag (2026:447) om ändring i lagen (2001:82) om svenskt medborgarskap",
       "date": "2026-06-06",
       "url": "https://svenskforfattningssamling.se/doc/2026447.html",
-      "relevance": "full",
-      "note": null
+      "relevance": "partial",
+      "note": "Det framgår inte att kraven följer SOU 2021:2 fullt ut. Provet i svenska och vissa delar träder i kraft först senare (1 oktober 2027 eller efter regeringens beslut), och lagen innehåller många andra ändringar än löftet."
     },
     {
       "kind": "sfs",
@@ -77,7 +83,7 @@
       "date": "2027-10-01",
       "url": "https://svenskforfattningssamling.se/doc/2026448.html",
       "relevance": "partial",
-      "note": "Kravet på kunskaper om det svenska samhället (samhällskunskap) och övriga delar av språkkravet, till exempel i svenska i övrigt, omfattas inte av den här lagen."
+      "note": "Samhällskunskapsdelen genomförs inte i denna lag, eftersom den ligger i andra lagar i propositionen. Det framgår inte heller att alla SOU 2021:2-förslag följs exakt."
     }
   ]
 }

@@ -28,7 +28,7 @@
   "verdict": {
     "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i februari 2026 fram ett förslag om att barn och unga ska dömas till fängelse i stället för sluten ungdomsvård, och riksdagen beslutade om det i maj 2026. Ändringar i brottsbalken och fängelselagen trädde i kraft den 1 juli 2026, och Kriminalvården tar över verkställigheten från Sis. Det gäller dömda unga; flytten av ansvaret från kommunerna nämns inte i dokumenten.",
+    "reasoning": "Regeringen lade i februari 2026 fram ett förslag om att barn och unga ska dömas till fängelse i stället för sluten ungdomsvård, och riksdagen biföll det i maj 2026. Ändringar i bland annat brottsbalken, fängelselagen och skollagen trädde i kraft 1 juli 2026, så Kriminalvården tar över verkställigheten från Sis. Lagarna gäller dömda unga; kommunernas ansvar nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
@@ -73,7 +73,7 @@
       "date": "2026-07-01",
       "url": "https://svenskforfattningssamling.se/doc/2026516.html",
       "relevance": "partial",
-      "note": "Själva överföringen av verkställighetsansvaret från Statens institutionsstyrelse till Kriminalvården, med särskilda barn- och ungdomsavdelningar, regleras i andra lagar i propositionen och inte i denna brottsbalksändring."
+      "note": "Själva överföringen av verkställighetsansvaret från Statens institutionsstyrelse/kommunerna till Kriminalvården, barnavdelningar och verkställighetsreglerna ligger i andra lagar (fängelselagen, upphävandet av lagen om verkställighet av sluten ungdomsvård m.fl.)."
     },
     {
       "kind": "sfs",
@@ -83,7 +83,17 @@
       "date": "2026-07-01",
       "url": "https://svenskforfattningssamling.se/doc/2026530.html",
       "relevance": "partial",
-      "note": "Lagen ensam genomför inte hela flytten: ansvaret flyttas inte från kommunerna, den avser alla barn och unga som dömts till frihetsberövande och inte bara de tyngst kriminella, och själva påföljdsändringen och upphävandet av lagen om sluten ungdomsvård ligger i andra lagar."
+      "note": "Själva övergången från sluten ungdomsvård till fängelse och att ansvaret flyttas från Statens institutionsstyrelse ligger i andra lagar i propositionen. Löftets formulering om ansvar från kommunerna och om de tyngst kriminella unga täcks inte fullt ut."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-531",
+      "designation": "SFS 2026:531",
+      "title": "Lag (2026:531) om ändring i skollagen (2010:800)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026531.html",
+      "relevance": "partial",
+      "note": "Själva överflyttningen av ansvaret för verkställigheten för grovt kriminella unga från kommunerna/SiS till Kriminalvården ligger i andra lagar i propositionen, inte i skollagen."
     }
   ]
 }

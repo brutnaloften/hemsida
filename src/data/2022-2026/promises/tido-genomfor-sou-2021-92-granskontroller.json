@@ -22,7 +22,7 @@
   "verdict": {
     "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Riksdagen beslutade i juni 2023 om utökade polisiära befogenheter i gränsnära områden, bland annat kroppsvisitation och fordonsundersökning för att hitta id-handlingar. Lagarna trädde i kraft 1 augusti 2023, och fler ändringar följde 2024 och 2026. Dokumenten visar att kamerabevakning och inre utlänningskontroll har fått regler, men att förslagen i utredningen genomförs fullt ut framgår inte.",
+    "reasoning": "Riksdagen beslutade i juni 2023 om nya polisiära befogenheter i gränsnära områden, och lagarna trädde i kraft den 1 augusti 2023. De ger bland annat rätt till kroppsvisitation och fordonssökning samt ändringar i kamerabevakningen. Fler lagändringar om inre utlänningskontroll följde 2024 och 2026. Dokumenten visar bara delar av löftet; vad som återstår framgår inte.",
     "date": "2026-11-11",
     "history": [
       {
@@ -77,7 +77,7 @@
       "date": "2023-08-01",
       "url": "https://svenskforfattningssamling.se/doc/2023476.html",
       "relevance": "partial",
-      "note": "De huvudsakliga befogenheterna, bland annat brottsförebyggande ingripanden och utökad kamerabevakning, finns i andra lagar i propositionen. Övriga förslag i SOU 2021:92 omfattas inte av den här lagen."
+      "note": "Befogenheterna för bevakning, kamerabevakning och brottsförebyggande ingripanden ligger i andra lagar i propositionen (särskild lag om polisiära befogenheter, kamerabevakningslagen m.fl.), inte i denna lag."
     },
     {
       "kind": "sfs",
@@ -87,7 +87,7 @@
       "date": "2023-08-01",
       "url": "https://svenskforfattningssamling.se/doc/2023477.html",
       "relevance": "partial",
-      "note": "De utökade polisiära befogenheterna för inre utlänningskontroller och brottsförebyggande ingripanden, som ligger i andra lagar i propositionen, ingår inte i denna lag."
+      "note": "Lagen genomför inte själva inre utlänningskontrollerna och de utökade polisiära befogenheterna, som finns i andra lagar i propositionen, och inte övriga förslag i SOU 2021:92."
     },
     {
       "kind": "prop",
@@ -117,7 +117,7 @@
       "date": "2024-01-01",
       "url": "https://svenskforfattningssamling.se/doc/2023735.html",
       "relevance": "partial",
-      "note": "Övriga delar av SOU 2021:92, bland annat effektivare bevakning och andra åtgärder i gränsområden, genomförs inte i denna lag."
+      "note": "Övriga förslag i SOU 2021:92 om effektivare bevakning och andra åtgärder i gränsområden ingår inte i denna lag."
     },
     {
       "kind": "prop",
@@ -141,13 +141,23 @@
     },
     {
       "kind": "sfs",
+      "dok_id": "sfs-2026-1337",
+      "designation": "SFS 2026:1337",
+      "title": "Lag (2026:1337) om ändring i rättegångsbalken",
+      "date": "2026-07-13",
+      "url": "https://svenskforfattningssamling.se/doc/20261337.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte övriga delar av SOU 2021:92, till exempel bevakning och inre utlänningskontroller i gränsområden, som ligger i andra lagar."
+    },
+    {
+      "kind": "sfs",
       "dok_id": "sfs-2026-1339",
       "designation": "SFS 2026:1339",
       "title": "Lag (2026:1339) om ändring i utlänningslagen (2005:716)",
       "date": "2026-07-13",
       "url": "https://svenskforfattningssamling.se/doc/20261339.html",
       "relevance": "partial",
-      "note": "Texten visar inte att bevakningsdelen och de särskilda gränsområdesåtgärderna i SOU 2021:92 genomförs, och inte alla förslag i utredningen täcks."
+      "note": "Texten visar inte att alla förslag i SOU 2021:92 genomförs, särskilt inte förslagen om effektivare bevakning; lagen är en del av ett bredare återvändandepaket."
     },
     {
       "kind": "sfs",
@@ -157,7 +167,7 @@
       "date": "2026-07-13",
       "url": "https://svenskforfattningssamling.se/doc/20261342.html",
       "relevance": "partial",
-      "note": "Texten visar inte att förslagen om effektivare bevakning eller övriga delar av SOU 2021:92 (till exempel i gränsområden) genomförs i just den här lagen."
+      "note": "Övriga delar av SOU 2021:92, som effektivare bevakning och inre utlänningskontroller i gränsområden, genomförs inte i denna lag."
     }
   ]
 }

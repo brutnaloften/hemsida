@@ -22,7 +22,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "En ändring i ellagen trädde i kraft 1 juni 2023 och genomför delar av direktivet: krav på elleverantörer, aggregeringstjänster och balansansvar. Resten av direktivet bereddes därefter i en utredning i april 2025 och en proposition i april 2026 om en ny elmarknadslag med tydligare roller. Riksdagen beslutade om den i juni 2026, och elmarknadslagen träder i kraft 1 januari 2027.",
+    "reasoning": "Riksdagen beslutade i april 2023 om delar av direktivet, leverans av el och aggregeringstjänster, och ändringen i ellagen trädde i kraft 1 juni 2023. Efter en utredning 2025 föreslog regeringen i april 2026 en ny elmarknadslag med tydligare roller, och riksdagen beslutade i juni 2026. Den lagen träder i kraft 1 januari 2027. Resten av löftet bereds fortfarande.",
     "date": "2026-11-11",
     "history": [
       {
@@ -60,8 +60,8 @@
       "title": "Lag (2023:238) om ändring i ellagen (1997:857)",
       "date": "2023-06-01",
       "url": "https://svenskforfattningssamling.se/doc/2023238.html",
-      "relevance": "full",
-      "note": null
+      "relevance": "partial",
+      "note": "Texten visar inte att hela direktivet är genomfört eller att ansvarsfördelningen mellan elsystemets aktörer tydliggörs fullt ut; vissa delar ligger i föreskrifter eller andra lagar."
     },
     {
       "kind": "sou",
@@ -102,6 +102,26 @@
       "url": "https://svenskforfattningssamling.se/doc/20261281.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1283",
+      "designation": "SFS 2026:1283",
+      "title": "Lag (2026:1283) om elektriska ledningar",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261283.html",
+      "relevance": "partial",
+      "note": "Huvuddelen av genomförandet av elmarknadsdirektivet och förtydligandet av ansvarsfördelningen mellan elsystemets aktörer ligger i elmarknadslagen, inte i den här lagen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1291",
+      "designation": "SFS 2026:1291",
+      "title": "Lag (2026:1291) om ändring i lagen (2011:710) om certifiering av transmissionsnätsföretag för el",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261291.html",
+      "relevance": "partial",
+      "note": "Den huvudsakliga implementeringen av elmarknadsdirektivet och tydliggörandet av ansvarsfördelningen mellan elsystemets aktörer ligger i elmarknadslagen och andra lagar, inte i denna lag."
     }
   ]
 }

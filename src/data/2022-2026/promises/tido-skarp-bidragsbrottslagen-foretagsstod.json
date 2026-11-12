@@ -20,15 +20,21 @@
   "committee": "SfU",
   "keywords": ["bidragsbrottslagen", "bidragsbrott", "företagsstöd", "välfärdsbrottslighet"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En utredning föreslog i mars 2024 en ny lag om straff för missbruk av statligt stöd till företag. Regeringen lade fram förslaget i juni 2025 och riksdagen biföll det i november 2025. Den nya subventionsbrottslagen trädde i kraft 1 januari 2026 och ger statligt företagsstöd ett straffrättsligt skydd. Skärpningen av själva bidragsbrottslagen bereds fortfarande.",
+    "reasoning": "En statlig utredning föreslog i mars 2024 en ny lag om straff för bidragsliknande brott mot statliga företagsstöd. Regeringen lade fram förslaget i juni 2025 och riksdagen biföll det i november 2025. En ny subventionsbrottslag och en lag om anmälan av felaktiga utbetalningar av företagsstöd trädde i kraft 1 januari 2026. Det täcker stöd till företag, men att själva bidragsbrottslagen skärps nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En utredning föreslog i mars 2024 en ny lag om straff för missbruk av statligt stöd till företag. Regeringen lade fram förslaget i juni 2025 och riksdagen biföll det i november 2025. Den nya subventionsbrottslagen trädde i kraft 1 januari 2026 och ger statligt företagsstöd ett straffrättsligt skydd. Skärpningen av själva bidragsbrottslagen bereds fortfarande.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -70,8 +76,18 @@
       "title": "Subventionsbrottslag (2025:1267)",
       "date": "2026-01-01",
       "url": "https://svenskforfattningssamling.se/doc/20251267.html",
-      "relevance": "full",
-      "note": null
+      "relevance": "partial",
+      "note": "Själva bidragsbrottslagen skärps inte och görs inte tillämplig på företagsstöd. Lånen, garantierna och skattestöden undantas, och subventionsbrottslagen är subsidiär till bidragsbrottslagen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-1268",
+      "designation": "SFS 2025:1268",
+      "title": "Lag (2025:1268) om underrättelseskyldighet vid felaktiga utbetalningar av statligt företagsstöd",
+      "date": "2026-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20251268.html",
+      "relevance": "partial",
+      "note": "Själva skärpningen av bidragsbrottslagen och det straffrättsliga skyddet för företagsstöd finns i subventionsbrottslagen, inte i den här lagen."
     }
   ]
 }

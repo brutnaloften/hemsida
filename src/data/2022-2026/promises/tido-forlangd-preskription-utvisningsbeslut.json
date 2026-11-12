@@ -20,9 +20,9 @@
   "committee": "SfU",
   "keywords": ["preskription", "utvisningsbeslut", "avvisning", "ny asylansökan", "återreseförbud"],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "En utredning föreslog i februari 2024 att preskriptionstiden för utvisnings- och avvisningsbeslut förlängs från fyra till fem år, men avvisade att helt avskaffa den. Regeringen lade fram ett förslag i januari 2025 och riksdagen biföll det i mars 2025. Ändringen i utlänningslagen trädde i kraft 1 april 2025. Förlängningen är ett av de två alternativ löftet nämner, men dokumenten visar inte tydligt att alla slags beslut omfattas.",
+    "reasoning": "En utredning föreslog i februari 2024 att tiden för utvisnings- och avvisningsbeslut förlängs från fyra till fem år och räknas från utresan. Regeringen lade fram ett förslag i januari 2025 och riksdagen biföll det i mars 2025. Ändringen i utlänningslagen trädde i kraft 1 april 2025 och förlänger tiden, vilket är ett av de två alternativ löftet nämner. Att ändringen omfattar alla slags beslut är ännu inte bekräftat.",
     "date": "2026-11-11",
     "history": [
       {
@@ -34,6 +34,12 @@
         "value": "in_progress",
         "assessedBy": "ai",
         "reasoning": "En statlig utredning föreslog i februari 2024 att tiden för avvisnings- och utvisningsbeslut förlängs från fyra till fem år och räknas från att personen lämnat landet. Full avskaffning avvisades. Regeringen föreslog i januari 2025 fem år, eller längre med återreseförbud. Riksdagens utskott tillstyrkte det i mars 2025. Dokumenten täcker hela löftet, men ingen författning är kopplad.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "En utredning föreslog i februari 2024 att preskriptionstiden för utvisnings- och avvisningsbeslut förlängs från fyra till fem år, men avvisade att helt avskaffa den. Regeringen lade fram ett förslag i januari 2025 och riksdagen biföll det i mars 2025. Ändringen i utlänningslagen trädde i kraft 1 april 2025. Förlängningen är ett av de två alternativ löftet nämner, men dokumenten visar inte tydligt att alla slags beslut omfattas.",
         "date": "2026-11-11"
       }
     ]
@@ -76,8 +82,8 @@
       "title": "Lag (2025:225) om ändring i utlänningslagen (2005:716)",
       "date": "2025-04-01",
       "url": "https://svenskforfattningssamling.se/doc/2025225.html",
-      "relevance": "partial",
-      "note": "Preskriptionstiden avskaffas inte helt, och lagen innehåller även andra åtgärder (längre återreseförbud, spårbyte) som inte rör löftet; att alla beslutstyper omfattas framgår inte tydligt."
+      "relevance": "full",
+      "note": null
     }
   ]
 }

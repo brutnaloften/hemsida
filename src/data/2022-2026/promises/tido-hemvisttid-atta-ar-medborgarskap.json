@@ -20,15 +20,21 @@
   "committee": "SfU",
   "keywords": ["hemvisttid", "medborgarskap", "åtta år", "medborgarskapslagen", "naturalisering"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i september 2023 en utredare i uppdrag att föreslå längre hemvisttid, och i januari 2025 föreslogs åtta år. Riksdagen biföll i april 2026 regeringens förslag om skärpta krav, och en ändring av medborgarskapslagen trädde i kraft 6 juni 2026. Åttaårsgränsen nämns inte i de beslutade dokumenten, så resten av löftet bereds fortfarande.",
+    "reasoning": "Regeringen gav i september 2023 en utredare i uppdrag att föreslå längre hemvisttid, och utredningen föreslog i januari 2025 åtta år som utgångspunkt. Riksdagen beslutade i april 2026 om skärpta krav, och en ändring i medborgarskapslagen trädde i kraft 6 juni 2026. Dokumenten visar skärpta hemvistkrav, men åttaårsgränsen nämns inte i propositionen eller beslutet, så hur stor del av löftet lagen täcker framgår inte.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i september 2023 en utredare i uppdrag att föreslå längre hemvisttid, och i januari 2025 föreslogs åtta år. Riksdagen biföll i april 2026 regeringens förslag om skärpta krav, och en ändring av medborgarskapslagen trädde i kraft 6 juni 2026. Åttaårsgränsen nämns inte i de beslutade dokumenten, så resten av löftet bereds fortfarande.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -80,8 +86,8 @@
       "title": "Lag (2026:447) om ändring i lagen (2001:82) om svenskt medborgarskap",
       "date": "2026-06-06",
       "url": "https://svenskforfattningssamling.se/doc/2026447.html",
-      "relevance": "full",
-      "note": null
+      "relevance": "partial",
+      "note": "Texten visar inte att hemvisttiden för naturalisation faktiskt höjs till minst åtta år; de synliga lagändringarna rör bara anmälningsförfarandet och språkkrav."
     }
   ]
 }

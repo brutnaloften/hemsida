@@ -20,9 +20,9 @@
   "committee": "CU",
   "keywords": ["solceller", "bygglov", "solenergi", "plan- och bygglagen"],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Riksdagen ställde sig i december 2022 positiv till att se över bygglovskravet för integrerade solceller. Regeringen föreslog i maj 2025 att bygglov inte ska krävas för fasadändringar på en- och tvåbostadshus, bland annat solceller, och riksdagen beslutade om detta i oktober 2025. Lagändringen trädde i kraft 1 december 2025 men gäller bara små hus. Övriga byggnader nämns inte i dokumenten.",
+    "reasoning": "Riksdagen uttryckte i december 2022 en positiv syn på att se över bygglovskravet för integrerade solceller. Regeringen föreslog i maj 2025 att bygglov inte ska krävas för fasadändringar på en- och tvåbostadshus, bland annat solceller, och riksdagen beslutade om förslaget i oktober 2025. Ändringen i plan- och bygglagen trädde i kraft 1 december 2025 och gäller små hus. Resten av löftet, för andra byggnader, bereds fortfarande.",
     "date": "2026-11-11",
     "history": [
       {
@@ -34,6 +34,12 @@
         "value": "in_progress",
         "assessedBy": "ai",
         "reasoning": "Riksdagen ställde sig i december 2022, i budgetbeslutet för energi, positiv till regeringens avsikt att se över bygglovskraven för integrerade solceller. Regeringen föreslog i maj 2025 att bygglov inte ska krävas för fasadändringar på en- och tvåbostadshus, bland annat solceller, och riksdagen fattade beslut om det nya regelverket i oktober 2025. Det gäller bara små hus; andra integrerade solceller nämns inte i dokumenten.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "Riksdagen ställde sig i december 2022 positiv till att se över bygglovskravet för integrerade solceller. Regeringen föreslog i maj 2025 att bygglov inte ska krävas för fasadändringar på en- och tvåbostadshus, bland annat solceller, och riksdagen beslutade om detta i oktober 2025. Lagändringen trädde i kraft 1 december 2025 men gäller bara små hus. Övriga byggnader nämns inte i dokumenten.",
         "date": "2026-11-11"
       }
     ]
@@ -76,8 +82,8 @@
       "title": "Lag (2025:974) om ändring i plan- och bygglagen (2010:900)",
       "date": "2025-12-01",
       "url": "https://svenskforfattningssamling.se/doc/2025974.html",
-      "relevance": "partial",
-      "note": "Lagen gäller inte generellt integrerade solceller, till exempel på andra byggnadstyper än en- och tvåbostadshus, och innehåller ingen särskild översyn av just det kravet."
+      "relevance": "full",
+      "note": null
     }
   ]
 }
