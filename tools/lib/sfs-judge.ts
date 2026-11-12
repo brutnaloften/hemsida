@@ -207,22 +207,41 @@ export function judgeKey(
 
 const stripLeaders = (s: string) => s.replace(/\s*\.{4,}.*$/, '').trim();
 
-/** `Lag (2023:311) om ändring i X` -> `lag om ändring i x`; the bill heading `Förslag till lag om ändring i X` -> the same. */
-export const normalizeLawTitle = (title: string): string =>
-  stripLeaders(title)
-    .replace(/^förslag till\s+/i, '')
-    .replace(/^(lag|förordning|kungörelse)\s+\(\d{4}:\d+\)\s+/i, '$1 ')
+const base = (s: string): string =>
+  stripLeaders(s)
+    .replace(/^\d+(\.\d+)*\s*/, '')
+    .replace(/\s*Prop\.\s*\d{4}\/\d{2}:\d+/gi, '')
+    .replace(/^förslag(et)? till\s+/i, '')
     .replace(/\s+/g, ' ')
+    .trim()
     .toLowerCase();
 
-const LAW_HEADING = /^Förslag till (lag|förordning)\b/i;
-const SECTION_END = /^\d+(\.\d+)*\s+(Ärendet och dess beredning|Författningskommentar|Bakgrund)/i;
+/**
+ * Comparable form of a law title or a bill heading. Strict: the register's own `(YYYY:N)` after
+ * `Lag`/`Förordning` is dropped (the bill heading has none), any amended act's number stays. Loose: every
+ * `(YYYY:N)` is dropped, for headings that omit the amended act's number or name a new law without its.
+ */
+export const normalizeLawTitle = (title: string, loose = false): string => {
+  const t = base(title).replace(/^(lag|förordning|kungörelse)\s+\(\d{4}:\d+\)\s+/, '$1 ');
+  return loose ? t.replace(/\s*\(\d{4}:\d+\)/g, '').trim() : t;
+};
+
+/** A bill's lagtext or författningskommentar heading: `2.1Förslag till ...`, `10.2Förslaget till ...`, `Förslag till ...`. */
+const LAW_HEADING = /^(\d+(\.\d+)*\s*)?Förslag(et)? till (lag|förordning|[a-zåäö]+lag\b)/i;
+/** A bill chapter or annex heading, which ends a law's run. */
+const SECTION_END = /^(\d{1,2}\s*[A-ZÅÄÖ][a-zåäö]|Bilaga \d)/;
+/** Appendix runs reprint an inquiry's or the Council on Legislation's draft, not the bill's own text. */
+const DRAFT_MARKER = /^(Betänkandets|Promemorians|Lagrådsremissens|Utkastet till) lagförslag/i;
+const BILAGA = /^Bilaga \d/;
+const MIN_RUN_CHARS = 150;
 
 /**
- * The law's own sections of a proposition: every paragraph run that starts at a `Förslag till lag om ...`
- * heading naming this law (the lagtext, and the same heading again in the författningskommentar), up to
- * the next such heading. Table-of-contents rows (dot leaders) are skipped. Each run is cut at
- * `maxCharsEach`; null when the proposition has no section for the law.
+ * The law's own sections of a proposition: runs that start at a `Förslag till lag om ...` heading naming
+ * this law (the lagtext, and the heading again in the författningskommentar), up to the next such heading
+ * or chapter. Headings may be numbered, end in `Prop. YYYY/YY:N`, or wrap over two paragraphs. Table of
+ * contents rows (dot leaders or run shorter than MIN_RUN_CHARS), and everything from the first annex after
+ * the författningskommentar or from a `Betänkandets/Promemorians/Lagrådsremissens lagförslag` marker, are
+ * skipped. Each run is cut at `maxCharsEach`; null when the proposition has no section for the law.
  */
 export function extractLawSections(
   paragraphs: readonly { text: string }[],
@@ -230,23 +249,51 @@ export function extractLawSections(
   maxCharsEach: number,
   maxRuns = 2,
 ): string | null {
-  const want = normalizeLawTitle(lawTitle);
-  const runs: string[] = [];
-  for (let i = 0; i < paragraphs.length && runs.length < maxRuns; i++) {
+  let end = paragraphs.length;
+  let afterKommentar = false;
+  for (let i = 0; i < paragraphs.length; i++) {
     const t = paragraphs[i]!.text;
-    if (!LAW_HEADING.test(t) || /\.{4,}/.test(t) || normalizeLawTitle(t) !== want) continue;
-    const body: string[] = [t];
-    for (let j = i + 1; j < paragraphs.length; j++) {
-      const u = paragraphs[j]!.text;
-      if (LAW_HEADING.test(u) || SECTION_END.test(u)) break;
-      body.push(u);
+    if (/\.{4,}/.test(t)) continue;
+    if (/^\d+\s*Författningskommentar/i.test(t)) afterKommentar = true;
+    if (DRAFT_MARKER.test(t) || (afterKommentar && BILAGA.test(t))) {
+      end = i;
+      break;
     }
-    const text = body.join('\n');
-    runs.push(
-      text.length <= maxCharsEach ? text : text.slice(0, maxCharsEach) + '\n[... avkortat ...]',
-    );
   }
-  return runs.length ? runs.join('\n\n') : null;
+  for (const loose of [false, true]) {
+    const want = normalizeLawTitle(lawTitle, loose);
+    const runs: string[] = [];
+    for (let i = 0; i < end && runs.length < maxRuns; i++) {
+      const t = paragraphs[i]!.text;
+      if (!LAW_HEADING.test(t) || /\.{4,}/.test(t)) continue;
+      // A heading may wrap over the next few short paragraphs.
+      let head = t;
+      let next = i + 1;
+      let matched = normalizeLawTitle(head, loose) === want;
+      for (let k = 0; k < 4 && !matched && next < end; k++) {
+        const u = paragraphs[next]!.text;
+        if (u.length > 100 || LAW_HEADING.test(u) || SECTION_END.test(u) || /^Härigenom/.test(u))
+          break;
+        head += ' ' + u;
+        next++;
+        matched = normalizeLawTitle(head, loose) === want;
+      }
+      if (!matched) continue;
+      const body: string[] = [t];
+      for (let j = i + 1; j < end; j++) {
+        const u = paragraphs[j]!.text;
+        if (LAW_HEADING.test(u) || SECTION_END.test(u)) break;
+        body.push(u);
+      }
+      const text = body.join('\n');
+      if (text.length < MIN_RUN_CHARS) continue;
+      runs.push(
+        text.length <= maxCharsEach ? text : text.slice(0, maxCharsEach) + '\n[... avkortat ...]',
+      );
+    }
+    if (runs.length) return runs.join('\n\n');
+  }
+  return null;
 }
 
 /** Tier-1 sections to a text, the proposal sections first, cut at `maxChars`. */
@@ -571,31 +618,24 @@ export function collectResults(
 
 /**
  * Re-judging after a template change: pairs the earlier run labelled in `rerunLabels` (or never judged)
- * are sent again. An earlier label outside `rerunLabels` is kept only when it cannot hide a changed
- * judgement: its result already carries `currentVersion` (same input), or `isMultiLaw` says the pair's
- * proposition has a single law, so the law's own section adds nothing to the input. Otherwise (a none or
- * weaker label from an older template on a multi-law bill) the pair is re-judged, because the newer
- * input can move labels up as well as down. `kept` carries each kept result with its own template version.
+ * are sent again. An earlier label outside `rerunLabels` is kept only when its result already carries the
+ * current template version (same input). A none or weaker label from another template version is
+ * re-judged too: a changed template changes the input and can move labels up as well as down.
+ * `kept` carries each kept result with its own template version.
  */
 export function splitByEarlierRun(
   pairs: readonly SfsPair[],
   earlier: readonly SfsResult[],
   rerunLabels: ReadonlySet<string>,
-  opts: { currentVersion: string; isMultiLaw: (pair: SfsPair) => boolean } = {
-    currentVersion: SFS_JUDGE_TEMPLATE_VERSION,
-    isMultiLaw: () => true,
-  },
+  currentVersion: string = SFS_JUDGE_TEMPLATE_VERSION,
 ): { rerun: SfsPair[]; kept: SfsResult[] } {
   const byId = new Map(earlier.map((r) => [r.id, r]));
   const rerun: SfsPair[] = [];
   const kept: SfsResult[] = [];
   for (const p of pairs) {
     const old = byId.get(p.id);
-    const safeToKeep =
-      old &&
-      !rerunLabels.has(old.label) &&
-      (old.template_version === opts.currentVersion || !opts.isMultiLaw(p));
-    if (old && safeToKeep) kept.push(old);
+    if (old && !rerunLabels.has(old.label) && old.template_version === currentVersion)
+      kept.push(old);
     else rerun.push(p);
   }
   return { rerun, kept };

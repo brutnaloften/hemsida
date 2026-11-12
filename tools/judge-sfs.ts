@@ -8,8 +8,8 @@
  * --max-cost is an OVERALL cap per run name: spend of earlier calls is read from manifest.json (written
  * after every request, so a crash loses nothing) and subtracted. --pairs-from re-judges only pairs the
  * earlier results.json labelled --labels (default full,partial) or never judged, plus none/weaker pairs
- * whose proposition has several laws and whose earlier result is from another template version (the
- * law's own section may change them); the rest keep their earlier result. Each prompt includes the law's
+ * whose earlier result is from another template version (a changed template changes the input); the
+ * rest keep their earlier result. Each prompt includes the law's
  * own lagtext/författningskommentar from the proposition text when it can be found.
  * Pairs: legislative promises x laws reached through a proposition already linked as evidence
  * (tools/out/sfs-store from ingest-sfs.ts). Runs through the local Claude Code login (refuses an API
@@ -148,10 +148,7 @@ if (values['pairs-from']) {
     pairs,
     earlier,
     new Set(values.labels!.split(',')),
-    {
-      currentVersion: SFS_JUDGE_TEMPLATE_VERSION,
-      isMultiLaw: (p) => p.prop_ids.some((id) => (sfs.byProp[id] ?? []).length > 1),
-    },
+    SFS_JUDGE_TEMPLATE_VERSION,
   ));
   console.log(
     `--pairs-from: ${toJudge.length} pairs to judge, ${kept.length} keep their earlier label`,

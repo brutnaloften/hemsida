@@ -332,9 +332,9 @@ describe('v2 additions', () => {
     expect(pairs.map((p) => p.id)).toEqual(['b::sfs-2025-3']);
   });
 
-  it('re-judges earlier full/partial and unjudged pairs, keeps none/weaker', () => {
+  it('re-judges earlier full/partial, unjudged and other-template pairs; keeps same-template none/weaker', () => {
     const pair = (id: string) => ({ id, promise_id: 'p', sfs_key: 'k', prop_ids: [], bet_ids: [] });
-    const old = (id: string, label: 'full' | 'partial' | 'weaker' | 'none') => ({
+    const old = (id: string, label: 'full' | 'partial' | 'weaker' | 'none', v: string) => ({
       id,
       promise_id: 'p',
       sfs: 's',
@@ -344,59 +344,102 @@ describe('v2 additions', () => {
       covered_sv: '',
       missing_sv: '',
       reason: 'r',
-      template_version: 'v1',
+      template_version: v,
     });
-    const run = (opts?: Parameters<typeof splitByEarlierRun>[3]) =>
-      splitByEarlierRun(
-        ['a', 'b', 'c', 'd', 'e'].map(pair),
-        [old('a', 'full'), old('b', 'partial'), old('c', 'none'), old('d', 'weaker')],
-        new Set(['full', 'partial']),
-        opts,
-      );
-    // single-law bills: none/weaker from an older template stay
-    const single = run({ currentVersion: 'v4', isMultiLaw: () => false });
-    expect(single.rerun.map((p) => p.id)).toEqual(['a', 'b', 'e']);
-    expect(single.kept.map((r) => r.id)).toEqual(['c', 'd']);
-    expect(single.kept[0]!.template_version).toBe('v1');
-    // multi-law bills: older none/weaker may hide a full, so they are re-judged
-    const multi = run({ currentVersion: 'v4', isMultiLaw: () => true });
-    expect(multi.rerun.map((p) => p.id)).toEqual(['a', 'b', 'c', 'd', 'e']);
-    // same template version: input is unchanged, keep
-    expect(run({ currentVersion: 'v1', isMultiLaw: () => true }).kept.map((r) => r.id)).toEqual([
-      'c',
-      'd',
-    ]);
+    const earlier = [
+      old('a', 'full', 'v4'),
+      old('b', 'partial', 'v4'),
+      old('c', 'none', 'v4'),
+      old('d', 'weaker', 'v4'),
+      old('f', 'none', 'v3'),
+    ];
+    const { rerun, kept } = splitByEarlierRun(
+      ['a', 'b', 'c', 'd', 'e', 'f'].map(pair),
+      earlier,
+      new Set(['full', 'partial']),
+      'v4',
+    );
+    expect(rerun.map((p) => p.id)).toEqual(['a', 'b', 'e', 'f']);
+    expect(kept.map((r) => r.id)).toEqual(['c', 'd']);
   });
 
-  it('extracts a law its own lagtext and kommentar, skipping the table of contents', () => {
-    const ps = [
-      'Förslag till lag om ändring i utlänningslagen (2005:716) ........ 4',
-      'Förslag till lag om ändring i lagen (1999:1) om x',
-      'Intro',
-    ]
-      .concat([
-        'Förslag till lag om ändring i utlänningslagen (2005:716)',
-        '1 § Text A',
-        '2 § Text B',
-      ])
-      .concat(['Förslag till lag om ändring i annan lag', 'Annat'])
-      .concat(['8 Författningskommentar', 'ska inte med'])
-      .concat(['Förslag till lag om ändring i utlänningslagen (2005:716)', '1 § Kommentar'])
-      .map((text) => ({ text }));
-    const out = extractLawSections(
-      ps,
-      'Lag (2022:5) om ändring i utlänningslagen (2005:716)',
-      1000,
+  // Paragraph shapes copied from the real prop texts (tools/out/riksdag-text): numbered headings with the
+  // number glued on (HA0378, HD03207), a page header inside a heading and a heading wrapped over two
+  // paragraphs (HC0389, HD03247), and the inquiry's and the Council on Legislation's drafts in annexes.
+  const prop = (...t: string[]) => t.map((text) => ({ text }));
+  const body = (what: string) =>
+    `Härigenom föreskrivs att ${what} ska ha följande lydelse. `.repeat(6);
+  const fixture = prop(
+    '2.1Förslag till lag om ändring i rättegångsbalken ........................ 4',
+    '2.2Förslag till lag om ändring i lagen (1964:167) med',
+    'särskilda bestämmelser om unga lagöverträdare ...................... 5',
+    '3 Ärendet och dess beredning',
+    '2.1Förslag till lag om ändring i rättegångsbalken',
+    body('48 kap. 2 § rättegångsbalken'),
+    '2.2 Förslag till lag om ändring i lagen (1964:167) Prop. 2024/25:89 med särskilda bestämmelser om unga',
+    'lagöverträdare',
+    body('11 § lagen om unga lagöverträdare'),
+    '2.3Förslag till lag om ändring i socialtjänstlagen (2001:453)',
+    body('2 kap. 1 § socialtjänstlagen'),
+    '3 Ärendet och dess beredning',
+    'Bakgrund som inte hör till lagen. '.repeat(10),
+    '10Författningskommentar',
+    '10.1Förslaget till lag om ändring i rättegångsbalken',
+    'Kommentar till 48 kap. 2 § som förklarar vad ändringen innebär för målsägandebiträde. '.repeat(
+      3,
+    ),
+    '10.2 Förslaget till lag om ändring i socialtjänstlagen (2001:453)',
+    'Kommentar till socialtjänstlagen. '.repeat(10),
+    'Bilaga 1',
+    'Betänkandets lagförslag',
+    'Förslag till lag om ändring i rättegångsbalken',
+    'Utkast från betänkandet som inte ska med. '.repeat(10),
+  );
+
+  it('extracts numbered, Prop-interrupted and wrapped headings, lagtext and kommentar', () => {
+    const rb = extractLawSections(fixture, 'Lag (2023:311) om ändring i rättegångsbalken', 2000)!;
+    expect(rb).toContain('48 kap. 2 § rättegångsbalken');
+    expect(rb).toContain('målsägandebiträde');
+    expect(rb).not.toContain('Utkast från betänkandet');
+    expect(rb).not.toContain('........');
+    const lul = extractLawSections(
+      fixture,
+      'Lag (2025:405) om ändring i lagen (1964:167) med särskilda bestämmelser om unga lagöverträdare',
+      2000,
     )!;
-    expect(out).toContain('1 § Text A');
-    expect(out).toContain('1 § Kommentar');
-    expect(out).not.toContain('Annat');
-    expect(out).not.toContain('ska inte med');
-    expect(out).not.toContain('........');
-    expect(extractLawSections(ps, 'Lag (2022:5) om något helt annat', 1000)).toBeNull();
+    expect(lul).toContain('11 § lagen om unga lagöverträdare');
+    // the amended act's number differs in the heading (strict miss, loose hit)
+    const sol = extractLawSections(fixture, 'Lag (2025:9) om ändring i socialtjänstlagen', 2000)!;
+    expect(sol).toContain('2 kap. 1 § socialtjänstlagen');
+    expect(sol).toContain('Kommentar till socialtjänstlagen');
+  });
+
+  it('stops a run at the next chapter and ignores annex drafts', () => {
+    const sol = extractLawSections(fixture, 'Lag (2025:9) om ändring i socialtjänstlagen', 5000)!;
+    expect(sol).not.toContain('Bakgrund som inte hör till lagen');
+    // only the annex copy exists for this law: no section at all
+    const onlyAnnex = prop(
+      'Bilaga 1',
+      'Lagrådsremissens lagförslag',
+      'Förslag till lag om ändring i brottsbalken',
+      'Text. '.repeat(60),
+    );
     expect(
-      extractLawSections(ps, 'Lag (2022:5) om ändring i utlänningslagen (2005:716)', 12)!,
+      extractLawSections(onlyAnnex, 'Lag (2025:9) om ändring i brottsbalken', 2000),
+    ).toBeNull();
+    expect(extractLawSections(fixture, 'Lag (2022:5) om något helt annat', 1000)).toBeNull();
+    expect(
+      extractLawSections(fixture, 'Lag (2023:311) om ändring i rättegångsbalken', 20)!,
     ).toContain('avkortat');
+  });
+
+  it('matches a new named law without its own number', () => {
+    const ps = prop(
+      '2.1Förslag till socialtjänstlag',
+      'Härigenom föreskrivs följande. ' + '1 § Denna lag innehåller bestämmelser. '.repeat(8),
+      '3 Ärendet och dess beredning',
+    );
+    expect(extractLawSections(ps, 'Socialtjänstlag (2025:400)', 2000)).toContain('1 §');
   });
 
   it('normalises law titles and puts the law sections in the prompt and the cache key', () => {
