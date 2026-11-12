@@ -20,15 +20,21 @@
   "committee": "UbU",
   "keywords": ["obehöriga", "jourskolor", "akutskolor", "sekretess", "brottslighet i skolan"],
   "verdict": {
-    "value": "in_progress",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i augusti 2023 Skolsäkerhetsutredningen i uppdrag att kartlägga och föreslå ändrade sekretessregler för informationsutbyte mellan skola, socialtjänst och polis. Utredningen föreslog i december 2024 sekretessbrytande regler för just detta. Riksdagen beslutade i maj 2025 om ändringar i skollagen och sekretesslagen, men dokumenten visar inte att de gäller utbyte mellan alla tre.",
-    "date": "2026-11-11",
+    "reasoning": "Regeringen beslutade den 10 augusti 2023 om ett tilläggsdirektiv till Skolsäkerhetsutredningen. Utredaren fick i uppdrag att kartlägga vilka uppgifter som behöver utbytas mellan skola, socialtjänst och polis i ärenden om unga och att föreslå författningsändringar. Utredningen lämnade i december 2024 ett betänkande om ökat uppgiftsutbyte i det brottsförebyggande arbetet.",
+    "date": "2026-11-12",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i augusti 2023 Skolsäkerhetsutredningen i uppdrag att kartlägga och föreslå ändrade sekretessregler för informationsutbyte mellan skola, socialtjänst och polis. Utredningen föreslog i december 2024 sekretessbrytande regler för just detta. Riksdagen beslutade i maj 2025 om ändringar i skollagen och sekretesslagen, men dokumenten visar inte att de gäller utbyte mellan alla tre.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -37,7 +43,7 @@
       "kind": "sou",
       "dok_id": "HBB328",
       "designation": "SOU 2023:28",
-      "title": "Samhället mot skolattacker ",
+      "title": "Samhället mot skolattacker",
       "date": "2023-06-16",
       "url": "https://data.riksdagen.se/dokument/HBB328.html",
       "relevance": "partial",
@@ -67,7 +73,7 @@
       "kind": "sou",
       "dok_id": "HCB363",
       "designation": "SOU 2024:63",
-      "title": "Ökat informationsutbyte mellan myndigheter ",
+      "title": "Ökat informationsutbyte mellan myndigheter",
       "date": "2024-09-03",
       "url": "https://data.riksdagen.se/dokument/HCB363.html",
       "relevance": "partial",

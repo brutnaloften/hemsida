@@ -374,6 +374,28 @@ describe('promiseSchema', () => {
       }
     });
 
+    it('an inquiry promise is fulfilled by its directive, not by a law', () => {
+      const inquiry = { type: 'inquiry' };
+      for (const v of ['fulfilled', 'partially_fulfilled']) {
+        expect(ok(make(v, 'Direktivet finns.', [ev('dir')], inquiry)), v).toBe(true);
+        // A later SOU next to the directive is only shown.
+        expect(
+          ok(make(v, 'Direktivet finns.', [ev('dir'), { ...ev('sou'), dok_id: 'D2' }], inquiry)),
+          v,
+        ).toBe(true);
+        // No directive: an SOU, a law or nothing is not enough.
+        for (const kind of ['sou', 'ds', 'prop', 'sfs']) {
+          expect(ok(make(v, 'Klart.', [ev(kind)], inquiry)), `${v} ${kind}`).toBe(false);
+        }
+        expect(ok(make(v, 'Klart.', [ev('dir', { relevance: 'contradicts' })], inquiry)), v).toBe(
+          false,
+        );
+        expect(messages(make(v, 'Klart.', [], inquiry))[0]).toContain('kind dir');
+      }
+      // Other types keep needing a law; a directive alone does not fulfil them.
+      expect(ok(make('fulfilled', 'Klart.', [ev('dir')], { type: 'legislative' }))).toBe(false);
+    });
+
     it('does not check history entries against the evidence', () => {
       const p = make('in_progress', 'Pågår.', [ev('prop')]);
       const history = [{ value: 'partially_fulfilled', reasoning: 'Äldre.', date: '2023-01-01' }];

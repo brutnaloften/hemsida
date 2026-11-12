@@ -20,15 +20,21 @@
   "committee": "SfU",
   "keywords": ["felaktiga utbetalningar", "kartläggning", "kommuner", "regioner", "välfärdsbrott"],
   "verdict": {
-    "value": "in_progress",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i maj 2023 en utredare i uppdrag att kartlägga felaktiga utbetalningar från kommuner och regioner. I februari 2025 redovisade utredningen en enkät till alla kommuner och regioner om bland annat välfärdsutbetalningar, skolpeng och föreningsbidrag. I juli 2026 kom ett nytt direktiv om behovet av att behandla personuppgifter, vilket bara delvis rör löftet.",
-    "date": "2026-11-11",
+    "reasoning": "Regeringen gav den 11 maj 2023 en särskild utredare i uppdrag att kartlägga omfattningen av felaktiga utbetalningar från kommuner och regioner, bland annat till individer, privata utförare och som föreningsbidrag. Utredningen lämnade sitt betänkande den 20 februari 2025, där kartläggningen gjordes genom en enkät till alla kommuner och regioner.",
+    "date": "2026-11-12",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i maj 2023 en utredare i uppdrag att kartlägga felaktiga utbetalningar från kommuner och regioner. I februari 2025 redovisade utredningen en enkät till alla kommuner och regioner om bland annat välfärdsutbetalningar, skolpeng och föreningsbidrag. I juli 2026 kom ett nytt direktiv om behovet av att behandla personuppgifter, vilket bara delvis rör löftet.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -47,7 +53,7 @@
       "kind": "sou",
       "dok_id": "HDB320",
       "designation": "SOU 2025:20",
-      "title": "Kommunal anslutning till Utbetalningsmyndighetens verksamhet ",
+      "title": "Kommunal anslutning till Utbetalningsmyndighetens verksamhet",
       "date": "2025-02-20",
       "url": "https://data.riksdagen.se/dokument/HDB320.html",
       "relevance": "full",

@@ -20,15 +20,21 @@
   "committee": "JuU",
   "keywords": ["frihetsberövande", "unga brottsmisstänkta", "kvarhållande", "häktning unga", "LUL"],
   "verdict": {
-    "value": "in_progress",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att se över reglerna om anhållande och häktning av unga och hur länge polisen får hålla kvar unga misstänkta tills vårdnadshavare eller socialtjänst kan ta över. I december 2024 lade utredningen fram förslag om längre häktningstid för barn och längre kvarhållande. Dokumenten visar förslag, inget beslut, och tar mest upp tvångsmedel.",
-    "date": "2026-11-11",
+    "reasoning": "Regeringen tillsatte utredningen genom ett direktiv den 29 juni 2023. Utredaren fick i uppdrag att se över reglerna om anhållande och häktning av unga under 18 år, bland annat kravet på synnerliga skäl, samt tidsgränsen och villkoren för att polisen ska få hålla kvar unga misstänkta tills vårdnadshavare eller socialtjänst kan ta över. Utredningen lämnade sitt betänkande den 20 december 2024.",
+    "date": "2026-11-12",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att se över reglerna om anhållande och häktning av unga och hur länge polisen får hålla kvar unga misstänkta tills vårdnadshavare eller socialtjänst kan ta över. I december 2024 lade utredningen fram förslag om längre häktningstid för barn och längre kvarhållande. Dokumenten visar förslag, inget beslut, och tar mest upp tvångsmedel.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -47,7 +53,7 @@
       "kind": "sou",
       "dok_id": "HCB393",
       "designation": "SOU 2024:93",
-      "title": "Effektivare verktyg för att bekämpa brott av unga lagöverträdare ",
+      "title": "Effektivare verktyg för att bekämpa brott av unga lagöverträdare",
       "date": "2024-12-20",
       "url": "https://data.riksdagen.se/dokument/HCB393.html",
       "relevance": "partial",

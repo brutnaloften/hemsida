@@ -55,6 +55,7 @@ Skrivelser (the store files them under `prop`) and pairs the judge staged as `ba
 - no dated law: `in_progress` (the placeholder reasoning names the in-force date of each law);
 - pending work also keeps `in_progress`: another linked proposition with no dated law (any law, whatever the judge made of it), or a linked dir, sou or ds dated after the newest proposition that has a dated law;
 - `fulfilled`: a law judged `full` at `high` confidence is linked, no linked law is judged `weaker`, and no judged law is undated (a law with a future in-force date does not block it);
+- Inquiry promises (`type: inquiry`) skip the law step: `fulfilled` when a linked `dir` is judged `match` at `high` confidence, `partially_fulfilled` for a `partial` directive at `high` confidence, else `in_progress`; a later SOU never blocks it (hemsida-02a, `docs/data-model.md` "Inquiry promises"). `write-reasoning` has directive-specific instructions for them and its validator rejects law or decision claims and absence claims in those texts.
 - `partially_fulfilled`: nothing is pending and either a high-confidence `full` is blocked as above or a law is `partial`/`weaker`;
 - a `full` below `high` confidence alone is unconfirmed: `in_progress` with the sfs entry attached (medium fulls need confirmation).
 

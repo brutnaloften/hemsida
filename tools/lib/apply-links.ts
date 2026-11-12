@@ -26,6 +26,12 @@
  *    medium fulls need confirmation before they can count. Never `broken`. Overrides (tools/sfs-overrides.json)
  *    replace the judge's label for a promise/law pair before any of this, because a lone `full` is not
  *    fully reliable;
+ *  - INQUIRY promises (`type: inquiry`, "utreda X") are met once the inquiry exists, so no law is
+ *    looked for: `fulfilled` when a linked kommittédirektiv (dir) is judged `match` at `high`
+ *    confidence (the directive sets up the whole inquiry the promise asks for), `partially_fulfilled`
+ *    when a directive is judged `partial` at `high` confidence, otherwise `in_progress`. A later SOU,
+ *    Ds or proposition is shown as evidence and never blocks `fulfilled` (unlike for a legislative
+ *    promise, where a newer dir/sou/ds means the work is still going on);
  *  - a `contradicts` pair (proposed, stage not `background`) becomes evidence with relevance
  *    `contradicts` ("Motverkar") on any eligible promise; it never counts toward the verdict, never
  *    pulls in a deciding betänkande, and a promise whose only evidence works against it stays
@@ -354,7 +360,12 @@ export function applyLinks(
   const rerunAi = promise.verdict.assessedBy === 'ai';
   if (!rerunAi && promise.verdict.value !== 'unassessed') return null;
   // Without SFS input the rules cannot reproduce a fulfilled / partially_fulfilled verdict: keep it.
-  if (!sfs && ['fulfilled', 'partially_fulfilled'].includes(promise.verdict.value)) return null;
+  if (
+    !sfs &&
+    promise.type !== 'inquiry' &&
+    ['fulfilled', 'partially_fulfilled'].includes(promise.verdict.value)
+  )
+    return null;
   // With SFS input the sfs entries are recomputed from the judgements; otherwise they stay as they are.
   const useSfs = !!sfs && promise.type === 'legislative';
   const allRiksdag = promise.evidence.filter(isRiksdagEvidence);
@@ -451,6 +462,19 @@ export function applyLinks(
     return riksdag.length === 0 || sameEvidence ? null : { evidence, verdict: promise.verdict };
   }
 
+  if (promise.type === 'inquiry') {
+    return applyInquiry(
+      promise,
+      evidence,
+      riksdag,
+      entries,
+      contradicting,
+      rerunAi,
+      sameEvidence,
+      today,
+    );
+  }
+
   // SFS: laws reached through the linked propositions (budget propositions and skrivelser excluded).
   let outcome: SfsOutcome | null = null;
   if (useSfs) {
@@ -513,6 +537,83 @@ export function applyLinks(
     .join(' ');
 
   // Same value as before: update in place. A changed value moves the earlier verdict to history.
+  const sameValue = rerunAi && promise.verdict.value === value;
+  return {
+    evidence,
+    verdict: {
+      value,
+      assessedBy: 'ai',
+      reasoning,
+      date: today,
+      history: sameValue
+        ? promise.verdict.history
+        : [...promise.verdict.history, asHistory(promise.verdict)],
+    },
+  };
+}
+
+/**
+ * Verdict for an inquiry promise: the directive that appoints the inquiry is the deliverable. See the
+ * header comment; the evidence list is already built by the caller.
+ */
+function applyInquiry(
+  promise: PromiseRecord,
+  evidence: Evidence[],
+  riksdag: readonly RiksdagEvidence[],
+  entries: readonly { pair: JudgedPair; doc: StoreDocument }[],
+  contradicting: readonly { pair: JudgedPair; doc: StoreDocument }[],
+  rerunAi: boolean,
+  sameEvidence: boolean,
+  today: string,
+): Applied | null {
+  const dirs = entries.filter((e) => e.doc.doktyp === 'dir');
+  const high = (label: JudgedPair['label']) =>
+    dirs.filter((e) => e.pair.label === label && e.pair.confidence === 'high');
+  const value: 'fulfilled' | 'partially_fulfilled' | 'in_progress' =
+    high('match').length > 0
+      ? 'fulfilled'
+      : high('partial').length > 0
+        ? 'partially_fulfilled'
+        : 'in_progress';
+  if (rerunAi && sameEvidence && promise.verdict.value === value) return null;
+
+  const list = (xs: readonly { doc: StoreDocument }[]) =>
+    xs.map((e) => `${designationOf(e.doc)} (${e.doc.titel})`).join('; ');
+  const dirDocs =
+    value === 'fulfilled'
+      ? high('match')
+      : value === 'partially_fulfilled'
+        ? high('partial')
+        : dirs;
+  const later = entries.filter(
+    (e) => ['sou', 'ds'].includes(e.doc.doktyp) && dirDocs.some((d) => e.doc.datum > d.doc.datum),
+  );
+  const opposed = contradicting.filter((e) => riksdag.some((r) => r.dok_id === e.doc.dok_id));
+  const plural = dirDocs.length > 1;
+  // A supplementary directive changes an inquiry that already exists; it does not appoint one.
+  const supplementary =
+    dirDocs.length > 0 && dirDocs.every((d) => /^Tilläggsdirektiv/i.test(d.doc.titel.trim()));
+  const reasoning = [
+    value === 'in_progress'
+      ? `${entries.length === 1 ? 'Ett dokument' : 'Dokument'} i riksdagens register hör till löftet: ${list(entries)}.`
+      : supplementary
+        ? `Regeringen gav en redan tillsatt utredning ett ändrat uppdrag genom ${plural ? 'tilläggsdirektiven' : 'tilläggsdirektivet'} ${list(dirDocs)}, daterat ${[...new Set(dirDocs.map((d) => d.doc.datum))].join(', ')}.`
+        : `Regeringen har tillsatt utredningen genom ${plural ? 'kommittédirektiven' : 'kommittédirektivet'} ${list(dirDocs)}, daterat ${[...new Set(dirDocs.map((d) => d.doc.datum))].join(', ')}.`,
+    value === 'fulfilled'
+      ? 'Direktivet behandlar hela löftet, så löftet om en utredning bedöms som uppfyllt.'
+      : value === 'partially_fulfilled'
+        ? 'Direktivet behandlar bara en del av löftet, så det bedöms som delvis uppfyllt.'
+        : 'Dokumenten visar inte ett direktiv som tillsätter den utredning löftet gäller, så löftet bedöms inte som uppfyllt.',
+    later.length > 0
+      ? `${later.length === 1 ? 'Utredningens betänkande' : 'Betänkanden'} ${list(later)} visas som underlag och påverkar inte bedömningen.`
+      : '',
+    opposed.length > 0
+      ? `${opposed.length === 1 ? 'Ett dokument' : 'Dokument'} motverkar löftet: ${list(opposed)}.`
+      : '',
+  ]
+    .filter((t) => t !== '')
+    .join(' ');
+
   const sameValue = rerunAi && promise.verdict.value === value;
   return {
     evidence,
