@@ -228,20 +228,36 @@ export const normalizeLawTitle = (title: string, loose = false): string => {
 
 /** A bill's lagtext or författningskommentar heading: `2.1Förslag till ...`, `10.2Förslaget till ...`, `Förslag till ...`. */
 const LAW_HEADING = /^(\d+(\.\d+)*\s*)?Förslag(et)? till (lag|förordning|[a-zåäö]+lag\b)/i;
-/** A bill chapter or annex heading, which ends a law's run. */
-const SECTION_END = /^(\d{1,2}\s*[A-ZÅÄÖ][a-zåäö]|Bilaga \d)/;
-/** Appendix runs reprint an inquiry's or the Council on Legislation's draft, not the bill's own text. */
-const DRAFT_MARKER = /^(Betänkandets|Promemorians|Lagrådsremissens|Utkastet till) lagförslag/i;
-const BILAGA = /^Bilaga \d/;
+const DOT_LEADER = /\.{4,}/;
+/** A bill chapter or annex heading (short, no sentence punctuation, no `§`), which ends a law's run. */
+const isSectionEnd = (t: string): boolean =>
+  /^Bilaga \d/.test(t) ||
+  (/^\d{1,2}\s*[A-ZÅÄÖ][a-zåäö]/.test(t) && t.length < 90 && !/[.:;§]$|§/.test(t));
+/** A standalone heading before an annex that reprints an inquiry's or the Council on Legislation's draft. */
+const DRAFT_MARKER = /^(Betänkandets|Promemorians|Lagrådsremissens|Utkastet till) lagförslag\s*$/i;
 const MIN_RUN_CHARS = 150;
+
+/**
+ * Paragraphs that belong to the table of contents: a dot-leader row, or the one or two short paragraphs
+ * before it (a wrapped entry puts the leaders on its last line).
+ */
+function tocParagraphs(paragraphs: readonly { text: string }[]): boolean[] {
+  const dot = paragraphs.map((p) => DOT_LEADER.test(p.text));
+  return paragraphs.map((p, i) => {
+    if (dot[i] || dot[i + 1]) return true;
+    return dot[i + 2] === true && paragraphs[i + 1]!.text.length < 100 && p.text.length < 100;
+  });
+}
 
 /**
  * The law's own sections of a proposition: runs that start at a `Förslag till lag om ...` heading naming
  * this law (the lagtext, and the heading again in the författningskommentar), up to the next such heading
- * or chapter. Headings may be numbered, end in `Prop. YYYY/YY:N`, or wrap over two paragraphs. Table of
- * contents rows (dot leaders or run shorter than MIN_RUN_CHARS), and everything from the first annex after
- * the författningskommentar or from a `Betänkandets/Promemorians/Lagrådsremissens lagförslag` marker, are
- * skipped. Each run is cut at `maxCharsEach`; null when the proposition has no section for the law.
+ * or chapter. Headings may be numbered, contain a `Prop. YYYY/YY:N` page header, or wrap over several
+ * paragraphs. The table of contents (also wrapped entries) never starts or belongs to a run, a run
+ * containing dot leaders is dropped, and the scan ends at a standalone `Betänkandets/Promemorians/
+ * Lagrådsremissens lagförslag` heading or at the first annex after the författningskommentar, because annexes
+ * reprint drafts that are not the bill's text. Each run is cut at `maxCharsEach`; null when the
+ * proposition has no section for the law.
  */
 export function extractLawSections(
   paragraphs: readonly { text: string }[],
@@ -249,13 +265,14 @@ export function extractLawSections(
   maxCharsEach: number,
   maxRuns = 2,
 ): string | null {
+  const toc = tocParagraphs(paragraphs);
   let end = paragraphs.length;
   let afterKommentar = false;
   for (let i = 0; i < paragraphs.length; i++) {
+    if (toc[i]) continue;
     const t = paragraphs[i]!.text;
-    if (/\.{4,}/.test(t)) continue;
     if (/^\d+\s*Författningskommentar/i.test(t)) afterKommentar = true;
-    if (DRAFT_MARKER.test(t) || (afterKommentar && BILAGA.test(t))) {
+    if (DRAFT_MARKER.test(t) || (afterKommentar && /^Bilaga \d/.test(t))) {
       end = i;
       break;
     }
@@ -265,14 +282,20 @@ export function extractLawSections(
     const runs: string[] = [];
     for (let i = 0; i < end && runs.length < maxRuns; i++) {
       const t = paragraphs[i]!.text;
-      if (!LAW_HEADING.test(t) || /\.{4,}/.test(t)) continue;
+      if (toc[i] || !LAW_HEADING.test(t)) continue;
       // A heading may wrap over the next few short paragraphs.
       let head = t;
       let next = i + 1;
       let matched = normalizeLawTitle(head, loose) === want;
       for (let k = 0; k < 4 && !matched && next < end; k++) {
         const u = paragraphs[next]!.text;
-        if (u.length > 100 || LAW_HEADING.test(u) || SECTION_END.test(u) || /^Härigenom/.test(u))
+        if (
+          toc[next] ||
+          u.length > 100 ||
+          LAW_HEADING.test(u) ||
+          isSectionEnd(u) ||
+          /^Härigenom/.test(u)
+        )
           break;
         head += ' ' + u;
         next++;
@@ -280,13 +303,15 @@ export function extractLawSections(
       }
       if (!matched) continue;
       const body: string[] = [t];
+      let leaders = false;
       for (let j = i + 1; j < end; j++) {
         const u = paragraphs[j]!.text;
-        if (LAW_HEADING.test(u) || SECTION_END.test(u)) break;
+        if (LAW_HEADING.test(u) || isSectionEnd(u)) break;
+        if (DOT_LEADER.test(u)) leaders = true;
         body.push(u);
       }
       const text = body.join('\n');
-      if (text.length < MIN_RUN_CHARS) continue;
+      if (leaders || text.length < MIN_RUN_CHARS) continue;
       runs.push(
         text.length <= maxCharsEach ? text : text.slice(0, maxCharsEach) + '\n[... avkortat ...]',
       );

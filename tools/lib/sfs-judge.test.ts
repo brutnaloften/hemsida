@@ -433,6 +433,56 @@ describe('v2 additions', () => {
     ).toContain('avkortat');
   });
 
+  // Shapes from HC03160 (paras 179-230) and HD03262: wrapped table-of-contents entries put the dot leaders
+  // on the last line, the TOC lists "Betänkandets lagförslag i relevanta delar", and the Ärendet chapter says
+  // "Betänkandets lagförslag i relevanta delar finns i bilaga 2" in running text.
+  const tocFixture = prop(
+    'Förslaget till lag om ändring i skollagen (2010:800)............ 28',
+    'Förslaget till lag om ändring i lagen (2025:000) om',
+    'ändring i skollagen (2010:800).......................... 29',
+    'Bilaga 2',
+    'Betänkandets lagförslag i relevanta delar',
+    '..................................................... 40',
+    'Bilaga 4',
+    'Lagrådsremissens lagförslag ..........................................',
+    '2.1Förslag till lag om ändring i skollagen (2010:800)',
+    body('9 kap. skollagen'),
+    '3 Ärendet och dess beredning',
+    'Betänkandets lagförslag i relevanta delar finns i bilaga 2. Betän-',
+    'Bakgrund som inte hör till lagen. '.repeat(10),
+    '12Författningskommentar',
+    '12.1Förslaget till lag om ändring i skollagen (2010:800)',
+    'Kommentar till 9 kap. som förklarar upphävandet av kapitlet. '.repeat(4),
+    'Bilaga 1',
+  );
+
+  it('skips wrapped table-of-contents entries and does not end at TOC or prose draft markers', () => {
+    const out = extractLawSections(
+      tocFixture,
+      'Lag (2025:729) om ändring i skollagen (2010:800)',
+      3000,
+    )!;
+    expect(out).not.toMatch(/\.{4,}/);
+    expect(out).toContain('9 kap. skollagen');
+    // the kommentar after the prose "finns i bilaga 2" sentence is still reached
+    expect(out).toContain('upphävandet av kapitlet');
+    expect(out).not.toContain('Bakgrund som inte hör till lagen');
+  });
+
+  it('gives nothing for a law that only has table-of-contents rows', () => {
+    const ps = prop(
+      'Förslaget till lag om ändring i lagen (2025:000) om',
+      'ändring i skollagen (2010:800).......................... 29',
+      '2.5',
+      'Förslag till lag om ändring i brottsbalken',
+      'ändring.......................... 30',
+    );
+    expect(extractLawSections(ps, 'Lag (2025:1) om ändring i brottsbalken', 2000)).toBeNull();
+    expect(
+      extractLawSections(ps, 'Lag (2025:2) om ändring i skollagen (2010:800)', 2000),
+    ).toBeNull();
+  });
+
   it('matches a new named law without its own number', () => {
     const ps = prop(
       '2.1Förslag till socialtjänstlag',
