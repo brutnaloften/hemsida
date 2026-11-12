@@ -3,6 +3,8 @@ import {
   SFS_JUDGE_INSTRUCTIONS,
   SFS_JUDGE_TEMPLATE_VERSION,
   splitByEarlierRun,
+  extractLawSections,
+  normalizeLawTitle,
   buildPrompt,
   changedProposal,
   collectResults,
@@ -251,6 +253,33 @@ describe('runRequests', () => {
     expect(s.status).toBe('budget_exceeded');
     expect(s.sent).toBe(1);
   });
+  it('reports running spend after each request', async () => {
+    const spends: number[] = [];
+    const judge = {
+      kind: 'x',
+      judge: async () => ({
+        coverage: {
+          coverage: 'none' as const,
+          confidence: 'low' as const,
+          covered_sv: '',
+          missing_sv: '',
+          reason: 'r',
+        },
+        tokens: 1,
+        cost_usd: 0.1,
+      }),
+    };
+    await runRequests([mk('a', 0.1), mk('b', 0.1)], {
+      judge,
+      instructions: 'i',
+      cache: createMemoryCoverageCache(),
+      maxCostUsd: 1,
+      concurrency: 1,
+      onSpend: (c) => spends.push(c),
+    });
+    expect(spends).toHaveLength(2);
+    expect(spends[1]).toBeCloseTo(0.2);
+  });
   it('skips transient errors and fails on others', async () => {
     const mkJudge = (status: number | undefined) => ({
       kind: 'x',
@@ -282,7 +311,7 @@ describe('v2 additions', () => {
   it('the prompt tells the judge to assess only this law and bumps the template version', () => {
     expect(SFS_JUDGE_INSTRUCTIONS).toMatch(/ENDAST vad just den här lagen gör/);
     expect(SFS_JUDGE_INSTRUCTIONS).toMatch(/följdändring/);
-    expect(SFS_JUDGE_TEMPLATE_VERSION).toBe('v3');
+    expect(SFS_JUDGE_TEMPLATE_VERSION).toBe('v4');
   });
 
   it('skips budget propositions as pair sources', () => {
@@ -303,9 +332,9 @@ describe('v2 additions', () => {
     expect(pairs.map((p) => p.id)).toEqual(['b::sfs-2025-3']);
   });
 
-  it('re-judges earlier full/partial and unjudged pairs, keeps none/weaker', () => {
+  it('re-judges earlier full/partial, unjudged and other-template pairs; keeps same-template none/weaker', () => {
     const pair = (id: string) => ({ id, promise_id: 'p', sfs_key: 'k', prop_ids: [], bet_ids: [] });
-    const old = (id: string, label: 'full' | 'partial' | 'weaker' | 'none') => ({
+    const old = (id: string, label: 'full' | 'partial' | 'weaker' | 'none', v: string) => ({
       id,
       promise_id: 'p',
       sfs: 's',
@@ -315,16 +344,170 @@ describe('v2 additions', () => {
       covered_sv: '',
       missing_sv: '',
       reason: 'r',
-      template_version: 'v1',
+      template_version: v,
     });
+    const earlier = [
+      old('a', 'full', 'v4'),
+      old('b', 'partial', 'v4'),
+      old('c', 'none', 'v4'),
+      old('d', 'weaker', 'v4'),
+      old('f', 'none', 'v3'),
+    ];
     const { rerun, kept } = splitByEarlierRun(
-      ['a', 'b', 'c', 'd', 'e'].map(pair),
-      [old('a', 'full'), old('b', 'partial'), old('c', 'none'), old('d', 'weaker')],
+      ['a', 'b', 'c', 'd', 'e', 'f'].map(pair),
+      earlier,
       new Set(['full', 'partial']),
+      'v4',
     );
-    expect(rerun.map((p) => p.id)).toEqual(['a', 'b', 'e']);
+    expect(rerun.map((p) => p.id)).toEqual(['a', 'b', 'e', 'f']);
     expect(kept.map((r) => r.id)).toEqual(['c', 'd']);
-    expect(kept[0]!.template_version).toBe('v1');
+  });
+
+  // Paragraph shapes copied from the real prop texts (tools/out/riksdag-text): numbered headings with the
+  // number glued on (HA0378, HD03207), a page header inside a heading and a heading wrapped over two
+  // paragraphs (HC0389, HD03247), and the inquiry's and the Council on Legislation's drafts in annexes.
+  const prop = (...t: string[]) => t.map((text) => ({ text }));
+  const body = (what: string) =>
+    `Härigenom föreskrivs att ${what} ska ha följande lydelse. `.repeat(6);
+  const fixture = prop(
+    '2.1Förslag till lag om ändring i rättegångsbalken ........................ 4',
+    '2.2Förslag till lag om ändring i lagen (1964:167) med',
+    'särskilda bestämmelser om unga lagöverträdare ...................... 5',
+    '3 Ärendet och dess beredning',
+    '2.1Förslag till lag om ändring i rättegångsbalken',
+    body('48 kap. 2 § rättegångsbalken'),
+    '2.2 Förslag till lag om ändring i lagen (1964:167) Prop. 2024/25:89 med särskilda bestämmelser om unga',
+    'lagöverträdare',
+    body('11 § lagen om unga lagöverträdare'),
+    '2.3Förslag till lag om ändring i socialtjänstlagen (2001:453)',
+    body('2 kap. 1 § socialtjänstlagen'),
+    '3 Ärendet och dess beredning',
+    'Bakgrund som inte hör till lagen. '.repeat(10),
+    '10Författningskommentar',
+    '10.1Förslaget till lag om ändring i rättegångsbalken',
+    'Kommentar till 48 kap. 2 § som förklarar vad ändringen innebär för målsägandebiträde. '.repeat(
+      3,
+    ),
+    '10.2 Förslaget till lag om ändring i socialtjänstlagen (2001:453)',
+    'Kommentar till socialtjänstlagen. '.repeat(10),
+    'Bilaga 1',
+    'Betänkandets lagförslag',
+    'Förslag till lag om ändring i rättegångsbalken',
+    'Utkast från betänkandet som inte ska med. '.repeat(10),
+  );
+
+  it('extracts numbered, Prop-interrupted and wrapped headings, lagtext and kommentar', () => {
+    const rb = extractLawSections(fixture, 'Lag (2023:311) om ändring i rättegångsbalken', 2000)!;
+    expect(rb).toContain('48 kap. 2 § rättegångsbalken');
+    expect(rb).toContain('målsägandebiträde');
+    expect(rb).not.toContain('Utkast från betänkandet');
+    expect(rb).not.toContain('........');
+    const lul = extractLawSections(
+      fixture,
+      'Lag (2025:405) om ändring i lagen (1964:167) med särskilda bestämmelser om unga lagöverträdare',
+      2000,
+    )!;
+    expect(lul).toContain('11 § lagen om unga lagöverträdare');
+    // the amended act's number differs in the heading (strict miss, loose hit)
+    const sol = extractLawSections(fixture, 'Lag (2025:9) om ändring i socialtjänstlagen', 2000)!;
+    expect(sol).toContain('2 kap. 1 § socialtjänstlagen');
+    expect(sol).toContain('Kommentar till socialtjänstlagen');
+  });
+
+  it('stops a run at the next chapter and ignores annex drafts', () => {
+    const sol = extractLawSections(fixture, 'Lag (2025:9) om ändring i socialtjänstlagen', 5000)!;
+    expect(sol).not.toContain('Bakgrund som inte hör till lagen');
+    // only the annex copy exists for this law: no section at all
+    const onlyAnnex = prop(
+      'Bilaga 1',
+      'Lagrådsremissens lagförslag',
+      'Förslag till lag om ändring i brottsbalken',
+      'Text. '.repeat(60),
+    );
+    expect(
+      extractLawSections(onlyAnnex, 'Lag (2025:9) om ändring i brottsbalken', 2000),
+    ).toBeNull();
+    expect(extractLawSections(fixture, 'Lag (2022:5) om något helt annat', 1000)).toBeNull();
+    expect(
+      extractLawSections(fixture, 'Lag (2023:311) om ändring i rättegångsbalken', 20)!,
+    ).toContain('avkortat');
+  });
+
+  // Shapes from HC03160 (paras 179-230) and HD03262: wrapped table-of-contents entries put the dot leaders
+  // on the last line, the TOC lists "Betänkandets lagförslag i relevanta delar", and the Ärendet chapter says
+  // "Betänkandets lagförslag i relevanta delar finns i bilaga 2" in running text.
+  const tocFixture = prop(
+    'Förslaget till lag om ändring i skollagen (2010:800)............ 28',
+    'Förslaget till lag om ändring i lagen (2025:000) om',
+    'ändring i skollagen (2010:800).......................... 29',
+    'Bilaga 2',
+    'Betänkandets lagförslag i relevanta delar',
+    '..................................................... 40',
+    'Bilaga 4',
+    'Lagrådsremissens lagförslag ..........................................',
+    '2.1Förslag till lag om ändring i skollagen (2010:800)',
+    body('9 kap. skollagen'),
+    '3 Ärendet och dess beredning',
+    'Betänkandets lagförslag i relevanta delar finns i bilaga 2. Betän-',
+    'Bakgrund som inte hör till lagen. '.repeat(10),
+    '12Författningskommentar',
+    '12.1Förslaget till lag om ändring i skollagen (2010:800)',
+    'Kommentar till 9 kap. som förklarar upphävandet av kapitlet. '.repeat(4),
+    'Bilaga 1',
+  );
+
+  it('skips wrapped table-of-contents entries and does not end at TOC or prose draft markers', () => {
+    const out = extractLawSections(
+      tocFixture,
+      'Lag (2025:729) om ändring i skollagen (2010:800)',
+      3000,
+    )!;
+    expect(out).not.toMatch(/\.{4,}/);
+    expect(out).toContain('9 kap. skollagen');
+    // the kommentar after the prose "finns i bilaga 2" sentence is still reached
+    expect(out).toContain('upphävandet av kapitlet');
+    expect(out).not.toContain('Bakgrund som inte hör till lagen');
+  });
+
+  it('gives nothing for a law that only has table-of-contents rows', () => {
+    const ps = prop(
+      'Förslaget till lag om ändring i lagen (2025:000) om',
+      'ändring i skollagen (2010:800).......................... 29',
+      '2.5',
+      'Förslag till lag om ändring i brottsbalken',
+      'ändring.......................... 30',
+    );
+    expect(extractLawSections(ps, 'Lag (2025:1) om ändring i brottsbalken', 2000)).toBeNull();
+    expect(
+      extractLawSections(ps, 'Lag (2025:2) om ändring i skollagen (2010:800)', 2000),
+    ).toBeNull();
+  });
+
+  it('matches a new named law without its own number', () => {
+    const ps = prop(
+      '2.1Förslag till socialtjänstlag',
+      'Härigenom föreskrivs följande. ' + '1 § Denna lag innehåller bestämmelser. '.repeat(8),
+      '3 Ärendet och dess beredning',
+    );
+    expect(extractLawSections(ps, 'Socialtjänstlag (2025:400)', 2000)).toContain('1 §');
+  });
+
+  it('normalises law titles and puts the law sections in the prompt and the cache key', () => {
+    expect(normalizeLawTitle('Lag (2023:311) om X')).toBe('lag om x');
+    expect(normalizeLawTitle('Förslag till lag om X')).toBe('lag om x');
+    const base = {
+      promise: { title: 't', description: 'd' },
+      law: { sfs: '2025:1', title: 'Lag (2025:1) om X', omfattning: null, ikraft: null },
+      propTexts: [],
+    } as unknown as Parameters<typeof buildPrompt>[0];
+    const withText = buildPrompt({
+      ...base,
+      lawSections: [{ designation: 'Prop. 1', text: '1 § hej' }],
+    });
+    expect(withText).toContain('LAGENS EGEN TEXT I PROPOSITION Prop. 1\n1 § hej');
+    expect(judgeKey('claude', 'm', withText, 'i')).not.toBe(
+      judgeKey('claude', 'm', buildPrompt(base), 'i'),
+    );
   });
 
   it('marks a run incomplete when requests were skipped on transient errors', async () => {

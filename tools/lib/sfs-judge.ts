@@ -10,7 +10,7 @@ import { z } from 'zod';
 import type { SfsLaw, SfsStore } from './sfs-register.ts';
 import { sha256, stableJson } from './score/plan.ts';
 
-export const SFS_JUDGE_TEMPLATE_VERSION = 'v3';
+export const SFS_JUDGE_TEMPLATE_VERSION = 'v4';
 
 export const coverageLabelSchema = z.enum(['full', 'partial', 'weaker', 'none']);
 export type CoverageLabel = z.infer<typeof coverageLabelSchema>;
@@ -43,7 +43,7 @@ export const COVERAGE_JSON_SCHEMA = {
 
 export const SFS_JUDGE_INSTRUCTIONS = `Du bedömer hur stor del av ett politiskt löfte som en antagen lag genomför. Texten du får är på svenska.
 
-Du får: (1) ett löfte (titel, beskrivning och citat ur överenskommelsen), (2) lagen från Regeringskansliets författningsregister (rubrik, omfattning, datum för ikraftträdande), (3) utdrag ur propositionen som ledde till lagen (sammanfattning och förslag till riksdagsbeslut) och ibland (4) utskottets förslag till riksdagsbeslut när riksdagen ändrade regeringens förslag. Lagen är regeringens lagförslag så som riksdagen antog det, med de ändringar som utskottet föreslog.
+Du får: (1) ett löfte (titel, beskrivning och citat ur överenskommelsen), (2) lagen från Regeringskansliets författningsregister (rubrik, omfattning, datum för ikraftträdande), (3) utdrag ur propositionen som ledde till lagen (sammanfattning och förslag till riksdagsbeslut) och, när den går att hitta, (3b) lagens egen lagtext och författningskommentar ur propositionen (avsnitten "Förslag till lag om ..."), och ibland (4) utskottets förslag till riksdagsbeslut när riksdagen ändrade regeringens förslag. Lagen är regeringens lagförslag så som riksdagen antog det, med de ändringar som utskottet föreslog.
 
 Välj en etikett:
 - full: lagen genomför hela åtagandet så som det är formulerat, inklusive alla delar och den skärpning, det belopp eller den målgrupp som nämns. Använd inte full om en del av löftet saknas i texten du ser.
@@ -59,6 +59,7 @@ Regler:
 - Svara full bara när lagen själv, enligt sin rubrik och omfattning och propositionens beskrivning av den, genomför hela åtagandet. Om undantag gör att bara en del av målgruppen eller åtgärden täcks är det partial.
 - Påstå ingenting som inte står i texten du fått. Om texten inte visar att en del av löftet genomförs räknas den delen som saknad. Gissa inte.
 - Lagens omfattning (vilka paragrafer som ändras) är bara ett stöd; avgörande är vad propositionen och utskottets förslag säger att lagen innebär.
+- När lagens egen lagtext eller författningskommentar visas är den huvudunderlaget: bedöm utifrån vad just de paragraferna säger, inte utifrån paragrafnummer eller propositionens sammanfattning. Visas ingen sådan text för en proposition med flera lagar, var försiktig med full.
 - Bedöm bara om lagen genomför åtagandet, inte om den är bra eller om den har börjat gälla.
 - confidence: high när texten tydligt visar svaret, medium när det kräver en rimlig tolkning, low när texten är tunn eller oklar.
 - covered_sv: en kort svensk mening om vad lagen genomför av åtagandet (tom sträng vid none).
@@ -159,6 +160,8 @@ export interface JudgeInput {
   propTexts: { designation: string; text: string }[];
   /** The deciding betänkande's proposal, only when it differs from the proposition. */
   betProposal?: { designation: string; text: string } | undefined;
+  /** The law's own sections (lagtext and författningskommentar) from each cited proposition. */
+  lawSections?: { designation: string; text: string }[] | undefined;
 }
 
 const MAX_OMFATTNING_CHARS = 1200;
@@ -172,6 +175,9 @@ export function buildPrompt(i: JudgeInput): string {
       om.length > MAX_OMFATTNING_CHARS ? om.slice(0, MAX_OMFATTNING_CHARS) + ' [...]' : om
     }\nIkraft: ${i.law.ikraft ?? '(saknas)'}`,
     ...i.propTexts.map((t) => `PROPOSITION ${t.designation}\n${t.text}`),
+    ...(i.lawSections ?? []).map(
+      (t) => `LAGENS EGEN TEXT I PROPOSITION ${t.designation}\n${t.text}`,
+    ),
     ...(i.betProposal
       ? [
           `UTSKOTTETS FÖRSLAG TILL RIKSDAGSBESLUT (betänkande ${i.betProposal.designation}, ändrar regeringens förslag)\n${i.betProposal.text}`,
@@ -197,6 +203,122 @@ export function judgeKey(
       prompt_sha256: sha256(prompt),
     }),
   );
+}
+
+const stripLeaders = (s: string) => s.replace(/\s*\.{4,}.*$/, '').trim();
+
+const base = (s: string): string =>
+  stripLeaders(s)
+    .replace(/^\d+(\.\d+)*\s*/, '')
+    .replace(/\s*Prop\.\s*\d{4}\/\d{2}:\d+/gi, '')
+    .replace(/^förslag(et)? till\s+/i, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+
+/**
+ * Comparable form of a law title or a bill heading. Strict: the register's own `(YYYY:N)` after
+ * `Lag`/`Förordning` is dropped (the bill heading has none), any amended act's number stays. Loose: every
+ * `(YYYY:N)` is dropped, for headings that omit the amended act's number or name a new law without its.
+ */
+export const normalizeLawTitle = (title: string, loose = false): string => {
+  const t = base(title).replace(/^(lag|förordning|kungörelse)\s+\(\d{4}:\d+\)\s+/, '$1 ');
+  return loose ? t.replace(/\s*\(\d{4}:\d+\)/g, '').trim() : t;
+};
+
+/** A bill's lagtext or författningskommentar heading: `2.1Förslag till ...`, `10.2Förslaget till ...`, `Förslag till ...`. */
+const LAW_HEADING = /^(\d+(\.\d+)*\s*)?Förslag(et)? till (lag|förordning|[a-zåäö]+lag\b)/i;
+const DOT_LEADER = /\.{4,}/;
+/** A bill chapter or annex heading (short, no sentence punctuation, no `§`), which ends a law's run. */
+const isSectionEnd = (t: string): boolean =>
+  /^Bilaga \d/.test(t) ||
+  (/^\d{1,2}\s*[A-ZÅÄÖ][a-zåäö]/.test(t) && t.length < 90 && !/[.:;§]$|§/.test(t));
+/** A standalone heading before an annex that reprints an inquiry's or the Council on Legislation's draft. */
+const DRAFT_MARKER = /^(Betänkandets|Promemorians|Lagrådsremissens|Utkastet till) lagförslag\s*$/i;
+const MIN_RUN_CHARS = 150;
+
+/**
+ * Paragraphs that belong to the table of contents: a dot-leader row, or the one or two short paragraphs
+ * before it (a wrapped entry puts the leaders on its last line).
+ */
+function tocParagraphs(paragraphs: readonly { text: string }[]): boolean[] {
+  const dot = paragraphs.map((p) => DOT_LEADER.test(p.text));
+  return paragraphs.map((p, i) => {
+    if (dot[i] || dot[i + 1]) return true;
+    return dot[i + 2] === true && paragraphs[i + 1]!.text.length < 100 && p.text.length < 100;
+  });
+}
+
+/**
+ * The law's own sections of a proposition: runs that start at a `Förslag till lag om ...` heading naming
+ * this law (the lagtext, and the heading again in the författningskommentar), up to the next such heading
+ * or chapter. Headings may be numbered, contain a `Prop. YYYY/YY:N` page header, or wrap over several
+ * paragraphs. The table of contents (also wrapped entries) never starts or belongs to a run, a run
+ * containing dot leaders is dropped, and the scan ends at a standalone `Betänkandets/Promemorians/
+ * Lagrådsremissens lagförslag` heading or at the first annex after the författningskommentar, because annexes
+ * reprint drafts that are not the bill's text. Each run is cut at `maxCharsEach`; null when the
+ * proposition has no section for the law.
+ */
+export function extractLawSections(
+  paragraphs: readonly { text: string }[],
+  lawTitle: string,
+  maxCharsEach: number,
+  maxRuns = 2,
+): string | null {
+  const toc = tocParagraphs(paragraphs);
+  let end = paragraphs.length;
+  let afterKommentar = false;
+  for (let i = 0; i < paragraphs.length; i++) {
+    if (toc[i]) continue;
+    const t = paragraphs[i]!.text;
+    if (/^\d+\s*Författningskommentar/i.test(t)) afterKommentar = true;
+    if (DRAFT_MARKER.test(t) || (afterKommentar && /^Bilaga \d/.test(t))) {
+      end = i;
+      break;
+    }
+  }
+  for (const loose of [false, true]) {
+    const want = normalizeLawTitle(lawTitle, loose);
+    const runs: string[] = [];
+    for (let i = 0; i < end && runs.length < maxRuns; i++) {
+      const t = paragraphs[i]!.text;
+      if (toc[i] || !LAW_HEADING.test(t)) continue;
+      // A heading may wrap over the next few short paragraphs.
+      let head = t;
+      let next = i + 1;
+      let matched = normalizeLawTitle(head, loose) === want;
+      for (let k = 0; k < 4 && !matched && next < end; k++) {
+        const u = paragraphs[next]!.text;
+        if (
+          toc[next] ||
+          u.length > 100 ||
+          LAW_HEADING.test(u) ||
+          isSectionEnd(u) ||
+          /^Härigenom/.test(u)
+        )
+          break;
+        head += ' ' + u;
+        next++;
+        matched = normalizeLawTitle(head, loose) === want;
+      }
+      if (!matched) continue;
+      const body: string[] = [t];
+      let leaders = false;
+      for (let j = i + 1; j < end; j++) {
+        const u = paragraphs[j]!.text;
+        if (LAW_HEADING.test(u) || isSectionEnd(u)) break;
+        if (DOT_LEADER.test(u)) leaders = true;
+        body.push(u);
+      }
+      const text = body.join('\n');
+      if (leaders || text.length < MIN_RUN_CHARS) continue;
+      runs.push(
+        text.length <= maxCharsEach ? text : text.slice(0, maxCharsEach) + '\n[... avkortat ...]',
+      );
+    }
+    if (runs.length) return runs.join('\n\n');
+  }
+  return null;
 }
 
 /** Tier-1 sections to a text, the proposal sections first, cut at `maxChars`. */
@@ -416,6 +538,8 @@ export async function runRequests(
     /** Cap for this call; the CLI passes the run's cap minus what earlier calls under the same name spent. */
     maxCostUsd: number;
     onProgress?: (done: number, total: number) => void;
+    /** Called after each completed request with this call's running spend, so a crash loses nothing. */
+    onSpend?: (costUsd: number) => void;
   },
 ): Promise<RunSummary> {
   const todo = requests.filter((r) => !opts.cache.has(r.key));
@@ -447,6 +571,7 @@ export async function runRequests(
         s.sent++;
         s.tokens += res.tokens;
         s.cost_usd += res.cost_usd ?? req.estimated_cost_usd;
+        opts.onSpend?.(s.cost_usd);
         opts.onProgress?.(s.cached + s.sent, s.total);
       } catch (err) {
         if (isTransientJudgeError(err)) {
@@ -517,22 +642,26 @@ export function collectResults(
 }
 
 /**
- * Re-judging with a stricter prompt: pairs the earlier run labelled in `rerunLabels` (or never judged)
- * are sent again; the others keep their earlier result (the stricter prompt only moves labels towards
- * none, so a none or weaker label stays). `kept` carries each kept result with its own template version.
+ * Re-judging after a template change: pairs the earlier run labelled in `rerunLabels` (or never judged)
+ * are sent again. An earlier label outside `rerunLabels` is kept only when its result already carries the
+ * current template version (same input). A none or weaker label from another template version is
+ * re-judged too: a changed template changes the input and can move labels up as well as down.
+ * `kept` carries each kept result with its own template version.
  */
 export function splitByEarlierRun(
   pairs: readonly SfsPair[],
   earlier: readonly SfsResult[],
   rerunLabels: ReadonlySet<string>,
+  currentVersion: string = SFS_JUDGE_TEMPLATE_VERSION,
 ): { rerun: SfsPair[]; kept: SfsResult[] } {
   const byId = new Map(earlier.map((r) => [r.id, r]));
   const rerun: SfsPair[] = [];
   const kept: SfsResult[] = [];
   for (const p of pairs) {
     const old = byId.get(p.id);
-    if (!old || rerunLabels.has(old.label)) rerun.push(p);
-    else kept.push(old);
+    if (old && !rerunLabels.has(old.label) && old.template_version === currentVersion)
+      kept.push(old);
+    else rerun.push(p);
   }
   return { rerun, kept };
 }

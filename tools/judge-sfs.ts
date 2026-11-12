@@ -4,6 +4,13 @@
  *   node --experimental-strip-types tools/judge-sfs.ts [--term 2022-2026] [--id-prefix tido-]
  *     [--only <promise-id>] [--ids a,b,c] [--limit n] [--name <run>] [--model claude-sonnet-5-5]
  *     [--judge claude|fake] [--concurrency 4] [--max-cost 15] [--out-dir tools/out] [--dry-run]
+ *     [--pairs-from <results.json> [--labels full,partial]]
+ * --max-cost is an OVERALL cap per run name: spend of earlier calls is read from manifest.json (written
+ * after every request, so a crash loses nothing) and subtracted. --pairs-from re-judges only pairs the
+ * earlier results.json labelled --labels (default full,partial) or never judged, plus none/weaker pairs
+ * whose earlier result is from another template version (a changed template changes the input); the
+ * rest keep their earlier result. Each prompt includes the law's
+ * own lagtext/författningskommentar from the proposition text when it can be found.
  * Pairs: legislative promises x laws reached through a proposition already linked as evidence
  * (tools/out/sfs-store from ingest-sfs.ts). Runs through the local Claude Code login (refuses an API
  * key). Judgements are cached in <out-dir>/sfs-judge-cache by hash of model, template version and
@@ -18,6 +25,7 @@ import { parseArgs } from 'node:util';
 import { designationOf, type StoreDocument } from './lib/apply-links.ts';
 import { loadJson, writeJsonAtomic } from './lib/json.ts';
 import { loadStore } from './lib/riksdag-ingest.ts';
+import { parseRiksdagText } from './lib/riksdag-text.ts';
 import { extractTier1 } from './lib/riksdag-tier1.ts';
 import { promiseSchema } from './lib/schema.ts';
 import { sfsStoreSchema } from './lib/sfs-register.ts';
@@ -27,6 +35,7 @@ import {
   buildPrompt,
   changedProposal,
   collectResults,
+  extractLawSections,
   coverageSchema,
   createCoverageJudge,
   estimateCostUsd,
@@ -69,6 +78,7 @@ const name = values.name ?? `${term}-${values.model}`;
 
 const MAX_PROP_CHARS = 9000;
 const MAX_BET_CHARS = 2500;
+const MAX_LAW_SECTION_CHARS = 2500;
 
 const sfs = sfsStoreSchema.parse(loadJson(resolve(outDir, 'sfs-store', `${term}.json`)));
 const store = loadStore(resolve(outDir, 'riksdag-store', `${term}.json`), term);
@@ -111,6 +121,17 @@ function sectionsOf(dokId: string): { heading: string; text: string }[] {
   return sections;
 }
 
+const paragraphCache = new Map<string, { text: string }[]>();
+function paragraphsOf(dokId: string): { text: string }[] {
+  let ps = paragraphCache.get(dokId);
+  if (!ps) {
+    const raw = resolve(outDir, 'riksdag-text', `${dokId}.xml`);
+    ps = existsSync(raw) ? parseRiksdagText(readFileSync(raw, 'utf8')) : [];
+    paragraphCache.set(dokId, ps);
+  }
+  return ps;
+}
+
 // --pairs-from <results.json>: only pairs the earlier run labelled --labels (default full,partial) or never
 // judged are sent; the rest keep their earlier result (with that file's template version) in the output.
 let kept: SfsResult[] = [];
@@ -127,6 +148,7 @@ if (values['pairs-from']) {
     pairs,
     earlier,
     new Set(values.labels!.split(',')),
+    SFS_JUDGE_TEMPLATE_VERSION,
   ));
   console.log(
     `--pairs-from: ${toJudge.length} pairs to judge, ${kept.length} keep their earlier label`,
@@ -142,6 +164,10 @@ const requests: SfsRequest[] = toJudge.map((pair) => {
       renderTier1(sectionsOf(id), MAX_PROP_CHARS / pair.prop_ids.length) ||
       '(ingen utdragen text finns för propositionen)',
   }));
+  const lawSections = pair.prop_ids.flatMap((id) => {
+    const text = extractLawSections(paragraphsOf(id), law.title, MAX_LAW_SECTION_CHARS);
+    return text ? [{ designation: designationOf(docById.get(id)!), text }] : [];
+  });
   let betProposal: { designation: string; text: string } | undefined;
   for (const betId of pair.bet_ids) {
     const text = changedProposal(sectionsOf(betId), MAX_BET_CHARS);
@@ -159,6 +185,7 @@ const requests: SfsRequest[] = toJudge.map((pair) => {
     law,
     propTexts,
     betProposal,
+    lawSections,
   });
   return {
     pair,
@@ -203,12 +230,21 @@ if (remainingCap <= 0)
   throw new Error(`run ${name} has already spent $${priorSpend.toFixed(2)} of its $${maxCost} cap`);
 
 const judge = createCoverageJudge(values.judge!, values.model!);
+mkdirSync(runDir, { recursive: true });
+const writeSpend = (callCost: number) =>
+  writeJsonAtomic(manifestPath, {
+    status: 'running',
+    judge_kind: judge.kind,
+    max_cost_usd: maxCost,
+    cumulative_cost_usd: priorSpend + callCost,
+  });
 const summary = await runRequests(requests, {
   judge,
   instructions: SFS_JUDGE_INSTRUCTIONS,
   cache,
   concurrency: Number(values.concurrency),
   maxCostUsd: remainingCap,
+  onSpend: writeSpend,
   onProgress: (done, total) => {
     if (done % 10 === 0 || done === total) console.log(`${done}/${total}`);
   },
