@@ -3,6 +3,8 @@ import {
   SFS_JUDGE_INSTRUCTIONS,
   SFS_JUDGE_TEMPLATE_VERSION,
   splitByEarlierRun,
+  extractLawSections,
+  normalizeLawTitle,
   buildPrompt,
   changedProposal,
   collectResults,
@@ -251,6 +253,33 @@ describe('runRequests', () => {
     expect(s.status).toBe('budget_exceeded');
     expect(s.sent).toBe(1);
   });
+  it('reports running spend after each request', async () => {
+    const spends: number[] = [];
+    const judge = {
+      kind: 'x',
+      judge: async () => ({
+        coverage: {
+          coverage: 'none' as const,
+          confidence: 'low' as const,
+          covered_sv: '',
+          missing_sv: '',
+          reason: 'r',
+        },
+        tokens: 1,
+        cost_usd: 0.1,
+      }),
+    };
+    await runRequests([mk('a', 0.1), mk('b', 0.1)], {
+      judge,
+      instructions: 'i',
+      cache: createMemoryCoverageCache(),
+      maxCostUsd: 1,
+      concurrency: 1,
+      onSpend: (c) => spends.push(c),
+    });
+    expect(spends).toHaveLength(2);
+    expect(spends[1]).toBeCloseTo(0.2);
+  });
   it('skips transient errors and fails on others', async () => {
     const mkJudge = (status: number | undefined) => ({
       kind: 'x',
@@ -282,7 +311,7 @@ describe('v2 additions', () => {
   it('the prompt tells the judge to assess only this law and bumps the template version', () => {
     expect(SFS_JUDGE_INSTRUCTIONS).toMatch(/ENDAST vad just den här lagen gör/);
     expect(SFS_JUDGE_INSTRUCTIONS).toMatch(/följdändring/);
-    expect(SFS_JUDGE_TEMPLATE_VERSION).toBe('v3');
+    expect(SFS_JUDGE_TEMPLATE_VERSION).toBe('v4');
   });
 
   it('skips budget propositions as pair sources', () => {
@@ -317,14 +346,75 @@ describe('v2 additions', () => {
       reason: 'r',
       template_version: 'v1',
     });
-    const { rerun, kept } = splitByEarlierRun(
-      ['a', 'b', 'c', 'd', 'e'].map(pair),
-      [old('a', 'full'), old('b', 'partial'), old('c', 'none'), old('d', 'weaker')],
-      new Set(['full', 'partial']),
+    const run = (opts?: Parameters<typeof splitByEarlierRun>[3]) =>
+      splitByEarlierRun(
+        ['a', 'b', 'c', 'd', 'e'].map(pair),
+        [old('a', 'full'), old('b', 'partial'), old('c', 'none'), old('d', 'weaker')],
+        new Set(['full', 'partial']),
+        opts,
+      );
+    // single-law bills: none/weaker from an older template stay
+    const single = run({ currentVersion: 'v4', isMultiLaw: () => false });
+    expect(single.rerun.map((p) => p.id)).toEqual(['a', 'b', 'e']);
+    expect(single.kept.map((r) => r.id)).toEqual(['c', 'd']);
+    expect(single.kept[0]!.template_version).toBe('v1');
+    // multi-law bills: older none/weaker may hide a full, so they are re-judged
+    const multi = run({ currentVersion: 'v4', isMultiLaw: () => true });
+    expect(multi.rerun.map((p) => p.id)).toEqual(['a', 'b', 'c', 'd', 'e']);
+    // same template version: input is unchanged, keep
+    expect(run({ currentVersion: 'v1', isMultiLaw: () => true }).kept.map((r) => r.id)).toEqual([
+      'c',
+      'd',
+    ]);
+  });
+
+  it('extracts a law its own lagtext and kommentar, skipping the table of contents', () => {
+    const ps = [
+      'Förslag till lag om ändring i utlänningslagen (2005:716) ........ 4',
+      'Förslag till lag om ändring i lagen (1999:1) om x',
+      'Intro',
+    ]
+      .concat([
+        'Förslag till lag om ändring i utlänningslagen (2005:716)',
+        '1 § Text A',
+        '2 § Text B',
+      ])
+      .concat(['Förslag till lag om ändring i annan lag', 'Annat'])
+      .concat(['8 Författningskommentar', 'ska inte med'])
+      .concat(['Förslag till lag om ändring i utlänningslagen (2005:716)', '1 § Kommentar'])
+      .map((text) => ({ text }));
+    const out = extractLawSections(
+      ps,
+      'Lag (2022:5) om ändring i utlänningslagen (2005:716)',
+      1000,
+    )!;
+    expect(out).toContain('1 § Text A');
+    expect(out).toContain('1 § Kommentar');
+    expect(out).not.toContain('Annat');
+    expect(out).not.toContain('ska inte med');
+    expect(out).not.toContain('........');
+    expect(extractLawSections(ps, 'Lag (2022:5) om något helt annat', 1000)).toBeNull();
+    expect(
+      extractLawSections(ps, 'Lag (2022:5) om ändring i utlänningslagen (2005:716)', 12)!,
+    ).toContain('avkortat');
+  });
+
+  it('normalises law titles and puts the law sections in the prompt and the cache key', () => {
+    expect(normalizeLawTitle('Lag (2023:311) om X')).toBe('lag om x');
+    expect(normalizeLawTitle('Förslag till lag om X')).toBe('lag om x');
+    const base = {
+      promise: { title: 't', description: 'd' },
+      law: { sfs: '2025:1', title: 'Lag (2025:1) om X', omfattning: null, ikraft: null },
+      propTexts: [],
+    } as unknown as Parameters<typeof buildPrompt>[0];
+    const withText = buildPrompt({
+      ...base,
+      lawSections: [{ designation: 'Prop. 1', text: '1 § hej' }],
+    });
+    expect(withText).toContain('LAGENS EGEN TEXT I PROPOSITION Prop. 1\n1 § hej');
+    expect(judgeKey('claude', 'm', withText, 'i')).not.toBe(
+      judgeKey('claude', 'm', buildPrompt(base), 'i'),
     );
-    expect(rerun.map((p) => p.id)).toEqual(['a', 'b', 'e']);
-    expect(kept.map((r) => r.id)).toEqual(['c', 'd']);
-    expect(kept[0]!.template_version).toBe('v1');
   });
 
   it('marks a run incomplete when requests were skipped on transient errors', async () => {
