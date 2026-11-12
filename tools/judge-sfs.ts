@@ -35,6 +35,7 @@ import {
   SFS_RECHECK_TEMPLATE_VERSION,
   RECHECK_LAW_SECTION_CHARS,
   splitForRecheck,
+  resultsWithFileVersion,
   buildPrompt,
   changedProposal,
   collectResults,
@@ -148,10 +149,11 @@ if (values['pairs-from']) {
   const file = z
     .object({ template_version: z.string(), results: z.array(z.looseObject({ id: z.string() })) })
     .parse(loadJson(resolve(values['pairs-from'])));
-  const earlier = file.results.map((r) => ({
-    template_version: file.template_version,
-    ...r,
-  })) as SfsResult[];
+  const earlier = resultsWithFileVersion(file.template_version, file.results);
+  // splitByEarlierRun compares against v4: v5 results (full law section) would be re-judged with the short
+  // section and silently downgraded.
+  if (earlier.some((r) => r.template_version === SFS_RECHECK_TEMPLATE_VERSION))
+    throw new Error('--pairs-from cannot take a run containing recheck (v5) results');
   ({ rerun: toJudge, kept } = splitByEarlierRun(
     pairs,
     earlier,
@@ -173,10 +175,7 @@ if (recheck) {
   const file = z
     .object({ template_version: z.string(), results: z.array(z.looseObject({ id: z.string() })) })
     .parse(loadJson(path));
-  const earlier = file.results.map((r) => ({
-    template_version: file.template_version,
-    ...r,
-  })) as SfsResult[];
+  const earlier = resultsWithFileVersion(file.template_version, file.results);
   let unjudged: typeof pairs;
   ({ rerun: toJudge, kept, unjudged } = splitForRecheck(pairs, earlier));
   // Results of pairs outside this invocation's filter (--ids etc.) stay carried over too.
@@ -187,6 +186,7 @@ if (recheck) {
   );
 }
 
+const truncatedLaw = new Set<string>();
 const requests: SfsRequest[] = toJudge.map((pair) => {
   const promise = promiseById.get(pair.promise_id)!;
   const law = sfs.laws[pair.sfs_key]!;
@@ -200,6 +200,7 @@ const requests: SfsRequest[] = toJudge.map((pair) => {
     const text = extractLawSections(paragraphsOf(id), law.title, MAX_LAW_SECTION_CHARS);
     return text ? [{ designation: designationOf(docById.get(id)!), text }] : [];
   });
+  if (lawSections.some((l) => l.text.includes('[... avkortat ...]'))) truncatedLaw.add(pair.id);
   let betProposal: { designation: string; text: string } | undefined;
   for (const betId of pair.bet_ids) {
     const text = changedProposal(sectionsOf(betId), MAX_BET_CHARS);
@@ -226,6 +227,13 @@ const requests: SfsRequest[] = toJudge.map((pair) => {
     estimated_cost_usd: estimateCostUsd(prompt, SFS_JUDGE_INSTRUCTIONS),
   };
 });
+
+if (recheck) {
+  if (truncatedLaw.size)
+    console.warn(
+      `warning: ${truncatedLaw.size} recheck law sections still truncated: ${[...truncatedLaw].join(', ')}`,
+    );
+}
 
 const cacheDir = resolve(outDir, 'sfs-judge-cache');
 const cache: CoverageCache = {

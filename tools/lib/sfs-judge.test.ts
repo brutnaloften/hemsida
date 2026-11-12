@@ -5,6 +5,7 @@ import {
   splitByEarlierRun,
   splitForRecheck,
   RECHECK_LAW_SECTION_CHARS,
+  resultsWithFileVersion,
   extractLawSections,
   normalizeLawTitle,
   buildPrompt,
@@ -539,6 +540,14 @@ describe('v2 additions', () => {
 });
 
 describe('recheck mode', () => {
+  it('a per-result template version wins over the file-level "mixed" one', () => {
+    const rs = resultsWithFileVersion('mixed', [
+      { id: 'a', label: 'full', template_version: 'v5' },
+      { id: 'b', label: 'none' },
+    ]);
+    expect(rs.map((r) => r.template_version)).toEqual(['v5', 'mixed']);
+  });
+
   const pair = (id: string) => ({ id, promise_id: 'p', sfs_key: 'k', prop_ids: [], bet_ids: [] });
   const old = (id: string, label: 'full' | 'partial' | 'none', v = 'v4') => ({
     id,

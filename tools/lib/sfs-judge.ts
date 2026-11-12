@@ -13,8 +13,8 @@ import { sha256, stableJson } from './score/plan.ts';
 export const SFS_JUDGE_TEMPLATE_VERSION = 'v4';
 /** Version of results re-judged with the complete law section (`judge-sfs.ts --recheck`); same instructions as v4. */
 export const SFS_RECHECK_TEMPLATE_VERSION = 'v5';
-/** Per-run cap on the law section in recheck mode (the normal cap is 2500), and the runs kept (lagtext first). */
-export const RECHECK_LAW_SECTION_CHARS = 8000;
+/** Per-run cap on the law section in recheck mode (the normal cap is 2500): about 20k tokens; 14 of the 21 v4 fulls fit, the rest are omnibus sections of 60k+ chars, and judge-sfs warns for each that is still cut. */
+export const RECHECK_LAW_SECTION_CHARS = 60000;
 
 export const coverageLabelSchema = z.enum(['full', 'partial', 'weaker', 'none']);
 export type CoverageLabel = z.infer<typeof coverageLabelSchema>;
@@ -693,4 +693,12 @@ export function splitForRecheck(
     else kept.push(old);
   }
   return { rerun, kept, unjudged };
+}
+
+/** Earlier results with the file-level template version as default; a version on the result itself wins (files from a recheck are mixed). */
+export function resultsWithFileVersion(
+  fileVersion: string,
+  results: readonly Record<string, unknown>[],
+): SfsResult[] {
+  return results.map((r) => ({ template_version: fileVersion, ...r })) as unknown as SfsResult[];
 }
