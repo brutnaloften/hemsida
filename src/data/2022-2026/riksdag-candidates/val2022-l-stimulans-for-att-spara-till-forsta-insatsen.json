@@ -1,0 +1,43 @@
+{
+  "promise_id": "val2022-l-stimulans-for-att-spara-till-forsta-insatsen",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:bostadssparande",
+    "keyword:kontantinsats",
+    "keyword:första bostad",
+    "keyword:bosparande",
+    "keyword:ungdomar",
+    "all-keywords",
+    "committee:CU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SoU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU9",
+      "datum": "2025-11-13",
+      "titel": "Stärkta förutsättningar för stöd ur Allmänna arvsfonden till förmån för äldre personer",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU9.html",
+      "found_by": ["keyword:ungdomar"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01KrU4",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KrU4",
+      "datum": "2025-02-17",
+      "titel": "Public service, film och dataspel",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HC01KrU4.html",
+      "found_by": ["keyword:ungdomar"],
+      "score": 1
+    }
+  ]
+}

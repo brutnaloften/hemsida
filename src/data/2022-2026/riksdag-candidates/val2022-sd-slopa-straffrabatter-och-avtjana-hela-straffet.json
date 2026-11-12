@@ -1,0 +1,114 @@
+{
+  "promise_id": "val2022-sd-slopa-straffrabatter-och-avtjana-hela-straffet",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:straffrabatt",
+    "keyword:villkorlig frigivning",
+    "keyword:strafftid",
+    "keyword:mängdrabatt",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01JuU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU8",
+      "datum": "2025-11-28",
+      "titel": "Skärpta regler för villkorlig frigivning",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU8.html",
+      "found_by": ["keyword:villkorlig frigivning", "keyword:strafftid"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01JuU41",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU41",
+      "datum": "2026-08-12",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "found_by": ["keyword:straffrabatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU48",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU48",
+      "datum": "2026-08-12",
+      "titel": "Ett nytt straffrättsligt påföljdssystem",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
+      "found_by": ["keyword:mängdrabatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU30",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU30",
+      "datum": "2026-05-05",
+      "titel": "Frihetsberövande påföljder för barn och unga",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
+      "found_by": ["keyword:villkorlig frigivning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD0334",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "34",
+      "datum": "2025-10-16",
+      "titel": "Skärpta regler för villkorlig frigivning",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0334.html",
+      "found_by": ["keyword:villkorlig frigivning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01JuU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU17",
+      "datum": "2024-04-17",
+      "titel": "Kriminalvårdsfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU17.html",
+      "found_by": ["keyword:villkorlig frigivning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01JuU13",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU13",
+      "datum": "2023-04-13",
+      "titel": "Kriminalvårdsfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU13.html",
+      "found_by": ["keyword:villkorlig frigivning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01JuU4",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU4",
+      "datum": "2022-10-20",
+      "titel": "Förbättrad hantering av ärenden om överförande av straffverkställighet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU4.html",
+      "found_by": ["keyword:strafftid"],
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "promise_id": "val2022-sd-bevara-inrikesflyget-och-bromma-flygplats",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:Bromma flygplats",
+    "keyword:inrikesflyg",
+    "keyword:regionala flygplatser",
+    "all-keywords",
+    "committee:TU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HDB155",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "55",
+      "datum": "2025-05-28",
+      "titel": "Statens framtida roll som ägare och förvaltare av flygplatser samt Bromma flygplats funktion",
+      "organ": "LI-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB155.html",
+      "found_by": ["keyword:Bromma flygplats"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01TU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "TU13",
+      "datum": "2025-05-15",
+      "titel": "Luftfartsfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HC01TU13.html",
+      "found_by": ["keyword:regionala flygplatser"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01TU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "TU14",
+      "datum": "2024-05-17",
+      "titel": "Luftfartsfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HB01TU14.html",
+      "found_by": ["keyword:regionala flygplatser"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01TU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "TU11",
+      "datum": "2023-05-26",
+      "titel": "Luftfartsfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HA01TU11.html",
+      "found_by": ["keyword:regionala flygplatser"],
+      "score": 1
+    }
+  ]
+}

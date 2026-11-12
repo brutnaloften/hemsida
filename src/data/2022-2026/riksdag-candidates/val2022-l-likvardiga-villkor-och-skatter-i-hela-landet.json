@@ -1,0 +1,90 @@
+{
+  "promise_id": "val2022-l-likvardiga-villkor-och-skatter-i-hela-landet",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:kommunalskatt",
+    "keyword:skatteutjämning",
+    "keyword:glesbygd",
+    "keyword:likvärdiga villkor",
+    "all-keywords",
+    "committee:FiU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01CU23",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU23",
+      "datum": "2026-04-09",
+      "titel": "Sysselsättning och boende på landsbygden",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU23.html",
+      "found_by": ["keyword:glesbygd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB320",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "20",
+      "datum": "2026-03-05",
+      "titel": "Belägg för broms?",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB320.html",
+      "found_by": ["keyword:kommunalskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB382",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "82",
+      "datum": "2025-06-27",
+      "titel": "Sysselsättning och boende på landsbygden",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB382.html",
+      "found_by": ["keyword:glesbygd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SoU21",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU21",
+      "datum": "2024-05-07",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU21.html",
+      "found_by": ["keyword:glesbygd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01KU7",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KU7",
+      "datum": "2024-04-11",
+      "titel": "Likvärdiga krav på mål och riktlinjer för utförare av kommunal verksamhet",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HB01KU7.html",
+      "found_by": ["keyword:likvärdiga villkor"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB423",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "23",
+      "datum": "2023-11-08",
+      "titel": "Uppdrag att möjliggöra bättre tillgång till hälso- och sjukvård i hela landet genom främjande av etablering i glesbygd ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB423.html",
+      "found_by": ["keyword:glesbygd"],
+      "score": 1
+    }
+  ]
+}

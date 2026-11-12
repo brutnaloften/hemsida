@@ -1,0 +1,138 @@
+{
+  "promise_id": "val2022-c-laddplatser-i-hela-landet",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:laddplatser",
+    "keyword:elbilar",
+    "keyword:laddinfrastruktur",
+    "keyword:parkering",
+    "all-keywords",
+    "committee:TU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01TU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "TU11",
+      "datum": "2025-03-27",
+      "titel": "Vägtrafik- och fordonsfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HC01TU11.html",
+      "found_by": ["keyword:laddinfrastruktur", "keyword:parkering"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01CU29",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU29",
+      "datum": "2026-04-23",
+      "titel": "Ökade möjligheter till hemmaladdning av elfordon",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU29.html",
+      "found_by": ["keyword:parkering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01TU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "TU9",
+      "datum": "2026-02-10",
+      "titel": "Vägtrafik- och fordonsfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HD01TU9.html",
+      "found_by": ["keyword:laddinfrastruktur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB188",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "88",
+      "datum": "2025-09-25",
+      "titel": "Genomförande av direktiv om inrättande av EU-intyg om funktionsnedsättning och EU-parkeringstillstånd för personer med funktionsnedsättning",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB188.html",
+      "found_by": ["keyword:parkering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB14",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "4",
+      "datum": "2025-01-15",
+      "titel": "Tilläggsdirektiv till Utredningen om inrättande av EU-intyg om funktionsnedsättning och EU-parkeringstillstånd för personer med funktionsnedsättning (S 2025:10)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB14.html",
+      "found_by": ["keyword:parkering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01NU3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU3",
+      "datum": "2024-12-09",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
+      "found_by": ["keyword:laddinfrastruktur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01MJU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU1",
+      "datum": "2023-12-11",
+      "titel": "Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU1.html",
+      "found_by": ["keyword:laddinfrastruktur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01NU3",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU3",
+      "datum": "2023-12-08",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU3.html",
+      "found_by": ["keyword:laddinfrastruktur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01TU10",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "TU10",
+      "datum": "2023-05-12",
+      "titel": "Vägtrafik- och fordonsfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HA01TU10.html",
+      "found_by": ["keyword:parkering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01NU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU3",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
+      "found_by": ["keyword:laddinfrastruktur"],
+      "score": 1
+    }
+  ]
+}

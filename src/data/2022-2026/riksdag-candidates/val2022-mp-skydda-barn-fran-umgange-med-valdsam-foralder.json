@@ -1,0 +1,101 @@
+{
+  "promise_id": "val2022-mp-skydda-barn-fran-umgange-med-valdsam-foralder",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:umgänge",
+    "keyword:våldsam förälder",
+    "keyword:barnets bästa",
+    "all-keywords",
+    "committee:CU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01CU4",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "CU4",
+      "datum": "2024-11-21",
+      "titel": "Tryggare hem för barn",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HC01CU4.html",
+      "found_by": ["keyword:umgänge", "keyword:barnets bästa"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01SoU38",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU38",
+      "datum": "2026-08-07",
+      "titel": "För barns rättigheter och trygghet – en ny lag om omhändertagande för vård av barn och unga",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU38.html",
+      "found_by": ["keyword:barnets bästa"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01CU34",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU34",
+      "datum": "2026-05-08",
+      "titel": "Ändamålsenliga utmätningsregler och utökad distansutmätning",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU34.html",
+      "found_by": ["keyword:barnets bästa"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01CU12",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU12",
+      "datum": "2026-01-23",
+      "titel": "Familjerätt",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU12.html",
+      "found_by": ["keyword:umgänge"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01CU7",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "CU7",
+      "datum": "2025-03-21",
+      "titel": "Familjerätt",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HC01CU7.html",
+      "found_by": ["keyword:umgänge"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01CU9",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "CU9",
+      "datum": "2024-04-12",
+      "titel": "Familjerätt",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HB01CU9.html",
+      "found_by": ["keyword:umgänge"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU9",
+      "datum": "2022-12-13",
+      "titel": "Barnets bästa vid fortsatt vård enligt LVU",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU9.html",
+      "found_by": ["keyword:barnets bästa"],
+      "score": 1
+    }
+  ]
+}

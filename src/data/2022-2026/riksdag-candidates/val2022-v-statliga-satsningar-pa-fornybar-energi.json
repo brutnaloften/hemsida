@@ -1,0 +1,102 @@
+{
+  "promise_id": "val2022-v-statliga-satsningar-pa-fornybar-energi",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:förnybar energi",
+    "keyword:vätgas",
+    "keyword:elproduktion",
+    "keyword:statliga satsningar",
+    "all-keywords",
+    "committee:NU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01NU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU18",
+      "datum": "2026-04-08",
+      "titel": "Tillståndsprövning enligt förnybartdirektivet",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU18.html",
+      "found_by": ["keyword:förnybar energi"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01NU10",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU10",
+      "datum": "2025-02-13",
+      "titel": "Regional utvecklingspolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU10.html",
+      "found_by": ["keyword:elproduktion"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01NU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU11",
+      "datum": "2025-01-16",
+      "titel": "En kapacitetsmekanism för elmarknaden",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU11.html",
+      "found_by": ["keyword:elproduktion"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01NU12",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU12",
+      "datum": "2024-05-02",
+      "titel": "Regional utveckling",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU12.html",
+      "found_by": ["keyword:elproduktion"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FiU21",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU21",
+      "datum": "2023-06-15",
+      "titel": "Vårändringsbudget för 2023",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU21.html",
+      "found_by": ["keyword:elproduktion"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01NU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU17",
+      "datum": "2023-05-25",
+      "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
+      "found_by": ["keyword:förnybar energi"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FiU33",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU33",
+      "datum": "2023-02-21",
+      "titel": "Extra ändringsbudget för 2023 – Tillfällig skatt på vissa elproducenters överintäkter",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU33.html",
+      "found_by": ["keyword:elproduktion"],
+      "score": 1
+    }
+  ]
+}

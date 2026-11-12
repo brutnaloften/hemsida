@@ -1,0 +1,198 @@
+{
+  "promise_id": "val2022-s-ingen-fastighetsskatt",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:fastighetsskatt",
+    "keyword:fastighetsavgift",
+    "keyword:skatter",
+    "keyword:bostadsskatt",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["keyword:fastighetsskatt", "keyword:skatter"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01SkU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU13",
+      "datum": "2025-04-01",
+      "titel": "Företag, kapital och fastighet",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU13.html",
+      "found_by": ["keyword:fastighetsskatt", "keyword:fastighetsavgift"],
+      "score": 2
+    },
+    {
+      "dok_id": "HCB320",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "20",
+      "datum": "2024-03-05",
+      "titel": "Maskinellt värde för vissa industribyggnader - ett undantag från fastighetsskatt",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB320.html",
+      "found_by": ["keyword:fastighetsskatt", "keyword:skatter"],
+      "score": 2
+    },
+    {
+      "dok_id": "HEB195",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "95",
+      "datum": "2026-08-20",
+      "titel": "En översyn av flyttskatterna vid bostadsbyte",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB195.html",
+      "found_by": ["keyword:skatter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03278",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "278",
+      "datum": "2026-06-09",
+      "titel": "Teknisk översyn av mervärdesskattereglerna vid gränsöverskridande handel",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03278.html",
+      "found_by": ["keyword:skatter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01FiU42",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU42",
+      "datum": "2026-05-22",
+      "titel": "Förenklad leverantörskontroll vid upphandling",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU42.html",
+      "found_by": ["keyword:skatter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SkU21",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU21",
+      "datum": "2026-04-28",
+      "titel": "Det skatterättsliga företrädaransvaret – nya regler om befrielse och rådrum",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU21.html",
+      "found_by": ["keyword:skatter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SkU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU13",
+      "datum": "2026-03-19",
+      "titel": "Inkomstskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU13.html",
+      "found_by": ["keyword:skatter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SkU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU16",
+      "datum": "2026-03-19",
+      "titel": "Punktskatt",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU16.html",
+      "found_by": ["keyword:skatter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SkU20",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU20",
+      "datum": "2026-03-19",
+      "titel": "Utbyte av uppgifter i tilläggsskatterapport och kompletteringar av förfarandet av tilläggsskatt för företag i stora koncerner",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU20.html",
+      "found_by": ["keyword:skatter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SkU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU14",
+      "datum": "2026-02-26",
+      "titel": "Skatteförfarande, folkbokföring och tull",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU14.html",
+      "found_by": ["keyword:skatter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SkU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU18",
+      "datum": "2026-02-05",
+      "titel": "Förbättrat regelverk om beskattning av skog",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU18.html",
+      "found_by": ["keyword:skatter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03102",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "102",
+      "datum": "2026-01-27",
+      "titel": "Utbyte av uppgifter i tilläggsskatterapport och kompletteringar av förfarandet av tilläggsskatt för företag i stora koncerner",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03102.html",
+      "found_by": ["keyword:skatter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SkU6",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU6",
+      "datum": "2026-01-27",
+      "titel": "Kompletteringar och förtydliganden i fråga om sanktioner vid skatteundandragande och bedrägerier",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU6.html",
+      "found_by": ["keyword:skatter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB16",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "6",
+      "datum": "2026-01-22",
+      "titel": "En modern lagstiftning om källskatt på utdelning",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB16.html",
+      "found_by": ["keyword:skatter"],
+      "score": 1
+    }
+  ]
+}

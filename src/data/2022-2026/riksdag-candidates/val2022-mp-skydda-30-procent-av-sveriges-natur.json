@@ -1,0 +1,54 @@
+{
+  "promise_id": "val2022-mp-skydda-30-procent-av-sveriges-natur",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:naturskydd",
+    "keyword:30 procent",
+    "keyword:fjällskog",
+    "keyword:skyddsvärd skog",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01FiU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU16",
+      "datum": "2025-10-14",
+      "titel": "Subsidiaritetsprövning av kommissionens förslag till nytt system för Europeiska unionens egna medel för perioden 2028 och framåt",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU16.html",
+      "found_by": ["keyword:30 procent"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01FiU32",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU32",
+      "datum": "2025-05-06",
+      "titel": "Extra ändringsbudget för 2025 – Tillfälligt höjd subventionsgrad för rotavdraget",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU32.html",
+      "found_by": ["keyword:30 procent"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01FiU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU17",
+      "datum": "2023-09-26",
+      "titel": "Subsidiaritetsprövning av kommissionens förslag till ny ändring av systemet för Europeiska unionens egna medel",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU17.html",
+      "found_by": ["keyword:30 procent"],
+      "score": 1
+    }
+  ]
+}

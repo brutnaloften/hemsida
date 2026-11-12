@@ -44,8 +44,17 @@ describe('committed promise files', () => {
         .promises.map((p) => `${p.id}.json`)
         .sort(),
     );
+    // Verdict and Riksdag evidence are set later by apply-links, so only the generated fields
+    // (everything but the verdict and the non-agreement evidence) must match.
+    const generated = (p: PromiseRecord) => ({
+      ...p,
+      verdict: undefined,
+      evidence: p.evidence.filter((e) => e.kind === 'agreement'),
+    });
     for (const p of committed) {
-      expect(p).toEqual(promote(candidates).promises.find((q) => q.id === p.id));
+      expect(generated(p)).toEqual(
+        generated(promote(candidates).promises.find((q) => q.id === p.id)!),
+      );
     }
   });
 
@@ -84,8 +93,9 @@ describe('committed promise files', () => {
     }
   });
 
-  it('set no verdict other than unassessed, or not_assessable for vague', () => {
+  it('set no verdict other than unassessed or not_assessable (vague), except model-set ones', () => {
     for (const p of committed) {
+      if (p.verdict.assessedBy === 'ai') continue;
       expect(p.verdict.value).toBe(p.type === 'vague' ? 'not_assessable' : 'unassessed');
     }
   });

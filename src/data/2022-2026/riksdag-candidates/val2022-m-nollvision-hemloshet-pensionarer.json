@@ -1,0 +1,138 @@
+{
+  "promise_id": "val2022-m-nollvision-hemloshet-pensionarer",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:hemlöshet",
+    "keyword:pensionärer",
+    "keyword:nollvision",
+    "keyword:boendestöd",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SoU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU18",
+      "datum": "2026-03-26",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU18.html",
+      "found_by": ["keyword:hemlöshet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SfU2",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU2",
+      "datum": "2025-11-27",
+      "titel": "Utgiftsområde 11 Ekonomisk trygghet vid ålderdom",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU2.html",
+      "found_by": ["keyword:pensionärer"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SoU18",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU18",
+      "datum": "2025-01-28",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU18.html",
+      "found_by": ["keyword:hemlöshet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SfU2",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SfU2",
+      "datum": "2024-12-03",
+      "titel": "Utgiftsområde 11 Ekonomisk trygghet vid ålderdom",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU2.html",
+      "found_by": ["keyword:pensionärer"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB412",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "12",
+      "datum": "2024-07-25",
+      "titel": "Pensionärernas levnadsstandard då och nu",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB412.html",
+      "found_by": ["keyword:pensionärer"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SoU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU17",
+      "datum": "2024-06-04",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU17.html",
+      "found_by": ["keyword:hemlöshet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SfU2",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SfU2",
+      "datum": "2023-12-04",
+      "titel": "Utgiftsområde 11 Ekonomisk trygghet vid ålderdom",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU2.html",
+      "found_by": ["keyword:pensionärer"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU16",
+      "datum": "2023-04-26",
+      "titel": "Socialtjänstens arbete",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU16.html",
+      "found_by": ["keyword:hemlöshet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01AU7",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU7",
+      "datum": "2023-03-30",
+      "titel": "Jämställdhet och åtgärder mot diskriminering",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU7.html",
+      "found_by": ["keyword:nollvision"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SfU2",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SfU2",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 11 Ekonomisk trygghet vid ålderdom",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU2.html",
+      "found_by": ["keyword:pensionärer"],
+      "score": 1
+    }
+  ]
+}

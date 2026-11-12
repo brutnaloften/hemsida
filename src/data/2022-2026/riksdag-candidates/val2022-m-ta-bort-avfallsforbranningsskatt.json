@@ -1,0 +1,198 @@
+{
+  "promise_id": "val2022-m-ta-bort-avfallsforbranningsskatt",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:avfallsförbränningsskatt",
+    "keyword:kraftvärme",
+    "keyword:elproduktion",
+    "keyword:skatt",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01NU10",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU10",
+      "datum": "2025-02-13",
+      "titel": "Regional utvecklingspolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU10.html",
+      "found_by": ["keyword:elproduktion", "keyword:skatt"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01NU12",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU12",
+      "datum": "2024-05-02",
+      "titel": "Regional utveckling",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU12.html",
+      "found_by": ["keyword:elproduktion", "keyword:skatt"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01FiU33",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU33",
+      "datum": "2023-02-21",
+      "titel": "Extra ändringsbudget för 2023 – Tillfällig skatt på vissa elproducenters överintäkter",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU33.html",
+      "found_by": ["keyword:elproduktion", "keyword:skatt"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD03307",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "307",
+      "datum": "2026-09-08",
+      "titel": "Skatteavtal mellan Sverige och Nederländerna",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03307.html",
+      "found_by": ["keyword:skatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03309",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "309",
+      "datum": "2026-09-01",
+      "titel": "Förändringar i förfarandet för kupongskatt",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03309.html",
+      "found_by": ["keyword:skatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB195",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "95",
+      "datum": "2026-08-20",
+      "titel": "En översyn av flyttskatterna vid bostadsbyte",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB195.html",
+      "found_by": ["keyword:skatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03296",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "296",
+      "datum": "2026-06-30",
+      "titel": "Skattetransparenta värdepappersfonder för institutionella investerare",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03296.html",
+      "found_by": ["keyword:skatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HE01FiU8",
+      "doktyp": "bet",
+      "rm": "2026/27",
+      "beteckning": "FiU8",
+      "datum": "2026-06-30",
+      "titel": "Skattetransparenta värdepappersfonder för institutionella investerare",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HE01FiU8.html",
+      "found_by": ["keyword:skatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01FiU47",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU47",
+      "datum": "2026-06-16",
+      "titel": "Extra ändringsbudget för 2026 – Stöd till Ukraina samt stöd till hushåll och andra åtgärder med anledning av kriget i Mellanöstern",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU47.html",
+      "found_by": ["keyword:skatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU44",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU44",
+      "datum": "2026-06-12",
+      "titel": "En betald polisutbildning",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU44.html",
+      "found_by": ["keyword:skatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB144",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "44",
+      "datum": "2026-06-11",
+      "titel": "Ökad förutsägbarhet på skatteområdet",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB144.html",
+      "found_by": ["keyword:skatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SfU32",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU32",
+      "datum": "2026-06-11",
+      "titel": "Stärkt återvändandeverksamhet",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
+      "found_by": ["keyword:skatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SkU30",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU30",
+      "datum": "2026-06-11",
+      "titel": "Utökade befogenheter för Skatteverket inom folkbokföringsverksamheten",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU30.html",
+      "found_by": ["keyword:skatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03278",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "278",
+      "datum": "2026-06-09",
+      "titel": "Teknisk översyn av mervärdesskattereglerna vid gränsöverskridande handel",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03278.html",
+      "found_by": ["keyword:skatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SkU29",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU29",
+      "datum": "2026-06-04",
+      "titel": "Förbättrade regler för svensk tonnagebeskattning",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU29.html",
+      "found_by": ["keyword:skatt"],
+      "score": 1
+    }
+  ]
+}

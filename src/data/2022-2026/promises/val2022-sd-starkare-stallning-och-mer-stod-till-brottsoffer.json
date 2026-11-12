@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["brottsoffer", "stöd", "brottsskadeersättning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:94 (Ersättningsregler med brottsoffret i fokus). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,16 @@
       ],
       "outcome": "included",
       "note": "Avtalet anger ökade insatser för information och stöd till brottsoffer och att regelverket för brottsskadeersättningen ses över."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB194",
+      "designation": "Dir. 2023:94",
+      "title": "Ersättningsregler med brottsoffret i fokus",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB194.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

@@ -1,0 +1,41 @@
+{
+  "promise_id": "val2022-sd-forutsattningar-for-nyforetagande-och-entreprenorskap",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:nyföretagande",
+    "keyword:entreprenörskap",
+    "keyword:starta eget",
+    "all-keywords",
+    "committee:NU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HB01FiU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU20",
+      "datum": "2024-06-13",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU20.html",
+      "found_by": ["keyword:entreprenörskap"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB110",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "10",
+      "datum": "2023-01-26",
+      "titel": "Tilläggsdirektiv till Kommittén om förenklad beskattning av ägare till fåmansföretag (Fi 2022:04)",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB110.html",
+      "found_by": ["keyword:entreprenörskap"],
+      "score": 1
+    }
+  ]
+}

@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["våldsprevention", "skola", "förebyggande", "elevhälsa"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:22 (Tilläggsdirektiv till utredningen om att säkerheten i skolan ska förbättras (U 2022:04)). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-anmalningsplikt-skolor-brott"],
       "outcome": "included",
       "note": "Avtalet lagstadgar skolornas brottsförebyggande roll."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB122",
+      "designation": "Dir. 2023:22",
+      "title": "Tilläggsdirektiv till utredningen om att säkerheten i skolan ska förbättras (U 2022:04)",
+      "date": "2023-02-09",
+      "url": "https://data.riksdagen.se/dokument/HBB122.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

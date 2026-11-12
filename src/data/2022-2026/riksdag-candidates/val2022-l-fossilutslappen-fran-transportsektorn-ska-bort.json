@@ -1,0 +1,103 @@
+{
+  "promise_id": "val2022-l-fossilutslappen-fran-transportsektorn-ska-bort",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:transportsektorn",
+    "keyword:fossilutsläpp",
+    "keyword:fossilfria transporter",
+    "keyword:elektrifiering",
+    "keyword:utsläppsminskning",
+    "all-keywords",
+    "committee:TU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HBB180",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "80",
+      "datum": "2023-06-15",
+      "titel": "Undanröja hinder för elektrifieringen av transportsektorn",
+      "organ": "Landsbygds- och infrastrukturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB180.html",
+      "found_by": ["keyword:transportsektorn", "keyword:elektrifiering"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01FiU21",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU21",
+      "datum": "2026-06-04",
+      "titel": "Vårändringsbudget för 2026",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU21.html",
+      "found_by": ["keyword:elektrifiering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01MJU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU16",
+      "datum": "2026-03-02",
+      "titel": "Klimatpolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU16.html",
+      "found_by": ["keyword:transportsektorn"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB397",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "97",
+      "datum": "2025-01-01",
+      "titel": "Mot en effektiv elektrifiering av transportsystemet ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB397.html",
+      "found_by": ["keyword:elektrifiering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01NU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU14",
+      "datum": "2024-05-20",
+      "titel": "Energipolitikens långsiktiga inriktning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU14.html",
+      "found_by": ["keyword:elektrifiering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01MJU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU16",
+      "datum": "2023-05-26",
+      "titel": "Klimatpolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU16.html",
+      "found_by": ["keyword:transportsektorn"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01TU4",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "TU4",
+      "datum": "2023-02-20",
+      "titel": "Infrastrukturfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HA01TU4.html",
+      "found_by": ["keyword:transportsektorn"],
+      "score": 1
+    }
+  ]
+}

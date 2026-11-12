@@ -1,0 +1,101 @@
+{
+  "promise_id": "val2022-mp-fasa-ut-giftiga-amnen-fran-barnprodukter",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:giftiga ämnen",
+    "keyword:kemikalier",
+    "keyword:barnprodukter",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD03270",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "270",
+      "datum": "2026-05-26",
+      "titel": "Kompletterande bestämmelser till EU-förordningar om kemikalier och avfall",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03270.html",
+      "found_by": ["keyword:kemikalier"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SkU13",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU13",
+      "datum": "2024-04-09",
+      "titel": "Punktskatt och tull",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU13.html",
+      "found_by": ["keyword:kemikalier"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SoU9",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU9",
+      "datum": "2024-03-19",
+      "titel": "Genomförande av nya krav på upphettade tobaksvaror",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU9.html",
+      "found_by": ["keyword:kemikalier"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB49",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "9",
+      "datum": "2023-04-18",
+      "titel": "En säkrare tillgång till vattenreningskemikalier",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB49.html",
+      "found_by": ["keyword:kemikalier"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SkU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU14",
+      "datum": "2023-04-13",
+      "titel": "Punktskatt och tull",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU14.html",
+      "found_by": ["keyword:kemikalier"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01MJU6",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU6",
+      "datum": "2023-02-22",
+      "titel": "Kemikaliepolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU6.html",
+      "found_by": ["keyword:kemikalier"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SkU2",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU2",
+      "datum": "2022-10-20",
+      "titel": "BNP-indexering av skatterna på kemikalier i viss elektronik och avfallsförbränning",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU2.html",
+      "found_by": ["keyword:kemikalier"],
+      "score": 1
+    }
+  ]
+}

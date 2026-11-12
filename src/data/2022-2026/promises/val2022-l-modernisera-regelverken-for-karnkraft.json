@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["kärnkraft", "regelverk", "tillståndsprocess", "miljöbalken", "kärntekniklagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:155 (Ny kärnkraft i Sverige - ett andra steg). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -35,6 +42,16 @@
       ],
       "outcome": "included",
       "note": "Avtalet förändrar regelverken för ny kärnkraft: borttagna förbud, snabbspår och lägre ansökningsavgift."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1155",
+      "designation": "Dir. 2023:155",
+      "title": "Ny kärnkraft i Sverige - ett andra steg",
+      "date": "2023-11-02",
+      "url": "https://data.riksdagen.se/dokument/HBB1155.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

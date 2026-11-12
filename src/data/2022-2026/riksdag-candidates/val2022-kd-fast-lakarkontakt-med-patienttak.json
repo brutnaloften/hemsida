@@ -1,0 +1,53 @@
+{
+  "promise_id": "val2022-kd-fast-lakarkontakt-med-patienttak",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:fast läkarkontakt",
+    "keyword:patientlista",
+    "keyword:primärvård",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SoU23",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU23",
+      "datum": "2026-02-06",
+      "titel": "Nästa steg för en god och nära vård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU23.html",
+      "found_by": ["keyword:primärvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU12",
+      "datum": "2023-04-24",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
+      "found_by": ["keyword:primärvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU5",
+      "datum": "2023-01-17",
+      "titel": "Ökad kontroll i hälso- och sjukvården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU5.html",
+      "found_by": ["keyword:primärvård"],
+      "score": 1
+    }
+  ]
+}

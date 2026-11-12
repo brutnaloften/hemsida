@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["försörjningsstöd", "aktivitetskrav", "socialbidrag", "heltid"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Ds 2024:29 (Aktivitetskrav inom försörjningsstödet - för arbete, egenförsörjning och nationell likformighet ). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-aktivitetskrav-forsorjningsstod"],
       "outcome": "weakened",
       "note": "Avtalet kräver aktivitet motsvarande arbetsförmågan, inte uttryckligen heltid."
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HCB429",
+      "designation": "Ds 2024:29",
+      "title": "Aktivitetskrav inom försörjningsstödet - för arbete, egenförsörjning och nationell likformighet",
+      "date": "2024-11-25",
+      "url": "https://data.riksdagen.se/dokument/HCB429.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

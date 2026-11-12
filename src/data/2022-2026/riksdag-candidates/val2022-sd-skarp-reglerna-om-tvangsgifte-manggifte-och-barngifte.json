@@ -1,0 +1,41 @@
+{
+  "promise_id": "val2022-sd-skarp-reglerna-om-tvangsgifte-manggifte-och-barngifte",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:tvångsäktenskap",
+    "keyword:månggifte",
+    "keyword:barnäktenskap",
+    "all-keywords",
+    "committee:CU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01JuU43",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU43",
+      "datum": "2026-05-20",
+      "titel": "Stärkt lagstiftning mot hedersrelaterat våld och förtryck",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU43.html",
+      "found_by": ["keyword:barnäktenskap"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU3",
+      "datum": "2025-10-17",
+      "titel": "Kriminalisering av oskuldskontroller, oskuldsintyg och oskuldsingrepp",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU3.html",
+      "found_by": ["keyword:barnäktenskap"],
+      "score": 1
+    }
+  ]
+}

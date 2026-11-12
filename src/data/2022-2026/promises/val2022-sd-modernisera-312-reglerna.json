@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["3:12", "fåmansföretag", "entreprenörskap", "skatt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:10 (Tilläggsdirektiv till Kommittén om förenklad beskattning av ägare till fåmansföretag (Fi 2022:04)). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-battre-villkor-sma-foretag-312-regler"],
       "outcome": "included",
       "note": "Avtalet ger bättre villkor för små och medelstora företag, till exempel ändrade 3:12-regler."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB110",
+      "designation": "Dir. 2023:10",
+      "title": "Tilläggsdirektiv till Kommittén om förenklad beskattning av ägare till fåmansföretag (Fi 2022:04)",
+      "date": "2023-01-26",
+      "url": "https://data.riksdagen.se/dokument/HBB110.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

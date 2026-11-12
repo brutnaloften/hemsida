@@ -1,0 +1,66 @@
+{
+  "promise_id": "val2022-kd-vargstammen-minskas-till-170",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:varg",
+    "keyword:vargstam",
+    "keyword:rovdjur",
+    "keyword:licensjakt",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HB01MJU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU14",
+      "datum": "2024-04-25",
+      "titel": "Jakt och viltvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU14.html",
+      "found_by": ["keyword:varg", "keyword:rovdjur"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01MJU23",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU23",
+      "datum": "2026-05-11",
+      "titel": "Förenklingar i jaktlagstiftningen",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU23.html",
+      "found_by": ["keyword:rovdjur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01MJU10",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU10",
+      "datum": "2026-02-25",
+      "titel": "Jakt och viltvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU10.html",
+      "found_by": ["keyword:rovdjur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01MJU7",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU7",
+      "datum": "2025-02-11",
+      "titel": "Jakt och viltvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU7.html",
+      "found_by": ["keyword:rovdjur"],
+      "score": 1
+    }
+  ]
+}

@@ -17,10 +17,38 @@
   "committee": "JuU",
   "keywords": ["oskuldskontroll", "hedersförtryck", "kriminalisering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2024/25:189 (Kriminalisering av oskuldskontroller, oskuldsintyg och oskuldsingrepp). Dokumentet behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2025/26:JuU3 (Kriminalisering av oskuldskontroller, oskuldsintyg och oskuldsingrepp), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC03189",
+      "designation": "Prop. 2024/25:189",
+      "title": "Kriminalisering av oskuldskontroller, oskuldsintyg och oskuldsingrepp",
+      "date": "2025-06-17",
+      "url": "https://data.riksdagen.se/dokument/HC03189.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU3",
+      "designation": "Bet. 2025/26:JuU3",
+      "title": "Kriminalisering av oskuldskontroller, oskuldsintyg och oskuldsingrepp",
+      "date": "2025-10-17",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU3.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

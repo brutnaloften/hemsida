@@ -1,0 +1,65 @@
+{
+  "promise_id": "val2022-s-privata-vardgivare-erbjuda-vfu",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:verksamhetsförlagd utbildning",
+    "keyword:privata vårdgivare",
+    "keyword:vårdutbildning",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SoU7",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU7",
+      "datum": "2025-11-13",
+      "titel": "Stärkt kontroll över tandvårdssektorn",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU7.html",
+      "found_by": ["keyword:privata vårdgivare"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB39",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "9",
+      "datum": "2024-02-02",
+      "titel": "Utvecklat samarbete för verksamhetsförlagd utbildning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB39.html",
+      "found_by": ["keyword:verksamhetsförlagd utbildning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB1166",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "166",
+      "datum": "2023-12-07",
+      "titel": "Tilläggsdirektiv till utredningen Samordnat arbete för fler platser för verksamhetsförlagd utbildning i sjuksköterskeutbildningen (U 2022:07)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1166.html",
+      "found_by": ["keyword:verksamhetsförlagd utbildning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU5",
+      "datum": "2023-01-17",
+      "titel": "Ökad kontroll i hälso- och sjukvården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU5.html",
+      "found_by": ["keyword:privata vårdgivare"],
+      "score": 1
+    }
+  ]
+}

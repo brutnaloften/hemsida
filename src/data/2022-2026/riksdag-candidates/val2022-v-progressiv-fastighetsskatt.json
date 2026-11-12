@@ -1,0 +1,102 @@
+{
+  "promise_id": "val2022-v-progressiv-fastighetsskatt",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:fastighetsskatt",
+    "keyword:progressiv skatt",
+    "keyword:lyxfastigheter",
+    "keyword:taxering",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["keyword:fastighetsskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC03168",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "168",
+      "datum": "2025-06-17",
+      "titel": "Höjd fastighetsskatt för vindkraftverk",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03168.html",
+      "found_by": ["keyword:fastighetsskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SkU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU13",
+      "datum": "2025-04-01",
+      "titel": "Företag, kapital och fastighet",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU13.html",
+      "found_by": ["keyword:fastighetsskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01NU10",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU10",
+      "datum": "2025-02-13",
+      "titel": "Regional utvecklingspolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU10.html",
+      "found_by": ["keyword:fastighetsskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01NU12",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU12",
+      "datum": "2024-05-02",
+      "titel": "Regional utveckling",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU12.html",
+      "found_by": ["keyword:fastighetsskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB320",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "20",
+      "datum": "2024-03-05",
+      "titel": "Maskinellt värde för vissa industribyggnader - ett undantag från fastighetsskatt",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB320.html",
+      "found_by": ["keyword:fastighetsskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01CU15",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "CU15",
+      "datum": "2023-02-28",
+      "titel": "Ändringar i jordförvärvslagen i syfte att hindra att bestämmelserna om förvärvstillstånd kringgås",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HA01CU15.html",
+      "found_by": ["keyword:taxering"],
+      "score": 1
+    }
+  ]
+}

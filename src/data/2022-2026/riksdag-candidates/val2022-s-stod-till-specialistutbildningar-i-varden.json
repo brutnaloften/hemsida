@@ -1,0 +1,42 @@
+{
+  "promise_id": "val2022-s-stod-till-specialistutbildningar-i-varden",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:specialistutbildning",
+    "keyword:sjuksköterskor",
+    "keyword:undersköterskor",
+    "keyword:vårdutbildning",
+    "all-keywords",
+    "committee:UbU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SoU25",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU25",
+      "datum": "2026-04-24",
+      "titel": "Stärkta insatser för äldre och för de som vårdar eller stöder närstående",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU25.html",
+      "found_by": ["keyword:undersköterskor"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB1148",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "148",
+      "datum": "2023-10-19",
+      "titel": "Behörighet och yrkesreglering inom hälso- och sjukvård och tandvård",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1148.html",
+      "found_by": ["keyword:specialistutbildning"],
+      "score": 1
+    }
+  ]
+}

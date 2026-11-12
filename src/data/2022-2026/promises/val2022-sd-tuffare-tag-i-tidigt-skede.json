@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["socialtjänst", "tidiga insatser", "mellantvång", "ungdomskriminalitet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:121 (Översyn av socionomexamen för att motverka ungdomskriminalitet). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-mellantvang-socialtjanstlagen"],
       "outcome": "weakened",
       "note": "Avtalet ger socialtjänsten utökade befogenheter att besluta om tidiga och obligatoriska insatser."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1121",
+      "designation": "Dir. 2023:121",
+      "title": "Översyn av socionomexamen för att motverka ungdomskriminalitet",
+      "date": "2023-08-18",
+      "url": "https://data.riksdagen.se/dokument/HBB1121.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

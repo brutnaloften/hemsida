@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["förskola", "obligatorisk", "femåringar", "skollagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2024:113 (En likvärdig förskola av god kvalitet med obligatorisk språkförskola). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB1113",
+      "designation": "Dir. 2024:113",
+      "title": "En likvärdig förskola av god kvalitet med obligatorisk språkförskola",
+      "date": "2024-11-21",
+      "url": "https://data.riksdagen.se/dokument/HCB1113.html",
+      "relevance": "partial",
       "note": null
     }
   ]

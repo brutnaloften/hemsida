@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["karensavdrag", "förskolepersonal"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Ds 2023:33 (Karenstak och högriskskydd - en översyn av karensavdraget och förslag på utökade undantag ). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HBB433",
+      "designation": "Ds 2023:33",
+      "title": "Karenstak och högriskskydd - en översyn av karensavdraget och förslag på utökade undantag",
+      "date": "2023-12-15",
+      "url": "https://data.riksdagen.se/dokument/HBB433.html",
+      "relevance": "partial",
       "note": null
     }
   ]

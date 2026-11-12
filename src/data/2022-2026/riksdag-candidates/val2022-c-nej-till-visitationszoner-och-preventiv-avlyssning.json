@@ -1,0 +1,102 @@
+{
+  "promise_id": "val2022-c-nej-till-visitationszoner-och-preventiv-avlyssning",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:visitationszoner",
+    "keyword:preventiv avlyssning",
+    "keyword:omvänd bevisbörda",
+    "keyword:anonyma vittnen",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HCB1122",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "122",
+      "datum": "2024-12-19",
+      "titel": "Genomförande av direktivet om återvinning av tillgångar och förverkande",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB1122.html",
+      "found_by": ["keyword:omvänd bevisbörda"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01JuU6",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU6",
+      "datum": "2024-11-21",
+      "titel": "Anonyma vittnen",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU6.html",
+      "found_by": ["keyword:anonyma vittnen"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC0320",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "20",
+      "datum": "2024-10-01",
+      "titel": "Anonyma vittnen",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0320.html",
+      "found_by": ["keyword:anonyma vittnen"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB351",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "51",
+      "datum": "2024-07-05",
+      "titel": "En mer rättssäker och effektiv domstolsprocess",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB351.html",
+      "found_by": ["keyword:anonyma vittnen"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB125",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "25",
+      "datum": "2024-02-15",
+      "titel": "Tilläggsdirektiv till Utredningen om Anonyma vittnen (Ju 2022:17)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB125.html",
+      "found_by": ["keyword:anonyma vittnen"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB367",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "67",
+      "datum": "2023-10-30",
+      "titel": "Anonyma vittnen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB367.html",
+      "found_by": ["keyword:anonyma vittnen"],
+      "score": 1
+    },
+    {
+      "dok_id": "HAB1141",
+      "doktyp": "dir",
+      "rm": "2022",
+      "beteckning": "141",
+      "datum": "2022-12-19",
+      "titel": "Anonyma vittnen",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HAB1141.html",
+      "found_by": ["keyword:anonyma vittnen"],
+      "score": 1
+    }
+  ]
+}

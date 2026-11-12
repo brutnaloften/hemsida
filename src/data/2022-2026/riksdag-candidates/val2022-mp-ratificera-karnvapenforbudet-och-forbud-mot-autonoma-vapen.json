@@ -1,0 +1,41 @@
+{
+  "promise_id": "val2022-mp-ratificera-karnvapenforbudet-och-forbud-mot-autonoma-vapen",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:kärnvapenförbud",
+    "keyword:autonoma vapensystem",
+    "keyword:nedrustning",
+    "all-keywords",
+    "committee:UU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01UU6",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UU6",
+      "datum": "2026-04-09",
+      "titel": "Säkerhetspolitik",
+      "organ": "UU",
+      "url": "https://data.riksdagen.se/dokument/HD01UU6.html",
+      "found_by": ["keyword:nedrustning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01UU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "UU11",
+      "datum": "2024-05-24",
+      "titel": "Vissa säkerhetspolitiska frågor",
+      "organ": "UU",
+      "url": "https://data.riksdagen.se/dokument/HB01UU11.html",
+      "found_by": ["keyword:nedrustning"],
+      "score": 1
+    }
+  ]
+}

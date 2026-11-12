@@ -1,0 +1,101 @@
+{
+  "promise_id": "val2022-sd-nolltolerans-mot-brott",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:nolltolerans",
+    "keyword:brottsutredning",
+    "keyword:lagföring",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01JuU33",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU33",
+      "datum": "2026-05-29",
+      "titel": "Effektivare gränsöverskridande inhämtning av elektroniska bevis",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU33.html",
+      "found_by": ["keyword:brottsutredning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU13",
+      "datum": "2026-01-16",
+      "titel": "Unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU13.html",
+      "found_by": ["keyword:lagföring"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB324",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "24",
+      "datum": "2024-03-26",
+      "titel": "Ett effektivt straffrättsligt skydd för statliga stöd till företag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB324.html",
+      "found_by": ["keyword:brottsutredning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01JuU2",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU2",
+      "datum": "2023-10-27",
+      "titel": "Ekonomiska sanktioner mot terrorism",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU2.html",
+      "found_by": ["keyword:brottsutredning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB352",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "52",
+      "datum": "2023-09-07",
+      "titel": "Ett stärkt och samlat skydd av välfärdssystemen ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB352.html",
+      "found_by": ["keyword:brottsutredning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB31",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "1",
+      "datum": "2023-01-25",
+      "titel": "Skärpta straff för flerfaldig brottslighet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB31.html",
+      "found_by": ["keyword:brottsutredning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01JuU2",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU2",
+      "datum": "2022-11-10",
+      "titel": "Snabbare lagföring av brott",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU2.html",
+      "found_by": ["keyword:lagföring"],
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "promise_id": "val2022-s-kortare-vantetider-1177",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:1177",
+    "keyword:väntetider",
+    "keyword:sjukvårdsrådgivning",
+    "keyword:webbtjänst",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HCB150",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "50",
+      "datum": "2024-05-23",
+      "titel": "Bättre styrning för en tillgänglig och jämlik hälso- och sjukvård med god kontinuitet",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB150.html",
+      "found_by": ["keyword:väntetider"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SoU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU8",
+      "datum": "2024-04-18",
+      "titel": "Riksrevisionens rapport om statens arbete med väntetider i vården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU8.html",
+      "found_by": ["keyword:väntetider"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB0348",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "48",
+      "datum": "2023-12-05",
+      "titel": "Riksrevisionens rapport om statens arbete med väntetider i vården",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0348.html",
+      "found_by": ["keyword:väntetider"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU14",
+      "datum": "2023-04-24",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU14.html",
+      "found_by": ["keyword:1177"],
+      "score": 1
+    }
+  ]
+}

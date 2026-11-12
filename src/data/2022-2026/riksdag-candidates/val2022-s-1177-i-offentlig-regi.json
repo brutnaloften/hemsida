@@ -1,0 +1,78 @@
+{
+  "promise_id": "val2022-s-1177-i-offentlig-regi",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:1177",
+    "keyword:offentlig regi",
+    "keyword:sjukvårdsrådgivning",
+    "keyword:privatisering",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SoU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU16",
+      "datum": "2026-04-01",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
+      "found_by": ["keyword:privatisering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB391",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "91",
+      "datum": "2025-08-29",
+      "titel": "Nya regler om arv och testamente",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB391.html",
+      "found_by": ["keyword:offentlig regi"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SoU16",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU16",
+      "datum": "2025-06-04",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
+      "found_by": ["keyword:privatisering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SoU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU14",
+      "datum": "2024-06-03",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU14.html",
+      "found_by": ["keyword:privatisering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU14",
+      "datum": "2023-04-24",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU14.html",
+      "found_by": ["keyword:1177"],
+      "score": 1
+    }
+  ]
+}

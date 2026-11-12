@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["övervakningskameror", "kamerabevakning", "brottsbekämpning", "trygghet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2026:66 (Förbättrade möjligheter att bedriva kamerabevakning). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-oversyn-kamerabevakningslagen"],
       "outcome": "weakened",
       "note": "Avtalet lovar en översyn av kamerabevakningslagen för att möjliggöra mer kamerabevakning, men inget om en kraftig ökning av antalet kameror."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB166",
+      "designation": "Dir. 2026:66",
+      "title": "Förbättrade möjligheter att bedriva kamerabevakning",
+      "date": "2026-07-02",
+      "url": "https://data.riksdagen.se/dokument/HEB166.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

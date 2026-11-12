@@ -1,0 +1,29 @@
+{
+  "promise_id": "val2022-sd-forebygga-invasiva-arter",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:invasiva arter",
+    "keyword:växtarter",
+    "keyword:djurarter",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01MJU29",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU29",
+      "datum": "2026-06-09",
+      "titel": "Ett tydligt regelverk för aktivt skogsbruk",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU29.html",
+      "found_by": ["keyword:växtarter"],
+      "score": 1
+    }
+  ]
+}

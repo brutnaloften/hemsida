@@ -1,0 +1,114 @@
+{
+  "promise_id": "val2022-s-mer-forbara-drivmedel",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:förnybara drivmedel",
+    "keyword:biodrivmedel",
+    "keyword:fossilfritt",
+    "keyword:drivmedelspriser",
+    "all-keywords",
+    "committee:NU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HEB333",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "33",
+      "datum": "2026-05-28",
+      "titel": "Vägen mot utfasning",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB333.html",
+      "found_by": ["keyword:fossilfritt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01FiU48",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU48",
+      "datum": "2026-04-21",
+      "titel": "Extra ändringsbudget för 2026 – Sänkt skatt på drivmedel samt el- och gasprisstöd",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU48.html",
+      "found_by": ["keyword:drivmedelspriser"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01NU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU13",
+      "datum": "2026-02-26",
+      "titel": "Energipolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
+      "found_by": ["keyword:biodrivmedel"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01MJU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU17",
+      "datum": "2025-05-15",
+      "titel": "Nya regler för datacenter och hållbara bränslen samt en ny reduktionsplikt",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU17.html",
+      "found_by": ["keyword:biodrivmedel"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01NU19",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU19",
+      "datum": "2025-04-29",
+      "titel": "Energipolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
+      "found_by": ["keyword:biodrivmedel"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB1121",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "121",
+      "datum": "2024-12-12",
+      "titel": "Tilläggsdirektiv till Initiativet Fossilfritt Sverige (M 2016:05)",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB1121.html",
+      "found_by": ["keyword:fossilfritt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB384",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "84",
+      "datum": "2023-12-04",
+      "titel": "En hållbar bioekonomistrategi- för ett välmående fossilfritt samhälle",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB384.html",
+      "found_by": ["keyword:fossilfritt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01MJU5",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU5",
+      "datum": "2023-11-23",
+      "titel": "Sänkning av reduktionsplikten för bensin och diesel",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU5.html",
+      "found_by": ["keyword:drivmedelspriser"],
+      "score": 1
+    }
+  ]
+}

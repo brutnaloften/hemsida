@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["kösystem", "skolpeng", "likvärdighet", "skolval"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:153 (En nationell skolpengsnorm för ökad likvärdighet). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,16 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet har gemensamt skolval och tar bara steg mot en nationellt bindande skolpengsnorm."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1153",
+      "designation": "Dir. 2023:153",
+      "title": "En nationell skolpengsnorm för ökad likvärdighet",
+      "date": "2023-11-02",
+      "url": "https://data.riksdagen.se/dokument/HBB1153.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

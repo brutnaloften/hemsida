@@ -1,0 +1,88 @@
+{
+  "promise_id": "val2022-sd-sank-straffmyndighetsaldern",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:straffmyndighetsålder",
+    "keyword:ungdomskriminalitet",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HCB1100",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "100",
+      "datum": "2024-10-24",
+      "titel": "Tilläggsdirektiv till Utredningen om en översyn av socionomexamen för att motverka ungdomskriminalitet (U 2023:04)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB1100.html",
+      "found_by": ["keyword:ungdomskriminalitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB330",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2024-05-08",
+      "titel": "En statlig ordning med brottsförebyggande åtgärder för barn och unga",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB330.html",
+      "found_by": ["keyword:ungdomskriminalitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB132",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "32",
+      "datum": "2024-03-21",
+      "titel": "Tilläggsdirektiv till Utredningen om en översyn av socionomexamen för att motverka ungdomskriminalitet (U 2023:04)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB132.html",
+      "found_by": ["keyword:ungdomskriminalitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB1121",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "121",
+      "datum": "2023-08-18",
+      "titel": "Översyn av socionomexamen för att motverka ungdomskriminalitet",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1121.html",
+      "found_by": ["keyword:ungdomskriminalitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB1112",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "112",
+      "datum": "2023-07-06",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB1112.html",
+      "found_by": ["keyword:straffmyndighetsålder"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB126",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "26",
+      "datum": "2023-02-16",
+      "titel": "Tilläggsdirektiv till Utredningen om ungdomskriminalitetsnämnder (S 2022:11)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB126.html",
+      "found_by": ["keyword:ungdomskriminalitet"],
+      "score": 1
+    }
+  ]
+}

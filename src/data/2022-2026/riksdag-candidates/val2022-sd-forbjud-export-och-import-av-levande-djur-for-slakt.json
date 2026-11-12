@@ -1,0 +1,77 @@
+{
+  "promise_id": "val2022-sd-forbjud-export-och-import-av-levande-djur-for-slakt",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:djurtransporter",
+    "keyword:levande djur",
+    "keyword:slakt",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01MJU23",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU23",
+      "datum": "2025-06-04",
+      "titel": "Förbättrade förutsättningar för ett hållbart vattenbruk",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU23.html",
+      "found_by": ["keyword:levande djur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01MJU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU11",
+      "datum": "2024-03-26",
+      "titel": "Djurskydd",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU11.html",
+      "found_by": ["keyword:slakt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB327",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "27",
+      "datum": "2023-06-12",
+      "titel": "Kamerabevakning för ett bättre djurskydd ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB327.html",
+      "found_by": ["keyword:slakt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01CU8",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "CU8",
+      "datum": "2023-05-04",
+      "titel": "Konsumenträtt",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HA01CU8.html",
+      "found_by": ["keyword:levande djur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01MJU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU9",
+      "datum": "2023-03-09",
+      "titel": "Djurskydd",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU9.html",
+      "found_by": ["keyword:slakt"],
+      "score": 1
+    }
+  ]
+}

@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["barnutredningar", "rättssäkerhet", "socialtjänst"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2026:60 (En rättssäker och kunskapsbaserad socialtjänst). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB160",
+      "designation": "Dir. 2026:60",
+      "title": "En rättssäker och kunskapsbaserad socialtjänst",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HEB160.html",
+      "relevance": "partial",
       "note": null
     }
   ]

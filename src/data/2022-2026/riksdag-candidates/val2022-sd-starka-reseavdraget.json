@@ -1,0 +1,41 @@
+{
+  "promise_id": "val2022-sd-starka-reseavdraget",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:reseavdrag",
+    "keyword:bilberoende",
+    "keyword:pendling",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HA01FiU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU1",
+      "datum": "2022-12-12",
+      "titel": "Statens budget 2023 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
+      "found_by": ["keyword:reseavdrag"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA0318",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "18",
+      "datum": "2022-11-15",
+      "titel": "Bibehållet reseavdrag med vissa förstärkningar för arbetsresor, tjänsteresor och hemresor",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0318.html",
+      "found_by": ["keyword:reseavdrag"],
+      "score": 1
+    }
+  ]
+}

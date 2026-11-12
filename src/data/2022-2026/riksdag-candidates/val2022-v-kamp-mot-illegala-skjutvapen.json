@@ -1,0 +1,78 @@
+{
+  "promise_id": "val2022-v-kamp-mot-illegala-skjutvapen",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:illegala skjutvapen",
+    "keyword:vapenlagen",
+    "keyword:skjutvapenvåld",
+    "keyword:gängkriminalitet",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01UU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UU18",
+      "datum": "2026-05-27",
+      "titel": "Ett modernt och anpassat regelverk för krigsmateriel",
+      "organ": "UU",
+      "url": "https://data.riksdagen.se/dokument/HD01UU18.html",
+      "found_by": ["keyword:vapenlagen"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU10",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU10",
+      "datum": "2026-04-24",
+      "titel": "En ny vapenlag",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU10.html",
+      "found_by": ["keyword:vapenlagen"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01JuU33",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU33",
+      "datum": "2025-04-10",
+      "titel": "Redogörelse för verksamheten inom den gemensamma parlamentariska kontrollgruppen för Europol och riksdagsdelegationens arbete under 2024",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU33.html",
+      "found_by": ["keyword:skjutvapenvåld"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01JuU16",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU16",
+      "datum": "2024-04-08",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU16.html",
+      "found_by": ["keyword:gängkriminalitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01JuU8",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU8",
+      "datum": "2023-05-03",
+      "titel": "Skärpta straff för brott i kriminella nätverk",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU8.html",
+      "found_by": ["keyword:gängkriminalitet"],
+      "score": 1
+    }
+  ]
+}

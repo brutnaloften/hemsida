@@ -1,0 +1,77 @@
+{
+  "promise_id": "val2022-mp-hojd-maxtid-for-sluten-ungdomsvard",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:sluten ungdomsvård",
+    "keyword:ungdomsbrott",
+    "keyword:utslussning",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01JuU30",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU30",
+      "datum": "2026-05-05",
+      "titel": "Frihetsberövande påföljder för barn och unga",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
+      "found_by": ["keyword:sluten ungdomsvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU27",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU27",
+      "datum": "2026-03-17",
+      "titel": "Säkerhetsförvaring – en ny tidsobestämd frihetsberövande påföljd",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU27.html",
+      "found_by": ["keyword:utslussning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SoU5",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU5",
+      "datum": "2024-11-28",
+      "titel": "Avskildhet i anslutning till dygnsvilan – för ökad trygghet och säkerhet på särskilda ungdomshem",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU5.html",
+      "found_by": ["keyword:sluten ungdomsvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SoU25",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU25",
+      "datum": "2024-04-25",
+      "titel": "Begränsningar och kontroll i fråga om elektroniska kommunikationstjänster och besök på särskilda ungdomshem",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU25.html",
+      "found_by": ["keyword:sluten ungdomsvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01JuU15",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU15",
+      "datum": "2023-04-13",
+      "titel": "Unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU15.html",
+      "found_by": ["keyword:ungdomsbrott"],
+      "score": 1
+    }
+  ]
+}

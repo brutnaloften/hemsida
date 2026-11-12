@@ -1,0 +1,89 @@
+{
+  "promise_id": "val2022-sd-hoj-hastighetsgransen-for-a-traktorer-till-45",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:A-traktor",
+    "keyword:hastighetsgräns",
+    "keyword:ungdomar",
+    "all-keywords",
+    "committee:TU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01TU6",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "TU6",
+      "datum": "2026-01-29",
+      "titel": "Trafiksäkerhet",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HD01TU6.html",
+      "found_by": ["keyword:A-traktor"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SoU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU9",
+      "datum": "2025-11-13",
+      "titel": "Stärkta förutsättningar för stöd ur Allmänna arvsfonden till förmån för äldre personer",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU9.html",
+      "found_by": ["keyword:ungdomar"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01TU14",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "TU14",
+      "datum": "2025-05-27",
+      "titel": "Trafiksäkerhet",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HC01TU14.html",
+      "found_by": ["keyword:A-traktor"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01KrU4",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KrU4",
+      "datum": "2025-02-17",
+      "titel": "Public service, film och dataspel",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HC01KrU4.html",
+      "found_by": ["keyword:ungdomar"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01TU7",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "TU7",
+      "datum": "2024-02-20",
+      "titel": "Trafiksäkerhet",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HB01TU7.html",
+      "found_by": ["keyword:A-traktor"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01TU13",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "TU13",
+      "datum": "2023-06-13",
+      "titel": "Trafiksäkerhet",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HA01TU13.html",
+      "found_by": ["keyword:A-traktor"],
+      "score": 1
+    }
+  ]
+}

@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["bidragstak", "bidrag", "arbetslinjen", "försörjningsstöd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:70 (Tilläggsdirektiv till Utredningen om drivkrafter och möjligheter i försörjningsstödet (S 2022:16)). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": ["tido-bidragsreform-bidragstak-lagre-skatt"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB170",
+      "designation": "Dir. 2023:70",
+      "title": "Tilläggsdirektiv till Utredningen om drivkrafter och möjligheter i försörjningsstödet (S 2022:16)",
+      "date": "2023-06-08",
+      "url": "https://data.riksdagen.se/dokument/HBB170.html",
+      "relevance": "full",
       "note": null
     }
   ]

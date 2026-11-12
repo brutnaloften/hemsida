@@ -1,0 +1,42 @@
+{
+  "promise_id": "val2022-s-forbjud-vinstuttag-i-skolan",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:vinstuttag",
+    "keyword:friskolor",
+    "keyword:vinstförbud",
+    "keyword:skolans finansiering",
+    "all-keywords",
+    "committee:UbU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01UbU20",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU20",
+      "datum": "2026-05-08",
+      "titel": "Offentlighetsprincipen med lättnadsregler för enskilda mindre huvudmän i skolväsendet",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU20.html",
+      "found_by": ["keyword:friskolor"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01UbU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UbU12",
+      "datum": "2023-03-16",
+      "titel": "Riksrevisionens rapport Skolpengen – effektivitet och konsekvenser",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU12.html",
+      "found_by": ["keyword:friskolor"],
+      "score": 1
+    }
+  ]
+}

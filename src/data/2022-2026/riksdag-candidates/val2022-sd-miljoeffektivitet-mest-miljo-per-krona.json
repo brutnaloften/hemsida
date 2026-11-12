@@ -1,0 +1,101 @@
+{
+  "promise_id": "val2022-sd-miljoeffektivitet-mest-miljo-per-krona",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:miljöeffektivitet",
+    "keyword:kostnadseffektivitet",
+    "keyword:miljöpolitik",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01MJU22",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU22",
+      "datum": "2026-05-20",
+      "titel": "Riksrevisionens rapport om internationella klimatinsatser",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU22.html",
+      "found_by": ["keyword:kostnadseffektivitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU31",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU31",
+      "datum": "2026-04-24",
+      "titel": "Riksrevisionens rapport om Polisreformen 2015",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU31.html",
+      "found_by": ["keyword:kostnadseffektivitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01MJU7",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU7",
+      "datum": "2026-01-16",
+      "titel": "Övergripande miljöfrågor",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU7.html",
+      "found_by": ["keyword:miljöpolitik"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01KU5",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU5",
+      "datum": "2024-12-18",
+      "titel": "Uppföljning av riksdagens tillämpning av subsidiaritetsprincipen",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU5.html",
+      "found_by": ["keyword:miljöpolitik"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01MJU5",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU5",
+      "datum": "2024-11-15",
+      "titel": "Ett levande hav – ökat skydd, minskad övergödning och ett hållbart fiske",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU5.html",
+      "found_by": ["keyword:miljöpolitik"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC031d21",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d21.html",
+      "found_by": ["keyword:miljöpolitik"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB031d21",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d21.html",
+      "found_by": ["keyword:miljöpolitik"],
+      "score": 1
+    }
+  ]
+}

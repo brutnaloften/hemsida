@@ -1,0 +1,149 @@
+{
+  "promise_id": "val2022-sd-regionalisera-fastighetsskatten-industri-el",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:fastighetsskatt",
+    "keyword:regional nivå",
+    "keyword:elproduktion",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01NU10",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU10",
+      "datum": "2025-02-13",
+      "titel": "Regional utvecklingspolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU10.html",
+      "found_by": ["keyword:fastighetsskatt", "keyword:elproduktion"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01NU12",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU12",
+      "datum": "2024-05-02",
+      "titel": "Regional utveckling",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU12.html",
+      "found_by": ["keyword:fastighetsskatt", "keyword:elproduktion"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["keyword:fastighetsskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC03168",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "168",
+      "datum": "2025-06-17",
+      "titel": "Höjd fastighetsskatt för vindkraftverk",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03168.html",
+      "found_by": ["keyword:fastighetsskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SkU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU13",
+      "datum": "2025-04-01",
+      "titel": "Företag, kapital och fastighet",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU13.html",
+      "found_by": ["keyword:fastighetsskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01NU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU11",
+      "datum": "2025-01-16",
+      "titel": "En kapacitetsmekanism för elmarknaden",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU11.html",
+      "found_by": ["keyword:elproduktion"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB320",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "20",
+      "datum": "2024-03-05",
+      "titel": "Maskinellt värde för vissa industribyggnader - ett undantag från fastighetsskatt",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB320.html",
+      "found_by": ["keyword:fastighetsskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01MJU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU1",
+      "datum": "2023-12-11",
+      "titel": "Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU1.html",
+      "found_by": ["keyword:regional nivå"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FiU21",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU21",
+      "datum": "2023-06-15",
+      "titel": "Vårändringsbudget för 2023",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU21.html",
+      "found_by": ["keyword:elproduktion"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FiU33",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU33",
+      "datum": "2023-02-21",
+      "titel": "Extra ändringsbudget för 2023 – Tillfällig skatt på vissa elproducenters överintäkter",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU33.html",
+      "found_by": ["keyword:elproduktion"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01KU2",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU2",
+      "datum": "2022-11-17",
+      "titel": "En ny beteckning för kommuner på regional nivå och vissa frågor om regionindelning (vilande grundlagsförslag)",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU2.html",
+      "found_by": ["keyword:regional nivå"],
+      "score": 1
+    }
+  ]
+}

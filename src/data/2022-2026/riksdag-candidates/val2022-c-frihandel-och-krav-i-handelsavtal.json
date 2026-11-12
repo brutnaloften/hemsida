@@ -1,0 +1,114 @@
+{
+  "promise_id": "val2022-c-frihandel-och-krav-i-handelsavtal",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:frihandel",
+    "keyword:handelsavtal",
+    "keyword:arbetsvillkor",
+    "keyword:klimatkrav",
+    "all-keywords",
+    "committee:UU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HA01NU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU12",
+      "datum": "2023-03-28",
+      "titel": "Handelspolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU12.html",
+      "found_by": ["keyword:frihandel", "keyword:handelsavtal"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01AU15",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU15",
+      "datum": "2026-04-23",
+      "titel": "ILO:s konvention om avskaffande av våld och trakasserier i arbetslivet och ILO:s konvention om en säker och hälsosam arbetsmiljö",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU15.html",
+      "found_by": ["keyword:arbetsvillkor"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01FiU28",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU28",
+      "datum": "2026-03-19",
+      "titel": "Riksrevisionens rapport om arbetsrättsliga villkor i offentlig upphandling",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU28.html",
+      "found_by": ["keyword:arbetsvillkor"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB1116",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "116",
+      "datum": "2024-11-21",
+      "titel": "Genomförande av EU-direktivet om förbättrade arbetsvillkor för plattformsarbete",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB1116.html",
+      "found_by": ["keyword:arbetsvillkor"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01AU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "AU11",
+      "datum": "2024-06-13",
+      "titel": "Subsidiaritetsprövning av kommissionens förslag till direktiv om stärkta arbetsvillkor för praktikanter",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HB01AU11.html",
+      "found_by": ["keyword:arbetsvillkor"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01UU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "UU17",
+      "datum": "2024-05-17",
+      "titel": "Partnerskapsavtal mellan Europeiska unionen och dess medlemsstater och medlemmarna i Organisationen för stater i Afrika, Karibien och Stillahavsområdet",
+      "organ": "UU",
+      "url": "https://data.riksdagen.se/dokument/HB01UU17.html",
+      "found_by": ["keyword:handelsavtal"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01AU10",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU10",
+      "datum": "2023-06-01",
+      "titel": "En fortsatt stärkt arbetslöshetsförsäkring",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU10.html",
+      "found_by": ["keyword:arbetsvillkor"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU14",
+      "datum": "2023-04-24",
+      "titel": "Kompetensförsörjning, e-hälsa och beredskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU14.html",
+      "found_by": ["keyword:arbetsvillkor"],
+      "score": 1
+    }
+  ]
+}

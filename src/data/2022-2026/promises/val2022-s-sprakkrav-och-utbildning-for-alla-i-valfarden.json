@@ -17,10 +17,28 @@
   "committee": "SoU",
   "keywords": ["språkkrav", "välfärd", "svenska", "utbildningsinsatser"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:44 (Språkkrav för personal i äldreomsorgen). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB144",
+      "designation": "Dir. 2023:44",
+      "title": "Språkkrav för personal i äldreomsorgen",
+      "date": "2023-03-30",
+      "url": "https://data.riksdagen.se/dokument/HBB144.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

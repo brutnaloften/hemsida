@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["vistelseförbud", "kontaktförbud", "dömda", "utsatta områden", "kriminella"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2023/24:57 (Preventiva vistelseförbud). Dokumentet behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2023/24:JuU12 (Preventiva vistelseförbud), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-vistelseforbud"],
       "outcome": "included",
       "note": "Avtalet inför vistelseförbud enligt dansk modell, bl.a. för gängrelaterade och hedersrelaterade brott, i stället för att bara pröva det."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0357",
+      "designation": "Prop. 2023/24:57",
+      "title": "Preventiva vistelseförbud",
+      "date": "2023-12-21",
+      "url": "https://data.riksdagen.se/dokument/HB0357.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01JuU12",
+      "designation": "Bet. 2023/24:JuU12",
+      "title": "Preventiva vistelseförbud",
+      "date": "2024-01-23",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU12.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

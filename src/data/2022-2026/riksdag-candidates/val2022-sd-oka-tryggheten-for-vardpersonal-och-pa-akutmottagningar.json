@@ -1,0 +1,65 @@
+{
+  "promise_id": "val2022-sd-oka-tryggheten-for-vardpersonal-och-pa-akutmottagningar",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:akutmottagningar",
+    "keyword:hot och våld",
+    "keyword:vårdpersonal",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01JuU29",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU29",
+      "datum": "2025-05-14",
+      "titel": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU29.html",
+      "found_by": ["keyword:hot och våld"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01KU19",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU19",
+      "datum": "2025-04-29",
+      "titel": "Stärkt skydd för vissa förtroendevalda och en tydligare intern kontroll i kommuner och regioner",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU19.html",
+      "found_by": ["keyword:hot och våld"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FiU40",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU40",
+      "datum": "2023-06-08",
+      "titel": "Riksrevisionens rapport om åtgärder med anledning av trakasserier, hot och våld vid statliga myndigheter",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU40.html",
+      "found_by": ["keyword:hot och våld"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA0386",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "86",
+      "datum": "2023-03-23",
+      "titel": "Riksrevisionens rapport om åtgärder med anledning av trakasserier, hot och våld vid statliga myndigheter",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0386.html",
+      "found_by": ["keyword:hot och våld"],
+      "score": 1
+    }
+  ]
+}

@@ -17,10 +17,28 @@
   "committee": "UbU",
   "keywords": ["elevhälsa", "skolsköterskor", "specialpedagoger", "kuratorer"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2024:30 (En förbättrad elevhälsa). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB130",
+      "designation": "Dir. 2024:30",
+      "title": "En förbättrad elevhälsa",
+      "date": "2024-03-07",
+      "url": "https://data.riksdagen.se/dokument/HCB130.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

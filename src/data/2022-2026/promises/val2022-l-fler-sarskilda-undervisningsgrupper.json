@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["särskild undervisningsgrupp", "studiero", "skolan", "stöd", "ordning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:154 (Varaktigt förbättrad trygghet och studiero i skolan). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-fler-speciallarare-sarskilda-undervisningsgrupper"],
       "outcome": "included",
       "note": "Avtalet vill att fler elever får undervisning i särskilda undervisningsgrupper."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1154",
+      "designation": "Dir. 2023:154",
+      "title": "Varaktigt förbättrad trygghet och studiero i skolan",
+      "date": "2023-11-02",
+      "url": "https://data.riksdagen.se/dokument/HBB1154.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

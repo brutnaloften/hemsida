@@ -1,0 +1,138 @@
+{
+  "promise_id": "val2022-m-forstarkt-gront-skatteavdrag",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:grönt skatteavdrag",
+    "keyword:energieffektivisering",
+    "keyword:elkonsumtion",
+    "keyword:solceller",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01NU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU13",
+      "datum": "2026-02-26",
+      "titel": "Energipolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU13.html",
+      "found_by": ["keyword:energieffektivisering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SkU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU17",
+      "datum": "2025-05-08",
+      "titel": "Förändrade skattesubventioner för solceller och mikroproduktion av el",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU17.html",
+      "found_by": ["keyword:solceller"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01NU19",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU19",
+      "datum": "2025-04-29",
+      "titel": "Energipolitik",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU19.html",
+      "found_by": ["keyword:energieffektivisering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC03109",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "109",
+      "datum": "2025-03-18",
+      "titel": "Förändrade skattesubventioner för solceller och mikroproduktion av el",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03109.html",
+      "found_by": ["keyword:solceller"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01CU13",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "CU13",
+      "datum": "2024-02-29",
+      "titel": "Bostadspolitik",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HB01CU13.html",
+      "found_by": ["keyword:energieffektivisering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01CU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "CU1",
+      "datum": "2023-12-07",
+      "titel": "Utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HB01CU1.html",
+      "found_by": ["keyword:energieffektivisering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01NU17",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU17",
+      "datum": "2023-05-25",
+      "titel": "Kompletterande bestämmelser till EU:s gaslagringsförordning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU17.html",
+      "found_by": ["keyword:energieffektivisering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01CU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "CU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HA01CU1.html",
+      "found_by": ["keyword:energieffektivisering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FiU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU1",
+      "datum": "2022-12-12",
+      "titel": "Statens budget 2023 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
+      "found_by": ["keyword:solceller"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA0315",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "15",
+      "datum": "2022-11-10",
+      "titel": "Förstärkt skattereduktion för installation av solceller",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0315.html",
+      "found_by": ["keyword:solceller"],
+      "score": 1
+    }
+  ]
+}

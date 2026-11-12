@@ -1,0 +1,53 @@
+{
+  "promise_id": "val2022-sd-forbud-mot-import-fran-tvangsmatade-obedovade-djur",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:import",
+    "keyword:slakt utan bedövning",
+    "keyword:tvångsmatning",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01UU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UU17",
+      "datum": "2025-04-29",
+      "titel": "Ny lag om internationella sanktioner",
+      "organ": "UU",
+      "url": "https://data.riksdagen.se/dokument/HC01UU17.html",
+      "found_by": ["keyword:import"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SkU12",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU12",
+      "datum": "2025-03-27",
+      "titel": "Skatteförfarande, folkbokföring och tull",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU12.html",
+      "found_by": ["keyword:import"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SkU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU14",
+      "datum": "2023-04-13",
+      "titel": "Punktskatt och tull",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU14.html",
+      "found_by": ["keyword:import"],
+      "score": 1
+    }
+  ]
+}

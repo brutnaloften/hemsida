@@ -1,0 +1,42 @@
+{
+  "promise_id": "val2022-l-fortsatt-minskade-marginalskatter",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:marginalskatt",
+    "keyword:skiktgräns",
+    "keyword:statlig inkomstskatt",
+    "keyword:värnskatt",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HB01SkU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU8",
+      "datum": "2023-11-23",
+      "titel": "Pausad uppräkning av skiktgränsen för statlig inkomstskatt för beskattningsåret 2024",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU8.html",
+      "found_by": ["keyword:skiktgräns", "keyword:statlig inkomstskatt"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB0327",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "27",
+      "datum": "2023-10-17",
+      "titel": "Pausad uppräkning av skiktgränsen för statlig inkomstskatt för beskattningsåret 2024",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0327.html",
+      "found_by": ["keyword:skiktgräns", "keyword:statlig inkomstskatt"],
+      "score": 2
+    }
+  ]
+}

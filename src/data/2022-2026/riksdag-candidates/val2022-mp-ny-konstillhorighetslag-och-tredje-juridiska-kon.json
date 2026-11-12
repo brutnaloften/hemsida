@@ -1,0 +1,41 @@
+{
+  "promise_id": "val2022-mp-ny-konstillhorighetslag-och-tredje-juridiska-kon",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:transpersoner",
+    "keyword:könstillhörighet",
+    "keyword:juridiskt kön",
+    "all-keywords",
+    "committee:CU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HB01SoU22",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU22",
+      "datum": "2024-04-04",
+      "titel": "Förbättrade möjligheter att ändra kön",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU22.html",
+      "found_by": ["keyword:könstillhörighet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01KU26",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU26",
+      "datum": "2023-05-05",
+      "titel": "Fri- och rättigheter m.m.",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU26.html",
+      "found_by": ["keyword:juridiskt kön"],
+      "score": 1
+    }
+  ]
+}

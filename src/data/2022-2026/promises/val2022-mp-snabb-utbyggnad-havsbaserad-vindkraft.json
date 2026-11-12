@@ -17,10 +17,28 @@
   "committee": "NU",
   "keywords": ["vindkraft", "havsbaserad vindkraft", "kommunal återbäring"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:61 (En ordnad prövning av havsbaserad vindkraft). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB161",
+      "designation": "Dir. 2023:61",
+      "title": "En ordnad prövning av havsbaserad vindkraft",
+      "date": "2023-05-04",
+      "url": "https://data.riksdagen.se/dokument/HBB161.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

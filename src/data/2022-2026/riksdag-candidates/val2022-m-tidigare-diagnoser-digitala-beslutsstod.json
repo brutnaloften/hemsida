@@ -1,0 +1,102 @@
+{
+  "promise_id": "val2022-m-tidigare-diagnoser-digitala-beslutsstod",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:diagnos",
+    "keyword:digitala beslutsstöd",
+    "keyword:riskprofilering",
+    "keyword:kvinnors hälsa",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HEB168",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "68",
+      "datum": "2026-07-02",
+      "titel": "Goda och jämlika livsvillkor för barn och unga med neuropsykiatriska funktionsnedsättningar",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB168.html",
+      "found_by": ["keyword:diagnos"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SoU25",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU25",
+      "datum": "2026-04-24",
+      "titel": "Stärkta insatser för äldre och för de som vårdar eller stöder närstående",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU25.html",
+      "found_by": ["keyword:diagnos"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SoU24",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU24",
+      "datum": "2026-01-29",
+      "titel": "Specialiseringstjänstgöring för sjukhusfysiker",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU24.html",
+      "found_by": ["keyword:diagnos"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SoU26",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU26",
+      "datum": "2025-04-04",
+      "titel": "Nya anpassningar till EU:s förordningar om medicinteknik",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU26.html",
+      "found_by": ["keyword:diagnos"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SoU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU8",
+      "datum": "2024-04-18",
+      "titel": "Riksrevisionens rapport om statens arbete med väntetider i vården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU8.html",
+      "found_by": ["keyword:diagnos"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SoU23",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU23",
+      "datum": "2024-04-11",
+      "titel": "Ytterligare anpassningar till EU:s förordningar om medicinteknik",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU23.html",
+      "found_by": ["keyword:diagnos"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU13",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU13",
+      "datum": "2023-04-18",
+      "titel": "Prioriteringar inom hälso- och sjukvården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU13.html",
+      "found_by": ["keyword:diagnos"],
+      "score": 1
+    }
+  ]
+}

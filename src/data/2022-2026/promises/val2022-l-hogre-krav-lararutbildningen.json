@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["lärarutbildning", "antagningskrav", "behörighet", "lärare"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:111 (Utveckla lärar- och förskollärarutbildningarna ). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-antagningskrav-lararutbildning", "tido-koncentrera-amneslararutbildning"],
       "outcome": "included",
       "note": "Avtalet höjer antagningskraven till lärarutbildningen och reformerar innehållet."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1111",
+      "designation": "Dir. 2023:111",
+      "title": "Utveckla lärar- och förskollärarutbildningarna",
+      "date": "2023-07-06",
+      "url": "https://data.riksdagen.se/dokument/HBB1111.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

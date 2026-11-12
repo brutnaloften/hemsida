@@ -1,0 +1,66 @@
+{
+  "promise_id": "val2022-l-slopa-det-forhojda-amorteringskravet",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:amorteringskrav",
+    "keyword:skuldkvotstak",
+    "keyword:bolån",
+    "keyword:bostadsköp",
+    "all-keywords",
+    "committee:FiU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01FiU36",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU36",
+      "datum": "2026-03-03",
+      "titel": "Utveckling av makrotillsynsområdet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU36.html",
+      "found_by": ["keyword:amorteringskrav", "keyword:bolån"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01FiU22",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU22",
+      "datum": "2026-03-12",
+      "titel": "Finansiell stabilitet och finansmarknadsfrågor",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU22.html",
+      "found_by": ["keyword:bolån"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01CU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "CU17",
+      "datum": "2025-04-10",
+      "titel": "En ny regel om ränteskillnadsersättning – minskade hinder mot förtidsbetalning av bostadslån",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HC01CU17.html",
+      "found_by": ["keyword:bolån"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FiU22",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU22",
+      "datum": "2023-03-29",
+      "titel": "Finansiell stabilitet och finansmarknadsfrågor",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU22.html",
+      "found_by": ["keyword:bolån"],
+      "score": 1
+    }
+  ]
+}

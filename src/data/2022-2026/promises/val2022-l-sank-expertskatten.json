@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["expertskatt", "nyckelpersoner", "utländsk arbetskraft", "skattelättnad"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2023/24:16 (Utvidgad tidsgräns för expertskatt). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2023/24:FiU1 (Statens budget 2024 - Rambeslutet), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,26 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0316",
+      "designation": "Prop. 2023/24:16",
+      "title": "Utvidgad tidsgräns för expertskatt",
+      "date": "2023-09-28",
+      "url": "https://data.riksdagen.se/dokument/HB0316.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01FiU1",
+      "designation": "Bet. 2023/24:FiU1",
+      "title": "Statens budget 2024 - Rambeslutet",
+      "date": "2023-11-24",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU1.html",
+      "relevance": "partial",
       "note": null
     }
   ]

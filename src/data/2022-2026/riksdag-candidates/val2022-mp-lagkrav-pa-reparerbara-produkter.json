@@ -1,0 +1,113 @@
+{
+  "promise_id": "val2022-mp-lagkrav-pa-reparerbara-produkter",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:reparation",
+    "keyword:lagkrav",
+    "keyword:hållbar konsumtion",
+    "all-keywords",
+    "committee:CU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HDB113",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "13",
+      "datum": "2025-02-20",
+      "titel": "Genomförande av två EU-direktiv för att främja en mer hållbar konsumtion",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB113.html",
+      "found_by": ["keyword:reparation", "keyword:hållbar konsumtion"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01CU17",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU17",
+      "datum": "2026-03-27",
+      "titel": "Konsumenträtt m.m.",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU17.html",
+      "found_by": ["keyword:hållbar konsumtion"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB3124",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "124",
+      "datum": "2026-01-01",
+      "titel": "Åtgärder för en mer hållbar konsumtion ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3124.html",
+      "found_by": ["keyword:hållbar konsumtion"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB368",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "68",
+      "datum": "2025-06-10",
+      "titel": "Nya samverkansformer, modern byggnads- och reparationsberedskap",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB368.html",
+      "found_by": ["keyword:reparation"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01FiU32",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU32",
+      "datum": "2025-05-06",
+      "titel": "Extra ändringsbudget för 2025 – Tillfälligt höjd subventionsgrad för rotavdraget",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU32.html",
+      "found_by": ["keyword:reparation"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SkU7",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU7",
+      "datum": "2023-02-16",
+      "titel": "Höjd mervärdesskatt på vissa reparationer",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU7.html",
+      "found_by": ["keyword:reparation"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU6",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU6",
+      "datum": "2023-02-09",
+      "titel": "Riksrevisionens rapport om statens tillsyn över apotek och partihandel med läkemedel",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU6.html",
+      "found_by": ["keyword:lagkrav"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA0335",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "35",
+      "datum": "2022-12-20",
+      "titel": "Höjd mervärdesskatt på vissa reparationer",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0335.html",
+      "found_by": ["keyword:reparation"],
+      "score": 1
+    }
+  ]
+}

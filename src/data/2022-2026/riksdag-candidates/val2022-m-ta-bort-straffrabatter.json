@@ -1,0 +1,78 @@
+{
+  "promise_id": "val2022-m-ta-bort-straffrabatter",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:straffrabatt",
+    "keyword:mängdrabatt",
+    "keyword:ungdomsrabatt",
+    "keyword:straffmätning",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01JuU48",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU48",
+      "datum": "2026-08-12",
+      "titel": "Ett nytt straffrättsligt påföljdssystem",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
+      "found_by": ["keyword:mängdrabatt", "keyword:straffmätning"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01JuU41",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU41",
+      "datum": "2026-08-12",
+      "titel": "Skärpta regler för unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "found_by": ["keyword:straffrabatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU38",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU38",
+      "datum": "2026-05-27",
+      "titel": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU38.html",
+      "found_by": ["keyword:straffmätning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB1115",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "115",
+      "datum": "2023-07-20",
+      "titel": "En översyn av straffskalorna samt ett reformerat och mer rättvist påföljdssystem",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB1115.html",
+      "found_by": ["keyword:straffmätning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01JuU15",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU15",
+      "datum": "2023-04-13",
+      "titel": "Unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU15.html",
+      "found_by": ["keyword:straffmätning"],
+      "score": 1
+    }
+  ]
+}

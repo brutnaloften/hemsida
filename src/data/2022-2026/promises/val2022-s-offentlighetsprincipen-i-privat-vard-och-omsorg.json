@@ -17,10 +17,28 @@
   "committee": "KU",
   "keywords": ["offentlighetsprincipen", "privat vård", "omsorg", "insyn"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2024:28 (Offentlighetsprincipen eller insynslag, Allmänhetens insyn i enskilda aktörer inom skolväsendet ). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB328",
+      "designation": "SOU 2024:28",
+      "title": "Offentlighetsprincipen eller insynslag, Allmänhetens insyn i enskilda aktörer inom skolväsendet",
+      "date": "2024-04-19",
+      "url": "https://data.riksdagen.se/dokument/HCB328.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }
