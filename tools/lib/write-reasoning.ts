@@ -16,6 +16,27 @@ Du får ett löfte och de dokument från riksdagens register som hör till det: 
 
 Skriv två eller tre korta meningar på klarspråk:
 1. Vad som hänt hittills, i tidsordning och med egna ord (till exempel "Regeringen lade i mars 2026 fram ett förslag om ..."; "Riksdagen beslutade i maj 2025 att ...").
+2. Vad dokumenten säger att de täcker av löftet, om de bara täcker en del av det.
+
+Regler:
+- Nämn inga dokumentbeteckningar, dokument-id, SOU- eller propositionsnummer. Beskriv dokumenten med ord och datum; de listas i tidslinjen bredvid.
+- Du ser bara de dokument som har kopplats till löftet, inte alla dokument som finns. Att ett beslut, en lag eller ett förslag inte nämns betyder alltså inte att det saknas. Skriv därför aldrig att något "inte har beslutats", "inte antagits", "ännu inte lagts fram" eller att "inga beslut" finns. Skriv inte heller att riksdagen "ska ta ställning", "ska behandla" eller "väntar på beslut" och inte att något är "på väg": du vet inte vad som hänt efter de angivna dokumenten. Du får skriva att just de angivna dokumenten visar förslag men inget beslut ("dokumenten visar förslag, inget beslut"), men aldrig att inget beslut finns. Beskriv bara vad de angivna dokumenten visar och vilka delar av löftet de täcker.
+- Skriv aldrig vad som saknas, inte nämns, inte framgår eller inte tas upp i dokumenten ("nämns inte", "saknas", "framgår inte", "tas inte upp", "ingår inte"). Skriv inte heller något med "men inte ...", "inte ..." eller "visas inte" om vad dokumenten eller lagen lämnar utanför. Du ser bara korta anteckningar, inte dokumentens hela text, så du kan inte veta det, och sådana påståenden har visat sig vara felaktiga. Skriv bara vad dokumenten säger att de innehåller; att de bara täcker en del av löftet får du skriva, men inte vilken del som lämnas utanför.
+- Påstå inget som dokumenten och anteckningarna inte visar. Skriv inte att något är genomfört eller i kraft om det inte framgår. Gissa inte.
+- Skriv inga varningar och inga reservationer om att fler dokument kan finnas.
+- Skriv inte "AI" och inte "bedömningen". Inga rubriker, inga punktlistor, ingen värdering av om löftet är bra eller dåligt.
+- Högst 450 tecken.`;
+
+/**
+ * The instructions before the absence ban (hemsida-6vh). Manifesto promises (`noAbsenceClaims`) keep them
+ * so their cached texts stay valid; the Tidö texts use REASONING_INSTRUCTIONS above.
+ */
+const LEGACY_INSTRUCTIONS = `Du skriver motiveringen till en bedömning på en svensk granskningssajt som följer upp politiska löften. Läsaren är en vanlig medborgare utan förkunskaper.
+
+Du får ett löfte och de dokument från riksdagens register som hör till det: typ, datum, titel, hur mycket av löftet dokumentet täcker (hela eller delar) och en kort, engelsk anteckning om vad dokumentet innehåller. Bedömningen är redan satt (pågår: åtgärden är under beredning eller beslutad, men ingen författning är kopplad till löftet). Din uppgift är bara att motivera den.
+
+Skriv två eller tre korta meningar på klarspråk:
+1. Vad som hänt hittills, i tidsordning och med egna ord (till exempel "Regeringen lade i mars 2026 fram ett förslag om ..."; "Riksdagen beslutade i maj 2025 att ...").
 2. Vad som täcks och vad som återstår eller saknas, om dokumenten bara täcker en del av löftet.
 
 Regler:
@@ -46,14 +67,14 @@ const LAW_INSTRUCTIONS: Record<string, string> = {
 Bedömningen är i det här fallet satt till uppfyllt: en lag (SFS) har beslutats och trätt i kraft och genomför löftet i sin helhet. Beskriv vad lagen innebär och skriv att lagen trädde i kraft på det angivna datumet ("Lagen som genomför löftet trädde i kraft den <datum>"). Nämn inget lagnummer.`,
   partially_fulfilled: `
 
-Bedömningen är i det här fallet satt till delvis uppfyllt: en lag (SFS) har trätt i kraft men genomför bara en del av löftet eller en svagare variant av det. Beskriv vad lagen innebär och när den trädde i kraft, och med hjälp av anteckningen vad lagen täcker av det som löftet gäller. Skriv vad som enligt underlaget saknas i lagen, helst som att det "nämns inte i dokumenten" (inte "ingår inte"), och påstå inte att något fortfarande bereds eller pågår. Säg aldrig att något täcker hela löftet eller löftet i sin helhet. Använd inte orden "anteckning" eller "lagtextutdrag". Nämn inget lagnummer.`,
+Bedömningen är i det här fallet satt till delvis uppfyllt: en lag (SFS) har trätt i kraft men genomför bara en del av löftet eller en svagare variant av det. Beskriv vad lagen innebär och när den trädde i kraft, och med hjälp av anteckningen vad lagen täcker av det som löftet gäller. Påstå inte att något fortfarande bereds eller pågår. Säg aldrig att något täcker hela löftet eller löftet i sin helhet. Använd inte orden "anteckning" eller "lagtextutdrag". Nämn inget lagnummer.`,
   // Every law behind the verdict is adopted but not yet in force: a verdict still rests on it.
   fulfilled_future: `
 
 Bedömningen är i det här fallet satt till uppfyllt: en lag (SFS) har beslutats och genomför löftet i sin helhet, men den har ännu inte trätt i kraft. Beskriv vad lagen innebär och skriv att lagen är beslutad och träder i kraft på det angivna datumet ("Lagen som genomför löftet är beslutad och träder i kraft den <datum>"). Använd bara presens eller futurum om ikraftträdandet, aldrig "trädde i kraft", "har trätt i kraft" eller "gäller". Nämn inget lagnummer.`,
   partially_fulfilled_future: `
 
-Bedömningen är i det här fallet satt till delvis uppfyllt: en lag (SFS) har beslutats men genomför bara en del av löftet eller en svagare variant av det, och den har ännu inte trätt i kraft. Beskriv vad lagen innebär, att den är beslutad och att den träder i kraft på det angivna datumet, och med hjälp av anteckningen vad lagen täcker av det som löftet gäller. Använd bara presens eller futurum om ikraftträdandet, aldrig "trädde i kraft", "har trätt i kraft" eller "gäller". Skriv vad som enligt underlaget saknas i lagen, helst som att det "nämns inte i dokumenten" (inte "ingår inte"), och påstå inte att något fortfarande bereds eller pågår. Säg aldrig att något täcker hela löftet eller löftet i sin helhet. Använd inte orden "anteckning" eller "lagtextutdrag". Nämn inget lagnummer.`,
+Bedömningen är i det här fallet satt till delvis uppfyllt: en lag (SFS) har beslutats men genomför bara en del av löftet eller en svagare variant av det, och den har ännu inte trätt i kraft. Beskriv vad lagen innebär, att den är beslutad och att den träder i kraft på det angivna datumet, och med hjälp av anteckningen vad lagen täcker av det som löftet gäller. Använd bara presens eller futurum om ikraftträdandet, aldrig "trädde i kraft", "har trätt i kraft" eller "gäller". Påstå inte att något fortfarande bereds eller pågår. Säg aldrig att något täcker hela löftet eller löftet i sin helhet. Använd inte orden "anteckning" eller "lagtextutdrag". Nämn inget lagnummer.`,
   in_progress_law_in_force: `
 
 En lag (SFS) som hör till löftet har trätt i kraft på det angivna datumet. Beskriv vad den lagen täcker. Beskriv bara vad dokumenten visar och påstå inte att något fortfarande bereds eller pågår. Använd inte orden "anteckning" eller "lagtextutdrag". Nämn inget lagnummer.`,
@@ -122,10 +143,11 @@ export function reasoningInstructions(
   noAbsenceClaims = false,
 ): string {
   const noLaw = verdict === 'in_progress' && !items.some((i) => i.kind === 'sfs');
+  const BASE_INSTRUCTIONS = noAbsenceClaims ? LEGACY_INSTRUCTIONS : REASONING_INSTRUCTIONS;
   const nonLegislative = noLaw && noAbsenceClaims && type !== undefined && type !== 'legislative';
   if (noLaw && noAbsenceClaims && !nonLegislative && type !== 'inquiry') {
     return (
-      REASONING_INSTRUCTIONS.replace(
+      BASE_INSTRUCTIONS.replace(
         'om delar av löftet inte nämns i dokumenten, skriv att dokumenten inte tar upp dem ("nämns inte i dokumenten").',
         'skriv inte vad dokumenten lämnar utanför.',
       ) +
@@ -134,7 +156,7 @@ export function reasoningInstructions(
     );
   }
   if (type === 'inquiry' && INQUIRY_INSTRUCTIONS[verdict]) {
-    let out = REASONING_INSTRUCTIONS.replace(
+    let out = BASE_INSTRUCTIONS.replace(
       'Bedömningen är redan satt (pågår: åtgärden är under beredning eller beslutad, men ingen författning är kopplad till löftet).',
       'Bedömningen är redan satt.',
     );
@@ -155,7 +177,7 @@ export function reasoningInstructions(
   }
   const laws = items.filter((i) => i.kind === 'sfs');
   if (nonLegislative) {
-    const base = REASONING_INSTRUCTIONS.replace(
+    const base = BASE_INSTRUCTIONS.replace(
       'Bedömningen är redan satt (pågår: åtgärden är under beredning eller beslutad, men ingen författning är kopplad till löftet).',
       'Bedömningen är redan satt (pågår: åtgärden är under beredning eller beslutad).',
     ).replace(
@@ -172,11 +194,11 @@ export function reasoningInstructions(
   // With a law in force, "ingen författning är kopplad till löftet" would contradict the evidence.
   let out =
     laws.length > 0
-      ? REASONING_INSTRUCTIONS.replace(
+      ? BASE_INSTRUCTIONS.replace(
           'Bedömningen är redan satt (pågår: åtgärden är under beredning eller beslutad, men ingen författning är kopplad till löftet).',
           'Bedömningen är redan satt.',
         )
-      : REASONING_INSTRUCTIONS;
+      : BASE_INSTRUCTIONS;
   if (items.some((i) => i.relevance === 'contradicts')) out += AGAINST_INSTRUCTIONS;
   if (verdict === 'fulfilled' || verdict === 'partially_fulfilled') {
     // Only laws still ahead: the in-force wording is future tense. Otherwise the original text.
@@ -269,13 +291,19 @@ export function buildReasoningPrompt(
   return `Löfte: ${promise.title}\n${promise.description}\n\nDokument:\n${docs}`;
 }
 
+/** v4 = the absence ban (Tidö); the manifesto texts keep v3 so their caches stay valid. */
+function templateVersion(instructions: string): string {
+  return instructions.includes(ABSENCE_BAN_MARKER) ? 'v4' : REASONING_TEMPLATE_VERSION;
+}
+const ABSENCE_BAN_MARKER = '- Skriv aldrig vad som saknas';
+
 export function reasoningKey(
   model: string,
   prompt: string,
   instructions: string = REASONING_INSTRUCTIONS,
 ): string {
   return createHash('sha256')
-    .update(JSON.stringify([model, REASONING_TEMPLATE_VERSION, instructions, prompt]))
+    .update(JSON.stringify([model, templateVersion(instructions), instructions, prompt]))
     .digest('hex');
 }
 
@@ -296,8 +324,47 @@ const IN_FORCE_CLAIM =
 const NEGATED_IN_FORCE =
   /framgår\s+(?:inte|ej)\s+att(?:(?![,;]|\s(?:men|och)\s)[^.!?])*?(?:i\s+kraft|gäller)|\b(?:inte|ej)\s+(?:ännu\s+)?(?:(?:har|hade)\s+)?(?:trätt\s+i\s+kraft|trädde\s+i\s+kraft|i\s+kraft|gäller)|\bännu\s+inte\s+(?:(?:har|hade)\s+)?(?:trätt\s+)?i\s+kraft|\bännu\s+inte\s+trätt\s+i\s+kraft/gi;
 
-const ABSENCE_CLAIM =
+/**
+ * A claim that something is absent from the documents. The writer never sees the whole documents, so
+ * these claims are unverifiable and most were false (hemsida-6vh: 76 of 113 false, 13 borderline).
+ * Even a law's note on what the law lacks does not make them safe: 38 of 47 such claims were false
+ * too, because the cited proposition covers the topic in another law. tools/audit-absence-claims.ts
+ * greps the real texts for the sentences this finds.
+ */
+export const ABSENCE_CLAIM =
   /\b(?:gäller|rör|beskriver|beskrivs|innehåller|behandlar|behandlas|tar|tas|redovisar|finns)\s+(?:inte|ej)\b|\bingen\s+finansiering\b|\bvisar\s+inga\s+(?:regler|åtgärder|pengar)\b|\b(?:syns|visas|redovisas)\s+(?:inte|ej)\b|(?:^|\s)(?:är|var)\s+(?:inte|ej)\s+(?:en\s+)?del\s+av\b|lämnas\s+(?:uttryckligen\s+)?utanför|\binte\s+uttryckligen\b|\b(?:gäller|täcker|handlar\s+om)\s+(?:bara|endast|enbart)\b[^.!?]*,\s+(?:inte|ej)\s+(?!ett\s+(?:beslut|förslag)\b)\S|\b(?:berörs|täcks|anges|framgår|nämner|tas\s+upp|omfattas)\s+(?:inte|ej)\b|nämns\s+(?:inte|ej)|ingår\s+(?:inte|ej)|\bsaknas\s+(?:i|det|helt)\b|\b(?:direktivet|uppdraget|utredningen|dokumenten|texten)\s+saknar\b|(?:inte|ej)\s+i\s+dokument/i;
+
+/**
+ * Further phrasings for the Tidö texts (hemsida-6vh): contrast and negation forms ("men inte X",
+ * "..., inte X", "täcker inte", "visas inte") that said the same thing in other words. The manifesto
+ * texts are checked with ABSENCE_CLAIM only, so their cached texts stay valid.
+ */
+const TIDO_ABSENCE_EXTRA = new RegExp(
+  [
+    String.raw`\b(?:omn[äa]mns|n[äa]mns|framg[åa]r|ing[åa]r|behandlas|ber[öo]rs|diskuteras|t[äa]cks|omfattas|regleras|anges|uttrycks|visas|genomf[öo]rs|föreslås|innehålls)\s+(?:\w+\s+)?(?:inte|ej)\b`,
+    String.raw`\b(?:tas|tar|togs|tog)\s+(?:\w+\s+)?inte\s+upp`,
+    String.raw`\b(?:täcker|omfattar|gäller|rör|handlar\s+om|behandlar|reglerar|innebär|innehåller|innefattar|avser|berör|visar|ger|genomför|gör|föreslår|riktar\s+sig|syftar)\s+(?:\w+\s+){0,2}?(?:inte|ej)\b`,
+    String.raw`\b(?:beskriver|beskrivs|redovisar|redovisas|syns|nämner|finns)\s+(?:inte|ej)\b`,
+    String.raw`\b(?:men|dock|däremot|alltså|således|samt|eller|och|eftersom\s+de)\s+(?:\w+\s+)?(?:inte|ej)\b`,
+    String.raw`,\s*(?:inte|ej)\b`,
+    String.raw`\b(?:inte|ej)\s+(?:heller|särskilt|alls|här|närmare|tydligt|uttryckligen|direkt)\b`,
+    String.raw`\b(?:föreslår|innehåller|innebär|ger|innefattar|innehöll)\s+(?:\w+\s+)?(?:ingen|inget|inga)\b`,
+    String.raw`\bsaknas\b`,
+    String.raw`\b(?:dokument(?:en|et)?|lag(?:en|ar|arna)?|förslag(?:et|en)?|texten|propositionen|utredningen|direktivet|uppdraget|beslut(?:et|en)?|betänkandet|promemorian)\s+saknar\b`,
+    String.raw`\b(?:finns|fanns)\s+(?:inget|ingen|inga)\b`,
+  ].join('|'),
+  'i',
+);
+
+/** The sentences of `text` that make an absence claim (the strict Tidö rule). */
+export function absenceSentences(text: string): string[] {
+  // "Dokumenten visar förslag, inget beslut" says what the listed documents show; it stays allowed.
+  const noDecision = /,?\s*(?:och\s+)?(?:(?:inte|ej)\s+(?:något|ett)\s+beslut|inget\s+beslut)/gi;
+  return text
+    .split(/(?<=[.!?])\s+/)
+    .map((x) => x.replace(noDecision, ''))
+    .filter((x) => ABSENCE_CLAIM.test(x) || TIDO_ABSENCE_EXTRA.test(x));
+}
 
 /**
  * Rejects text that name-drops documents or breaks the rules the prompt sets. `lawInForce` says that
@@ -311,12 +378,18 @@ export function reasoningProblems(
   coverage?: 'unconfirmed_full' | 'partial',
   inquiry = false,
   nonLegislative = false,
+  legacyAbsence = false,
 ): string[] {
   const problems: string[] = [];
-  if (nonLegislative && !inquiry && ABSENCE_CLAIM.test(text))
+  // Manifesto promises (`legacyAbsence`) keep the narrower rule; Tidö texts may never claim absence.
+  if (
+    legacyAbsence
+      ? (nonLegislative || inquiry) && ABSENCE_CLAIM.test(text)
+      : absenceSentences(text).length > 0
+  )
     problems.push('makes an absence claim');
   if (inquiry) {
-    // A directive-based verdict has no law behind it, and absence claims cannot be verified.
+    // A directive-based verdict has no law behind it.
     // Describing what the directive asks the inquiry to propose is fine; saying a law or a decision exists is not.
     if (
       /\blag(?:en|ar|arna)?\s+(?:har\s+)?(?:beslutats|antagits|börjat|trätt|träder|gäller|införts)|riksdagen\s+(?:har\s+)?beslut|\bi\s+kraft\b|ledde\s+till\s+(?:en\s+)?(?:nya?\s+)?(?:lag|beslut|lagstift)/i.test(
@@ -324,7 +397,6 @@ export function reasoningProblems(
       )
     )
       problems.push('talks about a law or a Riksdag decision in an inquiry text');
-    if (ABSENCE_CLAIM.test(text)) problems.push('makes an absence claim');
   }
   if (/anteckning|lagtextutdrag|textutdrag/i.test(text)) problems.push('uses an internal term');
   if (/visade\s+lagtext|avkortad|avkortat|brottskatalog-urval|citatet\s+är/i.test(text))
