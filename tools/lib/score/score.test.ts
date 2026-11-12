@@ -15,6 +15,7 @@ import {
   createScorer,
   parseClaudeResult,
   scorerFor,
+  SkippableScoreError,
   TooLongError,
   type ClaudeResult,
   type Scorer,
@@ -60,14 +61,17 @@ const promises = (n = 4): PlanPromise[] =>
   }));
 
 /** A scorer that counts calls and can be told to fail on call number `failOn`. */
-function countingScorer(failOn?: number): Scorer & { calls: number } {
+function countingScorer(
+  failOn?: number,
+  failWith: () => Error = () => new Error('boom'),
+): Scorer & { calls: number } {
   const inner = createFakeScorer();
   const s = {
     kind: 'fake',
     calls: 0,
     async score(state: string, questions: Record<string, string>) {
       s.calls++;
-      if (s.calls === failOn) throw new Error('boom');
+      if (s.calls === failOn) throw failWith();
       return inner.score(state, questions);
     },
   };
@@ -176,6 +180,28 @@ describe('runner', () => {
     const second = await runPlan(plan(), { ...opts, scorer: healthy });
     expect(second.status).toBe('complete');
     expect(healthy.calls).toBe(total - 2);
+  });
+
+  it('skips a request on SkippableScoreError, finishes the rest and retries it on the next run', async () => {
+    const cache = createMemoryCache();
+    const total = plan().requests.length;
+    const opts = { cache, maxCostUsd: 1, usdPerMillionTokens: 0.042, concurrency: 1 };
+    const flaky = countingScorer(2, () => new SkippableScoreError('claude: error_max_turns'));
+    const progress: number[] = [];
+    const first = await runPlan(plan(), {
+      ...opts,
+      scorer: flaky,
+      onProgress: (done) => progress.push(done),
+    });
+    expect(first).toMatchObject({ status: 'complete', sent: total - 1, skipped: 1, remaining: 1 });
+    expect(progress.at(-1)).toBe(total);
+    expect(first.error).toMatch(/1 request\(s\) skipped/);
+    expect(cache.size()).toBe(total - 1);
+    const healthy = countingScorer();
+    const second = await runPlan(plan(), { ...opts, scorer: healthy });
+    expect(second).toMatchObject({ status: 'complete', sent: 1, skipped: 0, remaining: 0 });
+    expect(second.error).toBeUndefined();
+    expect(healthy.calls).toBe(1);
   });
 
   it('stops before overspending and leaves completed requests cached', async () => {
@@ -319,6 +345,23 @@ describe('scorers', () => {
       expect(() =>
         parseClaudeResult(ok({ subtype: 'error_max_turns', is_error: true }), ids),
       ).not.toThrow(TooLongError);
+    });
+    it('makes only error_max_turns skippable; rate limits and other errors still stop the run', () => {
+      const maxTurns = ok({
+        subtype: 'error_max_turns',
+        is_error: true,
+        errors: ['Reached maximum number of turns (1)'],
+      });
+      expect(() => parseClaudeResult(maxTurns, ids)).toThrow(SkippableScoreError);
+      expect(() => parseClaudeResult(maxTurns, ids)).toThrow(/error_max_turns.*maximum number/);
+      for (const status of [429, 529, 500]) {
+        const failed = ok({ is_error: true, api_error_status: status, result: 'limit' });
+        expect(() => parseClaudeResult(failed, ids)).toThrow(/limit/);
+        expect(() => parseClaudeResult(failed, ids)).not.toThrow(SkippableScoreError);
+      }
+      expect(() => parseClaudeResult(ok({ structured_output: { q0: 0.5 } }), ids)).not.toThrow(
+        SkippableScoreError,
+      );
     });
     it('rejects structured output that is missing a key or out of range', () => {
       expect(() => parseClaudeResult(ok({ structured_output: { q0: 0.5 } }), ids)).toThrow(

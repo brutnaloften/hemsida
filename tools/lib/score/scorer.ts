@@ -24,6 +24,13 @@ export class TooLongError extends Error {
   }
 }
 
+/**
+ * One request failed in a way that says nothing about the rest of the run (the model ran out of turns
+ * before producing valid structured output): the runner skips it and goes on, and a re-run sends it again.
+ * Rate and usage limits are deliberately not skippable: they hit every later request too, so the run stops.
+ */
+export class SkippableScoreError extends Error {}
+
 export function createJevScorer(token: string, model: string): Scorer {
   return {
     kind: 'jev',
@@ -68,13 +75,17 @@ export interface ClaudeResult {
   usage: { input_tokens: number };
 }
 
+/** Room for the Agent SDK to retry structured output that failed validation (see `createClaudeScorer`). */
+export const CLAUDE_MAX_TURNS = 3;
+
 /** Positional question keys: promise ids can exceed the 64-character tool-schema property-name limit. */
 const claudeKey = (i: number): string => `q${i}`;
 
 /**
  * Turn one Agent SDK result into answers keyed by the real question ids. API errors (including prompt too
  * long) arrive as `subtype: 'success'` with `is_error: true`; only a 400 about length becomes `TooLongError`
- * (the runner then halves the state), every other failure is a plain error carrying the SDK's message.
+ * (the runner then halves the state), `error_max_turns` becomes `SkippableScoreError`, every other failure
+ * is a plain error carrying the SDK's message.
  */
 export function parseClaudeResult(message: ClaudeResult, ids: readonly string[]): ScoreResult {
   if (message.subtype !== 'success' || message.is_error) {
@@ -83,7 +94,9 @@ export function parseClaudeResult(message: ClaudeResult, ids: readonly string[])
     if (message.api_error_status === 400 && /too long|context|max_tokens/i.test(detail)) {
       throw new TooLongError(`claude: ${detail}`);
     }
-    throw new Error(`claude: ${message.subtype} (status ${status}): ${detail}`);
+    const text = `claude: ${message.subtype} (status ${status}): ${detail}`;
+    if (message.subtype === 'error_max_turns') throw new SkippableScoreError(text);
+    throw new Error(text);
   }
   const shape = z.object(
     Object.fromEntries(ids.map((_, i) => [claudeKey(i), z.number().min(0).max(1)])),
@@ -146,7 +159,9 @@ export function createClaudeScorer(model: string): Scorer {
           model,
           settingSources: [], // no CLAUDE.md / project settings bleeding into the scoring prompt
           tools: [], // pure completion: no built-in tools sent or callable
-          maxTurns: 1,
+          // Structured output comes back through an SDK-internal tool call; when the first attempt does not
+          // validate the SDK needs another turn to retry, and with 1 the request fails as error_max_turns.
+          maxTurns: CLAUDE_MAX_TURNS,
           thinking: { type: 'disabled' },
           systemPrompt:
             'Du svarar bara med strukturerad JSON enligt schemat. Inga verktyg, inga förklaringar.',
