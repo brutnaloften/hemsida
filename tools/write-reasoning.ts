@@ -99,10 +99,8 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
       judgementBy.get(`${p.id}:${e.dok_id}`)?.reason ??
       (e.kind === 'bet' ? 'Riksdagens beslut om en proposition som hör till löftet.' : ''),
   }));
-  if (p.verdict.value !== 'in_progress' && !hasLawInForce(items, today)) {
-    console.warn(
-      `WARNING ${file}: verdict ${p.verdict.value} but no sfs evidence in force on ${today}; skipped`,
-    );
+  if (p.verdict.value !== 'in_progress' && !items.some((i) => i.kind === 'sfs')) {
+    console.warn(`WARNING ${file}: verdict ${p.verdict.value} but no sfs evidence; skipped`);
     continue;
   }
   const prompt = buildReasoningPrompt(p, items, today);
@@ -119,7 +117,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
       p.verdict.value === 'partially_fulfilled'
         ? 'partial'
         : p.verdict.value === 'in_progress' &&
-            items.some((i) => i.kind === 'sfs' && i.date <= today && i.relevance === 'full')
+            items.some((i) => i.kind === 'sfs' && i.relevance === 'full')
           ? 'unconfirmed_full'
           : undefined,
   });

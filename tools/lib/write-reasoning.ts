@@ -47,6 +47,13 @@ Bedömningen är i det här fallet satt till uppfyllt: en lag (SFS) har beslutat
   partially_fulfilled: `
 
 Bedömningen är i det här fallet satt till delvis uppfyllt: en lag (SFS) har trätt i kraft men genomför bara en del av löftet eller en svagare variant av det. Beskriv vad lagen innebär och när den trädde i kraft, och med hjälp av anteckningen vad lagen täcker av det som löftet gäller. Skriv vad som enligt underlaget saknas i lagen, helst som att det "nämns inte i dokumenten" (inte "ingår inte"), och påstå inte att något fortfarande bereds eller pågår. Säg aldrig att något täcker hela löftet eller löftet i sin helhet. Använd inte orden "anteckning" eller "lagtextutdrag". Nämn inget lagnummer.`,
+  // Every law behind the verdict is adopted but not yet in force: a verdict still rests on it.
+  fulfilled_future: `
+
+Bedömningen är i det här fallet satt till uppfyllt: en lag (SFS) har beslutats och genomför löftet i sin helhet, men den har ännu inte trätt i kraft. Beskriv vad lagen innebär och skriv att lagen är beslutad och träder i kraft på det angivna datumet ("Lagen som genomför löftet är beslutad och träder i kraft den <datum>"). Använd bara presens eller futurum om ikraftträdandet, aldrig "trädde i kraft", "har trätt i kraft" eller "gäller". Nämn inget lagnummer.`,
+  partially_fulfilled_future: `
+
+Bedömningen är i det här fallet satt till delvis uppfyllt: en lag (SFS) har beslutats men genomför bara en del av löftet eller en svagare variant av det, och den har ännu inte trätt i kraft. Beskriv vad lagen innebär, att den är beslutad och att den träder i kraft på det angivna datumet, och med hjälp av anteckningen vad lagen täcker av det som löftet gäller. Använd bara presens eller futurum om ikraftträdandet, aldrig "trädde i kraft", "har trätt i kraft" eller "gäller". Skriv vad som enligt underlaget saknas i lagen, helst som att det "nämns inte i dokumenten" (inte "ingår inte"), och påstå inte att något fortfarande bereds eller pågår. Säg aldrig att något täcker hela löftet eller löftet i sin helhet. Använd inte orden "anteckning" eller "lagtextutdrag". Nämn inget lagnummer.`,
   in_progress_law_in_force: `
 
 En lag (SFS) som hör till löftet har trätt i kraft på det angivna datumet. Beskriv vad den lagen täcker. Beskriv bara vad dokumenten visar och påstå inte att något fortfarande bereds eller pågår. Använd inte orden "anteckning" eller "lagtextutdrag". Nämn inget lagnummer.`,
@@ -64,8 +71,8 @@ const FUTURE_LAW_NOTE =
 
 /**
  * The system prompt for a promise: the base instructions plus the extra rules when needed. A law in
- * force (SFS date on or before `today`) is what makes fulfilled / partially_fulfilled; a law that is
- * decided but not yet in force adds a note to in_progress.
+ * An issued law (SFS entry) is what makes fulfilled / partially_fulfilled, in force or not: a law
+ * whose in-force date is still ahead gets future-tense instructions; for in_progress it adds a note.
  */
 export function reasoningInstructions(
   items: readonly ReasoningItem[],
@@ -84,14 +91,16 @@ export function reasoningInstructions(
       : REASONING_INSTRUCTIONS;
   if (items.some((i) => i.relevance === 'contradicts')) out += AGAINST_INSTRUCTIONS;
   if (verdict === 'fulfilled' || verdict === 'partially_fulfilled') {
-    out += LAW_INSTRUCTIONS[verdict];
-    if (laws.some((i) => i.date > today)) out += FUTURE_LAW_NOTE;
+    // Only laws still ahead: the in-force wording is future tense. Otherwise the original text.
+    out += LAW_INSTRUCTIONS[inForce ? verdict : `${verdict}_future`];
+    if (inForce && laws.some((i) => i.date > today)) out += FUTURE_LAW_NOTE;
   } else if (inForce) {
     out += LAW_INSTRUCTIONS.in_progress_law_in_force;
     if (laws.some((i) => i.date <= today && i.relevance === 'full')) out += UNCONFIRMED_FULL_NOTE;
     if (laws.some((i) => i.date > today)) out += FUTURE_LAW_NOTE;
   } else if (laws.length > 0) {
     out += LAW_INSTRUCTIONS.in_progress;
+    if (laws.some((i) => i.relevance === 'full')) out += UNCONFIRMED_FULL_NOTE;
   }
   return out;
 }

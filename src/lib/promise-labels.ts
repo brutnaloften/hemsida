@@ -48,7 +48,8 @@ export const VERDICT_DESCRIPTIONS: Record<(typeof VERDICTS)[number], string> = {
     'Vi har sökt i riksdagens dokument och inte hittat något som visar att arbetet har påbörjats. Motiveringen anger när och vad vi sökte efter.',
   in_progress:
     'Arbetet pågår, till exempel i form av en utredning, ett förslag eller en proposition, men är ännu inte beslutat eller i kraft.',
-  fulfilled: 'Löftet har genomförts som det formulerades.',
+  fulfilled:
+    'Löftet har genomförts som det formulerades. En beslutad lag räknas, även om den träder i kraft först senare.',
   partially_fulfilled:
     'Löftet har genomförts, men i väsentligt snävare eller svagare form än utlovat, eller bara till vissa delar.',
   unfulfilled: 'Mandatperioden gick ut utan att löftet hade genomförts.',

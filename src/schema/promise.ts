@@ -303,11 +303,11 @@ function checkVerdictEvidence(
     );
   }
   if (value === 'fulfilled' || value === 'partially_fulfilled') {
-    // The law must have been in force when the verdict was set (sfs date = in-force date).
-    const inForce = riksdag.some((e) => e.kind === 'sfs' && e.date <= p.verdict.date);
-    if (!inForce) {
+    // An issued law is enough, including one whose in-force date (the sfs date) is still ahead:
+    // the government's part is done once the law is adopted. Agreement and budget evidence do not count.
+    if (!riksdag.some((e) => e.kind === 'sfs')) {
       fail(
-        `verdict ${value} requires Riksdag evidence of kind sfs dated on or before the verdict date (a law in force when the verdict was set; agreement and budget evidence do not count)`,
+        `verdict ${value} requires Riksdag evidence of kind sfs (an issued law, in force or not yet; agreement and budget evidence do not count)`,
       );
     }
   }

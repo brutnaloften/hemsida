@@ -360,21 +360,17 @@ describe('promiseSchema', () => {
       expect(ok(make('fulfilled', 'Klart.', []))).toBe(false);
     });
 
-    it('fulfilled and partially_fulfilled need an sfs entry in force at the verdict date', () => {
+    it('fulfilled and partially_fulfilled need an sfs entry, in force or not yet', () => {
       for (const v of ['fulfilled', 'partially_fulfilled']) {
         expect(ok(make(v, 'Lag i kraft.', [ev('sfs', { date: '2024-01-01' })])), v).toBe(true);
         expect(ok(make(v, 'Motivering.', [])), v).toBe(false);
         expect(ok(make(v, 'Motivering.', [ev('prop')])), v).toBe(false);
-        // verdict.date is 2024-01-01; a law taking effect later was not in force yet.
-        const later = make(v, 'Motivering.', [ev('sfs', { date: '2024-01-02' })]);
-        expect(ok(later), v).toBe(false);
-        expect(messages(later)[0]).toContain('on or before the verdict date');
-        // An earlier in-force law next to a later one is enough.
-        const both = [
-          ev('sfs', { date: '2024-01-02' }),
-          ev('sfs', { dok_id: 'sfs-2022-1', designation: 'SFS 2022:1', date: '2023-01-01' }),
-        ];
-        expect(ok(make(v, 'Motivering.', both)), v).toBe(true);
+        // verdict.date is 2024-01-01; an issued law taking effect later still counts.
+        expect(ok(make(v, 'Motivering.', [ev('sfs', { date: '2024-01-02' })])), v).toBe(true);
+        // A contradicting law does not.
+        const against = make(v, 'Motivering.', [ev('sfs', { relevance: 'contradicts' })]);
+        expect(ok(against), v).toBe(false);
+        expect(messages(against)[0]).toContain('kind sfs');
       }
     });
 
