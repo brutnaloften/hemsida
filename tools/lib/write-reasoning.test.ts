@@ -107,6 +107,28 @@ describe('write-reasoning', () => {
     );
   });
 
+  it('rejects internal terms and full-coverage claims where the verdict is not fulfilled', () => {
+    const ok = 'Lagen trädde i kraft 1 april 2025 och förlänger tiden.';
+    expect(reasoningProblems(`${ok} Enligt anteckningen saknas något.`, [], true)).toContain(
+      'uses an internal term',
+    );
+    expect(reasoningProblems(`${ok} Lagen täcker hela löftet.`, [], true, 'partial')).toContain(
+      'claims full coverage',
+    );
+    expect(reasoningProblems(`${ok} Lagen täcker hela löftet.`, [], true)).toEqual([]);
+    expect(reasoningProblems(`${ok} Lagen täcker löftet.`, [], true, 'unconfirmed_full')).toContain(
+      'must say the coverage is unconfirmed',
+    );
+    expect(
+      reasoningProblems(
+        `${ok} Lagen verkar täcka löftet, men det är obekräftat.`,
+        [],
+        true,
+        'unconfirmed_full',
+      ),
+    ).toEqual([]);
+  });
+
   it('rejects claims that something is still being prepared', () => {
     const ok = 'Lagen trädde i kraft 1 april 2025 och förlänger tiden.';
     for (const bad of [

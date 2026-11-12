@@ -46,14 +46,18 @@ const LAW_INSTRUCTIONS: Record<string, string> = {
 Bedömningen är i det här fallet satt till uppfyllt: en lag (SFS) har beslutats och trätt i kraft och genomför löftet i sin helhet. Beskriv vad lagen innebär och skriv att lagen trädde i kraft på det angivna datumet ("Lagen som genomför löftet trädde i kraft den <datum>"). Nämn inget lagnummer.`,
   partially_fulfilled: `
 
-Bedömningen är i det här fallet satt till delvis uppfyllt: en lag (SFS) har trätt i kraft men genomför bara en del av löftet eller en svagare variant av det. Beskriv vad lagen innebär och när den trädde i kraft, och med hjälp av anteckningen vad lagen täcker av det som löftet gäller. Skriv vad anteckningen säger att lagen inte täcker, och påstå inte att något fortfarande bereds eller pågår. Nämn inget lagnummer.`,
+Bedömningen är i det här fallet satt till delvis uppfyllt: en lag (SFS) har trätt i kraft men genomför bara en del av löftet eller en svagare variant av det. Beskriv vad lagen innebär och när den trädde i kraft, och med hjälp av anteckningen vad lagen täcker av det som löftet gäller. Skriv vad som enligt underlaget saknas i lagen, helst som att det "nämns inte i dokumenten" (inte "ingår inte"), och påstå inte att något fortfarande bereds eller pågår. Säg aldrig att något täcker hela löftet eller löftet i sin helhet. Använd inte orden "anteckning" eller "lagtextutdrag". Nämn inget lagnummer.`,
   in_progress_law_in_force: `
 
-En lag (SFS) som hör till löftet har trätt i kraft på det angivna datumet. Beskriv vad den lagen täcker. Beskriv bara vad dokumenten visar och påstå inte att något fortfarande bereds eller pågår. Nämn inget lagnummer.`,
+En lag (SFS) som hör till löftet har trätt i kraft på det angivna datumet. Beskriv vad den lagen täcker. Beskriv bara vad dokumenten visar och påstå inte att något fortfarande bereds eller pågår. Använd inte orden "anteckning" eller "lagtextutdrag". Nämn inget lagnummer.`,
   in_progress: `
 
 En lag (SFS) som hör till löftet är beslutad och träder i kraft ett senare datum. Skriv att lagen är beslutad och att den träder i kraft på det angivna datumet. Skriv inte att den gäller eller har trätt i kraft. Nämn inget lagnummer.`,
 };
+
+/** A law judged to cover the promise fully, but below high confidence: the verdict stays in_progress. */
+const UNCONFIRMED_FULL_NOTE =
+  ' Lagen verkar enligt dokumenten täcka löftet, men det är obekräftat, och därför står bedömningen kvar som pågående. Skriv att lagen verkar täcka löftet men att det är obekräftat. Skriv aldrig att den täcker hela löftet.';
 
 const FUTURE_LAW_NOTE =
   ' En annan lag är beslutad och träder i kraft senare; formuleringen "träder i kraft" gäller bara den lagen och du får inte skriva att den gäller.';
@@ -84,6 +88,7 @@ export function reasoningInstructions(
     if (laws.some((i) => i.date > today)) out += FUTURE_LAW_NOTE;
   } else if (inForce) {
     out += LAW_INSTRUCTIONS.in_progress_law_in_force;
+    if (laws.some((i) => i.date <= today && i.relevance === 'full')) out += UNCONFIRMED_FULL_NOTE;
     if (laws.some((i) => i.date > today)) out += FUTURE_LAW_NOTE;
   } else if (laws.length > 0) {
     out += LAW_INSTRUCTIONS.in_progress;
@@ -200,8 +205,23 @@ export function reasoningProblems(
   text: string,
   designations: readonly string[],
   lawInForce = false,
+  coverage?: 'unconfirmed_full' | 'partial',
 ): string[] {
   const problems: string[] = [];
+  if (/anteckning|lagtextutdrag|textutdrag/i.test(text)) problems.push('uses an internal term');
+  if (coverage === 'unconfirmed_full' || coverage === 'partial') {
+    if (
+      /(?:täcker|genomför|omfattar)\s+(?:hela|fullt ut|helt)\b|\bhela\s+löftet|\bi\s+sin\s+helhet/i.test(
+        text,
+      )
+    )
+      problems.push('claims full coverage');
+  }
+  if (
+    coverage === 'unconfirmed_full' &&
+    !/obekräftad|obekräftat|(?:inte|ej)\s+bekräftat|bekräftas\s+(?:inte|ej)/i.test(text)
+  )
+    problems.push('must say the coverage is unconfirmed');
   for (const d of designations) if (text.includes(d)) problems.push(`names ${d}`);
   if (/\b(Prop\.|Bet\.|SOU|Dir\.|Ds)\s?\d{4}/.test(text)) problems.push('names a designation');
   if (/\bSFS\s?\d{4}:\d+/.test(text)) problems.push('names an SFS designation');
