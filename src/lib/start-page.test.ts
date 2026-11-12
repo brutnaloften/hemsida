@@ -61,7 +61,7 @@ function promisesFor(agreementId: string): StartPromise[] {
     promise('valmanifest-2022-m', ['M'], 'fulfilled', [outcome(agreementId, 'included')]),
     promise('valmanifest-2022-m', ['M'], 'unassessed', [outcome(agreementId, 'not_addressed')]),
     promise('valmanifest-2022-s', ['S']),
-    promise(agreementId, ['M', 'KD', 'L', 'SD']),
+    promise(agreementId, ['M', 'KD', 'L', 'SD'], 'in_progress'),
   ];
 }
 
@@ -72,7 +72,7 @@ describe('buildStartModel', () => {
       [agreementSource('tidoavtalet', 'Tidöavtalet'), ...manifestos],
       promisesFor('tidoavtalet'),
     );
-    expect(m.keyNumbers).toMatchObject({ promises: 3, parties: 8, assessed: 1 });
+    expect(m.keyNumbers).toMatchObject({ promises: 4, parties: 8, assessed: 2 });
     expect(m.agreements).toMatchObject([{ name: 'Tidöavtalet', points: 1 }]);
     expect(m.roleGroups.map((g) => g.parties)).toEqual([
       ['M', 'KD', 'L'],
@@ -82,6 +82,10 @@ describe('buildStartModel', () => {
     const cards = m.cardGroups.flatMap((g) => g.cards);
     const mCard = cards.find((c) => c.party === 'M')!;
     expect(mCard.promises).toBe(2);
+    expect(mCard.assessed).toBe(1);
+    // The agreement point is not a vallöfte, but is reported per party behind it.
+    expect(mCard.agreementPoints).toMatchObject([{ points: 1, assessed: 1 }]);
+    expect(cards.find((c) => c.party === 'S')!.agreementPoints).toEqual([]);
     expect(agreementSplitText(mCard.agreementSplits[0]!.counts)).toBe('1 med · 1 saknas');
     expect(cards.find((c) => c.party === 'S')!.agreementSplits).toEqual([]);
   });
@@ -92,8 +96,8 @@ describe('buildStartModel', () => {
     expect(m.cardGroups.flatMap((g) => g.cards).every((c) => c.agreementSplits.length === 0)).toBe(
       true,
     );
-    // Only manifesto promises count, with or without an agreement.
-    expect(m.keyNumbers.promises).toBe(3);
+    // The hero counts every promise in the term, whatever its source.
+    expect(m.keyNumbers).toMatchObject({ promises: 4, assessed: 2 });
   });
 
   it('scenario 3: a differently named agreement', () => {

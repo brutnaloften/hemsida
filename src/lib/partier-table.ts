@@ -2,6 +2,7 @@ import type { AgreementOutcome, Evidence, Source } from '@/schema/promise';
 import type { Term } from '@/schema/term';
 import {
   agreementOutcomeCounts,
+  agreementPointStats,
   assessedCount,
   promisesForParty,
   verdictCounts,
@@ -23,6 +24,9 @@ export interface AgreementCell {
   stands: boolean;
   counts: Record<AgreementOutcome, number>;
   total: number;
+  /** The agreement's own points that list the party, and how many of them are assessed. */
+  points: number;
+  pointsAssessed: number;
 }
 
 export interface PartierRow {
@@ -60,6 +64,10 @@ export function buildPartierRows(
       agreements: agreements.map((a) => ({
         agreementId: a.id,
         stands: (a.parties as readonly string[]).includes(party),
+        ...(() => {
+          const s = agreementPointStats(promises, a.id, party);
+          return { points: s.points, pointsAssessed: s.assessed };
+        })(),
         ...agreementOutcomeCounts(
           own.map((p) => ({
             evidence: p.evidence.filter((e) => e.kind !== 'agreement' || e.source === a.id),

@@ -8,7 +8,7 @@ import { AREAS } from '@/schema/areas';
 import { agreementName } from '@/schema/promise';
 import type { AgreementOutcome, Evidence, PromiseRecord } from '@/schema/promise';
 import type { Term } from '@/schema/term';
-import { agreementOutcomeCounts } from '@/lib/party-stats';
+import { agreementOutcomeCounts, agreementPointStats } from '@/lib/party-stats';
 import { manifestoOnly } from '@/lib/manifesto';
 import { isAgreement } from '@/lib/timeline';
 
@@ -32,6 +32,9 @@ export interface PartyAgreement {
   counts: Record<AgreementOutcome, number>;
   /** Manifesto promises with an entry for this agreement. */
   total: number;
+  /** The agreement's own points that list the party, and how many are assessed. */
+  points: number;
+  pointsAssessed: number;
 }
 
 export interface PartyPageModel<T extends PartyPagePromise> {
@@ -77,7 +80,16 @@ export function buildPartyModel<T extends PartyPagePromise>(
     const forAgreement = manifesto.map((p) => ({
       evidence: p.evidence.filter((e) => isAgreement(e) && e.source === id),
     }));
-    return [{ source, name: agreementName(source), ...agreementOutcomeCounts(forAgreement) }];
+    const pts = agreementPointStats(mine, id, party);
+    return [
+      {
+        source,
+        name: agreementName(source),
+        ...agreementOutcomeCounts(forAgreement),
+        points: pts.points,
+        pointsAssessed: pts.assessed,
+      },
+    ];
   });
 
   const manifestoSources = [...new Set(manifesto.map((p) => p.source.id))]

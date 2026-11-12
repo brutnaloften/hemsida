@@ -27,7 +27,7 @@ const promises = [
   mk('1', ['M'], 'unassessed', 'included'),
   mk('2', ['M'], 'fulfilled', 'weakened'),
   mk('3', ['S'], 'unassessed', undefined, 'valmanifest-2022-s'),
-  mk('tido-1', ['M', 'KD', 'SD'], 'unassessed', 'included', 'tidoavtalet'),
+  mk('tido-1', ['M', 'KD', 'SD'], 'in_progress', 'included', 'tidoavtalet'),
   mk('4', ['M'], 'unassessed', 'contradicted', 'valmanifest-2022-m', 'other'),
 ] as never;
 const sources = [
@@ -56,6 +56,17 @@ describe('buildPartierRows', () => {
     // the contradicted entry belongs to another agreement source
     expect(m.agreements[0].counts.contradicted).toBe(0);
     expect(m.agreements[0].stands).toBe(true);
+  });
+  it('counts the agreement own points and how many are assessed', () => {
+    const m = rows[0].agreements[0];
+    expect(m).toMatchObject({ points: 0, pointsAssessed: 0 }); // 'avt' has no points of its own
+    const t = buildPartierRows(
+      { ...(term as object), agreements: ['tidoavtalet'] } as never,
+      promises,
+      sources,
+    );
+    expect(t[0].agreements[0]).toMatchObject({ points: 1, pointsAssessed: 1 });
+    expect(t.find((r) => r.party === 'S')?.agreements[0]).toMatchObject({ points: 0 });
   });
   it('marks parties outside the agreement', () => {
     expect(rows[3].agreements[0].stands).toBe(false);

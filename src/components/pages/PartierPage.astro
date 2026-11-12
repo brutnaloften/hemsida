@@ -114,11 +114,15 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
                       <td class="min-w-48 px-4 py-3">
                         {!cell.stands ? (
                           <span class="text-sm text-muted-foreground">Står inte bakom överenskommelsen</span>
-                        ) : cell.total === 0 ? (
+                        ) : cell.total === 0 ? (cell.points > 0 ? (
+                          <p class="text-sm text-muted-foreground">
+                            {cell.points} punkter, {cell.pointsAssessed} bedömda
+                          </p>
+                        ) : (
                           <span class="text-sm text-muted-foreground">
                             {row.promiseCount === 0 ? 'Inga löften insamlade' : 'Inga löften jämförda'}
                           </span>
-                        ) : (
+                        )) : (
                           <>
                             <div class="flex h-2.5 w-full overflow-hidden rounded-full bg-muted" aria-hidden="true">
                               <div style={`width:${pct(cell.counts.included + cell.counts.strengthened, cell.total)};background:var(--agreement-included-bg)`} />
@@ -128,6 +132,11 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
                             <p class="mt-1.5 text-sm text-muted-foreground">
                               {outcomeCountsText(cell.counts)}
                             </p>
+                            {cell.points > 0 && (
+                              <p class="mt-1 text-sm text-muted-foreground">
+                                {cell.points} punkter, {cell.pointsAssessed} bedömda
+                              </p>
+                            )}
                           </>
                         )}
                       </td>

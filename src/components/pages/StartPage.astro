@@ -32,7 +32,7 @@ const { keyNumbers: k } = model;
 const hasData = promises.length > 0;
 const latestTerm = await getDefaultTerm();
 const keyList = [
-  { n: k.promises, label: 'löften' },
+  { n: k.promises, label: 'löften totalt' },
   { n: k.parties, label: 'partier' },
   { n: k.assessed, label: 'bedömda hittills' },
   { n: k.riksdagDocuments, label: 'riksdagsdokument kopplade' },
@@ -163,7 +163,8 @@ const keyList = [
         Var vi står just nu
       </h2>
       <p class="mt-2 max-w-3xl">
-        {num(k.assessed)} av {num(k.promises)} löften är bedömda. <strong>Inte bedömt</strong> säger ingenting om
+        {num(k.assessed)} av {num(k.promises)} löften är bedömda. Siffran gäller alla löften under perioden:
+        vallöften, punkter i överenskommelser och utfästelser under mandatperioden. <strong>Inte bedömt</strong> säger ingenting om
         huruvida ett löfte hålls. Det betyder bara att ingen har bedömt det ännu.
         <a href={`${base}om-metoden`} class="underline underline-offset-2">Så arbetar vi</a>
       </p>
@@ -189,8 +190,7 @@ const keyList = [
                     <span class="font-semibold">{partyName(c.party)}</span>
                   </span>
                   <span class="text-sm text-muted-foreground">
-                    {c.promises > 0 ? `${num(c.promises)} löften` : 'Inga löften insamlade'}
-                    {c.promises > 0 && ` · ${num(c.assessed)} bedömda`}
+                    {c.promises > 0 ? `${num(c.assessed)} av ${num(c.promises)} vallöften bedömda` : 'Inga vallöften insamlade'}
                   </span>
                   {c.promises > 0 && (
                     <span
@@ -201,6 +201,13 @@ const keyList = [
                       <span class="bg-foreground/70" style={`width:${(c.assessed / c.promises) * 100}%`} />
                     </span>
                   )}
+                  {c.agreementPoints
+                    .filter((s) => s.points > 0)
+                    .map((s) => (
+                      <span class="text-sm text-muted-foreground">
+                        {s.agreement.name}: {num(s.points)} punkter, {num(s.assessed)} bedömda
+                      </span>
+                    ))}
                   {c.agreementSplits
                     .filter((s) => s.total > 0)
                     .map((s) => (
