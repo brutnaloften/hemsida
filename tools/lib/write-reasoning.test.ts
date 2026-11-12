@@ -206,6 +206,17 @@ describe('write-reasoning', () => {
       );
     });
 
+    it('uses future-tense instructions when every law is still ahead', () => {
+      for (const v of ['fulfilled', 'partially_fulfilled']) {
+        const ins = reasoningInstructions([item, future], v, today);
+        expect(ins).toContain('ännu inte trätt i kraft');
+        expect(ins).toContain('aldrig "trädde i kraft"');
+        expect(reasoningInstructions([item, law], v, today)).not.toContain('ännu inte trätt');
+      }
+      const medium = reasoningInstructions([item, future], 'in_progress', today);
+      expect(medium).toContain('obekräftat');
+    });
+
     it('only accepts in-force phrasing when a law is in force', () => {
       const text = 'Lagen som genomför löftet trädde i kraft den 1 juli 2026.';
       expect(hasLawInForce([law], today)).toBe(true);

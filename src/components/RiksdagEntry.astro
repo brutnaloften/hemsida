@@ -12,6 +12,7 @@ const link = 'underline underline-offset-2';
 <div>
   <p class="text-sm text-muted-foreground">
     {e.date} &middot; {EVIDENCE_KIND_LABELS[e.kind]}
+    {e.kind === "sfs" && " (datum för ikraftträdande)"}
     {e.relevance === "partial" && " (delvis relevant)"}
     {e.relevance === "contradicts" && (
       <>

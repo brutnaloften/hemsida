@@ -13,14 +13,15 @@
  *    propositions in the evidence (`sfs.byProp`) become `sfs` evidence when the judge (or an override)
  *    gave them coverage full, partial or weaker (relevance `full` for full, otherwise `partial`, with
  *    the gap in `note`); a law with no judgement is not added, and neither is one without an in-force
- *    date (the schema needs a date). A law is in force when its in-force date is on or before `today`.
- *    No law in force: `in_progress`. Pending work keeps `in_progress` too: another linked proposition
- *    (budget excluded) with no law in force yet, or a linked dir/sou/ds dated after the newest
- *    proposition that has a law in force. With nothing pending: `fulfilled` only when a law judged
- *    `full` at `high` confidence is in force, no linked law is judged `weaker`, and every linked law
- *    (judged full/partial/weaker) is in force (a future or undated law on the same proposition blocks
- *    `fulfilled`, so the promise gets `partially_fulfilled` instead); `partially_fulfilled` when laws
- *    are in force and one is high-confidence full or partial/weaker. A `full` below `high` confidence
+ *    date (the schema needs a date). A law counts once it is issued (utfärdad): a law whose in-force
+ *    date is still in the future counts as fulfilling the promise, with the in-force date in the
+ *    reasoning (future tense); the date does not gate the verdict. No law at all: `in_progress`.
+ *    Pending work keeps `in_progress` too: another linked proposition (budget excluded) with no dated
+ *    law yet, or a linked dir/sou/ds dated after the newest proposition that has a law. With nothing
+ *    pending: `fulfilled` only when a law judged `full` at `high` confidence is linked, no linked law
+ *    is judged `weaker`, and no judged law is undated (an undated law on the same proposition blocks
+ *    `fulfilled`, so the promise gets `partially_fulfilled` instead); `partially_fulfilled` when a
+ *    law is high-confidence full or partial/weaker. A `full` below `high` confidence
  *    alone is unconfirmed: `in_progress` with the sfs entry attached (relevance full). Follow-up:
  *    medium fulls need confirmation before they can count. Never `broken`. Overrides (tools/sfs-overrides.json)
  *    replace the judge's label for a promise/law pair before any of this, because a lone `full` is not
@@ -209,12 +210,12 @@ interface SfsOutcome {
   value: 'fulfilled' | 'partially_fulfilled' | 'in_progress';
 }
 
+// An issued law counts whether or not it is in force yet: the in-force date does not gate the verdict.
 function sfsOutcome(
   promiseId: string,
   props: readonly RiksdagEvidence[],
   planning: readonly RiksdagEvidence[],
   sfs: SfsInput,
-  today: string,
 ): SfsOutcome {
   const seen = new Map<string, SfsLinked>();
   const pending: RiksdagEvidence[] = [];
@@ -223,8 +224,9 @@ function sfsOutcome(
   let undated = 0;
   for (const prop of props) {
     const keys = sfs.byProp[prop.dok_id] ?? [];
-    // A law in force counts for the proposition whatever the judge made of it.
-    if (keys.some((k) => (sfs.laws[k]?.ikraft ?? '9999') <= today)) {
+    // An issued law with a known in-force date (past or future) counts for the proposition
+    // whatever the judge made of it.
+    if (keys.some((k) => sfs.laws[k]?.ikraft)) {
       if (prop.date > newestDecided) newestDecided = prop.date;
     } else pending.push(prop);
     for (const key of keys) {
@@ -241,19 +243,15 @@ function sfsOutcome(
   const laws = [...seen.values()].sort(
     (a, b) => a.law.ikraft.localeCompare(b.law.ikraft) || a.key.localeCompare(b.key),
   );
-  const inForce = laws.filter((l) => l.law.ikraft <= today);
   // An inquiry or directive newer than the newest enacted proposition is work still going on.
   const later = newestDecided ? planning.filter((e) => e.date > newestDecided) : [];
   let value: SfsOutcome['value'] = 'in_progress';
-  if (inForce.length > 0 && pending.length === 0 && later.length === 0) {
-    const fullHigh = inForce.some(
+  if (laws.length > 0 && pending.length === 0 && later.length === 0) {
+    const fullHigh = laws.some(
       (l) => l.judgement.label === 'full' && l.judgement.confidence === 'high',
     );
-    const blocked =
-      undated > 0 ||
-      inForce.length < laws.length ||
-      laws.some((l) => l.judgement.label === 'weaker');
-    const partial = inForce.some((l) => l.judgement.label !== 'full');
+    const blocked = undated > 0 || laws.some((l) => l.judgement.label === 'weaker');
+    const partial = laws.some((l) => l.judgement.label !== 'full');
     if (fullHigh && !blocked) value = 'fulfilled';
     // A full below high confidence alone is unconfirmed: it neither fulfils nor partly fulfils.
     else if (fullHigh || partial) value = 'partially_fulfilled';
@@ -293,8 +291,8 @@ function sfsReasoning(o: SfsOutcome, today: string): string {
       `${future.length === 1 ? 'Lagen' : 'Lagarna'} ${sfsList(future)} träder i kraft ${[...new Set(future.map((l) => l.law.ikraft))].join(', ')}.`,
     );
   }
-  const missing = inForce.filter((l) => l.judgement.label !== 'full' && l.judgement.missing_sv);
-  const plural = inForce.length > 1;
+  const missing = o.laws.filter((l) => l.judgement.label !== 'full' && l.judgement.missing_sv);
+  const plural = o.laws.length > 1;
   if (o.value === 'fulfilled') {
     out.push(
       `${plural ? 'Lagarna genomför' : 'Lagen genomför'} hela löftet, så det bedöms som uppfyllt.`,
@@ -303,10 +301,10 @@ function sfsReasoning(o: SfsOutcome, today: string): string {
     out.push(
       `${plural ? 'Lagarna genomför' : 'Lagen genomför'} bara en del av löftet${missing.length > 0 ? `: ${missing.map((l) => l.judgement.missing_sv).join(' ')}` : '.'} Det bedöms därför som delvis uppfyllt.`,
     );
-  } else if (inForce.length > 0) {
+  } else if (o.laws.length > 0) {
     const why = [
       o.pending.length > 0
-        ? `${o.pending.length === 1 ? 'En' : 'Flera'} av propositionerna (${o.pending.map((p) => p.designation).join('; ')}) har ännu ingen lag i kraft`
+        ? `${o.pending.length === 1 ? 'En' : 'Flera'} av propositionerna (${o.pending.map((p) => p.designation).join('; ')}) har ännu ingen beslutad lag`
         : '',
       o.later.length > 0
         ? `${o.later.length === 1 ? 'Ett nyare dokument' : 'Nyare dokument'} (${o.later.map((p) => p.designation).join('; ')}) visar att arbetet pågår`
@@ -315,10 +313,10 @@ function sfsReasoning(o: SfsOutcome, today: string): string {
     out.push(
       why.length > 0
         ? `${why.join(' och ')}, så löftet bedöms inte som uppfyllt.`
-        : `${plural ? 'Lagarna är' : 'Lagen är'} i kraft, men dokumenten visar inte att ${plural ? 'de täcker' : 'den täcker'} hela löftet, så löftet bedöms inte som uppfyllt.`,
+        : `${plural ? 'Lagarna är' : 'Lagen är'} beslutad${plural ? 'e' : ''}, men dokumenten visar inte att ${plural ? 'de täcker' : 'den täcker'} hela löftet, så löftet bedöms inte som uppfyllt.`,
     );
   } else {
-    out.push('Ingen av lagarna är i kraft ännu, så löftet bedöms inte som uppfyllt.');
+    out.push('Ingen lag är kopplad till löftet ännu, så det bedöms inte som uppfyllt.');
   }
   return out.join(' ');
 }
@@ -465,7 +463,7 @@ export function applyLinks(
     const planning = riksdag.filter(
       (e) => ['dir', 'sou', 'ds'].includes(e.kind) && isSupporting(e),
     );
-    const o = sfsOutcome(promise.id, props, planning, sfs!, today);
+    const o = sfsOutcome(promise.id, props, planning, sfs!);
     if (o.laws.length > 0) outcome = o;
   }
   const sfsEntries = outcome ? outcome.laws.map(sfsEvidence) : [];

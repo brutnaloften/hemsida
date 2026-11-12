@@ -1,4 +1,22 @@
 {
+  "tido-anonymitet-poliser-skyddade-uppgifter::sfs-2024-224": {
+    "label": "none",
+    "reason": "SFS 2024:224 is the sunset provision that only repeals 28 a § polislagen on 2029-04-30; it implements no protection itself. The alias option is introduced in SFS 2024:223 and the secrecy in SFS 2024:225, which stay partial. The judge called it partial at low confidence and said it could arguably be none."
+  },
+  "tido-starkta-larares-befogenheter::sfs-2026-1198": {
+    "label": "full",
+    "reason": "Read in Prop. 2025/26:193: the amended 5 kap. 24 § drops utvisning ur undervisningslokalen (7 §) and kvarsittning (8 §) from the documentation duty ('en avskaffad dokumentationsskyldighet i dessa fall'), which is the documentation half of the promise. The other half (the teacher decides on the teaching) is enacted in SFS 2026:1242 and 2026:1243 ('undervisningen bestäms och leds av lärare eller förskollärare', Prop. 2025/26:194 and 193). Together the laws deliver the whole promise; the judge only saw this law's own text."
+  },
+  "tido-starkta-larares-befogenheter::sfs-2026-1242": {
+    "label": "partial",
+    "reason": "Covers the teacher-decides half; the documentation half is SFS 2026:1198.",
+    "missing_sv": "Avskaffandet av dokumentationskravet för utvisning och kvarsittning finns i en annan lag (SFS 2026:1198)."
+  },
+  "tido-starkta-larares-befogenheter::sfs-2026-1243": {
+    "label": "partial",
+    "reason": "Covers the teacher-decides half; the documentation half is SFS 2026:1198.",
+    "missing_sv": "Avskaffandet av dokumentationskravet för utvisning och kvarsittning finns i en annan lag (SFS 2026:1198)."
+  },
   "tido-utokat-kontaktforbud::sfs-2025-561": {
     "label": "full",
     "reason": "The law delivers all three parts: larger areas for extended and especially extended bans, house searches for service, and bans to protect witnesses and complainants in legal proceedings (HC03123, section 6.2), where the extended bans can be combined with electronic monitoring (already in the act). The judge's partial rested on the word 'kraftigt' and a cut-off quote, neither a gap in the law."

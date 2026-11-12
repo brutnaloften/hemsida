@@ -436,15 +436,16 @@ describe('applyLinks with SFS', () => {
     expect(r.verdict.reasoning).toContain('Lagarna genomför bara en del');
   });
 
-  it('a future law on the same proposition blocks fulfilled', () => {
+  it('a future law on the same proposition does not block fulfilled', () => {
     const r = run(
       sfsFor(
         { P1: ['sfs-2026-100', 'sfs-2027-5'] },
         { 'sfs-2026-100': ['full', 'high'], 'sfs-2027-5': ['partial', 'high'] },
       ),
     )!;
-    expect(r.verdict.value).toBe('partially_fulfilled');
+    expect(r.verdict.value).toBe('fulfilled');
     expect(sfsOf(r)).toHaveLength(2);
+    valid(r);
   });
 
   it('an undated judged law on the same proposition blocks fulfilled', () => {
@@ -499,18 +500,19 @@ describe('applyLinks with SFS', () => {
     expect(sfsOf(r).map((e) => e.dok_id)).toEqual(['sfs-2026-100']);
   });
 
-  it('keeps in_progress for a law with a future in-force date and names the date', () => {
+  it('a law with a future in-force date counts as fulfilled and names the date in future tense', () => {
     const r = run(sfsFor({ P1: ['sfs-2027-5'] }, { 'sfs-2027-5': ['full', 'high'] }))!;
-    expect(r.verdict.value).toBe('in_progress');
+    expect(r.verdict.value).toBe('fulfilled');
     expect(sfsOf(r)[0]!.date).toBe('2027-01-01');
-    expect(r.verdict.reasoning).toContain('2027-01-01');
+    expect(r.verdict.reasoning).toContain('träder i kraft 2027-01-01');
+    expect(r.verdict.reasoning).not.toContain('trädde i kraft');
     valid(r);
   });
 
-  it('a law becomes in force on its date: same inputs, later today', () => {
+  it('the verdict does not depend on today relative to the in-force date', () => {
     const sfs = sfsFor({ P1: ['sfs-2027-5'] }, { 'sfs-2027-5': ['full', 'high'] });
     expect(run(sfs, [pair('P1')], base, '2027-01-01')!.verdict.value).toBe('fulfilled');
-    expect(run(sfs, [pair('P1')], base, '2026-12-31')!.verdict.value).toBe('in_progress');
+    expect(run(sfs, [pair('P1')], base, '2026-12-31')!.verdict.value).toBe('fulfilled');
   });
 
   it('adds no sfs entry for a law without in-force date and stays in_progress', () => {
@@ -520,14 +522,20 @@ describe('applyLinks with SFS', () => {
     expect(r.verdict.reasoning).toContain('Ingen SFS-författning');
   });
 
-  it('a future law never lifts the verdict when another law is in force and pending props exist', () => {
+  it('laws on two propositions, one still in the future, both count', () => {
     const sfs = sfsFor(
       { P1: ['sfs-2026-100'], P2: ['sfs-2027-5'] },
       { 'sfs-2026-100': ['full', 'high'], 'sfs-2027-5': ['full', 'high'] },
     );
     const r = run(sfs, [pair('P1'), pair('P2')])!;
-    expect(r.verdict.value).toBe('in_progress');
+    expect(r.verdict.value).toBe('fulfilled');
     expect(sfsOf(r)).toHaveLength(2);
+  });
+
+  it('a future law keeps in_progress when it is only a medium-confidence full', () => {
+    const r = run(sfsFor({ P1: ['sfs-2027-5'] }, { 'sfs-2027-5': ['full', 'medium'] }))!;
+    expect(r.verdict.value).toBe('in_progress');
+    expect(sfsOf(r)).toHaveLength(1);
   });
 
   it('adds no sfs evidence for coverage none or a missing judgement', () => {
