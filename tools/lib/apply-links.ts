@@ -590,15 +590,20 @@ function applyInquiry(
   );
   const opposed = contradicting.filter((e) => riksdag.some((r) => r.dok_id === e.doc.dok_id));
   const plural = dirDocs.length > 1;
+  // A supplementary directive changes an inquiry that already exists; it does not appoint one.
+  const supplementary =
+    dirDocs.length > 0 && dirDocs.every((d) => /^Tilläggsdirektiv/i.test(d.doc.titel.trim()));
   const reasoning = [
     value === 'in_progress'
-      ? `${entries.length === 1 ? 'Ett dokument' : 'Dokument'} i riksdagens register visar att utredningen pågår: ${list(entries)}.`
-      : `Regeringen har tillsatt utredningen genom ${plural ? 'kommittédirektiven' : 'kommittédirektivet'} ${list(dirDocs)}, daterat ${[...new Set(dirDocs.map((d) => d.doc.datum))].join(', ')}.`,
+      ? `${entries.length === 1 ? 'Ett dokument' : 'Dokument'} i riksdagens register hör till löftet: ${list(entries)}.`
+      : supplementary
+        ? `Regeringen gav en redan tillsatt utredning ett ändrat uppdrag genom ${plural ? 'tilläggsdirektiven' : 'tilläggsdirektivet'} ${list(dirDocs)}, daterat ${[...new Set(dirDocs.map((d) => d.doc.datum))].join(', ')}.`
+        : `Regeringen har tillsatt utredningen genom ${plural ? 'kommittédirektiven' : 'kommittédirektivet'} ${list(dirDocs)}, daterat ${[...new Set(dirDocs.map((d) => d.doc.datum))].join(', ')}.`,
     value === 'fulfilled'
       ? 'Direktivet behandlar hela löftet, så löftet om en utredning bedöms som uppfyllt.'
       : value === 'partially_fulfilled'
         ? 'Direktivet behandlar bara en del av löftet, så det bedöms som delvis uppfyllt.'
-        : 'Det finns inget direktiv som tydligt tillsätter den utredning löftet gäller, så löftet bedöms inte som uppfyllt.',
+        : 'Dokumenten visar inte ett direktiv som tillsätter den utredning löftet gäller, så löftet bedöms inte som uppfyllt.',
     later.length > 0
       ? `${later.length === 1 ? 'Utredningens betänkande' : 'Betänkanden'} ${list(later)} visas som underlag och påverkar inte bedömningen.`
       : '',

@@ -76,6 +76,14 @@ Löftet gäller att tillsätta en utredning och bedömningen är satt till uppfy
 Löftet gäller att tillsätta en utredning och bedömningen är satt till delvis uppfyllt: regeringen har tillsatt en utredning genom ett kommittédirektiv med det angivna datumet, men direktivet täcker bara en del av det som löftet gäller. Skriv att regeringen tillsatte utredningen genom ett direktiv den <datum> och vad utredningen fick i uppdrag att göra. Om ett betänkande (SOU) finns bland dokumenten, nämn att utredningen har lämnat sitt betänkande och datumet. Skriv ingenting om lagar, lagstiftning, ikraftträdande eller riksdagsbeslut. Skriv inte vad som inte finns eller inte nämns ("nämns inte", "saknas", "ingår inte"): beskriv bara vad direktivet säger.`,
 };
 
+/**
+ * When every qualifying directive is a tilläggsdirektiv, the inquiry already existed: the directive
+ * gave it a new or changed assignment (or deadline). Saying it "tillsatte" the inquiry would be false.
+ */
+const SUPPLEMENTARY_INSTRUCTIONS = `
+
+Löftet gäller en utredning och bedömningen är satt till uppfyllt (eller delvis uppfyllt): regeringen har genom ett tilläggsdirektiv med det angivna datumet gett en redan tillsatt utredning ett nytt, ändrat eller utökat uppdrag (eller en ändrad tidsplan) som motsvarar löftet. Skriv att regeringen den <datum> beslutade om ett tilläggsdirektiv till utredningen och vad det innebar. Skriv aldrig att regeringen tillsatte utredningen: den fanns redan. Om ett betänkande (SOU) finns bland dokumenten, nämn att utredningen har lämnat sitt betänkande, men säg inte att det ledde till lag eller beslut. Skriv ingenting om lagar, lagstiftning, ikraftträdande eller riksdagsbeslut. Skriv inte vad som inte finns eller inte nämns ("nämns inte", "saknas", "ingår inte").`;
+
 /** A law judged to cover the promise fully, but below high confidence: the verdict stays in_progress. */
 const UNCONFIRMED_FULL_NOTE =
   ' Lagen verkar enligt dokumenten täcka löftet, men det är obekräftat, och därför står bedömningen kvar som pågående. Skriv att lagen verkar täcka löftet men att det är obekräftat. Skriv aldrig att den täcker hela löftet.';
@@ -100,7 +108,19 @@ export function reasoningInstructions(
       'Bedömningen är redan satt.',
     );
     if (items.some((i) => i.relevance === 'contradicts')) out += AGAINST_INSTRUCTIONS;
-    return out + INQUIRY_INSTRUCTIONS[verdict];
+    const qualifying = items.filter(
+      (i) => i.kind === 'dir' && i.relevance === (verdict === 'fulfilled' ? 'full' : 'partial'),
+    );
+    const supplementary =
+      qualifying.length > 0 && qualifying.every((i) => /^Tilläggsdirektiv/i.test(i.title.trim()));
+    const unknownDate = items.some((i) => i.kind === 'sou' && /-01-01$/.test(i.date))
+      ? ' Om ett dokument har datumet "okänt", nämn inget datum för det.'
+      : '';
+    return (
+      out +
+      (supplementary ? SUPPLEMENTARY_INSTRUCTIONS : INQUIRY_INSTRUCTIONS[verdict]) +
+      unknownDate
+    );
   }
   const laws = items.filter((i) => i.kind === 'sfs');
   const inForce = laws.some((i) => i.date <= today);
@@ -174,7 +194,9 @@ function kindLabel(i: ReasoningItem): string {
 }
 
 /** The date of a law is its in-force date, so it is labelled as such; other dates are plain. */
-function dateLabel(i: ReasoningItem, today: string): string {
+function dateLabel(i: ReasoningItem, today: string, unknownJan1 = false): string {
+  // The register dates some SOUs 1 January (a placeholder); an inquiry text must not repeat it.
+  if (unknownJan1 && i.kind === 'sou' && /-01-01$/.test(i.date)) return 'okänt';
   if (i.kind !== 'sfs') return i.date;
   return `${i.date <= today ? 'trädde i kraft' : 'träder i kraft'} ${i.date}`;
 }
@@ -191,11 +213,12 @@ export function buildReasoningPrompt(
   promise: { title: string; description: string },
   items: readonly ReasoningItem[],
   today: string = todayIso(),
+  inquiry = false,
 ): string {
   const docs = items
     .map(
       (i, n) =>
-        `${n + 1}. ${kindLabel(i)}, ${dateLabel(i, today)}: "${i.title}". ${RELEVANCE_SV[i.relevance]}. Anteckning: ${i.note || '(saknas)'}`,
+        `${n + 1}. ${kindLabel(i)}, ${dateLabel(i, today, inquiry)}: "${i.title}". ${RELEVANCE_SV[i.relevance]}. Anteckning: ${i.note || '(saknas)'}`,
     )
     .join('\n');
   return `Löfte: ${promise.title}\n${promise.description}\n\nDokument:\n${docs}`;
@@ -245,13 +268,13 @@ export function reasoningProblems(
     // A directive-based verdict has no law behind it, and absence claims cannot be verified.
     // Describing what the directive asks the inquiry to propose is fine; saying a law or a decision exists is not.
     if (
-      /\bnya?\s+lag(?:en|ar|arna)?\b|\blag(?:en|ar|arna)?\s+(?:har\s+)?(?:beslutats|antagits|börjat|trätt|träder|gäller|införts)|riksdagen\s+(?:har\s+)?beslut|\bi\s+kraft\b|ledde\s+till\s+(?:lag|beslut|lagstift)/i.test(
+      /\blag(?:en|ar|arna)?\s+(?:har\s+)?(?:beslutats|antagits|börjat|trätt|träder|gäller|införts)|riksdagen\s+(?:har\s+)?beslut|\bi\s+kraft\b|ledde\s+till\s+(?:en\s+)?(?:nya?\s+)?(?:lag|beslut|lagstift)/i.test(
         text,
       )
     )
       problems.push('talks about a law or a Riksdag decision in an inquiry text');
     if (
-      /nämns\s+(?:inte|ej)|ingår\s+(?:inte|ej)|\bsaknas\b|\bsaknar\b|(?:inte|ej)\s+i\s+dokument/i.test(
+      /nämns\s+(?:inte|ej)|ingår\s+(?:inte|ej)|\bsaknas\s+(?:i|det|helt)\b|\b(?:direktivet|uppdraget|utredningen|dokumenten|texten)\s+saknar\b|(?:inte|ej)\s+i\s+dokument/i.test(
         text,
       )
     )

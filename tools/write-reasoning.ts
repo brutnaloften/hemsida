@@ -111,7 +111,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     );
     continue;
   }
-  const prompt = buildReasoningPrompt(p, items, today);
+  const prompt = buildReasoningPrompt(p, items, today, inquiry);
   const instructions = reasoningInstructions(items, p.verdict.value, today, p.type);
   jobs.push({
     file,

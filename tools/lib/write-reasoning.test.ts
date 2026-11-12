@@ -301,6 +301,32 @@ describe('write-reasoning', () => {
       );
     });
 
+    it('uses supplementary-directive wording when every qualifying directive is a tilläggsdirektiv', () => {
+      const tillagg = { ...dir, title: 'Tilläggsdirektiv till Utredningen om X' };
+      const ins = reasoningInstructions([tillagg], 'fulfilled', today, 'inquiry');
+      expect(ins).toContain('Skriv aldrig att regeringen tillsatte utredningen');
+      // A plain directive next to it keeps the appointing wording.
+      expect(reasoningInstructions([dir, tillagg], 'fulfilled', today, 'inquiry')).toContain(
+        'tillsatte utredningen genom ett direktiv',
+      );
+    });
+
+    it('hides a placeholder 1 January SOU date in inquiry prompts only', () => {
+      const sou = { ...item, kind: 'sou', date: '2025-01-01' };
+      expect(buildReasoningPrompt({ title: 'T', description: 'D' }, [sou], today, true)).toContain(
+        'okänt',
+      );
+      expect(buildReasoningPrompt({ title: 'T', description: 'D' }, [sou], today)).toContain(
+        '2025-01-01',
+      );
+    });
+
+    it('accepts wording about people without citizenship and a mandate to propose a new law', () => {
+      const t =
+        'Regeringen tillsatte utredningen i maj 2024. Den ska föreslå att utlänningar som saknar svenskt medborgarskap kan utvisas och att en ny lag införs.';
+      expect(reasoningProblems(t, [], false, undefined, true)).toEqual([]);
+    });
+
     it('leaves in_progress and other types unchanged', () => {
       expect(reasoningInstructions([dir], 'in_progress', today, 'inquiry')).toBe(
         reasoningInstructions([dir], 'in_progress', today),

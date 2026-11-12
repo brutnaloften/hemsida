@@ -653,6 +653,18 @@ describe('applyLinks for inquiry promises', () => {
     expect(run([pair('D1', { confidence: 'medium' })]).verdict.value).toBe('in_progress');
   });
 
+  it('words a supplementary directive as a changed assignment, not an appointment', () => {
+    const tdocs = new Map(idocs);
+    tdocs.set('D2', {
+      ...doc('D2', 'dir', '2023-02-16', '26'),
+      titel: 'Tilläggsdirektiv till Utredningen om X',
+    });
+    const r = applyLinks(inquiry, [pair('D2')], tdocs, today)!;
+    expect(r.verdict.value).toBe('fulfilled');
+    expect(r.verdict.reasoning).toContain('ett ändrat uppdrag');
+    expect(r.verdict.reasoning).not.toContain('har tillsatt utredningen');
+  });
+
   it('stays in_progress without a directive (SOU only)', () => {
     const r = run([pair('S9')]);
     expect(r.verdict.value).toBe('in_progress');
