@@ -26,9 +26,9 @@
     "skollagen"
   ],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Riksdagen beslutade under våren 2026 om ändringar i skollagen. En lag som stärker möjligheterna att visa ut elever ur undervisningslokalen och ändrar dokumentationsbestämmelsen trädde i kraft 1 augusti 2026. Två lagar som slår fast att undervisningen bestäms och leds av lärare träder i kraft 1 juli 2028 och 2 juli 2028. Att kravet på skriftlig dokumentation av mindre långtgående åtgärder tas bort framgår inte av dokumenten.",
+    "reasoning": "Riksdagen beslutade under våren 2026 om ändringar i skollagen. En lag som trädde i kraft 1 augusti 2026 avskaffar kravet på dokumentation när en elev visas ut ur undervisningslokalen eller får kvarsittning. Två lagar som tydliggör att undervisningen bestäms och leds av lärare eller förskollärare träder i kraft 1 juli 2028 och 2 juli 2028. Därmed är båda delarna av löftet genomförda i beslutad lag.",
     "date": "2026-11-12",
     "history": [
       {
@@ -41,6 +41,12 @@
         "assessedBy": "ai",
         "reasoning": "Utredningen föreslog i januari 2025 båda delarna av löftet. Riksdagen beslutade i maj 2026 att ta bort dokumentationskravet vid utvisning och kvarsittning, och en skollagsändring trädde i kraft 1 augusti 2026. Att läraren bestämmer över undervisningen föreslogs i en proposition i mars 2026; två skollagsändringar träder i kraft i juli 2028 och täcker delar av löftet.",
         "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "Riksdagen beslutade under våren 2026 om ändringar i skollagen. En lag som stärker möjligheterna att visa ut elever ur undervisningslokalen och ändrar dokumentationsbestämmelsen trädde i kraft 1 augusti 2026. Två lagar som slår fast att undervisningen bestäms och leds av lärare träder i kraft 1 juli 2028 och 2 juli 2028. Att kravet på skriftlig dokumentation av mindre långtgående åtgärder tas bort framgår inte av dokumenten.",
+        "date": "2026-11-12"
       }
     ]
   },
@@ -122,8 +128,8 @@
       "title": "Lag (2026:1198) om ändring i skollagen (2010:800)",
       "date": "2026-08-01",
       "url": "https://svenskforfattningssamling.se/doc/20261198.html",
-      "relevance": "partial",
-      "note": "Texten visar inte tydligt att det i författning slås fast att läraren beslutar om undervisningen och dess uppläggning, och inte heller att dokumentationskravet för mindre långtgående åtgärder helt tas bort."
+      "relevance": "full",
+      "note": null
     },
     {
       "kind": "sfs",
@@ -133,7 +139,7 @@
       "date": "2028-07-01",
       "url": "https://svenskforfattningssamling.se/doc/20261242.html",
       "relevance": "partial",
-      "note": "Texten visar inte att kravet på skriftlig dokumentation av mindre långtgående disciplinära åtgärder, som tillfällig utvisning, tas bort."
+      "note": "Avskaffandet av dokumentationskravet för utvisning och kvarsittning finns i en annan lag (SFS 2026:1198)."
     },
     {
       "kind": "sfs",
@@ -143,7 +149,7 @@
       "date": "2028-07-02",
       "url": "https://svenskforfattningssamling.se/doc/20261243.html",
       "relevance": "partial",
-      "note": "Texten visar inte att kravet på skriftlig dokumentation av mindre långtgående disciplinära åtgärder (t.ex. tillfälligt utvisande) tas bort."
+      "note": "Avskaffandet av dokumentationskravet för utvisning och kvarsittning finns i en annan lag (SFS 2026:1198)."
     }
   ]
 }
