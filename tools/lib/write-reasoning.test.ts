@@ -109,6 +109,12 @@ describe('write-reasoning', () => {
 
   it('rejects internal terms and full-coverage claims where the verdict is not fulfilled', () => {
     const ok = 'Lagen trädde i kraft 1 april 2025 och förlänger tiden.';
+    expect(reasoningProblems(`${ok} Den visade lagtexten visar inte allt.`, [], true)).toContain(
+      'describes the tool input (shown text, truncation) instead of the law',
+    );
+    expect(reasoningProblems(`${ok} Löftets citat är avkortat.`, [], true)).toContain(
+      'describes the tool input (shown text, truncation) instead of the law',
+    );
     expect(reasoningProblems(`${ok} Enligt anteckningen saknas något.`, [], true)).toContain(
       'uses an internal term',
     );

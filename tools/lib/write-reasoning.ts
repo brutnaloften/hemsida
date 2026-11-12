@@ -209,6 +209,8 @@ export function reasoningProblems(
 ): string[] {
   const problems: string[] = [];
   if (/anteckning|lagtextutdrag|textutdrag/i.test(text)) problems.push('uses an internal term');
+  if (/visade\s+lagtext|avkortad|avkortat|brottskatalog-urval|citatet\s+är/i.test(text))
+    problems.push('describes the tool input (shown text, truncation) instead of the law');
   if (coverage === 'unconfirmed_full' || coverage === 'partial') {
     if (
       /(?:täcker|genomför|omfattar)\s+(?:hela|fullt ut|helt)\b|\bhela\s+löftet|\bi\s+sin\s+helhet/i.test(

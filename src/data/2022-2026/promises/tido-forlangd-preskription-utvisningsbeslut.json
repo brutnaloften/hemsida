@@ -20,9 +20,9 @@
   "committee": "SfU",
   "keywords": ["preskription", "utvisningsbeslut", "avvisning", "ny asylansökan", "återreseförbud"],
   "verdict": {
-    "value": "in_progress",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En utredning föreslog i februari 2024 att tiden för utvisnings- och avvisningsbeslut förlängs från fyra till fem år och räknas från utresan. Regeringen lade fram ett förslag i januari 2025 och riksdagen biföll det i mars 2025. Ändringen i utlänningslagen trädde i kraft 1 april 2025 och förlänger tiden, vilket är ett av de två alternativ löftet nämner. Att ändringen omfattar alla slags beslut är ännu inte bekräftat.",
+    "reasoning": "En utredning föreslog i februari 2024 att preskriptionstiden för utvisnings- och avvisningsbeslut förlängs från fyra till fem år. Regeringen lade fram ett förslag i januari 2025 och riksdagen biföll det i mars 2025. Lagen, som förlänger tiden till fem år från utresan, trädde i kraft den 1 april 2025.",
     "date": "2026-11-11",
     "history": [
       {
@@ -40,6 +40,18 @@
         "value": "partially_fulfilled",
         "assessedBy": "ai",
         "reasoning": "En utredning föreslog i februari 2024 att preskriptionstiden för utvisnings- och avvisningsbeslut förlängs från fyra till fem år, men avvisade att helt avskaffa den. Regeringen lade fram ett förslag i januari 2025 och riksdagen biföll det i mars 2025. Ändringen i utlänningslagen trädde i kraft 1 april 2025. Förlängningen är ett av de två alternativ löftet nämner, men dokumenten visar inte tydligt att alla slags beslut omfattas.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En utredning föreslog i februari 2024 att tiden för utvisnings- och avvisningsbeslut förlängs från fyra till fem år och räknas från utresan. Regeringen lade fram ett förslag i januari 2025 och riksdagen biföll det i mars 2025. Ändringen i utlänningslagen trädde i kraft 1 april 2025 och förlänger tiden, vilket är ett av de två alternativ löftet nämner. Att ändringen omfattar alla slags beslut är ännu inte bekräftat.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "En utredning föreslog i februari 2024 längre preskriptionstid för avlägsnandebeslut, och regeringen lade i januari 2025 fram ett förslag om fem år från utresan. Riksdagen godkände det i mars 2025 och lagen trädde i kraft 1 april 2025. Tiden förlängs, men avskaffas inte, och lagen gäller bara beslut som inte meddelats av allmän domstol.",
         "date": "2026-11-11"
       }
     ]
