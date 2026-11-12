@@ -280,4 +280,60 @@ describe('write-reasoning', () => {
       );
     });
   });
+
+  describe('inquiry promises', () => {
+    const today = '2026-11-12';
+    const dir: ReasoningItem = {
+      kind: 'dir',
+      date: '2023-05-01',
+      title: 'Utredning om X',
+      relevance: 'full',
+      note: 'Appoints an inquiry into X.',
+    };
+
+    it('uses directive wording and never law wording', () => {
+      const ins = reasoningInstructions([dir], 'fulfilled', today, 'inquiry');
+      expect(ins).toContain('kommittédirektiv');
+      expect(ins).toContain('Skriv ingenting om lagar');
+      expect(ins).not.toContain('trädde i kraft den <datum>');
+      expect(reasoningInstructions([dir], 'partially_fulfilled', today, 'inquiry')).toContain(
+        'delvis uppfyllt',
+      );
+    });
+
+    it('leaves in_progress and other types unchanged', () => {
+      expect(reasoningInstructions([dir], 'in_progress', today, 'inquiry')).toBe(
+        reasoningInstructions([dir], 'in_progress', today),
+      );
+      expect(reasoningInstructions([dir], 'fulfilled', today, 'legislative')).toBe(
+        reasoningInstructions([dir], 'fulfilled', today),
+      );
+    });
+
+    it('rejects law claims and absence claims in an inquiry text', () => {
+      const ok =
+        'Regeringen tillsatte i maj 2023 en utredning om X. Utredningen lämnade sitt betänkande i juni 2025.';
+      expect(reasoningProblems(ok, [], false, undefined, true)).toEqual([]);
+      // Saying what the inquiry was asked to propose is fine.
+      expect(
+        reasoningProblems(
+          `${ok} Den ska föreslå författningsändringar i lagen (2022:700).`,
+          [],
+          false,
+          undefined,
+          true,
+        ),
+      ).toEqual([]);
+      for (const bad of [
+        'Utredningen ledde till en ny lag.',
+        'Lagen har beslutats av riksdagen.',
+        'Riksdagen har beslutat om förslaget.',
+        'Frågan om Y nämns inte i direktivet.',
+        'Uppdraget saknar delen om Y.',
+        'Utredningen trädde i kraft i juni 2023.',
+      ]) {
+        expect(reasoningProblems(`${ok} ${bad}`, [], false, undefined, true), bad).not.toEqual([]);
+      }
+    });
+  });
 });

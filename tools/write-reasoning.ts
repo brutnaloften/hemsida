@@ -75,6 +75,8 @@ interface Job {
   designations: string[];
   lawInForce: boolean;
   coverage?: 'unconfirmed_full' | 'partial';
+  /** An inquiry promise (type inquiry): the text is about the directive, never a law. */
+  inquiry: boolean;
 }
 const REASONED_VERDICTS: readonly string[] = ['in_progress', 'fulfilled', 'partially_fulfilled'];
 const today = new Date().toISOString().slice(0, 10);
@@ -99,12 +101,18 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
       judgementBy.get(`${p.id}:${e.dok_id}`)?.reason ??
       (e.kind === 'bet' ? 'Riksdagens beslut om en proposition som hör till löftet.' : ''),
   }));
-  if (p.verdict.value !== 'in_progress' && !items.some((i) => i.kind === 'sfs')) {
-    console.warn(`WARNING ${file}: verdict ${p.verdict.value} but no sfs evidence; skipped`);
+  const inquiry = p.type === 'inquiry' && p.verdict.value !== 'in_progress';
+  if (
+    p.verdict.value !== 'in_progress' &&
+    !items.some((i) => i.kind === (p.type === 'inquiry' ? 'dir' : 'sfs'))
+  ) {
+    console.warn(
+      `WARNING ${file}: verdict ${p.verdict.value} but no ${p.type === 'inquiry' ? 'dir' : 'sfs'} evidence; skipped`,
+    );
     continue;
   }
   const prompt = buildReasoningPrompt(p, items, today);
-  const instructions = reasoningInstructions(items, p.verdict.value, today);
+  const instructions = reasoningInstructions(items, p.verdict.value, today, p.type);
   jobs.push({
     file,
     raw: rawPromise,
@@ -113,6 +121,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     key: reasoningKey(values.model!, prompt, instructions),
     designations: riksdag.map((e) => e.designation),
     lawInForce: hasLawInForce(items, today),
+    inquiry,
     coverage:
       p.verdict.value === 'partially_fulfilled'
         ? 'partial'
@@ -131,7 +140,13 @@ if (values.pin) {
   const job = jobs.find((j) => j.file === `${values.pin}.json`);
   if (!job || !values.text)
     throw new Error(`--pin needs --text and a reasoned promise ${values.pin}`);
-  const problems = reasoningProblems(values.text, job.designations, job.lawInForce, job.coverage);
+  const problems = reasoningProblems(
+    values.text,
+    job.designations,
+    job.lawInForce,
+    job.coverage,
+    job.inquiry,
+  );
   if (problems.length > 0) throw new Error(`pinned text rejected: ${problems.join(', ')}`);
   pins[values.pin] = { key: job.key, reasoning: values.text };
   writeJson(pinsPath, pins);
@@ -144,7 +159,13 @@ for (const job of jobs) {
     console.warn(`pin for ${id} is stale (evidence changed); the model writes a new text`);
     continue;
   }
-  const problems = reasoningProblems(pin.reasoning, job.designations, job.lawInForce, job.coverage);
+  const problems = reasoningProblems(
+    pin.reasoning,
+    job.designations,
+    job.lawInForce,
+    job.coverage,
+    job.inquiry,
+  );
   if (problems.length > 0) throw new Error(`pin for ${id} rejected: ${problems.join(', ')}`);
   writeJsonAtomic(cachePath(job.key), { reasoning: pin.reasoning });
 }
@@ -159,7 +180,7 @@ const usable = (j: Job): boolean => {
   const text = cachedText(j);
   return (
     text !== undefined &&
-    reasoningProblems(text, j.designations, j.lawInForce, j.coverage).length === 0
+    reasoningProblems(text, j.designations, j.lawInForce, j.coverage, j.inquiry).length === 0
   );
 };
 const uncached = todo.filter((j) => !usable(j));
@@ -195,6 +216,7 @@ async function write(job: Job): Promise<void> {
         job.designations,
         job.lawInForce,
         job.coverage,
+        job.inquiry,
       );
       if (problems.length === 0) {
         writeJsonAtomic(cachePath(job.key), parsed.data);

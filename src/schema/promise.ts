@@ -284,6 +284,7 @@ const MIN_SEARCH_NOTE_LENGTH = 30;
  */
 function checkVerdictEvidence(
   p: {
+    type: string;
     verdict: { value: string; reasoning: string; date: string };
     evidence: Evidence[];
     committee?: string | undefined;
@@ -303,9 +304,17 @@ function checkVerdictEvidence(
     );
   }
   if (value === 'fulfilled' || value === 'partially_fulfilled') {
-    // An issued law is enough, including one whose in-force date (the sfs date) is still ahead:
-    // the government's part is done once the law is adopted. Agreement and budget evidence do not count.
-    if (!riksdag.some((e) => e.kind === 'sfs')) {
+    if (p.type === 'inquiry') {
+      // An inquiry promise is met once the government has appointed the inquiry: the directive is the
+      // evidence, a later SOU is only shown. No law is needed (or expected) for it.
+      if (!riksdag.some((e) => e.kind === 'dir')) {
+        fail(
+          `verdict ${value} on an inquiry promise requires Riksdag evidence of kind dir (the inquiry directive; agreement and budget evidence do not count)`,
+        );
+      }
+    } else if (!riksdag.some((e) => e.kind === 'sfs')) {
+      // An issued law is enough, including one whose in-force date (the sfs date) is still ahead:
+      // the government's part is done once the law is adopted. Agreement and budget evidence do not count.
       fail(
         `verdict ${value} requires Riksdag evidence of kind sfs (an issued law, in force or not yet; agreement and budget evidence do not count)`,
       );

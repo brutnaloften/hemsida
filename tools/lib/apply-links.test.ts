@@ -620,3 +620,54 @@ describe('applyLinks with SFS', () => {
     expect(promise.verdict.value).toBe('fulfilled');
   });
 });
+
+describe('applyLinks for inquiry promises', () => {
+  const inquiry = promiseSchema.parse({ ...base, type: 'inquiry' });
+  const idocs = new Map([
+    ['D1', doc('D1', 'dir', '2023-05-01', '40')],
+    ['S9', doc('S9', 'sou', '2025-06-01', '9')],
+    ['P1', doc('P1', 'prop', '2026-03-17', '207')],
+  ]);
+  const today = '2026-11-12';
+  const run = (pairs: JudgedPair[], promise = inquiry) => applyLinks(promise, pairs, idocs, today)!;
+
+  it('is fulfilled by a directive judged match at high confidence, without any law', () => {
+    const r = run([pair('D1')]);
+    expect(r.verdict.value).toBe('fulfilled');
+    expect(r.verdict.reasoning).toContain('Dir. 2025/26:40');
+    expect(r.verdict.reasoning).not.toMatch(/lag/i);
+    expect(r.evidence.some((e) => e.kind === 'sfs')).toBe(false);
+    expect(promiseSchema.safeParse({ ...inquiry, ...r }).success).toBe(true);
+  });
+
+  it('a later SOU is shown as evidence and does not block fulfilled', () => {
+    const r = run([pair('D1'), pair('S9')]);
+    expect(r.evidence.map((e) => e.kind)).toEqual(['dir', 'sou']);
+    expect(r.verdict.value).toBe('fulfilled');
+    expect(r.verdict.reasoning).toContain('SOU 2025/26:9');
+    expect(promiseSchema.safeParse({ ...inquiry, ...r }).success).toBe(true);
+  });
+
+  it('is partially_fulfilled for a partial directive and in_progress for a medium one', () => {
+    expect(run([pair('D1', { label: 'partial' })]).verdict.value).toBe('partially_fulfilled');
+    expect(run([pair('D1', { confidence: 'medium' })]).verdict.value).toBe('in_progress');
+  });
+
+  it('stays in_progress without a directive (SOU only)', () => {
+    const r = run([pair('S9')]);
+    expect(r.verdict.value).toBe('in_progress');
+    expect(promiseSchema.safeParse({ ...inquiry, ...r }).success).toBe(true);
+  });
+
+  it('a rerun without sfs input recomputes and then settles', () => {
+    const first = run([pair('D1')]);
+    const promise = promiseSchema.parse({ ...inquiry, ...first });
+    expect(applyLinks(promise, [pair('D1')], idocs, today)).toBeNull();
+    const down = applyLinks(promise, [pair('D1', { confidence: 'medium' })], idocs, today)!;
+    expect(down.verdict.value).toBe('in_progress');
+  });
+
+  it('a legislative promise with only a directive stays in_progress', () => {
+    expect(run([pair('D1')], base).verdict.value).toBe('in_progress');
+  });
+});

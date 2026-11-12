@@ -49,7 +49,7 @@ export const VERDICT_DESCRIPTIONS: Record<(typeof VERDICTS)[number], string> = {
   in_progress:
     'Arbetet pågår, till exempel i form av en utredning, ett förslag eller en proposition, men ingen beslutad lag finns ännu.',
   fulfilled:
-    'Löftet har genomförts som det formulerades. En beslutad lag räknas, även om den träder i kraft först senare.',
+    'Löftet har genomförts som det formulerades. En beslutad lag räknas, även om den träder i kraft först senare. För löften om en utredning räcker det att utredningen har tillsatts genom ett direktiv; ett senare betänkande visas som underlag men ändrar inte bedömningen.',
   partially_fulfilled:
     'Löftet har genomförts, men i väsentligt snävare eller svagare form än utlovat, eller bara till vissa delar. En beslutad lag räknas, även om den träder i kraft först senare.',
   unfulfilled: 'Mandatperioden gick ut utan att löftet hade genomförts.',

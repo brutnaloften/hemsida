@@ -26,15 +26,21 @@
     "prövning"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att förenkla och förkorta miljötillståndsprövningen, bland annat genom att pröva om en enda statlig myndighet kan föra statens talan. Utredningen lämnade i januari 2025 sitt betänkande med förslag om en samordnad prövningsprocess och begränsad talerätt för myndigheter. Dokumenten visar förslag, inget beslut. Hur Miljöprövningsutredningens förslag genomförs framgår inte tydligt.",
-    "date": "2026-11-11",
+    "reasoning": "Regeringen tillsatte utredningen genom ett direktiv den 8 juni 2023. Den fick i uppdrag att förenkla och förkorta miljötillståndsprövningen enligt miljöbalken, bland annat genom att undersöka om en enda statlig myndighet kan föra statens talan, med stöd i tidigare utredningsförslag. Utredningen har lämnat sitt betänkande, daterat 1 januari 2025, om en ny samordnad process för miljöbedömning och tillståndsprövning.",
+    "date": "2026-11-12",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att förenkla och förkorta miljötillståndsprövningen, bland annat genom att pröva om en enda statlig myndighet kan föra statens talan. Utredningen lämnade i januari 2025 sitt betänkande med förslag om en samordnad prövningsprocess och begränsad talerätt för myndigheter. Dokumenten visar förslag, inget beslut. Hur Miljöprövningsutredningens förslag genomförs framgår inte tydligt.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -53,7 +59,7 @@
       "kind": "sou",
       "dok_id": "HCB398",
       "designation": "SOU 2024:98",
-      "title": "En ny samordnad miljöbedömnings- och tillståndsprövningsprocess ",
+      "title": "En ny samordnad miljöbedömnings- och tillståndsprövningsprocess",
       "date": "2025-01-01",
       "url": "https://data.riksdagen.se/dokument/HCB398.html",
       "relevance": "full",
