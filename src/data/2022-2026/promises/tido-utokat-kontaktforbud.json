@@ -26,9 +26,9 @@
     "vittnesskydd"
   ],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i mars 2025 fram ett förslag om större områden för utvidgade kontaktförbud, husrannsakan för delgivning och kontaktförbud för att skydda målsägande och vittnen i rättsprocesser. Riksdagen biföll det i maj 2025, och ändringen i kontaktförbudslagen trädde i kraft 1 juli 2025. Lagen ger dock inga nya regler om fler kontaktförbud med elektronisk övervakning inför rättegångar, så en del av löftet återstår.",
+    "reasoning": "En statlig utredning föreslog i februari 2024 större områden för kontaktförbud, husrannsakan för delgivning och fler förbud före rättegångar, även med elektronisk övervakning. Regeringen lade fram ett förslag i mars 2025 och riksdagen biföll det i maj 2025. Lagen som genomför löftet trädde i kraft den 1 juli 2025.",
     "date": "2026-11-11",
     "history": [
       {
@@ -40,6 +40,12 @@
         "value": "in_progress",
         "assessedBy": "ai",
         "reasoning": "En statlig utredning föreslog i februari 2024 större områden för kontaktförbud, husrannsakan för att delge beslut och fler kontaktförbud inför rättegångar, även med elektronisk övervakning. Regeringen lade i mars 2025 fram ett liknande förslag och riksdagen biföll det i maj 2025. En lag om ändring av kontaktförbudslagen trädde i kraft 1 juli 2025. Lagen verkar täcka löftet, men det är obekräftat.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i mars 2025 fram ett förslag om större områden för utvidgade kontaktförbud, husrannsakan för delgivning och kontaktförbud för att skydda målsägande och vittnen i rättsprocesser. Riksdagen biföll det i maj 2025, och ändringen i kontaktförbudslagen trädde i kraft 1 juli 2025. Lagen ger dock inga nya regler om fler kontaktförbud med elektronisk övervakning inför rättegångar, så en del av löftet återstår.",
         "date": "2026-11-11"
       }
     ]
@@ -82,8 +88,8 @@
       "title": "Lag (2025:561) om ändring i lagen (1988:688) om kontaktförbud",
       "date": "2025-07-01",
       "url": "https://svenskforfattningssamling.se/doc/2025561.html",
-      "relevance": "partial",
-      "note": "Lagen innehåller ingen ny bestämmelse som särskilt ger fler kontaktförbud med elektronisk övervakning inför rättegångar. Skydd för målsägande och vittnen i rättsprocesser läggs dock till."
+      "relevance": "full",
+      "note": null
     }
   ]
 }

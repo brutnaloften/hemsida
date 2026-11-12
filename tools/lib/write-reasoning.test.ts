@@ -112,6 +112,9 @@ describe('write-reasoning', () => {
     expect(reasoningProblems(`${ok} Den visade lagtexten visar inte allt.`, [], true)).toContain(
       'describes the tool input (shown text, truncation) instead of the law',
     );
+    expect(reasoningProblems(`${ok} Löftets citat är avkortat.`, [], true)).toContain(
+      'describes the tool input (shown text, truncation) instead of the law',
+    );
     expect(reasoningProblems(`${ok} Enligt anteckningen saknas något.`, [], true)).toContain(
       'uses an internal term',
     );
