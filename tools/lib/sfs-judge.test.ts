@@ -3,6 +3,8 @@ import {
   SFS_JUDGE_INSTRUCTIONS,
   SFS_JUDGE_TEMPLATE_VERSION,
   splitByEarlierRun,
+  splitForRecheck,
+  RECHECK_LAW_SECTION_CHARS,
   extractLawSections,
   normalizeLawTitle,
   buildPrompt,
@@ -533,5 +535,53 @@ describe('v2 additions', () => {
       },
     );
     expect(s.status).toBe('incomplete');
+  });
+});
+
+describe('recheck mode', () => {
+  const pair = (id: string) => ({ id, promise_id: 'p', sfs_key: 'k', prop_ids: [], bet_ids: [] });
+  const old = (id: string, label: 'full' | 'partial' | 'none', v = 'v4') => ({
+    id,
+    promise_id: 'p',
+    sfs: 's',
+    sfs_dok_id: 'k',
+    label,
+    confidence: 'medium' as const,
+    covered_sv: '',
+    missing_sv: '',
+    reason: 'r',
+    template_version: v,
+  });
+
+  it('re-judges only earlier fulls and carries over the rest', () => {
+    const earlier = [
+      old('a', 'full'),
+      old('b', 'partial'),
+      old('c', 'none'),
+      old('d', 'full', 'v5'),
+    ];
+    const { rerun, kept, unjudged } = splitForRecheck(['a', 'b', 'c', 'd', 'e'].map(pair), earlier);
+    expect(rerun.map((p) => p.id)).toEqual(['a']);
+    expect(kept.map((r) => r.id)).toEqual(['b', 'c', 'd']);
+    expect(unjudged.map((p) => p.id)).toEqual(['e']);
+  });
+
+  it('a larger cap keeps the lagtext tail that the normal cap cuts off', () => {
+    const long = [
+      { text: 'Förslag till lag om ändring i testlagen (2000:1)' },
+      {
+        text: 'Härigenom föreskrivs att 1 § ska ha följande lydelse. ' + 'x'.repeat(5000) + ' SLUT',
+      },
+    ];
+    expect(extractLawSections(long, 'Lag om ändring i testlagen (2000:1)', 2500)).toContain(
+      'avkortat',
+    );
+    const full = extractLawSections(
+      long,
+      'Lag om ändring i testlagen (2000:1)',
+      RECHECK_LAW_SECTION_CHARS,
+    );
+    expect(full).toContain('SLUT');
+    expect(full).not.toContain('avkortat');
   });
 });

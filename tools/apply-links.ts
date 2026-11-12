@@ -24,7 +24,7 @@ import {
 } from './lib/apply-links.ts';
 import { CONFIDENCES } from './lib/link/config.ts';
 import { addDecisions } from './lib/decided-by.ts';
-import { SFS_JUDGE_TEMPLATE_VERSION } from './lib/sfs-judge.ts';
+import { SFS_JUDGE_TEMPLATE_VERSION, SFS_RECHECK_TEMPLATE_VERSION } from './lib/sfs-judge.ts';
 import { loadJson, writeJson } from './lib/json.ts';
 import { defaultStorePath } from './lib/riksdag-ingest.ts';
 import { isRiksdagEvidence, promiseSchema } from './lib/schema.ts';
@@ -119,7 +119,8 @@ if (values['sfs-store']) {
   const stale = (sfsResults as readonly { label: string; template_version?: string }[]).filter(
     (r) =>
       (r.label === 'full' || r.label === 'partial') &&
-      r.template_version !== SFS_JUDGE_TEMPLATE_VERSION,
+      r.template_version !== SFS_JUDGE_TEMPLATE_VERSION &&
+      r.template_version !== SFS_RECHECK_TEMPLATE_VERSION,
   );
   if (stale.length > 0) {
     console.warn(

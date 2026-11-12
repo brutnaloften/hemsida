@@ -11,6 +11,10 @@ import type { SfsLaw, SfsStore } from './sfs-register.ts';
 import { sha256, stableJson } from './score/plan.ts';
 
 export const SFS_JUDGE_TEMPLATE_VERSION = 'v4';
+/** Version of results re-judged with the complete law section (`judge-sfs.ts --recheck`); same instructions as v4. */
+export const SFS_RECHECK_TEMPLATE_VERSION = 'v5';
+/** Per-run cap on the law section in recheck mode (the normal cap is 2500), and the runs kept (lagtext first). */
+export const RECHECK_LAW_SECTION_CHARS = 8000;
 
 export const coverageLabelSchema = z.enum(['full', 'partial', 'weaker', 'none']);
 export type CoverageLabel = z.infer<typeof coverageLabelSchema>;
@@ -616,6 +620,7 @@ export function collectResults(
   requests: readonly SfsRequest[],
   cache: CoverageCache,
   laws: Record<string, SfsLaw>,
+  templateVersion: string = SFS_JUDGE_TEMPLATE_VERSION,
 ): { results: SfsResult[]; missing: number } {
   const results: SfsResult[] = [];
   let missing = 0;
@@ -635,7 +640,7 @@ export function collectResults(
       covered_sv: hit.coverage.covered_sv,
       missing_sv: hit.coverage.missing_sv,
       reason: hit.coverage.reason,
-      template_version: SFS_JUDGE_TEMPLATE_VERSION,
+      template_version: templateVersion,
     });
   }
   return { results, missing };
@@ -664,4 +669,28 @@ export function splitByEarlierRun(
     else rerun.push(p);
   }
   return { rerun, kept };
+}
+
+/**
+ * Recheck mode: only the pairs the earlier run labelled `full` (any confidence) are judged again, with the
+ * complete law section. Everything else keeps its earlier result untouched. Pairs the earlier run never
+ * judged are neither rejudged nor kept (`unjudged`): a recheck refines a run, it does not extend it.
+ * A full that already carries `recheckVersion` is kept (same input).
+ */
+export function splitForRecheck(
+  pairs: readonly SfsPair[],
+  earlier: readonly SfsResult[],
+  recheckVersion: string = SFS_RECHECK_TEMPLATE_VERSION,
+): { rerun: SfsPair[]; kept: SfsResult[]; unjudged: SfsPair[] } {
+  const byId = new Map(earlier.map((r) => [r.id, r]));
+  const rerun: SfsPair[] = [];
+  const kept: SfsResult[] = [];
+  const unjudged: SfsPair[] = [];
+  for (const p of pairs) {
+    const old = byId.get(p.id);
+    if (!old) unjudged.push(p);
+    else if (old.label === 'full' && old.template_version !== recheckVersion) rerun.push(p);
+    else kept.push(old);
+  }
+  return { rerun, kept, unjudged };
 }
