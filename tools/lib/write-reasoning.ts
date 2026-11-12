@@ -91,7 +91,7 @@ Löftet gäller en utredning och bedömningen är satt till uppfyllt (eller delv
  */
 const NON_LEGISLATIVE_INSTRUCTIONS = `
 
-Löftet gäller inte en lagändring, så skriv ingenting om lagar, lagstiftning, författningar eller att något "bedöms som" uppfyllt eller inte uppfyllt. Beskriv bara vilka steg dokumenten visar (till exempel att regeringen gav en utredare i uppdrag att ..., eller att regeringen lade fram ett förslag om ...) och hur de hänger ihop med löftet. Om dokumenten bara hör till en del av löftet, skriv vilken del de gäller, men skriv inte vad som saknas, inte nämns eller inte ingår ("nämns inte", "saknas", "ingår inte"). Uppdrag och direktiv är steg på vägen; skriv inte att löftet är genomfört.`;
+Löftet gäller inte en lagändring, så skriv ingenting om lagar, lagstiftning, författningar eller att något "bedöms som" uppfyllt eller inte uppfyllt. Beskriv bara vilka steg dokumenten visar (till exempel att regeringen gav en utredare i uppdrag att ..., eller att regeringen lade fram ett förslag om ...) och hur de hänger ihop med löftet. Om dokumenten bara hör till en del av löftet, skriv vilken del de gäller, men skriv inte vad som saknas, inte nämns eller inte ingår ("nämns inte", "saknas", "ingår inte"). Uppdrag och direktiv är steg på vägen; skriv inte att löftet är genomfört. Skriv aldrig att dokumenten täcker "hela löftet" eller löftet "i sin helhet": ett uppdrag eller ett förslag är bara ett steg. Ett direktiv anger vad utredaren ska analysera eller överväga; skriv inte att utredaren föreslår en viss lösning om inte uppdraget säger att förslag ska lämnas. Skriv inte att något är finansierat eller att pengar avsatts om det inte uttryckligen framgår.`;
 
 /**
  * Law promise without a law whose source is not the Tidö agreement (the manifesto promises): the
@@ -100,7 +100,7 @@ Löftet gäller inte en lagändring, så skriv ingenting om lagar, lagstiftning,
  */
 const NO_ABSENCE_INSTRUCTIONS = `
 
-Skriv inte vad dokumenten lämnar utanför eller inte tar upp ("nämns inte", "saknas", "ingår inte", "inte uttryckligen"); du har bara en kort sammanfattning och kan inte kontrollera det. Om dokumenten bara täcker en del av löftet, skriv vilken del de gäller. Skriv inte att något "bedöms" som uppfyllt eller inte uppfyllt.`;
+Skriv inte vad dokumenten lämnar utanför eller inte tar upp ("nämns inte", "saknas", "ingår inte", "inte uttryckligen"); du har bara en kort sammanfattning och kan inte kontrollera det. Om dokumenten bara täcker en del av löftet, skriv vilken del de gäller. Skriv inte att något "bedöms" som uppfyllt eller inte uppfyllt. Skriv aldrig att dokumenten täcker "hela löftet" eller löftet "i sin helhet": ett uppdrag eller ett förslag är bara ett steg. Ett direktiv anger vad utredaren ska analysera eller överväga; skriv inte att utredaren föreslår en viss lösning om inte uppdraget säger att förslag ska lämnas. Skriv inte att något är finansierat eller att pengar avsatts om det inte uttryckligen framgår.`;
 
 /** A law judged to cover the promise fully, but below high confidence: the verdict stays in_progress. */
 const UNCONFIRMED_FULL_NOTE =
@@ -122,7 +122,7 @@ export function reasoningInstructions(
   noAbsenceClaims = false,
 ): string {
   const noLaw = verdict === 'in_progress' && !items.some((i) => i.kind === 'sfs');
-  const nonLegislative = noLaw && type !== undefined && type !== 'legislative';
+  const nonLegislative = noLaw && noAbsenceClaims && type !== undefined && type !== 'legislative';
   if (noLaw && noAbsenceClaims && !nonLegislative && type !== 'inquiry') {
     return (
       REASONING_INSTRUCTIONS.replace(
@@ -297,7 +297,7 @@ const NEGATED_IN_FORCE =
   /framgår\s+(?:inte|ej)\s+att(?:(?![,;]|\s(?:men|och)\s)[^.!?])*?(?:i\s+kraft|gäller)|\b(?:inte|ej)\s+(?:ännu\s+)?(?:(?:har|hade)\s+)?(?:trätt\s+i\s+kraft|trädde\s+i\s+kraft|i\s+kraft|gäller)|\bännu\s+inte\s+(?:(?:har|hade)\s+)?(?:trätt\s+)?i\s+kraft|\bännu\s+inte\s+trätt\s+i\s+kraft/gi;
 
 const ABSENCE_CLAIM =
-  /\b(?:berörs|täcks|anges|framgår|nämner|tas\s+upp|omfattas)\s+(?:inte|ej)\b|nämns\s+(?:inte|ej)|ingår\s+(?:inte|ej)|\bsaknas\s+(?:i|det|helt)\b|\b(?:direktivet|uppdraget|utredningen|dokumenten|texten)\s+saknar\b|(?:inte|ej)\s+i\s+dokument/i;
+  /\b(?:gäller|rör|beskriver|beskrivs|innehåller|behandlar|behandlas|tar|tas|redovisar|finns)\s+(?:inte|ej)\b|\bingen\s+finansiering\b|\bvisar\s+inga\s+(?:regler|åtgärder|pengar)\b|\b(?:syns|visas|redovisas)\s+(?:inte|ej)\b|(?:^|\s)(?:är|var)\s+(?:inte|ej)\s+(?:en\s+)?del\s+av\b|lämnas\s+(?:uttryckligen\s+)?utanför|\binte\s+uttryckligen\b|\b(?:gäller|täcker|handlar\s+om)\s+(?:bara|endast|enbart)\b[^.!?]*,\s+(?:inte|ej)\s+(?!ett\s+(?:beslut|förslag)\b)\S|\b(?:berörs|täcks|anges|framgår|nämner|tas\s+upp|omfattas)\s+(?:inte|ej)\b|nämns\s+(?:inte|ej)|ingår\s+(?:inte|ej)|\bsaknas\s+(?:i|det|helt)\b|\b(?:direktivet|uppdraget|utredningen|dokumenten|texten)\s+saknar\b|(?:inte|ej)\s+i\s+dokument/i;
 
 /**
  * Rejects text that name-drops documents or breaks the rules the prompt sets. `lawInForce` says that

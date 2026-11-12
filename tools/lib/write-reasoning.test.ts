@@ -291,7 +291,7 @@ describe('write-reasoning', () => {
       note: 'Tasks an inquiry.',
     };
     it('drops the missing-law framing and the absence instruction', () => {
-      const ins = reasoningInstructions([dir], 'in_progress', today, 'budget');
+      const ins = reasoningInstructions([dir], 'in_progress', today, 'budget', true);
       expect(ins).not.toContain('ingen författning är kopplad');
       expect(ins).not.toContain('"nämns inte i dokumenten")');
       expect(ins).toContain('gäller inte en lagändring');
@@ -307,11 +307,34 @@ describe('write-reasoning', () => {
       expect(ins).toContain('Skriv inte vad dokumenten lämnar utanför');
       expect(ins).not.toContain('"nämns inte i dokumenten")');
     });
-    it('catches "anges inte uttryckligen" and "berörs inte"', () => {
-      for (const t of ['Heltid anges inte uttryckligen.', 'Uppfostringsresor berörs inte av dem.'])
+    it('catches further absence forms and accepts plain descriptions', () => {
+      for (const t of [
+        'Heltid anges inte uttryckligen.',
+        'Uppfostringsresor berörs inte av dem.',
+        'Biståndsmedel syns inte i direktivet.',
+        'Uppfostringsresor är inte en del av dem.',
+        'Åtgärder lämnas uttryckligen utanför.',
+        'Direktivet tar inte upp reglerna.',
+        'Uppdraget gäller inte partiernas interna arbete.',
+        'Reglerna tas inte upp i direktivet.',
+        'Användning av biståndsmedel beskrivs inte.',
+        'Det beskriver inte användning av biståndsmedel.',
+        'Dokumentet visar ingen finansiering.',
+        'Dokumenten gäller bara minoritetsspråk, inte äganderätten.',
+      ])
         expect(reasoningProblems(t, [], false, undefined, false, true)).toContain(
           'makes an absence claim',
         );
+      expect(
+        reasoningProblems(
+          'Dokumentet gäller bara jordbruket och visar ett uppdrag, inte ett beslut.',
+          [],
+          false,
+          undefined,
+          false,
+          true,
+        ),
+      ).toEqual([]);
     });
     it('rejects absence claims only when flagged', () => {
       const t =
@@ -370,8 +393,12 @@ describe('write-reasoning', () => {
     });
 
     it('treats in_progress inquiry like other non-law types and leaves legislative unchanged', () => {
-      expect(reasoningInstructions([dir], 'in_progress', today, 'inquiry')).toBe(
-        reasoningInstructions([dir], 'in_progress', today, 'budget'),
+      expect(reasoningInstructions([dir], 'in_progress', today, 'inquiry', true)).toBe(
+        reasoningInstructions([dir], 'in_progress', today, 'budget', true),
+      );
+      // Not a manifesto promise (Tidö): the instructions are the original ones.
+      expect(reasoningInstructions([dir], 'in_progress', today, 'budget')).toBe(
+        reasoningInstructions([dir], 'in_progress', today),
       );
       expect(reasoningInstructions([dir], 'fulfilled', today, 'legislative')).toBe(
         reasoningInstructions([dir], 'fulfilled', today),

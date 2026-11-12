@@ -127,11 +127,11 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     lawInForce: hasLawInForce(items, today),
     inquiry,
     nonLegislative:
-      p.verdict.value === 'in_progress' &&
-      (p.type !== 'legislative' || manifesto) &&
-      !items.some((i) => i.kind === 'sfs'),
+      manifesto && p.verdict.value === 'in_progress' && !items.some((i) => i.kind === 'sfs'),
     coverage:
-      p.verdict.value === 'partially_fulfilled'
+      p.verdict.value === 'partially_fulfilled' ||
+      // A manifesto promise in progress rests on an inquiry or proposal, never on the full promise.
+      (manifesto && p.verdict.value === 'in_progress' && !items.some((i) => i.kind === 'sfs'))
         ? 'partial'
         : p.verdict.value === 'in_progress' &&
             items.some((i) => i.kind === 'sfs' && i.relevance === 'full')
