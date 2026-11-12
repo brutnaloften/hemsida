@@ -32,6 +32,10 @@ import { sfsStoreSchema } from './lib/sfs-register.ts';
 import {
   SFS_JUDGE_INSTRUCTIONS,
   SFS_JUDGE_TEMPLATE_VERSION,
+  SFS_RECHECK_TEMPLATE_VERSION,
+  RECHECK_LAW_SECTION_CHARS,
+  splitForRecheck,
+  resultsWithFileVersion,
   buildPrompt,
   changedProposal,
   collectResults,
@@ -65,6 +69,7 @@ const { values } = parseArgs({
     'max-cost': { type: 'string', default: '15' },
     'out-dir': { type: 'string', default: resolve(root, 'tools/out') },
     'pairs-from': { type: 'string' },
+    recheck: { type: 'string' },
     labels: { type: 'string', default: 'full,partial' },
     'dry-run': { type: 'boolean', default: false },
   },
@@ -78,7 +83,11 @@ const name = values.name ?? `${term}-${values.model}`;
 
 const MAX_PROP_CHARS = 9000;
 const MAX_BET_CHARS = 2500;
-const MAX_LAW_SECTION_CHARS = 2500;
+const recheck = values.recheck !== undefined;
+if (recheck && values['pairs-from']) throw new Error('--recheck and --pairs-from are exclusive');
+const MAX_LAW_SECTION_CHARS = recheck ? RECHECK_LAW_SECTION_CHARS : 2500;
+// Results written by this invocation carry the recheck version when the input was the larger section.
+const OUT_VERSION = recheck ? SFS_RECHECK_TEMPLATE_VERSION : SFS_JUDGE_TEMPLATE_VERSION;
 
 const sfs = sfsStoreSchema.parse(loadJson(resolve(outDir, 'sfs-store', `${term}.json`)));
 const store = loadStore(resolve(outDir, 'riksdag-store', `${term}.json`), term);
@@ -140,10 +149,11 @@ if (values['pairs-from']) {
   const file = z
     .object({ template_version: z.string(), results: z.array(z.looseObject({ id: z.string() })) })
     .parse(loadJson(resolve(values['pairs-from'])));
-  const earlier = file.results.map((r) => ({
-    template_version: file.template_version,
-    ...r,
-  })) as SfsResult[];
+  const earlier = resultsWithFileVersion(file.template_version, file.results);
+  // splitByEarlierRun compares against v4: v5 results (full law section) would be re-judged with the short
+  // section and silently downgraded.
+  if (earlier.some((r) => r.template_version === SFS_RECHECK_TEMPLATE_VERSION))
+    throw new Error('--pairs-from cannot take a run containing recheck (v5) results');
   ({ rerun: toJudge, kept } = splitByEarlierRun(
     pairs,
     earlier,
@@ -155,6 +165,28 @@ if (values['pairs-from']) {
   );
 }
 
+// --recheck <run or results.json>: re-judge only the pairs that run labelled full (any confidence) with the
+// complete law section (template v5); every other result is carried over unchanged.
+if (recheck) {
+  const arg = values.recheck!;
+  const path = arg.endsWith('.json')
+    ? resolve(arg)
+    : resolve(outDir, 'sfs-judge-runs', arg, 'results.json');
+  const file = z
+    .object({ template_version: z.string(), results: z.array(z.looseObject({ id: z.string() })) })
+    .parse(loadJson(path));
+  const earlier = resultsWithFileVersion(file.template_version, file.results);
+  let unjudged: typeof pairs;
+  ({ rerun: toJudge, kept, unjudged } = splitForRecheck(pairs, earlier));
+  // Results of pairs outside this invocation's filter (--ids etc.) stay carried over too.
+  const seen = new Set(pairs.map((p) => p.id));
+  kept = [...kept, ...earlier.filter((r) => !seen.has(r.id))];
+  console.log(
+    `--recheck: ${toJudge.length} full pairs to re-judge, ${kept.length} carried over, ${unjudged.length} pairs not in the earlier run (skipped)`,
+  );
+}
+
+const truncatedLaw = new Set<string>();
 const requests: SfsRequest[] = toJudge.map((pair) => {
   const promise = promiseById.get(pair.promise_id)!;
   const law = sfs.laws[pair.sfs_key]!;
@@ -168,6 +200,7 @@ const requests: SfsRequest[] = toJudge.map((pair) => {
     const text = extractLawSections(paragraphsOf(id), law.title, MAX_LAW_SECTION_CHARS);
     return text ? [{ designation: designationOf(docById.get(id)!), text }] : [];
   });
+  if (lawSections.some((l) => l.text.includes('[... avkortat ...]'))) truncatedLaw.add(pair.id);
   let betProposal: { designation: string; text: string } | undefined;
   for (const betId of pair.bet_ids) {
     const text = changedProposal(sectionsOf(betId), MAX_BET_CHARS);
@@ -194,6 +227,13 @@ const requests: SfsRequest[] = toJudge.map((pair) => {
     estimated_cost_usd: estimateCostUsd(prompt, SFS_JUDGE_INSTRUCTIONS),
   };
 });
+
+if (recheck) {
+  if (truncatedLaw.size)
+    console.warn(
+      `warning: ${truncatedLaw.size} recheck law sections still truncated: ${[...truncatedLaw].join(', ')}`,
+    );
+}
 
 const cacheDir = resolve(outDir, 'sfs-judge-cache');
 const cache: CoverageCache = {
@@ -223,7 +263,7 @@ const todo = requests.filter((r) => !cache.has(r.key));
 const estimate = todo.reduce((a, r) => a + r.estimated_cost_usd, 0);
 console.log(
   `${new Set(pairs.map((p) => p.promise_id)).size} promises, ${pairs.length} pairs (${requests.length} to judge, ${kept.length} kept from the earlier run), ${requests.length - todo.length} cached, ` +
-    `${todo.length} to send; estimated $${estimate.toFixed(2)} (overall cap for run ${name}: $${maxCost}, already spent $${priorSpend.toFixed(2)}; template ${SFS_JUDGE_TEMPLATE_VERSION}, model ${values.model})`,
+    `${todo.length} to send; estimated $${estimate.toFixed(2)} (overall cap for run ${name}: $${maxCost}, already spent $${priorSpend.toFixed(2)}; template ${OUT_VERSION}, model ${values.model})`,
 );
 if (dryRun) process.exit(0);
 if (remainingCap <= 0)
@@ -250,7 +290,7 @@ const summary = await runRequests(requests, {
   },
 });
 
-const collected = collectResults(requests, cache, sfs.laws);
+const collected = collectResults(requests, cache, sfs.laws, OUT_VERSION);
 const missing = collected.missing;
 const results = [...kept, ...collected.results].sort((a, b) => (a.id < b.id ? -1 : 1));
 const dir = runDir;
@@ -258,7 +298,7 @@ mkdirSync(dir, { recursive: true });
 writeJsonAtomic(resolve(dir, 'results.json'), {
   term,
   model: values.model,
-  template_version: SFS_JUDGE_TEMPLATE_VERSION,
+  template_version: recheck ? 'mixed' : SFS_JUDGE_TEMPLATE_VERSION,
   complete: missing === 0,
   results,
 });
