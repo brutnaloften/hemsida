@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["språkförskola", "språkutveckling", "förskola", "svenska"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2025:102 (Tilläggsdirektiv till Utredningen om en likvärdig förskola av god kvalitet med obligatorisk språkförskola (U 2024:04)). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-bvc-sprakscreening-integration-yngsta-barn"],
       "outcome": "weakened",
       "note": "Avtalet säger bara att språkförskola ska övervägas för barn i utsatta områden och nyanlända barn."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB1102",
+      "designation": "Dir. 2025:102",
+      "title": "Tilläggsdirektiv till Utredningen om en likvärdig förskola av god kvalitet med obligatorisk språkförskola (U 2024:04)",
+      "date": "2025-11-27",
+      "url": "https://data.riksdagen.se/dokument/HDB1102.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

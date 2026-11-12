@@ -1,0 +1,30 @@
+{
+  "promise_id": "val2022-kd-mobila-sjukvardsenheter-i-hemmet",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:hemsjukvård",
+    "keyword:multisjuka",
+    "keyword:mobila enheter",
+    "keyword:närsjukvård",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SoU23",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU23",
+      "datum": "2026-02-06",
+      "titel": "Nästa steg för en god och nära vård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU23.html",
+      "found_by": ["keyword:hemsjukvård"],
+      "score": 1
+    }
+  ]
+}

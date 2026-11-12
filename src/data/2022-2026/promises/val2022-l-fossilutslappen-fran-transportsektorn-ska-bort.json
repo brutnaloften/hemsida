@@ -23,10 +23,17 @@
     "utsläppsminskning"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:80 (Undanröja hinder för elektrifieringen av transportsektorn). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -36,6 +43,16 @@
       "promises": ["tido-utbyggd-laddinfrastruktur"],
       "outcome": "weakened",
       "note": "Avtalet satsar på laddinfrastruktur för elektrifiering av transporter, men har inget mål om att fossilutsläppen från transportsektorn ska bort; det finns också mål om lägre drivmedelspriser."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB180",
+      "designation": "Dir. 2023:80",
+      "title": "Undanröja hinder för elektrifieringen av transportsektorn",
+      "date": "2023-06-15",
+      "url": "https://data.riksdagen.se/dokument/HBB180.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

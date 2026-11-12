@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["återvandring", "frivillig", "utanförskap"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:151 (Översyn av incitamentsstrukturerna för frivillig återvandring). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-stimulera-frivillig-aterundvandring-utredning"],
       "outcome": "weakened",
       "note": "Avtalet anger att en utredning tillsätts kring hur återvandring kraftigt kan stimuleras."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1151",
+      "designation": "Dir. 2023:151",
+      "title": "Översyn av incitamentsstrukturerna för frivillig återvandring",
+      "date": "2023-10-26",
+      "url": "https://data.riksdagen.se/dokument/HBB1151.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

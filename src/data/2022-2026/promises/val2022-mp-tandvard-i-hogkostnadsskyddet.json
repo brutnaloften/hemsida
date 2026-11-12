@@ -17,10 +17,28 @@
   "committee": "SoU",
   "keywords": ["tandvård", "högkostnadsskydd", "sjukvård"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:138 (Tilläggsdirektiv till Utredningen om stärkt stöd till tandvård för våldsutsatta och ökad kontroll över tandvårdssektorn (S 2022:12)). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1138",
+      "designation": "Dir. 2023:138",
+      "title": "Tilläggsdirektiv till Utredningen om stärkt stöd till tandvård för våldsutsatta och ökad kontroll över tandvårdssektorn (S 2022:12)",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HBB1138.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

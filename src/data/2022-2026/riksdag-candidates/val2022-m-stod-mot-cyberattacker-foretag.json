@@ -1,0 +1,78 @@
+{
+  "promise_id": "val2022-m-stod-mot-cyberattacker-foretag",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:cyberattacker",
+    "keyword:spionage",
+    "keyword:säkerhetskänslig verksamhet",
+    "keyword:främmande makt",
+    "all-keywords",
+    "committee:FöU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01JuU36",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU36",
+      "datum": "2026-05-19",
+      "titel": "Utökade möjligheter att ingripa i säkerhetskänslig verksamhet",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU36.html",
+      "found_by": ["keyword:säkerhetskänslig verksamhet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01FiU37",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU37",
+      "datum": "2026-05-07",
+      "titel": "En ny funktion för operativ krishantering i den finansiella sektorn",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU37.html",
+      "found_by": ["keyword:cyberattacker"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU29",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU29",
+      "datum": "2026-03-26",
+      "titel": "Stärkt säkerhetsskydd vid överlåtelse av fast egendom",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU29.html",
+      "found_by": ["keyword:säkerhetskänslig verksamhet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03182",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "182",
+      "datum": "2026-03-17",
+      "titel": "Utökade möjligheter att ingripa i säkerhetskänslig verksamhet",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03182.html",
+      "found_by": ["keyword:säkerhetskänslig verksamhet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01JuU32",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU32",
+      "datum": "2023-09-07",
+      "titel": "Ett granskningssystem för utländska direktinvesteringar till skydd för svenska säkerhetsintressen",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU32.html",
+      "found_by": ["keyword:främmande makt"],
+      "score": 1
+    }
+  ]
+}

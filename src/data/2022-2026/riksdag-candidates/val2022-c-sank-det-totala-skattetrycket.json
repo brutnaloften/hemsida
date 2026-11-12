@@ -1,0 +1,89 @@
+{
+  "promise_id": "val2022-c-sank-det-totala-skattetrycket",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:skattetryck",
+    "keyword:skattesänkning",
+    "keyword:mandatperiod",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SkU28",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU28",
+      "datum": "2026-05-19",
+      "titel": "Sänkt alkoholskatt för alkoholvaror från oberoende småproducenter",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU28.html",
+      "found_by": ["keyword:skattesänkning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB179",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "79",
+      "datum": "2025-08-28",
+      "titel": "Incitament för lägre skattesatser i kommunsektorn",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB179.html",
+      "found_by": ["keyword:skattesänkning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SkU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU11",
+      "datum": "2025-01-22",
+      "titel": "Sänkt alkoholskatt för öl från oberoende småbryggerier",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU11.html",
+      "found_by": ["keyword:skattesänkning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01MJU18",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU18",
+      "datum": "2024-06-18",
+      "titel": "Nationell strategi och regeringens handlingsplan för klimatanpassning",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU18.html",
+      "found_by": ["keyword:mandatperiod"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01MJU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU15",
+      "datum": "2024-05-06",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
+      "found_by": ["keyword:mandatperiod"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SkU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU1",
+      "datum": "2023-11-30",
+      "titel": "Utgiftsområde 3 Skatt, tull och exekution",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU1.html",
+      "found_by": ["keyword:skattesänkning"],
+      "score": 1
+    }
+  ]
+}

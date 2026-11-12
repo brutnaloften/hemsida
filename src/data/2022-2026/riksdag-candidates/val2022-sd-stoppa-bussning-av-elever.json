@@ -1,0 +1,41 @@
+{
+  "promise_id": "val2022-sd-stoppa-bussning-av-elever",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:bussning",
+    "keyword:skolval",
+    "keyword:integrationsexperiment",
+    "all-keywords",
+    "committee:UbU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01UbU7",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU7",
+      "datum": "2026-02-23",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU7.html",
+      "found_by": ["keyword:skolval"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01UbU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU9",
+      "datum": "2025-04-23",
+      "titel": "Övergripande skolfrågor",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU9.html",
+      "found_by": ["keyword:skolval"],
+      "score": 1
+    }
+  ]
+}

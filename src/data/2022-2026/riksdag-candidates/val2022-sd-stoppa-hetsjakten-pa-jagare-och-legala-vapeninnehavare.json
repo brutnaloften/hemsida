@@ -1,0 +1,101 @@
+{
+  "promise_id": "val2022-sd-stoppa-hetsjakten-pa-jagare-och-legala-vapeninnehavare",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:jägare",
+    "keyword:vapeninnehavare",
+    "keyword:vapenlagen",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01JuU10",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU10",
+      "datum": "2026-04-24",
+      "titel": "En ny vapenlag",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU10.html",
+      "found_by": ["keyword:jägare", "keyword:vapenlagen"],
+      "score": 2
+    },
+    {
+      "dok_id": "HEB1106",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "106",
+      "datum": "2026-09-03",
+      "titel": "Ytterligare förenklingar för legala vapenägare",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1106.html",
+      "found_by": ["keyword:jägare"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01UU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UU18",
+      "datum": "2026-05-27",
+      "titel": "Ett modernt och anpassat regelverk för krigsmateriel",
+      "organ": "UU",
+      "url": "https://data.riksdagen.se/dokument/HD01UU18.html",
+      "found_by": ["keyword:vapenlagen"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01MJU23",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU23",
+      "datum": "2026-05-11",
+      "titel": "Förenklingar i jaktlagstiftningen",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU23.html",
+      "found_by": ["keyword:jägare"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01JuU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU17",
+      "datum": "2025-05-08",
+      "titel": "Vapenfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU17.html",
+      "found_by": ["keyword:jägare"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01KU6",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KU6",
+      "datum": "2024-02-29",
+      "titel": "Sekretess för uppgifter om jägare hos länsstyrelsen och Polismyndigheten",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HB01KU6.html",
+      "found_by": ["keyword:jägare"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB0361",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "61",
+      "datum": "2024-01-03",
+      "titel": "Sekretess för uppgifter om jägare hos länsstyrelsen och Polismyndigheten",
+      "organ": "Landsbygds- och infrastrukturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0361.html",
+      "found_by": ["keyword:jägare"],
+      "score": 1
+    }
+  ]
+}

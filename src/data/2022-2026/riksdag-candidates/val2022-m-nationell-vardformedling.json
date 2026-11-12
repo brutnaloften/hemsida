@@ -1,0 +1,102 @@
+{
+  "promise_id": "val2022-m-nationell-vardformedling",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:vårdförmedling",
+    "keyword:väntetider",
+    "keyword:vårdgaranti",
+    "keyword:vårdköer",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HB01SoU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU8",
+      "datum": "2024-04-18",
+      "titel": "Riksrevisionens rapport om statens arbete med väntetider i vården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU8.html",
+      "found_by": ["keyword:väntetider", "keyword:vårdgaranti", "keyword:vårdköer"],
+      "score": 3
+    },
+    {
+      "dok_id": "HEB192",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "92",
+      "datum": "2026-08-13",
+      "titel": "Nationella principer för utbud av hälso- och sjukvård i hela landet",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB192.html",
+      "found_by": ["keyword:vårdgaranti"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB13",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "3",
+      "datum": "2026-01-08",
+      "titel": "Samordnare för att korta vårdköerna i hälso- och sjukvården",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB13.html",
+      "found_by": ["keyword:vårdköer"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB150",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "50",
+      "datum": "2024-05-23",
+      "titel": "Bättre styrning för en tillgänglig och jämlik hälso- och sjukvård med god kontinuitet",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB150.html",
+      "found_by": ["keyword:väntetider"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB0348",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "48",
+      "datum": "2023-12-05",
+      "titel": "Riksrevisionens rapport om statens arbete med väntetider i vården",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0348.html",
+      "found_by": ["keyword:väntetider"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FiU20",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU20",
+      "datum": "2023-06-15",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU20.html",
+      "found_by": ["keyword:vårdköer"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU3",
+      "datum": "2022-11-17",
+      "titel": "Vissa frågor inom hälso- och sjukvårdsområdet",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU3.html",
+      "found_by": ["keyword:vårdköer"],
+      "score": 1
+    }
+  ]
+}

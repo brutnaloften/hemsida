@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["socialtjänst", "tvångsåtgärder", "unga lagöverträdare", "LVU"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2024:114 (Tilläggsdirektiv till Utredningen om stärkt barnrättsperspektiv i LVU (S 2023:13)). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-mellantvang-socialtjanstlagen", "tido-lvu-anvands-oftare"],
       "outcome": "included",
       "note": "Avtalet ger socialtjänsten utökade befogenheter till tidiga och obligatoriska insatser och använder LVU oftare."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB1114",
+      "designation": "Dir. 2024:114",
+      "title": "Tilläggsdirektiv till Utredningen om stärkt barnrättsperspektiv i LVU (S 2023:13)",
+      "date": "2024-11-21",
+      "url": "https://data.riksdagen.se/dokument/HCB1114.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

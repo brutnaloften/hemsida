@@ -1,0 +1,29 @@
+{
+  "promise_id": "val2022-sd-sarskilt-hedersbrott",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:hedersbrott",
+    "keyword:hedersförtryck",
+    "keyword:brottsrubricering",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01JuU22",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU22",
+      "datum": "2025-02-21",
+      "titel": "En modern straffrättslig preskriptionslagstiftning",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU22.html",
+      "found_by": ["keyword:hedersförtryck"],
+      "score": 1
+    }
+  ]
+}

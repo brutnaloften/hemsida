@@ -1,0 +1,102 @@
+{
+  "promise_id": "val2022-m-bygga-ut-laddstationer",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:laddstolpar",
+    "keyword:laddstationer",
+    "keyword:elbilar",
+    "keyword:laddinfrastruktur",
+    "all-keywords",
+    "committee:TU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01TU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "TU9",
+      "datum": "2026-02-10",
+      "titel": "Vägtrafik- och fordonsfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HD01TU9.html",
+      "found_by": ["keyword:laddinfrastruktur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01MJU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU17",
+      "datum": "2025-05-15",
+      "titel": "Nya regler för datacenter och hållbara bränslen samt en ny reduktionsplikt",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU17.html",
+      "found_by": ["keyword:laddstationer"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01TU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "TU11",
+      "datum": "2025-03-27",
+      "titel": "Vägtrafik- och fordonsfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HC01TU11.html",
+      "found_by": ["keyword:laddinfrastruktur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01NU3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU3",
+      "datum": "2024-12-09",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
+      "found_by": ["keyword:laddinfrastruktur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01MJU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU1",
+      "datum": "2023-12-11",
+      "titel": "Utgiftsområde 20 Klimat, miljö och natur",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU1.html",
+      "found_by": ["keyword:laddinfrastruktur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01NU3",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU3",
+      "datum": "2023-12-08",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU3.html",
+      "found_by": ["keyword:laddinfrastruktur"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01NU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU3",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
+      "found_by": ["keyword:laddinfrastruktur"],
+      "score": 1
+    }
+  ]
+}

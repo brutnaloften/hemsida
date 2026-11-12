@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["straffmyndighetsålder", "ungdomskriminalitet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:112 (Skärpta regler för unga lagöverträdare). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-utred-straffrabatt-under-18"],
       "outcome": "weakened",
       "note": "Avtalet anger att en utredning ska se över straffrabatten för under 18 år och samtidigt överväga en sänkning av straffmyndighetsåldern."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1112",
+      "designation": "Dir. 2023:112",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2023-07-06",
+      "url": "https://data.riksdagen.se/dokument/HBB1112.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

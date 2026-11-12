@@ -1,0 +1,113 @@
+{
+  "promise_id": "val2022-sd-oka-ekonomiskt-stod-till-mest-utsatta-aldre",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:garantipension",
+    "keyword:bostadstillägg",
+    "keyword:utsatta äldre",
+    "all-keywords",
+    "committee:SfU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SfU2",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU2",
+      "datum": "2025-11-27",
+      "titel": "Utgiftsområde 11 Ekonomisk trygghet vid ålderdom",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU2.html",
+      "found_by": ["keyword:garantipension", "keyword:bostadstillägg"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01SfU2",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SfU2",
+      "datum": "2024-12-03",
+      "titel": "Utgiftsområde 11 Ekonomisk trygghet vid ålderdom",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU2.html",
+      "found_by": ["keyword:garantipension", "keyword:bostadstillägg"],
+      "score": 2
+    },
+    {
+      "dok_id": "HB01SfU2",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SfU2",
+      "datum": "2023-12-04",
+      "titel": "Utgiftsområde 11 Ekonomisk trygghet vid ålderdom",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU2.html",
+      "found_by": ["keyword:garantipension", "keyword:bostadstillägg"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01SfU2",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SfU2",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 11 Ekonomisk trygghet vid ålderdom",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU2.html",
+      "found_by": ["keyword:garantipension", "keyword:bostadstillägg"],
+      "score": 2
+    },
+    {
+      "dok_id": "HEB157",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "57",
+      "datum": "2026-06-18",
+      "titel": "Ett bättre och enklare grundskydd i ålderspensionssystemet",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB157.html",
+      "found_by": ["keyword:garantipension"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SfU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU13",
+      "datum": "2025-12-11",
+      "titel": "Pensioner",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU13.html",
+      "found_by": ["keyword:bostadstillägg"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SfU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SfU13",
+      "datum": "2025-02-20",
+      "titel": "Pensioner",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU13.html",
+      "found_by": ["keyword:bostadstillägg"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SfU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SfU11",
+      "datum": "2023-02-10",
+      "titel": "Pensioner",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU11.html",
+      "found_by": ["keyword:garantipension"],
+      "score": 1
+    }
+  ]
+}

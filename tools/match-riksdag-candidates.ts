@@ -2,7 +2,10 @@
  * Match locally stored Riksdag documents against Tidö promises and merge the hits into
  * src/data/<term>/riksdag-candidates/<promise-id>.json (same format as search-riksdag-candidates.ts).
  *   node --experimental-strip-types tools/match-riksdag-candidates.ts [--term 2022-2026]
- *     [--rematch] [--promise <id>] [--store <path>] [--dry-run]
+ *     [--rematch] [--promise <id>] [--id-prefix <prefix>] [--store <path>] [--dry-run]
+ *
+ * Without --id-prefix only Tidöavtalet promises are matched; with it every promise whose id starts
+ * with the prefix (e.g. val2022- for the manifesto promises).
  *
  * Needs the store from ingest-riksdag.ts. Only documents ingested since the last match are
  * scored, except for promises whose keywords/committee changed (hash differs) or with --rematch,
@@ -29,6 +32,7 @@ const { values } = parseArgs({
     term: { type: 'string', default: '2022-2026' },
     rematch: { type: 'boolean', default: false },
     promise: { type: 'string' },
+    'id-prefix': { type: 'string' },
     store: { type: 'string' },
     'dry-run': { type: 'boolean', default: false },
   },
@@ -56,7 +60,11 @@ function loadPromises(): SearchPromise[] {
     .filter((f) => f.endsWith('.json'))
     .sort()
     .map((f) => loadJson(resolve(dir, f)) as SearchPromise & { source: { id: string } })
-    .filter((p) => p.source.id === 'tidoavtalet')
+    .filter((p) =>
+      values['id-prefix'] === undefined
+        ? p.source.id === 'tidoavtalet'
+        : p.id.startsWith(values['id-prefix']),
+    )
     .map((p) => ({ id: p.id, term: p.term, keywords: p.keywords ?? [], committee: p.committee }));
 }
 

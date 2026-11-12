@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["public service", "SVT", "SR", "UR", "oberoende", "radio- och tv-lagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:27 (Långsiktiga villkor för ett hållfast och oberoende public service). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-public-service-oberoende-finansiering-tillstandsperiod"],
       "outcome": "weakened",
       "note": "Avtalet säger att public service oberoende ska bestå och finansieringen vidmakthållas, men nämner inget ökat skydd i lag."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB127",
+      "designation": "Dir. 2023:27",
+      "title": "Långsiktiga villkor för ett hållfast och oberoende public service",
+      "date": "2023-02-23",
+      "url": "https://data.riksdagen.se/dokument/HBB127.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

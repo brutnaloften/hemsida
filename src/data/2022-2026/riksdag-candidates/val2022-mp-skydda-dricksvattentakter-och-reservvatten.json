@@ -1,0 +1,53 @@
+{
+  "promise_id": "val2022-mp-skydda-dricksvattentakter-och-reservvatten",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:dricksvatten",
+    "keyword:vattentäkter",
+    "keyword:reservvatten",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HB01CU16",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "CU16",
+      "datum": "2024-04-19",
+      "titel": "Hushållningen med mark- och vattenområden",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HB01CU16.html",
+      "found_by": ["keyword:dricksvatten"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01MJU6",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU6",
+      "datum": "2024-01-25",
+      "titel": "Genomförande av EU:s nya dricksvattendirektiv",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU6.html",
+      "found_by": ["keyword:dricksvatten"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB0330",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "30",
+      "datum": "2023-10-24",
+      "titel": "Genomförande av EU:s nya dricksvattendirektiv",
+      "organ": "Landsbygds- och infrastrukturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0330.html",
+      "found_by": ["keyword:dricksvatten"],
+      "score": 1
+    }
+  ]
+}

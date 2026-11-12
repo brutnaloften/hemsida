@@ -1,0 +1,66 @@
+{
+  "promise_id": "val2022-kd-stark-foreningslivet-mentorskap-avhopparprogram",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:avhopparprogram",
+    "keyword:mentorskap",
+    "keyword:föreningsliv",
+    "keyword:gängkriminalitet",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01JuU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU14",
+      "datum": "2026-03-26",
+      "titel": "Terrorism",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU14.html",
+      "found_by": ["keyword:avhopparprogram"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SoU29",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU29",
+      "datum": "2025-06-11",
+      "titel": "Ett fritidskort för barn och unga – en aktiv och meningsfull fritid i gemenskap med andra",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU29.html",
+      "found_by": ["keyword:föreningsliv"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01JuU16",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU16",
+      "datum": "2024-04-08",
+      "titel": "Polisfrågor",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU16.html",
+      "found_by": ["keyword:gängkriminalitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01JuU8",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU8",
+      "datum": "2023-05-03",
+      "titel": "Skärpta straff för brott i kriminella nätverk",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU8.html",
+      "found_by": ["keyword:gängkriminalitet"],
+      "score": 1
+    }
+  ]
+}

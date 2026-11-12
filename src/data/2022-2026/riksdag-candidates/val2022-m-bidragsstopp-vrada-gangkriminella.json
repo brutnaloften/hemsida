@@ -1,0 +1,66 @@
+{
+  "promise_id": "val2022-m-bidragsstopp-vrada-gangkriminella",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:bidragsstopp",
+    "keyword:vräkning",
+    "keyword:gängkriminella",
+    "keyword:hyreslagen",
+    "all-keywords",
+    "committee:CU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HA01CU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "CU14",
+      "datum": "2023-04-03",
+      "titel": "Hyresrätt m.m.",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HA01CU14.html",
+      "found_by": ["keyword:vräkning", "keyword:hyreslagen"],
+      "score": 2
+    },
+    {
+      "dok_id": "HEB194",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "94",
+      "datum": "2026-08-20",
+      "titel": "Tilläggsdirektiv till utredningen om riktade insatser mot kriminella organisationer - en särlagstiftning för gängkriminella (Ju 2026:11)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB194.html",
+      "found_by": ["keyword:gängkriminella"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB167",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "67",
+      "datum": "2026-07-02",
+      "titel": "Riktade insatser mot kriminella organisationer - En särlagstiftning för gängkriminella",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB167.html",
+      "found_by": ["keyword:gängkriminella"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB137",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "37",
+      "datum": "2025-04-10",
+      "titel": "Åtgärder mot överskuldsättning med fokus på evighetsgäldenärer",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB137.html",
+      "found_by": ["keyword:vräkning"],
+      "score": 1
+    }
+  ]
+}

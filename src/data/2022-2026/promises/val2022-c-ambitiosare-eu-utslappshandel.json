@@ -17,10 +17,38 @@
   "committee": "MJU",
   "keywords": ["utsläppsrätter", "EU ETS", "utsläppshandel", "klimat"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2022/23:144 (Nya verksamheter i utsläppshandelssystemet). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2023/24:MJU4 (Nya verksamheter i utsläppshandelssystemet), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA03144",
+      "designation": "Prop. 2022/23:144",
+      "title": "Nya verksamheter i utsläppshandelssystemet",
+      "date": "2023-09-11",
+      "url": "https://data.riksdagen.se/dokument/HA03144.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01MJU4",
+      "designation": "Bet. 2023/24:MJU4",
+      "title": "Nya verksamheter i utsläppshandelssystemet",
+      "date": "2023-11-07",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU4.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

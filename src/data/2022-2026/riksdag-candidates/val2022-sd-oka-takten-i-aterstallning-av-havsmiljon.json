@@ -1,0 +1,77 @@
+{
+  "promise_id": "val2022-sd-oka-takten-i-aterstallning-av-havsmiljon",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:Östersjön",
+    "keyword:havsmiljö",
+    "keyword:övergödning",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01MJU21",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU21",
+      "datum": "2025-06-10",
+      "titel": "Nämdöskärgårdens nationalpark och naturvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU21.html",
+      "found_by": ["keyword:Östersjön", "keyword:havsmiljö"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01MJU5",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU5",
+      "datum": "2024-11-15",
+      "titel": "Ett levande hav – ökat skydd, minskad övergödning och ett hållbart fiske",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU5.html",
+      "found_by": ["keyword:havsmiljö", "keyword:övergödning"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01MJU7",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU7",
+      "datum": "2023-02-23",
+      "titel": "Vattenvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU7.html",
+      "found_by": ["keyword:havsmiljö", "keyword:övergödning"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01MJU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU13",
+      "datum": "2025-03-20",
+      "titel": "Förbud mot bottentrålning i marina skyddade områden",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU13.html",
+      "found_by": ["keyword:havsmiljö"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB03156",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "156",
+      "datum": "2024-06-05",
+      "titel": "Ett levande hav – ökat skydd, minskad övergödning och ett hållbart fiske",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03156.html",
+      "found_by": ["keyword:övergödning"],
+      "score": 1
+    }
+  ]
+}

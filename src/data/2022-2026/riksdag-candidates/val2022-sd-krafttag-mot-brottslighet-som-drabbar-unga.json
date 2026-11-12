@@ -1,0 +1,23 @@
+{
+  "promise_id": "val2022-sd-krafttag-mot-brottslighet-som-drabbar-unga",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": ["keyword:ungdomsbrottslighet", "keyword:ungdomsrån", "all-keywords", "committee:JuU"],
+  "candidates": [
+    {
+      "dok_id": "HA01JuU15",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU15",
+      "datum": "2023-04-13",
+      "titel": "Unga lagöverträdare",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU15.html",
+      "found_by": ["keyword:ungdomsbrottslighet"],
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "promise_id": "val2022-mp-forstarkt-elevhalsa",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:elevhälsa",
+    "keyword:skolsköterskor",
+    "keyword:specialpedagoger",
+    "keyword:kuratorer",
+    "all-keywords",
+    "committee:UbU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HDB3113",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "113",
+      "datum": "2025-11-26",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3113.html",
+      "found_by": ["keyword:elevhälsa"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB162",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "62",
+      "datum": "2025-06-12",
+      "titel": "Tilläggsdirektiv till Utredningen om en förbättrad elevhälsa (U 2024:01)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB162.html",
+      "found_by": ["keyword:elevhälsa"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB344",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "44",
+      "datum": "2025-04-10",
+      "titel": "Förbättrat stöd i skolan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB344.html",
+      "found_by": ["keyword:elevhälsa"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB118",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "18",
+      "datum": "2025-02-27",
+      "titel": "Tilläggsdirektiv till Utredningen om en förbättrad elevhälsa (U 2024:01)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB118.html",
+      "found_by": ["keyword:elevhälsa"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB130",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2024-03-07",
+      "titel": "En förbättrad elevhälsa",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB130.html",
+      "found_by": ["keyword:elevhälsa"],
+      "score": 1
+    }
+  ]
+}

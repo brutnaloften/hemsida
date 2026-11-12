@@ -17,10 +17,17 @@
   "committee": "TU",
   "keywords": ["Arlanda", "flygplats", "utbyggnad", "flyg"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:178 (Stärkt konkurrenskraft för Arlanda flygplats genom ökad kapacitet och förbättrad tillgänglighet till och från flygplatsen). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1178",
+      "designation": "Dir. 2023:178",
+      "title": "Stärkt konkurrenskraft för Arlanda flygplats genom ökad kapacitet och förbättrad tillgänglighet till och från flygplatsen",
+      "date": "2023-12-20",
+      "url": "https://data.riksdagen.se/dokument/HBB1178.html",
+      "relevance": "partial",
       "note": null
     }
   ]

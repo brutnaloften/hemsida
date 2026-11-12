@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["Försvarsmakten", "polisen", "stöd till polisen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:143 (Polisens beredskap). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1143",
+      "designation": "Dir. 2023:143",
+      "title": "Polisens beredskap",
+      "date": "2023-10-12",
+      "url": "https://data.riksdagen.se/dokument/HBB1143.html",
+      "relevance": "full",
       "note": null
     }
   ]

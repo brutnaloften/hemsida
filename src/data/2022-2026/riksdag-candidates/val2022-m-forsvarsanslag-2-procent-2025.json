@@ -1,0 +1,54 @@
+{
+  "promise_id": "val2022-m-forsvarsanslag-2-procent-2025",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:försvarsanslag",
+    "keyword:2 procent av BNP",
+    "keyword:försvarsutgifter",
+    "keyword:försvarsbudget",
+    "all-keywords",
+    "committee:FöU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HEB190",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "90",
+      "datum": "2026-08-13",
+      "titel": "Översyn av den statliga förvaltningen för att säkerställa god hushållning",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB190.html",
+      "found_by": ["keyword:försvarsutgifter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01FiU49",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU49",
+      "datum": "2026-06-11",
+      "titel": "Utvärdering av statens upplåning och skuldförvaltning 2021–2025",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU49.html",
+      "found_by": ["keyword:2 procent av BNP"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FöU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FöU1",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "organ": "FöU",
+      "url": "https://data.riksdagen.se/dokument/HA01FöU1.html",
+      "found_by": ["keyword:försvarsanslag"],
+      "score": 1
+    }
+  ]
+}

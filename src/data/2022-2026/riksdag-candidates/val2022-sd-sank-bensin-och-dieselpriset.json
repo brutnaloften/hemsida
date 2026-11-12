@@ -1,0 +1,102 @@
+{
+  "promise_id": "val2022-sd-sank-bensin-och-dieselpriset",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:bensinpris",
+    "keyword:dieselpris",
+    "keyword:reduktionsplikt",
+    "keyword:bränsleskatt",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01MJU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU17",
+      "datum": "2025-05-15",
+      "titel": "Nya regler för datacenter och hållbara bränslen samt en ny reduktionsplikt",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU17.html",
+      "found_by": ["keyword:reduktionsplikt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC03131",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "131",
+      "datum": "2025-03-18",
+      "titel": "Nya regler för datacenter och hållbara bränslen samt en ny reduktionsplikt",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03131.html",
+      "found_by": ["keyword:reduktionsplikt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB198",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "98",
+      "datum": "2024-10-24",
+      "titel": "Styrmedel för att bidra till en utfasning av fossila bränslen och att nå Sveriges klimatåtaganden i EU",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB198.html",
+      "found_by": ["keyword:reduktionsplikt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01MJU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU8",
+      "datum": "2024-03-07",
+      "titel": "Riksrevisionens rapport om reduktionsplikten för bensin och diesel",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU8.html",
+      "found_by": ["keyword:reduktionsplikt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB0344",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "44",
+      "datum": "2023-11-28",
+      "titel": "Riksrevisionens rapport om reduktionsplikten för bensin och diesel",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0344.html",
+      "found_by": ["keyword:reduktionsplikt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01MJU5",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU5",
+      "datum": "2023-11-23",
+      "titel": "Sänkning av reduktionsplikten för bensin och diesel",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU5.html",
+      "found_by": ["keyword:reduktionsplikt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB0328",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "28",
+      "datum": "2023-10-17",
+      "titel": "Sänkning av reduktionsplikten för bensin och diesel",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0328.html",
+      "found_by": ["keyword:reduktionsplikt"],
+      "score": 1
+    }
+  ]
+}

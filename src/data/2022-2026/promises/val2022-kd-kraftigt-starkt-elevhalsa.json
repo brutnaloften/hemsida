@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["elevhälsa", "barn- och ungdomshälsovård", "skola", "ungas hälsa"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2025:44 (Förbättrat stöd i skolan ). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-reform-elevhalsan-elevhalsogaranti"],
       "outcome": "included",
       "note": "Avtalet reformerar elevhälsan och inför en elevhälsogaranti, men nämner inte en sammanhållen barn- och ungdomshälsovård."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB344",
+      "designation": "SOU 2025:44",
+      "title": "Förbättrat stöd i skolan",
+      "date": "2025-04-10",
+      "url": "https://data.riksdagen.se/dokument/HDB344.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

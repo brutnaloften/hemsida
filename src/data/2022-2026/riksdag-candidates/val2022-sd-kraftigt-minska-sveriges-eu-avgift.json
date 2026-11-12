@@ -1,0 +1,59 @@
+{
+  "promise_id": "val2022-sd-kraftigt-minska-sveriges-eu-avgift",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": ["keyword:EU-avgift", "keyword:budgetförhandling", "all-keywords", "committee:FiU"],
+  "candidates": [
+    {
+      "dok_id": "HD01FiU5",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU5",
+      "datum": "2025-12-11",
+      "titel": "Utgiftsområde 27 Avgiften till Europeiska unionen",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU5.html",
+      "found_by": ["keyword:EU-avgift"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01FiU5",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU5",
+      "datum": "2024-12-12",
+      "titel": "Utgiftsområde 27 Avgiften till Europeiska unionen",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU5.html",
+      "found_by": ["keyword:EU-avgift"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01FiU5",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU5",
+      "datum": "2023-12-14",
+      "titel": "Utgiftsområde 27 Avgiften till Europeiska unionen",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU5.html",
+      "found_by": ["keyword:EU-avgift"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FiU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU5",
+      "datum": "2022-12-19",
+      "titel": "Utgiftsområde 27 Avgiften till Europeiska unionen",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU5.html",
+      "found_by": ["keyword:EU-avgift"],
+      "score": 1
+    }
+  ]
+}

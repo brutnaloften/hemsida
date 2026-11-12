@@ -1,0 +1,65 @@
+{
+  "promise_id": "val2022-sd-mal-for-fossilfrihet-och-leveranssakerhet",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:fossilfrihet",
+    "keyword:leveranssäkerhet",
+    "keyword:energipolitiskt mål",
+    "all-keywords",
+    "committee:NU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01NU12",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU12",
+      "datum": "2025-03-06",
+      "titel": "Elmarknadsfrågor",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU12.html",
+      "found_by": ["keyword:leveranssäkerhet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01NU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU14",
+      "datum": "2024-05-20",
+      "titel": "Energipolitikens långsiktiga inriktning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU14.html",
+      "found_by": ["keyword:leveranssäkerhet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB112",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "12",
+      "datum": "2024-01-25",
+      "titel": "Ett elsystem med tydligt systemansvar, hög leveranssäkerhet och långsiktiga planeringsförutsättningar",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB112.html",
+      "found_by": ["keyword:leveranssäkerhet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01TU4",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "TU4",
+      "datum": "2023-02-20",
+      "titel": "Infrastrukturfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HA01TU4.html",
+      "found_by": ["keyword:fossilfrihet"],
+      "score": 1
+    }
+  ]
+}

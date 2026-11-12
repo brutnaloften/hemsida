@@ -1,0 +1,89 @@
+{
+  "promise_id": "val2022-sd-oka-anvandarnas-stallning-gentemot-sociala-plattformar",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:sociala plattformar",
+    "keyword:användare",
+    "keyword:avstängning",
+    "all-keywords",
+    "committee:KU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01UbU22",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU22",
+      "datum": "2026-05-22",
+      "titel": "Bättre förutsättningar för trygghet och studiero i skolan",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU22.html",
+      "found_by": ["keyword:avstängning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01NU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU8",
+      "datum": "2025-11-12",
+      "titel": "Förbättrad utformning av EU:s elmarknad",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU8.html",
+      "found_by": ["keyword:användare"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01AU4",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU4",
+      "datum": "2025-10-23",
+      "titel": "Regler om avstängning av statligt anställda",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU4.html",
+      "found_by": ["keyword:avstängning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC03204",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "204",
+      "datum": "2025-09-08",
+      "titel": "Regler om avstängning av statligt anställda",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03204.html",
+      "found_by": ["keyword:avstängning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01NU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU9",
+      "datum": "2023-04-21",
+      "titel": "Genomförande av elmarknadsdirektivet när det gäller leverans av el och aggregeringstjänster",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU9.html",
+      "found_by": ["keyword:användare"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01KU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU16",
+      "datum": "2023-01-24",
+      "titel": "Sekretess vid Försäkringskassans handläggning av ärenden om elstöd samt slopad kontrolluppgiftsskyldighet",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU16.html",
+      "found_by": ["keyword:användare"],
+      "score": 1
+    }
+  ]
+}

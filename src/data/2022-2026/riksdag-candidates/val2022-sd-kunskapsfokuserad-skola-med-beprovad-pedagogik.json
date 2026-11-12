@@ -1,0 +1,53 @@
+{
+  "promise_id": "val2022-sd-kunskapsfokuserad-skola-med-beprovad-pedagogik",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:kunskapsskola",
+    "keyword:pedagogik",
+    "keyword:styrdokument",
+    "all-keywords",
+    "committee:UbU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HEB1107",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "107",
+      "datum": "2026-09-03",
+      "titel": "En översyn av svenskämnenas indelning",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1107.html",
+      "found_by": ["keyword:styrdokument"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01UbU23",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU23",
+      "datum": "2026-05-28",
+      "titel": "Nya läroplaner – för en stark kunskapsskola",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU23.html",
+      "found_by": ["keyword:kunskapsskola"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03194",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "194",
+      "datum": "2026-03-17",
+      "titel": "Nya läroplaner – för en stark kunskapsskola",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03194.html",
+      "found_by": ["keyword:kunskapsskola"],
+      "score": 1
+    }
+  ]
+}

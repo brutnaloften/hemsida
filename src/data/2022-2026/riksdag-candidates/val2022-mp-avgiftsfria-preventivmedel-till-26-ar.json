@@ -1,0 +1,41 @@
+{
+  "promise_id": "val2022-mp-avgiftsfria-preventivmedel-till-26-ar",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:preventivmedel",
+    "keyword:avgiftsfritt",
+    "keyword:26 år",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD03140",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "140",
+      "datum": "2026-06-30",
+      "titel": "2026 års redogörelse för företag med statligt ägande",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03140.html",
+      "found_by": ["keyword:26 år"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03100",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "100",
+      "datum": "2026-04-13",
+      "titel": "2026 års ekonomiska vårproposition",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03100.html",
+      "found_by": ["keyword:26 år"],
+      "score": 1
+    }
+  ]
+}

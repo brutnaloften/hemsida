@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["dokumentationskrav", "lärare", "administration", "arbetsbörda"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2025:26 (Tid för undervisningsuppdraget). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
         "tido-starkta-larares-befogenheter"
       ],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB326",
+      "designation": "SOU 2025:26",
+      "title": "Tid för undervisningsuppdraget",
+      "date": "2025-03-03",
+      "url": "https://data.riksdagen.se/dokument/HDB326.html",
+      "relevance": "full",
       "note": null
     }
   ]

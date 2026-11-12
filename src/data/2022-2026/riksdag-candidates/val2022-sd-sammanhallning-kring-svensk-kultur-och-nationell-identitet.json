@@ -1,0 +1,53 @@
+{
+  "promise_id": "val2022-sd-sammanhallning-kring-svensk-kultur-och-nationell-identitet",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:svensk kultur",
+    "keyword:nationell identitet",
+    "keyword:kulturkanon",
+    "all-keywords",
+    "committee:KrU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HBB1180",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "180",
+      "datum": "2023-12-21",
+      "titel": "En svensk kulturkanon",
+      "organ": "Ku-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1180.html",
+      "found_by": ["keyword:svensk kultur", "keyword:kulturkanon"],
+      "score": 2
+    },
+    {
+      "dok_id": "HDB392",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "92",
+      "datum": "2025-09-02",
+      "titel": "En kulturkanon för Sverige",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB392.html",
+      "found_by": ["keyword:kulturkanon"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB1129",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "129",
+      "datum": "2023-09-07",
+      "titel": "Skärpta krav för att förvärva svenskt medborgarskap",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1129.html",
+      "found_by": ["keyword:svensk kultur"],
+      "score": 1
+    }
+  ]
+}

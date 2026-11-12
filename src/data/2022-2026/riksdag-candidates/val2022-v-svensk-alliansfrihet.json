@@ -1,0 +1,78 @@
+{
+  "promise_id": "val2022-v-svensk-alliansfrihet",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:alliansfrihet",
+    "keyword:Nato-medlemskap",
+    "keyword:neutralitet",
+    "keyword:militärt samarbete",
+    "all-keywords",
+    "committee:UFöU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01FöU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FöU14",
+      "datum": "2026-06-10",
+      "titel": "Förbättrade förutsättningar för operativt militärt samarbete",
+      "organ": "FöU",
+      "url": "https://data.riksdagen.se/dokument/HD01FöU14.html",
+      "found_by": ["keyword:militärt samarbete"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03254",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "254",
+      "datum": "2026-04-30",
+      "titel": "Förbättrade förutsättningar för operativt militärt samarbete",
+      "organ": "Försvarsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03254.html",
+      "found_by": ["keyword:militärt samarbete"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01MJU5",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU5",
+      "datum": "2025-11-17",
+      "titel": "Straff för överträdelser av EU:s nya förordningar om f-gaser och ozonnedbrytande ämnen",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU5.html",
+      "found_by": ["keyword:neutralitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB421",
+      "doktyp": "ds",
+      "rm": "2025",
+      "beteckning": "21",
+      "datum": "2025-10-13",
+      "titel": "Förbättrade förutsättningar för operativt militärt samarbete",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB421.html",
+      "found_by": ["keyword:militärt samarbete"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01UU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "UU9",
+      "datum": "2023-06-01",
+      "titel": "Strategisk exportkontroll 2022 – krigsmateriel och produkter med dubbla användningsområden",
+      "organ": "UU",
+      "url": "https://data.riksdagen.se/dokument/HA01UU9.html",
+      "found_by": ["keyword:Nato-medlemskap"],
+      "score": 1
+    }
+  ]
+}

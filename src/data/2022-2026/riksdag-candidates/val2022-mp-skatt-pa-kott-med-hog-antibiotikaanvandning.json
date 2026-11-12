@@ -1,0 +1,53 @@
+{
+  "promise_id": "val2022-mp-skatt-pa-kott-med-hog-antibiotikaanvandning",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:antibiotika",
+    "keyword:djurhållning",
+    "keyword:köttskatt",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HB01MJU11",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU11",
+      "datum": "2024-03-26",
+      "titel": "Djurskydd",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU11.html",
+      "found_by": ["keyword:djurhållning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01MJU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU5",
+      "datum": "2023-02-16",
+      "titel": "Förbättrad övervakning av antibiotikaanvändning för behandling av djur",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU5.html",
+      "found_by": ["keyword:antibiotika"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA0313",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "13",
+      "datum": "2022-11-15",
+      "titel": "Förbättrad övervakning av antibiotikaanvändning för behandling av djur",
+      "organ": "Näringsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0313.html",
+      "found_by": ["keyword:antibiotika"],
+      "score": 1
+    }
+  ]
+}

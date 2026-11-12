@@ -1,0 +1,88 @@
+{
+  "promise_id": "val2022-sd-stoppa-offentliga-medel-till-latsasjobb",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:arbetsmarknadspolitik",
+    "keyword:subventionerade anställningar",
+    "all-keywords",
+    "committee:AU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01AU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU9",
+      "datum": "2026-02-20",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU9.html",
+      "found_by": ["keyword:arbetsmarknadspolitik"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01AU6",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU6",
+      "datum": "2025-03-03",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU6.html",
+      "found_by": ["keyword:arbetsmarknadspolitik"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01AU10",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "AU10",
+      "datum": "2024-06-03",
+      "titel": "Riksrevisionens rapport om kontrollen av subventionerade anställningar",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HB01AU10.html",
+      "found_by": ["keyword:subventionerade anställningar"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB0382",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "82",
+      "datum": "2024-03-12",
+      "titel": "Riksrevisionens rapport om kontrollen av subventionerade anställningar",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0382.html",
+      "found_by": ["keyword:subventionerade anställningar"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01AU3",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "AU3",
+      "datum": "2023-12-11",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HB01AU3.html",
+      "found_by": ["keyword:arbetsmarknadspolitik"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01AU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU9",
+      "datum": "2023-04-20",
+      "titel": "Arbetsmarknadspolitik och arbetslöshetsförsäkringen",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU9.html",
+      "found_by": ["keyword:arbetsmarknadspolitik"],
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "promise_id": "val2022-l-ratt-till-fast-lakare-pa-vardcentralen",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:fast läkarkontakt",
+    "keyword:husläkare",
+    "keyword:vårdcentral",
+    "keyword:primärvård",
+    "keyword:vårdval",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SoU23",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU23",
+      "datum": "2026-02-06",
+      "titel": "Nästa steg för en god och nära vård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU23.html",
+      "found_by": ["keyword:vårdcentral", "keyword:primärvård"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01SoU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU12",
+      "datum": "2023-04-24",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU12.html",
+      "found_by": ["keyword:primärvård", "keyword:vårdval"],
+      "score": 2
+    },
+    {
+      "dok_id": "HC01SoU16",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU16",
+      "datum": "2025-06-04",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
+      "found_by": ["keyword:vårdval"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SoU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU14",
+      "datum": "2024-06-03",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU14.html",
+      "found_by": ["keyword:vårdval"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU5",
+      "datum": "2023-01-17",
+      "titel": "Ökad kontroll i hälso- och sjukvården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU5.html",
+      "found_by": ["keyword:primärvård"],
+      "score": 1
+    }
+  ]
+}

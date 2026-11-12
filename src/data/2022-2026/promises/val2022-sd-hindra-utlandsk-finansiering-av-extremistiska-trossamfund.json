@@ -17,10 +17,17 @@
   "committee": "KrU",
   "keywords": ["trossamfund", "utländsk finansiering", "extremism"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2025:52 (Ett regelverk för att motverka utländsk finansiering av verksamheter med antidemokratiska syften). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-utredning-utlandsk-finansiering-trossamfund"],
       "outcome": "weakened",
       "note": "Avtalet anger att en utredning ska se över förbud mot utländsk finansiering av trossamfund och andra civilsamhällesorganisationer."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB152",
+      "designation": "Dir. 2025:52",
+      "title": "Ett regelverk för att motverka utländsk finansiering av verksamheter med antidemokratiska syften",
+      "date": "2025-05-28",
+      "url": "https://data.riksdagen.se/dokument/HDB152.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

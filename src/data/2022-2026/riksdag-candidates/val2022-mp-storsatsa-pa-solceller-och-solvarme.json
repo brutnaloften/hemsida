@@ -1,0 +1,65 @@
+{
+  "promise_id": "val2022-mp-storsatsa-pa-solceller-och-solvarme",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:solceller",
+    "keyword:solvärme",
+    "keyword:solenergi",
+    "all-keywords",
+    "committee:NU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01SkU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU17",
+      "datum": "2025-05-08",
+      "titel": "Förändrade skattesubventioner för solceller och mikroproduktion av el",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU17.html",
+      "found_by": ["keyword:solceller"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC03109",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "109",
+      "datum": "2025-03-18",
+      "titel": "Förändrade skattesubventioner för solceller och mikroproduktion av el",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03109.html",
+      "found_by": ["keyword:solceller"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FiU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU1",
+      "datum": "2022-12-12",
+      "titel": "Statens budget 2023 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
+      "found_by": ["keyword:solceller"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA0315",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "15",
+      "datum": "2022-11-10",
+      "titel": "Förstärkt skattereduktion för installation av solceller",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0315.html",
+      "found_by": ["keyword:solceller"],
+      "score": 1
+    }
+  ]
+}

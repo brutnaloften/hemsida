@@ -1,0 +1,102 @@
+{
+  "promise_id": "val2022-l-sank-expertskatten",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:expertskatt",
+    "keyword:nyckelpersoner",
+    "keyword:utländsk arbetskraft",
+    "keyword:skattelättnad",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HB0316",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "16",
+      "datum": "2023-09-28",
+      "titel": "Utvidgad tidsgräns för expertskatt",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0316.html",
+      "found_by": ["keyword:expertskatt", "keyword:skattelättnad"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01SfU12",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU12",
+      "datum": "2026-03-11",
+      "titel": "Nya regler för arbetskraftsinvandring",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU12.html",
+      "found_by": ["keyword:utländsk arbetskraft"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB33",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "3",
+      "datum": "2025-01-16",
+      "titel": "Skatteincitament för forskning och utveckling",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB33.html",
+      "found_by": ["keyword:expertskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01FiU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU1",
+      "datum": "2024-11-22",
+      "titel": "Statens budget 2025 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "found_by": ["keyword:expertskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB1104",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "104",
+      "datum": "2024-11-04",
+      "titel": "Tilläggsdirektiv till Utredningen om skatteregler som gynnar forskning och utveckling - en översyn av FoU-avdraget och expertskattereglerna (Fi 2023:06)",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB1104.html",
+      "found_by": ["keyword:expertskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01FiU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU1",
+      "datum": "2023-11-24",
+      "titel": "Statens budget 2024 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU1.html",
+      "found_by": ["keyword:expertskatt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB181",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "81",
+      "datum": "2023-06-08",
+      "titel": "Skatteregler som gynnar forskning och utveckling - en översyn av FoU-avdraget och expertskattereglerna",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB181.html",
+      "found_by": ["keyword:expertskatt"],
+      "score": 1
+    }
+  ]
+}

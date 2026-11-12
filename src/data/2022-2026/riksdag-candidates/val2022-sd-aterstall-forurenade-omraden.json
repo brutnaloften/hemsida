@@ -1,0 +1,76 @@
+{
+  "promise_id": "val2022-sd-aterstall-forurenade-omraden",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": ["keyword:förorenade områden", "keyword:sanering", "all-keywords", "committee:MJU"],
+  "candidates": [
+    {
+      "dok_id": "HA01MJU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU1",
+      "datum": "2022-12-15",
+      "titel": "Utgiftsområde 20 Allmän miljö- och naturvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU1.html",
+      "found_by": [
+        "keyword:förorenade områden",
+        "keyword:sanering",
+        "all-keywords",
+        "committee:MJU"
+      ],
+      "score": 4
+    },
+    {
+      "dok_id": "HD01MJU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU13",
+      "datum": "2026-03-12",
+      "titel": "Skärpningar av regelverket för invasiva främmande arter och naturvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU13.html",
+      "found_by": ["keyword:sanering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01UbU18",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU18",
+      "datum": "2025-05-08",
+      "titel": "Ett mer sammanhållet borgenärsansvar för Centrala studiestödsnämnden",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU18.html",
+      "found_by": ["keyword:sanering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01CU7",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "CU7",
+      "datum": "2023-02-28",
+      "titel": "Ersättningsrätt samt insolvens- och utsökningsrätt",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HA01CU7.html",
+      "found_by": ["keyword:sanering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01TU4",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "TU4",
+      "datum": "2023-02-20",
+      "titel": "Infrastrukturfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HA01TU4.html",
+      "found_by": ["keyword:förorenade områden"],
+      "score": 1
+    }
+  ]
+}

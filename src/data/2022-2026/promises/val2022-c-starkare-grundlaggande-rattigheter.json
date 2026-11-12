@@ -17,10 +17,38 @@
   "committee": "KU",
   "keywords": ["äganderätt", "diskrimineringsförbud", "minoritetsskydd", "minoritetsspråk"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2022/23:132 (Utökad rätt för elever i gymnasieskolan och anpassade gymnasieskolan att läsa nationella minoritetsspråk). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2023/24:UbU3 (Utökad rätt för elever i gymnasieskolan och anpassade gymnasieskolan att läsa nationella minoritetsspråk), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA03132",
+      "designation": "Prop. 2022/23:132",
+      "title": "Utökad rätt för elever i gymnasieskolan och anpassade gymnasieskolan att läsa nationella minoritetsspråk",
+      "date": "2023-06-21",
+      "url": "https://data.riksdagen.se/dokument/HA03132.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01UbU3",
+      "designation": "Bet. 2023/24:UbU3",
+      "title": "Utökad rätt för elever i gymnasieskolan och anpassade gymnasieskolan att läsa nationella minoritetsspråk",
+      "date": "2023-11-08",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU3.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

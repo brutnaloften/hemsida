@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["socionomutbildning", "ungdomskriminalitet", "utbildning", "socialtjänst"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2025:27 (En socionomutbildning i tiden ). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-ny-socionomutbildning-ungdomskriminalitet"],
       "outcome": "included",
       "note": "Avtalet gör ungdomskriminalitet till ett obligatoriskt moment i socionomutbildningen."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB327",
+      "designation": "SOU 2025:27",
+      "title": "En socionomutbildning i tiden",
+      "date": "2025-03-04",
+      "url": "https://data.riksdagen.se/dokument/HDB327.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

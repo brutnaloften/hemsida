@@ -1,0 +1,30 @@
+{
+  "promise_id": "val2022-v-arbetstidsforkortning-sex-timmars-arbetsdag",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:arbetstidsförkortning",
+    "keyword:sex timmars arbetsdag",
+    "keyword:arbetstidslagen",
+    "keyword:bibehållen lön",
+    "all-keywords",
+    "committee:AU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HA01AU8",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU8",
+      "datum": "2023-04-20",
+      "titel": "Arbetsmiljö och arbetstid",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU8.html",
+      "found_by": ["keyword:arbetstidslagen"],
+      "score": 1
+    }
+  ]
+}

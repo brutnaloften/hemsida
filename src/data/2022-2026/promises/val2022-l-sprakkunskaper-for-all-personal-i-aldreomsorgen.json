@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["språkkrav", "äldreomsorg", "personal", "svenska", "socialtjänstlagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:44 (Språkkrav för personal i äldreomsorgen). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-sprakkrav-aldreomsorg"],
       "outcome": "weakened",
       "note": "Avtalet utreder hur ett språkkrav för personal i äldreomsorgen kan genomföras, inte ett infört krav."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB144",
+      "designation": "Dir. 2023:44",
+      "title": "Språkkrav för personal i äldreomsorgen",
+      "date": "2023-03-30",
+      "url": "https://data.riksdagen.se/dokument/HBB144.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

@@ -1,0 +1,66 @@
+{
+  "promise_id": "val2022-s-ingen-forkortad-vardko-med-privat-forsakring",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:sjukvårdsförsäkring",
+    "keyword:köpassering",
+    "keyword:vårdköer",
+    "keyword:offentlig vård",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HEB13",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "3",
+      "datum": "2026-01-08",
+      "titel": "Samordnare för att korta vårdköerna i hälso- och sjukvården",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB13.html",
+      "found_by": ["keyword:vårdköer"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SoU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU8",
+      "datum": "2024-04-18",
+      "titel": "Riksrevisionens rapport om statens arbete med väntetider i vården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU8.html",
+      "found_by": ["keyword:vårdköer"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FiU20",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU20",
+      "datum": "2023-06-15",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU20.html",
+      "found_by": ["keyword:vårdköer"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU3",
+      "datum": "2022-11-17",
+      "titel": "Vissa frågor inom hälso- och sjukvårdsområdet",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU3.html",
+      "found_by": ["keyword:vårdköer"],
+      "score": 1
+    }
+  ]
+}

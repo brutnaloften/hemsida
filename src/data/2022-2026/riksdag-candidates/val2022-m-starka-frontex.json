@@ -1,0 +1,102 @@
+{
+  "promise_id": "val2022-m-starka-frontex",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:Frontex",
+    "keyword:EU:s yttre gräns",
+    "keyword:gränskontroll",
+    "keyword:kustbevakning",
+    "all-keywords",
+    "committee:SfU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01FöU11",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FöU11",
+      "datum": "2026-04-01",
+      "titel": "Riksrevisionens rapport om miljöräddning vid stora olyckor till sjöss",
+      "organ": "FöU",
+      "url": "https://data.riksdagen.se/dokument/HD01FöU11.html",
+      "found_by": ["keyword:kustbevakning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01FöU5",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FöU5",
+      "datum": "2026-01-16",
+      "titel": "Kustbevakningens sjöövervakning",
+      "organ": "FöU",
+      "url": "https://data.riksdagen.se/dokument/HD01FöU5.html",
+      "found_by": ["keyword:kustbevakning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD0336",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "36",
+      "datum": "2025-11-04",
+      "titel": "Kustbevakningens sjöövervakning",
+      "organ": "Försvarsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0336.html",
+      "found_by": ["keyword:kustbevakning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01FiU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU16",
+      "datum": "2025-10-14",
+      "titel": "Subsidiaritetsprövning av kommissionens förslag till nytt system för Europeiska unionens egna medel för perioden 2028 och framåt",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU16.html",
+      "found_by": ["keyword:EU:s yttre gräns"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01MJU3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU3",
+      "datum": "2025-09-22",
+      "titel": "Verkställbara tvångsmedel mot fartyg inom EU:s utsläppshandelssystem",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU3.html",
+      "found_by": ["keyword:kustbevakning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01JuU23",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "JuU23",
+      "datum": "2024-11-29",
+      "titel": "Rättelse i lagar om ändring i kustbevakningslagen och tullbefogenhetslagen",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU23.html",
+      "found_by": ["keyword:kustbevakning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01FiU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU17",
+      "datum": "2023-09-26",
+      "titel": "Subsidiaritetsprövning av kommissionens förslag till ny ändring av systemet för Europeiska unionens egna medel",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU17.html",
+      "found_by": ["keyword:EU:s yttre gräns"],
+      "score": 1
+    }
+  ]
+}

@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["hedersförtryck", "förskola", "skola", "hedersrelaterat våld"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2025:31 (Ökade insatser för att motverka hedersrelaterat våld och förtryck i förskolan, skolan och fritidshemmet). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-insatser-hedersforstryck-kransningar-skolan"],
       "outcome": "included",
       "note": "Avtalet har ökade insatser mot hedersrelaterat förtryck i skolan."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB131",
+      "designation": "Dir. 2025:31",
+      "title": "Ökade insatser för att motverka hedersrelaterat våld och förtryck i förskolan, skolan och fritidshemmet",
+      "date": "2025-03-20",
+      "url": "https://data.riksdagen.se/dokument/HDB131.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

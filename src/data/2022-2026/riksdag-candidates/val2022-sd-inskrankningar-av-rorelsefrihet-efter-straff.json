@@ -1,0 +1,125 @@
+{
+  "promise_id": "val2022-sd-inskrankningar-av-rorelsefrihet-efter-straff",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:rörelsefrihet",
+    "keyword:vistelseförbud",
+    "keyword:uppföljning efter straff",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HEB362",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "62",
+      "datum": "2026-09-30",
+      "titel": "Preventiva vistelseförbud",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB362.html",
+      "found_by": ["keyword:vistelseförbud"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB348",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "48",
+      "datum": "2026-07-02",
+      "titel": "Tillträdesförbud - Delbetänkande av Utredningen om nödvärn, tillträdesförbud och preventiva vistelseförbud",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB348.html",
+      "found_by": ["keyword:vistelseförbud"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB161",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "61",
+      "datum": "2026-06-25",
+      "titel": "Tilläggsdirektiv till Utredningen om nödvärn, tillträdesförbud och preventiva vistelseförbud (Ju 2025:18)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB161.html",
+      "found_by": ["keyword:vistelseförbud"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU38",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU38",
+      "datum": "2026-05-27",
+      "titel": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU38.html",
+      "found_by": ["keyword:rörelsefrihet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01JuU12",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU12",
+      "datum": "2024-01-23",
+      "titel": "Preventiva vistelseförbud",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU12.html",
+      "found_by": ["keyword:vistelseförbud"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB0357",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "57",
+      "datum": "2023-12-21",
+      "titel": "Preventiva vistelseförbud",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0357.html",
+      "found_by": ["keyword:vistelseförbud"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB417",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "17",
+      "datum": "2023-06-30",
+      "titel": "Vistelseförbud på allmän plats och vissa andra platser",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB417.html",
+      "found_by": ["keyword:vistelseförbud"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB174",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "74",
+      "datum": "2023-06-01",
+      "titel": "Tilläggsdirektiv till Utredningen om ett förstärkt samhällsskydd och en minskad risk för återfall i brott (Ju 2022:10)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB174.html",
+      "found_by": ["keyword:vistelseförbud"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01KU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU11",
+      "datum": "2023-01-19",
+      "titel": "Justitieombudsmännens ämbetsberättelse",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU11.html",
+      "found_by": ["keyword:rörelsefrihet"],
+      "score": 1
+    }
+  ]
+}

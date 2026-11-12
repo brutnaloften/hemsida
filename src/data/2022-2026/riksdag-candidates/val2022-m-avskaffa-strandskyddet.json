@@ -1,0 +1,198 @@
+{
+  "promise_id": "val2022-m-avskaffa-strandskyddet",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:strandskydd",
+    "keyword:bostadsbyggande",
+    "keyword:miljöbalken",
+    "keyword:strandnära boende",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HEB1110",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "110",
+      "datum": "2026-09-03",
+      "titel": "Miljöbalken och försvaret",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1110.html",
+      "found_by": ["keyword:miljöbalken"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03305",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "305",
+      "datum": "2026-09-01",
+      "titel": "En mer enhetlig reglering av tillsyn och kontroll på miljöbalkens område",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03305.html",
+      "found_by": ["keyword:miljöbalken"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB174",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "74",
+      "datum": "2026-07-16",
+      "titel": "Öka möjligheterna till bostadsbyggande i anslutning till områden som är av riksintresse för totalförsvarets militära del",
+      "organ": "LI-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB174.html",
+      "found_by": ["keyword:bostadsbyggande"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01MJU28",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU28",
+      "datum": "2026-06-09",
+      "titel": "Ersättning vid rådighetsinskränkningar till följd av artskyddet",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU28.html",
+      "found_by": ["keyword:miljöbalken"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01MJU29",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU29",
+      "datum": "2026-06-09",
+      "titel": "Ett tydligt regelverk för aktivt skogsbruk",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU29.html",
+      "found_by": ["keyword:miljöbalken"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01NU24",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU24",
+      "datum": "2026-06-05",
+      "titel": "Ny kärnkraft i Sverige – fler möjliga platser vid kusten",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU24.html",
+      "found_by": ["keyword:miljöbalken"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01NU27",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU27",
+      "datum": "2026-06-04",
+      "titel": "Ändamålsenliga säkerhets- och strålskyddskrav för utvinning och bearbetning av kärnämnen",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU27.html",
+      "found_by": ["keyword:miljöbalken"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB130",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "30",
+      "datum": "2026-05-13",
+      "titel": "Tilläggsdirektiv till Strandskyddsutredningen (KN 2025:01)",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB130.html",
+      "found_by": ["keyword:strandskydd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01CU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU18",
+      "datum": "2026-03-27",
+      "titel": "Bostadspolitik",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU18.html",
+      "found_by": ["keyword:bostadsbyggande"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01MJU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU13",
+      "datum": "2026-03-12",
+      "titel": "Skärpningar av regelverket för invasiva främmande arter och naturvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU13.html",
+      "found_by": ["keyword:strandskydd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB159",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "59",
+      "datum": "2025-06-12",
+      "titel": "Ett reformerat strandskydd",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB159.html",
+      "found_by": ["keyword:strandskydd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01MJU22",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU22",
+      "datum": "2025-06-10",
+      "titel": "Ett förbättrat genomförande av MKB-direktivet",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU22.html",
+      "found_by": ["keyword:miljöbalken"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01MJU23",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU23",
+      "datum": "2025-06-04",
+      "titel": "Förbättrade förutsättningar för ett hållbart vattenbruk",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU23.html",
+      "found_by": ["keyword:miljöbalken"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01MJU16",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU16",
+      "datum": "2025-05-09",
+      "titel": "Lättnader i strandskyddet – ett första steg",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU16.html",
+      "found_by": ["keyword:strandskydd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01CU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "CU13",
+      "datum": "2025-04-04",
+      "titel": "Bostadspolitik",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HC01CU13.html",
+      "found_by": ["keyword:bostadsbyggande"],
+      "score": 1
+    }
+  ]
+}

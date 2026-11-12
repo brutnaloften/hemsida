@@ -1,0 +1,71 @@
+{
+  "promise_id": "val2022-mp-konsneutral-familjepolitik",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": ["keyword:familjepolitik", "keyword:könsneutral", "all-keywords", "committee:CU"],
+  "candidates": [
+    {
+      "dok_id": "HD01SfU17",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU17",
+      "datum": "2026-03-12",
+      "titel": "Ekonomisk familjepolitik",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU17.html",
+      "found_by": ["keyword:familjepolitik"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01SfU19",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SfU19",
+      "datum": "2025-05-09",
+      "titel": "Ekonomisk familjepolitik",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU19.html",
+      "found_by": ["keyword:familjepolitik"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01CU9",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "CU9",
+      "datum": "2024-04-12",
+      "titel": "Familjerätt",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HB01CU9.html",
+      "found_by": ["keyword:könsneutral"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01SfU12",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SfU12",
+      "datum": "2024-04-12",
+      "titel": "Ekonomisk familjepolitik",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU12.html",
+      "found_by": ["keyword:familjepolitik"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SfU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SfU16",
+      "datum": "2023-04-27",
+      "titel": "Ekonomisk familjepolitik",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU16.html",
+      "found_by": ["keyword:familjepolitik"],
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "promise_id": "val2022-l-skala-upp-infangning-avskiljning-lagring-av-koldioxid",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:koldioxidlagring",
+    "keyword:CCS",
+    "keyword:BECCS",
+    "keyword:infångning",
+    "keyword:negativa utsläpp",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01MJU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU16",
+      "datum": "2026-03-02",
+      "titel": "Klimatpolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU16.html",
+      "found_by": ["keyword:negativa utsläpp"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01MJU14",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU14",
+      "datum": "2025-04-24",
+      "titel": "Klimatpolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU14.html",
+      "found_by": ["keyword:negativa utsläpp"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01MJU16",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU16",
+      "datum": "2023-05-26",
+      "titel": "Klimatpolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU16.html",
+      "found_by": ["keyword:negativa utsläpp"],
+      "score": 1
+    }
+  ]
+}

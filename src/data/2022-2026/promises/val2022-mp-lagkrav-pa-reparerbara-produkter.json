@@ -17,10 +17,28 @@
   "committee": "CU",
   "keywords": ["reparation", "lagkrav", "hållbar konsumtion"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2025:13 (Genomförande av två EU-direktiv för att främja en mer hållbar konsumtion). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB113",
+      "designation": "Dir. 2025:13",
+      "title": "Genomförande av två EU-direktiv för att främja en mer hållbar konsumtion",
+      "date": "2025-02-20",
+      "url": "https://data.riksdagen.se/dokument/HDB113.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

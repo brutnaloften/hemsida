@@ -1,0 +1,41 @@
+{
+  "promise_id": "val2022-sd-familjemedling-for-familjer-i-tvist",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:familjemedling",
+    "keyword:vårdnadstvist",
+    "keyword:tidiga insatser",
+    "all-keywords",
+    "committee:CU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HB01SfU4",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SfU4",
+      "datum": "2023-12-04",
+      "titel": "Utgiftsområde 8 Migration",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU4.html",
+      "found_by": ["keyword:tidiga insatser"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB1121",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "121",
+      "datum": "2023-08-18",
+      "titel": "Översyn av socionomexamen för att motverka ungdomskriminalitet",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1121.html",
+      "found_by": ["keyword:tidiga insatser"],
+      "score": 1
+    }
+  ]
+}

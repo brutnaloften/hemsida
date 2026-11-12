@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["ordning", "stök", "lärare", "rektor", "utsatta områden"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:154 (Varaktigt förbättrad trygghet och studiero i skolan). Dokumentet behandlar hela löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -34,6 +41,16 @@
       ],
       "outcome": "included",
       "note": "Avtalet stärker rektors och lärares befogenheter och inför konsekvenstrappa för ordningsregler, för alla skolor."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1154",
+      "designation": "Dir. 2023:154",
+      "title": "Varaktigt förbättrad trygghet och studiero i skolan",
+      "date": "2023-11-02",
+      "url": "https://data.riksdagen.se/dokument/HBB1154.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

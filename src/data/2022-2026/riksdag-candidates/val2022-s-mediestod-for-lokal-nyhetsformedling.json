@@ -1,0 +1,102 @@
+{
+  "promise_id": "val2022-s-mediestod-for-lokal-nyhetsformedling",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:mediestöd",
+    "keyword:lokal journalistik",
+    "keyword:nyhetsförmedling",
+    "keyword:presstöd",
+    "all-keywords",
+    "committee:KrU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01KU18",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU18",
+      "datum": "2026-01-16",
+      "titel": "Tryck- och yttrandefrihet, massmediefrågor",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU18.html",
+      "found_by": ["keyword:mediestöd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01KU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU1",
+      "datum": "2025-11-28",
+      "titel": "Utgiftsområde 1 Rikets styrelse",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU1.html",
+      "found_by": ["keyword:mediestöd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01KU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU1",
+      "datum": "2024-11-29",
+      "titel": "Utgiftsområde 1 Rikets styrelse",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU1.html",
+      "found_by": ["keyword:mediestöd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01KU1",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KU1",
+      "datum": "2023-12-06",
+      "titel": "Utgiftsområde 1 Rikets styrelse",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HB01KU1.html",
+      "found_by": ["keyword:mediestöd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01KU3",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KU3",
+      "datum": "2023-11-09",
+      "titel": "Ett hållbart mediestöd för hela landet",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HB01KU3.html",
+      "found_by": ["keyword:mediestöd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA03133",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "133",
+      "datum": "2023-06-20",
+      "titel": "Ett hållbart mediestöd för hela landet",
+      "organ": "Kulturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03133.html",
+      "found_by": ["keyword:mediestöd"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01KU1",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU1",
+      "datum": "2022-12-14",
+      "titel": "Utgiftsområde 1 Rikets styrelse",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU1.html",
+      "found_by": ["keyword:mediestöd"],
+      "score": 1
+    }
+  ]
+}

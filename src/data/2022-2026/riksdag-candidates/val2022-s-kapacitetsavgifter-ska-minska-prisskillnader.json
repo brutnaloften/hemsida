@@ -1,0 +1,90 @@
+{
+  "promise_id": "val2022-s-kapacitetsavgifter-ska-minska-prisskillnader",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:kapacitetsavgifter",
+    "keyword:flaskhalsintäkter",
+    "keyword:elpriser",
+    "keyword:svenska kraftnät",
+    "all-keywords",
+    "committee:NU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01FiU48",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU48",
+      "datum": "2026-04-21",
+      "titel": "Extra ändringsbudget för 2026 – Sänkt skatt på drivmedel samt el- och gasprisstöd",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU48.html",
+      "found_by": ["keyword:elpriser"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01NU26",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU26",
+      "datum": "2026-02-26",
+      "titel": "Subsidiaritetsprövning av kommissionens förslag om riktlinjer för transeuropeisk energiinfrastruktur och påskyndandet av tillståndsförfaranden",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU26.html",
+      "found_by": ["keyword:flaskhalsintäkter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01NU11",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "NU11",
+      "datum": "2025-01-16",
+      "titel": "En kapacitetsmekanism för elmarknaden",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HC01NU11.html",
+      "found_by": ["keyword:svenska kraftnät"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01NU14",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU14",
+      "datum": "2024-05-20",
+      "titel": "Energipolitikens långsiktiga inriktning",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU14.html",
+      "found_by": ["keyword:svenska kraftnät"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01NU3",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU3",
+      "datum": "2023-12-08",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU3.html",
+      "found_by": ["keyword:svenska kraftnät"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01NU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU3",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 21 Energi",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
+      "found_by": ["keyword:svenska kraftnät"],
+      "score": 1
+    }
+  ]
+}

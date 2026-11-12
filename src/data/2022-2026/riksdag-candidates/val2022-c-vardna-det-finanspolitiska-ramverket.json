@@ -1,0 +1,77 @@
+{
+  "promise_id": "val2022-c-vardna-det-finanspolitiska-ramverket",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:finanspolitiskt ramverk",
+    "keyword:överskottsmål",
+    "keyword:statsfinanser",
+    "all-keywords",
+    "committee:FiU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01FiU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU14",
+      "datum": "2026-02-05",
+      "titel": "Det finanspolitiska ramverket",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU14.html",
+      "found_by": ["keyword:finanspolitiskt ramverk"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01KU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU1",
+      "datum": "2025-11-28",
+      "titel": "Utgiftsområde 1 Rikets styrelse",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU1.html",
+      "found_by": ["keyword:överskottsmål"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01FiU1",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU1",
+      "datum": "2025-11-21",
+      "titel": "Statens budget 2026 - Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "found_by": ["keyword:överskottsmål"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB376",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "76",
+      "datum": "2024-11-18",
+      "titel": "Från överskottsmål till balansmål",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB376.html",
+      "found_by": ["keyword:överskottsmål"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01FiU20",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU20",
+      "datum": "2023-06-15",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU20.html",
+      "found_by": ["keyword:överskottsmål"],
+      "score": 1
+    }
+  ]
+}

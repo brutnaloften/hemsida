@@ -1,0 +1,89 @@
+{
+  "promise_id": "val2022-mp-stoppa-renovraktningar",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:renovräkning",
+    "keyword:hyresgäster",
+    "keyword:hyreslagen",
+    "all-keywords",
+    "committee:CU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HA01CU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "CU14",
+      "datum": "2023-04-03",
+      "titel": "Hyresrätt m.m.",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HA01CU14.html",
+      "found_by": ["keyword:hyresgäster", "keyword:hyreslagen"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01CU31",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU31",
+      "datum": "2026-05-08",
+      "titel": "En mer flexibel hyresmarknad",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU31.html",
+      "found_by": ["keyword:hyresgäster"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01CU27",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU27",
+      "datum": "2026-04-17",
+      "titel": "Identitetskrav vid lagfart och åtgärder mot kringgåenden av bostadsrättslagen",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU27.html",
+      "found_by": ["keyword:hyresgäster"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01CU5",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU5",
+      "datum": "2025-11-14",
+      "titel": "En förbättrad modell för presumtionshyra",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU5.html",
+      "found_by": ["keyword:hyresgäster"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01CU20",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "CU20",
+      "datum": "2024-05-15",
+      "titel": "Åtgärder för tryggare bostadsområden",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HB01CU20.html",
+      "found_by": ["keyword:hyresgäster"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB133",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "33",
+      "datum": "2023-03-02",
+      "titel": "Tilläggsdirektiv till Utredningen om tryggare bostadsområden (Ju 2022:13)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB133.html",
+      "found_by": ["keyword:hyresgäster"],
+      "score": 1
+    }
+  ]
+}

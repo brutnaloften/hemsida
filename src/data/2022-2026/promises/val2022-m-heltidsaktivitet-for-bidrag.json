@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["aktivitetskrav", "bidrag", "heltidsaktivitet", "försörjningsstöd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Prop. 2025/26:207 (Aktivitetskrav för mottagare av försörjningsstöd). Dokumentet behandlar hela löftet. Riksdagen har även fattat beslut i Bet. 2025/26:SoU29 (Aktivitetskrav för mottagare av försörjningsstöd), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-sankt-etableringsstod", "tido-aktivitetskrav-forsorjningsstod"],
       "outcome": "weakened",
       "note": "Avtalet kräver aktivitet för försörjningsstöd (motsvarande arbetsförmågan) och heltidsaktiviteter för full etableringsersättning, inte för bidrag generellt."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03207",
+      "designation": "Prop. 2025/26:207",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03207.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU29",
+      "designation": "Bet. 2025/26:SoU29",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU29.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

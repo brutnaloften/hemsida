@@ -1,0 +1,29 @@
+{
+  "promise_id": "val2022-mp-lag-som-forbjuder-karnvapen-pa-svensk-mark",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:kärnvapen",
+    "keyword:lagförbud",
+    "keyword:svensk mark",
+    "all-keywords",
+    "committee:FöU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01UU6",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UU6",
+      "datum": "2026-04-09",
+      "titel": "Säkerhetspolitik",
+      "organ": "UU",
+      "url": "https://data.riksdagen.se/dokument/HD01UU6.html",
+      "found_by": ["keyword:kärnvapen"],
+      "score": 1
+    }
+  ]
+}

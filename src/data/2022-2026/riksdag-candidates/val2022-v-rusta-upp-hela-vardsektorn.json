@@ -1,0 +1,198 @@
+{
+  "promise_id": "val2022-v-rusta-upp-hela-vardsektorn",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:vårdplatser",
+    "keyword:sjukvård",
+    "keyword:krisberedskap",
+    "keyword:vårdkapacitet",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HA01FiU20",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU20",
+      "datum": "2023-06-15",
+      "titel": "Riktlinjer för den ekonomiska politiken",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU20.html",
+      "found_by": ["keyword:vårdplatser", "keyword:krisberedskap"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01SoU8",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU8",
+      "datum": "2023-02-16",
+      "titel": "Vissa frågor inom hälso- och sjukvårdsområdet",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU8.html",
+      "found_by": ["keyword:vårdplatser", "keyword:sjukvård"],
+      "score": 2
+    },
+    {
+      "dok_id": "HA01SoU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU3",
+      "datum": "2022-11-17",
+      "titel": "Vissa frågor inom hälso- och sjukvårdsområdet",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU3.html",
+      "found_by": ["keyword:vårdplatser", "keyword:sjukvård"],
+      "score": 2
+    },
+    {
+      "dok_id": "HEB1119",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "119",
+      "datum": "2026-09-03",
+      "titel": "En stärkt hälso- och sjukvård inom Kriminalvården",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1119.html",
+      "found_by": ["keyword:sjukvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB199",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "99",
+      "datum": "2026-08-27",
+      "titel": "Ett mer ändamålsenligt regelverk för behandling av personuppgifter inom hälso- och sjukvården",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB199.html",
+      "found_by": ["keyword:sjukvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB192",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "92",
+      "datum": "2026-08-13",
+      "titel": "Nationella principer för utbud av hälso- och sjukvård i hela landet",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB192.html",
+      "found_by": ["keyword:sjukvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HE01SoU1",
+      "doktyp": "bet",
+      "rm": "2026/27",
+      "beteckning": "SoU1",
+      "datum": "2026-08-11",
+      "titel": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HE01SoU1.html",
+      "found_by": ["keyword:sjukvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01KU42",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU42",
+      "datum": "2026-06-10",
+      "titel": "Indelning i utgiftsområden",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU42.html",
+      "found_by": ["keyword:krisberedskap"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SoU34",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU34",
+      "datum": "2026-06-04",
+      "titel": "En mer sammanhållen vård för personer med skadligt bruk eller beroende och andra psykiatriska tillstånd",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU34.html",
+      "found_by": ["keyword:sjukvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SoU28",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU28",
+      "datum": "2026-05-29",
+      "titel": "Riksrevisionens rapport om Inspektionen för vård och omsorgs hantering av enskildas klagomål på hälso- och sjukvården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU28.html",
+      "found_by": ["keyword:sjukvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SoU32",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU32",
+      "datum": "2026-05-29",
+      "titel": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU32.html",
+      "found_by": ["keyword:sjukvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB138",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "38",
+      "datum": "2026-05-28",
+      "titel": "Effektiv nationell upphandling av specialiserad hälso- och sjukvård i privat regi",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB138.html",
+      "found_by": ["keyword:sjukvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01UU4",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UU4",
+      "datum": "2026-05-20",
+      "titel": "Nordiskt samarbete inklusive Arktis",
+      "organ": "UU",
+      "url": "https://data.riksdagen.se/dokument/HD01UU4.html",
+      "found_by": ["keyword:krisberedskap"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01MJU26",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU26",
+      "datum": "2026-05-19",
+      "titel": "Föreskrifter om förbud mot användning och innehav av vissa läkemedel för djur",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU26.html",
+      "found_by": ["keyword:sjukvård"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01SoU25",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU25",
+      "datum": "2026-04-24",
+      "titel": "Stärkta insatser för äldre och för de som vårdar eller stöder närstående",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU25.html",
+      "found_by": ["keyword:sjukvård"],
+      "score": 1
+    }
+  ]
+}

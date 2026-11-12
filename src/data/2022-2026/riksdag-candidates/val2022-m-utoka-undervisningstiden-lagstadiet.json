@@ -1,0 +1,78 @@
+{
+  "promise_id": "val2022-m-utoka-undervisningstiden-lagstadiet",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:undervisningstid",
+    "keyword:lågstadiet",
+    "keyword:timplan",
+    "keyword:lärarledd undervisning",
+    "all-keywords",
+    "committee:UbU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01UbU23",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU23",
+      "datum": "2026-05-28",
+      "titel": "Nya läroplaner – för en stark kunskapsskola",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU23.html",
+      "found_by": ["keyword:lågstadiet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB394",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "94",
+      "datum": "2024-12-20",
+      "titel": "Förstärkningsundervisning i skolan ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "found_by": ["keyword:undervisningstid"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB1174",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "174",
+      "datum": "2023-12-14",
+      "titel": "Mer obligatorisk undervisningstid för elever som behöver det",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1174.html",
+      "found_by": ["keyword:undervisningstid"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01UbU5",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "UbU5",
+      "datum": "2023-12-01",
+      "titel": "Bättre anpassad undervisningstid i grundskolan, specialskolan och sameskolan",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU5.html",
+      "found_by": ["keyword:undervisningstid"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB0320",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "20",
+      "datum": "2023-10-03",
+      "titel": "Bättre anpassad undervisningstid i grundskolan, specialskolan och sameskolan",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0320.html",
+      "found_by": ["keyword:undervisningstid"],
+      "score": 1
+    }
+  ]
+}

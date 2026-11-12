@@ -1,0 +1,65 @@
+{
+  "promise_id": "val2022-mp-rot-stod-for-hyresratter",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:rot-avdrag",
+    "keyword:hyresrätter",
+    "keyword:renovering",
+    "all-keywords",
+    "committee:SkU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HA01CU14",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "CU14",
+      "datum": "2023-04-03",
+      "titel": "Hyresrätt m.m.",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HA01CU14.html",
+      "found_by": ["keyword:hyresrätter", "keyword:renovering"],
+      "score": 2
+    },
+    {
+      "dok_id": "HD01CU30",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU30",
+      "datum": "2026-05-12",
+      "titel": "Nytt mål för effektiv energianvändning och genomförande av det omarbetade direktivet om byggnaders energiprestanda",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU30.html",
+      "found_by": ["keyword:renovering"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01CU27",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU27",
+      "datum": "2026-04-17",
+      "titel": "Identitetskrav vid lagfart och åtgärder mot kringgåenden av bostadsrättslagen",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU27.html",
+      "found_by": ["keyword:hyresrätter"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01CU9",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "CU9",
+      "datum": "2025-04-11",
+      "titel": "Hyresrätt m.m.",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HC01CU9.html",
+      "found_by": ["keyword:hyresrätter"],
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "promise_id": "val2022-m-patientansvarig-lakare-aldres-sjukvard",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:patientansvarig läkare",
+    "keyword:läkarkontakt",
+    "keyword:äldres sjukvård",
+    "keyword:kontinuitet",
+    "all-keywords",
+    "committee:SoU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01SoU23",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU23",
+      "datum": "2026-02-06",
+      "titel": "Nästa steg för en god och nära vård",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU23.html",
+      "found_by": ["keyword:läkarkontakt"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB150",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "50",
+      "datum": "2024-05-23",
+      "titel": "Bättre styrning för en tillgänglig och jämlik hälso- och sjukvård med god kontinuitet",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB150.html",
+      "found_by": ["keyword:kontinuitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01FiU23",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FiU23",
+      "datum": "2024-04-25",
+      "titel": "Riksbankens verksamhet och förvaltning 2023",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU23.html",
+      "found_by": ["keyword:kontinuitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB427",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "27",
+      "datum": "2023-09-13",
+      "titel": "Effektiv och behovsbaserad digital vård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB427.html",
+      "found_by": ["keyword:kontinuitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SoU22",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU22",
+      "datum": "2023-03-13",
+      "titel": "Äldreomsorg",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU22.html",
+      "found_by": ["keyword:kontinuitet"],
+      "score": 1
+    },
+    {
+      "dok_id": "HAB371",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "71",
+      "datum": "2023-01-01",
+      "titel": "Tryggare hem för barn",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB371.html",
+      "found_by": ["keyword:kontinuitet"],
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "promise_id": "val2022-l-aterstall-tidigare-vatmarker",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:våtmarker",
+    "keyword:restaurering",
+    "keyword:kolinlagring",
+    "keyword:naturlig koldioxidlagring",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HA01MJU7",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU7",
+      "datum": "2023-02-23",
+      "titel": "Vattenvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU7.html",
+      "found_by": ["keyword:våtmarker"],
+      "score": 1
+    }
+  ]
+}

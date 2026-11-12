@@ -1,0 +1,101 @@
+{
+  "promise_id": "val2022-mp-svensk-utslappsbudget",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:utsläppsbudget",
+    "keyword:klimatmål",
+    "keyword:klimatpolitiska ramverket",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HD01MJU22",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU22",
+      "datum": "2026-05-20",
+      "titel": "Riksrevisionens rapport om internationella klimatinsatser",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU22.html",
+      "found_by": ["keyword:klimatmål"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01MJU21",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU21",
+      "datum": "2026-04-20",
+      "titel": "Riksrevisionens rapport om statens insatser för jordbrukets klimatomställning",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU21.html",
+      "found_by": ["keyword:klimatmål"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01MJU20",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU20",
+      "datum": "2026-04-16",
+      "titel": "Riksrevisionens rapport om statens arbete med underlag och utvärdering inom det klimatpolitiska ramverket",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU20.html",
+      "found_by": ["keyword:klimatpolitiska ramverket"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD03122",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "122",
+      "datum": "2026-02-17",
+      "titel": "Riksrevisionens rapport om statens arbete med underlag och utvärdering inom det klimatpolitiska ramverket",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03122.html",
+      "found_by": ["keyword:klimatpolitiska ramverket"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB3107",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "107",
+      "datum": "2025-11-03",
+      "titel": "Sveriges nationella klimatmål - uppdaterat etappmål till 2030 ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB3107.html",
+      "found_by": ["keyword:klimatmål"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01MJU15",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU15",
+      "datum": "2025-04-09",
+      "titel": "Riksrevisionens rapport om Industriklivet",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU15.html",
+      "found_by": ["keyword:klimatmål"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01MJU15",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU15",
+      "datum": "2024-05-06",
+      "titel": "Regeringens klimathandlingsplan – hela vägen till nettonoll",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
+      "found_by": ["keyword:klimatmål"],
+      "score": 1
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "promise_id": "val2022-m-butiksagare-bestammer-vem-som-vistas",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:butiksägare",
+    "keyword:tillträdesförbud",
+    "keyword:butikslokal",
+    "keyword:ordningslag",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HEB362",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "62",
+      "datum": "2026-09-30",
+      "titel": "Preventiva vistelseförbud",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB362.html",
+      "found_by": ["keyword:tillträdesförbud"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB348",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "48",
+      "datum": "2026-07-02",
+      "titel": "Tillträdesförbud - Delbetänkande av Utredningen om nödvärn, tillträdesförbud och preventiva vistelseförbud",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB348.html",
+      "found_by": ["keyword:tillträdesförbud"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB161",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "61",
+      "datum": "2026-06-25",
+      "titel": "Tilläggsdirektiv till Utredningen om nödvärn, tillträdesförbud och preventiva vistelseförbud (Ju 2025:18)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB161.html",
+      "found_by": ["keyword:tillträdesförbud"],
+      "score": 1
+    },
+    {
+      "dok_id": "HDB182",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "82",
+      "datum": "2025-09-11",
+      "titel": "En starkare nödvärnsrätt och ett effektivare tillträdesförbud",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB182.html",
+      "found_by": ["keyword:tillträdesförbud"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB1165",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "165",
+      "datum": "2023-12-07",
+      "titel": "Åtgärder för att minska läktarvåld och andra ordningsstörningar vid idrottsarrangemang",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1165.html",
+      "found_by": ["keyword:tillträdesförbud"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB1123",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "123",
+      "datum": "2023-08-18",
+      "titel": "Stärkt skydd för Sveriges säkerhet vid allmänna sammankomster",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1123.html",
+      "found_by": ["keyword:ordningslag"],
+      "score": 1
+    }
+  ]
+}

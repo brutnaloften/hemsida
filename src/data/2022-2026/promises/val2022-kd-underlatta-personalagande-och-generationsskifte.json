@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["personalägande", "generationsskifte", "företag", "ägarskifte"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:157 (Översyn av jordförvärvslagen i syfte att främja sysselsättning och boende på landsbygden samt underlätta för ägarskiften i jordbruksföretag). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-12",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-forenklade-agarskiften-familjeforetag"],
       "outcome": "included",
       "note": "Avtalet vill förenkla och underlätta ägarskiften i familjeföretag och till personal."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1157",
+      "designation": "Dir. 2023:157",
+      "title": "Översyn av jordförvärvslagen i syfte att främja sysselsättning och boende på landsbygden samt underlätta för ägarskiften i jordbruksföretag",
+      "date": "2023-11-16",
+      "url": "https://data.riksdagen.se/dokument/HBB1157.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

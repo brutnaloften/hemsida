@@ -1,0 +1,53 @@
+{
+  "promise_id": "val2022-mp-hoj-loner-i-kvinnodominerade-yrken",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:kvinnodominerade yrken",
+    "keyword:löner",
+    "keyword:lönegap",
+    "all-keywords",
+    "committee:AU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HA01FiU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU12",
+      "datum": "2022-12-19",
+      "titel": "Riksrevisionens rapport om den årliga omräkningen av myndigheternas anslag",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU12.html",
+      "found_by": ["keyword:löner"],
+      "score": 1
+    },
+    {
+      "dok_id": "HAB1140",
+      "doktyp": "dir",
+      "rm": "2022",
+      "beteckning": "140",
+      "datum": "2022-12-15",
+      "titel": "Genomförande av direktivet om tillräckliga minimilöner",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HAB1140.html",
+      "found_by": ["keyword:löner"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01SfU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SfU9",
+      "datum": "2022-11-25",
+      "titel": "Ett höjt försörjningskrav för arbetskraftsinvandrare",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU9.html",
+      "found_by": ["keyword:löner"],
+      "score": 1
+    }
+  ]
+}

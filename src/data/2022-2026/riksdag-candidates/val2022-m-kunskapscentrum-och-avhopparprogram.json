@@ -1,0 +1,66 @@
+{
+  "promise_id": "val2022-m-kunskapscentrum-och-avhopparprogram",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:kunskapscentrum",
+    "keyword:brottsprevention",
+    "keyword:avhopparprogram",
+    "keyword:gängkriminella",
+    "all-keywords",
+    "committee:JuU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HEB194",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "94",
+      "datum": "2026-08-20",
+      "titel": "Tilläggsdirektiv till utredningen om riktade insatser mot kriminella organisationer - en särlagstiftning för gängkriminella (Ju 2026:11)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB194.html",
+      "found_by": ["keyword:gängkriminella"],
+      "score": 1
+    },
+    {
+      "dok_id": "HEB167",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "67",
+      "datum": "2026-07-02",
+      "titel": "Riktade insatser mot kriminella organisationer - En särlagstiftning för gängkriminella",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB167.html",
+      "found_by": ["keyword:gängkriminella"],
+      "score": 1
+    },
+    {
+      "dok_id": "HD01JuU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU14",
+      "datum": "2026-03-26",
+      "titel": "Terrorism",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU14.html",
+      "found_by": ["keyword:avhopparprogram"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB122",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "22",
+      "datum": "2023-02-09",
+      "titel": "Tilläggsdirektiv till utredningen om att säkerheten i skolan ska förbättras (U 2022:04)",
+      "organ": "U-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB122.html",
+      "found_by": ["keyword:brottsprevention"],
+      "score": 1
+    }
+  ]
+}

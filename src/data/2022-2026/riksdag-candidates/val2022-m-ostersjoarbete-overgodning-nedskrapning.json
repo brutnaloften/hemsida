@@ -1,0 +1,102 @@
+{
+  "promise_id": "val2022-m-ostersjoarbete-overgodning-nedskrapning",
+  "searched_at": "2026-11-12",
+  "window": {
+    "from": "2022-09-01",
+    "tom": "2026-09-30"
+  },
+  "queries": [
+    "keyword:Östersjön",
+    "keyword:övergödning",
+    "keyword:nedskräpning",
+    "keyword:internationellt samarbete",
+    "all-keywords",
+    "committee:MJU"
+  ],
+  "candidates": [
+    {
+      "dok_id": "HC01MJU21",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU21",
+      "datum": "2025-06-10",
+      "titel": "Nämdöskärgårdens nationalpark och naturvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU21.html",
+      "found_by": ["keyword:Östersjön"],
+      "score": 1
+    },
+    {
+      "dok_id": "HCB433",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "33",
+      "datum": "2024-12-20",
+      "titel": "Det nödvändiga ska vara tillåtet - en lag om internationellt hälso- och sjukvårdsarbete",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB433.html",
+      "found_by": ["keyword:internationellt samarbete"],
+      "score": 1
+    },
+    {
+      "dok_id": "HC01MJU5",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU5",
+      "datum": "2024-11-15",
+      "titel": "Ett levande hav – ökat skydd, minskad övergödning och ett hållbart fiske",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU5.html",
+      "found_by": ["keyword:övergödning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB03156",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "156",
+      "datum": "2024-06-05",
+      "titel": "Ett levande hav – ökat skydd, minskad övergödning och ett hållbart fiske",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03156.html",
+      "found_by": ["keyword:övergödning"],
+      "score": 1
+    },
+    {
+      "dok_id": "HB01FöU6",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FöU6",
+      "datum": "2024-02-01",
+      "titel": "Försvarspolitik och totalförsvar",
+      "organ": "FöU",
+      "url": "https://data.riksdagen.se/dokument/HB01FöU6.html",
+      "found_by": ["keyword:internationellt samarbete"],
+      "score": 1
+    },
+    {
+      "dok_id": "HBB1150",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "150",
+      "datum": "2023-10-26",
+      "titel": "Översyn av underrättelseverksamheten",
+      "organ": "Fö-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1150.html",
+      "found_by": ["keyword:internationellt samarbete"],
+      "score": 1
+    },
+    {
+      "dok_id": "HA01MJU7",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU7",
+      "datum": "2023-02-23",
+      "titel": "Vattenvård",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU7.html",
+      "found_by": ["keyword:övergödning"],
+      "score": 1
+    }
+  ]
+}
