@@ -281,6 +281,71 @@ describe('write-reasoning', () => {
     });
   });
 
+  describe('non-legislative in_progress promises', () => {
+    const today = '2026-11-12';
+    const dir = {
+      kind: 'dir',
+      date: '2025-01-01',
+      title: 'Uppdrag om X',
+      relevance: 'partial' as const,
+      note: 'Tasks an inquiry.',
+    };
+    it('drops the missing-law framing and the absence instruction', () => {
+      const ins = reasoningInstructions([dir], 'in_progress', today, 'budget', true);
+      expect(ins).not.toContain('ingen författning är kopplad');
+      expect(ins).not.toContain('"nämns inte i dokumenten")');
+      expect(ins).toContain('gäller inte en lagändring');
+    });
+    it('keeps the legislative instructions unchanged', () => {
+      expect(reasoningInstructions([dir], 'in_progress', today, 'legislative')).toBe(
+        reasoningInstructions([dir], 'in_progress', today),
+      );
+    });
+    it('bans absence claims for a manifesto law promise but keeps the missing-law framing', () => {
+      const ins = reasoningInstructions([dir], 'in_progress', today, 'legislative', true);
+      expect(ins).toContain('ingen författning är kopplad');
+      expect(ins).toContain('Skriv inte vad dokumenten lämnar utanför');
+      expect(ins).not.toContain('"nämns inte i dokumenten")');
+    });
+    it('catches further absence forms and accepts plain descriptions', () => {
+      for (const t of [
+        'Heltid anges inte uttryckligen.',
+        'Uppfostringsresor berörs inte av dem.',
+        'Biståndsmedel syns inte i direktivet.',
+        'Uppfostringsresor är inte en del av dem.',
+        'Åtgärder lämnas uttryckligen utanför.',
+        'Direktivet tar inte upp reglerna.',
+        'Uppdraget gäller inte partiernas interna arbete.',
+        'Reglerna tas inte upp i direktivet.',
+        'Användning av biståndsmedel beskrivs inte.',
+        'Det beskriver inte användning av biståndsmedel.',
+        'Dokumentet visar ingen finansiering.',
+        'Dokumenten gäller bara minoritetsspråk, inte äganderätten.',
+      ])
+        expect(reasoningProblems(t, [], false, undefined, false, true)).toContain(
+          'makes an absence claim',
+        );
+      expect(
+        reasoningProblems(
+          'Dokumentet gäller bara jordbruket och visar ett uppdrag, inte ett beslut.',
+          [],
+          false,
+          undefined,
+          false,
+          true,
+        ),
+      ).toEqual([]);
+    });
+    it('rejects absence claims only when flagged', () => {
+      const t =
+        'Regeringen gav i januari 2025 ett uppdrag om X. Finansieringen nämns inte i dokumenten.';
+      expect(reasoningProblems(t, [], false, undefined, false, true)).toContain(
+        'makes an absence claim',
+      );
+      expect(reasoningProblems(t, [])).not.toContain('makes an absence claim');
+    });
+  });
+
   describe('inquiry promises', () => {
     const today = '2026-11-12';
     const dir: ReasoningItem = {
@@ -327,8 +392,12 @@ describe('write-reasoning', () => {
       expect(reasoningProblems(t, [], false, undefined, true)).toEqual([]);
     });
 
-    it('leaves in_progress and other types unchanged', () => {
-      expect(reasoningInstructions([dir], 'in_progress', today, 'inquiry')).toBe(
+    it('treats in_progress inquiry like other non-law types and leaves legislative unchanged', () => {
+      expect(reasoningInstructions([dir], 'in_progress', today, 'inquiry', true)).toBe(
+        reasoningInstructions([dir], 'in_progress', today, 'budget', true),
+      );
+      // Not a manifesto promise (Tidö): the instructions are the original ones.
+      expect(reasoningInstructions([dir], 'in_progress', today, 'budget')).toBe(
         reasoningInstructions([dir], 'in_progress', today),
       );
       expect(reasoningInstructions([dir], 'fulfilled', today, 'legislative')).toBe(

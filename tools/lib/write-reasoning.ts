@@ -84,6 +84,24 @@ const SUPPLEMENTARY_INSTRUCTIONS = `
 
 Löftet gäller en utredning och bedömningen är satt till uppfyllt (eller delvis uppfyllt): regeringen har genom ett tilläggsdirektiv med det angivna datumet gett en redan tillsatt utredning ett nytt, ändrat eller utökat uppdrag (eller en ändrad tidsplan) som motsvarar löftet. Skriv att regeringen den <datum> beslutade om ett tilläggsdirektiv till utredningen och vad det innebar. Skriv aldrig att regeringen tillsatte utredningen: den fanns redan. Om ett betänkande (SOU) finns bland dokumenten, nämn att utredningen har lämnat sitt betänkande, men säg inte att det ledde till lag eller beslut. Skriv ingenting om lagar, lagstiftning, ikraftträdande eller riksdagsbeslut. Skriv inte vad som inte finns eller inte nämns ("nämns inte", "saknas", "ingår inte").`;
 
+/**
+ * Added for an in_progress promise that is not a law promise (budget, other_action, outcome, vague)
+ * and has no law behind it: there is no missing law to talk about, and the writer cannot know what
+ * the linked documents leave out, so absence claims are banned.
+ */
+const NON_LEGISLATIVE_INSTRUCTIONS = `
+
+Löftet gäller inte en lagändring, så skriv ingenting om lagar, lagstiftning, författningar eller att något "bedöms som" uppfyllt eller inte uppfyllt. Beskriv bara vilka steg dokumenten visar (till exempel att regeringen gav en utredare i uppdrag att ..., eller att regeringen lade fram ett förslag om ...) och hur de hänger ihop med löftet. Om dokumenten bara hör till en del av löftet, skriv vilken del de gäller, men skriv inte vad som saknas, inte nämns eller inte ingår ("nämns inte", "saknas", "ingår inte"). Uppdrag och direktiv är steg på vägen; skriv inte att löftet är genomfört. Skriv aldrig att dokumenten täcker "hela löftet" eller löftet "i sin helhet": ett uppdrag eller ett förslag är bara ett steg. Ett direktiv anger vad utredaren ska analysera eller överväga; skriv inte att utredaren föreslår en viss lösning om inte uppdraget säger att förslag ska lämnas. Skriv inte att något är finansierat eller att pengar avsatts om det inte uttryckligen framgår.`;
+
+/**
+ * Law promise without a law whose source is not the Tidö agreement (the manifesto promises): the
+ * writer cannot check what the linked documents leave out, so absence claims are banned; the
+ * missing-law framing stays accurate here.
+ */
+const NO_ABSENCE_INSTRUCTIONS = `
+
+Skriv inte vad dokumenten lämnar utanför eller inte tar upp ("nämns inte", "saknas", "ingår inte", "inte uttryckligen"); du har bara en kort sammanfattning och kan inte kontrollera det. Om dokumenten bara täcker en del av löftet, skriv vilken del de gäller. Skriv inte att något "bedöms" som uppfyllt eller inte uppfyllt. Skriv aldrig att dokumenten täcker "hela löftet" eller löftet "i sin helhet": ett uppdrag eller ett förslag är bara ett steg. Ett direktiv anger vad utredaren ska analysera eller överväga; skriv inte att utredaren föreslår en viss lösning om inte uppdraget säger att förslag ska lämnas. Skriv inte att något är finansierat eller att pengar avsatts om det inte uttryckligen framgår.`;
+
 /** A law judged to cover the promise fully, but below high confidence: the verdict stays in_progress. */
 const UNCONFIRMED_FULL_NOTE =
   ' Lagen verkar enligt dokumenten täcka löftet, men det är obekräftat, och därför står bedömningen kvar som pågående. Skriv att lagen verkar täcka löftet men att det är obekräftat. Skriv aldrig att den täcker hela löftet.';
@@ -101,7 +119,20 @@ export function reasoningInstructions(
   verdict: string = 'in_progress',
   today: string = todayIso(),
   type?: string,
+  noAbsenceClaims = false,
 ): string {
+  const noLaw = verdict === 'in_progress' && !items.some((i) => i.kind === 'sfs');
+  const nonLegislative = noLaw && noAbsenceClaims && type !== undefined && type !== 'legislative';
+  if (noLaw && noAbsenceClaims && !nonLegislative && type !== 'inquiry') {
+    return (
+      REASONING_INSTRUCTIONS.replace(
+        'om delar av löftet inte nämns i dokumenten, skriv att dokumenten inte tar upp dem ("nämns inte i dokumenten").',
+        'skriv inte vad dokumenten lämnar utanför.',
+      ) +
+      (items.some((i) => i.relevance === 'contradicts') ? AGAINST_INSTRUCTIONS : '') +
+      NO_ABSENCE_INSTRUCTIONS
+    );
+  }
   if (type === 'inquiry' && INQUIRY_INSTRUCTIONS[verdict]) {
     let out = REASONING_INSTRUCTIONS.replace(
       'Bedömningen är redan satt (pågår: åtgärden är under beredning eller beslutad, men ingen författning är kopplad till löftet).',
@@ -123,6 +154,20 @@ export function reasoningInstructions(
     );
   }
   const laws = items.filter((i) => i.kind === 'sfs');
+  if (nonLegislative) {
+    const base = REASONING_INSTRUCTIONS.replace(
+      'Bedömningen är redan satt (pågår: åtgärden är under beredning eller beslutad, men ingen författning är kopplad till löftet).',
+      'Bedömningen är redan satt (pågår: åtgärden är under beredning eller beslutad).',
+    ).replace(
+      'om delar av löftet inte nämns i dokumenten, skriv att dokumenten inte tar upp dem ("nämns inte i dokumenten").',
+      'skriv inte vad dokumenten lämnar utanför.',
+    );
+    return (
+      base +
+      (items.some((i) => i.relevance === 'contradicts') ? AGAINST_INSTRUCTIONS : '') +
+      NON_LEGISLATIVE_INSTRUCTIONS
+    );
+  }
   const inForce = laws.some((i) => i.date <= today);
   // With a law in force, "ingen författning är kopplad till löftet" would contradict the evidence.
   let out =
@@ -251,6 +296,9 @@ const IN_FORCE_CLAIM =
 const NEGATED_IN_FORCE =
   /framgår\s+(?:inte|ej)\s+att(?:(?![,;]|\s(?:men|och)\s)[^.!?])*?(?:i\s+kraft|gäller)|\b(?:inte|ej)\s+(?:ännu\s+)?(?:(?:har|hade)\s+)?(?:trätt\s+i\s+kraft|trädde\s+i\s+kraft|i\s+kraft|gäller)|\bännu\s+inte\s+(?:(?:har|hade)\s+)?(?:trätt\s+)?i\s+kraft|\bännu\s+inte\s+trätt\s+i\s+kraft/gi;
 
+const ABSENCE_CLAIM =
+  /\b(?:gäller|rör|beskriver|beskrivs|innehåller|behandlar|behandlas|tar|tas|redovisar|finns)\s+(?:inte|ej)\b|\bingen\s+finansiering\b|\bvisar\s+inga\s+(?:regler|åtgärder|pengar)\b|\b(?:syns|visas|redovisas)\s+(?:inte|ej)\b|(?:^|\s)(?:är|var)\s+(?:inte|ej)\s+(?:en\s+)?del\s+av\b|lämnas\s+(?:uttryckligen\s+)?utanför|\binte\s+uttryckligen\b|\b(?:gäller|täcker|handlar\s+om)\s+(?:bara|endast|enbart)\b[^.!?]*,\s+(?:inte|ej)\s+(?!ett\s+(?:beslut|förslag)\b)\S|\b(?:berörs|täcks|anges|framgår|nämner|tas\s+upp|omfattas)\s+(?:inte|ej)\b|nämns\s+(?:inte|ej)|ingår\s+(?:inte|ej)|\bsaknas\s+(?:i|det|helt)\b|\b(?:direktivet|uppdraget|utredningen|dokumenten|texten)\s+saknar\b|(?:inte|ej)\s+i\s+dokument/i;
+
 /**
  * Rejects text that name-drops documents or breaks the rules the prompt sets. `lawInForce` says that
  * an SFS item with an in-force date on or before today is among the evidence; only then may the text
@@ -262,8 +310,11 @@ export function reasoningProblems(
   lawInForce = false,
   coverage?: 'unconfirmed_full' | 'partial',
   inquiry = false,
+  nonLegislative = false,
 ): string[] {
   const problems: string[] = [];
+  if (nonLegislative && !inquiry && ABSENCE_CLAIM.test(text))
+    problems.push('makes an absence claim');
   if (inquiry) {
     // A directive-based verdict has no law behind it, and absence claims cannot be verified.
     // Describing what the directive asks the inquiry to propose is fine; saying a law or a decision exists is not.
@@ -273,12 +324,7 @@ export function reasoningProblems(
       )
     )
       problems.push('talks about a law or a Riksdag decision in an inquiry text');
-    if (
-      /nämns\s+(?:inte|ej)|ingår\s+(?:inte|ej)|\bsaknas\s+(?:i|det|helt)\b|\b(?:direktivet|uppdraget|utredningen|dokumenten|texten)\s+saknar\b|(?:inte|ej)\s+i\s+dokument/i.test(
-        text,
-      )
-    )
-      problems.push('makes an absence claim');
+    if (ABSENCE_CLAIM.test(text)) problems.push('makes an absence claim');
   }
   if (/anteckning|lagtextutdrag|textutdrag/i.test(text)) problems.push('uses an internal term');
   if (/visade\s+lagtext|avkortad|avkortat|brottskatalog-urval|citatet\s+är/i.test(text))

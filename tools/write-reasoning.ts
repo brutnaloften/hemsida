@@ -77,6 +77,8 @@ interface Job {
   coverage?: 'unconfirmed_full' | 'partial';
   /** An inquiry promise (type inquiry): the text is about the directive, never a law. */
   inquiry: boolean;
+  /** Budget, other_action, outcome or vague promise without a law: no law talk, no absence claims. */
+  nonLegislative: boolean;
 }
 const REASONED_VERDICTS: readonly string[] = ['in_progress', 'fulfilled', 'partially_fulfilled'];
 const today = new Date().toISOString().slice(0, 10);
@@ -101,6 +103,8 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
       judgementBy.get(`${p.id}:${e.dok_id}`)?.reason ??
       (e.kind === 'bet' ? 'Riksdagens beslut om en proposition som hör till löftet.' : ''),
   }));
+  // Not from the Tidö agreement: absence claims about linked documents cannot be verified.
+  const manifesto = (p.source as { id?: string }).id !== 'tidoavtalet';
   const inquiry = p.type === 'inquiry' && p.verdict.value !== 'in_progress';
   if (
     p.verdict.value !== 'in_progress' &&
@@ -112,7 +116,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     continue;
   }
   const prompt = buildReasoningPrompt(p, items, today, inquiry);
-  const instructions = reasoningInstructions(items, p.verdict.value, today, p.type);
+  const instructions = reasoningInstructions(items, p.verdict.value, today, p.type, manifesto);
   jobs.push({
     file,
     raw: rawPromise,
@@ -122,8 +126,12 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     designations: riksdag.map((e) => e.designation),
     lawInForce: hasLawInForce(items, today),
     inquiry,
+    nonLegislative:
+      manifesto && p.verdict.value === 'in_progress' && !items.some((i) => i.kind === 'sfs'),
     coverage:
-      p.verdict.value === 'partially_fulfilled'
+      p.verdict.value === 'partially_fulfilled' ||
+      // A manifesto promise in progress rests on an inquiry or proposal, never on the full promise.
+      (manifesto && p.verdict.value === 'in_progress' && !items.some((i) => i.kind === 'sfs'))
         ? 'partial'
         : p.verdict.value === 'in_progress' &&
             items.some((i) => i.kind === 'sfs' && i.relevance === 'full')
@@ -146,6 +154,7 @@ if (values.pin) {
     job.lawInForce,
     job.coverage,
     job.inquiry,
+    job.nonLegislative,
   );
   if (problems.length > 0) throw new Error(`pinned text rejected: ${problems.join(', ')}`);
   pins[values.pin] = { key: job.key, reasoning: values.text };
@@ -165,6 +174,7 @@ for (const job of jobs) {
     job.lawInForce,
     job.coverage,
     job.inquiry,
+    job.nonLegislative,
   );
   if (problems.length > 0) throw new Error(`pin for ${id} rejected: ${problems.join(', ')}`);
   writeJsonAtomic(cachePath(job.key), { reasoning: pin.reasoning });
@@ -180,7 +190,8 @@ const usable = (j: Job): boolean => {
   const text = cachedText(j);
   return (
     text !== undefined &&
-    reasoningProblems(text, j.designations, j.lawInForce, j.coverage, j.inquiry).length === 0
+    reasoningProblems(text, j.designations, j.lawInForce, j.coverage, j.inquiry, j.nonLegislative)
+      .length === 0
   );
 };
 const uncached = todo.filter((j) => !usable(j));
@@ -217,6 +228,7 @@ async function write(job: Job): Promise<void> {
         job.lawInForce,
         job.coverage,
         job.inquiry,
+        job.nonLegislative,
       );
       if (problems.length === 0) {
         writeJsonAtomic(cachePath(job.key), parsed.data);

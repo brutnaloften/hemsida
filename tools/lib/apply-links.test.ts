@@ -554,6 +554,8 @@ describe('applyLinks with SFS', () => {
     const r = run(sfs, [pair('P1')], budgetPromise)!;
     expect(r.verdict.value).toBe('in_progress');
     expect(sfsOf(r)).toHaveLength(0);
+    // The missing-law placeholder only makes sense for a law promise.
+    expect(r.verdict.reasoning).not.toContain('SFS-författning');
   });
 
   it('only uses laws reached through linked propositions', () => {
