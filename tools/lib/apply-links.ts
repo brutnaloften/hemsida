@@ -527,11 +527,13 @@ export function applyLinks(
           decided.length > 0 ? `Riksdagen har även fattat beslut i ${list(decided)}.` : '',
           sfsReasoning(outcome, today),
         ]
-      : [
-          decided.length > 0
-            ? `Riksdagen har även fattat beslut i ${list(decided)}, men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.`
-            : 'Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.',
-        ]),
+      : promise.type === 'legislative'
+        ? [
+            decided.length > 0
+              ? `Riksdagen har även fattat beslut i ${list(decided)}, men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.`
+              : 'Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.',
+          ]
+        : [decided.length > 0 ? `Riksdagen har även fattat beslut i ${list(decided)}.` : '']),
   ]
     .filter((t) => t !== '')
     .join(' ');

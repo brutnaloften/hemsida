@@ -281,6 +281,48 @@ describe('write-reasoning', () => {
     });
   });
 
+  describe('non-legislative in_progress promises', () => {
+    const today = '2026-11-12';
+    const dir = {
+      kind: 'dir',
+      date: '2025-01-01',
+      title: 'Uppdrag om X',
+      relevance: 'partial' as const,
+      note: 'Tasks an inquiry.',
+    };
+    it('drops the missing-law framing and the absence instruction', () => {
+      const ins = reasoningInstructions([dir], 'in_progress', today, 'budget');
+      expect(ins).not.toContain('ingen författning är kopplad');
+      expect(ins).not.toContain('"nämns inte i dokumenten")');
+      expect(ins).toContain('gäller inte en lagändring');
+    });
+    it('keeps the legislative instructions unchanged', () => {
+      expect(reasoningInstructions([dir], 'in_progress', today, 'legislative')).toBe(
+        reasoningInstructions([dir], 'in_progress', today),
+      );
+    });
+    it('bans absence claims for a manifesto law promise but keeps the missing-law framing', () => {
+      const ins = reasoningInstructions([dir], 'in_progress', today, 'legislative', true);
+      expect(ins).toContain('ingen författning är kopplad');
+      expect(ins).toContain('Skriv inte vad dokumenten lämnar utanför');
+      expect(ins).not.toContain('"nämns inte i dokumenten")');
+    });
+    it('catches "anges inte uttryckligen" and "berörs inte"', () => {
+      for (const t of ['Heltid anges inte uttryckligen.', 'Uppfostringsresor berörs inte av dem.'])
+        expect(reasoningProblems(t, [], false, undefined, false, true)).toContain(
+          'makes an absence claim',
+        );
+    });
+    it('rejects absence claims only when flagged', () => {
+      const t =
+        'Regeringen gav i januari 2025 ett uppdrag om X. Finansieringen nämns inte i dokumenten.';
+      expect(reasoningProblems(t, [], false, undefined, false, true)).toContain(
+        'makes an absence claim',
+      );
+      expect(reasoningProblems(t, [])).not.toContain('makes an absence claim');
+    });
+  });
+
   describe('inquiry promises', () => {
     const today = '2026-11-12';
     const dir: ReasoningItem = {
@@ -327,9 +369,9 @@ describe('write-reasoning', () => {
       expect(reasoningProblems(t, [], false, undefined, true)).toEqual([]);
     });
 
-    it('leaves in_progress and other types unchanged', () => {
+    it('treats in_progress inquiry like other non-law types and leaves legislative unchanged', () => {
       expect(reasoningInstructions([dir], 'in_progress', today, 'inquiry')).toBe(
-        reasoningInstructions([dir], 'in_progress', today),
+        reasoningInstructions([dir], 'in_progress', today, 'budget'),
       );
       expect(reasoningInstructions([dir], 'fulfilled', today, 'legislative')).toBe(
         reasoningInstructions([dir], 'fulfilled', today),
