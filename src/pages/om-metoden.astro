@@ -112,8 +112,7 @@ const stages = [
         Dokumenten från riksdagen kopieras inte över: tidslinjen visas i stället via det länkade
         Tidölöftet. För löften som saknas i avtalet finns inget länkat Tidölöfte och därmed ingen
         tidslinje. De flesta manifestlöften är ännu inte bedömda. De som var för vaga för att bedömas
-        markerades som &quot;Ej bedömbart&quot; vid inläsningen. Etiketterna kan innehålla fel, och de som
-        upptäcks rättas via en pull request.
+        markerades som &quot;Ej bedömbart&quot; vid inläsningen. Etiketterna kan innehålla fel.
       </p>
     </section>
 
@@ -140,9 +139,10 @@ const stages = [
         }
       </dl>
       <p>
-        När mandatperioden är slut granskas kvarvarande löften som står som &quot;Inte bedömt&quot;,
-        &quot;Inga belägg funna&quot; eller &quot;Pågår&quot; i en särskild avslutande genomgång, där de kan få
-        till exempel &quot;Ej uppfyllt&quot;. Ingenting ändras automatiskt.
+        &quot;Ej uppfyllt&quot; och &quot;Övergivet&quot; sätts bara i en avslutande genomgång när
+        mandatperioden är slut. Då prövas varje kvarvarande löfte för sig, oavsett om det står som
+        &quot;Inte bedömt&quot;, &quot;Inga belägg funna&quot; eller &quot;Pågår&quot;. Ett löfte som inte
+        har uppfyllts blir alltså inte &quot;Ej uppfyllt&quot; av sig självt när perioden går ut.
       </p>
     </section>
 
