@@ -46,10 +46,10 @@ const LAW_INSTRUCTIONS: Record<string, string> = {
 Bedömningen är i det här fallet satt till uppfyllt: en lag (SFS) har beslutats och trätt i kraft och genomför löftet i sin helhet. Beskriv vad lagen innebär och skriv att lagen trädde i kraft på det angivna datumet ("Lagen som genomför löftet trädde i kraft den <datum>"). Nämn inget lagnummer.`,
   partially_fulfilled: `
 
-Bedömningen är i det här fallet satt till delvis uppfyllt: en lag (SFS) har trätt i kraft men genomför bara en del av löftet eller en svagare variant av det. Beskriv vad lagen innebär och när den trädde i kraft, och med hjälp av anteckningen vad lagen täcker av det som löftet gäller. Skriv att de angivna dokumenten visar att resten fortfarande bereds eller inte ingår i lagen. Nämn inget lagnummer.`,
+Bedömningen är i det här fallet satt till delvis uppfyllt: en lag (SFS) har trätt i kraft men genomför bara en del av löftet eller en svagare variant av det. Beskriv vad lagen innebär och när den trädde i kraft, och med hjälp av anteckningen vad lagen täcker av det som löftet gäller. Skriv vad anteckningen säger att lagen inte täcker, och påstå inte att något fortfarande bereds eller pågår. Nämn inget lagnummer.`,
   in_progress_law_in_force: `
 
-En lag (SFS) som hör till löftet har trätt i kraft på det angivna datumet. Beskriv vad den lagen täcker. Dokumenten visar också att resten av löftet fortfarande bereds. Nämn inget lagnummer.`,
+En lag (SFS) som hör till löftet har trätt i kraft på det angivna datumet. Beskriv vad den lagen täcker. Beskriv bara vad dokumenten visar och påstå inte att något fortfarande bereds eller pågår. Nämn inget lagnummer.`,
   in_progress: `
 
 En lag (SFS) som hör till löftet är beslutad och träder i kraft ett senare datum. Skriv att lagen är beslutad och att den träder i kraft på det angivna datumet. Skriv inte att den gäller eller har trätt i kraft. Nämn inget lagnummer.`,
@@ -181,6 +181,10 @@ const MANDATE_CLAUSE =
   /(^|[,;]\s+)((?:men|och)\s+)?((?:utredning(?:en|arna)?|utredare(?:n)?|utredarna|kommitté(?:n|erna)?|uppdraget|direktivet)\s+ska\s+(?:ännu\s+)?(?:ta\s+ställning|behandla|besluta)\b)/gi;
 const NO_DECISION_NOUN = /\b(inte|ej)\s+(något|ett)\s+beslut|\binget\s+beslut/i;
 
+/** The writer only sees linked documents, so it cannot know that something is still being prepared. */
+const STILL_PENDING_CLAIM =
+  /\b(?:bereds|pågår|utreds|övervägs|bearbetas)\s+(?:fortfarande|alltjämt|ännu)\b|\b(?:fortfarande|alltjämt)\s+(?:under\s+beredning|(?:bereds|pågår|utreds|övervägs))\b|\bpågående\s+(?:beredning|utredning)\b/i;
+
 const IN_FORCE_CLAIM =
   /\btr[äa]dde\s+i\s+kraft|\b(?:har|hade)\s+(?:nu\s+)?trätt\s+i\s+kraft|\bträtt\s+i\s+kraft|\bgäller\s+(?:sedan|från)|\bgäller\s+nu|\bär\s+i\s+kraft|\bi\s+kraft\s+sedan|\bbörjade\s+gälla/i;
 /** "Framgår inte att lagen har trätt i kraft" is not a claim that it did. */
@@ -208,6 +212,7 @@ export function reasoningProblems(
     problems.push('claims a law is in force');
   if (/\bAI\b|AI-modell/.test(text)) problems.push('mentions AI');
   if (/fler dokument|kan finnas/i.test(text)) problems.push('adds a completeness caveat');
+  if (STILL_PENDING_CLAIM.test(text)) problems.push('claims something is still being prepared');
   // The model only sees linked documents, so it cannot know that nothing else was decided or proposed.
   // A sentence that is explicitly about the listed documents may say they show no decision.
   const aboutListedDocuments = /\bdokument(en|et)?\b/i;

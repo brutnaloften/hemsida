@@ -146,6 +146,8 @@ export interface SfsJudgement {
 export interface SfsOverride {
   label: SfsLabel;
   reason: string;
+  /** Replaces the judge's note about what the law leaves out (default: the judge's own note). */
+  missing_sv?: string;
 }
 
 /** The slice of an SFS law the verdict rules need (a subset of `SfsLaw`). */
@@ -185,7 +187,7 @@ export function sfsJudgements(
     out.set(id, {
       label: o.label,
       confidence: 'high',
-      missing_sv: o.label === 'full' ? '' : (old?.missing_sv ?? ''),
+      missing_sv: o.label === 'full' ? '' : (o.missing_sv ?? old?.missing_sv ?? ''),
     });
   }
   return out;

@@ -107,6 +107,22 @@ describe('write-reasoning', () => {
     );
   });
 
+  it('rejects claims that something is still being prepared', () => {
+    const ok = 'Lagen trädde i kraft 1 april 2025 och förlänger tiden.';
+    for (const bad of [
+      'Resten av löftet bereds fortfarande.',
+      'Frågan pågår fortfarande.',
+      'Resten är fortfarande under beredning.',
+      'Det pågår en utredning.'.replace('Det pågår en', 'Det finns en pågående'),
+    ])
+      expect(reasoningProblems(`${ok} ${bad}`, [], true), bad).toContain(
+        'claims something is still being prepared',
+      );
+    expect(reasoningProblems(`${ok} Utredningen lämnade sitt betänkande i maj.`, [], true)).toEqual(
+      [],
+    );
+  });
+
   it('describes a contradicting document and only changes the instructions for such promises', () => {
     const item = {
       kind: 'sou',
