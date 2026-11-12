@@ -351,7 +351,7 @@ describe('applyLinks with SFS', () => {
   const sfsFor = (
     byProp: Record<string, string[]>,
     labels: Record<string, [SfsLabel, 'high' | 'medium' | 'low']>,
-    overrides: Record<string, { label: SfsLabel; reason: string }> = {},
+    overrides: Record<string, { label: SfsLabel; reason: string; missing_sv?: string }> = {},
   ): SfsInput => ({
     laws,
     byProp,
@@ -371,6 +371,19 @@ describe('applyLinks with SFS', () => {
     r.evidence.filter((e) => e.kind === 'sfs') as { dok_id: string; date: string }[];
   const valid = (r: NonNullable<ReturnType<typeof run>>, p = base) =>
     expect(promiseSchema.safeParse({ ...p, ...r }).success).toBe(true);
+
+  it('lets an override replace the note about what the law leaves out', () => {
+    const r = run(
+      sfsFor(
+        { P1: ['sfs-2026-100'] },
+        { 'sfs-2026-100': ['partial', 'low'] },
+        { 'tido-x::sfs-2026-100': { label: 'partial', reason: 'r', missing_sv: 'Ny anteckning.' } },
+      ),
+    )!;
+    expect((r.evidence.find((e) => e.kind === 'sfs') as { note: string }).note).toBe(
+      'Ny anteckning.',
+    );
+  });
 
   it('sets fulfilled for a law judged full at high confidence that is in force', () => {
     const r = run(sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] }))!;

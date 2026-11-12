@@ -22,7 +22,7 @@
   "verdict": {
     "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att se över hemliga tvångsmedel mot barn under 15. Utredningen föreslog det i december 2024, och riksdagen beslutade i september 2025 efter ett regeringsförslag. Flera lagändringar, bland annat om hemlig dataavläsning, trädde i kraft 1 oktober 2025 men täcker bara en del av löftet. En annan ändring träder i kraft 1 oktober 2028.",
+    "reasoning": "Riksdagen beslutade i september 2025 att hemliga och förebyggande tvångsmedel ska få användas mot barn under 15 som begår grova brott. Ändringar i bland annat lagen om unga lagöverträdare och lagen om hemlig dataavläsning trädde i kraft 1 oktober 2025. Lagarna täcker en del av löftet; vad som saknas nämns inte i dokumenten, och en senare ändring träder i kraft 2028.",
     "date": "2026-11-11",
     "history": [
       {
@@ -81,13 +81,23 @@
     },
     {
       "kind": "sfs",
+      "dok_id": "sfs-2025-861",
+      "designation": "SFS 2025:861",
+      "title": "Lag (2025:861) om ändring i lagen (1964:167) med särskilda bestämmelser om unga lagöverträdare",
+      "date": "2025-10-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025861.html",
+      "relevance": "partial",
+      "note": "De materiella reglerna om själva tvångsmedlen ligger i andra lagar i propositionen (t.ex. rättegångsbalken, hemlig dataavläsning, preventiva tvångsmedel), och LUL-ändringen genomför inte hela löftet ensam."
+    },
+    {
+      "kind": "sfs",
       "dok_id": "sfs-2025-863",
       "designation": "SFS 2025:863",
       "title": "Lag (2025:863) om ändring i lagen (2007:979) om åtgärder för att förhindra vissa särskilt allvarliga brott",
       "date": "2025-10-01",
       "url": "https://svenskforfattningssamling.se/doc/2025863.html",
       "relevance": "partial",
-      "note": "Möjligheten att använda hemliga tvångsmedel för att utreda brott som begåtts av barn under 15 år (rättegångsbalken) och ändringarna i övriga lagar, till exempel LUL, ingår inte i denna lag."
+      "note": "Hemliga tvångsmedel för att utreda grova brott begångna av under 15-åringar (rättegångsbalken, LUL m.fl.) ingår inte i denna lag, och den preventiva möjligheten gäller bara vissa brott."
     },
     {
       "kind": "sfs",
@@ -97,7 +107,7 @@
       "date": "2025-10-01",
       "url": "https://svenskforfattningssamling.se/doc/2025866.html",
       "relevance": "partial",
-      "note": "Övriga hemliga tvångsmedel (till exempel i rättegångsbalken och lagen om hemlig dataavläsning) och de preventiva tvångsmedlen ligger i andra lagar i propositionen."
+      "note": "Övriga hemliga tvångsmedel och preventiva tvångsmedel mot under 15-åringar, som rättegångsbalken, hemlig dataavläsning och lagen om åtgärder för att förhindra särskilt allvarliga brott, ligger i andra lagar."
     },
     {
       "kind": "sfs",
@@ -107,7 +117,7 @@
       "date": "2025-10-01",
       "url": "https://svenskforfattningssamling.se/doc/2025868.html",
       "relevance": "partial",
-      "note": "Övriga hemliga tvångsmedel (t.ex. i rättegångsbalken och LUL) samt preventiva tvångsmedel och kvarhållande ligger i andra lagar i propositionen."
+      "note": "Lagen omfattar bara hemlig dataavläsning, inte övriga hemliga tvångsmedel som hemlig avlyssning eller övervakning av elektronisk kommunikation, vilka ligger i andra lagar."
     },
     {
       "kind": "sfs",
@@ -117,7 +127,7 @@
       "date": "2028-10-01",
       "url": "https://svenskforfattningssamling.se/doc/2025869.html",
       "relevance": "partial",
-      "note": "Övriga hemliga tvångsmedel (till exempel i rättegångsbalken och lagen om inhämtning av elektronisk kommunikation) och de preventiva tvångsmedlen ligger i andra lagar. Lagen har dessutom ett sent ikraftträdande, 2028."
+      "note": "Lagen täcker bara hemlig dataavläsning (en följdändring med senare ikraftträdande 2028), inte övriga hemliga tvångsmedel som telefonavlyssning eller de ändringar i LUL, rättegångsbalken och andra lagar som genomför löftet i övrigt."
     }
   ]
 }

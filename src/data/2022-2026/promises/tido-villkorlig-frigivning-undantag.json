@@ -28,7 +28,7 @@
   "verdict": {
     "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Utredningen från juli 2024 föreslog bland annat längre prövotid, men avrådde från 3/4-modellen. Regeringen föreslog i oktober 2025 skärpta regler och riksdagen beslutade i november 2025. Lagändringar i brottsbalken och fängelselagen trädde i kraft 1 januari 2026: tiden före villkorlig frigivning höjs stegvis från 2/3 till 3/4 och det blir lättare att skjuta upp frigivningen. Att frigivning som huvudregel inte ska beviljas utan särskilda skäl ingår inte i lagarna.",
+    "reasoning": "En utredning lade i juli 2024 fram förslag, och riksdagen beslutade i november 2025 om skärpta regler. Lagändringen trädde i kraft 1 januari 2026. Den höjer stegvis tiden före villkorlig frigivning från två tredjedelar till tre fjärdedelar av straffet och gör det lättare att skjuta upp frigivningen. Att frigivning ska vara undantag och kräva särskilda skäl nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
@@ -93,17 +93,7 @@
       "date": "2026-01-01",
       "url": "https://svenskforfattningssamling.se/doc/20251414.html",
       "relevance": "partial",
-      "note": "Villkorlig frigivning blir inte undantag som kräver särskilda skäl, och höjningen till tre fjärdedelar av straffet framgår inte som genomförd i just denna lag."
-    },
-    {
-      "kind": "sfs",
-      "dok_id": "sfs-2025-1419",
-      "designation": "SFS 2025:1419",
-      "title": "Lag (2025:1419) om ändring i fängelselagen (2010:610)",
-      "date": "2026-01-01",
-      "url": "https://svenskforfattningssamling.se/doc/20251419.html",
-      "relevance": "partial",
-      "note": "Lagen genomför inte huvudregeln att villkorlig frigivning inte beviljas utan särskilda skäl, inte heller 3/4-gränsen (finns i brottsbalken) eller förlängd övervakningsperiod."
+      "note": "Villkorlig frigivning blir inte ett undantag som kräver särskilda skäl, och 3/4 gäller inte alla straff, eftersom kortare straff fortfarande ger frigivning efter 2/3."
     }
   ]
 }

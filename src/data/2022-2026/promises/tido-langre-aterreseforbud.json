@@ -20,15 +20,21 @@
   "committee": "SfU",
   "keywords": ["återreseförbud", "utvisning", "avvisning", "utlänningslagen"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Riksdagen beslutade i mars 2025 om längre återreseförbud för dem som inte lämnat landet i tid, och lagen trädde i kraft 1 april 2025. Efter en utredning i maj 2025 och ett regeringsförslag i april 2026 beslutade riksdagen i juni 2026 om längre återreseförbud vid utvisning på grund av brott, normalt fem år, tio år eller utan tidsgräns. Lagen gäller från 1 september 2026. Resten av löftet bereds fortfarande.",
+    "reasoning": "Den första lagändringen trädde i kraft 1 april 2025 och ger återreseförbud på upp till fem år för den som inte lämnat landet i tid. Efter riksdagens beslut i juni 2026 trädde nya regler i kraft 1 september 2026. Vid utvisning på grund av brott blir förbudet, beroende på straffet, normalt fem år, tio år eller utan tidsgräns. Återreseförbud i andra fall nämns inte i dokumenten.",
     "date": "2026-11-11",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Riksdagen beslutade i mars 2025 om längre återreseförbud för dem som inte lämnat landet i tid, och lagen trädde i kraft 1 april 2025. Efter en utredning i maj 2025 och ett regeringsförslag i april 2026 beslutade riksdagen i juni 2026 om längre återreseförbud vid utvisning på grund av brott, normalt fem år, tio år eller utan tidsgräns. Lagen gäller från 1 september 2026. Resten av löftet bereds fortfarande.",
+        "date": "2026-11-11"
       }
     ]
   },
@@ -60,8 +66,8 @@
       "title": "Lag (2025:225) om ändring i utlänningslagen (2005:716)",
       "date": "2025-04-01",
       "url": "https://svenskforfattningssamling.se/doc/2025225.html",
-      "relevance": "full",
-      "note": null
+      "relevance": "partial",
+      "note": "Det framgår inte att återreseförbuden generellt görs längre; förlängningen gäller bara fall där utlänningen inte lämnat landet i tid, och lagen ändrar också andra saker (t.ex. spårbyte)."
     },
     {
       "kind": "sou",
@@ -100,8 +106,8 @@
       "title": "Lag (2026:1259) om ändring i utlänningslagen (2005:716)",
       "date": "2026-09-01",
       "url": "https://svenskforfattningssamling.se/doc/20261259.html",
-      "relevance": "full",
-      "note": null
+      "relevance": "partial",
+      "note": "Det framgår inte av den synliga lagtexten exakt hur återreseförbuden förlängs, och lagen omfattar även mycket annat än återreseförbud (utvisningsregler). Utredningsdelen av löftet ses inte heller."
     }
   ]
 }

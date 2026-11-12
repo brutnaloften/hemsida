@@ -74,6 +74,7 @@ interface Job {
   key: string;
   designations: string[];
   lawInForce: boolean;
+  coverage?: 'unconfirmed_full' | 'partial';
 }
 const REASONED_VERDICTS: readonly string[] = ['in_progress', 'fulfilled', 'partially_fulfilled'];
 const today = new Date().toISOString().slice(0, 10);
@@ -114,6 +115,13 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     key: reasoningKey(values.model!, prompt, instructions),
     designations: riksdag.map((e) => e.designation),
     lawInForce: hasLawInForce(items, today),
+    coverage:
+      p.verdict.value === 'partially_fulfilled'
+        ? 'partial'
+        : p.verdict.value === 'in_progress' &&
+            items.some((i) => i.kind === 'sfs' && i.date <= today && i.relevance === 'full')
+          ? 'unconfirmed_full'
+          : undefined,
   });
 }
 const cachePath = (k: string) => resolve(cacheDir, `${k}.json`);
@@ -125,7 +133,7 @@ if (values.pin) {
   const job = jobs.find((j) => j.file === `${values.pin}.json`);
   if (!job || !values.text)
     throw new Error(`--pin needs --text and a reasoned promise ${values.pin}`);
-  const problems = reasoningProblems(values.text, job.designations, job.lawInForce);
+  const problems = reasoningProblems(values.text, job.designations, job.lawInForce, job.coverage);
   if (problems.length > 0) throw new Error(`pinned text rejected: ${problems.join(', ')}`);
   pins[values.pin] = { key: job.key, reasoning: values.text };
   writeJson(pinsPath, pins);
@@ -138,7 +146,7 @@ for (const job of jobs) {
     console.warn(`pin for ${id} is stale (evidence changed); the model writes a new text`);
     continue;
   }
-  const problems = reasoningProblems(pin.reasoning, job.designations, job.lawInForce);
+  const problems = reasoningProblems(pin.reasoning, job.designations, job.lawInForce, job.coverage);
   if (problems.length > 0) throw new Error(`pin for ${id} rejected: ${problems.join(', ')}`);
   writeJsonAtomic(cachePath(job.key), { reasoning: pin.reasoning });
 }
@@ -151,7 +159,10 @@ const cachedText = (j: Job): string | undefined =>
     : undefined;
 const usable = (j: Job): boolean => {
   const text = cachedText(j);
-  return text !== undefined && reasoningProblems(text, j.designations, j.lawInForce).length === 0;
+  return (
+    text !== undefined &&
+    reasoningProblems(text, j.designations, j.lawInForce, j.coverage).length === 0
+  );
 };
 const uncached = todo.filter((j) => !usable(j));
 console.log(
@@ -181,7 +192,12 @@ async function write(job: Job): Promise<void> {
       }
       const parsed = reasoningSchema.safeParse(message.structured_output);
       if (!parsed.success) break;
-      const problems = reasoningProblems(parsed.data.reasoning, job.designations, job.lawInForce);
+      const problems = reasoningProblems(
+        parsed.data.reasoning,
+        job.designations,
+        job.lawInForce,
+        job.coverage,
+      );
       if (problems.length === 0) {
         writeJsonAtomic(cachePath(job.key), parsed.data);
         return;

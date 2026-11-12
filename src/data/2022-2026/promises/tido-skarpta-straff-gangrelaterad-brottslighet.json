@@ -28,7 +28,7 @@
   "verdict": {
     "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Riksdagen beslutade i maj 2023 om skärpta straff för bland annat olaga hot, rån och utpressning, och ändringar i brottsbalken trädde i kraft 1 juli 2023. Efter ett förslag i april 2026 om dubbla straff för brott i kriminella nätverk och skärpta straffskalor trädde nya lagändringar i kraft 1 augusti 2026. Vapenbrott, övergrepp i rättssak, bedrägeri och ocker nämns inte i 2023 års förslag.",
+    "reasoning": "Regeringen föreslog i januari 2023 skärpta straff för olaga hot, rån och utpressning. Riksdagen beslutade i maj 2023 och lagändringarna trädde i kraft 1 juli 2023. Riksdagen beslutade i juni 2026 om dubbla straff för brott i kriminella nätverk och skärpta straffskalor, och lagändringar trädde i kraft 1 augusti 2026. Vapenbrott, övergrepp i rättssak, bedrägeri och ocker nämns inte i 2023 års förslag.",
     "date": "2026-11-11",
     "history": [
       {
@@ -73,7 +73,7 @@
       "date": "2023-07-01",
       "url": "https://svenskforfattningssamling.se/doc/2023257.html",
       "relevance": "partial",
-      "note": "Lagen visar inte skärpta straff för vapenbrott, övergrepp i rättssak, bedrägeri och ocker, som nämns i löftet."
+      "note": "Straffskärpningar för vapenbrott, övergrepp i rättssak, bedrägeri och ocker framgår inte av texten."
     },
     {
       "kind": "sfs",
@@ -83,7 +83,7 @@
       "date": "2023-07-01",
       "url": "https://svenskforfattningssamling.se/doc/2023258.html",
       "relevance": "partial",
-      "note": "Lagen rör inte de uppräknade brotten vapenbrott, övergrepp i rättssak, utpressning, bedrägeri, ocker, rån och olaga hot, och inte någon bredare skärpning av straffen för gängbrott."
+      "note": "Lagen rör inte de brott som löftet nämner, som vapenbrott, övergrepp i rättssak, utpressning, bedrägeri, ocker, rån och olaga hot. Dessa regleras i andra lagar."
     },
     {
       "kind": "sou",
@@ -123,7 +123,17 @@
       "date": "2026-08-01",
       "url": "https://svenskforfattningssamling.se/doc/20261318.html",
       "relevance": "partial",
-      "note": "Texten visar inte att alla de uppräknade brotten (vapenbrott, ocker, bedrägeri m.fl.) skärps, och vapenbrott ligger i en annan lag än brottsbalken. Gängbrottsutredningen som utgångspunkt framgår inte heller."
+      "note": "Lagen är en generell straffskärpning och inte avgränsad till gängbrottslighet; texten visar inte tydligt att alla uppräknade brott (vapenbrott, övergrepp i rättssak, utpressning, bedrägeri, ocker, rån, olaga hot) skärps, och vapenbrott ligger i annan lag."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1320",
+      "designation": "SFS 2026:1320",
+      "title": "Lag (2026:1320) om ändring i skattebrottslagen (1971:69)",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261320.html",
+      "relevance": "partial",
+      "note": "Lagen rör inte de brott som löftet pekar ut (vapenbrott, övergrepp i rättssak, utpressning, bedrägeri, ocker, rån, olaga hot) och bygger inte på Gängbrottsutredningen; skattebrott är inte typiskt gängbrott."
     },
     {
       "kind": "sfs",
@@ -133,7 +143,17 @@
       "date": "2026-08-01",
       "url": "https://svenskforfattningssamling.se/doc/20261321.html",
       "relevance": "partial",
-      "note": "Lagen täcker inte de flesta brott som löftet nämner, som övergrepp i rättssak, utpressning, bedrägeri, ocker, rån och olaga hot. Dessa regleras i andra lagar."
+      "note": "Lagen genomför inte skärpta straff för de andra gängrelaterade brotten i löftet (vapenbrott, övergrepp i rättssak, utpressning, bedrägeri, ocker, rån, olaga hot). Den rör bara smugglingsbrott, som inte nämns uttryckligen i löftet."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1323",
+      "designation": "SFS 2026:1323",
+      "title": "Lag (2026:1323) om ändring i lagen (2014:307) om straff för penningtvättsbrott",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261323.html",
+      "relevance": "partial",
+      "note": "Lagen rör inte de uttryckligen nämnda brotten (vapenbrott, övergrepp i rättssak, utpressning, bedrägeri, ocker, rån, olaga hot) och är ingen särskild gängbrottsåtgärd."
     }
   ]
 }
