@@ -297,6 +297,54 @@ function templateVersion(instructions: string): string {
 }
 const ABSENCE_BAN_MARKER = '- Skriv aldrig vad som saknas';
 
+/** A hand-written reasoning kept in tools/reasoning-pins.json. */
+export interface Pin {
+  /** Prompt key the text was written for (changes with instructions and evidence). */
+  key: string;
+  reasoning: string;
+  /** Hash of the evidence behind the text (see pinEvidenceHash); absent on pins from before it existed. */
+  evidence?: string;
+}
+
+/**
+ * Hash of what a pinned text depends on: the promise and its evidence items, without the
+ * instructions. Law (sfs) notes are left out because the writer no longer sees them. A pin may be
+ * re-keyed after an instruction change only when this hash is unchanged.
+ */
+export function pinEvidenceHash(
+  promise: { title: string; description: string },
+  items: readonly ReasoningItem[],
+): string {
+  return createHash('sha256')
+    .update(
+      JSON.stringify([
+        promise.title,
+        promise.description,
+        items.map((i) => [
+          i.kind,
+          i.date,
+          i.title,
+          i.relevance,
+          i.stage ?? '',
+          i.kind === 'sfs' ? '' : i.note,
+        ]),
+      ]),
+    )
+    .digest('hex');
+}
+
+/**
+ * `fresh`: the pin's key matches. `rekey`: the key changed but the evidence hash matches (only the
+ * instructions changed). `stale`: the evidence changed, or the pin has no hash to prove it did not.
+ */
+export function pinStatus(
+  pin: Pin,
+  job: { key: string; evidence: string },
+): 'fresh' | 'rekey' | 'stale' {
+  if (pin.key === job.key) return 'fresh';
+  return pin.evidence !== undefined && pin.evidence === job.evidence ? 'rekey' : 'stale';
+}
+
 export function reasoningKey(
   model: string,
   prompt: string,
@@ -349,6 +397,8 @@ const TIDO_ABSENCE_EXTRA = new RegExp(
     String.raw`,\s*(?:inte|ej)\b`,
     String.raw`\b(?:inte|ej)\s+(?:heller|särskilt|alls|här|närmare|tydligt|uttryckligen|direkt)\b`,
     String.raw`\b(?:föreslår|innehåller|innebär|ger|innefattar|innehöll)\s+(?:\w+\s+)?(?:ingen|inget|inga)\b`,
+    String.raw`\bvarken\b`,
+    String.raw`\b(?:föreslog|innehöll|innebar|gav|tog|visade|täckte|omfattade|rörde|gällde|behandlade)\s+(?:\w+\s+)?(?:ingen|inget|inga|inte|ej)\b`,
     String.raw`\bsaknas\b`,
     String.raw`\b(?:dokument(?:en|et)?|lag(?:en|ar|arna)?|förslag(?:et|en)?|texten|propositionen|utredningen|direktivet|uppdraget|beslut(?:et|en)?|betänkandet|promemorian)\s+saknar\b`,
     String.raw`\b(?:finns|fanns)\s+(?:inget|ingen|inga)\b`,

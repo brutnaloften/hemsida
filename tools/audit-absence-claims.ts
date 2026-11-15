@@ -16,6 +16,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import { loadJson, writeJson, writeJsonAtomic } from './lib/json.ts';
+import { cleanStems, pickPassages } from './lib/absence-audit.ts';
 import { parseRiksdagText } from './lib/riksdag-text.ts';
 import { isRiksdagEvidence, promiseSchema } from './lib/schema.ts';
 import { absenceSentences } from './lib/write-reasoning.ts';
@@ -152,20 +153,11 @@ async function audit(c: Claim): Promise<Result> {
     `Löfte: ${c.title}\n${c.description}\n\nMening: ${c.sentence}`,
     STEM_SCHEMA,
   );
-  const lower = stems.map((s) => s.toLowerCase().trim()).filter((s) => s.length >= 3);
-  const scored: { designation: string; text: string; score: number }[] = [];
-  for (const d of c.docs) {
-    const hits: { designation: string; text: string; score: number }[] = [];
-    for (const text of paragraphs(d.dok_id)) {
-      const l = text.toLowerCase();
-      const score = lower.filter((s) => l.includes(s)).length;
-      if (score > 0) hits.push({ designation: d.designation, text, score });
-    }
-    hits.sort((a, b) => b.score - a.score);
-    scored.push(...hits.slice(0, 5));
-  }
-  scored.sort((a, b) => b.score - a.score);
-  const top = scored.slice(0, 12);
+  const lower = cleanStems(stems);
+  const top = pickPassages(
+    c.docs.map((d) => ({ designation: d.designation, paragraphs: paragraphs(d.dok_id) })),
+    lower,
+  );
   const passages = top.length
     ? top.map((h, n) => `[${n + 1}] ${h.designation}: ${h.text.slice(0, 900)}`).join('\n\n')
     : '(inga passager i de angivna dokumenten innehåller söksträngarna)';

@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest';
 import {
   buildReasoningPrompt,
   hasLawInForce,
+  pinEvidenceHash,
+  pinStatus,
   absenceSentences,
   reasoningInstructions,
   reasoningKey,
@@ -452,6 +454,9 @@ describe('write-reasoning', () => {
       'Förslaget gäller inte ledarskap.',
       'Dokumenten visar inte att uppdraget utökas.',
       'Utredningen föreslår ingen sådan regel.',
+      'Frågan behandlas varken i förslaget eller i beslutet.',
+      'Utredningen föreslog ingen sådan regel.',
+      'Propositionen innehöll inga regler om detta.',
     ]) {
       expect(reasoningProblems(`${ok} ${bad}`, []), bad).toContain('makes an absence claim');
     }
@@ -470,5 +475,28 @@ describe('write-reasoning', () => {
     expect(reasoningInstructions([law], 'partially_fulfilled')).not.toContain(
       'enligt underlaget saknas i lagen',
     );
+  });
+});
+
+describe('pins', () => {
+  const promise = { title: 'T', description: 'D' };
+  const sfs: ReasoningItem = { ...item, kind: 'sfs', relevance: 'partial', note: 'gap list' };
+
+  it('hashes the evidence but not law notes', () => {
+    const base = pinEvidenceHash(promise, [item, sfs]);
+    expect(pinEvidenceHash(promise, [item, { ...sfs, note: 'another gap list' }])).toBe(base);
+    expect(pinEvidenceHash(promise, [item, { ...sfs, relevance: 'full' }])).not.toBe(base);
+    expect(pinEvidenceHash(promise, [item])).not.toBe(base);
+    expect(pinEvidenceHash({ ...promise, title: 'U' }, [item, sfs])).not.toBe(base);
+    expect(pinEvidenceHash(promise, [{ ...item, note: 'x' }, sfs])).not.toBe(base);
+  });
+
+  it('re-keys only when the evidence hash proves nothing but the instructions changed', () => {
+    const pin = { key: 'k1', reasoning: 'r', evidence: 'h1' };
+    expect(pinStatus(pin, { key: 'k1', evidence: 'h1' })).toBe('fresh');
+    expect(pinStatus(pin, { key: 'k2', evidence: 'h1' })).toBe('rekey');
+    expect(pinStatus(pin, { key: 'k2', evidence: 'h2' })).toBe('stale');
+    // No stored hash: cannot prove the evidence is unchanged.
+    expect(pinStatus({ key: 'k1', reasoning: 'r' }, { key: 'k2', evidence: 'h1' })).toBe('stale');
   });
 });
