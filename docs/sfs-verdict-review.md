@@ -149,13 +149,22 @@ Review follow-up (PR #214): when every qualifying directive is a tilläggsdirekt
 
 Same chain as for Tidö, run with link run `link-val2022-sonnet-v1`, judge runs `val2022-full-v1` (template v4) and `val2022-full-v2` (`--recheck` of the single `full`, template v5), `--sfs-store tools/out/sfs-store/2022-2026.json`, `--today 2026-11-15`. Only 6 of the 501 legislative manifesto promises have a proposition linked as evidence, so the judge saw 22 pairs and cost $0.44 (recheck $0.05, reasoning about $0.1 on subscription usage). Labels: 1 full, 7 partial, 1 weaker, 13 none.
 
-Result: 1 `fulfilled`, 4 `partially_fulfilled`, the rest unchanged. Hand-read against the law section:
+Result: 1 `fulfilled`, 5 `partially_fulfilled`, the rest unchanged. Hand-read against the law section:
 
 - val2022-m-kriminalisera-oskuldskontroller: fulfilled. SFS 2025:962 adds 4 kap. 4 f § brottsbalken (oskuldskontroll) and SFS 2025:1010 the ban on oskuldsingrepp; the promise is exactly "Kriminalisera oskuldskontroller", in force 2025-12-01, judge full at high confidence after the long-section recheck.
 - val2022-c-kriminalisera-oskuldskontroller and val2022-l-bredda-kriminaliseringen-oskuldskontroller-uppfostringsresor: partially fulfilled. Same laws, but the pledges also name kontrollerande beteende (C) and uppfostringsresor (L), which no law covers.
 - val2022-m-heltidsaktivitet-for-bidrag: partially fulfilled (SFS 2026:730, activity requirement for försörjningsstöd only, reduced by ability, not a strict full-time rule).
 - val2022-l-sank-expertskatten: partially fulfilled via a `weaker` law (SFS 2023:799 extends the relief from five to seven years but does not cut the tax).
-- Override: val2022-c-starkare-grundlaggande-rattigheter::sfs-2023-689 set to `none`. The judge's medium partial rested on a minority-language tuition rule in upper secondary school, which delivers no named part of a broad rights pledge.
-- Reasoning for the four partial promises was pinned by hand because the writer used "nämns inte i dokumenten" absence claims.
+- val2022-c-starkare-grundlaggande-rattigheter: partially fulfilled (judge partial, medium). SFS 2023:689 drops the language-skill demand for mother-tongue tuition in national minority languages in upper secondary school, which touches the minority-language part of the pledge but not property rights or anti-discrimination. No override.
+- Reasoning for the partial promises and the fulfilled one was pinned by hand where the writer used "nämns inte i dokumenten" absence claims or called SFS 2025:1010 a consequential amendment (it adds its own ban on oskuldsingrepp).
 
 The low count is a linking gap, not a law gap: the Riksdag link run linked a prop to few legislative manifesto promises. Widening it (top-k links) is the way to find more.
+
+Commands:
+
+```
+node --experimental-strip-types tools/judge-sfs.ts --id-prefix val2022- --name val2022-full-v1
+node --experimental-strip-types tools/judge-sfs.ts --id-prefix val2022- --name val2022-full-v2 --recheck val2022-full-v1
+node --experimental-strip-types tools/apply-links.ts --run link-val2022-sonnet-v1 --id-prefix val2022- --sfs-store tools/out/sfs-store/2022-2026.json --sfs-run val2022-full-v2 --sfs-overrides tools/sfs-overrides.json --today 2026-11-15
+node --experimental-strip-types tools/write-reasoning.ts --run link-val2022-sonnet-v1 --id-prefix val2022- --model claude-sonnet-5-5
+```
