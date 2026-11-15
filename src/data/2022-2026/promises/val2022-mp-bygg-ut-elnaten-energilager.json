@@ -17,10 +17,38 @@
   "committee": "NU",
   "keywords": ["elnät", "energilager", "smart energisystem"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2024 fram ett förslag om en tydligare process för tillståndsprövning av elnät, för att det ska gå snabbare att bygga ut och förstärka näten. Riksdagen biföll förslaget i maj 2024. Dokumenten gäller den del av löftet som handlar om att bygga ut elnäten.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HB0388",
+      "designation": "Prop. 2023/24:88",
+      "title": "En tydligare process för tillståndsprövning av elnät",
+      "date": "2024-03-19",
+      "url": "https://data.riksdagen.se/dokument/HB0388.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01NU15",
+      "designation": "Bet. 2023/24:NU15",
+      "title": "En tydligare process för tillståndsprövning av elnät",
+      "date": "2024-05-16",
+      "url": "https://data.riksdagen.se/dokument/HB01NU15.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -17,10 +17,17 @@
   "committee": "CU",
   "keywords": ["kusinäktenskap", "förbud", "äktenskap"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2026 fram ett förslag om att förbjuda kusinäktenskap och äktenskap mellan andra nära släktingar utan undantag. Riksdagen biföll förslaget i maj 2026. Lagen om ändring i äktenskapsbalken, som genomför löftet i sin helhet, trädde i kraft den 1 juli 2026.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,12 +39,32 @@
       "note": "Avtalet förbjuder äktenskap mellan kusiner."
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03154",
+      "designation": "Prop. 2025/26:154",
+      "title": "Förbud mot kusinäktenskap och äktenskap mellan andra nära släktingar",
+      "date": "2026-03-12",
+      "url": "https://data.riksdagen.se/dokument/HD03154.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01CU33",
       "designation": "Bet. 2025/26:CU33",
       "title": "Förbud mot kusinäktenskap och äktenskap mellan andra nära släktingar",
       "date": "2026-05-19",
       "url": "https://data.riksdagen.se/dokument/HD01CU33.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-947",
+      "designation": "SFS 2026:947",
+      "title": "Lag (2026:947) om ändring i äktenskapsbalken",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026947.html",
       "relevance": "full",
       "note": null
     }

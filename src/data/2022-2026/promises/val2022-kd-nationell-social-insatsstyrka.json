@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["social insatsstyrka", "socialtjänst", "brottsförebyggande"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "I en departementspromemoria från september 2026 redovisades ett uppdrag om stärkt samverkan mellan socialtjänst och barn- och ungdomspsykiatri i brottsförebyggande syfte. Den innehåller förslag om mer enhetligt förebyggande arbete, nationellt kunskapsstöd och uppdrag till Socialstyrelsen och Brå. Dokumentet gäller en närliggande del av löftet och visar förslag, inget beslut.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-nationell-social-insatsstyrka"],
       "outcome": "included",
       "note": "Avtalet inrättar en nationell social insatsstyrka."
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HEB418",
+      "designation": "Ds 2026:18",
+      "title": "Slutredovisning av tilläggsuppdraget om stärkt samverkan mellan socialtjänst och barn- och ungdomspsykiatri i brottsförebyggande syfte",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB418.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

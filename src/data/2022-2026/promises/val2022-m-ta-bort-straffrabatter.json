@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["straffrabatt", "mängdrabatt", "ungdomsrabatt", "straffmätning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juli 2023 en utredare i uppdrag att se över straffskalorna, bland annat att de tre grövsta brotten ska räknas fullt ut vid flera brott och att billighetsskälen ska begränsas eller tas bort. Riksdagen biföll i augusti 2026 ett nytt påföljdssystem som begränsar strafflindringsgrunderna och ersätter reglerna om flera brott med ett nytt sätt att bestämma gemensamt straff. Det gäller mängdrabatten och en del av straffrabatterna.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": ["tido-ta-bort-straffreduktion-over-18", "tido-avskaffa-mangdrabatt"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1115",
+      "designation": "Dir. 2023:115",
+      "title": "En översyn av straffskalorna samt ett reformerat och mer rättvist påföljdssystem",
+      "date": "2023-07-20",
+      "url": "https://data.riksdagen.se/dokument/HBB1115.html",
+      "relevance": "partial",
       "note": null
     },
     {

@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["straff", "mängdrabatt", "brott mot person", "straffskalor"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juli 2023 en utredning i uppdrag att föreslå skärpta straffskalor, särskilt för våldsbrott och sexualbrott, och en ny modell där de tre allvarligaste brotten räknas fullt ut, vilket tar bort mängdrabatten. I december 2023 beslutade riksdagen om höjda straff för allvarliga vapen-, sprängämnes- och smugglingsbrott, och utredningens tid kortades till maj 2025.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,12 +39,32 @@
       "note": "Avtalet avskaffar dagens form av mängdrabatt och anger att straffen för våldsbrott och sexualbrott ska skärpas."
     },
     {
+      "kind": "dir",
+      "dok_id": "HBB1115",
+      "designation": "Dir. 2023:115",
+      "title": "En översyn av straffskalorna samt ett reformerat och mer rättvist påföljdssystem",
+      "date": "2023-07-20",
+      "url": "https://data.riksdagen.se/dokument/HBB1115.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HB01JuU4",
       "designation": "Bet. 2023/24:JuU4",
       "title": "Skjutvapen och explosiva varor – skärpta straff för de allvarligare brotten",
       "date": "2023-12-07",
       "url": "https://data.riksdagen.se/dokument/HB01JuU4.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1181",
+      "designation": "Dir. 2023:181",
+      "title": "Tilläggsdirektiv till Straffreformutredningen (Ju 2023:14)",
+      "date": "2023-12-21",
+      "url": "https://data.riksdagen.se/dokument/HBB1181.html",
       "relevance": "partial",
       "note": null
     }

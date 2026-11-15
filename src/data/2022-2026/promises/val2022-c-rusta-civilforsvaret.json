@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["civilförsvar", "beredskap", "krig", "kris"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i april 2023 om åtgärder för att stärka hälso- och sjukvårdens försörjningsberedskap, bland annat krav på lagerhållning, lagerskyldighet för apotek och fler uppgifter för Apotek Produktion & Laboratorier. Regeringen gav i juni 2023 en utredare i uppdrag att se över hur arbetslöshetsförsäkringen kan fungera vid allvarlig kris, höjd beredskap och krig. Dokumenten gäller sjukvårdens beredskap och arbetslöshetsförsäkringen.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "title": "Vissa frågor om hälso- och sjukvårdens försörjningsberedskap",
       "date": "2023-04-04",
       "url": "https://data.riksdagen.se/dokument/HA01SoU11.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB176",
+      "designation": "Dir. 2023:76",
+      "title": "Arbetslöshetsförsäkringen vid störda förhållanden, allvarlig fredstida kris, höjd beredskap och ytterst krig",
+      "date": "2023-06-01",
+      "url": "https://data.riksdagen.se/dokument/HBB176.html",
       "relevance": "partial",
       "note": null
     }

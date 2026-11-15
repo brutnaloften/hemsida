@@ -17,10 +17,28 @@
   "committee": "SoU",
   "keywords": ["psykisk ohälsa", "BUP", "psykiatri", "unga"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade den 2 juli 2026 direktiv som tillsätter en delegation för barn och unga med neuropsykiatriska funktionsnedsättningar. Uppdraget tar upp köer till BUP, tillgänglighet och samordning av insatser. Dokumentet gäller den del av löftet som rör barn och unga med NPF.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HEB168",
+      "designation": "Dir. 2026:68",
+      "title": "Goda och jämlika livsvillkor för barn och unga med neuropsykiatriska funktionsnedsättningar",
+      "date": "2026-07-02",
+      "url": "https://data.riksdagen.se/dokument/HEB168.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

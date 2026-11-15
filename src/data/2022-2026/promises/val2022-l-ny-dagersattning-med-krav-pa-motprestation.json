@@ -23,10 +23,17 @@
     "aktivitetskrav"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen presenterade i november 2024 ett förslag om aktivitetskrav för vuxna som får försörjningsstöd, till exempel språkutbildning, kompetenshöjande insatser eller jobbsökande, med avdrag om man tackar nej. Riksdagen biföll i maj 2026 ett obligatoriskt aktivitetskrav för försörjningsstöd. Dokumenten gäller bara en del av löftet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -39,6 +46,26 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet inför aktivitetskrav för försörjningsstöd och krav på långtidsarbetslösa, men ingen ny dagersättning."
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HCB429",
+      "designation": "Ds 2024:29",
+      "title": "Aktivitetskrav inom försörjningsstödet - för arbete, egenförsörjning och nationell likformighet",
+      "date": "2024-11-25",
+      "url": "https://data.riksdagen.se/dokument/HCB429.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU29",
+      "designation": "Bet. 2025/26:SoU29",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU29.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

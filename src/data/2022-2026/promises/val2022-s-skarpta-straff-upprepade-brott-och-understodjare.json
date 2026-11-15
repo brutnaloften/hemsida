@@ -17,10 +17,38 @@
   "committee": "JuU",
   "keywords": ["straff", "återfall", "organiserad brottslighet", "understödja"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i april 2023 att införa ett nytt brott i terroristbrottslagen: att delta i en terroristorganisation på ett sätt som stödjer den. Det gäller bara stöd till terroristorganisationer. I juli 2024 lämnade en statlig utredning förslag om hårdare straff för upprepad och allvarlig brottslighet, bland annat säkerhetsstraff och strängare regler om återfall. Utredningen är ett förslag.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU20",
+      "designation": "Bet. 2022/23:JuU20",
+      "title": "En särskild straffbestämmelse för deltagande i en terroristorganisation",
+      "date": "2023-04-27",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU20.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB348",
+      "designation": "SOU 2024:48",
+      "title": "Ett ändamålsenligt samhällsskydd Volym 1",
+      "date": "2024-07-05",
+      "url": "https://data.riksdagen.se/dokument/HCB348.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

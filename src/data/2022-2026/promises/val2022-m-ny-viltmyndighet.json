@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["viltmyndighet", "myndighet", "vilt", "viltförvaltning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juli 2023 en särskild utredare i uppdrag att utreda formen för en ny jakt- och viltvårdsmyndighet och lämna förslag på den. Uppdraget omfattar även nödvändiga lagförslag. Dokumenten visar ett utredningsuppdrag, inget beslut om att myndigheten inrättas.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-bred-utredning-vapenlagen"],
       "outcome": "weakened",
       "note": "Avtalet nämner en ny jakt- och viltvårdsmyndighet endast som förslag i en vapenlagsutredning med fokus på licensprövning."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1108",
+      "designation": "Dir. 2023:108",
+      "title": "En ny jakt- och viltvårdsmyndighet",
+      "date": "2023-07-06",
+      "url": "https://data.riksdagen.se/dokument/HBB1108.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

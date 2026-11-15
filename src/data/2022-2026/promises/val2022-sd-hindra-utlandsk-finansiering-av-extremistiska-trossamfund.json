@@ -19,8 +19,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen beslutade den 28 maj 2025 att tillsätta en utredare. Uppdraget gäller att föreslå ett regelverk som förbjuder eller motverkar utländsk finansiering av trossamfund och andra verksamheter med extremistiska och antidemokratiska syften. Dokumentet är ett utredningsdirektiv och visar ett uppdrag att ta fram förslag, inte en färdig lag.",
-    "date": "2026-11-12",
+    "reasoning": "Regeringen gav i maj 2025 en utredare i uppdrag att ta fram ett regelverk som motverkar utländsk finansiering av trossamfund och andra verksamheter med antidemokratiska syften. I juni 2026 lade utredningen fram förslag i två delar: anmälningsplikt, granskning, förbud, sanktioner och straffansvar. Del två innehåller bland annat ett kapitel om dataskydd. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-15",
     "history": [
       {
         "value": "unassessed",
@@ -46,6 +46,26 @@
       "date": "2025-05-28",
       "url": "https://data.riksdagen.se/dokument/HDB152.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB342",
+      "designation": "SOU 2026:42",
+      "title": "Ett nytt regelverk för granskning av utländsk finansiering av trossamfund och andra verksamheter, del 1",
+      "date": "2026-06-23",
+      "url": "https://data.riksdagen.se/dokument/HEB342.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB342d2",
+      "designation": "SOU 2026:42",
+      "title": "Ett nytt regelverk för granskning av utländsk finansiering av trossamfund och andra verksamheter, del 2",
+      "date": "2026-06-23",
+      "url": "https://data.riksdagen.se/dokument/HEB342d2.html",
+      "relevance": "partial",
       "note": null
     }
   ]

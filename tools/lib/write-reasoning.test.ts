@@ -324,6 +324,10 @@ describe('write-reasoning', () => {
         'Det beskriver inte användning av biståndsmedel.',
         'Dokumentet visar ingen finansiering.',
         'Dokumenten gäller bara minoritetsspråk, inte äganderätten.',
+        'Någon kriskommission är inte tillsatt i de angivna dokumenten.',
+        'Någon koppling till samhällsorientering görs inte.',
+        'Inget i det gäller att göra det enklare att vräka.',
+        'Dokumentet är inget förslag om krav på kollektivavtal.',
       ])
         expect(reasoningProblems(t, [], false, undefined, false, true)).toContain(
           'makes an absence claim',
@@ -339,17 +343,16 @@ describe('write-reasoning', () => {
         ),
       ).toEqual([]);
     });
-    it('rejects absence claims only when flagged', () => {
+    it('rejects absence claims in every text, with filler words in between', () => {
       const t =
         'Regeringen gav i januari 2025 ett uppdrag om X. Finansieringen nämns inte i dokumenten.';
-      expect(reasoningProblems(t, [], false, undefined, false, true, true)).toContain(
-        'makes an absence claim',
-      );
-      // Manifesto (legacy) rule: a legislative text may still say it; Tidö texts never may.
-      expect(reasoningProblems(t, [], false, undefined, false, false, true)).not.toContain(
+      expect(reasoningProblems(t, [], false, undefined, false, true)).toContain(
         'makes an absence claim',
       );
       expect(reasoningProblems(t, [])).toContain('makes an absence claim');
+      expect(
+        reasoningProblems('Regeringen föreslog X. Reservvattentäkter nämns i dem inte.', []),
+      ).toContain('makes an absence claim');
     });
   });
 

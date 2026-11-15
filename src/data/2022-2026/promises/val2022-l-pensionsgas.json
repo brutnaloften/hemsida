@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["pensionsgas", "pensionssystemet", "överskott", "balanstal", "inkomstpension"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen presenterade i oktober 2025 en promemoria om utdelning av överskott i inkomstpensionssystemet. I mars 2026 lade den fram en proposition, och riksdagen biföll den i maj 2026. En lag om ändring i socialförsäkringsbalken trädde i kraft 1 augusti 2026. Lagen verkar täcka löftet om pensionsgas, men det är obekräftat.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,12 +39,42 @@
       "note": "Avtalet ska ta fram förslag för att stärka pensionärernas ekonomi, men nämner ingen pensionsgas."
     },
     {
+      "kind": "ds",
+      "dok_id": "HDB424",
+      "designation": "Ds 2025:24",
+      "title": "Utdelningsbart överskott i inkomstpensionssystemet",
+      "date": "2025-10-15",
+      "url": "https://data.riksdagen.se/dokument/HDB424.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03169",
+      "designation": "Prop. 2025/26:169",
+      "title": "Utdelning av överskott i inkomstpensionssystemet",
+      "date": "2026-03-10",
+      "url": "https://data.riksdagen.se/dokument/HD03169.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01SfU25",
       "designation": "Bet. 2025/26:SfU25",
       "title": "Utdelning av överskott i inkomstpensionssystemet",
       "date": "2026-05-27",
       "url": "https://data.riksdagen.se/dokument/HD01SfU25.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1301",
+      "designation": "SFS 2026:1301",
+      "title": "Lag (2026:1301) om ändring i socialförsäkringsbalken",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261301.html",
       "relevance": "full",
       "note": null
     }

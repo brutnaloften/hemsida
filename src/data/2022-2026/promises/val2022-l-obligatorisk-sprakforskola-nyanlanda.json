@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["språkförskola", "nyanlända", "obligatorisk förskola", "svenska språket"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i november 2024 en utredare i uppdrag att föreslå hur en obligatorisk språkförskola kan införas. Uppdraget gäller barn som är folkbokförda i Sverige och saknar svenska i hemmen, vilket i stor utsträckning är nyanlända barn. Dokumenten visar ett utredningsuppdrag, inget beslut om själva språkförskolan.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-sprakforskola-utsatta-omraden-nyanlanda-barn"],
       "outcome": "weakened",
       "note": "Avtalet säger att språkförskola för nyanlända barn ska övervägas, inte att den ska införas som obligatorisk."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB1113",
+      "designation": "Dir. 2024:113",
+      "title": "En likvärdig förskola av god kvalitet med obligatorisk språkförskola",
+      "date": "2024-11-21",
+      "url": "https://data.riksdagen.se/dokument/HCB1113.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

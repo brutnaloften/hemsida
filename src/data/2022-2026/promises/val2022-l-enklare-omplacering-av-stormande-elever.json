@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["omplacering", "rektor", "ordning", "mobbning", "skollagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i november 2023 en utredare i uppdrag att föreslå att omplacering och avstängning av elever ska kunna ske i fler fall och under längre tid. I maj 2026 beslutade riksdagen om skollagsändringar som stärker åtgärder som utvisning ur klassrummet och kvarsittning och tar bort dokumentationskravet. Det gäller en del av löftet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-rektors-ansvar-trygghet-studiero-skollagen"],
       "outcome": "weakened",
       "note": "Avtalet åtar sig bara att utreda författningsändringar så att rektor i fler fall kan omplacera och flytta elever."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1154",
+      "designation": "Dir. 2023:154",
+      "title": "Varaktigt förbättrad trygghet och studiero i skolan",
+      "date": "2023-11-02",
+      "url": "https://data.riksdagen.se/dokument/HBB1154.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",

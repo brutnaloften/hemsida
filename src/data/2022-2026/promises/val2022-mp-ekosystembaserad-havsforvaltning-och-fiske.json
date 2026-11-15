@@ -17,12 +17,29 @@
   "committee": "MJU",
   "keywords": ["fiske", "havsförvaltning", "ekosystem", "fiskemetoder"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i juni 2024 fram en proposition om havspolitik där ett ekosystembaserat synsätt stärks och hållbart fiske ingår i havsarbetet. Riksdagen biföll i november 2024 inriktningen med en utvecklad ekosystembaserad havsförvaltning. Dokumenten gäller bara den delen av löftet: ekosystembaserad förvaltning.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HB03156",
+      "designation": "Prop. 2023/24:156",
+      "title": "Ett levande hav – ökat skydd, minskad övergödning och ett hållbart fiske",
+      "date": "2024-06-05",
+      "url": "https://data.riksdagen.se/dokument/HB03156.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HC01MJU5",

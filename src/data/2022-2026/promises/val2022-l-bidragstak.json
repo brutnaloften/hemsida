@@ -23,15 +23,21 @@
     "arbetslinjen"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen beslutade i juni 2023 tilläggsdirektiv till utredningen om försörjningsstödet. Utredaren fick i uppdrag att föreslå en modell för ett bidragstak som begränsar den sammanlagda nivån på bidrag, så att arbete alltid lönar sig. Direktivet är förberedande och gäller själva bidragstaket.",
-    "date": "2026-11-12",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att ta fram en modell för bidragstak och föreslog i mars 2026 ett bidragstak i försörjningsstödet. Riksdagen biföll förslaget i maj 2026. Den beslutade lagen träder i kraft 1 januari 2027. Den innehåller en moderniserad riksnorm och gränser för stöd till stora hushåll. Lagen täcker en del av löftet.",
+    "date": "2026-11-15",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-08-08"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen beslutade i juni 2023 tilläggsdirektiv till utredningen om försörjningsstödet. Utredaren fick i uppdrag att föreslå en modell för ett bidragstak som begränsar den sammanlagda nivån på bidrag, så att arbete alltid lönar sig. Direktivet är förberedande och gäller själva bidragstaket.",
+        "date": "2026-11-12"
       }
     ]
   },
@@ -53,6 +59,36 @@
       "url": "https://data.riksdagen.se/dokument/HBB170.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03201",
+      "designation": "Prop. 2025/26:201",
+      "title": "Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03201.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU30",
+      "designation": "Bet. 2025/26:SoU30",
+      "title": "Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU30.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-897",
+      "designation": "SFS 2026:897",
+      "title": "Lag (2026:897) om ändring i socialtjänstlagen (2025:400)",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026897.html",
+      "relevance": "partial",
+      "note": "Texten visar inget tak som binder de samlade bidragen till de lägsta kollektivavtalade lönerna, och ingen begränsning av summan av flera olika bidrag utanför försörjningsstödet."
     }
   ]
 }

@@ -17,20 +17,37 @@
   "committee": "KU",
   "keywords": ["sekretess", "informationsutbyte", "myndighetssamverkan", "polisen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i januari 2023 en utredning i uppdrag att föreslå en ny huvudregel i sekretesslagstiftningen så att myndigheter kan lämna information till brottsbekämpande myndigheter. Riksdagen beslutade i februari 2025 om en ny lag som ger skyldighet att lämna uppgifter till brottsbekämpningen trots sekretess, med följdändringar i sekretesslagen och andra lagar.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
     {
+      "kind": "dir",
+      "dok_id": "HBB111",
+      "designation": "Dir. 2023:11",
+      "title": "Tilläggsdirektiv till Utredningen om förbättrade möjligheter att utbyta information med brottsbekämpande myndigheter (Ju 2022:03)",
+      "date": "2023-01-26",
+      "url": "https://data.riksdagen.se/dokument/HBB111.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
-      "dok_id": "HA01KU25",
-      "designation": "Bet. 2022/23:KU25",
-      "title": "Offentlighet, sekretess och integritet",
-      "date": "2023-03-24",
-      "url": "https://data.riksdagen.se/dokument/HA01KU25.html",
-      "relevance": "contradicts",
+      "dok_id": "HC01JuU9",
+      "designation": "Bet. 2024/25:JuU9",
+      "title": "Ökat informationsflöde till brottsbekämpningen",
+      "date": "2025-02-21",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU9.html",
+      "relevance": "full",
       "note": null
     }
   ]

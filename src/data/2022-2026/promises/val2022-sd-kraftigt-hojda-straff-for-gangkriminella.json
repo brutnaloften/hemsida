@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["gängkriminella", "straff", "dubbla straff"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2026 fram ett förslag om att dubbla straffvärdet för brott kopplade till kriminella nätverk och skärpa straffskalorna för ett femtiotal brott. Riksdagen biföll förslaget i juni 2026. Ändringar i brottsbalken och i fyra straffrättsliga lagar, bland annat om smuggling och penningtvätt, trädde i kraft den 1 augusti 2026. Lagändringarna täcker en del av löftet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -35,6 +42,16 @@
       "note": "Avtalet skärper straffen för gängrelaterad brottslighet och ger dubbla straff för brott med koppling till kriminella nätverk."
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03218",
+      "designation": "Prop. 2025/26:218",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03218.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01JuU42",
       "designation": "Bet. 2025/26:JuU42",
@@ -43,6 +60,56 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1318",
+      "designation": "SFS 2026:1318",
+      "title": "Lag (2026:1318) om ändring i brottsbalken",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261318.html",
+      "relevance": "partial",
+      "note": "Texten visar inte den specifika straffskärpningen för brott med samband till kriminella nätverk (dubbelt straffvärde) i denna lag, och höjningarna riktar sig inte särskilt mot gängkriminella."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1320",
+      "designation": "SFS 2026:1320",
+      "title": "Lag (2026:1320) om ändring i skattebrottslagen (1971:69)",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261320.html",
+      "relevance": "partial",
+      "note": "Lagen riktar sig inte specifikt mot gängkriminella och genomför inte den generella straffskärpningen för brott med samband till kriminella nätverk eller övriga straffhöjningar."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1321",
+      "designation": "SFS 2026:1321",
+      "title": "Lag (2026:1321) om ändring i lagen (2000:1225) om straff för smuggling",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261321.html",
+      "relevance": "partial",
+      "note": "Lagen gäller bara smugglingsbrott och inte gängkriminella som grupp. Straffskärpningen för brott med koppling till kriminella nätverk och övriga straffhöjningar ligger i andra lagar."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1322",
+      "designation": "SFS 2026:1322",
+      "title": "Lag (2026:1322) om ändring i bidragsbrottslagen (2007:612)",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261322.html",
+      "relevance": "partial",
+      "note": "Lagen riktar sig inte specifikt mot gängkriminella och är en måttlig skärpning av ett enskilt brott; den nya straffskärpningen för kriminella nätverk och övriga straffhöjningar ligger i andra lagar."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1323",
+      "designation": "SFS 2026:1323",
+      "title": "Lag (2026:1323) om ändring i lagen (2014:307) om straff för penningtvättsbrott",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261323.html",
+      "relevance": "partial",
+      "note": "Lagen gäller bara två penningtvättsbrott och riktar sig inte specifikt mot gängkriminella; straffskärpningen för brott med koppling till kriminella nätverk och övriga skärpta straffskalor finns i andra lagar."
     }
   ]
 }

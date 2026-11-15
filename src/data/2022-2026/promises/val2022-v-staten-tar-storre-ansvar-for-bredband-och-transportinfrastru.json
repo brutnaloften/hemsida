@@ -17,10 +17,38 @@
   "committee": "TU",
   "keywords": ["fiber", "bredband", "landsbygd", "transportinfrastruktur"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i oktober 2024 fram ett förslag till riksdagen om statliga ekonomiska ramar för transportinfrastruktur 2026–2037, bland annat statlig medfinansiering av enskilda vägar. Riksdagen beslutade i december 2024 i frågor om infrastruktur. Dokumenten gäller transportinfrastrukturdelen av löftet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC0328",
+      "designation": "Prop. 2024/25:28",
+      "title": "Vägen till en pålitlig transportinfrastruktur – för att hela Sverige ska fungera",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC0328.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01TU5",
+      "designation": "Bet. 2024/25:TU5",
+      "title": "Infrastrukturfrågor",
+      "date": "2024-12-06",
+      "url": "https://data.riksdagen.se/dokument/HC01TU5.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

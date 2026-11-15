@@ -70,6 +70,47 @@ export interface JudgedPair {
   stage: 'definitive' | 'preparatory' | 'background';
   confidence: 'high' | 'medium' | 'low';
   proposed: boolean;
+  /** The judge's one or two sentences; only used to tell a betänkande that merely rejects motions. */
+  reason?: string;
+  /** Hand-checked: a `contradicts` label that is off topic (tools/contradicts-overrides.json). */
+  notContradiction?: boolean;
+}
+
+const REJECTS_MOTIONS = /\b(rejects|avslag|avstyr\w*)\b[^.]*\bmotion/i;
+const ADOPTS_MEASURE =
+  /\b(bifall\w*|approves|adopts|endorses|raises|lowers|cuts|extends|pauses|removes)\b/i;
+/** The judge itself says the document is beside the point or does not act on the promise. */
+const OFF_TOPIC =
+  /\b(does nothing|does not advance|doesn'?t advance|does not act on|no connection|different subject|unrelated)\b/i;
+
+/**
+ * A betänkande whose content is that the committee rejects motions about the topic (and adopts no
+ * measure of its own) says the Riksdag did not act; that is not a document working against the promise.
+ * The structural signal is the document's own summary ("Riksdagen sa nej till ..." / "Nej till motioner
+ * om ..." against "Riksdagen sa ja till ..."); without a text the judge's reason is used.
+ */
+export function onlyRejectsMotions(pair: JudgedPair, doc: StoreDocument): boolean {
+  if (doc.doktyp !== 'bet') return false;
+  const head = (doc.text ?? '').slice(0, 600);
+  // A skrivelse "lagd till handlingarna" / "har behandlats" is no decision against anything.
+  if (/^Skrivelse /.test(head)) return true;
+  if (head) {
+    const yes =
+      /Riksdagen sa ja till|Riksdagen biföll|Riksdagen godkände|\b(?:säger|sade|sa|röstade)\s+ja\b/.test(
+        head,
+      );
+    const no = /Nej till motioner|\bsa nej till\b/.test(head);
+    // Both in one summary (a bill plus rejected motions on other things): the judge's reason decides.
+    if (yes && !no) return false;
+    if (no && !yes) return true;
+  }
+  if (!pair.reason) return false;
+  return REJECTS_MOTIONS.test(pair.reason) && !ADOPTS_MEASURE.test(pair.reason);
+}
+
+/** A `contradicts` judgement that is not one: a motion-rejecting betänkande, or off-topic by the judge's own words. */
+export function falseContradiction(pair: JudgedPair, doc: StoreDocument): boolean {
+  return onlyRejectsMotions(pair, doc) || (!!pair.reason && OFF_TOPIC.test(pair.reason));
 }
 
 /**
@@ -377,6 +418,7 @@ export function applyLinks(
 
   const byDoc = new Map<string, { pair: JudgedPair; doc: StoreDocument }>();
   const against = new Map<string, { pair: JudgedPair; doc: StoreDocument }>();
+  const rejectedMotions = new Set<string>();
   for (const pair of pairs) {
     if (!pair.proposed || pair.label === 'no_match') continue;
     // `background` = only mentions the topic or rejects motions about it: not evidence of action.
@@ -385,6 +427,10 @@ export function applyLinks(
     if (!doc || !['dir', 'sou', 'ds', 'prop', 'bet'].includes(doc.doktyp) || isSkrivelse(doc))
       continue;
     if (pair.label === 'contradicts') {
+      if (pair.notContradiction || falseContradiction(pair, doc)) {
+        rejectedMotions.add(doc.dok_id);
+        continue;
+      }
       against.set(doc.dok_id, { pair, doc });
       continue;
     }
@@ -427,14 +473,18 @@ export function applyLinks(
   // the evidence already there stays and new documents are added.
   // Evidence no judgement in this run mentions came from elsewhere (an earlier run, a hand edit):
   // only what the judge now rejects is dropped.
-  const unjudged = existingRiksdag.filter((e) => !judged.has(e.dok_id));
+  // A `contradicts` entry written by an earlier run for a betänkande that only rejects motions goes too.
+  const existingKept = existingRiksdag.filter(
+    (e) => !(e.relevance === 'contradicts' && rejectedMotions.has(e.dok_id)),
+  );
+  const unjudged = existingKept.filter((e) => !judged.has(e.dok_id));
   const riksdag: RiksdagEvidence[] = rerunAi
     ? [...unjudged, ...fresh.filter((f) => !unjudged.some((x) => x.dok_id === f.dok_id))].sort(
         (a, b) => a.date.localeCompare(b.date) || a.dok_id.localeCompare(b.dok_id),
       )
     : [
-        ...existingRiksdag,
-        ...fresh.filter((f) => !existingRiksdag.some((x) => x.dok_id === f.dok_id)),
+        ...existingKept,
+        ...fresh.filter((f) => !existingKept.some((x) => x.dok_id === f.dok_id)),
       ].sort((a, b) => a.date.localeCompare(b.date) || a.dok_id.localeCompare(b.dok_id));
   let evidence: Evidence[] = [...otherEvidence, ...riksdag];
 
@@ -459,7 +509,7 @@ export function applyLinks(
         },
       };
     }
-    return riksdag.length === 0 || sameEvidence ? null : { evidence, verdict: promise.verdict };
+    return sameEvidence ? null : { evidence, verdict: promise.verdict };
   }
 
   if (promise.type === 'inquiry') {

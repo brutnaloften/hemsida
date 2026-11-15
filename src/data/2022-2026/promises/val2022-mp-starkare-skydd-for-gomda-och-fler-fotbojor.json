@@ -17,10 +17,28 @@
   "committee": "JuU",
   "keywords": ["skyddad identitet", "fotboja", "kontaktförbud"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i mars 2023 tilläggsdirektiv till utredningen om en översyn av kontaktförbudslagstiftningen. Uppdraget gäller bland annat fotboja för misstänkta, större områden för utökade kontaktförbud och delgivning av förbud. Dokumentet täcker den del av löftet som rör skydd för hotade personer och fler fotbojor.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB136",
+      "designation": "Dir. 2023:36",
+      "title": "Tilläggsdirektiv till Utredningen om en översyn av kontaktförbudslagstiftningen (Ju 2022:14)",
+      "date": "2023-03-09",
+      "url": "https://data.riksdagen.se/dokument/HBB136.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

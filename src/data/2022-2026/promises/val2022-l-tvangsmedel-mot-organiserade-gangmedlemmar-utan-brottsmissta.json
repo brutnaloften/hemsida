@@ -23,10 +23,17 @@
     "organiserad brottslighet"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i juni 2024 att utöka möjligheterna till hemliga tvångsmedel i förebyggande syfte, utan konkret brottsmisstanke. Reglerna skulle gälla från 1 september 2024. I mars 2026 gav regeringen en utredning tilläggsdirektiv att analysera tillstånd kopplade till en person och förebyggande tvångsmedel utan koppling till en organisation eller grupp.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -45,6 +52,16 @@
       "date": "2024-06-11",
       "url": "https://data.riksdagen.se/dokument/HB01JuU24.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB120",
+      "designation": "Dir. 2026:20",
+      "title": "Tilläggsdirektiv till Utredningen om hemliga och preventiva tvångsmedel (Ju 2025:04)",
+      "date": "2026-03-26",
+      "url": "https://data.riksdagen.se/dokument/HEB120.html",
+      "relevance": "partial",
       "note": null
     }
   ]

@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["fängelseplatser", "kriminalvården", "häkten", "anstalter"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen presenterade i november 2024 en promemoria med förslag om att göra det snabbare att bygga häkten och anstalter, bland annat genom tidsbegränsade och permanenta bygglov. Riksdagen beslutade i maj 2026 om ändringar som ger tillfälliga bygglov och regeringens undantag för att påskynda bygget. Dokumenten gäller delen om fler fängelseplatser.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,26 @@
         "tido-hyra-anstaltsplatser-utomlands"
       ],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HCB425",
+      "designation": "Ds 2024:25",
+      "title": "En snabbare utbyggnad av häkten och anstalter",
+      "date": "2024-11-06",
+      "url": "https://data.riksdagen.se/dokument/HCB425.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01CU25",
+      "designation": "Bet. 2025/26:CU25",
+      "title": "En snabbare utbyggnad av kriminalvårdsanstalter och häkten",
+      "date": "2026-05-06",
+      "url": "https://data.riksdagen.se/dokument/HD01CU25.html",
+      "relevance": "partial",
       "note": null
     }
   ]

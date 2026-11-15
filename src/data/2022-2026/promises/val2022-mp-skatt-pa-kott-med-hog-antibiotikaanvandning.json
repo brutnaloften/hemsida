@@ -17,12 +17,29 @@
   "committee": "MJU",
   "keywords": ["antibiotika", "djurhållning", "köttskatt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i november 2022 fram ett förslag om bättre övervakning av antibiotikaanvändning hos djur, och riksdagen beslutade om det i februari 2023. Två lagändringar om provtagning på djur och om djurens hälso- och sjukvård trädde i kraft 1 april 2023. De ger övervakning och ett bemyndigande att senare begränsa användningen, så de hör bara indirekt till löftet om minskad antibiotikaanvändning.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA0313",
+      "designation": "Prop. 2022/23:13",
+      "title": "Förbättrad övervakning av antibiotikaanvändning för behandling av djur",
+      "date": "2022-11-15",
+      "url": "https://data.riksdagen.se/dokument/HA0313.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HA01MJU5",
@@ -32,6 +49,26 @@
       "url": "https://data.riksdagen.se/dokument/HA01MJU5.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-89",
+      "designation": "SFS 2023:89",
+      "title": "Lag (2023:89) om ändring i lagen (2006:806) om provtagning på djur, m.m.",
+      "date": "2023-04-01",
+      "url": "https://svenskforfattningssamling.se/doc/202389.html",
+      "relevance": "partial",
+      "note": "Själva minskningen av antibiotikaanvändningen är inte säkerställd, eftersom bara ett bemyndigande ges. Skatten på kött från produktion med hög antibiotikaanvändning saknas helt."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-90",
+      "designation": "SFS 2023:90",
+      "title": "Lag (2023:90) om ändring i lagen (2009:302) om verksamhet inom djurens hälso- och sjukvård",
+      "date": "2023-04-01",
+      "url": "https://svenskforfattningssamling.se/doc/202390.html",
+      "relevance": "partial",
+      "note": "Ingen skatt på kött som producerats med hög antibiotikaanvändning, och ingen faktisk minskning av antibiotikaanvändningen är beslutad, bara övervakning och ett bemyndigande."
     }
   ]
 }

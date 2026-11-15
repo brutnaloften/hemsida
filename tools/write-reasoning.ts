@@ -126,7 +126,14 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     continue;
   }
   const prompt = buildReasoningPrompt(p, items, today, inquiry);
-  const instructions = reasoningInstructions(items, p.verdict.value, today, p.type, manifesto);
+  // A manifesto promise backed by a law gets the same strict instructions as the Tidö ones.
+  const instructions = reasoningInstructions(
+    items,
+    p.verdict.value,
+    today,
+    p.type,
+    manifesto && !items.some((i) => i.kind === 'sfs'),
+  );
   jobs.push({
     file,
     raw: rawPromise,
@@ -165,7 +172,6 @@ if (values.pin) {
     job.coverage,
     job.inquiry,
     job.nonLegislative,
-    job.manifesto,
   );
   if (problems.length > 0) throw new Error(`pinned text rejected: ${problems.join(', ')}`);
   pins[values.pin] = { key: job.key, reasoning: values.text, evidence: job.evidence };
@@ -190,7 +196,6 @@ for (const job of jobs) {
       job.coverage,
       job.inquiry,
       job.nonLegislative,
-      job.manifesto,
     );
     if (problems.length > 0) {
       console.warn(`pin for ${id} not carried over: ${problems.join(', ')}`);
@@ -212,7 +217,6 @@ for (const job of jobs) {
     job.coverage,
     job.inquiry,
     job.nonLegislative,
-    job.manifesto,
   );
   if (problems.length > 0) throw new Error(`pin for ${id} rejected: ${problems.join(', ')}`);
   writeJsonAtomic(cachePath(job.key), { reasoning: pin.reasoning });
@@ -228,15 +232,8 @@ const usable = (j: Job): boolean => {
   const text = cachedText(j);
   return (
     text !== undefined &&
-    reasoningProblems(
-      text,
-      j.designations,
-      j.lawInForce,
-      j.coverage,
-      j.inquiry,
-      j.nonLegislative,
-      j.manifesto,
-    ).length === 0
+    reasoningProblems(text, j.designations, j.lawInForce, j.coverage, j.inquiry, j.nonLegislative)
+      .length === 0
   );
 };
 const uncached = todo.filter((j) => !usable(j));
@@ -274,7 +271,6 @@ async function write(job: Job): Promise<void> {
         job.coverage,
         job.inquiry,
         job.nonLegislative,
-        job.manifesto,
       );
       if (problems.length === 0) {
         writeJsonAtomic(cachePath(job.key), parsed.data);

@@ -384,12 +384,12 @@ export const ABSENCE_CLAIM =
 
 /**
  * Further phrasings for the Tidö texts (hemsida-6vh): contrast and negation forms ("men inte X",
- * "..., inte X", "täcker inte", "visas inte") that said the same thing in other words. The manifesto
- * texts are checked with ABSENCE_CLAIM only, so their cached texts stay valid.
+ * "..., inte X", "täcker inte", "visas inte") that said the same thing in other words. Since
+ * hemsida-9ql every text, manifesto ones included, is checked with both patterns.
  */
 const TIDO_ABSENCE_EXTRA = new RegExp(
   [
-    String.raw`\b(?:omn[äa]mns|n[äa]mns|framg[åa]r|ing[åa]r|behandlas|ber[öo]rs|diskuteras|t[äa]cks|omfattas|regleras|anges|uttrycks|visas|genomf[öo]rs|föreslås|innehålls)\s+(?:\w+\s+)?(?:inte|ej)\b`,
+    String.raw`\b(?:omn[äa]mns|n[äa]mns|framg[åa]r|ing[åa]r|behandlas|ber[öo]rs|diskuteras|t[äa]cks|omfattas|regleras|anges|uttrycks|visas|genomf[öo]rs|föreslås|innehålls)\s+(?:[^\s.]+\s+){0,3}(?:inte|ej)\b`,
     String.raw`\b(?:tas|tar|togs|tog)\s+(?:\w+\s+)?inte\s+upp`,
     String.raw`\b(?:täcker|omfattar|gäller|rör|handlar\s+om|behandlar|reglerar|innebär|innehåller|innefattar|avser|berör|visar|ger|genomför|gör|föreslår|riktar\s+sig|syftar)\s+(?:\w+\s+){0,2}?(?:inte|ej)\b`,
     String.raw`\b(?:beskriver|beskrivs|redovisar|redovisas|syns|nämner|finns)\s+(?:inte|ej)\b`,
@@ -402,6 +402,10 @@ const TIDO_ABSENCE_EXTRA = new RegExp(
     String.raw`\bsaknas\b`,
     String.raw`\b(?:dokument(?:en|et)?|lag(?:en|ar|arna)?|förslag(?:et|en)?|texten|propositionen|utredningen|direktivet|uppdraget|beslut(?:et|en)?|betänkandet|promemorian)\s+saknar\b`,
     String.raw`\b(?:finns|fanns)\s+(?:inget|ingen|inga)\b`,
+    String.raw`\b(?:inte|ej)\s+(?:[^\s.]+\s+){0,2}i\s+(?:de\s+)?(?:[^\s.]+\s+)?dokument`,
+    String.raw`\bn[åa]gon\s+(?:[^\s.]+\s+){1,4}(?:g[öo]rs|finns|n[äa]mns|anges|tills[äa]tts|f[öo]resl[åa]s|framg[åa]r)\s+(?:inte|ej)\b`,
+    String.raw`\binget\s+i\s+(?:det|dem|den|dokumentet|dokumenten|direktivet)\b`,
+    String.raw`(?:^|\s)(?:[äa]r|var)\s+(?:inget|ingen|inga)\s+(?!beslut)`,
   ].join('|'),
   'i',
 );
@@ -428,16 +432,10 @@ export function reasoningProblems(
   coverage?: 'unconfirmed_full' | 'partial',
   inquiry = false,
   nonLegislative = false,
-  legacyAbsence = false,
 ): string[] {
   const problems: string[] = [];
-  // Manifesto promises (`legacyAbsence`) keep the narrower rule; Tidö texts may never claim absence.
-  if (
-    legacyAbsence
-      ? (nonLegislative || inquiry) && ABSENCE_CLAIM.test(text)
-      : absenceSentences(text).length > 0
-  )
-    problems.push('makes an absence claim');
+  // No text may claim absence (hemsida-6vh); manifesto texts used a narrower rule until hemsida-9ql.
+  if (absenceSentences(text).length > 0) problems.push('makes an absence claim');
   if (inquiry) {
     // A directive-based verdict has no law behind it.
     // Describing what the directive asks the inquiry to propose is fine; saying a law or a decision exists is not.

@@ -17,10 +17,48 @@
   "committee": "MJU",
   "keywords": ["dricksvatten", "vattentäkter", "reservvatten"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i oktober 2023 fram ett förslag som genomför EU:s nya dricksvattendirektiv, bland annat med riskbedömning av områden där dricksvatten tas ut. Riksdagen biföll förslaget i januari 2024. Ändringar i miljöbalken trädde i kraft den 1 mars 2024. Dokumenten täcker en del av löftet: skyddet av dricksvattnets kvalitet och källor.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HB0330",
+      "designation": "Prop. 2023/24:30",
+      "title": "Genomförande av EU:s nya dricksvattendirektiv",
+      "date": "2023-10-24",
+      "url": "https://data.riksdagen.se/dokument/HB0330.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01MJU6",
+      "designation": "Bet. 2023/24:MJU6",
+      "title": "Genomförande av EU:s nya dricksvattendirektiv",
+      "date": "2024-01-25",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU6.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-22",
+      "designation": "SFS 2024:22",
+      "title": "Lag (2024:22) om ändring i miljöbalken",
+      "date": "2024-03-01",
+      "url": "https://svenskforfattningssamling.se/doc/202422.html",
+      "relevance": "partial",
+      "note": "Lagen innehåller inget om att säkerställa fungerande reservvattentäkter, och skyddet av täkterna stärks bara genom riskbevakning och åtgärdsprogram, inte genom nya skyddskrav."
+    }
+  ]
 }

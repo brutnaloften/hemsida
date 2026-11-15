@@ -17,10 +17,28 @@
   "committee": "SfU",
   "keywords": ["eget boende", "ebo", "asylsökande", "boendesegregation"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning lade i november 2022 fram ett förslag om att ta bort möjligheten till eget boende för asylsökande. Alla asylsökande skulle i stället anvisas plats i asylboende, och boendet skulle vara ett villkor för dagersättning och undantag från krav på arbetstillstånd. Dokumentet visar förslag, inget beslut.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HAB364",
+      "designation": "SOU 2022:64",
+      "title": "En ny ordning för asylsökandes boende",
+      "date": "2022-11-15",
+      "url": "https://data.riksdagen.se/dokument/HAB364.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

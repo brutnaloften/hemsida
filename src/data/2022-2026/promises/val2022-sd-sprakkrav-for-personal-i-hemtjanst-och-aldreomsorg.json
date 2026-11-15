@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["språkkrav", "hemtjänst", "äldreomsorg"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav den 30 mars 2023 en utredare i uppdrag att föreslå språkkrav för personal i äldreomsorgen, bland annat undersköterskor, vårdbiträden och personal i hemtjänsten. Uppdraget omfattar författningsförslag. Dokumentet visar ett utredningsuppdrag, inget beslut om lag.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-sprakkrav-aldreomsorg"],
       "outcome": "weakened",
       "note": "Avtalet ska utreda språkkrav för personal i äldreomsorgen."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB144",
+      "designation": "Dir. 2023:44",
+      "title": "Språkkrav för personal i äldreomsorgen",
+      "date": "2023-03-30",
+      "url": "https://data.riksdagen.se/dokument/HBB144.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

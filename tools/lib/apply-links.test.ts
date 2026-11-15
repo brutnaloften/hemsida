@@ -303,6 +303,141 @@ describe('applyLinks', () => {
       expect(r.evidence.map((e) => e.kind)).toEqual(['sou', 'bet']);
     });
 
+    it('skips a betänkande that only rejects motions, keeps one that adopts a measure', () => {
+      const rejects = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande rejects motions on VAT rates and keeps VAT uniform.',
+      });
+      const r1 = applyLinks(base, [pair('P1'), rejects], docs, '2026-11-10')!;
+      expect(r1.evidence.map((e) => e.kind)).toEqual(['prop']);
+      const adopts = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande approves a bill that cuts the subsidy and rejects motions.',
+      });
+      const r2 = applyLinks(base, [pair('P1'), adopts], docs, '2026-11-10')!;
+      expect(r2.evidence.map((e) => e.kind)).toEqual(['prop', 'bet']);
+    });
+
+    it('removes an earlier contradicts entry for a betänkande that only rejects motions', () => {
+      const earlier = applyLinks(
+        base,
+        [pair('S1'), against('B1', { stage: 'definitive' })],
+        docs,
+        '2026-11-10',
+      )!;
+      const promise = promiseSchema.parse({ ...base, ...earlier });
+      expect(promise.evidence.map((e) => e.kind)).toContain('bet');
+      const rejects = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande rejects motions on VAT rates.',
+      });
+      const r = applyLinks(promise, [pair('S1'), rejects], docs, '2026-11-10')!;
+      expect(r.evidence.some((e) => e.kind === 'bet')).toBe(false);
+    });
+
+    it('removes the last Riksdag entry instead of returning no change', () => {
+      const earlier = applyLinks(
+        base,
+        [against('B1', { stage: 'definitive' })],
+        docs,
+        '2026-11-10',
+      )!;
+      const promise = promiseSchema.parse({ ...base, ...earlier });
+      expect(promise.evidence.map((e) => e.kind)).toEqual(['bet']);
+      const rejects = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande rejects motions on VAT rates.',
+      });
+      const r = applyLinks(promise, [rejects], docs, '2026-11-10');
+      expect(r).not.toBeNull();
+      expect(r!.evidence).toEqual([]);
+    });
+
+    it('keeps a passed bill whose summary says the Riksdag said yes, whatever the reason says', () => {
+      const nato = {
+        ...doc('B1', 'bet', '2026-05-01', 'FöU14'),
+        text: 'Förbättrade förutsättningar för operativt militärt samarbete (FöU14) Riksdagen sa ja till regeringens förslag',
+      };
+      const judged = against('B1', {
+        stage: 'definitive',
+        reason:
+          'The adopted betänkande approves laws deepening military cooperation and rejects the opposing motions, so it works against the promise.',
+      });
+      const r = applyLinks(base, [judged], new Map([['B1', nato]]), '2026-11-10')!;
+      expect(r.evidence.map((e) => (e as { relevance: string }).relevance)).toEqual([
+        'contradicts',
+      ]);
+      // Same reason, but the summary is a plain rejection of motions: dropped.
+      const nej = {
+        ...nato,
+        text: 'Nej till motioner om försvaret (FöU1) Riksdagen sa nej till förslag i motioner',
+      };
+      expect(applyLinks(base, [judged], new Map([['B1', nej]]), '2026-11-10')).toBeNull();
+    });
+
+    it('lets the reason decide when the summary has both a yes and a no, and drops a skrivelse', () => {
+      const mixed = {
+        ...doc('B1', 'bet', '2026-05-01', 'TU11'),
+        text: 'Luftfartssamarbetet ska fortsätta (TU11) Riksdagen sa ja till regeringens förslag om samarbetet. Riksdagen sa nej till cirka 60 motioner.',
+      };
+      const rejecting = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande rejects motions on aviation climate measures.',
+      });
+      expect(applyLinks(base, [rejecting], new Map([['B1', mixed]]), '2026-11-10')).toBeNull();
+      const adopting = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande approves a bill that cuts the subsidy.',
+      });
+      expect(applyLinks(base, [adopting], new Map([['B1', mixed]]), '2026-11-10')).not.toBeNull();
+      const skr = {
+        ...doc('B1', 'bet', '2026-05-01', 'MJU8'),
+        text: 'Skrivelse om reduktionsplikten har behandlats (MJU8) Riksdagen har behandlat en skrivelse',
+      };
+      const endorses = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande endorses the sharp cut in the reduktionsplikt.',
+      });
+      expect(applyLinks(base, [endorses], new Map([['B1', skr]]), '2026-11-10')).toBeNull();
+    });
+
+    it('removes an existing contradicts entry for a hand-checked override pair, and reads "säger ja" as yes', () => {
+      const earlier = applyLinks(
+        base,
+        [against('B1', { stage: 'definitive' })],
+        docs,
+        '2026-11-10',
+      )!;
+      const promise = promiseSchema.parse({ ...base, ...earlier });
+      expect(promise.evidence.map((e) => e.kind)).toEqual(['bet']);
+      const r = applyLinks(
+        promise,
+        [against('B1', { stage: 'definitive', notContradiction: true })],
+        docs,
+        '2026-11-10',
+      )!;
+      expect(r.evidence).toEqual([]);
+      const said = {
+        ...doc('B1', 'bet', '2026-05-01', 'NU15'),
+        text: 'Elnät (NU15) Det anser riksdagen som säger ja till regeringens förslag. Riksdagen sa nej till motioner.',
+      };
+      // Both a yes and a no: the reason decides (here it adopts a measure, so it stays).
+      const kept = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande approves a law exempting power lines.',
+      });
+      expect(applyLinks(base, [kept], new Map([['B1', said]]), '2026-11-10')).not.toBeNull();
+    });
+
+    it('drops a contradicts judgement the judge itself calls beside the point', () => {
+      const off = against('S1', {
+        reason: 'It restricts hunters and does nothing to give mountain hunting equal terms.',
+      });
+      expect(
+        applyLinks(base, [pair('P1'), off], docs, '2026-11-10')!.evidence.map((e) => e.kind),
+      ).toEqual(['prop']);
+    });
+
     it('skips background contradicts and unproposed pairs', () => {
       const r = applyLinks(
         base,

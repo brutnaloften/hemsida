@@ -17,15 +17,21 @@
   "committee": "SfU",
   "keywords": ["bidragstak", "bidrag", "arbetslinjen", "försörjningsstöd"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i juni 2023 utredningen om drivkrafter och möjligheter i försörjningsstödet ett tilläggsuppdrag. Utredaren ska föreslå en modell för ett bidragstak, så att den som kan arbeta aldrig får högre inkomster från bidrag än från arbete, och lämna författningsförslag. Dokumentet visar ett uppdrag, inget beslut om ett bidragstak.",
-    "date": "2026-11-12",
+    "reasoning": "Regeringen lade i mars 2026 fram ett förslag om bidragstak i försörjningsstödet, och riksdagen biföll det i maj 2026. Därefter har en lag om ändring i socialtjänstlagen beslutats, och den träder i kraft den 1 januari 2027. Lagen genomför en del av löftet: ett tak i försörjningsstödet som ska göra det mer lönsamt att arbeta, med reformerad riksnorm och gränser för större hushåll.",
+    "date": "2026-11-15",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2026-10-29"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i juni 2023 utredningen om drivkrafter och möjligheter i försörjningsstödet ett tilläggsuppdrag. Utredaren ska föreslå en modell för ett bidragstak, så att den som kan arbeta aldrig får högre inkomster från bidrag än från arbete, och lämna författningsförslag. Dokumentet visar ett uppdrag, inget beslut om ett bidragstak.",
+        "date": "2026-11-12"
       }
     ]
   },
@@ -47,6 +53,36 @@
       "url": "https://data.riksdagen.se/dokument/HBB170.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03201",
+      "designation": "Prop. 2025/26:201",
+      "title": "Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03201.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU30",
+      "designation": "Bet. 2025/26:SoU30",
+      "title": "Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU30.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-897",
+      "designation": "SFS 2026:897",
+      "title": "Lag (2026:897) om ändring i socialtjänstlagen (2025:400)",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026897.html",
+      "relevance": "partial",
+      "note": "Lagen garanterar inte att de samlade bidragen aldrig kan bli högre än lönen från ett arbete, och den omfattar bara försörjningsstöd, inte andra bidrag."
     }
   ]
 }

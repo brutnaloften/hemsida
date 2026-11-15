@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["försvarsmateriel", "anskaffning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i maj 2024 fram en extra ändringsbudget som höjer anslaget för anskaffning av materiel och anläggningar och ger större beställningsbemyndiganden. Riksdagen biföll förslaget i juni 2024. Dessa steg gäller materielanskaffning, främst gåvor av materiel till Ukraina och ersättning av den, alltså bara en del av löftet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB03155",
+      "designation": "Prop. 2023/24:155",
+      "title": "Extra ändringsbudget för 2024 – Ytterligare försvarsmateriel och ekonomiskt stöd till Ukraina",
+      "date": "2024-05-30",
+      "url": "https://data.riksdagen.se/dokument/HB03155.html",
+      "relevance": "partial",
       "note": null
     },
     {

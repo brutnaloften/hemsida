@@ -17,10 +17,17 @@
   "committee": "AU",
   "keywords": ["samhällsorientering", "nyanlända", "jämställdhet", "hbtq", "integration"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning från maj 2025 föreslår att samhällsorienteringen blir en del av komvux och obligatorisk för dem som får förmåner kopplade till deltagande. Innehållet ska utgå från grundläggande värderingar, bland annat jämställdhet med ett förstärkt jämställdhetsperspektiv. Dokumenten visar förslag, inget beslut, och gäller jämställdhetsdelen av löftet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-obligatorisk-samhallsintroduktion-och-samhallsorientering"],
       "outcome": "weakened",
       "note": "Avtalet inför obligatorisk samhällsorientering, men nämner inte jämställdhet och hbtq som särskilt innehåll."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB355",
+      "designation": "SOU 2025:55",
+      "title": "En reformerad samhällsorientering för bättre integration",
+      "date": "2025-05-08",
+      "url": "https://data.riksdagen.se/dokument/HDB355.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

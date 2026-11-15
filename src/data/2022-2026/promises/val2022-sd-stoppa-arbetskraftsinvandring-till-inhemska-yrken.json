@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["arbetskraftsinvandring", "arbetstillstånd", "lönekrav"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i februari 2023 utredningen om arbetskraftsinvandring tilläggsdirektiv om ett medianlönekrav och möjlighet att undanta vissa yrken från arbetstillstånd. Riksdagen biföll i mars 2026 nya regler med högre lönekrav och rätt för regeringen att undanta yrken. Dessa steg gäller en del av löftet: yrken som inhemsk arbetskraft kan fylla.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,16 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet anger att arbetstillstånd endast ska beviljas om lönen når en inkomstgräns kopplad till medianlön och att regeringen ska kunna undanta vissa yrkesgrupper från arbetstillstånd."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB125",
+      "designation": "Dir. 2023:25",
+      "title": "Tilläggsdirektiv till Utredningen om en behovsprövad arbetskraftsinvandring (Ju 2022:11)",
+      "date": "2023-02-16",
+      "url": "https://data.riksdagen.se/dokument/HBB125.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",

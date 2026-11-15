@@ -22,10 +22,17 @@
     "europeiska åklagarmyndigheten"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2024 fram ett förslag om att Sverige ska delta i Europeiska åklagarmyndigheten. Riksdagen beslutade i maj 2024 att godkänna förslaget och de följdändringar som hör till. Dokumenten gäller den delen av löftet som rör deltagande i EU:s gemensamma åklagarmyndighet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -34,6 +41,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0387",
+      "designation": "Prop. 2023/24:87",
+      "title": "Sveriges deltagande i Europeiska åklagarmyndigheten",
+      "date": "2024-03-12",
+      "url": "https://data.riksdagen.se/dokument/HB0387.html",
+      "relevance": "partial",
       "note": null
     },
     {

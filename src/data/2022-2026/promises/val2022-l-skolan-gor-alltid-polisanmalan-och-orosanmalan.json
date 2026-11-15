@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["polisanmälan", "orosanmälan", "skola", "anmälningsplikt", "socialtjänst"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i december 2024 bredare möjligheter för skolor att lämna information till socialtjänsten och andra skolor. Riksdagen beslutade i maj 2025 att skolan eller rektorn ska anmäla misstänkt brott till polisen, utan åldersgräns. Dokumenten gäller främst polisanmälan, och utskottet noterar att den inte ersätter en orosanmälan till socialnämnden.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-anmalningsplikt-skolor-brott"],
       "outcome": "weakened",
       "note": "Avtalet inför skyldighet för skolor att anmäla brott, men nämner inte orosanmälan till socialtjänsten."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB387",
+      "designation": "SOU 2024:87",
+      "title": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "date": "2024-12-18",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01UbU21",
+      "designation": "Bet. 2024/25:UbU21",
+      "title": "Skolor mot brott",
+      "date": "2025-05-23",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU21.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

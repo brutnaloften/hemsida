@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["tandvård", "högkostnadsskydd", "munhälsa"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i oktober 2023 en utredning ett tilläggsuppdrag: att föreslå ett starkare högkostnadsskydd i tandvården som liknar det inom annan vård, och att ta bort särskilda avgiftsregler för asylsökande. Det gäller en del av löftet. Ett riksdagsbeslut i november 2024 motverkar löftet genom att sänka åldersgränsen för avgiftsfri tandvård, så att unga vuxna mellan 20 och 23 år inte längre får den.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-tandvardsreform-hogkostnadsskydd"],
       "outcome": "weakened",
       "note": "Avtalet innehåller en utredning om ett stärkt tandvårdshögkostnadsskydd."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1138",
+      "designation": "Dir. 2023:138",
+      "title": "Tilläggsdirektiv till Utredningen om stärkt stöd till tandvård för våldsutsatta och ökad kontroll över tandvårdssektorn (S 2022:12)",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HBB1138.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",

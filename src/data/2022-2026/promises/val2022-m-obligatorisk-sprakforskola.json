@@ -19,8 +19,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i november 2025 tilläggsdirektiv till utredningen om en likvärdig förskola med obligatorisk språkförskola. Utredningen ska överväga hur obligatorisk språkförskola kan införas för barn som behöver stärka sin språkutveckling. Tilläggsdirektivet förlänger tiden för uppdraget och rör en språklagshänvisning i skollagen. Dokumentet visar beredning, inget beslut.",
-    "date": "2026-11-12",
+    "reasoning": "Regeringen gav i november 2024 en utredning i uppdrag att föreslå en obligatorisk språkförskola för barn med bristande språkutveckling, och i november 2025 kom tilläggsdirektiv med förlängd tid. Utredningens betänkande i juni 2026 motverkar löftet: det avråder från obligatorisk språkförskola och föreslår språkbedömning vid tre års ålder, förskoleplats och extra språkstöd utan krav på närvaro.",
+    "date": "2026-11-15",
     "history": [
       {
         "value": "unassessed",
@@ -40,12 +40,32 @@
     },
     {
       "kind": "dir",
+      "dok_id": "HCB1113",
+      "designation": "Dir. 2024:113",
+      "title": "En likvärdig förskola av god kvalitet med obligatorisk språkförskola",
+      "date": "2024-11-21",
+      "url": "https://data.riksdagen.se/dokument/HCB1113.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
       "dok_id": "HDB1102",
       "designation": "Dir. 2025:102",
       "title": "Tilläggsdirektiv till Utredningen om en likvärdig förskola av god kvalitet med obligatorisk språkförskola (U 2024:04)",
       "date": "2025-11-27",
       "url": "https://data.riksdagen.se/dokument/HDB1102.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB337",
+      "designation": "SOU 2026:37",
+      "title": "Förutsättningar för en likvärdig och språkutvecklande förskola",
+      "date": "2026-06-17",
+      "url": "https://data.riksdagen.se/dokument/HEB337.html",
+      "relevance": "contradicts",
       "note": null
     }
   ]

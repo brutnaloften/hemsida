@@ -23,10 +23,17 @@
     "kommunal vuxenutbildning"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i september 2025 fram ett förslag om skärpta krav i sfi: en tidsgräns på tre år för rätten att delta, obligatorisk kunskapsbedömning och en handlingsplan. Riksdagen biföll förslaget i november 2025. Dessa steg gäller kravdelen av löftet, bland annat tidsgränsen.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -39,6 +46,26 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet vill förstärka SFI-undervisningen och ställa krav på aktivt deltagande, men anger inga skärpta kunskapskrav eller kvalitetsmått."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0310",
+      "designation": "Prop. 2025/26:10",
+      "title": "Skärpta krav i kommunal vuxenutbildning i svenska för invandrare (sfi)",
+      "date": "2025-09-11",
+      "url": "https://data.riksdagen.se/dokument/HD0310.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU4",
+      "designation": "Bet. 2025/26:UbU4",
+      "title": "Skärpta krav i kommunal vuxenutbildning i svenska för invandrare (sfi)",
+      "date": "2025-11-12",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU4.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

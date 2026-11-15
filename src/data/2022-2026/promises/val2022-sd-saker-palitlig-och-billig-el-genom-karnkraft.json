@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["kärnkraft", "elförsörjning", "elpris"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2025 fram ett förslag om statliga lån och dubbelriktade differenskontrakt, en form av riskdelning, för investeringar i ny kärnkraft. Riksdagen biföll förslaget i ett beslut i maj 2025. Dokumenten gäller satsningar på ny kärnkraft för att trygga elförsörjningen och konkurrenskraftiga elpriser.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -34,6 +41,16 @@
       ],
       "outcome": "included",
       "note": "Avtalet anger statliga kreditgarantier om 400 miljarder kronor för kärnkraft, att Vattenfall omedelbart ska påbörja planeringen av ny kärnkraft vid Ringhals och lagändringar för att möjliggöra ny kärnkraft."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03150",
+      "designation": "Prop. 2024/25:150",
+      "title": "Finansiering och riskdelning vid investeringar i ny kärnkraft",
+      "date": "2025-03-27",
+      "url": "https://data.riksdagen.se/dokument/HC03150.html",
+      "relevance": "full",
+      "note": null
     },
     {
       "kind": "bet",

@@ -17,10 +17,28 @@
   "committee": "UbU",
   "keywords": ["fritidshem", "fritids", "tillgång"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning lämnade i november 2022 ett betänkande som föreslår ett avgiftsfritt allmänt fritidshem för alla barn i 6–9 års ålder, även barn till arbetslösa eller sjukskrivna föräldrar. Betänkandet innehåller också åtgärder för att stärka fritidshemmen. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HAB361",
+      "designation": "SOU 2022:61",
+      "title": "En ny lag om stöd vid korttidsarbete - ett mer förutsägbart, förenklat och stärkt regelverk",
+      "date": "2022-11-29",
+      "url": "https://data.riksdagen.se/dokument/HAB361.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

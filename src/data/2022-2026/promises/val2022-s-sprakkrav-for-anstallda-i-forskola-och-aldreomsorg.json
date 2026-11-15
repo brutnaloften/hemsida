@@ -17,10 +17,38 @@
   "committee": "SoU",
   "keywords": ["språkkrav", "förskola", "äldreomsorg", "språkutbildning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i mars 2023 en utredning i uppdrag att föreslå språkkrav för personal i äldreomsorgen, med stöd för redan anställda att nå kraven. I juli 2024 förlängdes utredningens tid till den 29 november 2024. Dokumenten gäller bara äldreomsorgen, alltså en del av löftet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB144",
+      "designation": "Dir. 2023:44",
+      "title": "Språkkrav för personal i äldreomsorgen",
+      "date": "2023-03-30",
+      "url": "https://data.riksdagen.se/dokument/HBB144.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB166",
+      "designation": "Dir. 2024:66",
+      "title": "Tilläggsdirektiv till Utredningen om språkkrav för personal i äldreomsorgen (S 2023:03)",
+      "date": "2024-07-04",
+      "url": "https://data.riksdagen.se/dokument/HCB166.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

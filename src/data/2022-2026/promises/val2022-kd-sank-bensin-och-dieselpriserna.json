@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["drivmedelspriser", "bensin", "diesel", "reduktionsplikt", "biobränsle"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i oktober 2023 fram ett förslag om att sänka reduktionsplikten för bensin och diesel till sex procent för 2024–2026, vilket innebär mindre inblandning av biobränsle. Riksdagen biföll förslaget i november 2023, med sänkta nivåer även för åren efter 2026 borttagna. Beslutet motiveras med att hålla nere bränslepriserna.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-lagre-drivmedelspriser"],
       "outcome": "weakened",
       "note": "Avtalet nämner bara lägre drivmedelspriser som inriktning för hushållsåtgärder, utan konkreta åtgärder som minskad inblandning av biobränsle."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0328",
+      "designation": "Prop. 2023/24:28",
+      "title": "Sänkning av reduktionsplikten för bensin och diesel",
+      "date": "2023-10-17",
+      "url": "https://data.riksdagen.se/dokument/HB0328.html",
+      "relevance": "full",
+      "note": null
     },
     {
       "kind": "bet",

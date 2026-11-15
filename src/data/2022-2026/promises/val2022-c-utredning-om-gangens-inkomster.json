@@ -17,10 +17,28 @@
   "committee": "JuU",
   "keywords": ["gäng", "inkomster", "utredning", "organiserad brottslighet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i augusti 2026 tilläggsdirektiv till utredningen om riktade insatser mot kriminella organisationer. Utredningen fick nya uppgifter som gäller företagsbot för företag som används som brottsverktyg, högre straff för ekonomisk brottslighet och begränsad vinst från brottsberättelser. Dessa delar rör gängens inkomster.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HEB194",
+      "designation": "Dir. 2026:94",
+      "title": "Tilläggsdirektiv till utredningen om riktade insatser mot kriminella organisationer - en särlagstiftning för gängkriminella (Ju 2026:11)",
+      "date": "2026-08-20",
+      "url": "https://data.riksdagen.se/dokument/HEB194.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

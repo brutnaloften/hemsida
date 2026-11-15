@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["samhällsnyttiga insatser", "motprestation", "försörjningsstöd", "bidrag"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2026 fram ett förslag om reformerat försörjningsstöd med ett bidragstak. Socialnämnden skulle också kunna kräva att personer med nedsatt arbetsförmåga deltar i arbetsinriktad rehabilitering. I maj 2026 följde ett riksdagsbetänkande om bidragstak och ändrad riksnorm. Dokumenten gäller en del av löftet: arbetsinriktade insatser inom försörjningsstödet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,26 @@
       "date": "2022-10-14",
       "promises": ["tido-aktivitetskrav-forsorjningsstod"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03201",
+      "designation": "Prop. 2025/26:201",
+      "title": "Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03201.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU30",
+      "designation": "Bet. 2025/26:SoU30",
+      "title": "Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU30.html",
+      "relevance": "partial",
       "note": null
     }
   ]

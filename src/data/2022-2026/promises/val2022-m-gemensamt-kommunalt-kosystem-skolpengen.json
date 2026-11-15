@@ -19,8 +19,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i november 2023 en utredare i uppdrag att föreslå en nationellt bindande skolpengsnorm, alltså en tydligare statlig styrning av skolpengen. Direktivet gäller den delen av löftet, den som rör styrningen av skolpengen.",
-    "date": "2026-11-12",
+    "reasoning": "Regeringen gav i november 2023 en utredare i uppdrag att föreslå en nationellt bindande skolpengsnorm, och i mars 2025 förlängdes tiden för ett delbetänkande. Utredningen lämnade i juni 2025 ett betänkande som föreslår en vägledande norm i stället för en bindande. Dokumenten gäller den del av löftet som rör statlig styrning av skolpengen.",
+    "date": "2026-11-15",
     "history": [
       {
         "value": "unassessed",
@@ -48,6 +48,26 @@
       "title": "En nationell skolpengsnorm för ökad likvärdighet",
       "date": "2023-11-02",
       "url": "https://data.riksdagen.se/dokument/HBB1153.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB123",
+      "designation": "Dir. 2025:23",
+      "title": "Tilläggsdirektiv till Utredningen om en nationell skolpengsnorm för ökad likvärdighet (U 2023:05)",
+      "date": "2025-03-06",
+      "url": "https://data.riksdagen.se/dokument/HDB123.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB372",
+      "designation": "SOU 2025:72",
+      "title": "Verktyg för en mer likvärdig resursfördelning till skolan",
+      "date": "2025-06-13",
+      "url": "https://data.riksdagen.se/dokument/HDB372.html",
       "relevance": "partial",
       "note": null
     }

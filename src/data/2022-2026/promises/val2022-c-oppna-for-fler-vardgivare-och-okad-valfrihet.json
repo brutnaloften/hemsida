@@ -17,10 +17,28 @@
   "committee": "SoU",
   "keywords": ["vårdval", "valfrihet", "vårdgivare", "patienter"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i maj 2024 en utredning i uppdrag att föreslå en regel som låter patienter välja vårdgivare i hela landet utan extra kostnad när vårdgarantin inte kan hållas. Regeln ska också gälla slutenvård. Direktivet gäller alltså den specialiserade vården och en del av löftet om valfrihet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB150",
+      "designation": "Dir. 2024:50",
+      "title": "Bättre styrning för en tillgänglig och jämlik hälso- och sjukvård med god kontinuitet",
+      "date": "2024-05-23",
+      "url": "https://data.riksdagen.se/dokument/HCB150.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }
