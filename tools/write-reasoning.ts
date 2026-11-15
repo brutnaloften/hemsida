@@ -2,11 +2,14 @@
  * Replace the placeholder reasoning of model-set verdicts with plain Swedish.
  *   node --experimental-strip-types tools/write-reasoning.ts --run <link-run> [--term 2022-2026]
  *     [--id-prefix tido-] [--only <promise-id>] [--model claude-sonnet-5-5] [--concurrency 4]
- *     [--limit n] [--dry-run] [--pin <promise-id> --text <hand-written reasoning>]
+ *     [--limit n] [--dry-run] [--pin <promise-id> --text <hand-written reasoning>] [--repin-stale]
  * A hand-corrected text is kept with --pin: it is validated, stored in the cache under the promise's
  * current prompt key and recorded with that key in tools/reasoning-pins.json (committed). Every run
  * re-applies the pins whose key still matches, so a rerun reproduces the text; once the evidence
  * changes the key changes, the pin is reported as stale and the model writes a new text.
+ * After a deliberate change of the instructions (every key changes) --repin-stale re-keys the pins
+ * whose evidence hash (stored in the pin) is unchanged and that still pass the validator. Pins
+ * without a hash get one from the first non-dry run in which their key still matches. A dry run never writes the pins file.
  * Runs through the local Claude Code login (Agent SDK), refuses an API key like the other claude tools.
  * Results are cached in tools/out/reasoning-cache by hash of model, prompt version, promise and
  * evidence, so a rerun only pays for promises whose evidence changed (a cached text that fails the
@@ -23,6 +26,9 @@ import {
   REASONING_JSON_SCHEMA,
   buildReasoningPrompt,
   hasLawInForce,
+  pinEvidenceHash,
+  pinStatus,
+  type Pin,
   reasoningInstructions,
   reasoningKey,
   reasoningProblems,
@@ -41,6 +47,7 @@ const { values } = parseArgs({
     limit: { type: 'string' },
     only: { type: 'string' },
     pin: { type: 'string' },
+    'repin-stale': { type: 'boolean', default: false },
     text: { type: 'string' },
     'dry-run': { type: 'boolean', default: false },
   },
@@ -79,6 +86,8 @@ interface Job {
   inquiry: boolean;
   /** Budget, other_action, outcome or vague promise without a law: no law talk, no absence claims. */
   nonLegislative: boolean;
+  manifesto: boolean;
+  evidence: string;
 }
 const REASONED_VERDICTS: readonly string[] = ['in_progress', 'fulfilled', 'partially_fulfilled'];
 const today = new Date().toISOString().slice(0, 10);
@@ -99,6 +108,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     ...(judgementBy.get(`${p.id}:${e.dok_id}`)?.stage
       ? { stage: judgementBy.get(`${p.id}:${e.dok_id}`)!.stage! }
       : e.kind === 'bet' && { stage: 'definitive' as const }),
+    // A law's own evidence note lists what the law lacks; it is not content, so the writer never sees it.
     note:
       judgementBy.get(`${p.id}:${e.dok_id}`)?.reason ??
       (e.kind === 'bet' ? 'Riksdagens beslut om en proposition som hör till löftet.' : ''),
@@ -126,6 +136,8 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     designations: riksdag.map((e) => e.designation),
     lawInForce: hasLawInForce(items, today),
     inquiry,
+    manifesto,
+    evidence: pinEvidenceHash(p, items),
     nonLegislative:
       manifesto && p.verdict.value === 'in_progress' && !items.some((i) => i.kind === 'sfs'),
     coverage:
@@ -141,9 +153,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
 }
 const cachePath = (k: string) => resolve(cacheDir, `${k}.json`);
 const pinsPath = resolve(root, 'tools/reasoning-pins.json');
-const pins: Record<string, { key: string; reasoning: string }> = existsSync(pinsPath)
-  ? (loadJson(pinsPath) as typeof pins)
-  : {};
+const pins: Record<string, Pin> = existsSync(pinsPath) ? (loadJson(pinsPath) as typeof pins) : {};
 if (values.pin) {
   const job = jobs.find((j) => j.file === `${values.pin}.json`);
   if (!job || !values.text)
@@ -155,16 +165,43 @@ if (values.pin) {
     job.coverage,
     job.inquiry,
     job.nonLegislative,
+    job.manifesto,
   );
   if (problems.length > 0) throw new Error(`pinned text rejected: ${problems.join(', ')}`);
-  pins[values.pin] = { key: job.key, reasoning: values.text };
+  pins[values.pin] = { key: job.key, reasoning: values.text, evidence: job.evidence };
   writeJson(pinsPath, pins);
 }
 for (const job of jobs) {
   const id = job.file.replace(/\.json$/, '');
   const pin = pins[id];
   if (!pin) continue;
-  if (pin.key !== job.key) {
+  const status = pinStatus(pin, job);
+  if (status === 'fresh' && pin.evidence === undefined && !values['dry-run']) {
+    // Pins written before the evidence hash existed: record it while the key still proves they are current.
+    pins[id] = { ...pin, evidence: job.evidence };
+    writeJson(pinsPath, pins);
+  }
+  if (status === 'rekey' && values['repin-stale']) {
+    // After a deliberate change of the instructions: keep the hand text if it still passes the rules.
+    const problems = reasoningProblems(
+      pin.reasoning,
+      job.designations,
+      job.lawInForce,
+      job.coverage,
+      job.inquiry,
+      job.nonLegislative,
+      job.manifesto,
+    );
+    if (problems.length > 0) {
+      console.warn(`pin for ${id} not carried over: ${problems.join(', ')}`);
+      continue;
+    }
+    if (!values['dry-run']) {
+      pins[id] = { key: job.key, reasoning: pin.reasoning, evidence: job.evidence };
+      writeJson(pinsPath, pins);
+    }
+    console.log(`pin for ${id} re-keyed`);
+  } else if (status !== 'fresh') {
     console.warn(`pin for ${id} is stale (evidence changed); the model writes a new text`);
     continue;
   }
@@ -175,6 +212,7 @@ for (const job of jobs) {
     job.coverage,
     job.inquiry,
     job.nonLegislative,
+    job.manifesto,
   );
   if (problems.length > 0) throw new Error(`pin for ${id} rejected: ${problems.join(', ')}`);
   writeJsonAtomic(cachePath(job.key), { reasoning: pin.reasoning });
@@ -190,8 +228,15 @@ const usable = (j: Job): boolean => {
   const text = cachedText(j);
   return (
     text !== undefined &&
-    reasoningProblems(text, j.designations, j.lawInForce, j.coverage, j.inquiry, j.nonLegislative)
-      .length === 0
+    reasoningProblems(
+      text,
+      j.designations,
+      j.lawInForce,
+      j.coverage,
+      j.inquiry,
+      j.nonLegislative,
+      j.manifesto,
+    ).length === 0
   );
 };
 const uncached = todo.filter((j) => !usable(j));
@@ -229,6 +274,7 @@ async function write(job: Job): Promise<void> {
         job.coverage,
         job.inquiry,
         job.nonLegislative,
+        job.manifesto,
       );
       if (problems.length === 0) {
         writeJsonAtomic(cachePath(job.key), parsed.data);

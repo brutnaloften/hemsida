@@ -2,6 +2,9 @@ import { describe, expect, it } from 'vitest';
 import {
   buildReasoningPrompt,
   hasLawInForce,
+  pinEvidenceHash,
+  pinStatus,
+  absenceSentences,
   reasoningInstructions,
   reasoningKey,
   reasoningProblems,
@@ -60,7 +63,7 @@ describe('write-reasoning', () => {
     }
     expect(
       reasoningProblems(`${base} Utbildning av personal nämns inte i dokumenten.`, []),
-    ).toEqual([]);
+    ).toEqual(['makes an absence claim']);
     // A sentence about the listed documents may say they show no decision; a flat claim may not.
     expect(
       reasoningProblems(`${base} Båda dokumenten visar förslag och inte något beslut.`, []),
@@ -339,10 +342,14 @@ describe('write-reasoning', () => {
     it('rejects absence claims only when flagged', () => {
       const t =
         'Regeringen gav i januari 2025 ett uppdrag om X. Finansieringen nämns inte i dokumenten.';
-      expect(reasoningProblems(t, [], false, undefined, false, true)).toContain(
+      expect(reasoningProblems(t, [], false, undefined, false, true, true)).toContain(
         'makes an absence claim',
       );
-      expect(reasoningProblems(t, [])).not.toContain('makes an absence claim');
+      // Manifesto (legacy) rule: a legislative text may still say it; Tidö texts never may.
+      expect(reasoningProblems(t, [], false, undefined, false, false, true)).not.toContain(
+        'makes an absence claim',
+      );
+      expect(reasoningProblems(t, [])).toContain('makes an absence claim');
     });
   });
 
@@ -430,5 +437,66 @@ describe('write-reasoning', () => {
         expect(reasoningProblems(`${ok} ${bad}`, [], false, undefined, true), bad).not.toEqual([]);
       }
     });
+  });
+
+  it('bans absence claims, even when a law note lists what the law lacks', () => {
+    const ok = 'Regeringen lade i mars 2026 fram ett förslag om aktivitetskrav.';
+    for (const bad of [
+      'Utbildning av personal nämns inte i dokumenten.',
+      'Egna ungdomsfängelser nämns inte.',
+      'En fast avgift tas inte upp särskilt i dokumenten.',
+      'Ikraftträdandet framgår inte.',
+      'Det som saknas är en översyn.',
+      'Dokumenten saknar förslag om avgift.',
+      'Det finns inget om avgift.',
+      'Lagen täcker våld och hot men inte blåljussabotage.',
+      'Dokumenten täcker bara den delen, inte översynen.',
+      'Förslaget gäller inte ledarskap.',
+      'Dokumenten visar inte att uppdraget utökas.',
+      'Utredningen föreslår ingen sådan regel.',
+      'Frågan behandlas varken i förslaget eller i beslutet.',
+      'Utredningen föreslog ingen sådan regel.',
+      'Propositionen innehöll inga regler om detta.',
+    ]) {
+      expect(reasoningProblems(`${ok} ${bad}`, []), bad).toContain('makes an absence claim');
+    }
+    expect(reasoningProblems(ok, [])).toEqual([]);
+    for (const fine of [
+      'Dokumenten visar förslag, inget beslut.',
+      'Dokumenten täcker bara en del av löftet.',
+      'Lagen gäller bara vissa grupper.',
+    ])
+      expect(absenceSentences(fine), fine).toEqual([]);
+    expect(absenceSentences(`${ok} Avgiften nämns inte.`)).toEqual(['Avgiften nämns inte.']);
+    const law = { ...item, kind: 'sfs', relevance: 'partial' as const, note: 'Ingen maxtid.' };
+    expect(reasoningInstructions([law], 'partially_fulfilled')).toContain(
+      'Skriv aldrig vad som saknas',
+    );
+    expect(reasoningInstructions([law], 'partially_fulfilled')).not.toContain(
+      'enligt underlaget saknas i lagen',
+    );
+  });
+});
+
+describe('pins', () => {
+  const promise = { title: 'T', description: 'D' };
+  const sfs: ReasoningItem = { ...item, kind: 'sfs', relevance: 'partial', note: 'gap list' };
+
+  it('hashes the evidence but not law notes', () => {
+    const base = pinEvidenceHash(promise, [item, sfs]);
+    expect(pinEvidenceHash(promise, [item, { ...sfs, note: 'another gap list' }])).toBe(base);
+    expect(pinEvidenceHash(promise, [item, { ...sfs, relevance: 'full' }])).not.toBe(base);
+    expect(pinEvidenceHash(promise, [item])).not.toBe(base);
+    expect(pinEvidenceHash({ ...promise, title: 'U' }, [item, sfs])).not.toBe(base);
+    expect(pinEvidenceHash(promise, [{ ...item, note: 'x' }, sfs])).not.toBe(base);
+  });
+
+  it('re-keys only when the evidence hash proves nothing but the instructions changed', () => {
+    const pin = { key: 'k1', reasoning: 'r', evidence: 'h1' };
+    expect(pinStatus(pin, { key: 'k1', evidence: 'h1' })).toBe('fresh');
+    expect(pinStatus(pin, { key: 'k2', evidence: 'h1' })).toBe('rekey');
+    expect(pinStatus(pin, { key: 'k2', evidence: 'h2' })).toBe('stale');
+    // No stored hash: cannot prove the evidence is unchanged.
+    expect(pinStatus({ key: 'k1', reasoning: 'r' }, { key: 'k2', evidence: 'h1' })).toBe('stale');
   });
 });
