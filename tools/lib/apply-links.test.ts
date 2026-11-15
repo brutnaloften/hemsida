@@ -401,6 +401,34 @@ describe('applyLinks', () => {
       expect(applyLinks(base, [endorses], new Map([['B1', skr]]), '2026-11-10')).toBeNull();
     });
 
+    it('removes an existing contradicts entry for a hand-checked override pair, and reads "säger ja" as yes', () => {
+      const earlier = applyLinks(
+        base,
+        [against('B1', { stage: 'definitive' })],
+        docs,
+        '2026-11-10',
+      )!;
+      const promise = promiseSchema.parse({ ...base, ...earlier });
+      expect(promise.evidence.map((e) => e.kind)).toEqual(['bet']);
+      const r = applyLinks(
+        promise,
+        [against('B1', { stage: 'definitive', notContradiction: true })],
+        docs,
+        '2026-11-10',
+      )!;
+      expect(r.evidence).toEqual([]);
+      const said = {
+        ...doc('B1', 'bet', '2026-05-01', 'NU15'),
+        text: 'Elnät (NU15) Det anser riksdagen som säger ja till regeringens förslag. Riksdagen sa nej till motioner.',
+      };
+      // Both a yes and a no: the reason decides (here it adopts a measure, so it stays).
+      const kept = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande approves a law exempting power lines.',
+      });
+      expect(applyLinks(base, [kept], new Map([['B1', said]]), '2026-11-10')).not.toBeNull();
+    });
+
     it('drops a contradicts judgement the judge itself calls beside the point', () => {
       const off = against('S1', {
         reason: 'It restricts hunters and does nothing to give mountain hunting equal terms.',

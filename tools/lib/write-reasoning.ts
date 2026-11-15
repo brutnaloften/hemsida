@@ -389,7 +389,7 @@ export const ABSENCE_CLAIM =
  */
 const TIDO_ABSENCE_EXTRA = new RegExp(
   [
-    String.raw`\b(?:omn[äa]mns|n[äa]mns|framg[åa]r|ing[åa]r|behandlas|ber[öo]rs|diskuteras|t[äa]cks|omfattas|regleras|anges|uttrycks|visas|genomf[öo]rs|föreslås|innehålls)\s+(?:\w+\s+){0,3}(?:inte|ej)\b`,
+    String.raw`\b(?:omn[äa]mns|n[äa]mns|framg[åa]r|ing[åa]r|behandlas|ber[öo]rs|diskuteras|t[äa]cks|omfattas|regleras|anges|uttrycks|visas|genomf[öo]rs|föreslås|innehålls)\s+(?:[^\s.]+\s+){0,3}(?:inte|ej)\b`,
     String.raw`\b(?:tas|tar|togs|tog)\s+(?:\w+\s+)?inte\s+upp`,
     String.raw`\b(?:täcker|omfattar|gäller|rör|handlar\s+om|behandlar|reglerar|innebär|innehåller|innefattar|avser|berör|visar|ger|genomför|gör|föreslår|riktar\s+sig|syftar)\s+(?:\w+\s+){0,2}?(?:inte|ej)\b`,
     String.raw`\b(?:beskriver|beskrivs|redovisar|redovisas|syns|nämner|finns)\s+(?:inte|ej)\b`,
@@ -402,6 +402,10 @@ const TIDO_ABSENCE_EXTRA = new RegExp(
     String.raw`\bsaknas\b`,
     String.raw`\b(?:dokument(?:en|et)?|lag(?:en|ar|arna)?|förslag(?:et|en)?|texten|propositionen|utredningen|direktivet|uppdraget|beslut(?:et|en)?|betänkandet|promemorian)\s+saknar\b`,
     String.raw`\b(?:finns|fanns)\s+(?:inget|ingen|inga)\b`,
+    String.raw`\b(?:inte|ej)\s+(?:[^\s.]+\s+){0,2}i\s+(?:de\s+)?(?:[^\s.]+\s+)?dokument`,
+    String.raw`\bn[åa]gon\s+(?:[^\s.]+\s+){1,4}(?:g[öo]rs|finns|n[äa]mns|anges|tills[äa]tts|f[öo]resl[åa]s|framg[åa]r)\s+(?:inte|ej)\b`,
+    String.raw`\binget\s+i\s+(?:det|dem|den|dokumentet|dokumenten|direktivet)\b`,
+    String.raw`(?:^|\s)(?:[äa]r|var)\s+(?:inget|ingen|inga)\s+(?!beslut)`,
   ].join('|'),
   'i',
 );

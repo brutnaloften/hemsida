@@ -324,6 +324,10 @@ describe('write-reasoning', () => {
         'Det beskriver inte användning av biståndsmedel.',
         'Dokumentet visar ingen finansiering.',
         'Dokumenten gäller bara minoritetsspråk, inte äganderätten.',
+        'Någon kriskommission är inte tillsatt i de angivna dokumenten.',
+        'Någon koppling till samhällsorientering görs inte.',
+        'Inget i det gäller att göra det enklare att vräka.',
+        'Dokumentet är inget förslag om krav på kollektivavtal.',
       ])
         expect(reasoningProblems(t, [], false, undefined, false, true)).toContain(
           'makes an absence claim',

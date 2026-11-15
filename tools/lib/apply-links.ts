@@ -72,6 +72,8 @@ export interface JudgedPair {
   proposed: boolean;
   /** The judge's one or two sentences; only used to tell a betänkande that merely rejects motions. */
   reason?: string;
+  /** Hand-checked: a `contradicts` label that is off topic (tools/contradicts-overrides.json). */
+  notContradiction?: boolean;
 }
 
 const REJECTS_MOTIONS = /\b(rejects|avslag|avstyr\w*)\b[^.]*\bmotion/i;
@@ -93,7 +95,10 @@ export function onlyRejectsMotions(pair: JudgedPair, doc: StoreDocument): boolea
   // A skrivelse "lagd till handlingarna" / "har behandlats" is no decision against anything.
   if (/^Skrivelse /.test(head)) return true;
   if (head) {
-    const yes = /Riksdagen sa ja till|Riksdagen biföll|Riksdagen godkände/.test(head);
+    const yes =
+      /Riksdagen sa ja till|Riksdagen biföll|Riksdagen godkände|\b(?:säger|sade|sa|röstade)\s+ja\b/.test(
+        head,
+      );
     const no = /Nej till motioner|\bsa nej till\b/.test(head);
     // Both in one summary (a bill plus rejected motions on other things): the judge's reason decides.
     if (yes && !no) return false;
@@ -422,7 +427,7 @@ export function applyLinks(
     if (!doc || !['dir', 'sou', 'ds', 'prop', 'bet'].includes(doc.doktyp) || isSkrivelse(doc))
       continue;
     if (pair.label === 'contradicts') {
-      if (falseContradiction(pair, doc)) {
+      if (pair.notContradiction || falseContradiction(pair, doc)) {
         rejectedMotions.add(doc.dok_id);
         continue;
       }
