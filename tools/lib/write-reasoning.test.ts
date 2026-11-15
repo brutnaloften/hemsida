@@ -339,17 +339,16 @@ describe('write-reasoning', () => {
         ),
       ).toEqual([]);
     });
-    it('rejects absence claims only when flagged', () => {
+    it('rejects absence claims in every text, with filler words in between', () => {
       const t =
         'Regeringen gav i januari 2025 ett uppdrag om X. Finansieringen nämns inte i dokumenten.';
-      expect(reasoningProblems(t, [], false, undefined, false, true, true)).toContain(
-        'makes an absence claim',
-      );
-      // Manifesto texts are held to the same rule since hemsida-9ql.
-      expect(reasoningProblems(t, [], false, undefined, false, false, true)).toContain(
+      expect(reasoningProblems(t, [], false, undefined, false, true)).toContain(
         'makes an absence claim',
       );
       expect(reasoningProblems(t, [])).toContain('makes an absence claim');
+      expect(
+        reasoningProblems('Regeringen föreslog X. Reservvattentäkter nämns i dem inte.', []),
+      ).toContain('makes an absence claim');
     });
   });
 

@@ -384,12 +384,12 @@ export const ABSENCE_CLAIM =
 
 /**
  * Further phrasings for the Tidö texts (hemsida-6vh): contrast and negation forms ("men inte X",
- * "..., inte X", "täcker inte", "visas inte") that said the same thing in other words. The manifesto
- * texts are checked with ABSENCE_CLAIM only, so their cached texts stay valid.
+ * "..., inte X", "täcker inte", "visas inte") that said the same thing in other words. Since
+ * hemsida-9ql every text, manifesto ones included, is checked with both patterns.
  */
 const TIDO_ABSENCE_EXTRA = new RegExp(
   [
-    String.raw`\b(?:omn[äa]mns|n[äa]mns|framg[åa]r|ing[åa]r|behandlas|ber[öo]rs|diskuteras|t[äa]cks|omfattas|regleras|anges|uttrycks|visas|genomf[öo]rs|föreslås|innehålls)\s+(?:\w+\s+)?(?:inte|ej)\b`,
+    String.raw`\b(?:omn[äa]mns|n[äa]mns|framg[åa]r|ing[åa]r|behandlas|ber[öo]rs|diskuteras|t[äa]cks|omfattas|regleras|anges|uttrycks|visas|genomf[öo]rs|föreslås|innehålls)\s+(?:\w+\s+){0,3}(?:inte|ej)\b`,
     String.raw`\b(?:tas|tar|togs|tog)\s+(?:\w+\s+)?inte\s+upp`,
     String.raw`\b(?:täcker|omfattar|gäller|rör|handlar\s+om|behandlar|reglerar|innebär|innehåller|innefattar|avser|berör|visar|ger|genomför|gör|föreslår|riktar\s+sig|syftar)\s+(?:\w+\s+){0,2}?(?:inte|ej)\b`,
     String.raw`\b(?:beskriver|beskrivs|redovisar|redovisas|syns|nämner|finns)\s+(?:inte|ej)\b`,
@@ -428,7 +428,6 @@ export function reasoningProblems(
   coverage?: 'unconfirmed_full' | 'partial',
   inquiry = false,
   nonLegislative = false,
-  _manifesto = false,
 ): string[] {
   const problems: string[] = [];
   // No text may claim absence (hemsida-6vh); manifesto texts used a narrower rule until hemsida-9ql.

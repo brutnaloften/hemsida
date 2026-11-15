@@ -375,6 +375,32 @@ describe('applyLinks', () => {
       expect(applyLinks(base, [judged], new Map([['B1', nej]]), '2026-11-10')).toBeNull();
     });
 
+    it('lets the reason decide when the summary has both a yes and a no, and drops a skrivelse', () => {
+      const mixed = {
+        ...doc('B1', 'bet', '2026-05-01', 'TU11'),
+        text: 'Luftfartssamarbetet ska fortsätta (TU11) Riksdagen sa ja till regeringens förslag om samarbetet. Riksdagen sa nej till cirka 60 motioner.',
+      };
+      const rejecting = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande rejects motions on aviation climate measures.',
+      });
+      expect(applyLinks(base, [rejecting], new Map([['B1', mixed]]), '2026-11-10')).toBeNull();
+      const adopting = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande approves a bill that cuts the subsidy.',
+      });
+      expect(applyLinks(base, [adopting], new Map([['B1', mixed]]), '2026-11-10')).not.toBeNull();
+      const skr = {
+        ...doc('B1', 'bet', '2026-05-01', 'MJU8'),
+        text: 'Skrivelse om reduktionsplikten har behandlats (MJU8) Riksdagen har behandlat en skrivelse',
+      };
+      const endorses = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande endorses the sharp cut in the reduktionsplikt.',
+      });
+      expect(applyLinks(base, [endorses], new Map([['B1', skr]]), '2026-11-10')).toBeNull();
+    });
+
     it('drops a contradicts judgement the judge itself calls beside the point', () => {
       const off = against('S1', {
         reason: 'It restricts hunters and does nothing to give mountain hunting equal terms.',

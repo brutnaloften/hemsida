@@ -90,9 +90,14 @@ const OFF_TOPIC =
 export function onlyRejectsMotions(pair: JudgedPair, doc: StoreDocument): boolean {
   if (doc.doktyp !== 'bet') return false;
   const head = (doc.text ?? '').slice(0, 600);
+  // A skrivelse "lagd till handlingarna" / "har behandlats" is no decision against anything.
+  if (/^Skrivelse /.test(head)) return true;
   if (head) {
-    if (/Riksdagen sa ja till|Riksdagen biföll|Riksdagen godkände/.test(head)) return false;
-    if (/Nej till motioner|Riksdagen sa nej till/.test(head)) return true;
+    const yes = /Riksdagen sa ja till|Riksdagen biföll|Riksdagen godkände/.test(head);
+    const no = /Nej till motioner|\bsa nej till\b/.test(head);
+    // Both in one summary (a bill plus rejected motions on other things): the judge's reason decides.
+    if (yes && !no) return false;
+    if (no && !yes) return true;
   }
   if (!pair.reason) return false;
   return REJECTS_MOTIONS.test(pair.reason) && !ADOPTS_MEASURE.test(pair.reason);
