@@ -335,6 +335,55 @@ describe('applyLinks', () => {
       expect(r.evidence.some((e) => e.kind === 'bet')).toBe(false);
     });
 
+    it('removes the last Riksdag entry instead of returning no change', () => {
+      const earlier = applyLinks(
+        base,
+        [against('B1', { stage: 'definitive' })],
+        docs,
+        '2026-11-10',
+      )!;
+      const promise = promiseSchema.parse({ ...base, ...earlier });
+      expect(promise.evidence.map((e) => e.kind)).toEqual(['bet']);
+      const rejects = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande rejects motions on VAT rates.',
+      });
+      const r = applyLinks(promise, [rejects], docs, '2026-11-10');
+      expect(r).not.toBeNull();
+      expect(r!.evidence).toEqual([]);
+    });
+
+    it('keeps a passed bill whose summary says the Riksdag said yes, whatever the reason says', () => {
+      const nato = {
+        ...doc('B1', 'bet', '2026-05-01', 'FöU14'),
+        text: 'Förbättrade förutsättningar för operativt militärt samarbete (FöU14) Riksdagen sa ja till regeringens förslag',
+      };
+      const judged = against('B1', {
+        stage: 'definitive',
+        reason:
+          'The adopted betänkande approves laws deepening military cooperation and rejects the opposing motions, so it works against the promise.',
+      });
+      const r = applyLinks(base, [judged], new Map([['B1', nato]]), '2026-11-10')!;
+      expect(r.evidence.map((e) => (e as { relevance: string }).relevance)).toEqual([
+        'contradicts',
+      ]);
+      // Same reason, but the summary is a plain rejection of motions: dropped.
+      const nej = {
+        ...nato,
+        text: 'Nej till motioner om försvaret (FöU1) Riksdagen sa nej till förslag i motioner',
+      };
+      expect(applyLinks(base, [judged], new Map([['B1', nej]]), '2026-11-10')).toBeNull();
+    });
+
+    it('drops a contradicts judgement the judge itself calls beside the point', () => {
+      const off = against('S1', {
+        reason: 'It restricts hunters and does nothing to give mountain hunting equal terms.',
+      });
+      expect(
+        applyLinks(base, [pair('P1'), off], docs, '2026-11-10')!.evidence.map((e) => e.kind),
+      ).toEqual(['prop']);
+    });
+
     it('skips background contradicts and unproposed pairs', () => {
       const r = applyLinks(
         base,

@@ -76,15 +76,31 @@ export interface JudgedPair {
 
 const REJECTS_MOTIONS = /\b(rejects|avslag|avstyr\w*)\b[^.]*\bmotion/i;
 const ADOPTS_MEASURE =
-  /\b(bifall\w*|approves (a|an|the|bill|prop|amendments|pausing)|raises|lowers|cuts|extends|pauses|removes)\b/i;
+  /\b(bifall\w*|approves|adopts|endorses|raises|lowers|cuts|extends|pauses|removes)\b/i;
+/** The judge itself says the document is beside the point or does not act on the promise. */
+const OFF_TOPIC =
+  /\b(does nothing|does not advance|doesn'?t advance|does not act on|no connection|different subject|unrelated)\b/i;
 
 /**
- * A betänkande whose judged content is that the committee rejects motions about the topic (and adopts no
+ * A betänkande whose content is that the committee rejects motions about the topic (and adopts no
  * measure of its own) says the Riksdag did not act; that is not a document working against the promise.
+ * The structural signal is the document's own summary ("Riksdagen sa nej till ..." / "Nej till motioner
+ * om ..." against "Riksdagen sa ja till ..."); without a text the judge's reason is used.
  */
 export function onlyRejectsMotions(pair: JudgedPair, doc: StoreDocument): boolean {
-  if (doc.doktyp !== 'bet' || !pair.reason) return false;
+  if (doc.doktyp !== 'bet') return false;
+  const head = (doc.text ?? '').slice(0, 600);
+  if (head) {
+    if (/Riksdagen sa ja till|Riksdagen biföll|Riksdagen godkände/.test(head)) return false;
+    if (/Nej till motioner|Riksdagen sa nej till/.test(head)) return true;
+  }
+  if (!pair.reason) return false;
   return REJECTS_MOTIONS.test(pair.reason) && !ADOPTS_MEASURE.test(pair.reason);
+}
+
+/** A `contradicts` judgement that is not one: a motion-rejecting betänkande, or off-topic by the judge's own words. */
+export function falseContradiction(pair: JudgedPair, doc: StoreDocument): boolean {
+  return onlyRejectsMotions(pair, doc) || (!!pair.reason && OFF_TOPIC.test(pair.reason));
 }
 
 /**
@@ -401,7 +417,7 @@ export function applyLinks(
     if (!doc || !['dir', 'sou', 'ds', 'prop', 'bet'].includes(doc.doktyp) || isSkrivelse(doc))
       continue;
     if (pair.label === 'contradicts') {
-      if (onlyRejectsMotions(pair, doc)) {
+      if (falseContradiction(pair, doc)) {
         rejectedMotions.add(doc.dok_id);
         continue;
       }

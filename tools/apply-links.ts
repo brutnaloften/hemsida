@@ -54,6 +54,11 @@ type ResultRow = {
 // Several runs may be given, comma separated (the main run, then a re-link of split promises). For a
 // promise judged in more than one run the LATER run replaces the earlier one completely, so applying
 // them one after another with separate invocations no longer flip-flops.
+// Judge `contradicts` labels checked by hand and found off topic: treated as `no_match` (reasons in the file).
+const contradictsOverrides = loadJson(resolve(root, 'tools/contradicts-overrides.json')) as Record<
+  string,
+  string
+>;
 const runPairs: JudgedPair[][] = [];
 for (const run of values.run.split(',')) {
   const results = loadJson(resolve(root, 'tools/out/link-runs', run, 'results.json')) as
@@ -70,7 +75,9 @@ for (const run of values.run.split(',')) {
     rows.map((r) => ({
       promise_id: r.promise_id,
       document_id: r.document_id,
-      label: r.judgement.label,
+      label: contradictsOverrides[`${r.promise_id}::${r.document_id}`]
+        ? 'no_match'
+        : r.judgement.label,
       stage: r.judgement.stage,
       confidence: r.judgement.confidence,
       reason: r.judgement.reason,

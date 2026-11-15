@@ -345,8 +345,8 @@ describe('write-reasoning', () => {
       expect(reasoningProblems(t, [], false, undefined, false, true, true)).toContain(
         'makes an absence claim',
       );
-      // Manifesto (legacy) rule: a legislative text may still say it; Tidö texts never may.
-      expect(reasoningProblems(t, [], false, undefined, false, false, true)).not.toContain(
+      // Manifesto texts are held to the same rule since hemsida-9ql.
+      expect(reasoningProblems(t, [], false, undefined, false, false, true)).toContain(
         'makes an absence claim',
       );
       expect(reasoningProblems(t, [])).toContain('makes an absence claim');

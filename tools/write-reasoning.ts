@@ -126,7 +126,14 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     continue;
   }
   const prompt = buildReasoningPrompt(p, items, today, inquiry);
-  const instructions = reasoningInstructions(items, p.verdict.value, today, p.type, manifesto);
+  // A manifesto promise backed by a law gets the same strict instructions as the Tidö ones.
+  const instructions = reasoningInstructions(
+    items,
+    p.verdict.value,
+    today,
+    p.type,
+    manifesto && !items.some((i) => i.kind === 'sfs'),
+  );
   jobs.push({
     file,
     raw: rawPromise,

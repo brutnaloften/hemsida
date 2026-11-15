@@ -428,16 +428,11 @@ export function reasoningProblems(
   coverage?: 'unconfirmed_full' | 'partial',
   inquiry = false,
   nonLegislative = false,
-  legacyAbsence = false,
+  _manifesto = false,
 ): string[] {
   const problems: string[] = [];
-  // Manifesto promises (`legacyAbsence`) keep the narrower rule; Tidö texts may never claim absence.
-  if (
-    legacyAbsence
-      ? (nonLegislative || inquiry) && ABSENCE_CLAIM.test(text)
-      : absenceSentences(text).length > 0
-  )
-    problems.push('makes an absence claim');
+  // No text may claim absence (hemsida-6vh); manifesto texts used a narrower rule until hemsida-9ql.
+  if (absenceSentences(text).length > 0) problems.push('makes an absence claim');
   if (inquiry) {
     // A directive-based verdict has no law behind it.
     // Describing what the directive asks the inquiry to propose is fine; saying a law or a decision exists is not.
