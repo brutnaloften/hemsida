@@ -48,7 +48,7 @@ if (!values.run) throw new Error('usage: apply-links.ts --run <name> [--dry-run]
 type ResultRow = {
   promise_id: string;
   document_id: string;
-  judgement: Omit<JudgedPair, 'promise_id' | 'document_id' | 'proposed'>;
+  judgement: Omit<JudgedPair, 'promise_id' | 'document_id' | 'proposed'> & { reason?: string };
   proposed: boolean;
 };
 // Several runs may be given, comma separated (the main run, then a re-link of split promises). For a
@@ -73,6 +73,7 @@ for (const run of values.run.split(',')) {
       label: r.judgement.label,
       stage: r.judgement.stage,
       confidence: r.judgement.confidence,
+      reason: r.judgement.reason,
       proposed:
         r.proposed ||
         (r.judgement.label === 'contradicts' &&

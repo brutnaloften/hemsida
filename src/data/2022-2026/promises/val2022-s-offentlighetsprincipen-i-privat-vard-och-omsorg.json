@@ -19,8 +19,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i april 2024 att offentlighetsprincipen ska införas hos privata aktörer inom skolväsendet, som fristående skolor, förskolor, fritidshem och privat vuxenutbildning. Utredningen gäller alltså en del av löftet, utbildningsområdet. Dokumenten visar ett förslag, inget beslut.",
-    "date": "2026-11-12",
+    "reasoning": "En statlig utredning föreslog i april 2024 att offentlighetsprincipen ska gälla hos fristående skolor, förskolor, fritidshem och privat komvux. Riksdagen beslutade i maj 2026 att offentlighetsprincipen ska gälla privata huvudmän i skolväsendet, med lättnadsregler för mindre huvudmän. Dokumenten gäller alltså bara skolväsendet, en del av löftet, och inte privat vård och omsorg.",
+    "date": "2026-11-15",
     "history": [
       {
         "value": "unassessed",
@@ -37,6 +37,16 @@
       "title": "Offentlighetsprincipen eller insynslag, Allmänhetens insyn i enskilda aktörer inom skolväsendet",
       "date": "2024-04-19",
       "url": "https://data.riksdagen.se/dokument/HCB328.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU20",
+      "designation": "Bet. 2025/26:UbU20",
+      "title": "Offentlighetsprincipen med lättnadsregler för enskilda mindre huvudmän i skolväsendet",
+      "date": "2026-05-08",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU20.html",
       "relevance": "partial",
       "note": null
     }

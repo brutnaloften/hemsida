@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["välfärdsbrott", "socialförsäkring", "bidragsbrott"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2024 en utredare i uppdrag att se över hur ökad digitalisering inom socialförsäkringen kan motverka bidragsbrott och felaktiga utbetalningar. Riksdagen beslutade i mars 2025 att lägga en skrivelse om Riksrevisionens granskning av utländska inkomster i socialförsäkringen till handlingarna. Dokumenten gäller digitalisering och kontroller av utbetalningar, alltså en del av löftet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,26 @@
       ],
       "outcome": "included",
       "note": "Avtalet inrättar en ny myndighet för välfärdsutbetalningar och skärper bidragsbrottslagen."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB159",
+      "designation": "Dir. 2024:59",
+      "title": "Ökad digitalisering på socialförsäkringsområdet för att motverka bidragsbrott och förebygga felaktiga utbetalningar",
+      "date": "2024-06-20",
+      "url": "https://data.riksdagen.se/dokument/HCB159.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SfU16",
+      "designation": "Bet. 2024/25:SfU16",
+      "title": "Riksrevisionens rapport om socialförsäkringen vid utländska inkomster",
+      "date": "2025-03-24",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU16.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

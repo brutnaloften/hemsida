@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["återfall", "straffskärpning", "recidiv", "straffmätning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 en utredning tilläggsdirektiv att föreslå en skärpt återfallsreglering. I juli 2023 fick en annan utredning i uppdrag att se över straffskalorna, vilket gäller en del av löftet. Riksdagen biföll i maj 2026 ett förslag om skärpt återfallsreglering och tydligare reaktioner vid återfall, genom ändringar i brottsbalken och fängelselagen.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,26 @@
       "date": "2022-10-14",
       "promises": ["tido-aterfall-straffas-hardare"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB174",
+      "designation": "Dir. 2023:74",
+      "title": "Tilläggsdirektiv till Utredningen om ett förstärkt samhällsskydd och en minskad risk för återfall i brott (Ju 2022:10)",
+      "date": "2023-06-01",
+      "url": "https://data.riksdagen.se/dokument/HBB174.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1115",
+      "designation": "Dir. 2023:115",
+      "title": "En översyn av straffskalorna samt ett reformerat och mer rättvist påföljdssystem",
+      "date": "2023-07-20",
+      "url": "https://data.riksdagen.se/dokument/HBB1115.html",
+      "relevance": "partial",
       "note": null
     },
     {

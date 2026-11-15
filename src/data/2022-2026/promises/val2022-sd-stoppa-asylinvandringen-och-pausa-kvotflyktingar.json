@@ -19,8 +19,8 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i augusti 2023 tilläggsdirektiv till utredningen om stärkt återvändandeverksamhet. Direktivet gäller den del av löftet som rör återvändande, bland annat inre utlänningskontroller, biometri, längre återreseförbud och ingen preskription. Dokumentet är ett direktiv till en utredning, inget beslut.",
-    "date": "2026-11-12",
+    "reasoning": "Regeringen gav i juni och augusti 2023 två utredningar tilläggsuppdrag om bland annat anmälningsplikt, områdesbegränsning och effektivare återvändande. Riksdagen beslutade i januari 2025 att boende hos Migrationsverket ska vara huvudregel för asylsökande, med återvändandecenter. Dessa dokument gäller återvändande, inte stopp för asylinvandringen eller paus i kvotflyktingmottagandet.",
+    "date": "2026-11-15",
     "history": [
       {
         "value": "unassessed",
@@ -44,11 +44,31 @@
     },
     {
       "kind": "dir",
+      "dok_id": "HBB193",
+      "designation": "Dir. 2023:93",
+      "title": "Tilläggsdirektiv till Utredningen om ett ordnat initialt mottagande av asylsökande (Ju 2021:12)",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB193.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
       "dok_id": "HBB1126",
       "designation": "Dir. 2023:126",
       "title": "Tilläggsdirektiv till Utredningen om stärkt återvändandeverksamhet (Ju 2022:12)",
       "date": "2023-08-30",
       "url": "https://data.riksdagen.se/dokument/HBB1126.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SfU11",
+      "designation": "Bet. 2024/25:SfU11",
+      "title": "En ny ordning för asylsökandes boende",
+      "date": "2025-01-23",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU11.html",
       "relevance": "partial",
       "note": null
     }

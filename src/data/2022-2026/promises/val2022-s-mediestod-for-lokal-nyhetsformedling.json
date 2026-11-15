@@ -17,10 +17,38 @@
   "committee": "KrU",
   "keywords": ["mediestöd", "lokal journalistik", "nyhetsförmedling", "presstöd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i juni 2023 fram ett förslag om ett nytt mediestöd, med syfte att främja tillgång till oberoende nyheter och lokal och regional nyhetsförmedling i hela landet. Riksdagen fattade i november 2023 beslut om förslaget. Båda dokumenten gäller löftet som helhet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA03133",
+      "designation": "Prop. 2022/23:133",
+      "title": "Ett hållbart mediestöd för hela landet",
+      "date": "2023-06-20",
+      "url": "https://data.riksdagen.se/dokument/HA03133.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01KU3",
+      "designation": "Bet. 2023/24:KU3",
+      "title": "Ett hållbart mediestöd för hela landet",
+      "date": "2023-11-09",
+      "url": "https://data.riksdagen.se/dokument/HB01KU3.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

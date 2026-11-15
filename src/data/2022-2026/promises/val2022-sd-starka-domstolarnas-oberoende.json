@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["domstolar", "oberoende", "domarutnämningar"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i januari 2023 tilläggsdirektiv till grundlagskommittén, som arbetar med ett förstärkt skydd för demokratin och domstolarnas oberoende. Direktivet förlängde kommitténs tid till den 31 mars 2023. Dokumentet gäller en del av löftet och är ett förberedande steg.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB18",
+      "designation": "Dir. 2023:8",
+      "title": "Tilläggsdirektiv till 2020 års grundlagskommitté (Ju 2020:04)",
+      "date": "2023-01-26",
+      "url": "https://data.riksdagen.se/dokument/HBB18.html",
+      "relevance": "partial",
       "note": null
     }
   ]

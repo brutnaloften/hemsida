@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["elnät", "tillståndsprocesser", "utbyggnad", "investeringar"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juli 2026 en utredare i uppdrag att se över elnätsavgifterna, avkastningen för nätbolagen och en indelning av elnäten på två nivåer, där Svenska kraftnät tar över regionnäten. Uppdraget rör bara en del av löftet, nämligen hur elnätet regleras och finansieras.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB183",
+      "designation": "Dir. 2026:83",
+      "title": "Framtidens elnätsavgifter och indelning på två nivåer av elnäten i Sverige",
+      "date": "2026-07-23",
+      "url": "https://data.riksdagen.se/dokument/HEB183.html",
+      "relevance": "partial",
       "note": null
     }
   ]

@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["sekretess", "informationsutbyte", "myndighetssamverkan", "brottsbekämpning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i januari 2023 en utredare i uppdrag att föreslå en ny huvudregel för informationsutbyte med brottsbekämpande myndigheter och att ta bort begränsningar för elektroniskt utbyte. Riksdagen beslutade i februari 2025 om ökat informationsflöde till brottsbekämpningen, med en skyldighet att dela information och ändrade sekretessregler. Båda stegen gäller delen om att myndigheter ska kunna dela uppgifter för att förebygga och klara upp brott.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-sekretess-huvudregel-informationsdelning-brottsbekampning"],
       "outcome": "included",
       "note": "Avtalet inför en ny huvudregel i sekretesslagstiftningen om att all relevant information ska delas med brottsbekämpande myndigheter."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB111",
+      "designation": "Dir. 2023:11",
+      "title": "Tilläggsdirektiv till Utredningen om förbättrade möjligheter att utbyta information med brottsbekämpande myndigheter (Ju 2022:03)",
+      "date": "2023-01-26",
+      "url": "https://data.riksdagen.se/dokument/HBB111.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",

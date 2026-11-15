@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["tandvård", "högkostnadsskydd", "äldre", "tandvårdsstöd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i oktober 2023 en utredning i uppdrag att föreslå hur tandvårdens högkostnadsskydd kan stärkas, med fokus på äldre med sämst munhälsa. Riksdagen beslutade i november 2025 om en ny särskild tandvårdsersättning där ålder är första steget. Beslutet gäller en del av löftet: reformen genomförs stegvis.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-tandvardsreform-hogkostnadsskydd"],
       "outcome": "weakened",
       "note": "Avtalet tillsätter bara en utredning om tandvårdens högkostnadsskydd, med prioritet för äldre med sämst munhälsa."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1138",
+      "designation": "Dir. 2023:138",
+      "title": "Tilläggsdirektiv till Utredningen om stärkt stöd till tandvård för våldsutsatta och ökad kontroll över tandvårdssektorn (S 2022:12)",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HBB1138.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU10",
+      "designation": "Bet. 2025/26:SoU10",
+      "title": "Ett förstärkt högkostnadsskydd för tandvård",
+      "date": "2025-11-27",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU10.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

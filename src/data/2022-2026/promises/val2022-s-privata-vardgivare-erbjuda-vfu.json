@@ -17,10 +17,28 @@
   "committee": "SoU",
   "keywords": ["verksamhetsförlagd utbildning", "privata vårdgivare", "vårdutbildning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i februari 2024 åtgärder för att fler privata vårdgivare ska delta i verksamhetsförlagd utbildning, bland annat stöd från Upphandlingsmyndigheten och ett nationellt avtal som även Vårdföretagarna ingår i. Utredningen föreslår inte någon lagstadgad skyldighet för privata vårdgivare. Dokumentet visar förslag, inget beslut.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB39",
+      "designation": "SOU 2024:9",
+      "title": "Utvecklat samarbete för verksamhetsförlagd utbildning",
+      "date": "2024-02-02",
+      "url": "https://data.riksdagen.se/dokument/HCB39.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

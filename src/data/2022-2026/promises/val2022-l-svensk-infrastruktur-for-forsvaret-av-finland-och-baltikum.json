@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["Nato", "infrastruktur", "Finland", "Baltikum", "strategiskt djup"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i april 2026 ett svenskt bidrag på upp till 1 200 soldater till Natos närvaro i Finland, och riksdagen biföll det i maj, med en bataljon i Boden. I juni 2026 beslutade riksdagen om bättre förutsättningar för militärt samarbete, så att Sverige kan ta emot Nato och allierade styrkor. Dokumenten rör delar av löftet: Finland och mottagandet av allierade.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,12 +39,32 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03220",
+      "designation": "Prop. 2025/26:220",
+      "title": "Svenskt bidrag till Natos framskjutna närvaro i Finland",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03220.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01UFöU3",
       "designation": "Bet. 2025/26:UFöU3",
       "title": "Svenskt bidrag till Natos framskjutna närvaro i Finland",
       "date": "2026-05-26",
       "url": "https://data.riksdagen.se/dokument/HD01UFöU3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01FöU14",
+      "designation": "Bet. 2025/26:FöU14",
+      "title": "Förbättrade förutsättningar för operativt militärt samarbete",
+      "date": "2026-06-10",
+      "url": "https://data.riksdagen.se/dokument/HD01FöU14.html",
       "relevance": "partial",
       "note": null
     }

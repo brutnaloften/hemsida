@@ -17,10 +17,28 @@
   "committee": "UbU",
   "keywords": ["skolpeng", "huvudmän", "elevers behov", "skolfinansiering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i november 2023 en utredare i uppdrag att föreslå en nationell skolpengsnorm. Normen ska ta hänsyn till att kommunala och fristående huvudmän har olika ansvar och till elevernas behov. Dokumentet är ett utredningsdirektiv och visar uppdraget, inget beslut om en ny skolpeng.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1153",
+      "designation": "Dir. 2023:153",
+      "title": "En nationell skolpengsnorm för ökad likvärdighet",
+      "date": "2023-11-02",
+      "url": "https://data.riksdagen.se/dokument/HBB1153.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

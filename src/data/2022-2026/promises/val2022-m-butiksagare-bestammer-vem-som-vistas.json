@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["butiksägare", "tillträdesförbud", "butikslokal", "ordningslag"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i september 2025 en utredare i uppdrag att lämna förslag om att utvidga straffansvaret för olaga intrång, så att till exempel butiksägare själva kan besluta om tillträdesförbud som är straffsanktionerade. Dokumentet visar ett uppdrag om förslag, inget beslut. Det gäller löftets kärna: butiksägares rätt att avgöra vem som får vistas i butiken.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB182",
+      "designation": "Dir. 2025:82",
+      "title": "En starkare nödvärnsrätt och ett effektivare tillträdesförbud",
+      "date": "2025-09-11",
+      "url": "https://data.riksdagen.se/dokument/HDB182.html",
+      "relevance": "full",
       "note": null
     }
   ]

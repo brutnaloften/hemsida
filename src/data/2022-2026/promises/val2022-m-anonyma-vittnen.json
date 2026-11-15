@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["anonyma vittnen", "vittnen", "rättegång", "vittnesskydd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i december 2022 en utredare i uppdrag att föreslå ett system med anonyma vittnen, så att fler vågar vittna. I oktober 2023 lade utredningen fram ett förslag om en ny lag som gör det möjligt att höra vittnen anonymt i brottmål. Dokumenten visar uppdrag och förslag, inget beslut.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,26 @@
       "date": "2022-10-14",
       "promises": ["tido-anonyma-vittnen"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HAB1141",
+      "designation": "Dir. 2022:141",
+      "title": "Anonyma vittnen",
+      "date": "2022-12-19",
+      "url": "https://data.riksdagen.se/dokument/HAB1141.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB367",
+      "designation": "SOU 2023:67",
+      "title": "Anonyma vittnen",
+      "date": "2023-10-30",
+      "url": "https://data.riksdagen.se/dokument/HBB367.html",
+      "relevance": "full",
       "note": null
     }
   ]

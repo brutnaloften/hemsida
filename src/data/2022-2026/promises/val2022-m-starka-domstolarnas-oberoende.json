@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["domstolarnas oberoende", "fri- och rättigheter", "grundlagen", "rättsstaten"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2025 fram ett förslag om grundlagsändringar som ska stärka domstolarnas och domarnas oberoende. Förslaget gör också grundlagen svårare att ändra och låter Lagrådet granska lagar om grundläggande fri- och rättigheter. Riksdagen fattade beslut i frågan i september 2025.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-fullfolj-grundlagsutredning-domstolarnas-oberoende"],
       "outcome": "weakened",
       "note": "Avtalet nämner endast att den pågående grundlagsutredningen om domstolarnas oberoende fullföljs."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03165",
+      "designation": "Prop. 2024/25:165",
+      "title": "Stärkt skydd för demokratin och domstolarnas oberoende",
+      "date": "2025-04-28",
+      "url": "https://data.riksdagen.se/dokument/HC03165.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01KU2",
+      "designation": "Bet. 2025/26:KU2",
+      "title": "Stärkt skydd för demokratin och domstolarnas oberoende",
+      "date": "2025-09-29",
+      "url": "https://data.riksdagen.se/dokument/HD01KU2.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

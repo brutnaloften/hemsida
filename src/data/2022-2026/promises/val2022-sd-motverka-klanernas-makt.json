@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["klaner", "civilsamhälle", "infiltration"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2024 fram ett förslag om enhetliga demokratikrav för statligt stöd till trossamfund, Allmänna arvsfonden och civilsamhället. Riksdagen beslutade i juni 2024 om de nya villkoren, bland annat att stöd inte ges där det förekommer våld, tvång eller hot. Dokumenten gäller den del av löftet som rör stöd till civilsamhället och trossamfund.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,26 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB03119",
+      "designation": "Prop. 2023/24:119",
+      "title": "Statens stöd till trossamfund och civilsamhället – enhetliga och rättssäkra villkor",
+      "date": "2024-04-03",
+      "url": "https://data.riksdagen.se/dokument/HB03119.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01KrU7",
+      "designation": "Bet. 2023/24:KrU7",
+      "title": "Statens stöd till trossamfund och civilsamhället",
+      "date": "2024-06-13",
+      "url": "https://data.riksdagen.se/dokument/HB01KrU7.html",
+      "relevance": "partial",
       "note": null
     }
   ]

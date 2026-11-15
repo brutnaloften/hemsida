@@ -17,10 +17,38 @@
   "committee": "SfU",
   "keywords": ["nyanlända", "trygghetssystem", "kvalificering", "bidrag"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i oktober 2023 en utredning i uppdrag att föreslå en ny modell där nyanlända och icke-medborgare gradvis kvalificerar sig till socialförsäkring och ekonomiskt bistånd genom arbete, vistelsetid och egen insats. Riksdagen beslutade i maj 2026 om en kvalificeringstid, som kan förkortas genom arbete, för bosättningsbaserade förmåner i socialförsäkringen.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1149",
+      "designation": "Dir. 2023:149",
+      "title": "En ny modell för kvalificering till socialförsäkring och ekonomiskt bistånd för nyanlända och icke-medborgare",
+      "date": "2023-10-19",
+      "url": "https://data.riksdagen.se/dokument/HBB1149.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU21",
+      "designation": "Bet. 2025/26:SfU21",
+      "title": "Kvalificering till socialförsäkringen",
+      "date": "2026-05-06",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU21.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

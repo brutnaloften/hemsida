@@ -17,12 +17,29 @@
   "committee": "SkU",
   "keywords": ["fastighetsskatt", "fastighetsavgift", "skatter", "bostadsskatt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i mars 2024 att värdet av maskiner i vissa industribyggnader ska undantas från fastighetsskatt. Det gäller bara en del av löftet. Riksdagen beslutade i april 2025, efter skatteutskottets förslag, att avslå förslag om en statlig fastighetsskatt.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB320",
+      "designation": "SOU 2024:20",
+      "title": "Maskinellt värde för vissa industribyggnader - ett undantag från fastighetsskatt",
+      "date": "2024-03-05",
+      "url": "https://data.riksdagen.se/dokument/HCB320.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HC01SkU13",

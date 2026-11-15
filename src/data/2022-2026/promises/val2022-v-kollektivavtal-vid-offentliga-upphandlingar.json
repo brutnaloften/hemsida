@@ -17,10 +17,28 @@
   "committee": "FiU",
   "keywords": ["kollektivavtal", "offentlig upphandling", "arbetsklausuler", "upphandlingslagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i december 2022 en utredare i uppdrag att genomföra EU:s direktiv om minimilöner. En del av uppdraget är att bedöma om de svenska reglerna om sociala och arbetsrättsliga krav vid offentlig upphandling, bland annat lönevillkor enligt kollektivavtal, uppfyller direktivets krav. Dokumentet gäller bara den delen av löftet och innehåller inget förslag om krav på kollektivavtal.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HAB1140",
+      "designation": "Dir. 2022:140",
+      "title": "Genomförande av direktivet om tillräckliga minimilöner",
+      "date": "2022-12-15",
+      "url": "https://data.riksdagen.se/dokument/HAB1140.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

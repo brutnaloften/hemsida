@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["samhällsorientering", "nyanlända", "rättigheter", "hedersförtryck", "introduktion"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i december 2023 en utredare i uppdrag att föreslå att samhällsorienteringen blir obligatorisk för nyanlända, kopplad till bland annat etableringsersättning, med innehåll om rättigheter och skyldigheter. I september 2024 beslutade regeringen om tilläggsdirektiv som ändrade utredningens tidsfrist. Dokumenten visar uppdrag och förslagsarbete, inget beslut.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-obligatorisk-samhallsintroduktion-och-samhallsorientering"],
       "outcome": "included",
       "note": "Avtalet gör samhällsintroduktion och samhällsorientering obligatoriska och villkorade."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1169",
+      "designation": "Dir. 2023:169",
+      "title": "En förbättrad samhällsorientering för nyanlända",
+      "date": "2023-12-14",
+      "url": "https://data.riksdagen.se/dokument/HBB1169.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB189",
+      "designation": "Dir. 2024:89",
+      "title": "Tilläggsdirektiv till Utredningen om en förbättrad samhällsorientering för nyanlända (A 2023:06)",
+      "date": "2024-09-19",
+      "url": "https://data.riksdagen.se/dokument/HCB189.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

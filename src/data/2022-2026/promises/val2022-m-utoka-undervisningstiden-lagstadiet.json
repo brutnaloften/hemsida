@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["undervisningstid", "lågstadiet", "timplan", "lärarledd undervisning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i december 2023 en utredare i uppdrag att föreslå mer obligatorisk undervisningstid, till exempel lovskola och extra studietid, med fokus på de tidiga skolåren. Dokumentet gäller en del av löftet: mer undervisningstid för elever som behöver det, inte en extra timme om dagen för alla i lågstadiet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-utokad-timplan-svenska-matematik"],
       "outcome": "weakened",
       "note": "Avtalet utökar timplanen med fokus på svenska och matematik, utan en timme per dag i lågstadiet, och med förutsättningar."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1174",
+      "designation": "Dir. 2023:174",
+      "title": "Mer obligatorisk undervisningstid för elever som behöver det",
+      "date": "2023-12-14",
+      "url": "https://data.riksdagen.se/dokument/HBB1174.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

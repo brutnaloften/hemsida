@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["samhällsorientering", "prov", "medborgarskap", "integration"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning lade i maj 2025 fram förslag om ett nationellt skriftligt prov i slutet av samhällsorienteringen. Utredningen föreslår att kursen blir obligatorisk för personer som får ersättning kopplad till deltagande. Dokumentet visar förslag, inget beslut, och gäller en del av löftet: provet och obligatoriet, inte kopplingen till medborgarskap.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,16 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet utreder obligatorisk samhällsorientering med avslutande prov och lägger fram förslag om samhällskunskap för medborgarskap, men inte uttryckligen godkänt prov som medborgarskapskrav."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB355",
+      "designation": "SOU 2025:55",
+      "title": "En reformerad samhällsorientering för bättre integration",
+      "date": "2025-05-08",
+      "url": "https://data.riksdagen.se/dokument/HDB355.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["lånegarantier", "kärnkraft", "statliga garantier", "finansiering", "nyinvestering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2025 fram ett förslag om statligt stöd till ny kärnkraft i form av lån och differenskontrakt. Riksdagen biföll förslaget i maj 2025, och en lag om stöd till investeringar i ny kärnkraft trädde i kraft 1 augusti 2025. Lagen verkar täcka löftet, men det är obekräftat, eftersom stödet är lån och inte uttryckligen garantier.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,12 +39,32 @@
       "note": "Avtalet inför statliga kreditgarantier om 400 miljarder kronor för kärnkraft."
     },
     {
+      "kind": "prop",
+      "dok_id": "HC03150",
+      "designation": "Prop. 2024/25:150",
+      "title": "Finansiering och riskdelning vid investeringar i ny kärnkraft",
+      "date": "2025-03-27",
+      "url": "https://data.riksdagen.se/dokument/HC03150.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HC01NU20",
       "designation": "Bet. 2024/25:NU20",
       "title": "Finansiering och riskdelning vid investeringar i ny kärnkraft",
       "date": "2025-05-16",
       "url": "https://data.riksdagen.se/dokument/HC01NU20.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-587",
+      "designation": "SFS 2025:587",
+      "title": "Lag (2025:587) om statligt stöd för investeringar i ny kärnkraft",
+      "date": "2025-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025587.html",
       "relevance": "full",
       "note": null
     }

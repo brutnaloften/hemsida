@@ -17,15 +17,21 @@
   "committee": "SoU",
   "keywords": ["försörjningsstöd", "aktivitetskrav", "socialbidrag", "heltid"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen presenterade i november 2024 en promemoria med förslag om aktivitetskrav för vuxna som får försörjningsstöd. Huvudförslaget gäller aktivitet på heltid, upp till 40 timmar i veckan, och minskat eller avslaget stöd som sanktion. Dokumenten visar förslag, inget beslut.",
-    "date": "2026-11-12",
+    "reasoning": "Regeringen föreslog i mars 2026 ett aktivitetskrav för den som får försörjningsstöd, och riksdagen biföll förslaget i maj 2026. Lagen trädde i kraft 1 juli 2026. Kravet gäller bara den tid personen kan delta och är lindrat för föräldrar till små barn. Att aktiviteten ska vara på heltid framgår inte fullt ut av dokumenten.",
+    "date": "2026-11-15",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2026-10-29"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen presenterade i november 2024 en promemoria med förslag om aktivitetskrav för vuxna som får försörjningsstöd. Huvudförslaget gäller aktivitet på heltid, upp till 40 timmar i veckan, och minskat eller avslaget stöd som sanktion. Dokumenten visar förslag, inget beslut.",
+        "date": "2026-11-12"
       }
     ]
   },
@@ -47,6 +53,36 @@
       "url": "https://data.riksdagen.se/dokument/HCB429.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03207",
+      "designation": "Prop. 2025/26:207",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03207.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU29",
+      "designation": "Bet. 2025/26:SoU29",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU29.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-730",
+      "designation": "SFS 2026:730",
+      "title": "Lag (2026:730) om ändring i socialtjänstlagen (2025:400)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026730.html",
+      "relevance": "partial",
+      "note": "Kravet gäller inte alla som lever på försörjningsstöd (väntetid på tre månader och flera undantag), och tiden minskas och anpassas efter förmåga, deltidssysselsättning, arbetssökande och barn, så det är inte ett ovillkorligt heltidskrav."
     }
   ]
 }

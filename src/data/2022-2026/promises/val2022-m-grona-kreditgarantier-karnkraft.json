@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["kreditgarantier", "kärnkraft", "finansiering", "gröna garantier"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen biföll i december 2023 budgeten för energi, som tillstyrker kreditgarantier för ny kärnkraft med generösare villkor än dagens gröna garantier. Regeringen lade i mars 2025 fram ett förslag om statligt stöd till ny kärnkraft genom statliga lån och dubbelriktade differenskontrakt. Riksdagen biföll det i maj 2025. Stödet ska underlätta finansieringen.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,26 @@
       "title": "Utgiftsområde 21 Energi",
       "date": "2023-12-08",
       "url": "https://data.riksdagen.se/dokument/HB01NU3.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03150",
+      "designation": "Prop. 2024/25:150",
+      "title": "Finansiering och riskdelning vid investeringar i ny kärnkraft",
+      "date": "2025-03-27",
+      "url": "https://data.riksdagen.se/dokument/HC03150.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01NU20",
+      "designation": "Bet. 2024/25:NU20",
+      "title": "Finansiering och riskdelning vid investeringar i ny kärnkraft",
+      "date": "2025-05-16",
+      "url": "https://data.riksdagen.se/dokument/HC01NU20.html",
       "relevance": "full",
       "note": null
     }

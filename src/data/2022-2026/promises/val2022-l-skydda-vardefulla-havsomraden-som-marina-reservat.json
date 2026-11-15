@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["marina reservat", "havsskydd", "marina skyddade områden", "havsmiljö"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i maj 2023 ett förbud mot bottentrålning i nationalparker, naturreservat, biotopskyddsområden och Natura 2000-områden till havs. Riksdagen biföll i mars 2025 ett förslag som utvidgar möjligheten att förbjuda bottentrålning i skyddade havsområden. Dokumenten gäller skydd av redan skyddade havsområden mot en fiskemetod, alltså en del av löftet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB320",
+      "designation": "SOU 2023:20",
+      "title": "Förbud mot bottentrålning i marina skyddade områden",
+      "date": "2023-05-16",
+      "url": "https://data.riksdagen.se/dokument/HBB320.html",
+      "relevance": "partial",
       "note": null
     },
     {

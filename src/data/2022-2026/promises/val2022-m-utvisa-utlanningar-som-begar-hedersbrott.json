@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["utvisning", "hedersbrott", "medborgarskap", "utvisning på grund av brott"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen tillsatte i maj 2024 en utredning om att skärpa reglerna för utvisning på grund av brott, för alla typer av brott. I juni 2026 biföll riksdagen ett betänkande som skärper reglerna för utvisning av utländska medborgare som döms för brott, och som gör att hedersbrott kan leda till utvisning. Dokumenten gäller utvisning vid brott i allmänhet, alltså en del av löftet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-fler-utvisningar-pa-grund-av-brott"],
       "outcome": "weakened",
       "note": "Avtalet skärper utvisning vid brott generellt via en utredning, utan särskild inriktning mot hedersbrott."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB142",
+      "designation": "Dir. 2024:42",
+      "title": "Skärpt regelverk om utvisning på grund av brott",
+      "date": "2024-05-02",
+      "url": "https://data.riksdagen.se/dokument/HCB142.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU33",
+      "designation": "Bet. 2025/26:SfU33",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

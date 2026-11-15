@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["Nato", "medlemskap", "försvarsallians", "Natoansökan"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2023 fram ett förslag om att riksdagen skulle godkänna Sveriges anslutning till Nordatlantiska fördraget, Natos grundavtal. Riksdagen beslutade den 16 mars 2023 att godkänna anslutningen och det tillhörande avtalet om Natos status. Dokumenten gäller själva medlemskapet i Nato.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA0374",
+      "designation": "Prop. 2022/23:74",
+      "title": "Sveriges medlemskap i Nato",
+      "date": "2023-03-08",
+      "url": "https://data.riksdagen.se/dokument/HA0374.html",
+      "relevance": "full",
       "note": null
     },
     {

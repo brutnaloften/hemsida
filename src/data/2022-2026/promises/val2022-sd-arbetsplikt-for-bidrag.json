@@ -17,15 +17,21 @@
   "committee": "SoU",
   "keywords": ["arbetsplikt", "försörjningsstöd", "aktivitetskrav"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen presenterade i november 2024 en promemoria med förslag om ett obligatoriskt aktivitetskrav för vuxna som får försörjningsstöd. Socialnämnden skulle kunna avslå eller sätta ned bidraget om personen utan godtagbart skäl tackar nej. Dokumentet visar förslag, inget beslut, och gäller försörjningsstödet.",
-    "date": "2026-11-12",
+    "reasoning": "Regeringen presenterade i november 2024 en promemoria och i mars 2026 en proposition om aktivitetskrav för den som får försörjningsstöd. Riksdagen biföll förslaget i maj 2026, och en ändring i socialtjänstlagen trädde i kraft 1 juli 2026. Kravet gäller bara försörjningsstöd; andra bidrag nämns inte i dokumenten.",
+    "date": "2026-11-15",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2026-11-02"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen presenterade i november 2024 en promemoria med förslag om ett obligatoriskt aktivitetskrav för vuxna som får försörjningsstöd. Socialnämnden skulle kunna avslå eller sätta ned bidraget om personen utan godtagbart skäl tackar nej. Dokumentet visar förslag, inget beslut, och gäller försörjningsstödet.",
+        "date": "2026-11-12"
       }
     ]
   },
@@ -50,6 +56,36 @@
       "url": "https://data.riksdagen.se/dokument/HCB429.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03207",
+      "designation": "Prop. 2025/26:207",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03207.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU29",
+      "designation": "Bet. 2025/26:SoU29",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU29.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-730",
+      "designation": "SFS 2026:730",
+      "title": "Lag (2026:730) om ändring i socialtjänstlagen (2025:400)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026730.html",
+      "relevance": "partial",
+      "note": "Kravet gäller bara försörjningsstöd, inte bidrag i allmänhet. Det har flera undantag och är anpassat efter förmåga och är ett aktivitetskrav snarare än en renodlad arbetsplikt."
     }
   ]
 }

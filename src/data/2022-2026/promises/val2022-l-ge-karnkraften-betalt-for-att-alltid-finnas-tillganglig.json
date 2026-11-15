@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["kärnkraft", "planerbar kraft", "ersättning", "effektreserv", "elmarknad"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i maj 2025 om statliga lån och dubbelriktade prisavtal som ger betalt för driften av nya reaktorer. Det gäller en del av löftet. I oktober 2025 gav regeringen en utredare i uppdrag att se över ersättning till kärnkraftsägare om politiska beslut tvingar fram att reaktorer stängs.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,16 @@
       "title": "Finansiering och riskdelning vid investeringar i ny kärnkraft",
       "date": "2025-05-16",
       "url": "https://data.riksdagen.se/dokument/HC01NU20.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB189",
+      "designation": "Dir. 2025:89",
+      "title": "Ersättning vid avveckling av kärnkraftsreaktorer till följd av politiska beslut",
+      "date": "2025-10-02",
+      "url": "https://data.riksdagen.se/dokument/HDB189.html",
       "relevance": "partial",
       "note": null
     }

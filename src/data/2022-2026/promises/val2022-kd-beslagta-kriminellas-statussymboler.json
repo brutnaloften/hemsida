@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["förverkande", "beslag", "statussymboler", "gängkriminalitet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i maj 2024 fram ett förslag om ny förverkandelagstiftning, med bland annat förverkande av egendom som står i missförhållande till lagliga inkomster och ett generellt penningbeslag. Riksdagen fattade beslut om förslaget i september 2024. Dokumenten gäller en del av löftet: möjligheten att ta kriminellas tillgångar i beslag.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-nya-forverkandeformer"],
       "outcome": "weakened",
       "note": "Avtalet inför nya förverkandeformer men nämner inte särskilt kriminellas statussymboler. Osäker."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB03144",
+      "designation": "Prop. 2023/24:144",
+      "title": "En ny förverkandelagstiftning",
+      "date": "2024-05-28",
+      "url": "https://data.riksdagen.se/dokument/HB03144.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU3",
+      "designation": "Bet. 2024/25:JuU3",
+      "title": "En ny förverkandelagstiftning",
+      "date": "2024-09-26",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU3.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

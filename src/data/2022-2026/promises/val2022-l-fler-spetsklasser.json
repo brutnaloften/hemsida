@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["spetsklasser", "spetsutbildning", "högpresterande elever", "skola"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i maj 2024 att riksrekryterande spetsutbildningar i grundskolan blir permanenta och att det ska bli lättare att läsa i snabbare takt och på högre nivå. I juni 2026 lades en departementspromemoria fram med förslag om en försöksverksamhet med spetsutbildning i musik, högst 15 utbildningar med antagning via förmågeprov. Dokumenten gäller delar av löftet: befintliga spetsutbildningar och musik.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,16 @@
       "title": "Att lättare få läsa i snabbare takt och på en högre nivå",
       "date": "2024-05-20",
       "url": "https://data.riksdagen.se/dokument/HB01UbU16.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HEB413",
+      "designation": "Ds 2026:13",
+      "title": "Spetsutbildning i musik i grundskolan – en försöksverksamhet",
+      "date": "2026-06-22",
+      "url": "https://data.riksdagen.se/dokument/HEB413.html",
       "relevance": "partial",
       "note": null
     }

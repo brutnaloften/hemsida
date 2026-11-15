@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["LSS", "nationellt lyft", "funktionshinder"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i oktober 2023 direktiv till en utredning om välfärdsteknik inom socialtjänsten och verksamhet enligt LSS. Utredaren ska föreslå regler för hur sådan teknik får användas. Direktivet gäller en del av löftet om ett nationellt LSS-lyft, nämligen välfärdsteknik inom LSS-verksamhet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1147",
+      "designation": "Dir. 2023:147",
+      "title": "Välfärdsteknik inom socialtjänsten och verksamhet enligt LSS",
+      "date": "2023-10-19",
+      "url": "https://data.riksdagen.se/dokument/HBB1147.html",
+      "relevance": "partial",
       "note": null
     }
   ]

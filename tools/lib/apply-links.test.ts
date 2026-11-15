@@ -303,6 +303,38 @@ describe('applyLinks', () => {
       expect(r.evidence.map((e) => e.kind)).toEqual(['sou', 'bet']);
     });
 
+    it('skips a betänkande that only rejects motions, keeps one that adopts a measure', () => {
+      const rejects = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande rejects motions on VAT rates and keeps VAT uniform.',
+      });
+      const r1 = applyLinks(base, [pair('P1'), rejects], docs, '2026-11-10')!;
+      expect(r1.evidence.map((e) => e.kind)).toEqual(['prop']);
+      const adopts = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande approves a bill that cuts the subsidy and rejects motions.',
+      });
+      const r2 = applyLinks(base, [pair('P1'), adopts], docs, '2026-11-10')!;
+      expect(r2.evidence.map((e) => e.kind)).toEqual(['prop', 'bet']);
+    });
+
+    it('removes an earlier contradicts entry for a betänkande that only rejects motions', () => {
+      const earlier = applyLinks(
+        base,
+        [pair('S1'), against('B1', { stage: 'definitive' })],
+        docs,
+        '2026-11-10',
+      )!;
+      const promise = promiseSchema.parse({ ...base, ...earlier });
+      expect(promise.evidence.map((e) => e.kind)).toContain('bet');
+      const rejects = against('B1', {
+        stage: 'definitive',
+        reason: 'The adopted betänkande rejects motions on VAT rates.',
+      });
+      const r = applyLinks(promise, [pair('S1'), rejects], docs, '2026-11-10')!;
+      expect(r.evidence.some((e) => e.kind === 'bet')).toBe(false);
+    });
+
     it('skips background contradicts and unproposed pairs', () => {
       const r = applyLinks(
         base,

@@ -17,12 +17,39 @@
   "committee": "NU",
   "keywords": ["vindkraft", "kommuner", "kommunalt incitament", "vindkraftsersättning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i november 2022 en utredning i uppdrag att föreslå starkare incitament för kommuner med vindkraft, finansierade av verksamhetsutövarna. Riksdagen beslutade i maj 2026 om en lag om intäktsdelning från vindkraft, som trädde i kraft 1 juli 2026. Lagen betalar ut pengar till boende nära verken, inte till kommuner, så den täcker bara en del av löftet.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HAB1135",
+      "designation": "Dir. 2022:135",
+      "title": "Tilläggsdirektiv till utredningen Stärkta incitament för utbyggd vindkraft (M 2022:03)",
+      "date": "2022-11-24",
+      "url": "https://data.riksdagen.se/dokument/HAB1135.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03239",
+      "designation": "Prop. 2025/26:239",
+      "title": "Vindkraft i kommuner",
+      "date": "2026-04-14",
+      "url": "https://data.riksdagen.se/dokument/HD03239.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HD01NU20",
@@ -32,6 +59,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01NU20.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1113",
+      "designation": "SFS 2026:1113",
+      "title": "Lag (2026:1113) om intäktsdelning från vindkraftsanläggningar",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261113.html",
+      "relevance": "partial",
+      "note": "Stödet går till närboende fastighetsägare och inte till kommuner som medverkar till vindkraftsutbyggnad, och det är inte ett stöd till kommuner."
     }
   ]
 }

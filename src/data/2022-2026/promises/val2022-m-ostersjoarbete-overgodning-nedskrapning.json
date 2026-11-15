@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["Östersjön", "övergödning", "nedskräpning", "internationellt samarbete"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i februari 2023 om ett betänkande om vattenvård som stöder aktivt internationellt samarbete mot övergödning i Östersjön. Regeringen lade i juni 2024 fram en proposition om havsmiljö med minskad övergödning som princip, och riksdagen fattade beslut om den i november 2024. Dokumenten gäller övergödning och samarbete kring Östersjön.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,26 @@
       "title": "Vattenvård",
       "date": "2023-02-23",
       "url": "https://data.riksdagen.se/dokument/HA01MJU7.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB03156",
+      "designation": "Prop. 2023/24:156",
+      "title": "Ett levande hav – ökat skydd, minskad övergödning och ett hållbart fiske",
+      "date": "2024-06-05",
+      "url": "https://data.riksdagen.se/dokument/HB03156.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01MJU5",
+      "designation": "Bet. 2024/25:MJU5",
+      "title": "Ett levande hav – ökat skydd, minskad övergödning och ett hållbart fiske",
+      "date": "2024-11-15",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU5.html",
       "relevance": "partial",
       "note": null
     }

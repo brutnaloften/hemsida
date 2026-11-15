@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["brottsofferersättning", "brottsoffer", "utbetalning", "skadestånd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att se över reglerna för utbetalning av brottsskadeersättning. Brottsoffermyndigheten ska enligt uppdraget kunna betala ut ersättningen när en dom vunnit laga kraft. Uppdraget gäller också gränser för utmätningsförbudet och Kronofogdens roll vid frivilliga betalningar.",
+    "date": "2026-11-15",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-oversyn-brottsskadeersattning-skadestand"],
       "outcome": "weakened",
       "note": "Avtalet säger bara att reglerna för brottsskadeersättning ska ses över, inte att utbetalningen ska underlättas."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB194",
+      "designation": "Dir. 2023:94",
+      "title": "Ersättningsregler med brottsoffret i fokus",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB194.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }
