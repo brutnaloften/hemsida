@@ -17,15 +17,21 @@
   "committee": "SkU",
   "keywords": ["expertskatt", "nyckelpersoner", "utländsk arbetskraft", "skattelättnad"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i september 2023 fram ett förslag om att förlänga tiden för expertskatt från fem till sju år, för att göra det lättare att locka utländska nyckelmedarbetare. Riksdagen fattade i november 2023 beslut om ramarna för statens budget 2024. Dokumenten gäller en del av löftet: förlängd tid, inte en sänkning av själva skatten.",
-    "date": "2026-11-12",
+    "reasoning": "Regeringen föreslog i september 2023 att tiden för expertskatt förlängs från fem till sju år. Riksdagen beslutade i november 2023 om statens budget för 2024, och en ändring i inkomstskattelagen trädde i kraft den 1 januari 2024. Lagen går åt det håll löftet anger men är snävare: den förlänger hur länge lättnaden gäller, men sänker inte skattebördan per år.",
+    "date": "2026-11-15",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-08-08"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i september 2023 fram ett förslag om att förlänga tiden för expertskatt från fem till sju år, för att göra det lättare att locka utländska nyckelmedarbetare. Riksdagen fattade i november 2023 beslut om ramarna för statens budget 2024. Dokumenten gäller en del av löftet: förlängd tid, inte en sänkning av själva skatten.",
+        "date": "2026-11-12"
       }
     ]
   },
@@ -57,6 +63,16 @@
       "url": "https://data.riksdagen.se/dokument/HB01FiU1.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-799",
+      "designation": "SFS 2023:799",
+      "title": "Lag (2023:799) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2024-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023799.html",
+      "relevance": "partial",
+      "note": "Lagen sänker inte själva skattesatsen eller skattefria andelen (25 procent) och innehåller ingen höjd skattelättnad per år, bara längre varaktighet."
     }
   ]
 }

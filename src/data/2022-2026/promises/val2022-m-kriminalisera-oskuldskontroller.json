@@ -17,15 +17,21 @@
   "committee": "JuU",
   "keywords": ["oskuldskontroll", "jungfrutest", "kriminalisering", "hedersförtryck"],
   "verdict": {
-    "value": "in_progress",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i juni 2025 fram ett förslag om att kriminalisera oskuldskontroller, oskuldsintyg och oskuldsingrepp i brottsbalken. Riksdagen fattade i oktober 2025 beslut om förslaget. Båda dokumenten gäller löftet om att kriminalisera oskuldskontroller.",
-    "date": "2026-11-12",
+    "reasoning": "Regeringen lade i juni 2025 fram ett förslag om att göra oskuldskontroller, oskuldsintyg och oskuldsingrepp straffbara, och riksdagen beslutade om det i oktober 2025. Brottet oskuldskontroll infördes i brottsbalken, och lagen om förbud mot könsstympning fick ett eget förbud mot oskuldsingrepp. Båda ändringarna trädde i kraft den 1 december 2025 och genomför löftet.",
+    "date": "2026-11-15",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2026-10-29"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i juni 2025 fram ett förslag om att kriminalisera oskuldskontroller, oskuldsintyg och oskuldsingrepp i brottsbalken. Riksdagen fattade i oktober 2025 beslut om förslaget. Båda dokumenten gäller löftet om att kriminalisera oskuldskontroller.",
+        "date": "2026-11-12"
       }
     ]
   },
@@ -55,6 +61,26 @@
       "title": "Kriminalisering av oskuldskontroller, oskuldsintyg och oskuldsingrepp",
       "date": "2025-10-17",
       "url": "https://data.riksdagen.se/dokument/HD01JuU3.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-1010",
+      "designation": "SFS 2025:1010",
+      "title": "Lag (2025:1010) om ändring i lagen (1982:316) med förbud mot könsstympning av kvinnor",
+      "date": "2025-12-01",
+      "url": "https://svenskforfattningssamling.se/doc/20251010.html",
+      "relevance": "partial",
+      "note": "Själva brotten oskuldskontroll (undersökning av könsorgan) och intygande av sexuell oskuld finns i brottsbalken, inte i den här lagen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-962",
+      "designation": "SFS 2025:962",
+      "title": "Lag (2025:962) om ändring i brottsbalken",
+      "date": "2025-12-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025962.html",
       "relevance": "full",
       "note": null
     }

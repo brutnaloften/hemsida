@@ -144,3 +144,27 @@ Tidö verdicts before to after: fulfilled 7 to 33, partially_fulfilled 60 to 61,
 Hand check: for every new `fulfilled`, the judge's reading of the directive was compared with the promise text. In all 26 the directive appoints the inquiry (or adds the assignment, for a supplementary directive) with the task the promise names. Judgement calls kept: tido-utredning-utvidgade-mojligheter-aterkalla-uppehallstillstand (the directive text covers revocation, refugees and automated decision support in its mandate; regular follow-up is only background); tido-stimulera-frivillig-aterundvandring-utredning and tido-utred-omvandling-befintliga-permanenta-uppehallstillstand (the promise says spring 2023, the directives came in autumn 2023; the reasoning gives the real date); tido-ungdomskriminalitetsnamnder (the supplementary directive shortens the deadline from 2024-08-30 to 2024-03-27, which is the promise); tido-lojalitetsforklaring-medborgarskapsceremoni (the inquiry was asked to decide whether, and the SOU concluded no; the SOU is shown as `contradicts` and the reasoning says so, the verdict rests on the directive). Reasoning texts were read in full: no absence claims, no law claims, every SOU fact comes from the judge's note on the linked SOU.
 
 Review follow-up (PR #214): when every qualifying directive is a tilläggsdirektiv (an existing inquiry got a changed assignment or deadline) the reasoning says so instead of "tillsatte utredningen" (tido-ungdomskriminalitetsnamnder was wrong before). The register dates some SOUs 1 January as a placeholder (SOU 2024:98 is 2025-01-01), so inquiry prompts show such a date as "okänt" and the text omits it. Hand texts pinned: tido-sekretess-skola-socialtjanst-polis (the June 2023 SOU predates the supplementary directive, so only the December 2024 one is named), tido-abortratt-skydd-regeringsformen (adds the December 2025 proposition and the May 2026 committee report), and tido-stimulera-frivillig-aterundvandring-utredning and tido-utred-omvandling-befintliga-permanenta-uppehallstillstand (state that the promised "våren 2023" start came later). Follow-up beads: late delivery rule, possible split of tido-utvisning-gangkriminella-utan-dom. The validator's absence and law rules were narrowed to claims about the directive or a decision, so "som saknar svenskt medborgarskap" passes.
+
+## Manifesto promises (val2022-, hemsida-joa)
+
+Same chain as for Tidö, run with link run `link-val2022-sonnet-v1`, judge runs `val2022-full-v1` (template v4) and `val2022-full-v2` (`--recheck` of the single `full`, template v5), `--sfs-store tools/out/sfs-store/2022-2026.json`, `--today 2026-11-15`. Only 6 of the 501 legislative manifesto promises have a proposition linked as evidence, so the judge saw 22 pairs and cost $0.44 (recheck $0.05, reasoning about $0.1 on subscription usage). Labels: 1 full, 7 partial, 1 weaker, 13 none.
+
+Result: 1 `fulfilled`, 5 `partially_fulfilled`, the rest unchanged. Hand-read against the law section:
+
+- val2022-m-kriminalisera-oskuldskontroller: fulfilled. SFS 2025:962 adds 4 kap. 4 f § brottsbalken (oskuldskontroll) and SFS 2025:1010 the ban on oskuldsingrepp; the promise is exactly "Kriminalisera oskuldskontroller", in force 2025-12-01, judge full at high confidence after the long-section recheck.
+- val2022-c-kriminalisera-oskuldskontroller and val2022-l-bredda-kriminaliseringen-oskuldskontroller-uppfostringsresor: partially fulfilled. Same laws, but the pledges also name kontrollerande beteende (C) and uppfostringsresor (L), which no law covers.
+- val2022-m-heltidsaktivitet-for-bidrag: partially fulfilled (SFS 2026:730, activity requirement for försörjningsstöd only, reduced by ability, not a strict full-time rule).
+- val2022-l-sank-expertskatten: partially fulfilled via a `weaker` law (SFS 2023:799 extends the relief from five to seven years but does not cut the tax).
+- val2022-c-starkare-grundlaggande-rattigheter: partially fulfilled (judge partial, medium). SFS 2023:689 drops the language-skill demand for mother-tongue tuition in national minority languages in upper secondary school, which touches the minority-language part of the pledge but not property rights or anti-discrimination. No override.
+- Reasoning for the partial promises and the fulfilled one was pinned by hand where the writer used "nämns inte i dokumenten" absence claims or called SFS 2025:1010 a consequential amendment (it adds its own ban on oskuldsingrepp).
+
+The low count is a linking gap, not a law gap: the Riksdag link run linked a prop to few legislative manifesto promises. Widening it (top-k links) is the way to find more.
+
+Commands:
+
+```
+node --experimental-strip-types tools/judge-sfs.ts --id-prefix val2022- --name val2022-full-v1
+node --experimental-strip-types tools/judge-sfs.ts --id-prefix val2022- --name val2022-full-v2 --recheck val2022-full-v1
+node --experimental-strip-types tools/apply-links.ts --run link-val2022-sonnet-v1 --id-prefix val2022- --sfs-store tools/out/sfs-store/2022-2026.json --sfs-run val2022-full-v2 --sfs-overrides tools/sfs-overrides.json --today 2026-11-15
+node --experimental-strip-types tools/write-reasoning.ts --run link-val2022-sonnet-v1 --id-prefix val2022- --model claude-sonnet-5-5
+```
