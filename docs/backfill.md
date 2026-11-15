@@ -82,6 +82,7 @@ pnpm score tools/score-configs/tido-corpus-claude-v1.json --shard 2/20 --concurr
 
 - Output goes to `tools/out/runs/<name>-shard-2-of-20/`; results land in `tools/out/score-cache/`. Set `--max-cost <usd>` from the dry-run estimate times 2-3 headroom (the estimate counts only prompt tokens, so real spend runs higher) (the config cap of 10 is only a default).
 - **Interrupted or stopped runs resume**: run the same command again; finished requests are cache hits. **The budget cap is per run**, not cumulative (spend restarts at 0 each run), so every restart gets a fresh cap. A `budget_exceeded` stop (exit 1) means the estimate was too low: report it to the maintainer instead of restarting in a loop.
+- **Skipped requests**: a run can end `complete` with `N skipped` (the model ran out of turns on those requests). Re-run the same command once to send them; if the same ones keep being skipped, report it instead of looping.
 - **Rate limits**: if requests fail with rate-limit or usage-limit errors, stop; do not loop. The window is per account and more concurrency does not help. Wait for the reset and re-run the same command. Partial progress is fine, the delta in step 5 contains what is done.
 - An unsharded whole-corpus run holds every document in memory (the `score` script sets a 12 GB heap, so it needs a machine with that much free RAM); use shards.
 

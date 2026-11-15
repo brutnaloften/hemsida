@@ -77,6 +77,7 @@ export async function executeRun(opts: ExecuteOptions): Promise<ExecuteOutcome> 
     cached_count: summary.cached,
     sent_count: summary.sent,
     remaining_count: summary.remaining,
+    skipped_count: summary.skipped,
     api_requests: summary.api_requests,
     input_tokens: summary.input_tokens,
     cost_usd: summary.cost_usd,

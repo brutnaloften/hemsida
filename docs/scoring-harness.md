@@ -31,6 +31,8 @@ Each document is chunked; promises (sorted by id) are packed into question batch
 
 If the scorer rejects a request as too long, the runner splits the state in half, asks both halves and keeps the max per question; the result is cached under the original key.
 
+A scorer can throw `SkippableScoreError` for a failure that concerns only that request: the runner skips it and goes on, the run still ends `complete` (exit 0) but with `skipped_count` in the manifest and a `N skipped` note, and a re-run sends the skipped requests again. The `claude` scorer does this for the Agent SDK's `error_max_turns` (it allows 3 turns so the SDK can retry structured output that failed validation; with 1 turn this happened about once per few hundred requests and aborted the run). Rate limits, usage limits and every other error except `TooLongError` (which splits, see above) still stop the run.
+
 ## Budget behaviour
 
 Before each uncached request the runner checks actual spend plus the estimates of requests in flight plus this request's estimate against `max_cost_usd`. If it would exceed the cap the run stops with `budget_exceeded` (exit code 1) and an explanation; everything completed is already cached, so raising the cap (`--max-cost`) and re-running continues where it stopped. Estimates use `chars_per_token`, so check the dry run against the first real token counts in the manifest and adjust.
@@ -41,7 +43,7 @@ For the `claude` scorer there's no real per-token bill (it runs on a subscriptio
 
 `tools/out/runs/<name>/`:
 
-- `manifest.json`: config, plan hash, status, request / cached / sent counts, tokens, cost, started and finished timestamps.
+- `manifest.json`: config, plan hash, status, request / cached / sent / remaining / skipped counts, tokens, cost, started and finished timestamps.
 - `results.json`: `results[document][promise] = { score, best_chunk }` (max chunk probability).
 - `report.json` (when the inputs have labels and every request is done): AUC (match|partial vs no_match), per-label count, mean, min and max, precision and recall at 0.3 to 0.7, the rank of each pair's own promise within its document, lowest positives and highest negatives. The same report is printed.
 
