@@ -20,10 +20,38 @@
   "committee": "NU",
   "keywords": ["elmarknaden", "stödtjänster", "kraftslag", "elmarknadsutredning", "spelregler"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i januari 2024 direktiv till en ny utredning om hur elmarknaden kan utvecklas, bland annat med stödtjänstmarknader och kapacitetsmekanismer. Direktivet täcker en del av löftet. Utredningen lämnade i april 2025 sitt betänkande, som behandlar hur systemnyttor som frekvensreglering och spänningsstabilitet kan värderas och ersättas på marknadsmässiga villkor. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB112",
+      "designation": "Dir. 2024:12",
+      "title": "Ett elsystem med tydligt systemansvar, hög leveranssäkerhet och långsiktiga planeringsförutsättningar",
+      "date": "2024-01-25",
+      "url": "https://data.riksdagen.se/dokument/HCB112.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB347",
+      "designation": "SOU 2025:47",
+      "title": "Spänning i tillvaron",
+      "date": "2025-04-25",
+      "url": "https://data.riksdagen.se/dokument/HDB347.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

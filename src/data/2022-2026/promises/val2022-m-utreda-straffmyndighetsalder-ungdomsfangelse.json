@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["straffmyndighetsålder", "ungdomsfängelse", "ungdomsbrottslighet", "påföljder"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen tillsatte en utredning genom ett direktiv den 6 juli 2023. Utredaren fick i uppdrag att överväga och vid behov föreslå en sänkt straffmyndighetsålder, samt att se över skärpta påföljder för unga och en större roll för Kriminalvården. Direktivet täcker den del av löftet som gäller straffmyndighetsåldern.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,56 @@
       "date": "2022-10-14",
       "promises": ["tido-utred-straffrabatt-under-18", "tido-ungdomsfangelser"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1112",
+      "designation": "Dir. 2023:112",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2023-07-06",
+      "url": "https://data.riksdagen.se/dokument/HBB1112.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB344",
+      "designation": "SOU 2023:44",
+      "title": "En översyn av regleringen om frihetsberövande påföljder för unga",
+      "date": "2023-11-08",
+      "url": "https://data.riksdagen.se/dokument/HBB344.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03132",
+      "designation": "Prop. 2025/26:132",
+      "title": "Frihetsberövande påföljder för barn och unga",
+      "date": "2026-02-19",
+      "url": "https://data.riksdagen.se/dokument/HD03132.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU30",
+      "designation": "Bet. 2025/26:JuU30",
+      "title": "Frihetsberövande påföljder för barn och unga",
+      "date": "2026-05-05",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU41",
+      "designation": "Bet. 2025/26:JuU41",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "relevance": "partial",
       "note": null
     }
   ]
