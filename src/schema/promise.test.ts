@@ -302,6 +302,79 @@ describe('promiseSchema', () => {
     });
   });
 
+  describe('budget verdict rule', () => {
+    const outcome = {
+      kind: 'budget',
+      anslag: { kod: '0901011', namn: 'Exempelanslag', release: 2025 },
+      years: { from: 2022, to: 2025 },
+      amounts: { before: 1000, after: 1500.5 },
+      tier: 'outcome',
+      baselineNote: '2022 är basår.',
+      date: '2025-09-22',
+      relevance: 'full',
+    };
+    const prop = { ...valid.evidence[0]! };
+    const bet = { ...prop, kind: 'bet', dok_id: 'HAB1', designation: 'Bet. 2022/23:FiU1' };
+    const make = (value: string, evidence: unknown[], extra: object = {}) => ({
+      ...valid,
+      type: 'budget',
+      ...extra,
+      verdict: { value, reasoning: 'Anslaget ökade nominellt.', date: '2025-10-01' },
+      evidence,
+    });
+    const ok = (p: unknown) => promiseSchema.safeParse(p).success;
+
+    it('lets an outcome entry plus a prop or bet carry fulfilled and partially_fulfilled', () => {
+      for (const v of ['fulfilled', 'partially_fulfilled', 'in_progress']) {
+        expect(ok(make(v, [outcome, prop])), v).toBe(true);
+        expect(ok(make(v, [outcome, bet])), v).toBe(true);
+      }
+    });
+
+    it('requires the anchoring prop or bet', () => {
+      for (const v of ['fulfilled', 'partially_fulfilled', 'in_progress']) {
+        expect(ok(make(v, [outcome])), v).toBe(false);
+      }
+    });
+
+    it('lets a ceiling entry carry in_progress only', () => {
+      const ceiling = { ...outcome, tier: 'ceiling' };
+      expect(ok(make('in_progress', [ceiling, bet]))).toBe(true);
+      expect(ok(make('partially_fulfilled', [ceiling, prop]))).toBe(false);
+      expect(ok(make('fulfilled', [ceiling, prop]))).toBe(false);
+    });
+
+    it('never qualifies from an entry without a tier', () => {
+      const { tier: _t, ...untiered } = outcome;
+      expect(ok(make('partially_fulfilled', [untiered, prop]))).toBe(false);
+      expect(ok(make('in_progress', [untiered, bet]))).toBe(false);
+    });
+
+    it('needs relevance full on an outcome entry for fulfilled, not for partially_fulfilled', () => {
+      const partial = { ...outcome, relevance: 'partial' };
+      expect(ok(make('fulfilled', [partial, prop]))).toBe(false);
+      expect(ok(make('partially_fulfilled', [partial, prop]))).toBe(true);
+    });
+
+    it('does not apply to opposition-only promises', () => {
+      const opp = { parties: ['S'], roles: { S: 'opposition' } };
+      for (const v of ['fulfilled', 'partially_fulfilled', 'in_progress']) {
+        expect(ok(make(v, [outcome, bet], opp)), v).toBe(false);
+      }
+      const mixed = { parties: ['S', 'SD'], roles: { SD: 'support' } };
+      expect(ok(make('fulfilled', [outcome, bet], mixed))).toBe(true);
+    });
+
+    it('does not apply to other promise types', () => {
+      expect(ok(make('fulfilled', [outcome, prop], { type: 'outcome' }))).toBe(false);
+    });
+
+    it('still accepts the law path and rejects an empty baselineNote', () => {
+      expect(ok(make('fulfilled', [prop, valid.evidence[1]]))).toBe(true);
+      expect(ok(make('unassessed', [{ ...outcome, baselineNote: '' }]))).toBe(false);
+    });
+  });
+
   describe('verdict-evidence constraints', () => {
     const ev = (kind: string, extra: object = {}) => ({
       kind,
