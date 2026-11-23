@@ -8,12 +8,12 @@
     "c": "mis-typed"
   },
   "counts": {
-    "b": 197,
-    "c:legislative": 25,
-    "a": 16,
-    "c:budget": 35,
+    "b": 198,
+    "c:legislative": 24,
+    "a": 19,
+    "c:budget": 33,
     "c:outcome": 19,
-    "c:inquiry": 2
+    "c:inquiry": 1
   },
   "promises": [
     {
@@ -257,77 +257,76 @@
       "id": "val2022-kd-forlang-befintliga-reaktorers-drift",
       "class": "c",
       "retype_as": "legislative",
-      "reason": "Förlängd drift kräver lag-/tillståndsändring; i huvudsak lagstiftning."
+      "reason": "Extended operation requires a change in law or permits; mainly legislation.",
+      "verify_before_retyping": true
     },
     {
       "id": "val2022-kd-inga-dyra-hoghastighetstag",
       "class": "c",
       "retype_as": "budget",
-      "reason": "Prioritering av pengar till vägar framför tåg är en budgetfråga."
+      "reason": "Prioritizing money for roads over trains is a budget issue."
     },
     {
       "id": "val2022-kd-kompetensutveckling-for-hemtjanst-och-aldreboenden",
       "class": "b",
-      "reason": "Policyinriktning för kompetensutveckling; styrs via uppdrag/statsbidrag, ingen tydlig riksdagshandling."
+      "reason": "Policy direction for skills development; steered via assignments/state grants, no clear Riksdag document."
     },
     {
       "id": "val2022-kd-mobila-sjukvardsenheter-i-hemmet",
       "class": "c",
       "retype_as": "outcome",
-      "reason": "Ökad möjlighet att vårdas i hemmet är ett mätbart utfall."
+      "reason": "Greater opportunity to receive care at home is a measurable outcome."
     },
     {
       "id": "val2022-kd-nationell-forlossningsplan",
       "class": "b",
-      "reason": "Nationell plan tas fram av regeringen/myndighet; ej tydligt riksdagsdokument, fler kliniker är regionernas ansvar."
+      "reason": "A national plan is produced by the government/agency; not clearly a Riksdag document, and more clinics are the regions' responsibility."
     },
     {
       "id": "val2022-kd-okad-medicinsk-kompetens-i-aldreomsorgen",
       "class": "c",
       "retype_as": "outcome",
-      "reason": "Ökad medicinsk kompetens är ett utfall."
+      "reason": "Increased medical competence is an outcome."
     },
     {
       "id": "val2022-kd-renodla-polisens-uppdrag",
-      "class": "c",
-      "retype_as": "inquiry",
-      "reason": "Renodling av polisens uppdrag kräver utredning/översyn av uppgifter."
+      "class": "a",
+      "reason": "Same reading as the M promise on the police mission: a change could be prepared by directive or proposition. Judged in the follow-up run; only a betänkande rejecting motions found."
     },
     {
       "id": "val2022-kd-stark-foreningslivet-mentorskap-avhopparprogram",
-      "class": "c",
-      "retype_as": "budget",
-      "reason": "Stärkt föreningsliv och program är satsningar/finansiering."
+      "class": "a",
+      "reason": "Same reading as the other avhopparprogram promises (L, M): a national exit programme could be set up by directive or proposition. Judged in the follow-up run; only background material found."
     },
     {
       "id": "val2022-kd-tid-och-resurser-till-demensvarden",
       "class": "c",
       "retype_as": "budget",
-      "reason": "Mer tid och resurser är en budgetsatsning."
+      "reason": "More time and resources is a budget investment."
     },
     {
       "id": "val2022-kd-utbilda-mer-sjukvardspersonal",
       "class": "c",
       "retype_as": "budget",
-      "reason": "Fler utbildningsplatser är en resurssatsning."
+      "reason": "More training places is a resource investment."
     },
     {
       "id": "val2022-kd-utbyggd-primarvard",
       "class": "c",
       "retype_as": "budget",
-      "reason": "Utbyggnad av primärvård är en resurs-/satsningsfråga."
+      "reason": "Expanding primary care is a resource/investment issue."
     },
     {
       "id": "val2022-l-aterstall-tidigare-vatmarker",
       "class": "c",
       "retype_as": "budget",
-      "reason": "Återställande av fler våtmarker är en satsning/finansiering (klimatanslag)."
+      "reason": "Restoring more wetlands is an investment/funding matter (climate appropriation)."
     },
     {
       "id": "val2022-l-aterstart-av-ringhals-1-och-2",
       "class": "c",
       "retype_as": "legislative",
-      "reason": "Att möjliggöra återstart kräver regelverks-/lagändringar."
+      "reason": "Enabling a restart requires changes to regulations or law."
     },
     {
       "id": "val2022-l-battre-karriarvagar-yngre-forskare",
@@ -338,7 +337,7 @@
       "id": "val2022-l-betalt-for-den-som-minskar-vaxthusgaser-i-atmosfaren",
       "class": "c",
       "retype_as": "legislative",
-      "reason": "Betalning för negativa utsläpp kräver stödsystem/lagstiftning (t.ex. BECCS)."
+      "reason": "Payment for negative emissions requires support systems or legislation (e.g. BECCS)."
     },
     {
       "id": "val2022-l-bygg-bort-jarnvagsnatets-flaskhalsar",
@@ -453,9 +452,8 @@
     },
     {
       "id": "val2022-l-klassiker-i-skolan",
-      "class": "c",
-      "retype_as": "legislative",
-      "reason": "Would require curriculum/school law change; mis-typed as legislative."
+      "class": "b",
+      "reason": "Same reading as the Tidö promise on classics in school: a curriculum assignment to Skolverket, a government decision with no Riksdag document."
     },
     {
       "id": "val2022-l-klimattullar",
@@ -820,79 +818,79 @@
     {
       "id": "val2022-m-plan-animalieproduktion-vaxtodling-hojd-beredskap",
       "class": "b",
-      "reason": "En plan för livsmedelsproduktion vid höjd beredskap tas normalt fram som regeringsuppdrag till myndigheter och lämnar ingen proposition eller direktiv."
+      "reason": "A plan for food production during heightened alert is normally produced as a government assignment to agencies and yields no bill or directive."
     },
     {
       "id": "val2022-m-prioritera-demokrati-manskliga-rattigheter-bistand",
       "class": "c",
       "retype_as": "budget",
-      "reason": "Att prioritera biståndsinsatser är en fråga om fördelning av medel, alltså budget."
+      "reason": "Prioritizing aid efforts is a matter of allocating funds, i.e. the budget."
     },
     {
       "id": "val2022-m-prioritera-kvinnor-hbtq-kvotflyktingar",
       "class": "b",
-      "reason": "Prioriteringen av kvotflyktingar styrs av regeringens beslut och Migrationsverkets arbete, så ett riksdagsdokument behövs normalt inte."
+      "reason": "Prioritizing quota refugees is governed by government decisions and the Migration Agency's work, so a Riksdag document is normally not needed."
     },
     {
       "id": "val2022-m-renodla-polisens-uppdrag",
       "class": "a",
-      "reason": "Polisens uppdrag kan utredas genom direktiv och SOU och kan ändras genom en proposition, så ett riksdagsdokument kan vara evidens."
+      "reason": "The police's mandate can be investigated through directives and an SOU and changed through a bill, so a Riksdag document may be evidence."
     },
     {
       "id": "val2022-m-salja-sveaskog-regional-anknytning",
       "class": "a",
-      "reason": "Försäljning av statliga bolagsinnehav kräver riksdagens bemyndigande i en proposition, så ett riksdagsdokument kan vara evidens."
+      "reason": "Selling state-owned company holdings requires Riksdag authorization in a bill, so a Riksdag document may be evidence."
     },
     {
       "id": "val2022-m-samma-barnmorsketeam-forlossning",
       "class": "b",
-      "reason": "Vårdens organisation är regionernas ansvar. Staten kan bara stödja det, till exempel med överenskommelser, och det lämnar normalt inget riksdagsdokument."
+      "reason": "Healthcare organization is the regions' responsibility. The state can only support it, for example through agreements, and this normally yields no Riksdag document."
     },
     {
       "id": "val2022-m-specialiserade-polisgrupper-sexualbrott-nara-relation",
       "class": "b",
-      "reason": "Polisens interna organisation beslutas av Polismyndigheten och regeringen. Det krävs ingen riksdagsbehandling, och en eventuell insats blir en instruktion eller ett uppdrag."
+      "reason": "The police's internal organization is decided by the Police Authority and the government. No Riksdag handling is required, and any measure would take the form of an instruction or assignment."
     },
     {
       "id": "val2022-m-starka-armen-flygvapnet-marinen",
       "class": "c",
       "retype_as": "budget",
-      "reason": "Att stärka förmåga och materiel är en resursfråga i försvarsbudgeten."
+      "reason": "Strengthening capability and materiel is a resource issue in the defense budget."
     },
     {
       "id": "val2022-m-starka-forsvarsunderrattelseformagan",
       "class": "b",
-      "reason": "Underrättelseförmågan stärks främst genom regeringsuppdrag och anslag till myndigheter. Löftet är en vag viljeinriktning."
+      "reason": "Intelligence capability is strengthened mainly through government assignments and appropriations to agencies. The pledge is a vague statement of intent."
     },
     {
       "id": "val2022-m-starka-frontex",
       "class": "b",
-      "reason": "Löftet gäller EU-påverkan och förhandlingsposition, och det lämnar normalt inget svenskt riksdagsdokument."
+      "reason": "The pledge concerns EU influence and negotiating position, and normally yields no Swedish Riksdag document."
     },
     {
       "id": "val2022-m-starka-vardens-medarbetare",
       "class": "b",
-      "reason": "Löftet är en vag policyinriktning. Arbetsmiljö och vidareutbildning avgörs av regioner och arbetsgivare, så löftet går inte att knyta till ett riksdagsdokument."
+      "reason": "The pledge is a vague policy direction. Work environment and further training are decided by regions and employers, so the pledge cannot be tied to a Riksdag document."
     },
     {
       "id": "val2022-m-stod-mot-cyberattacker-foretag",
       "class": "b",
-      "reason": "Stödet ges genom myndigheters uppdrag och arbetssätt, så det är normalt inte dokumenterat i riksdagsdokument."
+      "reason": "The support is provided through agencies' assignments and working methods, so it is normally not documented in Riksdag documents."
     },
     {
       "id": "val2022-m-stoppa-tvangsbussning-kvotering-lottning",
       "class": "b",
-      "reason": "Löftet är ett ställningstagande om vad partiet inte vill göra. Det lämnar inget riksdagsdokument."
+      "reason": "The pledge is a stance on what the party does not want to do. It yields no Riksdag document."
     },
     {
       "id": "val2022-m-systematiskt-maltidslyft-aldreomsorg",
       "class": "b",
-      "reason": "Löftet är en vag viljeinriktning om att verka för något. Äldreomsorgens måltider är kommunernas ansvar, och staten kan bara stödja dem."
+      "reason": "The pledge is a vague statement of intent to work for something. Meals in elderly care are the municipalities' responsibility, and the state can only support them."
     },
     {
       "id": "val2022-m-teknologi-forsvarsindustri-hela-nato",
       "class": "b",
-      "reason": "Löftet gäller diplomati och påverkan inom Nato och lämnar inget riksdagsdokument."
+      "reason": "The pledge concerns diplomacy and influence within NATO and yields no Riksdag document."
     },
     {
       "id": "val2022-m-tidigare-diagnoser-digitala-beslutsstod",
@@ -907,7 +905,7 @@
     {
       "id": "val2022-m-upphandla-stabil-kraftproduktion",
       "class": "b",
-      "reason": "Procurement by Svenska kraftnät/government decision; no Riksdag document normally."
+      "reason": "Procurement by Svenska kraftnät/government decision; normally no Riksdag document."
     },
     {
       "id": "val2022-m-utoka-lovskolan",
@@ -1020,7 +1018,8 @@
       "id": "val2022-s-1177-i-offentlig-regi",
       "class": "c",
       "retype_as": "legislative",
-      "reason": "Requiring that 1177 be run publicly would need a law or regulation change."
+      "reason": "Requiring that 1177 be run publicly would need a law or regulation change.",
+      "verify_before_retyping": true
     },
     {
       "id": "val2022-s-aldrig-ge-makt-at-sverigedemokraterna",
@@ -1041,7 +1040,7 @@
       "id": "val2022-s-fler-sociala-insatser-mot-ungas-kriminalitet",
       "class": "c",
       "retype_as": "budget",
-      "reason": "'Fler och mer långtgående insatser' is about more spending and resources."
+      "reason": "'More and more far-reaching measures' is about more spending and resources."
     },
     {
       "id": "val2022-s-globalt-koldioxidpris",
@@ -1052,7 +1051,7 @@
       "id": "val2022-s-individuellt-utformade-insatser-for-jobb-for-funktionsnedsat",
       "class": "c",
       "retype_as": "budget",
-      "reason": "Fler insatser = resurser/satsning, budgetfråga."
+      "reason": "More interventions means resources/investment, a budget issue."
     },
     {
       "id": "val2022-s-internationellt-samarbete-mot-smuggling",
@@ -1062,12 +1061,12 @@
     {
       "id": "val2022-s-klimatpolitiska-ramverket-ligger-fast",
       "class": "b",
-      "reason": "Politisk hållning om att inte ändra; ingen dokumenterbar åtgärd."
+      "reason": "A political stance of not changing anything; no documentable action."
     },
     {
       "id": "val2022-s-krafttag-mot-arbetslivskriminalitet",
       "class": "b",
-      "reason": "Vag politisk ambition; olika medel, inte specifikt Riksdagsdokument."
+      "reason": "A vague political ambition; various means, not specifically a Riksdag document."
     },
     {
       "id": "val2022-s-mer-samarbete-polis-elevhalsa-socialtjanst-skola",
@@ -1077,12 +1076,12 @@
     {
       "id": "val2022-s-nej-till-vardnadsbidrag-och-barnomsorgspeng",
       "class": "b",
-      "reason": "Opposition/partiställning om vad man säger nej till."
+      "reason": "Opposition/party position on what it says no to."
     },
     {
       "id": "val2022-s-ny-energioverenskommelse",
       "class": "b",
-      "reason": "Partiöverläggningar, inget Riksdagsdokument."
+      "reason": "Party negotiations, no Riksdag document."
     },
     {
       "id": "val2022-s-sakra-aborter-som-global-rattighet",
@@ -1092,160 +1091,161 @@
     {
       "id": "val2022-s-sakra-tillgang-till-hogutbildad-arbetskraft-i-bristyrken",
       "class": "b",
-      "reason": "Vag policyambition, ofta via uppdrag till lärosäten."
+      "reason": "Vague policy ambition, often via assignments to universities."
     },
     {
-      "id": "val2022-s-sla-mot-organiserade-brottslighets-finansiering",
+      "id": "val2022-s-sla-mot-organiserad-brottslighets-finansiering",
       "class": "b",
-      "reason": "Vag ambition utan specifik åtgärd."
+      "reason": "A general pledge to hit organised crime financing and organisation hard, carried out by several authorities; it names no single measure a Riksdag document would record."
     },
     {
       "id": "val2022-s-starkt-wto-samarbetet",
       "class": "b",
-      "reason": "Internationell/EU-påverkan."
+      "reason": "International/EU influence."
     },
     {
       "id": "val2022-s-stoppa-vapen-och-narkotika-vid-granserna",
       "class": "b",
-      "reason": "Stärkt gränskontroll genomförs via myndighetsresurser/uppdrag; vagt."
+      "reason": "Stronger border control is carried out via agency resources/assignments; vague."
     },
     {
       "id": "val2022-s-sverige-ska-ga-med-i-nato",
       "class": "a",
-      "reason": "Nato-anslutning kräver ratificering via proposition."
+      "reason": "NATO accession requires ratification via a bill."
     },
     {
       "id": "val2022-s-tak-for-koldioxidutslapp",
       "class": "b",
-      "reason": "Internationell påverkan/förhandlingsposition."
+      "reason": "International influence/negotiating position."
     },
     {
       "id": "val2022-s-underlatta-energieffektivisering-i-hem",
       "class": "b",
-      "reason": "Information och takt; ingen specifik Riksdagsåtgärd."
+      "reason": "Information and pace; no specific Riksdag action."
     },
     {
       "id": "val2022-s-underlatta-energisparande-i-flerfamiljshus",
       "class": "c",
       "retype_as": "legislative",
-      "reason": "Underlätta för fastighetsägare kräver regeländringar/stöd; mest en lagändring eller budgetåtgärd."
+      "reason": "Making things easier for property owners requires rule changes or support; mostly a legislative or budget measure."
     },
     {
       "id": "val2022-s-utveckla-cyberforsvar-och-underrattelseformaga",
       "class": "c",
       "retype_as": "budget",
-      "reason": "Utveckla förmåga är i praktiken resurser/satsning på försvaret."
+      "reason": "Developing capability is in practice resources/investment in defence."
     },
     {
       "id": "val2022-s-vaxla-upp-tillsynen-av-sjukvarden",
       "class": "b",
-      "reason": "Skärpt tillsyn sker via myndighetsuppdrag/instruktion till IVO; ingen given riksdagsdokumentation."
+      "reason": "Stricter oversight is done via agency assignments/instruction to IVO; no given Riksdag documentation."
     },
     {
       "id": "val2022-s-villkor-sa-att-valfardspengar-gar-till-medarbetare",
       "class": "c",
       "retype_as": "legislative",
-      "reason": "Villkor för välfärdsutförare kräver lagstiftning."
+      "reason": "Conditions for welfare providers require legislation."
     },
     {
       "id": "val2022-sd-analysera-och-planera-for-stora-kriser",
       "class": "b",
-      "reason": "Analys och planering görs av myndigheter via regeringsuppdrag; vagt."
+      "reason": "Analysis and planning are done by agencies via government assignments; vague."
     },
     {
       "id": "val2022-sd-anpassad-skogsskotsel-fore-reservatsavsattning",
       "class": "b",
-      "reason": "Politisk prioritering/hållning, genomförs via myndighetsstyrning."
+      "reason": "Political priority/stance, implemented through agency governance."
     },
     {
       "id": "val2022-sd-aterupprata-allmanna-beredskapslager",
       "class": "b",
-      "reason": "Beredskapslager byggs upp via myndighetsuppdrag och anslag; ingen tydlig riksdagshandling för åtgärden."
+      "reason": "Emergency stockpiles are built up through agency assignments and appropriations; no clear Riksdag document for the measure."
     },
     {
       "id": "val2022-sd-aterupprata-ett-totalforsvar-rustat-for-krig",
       "class": "c",
       "retype_as": "budget",
-      "reason": "Återuppbyggnad av totalförsvaret handlar i huvudsak om resurser och satsningar."
+      "reason": "Rebuilding total defense is mainly about resources and investments."
     },
     {
       "id": "val2022-sd-avlasta-poliserna-med-civilanstallda",
       "class": "b",
-      "reason": "Bemanning styrs av Polismyndigheten och regleringsbrev; ingen riksdagshandling."
+      "reason": "Staffing is governed by the Police Authority and appropriation directions; no Riksdag document."
     },
     {
       "id": "val2022-sd-battre-utredningar-och-kortare-handlaggningstider",
       "class": "c",
       "retype_as": "outcome",
-      "reason": "Kortare handläggningstider och bättre kvalitet är ett mätbart utfall."
+      "reason": "Shorter processing times and better quality are a measurable outcome."
     },
     {
       "id": "val2022-sd-battre-villkor-och-halsovard-i-kvinnoyrken",
       "class": "c",
       "retype_as": "outcome",
-      "reason": "Förbättrade villkor och ökad företagshälsovård är ett utfall."
+      "reason": "Improved conditions and increased occupational health care are an outcome."
     },
     {
       "id": "val2022-sd-bekampa-brottslighet-som-drabbar-foretagare",
       "class": "b",
-      "reason": "Vag policyinriktning utan specifik riksdagsdokumenterad åtgärd."
+      "reason": "Vague policy direction without a specific action documented in the Riksdag."
     },
     {
       "id": "val2022-sd-bekampa-fusk-och-bedragerier-inom-lss",
       "class": "b",
-      "reason": "Vagt formulerad bekämpning, genomförs via myndigheter och tillsyn."
+      "reason": "Vaguely worded combating, carried out through agencies and supervision.",
+      "maybe_checkable": true
     },
     {
       "id": "val2022-sd-bekampa-skuggsamhallet-med-fler-kontroller-och-utvisningar",
       "class": "c",
       "retype_as": "outcome",
-      "reason": "Fler kontroller och utvisningar är ett mätbart utfall."
+      "reason": "More checks and deportations are a measurable outcome."
     },
     {
       "id": "val2022-sd-bevara-inrikesflyget-och-bromma-flygplats",
       "class": "b",
-      "reason": "Policyställningstagande om bevarande; ägarstyrning via Swedavia, ingen riksdagshandling krävs."
+      "reason": "Policy position on preservation; ownership steering via Swedavia, no Riksdag document required."
     },
     {
       "id": "val2022-sd-bevara-regionala-flygplatser-som-beredskapsflygplatser",
       "class": "c",
       "retype_as": "budget",
-      "reason": "Bevara flygplatser handlar om finansiering/stöd, i praktiken resurser."
+      "reason": "Preserving airports is about funding/support, in practice resources."
     },
     {
       "id": "val2022-sd-diplomatiska-patryckningar-for-att-underlatta-atervandande",
       "class": "b",
-      "reason": "Diplomatiska påtryckningar, ingen riksdagsdokumentation."
+      "reason": "Diplomatic pressure, no Riksdag documentation."
     },
     {
       "id": "val2022-sd-effektivisera-och-utvardera-det-svenska-bistandet",
       "class": "b",
-      "reason": "Förvaltningsåtgärd/policyinriktning, görs via regeringsuppdrag till myndigheter."
+      "reason": "Administrative measure/policy direction, done via government assignments to agencies."
     },
     {
       "id": "val2022-sd-europeiskt-samarbete-mot-islamism-och-terrorism",
       "class": "b",
-      "reason": "EU-/internationellt samarbete, förhandlingsposition."
+      "reason": "EU/international cooperation, negotiating position."
     },
     {
       "id": "val2022-sd-familjemedling-for-familjer-i-tvist",
       "class": "b",
-      "reason": "Vagt insatslöfte, genomförs sannolikt via uppdrag/stöd, inte tydligt riksdagsdokument."
+      "reason": "A vague pledge of measures, likely carried out through assignments/support, not clearly a Riksdag document."
     },
     {
       "id": "val2022-sd-fokusera-bistandet-pa-humanitart-katastrofbistand",
       "class": "b",
-      "reason": "Policyinriktning för bistånd, styrs via regeringsbeslut."
+      "reason": "Policy direction for aid, steered via government decisions."
     },
     {
       "id": "val2022-sd-forbattra-den-centrala-krisledningsformagan",
       "class": "a",
-      "reason": "Krisberedskap behandlas ofta i Ds/prop/dir om totalförsvar och krisberedskap."
+      "reason": "Crisis preparedness is often addressed in Ds/bills/directives on total defense and crisis preparedness."
     },
     {
       "id": "val2022-sd-forbud-mot-import-fran-tvangsmatade-obedovade-djur",
       "class": "b",
-      "reason": "Arbeta för förbud, EU-påverkan/opinionsarbete."
+      "reason": "Working for a ban is EU influence/opinion-building."
     },
     {
       "id": "val2022-sd-fordjupa-det-nordiska-forsvars-och-sakerhetssamarbetet",
@@ -1255,23 +1255,23 @@
     {
       "id": "val2022-sd-forebygga-invasiva-arter",
       "class": "b",
-      "reason": "Vagt policylöfte, genomförs via myndigheter."
+      "reason": "Vague policy promise, implemented via agencies."
     },
     {
       "id": "val2022-sd-forenkla-regelverken-och-forbattra-rattssakerheten",
       "class": "c",
       "retype_as": "legislative",
-      "reason": "Förenkling av regelverk innebär lagändringar."
+      "reason": "Simplifying regulations entails legislative changes."
     },
     {
       "id": "val2022-sd-forsvara-yttrandefriheten-mot-eu-censur",
       "class": "b",
-      "reason": "Politisk hållning/EU-påverkan."
+      "reason": "Political stance/EU influence."
     },
     {
       "id": "val2022-sd-forsvarsforbund-med-finland",
       "class": "b",
-      "reason": "Diplomatiskt verka för, förhandlingsposition."
+      "reason": "Diplomatic 'verka för', negotiating position."
     },
     {
       "id": "val2022-sd-framja-svensk-biobransleproduktion",
@@ -1281,7 +1281,7 @@
     {
       "id": "val2022-sd-ge-tillbaka-viltvardsuppdraget-till-jagarorganisationerna",
       "class": "b",
-      "reason": "Uppdragsfördelning beslutas av regeringen/myndighet, administrativt."
+      "reason": "Distribution of assignments is decided by the government/agency, administrative."
     },
     {
       "id": "val2022-sd-gemensam-nordisk-gransbevakning",
@@ -1410,7 +1410,8 @@
       "id": "val2022-sd-prioritera-svenska-spraket-inom-barnomsorgen",
       "class": "c",
       "retype_as": "legislative",
-      "reason": "Prioritizing Swedish in preschool would require school law/curriculum changes."
+      "reason": "Prioritizing Swedish in preschool would require school law/curriculum changes.",
+      "verify_before_retyping": true
     },
     {
       "id": "val2022-sd-regelforenkling-for-smaforetag",
@@ -1543,9 +1544,8 @@
     },
     {
       "id": "val2022-v-effektivt-avhopparprogram",
-      "class": "c",
-      "retype_as": "budget",
-      "reason": "Introducing an exit program is a funded program/spending measure, mis-typed as other_action."
+      "class": "a",
+      "reason": "Same reading as the other avhopparprogram promises (L, M): a national exit programme could be set up by directive or proposition. Judged in the follow-up run; only background material found."
     },
     {
       "id": "val2022-v-kamp-mot-illegala-skjutvapen",
@@ -1560,7 +1560,8 @@
     {
       "id": "val2022-v-riv-upp-vardlandsavtalet-med-nato",
       "class": "b",
-      "reason": "Opposition promise on an international agreement; party stance, unlikely to be documented by a topical Riksdag document as fulfilment."
+      "reason": "Opposition promise on an international agreement; party stance, unlikely to be documented by a topical Riksdag document as fulfilment.",
+      "maybe_checkable": true
     },
     {
       "id": "val2022-v-skriv-under-karnvapenkonventionen",
