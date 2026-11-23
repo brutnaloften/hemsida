@@ -3,13 +3,9 @@
   "term": "2022-2026",
   "title": "Miljardinvesteringar i infrastruktur",
   "description": "Investera i järnväg, väg och elnät för att främja ekonomisk tillväxt och jobbskapande.",
-  "source": {
-    "id": "kd-almedalen-2024"
-  },
+  "source": { "id": "kd-almedalen-2024" },
   "parties": ["KD"],
-  "roles": {
-    "KD": "government"
-  },
+  "roles": { "KD": "government" },
   "type": "budget",
   "area": "Infrastruktur och transporter",
   "committee": "TU",
@@ -17,7 +13,7 @@
   "verdict": {
     "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Löftet gäller investeringar i järnväg, väg och elnät. De två anslag som bär väg- och järnvägsinvesteringarna ökade nominellt mellan utfallet 2022 och 2025: 22:1 Utveckling av statens transportinfrastruktur från 29 277 till 37 836 mn kr (+8 559 mn kr, +29,2 procent; i fasta priser +15,0 procent) och 22:2 Vidmakthållande av statens transportinfrastruktur från 29 106 till 39 478 mn kr (+10 372 mn kr, +35,6 procent; i fasta priser +20,7 procent). Riksdagen beslutade om anslagen i betänkande 2024/25:TU1. Båda följer löftets riktning och ökningarna är miljardbelopp, men elnätsdelen går inte att läsa ur något anslag i budgetdatan och väg och järnväg delas inom anslagen. Källa: ESV:s årsutfall och betänkandet. Därför delvis uppfyllt.",
+    "reasoning": "Löftet från Almedalen 2024 gäller investeringar i järnväg, väg och elnät. De två anslag som bär väg- och järnvägsinvesteringarna ökade nominellt mellan utfallet 2024, året då löftet gavs, och 2025: 1:1 Utveckling av statens transportinfrastruktur från 32 872 till 37 836 mn kr (+4 964 mn kr, +15,1 procent; i fasta priser +14,3 procent) och 1:2 Vidmakthållande av statens transportinfrastruktur från 35 338 till 39 478 mn kr (+4 141 mn kr, +11,7 procent; i fasta priser +11,0 procent). Riksdagen beslutade om anslagen för 2025 i betänkande 2024/25:TU1. Båda följer löftets riktning och ökningarna är miljardbelopp, men elnätsdelen hör till andra anslag än de som jämförs och väg och järnväg delas inom anslagen. Källa: ESV:s årsutfall och betänkandet. Därför delvis uppfyllt.",
     "date": "2026-11-23",
     "history": [
       {
@@ -46,18 +42,18 @@
         "release": 2025
       },
       "years": {
-        "from": 2022,
+        "from": 2024,
         "to": 2025
       },
       "amounts": {
-        "before": 29277.4,
+        "before": 32872.1,
         "after": 37836.1
       },
       "tier": "outcome",
-      "baselineNote": "Jämförelse mot utfallet 2022. Nominellt utfall 29 277 mn kr 2022 och 37 836 mn kr 2025, ändring 8 559 mn kr (+29,2 %). I fasta priser +15,0 % (sammanhang, avgör inte bedömningen).",
+      "baselineNote": "Jämförelse mot utfallet 2024. Löftet är från Almedalen 2024, så jämförelsen börjar vid utfallet 2024 och inte 2022 (budgetarna för 2023 och 2024 föregår löftet). Nominellt utfall 32 872 mn kr 2024 och 37 836 mn kr 2025, ändring 4 964 mn kr (+15,1 %). I fasta priser +14,3 % (sammanhang, avgör inte bedömningen).",
       "date": "2025-12-31",
       "relevance": "partial",
-      "note": "Anslaget gäller nyinvesteringar i både väg och järnväg; ESV delar inte upp utfallet per trafikslag. Elnät ingår i löftet men saknar eget anslag i dessa data."
+      "note": "Anslaget 1:1 gäller nyinvesteringar i både väg och järnväg; ESV delar inte upp utfallet per trafikslag. Elnät ingår i löftet men hör till andra anslag än de som jämförs."
     },
     {
       "kind": "budget",
@@ -67,18 +63,18 @@
         "release": 2025
       },
       "years": {
-        "from": 2022,
+        "from": 2024,
         "to": 2025
       },
       "amounts": {
-        "before": 29106.1,
+        "before": 35337.8,
         "after": 39478.4
       },
       "tier": "outcome",
-      "baselineNote": "Jämförelse mot utfallet 2022. Nominellt utfall 29 106 mn kr 2022 och 39 478 mn kr 2025, ändring 10 372 mn kr (+35,6 %). I fasta priser +20,7 % (sammanhang, avgör inte bedömningen).",
+      "baselineNote": "Jämförelse mot utfallet 2024. Löftet är från Almedalen 2024, så jämförelsen börjar vid utfallet 2024 och inte 2022 (budgetarna för 2023 och 2024 föregår löftet). Nominellt utfall 35 338 mn kr 2024 och 39 478 mn kr 2025, ändring 4 141 mn kr (+11,7 %). I fasta priser +11,0 % (sammanhang, avgör inte bedömningen).",
       "date": "2025-12-31",
       "relevance": "partial",
-      "note": "Anslaget bär både väg och järnväg; ESV delar inte upp utfallet per trafikslag."
+      "note": "Anslaget 1:2 bär både väg och järnväg; ESV delar inte upp utfallet per trafikslag."
     }
   ]
 }
