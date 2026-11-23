@@ -211,6 +211,8 @@ const riksdagEvidenceSchema = z
     }
   });
 
+export const BUDGET_TIERS = ['ceiling', 'outcome'] as const;
+
 /**
  * A budget comparison for one anslag (appropriation line): the amount before and after the
  * promise period, in mn kr nominal, as in src/data/budget. Describes the numbers only; it is never
@@ -237,6 +239,14 @@ const budgetEvidenceSchema = z
       .refine((y) => y.from < y.to, { message: 'years.from must be before years.to' }),
     /** Amounts in mn kr, nominal (not inflation adjusted). */
     amounts: z.object({ before: z.number(), after: z.number() }).strict(),
+    /**
+     * Which budget tier the amounts are: `ceiling` (the voted appropriation, `budget` plus
+     * `andrad`) or `outcome` (ESV `utfall`). Optional for backward compatibility; an entry without
+     * a tier never qualifies a verdict. See "Budget verdict rule" in docs/data-model.md.
+     */
+    tier: z.enum(BUDGET_TIERS).optional(),
+    /** Swedish note on the baseline when it is not the 2022 outcome (one-offs, discontinued anslag). */
+    baselineNote: z.string().min(1).optional(),
     /** Date of the evidence, used to place it on the timeline (e.g. the budget proposition). */
     date: isoDate,
     relevance: z.enum(['full', 'partial']),
@@ -292,11 +302,12 @@ const MIN_SEARCH_NOTE_LENGTH = 30;
 /**
  * Evidence-to-verdict constraints for the CURRENT verdict (history entries are not checked; they
  * were judged against the evidence available at the time). Only Riksdag evidence counts;
- * `agreement` and `budget` evidence never qualify a verdict. See "Verdict" in docs/data-model.md.
+ * `agreement` evidence never qualifies; `budget` evidence only through the budget verdict rule. See "Verdict" in docs/data-model.md.
  */
 function checkVerdictEvidence(
   p: {
     type: string;
+    roles: Partial<Record<string, string>>;
     verdict: { value: string; reasoning: string; date: string };
     evidence: Evidence[];
     committee?: string | undefined;
@@ -310,9 +321,26 @@ function checkVerdictEvidence(
   const fail = (message: string) =>
     ctx.addIssue({ code: 'custom', path: ['verdict', 'value'], message });
 
-  if (value === 'in_progress' && !riksdag.some((e) => PLANNING_KINDS.includes(e.kind))) {
+  // Budget verdict rule (hemsida-dl5.6): for a `budget` promise made by at least one party in
+  // government or support, a budget entry with a tier plus an anchoring prop/bet can stand in for
+  // the law (outcome tier) or for the planning document (any tier). Opposition-only promises are
+  // never judged on ESV data: it measures the government's budget, not that party's act.
+  const budgetJudgeable =
+    p.type === 'budget' &&
+    Object.values(p.roles).some((r) => r === 'government' || r === 'support');
+  const tiered = budgetJudgeable
+    ? p.evidence.filter((e): e is BudgetEvidence => e.kind === 'budget' && e.tier !== undefined)
+    : [];
+  const anchored = riksdag.some((e) => e.kind === 'prop' || e.kind === 'bet');
+  const budgetOutcome = anchored && tiered.some((e) => e.tier === 'outcome');
+
+  if (
+    value === 'in_progress' &&
+    !riksdag.some((e) => PLANNING_KINDS.includes(e.kind)) &&
+    !(anchored && tiered.length > 0)
+  ) {
     fail(
-      'verdict in_progress requires Riksdag evidence of kind dir, sou, ds or prop (agreement and budget evidence do not count)',
+      'verdict in_progress requires Riksdag evidence of kind dir, sou, ds or prop (agreement and budget evidence do not count; a budget promise may instead use a tiered budget entry plus a prop or bet)',
     );
   }
   if (value === 'fulfilled' || value === 'partially_fulfilled') {
@@ -324,11 +352,19 @@ function checkVerdictEvidence(
           `verdict ${value} on an inquiry promise requires Riksdag evidence of kind dir (the inquiry directive; agreement and budget evidence do not count)`,
         );
       }
-    } else if (!riksdag.some((e) => e.kind === 'sfs')) {
+    } else if (
+      !riksdag.some((e) => e.kind === 'sfs') &&
+      !(
+        budgetOutcome &&
+        // fulfilled needs an outcome entry that covers the whole promise, partial needs any outcome entry
+        (value === 'partially_fulfilled' ||
+          tiered.some((e) => e.tier === 'outcome' && e.relevance === 'full'))
+      )
+    ) {
       // An issued law is enough, including one whose in-force date (the sfs date) is still ahead:
       // the government's part is done once the law is adopted. Agreement and budget evidence do not count.
       fail(
-        `verdict ${value} requires Riksdag evidence of kind sfs (an issued law, in force or not yet; agreement and budget evidence do not count)`,
+        `verdict ${value} requires Riksdag evidence of kind sfs (an issued law, in force or not yet; agreement and budget evidence do not count), or, for a budget promise by a government or support party, an outcome-tier budget entry plus a prop or bet${value === 'fulfilled' ? ' (fulfilled: the outcome entry must have relevance full)' : ''}`,
       );
     }
   }
