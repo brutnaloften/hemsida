@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["garantipension", "äldreförsörjningsstöd", "nyanlända"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2026 en utredare i uppdrag att se över hela grundskyddet i ålderspensionssystemet, med både garantipensionen och äldreförsörjningsstödet. Uppdraget tar bland annat upp garantipensionens undantagsregel för långa arbetsliv. Dokumentet gäller en bredare översyn och täcker därmed en del av löftet om undantagsreglerna.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB157",
+      "designation": "Dir. 2026:57",
+      "title": "Ett bättre och enklare grundskydd i ålderspensionssystemet",
+      "date": "2026-06-18",
+      "url": "https://data.riksdagen.se/dokument/HEB157.html",
+      "relevance": "partial",
       "note": null
     }
   ]

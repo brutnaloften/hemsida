@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["översyn", "sjukvårdens organisering", "finansiering", "regioner", "utredning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att ta fram ett beslutsunderlag om ett helt eller delvis statligt huvudmannaskap för hälso- och sjukvården. Uppdraget gäller både organisering och finansiering, bland annat resursfördelning, och rör den regionfinansierade vården. Dokumentet visar ett förberedande steg och motsvarar en del av löftet.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -34,6 +41,16 @@
       ],
       "outcome": "included",
       "note": "Avtalet utreder statligt huvudmannaskap, inför nationella principer för ersättning och avgifter och ger staten helhetsansvar för statliga medel."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB173",
+      "designation": "Dir. 2023:73",
+      "title": "Ett helt eller delvis statligt huvudmannaskap för hälso- och sjukvården",
+      "date": "2023-06-01",
+      "url": "https://data.riksdagen.se/dokument/HBB173.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

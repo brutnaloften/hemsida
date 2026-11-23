@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["sjukvårdens organisation", "huvudman", "regioner"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen tillsatte utredningen genom ett direktiv den 1 juni 2023. En parlamentarisk kommitté fick i uppdrag att se över hela sjukvårdens organisation, analysera ett helt eller delvis statligt huvudmannaskap för hälso- och sjukvården och föreslå en plan för genomförande.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-utredning-statligt-huvudmannaskap-sjukvard"],
       "outcome": "included",
       "note": "Avtalet utreder statligt huvudmannaskap för sjukvården."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB173",
+      "designation": "Dir. 2023:73",
+      "title": "Ett helt eller delvis statligt huvudmannaskap för hälso- och sjukvården",
+      "date": "2023-06-01",
+      "url": "https://data.riksdagen.se/dokument/HBB173.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

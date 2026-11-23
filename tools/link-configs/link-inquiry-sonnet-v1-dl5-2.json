@@ -1,0 +1,55 @@
+{
+  "name": "link-inquiry-sonnet-v1-dl5-2",
+  "judge": {
+    "kind": "claude",
+    "model": "claude-sonnet-5-5"
+  },
+  "template_version": "v1",
+  "instructions": "You judge whether an official Swedish Riksdag document is evidence for a political promise. You get the promise and an extract of the document (type, title, the sections that carry its proposals or decisions, and for a betänkande the outcome of the vote). Judge only from what is shown. Answer with four fields.\n\nlabel (relevance, how much of the promise the document covers): match = direct evidence that the promise is being acted on and covers the promise as a whole (the proposal, bill, decision or inquiry implements or prepares exactly what was promised); partial = same topic but covers only part of the promise (one of several measures, a narrower scope, a smaller amount); contradicts = on topic but works against the promise (for example cuts the funding the promise relies on; merely lower spending elsewhere is not contradiction); no_match = unrelated or only shares keywords.\n\nstage (how far along the process the document is, independent of the label): definitive = a decision (a law, an adopted betänkande, an anslag); preparatory = a directive, SOU, Ds or proposal that prepares a measure and is not yet decided (a preparatory document that prepares the whole promised measure is still label match); background = only mentions the topic, or rejects motions about it.\n\nconfidence: high, medium or low. reason: one or two sentences in English that name what in the document supports the label.",
+  "inputs": {
+    "promises": {
+      "term": "2022-2026",
+      "id_prefix": "",
+      "ids": [
+        "tido-elmarknad-utredning-likvardiga-spelregler",
+        "tido-fler-langa-arbetsstipendier-kulturskapare",
+        "tido-forbered-folkrakning-samordningsnummer",
+        "tido-incitament-minska-elforbrukning-hushall",
+        "tido-kartlagg-utlandska-gangkriminella",
+        "tido-kartlaggning-kompetensforsorjning-vard",
+        "tido-nationell-plan-vardplatser",
+        "tido-nationellt-tiggeriforbud",
+        "tido-studie-nya-medielandskapet-opinionsbildning",
+        "tido-utredning-aterstart-ringhals-1-2",
+        "val2022-l-bred-oversyn-av-vardens-organisering-och-finansiering",
+        "val2022-l-tillsatt-startup-kommission",
+        "val2022-m-bra-kartlagger-brott-mot-foretag",
+        "val2022-m-nationell-kartlaggning-hedersfortryck",
+        "val2022-m-ny-brottsbalk",
+        "val2022-m-se-over-elprisomraden",
+        "val2022-m-utreda-statlig-stodlinje-aldre",
+        "val2022-m-utreda-straffmyndighetsalder-ungdomsfangelse",
+        "val2022-s-oversyn-av-elprisomradena",
+        "val2022-s-oversyn-av-skatteutjamningssystemet",
+        "val2022-sd-se-over-sjukvardens-organisation",
+        "val2022-sd-se-over-undantagsregler-och-aldreforsorjningsstodet"
+      ]
+    },
+    "pairs": {
+      "kind": "candidates",
+      "max_per_promise": 15
+    }
+  },
+  "evidence": {
+    "max_tokens": 12000,
+    "chars_per_token": 3
+  },
+  "thresholds": {
+    "accept_labels": ["match", "partial"],
+    "min_confidence": "medium"
+  },
+  "budget": {
+    "max_cost_usd": 40,
+    "usd_per_million_tokens": 3
+  }
+}
