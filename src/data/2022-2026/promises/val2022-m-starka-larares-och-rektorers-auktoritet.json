@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["auktoritet", "lärare", "rektorer", "studiero", "ordning och reda"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i november 2023 ett utredningsuppdrag om trygghet och studiero i skolan. Utredaren ska se över hur rektorers och lärares ansvar och befogenheter kan stärkas, bland annat att tydliggöra hur personal kan upprätthålla ordning, ta bort dokumentationskrav vid utvisning ur undervisningen och göra det lättare att hantera störningar. Dokumentet är ett direktiv, inget beslut om ändrade regler.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
         "tido-rektors-ansvar-trygghet-studiero-skollagen"
       ],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1154",
+      "designation": "Dir. 2023:154",
+      "title": "Varaktigt förbättrad trygghet och studiero i skolan",
+      "date": "2023-11-02",
+      "url": "https://data.riksdagen.se/dokument/HBB1154.html",
+      "relevance": "full",
       "note": null
     }
   ]

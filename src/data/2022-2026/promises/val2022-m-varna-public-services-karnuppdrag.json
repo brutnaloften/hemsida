@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["public service", "kärnuppdrag", "saklighet", "opartiskhet", "sändningstillstånd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i februari 2023 en utredning i uppdrag att föreslå en lag om public service med fokus på kärnuppdraget. I mars 2023 föreslog den villkor för public services innehåll på internet, och riksdagen biföll i maj. Ändringen i radio- och tv-lagen trädde i kraft 1 juli 2023 och täcker en del av löftet.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,26 @@
       "note": "Avtalet värnar public service oberoende och finansiering men nämner inte kärnuppdrag eller saklighet."
     },
     {
+      "kind": "dir",
+      "dok_id": "HBB127",
+      "designation": "Dir. 2023:27",
+      "title": "Långsiktiga villkor för ett hållfast och oberoende public service",
+      "date": "2023-02-23",
+      "url": "https://data.riksdagen.se/dokument/HBB127.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA0383",
+      "designation": "Prop. 2022/23:83",
+      "title": "Innehållsvillkor för public service på internet",
+      "date": "2023-03-21",
+      "url": "https://data.riksdagen.se/dokument/HA0383.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HA01KU34",
       "designation": "Bet. 2022/23:KU34",
@@ -40,6 +67,16 @@
       "url": "https://data.riksdagen.se/dokument/HA01KU34.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-275",
+      "designation": "SFS 2023:275",
+      "title": "Lag (2023:275) om ändring i radio- och tv-lagen (2010:696)",
+      "date": "2023-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023275.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte ett bredare värnande och stärkande av public services kärnuppdrag; villkoren är en möjlighet, gäller bara tråd och tiden fram till 2025, och kräver att företagen godtar dem."
     }
   ]
 }

@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["dubbla straff", "gängkriminella", "straffskärpning", "gängbrott"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i maj 2023 om skärpta straff för brott i kriminella nätverk, men det gällde riktade höjningar som täcker en del av löftet. Regeringen lade i april 2026 fram ett förslag om dubbla straff för brott i kriminella nätverk, och riksdagen biföll det i juni 2026. En ändring i brottsbalken trädde i kraft 1 augusti 2026 och verkar täcka löftet, men det är obekräftat.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -42,12 +49,42 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03218",
+      "designation": "Prop. 2025/26:218",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03218.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01JuU42",
       "designation": "Bet. 2025/26:JuU42",
       "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
       "date": "2026-06-11",
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB167",
+      "designation": "Dir. 2026:67",
+      "title": "Riktade insatser mot kriminella organisationer - En särlagstiftning för gängkriminella",
+      "date": "2026-07-02",
+      "url": "https://data.riksdagen.se/dokument/HEB167.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1318",
+      "designation": "SFS 2026:1318",
+      "title": "Lag (2026:1318) om ändring i brottsbalken",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261318.html",
       "relevance": "full",
       "note": null
     }

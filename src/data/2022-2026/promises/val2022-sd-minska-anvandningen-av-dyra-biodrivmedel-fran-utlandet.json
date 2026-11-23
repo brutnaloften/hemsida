@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["biodrivmedel", "reduktionsplikt", "import"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i oktober 2023 att reduktionsplikten för bensin och diesel sänks till sex procent för 2024–2026. Riksdagen biföll förslaget i november 2023. Lagen trädde i kraft den 1 januari 2024 och minskar inblandningen av biodrivmedel i allmänhet, vilket täcker en del av löftet.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0328",
+      "designation": "Prop. 2023/24:28",
+      "title": "Sänkning av reduktionsplikten för bensin och diesel",
+      "date": "2023-10-17",
+      "url": "https://data.riksdagen.se/dokument/HB0328.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01MJU5",
+      "designation": "Bet. 2023/24:MJU5",
+      "title": "Sänkning av reduktionsplikten för bensin och diesel",
+      "date": "2023-11-23",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU5.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-823",
+      "designation": "SFS 2023:823",
+      "title": "Lag (2023:823) om ändring i lagen (2017:1201) om reduktion av växthusgasutsläpp från vissa fossila drivmedel",
+      "date": "2024-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023823.html",
+      "relevance": "partial",
+      "note": "Lagen riktar sig inte specifikt mot miljöskadliga eller dyra biodrivmedel från utlandet och innehåller inga krav eller begränsningar för importerade biodrivmedel."
     }
   ]
 }

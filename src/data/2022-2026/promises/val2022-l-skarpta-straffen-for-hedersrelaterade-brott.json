@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["hedersbrott", "straff", "straffskärpning", "brottsbalken", "hedersrelaterad"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i januari 2024 en utredare i uppdrag att ta ställning till om straffskalorna för hedersrelaterade brott ska höjas. Det gäller hedersförtryck, vilseledande till äktenskapsresa samt lägsta och högsta straff för barnäktenskapsbrott och äktenskapstvång. Utredaren ska också skriva förslag till lagändringar. Dokumentet visar uppdraget, inget beslut om skärpta straff.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-skarpt-hedersforstryck-lagstiftning"],
       "outcome": "included",
       "note": "Avtalet skärper straffskalan för hedersförtryck, äktenskapstvång och vilseledande till tvångsäktenskapsresa."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB18",
+      "designation": "Dir. 2024:8",
+      "title": "Förstärkta åtgärder mot hedersrelaterat våld och förtryck",
+      "date": "2024-01-18",
+      "url": "https://data.riksdagen.se/dokument/HCB18.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

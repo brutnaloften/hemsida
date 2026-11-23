@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["förstatligande", "huvudman", "kommunal skola", "skolan", "statlig"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning lade i november 2022 fram ett underlag för ett ökat statligt ansvar för skolan. Underlaget ska skapa förutsättningar för ett statligt huvudmannaskap. Uppdraget utvidgades genom ett tilläggsdirektiv till att också gälla andra alternativ som stärker statens ansvar. Dokumentet är ett utredningsbetänkande, inget beslut.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HAB353",
+      "designation": "SOU 2022:53",
+      "title": "Statens ansvar för skolan - ett besluts- och kunskapsunderlag - Volym 1",
+      "date": "2022-11-08",
+      "url": "https://data.riksdagen.se/dokument/HAB353.html",
+      "relevance": "full",
       "note": null
     }
   ]

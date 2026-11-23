@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["arbetsgivaravgifter", "ungdomsarbetslöshet", "nedsatta avgifter", "anställa unga"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i november 2025 fram ett förslag om tillfälligt sänkta arbetsgivaravgifter för unga. Riksdagen beslutade i februari 2026 i linje med förslaget, vilket gäller en åldersgrupp och tidsbegränsat. En lag om särskild beräkning av arbetsgivaravgifter för 18–22-åringar trädde i kraft 1 april 2026. Lagen verkar täcka löftet, men det är obekräftat.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HD0366",
+      "designation": "Prop. 2025/26:66",
+      "title": "Tillfälligt nedsatta arbetsgivaravgifter för 19–23-åringar",
+      "date": "2025-11-27",
+      "url": "https://data.riksdagen.se/dokument/HD0366.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01SfU11",
       "designation": "Bet. 2025/26:SfU11",
@@ -39,6 +56,16 @@
       "date": "2026-02-18",
       "url": "https://data.riksdagen.se/dokument/HD01SfU11.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-100",
+      "designation": "SFS 2026:100",
+      "title": "Lag (2026:100) om särskild beräkning av arbetsgivaravgifter och allmän löneavgift för personer som vid årets ingång fyllt 18 men inte 23 år",
+      "date": "2026-04-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026100.html",
+      "relevance": "full",
       "note": null
     }
   ]

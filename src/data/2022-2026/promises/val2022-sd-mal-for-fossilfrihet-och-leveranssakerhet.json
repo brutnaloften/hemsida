@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["fossilfrihet", "leveranssäkerhet", "energipolitiskt mål"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i januari 2024 en utredare i uppdrag att föreslå åtgärder för högre leveranssäkerhet i elsystemet, bland annat om systemansvar och kapacitetsmekanismer. Riksdagen beslutade i maj 2024 att godkänna ett leveranssäkerhetsmål och ett planeringsmål för elsystemet. Dokumenten gäller den del av löftet som rör leveranssäkerhet.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-energipolitiskt-mal-fossilfritt"],
       "outcome": "weakened",
       "note": "Avtalet anger att det energipolitiska målet ändras från 100 procent förnybart till 100 procent fossilfritt."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB112",
+      "designation": "Dir. 2024:12",
+      "title": "Ett elsystem med tydligt systemansvar, hög leveranssäkerhet och långsiktiga planeringsförutsättningar",
+      "date": "2024-01-25",
+      "url": "https://data.riksdagen.se/dokument/HCB112.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",

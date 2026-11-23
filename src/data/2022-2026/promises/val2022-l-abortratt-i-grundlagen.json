@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["abort", "grundlag", "regeringsformen", "kroppslig integritet", "aborträtt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i december 2025 fram ett förslag om att göra rätten till abort till en ny fri- och rättighet i regeringsformen. Riksdagen antog i maj 2026 ändringen som vilande, vilket är det första av två beslut som krävs för en grundlagsändring. Dokumenten gäller själva skyddet av aborträtten i grundlagen.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-abortratt-skydd-regeringsformen"],
       "outcome": "included",
       "note": "Avtalet tar fram förslag om att ge kvinnans rätt till abort skydd i regeringsformen."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0378",
+      "designation": "Prop. 2025/26:78",
+      "title": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
+      "date": "2025-12-05",
+      "url": "https://data.riksdagen.se/dokument/HD0378.html",
+      "relevance": "full",
+      "note": null
     },
     {
       "kind": "bet",

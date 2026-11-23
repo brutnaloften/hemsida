@@ -23,10 +23,17 @@
     "statsbidrag"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i juni 2024 om en ny lag om statsbidrag till trossamfund med krav på demokrati, vilket rör extremism och finansiering delvis. I maj 2025 gav regeringen en utredning i uppdrag att föreslå regler som förbjuder utländsk finansiering av trossamfund med extremistiska och antidemokratiska syften. Dokumenten gäller bara utländsk finansiering.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -44,6 +51,16 @@
       "title": "Statens stöd till trossamfund och civilsamhället",
       "date": "2024-06-13",
       "url": "https://data.riksdagen.se/dokument/HB01KrU7.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB152",
+      "designation": "Dir. 2025:52",
+      "title": "Ett regelverk för att motverka utländsk finansiering av verksamheter med antidemokratiska syften",
+      "date": "2025-05-28",
+      "url": "https://data.riksdagen.se/dokument/HDB152.html",
       "relevance": "partial",
       "note": null
     }

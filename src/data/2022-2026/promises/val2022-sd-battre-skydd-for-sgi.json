@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["SGI", "sjukpenninggrundande inkomst", "sjukförsäkring"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen förlängde i mars 2023 tidsfristen för utredningen om reglerna för sjukpenninggrundande inkomst till juni 2023. Utredningen lade i juni 2023 fram ett förslag till helt nytt regelverk med \"skyddad inkomst\" och särskilda regler, som enligt den ger avsevärt bättre skydd än i dag. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,26 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB141",
+      "designation": "Dir. 2023:41",
+      "title": "Tilläggsdirektiv till utredningen Ett trygghetssystem för alla - översyn av regelverket för sjukpenninggrundande inkomst (S 2021:07)",
+      "date": "2023-03-23",
+      "url": "https://data.riksdagen.se/dokument/HBB141.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB330",
+      "designation": "SOU 2023:30",
+      "title": "Ett trygghetssystem för alla - nytt regelverk för sjukpenninggrundande inkomst",
+      "date": "2023-06-20",
+      "url": "https://data.riksdagen.se/dokument/HBB330.html",
+      "relevance": "full",
       "note": null
     }
   ]

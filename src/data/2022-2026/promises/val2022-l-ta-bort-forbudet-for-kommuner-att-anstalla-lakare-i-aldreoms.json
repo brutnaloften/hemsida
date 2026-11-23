@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["läkare", "äldreomsorg", "kommuner", "hälso- och sjukvårdslagen", "kommunal läkare"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att föreslå hur kommuner kan anställa läkare. I maj 2026 godkände riksdagen regeringens ändring i hälso- och sjukvårdslagen som låter kommuner anställa läkare i kommunal hälso- och sjukvård.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-utredning-kommunala-lakare"],
       "outcome": "weakened",
       "note": "Avtalet tillsätter en utredning om att ge kommuner rätt att anställa läkare i den kommunala vården, inte ett borttaget förbud."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB198",
+      "designation": "Dir. 2023:98",
+      "title": "Stärkt medicinsk kompetens i kommunal hälso- och sjukvård",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB198.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",

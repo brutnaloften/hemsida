@@ -17,12 +17,29 @@
   "committee": "SfU",
   "keywords": ["arbetskraftsinvandring", "arbetstillstånd", "migration", "arbetslöshet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i februari 2023 en utredning tilläggsdirektiv om att skärpa reglerna, bland annat med krav på medianlön och försäkring, så att fler som redan är i Sverige kan få jobben. Riksdagen beslutade i mars 2026 om skärpta regler: högre lönekrav, krav på sjukförsäkring och möjlighet att utesluta yrken. Det gäller delen om att begränsa arbetskraftsinvandringen.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB125",
+      "designation": "Dir. 2023:25",
+      "title": "Tilläggsdirektiv till Utredningen om en behovsprövad arbetskraftsinvandring (Ju 2022:11)",
+      "date": "2023-02-16",
+      "url": "https://data.riksdagen.se/dokument/HBB125.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HA01SfU17",
@@ -40,6 +57,16 @@
       "title": "Arbetskraftsinvandring",
       "date": "2024-02-21",
       "url": "https://data.riksdagen.se/dokument/HB01SfU11.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU12",
+      "designation": "Bet. 2025/26:SfU12",
+      "title": "Nya regler för arbetskraftsinvandring",
+      "date": "2026-03-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU12.html",
       "relevance": "partial",
       "note": null
     }

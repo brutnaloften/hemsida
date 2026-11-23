@@ -17,15 +17,21 @@
   "committee": "JuU",
   "keywords": ["förverkande", "beslag", "statussymboler", "gängkriminalitet"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i maj 2024 fram ett förslag om ny förverkandelagstiftning, med bland annat förverkande av egendom som står i missförhållande till lagliga inkomster och ett generellt penningbeslag. Riksdagen fattade beslut om förslaget i september 2024. Dokumenten gäller en del av löftet: möjligheten att ta kriminellas tillgångar i beslag.",
-    "date": "2026-11-15",
+    "reasoning": "Regeringen lade i maj 2024 fram förslag om ny förverkandelagstiftning, bland annat förverkande av egendom som står i missförhållande till lagliga inkomster. Riksdagen beslutade i september 2024 om förslaget, och ändringar i bland annat brottsbalken och rättegångsbalken trädde i kraft den 8 november 2024. De gäller kriminellas tillgångar i allmänhet och täcker därmed en del av löftet.",
+    "date": "2026-11-23",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2026-10-29"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i maj 2024 fram ett förslag om ny förverkandelagstiftning, med bland annat förverkande av egendom som står i missförhållande till lagliga inkomster och ett generellt penningbeslag. Riksdagen fattade beslut om förslaget i september 2024. Dokumenten gäller en del av löftet: möjligheten att ta kriminellas tillgångar i beslag.",
+        "date": "2026-11-15"
       }
     ]
   },
@@ -57,6 +63,36 @@
       "url": "https://data.riksdagen.se/dokument/HC01JuU3.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-782",
+      "designation": "SFS 2024:782",
+      "title": "Lag (2024:782) om förfarandet vid förverkande av egendom och åläggande av företagsbot",
+      "date": "2024-11-08",
+      "url": "https://svenskforfattningssamling.se/doc/2024782.html",
+      "relevance": "partial",
+      "note": "Lagen innehåller inga materiella regler om beslag eller förverkande av statussymboler som sådana, och har inget fokus på att motverka negativa förebilder bland unga."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-783",
+      "designation": "SFS 2024:783",
+      "title": "Lag (2024:783) om ändring i brottsbalken",
+      "date": "2024-11-08",
+      "url": "https://svenskforfattningssamling.se/doc/2024783.html",
+      "relevance": "partial",
+      "note": "Texten visar ingen särskild regel om beslag eller förverkande av kriminellas statussymboler (t.ex. lyxbilar, dyra klockor) som sådana, och ingen koppling till att motverka negativa förebilder."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-784",
+      "designation": "SFS 2024:784",
+      "title": "Lag (2024:784) om ändring i rättegångsbalken",
+      "date": "2024-11-08",
+      "url": "https://svenskforfattningssamling.se/doc/2024784.html",
+      "relevance": "partial",
+      "note": "Lagen innehåller ingen särskild åtgärd riktad mot kriminellas statussymboler (t.ex. dyra bilar, klockor eller smycken), och de materiella förverkandereglerna ligger i andra lagar i propositionen."
     }
   ]
 }

@@ -17,10 +17,17 @@
   "committee": "CU",
   "keywords": ["hyressättning", "bruksvärde", "marknadshyror", "hyresgäster"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att göra hyressättningen vid privatuthyrning mer anpassad till hur efterfrågad bostaden är och ge parternas överenskomna hyra större genomslag. Riksdagen biföll i november 2025 ett betänkande om en förbättrad modell för presumtionshyra, med ett nytt skiljeförfarande för begynnelsehyror och hyresjusteringar. Dokumenten gäller privatuthyrning och presumtionshyra, alltså en del av löftet.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB192",
+      "designation": "Dir. 2023:92",
+      "title": "Enklare privatuthyrning och ändring av presumtionshyror",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB192.html",
+      "relevance": "partial",
       "note": null
     },
     {

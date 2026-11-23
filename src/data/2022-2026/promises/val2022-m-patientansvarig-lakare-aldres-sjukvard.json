@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["patientansvarig läkare", "läkarkontakt", "äldres sjukvård", "kontinuitet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i maj 2024 en utredare i uppdrag att föreslå en fast läkarkontakt inom specialiserad vård, särskilt för multisjuka äldre. Riksdagen beslutade i februari 2026 om lagar om en fast vårdkontakt i kommunal vård och information om patientens fasta läkarkontakt. Dokumenten gäller delar av löftet: specialiserad vård för multisjuka äldre och vårdkontakter.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-fast-lakarkontakt-uppfoljning"],
       "outcome": "weakened",
       "note": "Avtalet följer bara upp rätten till fast läkarkontakt och särskiljer inte äldres sjukvård."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB150",
+      "designation": "Dir. 2024:50",
+      "title": "Bättre styrning för en tillgänglig och jämlik hälso- och sjukvård med god kontinuitet",
+      "date": "2024-05-23",
+      "url": "https://data.riksdagen.se/dokument/HCB150.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU23",
+      "designation": "Bet. 2025/26:SoU23",
+      "title": "Nästa steg för en god och nära vård",
+      "date": "2026-02-06",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU23.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

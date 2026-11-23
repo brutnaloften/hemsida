@@ -17,12 +17,29 @@
   "committee": "KU",
   "keywords": ["offentlighetsprincipen", "friskolor", "insyn", "transparens"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i april 2024 att offentlighetsprincipen ska gälla i fristående förskolor, skolor och fritidshem samt vissa folkhögskolor och komvux på entreprenad. I maj 2026 biföll riksdagen ett förslag om att utvidga offentlighetsprincipen till skolhuvudmän, även enskilda, med lättnader för mindre huvudmän och sekretess för affärsuppgifter.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB328",
+      "designation": "SOU 2024:28",
+      "title": "Offentlighetsprincipen eller insynslag, Allmänhetens insyn i enskilda aktörer inom skolväsendet",
+      "date": "2024-04-19",
+      "url": "https://data.riksdagen.se/dokument/HCB328.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HD01UbU20",

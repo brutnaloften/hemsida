@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["omvänd bevisbörda", "beslag", "brottsvinster", "gängmedlemmar"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i december 2024 en utredare i uppdrag att lämna förslag om omvänd bevisbörda vid utvidgat förverkande. Uppdraget gäller också att egendom generellt ska kunna säkras i förverkandesyfte, vilket motsvarar att ta gängens pengar och lyxprylar. Dokumentet visar ett utredningsuppdrag, inget beslut om lag.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-nya-forverkandeformer"],
       "outcome": "weakened",
       "note": "Avtalet inför nya förverkandeformer och utreder en omvänd bevisbörda, men lovar den inte."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB1122",
+      "designation": "Dir. 2024:122",
+      "title": "Genomförande av direktivet om återvinning av tillgångar och förverkande",
+      "date": "2024-12-19",
+      "url": "https://data.riksdagen.se/dokument/HCB1122.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }
