@@ -26,10 +26,10 @@
     "verkställighetshinder"
   ],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen tillsatte en utredning i maj 2024 och den la fram sina förslag i maj 2025. Riksdagen beslutade i juni 2026 att skärpa reglerna: lägre gräns för utvisning, längre återreseförbud och att verkställighetshinder inte längre vägs in. En lag om ändring i utlänningslagen trädde i kraft 1 september 2026 och täcker en del av löftet.",
-    "date": "2026-11-11",
+    "reasoning": "Regeringen tillsatte en utredning i maj 2024, och den lade fram sina förslag i maj 2025. Regeringen la fram en proposition i april 2026 och riksdagen beslutade i juni 2026 i enlighet med den. Lagen som genomför löftet trädde i kraft den 1 september 2026. Den sänker gränsen för utvisning till straff strängare än böter, förlänger återreseförbuden och ålägger åklagare att yrka på utvisning.",
+    "date": "2026-11-23",
     "history": [
       {
         "value": "unassessed",
@@ -40,6 +40,12 @@
         "value": "in_progress",
         "assessedBy": "ai",
         "reasoning": "Regeringen gav i maj 2024 en utredning i uppdrag att skärpa reglerna om utvisning vid brott, och utredningen lade fram förslag i maj 2025. Regeringen föreslog i april 2026 skärpta regler, och riksdagen biföll förslaget i juni 2026: utvisning vid straff strängare än böter, längre återreseförbud och åklagarplikt. Domstolar kan inte längre döma till utvisning på eget initiativ, och utvisningsmen nämns inte.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen tillsatte en utredning i maj 2024 och den la fram sina förslag i maj 2025. Riksdagen beslutade i juni 2026 att skärpa reglerna: lägre gräns för utvisning, längre återreseförbud och att verkställighetshinder inte längre vägs in. En lag om ändring i utlänningslagen trädde i kraft 1 september 2026 och täcker en del av löftet.",
         "date": "2026-11-11"
       }
     ]
@@ -92,8 +98,8 @@
       "title": "Lag (2026:1259) om ändring i utlänningslagen (2005:716)",
       "date": "2026-09-01",
       "url": "https://svenskforfattningssamling.se/doc/20261259.html",
-      "relevance": "partial",
-      "note": "Texten visar inte tydligt att åklagarens yrkandeskyldighet ingår i just denna lag, och inte heller att utvisningsmen utmönstras som straffmildrande eller att reglerna om återfall behandlas."
+      "relevance": "full",
+      "note": null
     }
   ]
 }

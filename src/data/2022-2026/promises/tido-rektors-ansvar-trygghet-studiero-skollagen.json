@@ -26,10 +26,10 @@
     "ordningsregler"
   ],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i januari 2025 att rektors ansvar för trygghet och studiero förtydligas i skollagen, med längre placering och avstängning samt ordningsregler. Regeringen lade fram ett förslag i mars 2026 och riksdagen biföll det i maj 2026. En lag om ändring i skollagen trädde i kraft 1 augusti 2026 och täcker en del av löftet.",
-    "date": "2026-11-11",
+    "reasoning": "En statlig utredning föreslog i januari 2025 att rektors ansvar för trygghet och studiero förtydligas i skollagen, med längre placering och avstängning samt ordningsregler som rektor beslutar om. Regeringen lade fram ett förslag i mars 2026 och riksdagen biföll det i maj 2026. Lagen som genomför löftet trädde i kraft den 1 augusti 2026.",
+    "date": "2026-11-23",
     "history": [
       {
         "value": "unassessed",
@@ -40,6 +40,12 @@
         "value": "in_progress",
         "assessedBy": "ai",
         "reasoning": "En statlig utredning föreslog i januari 2025 att rektors ansvar för trygghet och studiero tydliggörs i skollagen, att placering och avstängning kan gälla längre och att rektor beslutar om ordningsregler. Regeringen lade i mars 2026 fram ett förslag, och riksdagen biföll det i maj 2026. Besluten täcker tydligare ansvar, skolövergripande ordningsregler och skarpare åtgärder. Längre avstängning och att rektor flyttar elever framgår inte.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i januari 2025 att rektors ansvar för trygghet och studiero förtydligas i skollagen, med längre placering och avstängning samt ordningsregler. Regeringen lade fram ett förslag i mars 2026 och riksdagen biföll det i maj 2026. En lag om ändring i skollagen trädde i kraft 1 augusti 2026 och täcker en del av löftet.",
         "date": "2026-11-11"
       }
     ]
@@ -82,8 +88,8 @@
       "title": "Lag (2026:1198) om ändring i skollagen (2010:800)",
       "date": "2026-08-01",
       "url": "https://svenskforfattningssamling.se/doc/20261198.html",
-      "relevance": "partial",
-      "note": "Texten visar inte tydligt att tillfällig placering och avstängning kan beslutas för längre tid, att rektor får flytta elever, eller att skolledningen beslutar om ordningsreglerna."
+      "relevance": "full",
+      "note": null
     }
   ]
 }

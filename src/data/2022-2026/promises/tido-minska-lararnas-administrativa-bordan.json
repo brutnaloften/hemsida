@@ -26,10 +26,10 @@
     "lärares arbetstid"
   ],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i mars 2025 minskad dokumentation och enklare regler om kränkande behandling. Regeringen lade i mars 2026 fram ett liknande förslag, och riksdagen beslutade i maj 2026. En ändring i skollagen trädde i kraft 1 augusti 2026. Dokumenten visar att den bland annat minskar rapporteringen av kränkande behandling till rektor, vilket är en del av löftet.",
-    "date": "2026-11-11",
+    "reasoning": "En statlig utredning föreslog i mars 2025 minskade dokumentationskrav och enklare regler om kränkande behandling. Regeringen lade i mars 2026 fram ett förslag om detta, och riksdagen beslutade i maj 2026. Lagen som genomför löftet trädde i kraft den 1 augusti 2026. En annan lag, som täcker en del av löftet, träder i kraft den 2 juli 2028.",
+    "date": "2026-11-23",
     "history": [
       {
         "value": "unassessed",
@@ -40,6 +40,12 @@
         "value": "in_progress",
         "assessedBy": "ai",
         "reasoning": "En statlig utredning föreslog i mars 2025 minskade dokumentationskrav, bland annat färre utvecklingssamtal och utvecklingsplaner som bara gäller kunskaper, samt enklare regler om kränkande behandling. Regeringen lade i mars 2026 fram ett liknande förslag, och riksdagen beslutade i maj 2026 om lärares tid för undervisning och mindre rapportering av kränkande behandling till rektor. Dokumenten nämner inte en bred regelöversyn eller begränsade utvecklingsplaner i beslutet.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i mars 2025 minskad dokumentation och enklare regler om kränkande behandling. Regeringen lade i mars 2026 fram ett liknande förslag, och riksdagen beslutade i maj 2026. En ändring i skollagen trädde i kraft 1 augusti 2026. Dokumenten visar att den bland annat minskar rapporteringen av kränkande behandling till rektor, vilket är en del av löftet.",
         "date": "2026-11-11"
       }
     ]
@@ -102,8 +108,8 @@
       "title": "Lag (2026:1096) om ändring i skollagen (2010:800)",
       "date": "2026-08-01",
       "url": "https://svenskforfattningssamling.se/doc/20261096.html",
-      "relevance": "partial",
-      "note": "Lagen genomför inte de begränsade kraven på elevnära dokumentation som individuella utvecklingsplaner och utvecklingssamtal, och inte själva breda regelöversynen. Dessa finns i en annan lag i propositionen."
+      "relevance": "full",
+      "note": null
     },
     {
       "kind": "sfs",
