@@ -17,10 +17,17 @@
   "committee": "TU",
   "keywords": ["järnväg", "höghastighetståg", "underhåll", "tågtrafik", "punktlighet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Löftet gäller att rusta upp dagens järnväg i stället för höghastighetståg. Det anslag som bär järnvägsunderhållet, 22:2 Vidmakthållande av statens transportinfrastruktur, hade ett anvisat belopp (budget plus ändringsbudgetar) på 31 144 mn kr 2022 och 40 802 mn kr 2025, en nominell ökning med 9 658 mn kr eller 31,0 procent (i fasta priser 16,6 procent). Anslaget delas dock med väg, och i budgeten för 2023 omprioriterade regeringen 750 mn kr av järnvägsunderhållet till vägunderhåll (Bet. 2022/23:TU1), så ökningen kan inte läsas som pengar till järnväg. Utfallet är inte uppdelat på trafikslag och delen om att satsa på dagens järnväg i stället för höghastighetståg går inte att mäta i anslagsdata. Källa: ESV:s årsutfall och betänkandena. Därför pågår arbetet.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,47 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01TU1",
+      "designation": "Bet. 2022/23:TU1",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2022-12-14",
+      "url": "https://data.riksdagen.se/dokument/HA01TU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01TU1",
+      "designation": "Bet. 2024/25:TU1",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01TU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2201002",
+        "namn": "Vidmakthållande av statens transportinfrastruktur",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 31144.3,
+        "after": 40802.2
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot utfallet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 31 144 mn kr 2022 och 40 802 mn kr 2025, ändring 9 658 mn kr (+31,0 %). I fasta priser +16,6 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-12-04",
+      "relevance": "partial",
+      "note": "Anslaget bär både väg och järnväg; ESV delar inte upp utfallet per trafikslag. I budgeten för 2023 flyttade regeringen 750 mn kr från järnvägsunderhåll till vägunderhåll (Bet. 2022/23:TU1)."
     }
   ]
 }
