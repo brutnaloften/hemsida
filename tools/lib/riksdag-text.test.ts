@@ -6,10 +6,11 @@ import {
   annotateParagraphs,
   createTextFetcher,
   decodeEntities,
+  extractToc,
   parseRiksdagText,
   trailingParties,
 } from './riksdag-text.ts';
-import { HD01SOU1_TEXT } from './riksdag-text.fixtures.ts';
+import { HD01SOU1_TEXT, SOU_PDF_NO_TOC, SOU_PDF_TOC } from './riksdag-text.fixtures.ts';
 
 describe('decodeEntities', () => {
   it('decodes numeric, hex and named entities', () => {
@@ -146,5 +147,109 @@ describe('createTextFetcher', () => {
     });
     expect(await fetcher('NOPE')).toBeNull();
     await expect(fetcher('../x')).rejects.toThrow('Bad dok_id');
+  });
+});
+
+describe('PDF-to-HTML sections (SOU, Ds, prop)', () => {
+  it('extracts top-level ToC entries and skips sub-entries and wrapped lines', () => {
+    expect(extractToc(SOU_PDF_TOC)).toEqual([
+      { number: null, title: 'Sammanfattning', page: 3 },
+      { number: '1', title: 'Författningsförslag', page: 4 },
+      { number: '2', title: 'Utredningens uppdrag och arbete', page: 5 },
+      { number: '3', title: 'Konsekvenser', page: 6 },
+      { number: null, title: 'Bilaga 1 Direktiv', page: 7 },
+    ]);
+  });
+
+  it('drops the ToC page and sets section from the ToC, synthesising missing headings', () => {
+    const paras = annotateParagraphs(parseRiksdagText(SOU_PDF_TOC), 'sou');
+    const sec = (start: string) => paras.find((p) => p.text.startsWith(start))?.section;
+    expect(paras.map((p) => p.text)).not.toContain('Innehåll');
+    expect(sec('Utredningen föreslår')).toBe('Sammanfattning');
+    expect(sec('Härigenom')).toBe('1 Författningsförslag');
+    // The real paragraph is the heading: no synthetic duplicate.
+    const hs = paras.filter((p) => p.heading && p.text.includes('Författningsförslag'));
+    expect(hs).toHaveLength(1);
+    expect(hs[0]!.text).toBe('1 Författningsförslag');
+    expect(sec('Uppdraget beskrivs')).toBe('2 Utredningens uppdrag och arbete');
+    expect(sec('Förslaget kostar')).toBe('3 Konsekvenser');
+    expect(sec('Direktivets')).toBe('Bilaga 1 Direktiv');
+  });
+
+  it('falls back to numbered and known headings without a ToC', () => {
+    expect(extractToc(SOU_PDF_NO_TOC)).toEqual([]);
+    const paras = annotateParagraphs(parseRiksdagText(SOU_PDF_NO_TOC), 'sou');
+    const sec = (start: string) => paras.find((p) => p.text.startsWith(start))?.section;
+    expect(sec('Vi föreslår en ändring')).toBe('Sammanfattning');
+    expect(sec('Uppdraget gavs')).toBe('1 Inledning');
+    expect(sec('Tidigare')).toBe('2 Bakgrund');
+    // "3 miljoner kronor ..." is a sentence, not a heading.
+    expect(sec('3 miljoner')).toBe('2 Bakgrund');
+    expect(sec('Vi föreslår en höjning')).toBe('3 Förslag');
+  });
+
+  it('keeps a body page right after the ToC whose footnote markers link to itself', () => {
+    const fn = [1, 2, 3, 4, 5].map((n) => `<A href="#page_3">${n}</A>`).join(' ');
+    const html = SOU_PDF_TOC.replace('<DIV id="page_3">', `<DIV id="page_3"><P>Fotnoter ${fn}</P>`);
+    const texts = parseRiksdagText(html).map((p) => p.text);
+    expect(texts).toContain('Utredningen föreslår en ny lag.');
+    expect(texts.some((t) => t.startsWith('Fotnoter'))).toBe(true);
+    expect(texts).not.toContain('Innehåll');
+  });
+
+  it('matches glued numbers and running headers to the ToC title without duplicates', () => {
+    const html = `<DIV id="page_1"><P>x</P></DIV>
+<DIV id="page_2"><TABLE>
+<TR><TD><A href="#page_3">1</A></TD><TD><A href="#page_3">Inledning ....</A></TD><TD><A href="#page_3">3</A></TD></TR>
+<TR><TD><A href="#page_4">2</A></TD><TD><A href="#page_4">Bakgrund ....</A></TD><TD><A href="#page_4">4</A></TD></TR>
+<TR><TD><A href="#page_5">3</A></TD><TD><A href="#page_5">Slut ....</A></TD><TD><A href="#page_5">5</A></TD></TR>
+</TABLE></DIV>
+<DIV id="page_3"><P>1Inledning</P><P>Text ett.</P></DIV>
+<DIV id="page_4"><P>Prop. 2023/24:64 2 Bakgrund</P><P>Text två.</P></DIV>
+<DIV id="page_5"><P>3 Slut</P><P>Text tre.</P></DIV>`;
+    const paras = parseRiksdagText(html);
+    expect(paras.filter((p) => p.heading).map((p) => p.text)).toEqual([
+      '1Inledning',
+      'Prop. 2023/24:64 2 Bakgrund',
+      '3 Slut',
+    ]);
+  });
+
+  it('fallback matches glued numbers and gives up when one heading swallows the text', () => {
+    const glued = parseRiksdagText(
+      '<DIV id="page_1"><P>Sammanfattning</P><P>a</P><P>1Inledning</P><P>b</P><P>2Bakgrund</P><P>c</P></DIV>',
+    );
+    expect(glued.filter((p) => p.heading).map((p) => p.text)).toEqual([
+      'Sammanfattning',
+      '1Inledning',
+      '2Bakgrund',
+    ]);
+    const long = 'Mycket lång brödtext. '.repeat(200);
+    const swallowed = parseRiksdagText(
+      `<DIV id="page_1"><P>Sammanfattning</P><P>${long}</P><P>Bilaga 1</P><P>kort</P></DIV>`,
+    );
+    expect(swallowed.some((p) => p.heading)).toBe(false);
+  });
+
+  it('drops only the leading run of ToC pages, not later pages with cross-references', () => {
+    const links = [3, 4, 5, 6, 7].map((n) => `<A href="#page_${n}">se ${n}</A>`).join(' ');
+    const html = `${SOU_PDF_TOC}<DIV id="page_9"><P>Sent kapitel</P><P>${links}</P></DIV>`;
+    expect(parseRiksdagText(html).map((p) => p.text)).toContain('Sent kapitel');
+  });
+
+  it('does not treat ToC leftovers, footnotes or repeated page headers as headings', () => {
+    const paras = parseRiksdagText(`<DIV id="page_1">
+<P>Innehåll</P><P>1 Inledning 9</P><P>2 Bakgrund 12</P>
+<P>1 Inledning</P><P>Text.</P><P>1 Jfr prop. 2020/21:1.</P><P>1 Jfr prop. 2020/21:1</P>
+<P>2 Bakgrund</P><P>Mer text.</P>
+<P>Bilaga 1</P><P>Texten.</P><P>Bilaga 1</P><P>Mer.</P>
+</DIV>`);
+    const heads = paras.filter((p) => p.heading).map((p) => p.text);
+    expect(heads).toEqual(['1 Inledning', '2 Bakgrund', 'Bilaga 1']);
+  });
+
+  it('leaves non-PDF documents without page divs alone', () => {
+    const paras = parseRiksdagText('<p>Sammanfattning</p><p>1 Inledning</p><p>2 Bakgrund</p>');
+    expect(paras.some((p) => p.heading)).toBe(false);
   });
 });
