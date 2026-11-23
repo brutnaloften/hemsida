@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["kravbaserad integration", "välfärdsförmåner", "språkinlärning", "medborgarskap"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2024 tilläggsdirektiv till utredningen om skärpta krav för att förvärva svenskt medborgarskap, och riksdagen fattade i april 2026 beslut om skärpta krav för svenskt medborgarskap. Det rör medborgarskap och är en del av en kravbaserad integrationspolitik.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-kravbaserad-integrationspolitik", "tido-kvalificering-valfard-nyanlanda"],
       "outcome": "weakened",
       "note": "Avtalet anger att en kravbaserad integrationspolitik ska införas och att en utredning ska föreslå en modell för kvalificering till välfärdsförmåner för nyanlända."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB163",
+      "designation": "Dir. 2024:63",
+      "title": "Tilläggsdirektiv till Utredningen om skärpta krav för att förvärva svenskt medborgarskap (Ju 2023:17)",
+      "date": "2024-06-27",
+      "url": "https://data.riksdagen.se/dokument/HCB163.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU28",
+      "designation": "Bet. 2025/26:SfU28",
+      "title": "Skärpta krav för svenskt medborgarskap",
+      "date": "2026-04-28",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU28.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

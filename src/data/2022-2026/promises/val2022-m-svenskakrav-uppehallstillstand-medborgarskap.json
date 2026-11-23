@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["språkkrav", "svenska", "uppehållstillstånd", "medborgarskap"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i september 2023 en utredare i uppdrag att föreslå skärpta krav för svenskt medborgarskap, bland annat kunskaper om svenskt samhälle och kultur. Uppdraget bygger på tidigare utredningar som föreslagit språkkrav. Dokumentet gäller bara medborgarskap, alltså en del av löftet.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-sprak-samhallskunskap-medborgarskap-sou-2021-2"],
       "outcome": "weakened",
       "note": "Avtalet täcker svenskakrav för medborgarskap (SOU 2021:2) men inte för permanent uppehållstillstånd, som i stället avskaffas."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1129",
+      "designation": "Dir. 2023:129",
+      "title": "Skärpta krav för att förvärva svenskt medborgarskap",
+      "date": "2023-09-07",
+      "url": "https://data.riksdagen.se/dokument/HBB1129.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

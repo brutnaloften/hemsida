@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["SFI", "prestationsplan", "kunskapsmål", "språkutbildning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i september 2025 fram ett förslag om skärpta krav i sfi, med en kunskapsbedömning vid start som underlag för en individuell studieplan. Riksdagen beslutade i november 2025 bland annat om en tidsgräns på tre år. En lag om ändring i skollagen trädde i kraft 1 januari 2026 och täcker en del av löftet.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0310",
+      "designation": "Prop. 2025/26:10",
+      "title": "Skärpta krav i kommunal vuxenutbildning i svenska för invandrare (sfi)",
+      "date": "2025-09-11",
+      "url": "https://data.riksdagen.se/dokument/HD0310.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU4",
+      "designation": "Bet. 2025/26:UbU4",
+      "title": "Skärpta krav i kommunal vuxenutbildning i svenska för invandrare (sfi)",
+      "date": "2025-11-12",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU4.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-1311",
+      "designation": "SFS 2025:1311",
+      "title": "Lag (2025:1311) om ändring i skollagen (2010:800)",
+      "date": "2026-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20251311.html",
+      "relevance": "partial",
+      "note": "Lagen visar inte att varje sfi-elev får en individuell prestationsplan med kunskapsmål som eleven ska uppnå. Den individuella studieplanen med utbildningsmål fanns redan sedan tidigare."
     }
   ]
 }

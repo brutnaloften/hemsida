@@ -23,10 +23,17 @@
     "företagande"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i oktober 2024 att växa-stödet skulle utvidgas, så att arbetsgivaravgifterna sänks för enmansföretagare som anställer upp till två personer. Riksdagen beslutade om budgeten i november 2024, och en lagändring om enmansföretag trädde i kraft 1 januari 2025. Den täcker bara en del av löftet, eftersom den gäller enmansföretag som anställer.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -36,6 +43,36 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0325",
+      "designation": "Prop. 2024/25:25",
+      "title": "Utvidgat växa-stöd – nedsättning av arbetsgivaravgifterna för upp till två anställda",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC0325.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01FiU1",
+      "designation": "Bet. 2024/25:FiU1",
+      "title": "Statens budget 2025 – Rambeslutet",
+      "date": "2024-11-22",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1158",
+      "designation": "SFS 2024:1158",
+      "title": "Lag (2024:1158) om ändring i lagen (2016:1053) om särskild beräkning av vissa avgifter för enmansföretag",
+      "date": "2025-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241158.html",
+      "relevance": "partial",
+      "note": "Lagen är en snäv, tidsbegränsad nedsättning för enmansföretag/växa-företag som anställer, inte en generell sänkning av arbetsgivaravgifterna för småföretagare."
     },
     {
       "kind": "bet",

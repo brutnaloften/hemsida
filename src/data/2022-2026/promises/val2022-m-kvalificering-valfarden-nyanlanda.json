@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["kvalificering", "välfärd", "nyanlända", "bidrag", "bosättning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i oktober 2023 en utredning i uppdrag att föreslå en ny modell där nyanlända kvalificerar sig till socialförsäkring och ekonomiskt bistånd genom eget arbete eller permanent, laglig bosättning. Riksdagen beslutade i maj 2026 att ändra socialförsäkringsbalken så att den som bosätter sig i Sverige måste kvalificera sig till förmåner genom förvärvsarbete eller bosättningstid och laglig vistelse.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-kvalificering-valfard-nyanlanda"],
       "outcome": "weakened",
       "note": "Avtalet innehåller endast en utredning av en kvalificeringsmodell för nyanlända."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1149",
+      "designation": "Dir. 2023:149",
+      "title": "En ny modell för kvalificering till socialförsäkring och ekonomiskt bistånd för nyanlända och icke-medborgare",
+      "date": "2023-10-19",
+      "url": "https://data.riksdagen.se/dokument/HBB1149.html",
+      "relevance": "full",
+      "note": null
     },
     {
       "kind": "bet",

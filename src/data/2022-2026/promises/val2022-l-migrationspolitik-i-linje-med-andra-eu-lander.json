@@ -23,10 +23,17 @@
     "utlänningslagen"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen utvidgade i november 2024 uppdraget till utredningen om hur det svenska asylregelverket kan anpassas till miniminivån enligt EU-rätten. Det gäller en del av löftet om en migrationspolitik i linje med andra EU-länder.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -36,6 +43,16 @@
       "promises": ["tido-asylregler-miniminivan-eu-ratten"],
       "outcome": "included",
       "note": "Avtalet anpassar svensk asyllagstiftning till EU-rättens miniminivå."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB1115",
+      "designation": "Dir. 2024:115",
+      "title": "Tilläggsdirektiv till Utredningen om anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten (Ju 2023:18)",
+      "date": "2024-11-21",
+      "url": "https://data.riksdagen.se/dokument/HCB1115.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

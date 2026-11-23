@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["rörelsefrihet", "vistelseförbud", "uppföljning efter straff"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att föreslå en ny påföljd med anvisningar om var dömda får vistas. Riksdagen beslutade i januari 2024 om preventiva vistelseförbud och i maj 2026 om utökade möjligheter att styra var dömda får vistas. Besluten täcker en del av löftet: vistelseförbud och vistelseföreskrifter.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,12 +39,42 @@
       "note": "Avtalet inför möjlighet till vistelseförbud enligt dansk modell i upp till tio år efter avtjänat fängelsestraff, för gängrelaterade brott, hedersrelaterade brott och brott kopplade till extremism."
     },
     {
+      "kind": "dir",
+      "dok_id": "HBB174",
+      "designation": "Dir. 2023:74",
+      "title": "Tilläggsdirektiv till Utredningen om ett förstärkt samhällsskydd och en minskad risk för återfall i brott (Ju 2022:10)",
+      "date": "2023-06-01",
+      "url": "https://data.riksdagen.se/dokument/HBB174.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HBB417",
+      "designation": "Ds 2023:17",
+      "title": "Vistelseförbud på allmän plats och vissa andra platser",
+      "date": "2023-06-30",
+      "url": "https://data.riksdagen.se/dokument/HBB417.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HB01JuU12",
       "designation": "Bet. 2023/24:JuU12",
       "title": "Preventiva vistelseförbud",
       "date": "2024-01-23",
       "url": "https://data.riksdagen.se/dokument/HB01JuU12.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU38",
+      "designation": "Bet. 2025/26:JuU38",
+      "title": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
+      "date": "2026-05-27",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU38.html",
       "relevance": "partial",
       "note": null
     }

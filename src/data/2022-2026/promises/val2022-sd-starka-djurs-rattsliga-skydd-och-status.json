@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["djurskydd", "djurs rättsliga ställning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i februari 2023 en utredare uppdrag som rör livsmedelsproducenters konkurrenskraft och ett starkt djurskydd. I juni 2023 föreslog en utredning obligatorisk kamerabevakning på slakterier. Riksdagen beslutade i mars 2024 om djurskydd, med stöd för strängare EU-regler för djurtransporter. Dokumenten gäller transporter, veterinärvård och slakterier, alltså delar av löftet.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,26 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB119",
+      "designation": "Dir. 2023:19",
+      "title": "Stärkt konkurrenskraft för livsmedelsproducenter och ett starkt djurskydd",
+      "date": "2023-02-09",
+      "url": "https://data.riksdagen.se/dokument/HBB119.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB327",
+      "designation": "SOU 2023:27",
+      "title": "Kamerabevakning för ett bättre djurskydd",
+      "date": "2023-06-12",
+      "url": "https://data.riksdagen.se/dokument/HBB327.html",
+      "relevance": "partial",
       "note": null
     },
     {

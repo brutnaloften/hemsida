@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["bidragsreform", "utanförskap", "bidrag", "arbetslinjen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i februari och mars 2026 fram förslag om kvalificeringskrav i socialförsäkringen, ett bidragstak i försörjningsstödet och aktivitetskrav. Riksdagen beslutade i maj 2026 om förslagen. Två lagändringar i socialtjänstlagen trädde i kraft 1 juli 2026 och täcker en del av löftet. Andra lagar träder i kraft 1 januari 2027.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,56 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03136",
+      "designation": "Prop. 2025/26:136",
+      "title": "Kvalificering till socialförsäkringen",
+      "date": "2026-02-23",
+      "url": "https://data.riksdagen.se/dokument/HD03136.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03201",
+      "designation": "Prop. 2025/26:201",
+      "title": "Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03201.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03207",
+      "designation": "Prop. 2025/26:207",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03207.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU21",
+      "designation": "Bet. 2025/26:SfU21",
+      "title": "Kvalificering till socialförsäkringen",
+      "date": "2026-05-06",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU21.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU29",
+      "designation": "Bet. 2025/26:SoU29",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU29.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01SoU30",
       "designation": "Bet. 2025/26:SoU30",
@@ -40,6 +97,46 @@
       "url": "https://data.riksdagen.se/dokument/HD01SoU30.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-730",
+      "designation": "SFS 2026:730",
+      "title": "Lag (2026:730) om ändring i socialtjänstlagen (2025:400)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026730.html",
+      "relevance": "partial",
+      "note": "Resten av den stora bidragsreformen, till exempel förändringar av andra bidrag och trygghetssystem, genomförs inte av denna lag."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-896",
+      "designation": "SFS 2026:896",
+      "title": "Lag (2026:896) om ändring i socialtjänstlagen (2025:400)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026896.html",
+      "relevance": "partial",
+      "note": "Bidragstaket, den nya riksnormen, begränsningar för större hushåll, krav kring andrahandsboende, krav på laglig vistelse och arbetslivsinriktad rehabilitering ligger i den andra lagen och ingår inte här."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-853",
+      "designation": "SFS 2026:853",
+      "title": "Lag (2026:853) om ändring i socialförsäkringsbalken",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026853.html",
+      "relevance": "partial",
+      "note": "Resten av en stor bidragsreform, till exempel ändringar i andra bidrag och ersättningar, ingår inte; lagen rör bara bosättningsbaserade socialförsäkringsförmåner."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-897",
+      "designation": "SFS 2026:897",
+      "title": "Lag (2026:897) om ändring i socialtjänstlagen (2025:400)",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026897.html",
+      "relevance": "partial",
+      "note": "Lagen visar inte själva bidragstaket i hela dess bredd, och reformen som helhet (t.ex. andra bidrag än försörjningsstöd) täcks inte av denna lag."
     }
   ]
 }

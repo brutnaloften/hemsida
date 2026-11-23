@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["pensionärsskatt", "skatt på pension", "grundavdrag", "pensionärer"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2024 fram ett förslag om skattefri kompensation till personer födda 1957, eftersom åldersgränsen för förhöjt grundavdrag höjts. Riksdagen beslutade om det i maj 2024, och lagen trädde i kraft 1 juli 2024. Den gäller en enskild årskull, alltså en del av löftet. Riksdagen godkände även budgetramen för 2025 i november 2024, med lägre skatt för pensionärer.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,12 +39,42 @@
       "note": "Avtalet sänker skatten på pensionsinkomster."
     },
     {
+      "kind": "prop",
+      "dok_id": "HB0391",
+      "designation": "Prop. 2023/24:91",
+      "title": "Vissa förslag om kompensation m.m. till personer födda 1957 och 1959 på grund av höjd åldersgräns för förhöjt grundavdrag",
+      "date": "2024-03-19",
+      "url": "https://data.riksdagen.se/dokument/HB0391.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HB01SkU23",
       "designation": "Bet. 2023/24:SkU23",
       "title": "Vissa förslag om kompensation m.m. till personer födda 1957 och 1959 på grund av höjd åldersgräns för förhöjt grundavdrag",
       "date": "2024-05-22",
       "url": "https://data.riksdagen.se/dokument/HB01SkU23.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-404",
+      "designation": "SFS 2024:404",
+      "title": "Lag (2024:404) om skattefrihet och förfarande för kompensation till personer födda 1957 på grund av höjd åldersgräns för förhöjt grundavdrag",
+      "date": "2024-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2024404.html",
+      "relevance": "partial",
+      "note": "Lagen sänker inte skatten på pensioner generellt. Den gäller bara en snäv grupp (födda 1957) och är en kompensation, inte en ändring av skattesatser eller grundavdrag för pensionärer i allmänhet."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01FiU1",
+      "designation": "Bet. 2024/25:FiU1",
+      "title": "Statens budget 2025 – Rambeslutet",
+      "date": "2024-11-22",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
       "relevance": "partial",
       "note": null
     }

@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["mord", "nära relation", "livstid", "mäns våld mot kvinnor"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i september 2026 att ge en utredning i uppdrag att se över åtgärder mot mäns våld mot kvinnor och våld i nära relationer. Uppdraget omfattar bland annat om ett särskilt brott för kvinnomord ska införas och om straffskalorna för relaterade brott ska ändras. Dokumentet gäller en del av löftet och är ett förberedande steg.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1113",
+      "designation": "Dir. 2026:113",
+      "title": "Kvinnofrid - förstärkta åtgärder mot mäns våld mot kvinnor",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1113.html",
+      "relevance": "partial",
       "note": null
     }
   ]

@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["fossila bränslen", "subventioner", "skattelättnader", "avskaffa", "klimat"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i oktober 2024 en utredning i uppdrag att se över befintliga klimatrelaterade stöd och styrmedel som påverkar drivmedel och analysera drivmedelsskatternas nivå, som del av utfasningen av fossila bränslen till 2045. Det gäller bara Sverige och är ett förberedande steg mot den delen av löftet.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB198",
+      "designation": "Dir. 2024:98",
+      "title": "Styrmedel för att bidra till en utfasning av fossila bränslen och att nå Sveriges klimatåtaganden i EU",
+      "date": "2024-10-24",
+      "url": "https://data.riksdagen.se/dokument/HCB198.html",
+      "relevance": "partial",
       "note": null
     }
   ]

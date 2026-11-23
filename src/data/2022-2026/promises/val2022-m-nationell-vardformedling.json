@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["vårdförmedling", "väntetider", "vårdgaranti", "vårdköer"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i maj 2024 en utredare i uppdrag att se över en starkare vårdgaranti och fritt vårdval i hela landet när garantin inte kan uppfyllas. I januari 2026 tillsattes en samordnare för att korta vårdköerna och sprida information om möjligheten att söka vård i andra regioner. Dokumenten gäller bara delar av löftet: själva vårdförmedlingen inrättas inte i något av dem.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,26 @@
       "date": "2022-10-14",
       "promises": ["tido-nationell-vardformedling"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB150",
+      "designation": "Dir. 2024:50",
+      "title": "Bättre styrning för en tillgänglig och jämlik hälso- och sjukvård med god kontinuitet",
+      "date": "2024-05-23",
+      "url": "https://data.riksdagen.se/dokument/HCB150.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB13",
+      "designation": "Dir. 2026:3",
+      "title": "Samordnare för att korta vårdköerna i hälso- och sjukvården",
+      "date": "2026-01-08",
+      "url": "https://data.riksdagen.se/dokument/HEB13.html",
+      "relevance": "partial",
       "note": null
     }
   ]

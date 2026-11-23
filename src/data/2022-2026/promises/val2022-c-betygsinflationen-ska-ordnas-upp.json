@@ -17,12 +17,29 @@
   "committee": "UbU",
   "keywords": ["betygsinflation", "oberoende rättning", "betyg"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att föreslå åtgärder mot betygsinflation. Centralt rättade prov skulle användas för att kontrollera betygen. Riksdagen biföll i juni 2026 ett förslag om ett nytt betygssystem. Det innehåller kalibrerade betygsvärden, centralt rättade nationella slutprov som ger oberoende information och en ny beräkning av meritvärden.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB195",
+      "designation": "Dir. 2023:95",
+      "title": "Likvärdiga betyg och meritvärden",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB195.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HD01UbU26",

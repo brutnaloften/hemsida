@@ -17,12 +17,29 @@
   "committee": "MJU",
   "keywords": ["miljöbalken", "tillståndsprocess", "miljöprövning", "gröna investeringar"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att förkorta och förenkla tillståndsprocesserna enligt miljöbalken. Riksdagen beslutade i maj 2024 om ändringar i miljöbalken och ellagen som ska göra tillståndsprövningen av elnät snabbare och tydligare. Dokumenten gäller snabbare tillstånd och ändringar i miljöbalken, men för elnät och som utredningsuppdrag.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB178",
+      "designation": "Dir. 2023:78",
+      "title": "Förenklade och förkortade tillståndsprocesser enligt miljöbalken",
+      "date": "2023-06-08",
+      "url": "https://data.riksdagen.se/dokument/HBB178.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HB01NU15",

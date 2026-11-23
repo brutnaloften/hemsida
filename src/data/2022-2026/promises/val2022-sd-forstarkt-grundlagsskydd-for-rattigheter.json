@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["grundlag", "yttrandefrihet", "äganderätt", "religionsfrihet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i oktober 2023 en utredare i uppdrag att se över skyddet för personuppgifter på tryck- och yttrandefrihetsområdet, och riksdagen beslutade i april 2023 om ett första steg i ett vilande grundlagsförslag om skyddet för tryck- och yttrandefriheten. Dokumenten gäller yttrandefriheten och täcker bara en del av löftet om starkare grundlagsskydd för rättigheter.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,16 @@
       "title": "Ett ändamålsenligt skydd för tryck- och yttrandefriheten (vilande grundlagsförslag m.m.)",
       "date": "2022-11-11",
       "url": "https://data.riksdagen.se/dokument/HA01KU6.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1145",
+      "designation": "Dir. 2023:145",
+      "title": "Ett förstärkt skydd för personuppgifter på tryck- och yttrandefrihetsområdet",
+      "date": "2023-10-19",
+      "url": "https://data.riksdagen.se/dokument/HBB1145.html",
       "relevance": "partial",
       "note": null
     }

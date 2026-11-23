@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["statligt huvudmannaskap", "regioner", "sjukvård", "vårdorganisation"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att ta fram ett underlag för ett helt eller delvis statligt huvudmannaskap för hälso- och sjukvården, med en plan för genomförandet. Dokumentet gäller en del av löftet: själva utredningen av ett statligt övertagande, inte något beslut om det.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-utredning-statligt-huvudmannaskap-sjukvard"],
       "outcome": "weakened",
       "note": "Avtalet utreder bara om ett delvis eller helt statligt huvudmannaskap för sjukvården kan införas på sikt, inte att regionernas ansvar avskaffas."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB173",
+      "designation": "Dir. 2023:73",
+      "title": "Ett helt eller delvis statligt huvudmannaskap för hälso- och sjukvården",
+      "date": "2023-06-01",
+      "url": "https://data.riksdagen.se/dokument/HBB173.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

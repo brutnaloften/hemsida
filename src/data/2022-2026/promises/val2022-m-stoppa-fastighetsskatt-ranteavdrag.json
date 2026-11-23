@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["fastighetsskatt", "ränteavdrag", "bostad", "skatt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i mars 2024 ett undantag från fastighetsskatt för maskinvärdet i vissa industribyggnader, vilket gäller en smal del av löftet. Riksdagen avslog i april 2025 motioner om statlig fastighetsskatt och ändrad fastighetsavgift. En proposition i juni 2025 motverkar löftet genom att höja fastighetsskatten på vindkraftverk från 0,2 till 0,5 procent.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,36 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB320",
+      "designation": "SOU 2024:20",
+      "title": "Maskinellt värde för vissa industribyggnader - ett undantag från fastighetsskatt",
+      "date": "2024-03-05",
+      "url": "https://data.riksdagen.se/dokument/HCB320.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SkU13",
+      "designation": "Bet. 2024/25:SkU13",
+      "title": "Företag, kapital och fastighet",
+      "date": "2025-04-01",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU13.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03168",
+      "designation": "Prop. 2024/25:168",
+      "title": "Höjd fastighetsskatt för vindkraftverk",
+      "date": "2025-06-17",
+      "url": "https://data.riksdagen.se/dokument/HC03168.html",
+      "relevance": "contradicts",
       "note": null
     }
   ]

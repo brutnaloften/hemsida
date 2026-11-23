@@ -23,10 +23,17 @@
     "brottsbalken"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2025 fram ett förslag om starkare straffrättsligt skydd för offentliganställda mot våld, hot och trakasserier, med ett nytt brott som rör förolämpning mot tjänsteman. Riksdagen beslutade i maj 2025 i enlighet med förslaget, och ändringarna i brottsbalken trädde i kraft den 2 juli 2025. Lagen täcker en del av löftet om ett nytt brott för att skydda offentliganställda.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,16 @@
       "note": "Avtalet återinför missfirmelse mot tjänsteman och skärper straffen för våld och hot mot tjänsteman, men inför inget nytt brott som tjänstemannaförföljelse."
     },
     {
+      "kind": "prop",
+      "dok_id": "HC03141",
+      "designation": "Prop. 2024/25:141",
+      "title": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03141.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HC01JuU29",
       "designation": "Bet. 2024/25:JuU29",
@@ -46,6 +63,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01JuU29.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-579",
+      "designation": "SFS 2025:579",
+      "title": "Lag (2025:579) om ändring i brottsbalken",
+      "date": "2025-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2025579.html",
+      "relevance": "partial",
+      "note": "Något särskilt brott med namnet tjänstemannaförföljelse införs inte. Förföljelse av tjänstemän täcks bara genom att de nya och skärpta brotten läggs till i det allmänna brottet olaga förföljelse."
     }
   ]
 }

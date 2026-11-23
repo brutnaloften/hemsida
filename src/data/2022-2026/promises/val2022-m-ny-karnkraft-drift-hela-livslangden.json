@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["kärnkraft", "drifttillstånd", "teknisk livslängd", "elproduktion"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2025 fram ett förslag om statliga lån och dubbelriktade differenskontrakt för ny kärnkraft, och riksdagen biföll det i maj 2025. I april 2026 beslutade riksdagen om en ny regeringsprövning för att bygga kärntekniska anläggningar. Dokumenten gäller finansiering, riskdelning och tillståndsprövning, alltså bara en del av löftet.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,12 +39,32 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HC03150",
+      "designation": "Prop. 2024/25:150",
+      "title": "Finansiering och riskdelning vid investeringar i ny kärnkraft",
+      "date": "2025-03-27",
+      "url": "https://data.riksdagen.se/dokument/HC03150.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HC01NU20",
       "designation": "Bet. 2024/25:NU20",
       "title": "Finansiering och riskdelning vid investeringar i ny kärnkraft",
       "date": "2025-05-16",
       "url": "https://data.riksdagen.se/dokument/HC01NU20.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01NU19",
+      "designation": "Bet. 2025/26:NU19",
+      "title": "En mer ändamålsenlig prövning av kärntekniska anläggningar",
+      "date": "2026-04-29",
+      "url": "https://data.riksdagen.se/dokument/HD01NU19.html",
       "relevance": "partial",
       "note": null
     }

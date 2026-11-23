@@ -17,12 +17,49 @@
   "committee": "SkU",
   "keywords": ["arbetsgivaravgift", "första anställda", "låga inkomster", "anställa"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i oktober 2024 ett utvidgat växa-stöd som sänker arbetsgivaravgifterna för ett företags första två anställda. Riksdagen beslutade om budgeten i november 2024, och en lagändring för enmansföretag trädde i kraft 1 januari 2025. I februari 2026 beslutade riksdagen om tillfälligt sänkta arbetsgivaravgifter för 19–23-åringar. Tillsammans täcker de en del av löftet.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC0325",
+      "designation": "Prop. 2024/25:25",
+      "title": "Utvidgat växa-stöd – nedsättning av arbetsgivaravgifterna för upp till två anställda",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC0325.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01FiU1",
+      "designation": "Bet. 2024/25:FiU1",
+      "title": "Statens budget 2025 – Rambeslutet",
+      "date": "2024-11-22",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1158",
+      "designation": "SFS 2024:1158",
+      "title": "Lag (2024:1158) om ändring i lagen (2016:1053) om särskild beräkning av vissa avgifter för enmansföretag",
+      "date": "2025-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241158.html",
+      "relevance": "partial",
+      "note": "Lagen genomför ingen sänkning av arbetsgivaravgiften för personer långt från arbetsmarknaden eller för låga inkomster, och sänkningen gäller bara vissa växa-företag (enmansföretag) och inte alla företags första anställda."
+    },
     {
       "kind": "bet",
       "dok_id": "HD01SfU11",
