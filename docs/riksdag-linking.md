@@ -31,6 +31,8 @@ Freshness: `tools/check-freshness.ts` and `tools/sync-freshness-issues.ts` open 
 3. **Apply** (`apply-links.ts --run <link-run> --id-prefix tido- --sfs-store tools/out/sfs-store/<term>.json --sfs-run <name> --sfs-overrides tools/sfs-overrides.json [--today YYYY-MM-DD] [--dry-run]`): adds `sfs` evidence and sets the verdict by the rules in "Evidence and verdicts" below and in `docs/data-model.md`. Then `pnpm fmt`.
 4. **Reasoning** (`write-reasoning.ts`, below): replaces the mechanical placeholder text with plain Swedish. Verdict-aware: for promises with an sfs item the prompt explains what `fulfilled` and `partially_fulfilled` mean, and the validator rejects claims that a law is in force unless an sfs item with an in-force date up to today exists (an issued law that starts later still counts for the verdict; its reasoning says "träder i kraft <datum>").
 
+**Held-back promise (`hemsida-zla`).** `val2022-s-sverige-ska-ga-med-i-nato` is deliberately left `unassessed` although judged links to prop. 2022/23:74 exist: `in_progress` would be wrong for a delivered accession and the rules have no non-law `fulfilled` route. A full `apply-links` rerun over `val2022-` would set it to `in_progress`; use `--id-prefix` or revert that file until `hemsida-zla` settles the rule (`docs/other-action-promises.md`).
+
 Cost: ingest is free; the judge is the only paid step (it runs on subscription usage, not API billing; the dry run prints an estimate and `--max-cost` bounds it, and a rerun with the same template is free from the cache); `apply-links` is offline and `write-reasoning` is one short model call per changed promise.
 
 Caveats:

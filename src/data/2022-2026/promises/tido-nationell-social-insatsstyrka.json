@@ -26,10 +26,28 @@
     "insatsstyrka"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "I juni 2025 redovisade delegationen för brottsförebyggande åtgärder sitt uppdrag om förstärkningsteam inom socialtjänsten i en departementspromemoria. Delegationen bedömer att arbetet bör fortsätta och att Socialstyrelsen bör få ett permanent uppdrag att ge kommuner stöd. Promemorian täcker en del av löftet. Dokumentet visar förslag, inget beslut.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "ds",
+      "dok_id": "HDB419",
+      "designation": "Ds 2025:19",
+      "title": "Slutredovisning av uppdraget om förstärkningsteam inom socialtjänsten",
+      "date": "2025-06-17",
+      "url": "https://data.riksdagen.se/dokument/HDB419.html",
+      "relevance": "partial",
+      "note": "Förstärkningsteam inom socialtjänsten är det som Tidöavtalet kallar social insatsstyrka, enligt SOU 2024:43 s. 169."
+    }
+  ]
 }
