@@ -1,0 +1,1041 @@
+{
+  "bead": "hemsida-9ce.1",
+  "checked": "2026-11-23",
+  "dataRelease": 2025,
+  "classes": {
+    "anslag": "answerable from ESV anslag outcome/ceiling",
+    "anslag_macro": "answerable from anslag plus SCB macro, with definition caveats",
+    "prop_text": "amount only in prop/bet text (stated intention, never qualifies a verdict)",
+    "rate_law": "rate or entitlement promise; the evidence is a law, not an anslag",
+    "not_answerable": "not answerable from ESV data"
+  },
+  "counts": {
+    "anslag": 46,
+    "anslag_macro": 7,
+    "prop_text": 77,
+    "rate_law": 23,
+    "not_answerable": 17
+  },
+  "promises": [
+    {
+      "id": "kd-miljardinvesteringar-infrastruktur",
+      "class": "anslag",
+      "anslag": ["2201001", "2201002"],
+      "note": "Road and rail anslag; elnät has no anslag (partial)"
+    },
+    {
+      "id": "kd-oka-statens-skuldsattning",
+      "class": "anslag_macro",
+      "anslag": [],
+      "note": "Saldo / BNP from ESV revenue+expenditure and SCB BNP; it is a framework change, so only context"
+    },
+    {
+      "id": "tido-foraldrastod-alla-kommuner",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "tido-forskningsmedel-aterv-solceller",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "tido-hogkostnadsskydd-el-hushall-foretag",
+      "class": "anslag",
+      "anslag": ["2101012 2022"],
+      "note": "Outcome on the compensation anslag; the prop/bet must anchor which decision it paid"
+    },
+    {
+      "id": "tido-justera-ned-kapacitetsutveckling-klimat-energi",
+      "class": "anslag",
+      "anslag": ["2101008 2023"],
+      "note": "Anslag discontinued after 2023 (outcome 0 in 2024); ceiling cut visible in budget series"
+    },
+    {
+      "id": "tido-lagre-anstallningskostnader-langtidsarbetslosa",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Payroll-tax reduction: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "tido-larobok-per-elev-och-amne",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "tido-okade-medel-forskning-kvinnors-halsa",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "tido-satsning-cancervard-barncancervard",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "tido-satsning-migran-endometrios-klimakteriet",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "tido-starkt-stod-energieffektivisering-privatpersoner",
+      "class": "anslag",
+      "anslag": ["2101002"],
+      "note": "Anslag 21:2 outcome 25 -> 401 mn kr 2022-2025; scope (private persons) from prop text"
+    },
+    {
+      "id": "val2022-c-battre-vagar-och-fler-laddstolpar-pa-landsbygden",
+      "class": "anslag",
+      "anslag": ["2201002", "2101008"],
+      "note": "Road maintenance and Laddinfrastruktur anslag"
+    },
+    {
+      "id": "val2022-c-examenspremie-och-lon-under-specialiststudier",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-c-forskola-och-fritidsverksamhet-for-alla",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "No amount or baseline"
+    },
+    {
+      "id": "val2022-c-insatser-och-resurser-mot-gangbrottslighet",
+      "class": "anslag",
+      "anslag": ["0401001", "0401003", "0401005", "0401006"],
+      "note": "Police, prosecution, courts, prison anslag (preventive part not in ESV)"
+    },
+    {
+      "id": "val2022-c-jordbruksavdrag-och-biodrivmedelspremie",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Tax relief: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-c-karriartjanster-i-skolor-med-laga-resultat",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-c-nationellt-forskningsprogram-om-kvinnosjukdomar",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-c-permanent-finansiering-av-kvinnojourer",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-c-platsmiljard-for-fler-vardplatser",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-c-rusta-jarnvag-och-bygga-nya-stambanor",
+      "class": "anslag",
+      "anslag": ["2201001", "2201002"],
+      "note": "Transport infrastructure anslag"
+    },
+    {
+      "id": "val2022-c-sank-skatten-pa-jobb-och-foretagande",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Tax rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-c-starkt-stod-for-lararlingar-i-yrkesprogram",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-c-tva-procent-av-bnp-till-forsvaret-och-nato",
+      "class": "anslag_macro",
+      "anslag": ["UO 6"],
+      "note": "UO 6 / BNP; NATO definition differs; 2025 BNP missing"
+    },
+    {
+      "id": "val2022-kd-bredda-driftstodet-till-lanthandeln",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-kd-hojd-garantipension-och-bostadstillagg",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Benefit rate (anslag 11:1, 11:3 move with volume): the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-kd-miljardsatsning-pa-eftersatta-vagar",
+      "class": "anslag",
+      "anslag": ["2201002"],
+      "note": "Road maintenance anslag"
+    },
+    {
+      "id": "val2022-l-battre-villkor-och-hogre-loner-for-poliser",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-l-bistand-en-procent-av-bni",
+      "class": "anslag_macro",
+      "anslag": ["0701001"],
+      "note": "UO 7 / BNP indicator; target is BNI and OECD ODA, not ESV"
+    },
+    {
+      "id": "val2022-l-fler-domare-och-fler-aklagare",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-l-fler-hakten-fangelser-kriminalvardare",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-l-forsvarsanslag-2-procent-av-bnp-2025",
+      "class": "anslag_macro",
+      "anslag": ["UO 6"],
+      "note": "UO 6 / BNP; 2025 BNP missing"
+    },
+    {
+      "id": "val2022-l-gradvis-okad-subventionsgrad-for-grupper-med-samst-munhalsa",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Subsidy rate (anslag 9:1:4 is context): the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-l-langsiktiga-statsbidrag-till-civilsamhallet",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-l-oka-forskningsanslagen",
+      "class": "anslag",
+      "anslag": ["1603001", "1602004", "1602006"],
+      "note": "Research anslag (aggregate over UO 16 research anslag)"
+    },
+    {
+      "id": "val2022-l-okat-europeiskt-klimatbistand",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-l-riktade-satsningar-locka-varldens-framsta-forskare",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-l-stod-civilsamhallet-i-utsatta-omraden",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-l-storsatsning-laromedel",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-l-tusen-fler-speciallarare",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-30000-fler-praktikplatser",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "Number of places is an outcome"
+    },
+    {
+      "id": "val2022-m-bris-stodlinjer-oppet-dygnet-runt",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-fler-akklagare",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-fordubbla-stod-barncancervard",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-forny-isbrytarflottan",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-forstarkt-gront-skatteavdrag",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Tax deduction: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-m-forsvarsanslag-2-procent-2025",
+      "class": "anslag_macro",
+      "anslag": ["UO 6"],
+      "note": "UO 6 / BNP; 2025 BNP missing"
+    },
+    {
+      "id": "val2022-m-fortsatt-industriklivet",
+      "class": "anslag",
+      "anslag": ["2001018"],
+      "note": "Industriklivet anslag 20:18"
+    },
+    {
+      "id": "val2022-m-fossilfria-flygbranslen-elflyg",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-hogkostnadsskydd-elrakningar",
+      "class": "anslag",
+      "anslag": ["2101012 2022"],
+      "note": "Same anslag as the Tidö item"
+    },
+    {
+      "id": "val2022-m-hogkostnadsskydd-ny-karnkraft",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "Risk-sharing mechanism outside the anslag structure"
+    },
+    {
+      "id": "val2022-m-hoj-ersattning-rovdjursangrepp",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-hojda-polislonner",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-idrottslyft-utsatta-omraden",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-jobbpremie-langtidsarbetslosa",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Tax/benefit premium: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-m-laga-sveriges-vagar",
+      "class": "anslag",
+      "anslag": ["2201002"],
+      "note": "Road maintenance anslag (speed restoration not in ESV)"
+    },
+    {
+      "id": "val2022-m-lagre-skatter-foretagande",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Tax rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-m-lan-garantier-ny-karnkraft",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "Loan guarantees are outside the anslag structure"
+    },
+    {
+      "id": "val2022-m-leder-friluftsanordningar-naturreservat",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-lonesatsning-poliser",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-mer-pengar-bedragerier-aldre",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-nollvision-hemloshet-pensionarer",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-oka-andel-humanitart-bistand",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-oka-klimatbistand",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-polisens-utrustning-kroppskameror-vattenkanoner",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-rusta-upp-jarnvagen-inte-hoghastighetstag",
+      "class": "anslag",
+      "anslag": ["2201001", "2201002"],
+      "note": "Transport infrastructure; the \"instead of\" part is not measurable"
+    },
+    {
+      "id": "val2022-m-sanka-slakteriavgifter",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Fee rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-m-sankt-kostnad-anstalla-langtidsarbetslosa",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Payroll-tax reduction: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-m-sankt-kostnad-anstalla-nyanlanda",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Payroll-tax reduction: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-m-sankt-skatt-isk",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Tax rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-m-sankt-skatt-pa-arbete",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Tax rate (revenue title group 1100 is context): the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-m-sankt-skatt-pensionarer",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Tax rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-m-satsa-biodrivmedel-tillverkning",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-skriva-av-studielan-poliser",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Loan write-off rule: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-m-starka-bup-snabb-hjalp",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-starka-forskning-kvinnors-sjukdomar",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-starka-kvinnojourerna",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-starka-sakerhetspolisen",
+      "class": "anslag",
+      "anslag": ["0401002"],
+      "note": "Säkerhetspolisen anslag 4:2"
+    },
+    {
+      "id": "val2022-m-starkt-tullen",
+      "class": "anslag",
+      "anslag": ["0301002"],
+      "note": "Tullverket anslag 3:2 (powers are law)"
+    },
+    {
+      "id": "val2022-m-stod-privata-markagare-friluftsliv",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-stod-teknikutveckling-jordbruk-miljo",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-trygga-utemiljoer-belysning",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-m-utoka-komiljarden-cancer-bup",
+      "class": "anslag",
+      "anslag": ["0901011"],
+      "note": "Prestationsbundna insatser för att korta vårdköerna 9:11; cancer/BUP split from prop text"
+    },
+    {
+      "id": "val2022-m-vattenrening-forskning-utbyggnad",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-mp-100-miljarder-per-ar-fossilfritt-2030",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "No single anslag set defines \"omställning\""
+    },
+    {
+      "id": "val2022-mp-anpassa-aldreboenden-skolor-och-forskolor-for-skyfall-och-he",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "No amount, no anslag"
+    },
+    {
+      "id": "val2022-mp-aterhamtningsplan-for-kulturlivet",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-mp-fler-klimatsmarta-hyresratter-och-investeringsstod",
+      "class": "anslag",
+      "anslag": ["1801008"],
+      "note": "Investeringsstöd hyresbostäder 18:8"
+    },
+    {
+      "id": "val2022-mp-fler-och-battre-betalda-poliser",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-mp-hoj-bostadsbidrag-och-bostadstillagg",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Benefit rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-mp-hoj-garantipensionen-och-reformera-pensionssystemet",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Benefit rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-mp-hoj-lagsta-nivan-i-sjuk-och-aktivitetsersattning",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Benefit rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-mp-hoj-studiestodet-och-forbattra-studenters-trygghet",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Benefit rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-mp-inga-pengar-fran-bistand-till-flyktingmottagande",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-mp-investera-i-klimatanpassning",
+      "class": "anslag",
+      "anslag": ["0602002"],
+      "note": "Förebyggande åtgärder mot jordskred 6:2:2 (partial)"
+    },
+    {
+      "id": "val2022-mp-jarnvag-och-nya-stambanor",
+      "class": "anslag",
+      "anslag": ["2201001", "2201002"],
+      "note": "Transport infrastructure anslag"
+    },
+    {
+      "id": "val2022-mp-mer-natur-och-gronska-i-stader",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-mp-mer-pengar-till-friluftsorganisationer",
+      "class": "anslag",
+      "anslag": ["1713003"],
+      "note": "Stöd till friluftsorganisationer 13:3 in UO 17"
+    },
+    {
+      "id": "val2022-mp-mindre-barngrupper-och-mer-personal-i-forskolan",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-mp-nattag-och-tag-till-europa",
+      "class": "anslag",
+      "anslag": ["2201007"],
+      "note": "Trafikavtal 22:7 (night trains are one part; partial)"
+    },
+    {
+      "id": "val2022-mp-over-1-procent-av-bni-till-bistand",
+      "class": "anslag_macro",
+      "anslag": ["0701001"],
+      "note": "UO 7 / BNP indicator; ODA is the right measure"
+    },
+    {
+      "id": "val2022-mp-radda-kustens-ekosystem",
+      "class": "anslag",
+      "anslag": ["2001011"],
+      "note": "Åtgärder för havs- och vattenmiljö 20:11 (partial)"
+    },
+    {
+      "id": "val2022-mp-snabbare-atervatning-av-vatmarker",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-mp-starkt-jordbruk-for-sjalvforsorjning-med-baslivsmedel",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "No amount; outcome-type goal"
+    },
+    {
+      "id": "val2022-mp-statlig-laddinfrastruktur",
+      "class": "anslag",
+      "anslag": ["2101008"],
+      "note": "Laddinfrastruktur 21:8"
+    },
+    {
+      "id": "val2022-mp-stod-for-energieffektivisering",
+      "class": "anslag",
+      "anslag": ["2101002", "1801007"],
+      "note": "Energy efficiency anslag 21:2 and 18:7"
+    },
+    {
+      "id": "val2022-mp-stod-till-ekologisk-odling-och-naturbetesmarker",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-mp-storre-andel-till-civilt-forsvar-och-krisberedskap",
+      "class": "anslag",
+      "anslag": ["0602004", "0602002", "0601014"],
+      "note": "Share civil vs military within UO 6, computable from anslag"
+    },
+    {
+      "id": "val2022-mp-storsatsa-pa-forebyggande-arbete-i-utsatta-omraden",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-mp-utbyggd-och-billigare-kollektivtrafik",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-s-avgiftsfri-kollektivtrafik-for-unga-under-sommaren",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-s-dubblera-klimatbistandet",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-s-en-krona-forebyggande-per-krona-polis",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "Ratio of two undefined series"
+    },
+    {
+      "id": "val2022-s-fler-poliser",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-s-fler-vampliktiga-och-modern-materiel",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-s-forsvarsanslag-tva-procent-av-bnp-senast-2028",
+      "class": "anslag_macro",
+      "anslag": ["UO 6"],
+      "note": "UO 6 / BNP; 2028 is after the data"
+    },
+    {
+      "id": "val2022-s-fortsatta-klimatanpassningsinvesteringar-i-kommunerna",
+      "class": "anslag",
+      "anslag": ["0602002"],
+      "note": "Same anslag"
+    },
+    {
+      "id": "val2022-s-investera-i-jarnvag",
+      "class": "anslag",
+      "anslag": ["2201001", "2201002"],
+      "note": "Transport infrastructure anslag"
+    },
+    {
+      "id": "val2022-s-mer-resurser-till-utsatta-skolor-och-forskolor",
+      "class": "anslag",
+      "anslag": ["1601015"],
+      "note": "Statligt stöd för stärkt kunskapsutveckling 16:15 (partial)"
+    },
+    {
+      "id": "val2022-s-okat-statsbidrag-till-kommuner-och-regioner",
+      "class": "anslag",
+      "anslag": ["2501001", "2501002"],
+      "note": "UO 25 general grants"
+    },
+    {
+      "id": "val2022-s-rusta-upp-det-civila-forsvaret",
+      "class": "anslag",
+      "anslag": ["0602004", "0901014"],
+      "note": "Krisberedskap 6:2:4 and civilt försvar inom hälso- och sjukvård"
+    },
+    {
+      "id": "val2022-s-starkt-kulturskolan",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-s-utbildning-pa-arbetstid-i-aldreomsorgen",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-s-utoka-grona-kreditgarantier",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "Guarantee frame outside the anslag structure"
+    },
+    {
+      "id": "val2022-sd-aterstall-forurenade-omraden",
+      "class": "anslag",
+      "anslag": ["2001004"],
+      "note": "Sanering och återställning av förorenade områden 20:4"
+    },
+    {
+      "id": "val2022-sd-betald-polisutbildning",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-sd-bistandsbedomt-trygghetsboende",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-sd-bygg-ut-laddinfrastrukturen-for-elbilar",
+      "class": "anslag",
+      "anslag": ["2101008"],
+      "note": "Laddinfrastruktur 21:8"
+    },
+    {
+      "id": "val2022-sd-ersatt-djurforsok-med-andra-testmetoder",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-sd-fler-anstaltsplatser-i-och-utanfor-sverige",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-sd-forskning-for-lonsammare-fossilfri-energi",
+      "class": "anslag",
+      "anslag": ["2101003"],
+      "note": "Energiforskning 21:3"
+    },
+    {
+      "id": "val2022-sd-forskningsreaktor-for-fjarde-generationens-karnkraft",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-sd-garantera-den-langsiktiga-finansieringen-av-forsvaret",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "No amount or baseline"
+    },
+    {
+      "id": "val2022-sd-hoj-ersattningen-de-forsta-100-dagarna",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Benefit rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-sd-hoj-pensionerna",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Benefit rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-sd-hoja-polisernas-loner",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-sd-kraftigt-minska-sveriges-eu-avgift",
+      "class": "anslag",
+      "anslag": ["2701001"],
+      "note": "Avgiften till EU 27:1 (set by EU own-resource rules; caveat)"
+    },
+    {
+      "id": "val2022-sd-kraftigt-upprustat-ratsvasende",
+      "class": "anslag",
+      "anslag": ["0401001", "0401003", "0401005", "0401006", "0401002"],
+      "note": "Rättsväsendet anslag"
+    },
+    {
+      "id": "val2022-sd-mer-resurser-till-forebyggande-arbete-och-rehabilitering",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "No amount or anslag"
+    },
+    {
+      "id": "val2022-sd-minska-bistandet-till-forman-for-svensk-valfard",
+      "class": "anslag",
+      "anslag": ["0701001"],
+      "note": "Biståndsverksamhet 7:1"
+    },
+    {
+      "id": "val2022-sd-minska-kostnader-for-migration-bistand-eu-och-klimat",
+      "class": "anslag",
+      "anslag": ["0701001", "0801001", "0801002", "2701001"],
+      "note": "UO 7, UO 8, UO 27 sums (climate part not separable)"
+    },
+    {
+      "id": "val2022-sd-nationellt-forskningsprogram-for-psykisk-halsa",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-sd-nyckelfri-hemtjanst-och-digitalisering",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-sd-oka-antalet-vardplatser",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "Number of beds is an outcome"
+    },
+    {
+      "id": "val2022-sd-oka-den-nationella-finansieringen-i-jordbruket",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-sd-oka-ekonomiskt-stod-till-mest-utsatta-aldre",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Benefit rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-sd-rusta-upp-vag-och-jarnvagsnatet",
+      "class": "anslag",
+      "anslag": ["2201001", "2201002"],
+      "note": "Transport infrastructure anslag"
+    },
+    {
+      "id": "val2022-sd-satsa-pa-atgarder-som-minskar-utslappen-mest-per-krona",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "Prioritisation, no amount"
+    },
+    {
+      "id": "val2022-sd-satsa-pa-bredband-och-telefoni-i-hela-landet",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-sd-satsa-pa-primarvarden",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-sd-se-over-offentliga-utgifter-och-rikta-om-till-valfarden",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "Review, no amount"
+    },
+    {
+      "id": "val2022-sd-starka-insatser-for-ungas-psykiska-halsa",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-sd-starka-resurserna-till-psykiatrin",
+      "class": "anslag",
+      "anslag": ["0901008"],
+      "note": "Bidrag till psykiatri 9:8"
+    },
+    {
+      "id": "val2022-v-forstarkt-socialtjanst",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-v-gron-omstallningsfond",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "Fund not an anslag"
+    },
+    {
+      "id": "val2022-v-hoja-studiestodet",
+      "class": "rate_law",
+      "anslag": [],
+      "note": "Benefit rate: the evidence is a law (sfs), not an anslag"
+    },
+    {
+      "id": "val2022-v-kommunalt-stodda-fritidsaktiviteter",
+      "class": "anslag",
+      "anslag": ["0902006"],
+      "note": "Stöd till en aktiv och meningsfull fritid 9:2:6 (new 2023)"
+    },
+    {
+      "id": "val2022-v-massivt-investeringsprogram-gron-industri",
+      "class": "anslag",
+      "anslag": ["2001018"],
+      "note": "Industriklivet (partial)"
+    },
+    {
+      "id": "val2022-v-mer-resurser-till-skolan-for-elever-som-behover-stod",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-v-mer-resurser-till-tull-och-polis-mot-narkotikahandel",
+      "class": "anslag",
+      "anslag": ["0301002", "0401001"],
+      "note": "Tullverket and Polismyndigheten"
+    },
+    {
+      "id": "val2022-v-mer-resurser-till-vard-och-aldreomsorg-och-personal",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "No amount; 9:1:6 baseline 2022 is distorted by pandemic funds"
+    },
+    {
+      "id": "val2022-v-oka-bistandet",
+      "class": "anslag",
+      "anslag": ["0701001"],
+      "note": "Biståndsverksamhet 7:1"
+    },
+    {
+      "id": "val2022-v-okad-omfordelning-till-regioner-och-kommuner",
+      "class": "anslag",
+      "anslag": ["2501001", "0901006"],
+      "note": "UO 25 grants and 9:1:6"
+    },
+    {
+      "id": "val2022-v-omstallningsstod-och-kompetensutveckling",
+      "class": "anslag",
+      "anslag": ["1401014"],
+      "note": "Grundläggande omställnings- och kompetensstöd 14:14 (partial)"
+    },
+    {
+      "id": "val2022-v-rusta-upp-hela-vardsektorn",
+      "class": "not_answerable",
+      "anslag": [],
+      "note": "No amount or anslag"
+    },
+    {
+      "id": "val2022-v-stabilt-stod-till-socialtjansten-mot-vald-i-nara-relationer",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-v-statliga-satsningar-pa-fornybar-energi",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    },
+    {
+      "id": "val2022-v-upprustning-av-vagnat-och-jarnvag",
+      "class": "anslag",
+      "anslag": ["2201001", "2201002"],
+      "note": "Transport infrastructure anslag"
+    },
+    {
+      "id": "val2022-v-utbyggd-och-billigare-kollektivtrafik",
+      "class": "prop_text",
+      "anslag": [],
+      "note": "Earmark, headcount or initiative inside a larger anslag; amount only in prop/bet text"
+    }
+  ]
+}
