@@ -26,10 +26,28 @@
     "insatsstyrka"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "I juni 2025 redovisade en departementspromemoria uppdraget om förstärkningsteam inom socialtjänsten. Den beskriver ett nationellt team vid Socialstyrelsen som ger stöd på plats i kommuner och förordar ett permanent uppdrag. Promemorian täcker en del av löftet, den operativa funktionen och viss spridning av metoder. Dokumentet visar förslag, inget beslut.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "ds",
+      "dok_id": "HDB419",
+      "designation": "Ds 2025:19",
+      "title": "Slutredovisning av uppdraget om förstärkningsteam inom socialtjänsten",
+      "date": "2025-06-17",
+      "url": "https://data.riksdagen.se/dokument/HDB419.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }
