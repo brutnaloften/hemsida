@@ -9,7 +9,7 @@
  * Without --sfs-store and --sfs-run no SFS evidence is written and no fulfilled verdict is set.
  * Rules and limits: tools/lib/apply-links.ts. Run `pnpm fmt` afterwards.
  */
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
@@ -28,6 +28,7 @@ import { SFS_JUDGE_TEMPLATE_VERSION, SFS_RECHECK_TEMPLATE_VERSION } from './lib/
 import { loadJson, writeJson } from './lib/json.ts';
 import { defaultStorePath } from './lib/riksdag-ingest.ts';
 import { isRiksdagEvidence, promiseSchema } from './lib/schema.ts';
+import { rejectedCandidatesFileSchema } from '../src/schema/rejected.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const { values } = parseArgs({
@@ -141,6 +142,17 @@ if (values['sfs-store']) {
   };
 }
 
+// Committed rejection list (src/data/<term>/rejected-candidates.json, shared with the candidate search):
+// pairs reviewed and rejected, or hand-removed from a promise, never become evidence again.
+const rejectedFile = resolve(root, 'src/data', values.term!, 'rejected-candidates.json');
+const rejectedBy = new Map<string, Set<string>>();
+for (const row of existsSync(rejectedFile)
+  ? rejectedCandidatesFileSchema.parse(loadJson(rejectedFile))
+  : []) {
+  if (!rejectedBy.has(row.promise_id)) rejectedBy.set(row.promise_id, new Set());
+  rejectedBy.get(row.promise_id)!.add(row.dok_id);
+}
+
 const dir = resolve(root, 'src/data', values.term!, 'promises');
 let changed = 0;
 const counts: Record<string, number> = {};
@@ -153,7 +165,15 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
   if (!pairs) continue;
   const raw = loadJson(resolve(dir, file));
   const promise = promiseSchema.parse(raw);
-  const applied = applyLinks(promise, pairs, docs, values.today!, decidedBy, sfs);
+  const applied = applyLinks(
+    promise,
+    pairs,
+    docs,
+    values.today!,
+    decidedBy,
+    sfs,
+    rejectedBy.get(id) ?? new Set(),
+  );
   if (!applied) continue;
   const next = promiseSchema.parse({ ...(raw as object), ...applied });
   changed++;
@@ -168,6 +188,18 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
         console.log(`    ${e.date} ${e.designation} ${e.relevance} ${e.title.slice(0, 100)}`);
       }
     }
+  }
+  if (values['dry-run']) {
+    // What the write would change in the evidence list, so a dry run shows the diff per promise.
+    const before = new Set(promise.evidence.filter(isRiksdagEvidence).map((e) => e.dok_id));
+    const after = new Set(next.evidence.filter(isRiksdagEvidence).map((e) => e.dok_id));
+    const diff = [
+      ...[...after].filter((d) => !before.has(d)).map((d) => `+${d}`),
+      ...[...before].filter((d) => !after.has(d)).map((d) => `-${d}`),
+    ];
+    console.log(
+      `${id}: ${promise.verdict.value} -> ${next.verdict.value}${diff.length ? ` (${diff.join(' ')})` : ''}`,
+    );
   }
   counts[next.verdict.value] = (counts[next.verdict.value] ?? 0) + 1;
   if (next.verdict.value === 'fulfilled' && next.verdict.value !== promise.verdict.value) {

@@ -290,6 +290,8 @@ Figures are only allowed on `bet` and `prop` (enforced like `votes`) and never q
 
 `src/data/<term>/rejected-candidates.json` holds `(promise_id, dok_id)` pairs that the matcher proposed and review rejected. The search skips these pairs, so the same document isn't proposed twice and promise files stay clean. Schema: `src/schema/rejected.ts`.
 
+`tools/apply-links.ts` reads the same file: a listed document (or an `sfs-YYYY-N` law, which is how SFS evidence is keyed) never becomes evidence on that promise, entries already there are dropped, and a promise left without supporting dir/sou/ds/prop evidence stays `unassessed`. Add a row whenever a link is reverted as off topic or evidence is removed by hand, otherwise a rerun of `apply-links` promotes it again. A dry run (`apply-links --dry-run`) prints each promise's evidence diff (`+dok_id` / `-dok_id`), so an empty list confirms the rejections hold.
+
 ```json
 [
   {
