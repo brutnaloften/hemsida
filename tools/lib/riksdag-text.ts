@@ -89,29 +89,40 @@ export interface TocEntry {
   page: number;
 }
 
-/** Pages that hold table-of-contents links (3 or more `#page_N` anchors), with their offsets. */
+/** A page with this many ToC links starts the ToC; body pages hold at most a few cross-references. */
+export const TOC_PAGE_LINKS = 5;
+/** A page after the first ToC page still belongs to the ToC with this many links (the last page is short). */
+const TOC_CONTINUE_LINKS = 3;
+
+/** `#page_N` links on a page, ignoring links to the page itself (footnote markers). */
+export function pageLinkCount(pageHtml: string, page: number): number {
+  let n = 0;
+  for (const m of pageHtml.matchAll(/href="#page_(\d+)"/gi)) if (Number(m[1]) !== page) n++;
+  return n;
+}
+
+/**
+ * The leading run of table-of-contents pages, with their offsets in `html`. Only the leading run
+ * counts: later pages with several links are body pages (cross-references), not ToC.
+ */
 function tocSpans(html: string): { pages: Set<number>; spans: [number, number][] } {
   const pages = new Set<number>();
   const spans: [number, number][] = [];
-  const re = /<DIV id="page_(\d+)"[^>]*>|href="#page_\d+"/gi;
-  let page = 0;
-  let start = 0;
-  let count = 0;
-  const close = (end: number) => {
-    if (page > 0 && count >= 3) {
-      pages.add(page);
-      spans.push([start, end]);
+  const re = /<DIV id="page_(\d+)"[^>]*>/gi;
+  const marks = [...html.matchAll(re)].map((m) => ({ page: Number(m[1]), at: m.index }));
+  let inRun = false;
+  for (let i = 0; i < marks.length; i++) {
+    const mk = marks[i]!;
+    const end = marks[i + 1]?.at ?? html.length;
+    const n = pageLinkCount(html.slice(mk.at, end), mk.page);
+    if (inRun ? n < TOC_CONTINUE_LINKS : n < TOC_PAGE_LINKS) {
+      if (inRun) break;
+      continue;
     }
-  };
-  for (let t = re.exec(html); t !== null; t = re.exec(html)) {
-    if (t[1] !== undefined) {
-      close(t.index);
-      page = Number(t[1]);
-      start = t.index;
-      count = 0;
-    } else count++;
+    inRun = true;
+    pages.add(mk.page);
+    spans.push([mk.at, end]);
   }
-  close(html.length);
   return { pages, spans };
 }
 
@@ -220,7 +231,10 @@ export function extractToc(raw: string): TocEntry[] {
 }
 
 const UNNUMBERED_HEADING =
-  /^(Sammanfattning|Summary|Författningsförslag|Förslag till riksdagsbeslut|Referenser|Källförteckning|Bilaga \d+|Bilagor|Innehåll)\b/;
+  /^(Sammanfattning|Summary|Författningsförslag|Förslag till riksdagsbeslut|Referenser|Källförteckning|Bilaga \d+|Bilagor)\b/;
+/** Footnote lines ("1 Jfr ...") look like numbered headings but are not. */
+const FOOTNOTE_START =
+  /^\d{1,2} (Jfr|Se|Prop|SOU|Ds|Bet|Dir|SFS|Not|Lag|Förordning|A\.a|Ibid|Dnr|Skr|Rskr|Mot|Kommittédirektiv|EU|Europaparlamentets)\b/;
 
 /**
  * Fallback for documents without a parseable ToC: top-level headings are short
@@ -230,14 +244,21 @@ const UNNUMBERED_HEADING =
  */
 export function guessHeadings(paras: RawParagraph[]): Set<number> {
   const hits = new Set<number>();
+  const seen = new Set<string>();
   let next = 1;
   paras.forEach((p, i) => {
     const t = p.text;
     if (t.length > 100 || /[.:;,]$/.test(t)) return;
+    // Unlinked ToC lines end in a page number ("1 Inledning 9"); they must not use up a number.
+    if (/\s\d{1,4}$/.test(t) && !/^Bilaga \d+$/.test(t)) return;
     if (UNNUMBERED_HEADING.test(t) && t.length <= 60) {
-      hits.add(i);
+      // Repeated "Bilaga 1" page headers: only the first occurrence is the section start.
+      const key = norm(t);
+      if (!seen.has(key)) hits.add(i);
+      seen.add(key);
       return;
     }
+    if (FOOTNOTE_START.test(t)) return;
     const m = /^(\d{1,2})\s+([A-ZÅÄÖ][^.]*)$/.exec(t);
     if (m && Number(m[1]) === next) {
       hits.add(i);
@@ -280,7 +301,8 @@ export function applyTocSections(paras: RawParagraph[], toc: TocEntry[]): RawPar
       if (pg < e.page) continue;
       if (first < 0) first = i;
       if (pg > e.page) break;
-      if (key.length > 3 && norm(out[i]!.text).startsWith(key) && out[i]!.text.length < 160) {
+      const body = norm(out[i]!.text).replace(/^\d{1,2} /, '');
+      if (key.length > 3 && body.startsWith(key) && out[i]!.text.length < 160) {
         match = i;
         break;
       }
@@ -303,6 +325,8 @@ export function parseRiksdagText(raw: string): RawParagraph[] {
   const html = toHtml(raw);
   const { pages } = tocSpans(html);
   const out = parseBlocks(html, pages);
+  // Only PDF conversions (page divs) lack heading markup; real HTML documents keep their own.
+  if (!/<DIV id="page_\d+"/i.test(html)) return out;
   return applyTocSections(out, pages.size > 0 ? extractToc(raw) : []);
 }
 

@@ -167,6 +167,10 @@ describe('PDF-to-HTML sections (SOU, Ds, prop)', () => {
     expect(paras.map((p) => p.text)).not.toContain('Innehåll');
     expect(sec('Utredningen föreslår')).toBe('Sammanfattning');
     expect(sec('Härigenom')).toBe('1 Författningsförslag');
+    // The real paragraph is the heading: no synthetic duplicate.
+    const hs = paras.filter((p) => p.heading && p.text.includes('Författningsförslag'));
+    expect(hs).toHaveLength(1);
+    expect(hs[0]!.text).toBe('1 Författningsförslag');
     expect(sec('Uppdraget beskrivs')).toBe('2 Utredningens uppdrag och arbete');
     expect(sec('Förslaget kostar')).toBe('3 Konsekvenser');
     expect(sec('Direktivets')).toBe('Bilaga 1 Direktiv');
@@ -182,5 +186,35 @@ describe('PDF-to-HTML sections (SOU, Ds, prop)', () => {
     // "3 miljoner kronor ..." is a sentence, not a heading.
     expect(sec('3 miljoner')).toBe('2 Bakgrund');
     expect(sec('Vi föreslår en höjning')).toBe('3 Förslag');
+  });
+
+  it('keeps body pages whose footnote markers link to their own page', () => {
+    const html = `${SOU_PDF_TOC}<DIV id="page_8"><P>Brödtext A</P><P><A href="#page_8">1</A> not</P><P><A href="#page_8">2</A> not</P><P><A href="#page_8">3</A> not</P><P><A href="#page_8">4</A> not</P><P><A href="#page_8">5</A> not</P></DIV>`;
+    const texts = parseRiksdagText(html).map((p) => p.text);
+    expect(texts).toContain('Brödtext A');
+    // Only the ToC page itself is dropped.
+    expect(texts).not.toContain('Innehåll');
+  });
+
+  it('drops only the leading run of ToC pages, not later pages with cross-references', () => {
+    const links = [3, 4, 5, 6, 7].map((n) => `<A href="#page_${n}">se ${n}</A>`).join(' ');
+    const html = `${SOU_PDF_TOC}<DIV id="page_9"><P>Sent kapitel</P><P>${links}</P></DIV>`;
+    expect(parseRiksdagText(html).map((p) => p.text)).toContain('Sent kapitel');
+  });
+
+  it('does not treat ToC leftovers, footnotes or repeated page headers as headings', () => {
+    const paras = parseRiksdagText(`<DIV id="page_1">
+<P>Innehåll</P><P>1 Inledning 9</P><P>2 Bakgrund 12</P>
+<P>1 Inledning</P><P>Text.</P><P>1 Jfr prop. 2020/21:1.</P><P>1 Jfr prop. 2020/21:1</P>
+<P>2 Bakgrund</P><P>Mer text.</P>
+<P>Bilaga 1</P><P>Texten.</P><P>Bilaga 1</P><P>Mer.</P>
+</DIV>`);
+    const heads = paras.filter((p) => p.heading).map((p) => p.text);
+    expect(heads).toEqual(['1 Inledning', '2 Bakgrund', 'Bilaga 1']);
+  });
+
+  it('leaves non-PDF documents without page divs alone', () => {
+    const paras = parseRiksdagText('<p>Sammanfattning</p><p>1 Inledning</p><p>2 Bakgrund</p>');
+    expect(paras.some((p) => p.heading)).toBe(false);
   });
 });

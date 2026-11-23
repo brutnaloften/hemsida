@@ -14,7 +14,9 @@
 import {
   decodeEntities,
   annotateParagraphs,
+  pageLinkCount,
   parseRiksdagText,
+  TOC_PAGE_LINKS,
   type Paragraph,
 } from './riksdag-text.ts';
 
@@ -148,6 +150,9 @@ const NUMBER_THEN_TITLE = /^(\d+(?:\.\d+)*|Bilaga\s*\d+)\s+(\S.*)$/;
  * dotted leader in a third), the number inline in the title anchor, or an unnumbered title. Wrapped title lines
  * (no number, not a known front/back matter title) are skipped.
  */
+// Kept separate from riksdag-text's extractToc on purpose: this one reads only <TR> rows with exact
+// anchors and keeps the chapter title as a range key for page slicing, while extractToc also handles
+// <P> rows and wrapped titles to label paragraphs. Page detection (pageLinkCount) is shared.
 export function parseToc(html: string): TocEntry[] {
   const entries: TocEntry[] = [];
   for (const row of html.match(/<TR>[\s\S]*?<\/TR>/g) ?? []) {
@@ -188,19 +193,20 @@ export function pagesOf(html: string): Map<number, string> {
 
 const SUMMARY = /^(sammanfattning|propositionens huvudsakliga innehåll)$/;
 const FRONT_SUMMARY = /^(propositionens|skrivelsens) huvudsakliga innehåll$/i;
-const TOC_LINK = /<A href="#page_\d+"/g;
-/** A page with this many ToC links is a ToC page; body pages hold at most a few cross-references. */
-const TOC_PAGE_LINKS = 5;
-
-const linkCount = (html: string): number => html.match(TOC_LINK)?.length ?? 0;
+// ToC page detection is shared with riksdag-text (leading run, own-page footnote links ignored).
+const linkCount = (html: string, page: number): number => pageLinkCount(html, page);
 
 /** First page after the leading run of ToC pages (0 when there is no ToC page). */
 export function bodyStartPage(pages: Map<number, string>): number {
   const nums = [...pages.keys()].sort((a, b) => a - b);
-  const first = nums.findIndex((n) => linkCount(pages.get(n)!) >= TOC_PAGE_LINKS);
+  const first = nums.findIndex((n) => linkCount(pages.get(n)!, n) >= TOC_PAGE_LINKS);
   if (first < 0) return 0;
   let last = first;
-  while (last + 1 < nums.length && linkCount(pages.get(nums[last + 1]!)!) >= TOC_PAGE_LINKS) last++;
+  while (
+    last + 1 < nums.length &&
+    linkCount(pages.get(nums[last + 1]!)!, nums[last + 1]!) >= TOC_PAGE_LINKS
+  )
+    last++;
   return nums[last]! + 1;
 }
 
@@ -211,7 +217,7 @@ export function frontSummary(pages: Map<number, string>): string | null {
   let found = false;
   for (const n of nums) {
     const html = pages.get(n)!;
-    if (linkCount(html) >= TOC_PAGE_LINKS) break;
+    if (linkCount(html, n) >= TOC_PAGE_LINKS) break;
     const paras = parseRiksdagText(html).map((p) => p.text);
     if (!found) {
       const at = paras.findIndex((t) => FRONT_SUMMARY.test(t));
