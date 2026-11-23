@@ -20,10 +20,17 @@
   "committee": "NU",
   "keywords": ["energieffektivisering", "energistöd", "privatpersoner", "energibesparing"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Anslaget 1:2 Insatser för energieffektivisering ökade nominellt från ett utfall på 25 mn kr 2022 till 401 mn kr 2025, alltså 376 mn kr (i fasta priser +1 315,2 procent). I budgetpropositionen för 2023 föreslog regeringen att anslaget skulle anvisas 397 mn kr, en ökning med 379 mn kr för energieffektivisering i småhus som värms med direktverkande el eller gas, med ett investeringsbidrag till hushåll för konvertering av uppvärmningssystem och energieffektiviserande renovering (Bet. 2022/23:NU3). Riktningen stämmer med löftet om förstärkt stöd till privatpersoner. Anslaget rymmer dock även teknikutveckling, informationsinsatser och investeringsstöd i lokaler, och ESV delar inte upp utfallet per ändamål, så det går inte att säga hur mycket som gått till privatpersoner eller om stödet har breddats. Källa: ESV:s årsutfall och betänkandet. Därför delvis uppfyllt.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
   "evidence": [
     {
@@ -35,6 +42,68 @@
       "url": "https://data.riksdagen.se/dokument/HD01NU3.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01NU3",
+      "designation": "Bet. 2022/23:NU3",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01NU3",
+      "designation": "Bet. 2024/25:NU3",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2024-12-09",
+      "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2101002",
+        "namn": "Insatser för energieffektivisering",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 25.2,
+        "after": 400.8
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (löftet gavs i oktober 2022). Nominellt utfall 25 mn kr 2022 och 401 mn kr 2025, ändring 376 mn kr (+1 490,5 %). I fasta priser +1 315,2 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Anslaget 1:2 rymmer både stöd till hushåll och annat (teknikutveckling, information, stöd i lokaler); ESV delar inte upp utfallet per ändamål."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2101002",
+        "namn": "Insatser för energieffektivisering",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 28,
+        "after": 415
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 28 mn kr 2022 och 415 mn kr 2025, ändring 387 mn kr (+1 382,1 %). I fasta priser +1 218,8 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-12-09",
+      "relevance": "partial",
+      "note": "Budgetpropositionen för 2023 föreslog 397 mn kr till anslaget, en ökning med 379 mn kr för energieffektivisering i småhus med direktverkande el eller gas (Bet. 2022/23:NU3)."
     }
   ]
 }

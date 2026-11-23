@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["Industriklivet", "industri", "omställning", "klimat"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Anslaget 1:18 Industriklivet ökade nominellt från ett utfall på 604 mn kr 2022 till 1 800 mn kr 2025, alltså 1 196 mn kr eller 198,1 procent (i fasta priser +165,2 procent). I budgetpropositionen för 2023 förstärkte regeringen Industriklivet med 600 mn kr per år 2023-2025 och föreslog 1 354 mn kr till anslaget för 2023 (Bet. 2022/23:MJU1). I vårändringsbudgeten för 2025 flyttades ytterligare 2 190 mn kr till anslaget (Bet. 2024/25:FiU21). Satsningen har alltså fortsatt och vuxit under hela perioden, och anslaget är Industriklivet självt. Källa: ESV:s årsutfall och betänkandena. Därför uppfyllt.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -50,6 +57,48 @@
       "url": "https://data.riksdagen.se/dokument/HC01FiU21.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2001018",
+        "namn": "Industriklivet",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 603.7,
+        "after": 1799.5
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 604 mn kr 2022 och 1 800 mn kr 2025, ändring 1 196 mn kr (+198,1 %). I fasta priser +165,2 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "full",
+      "note": "Anslaget 1:18 Industriklivet i utgiftsområde 20."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2001018",
+        "namn": "Industriklivet",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 909,
+        "after": 3535
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 909 mn kr 2022 och 3 535 mn kr 2025, ändring 2 626 mn kr (+288,9 %). I fasta priser +246,0 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-06-05",
+      "relevance": "full",
+      "note": "Anslaget 1:18 Industriklivet har 1 345 mn kr i budgeten för 2025 och ökades med 2 190 mn kr i vårändringsbudgeten för 2025 (Bet. 2024/25:FiU21)."
     }
   ]
 }
