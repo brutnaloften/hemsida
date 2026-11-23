@@ -20,10 +20,10 @@
   "committee": "UbU",
   "keywords": ["vinstutdelning", "friskolor", "nya ägare", "vinstuttag", "aktiebolag"],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i april 2025 ett femårigt förbud mot vinstutdelning efter nystart eller ägarbyte av en friskola. Regeringen lade i juni 2026 fram ett förslag om förbud mot värdeöverföringar, och riksdagen beslutade i augusti 2026 om ändringar i skollagen. Lagen träder i kraft 1 juli 2027 och täcker en del av löftet.",
-    "date": "2026-11-12",
+    "reasoning": "En statlig utredning lade i april 2025 fram förslag om ett femårigt förbud mot vinstutdelning efter att en ny skola startats eller bytt ägare. Regeringen föreslog i juni 2026 ett förbud mot värdeöverföringar vid nyetablering och ägarbyte, och riksdagen biföll förslaget i augusti 2026. Lagen som genomför löftet är beslutad och träder i kraft den 1 juli 2027.",
+    "date": "2026-11-23",
     "history": [
       {
         "value": "unassessed",
@@ -35,6 +35,12 @@
         "assessedBy": "ai",
         "reasoning": "En statlig utredning föreslog i april 2025 ett förbud mot vinstutdelning efter att en friskola startats eller bytt ägare. Regeringen lade i juni 2026 fram ett förslag om förbud mot värdeöverföringar vid nyetablering och ägarbyte, och riksdagen biföll det i augusti 2026. Ändringen i skollagen är beslutad och träder i kraft 1 juli 2027. Dokumenten visar inte exakt hur långt förbudet gäller.",
         "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i april 2025 ett femårigt förbud mot vinstutdelning efter nystart eller ägarbyte av en friskola. Regeringen lade i juni 2026 fram ett förslag om förbud mot värdeöverföringar, och riksdagen beslutade i augusti 2026 om ändringar i skollagen. Lagen träder i kraft 1 juli 2027 och täcker en del av löftet.",
+        "date": "2026-11-12"
       }
     ]
   },
@@ -76,8 +82,8 @@
       "title": "Lag (2026:1634) om ändring i skollagen (2010:800)",
       "date": "2027-07-01",
       "url": "https://svenskforfattningssamling.se/doc/20261634.html",
-      "relevance": "partial",
-      "note": "Förbudet är inte uttryckligen en tidsbegränsad vinstutdelningsstopp för \"de första åren\" som texten visar, och det framgår inte att en utredning tillsätts. Förbudet gäller också värdeöverföringar i stället för enbart vinstutdelning, och det tillkommer ett förbud vid tillsynsföreläggande."
+      "relevance": "full",
+      "note": null
     }
   ]
 }

@@ -20,10 +20,10 @@
   "committee": "SfU",
   "keywords": ["återreseförbud", "utvisning", "avvisning", "utlänningslagen"],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen föreslog i januari 2025 längre återreseförbud, och riksdagen biföll förslaget i mars 2025. En lagändring i utlänningslagen trädde i kraft 1 april 2025. Riksdagen godkände i juni 2026 skärpta regler om utvisning på grund av brott, med längre och oftare obegränsade återreseförbud. En ändring i utlänningslagen trädde i kraft 1 september 2026 och täcker en del av löftet.",
-    "date": "2026-11-11",
+    "reasoning": "Regeringen lade i januari 2025 fram ett förslag om längre återreseförbud, och riksdagen biföll det i mars 2025. Efter ett nytt förslag i april 2026 beslutade riksdagen i juni 2026 att återreseförbud vid utvisning på grund av brott normalt ska vara fem år, tio år eller utan tidsgräns. Lagen som genomför löftet trädde i kraft den 1 september 2026.",
+    "date": "2026-11-23",
     "history": [
       {
         "value": "unassessed",
@@ -34,6 +34,12 @@
         "value": "in_progress",
         "assessedBy": "ai",
         "reasoning": "Riksdagen beslutade i mars 2025 om längre återreseförbud för dem som inte lämnat landet i tid, och lagen trädde i kraft 1 april 2025. Efter en utredning i maj 2025 och ett regeringsförslag i april 2026 beslutade riksdagen i juni 2026 om längre återreseförbud vid utvisning på grund av brott, normalt fem år, tio år eller utan tidsgräns. Lagen gäller från 1 september 2026. Resten av löftet bereds fortfarande.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen föreslog i januari 2025 längre återreseförbud, och riksdagen biföll förslaget i mars 2025. En lagändring i utlänningslagen trädde i kraft 1 april 2025. Riksdagen godkände i juni 2026 skärpta regler om utvisning på grund av brott, med längre och oftare obegränsade återreseförbud. En ändring i utlänningslagen trädde i kraft 1 september 2026 och täcker en del av löftet.",
         "date": "2026-11-11"
       }
     ]
@@ -106,8 +112,8 @@
       "title": "Lag (2026:1259) om ändring i utlänningslagen (2005:716)",
       "date": "2026-09-01",
       "url": "https://svenskforfattningssamling.se/doc/20261259.html",
-      "relevance": "partial",
-      "note": "Det framgår inte av den synliga lagtexten exakt hur återreseförbuden förlängs, och lagen omfattar även mycket annat än återreseförbud (utvisningsregler). Utredningsdelen av löftet ses inte heller."
+      "relevance": "full",
+      "note": null
     }
   ]
 }

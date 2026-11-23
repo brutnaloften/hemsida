@@ -20,10 +20,10 @@
   "committee": "JuU",
   "keywords": ["rymning", "anstalt", "häkte", "kriminalisering", "Kriminalvården"],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen föreslog i mars 2026 att rymning från anstalt, häkte och vissa andra former av frihetsberövande ska bli straffbart. Riksdagen biföll förslaget i maj 2026, och ändringen i brottsbalken trädde i kraft den 2 juli 2026. Den gäller rymning från anstalt, häkte, sluten ungdomsvård och Migrationsverkets förvar, alltså en del av löftet.",
-    "date": "2026-11-11",
+    "reasoning": "En statlig utredning föreslog i juli 2024 att rymning från fängelse, sluten ungdomsvård, häkte och förvar ska kriminaliseras. Regeringen lade i mars 2026 fram ett förslag om detta, och riksdagen biföll det i maj 2026. Lagen som genomför löftet trädde i kraft den 2 juli 2026 och gör rymning från anstalt, häkte, sluten ungdomsvård och förvar till brott.",
+    "date": "2026-11-23",
     "history": [
       {
         "value": "unassessed",
@@ -34,6 +34,12 @@
         "value": "in_progress",
         "assessedBy": "ai",
         "reasoning": "En statlig utredning lade i juli 2024 fram ett förslag om att göra rymning från fängelse, sluten ungdomsvård, häkte och förvar straffbart. Regeringen föreslog i mars 2026 en ändring i brottsbalken om rymning, och riksdagens betänkande i maj 2026 tillstyrker förslaget för anstalt, häkte, sluten ungdomsvård och förvar. Dokumenten täcker hela löftet, men ingen författning är kopplad till det.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen föreslog i mars 2026 att rymning från anstalt, häkte och vissa andra former av frihetsberövande ska bli straffbart. Riksdagen biföll förslaget i maj 2026, och ändringen i brottsbalken trädde i kraft den 2 juli 2026. Den gäller rymning från anstalt, häkte, sluten ungdomsvård och Migrationsverkets förvar, alltså en del av löftet.",
         "date": "2026-11-11"
       }
     ]
@@ -76,8 +82,8 @@
       "title": "Lag (2026:924) om ändring i brottsbalken",
       "date": "2026-07-02",
       "url": "https://svenskforfattningssamling.se/doc/2026924.html",
-      "relevance": "partial",
-      "note": "Bestämmelsen omfattar bara uppräknade former av frihetsberövande, så rymning från övriga frihetsberövande åtgärder, till exempel andra tvångsvårdsformer, kriminaliseras inte. Ringa fall är straffria."
+      "relevance": "full",
+      "note": null
     }
   ]
 }

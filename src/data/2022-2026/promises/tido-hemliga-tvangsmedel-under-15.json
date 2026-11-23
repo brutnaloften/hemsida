@@ -20,10 +20,10 @@
   "committee": "JuU",
   "keywords": ["hemliga tvångsmedel", "under 15 år", "lagen om unga lagöverträdare", "LUL", "barn"],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att föreslå hemliga tvångsmedel mot barn under 15 år, och utredningen lämnade förslag i december 2024. Riksdagen biföll regeringens förslag i september 2025, och ändringar i flera lagar trädde i kraft 1 oktober 2025. Dessa lagar täcker en del av löftet. En annan lagändring om hemlig dataavläsning träder i kraft 1 oktober 2028.",
-    "date": "2026-11-11",
+    "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att se över hemliga tvångsmedel mot barn under 15. Utredningen föreslog det i december 2024, och regeringen lade fram ett förslag i maj 2025. Riksdagen biföll det i september 2025. Lagarna som genomför löftet trädde i kraft den 1 oktober 2025 och gör hemliga tvångsmedel möjliga mot barn under 15 som begår grova brott. En följdlag om hemlig dataavläsning träder i kraft den 1 oktober 2028.",
+    "date": "2026-11-23",
     "history": [
       {
         "value": "unassessed",
@@ -34,6 +34,12 @@
         "value": "in_progress",
         "assessedBy": "ai",
         "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att föreslå hur hemliga tvångsmedel kan användas mot barn under 15 år som begår grova brott. Utredningen lämnade förslag i december 2024, och regeringen lade fram en proposition i maj 2025. Riksdagen biföll förslaget i september 2025. Dokumenten täcker hela löftet, men någon författning är inte kopplad till det.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen gav i juni 2023 en utredning i uppdrag att föreslå hemliga tvångsmedel mot barn under 15 år, och utredningen lämnade förslag i december 2024. Riksdagen biföll regeringens förslag i september 2025, och ändringar i flera lagar trädde i kraft 1 oktober 2025. Dessa lagar täcker en del av löftet. En annan lagändring om hemlig dataavläsning träder i kraft 1 oktober 2028.",
         "date": "2026-11-11"
       }
     ]
@@ -86,8 +92,8 @@
       "title": "Lag (2025:861) om ändring i lagen (1964:167) med särskilda bestämmelser om unga lagöverträdare",
       "date": "2025-10-01",
       "url": "https://svenskforfattningssamling.se/doc/2025861.html",
-      "relevance": "partial",
-      "note": "De materiella reglerna om själva tvångsmedlen ligger i andra lagar i propositionen (t.ex. rättegångsbalken, hemlig dataavläsning, preventiva tvångsmedel), och LUL-ändringen genomför inte hela löftet ensam."
+      "relevance": "full",
+      "note": null
     },
     {
       "kind": "sfs",
