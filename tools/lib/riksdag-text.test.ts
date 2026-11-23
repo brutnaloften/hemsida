@@ -188,12 +188,47 @@ describe('PDF-to-HTML sections (SOU, Ds, prop)', () => {
     expect(sec('Vi föreslår en höjning')).toBe('3 Förslag');
   });
 
-  it('keeps body pages whose footnote markers link to their own page', () => {
-    const html = `${SOU_PDF_TOC}<DIV id="page_8"><P>Brödtext A</P><P><A href="#page_8">1</A> not</P><P><A href="#page_8">2</A> not</P><P><A href="#page_8">3</A> not</P><P><A href="#page_8">4</A> not</P><P><A href="#page_8">5</A> not</P></DIV>`;
+  it('keeps a body page right after the ToC whose footnote markers link to itself', () => {
+    const fn = [1, 2, 3, 4, 5].map((n) => `<A href="#page_3">${n}</A>`).join(' ');
+    const html = SOU_PDF_TOC.replace('<DIV id="page_3">', `<DIV id="page_3"><P>Fotnoter ${fn}</P>`);
     const texts = parseRiksdagText(html).map((p) => p.text);
-    expect(texts).toContain('Brödtext A');
-    // Only the ToC page itself is dropped.
+    expect(texts).toContain('Utredningen föreslår en ny lag.');
+    expect(texts.some((t) => t.startsWith('Fotnoter'))).toBe(true);
     expect(texts).not.toContain('Innehåll');
+  });
+
+  it('matches glued numbers and running headers to the ToC title without duplicates', () => {
+    const html = `<DIV id="page_1"><P>x</P></DIV>
+<DIV id="page_2"><TABLE>
+<TR><TD><A href="#page_3">1</A></TD><TD><A href="#page_3">Inledning ....</A></TD><TD><A href="#page_3">3</A></TD></TR>
+<TR><TD><A href="#page_4">2</A></TD><TD><A href="#page_4">Bakgrund ....</A></TD><TD><A href="#page_4">4</A></TD></TR>
+<TR><TD><A href="#page_5">3</A></TD><TD><A href="#page_5">Slut ....</A></TD><TD><A href="#page_5">5</A></TD></TR>
+</TABLE></DIV>
+<DIV id="page_3"><P>1Inledning</P><P>Text ett.</P></DIV>
+<DIV id="page_4"><P>Prop. 2023/24:64 2 Bakgrund</P><P>Text två.</P></DIV>
+<DIV id="page_5"><P>3 Slut</P><P>Text tre.</P></DIV>`;
+    const paras = parseRiksdagText(html);
+    expect(paras.filter((p) => p.heading).map((p) => p.text)).toEqual([
+      '1Inledning',
+      'Prop. 2023/24:64 2 Bakgrund',
+      '3 Slut',
+    ]);
+  });
+
+  it('fallback matches glued numbers and gives up when one heading swallows the text', () => {
+    const glued = parseRiksdagText(
+      '<DIV id="page_1"><P>Sammanfattning</P><P>a</P><P>1Inledning</P><P>b</P><P>2Bakgrund</P><P>c</P></DIV>',
+    );
+    expect(glued.filter((p) => p.heading).map((p) => p.text)).toEqual([
+      'Sammanfattning',
+      '1Inledning',
+      '2Bakgrund',
+    ]);
+    const long = 'Mycket lång brödtext. '.repeat(200);
+    const swallowed = parseRiksdagText(
+      `<DIV id="page_1"><P>Sammanfattning</P><P>${long}</P><P>Bilaga 1</P><P>kort</P></DIV>`,
+    );
+    expect(swallowed.some((p) => p.heading)).toBe(false);
   });
 
   it('drops only the leading run of ToC pages, not later pages with cross-references', () => {

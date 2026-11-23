@@ -193,6 +193,8 @@ export function pagesOf(html: string): Map<number, string> {
 
 const SUMMARY = /^(sammanfattning|propositionens huvudsakliga innehåll)$/;
 const FRONT_SUMMARY = /^(propositionens|skrivelsens) huvudsakliga innehåll$/i;
+// ToC page detection is shared (own-page links are ignored). Unlike riksdag-text's tocSpans, this run
+// continues only while pages keep TOC_PAGE_LINKS links, not the lower continuation threshold.
 // ToC page detection is shared with riksdag-text (leading run, own-page footnote links ignored).
 const linkCount = (html: string, page: number): number => pageLinkCount(html, page);
 

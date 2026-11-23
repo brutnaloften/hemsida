@@ -94,6 +94,9 @@ export const TOC_PAGE_LINKS = 5;
 /** A page after the first ToC page still belongs to the ToC with this many links (the last page is short). */
 const TOC_CONTINUE_LINKS = 3;
 
+/** The ToC run must start on one of the first pages. */
+const TOC_MAX_START_PAGE = 20;
+
 /** `#page_N` links on a page, ignoring links to the page itself (footnote markers). */
 export function pageLinkCount(pageHtml: string, page: number): number {
   let n = 0;
@@ -115,6 +118,8 @@ function tocSpans(html: string): { pages: Set<number>; spans: [number, number][]
     const mk = marks[i]!;
     const end = marks[i + 1]?.at ?? html.length;
     const n = pageLinkCount(html.slice(mk.at, end), mk.page);
+    // The ToC sits at the front: a run cannot start deep into the document.
+    if (!inRun && mk.page > TOC_MAX_START_PAGE) break;
     if (inRun ? n < TOC_CONTINUE_LINKS : n < TOC_PAGE_LINKS) {
       if (inRun) break;
       continue;
@@ -259,7 +264,7 @@ export function guessHeadings(paras: RawParagraph[]): Set<number> {
       return;
     }
     if (FOOTNOTE_START.test(t)) return;
-    const m = /^(\d{1,2})\s+([A-ZÅÄÖ][^.]*)$/.exec(t);
+    const m = /^(\d{1,2})(?!\d)\s*([A-ZÅÄÖ][^.]*)$/.exec(t);
     if (m && Number(m[1]) === next) {
       hits.add(i);
       next++;
@@ -268,7 +273,28 @@ export function guessHeadings(paras: RawParagraph[]): Set<number> {
   // A lone numbered hit is more likely a coincidence than a structure.
   const numbered = [...hits].filter((i) => /^\d/.test(paras[i]!.text));
   if (numbered.length < 2) for (const i of numbered) hits.delete(i);
+  // A guess that puts most of the text under one heading is wrong (the real headings were missed);
+  // no headings are better than a misleading one.
+  const total = paras.reduce((n, p) => n + p.text.length, 0);
+  const starts = [...hits].sort((a, b) => a - b);
+  let biggest =
+    starts.length > 0 ? paras.slice(0, starts[0]).reduce((n, p) => n + p.text.length, 0) : total;
+  starts.forEach((st, k) => {
+    const end = starts[k + 1] ?? paras.length;
+    biggest = Math.max(
+      biggest,
+      paras.slice(st, end).reduce((n, p) => n + p.text.length, 0),
+    );
+  });
+  if (total > 0 && biggest / total > 0.7) return new Set();
   return hits;
+}
+
+/** Drop a running page header ("Prop. 2023/24:64 ") and a leading section number ("3", "3.1", glued or not). */
+export function stripNumberAndHeader(text: string): string {
+  return text
+    .replace(/^(Prop|Skr)\. \d{4}\/\d{2}:\d+\s*/, '')
+    .replace(/^\d{1,2}(?!\d)(\.\d+)*\s*/, '');
 }
 
 const norm = (s: string) =>
@@ -301,7 +327,7 @@ export function applyTocSections(paras: RawParagraph[], toc: TocEntry[]): RawPar
       if (pg < e.page) continue;
       if (first < 0) first = i;
       if (pg > e.page) break;
-      const body = norm(out[i]!.text).replace(/^\d{1,2} /, '');
+      const body = norm(stripNumberAndHeader(out[i]!.text));
       if (key.length > 3 && body.startsWith(key) && out[i]!.text.length < 160) {
         match = i;
         break;
