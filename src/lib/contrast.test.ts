@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { AGREEMENT_OUTCOMES, VERDICTS } from '@/schema/promise';
+import { AGREEMENT_OUTCOMES, VERDICTS, VOTE_VALUES } from '@/schema/promise';
 
 /**
  * WCAG contrast of the text/background pairs in src/styles/globals.css, in both themes. The test
@@ -99,6 +99,15 @@ describe.each(['light', 'dark'] as const)('contrast (%s)', (theme) => {
     for (const surface of [ground, base['--muted']]) {
       const bg = bgOf(badges[`--agreement-${o}-bg`], surface);
       expect(ratio(fg, bg)).toBeGreaterThanOrEqual(4.5);
+    }
+  });
+
+  it.each(VOTE_VALUES)('vote badge %s reaches 4.5:1 text and 3:1 border', (v) => {
+    const fg = badges[`--vote-${v}-fg`];
+    for (const surface of [ground, base['--muted']]) {
+      const bg = bgOf(badges[`--vote-${v}-bg`], surface);
+      expect(ratio(fg, bg)).toBeGreaterThanOrEqual(4.5);
+      expect(ratio(badges[`--vote-${v}-border`], bg)).toBeGreaterThanOrEqual(3);
     }
   });
 

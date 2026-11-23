@@ -6,6 +6,7 @@ import { AiTag } from '@/components/ui/ai-tag';
 import { VerdictBadge } from '@/components/ui/verdict-badge';
 import { AgreementBadge } from '@/components/ui/agreement-badge';
 import { PartyChip } from '@/components/ui/party-chip';
+import { VoteBadge } from '@/components/ui/vote-badge';
 import { TimelineMarker } from '@/components/ui/timeline-marker';
 import { agreementName } from '@/schema/promise';
 import RiksdagEntry from '@/components/RiksdagEntry.astro';
@@ -21,6 +22,7 @@ import {
   relatedFromOtherParties,
   suggestSourceUrl,
   voteRows,
+  voteSummary,
 } from '@/lib/promise-page';
 
 export const getStaticPaths = (async () => {
@@ -227,21 +229,28 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                       <TimelineMarker step={s.evidence.relevance === 'contradicts' ? 'against' : 'document'} />
                       <RiksdagEntry entry={s.evidence} />
                       {s.evidence.kind === 'bet' && s.evidence.votes && (
-                        <details class="mt-2 text-sm">
-                          <summary class="cursor-pointer font-medium">Så röstade partierna</summary>
-                          <table class="mt-2 w-full max-w-xs border-collapse">
-                            <tbody>
-                              {voteRows(s.evidence.votes).map((r) => (
-                                <tr class="border-b border-border">
-                                  <th scope="row" class="py-1 pr-4 text-left font-mono font-medium">
-                                    {r.party}
-                                  </th>
-                                  <td class="py-1">{r.label}</td>
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        </details>
+                        <section class="mt-2 border border-border p-3 text-sm" aria-label="Så röstade partierna">
+                          <h4 class="font-medium">Så röstade partierna</h4>
+                          <p class="mt-0.5 text-xs text-muted-foreground">
+                            Omröstningen om utskottets förslag i sakfrågan. {voteSummary(s.evidence.votes)}.
+                          </p>
+                          <ul class="mt-2 flex flex-wrap gap-2">
+                            {voteRows(s.evidence.votes).map((r) => (
+                              <li class="flex items-center gap-1.5">
+                                <PartyChip
+                                  party={r.party}
+                                  role={promise.roles[r.party] ?? 'opposition'}
+                                  size="inline"
+                                  aria-label={`Parti ${r.party}`}
+                                />
+                                <VoteBadge vote={r.vote} />
+                              </li>
+                            ))}
+                          </ul>
+                          <p class="mt-2 text-xs text-muted-foreground">
+                            Ett ja är ett ja till utskottets förslag. En röstning påverkar inte bedömningen av löftet.
+                          </p>
+                        </section>
                       )}
                     </>
                   )}

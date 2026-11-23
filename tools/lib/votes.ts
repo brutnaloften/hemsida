@@ -161,7 +161,7 @@ async function resolveDokId(
   return null;
 }
 
-async function resolvePoint(
+export async function resolvePoint(
   proposals: Array<{ punkt: string; votering_id: string }>,
   ref: { rm: string; bet: string; punkt: string },
   getVoteMembers: VotesClient['getVoteMembers'],

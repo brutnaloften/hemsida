@@ -7,6 +7,9 @@ import {
   relatedFromOtherParties,
   suggestSourceUrl,
   voteRows,
+  voteSummary,
+  VOTE_SYMBOLS,
+  VOTE_LABELS,
 } from '@/lib/promise-page';
 
 const manifesto: Source = {
@@ -186,5 +189,18 @@ describe('voteRows', () => {
       { party: 'V', vote: 'no', label: 'Nej' },
     ]);
     expect(voteRows({})).toEqual([]);
+  });
+});
+
+describe('voteSummary', () => {
+  it('counts parties per vote in Swedish and skips empty groups', () => {
+    expect(voteSummary({ M: 'yes', SD: 'yes', S: 'no' })).toBe('Ja: 2 partier, Nej: 1 parti');
+    expect(voteSummary({ V: 'absent' })).toBe('Frånvarande: 1 parti');
+    expect(voteSummary({})).toBe('');
+  });
+
+  it('gives every vote its own symbol and word (colour is never the only signal)', () => {
+    expect(new Set(Object.values(VOTE_SYMBOLS)).size).toBe(4);
+    expect(new Set(Object.values(VOTE_LABELS)).size).toBe(4);
   });
 });
