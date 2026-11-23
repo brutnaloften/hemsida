@@ -20,10 +20,10 @@
   "committee": "JuU",
   "keywords": ["förvaringsdom", "påföljd", "samhällsfara", "återfall", "livstidsstraff"],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning föreslog i juli 2024 en ny tidsobestämd påföljd för personer med hög risk att återfalla i grov brottslighet. Regeringen lade i januari 2026 fram ett förslag om säkerhetsförvaring, och riksdagen biföll det i mars 2026. En lag om verkställighet av säkerhetsförvaring trädde i kraft den 15 april 2026 och täcker en del av löftet.",
-    "date": "2026-11-11",
+    "reasoning": "En statlig utredning föreslog i juli 2024 en ny tidsobestämd påföljd för personer med hög risk att återfalla i allvarlig brottslighet. Regeringen lade i januari 2026 fram ett förslag om säkerhetsförvaring, och riksdagen biföll det i mars 2026. Ett nytt kapitel i brottsbalken om påföljden och en ny lag om verkställighet trädde i kraft den 15 april 2026. Livstidsstraffet ligger kvar vid sidan av den nya påföljden.",
+    "date": "2026-11-23",
     "history": [
       {
         "value": "unassessed",
@@ -34,6 +34,12 @@
         "value": "in_progress",
         "assessedBy": "ai",
         "reasoning": "En statlig utredning föreslog i juli 2024 en ny tidsobestämd påföljd för personer med hög risk för återfall i allvarlig brottslighet. Regeringen lade i januari 2026 fram ett förslag om säkerhetsförvaring, alltså en ny tidsobestämd frihetsberövande påföljd. Riksdagen biföll förslaget i mars 2026. Livstidsstraffet ligger kvar vid sidan av den nya påföljden.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning föreslog i juli 2024 en ny tidsobestämd påföljd för personer med hög risk att återfalla i grov brottslighet. Regeringen lade i januari 2026 fram ett förslag om säkerhetsförvaring, och riksdagen biföll det i mars 2026. En lag om verkställighet av säkerhetsförvaring trädde i kraft den 15 april 2026 och täcker en del av löftet.",
         "date": "2026-11-11"
       }
     ]
@@ -76,8 +82,18 @@
       "title": "Lag (2026:252) om verkställighet av säkerhetsförvaring",
       "date": "2026-04-15",
       "url": "https://svenskforfattningssamling.se/doc/2026252.html",
-      "relevance": "partial",
-      "note": "Själva införandet av påföljden (när den får dömas ut, tidsramar) finns i brottsbalken 33 kap., inte i denna verkställighetslag."
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-253",
+      "designation": "SFS 2026:253",
+      "title": "Lag (2026:253) om ändring i brottsbalken",
+      "date": "2026-04-15",
+      "url": "https://svenskforfattningssamling.se/doc/2026253.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

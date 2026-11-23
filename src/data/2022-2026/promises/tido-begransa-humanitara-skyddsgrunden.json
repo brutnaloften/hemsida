@@ -26,10 +26,10 @@
     "utlänningslagen"
   ],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i september 2023 fram en proposition som begränsar uppehållstillstånd av humanitära skäl, och riksdagen biföll den i oktober 2023. Ändringen i utlänningslagen trädde i kraft den 1 december 2023. Lagen täcker en del av löftet.",
-    "date": "2026-11-11",
+    "reasoning": "Regeringen lade i september 2023 fram en proposition som begränsar uppehållstillstånd av humanitära skäl. Bestämmelsen om särskilt ömmande omständigheter tas bort, och barn får i stället uppehållstillstånd vid synnerligen ömmande omständigheter. Det är samma ändring som riksdagens socialförsäkringsutskott föreslog 2021. Riksdagen biföll propositionen i oktober 2023, och lagändringen trädde i kraft den 1 december 2023.",
+    "date": "2026-11-23",
     "history": [
       {
         "value": "unassessed",
@@ -40,6 +40,12 @@
         "value": "in_progress",
         "assessedBy": "ai",
         "reasoning": "Regeringen lade i september 2023 fram en proposition som begränsar möjligheterna till uppehållstillstånd av humanitära skäl. Den gällde också skärpta villkor för anhöriginvandring. Riksdagen biföll förslaget i oktober 2023. En lag om ändring i utlänningslagen trädde i kraft den 1 december 2023. Dokumenten täcker hela löftet.",
+        "date": "2026-11-11"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i september 2023 fram en proposition som begränsar uppehållstillstånd av humanitära skäl, och riksdagen biföll den i oktober 2023. Ändringen i utlänningslagen trädde i kraft den 1 december 2023. Lagen täcker en del av löftet.",
         "date": "2026-11-11"
       }
     ]
@@ -72,8 +78,8 @@
       "title": "Lag (2023:652) om ändring i utlänningslagen (2005:716)",
       "date": "2023-12-01",
       "url": "https://svenskforfattningssamling.se/doc/2023652.html",
-      "relevance": "partial",
-      "note": "Lagen är inte ett genomförande av utskottsinitiativet från den 3 maj 2021 som sådant, och texten visar inte att alla delar av det initiativet täcks. Flera ändringar gäller anhöriginvandring och inte den humanitära skyddsgrunden."
+      "relevance": "full",
+      "note": null
     }
   ]
 }
