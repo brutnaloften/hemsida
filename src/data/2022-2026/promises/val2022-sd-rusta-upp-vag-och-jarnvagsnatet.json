@@ -17,10 +17,17 @@
   "committee": "TU",
   "keywords": ["väg", "järnväg", "underhåll", "infrastruktur"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Löftet gäller att väg- och järnvägsnätet rustas upp. Anslaget 1:2 Vidmakthållande av statens transportinfrastruktur ökade nominellt från ett utfall på 29 106 mn kr 2022 till 39 478 mn kr 2025 (+10 372 mn kr, +35,6 procent; i fasta priser +20,7 procent) och 1:1 Utveckling av statens transportinfrastruktur från 29 277 till 37 836 mn kr (+8 559 mn kr, +29,2 procent; i fasta priser +15,0 procent). Riksdagen beslutade om anslagen i betänkande 2024/25:TU1, där regeringen bland annat föreslog 1 500 mn kr extra till vägunderhåll 2025 (som Vänsterpartiets särskilda yttrande kallar en engångssatsning). Pengarna ökade åt löftets håll, men de mäter anslagen och inte hur väg- och järnvägsnätet faktiskt rustats upp, och utfallet är inte uppdelat på väg och järnväg. Källa: ESV:s årsutfall och betänkandet. Därför delvis uppfyllt.",
+    "date": "2026-11-23",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -50,6 +57,48 @@
       "url": "https://data.riksdagen.se/dokument/HC01TU1.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2201002",
+        "namn": "Vidmakthållande av statens transportinfrastruktur",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 29106.1,
+        "after": 39478.4
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022. Nominellt utfall 29 106 mn kr 2022 och 39 478 mn kr 2025, ändring 10 372 mn kr (+35,6 %). I fasta priser +20,7 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Anslaget 1:2 bär både väg och järnväg; ESV delar inte upp utfallet per trafikslag. Anslaget mäter pengar till underhåll, inte nätets skick."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2201001",
+        "namn": "Utveckling av statens transportinfrastruktur",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 29277.4,
+        "after": 37836.1
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022. Nominellt utfall 29 277 mn kr 2022 och 37 836 mn kr 2025, ändring 8 559 mn kr (+29,2 %). I fasta priser +15,0 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Anslaget 1:1 gäller nyinvesteringar i både väg och järnväg; ESV delar inte upp utfallet per trafikslag."
     }
   ]
 }
