@@ -19,7 +19,7 @@
   "verdict": {
     "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen föreslog i oktober 2024 ett utvidgat växa-stöd som sänker arbetsgivaravgifterna för ett företags första två anställda. Riksdagen beslutade om budgeten i november 2024, och en lagändring för enmansföretag trädde i kraft 1 januari 2025. I februari 2026 beslutade riksdagen om tillfälligt sänkta arbetsgivaravgifter för 19–23-åringar. Tillsammans täcker de en del av löftet.",
+    "reasoning": "Regeringen föreslog i oktober 2024 ett utvidgat växa-stöd med lägre arbetsgivaravgifter för upp till två anställda, och en lagändring för enmansföretag trädde i kraft 1 januari 2025. Efter riksdagens beslut i februari 2026 trädde en lag i kraft 1 april 2026 med sänkta arbetsgivaravgifter för 18–22-åringar. Lagarna täcker en del av löftet: första anställda och en åldersgrupp.",
     "date": "2026-11-23",
     "history": [
       {
@@ -61,6 +61,16 @@
       "note": "Lagen genomför ingen sänkning av arbetsgivaravgiften för personer långt från arbetsmarknaden eller för låga inkomster, och sänkningen gäller bara vissa växa-företag (enmansföretag) och inte alla företags första anställda."
     },
     {
+      "kind": "prop",
+      "dok_id": "HD0366",
+      "designation": "Prop. 2025/26:66",
+      "title": "Tillfälligt nedsatta arbetsgivaravgifter för 19–23-åringar",
+      "date": "2025-11-27",
+      "url": "https://data.riksdagen.se/dokument/HD0366.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01SfU11",
       "designation": "Bet. 2025/26:SfU11",
@@ -69,6 +79,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01SfU11.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-100",
+      "designation": "SFS 2026:100",
+      "title": "Lag (2026:100) om särskild beräkning av arbetsgivaravgifter och allmän löneavgift för personer som vid årets ingång fyllt 18 men inte 23 år",
+      "date": "2026-04-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026100.html",
+      "relevance": "partial",
+      "note": "Sänkningen gäller inte ett företags första anställda eller personer långt från arbetsmarknaden i allmänhet, och inte låginkomsttagare som grupp. Den är begränsad till unga 18–22 år och är tidsbegränsad till 30 september 2027."
     }
   ]
 }

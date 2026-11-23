@@ -17,15 +17,21 @@
   "committee": "SkU",
   "keywords": ["arbetsgivaravgifter", "ungdomsarbetslöshet", "nedsatta avgifter", "anställa unga"],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen föreslog i oktober 2024 lägre arbetsgivaravgifter för enmansföretag som anställer upp till två personer (växa-stöd). Riksdagen beslutade om budgeten i november 2024, och lagändringen trädde i kraft 1 januari 2025. I februari 2026 godkände riksdagen också tillfälligt nedsatta arbetsgivaravgifter för unga. Tillsammans täcker detta en del av löftet.",
+    "reasoning": "Regeringen lade i november 2025 fram ett förslag om tillfälligt sänkta arbetsgivaravgifter för unga. Riksdagen beslutade i februari 2026 i linje med förslaget, vilket gäller en åldersgrupp och tidsbegränsat. En lag om särskild beräkning av arbetsgivaravgifter för 18–22-åringar trädde i kraft 1 april 2026. Lagen verkar täcka löftet, men det är obekräftat.",
     "date": "2026-11-23",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-08-08"
+      },
+      {
+        "value": "partially_fulfilled",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen föreslog i oktober 2024 lägre arbetsgivaravgifter för enmansföretag som anställer upp till två personer (växa-stöd). Riksdagen beslutade om budgeten i november 2024, och lagändringen trädde i kraft 1 januari 2025. I februari 2026 godkände riksdagen också tillfälligt nedsatta arbetsgivaravgifter för unga. Tillsammans täcker detta en del av löftet.",
+        "date": "2026-11-23"
       }
     ]
   },
@@ -40,33 +46,13 @@
     },
     {
       "kind": "prop",
-      "dok_id": "HC0325",
-      "designation": "Prop. 2024/25:25",
-      "title": "Utvidgat växa-stöd – nedsättning av arbetsgivaravgifterna för upp till två anställda",
-      "date": "2024-10-03",
-      "url": "https://data.riksdagen.se/dokument/HC0325.html",
-      "relevance": "partial",
+      "dok_id": "HD0366",
+      "designation": "Prop. 2025/26:66",
+      "title": "Tillfälligt nedsatta arbetsgivaravgifter för 19–23-åringar",
+      "date": "2025-11-27",
+      "url": "https://data.riksdagen.se/dokument/HD0366.html",
+      "relevance": "full",
       "note": null
-    },
-    {
-      "kind": "bet",
-      "dok_id": "HC01FiU1",
-      "designation": "Bet. 2024/25:FiU1",
-      "title": "Statens budget 2025 – Rambeslutet",
-      "date": "2024-11-22",
-      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "sfs",
-      "dok_id": "sfs-2024-1158",
-      "designation": "SFS 2024:1158",
-      "title": "Lag (2024:1158) om ändring i lagen (2016:1053) om särskild beräkning av vissa avgifter för enmansföretag",
-      "date": "2025-01-01",
-      "url": "https://svenskforfattningssamling.se/doc/20241158.html",
-      "relevance": "partial",
-      "note": "Lagen är inte riktad mot unga: nedsättningen gäller små växa-företag oavsett den anställdes ålder, så ingen sänkning av arbetsgivaravgifterna specifikt för att anställa unga genomförs."
     },
     {
       "kind": "bet",
@@ -76,6 +62,16 @@
       "date": "2026-02-18",
       "url": "https://data.riksdagen.se/dokument/HD01SfU11.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-100",
+      "designation": "SFS 2026:100",
+      "title": "Lag (2026:100) om särskild beräkning av arbetsgivaravgifter och allmän löneavgift för personer som vid årets ingång fyllt 18 men inte 23 år",
+      "date": "2026-04-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026100.html",
+      "relevance": "full",
       "note": null
     }
   ]

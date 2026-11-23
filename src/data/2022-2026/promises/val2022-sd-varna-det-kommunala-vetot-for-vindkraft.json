@@ -17,17 +17,10 @@
   "committee": "MJU",
   "keywords": ["kommunalt veto", "vindkraft"],
   "verdict": {
-    "value": "in_progress",
-    "assessedBy": "ai",
-    "reasoning": "En statlig utredning från april 2023 utgår från att kommunen även fortsättningsvis ska tillstyrka vindkraft, alltså det kommunala vetot. Den föreslår ekonomiska incitament för att fler kommuner ska säga ja, bland annat ett finansieringsvillkor kopplat till kommunens tillstyrkan. Dokumentet gäller bara en del av löftet och visar förslag, inget beslut.",
-    "date": "2026-11-23",
-    "history": [
-      {
-        "value": "unassessed",
-        "reasoning": "",
-        "date": "2026-11-02"
-      }
-    ]
+    "value": "unassessed",
+    "reasoning": "",
+    "date": "2026-11-02",
+    "history": []
   },
   "evidence": [
     {
@@ -36,16 +29,6 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
-      "note": null
-    },
-    {
-      "kind": "sou",
-      "dok_id": "HBB318",
-      "designation": "SOU 2023:18",
-      "title": "Värdet av vinden Kompensation, incitament och planering för en hållbar fortsatt utbyggnad av vindkraften",
-      "date": "2023-04-28",
-      "url": "https://data.riksdagen.se/dokument/HBB318.html",
-      "relevance": "partial",
       "note": null
     }
   ]
