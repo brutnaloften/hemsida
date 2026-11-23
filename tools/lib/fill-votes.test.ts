@@ -60,6 +60,25 @@ describe('parsing', () => {
 });
 
 describe('fillBetVotes', () => {
+  it('does not fill a first reading adopted som vilande (KU34 shape)', async () => {
+    const c = client([
+      {
+        ...point(
+          '1',
+          'Riksdagen antar som vilande regeringens förslag. Därmed bifaller riksdagen proposition 2023/24:19.',
+          V1,
+        ),
+        rubrik: 'Grundlagsförslaget',
+      },
+    ]);
+    expect(await fillBetVotes(c, bet, [bet, prop])).toMatchObject({ status: 'ambiguous' });
+  });
+
+  it('does not fill a whole-budget frame vote (Rambeslutet)', async () => {
+    const c = client([{ ...point('2', bill, V1), rubrik: 'Rambeslutet' }]);
+    expect(await fillBetVotes(c, bet, [bet, prop])).toMatchObject({ status: 'ambiguous' });
+  });
+
   it('does not pick the voted point when an unvoted point also cites the proposition', async () => {
     const c = client([point('1', bill, V1), point('3', bill, '')]);
     expect((await fillBetVotes(c, bet, [bet, prop])).status).toBe('ambiguous');

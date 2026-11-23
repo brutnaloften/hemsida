@@ -7,7 +7,7 @@
  * proposition 2023/24:19 ...". Rules, deliberately conservative (report instead of guessing):
  * - the promise must have `prop` evidence, whose designations give the proposition numbers;
  * - exactly one committee point may cite one of them, and it must carry a recorded vote
- *   (acklamation points have none); zero or several is reported, never picked between;
+ *   (acklamation points have none), and not a first reading ("som vilande") or a budget frame vote ("Rambeslutet"); zero or several is reported, never picked between;
  * - evidence with relevance `partial` is not filled;
  * - that vote must be the sakfråga ("decision"), not the motivfråga.
  * The result is the party position on the committee's proposal ("Ja" = for the committee, which
@@ -112,14 +112,21 @@ export async function fillBetVotes(
       reason: `point ${cited[0].punkt} decided without a recorded vote`,
     };
   }
-  if (/vilande/i.test(cited[0].rubrik)) {
-    // A first reading of a constitutional change is not the adoption of the law.
-    return { status: 'ambiguous', reason: `point ${cited[0].punkt} is a vilande first reading` };
+  const point = cited[0];
+  if (/vilande/i.test(point.rubrik) || /som vilande/i.test(point.forslag)) {
+    // A first reading of a constitutional change ("antar som vilande") is not the adoption of the law.
+    return { status: 'ambiguous', reason: `point ${point.punkt} is a vilande first reading` };
   }
-  const voted = cited;
+  if (/^\s*(ram|utgiftsram)\w*/i.test(point.rubrik) || /\brambeslut/i.test(point.rubrik)) {
+    // A whole-budget frame vote ("Rambeslutet") says little about any single promise.
+    return {
+      status: 'ambiguous',
+      reason: `point ${point.punkt} is a budget frame vote, not decisive`,
+    };
+  }
   const r = await resolvePoint(
     committeeProposals,
-    { rm: ref.rm, bet: ref.bet, punkt: voted[0].punkt },
+    { rm: ref.rm, bet: ref.bet, punkt: point.punkt },
     (id) => client.getVoteMembers(id),
   );
   if (r.status === 'no-recorded-vote') return { status: 'no-recorded-vote', reason: r.reason };
@@ -137,7 +144,7 @@ export async function fillBetVotes(
     status: 'filled',
     punkt: r.punkt,
     votingId: r.votingId,
-    rubrik: voted[0].rubrik,
+    rubrik: point.rubrik,
     votes: r.votes,
     tied: r.tied,
   };
