@@ -8,7 +8,7 @@
  * party positions as `votes`. Ambiguous cases (no or several candidate points, unclear vote kind)
  * and acklamation points are reported, never guessed. See tools/lib/fill-votes.ts for the rules and
  * docs/riksdag-api.md ("Voteringar"). Requests are sequential at 1/s; every response is cached in
- * tools/out/votes-cache/ so a re-run only fetches what is missing. Run with --dry-run first. Votes
+ * tools/out/votes-cache/ so a re-run only fetches what is missing (--refresh re-evaluates entries that already have votes but does NOT bypass this cache: delete the directory to refetch). Run with --dry-run first. Votes
  * never change a verdict.
  */
 
@@ -87,6 +87,11 @@ for (const f of files) {
     rows.push({ promise: promise.id, dok_id: e.dok_id, designation: e.designation, outcome });
     if (outcome.status === 'filled') {
       e.votes = outcome.votes;
+      e.vote_point = {
+        punkt: outcome.punkt,
+        rubrik: outcome.rubrik,
+        votering_id: outcome.votingId,
+      };
       touched = true;
     }
   }

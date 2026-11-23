@@ -6,8 +6,9 @@
  * the proposition the promise's law came from: its proposal text reads "... bifaller riksdagen
  * proposition 2023/24:19 ...". Rules, deliberately conservative (report instead of guessing):
  * - the promise must have `prop` evidence, whose designations give the proposition numbers;
- * - exactly one committee point citing one of them may carry a recorded vote (acklamation points
- *   have none); zero or several is reported, never picked between;
+ * - exactly one committee point may cite one of them, and it must carry a recorded vote
+ *   (acklamation points have none); zero or several is reported, never picked between;
+ * - evidence with relevance `partial` is not filled;
  * - that vote must be the sakfråga ("decision"), not the motivfråga.
  * The result is the party position on the committee's proposal ("Ja" = for the committee, which
  * for a bill point means for the bill). Votes never change a verdict (docs/data-model.md).
@@ -25,6 +26,7 @@ export interface EvidenceLike {
   dok_id?: string;
   designation?: string;
   votes?: unknown;
+  relevance?: string;
 }
 
 export type FillOutcome =
@@ -32,6 +34,7 @@ export type FillOutcome =
       status: 'filled';
       punkt: string;
       votingId: string;
+      rubrik: string;
       votes: PartyVoteMap;
       /** Parties that split evenly and are left out of `votes`. */
       tied: string[];
@@ -63,7 +66,7 @@ export function citedPropositions(forslag: string): string[] {
 
 /** Committee points whose proposal disposes of one of the propositions. */
 export function pointsCitingProp(
-  proposals: Pick<CommitteeProposal, 'punkt' | 'votering_id' | 'forslag'>[],
+  proposals: Pick<CommitteeProposal, 'punkt' | 'rubrik' | 'votering_id' | 'forslag'>[],
   props: string[],
 ) {
   return proposals.filter((p) => citedPropositions(p.forslag).some((c) => props.includes(c)));
@@ -75,6 +78,10 @@ export async function fillBetVotes(
   bet: EvidenceLike,
   evidence: EvidenceLike[],
 ): Promise<FillOutcome> {
+  if (bet.relevance === 'partial') {
+    // A partial document delivers only part of the promise; its decision vote says little about it.
+    return { status: 'ambiguous', reason: 'evidence relevance is partial; not filled' };
+  }
   const ref = betRef(bet.designation ?? '');
   if (!ref || !bet.dok_id) return { status: 'ambiguous', reason: 'unrecognised bet designation' };
   const props = evidence.flatMap((e) =>
@@ -91,19 +98,25 @@ export async function fillBetVotes(
       reason: `no committee point cites ${props.join(', ')} (the bet decides motions only or the text is unparsed)`,
     };
   }
-  const voted = cited.filter((p) => p.votering_id !== '');
-  if (voted.length === 0) {
-    return {
-      status: 'no-recorded-vote',
-      reason: `point ${cited.map((p) => p.punkt).join(', ')} decided without a recorded vote`,
-    };
-  }
-  if (voted.length > 1) {
+  // Only when exactly one point cites the proposition: with several (some perhaps unvoted) the
+  // deciding point for this promise cannot be told, and the one voted point is often the wrong one.
+  if (cited.length > 1) {
     return {
       status: 'ambiguous',
-      reason: `several voted points cite ${props.join(', ')}: ${voted.map((p) => p.punkt).join(', ')}`,
+      reason: `several points cite ${props.join(', ')}: ${cited.map((p) => p.punkt).join(', ')}`,
     };
   }
+  if (cited[0].votering_id === '') {
+    return {
+      status: 'no-recorded-vote',
+      reason: `point ${cited[0].punkt} decided without a recorded vote`,
+    };
+  }
+  if (/vilande/i.test(cited[0].rubrik)) {
+    // A first reading of a constitutional change is not the adoption of the law.
+    return { status: 'ambiguous', reason: `point ${cited[0].punkt} is a vilande first reading` };
+  }
+  const voted = cited;
   const r = await resolvePoint(
     committeeProposals,
     { rm: ref.rm, bet: ref.bet, punkt: voted[0].punkt },
@@ -120,5 +133,12 @@ export async function fillBetVotes(
   if (Object.keys(r.votes).length === 0) {
     return { status: 'ambiguous', reason: `point ${r.punkt} has no party position` };
   }
-  return { status: 'filled', punkt: r.punkt, votingId: r.votingId, votes: r.votes, tied: r.tied };
+  return {
+    status: 'filled',
+    punkt: r.punkt,
+    votingId: r.votingId,
+    rubrik: voted[0].rubrik,
+    votes: r.votes,
+    tied: r.tied,
+  };
 }

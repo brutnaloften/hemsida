@@ -112,6 +112,19 @@ describe('promiseSchema', () => {
     expect(promiseSchema.safeParse({ ...valid, evidence: ev }).success).toBe(false);
   });
 
+  it('accepts vote_point only on bet evidence with votes', () => {
+    const vp = { punkt: '1', rubrik: 'Regeringens lagförslag', votering_id: 'abc' };
+    const bet = { ...valid.evidence[0], kind: 'bet' };
+    const ok = {
+      ...valid,
+      verdict: unassessed,
+      evidence: [{ ...bet, votes: { M: 'yes' }, vote_point: vp }],
+    };
+    expect(promiseSchema.safeParse(ok).success).toBe(true);
+    const alone = { ...valid, verdict: unassessed, evidence: [{ ...bet, vote_point: vp }] };
+    expect(promiseSchema.safeParse(alone).success).toBe(false);
+  });
+
   it('rejects votes on non-bet evidence', () => {
     const votes = { M: 'yes' };
     const bad = { ...valid, evidence: [{ ...valid.evidence[0], votes }] };

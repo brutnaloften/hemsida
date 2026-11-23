@@ -60,6 +60,23 @@ describe('parsing', () => {
 });
 
 describe('fillBetVotes', () => {
+  it('does not pick the voted point when an unvoted point also cites the proposition', async () => {
+    const c = client([point('1', bill, V1), point('3', bill, '')]);
+    expect((await fillBetVotes(c, bet, [bet, prop])).status).toBe('ambiguous');
+  });
+
+  it('skips partial evidence and records the point for a fill', async () => {
+    const c = client([{ ...point('1', bill, V1), rubrik: 'Regeringens lagförslag' }]);
+    expect((await fillBetVotes(c, { ...bet, relevance: 'partial' }, [bet, prop])).status).toBe(
+      'ambiguous',
+    );
+    expect(await fillBetVotes(c, bet, [bet, prop])).toMatchObject({
+      status: 'filled',
+      rubrik: 'Regeringens lagförslag',
+      votingId: V1,
+    });
+  });
+
   it('fills party votes from the one voted point citing the proposition', async () => {
     const c = client([point('1', bill, V1), point('2', 'avslår motion 2023/24:19', V2)]);
     const r = await fillBetVotes(c, bet, [bet, prop]);

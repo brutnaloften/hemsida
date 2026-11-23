@@ -229,10 +229,18 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                       <TimelineMarker step={s.evidence.relevance === 'contradicts' ? 'against' : 'document'} />
                       <RiksdagEntry entry={s.evidence} />
                       {s.evidence.kind === 'bet' && s.evidence.votes && (
-                        <section class="mt-2 border border-border p-3 text-sm" aria-label="Så röstade partierna">
-                          <h4 class="font-medium">Så röstade partierna</h4>
+                        <section
+                          class="mt-2 border border-border p-3 text-sm"
+                          aria-labelledby={`votes-${s.evidence.dok_id}`}
+                        >
+                          <p id={`votes-${s.evidence.dok_id}`} class="font-medium">
+                            Så röstade partierna
+                          </p>
                           <p class="mt-0.5 text-xs text-muted-foreground">
-                            Omröstningen om utskottets förslag i sakfrågan. {voteSummary(s.evidence.votes)}.
+                            {s.evidence.vote_point
+                              ? `Omröstning om utskottets förslag i punkt ${s.evidence.vote_point.punkt}${s.evidence.vote_point.rubrik ? ` (${s.evidence.vote_point.rubrik})` : ''}, sakfrågan. `
+                              : 'Omröstning om utskottets förslag i sakfrågan. '}
+                            {voteSummary(s.evidence.votes)}.
                           </p>
                           <ul class="mt-2 flex flex-wrap gap-2">
                             {voteRows(s.evidence.votes).map((r) => (
@@ -241,14 +249,13 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                                   party={r.party}
                                   role={promise.roles[r.party] ?? 'opposition'}
                                   size="inline"
-                                  aria-label={`Parti ${r.party}`}
                                 />
                                 <VoteBadge vote={r.vote} />
                               </li>
                             ))}
                           </ul>
                           <p class="mt-2 text-xs text-muted-foreground">
-                            Ett ja är ett ja till utskottets förslag. En röstning påverkar inte bedömningen av löftet.
+                            Ett ja är ett ja till utskottets förslag, vilket kan vara att anta eller att avslå något. Omröstningen påverkar inte bedömningen av löftet.
                           </p>
                         </section>
                       )}

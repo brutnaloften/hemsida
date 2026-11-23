@@ -164,9 +164,21 @@ const riksdagEvidenceSchema = z
     relevance: z.enum(['full', 'partial', 'contradicts']),
     note: z.string().nullable().default(null),
     votes: z.partialRecord(partySchema, z.enum(VOTE_VALUES)).optional(),
+    /** Which committee point `votes` are from, so a vote can be traced and labelled. */
+    vote_point: z
+      .object({ punkt: z.string().min(1), rubrik: z.string(), votering_id: z.string().min(1) })
+      .strict()
+      .optional(),
     figures: z.array(evidenceFigureSchema).optional(),
   })
   .superRefine((e, ctx) => {
+    if (e.vote_point !== undefined && e.votes === undefined) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['vote_point'],
+        message: 'vote_point is only allowed together with votes',
+      });
+    }
     if (e.figures !== undefined && e.kind !== 'bet' && e.kind !== 'prop') {
       ctx.addIssue({
         code: 'custom',

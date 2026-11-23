@@ -338,12 +338,12 @@ Promise files stay JSON. The tooling reads and writes them without an extra depe
 
 ## Votes on bet evidence
 
-`votes` on a `bet` evidence entry records how each party voted on the committee's proposal in the **sakfråga** (the decision), never the motivfråga. "yes" is a yes to the committee's proposal; for the point that disposes of the promise's proposition that means for the bill. A party whose members split evenly is left out, and the speaker's row is ignored.
+`votes` on a `bet` evidence entry records how each party voted on the committee's proposal in the **sakfråga** (the decision), never the motivfråga. "yes" is a yes to the committee's proposal, which can be to adopt or to reject something (read the point's `rubrik`). The point is stored next to the votes as `vote_point` (`punkt`, `rubrik`, `votering_id`) and shown on the page; `vote_point` is only valid together with `votes`. A party whose members split evenly is left out, and the speaker's row is ignored.
 
-Because evidence has no committee point, `tools/fill-votes.ts` picks it: the one voted point whose proposal text cites a proposition from the promise's own `prop` evidence ("bifaller riksdagen proposition 2023/24:19"). Zero or several candidate points, a point decided by acklamation, or an unclear vote kind are reported in `tools/out/fill-votes-report.json` and left unfilled, never guessed. Promises without `prop` evidence are not filled.
+Because evidence has no committee point, `tools/fill-votes.ts` picks it: the one point whose proposal text cites a proposition from the promise's own `prop` evidence ("bifaller riksdagen proposition 2023/24:19"). Proposition lists after "punkterna ..." are not followed, which errs on the side of reporting. Several points citing the proposition (even if only one is voted), zero candidate points, `partial` evidence (it delivers only part of the promise), a point decided by acklamation, or an unclear vote kind are reported in `tools/out/fill-votes-report.json` and left unfilled, never guessed. Promises without `prop` evidence are not filled.
 
 ```text
 node --experimental-strip-types tools/fill-votes.ts --dry-run [--term T] [--id-prefix tido-] [--id <promise>] [--refresh]
 ```
 
-Requests are cached in `tools/out/votes-cache/` and paced at 1 per second. Votes never change a verdict: `broken` still needs an explicit contrary act (see the verdict rules). The promise page shows them under the Riksdag document ("Så röstade partierna") with party chip, a symbol and the word per vote; colours are the `--vote-*` variables in `globals.css`, contrast-tested.
+Requests are cached in `tools/out/votes-cache/` (`--refresh` re-evaluates entries that already have votes but does not bypass that cache; delete the directory to refetch) and paced at 1 per second. Votes never change a verdict: `broken` still needs an explicit contrary act (see the verdict rules). The promise page shows them under the Riksdag document ("Så röstade partierna") with party chip, a symbol and the word per vote; colours are the `--vote-*` variables in `globals.css`, contrast-tested.
