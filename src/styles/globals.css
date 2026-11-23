@@ -276,6 +276,18 @@
   --evidence-contradicts-bg: #ffedd5;
   --evidence-contradicts-border: #c2410c;
   --evidence-contradicts-fg: #7c2d12;
+  --vote-yes-bg: #dcfce7;
+  --vote-yes-fg: #14532d;
+  --vote-yes-border: #166534;
+  --vote-no-bg: #fee2e2;
+  --vote-no-fg: #7f1d1d;
+  --vote-no-border: #991b1b;
+  --vote-abstain-bg: #fef9c3;
+  --vote-abstain-fg: #713f12;
+  --vote-abstain-border: #a16207;
+  --vote-absent-bg: transparent;
+  --vote-absent-fg: #3a3e45;
+  --vote-absent-border: #8a8a84;
 }
 
 .dark {
@@ -324,6 +336,18 @@
   --evidence-contradicts-bg: #431407;
   --evidence-contradicts-border: #fb923c;
   --evidence-contradicts-fg: #fed7aa;
+  --vote-yes-bg: #052e16;
+  --vote-yes-fg: #bbf7d0;
+  --vote-yes-border: #4ade80;
+  --vote-no-bg: #450a0a;
+  --vote-no-fg: #fecaca;
+  --vote-no-border: #f87171;
+  --vote-abstain-bg: #422006;
+  --vote-abstain-fg: #fde68a;
+  --vote-abstain-border: #fbbf24;
+  --vote-absent-bg: transparent;
+  --vote-absent-fg: #c9ccd1;
+  --vote-absent-border: #6b6f76;
 }
 
 /* In @layer components so utilities such as text-sm and px-3 can override badge defaults. */
@@ -338,6 +362,39 @@
     line-height: 1;
     border-width: 1px;
     border-style: solid;
+  }
+  .vote-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    white-space: nowrap;
+    border: 2px solid;
+    border-radius: 0.25rem;
+    padding: 0 0.5rem;
+    height: 28px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .vote-badge[data-vote="yes"] {
+    background-color: var(--vote-yes-bg);
+    color: var(--vote-yes-fg);
+    border-color: var(--vote-yes-border);
+  }
+  .vote-badge[data-vote="no"] {
+    background-color: var(--vote-no-bg);
+    color: var(--vote-no-fg);
+    border-color: var(--vote-no-border);
+  }
+  .vote-badge[data-vote="abstain"] {
+    background-color: var(--vote-abstain-bg);
+    color: var(--vote-abstain-fg);
+    border-color: var(--vote-abstain-border);
+  }
+  .vote-badge[data-vote="absent"] {
+    background-color: var(--vote-absent-bg);
+    color: var(--vote-absent-fg);
+    border-color: var(--vote-absent-border);
+    border-style: dashed;
   }
   .verdict-badge {
     border-radius: 9999px;

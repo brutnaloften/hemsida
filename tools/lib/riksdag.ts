@@ -131,6 +131,8 @@ export type RiksdagReference = z.infer<typeof riksdagReferenceSchema>;
 export const committeeProposalSchema = z.object({
   punkt: str,
   rubrik: str,
+  /** The proposed decision text (HTML entities, `<br />`), e.g. "... bifaller riksdagen proposition 2023/24:19 ...". */
+  forslag: str,
   beslutstyp: str,
   votering_id: str,
   vinnare: str,

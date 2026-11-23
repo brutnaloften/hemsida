@@ -216,7 +216,7 @@ A reference to an official document that bears on the promise.
 | `url`         | URL            | Link to the document                                                                                                                    |
 | `relevance`   | enum           | `full` (addresses the whole promise), `partial` (one part of it) or `contradicts` (works against it, "Motverkar", see above)            |
 | `note`        | string \| null | Optional Swedish note, e.g. what part is covered or what was watered down                                                               |
-| `votes`       | object?        | For `bet` only, later (`hemsida-4np`): party → `yes` / `no` / `abstain` / `absent`                                                      |
+| `votes`       | object?        | For `bet` only: the parties' positions on the decision vote (see "Votes on bet evidence"). party → `yes` / `no` / `abstain` / `absent`  |
 | `figures`     | array?         | For `bet` and `prop` only: prose budget intentions found in the text, see "Evidence figures" below                                      |
 
 For `kind: sfs` (a law) the schema also checks the shape: `dok_id` is `sfs-<YYYY>-<N>` (e.g. `sfs-2025-625`), `designation` is `SFS <YYYY>:<N>` and must equal what the `dok_id` says, so the two cannot drift. `title` is the law's title (the SFS register's Rubrik), `date` is the **in-force date** (Ikraft; the earliest when several), not the publication date, and `url` is the official page `https://svenskforfattningssamling.se/doc/<YYYY><N>.html`. `relevance` says whether the law covers the whole promise (`full`) or part of it (`partial`), with the gap in `note`. Amendment acts count too ("Lag (2025:625) om ändring i ...").
@@ -335,3 +335,15 @@ Promise files stay JSON. The tooling reads and writes them without an extra depe
 ## Area vocabulary
 
 `area` is a fixed list of 20 Swedish areas in `src/schema/areas.ts` (the schema rejects anything else). Free-text labels from extraction are mapped onto it with `tools/area-mapping.json` (grouped by target area) via `node --experimental-strip-types tools/map-areas.ts [--term T] [--apply]`, which also proposes an area from the committee for unmapped labels. Reuse the same list and mapping for 2026-2030; add new areas deliberately.
+
+## Votes on bet evidence
+
+`votes` on a `bet` evidence entry records how each party voted on the committee's proposal in the **sakfråga** (the decision), never the motivfråga. "yes" is a yes to the committee's proposal, which can be to adopt or to reject something (read the point's `rubrik`). The point is stored next to the votes as `vote_point` (`punkt`, `rubrik`, `votering_id`) and shown on the page; `vote_point` is only valid together with `votes`. A party whose members split evenly is left out, and the speaker's row is ignored.
+
+Because evidence has no committee point, `tools/fill-votes.ts` picks it: the one point whose proposal text cites a proposition from the promise's own `prop` evidence ("bifaller riksdagen proposition 2023/24:19"). Proposition lists after "punkterna ..." are not followed, which errs on the side of reporting. Several points citing the proposition (even if only one is voted), zero candidate points, `partial` evidence (it delivers only part of the promise), a point decided by acklamation, or an unclear vote kind are reported in `tools/out/fill-votes-report.json` and left unfilled, never guessed. Promises without `prop` evidence are not filled.
+
+```text
+node --experimental-strip-types tools/fill-votes.ts --dry-run [--term T] [--id-prefix tido-] [--id <promise>] [--refresh]
+```
+
+Requests are cached in `tools/out/votes-cache/` (`--refresh` re-evaluates entries that already have votes but does not bypass that cache; delete the directory to refetch) and paced at 1 per second. Votes never change a verdict: `broken` still needs an explicit contrary act (see the verdict rules). The promise page shows them under the Riksdag document ("Så röstade partierna") with party chip, a symbol and the word per vote; colours are the `--vote-*` variables in `globals.css`, contrast-tested.

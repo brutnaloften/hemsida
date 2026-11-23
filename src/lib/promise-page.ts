@@ -159,6 +159,24 @@ export const VOTE_LABELS: Record<VoteValue, string> = {
   absent: 'Frånvarande',
 };
 
+/** Text symbol per vote so colour is never the only signal. */
+export const VOTE_SYMBOLS: Record<VoteValue, string> = {
+  yes: '✓',
+  no: '✗',
+  abstain: '–',
+  absent: '○',
+};
+
+/** Swedish count line over the recorded votes, e.g. "Ja: 4 partier, Nej: 3 partier"; empty when none. */
+export function voteSummary(votes: Partial<Record<(typeof PARTIES)[number], VoteValue>>): string {
+  const rows = voteRows(votes);
+  return (['yes', 'no', 'abstain', 'absent'] as const)
+    .map((v) => ({ v, n: rows.filter((r) => r.vote === v).length }))
+    .filter(({ n }) => n > 0)
+    .map(({ v, n }) => `${VOTE_LABELS[v]}: ${n} ${n === 1 ? 'parti' : 'partier'}`)
+    .join(', ');
+}
+
 /** Vote rows in fixed party order; parties without a recorded vote are left out. */
 export function voteRows(votes: Partial<Record<(typeof PARTIES)[number], VoteValue>>): {
   party: (typeof PARTIES)[number];
