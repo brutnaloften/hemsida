@@ -82,6 +82,73 @@ describe('mergeRunPairs', () => {
 });
 
 describe('applyLinks', () => {
+  describe('rejection list', () => {
+    const unassessed = base;
+    const rejected = new Set(['P1', 'B1']);
+
+    it('never turns a rejected document into evidence, so the promise stays unassessed', () => {
+      expect(
+        applyLinks(
+          unassessed,
+          [pair('P1'), pair('B1', { stage: 'definitive' })],
+          docs,
+          '2026-11-10',
+          new Map(),
+          undefined,
+          rejected,
+        ),
+      ).toBeNull();
+    });
+
+    it('skips the rejected deciding betänkande but keeps other evidence', () => {
+      const decided = new Map([['P1', ['B1']]]);
+      const r = applyLinks(
+        unassessed,
+        [pair('P1'), pair('S1')],
+        docs,
+        '2026-11-10',
+        decided,
+        undefined,
+        new Set(['B1']),
+      )!;
+      expect(r.evidence.map((e) => (e as { dok_id: string }).dok_id)).toEqual(['S1', 'P1']);
+    });
+
+    it('drops rejected evidence that is already on an AI-assessed promise, back to unassessed', () => {
+      const first = applyLinks(unassessed, [pair('P1')], docs, '2026-11-10')!;
+      const promise = promiseSchema.parse({ ...unassessed, ...first });
+      const r = applyLinks(
+        promise,
+        [pair('P1')],
+        docs,
+        '2026-11-11',
+        new Map(),
+        undefined,
+        new Set(['P1']),
+      )!;
+      expect(r.evidence).toHaveLength(0);
+      expect(r.verdict.value).toBe('unassessed');
+    });
+
+    it('removes rejected evidence from a hand-curated unassessed promise without adding it back', () => {
+      const withEvidence = promiseSchema.parse({
+        ...unassessed,
+        evidence: applyLinks(unassessed, [pair('B1', { stage: 'definitive' })], docs, '2026-11-10')!
+          .evidence,
+      });
+      const r = applyLinks(
+        withEvidence,
+        [pair('B1', { stage: 'definitive' })],
+        docs,
+        '2026-11-11',
+        new Map(),
+        undefined,
+        new Set(['B1']),
+      )!;
+      expect(r.evidence).toHaveLength(0);
+    });
+  });
+
   it('formats designations', () => {
     expect(designationOf(docs.get('P1')!)).toBe('Prop. 2025/26:207');
     expect(designationOf(docs.get('B1')!)).toBe('Bet. 2025/26:SoU18');
@@ -618,6 +685,21 @@ describe('applyLinks with SFS', () => {
     expect(sfsOf(r)).toHaveLength(1);
     expect(r.verdict.reasoning).toContain('Prop. 2025/26:50');
     valid(r);
+  });
+
+  it('never writes a rejected law, and the promise then stays without law evidence', () => {
+    const sfs = sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] });
+    const r = applyLinks(
+      base,
+      [pair('P1')],
+      sdocs,
+      today,
+      new Map(),
+      sfs,
+      new Set(['sfs-2026-100']),
+    )!;
+    expect(sfsOf(r)).toHaveLength(0);
+    expect(r.verdict.value).toBe('in_progress');
   });
 
   it('ignores a budget proposition when looking for pending propositions', () => {

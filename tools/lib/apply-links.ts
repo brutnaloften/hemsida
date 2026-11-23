@@ -263,6 +263,7 @@ function sfsOutcome(
   props: readonly RiksdagEvidence[],
   planning: readonly RiksdagEvidence[],
   sfs: SfsInput,
+  rejected: ReadonlySet<string>,
 ): SfsOutcome {
   const seen = new Map<string, SfsLinked>();
   const pending: RiksdagEvidence[] = [];
@@ -277,6 +278,8 @@ function sfsOutcome(
       if (prop.date > newestDecided) newestDecided = prop.date;
     } else pending.push(prop);
     for (const key of keys) {
+      // A law on the committed rejection list (`sfs-YYYY-N`) never becomes evidence.
+      if (rejected.has(key)) continue;
       const law = sfs.laws[key];
       const judgement = sfs.judgements.get(`${promiseId}::${key}`);
       if (!law || !judgement || judgement.label === 'none') continue;
@@ -389,6 +392,10 @@ const asHistory = (v: PromiseRecord['verdict']): VerdictEntry => ({
  * merged in by dok_id) and promises whose verdict this tool set earlier (`assessedBy: "ai"`), which
  * are recomputed from the newest judgements: their Riksdag evidence is replaced, and the earlier
  * verdict goes to `history` when its value changes. Any other verdict is left alone.
+ *
+ * `rejected` holds the dok_ids (Riksdag documents, or `sfs-YYYY-N` laws) on the committed rejection
+ * list for this promise (`rejected-candidates.json`): they never become evidence, existing entries
+ * for them are dropped, and a promise left with no supporting planning evidence stays unassessed.
  */
 export function applyLinks(
   promise: PromiseRecord,
@@ -397,6 +404,7 @@ export function applyLinks(
   today: string,
   decidedBy: ReadonlyMap<string, readonly string[]> = new Map(),
   sfs?: SfsInput,
+  rejected: ReadonlySet<string> = new Set(),
 ): Applied | null {
   const rerunAi = promise.verdict.assessedBy === 'ai';
   if (!rerunAi && promise.verdict.value !== 'unassessed') return null;
@@ -413,7 +421,11 @@ export function applyLinks(
   const existingSfs = useSfs ? allRiksdag.filter((e) => e.kind === 'sfs') : [];
   const existingRiksdag = useSfs ? allRiksdag.filter((e) => e.kind !== 'sfs') : allRiksdag;
   // Unassessed with a dir/sou/ds/prop already attached was curated by someone: leave it.
-  if (!rerunAi && existingRiksdag.some((e) => isSupporting(e) && PLANNING.has(e.kind))) return null;
+  if (
+    !rerunAi &&
+    existingRiksdag.some((e) => isSupporting(e) && PLANNING.has(e.kind) && !rejected.has(e.dok_id))
+  )
+    return null;
   const otherEvidence = promise.evidence.filter((e) => !isRiksdagEvidence(e));
 
   const byDoc = new Map<string, { pair: JudgedPair; doc: StoreDocument }>();
@@ -421,6 +433,7 @@ export function applyLinks(
   const rejectedMotions = new Set<string>();
   for (const pair of pairs) {
     if (!pair.proposed || pair.label === 'no_match') continue;
+    if (rejected.has(pair.document_id)) continue;
     // `background` = only mentions the topic or rejects motions about it: not evidence of action.
     if (pair.stage === 'background') continue;
     const doc = docs.get(pair.document_id);
@@ -448,7 +461,7 @@ export function applyLinks(
     if (deciding.length > MAX_DECIDING_BETS) continue;
     for (const betId of deciding) {
       const bet = docs.get(betId);
-      if (!bet || bet.doktyp !== 'bet' || byDoc.has(bet.dok_id)) continue;
+      if (!bet || bet.doktyp !== 'bet' || byDoc.has(bet.dok_id) || rejected.has(betId)) continue;
       byDoc.set(bet.dok_id, {
         pair: { ...pair, document_id: betId, stage: 'definitive' },
         doc: bet,
@@ -475,7 +488,8 @@ export function applyLinks(
   // only what the judge now rejects is dropped.
   // A `contradicts` entry written by an earlier run for a betänkande that only rejects motions goes too.
   const existingKept = existingRiksdag.filter(
-    (e) => !(e.relevance === 'contradicts' && rejectedMotions.has(e.dok_id)),
+    (e) =>
+      !rejected.has(e.dok_id) && !(e.relevance === 'contradicts' && rejectedMotions.has(e.dok_id)),
   );
   const unjudged = existingKept.filter((e) => !judged.has(e.dok_id));
   const riksdag: RiksdagEvidence[] = rerunAi
@@ -537,7 +551,7 @@ export function applyLinks(
     const planning = riksdag.filter(
       (e) => ['dir', 'sou', 'ds'].includes(e.kind) && isSupporting(e),
     );
-    const o = sfsOutcome(promise.id, props, planning, sfs!);
+    const o = sfsOutcome(promise.id, props, planning, sfs!, rejected);
     if (o.laws.length > 0) outcome = o;
   }
   const sfsEntries = outcome ? outcome.laws.map(sfsEvidence) : [];
