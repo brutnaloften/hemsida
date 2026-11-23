@@ -12,15 +12,22 @@ import { kpiFactor, type Kpi } from '@/lib/budget/real';
 
 export type ExpenditureLike = {
   years: number[];
-  anslag: { kod: string; namn: string; utfall: (number | null)[]; budget: (number | null)[] }[];
+  anslag: {
+    kod: string;
+    namn: string;
+    utfall: (number | null)[];
+    budget: (number | null)[];
+    andrad: (number | null)[];
+  }[];
 };
 
-export type ComparisonSeries = 'utfall' | 'budget';
+/** Matches the budget evidence `tier`: outcome = ESV utfall, ceiling = budget + andrad. */
+export type ComparisonSeries = 'outcome' | 'ceiling';
 
 export type NominalComparison = {
   kod: string;
   namn: string;
-  /** `utfall` is the outcome tier, `budget` the ceiling tier (see the budget evidence `tier`). */
+  /** `outcome` reads utfall, `ceiling` reads budget + andrad (the voted appropriation incl. ändringsbudgetar). */
   series: ComparisonSeries;
   baselineYear: number;
   endYear: number;
@@ -57,7 +64,7 @@ export function compareAnslag(
     kpi?: Kpi;
   },
 ): ComparisonResult {
-  const { kod, baselineYear, endYear, series = 'utfall', kpi } = opts;
+  const { kod, baselineYear, endYear, series = 'outcome', kpi } = opts;
   if (baselineYear >= endYear) return { ok: false, reason: 'baselineYear must be before endYear' };
   const a = data.anslag.find((x) => x.kod === kod);
   if (!a) return { ok: false, reason: `anslag ${kod} not found` };
@@ -66,8 +73,13 @@ export function compareAnslag(
   if (bi === -1 || ei === -1) {
     return { ok: false, reason: `year outside the data (${data.years[0]}-${data.years.at(-1)})` };
   }
-  const before = a[series][bi];
-  const after = a[series][ei];
+  const at = (i: number): number | null => {
+    if (series === 'outcome') return a.utfall[i] ?? null;
+    const b = a.budget[i] ?? null;
+    return b === null ? null : round1(b + (a.andrad[i] ?? 0));
+  };
+  const before = at(bi);
+  const after = at(ei);
   if (before == null || after == null) {
     return {
       ok: false,
