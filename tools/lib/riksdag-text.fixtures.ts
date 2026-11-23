@@ -25,3 +25,33 @@ export const HD01SOU1_TEXT = `<dokumentstatus><dokument>
 
 export const HC01SOU1_AMOUNT_PARAGRAPH =
   'För 2024 avsattes 1 600 000 000 kronor för förlossningsvård och kvinnors hälsa. För 2025 avsätts motsvarande belopp.';
+
+/** Condensed PDF-to-HTML SOU: ToC as a table with #page_N links, headings only as font classes. */
+export const SOU_PDF_TOC = `<STYLE>.p1{}</STYLE>
+<DIV id="page_1"><P class="p0 ft0">SOU 2025:1 Ett förslag</P></DIV>
+<DIV id="page_2">
+<P class="p2 ft2">Innehåll</P>
+<TABLE>
+<TR><TD><SPAN><A href="#page_3">&nbsp;</A></SPAN></TD><TD colspan=2><A href="#page_3">Sammanfattning ........ </A></TD><TD><A href="#page_3">3</A></TD></TR>
+<TR><TD><A href="#page_4">1</A></TD><TD colspan=2><A href="#page_4">Författningsförslag ........ </A></TD><TD><A href="#page_4">4</A></TD></TR>
+<TR><TD>&nbsp;</TD><TD><A href="#page_4">1.1</A></TD><TD><A href="#page_4">Förslag till lag ........ </A></TD><TD><A href="#page_4">4</A></TD></TR>
+<TR><TD><A href="#page_5">2</A></TD><TD colspan=2><A href="#page_5">Utredningens uppdrag och</A></TD><TD>&nbsp;</TD></TR>
+<TR><TD>&nbsp;</TD><TD>&nbsp;</TD><TD><A href="#page_5">arbete ........ </A></TD><TD><A href="#page_5">5</A></TD></TR>
+<TR><TD><A href="#page_6">3</A></TD><TD colspan=2><A href="#page_6">Konsekvenser ........ </A></TD><TD><A href="#page_6">6</A></TD></TR>
+<TR><TD>&nbsp;</TD><TD>&nbsp;</TD><TD><A href="#page_7">Bilaga 1 Direktiv ........ </A></TD><TD><A href="#page_7">7</A></TD></TR>
+</TABLE>
+</DIV>
+<DIV id="page_3"><P class="p3 ft3">Sammanfattning</P><P class="p4 ft4">Utredningen föreslår en ny lag.</P></DIV>
+<DIV id="page_4"><P class="p3 ft3">1 Författningsförslag</P><P class="p4 ft4">Härigenom föreskrivs följande.</P></DIV>
+<DIV id="page_5"><P class="p4 ft4">Uppdraget beskrivs här.</P></DIV>
+<DIV id="page_6"><P class="p3 ft3">3 Konsekvenser</P><P class="p4 ft4">Förslaget kostar 10 miljoner kronor.</P></DIV>
+<DIV id="page_7"><P class="p4 ft4">Direktivets text.</P></DIV>`;
+
+/** Condensed PDF-to-HTML document with no ToC links at all. */
+export const SOU_PDF_NO_TOC = `<DIV id="page_1">
+<P class="p1 ft1">Sammanfattning</P><P class="p2 ft2">Vi föreslår en ändring i lagen.</P>
+<P class="p1 ft1">1 Inledning</P><P class="p2 ft2">Uppdraget gavs 2024.</P>
+<P class="p1 ft1">2 Bakgrund</P><P class="p2 ft2">Tidigare utredningar visar följande.</P>
+<P class="p2 ft2">3 miljoner kronor avsätts, vilket motsvarar ungefär en procent.</P>
+<P class="p1 ft1">3 Förslag</P><P class="p2 ft2">Vi föreslår en höjning.</P>
+</DIV>`;

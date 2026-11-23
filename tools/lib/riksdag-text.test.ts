@@ -6,10 +6,11 @@ import {
   annotateParagraphs,
   createTextFetcher,
   decodeEntities,
+  extractToc,
   parseRiksdagText,
   trailingParties,
 } from './riksdag-text.ts';
-import { HD01SOU1_TEXT } from './riksdag-text.fixtures.ts';
+import { HD01SOU1_TEXT, SOU_PDF_NO_TOC, SOU_PDF_TOC } from './riksdag-text.fixtures.ts';
 
 describe('decodeEntities', () => {
   it('decodes numeric, hex and named entities', () => {
@@ -146,5 +147,40 @@ describe('createTextFetcher', () => {
     });
     expect(await fetcher('NOPE')).toBeNull();
     await expect(fetcher('../x')).rejects.toThrow('Bad dok_id');
+  });
+});
+
+describe('PDF-to-HTML sections (SOU, Ds, prop)', () => {
+  it('extracts top-level ToC entries and skips sub-entries and wrapped lines', () => {
+    expect(extractToc(SOU_PDF_TOC)).toEqual([
+      { number: null, title: 'Sammanfattning', page: 3 },
+      { number: '1', title: 'Författningsförslag', page: 4 },
+      { number: '2', title: 'Utredningens uppdrag och arbete', page: 5 },
+      { number: '3', title: 'Konsekvenser', page: 6 },
+      { number: null, title: 'Bilaga 1 Direktiv', page: 7 },
+    ]);
+  });
+
+  it('drops the ToC page and sets section from the ToC, synthesising missing headings', () => {
+    const paras = annotateParagraphs(parseRiksdagText(SOU_PDF_TOC), 'sou');
+    const sec = (start: string) => paras.find((p) => p.text.startsWith(start))?.section;
+    expect(paras.map((p) => p.text)).not.toContain('Innehåll');
+    expect(sec('Utredningen föreslår')).toBe('Sammanfattning');
+    expect(sec('Härigenom')).toBe('1 Författningsförslag');
+    expect(sec('Uppdraget beskrivs')).toBe('2 Utredningens uppdrag och arbete');
+    expect(sec('Förslaget kostar')).toBe('3 Konsekvenser');
+    expect(sec('Direktivets')).toBe('Bilaga 1 Direktiv');
+  });
+
+  it('falls back to numbered and known headings without a ToC', () => {
+    expect(extractToc(SOU_PDF_NO_TOC)).toEqual([]);
+    const paras = annotateParagraphs(parseRiksdagText(SOU_PDF_NO_TOC), 'sou');
+    const sec = (start: string) => paras.find((p) => p.text.startsWith(start))?.section;
+    expect(sec('Vi föreslår en ändring')).toBe('Sammanfattning');
+    expect(sec('Uppdraget gavs')).toBe('1 Inledning');
+    expect(sec('Tidigare')).toBe('2 Bakgrund');
+    // "3 miljoner kronor ..." is a sentence, not a heading.
+    expect(sec('3 miljoner')).toBe('2 Bakgrund');
+    expect(sec('Vi föreslår en höjning')).toBe('3 Förslag');
   });
 });

@@ -17,6 +17,8 @@ export interface RawParagraph {
   text: string;
   /** True for headings (h1-h6 or a heading paragraph class). */
   heading: boolean;
+  /** PDF page (`<DIV id="page_N">`) the paragraph sits on, for PDF-to-HTML documents. */
+  page?: number;
 }
 
 export type SpeakerKind =
@@ -71,20 +73,251 @@ const BLOCK_TAGS = new Set(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'tr',
 const HEADING_CLASS = /^R\d$|rubrik|^Heading/i;
 const DROP_CLASS = /^(TOC\d*|Mellanrum)$/i;
 
-/** Turn the `.text` response (or plain HTML) into paragraphs, dropping the table of contents. */
-export function parseRiksdagText(raw: string): RawParagraph[] {
+function toHtml(raw: string): string {
   let html = raw;
   const m = /<html>([\s\S]*)<\/html>/.exec(raw);
   if (m) html = decodeEntities(m[1]!);
-  html = html.replace(/<(style|script)[\s\S]*?<\/\1>/gi, '');
+  return html.replace(/<(style|script)[\s\S]*?<\/\1>/gi, '');
+}
 
+/** One top-level table-of-contents row: a numbered section or a named unnumbered one. */
+export interface TocEntry {
+  /** Section number ("3"), or null for unnumbered rows like Sammanfattning. */
+  number: string | null;
+  title: string;
+  /** PDF page the row links to (`#page_N`). */
+  page: number;
+}
+
+/** Pages that hold table-of-contents links (3 or more `#page_N` anchors), with their offsets. */
+function tocSpans(html: string): { pages: Set<number>; spans: [number, number][] } {
+  const pages = new Set<number>();
+  const spans: [number, number][] = [];
+  const re = /<DIV id="page_(\d+)"[^>]*>|href="#page_\d+"/gi;
+  let page = 0;
+  let start = 0;
+  let count = 0;
+  const close = (end: number) => {
+    if (page > 0 && count >= 3) {
+      pages.add(page);
+      spans.push([start, end]);
+    }
+  };
+  for (let t = re.exec(html); t !== null; t = re.exec(html)) {
+    if (t[1] !== undefined) {
+      close(t.index);
+      page = Number(t[1]);
+      start = t.index;
+      count = 0;
+    } else count++;
+  }
+  close(html.length);
+  return { pages, spans };
+}
+
+function plain(s: string): string {
+  return cleanText(s.replace(/<[^>]*>/g, ' '));
+}
+
+function stripLeaders(s: string): string {
+  return s
+    .replace(/\s*\.{3,}.*$/, '')
+    .replace(/\s+\d{1,4}$/, '')
+    .trim();
+}
+
+/**
+ * Top-level entries of the table of contents of a PDF-to-HTML document (SOU, Ds, prop,
+ * skr): rows with a `#page_N` link and a bare number ("3"), plus unnumbered rows that
+ * link to a new page (Sammanfattning, Författningsförslag, Referenser, Bilaga). Sub-entries
+ * ("3.1") and wrapped continuation lines are skipped. Returns [] when there is no ToC.
+ */
+export function extractToc(raw: string): TocEntry[] {
+  const html = toHtml(raw);
+  const { pages, spans } = tocSpans(html);
+  if (pages.size === 0) return [];
+  // Rows: table rows, or anchored paragraphs outside tables.
+  const rowRe =
+    /<tr[\s>][\s\S]*?<\/tr>|<p[\s>](?:(?!<\/p>)[\s\S])*?href="#page_\d+"[\s\S]*?<\/p>/gi;
+  const entries: TocEntry[] = [];
+  let lastTarget = -1;
+  let lastWasTop = false;
+  for (let r = rowRe.exec(html); r !== null; r = rowRe.exec(html)) {
+    const row = r[0];
+    if (!spans.some(([a, b]) => r!.index >= a && r!.index < b)) continue;
+    const target = /href="#page_(\d+)"/i.exec(row);
+    if (!target) {
+      lastWasTop = false;
+      continue;
+    }
+    const page = Number(target[1]);
+    const cells =
+      row.startsWith('<TR') || row.startsWith('<tr')
+        ? [...row.matchAll(/<t[dh][\s>][\s\S]*?<\/t[dh]>/gi)].map((c) => plain(c[0]))
+        : [plain(row)];
+    const nonEmpty = cells.filter((c) => c !== '');
+    if (nonEmpty.length === 0) continue;
+    let number: string | null = null;
+    let rest = nonEmpty;
+    if (/^\d{1,2}$/.test(nonEmpty[0]!) && nonEmpty.length > 1) {
+      number = nonEmpty[0]!;
+      rest = nonEmpty.slice(1);
+    } else if (nonEmpty.length === 1) {
+      const m = /^(\d{1,2})\s*([A-ZÅÄÖa-zåäö].*)$/.exec(nonEmpty[0]!);
+      if (m) {
+        number = m[1]!;
+        rest = [m[2]!];
+      }
+    }
+    if (/^\d+\.\d/.test(nonEmpty[0]!)) {
+      lastTarget = page;
+      lastWasTop = false;
+      continue;
+    }
+    let title = stripLeaders(rest.join(' '));
+    if (number === null) {
+      const m = /^(\d{1,2})\s+(\S.*)$/.exec(title);
+      if (m) {
+        number = m[1]!;
+        title = m[2]!;
+      }
+    }
+    // Law-text sections ("2 b §"), body sentences and lowercase continuations are not sections.
+    const isContinuation = number === null && page === lastTarget;
+    if (
+      title.length > 160 ||
+      /§|[.,;:]$/.test(title) ||
+      (!isContinuation && !/^[A-ZÅÄÖ]/.test(title))
+    ) {
+      lastWasTop = false;
+      continue;
+    }
+    const prev = entries[entries.length - 1];
+    if (prev && page < prev.page) {
+      lastWasTop = false;
+      continue;
+    }
+    if (number !== null) {
+      if (title) entries.push({ number, title, page });
+      lastTarget = page;
+      lastWasTop = true;
+    } else if (page === lastTarget) {
+      // Wrapped continuation of the previous row.
+      if (lastWasTop && title && !/^\d+$/.test(title)) {
+        const e = entries[entries.length - 1]!;
+        e.title = `${e.title} ${title}`;
+      }
+    } else {
+      // A new unnumbered target after a numbered sub-tree.
+      if (title && !/^\d+$/.test(title)) {
+        entries.push({ number: null, title, page });
+        lastWasTop = true;
+      } else lastWasTop = false;
+      lastTarget = page;
+    }
+  }
+  return entries;
+}
+
+const UNNUMBERED_HEADING =
+  /^(Sammanfattning|Summary|Författningsförslag|Förslag till riksdagsbeslut|Referenser|Källförteckning|Bilaga \d+|Bilagor|Innehåll)\b/;
+
+/**
+ * Fallback for documents without a parseable ToC: top-level headings are short
+ * paragraphs that start with the next running number ("3 Utredningens uppdrag") or are
+ * a known unnumbered name (Sammanfattning, Författningsförslag, Bilaga N). Numbers must
+ * run 1, 2, 3, ... so page headers and list items do not match.
+ */
+export function guessHeadings(paras: RawParagraph[]): Set<number> {
+  const hits = new Set<number>();
+  let next = 1;
+  paras.forEach((p, i) => {
+    const t = p.text;
+    if (t.length > 100 || /[.:;,]$/.test(t)) return;
+    if (UNNUMBERED_HEADING.test(t) && t.length <= 60) {
+      hits.add(i);
+      return;
+    }
+    const m = /^(\d{1,2})\s+([A-ZÅÄÖ][^.]*)$/.exec(t);
+    if (m && Number(m[1]) === next) {
+      hits.add(i);
+      next++;
+    }
+  });
+  // A lone numbered hit is more likely a coincidence than a structure.
+  const numbered = [...hits].filter((i) => /^\d/.test(paras[i]!.text));
+  if (numbered.length < 2) for (const i of numbered) hits.delete(i);
+  return hits;
+}
+
+const norm = (s: string) =>
+  s
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .trim();
+
+/**
+ * Mark top-level sections in a document whose headings carry no heading markup. Existing
+ * paragraphs that match a ToC entry (or the fallback guess) become headings; a ToC entry
+ * with no matching paragraph gets a synthetic heading at its first page.
+ */
+export function applyTocSections(paras: RawParagraph[], toc: TocEntry[]): RawParagraph[] {
+  if (paras.filter((p) => p.heading).length >= 3) return paras;
+  if (toc.length < 2) {
+    const guessed = guessHeadings(paras);
+    return paras.map((p, i) => (guessed.has(i) ? { ...p, heading: true } : p));
+  }
+  const out = paras.map((p) => ({ ...p }));
+  const inserts: { at: number; para: RawParagraph }[] = [];
+  let from = 0;
+  for (const e of toc) {
+    const key = norm(e.title).slice(0, 25);
+    const label = e.number ? `${e.number} ${e.title}` : e.title;
+    let first = -1;
+    let match = -1;
+    for (let i = from; i < out.length; i++) {
+      const pg = out[i]!.page ?? 0;
+      if (pg < e.page) continue;
+      if (first < 0) first = i;
+      if (pg > e.page) break;
+      if (key.length > 3 && norm(out[i]!.text).startsWith(key) && out[i]!.text.length < 160) {
+        match = i;
+        break;
+      }
+    }
+    if (match >= 0) {
+      out[match]!.heading = true;
+      from = match + 1;
+    } else if (first >= 0) {
+      const at = Math.max(first, from);
+      inserts.push({ at, para: { text: label, heading: true, page: out[first]!.page } });
+      from = at;
+    }
+  }
+  for (const { at, para } of inserts.sort((a, b) => b.at - a.at)) out.splice(at, 0, para);
+  return out;
+}
+
+/** Turn the `.text` response (or plain HTML) into paragraphs, dropping the table of contents. */
+export function parseRiksdagText(raw: string): RawParagraph[] {
+  const html = toHtml(raw);
+  const { pages } = tocSpans(html);
+  const out = parseBlocks(html, pages);
+  return applyTocSections(out, pages.size > 0 ? extractToc(raw) : []);
+}
+
+function parseBlocks(html: string, toc: Set<number>): RawParagraph[] {
   const out: RawParagraph[] = [];
   let buf = '';
   let heading = false;
   let drop = false;
+  let page: number | undefined;
   const flush = () => {
     const text = cleanText(buf.replace(/<[^>]*>/g, ''));
-    if (text && !drop && !/^\d+\.$/.test(text)) out.push({ text, heading });
+    const onToc = page !== undefined && toc.has(page);
+    if (text && !drop && !onToc && !/^\d+\.$/.test(text)) {
+      out.push(page === undefined ? { text, heading } : { text, heading, page });
+    }
     buf = '';
   };
 
@@ -104,6 +337,8 @@ export function parseRiksdagText(raw: string): RawParagraph[] {
       drop = false;
       continue;
     }
+    const pg = name === 'div' ? /\bid="page_(\d+)"/i.exec(t[3]!) : null;
+    if (pg) page = Number(pg[1]);
     const cls = /class="([^"]*)"/.exec(t[3]!)?.[1] ?? '';
     heading = /^h[1-6]$/.test(name) || HEADING_CLASS.test(cls);
     drop = DROP_CLASS.test(cls);
