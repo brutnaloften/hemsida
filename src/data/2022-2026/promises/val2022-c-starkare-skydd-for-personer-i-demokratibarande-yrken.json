@@ -17,10 +17,58 @@
   "committee": "KU",
   "keywords": ["hot och våld", "journalister", "religiösa samfund", "förvaltning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i april 2023 skärpt straff för brott mot journalister och starkare skydd mot våld och hot för personal inom vård, socialtjänst, räddningstjänst och skola. Riksdagen biföll i juni 2023, och ändringar i brottsbalken trädde i kraft 1 augusti 2023. I juli 2026 fick en utredning i uppdrag att se över skyddet för förtroendevalda och tjänstemän. Dokumenten täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA03106",
+      "designation": "Prop. 2022/23:106",
+      "title": "Skärpt syn på brott mot journalister och vissa andra samhällsnyttiga funktioner",
+      "date": "2023-04-25",
+      "url": "https://data.riksdagen.se/dokument/HA03106.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU27",
+      "designation": "Bet. 2022/23:JuU27",
+      "title": "Skärpt syn på brott mot journalister och vissa andra samhällsnyttiga funktioner",
+      "date": "2023-06-14",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU27.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-494",
+      "designation": "SFS 2023:494",
+      "title": "Lag (2023:494) om ändring i brottsbalken",
+      "date": "2023-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023494.html",
+      "relevance": "partial",
+      "note": "Skydd för personer verksamma i religiösa samfund ingår inte, och för offentlig förvaltning täcks bara vissa yrkesgrupper. Skyddet mot hat och trakasserier är begränsat."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB185",
+      "designation": "Dir. 2026:85",
+      "title": "Ett stärkt straffrättsligt skydd mot gärningar som skadar viktiga samhällsfunktioner och det demokratiska samtalet",
+      "date": "2026-07-30",
+      "url": "https://data.riksdagen.se/dokument/HEB185.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

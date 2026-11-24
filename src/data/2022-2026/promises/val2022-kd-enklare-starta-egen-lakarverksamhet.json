@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["läkare", "egen verksamhet", "vårdval", "primärvård"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "I november 2023 lades en promemoria fram om hur småskaliga vårdaktörer, bland annat enskilda läkare, kan anslutas till offentligt finansierad vård. Den föreslår att mindre företag ska beaktas vid upphandling, att lagarna om läkarvårdsersättning och om ersättning för fysioterapi upphävs och att ett statsbidrag införs i glesbygd. Det gäller en del av löftet; dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HBB423",
+      "designation": "Ds 2023:23",
+      "title": "Uppdrag att möjliggöra bättre tillgång till hälso- och sjukvård i hela landet genom främjande av etablering i glesbygd",
+      "date": "2023-11-08",
+      "url": "https://data.riksdagen.se/dokument/HBB423.html",
+      "relevance": "partial",
       "note": null
     }
   ]

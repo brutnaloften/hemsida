@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["patientsäkerhet", "digital vårdinformation", "standarder", "journaler"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i december 2023 en samordnare i uppdrag att förbereda en nationell digital infrastruktur i vården, med gemensamma standarder och begrepp samt patientsäkerhet som mål. I januari 2026 lämnade samordnaren sin utredning, som beskriver gemensamma tekniska specifikationer inom EU:s hälsodataområde och patientsäkerhetsnyttan med utbyte av uppgifter mellan vårdgivare. Dokumenten gäller en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-enhetlig-digital-infrastruktur-vard"],
       "outcome": "weakened",
       "note": "Avtalet inför en gemensam digital infrastruktur för vården men talar inte om nationella standarder och tekniska specifikationer. Osäker."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1177",
+      "designation": "Dir. 2023:177",
+      "title": "Samordnare för en nationell digital infrastruktur i hälso- och sjukvården",
+      "date": "2023-12-14",
+      "url": "https://data.riksdagen.se/dokument/HBB1177.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB36",
+      "designation": "SOU 2026:6",
+      "title": "En nationell digital infrastruktur i hälso- och sjukvården",
+      "date": "2026-01-20",
+      "url": "https://data.riksdagen.se/dokument/HEB36.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

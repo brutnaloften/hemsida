@@ -17,10 +17,108 @@
   "committee": "UbU",
   "keywords": ["tillståndsprövning", "utländska ägare", "skolval", "information"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade under 2026 fram förslag om skärpta villkor för friskolor och om att offentlighetsprincipen ska gälla enskilda skolhuvudmän. Riksdagen beslutade i maj och augusti 2026, och lagändringar i skollagen och sekretesslagen träder i kraft 1 januari 2027, en ytterligare 1 juli 2027. De ger skarpare prövning av ägare och ledning samt mer insyn i skolor, vilket täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB337",
+      "designation": "SOU 2025:37",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2025-04-08",
+      "url": "https://data.riksdagen.se/dokument/HDB337.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3123",
+      "designation": "SOU 2025:123",
+      "title": "Skärpta villkor för friskolesektorn - ytterligare förslag",
+      "date": "2026-01-09",
+      "url": "https://data.riksdagen.se/dokument/HDB3123.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03191",
+      "designation": "Prop. 2025/26:191",
+      "title": "Offentlighetsprincipen med lättnadsregler för enskilda mindre huvudmän i skolväsendet",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03191.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU20",
+      "designation": "Bet. 2025/26:UbU20",
+      "title": "Offentlighetsprincipen med lättnadsregler för enskilda mindre huvudmän i skolväsendet",
+      "date": "2026-05-08",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU20.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03292",
+      "designation": "Prop. 2025/26:292",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HD03292.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU30",
+      "designation": "Bet. 2025/26:UbU30",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU30.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-714",
+      "designation": "SFS 2026:714",
+      "title": "Lag (2026:714) om ändring i offentlighets- och sekretesslagen (2009:400)",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026714.html",
+      "relevance": "partial",
+      "note": "Skärpt tillståndsprövning för utländska ägare och ett mer aktivt skolval för alla genomförs inte av den här lagen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-716",
+      "designation": "SFS 2026:716",
+      "title": "Lag (2026:716) om ändring i skollagen (2010:800)",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026716.html",
+      "relevance": "partial",
+      "note": "Skärpt tillståndsprövning för utländska ägare och ett mer aktivt skolval för alla genomförs inte i den här lagen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1634",
+      "designation": "SFS 2026:1634",
+      "title": "Lag (2026:1634) om ändring i skollagen (2010:800)",
+      "date": "2027-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261634.html",
+      "relevance": "partial",
+      "note": "Ingen särskild skärpning för utländska ägare, inga krav på att skolorna ska dela mer information och inga åtgärder för ett mer aktivt skolval syns i texten."
+    }
+  ]
 }

@@ -26,10 +26,48 @@
     "vattenverksamhet"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i mars 2026 ändringar som gör att elförsörjningens vikt kan sänka miljökraven när vattenkraft omprövas. Riksdagen beslutade om det i maj 2026, och ändringen i miljöbalken trädde i kraft den 1 juli 2026. Det motsvarar delen av löftet om nya regler där elförsörjningen väger tungt. Den andra delen, en paus i omprövningarna, har upphört: enligt riksdagens beslut är omprövningarna sedan den 1 juli 2025 åter igång.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03202",
+      "designation": "Prop. 2025/26:202",
+      "title": "Undantag från krav enligt art- och habitatdirektivet vid vattenkraftens omprövning",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03202.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01CU41",
+      "designation": "Bet. 2025/26:CU41",
+      "title": "Undantag från krav enligt art- och habitatdirektivet vid vattenkraftens omprövning",
+      "date": "2026-05-21",
+      "url": "https://data.riksdagen.se/dokument/HD01CU41.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-802",
+      "designation": "SFS 2026:802",
+      "title": "Lag (2026:802) om ändring i miljöbalken",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026802.html",
+      "relevance": "partial",
+      "note": "Lagen pausar inte omprövningen av vattenkraftens miljötillstånd och innehåller ingen kartläggning av konsekvenserna för elproduktionen. Den ger inte heller ett helt nytt omprövningsregelverk."
+    }
+  ]
 }

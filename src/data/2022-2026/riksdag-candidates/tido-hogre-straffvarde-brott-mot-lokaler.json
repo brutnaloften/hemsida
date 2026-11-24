@@ -25,9 +25,94 @@
     "score:tido-corpus-claude-v1-shard-14-of-20",
     "score:tido-corpus-claude-v1-shard-15-of-20",
     "score:tido-corpus-claude-v1-shard-17-of-20",
-    "score:tido-corpus-claude-v1-shard-18-of-20"
+    "score:tido-corpus-claude-v1-shard-18-of-20",
+    "widen:straffvärde|angrepp mot lokaler|brott mot verksamhet|socialtjänstens lokaler|försvårande omständighet brott mot skola|avhopparverksamhet"
   ],
   "candidates": [
+    {
+      "dok_id": "HEB173",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "73",
+      "datum": "2026-07-09",
+      "titel": "Tilläggsdirektiv till Utredningen om förtydligat ansvar för stöd till avhoppare och förstärkt kontroll av externa aktörer som bedriver avhopparverksamhet (S 2025:06)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB173.html",
+      "found_by": [
+        "widen:straffvärde|angrepp mot lokaler|brott mot verksamhet|socialtjänstens lokaler|försvårande omständighet brott mot skola|avhopparverksamhet"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HDB153",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "53",
+      "datum": "2025-05-28",
+      "titel": "Förtydligat ansvar för stöd till avhoppare och förstärkt kontroll av externa aktörer som bedriver avhopparverksamhet",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB153.html",
+      "found_by": [
+        "widen:straffvärde|angrepp mot lokaler|brott mot verksamhet|socialtjänstens lokaler|försvårande omständighet brott mot skola|avhopparverksamhet"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01CU6",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU6",
+      "datum": "2025-11-20",
+      "titel": "Ett mer heltäckande straffansvar vid angrepp på företagshemligheter",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU6.html",
+      "found_by": [
+        "widen:straffvärde|angrepp mot lokaler|brott mot verksamhet|socialtjänstens lokaler|försvårande omständighet brott mot skola|avhopparverksamhet"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HC03208",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "208",
+      "datum": "2025-09-08",
+      "titel": "Ett mer heltäckande straffansvar vid angrepp på företagshemligheter",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03208.html",
+      "found_by": [
+        "widen:straffvärde|angrepp mot lokaler|brott mot verksamhet|socialtjänstens lokaler|försvårande omständighet brott mot skola|avhopparverksamhet"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01JuU19",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU19",
+      "datum": "2026-02-20",
+      "titel": "Ett utvidgat straffansvar för försök, förberedelse och stämpling till brott",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU19.html",
+      "found_by": [
+        "widen:straffvärde|angrepp mot lokaler|brott mot verksamhet|socialtjänstens lokaler|försvårande omständighet brott mot skola|avhopparverksamhet"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01JuU8",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU8",
+      "datum": "2023-05-03",
+      "titel": "Skärpta straff för brott i kriminella nätverk",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU8.html",
+      "found_by": [
+        "widen:straffvärde|angrepp mot lokaler|brott mot verksamhet|socialtjänstens lokaler|försvårande omständighet brott mot skola|avhopparverksamhet"
+      ],
+      "score": 10
+    },
     {
       "dok_id": "HA01JuU11",
       "doktyp": "bet",

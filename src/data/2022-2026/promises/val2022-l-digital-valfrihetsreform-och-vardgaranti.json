@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["digital vård", "nätläkare", "vårdgaranti", "valfrihet", "tillgänglighet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En promemoria från september 2023 föreslog att regioner ska erbjuda vård på distans när fysiskt möte inte behövs. Regeringen gav i maj 2024 en utredning i uppdrag att se över en starkare vårdgaranti och fritt val vid överskridna tider. Utredningen föreslog i juni 2026 en starkare vårdgaranti och distanskontakt när det är medicinskt lämpligt. Dokumenten täcker delar av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,46 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HBB427",
+      "designation": "Ds 2023:27",
+      "title": "Effektiv och behovsbaserad digital vård",
+      "date": "2023-09-13",
+      "url": "https://data.riksdagen.se/dokument/HBB427.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB150",
+      "designation": "Dir. 2024:50",
+      "title": "Bättre styrning för en tillgänglig och jämlik hälso- och sjukvård med god kontinuitet",
+      "date": "2024-05-23",
+      "url": "https://data.riksdagen.se/dokument/HCB150.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB194",
+      "designation": "Dir. 2025:94",
+      "title": "Tilläggsdirektiv till utredningen Behovsstyrd vård (S 2024:05)",
+      "date": "2025-10-23",
+      "url": "https://data.riksdagen.se/dokument/HDB194.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB338",
+      "designation": "SOU 2026:38",
+      "title": "Behovsstyrd vård",
+      "date": "2026-06-17",
+      "url": "https://data.riksdagen.se/dokument/HEB338.html",
+      "relevance": "partial",
       "note": null
     }
   ]
