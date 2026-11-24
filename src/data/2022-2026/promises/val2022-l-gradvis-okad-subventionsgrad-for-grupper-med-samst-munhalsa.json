@@ -12,15 +12,22 @@
   "roles": {
     "L": "government"
   },
-  "type": "budget",
+  "type": "legislative",
   "area": "Hälso- och sjukvård",
   "committee": "SoU",
   "keywords": ["tandvård", "subvention", "munhälsa", "tandvårdsstöd", "riskgrupper"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i oktober 2025 ett förstärkt högkostnadsskydd i tandvården. Riksdagen beslutade i november 2025 om en stegvis särskild tandvårdsersättning, först för äldre, och anvisade i december medel till den. Lagändringen trädde i kraft 1 januari 2026 och höjer stödet för en grupp med höga kostnader, alltså en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,46 @@
       "promises": ["tido-tandvardsreform-hogkostnadsskydd"],
       "outcome": "weakened",
       "note": "Avtalet säger att äldre med sämst munhälsa ska prioriteras i utredningen om tandvårdens högkostnadsskydd, men nämner ingen gradvis ökad subventionsgrad."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0327",
+      "designation": "Prop. 2025/26:27",
+      "title": "Ett förstärkt högkostnadsskydd för tandvård",
+      "date": "2025-10-02",
+      "url": "https://data.riksdagen.se/dokument/HD0327.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU10",
+      "designation": "Bet. 2025/26:SoU10",
+      "title": "Ett förstärkt högkostnadsskydd för tandvård",
+      "date": "2025-11-27",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU10.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU1",
+      "designation": "Bet. 2025/26:SoU1",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2025-12-03",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-1437",
+      "designation": "SFS 2025:1437",
+      "title": "Lag (2025:1437) om ändring i lagen (2008:145) om statligt tandvårdsstöd",
+      "date": "2026-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20251437.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att subventionsgraden uttryckligen och gradvis höjs för grupperna med sämst munhälsa. Målgrupp, nivåer och trappning överlåts till föreskrifter."
     }
   ]
 }

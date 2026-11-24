@@ -12,15 +12,22 @@
   "roles": {
     "M": "government"
   },
-  "type": "budget",
+  "type": "legislative",
   "area": "Energi",
   "committee": "SkU",
   "keywords": ["grönt skatteavdrag", "energieffektivisering", "elkonsumtion", "solceller"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i november 2022 att skattereduktionen för installation av solceller skulle höjas från 15 till 20 procent. Riksdagen antog budgetramen i december 2022, och en lagändring trädde i kraft 1 januari 2023. Den täcker bara en del av löftet, eftersom den gäller solceller. Ett beslut i maj 2025 motverkar löftet genom att sänka stödet från 20 till 15 procent och ta bort reduktionen för mikroproduktion.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,56 @@
       "promises": ["tido-starkt-stod-energieffektivisering-privatpersoner"],
       "outcome": "weakened",
       "note": "Avtalet förstärker stödet till energieffektivisering för privatpersoner men nämner inte det gröna skatteavdraget."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA0315",
+      "designation": "Prop. 2022/23:15",
+      "title": "Förstärkt skattereduktion för installation av solceller",
+      "date": "2022-11-10",
+      "url": "https://data.riksdagen.se/dokument/HA0315.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01FiU1",
+      "designation": "Bet. 2022/23:FiU1",
+      "title": "Statens budget 2023 – Rambeslutet",
+      "date": "2022-12-12",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2022-1797",
+      "designation": "SFS 2022:1797",
+      "title": "Lag (2022:1797) om ändring i lagen (2020:1066) om förfarandet vid skattereduktion för installation av grön teknik",
+      "date": "2023-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20221797.html",
+      "relevance": "partial",
+      "note": "Ingen utvidgning av det gröna avdraget till fler åtgärder, och inget som specifikt gäller minskad elkonsumtion (t.ex. energieffektivisering); förstärkningen gäller bara solceller."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03109",
+      "designation": "Prop. 2024/25:109",
+      "title": "Förändrade skattesubventioner för solceller och mikroproduktion av el",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03109.html",
+      "relevance": "contradicts",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SkU17",
+      "designation": "Bet. 2024/25:SkU17",
+      "title": "Förändrade skattesubventioner för solceller och mikroproduktion av el",
+      "date": "2025-05-08",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU17.html",
+      "relevance": "contradicts",
+      "note": null
     }
   ]
 }

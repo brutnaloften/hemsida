@@ -12,7 +12,7 @@
   "roles": {
     "C": "opposition"
   },
-  "type": "budget",
+  "type": "legislative",
   "area": "Näringsliv och företagande",
   "committee": "SkU",
   "keywords": ["skattesänkning", "småföretag", "egenföretagare", "jobb"],
@@ -30,6 +30,26 @@
       "title": "Statens budget 2024 - Rambeslutet",
       "date": "2023-11-24",
       "url": "https://data.riksdagen.se/dokument/HB01FiU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01FiU1",
+      "designation": "Bet. 2024/25:FiU1",
+      "title": "Statens budget 2025 – Rambeslutet",
+      "date": "2024-11-22",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SkU9",
+      "designation": "Bet. 2024/25:SkU9",
+      "title": "Inkomstskatt",
+      "date": "2025-03-20",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU9.html",
       "relevance": "partial",
       "note": null
     }

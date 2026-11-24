@@ -12,7 +12,7 @@
   "roles": {
     "M": "government"
   },
-  "type": "budget",
+  "type": "legislative",
   "area": "Ekonomi och skatter",
   "committee": "FiU",
   "keywords": ["skatt på arbete", "jobbskatteavdrag", "inkomstskatt", "arbetslinjen"],
@@ -30,6 +30,36 @@
       "promises": ["tido-sankt-skatt-arbetsinkomst-pensionsinkomst"],
       "outcome": "included",
       "note": "Avtalet sänker skatten på arbetsinkomster."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01FiU1",
+      "designation": "Bet. 2024/25:FiU1",
+      "title": "Statens budget 2025 – Rambeslutet",
+      "date": "2024-11-22",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SkU9",
+      "designation": "Bet. 2024/25:SkU9",
+      "title": "Inkomstskatt",
+      "date": "2025-03-20",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU9.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01FiU1",
+      "designation": "Bet. 2025/26:FiU1",
+      "title": "Statens budget 2026 - Rambeslutet",
+      "date": "2025-11-21",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }
