@@ -388,6 +388,10 @@ describe('promiseSchema', () => {
           }),
         ),
       ).toBe(false);
+      // a party with no recorded role is not opposition
+      expect(
+        ok(make('partially_fulfilled', [mot], { parties: ['S', 'M'], roles: { S: 'opposition' } })),
+      ).toBe(false);
     });
 
     it('does not apply to other promise types', () => {
