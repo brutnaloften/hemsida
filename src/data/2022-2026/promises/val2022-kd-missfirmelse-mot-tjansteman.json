@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["missfirmelse", "tjänsteman", "poliser", "nytt brott"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "En utredning föreslog i januari 2024 ett nytt brott, förolämpning mot tjänsteman, som gäller kränkande ord mot bland andra poliser. Regeringen lade fram förslaget i mars 2025 och beskriver det som en återinföring av det tidigare brottet missfirmelse mot tjänsteman. Justitieutskottet tillstyrkte i maj 2025, och lagen trädde i kraft den 2 juli 2025. Löftets brott finns därmed under namnet förolämpning mot tjänsteman.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,46 @@
       "promises": ["tido-starkt-straffrattsligt-skydd-poliser"],
       "outcome": "included",
       "note": "Avtalet återinför missfirmelse mot tjänsteman."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB31",
+      "designation": "SOU 2024:1",
+      "title": "Ett starkare skydd för offentliganställda  mot våld, hot och trakasserier",
+      "date": "2024-01-12",
+      "url": "https://data.riksdagen.se/dokument/HCB31.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03141",
+      "designation": "Prop. 2024/25:141",
+      "title": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03141.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU29",
+      "designation": "Bet. 2024/25:JuU29",
+      "title": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
+      "date": "2025-05-14",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU29.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-579",
+      "designation": "SFS 2025:579",
+      "title": "Lag (2025:579) om ändring i brottsbalken",
+      "date": "2025-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2025579.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

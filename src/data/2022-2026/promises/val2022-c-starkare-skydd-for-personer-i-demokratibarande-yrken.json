@@ -17,10 +17,128 @@
   "committee": "KU",
   "keywords": ["hot och våld", "journalister", "religiösa samfund", "förvaltning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Justitieutskottet tillstyrkte i juni 2023 skärpt straff för brott mot journalister och starkare skydd mot våld och hot för personal inom vård, socialtjänst, räddningstjänst och skola; ändringarna trädde i kraft 1 augusti 2023. Regeringen föreslog i mars 2025 ett starkare skydd för alla offentliganställda, bland annat brottet förolämpning mot tjänsteman, som trädde i kraft 2 juli 2025. I juli 2026 fick en utredare i uppdrag att se över skyddet för förtroendevalda; för tjänstemän gäller uppdraget bara tryckfrihetsförordningen. Dokumenten täcker journalister och offentliganställda.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB116",
+      "designation": "Dir. 2023:16",
+      "title": "Tilläggsdirektiv till Utredningen om åtgärder för att minska offentliganställdas utsatthet (Ju 2022:02)",
+      "date": "2023-02-02",
+      "url": "https://data.riksdagen.se/dokument/HBB116.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA03106",
+      "designation": "Prop. 2022/23:106",
+      "title": "Skärpt syn på brott mot journalister och vissa andra samhällsnyttiga funktioner",
+      "date": "2023-04-25",
+      "url": "https://data.riksdagen.se/dokument/HA03106.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU27",
+      "designation": "Bet. 2022/23:JuU27",
+      "title": "Skärpt syn på brott mot journalister och vissa andra samhällsnyttiga funktioner",
+      "date": "2023-06-14",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU27.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-494",
+      "designation": "SFS 2023:494",
+      "title": "Lag (2023:494) om ändring i brottsbalken",
+      "date": "2023-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023494.html",
+      "relevance": "partial",
+      "note": "Utvidgar straffskyddet mot våld och hot till personal inom hälso- och sjukvård, socialtjänst, räddningstjänst och skola och inför en straffskärpningsgrund för brott mot journalister. Personer verksamma i religiösa samfund nämns inte i propositionen."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB31",
+      "designation": "SOU 2024:1",
+      "title": "Ett starkare skydd för offentliganställda  mot våld, hot och trakasserier",
+      "date": "2024-01-12",
+      "url": "https://data.riksdagen.se/dokument/HCB31.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03141",
+      "designation": "Prop. 2024/25:141",
+      "title": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03141.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU29",
+      "designation": "Bet. 2024/25:JuU29",
+      "title": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
+      "date": "2025-05-14",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU29.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-579",
+      "designation": "SFS 2025:579",
+      "title": "Lag (2025:579) om ändring i brottsbalken",
+      "date": "2025-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2025579.html",
+      "relevance": "partial",
+      "note": "Skärper det straffrättsliga skyddet för offentliganställda mot våld, hot och angrepp och inför brottet förolämpning mot tjänsteman. Gäller offentligt anställda, inte journalister eller personer i religiösa samfund."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-581",
+      "designation": "SFS 2025:581",
+      "title": "Lag (2025:581) om ändring i offentlighets- och sekretesslagen (2009:400)",
+      "date": "2025-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2025581.html",
+      "relevance": "partial",
+      "note": "Ger sekretess för personuppgifter i polisutbildning och starkare sekretess i personaladministrativ verksamhet, vilket skyddar offentliganställda. Det straffrättsliga skyddet finns i brottsbalken."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-582",
+      "designation": "SFS 2025:582",
+      "title": "Lag (2025:582) om ändring i förvaltningslagen (2017:900)",
+      "date": "2025-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2025582.html",
+      "relevance": "partial",
+      "note": "Gör det möjligt att utelämna beslutsfattarens namn i skriftliga underrättelser om beslut när det finns risk för hot och trakasserier, vilket skyddar offentliganställda."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB185",
+      "designation": "Dir. 2026:85",
+      "title": "Ett stärkt straffrättsligt skydd mot gärningar som skadar viktiga samhällsfunktioner och det demokratiska samtalet",
+      "date": "2026-07-30",
+      "url": "https://data.riksdagen.se/dokument/HEB185.html",
+      "relevance": "partial",
+      "note": "Utredaren ska se över skyddet för förtroendevalda och skyddet mot aktioner som stör politiska möten. För tjänstemän ska utredaren bara ta ställning till om 2025 års ändringar av brottet hot mot tjänsteman och brottet förolämpning mot tjänsteman också ska gälla i tryckfrihetsförordningen."
+    }
+  ]
 }

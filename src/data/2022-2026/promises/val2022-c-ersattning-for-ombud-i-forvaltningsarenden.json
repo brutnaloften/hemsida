@@ -17,10 +17,38 @@
   "committee": "KU",
   "keywords": ["ombud", "rättshjälp", "förvaltningsärenden", "ersättning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i april 2024 en utredare i uppdrag att ta ställning till om enskilda i förvaltningsmål bör kunna få ersättning för rättegångskostnader. I november 2025 föreslog utredningen att det allmänna ska ersätta den enskildes kostnader för ombud och biträde när det är oskäligt att hen bär dem själv. Förslaget gäller domstolsprövning i förvaltningsmål och är ett utredningsförslag.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB139",
+      "designation": "Dir. 2024:39",
+      "title": "Rättsliga biträden och rättegångskostnader - skärpt kostnadskontroll, ökat förtroende för offentliga försvarare och stärkta rättigheter för enskilda",
+      "date": "2024-04-11",
+      "url": "https://data.riksdagen.se/dokument/HCB139.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3111",
+      "designation": "SOU 2025:111",
+      "title": "Rättssäkerhetens pris",
+      "date": "2025-11-25",
+      "url": "https://data.riksdagen.se/dokument/HDB3111.html",
+      "relevance": "partial",
+      "note": "Förslaget gäller ersättning för rättegångskostnader i förvaltningsmål, alltså vid domstolsprövning, och inte ärenden hos myndigheter."
+    }
+  ]
 }

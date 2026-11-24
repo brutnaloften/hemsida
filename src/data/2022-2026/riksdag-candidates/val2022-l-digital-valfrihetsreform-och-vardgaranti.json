@@ -12,9 +12,190 @@
     "keyword:valfrihet",
     "keyword:tillgänglighet",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "widen:Behovsstyrd vård"
   ],
   "candidates": [
+    {
+      "dok_id": "HEB338",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "38",
+      "datum": "2026-06-17",
+      "titel": "Behovsstyrd vård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB338.html",
+      "found_by": ["widen:Behovsstyrd vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HDB194",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "94",
+      "datum": "2025-10-23",
+      "titel": "Tilläggsdirektiv till utredningen Behovsstyrd vård (S 2024:05)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB194.html",
+      "found_by": ["widen:Behovsstyrd vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB125",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "25",
+      "datum": "2023-02-16",
+      "titel": "Tilläggsdirektiv till Utredningen om en behovsprövad arbetskraftsinvandring (Ju 2022:11)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB125.html",
+      "found_by": ["widen:Behovsstyrd vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01KU2",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KU2",
+      "datum": "2023-10-19",
+      "titel": "Effektiv ekonomistyrning i kommuner och regioner",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HB01KU2.html",
+      "found_by": ["widen:Behovsstyrd vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01FiU39",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU39",
+      "datum": "2026-05-21",
+      "titel": "Åtgärder för att stärka kontanternas funktionssätt",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU39.html",
+      "found_by": ["widen:Behovsstyrd vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01TU3",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "TU3",
+      "datum": "2023-11-09",
+      "titel": "Auktorisationssystem i fråga om tjänster för elektronisk identifiering och digital post",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HB01TU3.html",
+      "found_by": ["widen:Behovsstyrd vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01TU16",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "TU16",
+      "datum": "2024-06-04",
+      "titel": "Digitaliserings- och postfrågor",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HB01TU16.html",
+      "found_by": ["widen:Behovsstyrd vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB1177",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "177",
+      "datum": "2023-12-14",
+      "titel": "Samordnare för en nationell digital infrastruktur i hälso- och sjukvården",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1177.html",
+      "found_by": ["widen:Behovsstyrd vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB427",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "27",
+      "datum": "2023-09-13",
+      "titel": "Effektiv och behovsbaserad digital vård",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB427.html",
+      "found_by": [
+        "widen:digital vård|nätläkare|digitala vårdtjänster|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HAB1142",
+      "doktyp": "dir",
+      "rm": "2022",
+      "beteckning": "142",
+      "datum": "2022-12-22",
+      "titel": "Säker och tillgänglig digital identitet",
+      "organ": "Infrastrukturdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HAB1142.html",
+      "found_by": [
+        "widen:digital vård|nätläkare|digitala vårdtjänster|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01KU35",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU35",
+      "datum": "2026-05-13",
+      "titel": "Bättre förutsättningar för digitala kommunala sammanträden och förbättrad kontroll och uppföljning av privata utförare i kommuner och regioner",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU35.html",
+      "found_by": [
+        "widen:digital vård|nätläkare|digitala vårdtjänster|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD03164",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "164",
+      "datum": "2026-03-17",
+      "titel": "Bättre förutsättningar för digitala kommunala sammanträden och förbättrad kontroll och uppföljning av privata utförare i kommuner och regioner",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03164.html",
+      "found_by": [
+        "widen:digital vård|nätläkare|digitala vårdtjänster|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HAB369",
+      "doktyp": "sou",
+      "rm": "2022",
+      "beteckning": "69",
+      "datum": "2023-01-01",
+      "titel": "Kommuners och regioners kostnader för valfrihetssystem - ett kunskapsunderlag",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HAB369.html",
+      "found_by": [
+        "widen:digital vård|nätläkare|digitala vårdtjänster|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HCB150",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "50",
+      "datum": "2024-05-23",
+      "titel": "Bättre styrning för en tillgänglig och jämlik hälso- och sjukvård med god kontinuitet",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB150.html",
+      "found_by": [
+        "widen:digital vård|nätläkare|digitala vårdtjänster|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare"
+      ],
+      "score": 10
+    },
     {
       "dok_id": "HA01SoU12",
       "doktyp": "bet",

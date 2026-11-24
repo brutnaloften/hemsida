@@ -20,10 +20,68 @@
   "committee": "UbU",
   "keywords": ["obehöriga", "jourskolor", "akutskolor", "sekretess", "brottslighet i skolan"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Utbildningsutskottet tillstyrkte i december 2022 50 miljoner kronor till jour- och akutskolor för 2023, med en beräknad ökning till 100 miljoner från 2024. Regeringen föreslog i mars 2026 att akutskolor ska kunna drivas på entreprenad, utbildningsutskottet tillstyrkte i maj 2026, och lagändringen i skollagen trädde i kraft 1 augusti 2026. Den täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HA01UbU1",
+      "designation": "Bet. 2022/23:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och  universitetsforskning",
+      "date": "2022-12-14",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1154",
+      "designation": "Dir. 2023:154",
+      "title": "Varaktigt förbättrad trygghet och studiero i skolan",
+      "date": "2023-11-02",
+      "url": "https://data.riksdagen.se/dokument/HBB1154.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03193",
+      "designation": "Prop. 2025/26:193",
+      "title": "Bättre förutsättningar för trygghet och studiero i skolan",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03193.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU22",
+      "designation": "Bet. 2025/26:UbU22",
+      "title": "Bättre förutsättningar för trygghet och studiero i skolan",
+      "date": "2026-05-22",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU22.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1198",
+      "designation": "SFS 2026:1198",
+      "title": "Lag (2026:1198) om ändring i skollagen (2010:800)",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261198.html",
+      "relevance": "partial",
+      "note": "Lagen riktar sig inte specifikt till särskilt våldsamma elever, ger inga insatser för fler jourskolor och kräver inte utbildad personal."
+    }
+  ]
 }

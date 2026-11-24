@@ -23,9 +23,94 @@
     "score:tido-corpus-claude-v1-shard-16-of-20",
     "score:tido-corpus-claude-v1-shard-17-of-20",
     "score:tido-corpus-claude-v1-shard-19-of-20",
-    "score:tido-corpus-claude-v1-shard-20-of-20"
+    "score:tido-corpus-claude-v1-shard-20-of-20",
+    "widen:nystartsjobb|instegsjobb|anställningsstöd|långtidsarbetslösa|lönesubvention|arbetsgivaravgift långtidsarbetslösa"
   ],
   "candidates": [
+    {
+      "dok_id": "HB01AU10",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "AU10",
+      "datum": "2024-06-03",
+      "titel": "Riksrevisionens rapport om kontrollen av subventionerade anställningar",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HB01AU10.html",
+      "found_by": [
+        "widen:nystartsjobb|instegsjobb|anställningsstöd|långtidsarbetslösa|lönesubvention|arbetsgivaravgift långtidsarbetslösa"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HC0325",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "25",
+      "datum": "2024-10-03",
+      "titel": "Utvidgat växa-stöd – nedsättning av arbetsgivaravgifterna för upp till två anställda",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0325.html",
+      "found_by": [
+        "widen:nystartsjobb|instegsjobb|anställningsstöd|långtidsarbetslösa|lönesubvention|arbetsgivaravgift långtidsarbetslösa"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB385",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "85",
+      "datum": "2023-12-13",
+      "titel": "Långtidsutredningen 2023 - Finanspolitisk konjunkturstabilisering ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB385.html",
+      "found_by": [
+        "widen:nystartsjobb|instegsjobb|anställningsstöd|långtidsarbetslösa|lönesubvention|arbetsgivaravgift långtidsarbetslösa"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HC01AU2",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "AU2",
+      "datum": "2024-12-05",
+      "titel": "Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HC01AU2.html",
+      "found_by": [
+        "widen:nystartsjobb|instegsjobb|anställningsstöd|långtidsarbetslösa|lönesubvention|arbetsgivaravgift långtidsarbetslösa"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01AU4",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU4",
+      "datum": "2025-10-23",
+      "titel": "Regler om avstängning av statligt anställda",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU4.html",
+      "found_by": [
+        "widen:nystartsjobb|instegsjobb|anställningsstöd|långtidsarbetslösa|lönesubvention|arbetsgivaravgift långtidsarbetslösa"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01JuU22",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU22",
+      "datum": "2026-01-23",
+      "titel": "Utökade registerkontroller vid anställning i kommun",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU22.html",
+      "found_by": [
+        "widen:nystartsjobb|instegsjobb|anställningsstöd|långtidsarbetslösa|lönesubvention|arbetsgivaravgift långtidsarbetslösa"
+      ],
+      "score": 10
+    },
     {
       "dok_id": "HD01AU9",
       "doktyp": "bet",
