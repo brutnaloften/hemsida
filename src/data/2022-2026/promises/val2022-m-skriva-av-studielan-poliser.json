@@ -12,15 +12,22 @@
   "roles": {
     "M": "government"
   },
-  "type": "budget",
+  "type": "legislative",
   "area": "Kriminalpolitik",
   "committee": "UbU",
   "keywords": ["studielån", "CSN", "polisutbildning", "avskrivning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2026 fram ett förslag om att studielån för polisutbildning ska kunna skrivas av. Riksdagen beslutade om det i juni 2026. CSN ska successivt skriva av studielånen för den som utbildar sig och arbetar som polis. Lagen som genomför löftet är beslutad och träder i kraft den 1 januari 2027. Lagen ger regeringen eller en myndighet rätt att meddela föreskrifter om avskrivningen, så de närmare villkoren fastställs i förordning.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,66 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HDB425",
+      "designation": "Ds 2025:25",
+      "title": "En betald polisutbildning",
+      "date": "2025-10-21",
+      "url": "https://data.riksdagen.se/dokument/HDB425.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU2",
+      "designation": "Bet. 2025/26:UbU2",
+      "title": "Utgiftsområde 15 Studiestöd",
+      "date": "2025-12-03",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU2.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03237",
+      "designation": "Prop. 2025/26:237",
+      "title": "En betald polisutbildning",
+      "date": "2026-04-14",
+      "url": "https://data.riksdagen.se/dokument/HD03237.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU44",
+      "designation": "Bet. 2025/26:JuU44",
+      "title": "En betald polisutbildning",
+      "date": "2026-06-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU44.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1394",
+      "designation": "SFS 2026:1394",
+      "title": "Lag (2026:1394) om ändring i studiestödslagen (1999:1395)",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261394.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1393",
+      "designation": "SFS 2026:1393",
+      "title": "Lag (2026:1393) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2029-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261393.html",
+      "relevance": "partial",
+      "note": "Själva avskrivningen av studielånen och dess villkor regleras i studiestödslagen, inte i denna skattelag."
     }
   ]
 }

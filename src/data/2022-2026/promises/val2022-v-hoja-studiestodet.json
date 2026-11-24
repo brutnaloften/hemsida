@@ -12,15 +12,43 @@
   "roles": {
     "V": "opposition"
   },
-  "type": "budget",
+  "type": "legislative",
   "area": "Skola och utbildning",
   "committee": "UbU",
   "keywords": ["studiestöd", "CSN", "universitet", "högskolor"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen har beslutat två kommittédirektiv som rör universitetens oberoende: ett från april 2025 om ett stärkt skydd av den akademiska friheten och ett från januari 2026 om en ny organisationsform för statliga universitet och högskolor. De täcker bara en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB142",
+      "designation": "Dir. 2025:42",
+      "title": "Stärkt skydd av den akademiska friheten",
+      "date": "2025-04-24",
+      "url": "https://data.riksdagen.se/dokument/HDB142.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB15",
+      "designation": "Dir. 2026:5",
+      "title": "En mer ändamålsenlig organisationsform för statliga universitet och högskolor",
+      "date": "2026-01-15",
+      "url": "https://data.riksdagen.se/dokument/HEB15.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

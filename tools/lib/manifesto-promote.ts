@@ -50,6 +50,11 @@ export const ID_RENAMES: Readonly<Record<string, string>> = {
 /** Tax cuts are changes to tax law, so they are typed `legislative` like the other tax items. */
 export const TYPE_FIXES: Readonly<Record<string, { type: PromiseRecord['type']; reason: string }>> =
   {
+    'gradvis-okad-subventionsgrad-for-grupper-med-sam-sta-munhals': {
+      type: 'legislative',
+      reason:
+        'Typed `budget` by the proposal; retyped `legislative`: a tax, fee or benefit rate is set by law (hemsida-dl5.10, docs/budget-promises.md).',
+    },
     'sank-skatten-pa-lagsta-lonerna-med-1000-kronor': {
       type: 'legislative',
       reason: 'Tax cut typed `budget`; all other tax cuts are `legislative`.',
