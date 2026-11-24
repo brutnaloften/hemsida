@@ -17,10 +17,58 @@
   "committee": "MJU",
   "keywords": ["klimatomställning", "fossilfritt", "investeringar", "2030"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Miljöpartiet föreslog i sin budgetmotion för 2023 (Mot. 2022/23:2275) att staten satsar 100 miljarder kronor per år i tio år på klimatomställning, miljö och infrastruktur, finansierat med lån, och att överskottsmålet byts mot ett balansmål. I budgetmotionen för 2024 (Mot. 2023/24:2689) fanns satsningen med i en tabell där posterna summerar till 100 miljarder kronor för 2024, bland annat 19,1 miljarder kronor till järnväg, 10,4 miljarder till Sverigekortet för kollektivtrafik och 10,2 miljarder till energieffektivisering. Därefter sänkte partiet nivån: i budgetmotionen för 2025 (Mot. 2024/25:3220) föreslogs en investeringsbudget på 66,8 miljarder kronor, en procent av BNP, utöver regeringens reformutrymme, och i budgetmotionen för 2026 (Mot. 2025/26:3770) avsattes en procent av BNP till klimatinvesteringar och partiet ville införa ett investeringsmål med ett särskilt investeringsutrymme. Löftet om minst 100 miljarder kronor per år föreslogs alltså för 2023 och 2024 men inte för 2025 och 2026. Målet att Sverige ska vara fossilfritt 2030 är ett utfall som partiets förslag inte kan visa. Därför delvis uppfyllt. Riksdagen avslog alla fyra budgetmotionerna, så förslagen är partiets eget agerande, inte beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022275",
+      "designation": "Mot. 2022/23:2275",
+      "title": "Vi bygger det nya gröna folkhemmet – Miljöpartiets budgetmotion för 2023",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022275.html",
+      "relevance": "partial",
+      "note": "Miljöpartiets budgetmotion för 2023: 100 miljarder kronor per år i tio år, lånefinansierat."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022689",
+      "designation": "Mot. 2023/24:2689",
+      "title": "Det gröna framtidsbygget",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022689.html",
+      "relevance": "full",
+      "note": "Miljöpartiets budgetmotion för 2024: investeringsbudget på 100 miljarder kronor per år, med tabell för 2024."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023220",
+      "designation": "Mot. 2024/25:3220",
+      "title": "Budget för en rättvis omställning – Miljöpartiets budgetmotion för 2025",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023220.html",
+      "relevance": "partial",
+      "note": "Miljöpartiets budgetmotion för 2025: investeringsbudget på 66,8 miljarder kronor (en procent av BNP)."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023770",
+      "designation": "Mot. 2025/26:3770",
+      "title": "Sverige förtjänar bättre – Miljöpartiets budgetmotion för 2026",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023770.html",
+      "relevance": "partial",
+      "note": "Miljöpartiets budgetmotion för 2026: en procent av BNP till klimatinvesteringar och ett särskilt investeringsutrymme."
+    }
+  ]
 }

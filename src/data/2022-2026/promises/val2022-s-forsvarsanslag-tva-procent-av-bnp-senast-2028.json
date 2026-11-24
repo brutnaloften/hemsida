@@ -17,10 +17,38 @@
   "committee": "FöU",
   "keywords": ["försvarsanslag", "två procent", "bnp", "2028", "försvarsbudget"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "Löftet kommer från ett oppositionsparti och bedöms bara på partiets egna handlingar (som regel för oppositionspartier): en egen motion eller budgetmotion för utgiftsområde 6. Ingen sådan är länkad, så löftet lämnas obedömt tills en sådan har granskats (ingen S-motion för utgiftsområde 6 har hittats för ett annat löfte heller). Regeringens budgetutfall används inte mot partiet.",
+    "value": "partially_fulfilled",
+    "reasoning": "Socialdemokraterna föreslog i sin motion om försvar för 2023 (Mot. 2022/23:2012) att anslaget till det militära försvaret ska öka till två procent av BNP så snart det är praktiskt möjligt, och noterade att Försvarsmakten bedömt 2028 som det tidigaste år då förstärkningarna kan omsättas i förmåga och 2026 som möjligt. I motionen för 2024 (Mot. 2023/24:2564, yrkande 2) begärde partiet att riksdagen ställer sig bakom att försvarsutgifterna ska öka till två procent av BNP så snart det är möjligt med ökad operativ förmåga, och riksdagen avslog yrkandet. I motionen för 2025 skrev partiet att utgifterna ska öka stegvis enligt Försvarsberedningens förslag. Partiets anslagsförslag för utgiftsområde 6 avvek inte från regeringens i motionerna för 2023 och 2024: målet fanns som ett förslag om riktning, inte som ett eget belopp. Partiet nämnde heller aldrig 2028 som sista år i sina förslag. Därför delvis uppfyllt. Det är partiets eget agerande, inte ett beslut.",
     "date": "2026-11-24",
-    "history": []
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "Löftet kommer från ett oppositionsparti och bedöms bara på partiets egna handlingar (som regel för oppositionspartier): en egen motion eller budgetmotion för utgiftsområde 6. Ingen sådan är länkad, så löftet lämnas obedömt tills en sådan har granskats (ingen S-motion för utgiftsområde 6 har hittats för ett annat löfte heller). Regeringens budgetutfall används inte mot partiet.",
+        "date": "2026-11-24"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022012",
+      "designation": "Mot. 2022/23:2012",
+      "title": "Försvar och samhällets krisberedskap",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022012.html",
+      "relevance": "partial",
+      "note": "Socialdemokraternas motion om försvar för 2023: anslaget till det militära försvaret ska öka till två procent av BNP så snart det är praktiskt möjligt; anslagsförslaget avviker inte från regeringens."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022564",
+      "designation": "Mot. 2023/24:2564",
+      "title": "Försvar och samhällets krisberedskap",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022564.html",
+      "relevance": "partial",
+      "note": "Yrkande 2: försvarsutgifterna ska öka till två procent av BNP så snart det är möjligt med ökad operativ förmåga; anslagsförslaget avviker inte från regeringens."
+    }
+  ]
 }

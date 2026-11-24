@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["självförsörjning", "jordbruk", "livsmedel", "ekologiskt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "reasoning": "Miljöpartiet föreslog i sina motioner om utgiftsområde 23 för 2023 till 2026 (Mot. 2022/23:2265, Mot. 2023/24:2670, Mot. 2024/25:3046 och Mot. 2025/26:3549) högre anslag än regeringen för areella näringar och livsmedel: 2,76 miljarder kronor 2023, 3,45 miljarder 2024, 3,73 miljarder 2025 och 3,24 miljarder 2026. Inget anslag i tabellerna sänktes. Där ingick bland annat 0,7 till 0,97 miljarder kronor mer per år till den nationella medfinansieringen av den gemensamma jordbrukspolitiken, mer pengar till miljöåtgärder i jordbruket och till livsmedelsberedskap, och i texten partiets mål att öka självförsörjningen av baslivsmedel. För ekologiskt jordbruk föreslogs höjda stöd med 200 miljoner kronor per år i motionen för 2023, och därefter stöd till kommuner för ekologiska livsmedel (200, 50 och 30 miljoner kronor). För fossiloberoende maskiner föreslog partiet en biopremie (100 miljoner kronor 2026) och ett jordbruksavdrag. Avdraget skulle ersätta regeringens sänkta skatt på diesel för jordbruket, som partiet avvisade; för 2024 beräknades avdraget minska skatteintäkterna med 2 miljarder kronor medan den avvisade sänkningen skulle ge 0,72 miljarder, och för 2025 var motsvarande siffror 2 miljarder och 0,69 miljarder (Mot. 2023/24:2689 och Mot. 2024/25:3220). Alla delar av löftet fanns alltså med i partiets förslag, och inget av dem gick åt motsatt håll. För ett oppositionsparti betyder uppfyllt att partiet föreslog det, inte att något genomfördes: riksdagen avslog motionerna.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,66 @@
       "url": "https://data.riksdagen.se/dokument/HA01MJU2.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HA022265",
+      "designation": "Mot. 2022/23:2265",
+      "title": "Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022265.html",
+      "relevance": "full",
+      "note": "Miljöpartiets anslagsförslag för 2023: 2,76 miljarder kronor mer än regeringen, höjt stöd till ekologiskt jordbruk med 200 miljoner kronor och biopremie."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022670",
+      "designation": "Mot. 2023/24:2670",
+      "title": "Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022670.html",
+      "relevance": "partial",
+      "note": "Miljöpartiets anslagsförslag för 2024: 3,45 miljarder kronor mer än regeringen."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022689",
+      "designation": "Mot. 2023/24:2689",
+      "title": "Det gröna framtidsbygget",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022689.html",
+      "relevance": "partial",
+      "note": "Miljöpartiets budgetmotion för 2024: jordbruksavdrag i stället för regeringens sänkta dieselskatt för jordbruket."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023046",
+      "designation": "Mot. 2024/25:3046",
+      "title": "Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023046.html",
+      "relevance": "partial",
+      "note": "Miljöpartiets anslagsförslag för 2025: 3,73 miljarder kronor mer än regeringen."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023220",
+      "designation": "Mot. 2024/25:3220",
+      "title": "Budget för en rättvis omställning – Miljöpartiets budgetmotion för 2025",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023220.html",
+      "relevance": "partial",
+      "note": "Miljöpartiets budgetmotion för 2025: jordbruksavdrag i stället för regeringens sänkta dieselskatt för jordbruket."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023549",
+      "designation": "Mot. 2025/26:3549",
+      "title": "Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023549.html",
+      "relevance": "full",
+      "note": "Miljöpartiets anslagsförslag för 2026: 3,24 miljarder kronor mer än regeringen, biopremie på 100 miljoner kronor."
     }
   ]
 }

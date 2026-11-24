@@ -17,10 +17,58 @@
   "committee": "NU",
   "keywords": ["gröna kreditgarantier", "statliga investeringar", "industriomställning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Socialdemokraterna föreslog i sin motion om utgiftsområde 24 för 2026 (Mot. 2025/26:3593) att riksdagen ger regeringen rätt att ställa ut kreditgarantier för gröna investeringar upp till 80 miljarder kronor, medan regeringen hade avvecklat garantierna i budgeten för 2026. Taket är detsamma som regeringen själv föreslog för 2024 och 2025, så partiet ville behålla systemet, inte höja taket. I partiets motioner om utgiftsområde 24 för 2023 till 2025 finns inget yrkande om kreditgarantier. Den andra delen av löftet, mer gröna statliga investeringar, fanns i partiets budgetmotioner: 0,5 miljarder kronor mer per år till Industriklivet för 2024, 2025 och 2026 (Mot. 2023/24:2654, Mot. 2024/25:3199 och Mot. 2025/26:3551) och 0,25 miljarder kronor mer till Klimatklivet för 2025. Löftet att utöka de gröna kreditgarantierna fullföljdes alltså bara delvis: partiet föreslog att de skulle finnas kvar på samma nivå som tidigare men aldrig en större ram. Därför delvis uppfyllt. Riksdagen avslog förslagen, så de är partiets eget agerande, inte beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HB022654",
+      "designation": "Mot. 2023/24:2654",
+      "title": "Sammanhållning i en svår tid",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022654.html",
+      "relevance": "partial",
+      "note": "Socialdemokraternas budgetmotion för 2024: 0,5 miljarder kronor mer till Industriklivet."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023199",
+      "designation": "Mot. 2024/25:3199",
+      "title": "Ett rikare och rättvisare Sverige",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023199.html",
+      "relevance": "partial",
+      "note": "Socialdemokraternas budgetmotion för 2025: 0,5 miljarder kronor mer till Industriklivet och 0,25 miljarder till Klimatklivet."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023551",
+      "designation": "Mot. 2025/26:3551",
+      "title": "Ny riktning för Sverige",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023551.html",
+      "relevance": "partial",
+      "note": "Socialdemokraternas budgetmotion för 2026: 0,5 miljarder kronor mer till Industriklivet."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023593",
+      "designation": "Mot. 2025/26:3593",
+      "title": "Utgiftsområde 24 Näringsliv",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023593.html",
+      "relevance": "partial",
+      "note": "Yrkande om att regeringen får ställa ut kreditgarantier för gröna investeringar på högst 80 miljarder kronor under 2026."
+    }
+  ]
 }
