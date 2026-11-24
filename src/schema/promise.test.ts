@@ -365,6 +365,31 @@ describe('promiseSchema', () => {
       expect(ok(make('fulfilled', [outcome, bet], mixed))).toBe(true);
     });
 
+    it("lets an opposition-only budget promise be judged on the party's own motion", () => {
+      const opp = { parties: ['S'], roles: { S: 'opposition' } };
+      const mot = { ...prop, kind: 'mot', dok_id: 'HC023125', designation: 'Mot. 2024/25:3125' };
+      const motPartial = { ...mot, relevance: 'partial' };
+      for (const v of ['in_progress', 'partially_fulfilled', 'fulfilled']) {
+        expect(ok(make(v, [mot], opp)), v).toBe(true);
+      }
+      expect(ok(make('in_progress', [motPartial], opp))).toBe(true);
+      expect(ok(make('partially_fulfilled', [motPartial], opp))).toBe(true);
+      expect(ok(make('fulfilled', [motPartial], opp))).toBe(false);
+      expect(ok(make('partially_fulfilled', [{ ...mot, relevance: 'contradicts' }], opp))).toBe(
+        false,
+      );
+      // a government or mixed promise gets nothing from a motion
+      expect(ok(make('partially_fulfilled', [mot]))).toBe(false);
+      expect(
+        ok(
+          make('partially_fulfilled', [mot], {
+            parties: ['S', 'SD'],
+            roles: { S: 'opposition', SD: 'support' },
+          }),
+        ),
+      ).toBe(false);
+    });
+
     it('does not apply to other promise types', () => {
       expect(ok(make('fulfilled', [outcome, prop], { type: 'outcome' }))).toBe(false);
     });

@@ -17,12 +17,39 @@
   "committee": "TU",
   "keywords": ["kollektivtrafik", "biljettpriser", "unga", "pensionärer"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Miljöpartiet föreslog i sin budgetmotion för 2025 ett nytt anslag, Investeringsstöd för kollektivtrafik, på 5 000 mn kr och ett nytt anslag, Sverigekort, på 11 000 mn kr för lokal och regional kollektivtrafik i hela landet för 499 kr i månaden för vuxna och 250 kr för ungdomar, studenter och pensionärer. Det täcker både utbyggnad och lägre priser, särskilt för unga och pensionärer, som löftet säger. Riksdagen avslog motionens alternativa anslagsförslag (Bet. 2024/25:TU1), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HC023064",
+      "designation": "Mot. 2024/25:3064",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023064.html",
+      "relevance": "full",
+      "note": "Miljöpartiets budgetmotion för utgiftsområde 22, redovisad i Bet. 2024/25:TU1."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01TU1",
+      "designation": "Bet. 2024/25:TU1",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01TU1.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HD01FiU47",

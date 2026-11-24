@@ -17,10 +17,38 @@
   "committee": "TU",
   "keywords": ["kollektivtrafik", "gratis resor", "gymnasieelever", "studenter", "sommar"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Socialdemokraterna föreslog i sin budgetmotion för 2025 (yrkande 84) att anslaget 1:12 Transportstyrelsen skulle öka med 500 mn kr för gratis kollektivtrafik för unga under sommaren. Förslaget motsvarar löftet i sak, men motionen nämner ungdomar och inte uttryckligen gymnasieelever och studenter, och avser ett år. Därför delvis uppfyllt. Riksdagen avslog motionens alternativa anslagsförslag (Bet. 2024/25:TU1), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HC023125",
+      "designation": "Mot. 2024/25:3125",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023125.html",
+      "relevance": "partial",
+      "note": "Socialdemokraternas budgetmotion för utgiftsområde 22, redovisad i Bet. 2024/25:TU1."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01TU1",
+      "designation": "Bet. 2024/25:TU1",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01TU1.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }
