@@ -18,9 +18,16 @@
   "keywords": ["servicekontor", "samhällsservice", "landsbygd", "myndigheter"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "assessedBy": "ai",
+    "reasoning": "De statliga servicekontoren drivs av Statens servicecenter (anslaget 1:15). Antalet kontor växte från 130 vid utgången av 2022 (elva av dem öppnades det året enligt tidigare regeringsuppdrag, Bet. 2023/24:FiU2) till 138 vid utgången av 2023 (Bet. 2024/25:FiU2), men i budgeten för 2024 skrev regeringen att den för närvarande inte har för avsikt att gå vidare med förfrågningar om nya servicekontor på specifika orter (Bet. 2023/24:FiU2). I budgeten för 2025 minskade regeringen anslaget med 50 mn kr, och den avser att minska det med 100 mn kr 2026 och 150 mn kr 2027, eftersom Statens servicecenter i högre grad ska själv bestämma var kontoren ska finnas (Bet. 2024/25:FiU2). Myndigheten bedömde i januari 2025 preliminärt att 35 servicekontor behöver avvecklas under 2025-2027 (Bet. 2025/26:FiU2). Det anvisade beloppet var 937 mn kr 2025, lägre än 950 mn kr 2024; över hela perioden ökade det från 882 mn kr 2022 (+6,3 procent) och utfallet från 882 till 896 mn kr (+1,7 procent, i fasta priser -9,5 procent). Anslaget betalar hela myndigheten och räknar inte kontor, och hur många kontor som faktiskt har stängts 2025 och 2026 framgår inte av underlaget. Underlaget visar alltså att nätet har vuxit till och med 2023 och därefter planeras minska, vilket talar emot löftet. En planerad neddragning är dock inte ett uttryckligt beslut mot löftet, som en omröstning om just detta eller en lag, så löftet bedöms inte som brutet. Därför lämnas det obedömt tills det går att se hur många kontor som finns kvar.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01FiU2",
+      "designation": "Bet. 2023/24:FiU2",
+      "title": "Utgiftsområde 2 Samhällsekonomi och finansförvaltning",
+      "date": "2023-12-14",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU2.html",
+      "relevance": "contradicts",
+      "note": "130 servicekontor vid utgången av 2022, varav elva öppnades det året. Regeringen bedömer att verksamheten vid servicekontoren behöver stabiliseras och har därför för närvarande inte för avsikt att gå vidare med förfrågningar om nya servicekontor på specifika orter."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01FiU2",
+      "designation": "Bet. 2024/25:FiU2",
+      "title": "Utgiftsområde 2 Samhällsekonomi och finansförvaltning",
+      "date": "2024-12-13",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU2.html",
+      "relevance": "contradicts",
+      "note": "138 servicekontor vid utgången av 2023. Anslaget 1:15 minskas med 50 mn kr 2025 (planerat 100 mn kr 2026 och 150 mn kr 2027) så att Statens servicecenter i högre grad själv bestämmer var kontoren ska finnas."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01FiU2",
+      "designation": "Bet. 2025/26:FiU2",
+      "title": "Utgiftsområde 2 Samhällsekonomi och finansförvaltning",
+      "date": "2025-12-11",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU2.html",
+      "relevance": "contradicts",
+      "note": "Statens servicecenter bedömde i januari 2025 preliminärt att besparingen innebär att 35 servicekontor behöver avvecklas under 2025-2027."
     }
   ]
 }

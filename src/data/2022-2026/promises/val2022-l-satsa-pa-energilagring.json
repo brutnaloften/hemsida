@@ -18,9 +18,16 @@
   "keywords": ["energilagring", "batterier", "elsystemet", "elpriser", "lagring"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "assessedBy": "ai",
+    "reasoning": "Ingen anslagspost i ESV:s data är avsedd för energilagring. Det närmaste är anslaget 1:3 Energiforskning, som också betalar forskning om annat än lagring och som ökade nominellt från ett utfall på 1 470 mn kr 2022 till 1 591 mn kr 2025 (+8,2 procent, i fasta priser -3,7 procent). Anslaget visar inte hur mycket som gått till energilagring, och det finns ingen annan post där en satsning på energilagring kan följas. Därför lämnas löftet obedömt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {

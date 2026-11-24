@@ -17,10 +17,17 @@
   "committee": "TU",
   "keywords": ["höghastighetståg", "järnväg", "infrastruktur", "prioritering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen fattade i december 2022 beslut om att avbryta arbetet med projektet nya stambanor för höghastighetståg och prioriterar i stället upprustning av befintlig järnväg, bättre vägstandard och utbyggd laddinfrastruktur, eftersom en satsning på höghastighetsjärnväg enligt regeringen skulle ha trängt undan andra nödvändiga investeringar (Bet. 2024/25:TU5). Propositionen, som bygger på en överenskommelse mellan regeringen och Sverigedemokraterna, beskriver också att riksdagens tidigare tillkännagivande om att säga nej till höghastighetsjärnväg är slutbehandlat (Prop. 2024/25:28). Stoppet är alltså beslutat. Löftet gäller också att pengar läggs på vägar i stället, och det går inte att läsa ut av anslagen. Anslaget 1:1 Utveckling av statens transportinfrastruktur betalar både väg och järnväg och ökade nominellt från ett utfall på 29 277 mn kr 2022 till 37 836 mn kr 2025 (+29,2 procent, i fasta priser +15,0 procent), och det anvisade beloppet från 31 987 till 41 444 mn kr (+29,6 procent). ESV:s data delar inte upp anslaget på väg och järnväg eller på enskilda projekt, så det går inte att mäta hur mycket som har lagts på vägar eller på upprustning av befintlig järnväg. Därför pågår: stoppet är genomfört i beslut, men omfördelningen av pengarna kan inte följas i budgetdata.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0328",
+      "designation": "Prop. 2024/25:28",
+      "title": "Vägen till en pålitlig transportinfrastruktur – för att hela Sverige ska fungera",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC0328.html",
+      "relevance": "partial",
+      "note": "Regeringen konstaterar att riksdagens tillkännagivande om att säga nej till höghastighetsjärnväg är slutbehandlat och prioriterar upprustning av befintlig järnväg och bättre vägstandard."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01TU5",
+      "designation": "Bet. 2024/25:TU5",
+      "title": "Infrastrukturfrågor",
+      "date": "2024-12-06",
+      "url": "https://data.riksdagen.se/dokument/HC01TU5.html",
+      "relevance": "partial",
+      "note": "Regeringen avbröt i december 2022 arbetet med nya stambanor för höghastighetståg och prioriterar upprustning av befintlig järnväg, bättre vägstandard och laddinfrastruktur."
     }
   ]
 }
