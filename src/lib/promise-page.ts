@@ -8,6 +8,7 @@ import {
   isRiksdagEvidence,
   type AgreementEvidence,
   type BudgetEvidence,
+  type StatisticEvidence,
   type Evidence,
   type PromiseRecord,
   type RiksdagEvidence,
@@ -45,6 +46,7 @@ export type TimelineStep =
   | { type: 'agreement'; evidence: AgreementEvidence }
   | { type: 'document'; stage: PipelineStage | 'mot'; evidence: RiksdagEvidence }
   | { type: 'budget'; evidence: BudgetEvidence }
+  | { type: 'statistic'; evidence: StatisticEvidence }
   | { type: 'missing'; stage: PipelineStage; label: string };
 
 function promiseLabel(source: Source | undefined): string {
@@ -100,6 +102,12 @@ export function buildTimelineSteps(
       .map((evidence) => ({
         date: evidence.date,
         step: { type: 'budget', evidence } as TimelineStep,
+      })),
+    ...promise.evidence
+      .filter((e): e is StatisticEvidence => e.kind === 'statistic')
+      .map((evidence) => ({
+        date: evidence.date,
+        step: { type: 'statistic', evidence } as TimelineStep,
       })),
   ].sort(byDate);
   for (const t of tail) steps.push(t.step);

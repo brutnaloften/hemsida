@@ -1,0 +1,29 @@
+---
+import type { StatisticSeries, StatisticEvidence } from '@/schema/promise';
+import { formatStatistic } from '@/lib/statistic-evidence';
+
+interface Props {
+  entry: StatisticEvidence;
+  series: Pick<StatisticSeries, 'label' | 'unit' | 'priceBasis'> | undefined;
+}
+const { entry: e, series } = Astro.props;
+const f = formatStatistic(e, series);
+---
+
+<div>
+  <p class="text-sm text-muted-foreground">
+    {e.date} &middot; Statistik
+    {e.relevance === 'partial' && ' (delvis relevant)'}
+  </p>
+  <p class="font-medium">{f.label}</p>
+  <p class="text-sm">
+    {f.baseline} &rarr; {f.latest} ({f.change})
+  </p>
+  {f.target && <p class="text-sm">{f.target}</p>}
+  {e.baselineNote && <p class="text-sm">{e.baselineNote}</p>}
+  {e.inflationNote && <p class="text-sm">{e.inflationNote}</p>}
+  {e.note && <p class="text-sm">{e.note}</p>}
+  <p class="text-xs text-muted-foreground">
+    Statistiken visar utfallet, inte vad som orsakade det.
+  </p>
+</div>
