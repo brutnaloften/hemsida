@@ -386,6 +386,32 @@ const asHistory = (v: PromiseRecord['verdict']): VerdictEntry => ({
 });
 
 /**
+ * Re-anchor a computed verdict to the base branch's verdict (what is actually published). History
+ * and date are derived from `base`, not from the working tree, so a rerun after an intermediate
+ * state never records verdicts that were never on the base: the same value as on base leaves the
+ * whole block exactly as on base; a changed value appends the base verdict to the base history.
+ * `base` is null for a promise that does not exist on the base: the verdict is kept as computed.
+ */
+export function rebaseVerdict(
+  next: PromiseRecord['verdict'],
+  base: PromiseRecord['verdict'] | null,
+  today: string,
+): PromiseRecord['verdict'] {
+  if (!base) return next;
+  if (next.value === base.value) return base;
+  return { ...next, date: today, history: [...base.history, asHistory(base)] };
+}
+
+/** Whether `id` is selected by the `--ids` / `--exclude` options (empty `only` selects all). */
+export function selectedId(
+  id: string,
+  only: ReadonlySet<string>,
+  exclude: ReadonlySet<string>,
+): boolean {
+  return (only.size === 0 || only.has(id)) && !exclude.has(id);
+}
+
+/**
  * Returns null when the promise must not be touched or nothing would change.
  *
  * Eligible: `unassessed` promises (Riksdag evidence already there is kept and new documents are
