@@ -93,7 +93,22 @@
       "date": "2026-08-07",
       "url": "https://data.riksdagen.se/dokument/HD01SoU40.html",
       "relevance": "full",
-      "note": null
+      "note": null,
+      "votes": {
+        "S": "yes",
+        "SD": "yes",
+        "C": "no",
+        "M": "yes",
+        "MP": "no",
+        "L": "yes",
+        "KD": "yes",
+        "V": "no"
+      },
+      "vote_point": {
+        "punkt": "1",
+        "rubrik": "Regeringens lagförslag",
+        "votering_id": "453e9a58-e5cc-48aa-9274-6736a40054b7"
+      }
     },
     {
       "kind": "sfs",

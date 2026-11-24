@@ -67,7 +67,22 @@
       "date": "2026-05-26",
       "url": "https://data.riksdagen.se/dokument/HD01CU38.html",
       "relevance": "full",
-      "note": null
+      "note": null,
+      "votes": {
+        "S": "yes",
+        "SD": "yes",
+        "C": "yes",
+        "M": "yes",
+        "MP": "no",
+        "L": "yes",
+        "KD": "yes",
+        "V": "no"
+      },
+      "vote_point": {
+        "punkt": "1",
+        "rubrik": "Regeringens lagförslag",
+        "votering_id": "ee2b423e-9240-4e77-aff5-56c01a98fe59"
+      }
     },
     {
       "kind": "sfs",

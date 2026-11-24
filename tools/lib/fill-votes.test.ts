@@ -79,6 +79,15 @@ describe('fillBetVotes', () => {
     expect(await fillBetVotes(c, bet, [bet, prop])).toMatchObject({ status: 'ambiguous' });
   });
 
+  it('does not fill an ändringsbudget / ändrade ramar point', async () => {
+    const c = client([
+      { ...point('1', bill, V1), rubrik: 'Ändrade ramar för utgiftsområden för 2025' },
+    ]);
+    expect(await fillBetVotes(c, bet, [bet, prop])).toMatchObject({ status: 'ambiguous' });
+    const c2 = client([{ ...point('1', bill, V1), rubrik: 'Tilläggsbudget' }]);
+    expect((await fillBetVotes(c2, bet, [bet, prop])).status).toBe('filled');
+  });
+
   it('does not pick the voted point when an unvoted point also cites the proposition', async () => {
     const c = client([point('1', bill, V1), point('3', bill, '')]);
     expect((await fillBetVotes(c, bet, [bet, prop])).status).toBe('ambiguous');

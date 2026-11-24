@@ -75,7 +75,22 @@
       "date": "2026-05-20",
       "url": "https://data.riksdagen.se/dokument/HD01SoU29.html",
       "relevance": "full",
-      "note": null
+      "note": null,
+      "votes": {
+        "S": "yes",
+        "SD": "yes",
+        "C": "yes",
+        "M": "yes",
+        "MP": "yes",
+        "L": "yes",
+        "KD": "yes",
+        "V": "no"
+      },
+      "vote_point": {
+        "punkt": "1",
+        "rubrik": "Regeringens lagförslag",
+        "votering_id": "bba9e10f-b8d9-4154-bd17-dc180f205e90"
+      }
     },
     {
       "kind": "sfs",

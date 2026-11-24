@@ -83,7 +83,22 @@
       "date": "2026-06-04",
       "url": "https://data.riksdagen.se/dokument/HD01AU14.html",
       "relevance": "full",
-      "note": null
+      "note": null,
+      "votes": {
+        "S": "no",
+        "SD": "yes",
+        "C": "yes",
+        "M": "yes",
+        "MP": "abstain",
+        "L": "yes",
+        "KD": "yes",
+        "V": "abstain"
+      },
+      "vote_point": {
+        "punkt": "1",
+        "rubrik": "Regeringens lagförslag",
+        "votering_id": "062e0cab-d202-4fc9-b97f-3c25b1ed16ec"
+      }
     },
     {
       "kind": "sfs",

@@ -7,7 +7,9 @@
  * proposition 2023/24:19 ...". Rules, deliberately conservative (report instead of guessing):
  * - the promise must have `prop` evidence, whose designations give the proposition numbers;
  * - exactly one committee point may cite one of them, and it must carry a recorded vote
- *   (acklamation points have none), and not a first reading ("som vilande") or a budget frame vote ("Rambeslutet"); zero or several is reported, never picked between;
+ *   (acklamation points have none); zero or several is reported, never picked between;
+ * - a first reading ("som vilande"), a budget frame vote ("Rambeslutet") and an ändringsbudget /
+ *   "ändrade ramar för utgiftsområden" point are not filled;
  * - evidence with relevance `partial` is not filled;
  * - that vote must be the sakfråga ("decision"), not the motivfråga.
  * The result is the party position on the committee's proposal ("Ja" = for the committee, which
@@ -115,9 +117,16 @@ export async function fillBetVotes(
   const point = cited[0];
   if (/vilande/i.test(point.rubrik) || /som vilande/i.test(point.forslag)) {
     // A first reading of a constitutional change ("antar som vilande") is not the adoption of the law.
-    return { status: 'ambiguous', reason: `point ${point.punkt} is a vilande first reading` };
+    return {
+      status: 'ambiguous',
+      reason: `point ${point.punkt} is about vilande (first reading or vilandeförklaring), not decisive`,
+    };
   }
-  if (/^\s*(ram|utgiftsram)\w*/i.test(point.rubrik) || /\brambeslut/i.test(point.rubrik)) {
+  if (
+    /^\s*(rambeslut|utgiftsram)\w*/i.test(point.rubrik) ||
+    /\brambeslut/i.test(point.rubrik) ||
+    /ändringsbudget|ändrade ramar för utgiftsområden/i.test(`${point.rubrik} ${point.forslag}`)
+  ) {
     // A whole-budget frame vote ("Rambeslutet") says little about any single promise.
     return {
       status: 'ambiguous',
