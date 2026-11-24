@@ -17,31 +17,58 @@
   "committee": "MJU",
   "keywords": ["kust", "ekosystem", "återskapande", "hav"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Miljöpartiet föreslog varje år mer pengar till havs- och vattenmiljön än regeringen, men motionerna har ingen post som bara gäller kusten. Anslaget Åtgärder för havs- och vattenmiljö höjdes med 1,0 miljarder kronor för 2023 (Mot. 2022/23:2266) och 2024 (Mot. 2023/24:2671), med 1,089 miljarder för 2025 (Mot. 2024/25:3048) och med 761 miljoner för 2026 (Mot. 2025/26:3506). Anslaget till Havs- och vattenmyndigheten höjdes med 54,8, 72, 162 och 150 miljoner kronor de fyra åren. För 2025 tillkom 80 miljoner till lokalt havs- och vattenvårdsarbete och 50 miljoner till havsmiljöforskning. För 2026 föreslog partiet bland annat 296 miljoner till akvatisk restaurering på havsanslaget och en restaureringsmiljard för naturen i stort. Texterna talar om att öka åtgärdstakten för hav, kust och skärgård och att restaurera marina ekosystem, men beloppen går till havs- och vattenmiljön som helhet och inte till kusten särskilt. Inga anslag minskas i utgiftsområdets tabeller. Riksdagen avslog motionerna (Bet. 2022/23:MJU1, 2023/24:MJU1, 2024/25:MJU1 och 2025/26:MJU1). Därför delvis uppfyllt: partiet föreslog pengar åt havsmiljö och restaurering, men inget som är riktat mot kusten.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
-      "kind": "bet",
-      "dok_id": "HC01MJU5",
-      "designation": "Bet. 2024/25:MJU5",
-      "title": "Ett levande hav – ökat skydd, minskad övergödning och ett hållbart fiske",
-      "date": "2024-11-15",
-      "url": "https://data.riksdagen.se/dokument/HC01MJU5.html",
+      "kind": "mot",
+      "dok_id": "HA022266",
+      "designation": "Mot. 2022/23:2266",
+      "title": "Utgiftsområde 20 Allmän miljö- och naturvård",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022266.html",
       "relevance": "partial",
-      "note": null
+      "note": "Budgetmotion för 2023: 1,0 miljarder kronor mer till havs- och vattenmiljön. Avslogs i Bet. 2022/23:MJU1."
     },
     {
-      "kind": "bet",
-      "dok_id": "HC01MJU13",
-      "designation": "Bet. 2024/25:MJU13",
-      "title": "Förbud mot bottentrålning i marina skyddade områden",
-      "date": "2025-03-20",
-      "url": "https://data.riksdagen.se/dokument/HC01MJU13.html",
+      "kind": "mot",
+      "dok_id": "HB022671",
+      "designation": "Mot. 2023/24:2671",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022671.html",
       "relevance": "partial",
-      "note": null
+      "note": "Budgetmotion för 2024: 1,0 miljarder kronor mer till havs- och vattenmiljön och 72 miljoner mer till Havs- och vattenmyndigheten. Avslogs i Bet. 2023/24:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023048",
+      "designation": "Mot. 2024/25:3048",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023048.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025: 1,089 miljarder kronor mer till havs- och vattenmiljön, 80 miljoner till lokalt havs- och vattenvårdsarbete och 50 miljoner till havsmiljöforskning. Avslogs i Bet. 2024/25:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023506",
+      "designation": "Mot. 2025/26:3506",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023506.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: 761 miljoner kronor mer till havs- och vattenmiljön, varav 296 miljoner till akvatisk restaurering. Avslogs i Bet. 2025/26:MJU1."
     }
   ]
 }

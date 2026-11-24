@@ -17,21 +17,58 @@
   "committee": "MJU",
   "keywords": ["våtmarker", "återställning", "natur"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "reasoning": "Miljöpartiet föreslog en egen satsning på återvätning av dikade våtmarker i alla fyra budgetmotioner för utgiftsområde 20, inom anslaget Åtgärder för värdefull natur. För 2023 (Mot. 2022/23:2266) föreslogs 3,6 miljarder kronor under tre år för anslaget, i en motion som höjde det med 1,87 miljarder för 2023. För 2024 (Mot. 2023/24:2671) öronmärktes 445 miljoner kronor mer än regeringens satsning och 2,8 miljarder över tre år. För 2025 (Mot. 2024/25:3048) öronmärktes 365 miljoner kronor för 2025 och 1,5 miljarder över tre år mer än regeringen. För 2026 (Mot. 2025/26:3506) föreslogs 200 miljoner kronor över regeringens nivå, inklusive nedlagd jordbruksmark. Inga anslag i utgiftsområdets tabeller minskas. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:MJU1, 2023/24:MJU1, 2024/25:MJU1 och 2025/26:MJU1). Löftet är uppfyllt som partiets eget förslag, inte som beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
-      "kind": "bet",
-      "dok_id": "HA01MJU1",
-      "designation": "Bet. 2022/23:MJU1",
+      "kind": "mot",
+      "dok_id": "HA022266",
+      "designation": "Mot. 2022/23:2266",
       "title": "Utgiftsområde 20 Allmän miljö- och naturvård",
-      "date": "2022-12-15",
-      "url": "https://data.riksdagen.se/dokument/HA01MJU1.html",
-      "relevance": "partial",
-      "note": null
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022266.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2023: 3,6 miljarder kronor under tre år till återvätning av dikade våtmarker. Avslogs i Bet. 2022/23:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022671",
+      "designation": "Mot. 2023/24:2671",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022671.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2024: 445 miljoner kronor mer än regeringen till återvätning av våtmarker, 2,8 miljarder över tre år. Avslogs i Bet. 2023/24:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023048",
+      "designation": "Mot. 2024/25:3048",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023048.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2025: 365 miljoner kronor öronmärkta för återvätning av våtmarker, 1,5 miljarder över tre år. Avslogs i Bet. 2024/25:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023506",
+      "designation": "Mot. 2025/26:3506",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023506.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2026: 200 miljoner kronor över regeringens nivå för återvätning av våtmarker. Avslogs i Bet. 2025/26:MJU1."
     }
   ]
 }

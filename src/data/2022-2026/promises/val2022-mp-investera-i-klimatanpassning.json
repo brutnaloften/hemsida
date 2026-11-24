@@ -17,10 +17,58 @@
   "committee": "MJU",
   "keywords": ["klimatanpassning", "extremväder", "skyfall"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "reasoning": "Miljöpartiet föreslog mer pengar till klimatanpassning i alla fyra budgetmotioner för utgiftsområde 20. För 2023 (Mot. 2022/23:2266) höjdes anslaget Klimatanpassning med 2,86 miljarder kronor över regeringens 140 miljoner, och SMHI fick 81,6 miljoner mer. För 2024 (Mot. 2023/24:2671) föreslogs 110 miljoner mer på samma anslag, 75,5 miljoner mer till SMHI och ett nytt anslag för klimatanpassningskliv och storskaliga anpassningsåtgärder på 1,3 miljarder. För 2025 (Mot. 2024/25:3048) föreslogs 50,5 miljoner mer på anslaget, 120,5 miljoner mer till SMHI och 3,3 miljarder till det nya anslaget. För 2026 (Mot. 2025/26:3506) lämnades det ordinarie anslaget oförändrat, men partiet föreslog ett nytt anslag för storskaliga klimatanpassningsåtgärder på 3 miljarder och 50 miljoner till klimatsäkring mot ras, skred, erosion och översvämning i nationella riskområden. Inga anslag i utgiftsområdets tabeller minskas, så det finns inga indragningar i samma område att redovisa. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:MJU1, 2023/24:MJU1, 2024/25:MJU1 och 2025/26:MJU1) och anvisade anslagen enligt regeringens förslag. Löftet är därför uppfyllt som partiets eget förslag, inte som beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022266",
+      "designation": "Mot. 2022/23:2266",
+      "title": "Utgiftsområde 20 Allmän miljö- och naturvård",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022266.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2023: anslaget Klimatanpassning höjs med 2,86 miljarder kronor och SMHI med 81,6 miljoner. Avslogs i Bet. 2022/23:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022671",
+      "designation": "Mot. 2023/24:2671",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022671.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2024: 110 miljoner mer på Klimatanpassning, 75,5 miljoner mer till SMHI och 1,3 miljarder till ett nytt anslag för klimatanpassningskliv. Avslogs i Bet. 2023/24:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023048",
+      "designation": "Mot. 2024/25:3048",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023048.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2025: 50,5 miljoner mer på Klimatanpassning, 120,5 miljoner mer till SMHI och 3,3 miljarder till ett nytt anslag för klimatanpassningskliv. Avslogs i Bet. 2024/25:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023506",
+      "designation": "Mot. 2025/26:3506",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023506.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2026: nytt anslag på 3 miljarder för storskaliga klimatanpassningsåtgärder och 50 miljoner till klimatsäkring i riskområden. Avslogs i Bet. 2025/26:MJU1."
+    }
+  ]
 }

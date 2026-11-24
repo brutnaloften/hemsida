@@ -17,10 +17,88 @@
   "committee": "MJU",
   "keywords": ["ekologisk odling", "naturbetesmarker", "lantbruk", "stöd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "reasoning": "Miljöpartiet föreslog mer stöd till ekologisk odling i alla fyra budgetmotioner för utgiftsområde 23 (Mot. 2022/23:2265, 2023/24:2670, 2024/25:3046 och 2025/26:3549): stödnivåerna till ekologiskt jordbruk skulle höjas med 200 miljoner kronor per år, och för 2023 till 2025 tillkom miljöåtgärder för biologisk mångfald, till exempel 157,7 miljoner mer på anslaget Miljöförbättrande åtgärder i jordbruket för 2023. Alla fyra motionerna vill också höja stödnivåerna för naturbetesmarker till full kostnadstäckning. I utgiftsområde 20 öronmärkte partiet dessutom medel till ängs- och betesmarker: 166 miljoner kronor för 2024 (Mot. 2023/24:2671), 166 miljoner för 2025 (Mot. 2024/25:3048) och 80 miljoner för 2026 (Mot. 2025/26:3506). För 2023 anger motionen för utgiftsområde 20 en stödnivå på omkring 300 miljoner kronor per år för naturbete, men utan egen rad i tabellen. Inga anslag i tabellerna för utgiftsområde 23 minskas. Riksdagen avslog motionerna (Bet. 2022/23:MJU2, 2023/24:MJU2, 2024/25:MJU2 och 2025/26:MJU2, samt MJU1 för utgiftsområde 20). Löftet är uppfyllt som partiets eget förslag, inte som beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022265",
+      "designation": "Mot. 2022/23:2265",
+      "title": "Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022265.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2023: stödnivåerna till ekologiskt jordbruk höjs med 200 miljoner kronor per år och miljöåtgärderna med 157,7 miljoner. Avslogs i Bet. 2022/23:MJU2."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022670",
+      "designation": "Mot. 2023/24:2670",
+      "title": "Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022670.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2024: 200 miljoner kronor mer till ekologiskt jordbruk och full kostnadstäckning för naturbetesmarker. Avslogs i Bet. 2023/24:MJU2."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023046",
+      "designation": "Mot. 2024/25:3046",
+      "title": "Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023046.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2025: 200 miljoner kronor mer till ekologiskt jordbruk och full kostnadstäckning för naturbetesmarker. Avslogs i Bet. 2024/25:MJU2."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023549",
+      "designation": "Mot. 2025/26:3549",
+      "title": "Utgiftsområde 23 Areella näringar, landsbygd och livsmedel",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023549.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2026: 200 miljoner kronor mer till ekologiskt jordbruk och full kostnadstäckning för naturbetesmarker. Avslogs i Bet. 2025/26:MJU2."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022671",
+      "designation": "Mot. 2023/24:2671",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022671.html",
+      "relevance": "partial",
+      "note": "Utgiftsområde 20 för 2024: 166 miljoner kronor öronmärkta för restaurering och skötsel av ängs- och betesmarker. Avslogs i Bet. 2023/24:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023048",
+      "designation": "Mot. 2024/25:3048",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023048.html",
+      "relevance": "partial",
+      "note": "Utgiftsområde 20 för 2025: 166 miljoner kronor öronmärkta för restaurering och skötsel av ängs- och betesmarker. Avslogs i Bet. 2024/25:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023506",
+      "designation": "Mot. 2025/26:3506",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023506.html",
+      "relevance": "partial",
+      "note": "Utgiftsområde 20 för 2026: 80 miljoner kronor öronmärkta för restaurering och skötsel av ängs- och betesmarker. Avslogs i Bet. 2025/26:MJU1."
+    }
+  ]
 }

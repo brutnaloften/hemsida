@@ -17,21 +17,58 @@
   "committee": "MJU",
   "keywords": ["våtmarker", "invasiva arter", "naturvård", "biologisk mångfald"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Centerpartiet föreslog mer pengar till naturvård i alla fyra budgetmotioner för utgiftsområde 20, men våtmarker och invasiva arter nämns med belopp bara vissa år. För 2023 (Mot. 2022/23:2197) höjdes anslaget Åtgärder för värdefull natur med 130 miljoner kronor, främst för att vårda och restaurera skyddade områden, och markägare skulle kompenseras ekonomiskt; invasiva arter och våtmarker har inga egna belopp. För 2024 (Mot. 2023/24:2744) föreslogs 150 miljoner till skötsel av skyddade områden och 25 miljoner till invasiva arter. För 2025 (Mot. 2024/25:2149) höjdes anslaget med 75 miljoner kronor för den lokala naturvårdssatsningen (LONA), som bland annat kan användas till våtmarker. För 2026 (Mot. 2025/26:3744) föreslogs 150 miljoner till värdefull natur och friluftsliv och ytterligare 10 miljoner per år till LONA och våtmarker. Samtidigt drogs anslag ned i samma utgiftsområde: för 2023 minskades anslagen Sanering och återställning av förorenade områden med 240 miljoner kronor och Klimatpremier med 100 miljoner, för 2024 avslogs regeringens klimatbonus på 1,3 miljarder och 400 miljoner omprioriterades från Klimatinvesteringar, och för 2025 minskades Klimatpremier med 250 miljoner. Riksdagen avslog motionerna (Bet. 2022/23:MJU1, 2023/24:MJU1, 2024/25:MJU1 och 2025/26:MJU1). Därför delvis uppfyllt: våtmarker och invasiva arter fick pengar i vissa av åren, inte i alla.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
-      "kind": "bet",
-      "dok_id": "HB01MJU1",
-      "designation": "Bet. 2023/24:MJU1",
-      "title": "Utgiftsområde 20 Klimat, miljö och natur",
-      "date": "2023-12-11",
-      "url": "https://data.riksdagen.se/dokument/HB01MJU1.html",
+      "kind": "mot",
+      "dok_id": "HA022197",
+      "designation": "Mot. 2022/23:2197",
+      "title": "Utgiftsområde 20 Allmän miljö- och naturvård",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022197.html",
       "relevance": "partial",
-      "note": null
+      "note": "Budgetmotion för 2023: 130 miljoner kronor mer till värdefull natur och skötsel av skyddade områden. Avslogs i Bet. 2022/23:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022744",
+      "designation": "Mot. 2023/24:2744",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022744.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2024: 150 miljoner kronor till skötsel av skyddade områden och 25 miljoner till invasiva arter. Avslogs i Bet. 2023/24:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC022149",
+      "designation": "Mot. 2024/25:2149",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC022149.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025: 75 miljoner kronor mer till värdefull natur, för den lokala naturvårdssatsningen. Avslogs i Bet. 2024/25:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023744",
+      "designation": "Mot. 2025/26:3744",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023744.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: 150 miljoner kronor till värdefull natur och friluftsliv och 10 miljoner till LONA och våtmarker. Avslogs i Bet. 2025/26:MJU1."
     }
   ]
 }
