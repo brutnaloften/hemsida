@@ -46,14 +46,15 @@ page.on('pageerror', (e) => (pageProblem = `page error: ${e.message}`));
 page.on('crash', () => (pageProblem = 'page crashed'));
 
 /** Popup of the n-th AI tag, opened with `open`, as a rect plus the overflow it causes. */
-const measureTag = (n, open) =>
+const measureTag = (n, open, block) =>
   page.evaluate(
-    async ([n, open]) => {
+    async ([n, open, block]) => {
       const tag = document.querySelectorAll('.ai-tag')[n];
       const anchor = tag.firstElementChild;
       const popup = tag.lastElementChild;
-      if (open === 'focus') anchor.focus();
-      anchor.scrollIntoView({ block: 'center', inline: 'nearest' });
+      // Scroll first, then open: the popup must follow the tag, not sit at its unscrolled position.
+      anchor.scrollIntoView({ block, inline: 'nearest' });
+      if (open === 'focus') anchor.focus({ preventScroll: true });
       await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
       const r = popup.getBoundingClientRect();
       const out = {
@@ -62,13 +63,15 @@ const measureTag = (n, open) =>
         shown: r.width > 0,
         over: document.documentElement.scrollWidth - document.documentElement.clientWidth,
         vw: window.innerWidth,
+        vh: window.innerHeight,
+        top: r.top,
+        bottom: r.bottom,
         anchorY: anchor.getBoundingClientRect().bottom,
-        popupY: r.top,
       };
       if (open === 'focus') anchor.blur();
       return out;
     },
-    [n, open],
+    [n, open, block],
   );
 
 for (const [i, path] of paths.entries()) {
@@ -90,23 +93,36 @@ for (const [i, path] of paths.entries()) {
   const count = await page.locator('.ai-tag').count();
   const step = Math.max(1, Math.ceil(count / maxTags));
   for (let n = 0; n < count; n += step) {
-    for (const how of ['focus', 'hover']) {
+    for (const [how, block] of [
+      ['focus', 'center'],
+      ['hover', 'center'],
+      ['focus', 'start'],
+    ]) {
       if (how === 'hover') {
-        await page.locator('.ai-tag').nth(n).scrollIntoViewIfNeeded();
+        await page
+          .locator('.ai-tag')
+          .nth(n)
+          .evaluate((t, block) => {
+            t.scrollIntoView({ block, inline: 'nearest' });
+          }, block);
         await page.locator('.ai-tag').nth(n).hover();
       }
-      const m = await measureTag(n, how);
+      const m = await measureTag(n, how, block);
       if (how === 'hover') await page.mouse.move(0, 0);
       tagsChecked++;
-      const label = `${path} (AI tag #${n}, ${how})`;
+      const label = `${path} (AI tag #${n}, ${how}, scrolled to ${block})`;
       if (!m.shown) fail(`${label}: popup not shown`);
       else if (m.left < -0.5 || m.right > m.vw + 0.5)
         fail(
           `${label}: popup spans ${m.left.toFixed(0)}..${m.right.toFixed(0)}, viewport 0..${m.vw}`,
         );
-      else if (m.popupY < m.anchorY - 1)
+      else if (m.top < 0 || m.bottom > m.vh)
         fail(
-          `${label}: popup is not below its tag (${m.popupY.toFixed(0)} < ${m.anchorY.toFixed(0)})`,
+          `${label}: popup spans y ${m.top.toFixed(0)}..${m.bottom.toFixed(0)}, viewport 0..${m.vh}`,
+        );
+      else if (m.top - m.anchorY < -1 || m.top - m.anchorY > 40)
+        fail(
+          `${label}: popup is not directly below its tag (gap ${(m.top - m.anchorY).toFixed(0)}px)`,
         );
       if (m.over > 0) fail(`${label}: opening it makes the page ${m.over}px too wide`);
     }

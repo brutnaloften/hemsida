@@ -23,11 +23,11 @@ export function AiTag({ className }: Props) {
       >
         AI
       </span>
-      {/* Pinned to the viewport (16px gutters, centred, at most 20rem) so the anchor position never
-          matters; vertically it keeps its static position, just below the tag, because top stays auto. */}
+      {/* Under the tag, left-aligned; a script in Layout.astro shifts it sideways on open so it stays
+          inside the viewport (the tags are not hydrated, so this cannot be a React effect). */}
       <span
         aria-hidden="true"
-        className="pointer-events-none fixed inset-x-4 z-20 mx-auto mt-6 hidden max-w-xs border border-foreground bg-background p-2 text-xs font-normal leading-snug text-foreground shadow-md group-hover:block group-focus-within:block"
+        className="pointer-events-none absolute left-0 top-full z-20 mt-1 hidden w-64 max-w-[calc(100vw-2rem)] border border-foreground bg-background p-2 text-xs font-normal leading-snug text-foreground shadow-md group-hover:block group-focus-within:block"
       >
         {AI_TAG_WARNING}
       </span>
