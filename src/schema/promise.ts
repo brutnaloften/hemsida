@@ -307,6 +307,7 @@ const MIN_SEARCH_NOTE_LENGTH = 30;
 function checkVerdictEvidence(
   p: {
     type: string;
+    parties: string[];
     roles: Partial<Record<string, string>>;
     verdict: { value: string; reasoning: string; date: string };
     evidence: Evidence[];
@@ -333,14 +334,23 @@ function checkVerdictEvidence(
     : [];
   const anchored = riksdag.some((e) => e.kind === 'prop' || e.kind === 'bet');
   const budgetOutcome = anchored && tiered.some((e) => e.tier === 'outcome');
+  // An opposition-only budget promise is judged on the party's own act: a motion (its budget
+  // alternative) that proposes the money. `fulfilled` needs a motion judged to cover all of it.
+  const ownAct =
+    p.type === 'budget' &&
+    p.parties.length > 0 &&
+    p.parties.every((x) => p.roles[x] === 'opposition')
+      ? riksdag.filter((e) => e.kind === 'mot')
+      : [];
 
   if (
     value === 'in_progress' &&
     !riksdag.some((e) => PLANNING_KINDS.includes(e.kind)) &&
-    !(anchored && tiered.length > 0)
+    !(anchored && tiered.length > 0) &&
+    ownAct.length === 0
   ) {
     fail(
-      'verdict in_progress requires Riksdag evidence of kind dir, sou, ds or prop (agreement and budget evidence do not count; a budget promise may instead use a tiered budget entry plus a prop or bet)',
+      'verdict in_progress requires Riksdag evidence of kind dir, sou, ds or prop (agreement and budget evidence do not count; a budget promise may instead use a tiered budget entry plus a prop or bet, or, if opposition-only, a mot entry)',
     );
   }
   if (value === 'fulfilled' || value === 'partially_fulfilled') {
@@ -354,6 +364,9 @@ function checkVerdictEvidence(
       }
     } else if (
       !riksdag.some((e) => e.kind === 'sfs') &&
+      !(value === 'partially_fulfilled'
+        ? ownAct.length > 0
+        : ownAct.some((e) => e.relevance === 'full')) &&
       !(
         budgetOutcome &&
         // fulfilled needs an outcome entry that covers the whole promise, partial needs any outcome entry
@@ -364,7 +377,7 @@ function checkVerdictEvidence(
       // An issued law is enough, including one whose in-force date (the sfs date) is still ahead:
       // the government's part is done once the law is adopted. Agreement and budget evidence do not count.
       fail(
-        `verdict ${value} requires Riksdag evidence of kind sfs (an issued law, in force or not yet; agreement and budget evidence do not count), or, for a budget promise by a government or support party, an outcome-tier budget entry plus a prop or bet${value === 'fulfilled' ? ' (fulfilled: the outcome entry must have relevance full)' : ''}`,
+        `verdict ${value} requires Riksdag evidence of kind sfs (an issued law, in force or not yet; agreement and budget evidence do not count), or, for a budget promise by a government or support party, an outcome-tier budget entry plus a prop or bet, or, for an opposition-only budget promise, a mot entry (the party's own motion)${value === 'fulfilled' ? ' (fulfilled: the outcome or mot entry must have relevance full)' : ''}`,
       );
     }
   }

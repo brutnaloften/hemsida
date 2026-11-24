@@ -17,10 +17,17 @@
   "committee": "TU",
   "keywords": ["järnväg", "stambanor", "regionala järnvägar", "infrastruktur"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Centerpartiet föreslog i sin budgetmotion för 2025 att anslaget 1:2 Vidmakthållande av statens transportinfrastruktur skulle få 100 mn kr extra för upprustning och akuta satsningar på järnvägen, och att anslaget 1:7 Trafikavtal skulle öka med 200 mn kr för nattåg och regional trafik. Motionen innehåller ingen satsning på nya stambanor, och beloppet för upprustning är litet. Därför delvis uppfyllt. Riksdagen avslog motionens alternativa anslagsförslag (Bet. 2024/25:TU1), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "title": "Utgiftsområde 22 Kommunikationer",
       "date": "2022-12-14",
       "url": "https://data.riksdagen.se/dokument/HA01TU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC022151",
+      "designation": "Mot. 2024/25:2151",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC022151.html",
+      "relevance": "partial",
+      "note": "Centerpartiets budgetmotion för utgiftsområde 22, redovisad i Bet. 2024/25:TU1."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01TU1",
+      "designation": "Bet. 2024/25:TU1",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01TU1.html",
       "relevance": "partial",
       "note": null
     }

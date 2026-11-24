@@ -17,10 +17,17 @@
   "committee": "TU",
   "keywords": ["järnväg", "vägnät", "underhåll", "infrastruktur"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Vänsterpartiet föreslog i sin partimotion för 2025 att anslaget 1:2 Vidmakthållande av statens transportinfrastruktur skulle öka med 4 950 mn kr jämfört med regeringens förslag: 5 500 mn kr för att åtgärda underhållsskulden på stambanor och regionala banor och 900 mn kr riktat till vägunderhåll på landsbygden, men partiet avvisade samtidigt regeringens engångssatsning på 1 550 mn kr till vägunderhåll och besparingen på 100 mn kr (5 500 + 900 − 1 550 + 100 = 4 950). Partiet föreslog dessutom 4 700 mn kr mer till anslaget 1:1 Utveckling av statens transportinfrastruktur. Förslaget omfattar både väg och järnväg, men för vägarna ersätter det delvis regeringens egen satsning. Därför delvis uppfyllt. Riksdagen avslog motionens alternativa anslagsförslag (Bet. 2024/25:TU1), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "url": "https://data.riksdagen.se/dokument/HA01TU1.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC021911",
+      "designation": "Mot. 2024/25:1911",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC021911.html",
+      "relevance": "partial",
+      "note": "Vänsterpartiets budgetmotion för utgiftsområde 22, redovisad i Bet. 2024/25:TU1."
     },
     {
       "kind": "bet",

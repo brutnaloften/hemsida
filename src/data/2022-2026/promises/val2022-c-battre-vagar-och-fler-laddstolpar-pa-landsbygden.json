@@ -17,12 +17,29 @@
   "committee": "TU",
   "keywords": ["vägar", "trafiksäkerhet", "vägunderhåll", "laddstolpar"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Centerpartiet föreslog i sin budgetmotion för 2025 att anslaget 1:2 Vidmakthållande av statens transportinfrastruktur skulle öka med 500 mn kr för att återställa trasiga vägar och förstärka underhållet av enskilda vägar. Motionen innehåller inget om laddstolpar eller belysning. Därför delvis uppfyllt. Riksdagen avslog motionens alternativa anslagsförslag (Bet. 2024/25:TU1), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HC022151",
+      "designation": "Mot. 2024/25:2151",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC022151.html",
+      "relevance": "partial",
+      "note": "Centerpartiets budgetmotion för utgiftsområde 22, redovisad i Bet. 2024/25:TU1."
+    },
     {
       "kind": "bet",
       "dok_id": "HC01TU1",

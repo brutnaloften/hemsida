@@ -17,10 +17,38 @@
   "committee": "TU",
   "keywords": ["kollektivtrafik", "biljettpriser", "utbyggnad", "landsbygd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Vänsterpartiet föreslog i sin partimotion för 2025 4 000 mn kr i statligt investeringsstöd för utbyggd kollektivtrafik (inom en ökning av anslaget 1:1 med 4 700 mn kr) och ett nytt anslag, Sverigebiljett, på 5 000 mn kr för en gemensam regional kollektivtrafikbiljett för 450 kr i månaden. Det täcker både utbyggnad och lägre priser, som löftet säger. Riksdagen avslog motionens alternativa anslagsförslag (Bet. 2024/25:TU1), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HC021911",
+      "designation": "Mot. 2024/25:1911",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC021911.html",
+      "relevance": "full",
+      "note": "Vänsterpartiets budgetmotion för utgiftsområde 22, redovisad i Bet. 2024/25:TU1."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01TU1",
+      "designation": "Bet. 2024/25:TU1",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01TU1.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }
