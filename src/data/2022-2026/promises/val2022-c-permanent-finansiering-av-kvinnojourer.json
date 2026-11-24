@@ -17,10 +17,48 @@
   "committee": "SoU",
   "keywords": ["kvinnojour", "tjejjour", "skyddat boende", "finansiering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Centerpartiet föreslog mer pengar till kvinno- och tjejjourer och skyddade boenden i tre av fyra budgetmotioner för utgiftsområde 13, i anslag 3:1 Särskilda jämställdhetsåtgärder. För 2023 (Mot. 2022/23:2208) höjdes anslaget med 25 miljoner kronor till jourerna, och höjningen beräknades gälla varje år från 2024. För 2024 (Mot. 2023/24:2722) föreslogs återigen 25 miljoner kronor, beräknat för varje år från 2025. För 2026 (Mot. 2025/26:3738) föreslogs 50 miljoner kronor om året 2026 till 2028 till skyddade boenden, och 100 miljoner kronor om året till ett lämnaprogram för våldsutsatta. Samtidigt minskas samma anslag med 50 miljoner kronor om året 2026 till 2028 för att prioritera andra insatser mot hedersrelaterat våld, så att anslaget i nettot ökar med 115 miljoner kronor för 2026. Motionen för 2025 (Mot. 2024/25:2165) har däremot ingen höjning för jourerna: anslag 3:1 ökar med 20 miljoner kronor för ett exitprogram för unga i prostitution och för stödlinjen för ungas relationer. Partiet föreslår aldrig någon permanent finansiering i lag eller ett fast belopp utan upprepade årliga tillskott. I motionen för 2023 minskas dessutom anslag 3:3 Bidrag för kvinnors organisering med 20 miljoner kronor, eftersom regeringens motsvarande förstärkning avvisas. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:AU1, 2023/24:AU1, 2024/25:AU1 och 2025/26:AU1). Löftet är delvis uppfyllt som partiets eget förslag, inte som beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022208",
+      "designation": "Mot. 2022/23:2208",
+      "title": "Utgiftsområde 13 Jämställdhet och nyanlända invandrares etablering",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022208.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2023: 25 miljoner kronor mer till kvinno- och tjejjourer i anslag 3:1, beräknat varje år från 2024. Anslag 3:3 minskas med 20 miljoner kronor. Avslogs i Bet. 2022/23:AU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022722",
+      "designation": "Mot. 2023/24:2722",
+      "title": "Utgiftsområde 13 Integration och jämställdhet",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022722.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2024: 25 miljoner kronor mer till jourerna i anslag 3:1, beräknat varje år från 2025. Avslogs i Bet. 2023/24:AU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023738",
+      "designation": "Mot. 2025/26:3738",
+      "title": "Utgiftsområde 13 Integration och jämställdhet",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023738.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: 50 miljoner kronor om året till skyddade boenden och 100 miljoner kronor om året till lämnaprogram i anslag 3:1. Avslogs i Bet. 2025/26:AU1."
+    }
+  ]
 }

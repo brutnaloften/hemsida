@@ -17,10 +17,58 @@
   "committee": "NU",
   "keywords": ["grön industri", "investeringsprogram", "omställning", "statliga investeringar"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Vänsterpartiet har ett stort tioårigt klimatinvesteringsprogram i sina budgetmotioner (till exempel 46 miljarder kronor 2025 och 55 miljarder kronor 2026 i Mot. 2024/25:1924), men den del som riktas mot industrin är liten. I utgiftsområde 24 Näringsliv föreslår partiet ett nytt anslag, Program för grön omställning inom pappersindustrin, på 150 miljoner kronor för 2023 (Mot. 2022/23:1276) och 250 miljoner kronor om året för 2024 till 2026 (Mot. 2023/24:2325, 2024/25:1914 och 2025/26:3177), inom ett treårigt program. I utgiftsområde 21 Energi föreslår partiet pengar till elnätet som industrin behöver för att elektrifieras: 2 miljarder kronor om året 2024 och 2025 till stärkt elöverföringskapacitet (Mot. 2023/24:2337 och 2024/25:1912), men tabellen för 2026 (Mot. 2025/26:3174) har ingen sådan post. Klimatklivet i programmet är ett allmänt stöd till klimatåtgärder. Något motsvarande program för stål, kemi, cement eller annan tung industri finns inte i utgiftsområde 21 eller 24 eller i investeringstabellen för 2025. Partiet minskar anslag 1:24 Elstöd med 2 400 miljoner kronor 2023, och 2026 minskas energistödet med 1 000 miljoner kronor, men inget av detta rör industrins omställning. Löftet om ett massivt program för den gröna industrin är därför bara delvis täckt. Riksdagen avslog alla fyra motionerna för utgiftsområde 24 (Bet. 2022/23:NU1, 2023/24:NU1, 2024/25:NU1 och 2025/26:NU1). Löftet är delvis uppfyllt som partiets eget förslag, inte som beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA021276",
+      "designation": "Mot. 2022/23:1276",
+      "title": "Utgiftsområde 24 Näringsliv",
+      "date": "2022-11-22",
+      "url": "https://data.riksdagen.se/dokument/HA021276.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2023: nytt anslag på 150 miljoner kronor för grön omställning inom pappersindustrin. Avslogs i Bet. 2022/23:NU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022325",
+      "designation": "Mot. 2023/24:2325",
+      "title": "Utgiftsområde 24 Näringsliv",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022325.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2024: 250 miljoner kronor till grön omställning inom pappersindustrin. Avslogs i Bet. 2023/24:NU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC021914",
+      "designation": "Mot. 2024/25:1914",
+      "title": "Utgiftsområde 24 Näringsliv",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC021914.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025: 250 miljoner kronor till grön omställning inom pappersindustrin. Avslogs i Bet. 2024/25:NU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023177",
+      "designation": "Mot. 2025/26:3177",
+      "title": "Utgiftsområde 24 Näringsliv",
+      "date": "2025-10-06",
+      "url": "https://data.riksdagen.se/dokument/HD023177.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: 250 miljoner kronor till grön omställning inom pappersindustrin. Avslogs i Bet. 2025/26:NU1."
+    }
+  ]
 }

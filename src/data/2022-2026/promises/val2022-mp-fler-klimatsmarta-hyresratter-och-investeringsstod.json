@@ -17,10 +17,58 @@
   "committee": "CU",
   "keywords": ["hyresrätter", "investeringsstöd", "bostadsbyggande"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "reasoning": "Miljöpartiet föreslog att investeringsstödet för hyresbostäder och bostäder för studerande (anslag 1:8) skulle återinföras och utökas i tre av fyra budgetmotioner för utgiftsområde 18: 580 miljoner kronor mer än regeringen för 2023 (Mot. 2022/23:2094), 1 miljard kronor för 2024 (Mot. 2023/24:2702) och 1 miljard kronor om året 2025 till 2027 (Mot. 2024/25:3059), med krav på byggnadernas klimatpåverkan under livscykeln och med fokus på klimatsmarta hyresrätter med rimliga hyror. Dessutom föreslogs mer pengar till energieffektivisering av flerbostadshus (1,5 miljarder kronor 2023, 3,2 miljarder kronor 2024, 5,6 miljarder kronor 2025 och 6 miljarder kronor 2026) och ett riktat investeringsstöd för grönt samhällsbygge på 3 miljarder kronor 2024 och 2 miljarder kronor 2025 och 2026. För 2026 (Mot. 2025/26:3514) ingår ingen ökning av anslag 1:8, och stödet ersätts av statliga byggkrediter för hyresrätter och studentbostäder (50 miljoner kronor för handläggningen) och 2 miljarder kronor till grönt samhällsbygge. Inget anslag i utgiftsområdets tabeller minskas något år, så alla förslag går i löftets riktning. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:CU1, 2023/24:CU1, 2024/25:CU1 och 2025/26:CU1). Löftet är uppfyllt som partiets eget förslag, inte som beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022094",
+      "designation": "Mot. 2022/23:2094",
+      "title": "Utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022094.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2023: anslag 1:8 höjs med 580 miljoner kronor, energieffektivisering av flerbostadshus med 1,5 miljarder kronor. Avslogs i Bet. 2022/23:CU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022702",
+      "designation": "Mot. 2023/24:2702",
+      "title": "Utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022702.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2024: anslag 1:8 höjs med 1 miljard kronor, plus 3 miljarder kronor till grönt samhällsbygge. Avslogs i Bet. 2023/24:CU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023059",
+      "designation": "Mot. 2024/25:3059",
+      "title": "Utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023059.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2025: anslag 1:8 höjs med 1 miljard kronor om året 2025 till 2027. Avslogs i Bet. 2024/25:CU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023514",
+      "designation": "Mot. 2025/26:3514",
+      "title": "Utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023514.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: statliga byggkrediter för hyresrätter och studentbostäder i stället för höjt anslag 1:8. Avslogs i Bet. 2025/26:CU1."
+    }
+  ]
 }

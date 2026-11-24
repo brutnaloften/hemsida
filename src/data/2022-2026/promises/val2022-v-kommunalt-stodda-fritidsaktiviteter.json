@@ -17,21 +17,48 @@
   "committee": "KrU",
   "keywords": ["fritidsaktiviteter", "fritidsverksamhet", "brottsprevention", "barn och unga"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Vänsterpartiet föreslog pengar till barns och ungas fritid i alla fyra budgetmotioner för utgiftsområde 17, men inget som går via kommunerna och bara delvis kopplat till brottsförebyggande arbete. För 2023 (Mot. 2022/23:1274) föreslogs 40 miljoner kronor mer i anslag 13:1 Stöd till idrotten för en avgiftsfri idrottsskola för alla barn mellan 6 och 12 år. För 2024 (Mot. 2023/24:2354), 2025 (Mot. 2024/25:1936) och 2026 (Mot. 2025/26:3170) höjdes samma anslag med 425 miljoner kronor om året, och bidraget till ungdomsverksamhet höjdes med 10 miljoner kronor 2025 och 60 miljoner kronor 2026. Från 2025 ingår trygghetszoner, en satsning på 500 miljoner kronor som fördelas på fyra utgiftsområden, med 50 miljoner kronor i anslag 12:1 Myndigheten för ungdoms- och civilsamhällesfrågor för 2025 och 50 miljoner kronor i anslag 2:6 Stöd till främjande av en aktiv och meningsfull fritid för barn och unga, i utgiftsområde 9, för både 2025 och 2026 (Mot. 2024/25:1920 och 2025/26:3164). Inget anslag för fritid minskas. Bidragen går till idrotten, föreningar och statliga anslag, inte till kommunalt stödda aktiviteter, och bara trygghetszonerna motiveras med att förebygga brott. Löftet är därför delvis täckt. Riksdagen avslog motionerna (Bet. 2022/23:KrU1, 2023/24:KrU1, 2024/25:KrU1 och 2025/26:KrU1 samt 2024/25:SoU1 och 2025/26:SoU1). Löftet är delvis uppfyllt som partiets eget förslag, inte som beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
-      "kind": "bet",
-      "dok_id": "HC01SoU29",
-      "designation": "Bet. 2024/25:SoU29",
-      "title": "Ett fritidskort för barn och unga – en aktiv och meningsfull fritid i gemenskap med andra",
-      "date": "2025-06-11",
-      "url": "https://data.riksdagen.se/dokument/HC01SoU29.html",
+      "kind": "mot",
+      "dok_id": "HA021274",
+      "designation": "Mot. 2022/23:1274",
+      "title": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "date": "2022-11-22",
+      "url": "https://data.riksdagen.se/dokument/HA021274.html",
       "relevance": "partial",
-      "note": null
+      "note": "Budgetmotion för 2023, utgiftsområde 17: 40 miljoner kronor till en avgiftsfri idrottsskola för barn 6 till 12 år i anslag 13:1. Avslogs i Bet. 2022/23:KrU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC021920",
+      "designation": "Mot. 2024/25:1920",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC021920.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025, utgiftsområde 9: 50 miljoner kronor i anslag 2:6 (aktiv och meningsfull fritid) som del av trygghetszoner. Avslogs i Bet. 2024/25:SoU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023164",
+      "designation": "Mot. 2025/26:3164",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2025-10-06",
+      "url": "https://data.riksdagen.se/dokument/HD023164.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026, utgiftsområde 9: 50 miljoner kronor i anslag 2:6 som del av trygghetszoner. Avslogs i Bet. 2025/26:SoU1."
     }
   ]
 }

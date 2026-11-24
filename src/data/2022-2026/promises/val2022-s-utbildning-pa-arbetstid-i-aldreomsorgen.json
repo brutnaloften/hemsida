@@ -17,10 +17,38 @@
   "committee": "SoU",
   "keywords": ["äldreomsorgslyftet", "utbildning på arbetstid", "undersköterskor"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Socialdemokraterna ville förlänga Äldreomsorgslyftet, där personal utbildas på betald arbetstid, men det står bara i motionstexten och inte i någon anslagstabell. I budgetmotionen för 2023 (Mot. 2022/23:2061) aviseras att partiet förlänger lyftet mandatperioden ut och avsätter 1,7 miljarder kronor om året från 2024, eftersom regeringen då sagt att satsningen ska avslutas efter 2023. Motionens tabell för 2023 har ingen ändring av anslag 4:5, bara 500 miljoner kronor mer till brottsförebyggande arbete (anslag 4:7) och avvisade satsningar på fritidskort och äldres ensamhet. I budgetmotionerna för 2024 och 2025 (Mot. 2023/24:2617 och 2024/25:3022) välkomnar partiet att regeringen förlängt lyftet till och med 2026, och tabellerna har ingen post för det. För 2026 (Mot. 2025/26:3645) vill partiet göra lyftet permanent och föreslår 1 950 miljoner kronor för mer personal i äldreomsorgen, men har inget belopp för just utbildning. Förslaget omfattar alltså ett års aviserat belopp och därefter stöd för regeringens egen satsning. Riksdagen avslog motionerna (Bet. 2022/23:SoU1, 2023/24:SoU1, 2024/25:SoU1 och 2025/26:SoU1). Löftet är delvis uppfyllt som partiets eget förslag, inte som beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022061",
+      "designation": "Mot. 2022/23:2061",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022061.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2023: aviserar 1,7 miljarder kronor om året från 2024 för att förlänga Äldreomsorgslyftet, men ingen ändring av anslag 4:5 i tabellen. Avslogs i Bet. 2022/23:SoU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023645",
+      "designation": "Mot. 2025/26:3645",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023645.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: vill göra Äldreomsorgslyftet permanent och föreslår 1 950 miljoner kronor för mer personal i äldreomsorgen. Avslogs i Bet. 2025/26:SoU1."
+    }
+  ]
 }
