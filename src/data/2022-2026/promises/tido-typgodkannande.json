@@ -32,9 +32,21 @@
   ],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i mars 2026 att förhandsbesked införs i prövningen av kärntekniska anläggningar, och bedömer det som mer ändamålsenligt än typgodkännande. Uppdrag att ta fram ett snabbspår för typgodkännande ges i regeringsbeslut som ligger utanför det dokumentbestånd sidan bygger på. Löftet kan därför inte bedömas.",
+    "date": "2026-11-24",
     "history": []
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03171",
+      "designation": "Prop. 2025/26:171",
+      "title": "En mer ändamålsenlig prövning av kärntekniska anläggningar",
+      "date": "2026-03-10",
+      "url": "https://data.riksdagen.se/dokument/HD03171.html",
+      "relevance": "contradicts",
+      "note": "Föreslår förhandsbesked i prövningen av kärntekniska anläggningar i stället för typgodkännande."
+    }
+  ]
 }

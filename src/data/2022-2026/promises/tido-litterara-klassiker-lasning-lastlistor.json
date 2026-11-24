@@ -20,10 +20,17 @@
   "committee": "UbU",
   "keywords": ["läsning", "litterära klassiker", "läslistor", "läsförståelse", "kursplaner"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Skolverket och Kulturrådet redovisade den 2 december 2024 ett regeringsuppdrag att ta fram läslistor som stöd för lärares val av litteratur, vilket ett betänkande från 2025 beskriver. Läslistorna gäller en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-10-14"
+      }
+    ]
   },
   "evidence": [
     {
@@ -45,6 +52,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01UbU1.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB319",
+      "designation": "SOU 2025:19",
+      "title": "Kunskap för alla",
+      "date": "2025-02-26",
+      "url": "https://data.riksdagen.se/dokument/HDB319.html",
+      "relevance": "partial",
+      "note": "Redovisar att Skolverket och Kulturrådet lämnade läslistor den 2 december 2024."
     }
   ]
 }

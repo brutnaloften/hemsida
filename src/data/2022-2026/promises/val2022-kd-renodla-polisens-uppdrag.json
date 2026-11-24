@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["polisens uppdrag", "brottsbekämpning", "polisen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i augusti 2024 om kommittédirektiv till en utredning om tillsyn av tivolin och en översyn av vissa uppgifter som utförs av Polismyndigheten, med hänvisning till den sedan länge gällande ambitionen att renodla polisens verksamhet. I april 2025 föreslog ett betänkande att tillsynen över tivolin flyttas till Konsumentverket, och i oktober 2025 föreslog ett annat att flera av polisens uppgifter flyttas till andra myndigheter. Förslagen gäller en del av polisens uppgifter, och de täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB175",
+      "designation": "Dir. 2024:75",
+      "title": "En stärkt tillsyn av tivolin och en översyn av vissa uppgifter som utförs av Polismyndigheten",
+      "date": "2024-08-29",
+      "url": "https://data.riksdagen.se/dokument/HCB175.html",
+      "relevance": "partial",
+      "note": "Utredningen utgår från den sedan länge gällande ambitionen att renodla Polismyndighetens verksamhet."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB340",
+      "designation": "SOU 2025:40",
+      "title": "Säkrare tivoli",
+      "date": "2025-04-10",
+      "url": "https://data.riksdagen.se/dokument/HDB340.html",
+      "relevance": "partial",
+      "note": "Föreslår att tillsynen över tivolianordningar flyttas till Konsumentverket."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3102",
+      "designation": "SOU 2025:102",
+      "title": "Bättre ansvarsfördelning",
+      "date": "2025-10-13",
+      "url": "https://data.riksdagen.se/dokument/HDB3102.html",
+      "relevance": "partial",
+      "note": "Föreslår att flera av Polismyndighetens uppgifter flyttas till andra myndigheter."
     }
   ]
 }

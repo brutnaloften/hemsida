@@ -18,9 +18,21 @@
   "keywords": ["regioner", "statligt huvudmannaskap", "vårdansvar"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
+    "assessedBy": "ai",
+    "reasoning": "Löftet är ett besked om att vårdansvaret ska ligga kvar hos regionerna. Regeringen beslutade i juni 2023 om en utredning av ett helt eller delvis statligt huvudmannaskap för hälso- och sjukvården, vilket går åt motsatt håll mot löftet. Ett utredningsdirektiv avgör inte frågan, och därför kan löftet bedömas först när riksdagen har beslutat.",
+    "date": "2026-11-24",
     "history": []
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB173",
+      "designation": "Dir. 2023:73",
+      "title": "Ett helt eller delvis statligt huvudmannaskap för hälso- och sjukvården",
+      "date": "2023-06-01",
+      "url": "https://data.riksdagen.se/dokument/HBB173.html",
+      "relevance": "contradicts",
+      "note": null
+    }
+  ]
 }

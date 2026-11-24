@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["hedersförtryck", "kunskap", "yrkesverksamma", "utbildning", "hedersrelaterat våld"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i mars 2025 om kommittédirektiv till en utredning om ökade insatser mot hedersrelaterat våld och förtryck i förskolan, skolan och fritidshemmet. Direktivet betonar att personalen behöver kunskap och kompetens för att förebygga och upptäcka hedersförtryck. Direktivet gäller personal i skolan och täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,16 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet nämner effektivare myndighetsarbete och metodstöd till lärare om heder, inte generellt ökad kunskap hos yrkesverksamma."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB131",
+      "designation": "Dir. 2025:31",
+      "title": "Ökade insatser för att motverka hedersrelaterat våld och förtryck i förskolan, skolan och fritidshemmet",
+      "date": "2025-03-20",
+      "url": "https://data.riksdagen.se/dokument/HDB131.html",
+      "relevance": "partial",
+      "note": "Utredaren ska föreslå ökat stöd till skolpersonal för att förebygga och upptäcka hedersförtryck, med betoning på personalens kunskap och kompetens."
     }
   ]
 }
