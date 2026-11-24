@@ -11,9 +11,46 @@
     "keyword:elmarknad",
     "keyword:svenska kraftnät",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "widen:elprisområden|elområden|elprisområdenas utformning"
   ],
   "candidates": [
+    {
+      "dok_id": "HB01NU9",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU9",
+      "datum": "2024-03-26",
+      "titel": "Elmarknadsfrågor",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU9.html",
+      "found_by": ["widen:elprisområden|elområden|elprisområdenas utformning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HDB13",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "3",
+      "datum": "2025-01-23",
+      "titel": "Tilläggsdirektiv till Miljömålsberedningen (M 2010:04) om utformningen av svenska etappmål till 2030",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB13.html",
+      "found_by": ["widen:elprisområden|elområden|elprisområdenas utformning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HCB386",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "86",
+      "datum": "2024-12-18",
+      "titel": "Utformning av och alternativ för en ny kollektivavtalad arbetslöshetsförsäkring",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB386.html",
+      "found_by": ["widen:elprisområden|elområden|elprisområdenas utformning"],
+      "score": 10
+    },
     {
       "dok_id": "HC01NU11",
       "doktyp": "bet",

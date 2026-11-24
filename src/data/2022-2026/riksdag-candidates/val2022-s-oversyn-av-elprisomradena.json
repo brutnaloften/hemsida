@@ -11,9 +11,58 @@
     "keyword:elpriser",
     "keyword:översyn",
     "all-keywords",
-    "committee:NU"
+    "committee:NU",
+    "widen:elprisområden|indelningen av elområden|elområden"
   ],
   "candidates": [
+    {
+      "dok_id": "HEB183",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "83",
+      "datum": "2026-07-23",
+      "titel": "Framtidens elnätsavgifter och indelning på två nivåer av elnäten i Sverige",
+      "organ": "KN-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB183.html",
+      "found_by": ["widen:elprisområden|indelningen av elområden|elområden"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01KU42",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KU42",
+      "datum": "2026-06-10",
+      "titel": "Indelning i utgiftsområden",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HD01KU42.html",
+      "found_by": ["widen:elprisområden|indelningen av elområden|elområden"],
+      "score": 10
+    },
+    {
+      "dok_id": "HC01KU22",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "KU22",
+      "datum": "2025-06-11",
+      "titel": "Indelning i utgiftsområden",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HC01KU22.html",
+      "found_by": ["widen:elprisområden|indelningen av elområden|elområden"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01KU33",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KU33",
+      "datum": "2023-06-09",
+      "titel": "Indelning i utgiftsområden",
+      "organ": "KU",
+      "url": "https://data.riksdagen.se/dokument/HA01KU33.html",
+      "found_by": ["widen:elprisområden|indelningen av elområden|elområden"],
+      "score": 10
+    },
     {
       "dok_id": "HEB1107",
       "doktyp": "dir",

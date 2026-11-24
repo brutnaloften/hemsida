@@ -28,9 +28,106 @@
     "score:tido-corpus-claude-v1-shard-15-of-20",
     "score:tido-corpus-claude-v1-shard-17-of-20",
     "score:tido-corpus-claude-v1-shard-19-of-20",
-    "score:tido-corpus-claude-v1-shard-20-of-20"
+    "score:tido-corpus-claude-v1-shard-20-of-20",
+    "widen:vårdplatser|vårdplatsbrist|platser i sjukvården|nationell plan vård"
   ],
   "candidates": [
+    {
+      "dok_id": "HEB138",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "38",
+      "datum": "2026-05-28",
+      "titel": "Effektiv nationell upphandling av specialiserad hälso- och sjukvård i privat regi",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB138.html",
+      "found_by": ["widen:vårdplatser|vårdplatsbrist|platser i sjukvården|nationell plan vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB192",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "92",
+      "datum": "2026-08-13",
+      "titel": "Nationella principer för utbud av hälso- och sjukvård i hela landet",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB192.html",
+      "found_by": ["widen:vårdplatser|vårdplatsbrist|platser i sjukvården|nationell plan vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB36",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "6",
+      "datum": "2026-01-20",
+      "titel": "En nationell digital infrastruktur i hälso- och sjukvården ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB36.html",
+      "found_by": ["widen:vårdplatser|vårdplatsbrist|platser i sjukvården|nationell plan vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB1177",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "177",
+      "datum": "2023-12-14",
+      "titel": "Samordnare för en nationell digital infrastruktur i hälso- och sjukvården",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1177.html",
+      "found_by": ["widen:vårdplatser|vårdplatsbrist|platser i sjukvården|nationell plan vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01KrU9",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KrU9",
+      "datum": "2026-05-27",
+      "titel": "Attraktiva platser – bredare genomslag för politiken för arkitektur, form och design",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HD01KrU9.html",
+      "found_by": ["widen:vårdplatser|vårdplatsbrist|platser i sjukvården|nationell plan vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01SoU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU11",
+      "datum": "2023-04-04",
+      "titel": "Vissa frågor om hälso- och sjukvårdens försörjningsberedskap",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU11.html",
+      "found_by": ["widen:vårdplatser|vårdplatsbrist|platser i sjukvården|nationell plan vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01SoU24",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU24",
+      "datum": "2026-01-29",
+      "titel": "Specialiseringstjänstgöring för sjukhusfysiker",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU24.html",
+      "found_by": ["widen:vårdplatser|vårdplatsbrist|platser i sjukvården|nationell plan vård"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01NU24",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU24",
+      "datum": "2026-06-05",
+      "titel": "Ny kärnkraft i Sverige – fler möjliga platser vid kusten",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU24.html",
+      "found_by": ["widen:vårdplatser|vårdplatsbrist|platser i sjukvården|nationell plan vård"],
+      "score": 10
+    },
     {
       "dok_id": "HD01SoU16",
       "doktyp": "bet",
