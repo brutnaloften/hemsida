@@ -17,10 +17,58 @@
   "committee": "UbU",
   "keywords": ["utsatta skolor", "förskola", "resurser", "likvärdighet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Socialdemokraterna föreslog i alla fyra budgetmotioner för utgiftsområde 16 mer pengar till statsbidraget som är viktat efter skolornas behov (likvärdighetsbidraget, från 2024 kallat kunskapsbidraget): 1,0 miljard kronor för 2023 (Mot. 2022/23:2130), 700 miljoner för 2024 (Mot. 2023/24:2687), 3,0 miljarder för 2025 (Mot. 2024/25:3024) och 3,695 miljarder för 2026 (Mot. 2025/26:3810). För 2024 föreslogs dessutom 35 miljoner mer än regeringen till lärare i skolor med socioekonomiska utmaningar. Förskolan fick 230 miljoner mer för 2024, 330 miljoner för 2025 och 600 miljoner för 2026 på anslaget för maxtaxa och kvalitetshöjande åtgärder i förskolan, men medlen riktades uttryckligen mot de förskolor som behöver det mest först i 2026 års motion (de 200 förskolor med störst behov). För 2023 minskades anslaget Utveckling av skolväsendet med 899,5 miljoner kronor när partiet avvisade en del riktade statsbidrag och ville ge generella bidrag i stället; i de övriga tabellerna finns inga minskade anslag. Riksdagen avslog motionerna (Bet. 2022/23:UbU1, 2023/24:UbU1, 2024/25:UbU1 och 2025/26:UbU1). Därför delvis uppfyllt: skolorna får tydligt mer resurser, men för förskolor med störst behov syns riktade pengar bara 2026.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022130",
+      "designation": "Mot. 2022/23:2130",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022130.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2023: 1,0 miljard kronor mer till likvärdighetsbidraget, 899,5 miljoner mindre till riktade statsbidrag. Avslogs i Bet. 2022/23:UbU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022687",
+      "designation": "Mot. 2023/24:2687",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022687.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2024: 700 miljoner kronor mer till kunskapsbidraget, 35 miljoner mer till lärare i skolor med socioekonomiska utmaningar och 230 miljoner till förskolan. Avslogs i Bet. 2023/24:UbU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023024",
+      "designation": "Mot. 2024/25:3024",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023024.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025: 3,0 miljarder kronor mer till kunskapsbidraget och 330 miljoner till förskolan. Avslogs i Bet. 2024/25:UbU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023810",
+      "designation": "Mot. 2025/26:3810",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023810.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: 3,695 miljarder kronor mer till kunskapsbidraget och 600 miljoner till förskolor, med fokus på de 200 som behöver det mest. Avslogs i Bet. 2025/26:UbU1."
+    }
+  ]
 }

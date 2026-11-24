@@ -17,10 +17,48 @@
   "committee": "MJU",
   "keywords": ["klimatanpassning", "extremväder", "skyfall", "kommuner"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Socialdemokraterna föreslog i sina budgetmotioner för utgiftsområde 20 mer pengar till klimatanpassning för 2024, 2025 och 2026, men inte för 2023 och inte särskilt till kommunerna. För 2023 (Mot. 2022/23:2073) lämnades anslaget Klimatanpassning oförändrat. För 2024 (Mot. 2023/24:2629), 2025 (Mot. 2024/25:3109) och 2026 (Mot. 2025/26:3732) föreslogs 100 miljoner kronor mer per år på anslaget, till MSB och länsstyrelserna för att genomföra klimatanpassningsåtgärder. Det är en liten summa jämfört med löftet om fortsatta stora investeringar, och kommunerna nämns inte som mottagare. Samtidigt minskades anslaget Sanering och återställning av förorenade områden, med 340 miljoner kronor för 2023 och 250 miljoner för 2024 och 2025; för 2026 finns ingen sådan indragning i tabellen. Andra utgiftsområden har inte granskats. Riksdagen avslog motionerna (Bet. 2022/23:MJU1, 2023/24:MJU1, 2024/25:MJU1 och 2025/26:MJU1). Därför delvis uppfyllt som partiets eget förslag.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HB022629",
+      "designation": "Mot. 2023/24:2629",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022629.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2024: 100 miljoner kronor mer på anslaget Klimatanpassning, samtidigt 250 miljoner kronor mindre till sanering av förorenade områden. Avslogs i Bet. 2023/24:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023109",
+      "designation": "Mot. 2024/25:3109",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023109.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025: 100 miljoner kronor mer på anslaget Klimatanpassning, samtidigt 250 miljoner kronor mindre till sanering av förorenade områden. Avslogs i Bet. 2024/25:MJU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023732",
+      "designation": "Mot. 2025/26:3732",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023732.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: 100 miljoner kronor mer på anslaget Klimatanpassning. Avslogs i Bet. 2025/26:MJU1."
+    }
+  ]
 }

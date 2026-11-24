@@ -17,10 +17,58 @@
   "committee": "MJU",
   "keywords": ["friluftsliv", "friluftsorganisationer", "anslag"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "reasoning": "Miljöpartiet föreslog i alla fyra budgetmotioner för utgiftsområde 17 mer pengar till anslaget Stöd till friluftsorganisationer än regeringen: 50 miljoner kronor för 2023 (Mot. 2022/23:2097, regeringen 97,8 miljoner), 100 miljoner för 2024 (Mot. 2023/24:2676, regeringen 97,8 miljoner), 132 miljoner för 2025 (Mot. 2024/25:3033, regeringen 104,8 miljoner) och 100 miljoner för 2026 (Mot. 2025/26:3520, regeringen 109,8 miljoner). I tabellerna för 2023 till 2025 minskas inga anslag. För 2026 minskas anslaget Skapande skola med 226 miljoner kronor, som partiet vill ersätta med en kulturgaranti i skolan på ett annat anslag, vilket inte rör friluftsstödet. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:KrU1, 2023/24:KrU1, 2024/25:KrU1 och 2025/26:KrU1). Löftet är uppfyllt som partiets eget förslag, inte som beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022097",
+      "designation": "Mot. 2022/23:2097",
+      "title": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022097.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2023: stödet till friluftsorganisationer höjs med 50 miljoner kronor. Avslogs i Bet. 2022/23:KrU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022676",
+      "designation": "Mot. 2023/24:2676",
+      "title": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022676.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2024: stödet till friluftsorganisationer höjs med 100 miljoner kronor. Avslogs i Bet. 2023/24:KrU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023033",
+      "designation": "Mot. 2024/25:3033",
+      "title": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023033.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2025: stödet till friluftsorganisationer höjs med 132 miljoner kronor. Avslogs i Bet. 2024/25:KrU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023520",
+      "designation": "Mot. 2025/26:3520",
+      "title": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023520.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2026: stödet till friluftsorganisationer höjs med 100 miljoner kronor. Avslogs i Bet. 2025/26:KrU1."
+    }
+  ]
 }
