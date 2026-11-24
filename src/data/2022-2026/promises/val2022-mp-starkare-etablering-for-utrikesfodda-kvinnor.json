@@ -17,10 +17,38 @@
   "committee": "AU",
   "keywords": ["SFI", "utrikesfödda kvinnor", "etablering", "arbetsförmedlingen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i mars 2023 om tilläggsdirektiv till utredningen om en förbättrad arbetsmarknadsetablering för utrikes födda kvinnor, och utredningen lämnade i maj 2023 betänkandet Etablering för fler med förslag på åtgärder för att påskynda utrikes födda kvinnors etablering på arbetsmarknaden. Dokumenten gäller etablering på arbetsmarknaden och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB142",
+      "designation": "Dir. 2023:42",
+      "title": "Tilläggsdirektiv till Utredningen om en förbättrad arbetsmarknadsetablering för utrikes födda kvinnor (Ju 2022:05)",
+      "date": "2023-03-30",
+      "url": "https://data.riksdagen.se/dokument/HBB142.html",
+      "relevance": "partial",
+      "note": "Tilläggsdirektiv som utvidgade och förlängde utredningen om utrikes födda kvinnors arbetsmarknadsetablering."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB324",
+      "designation": "SOU 2023:24",
+      "title": "Etablering för fler Jämställda möjligheter till integration",
+      "date": "2023-05-31",
+      "url": "https://data.riksdagen.se/dokument/HBB324.html",
+      "relevance": "partial",
+      "note": "Betänkandet Etablering för fler: förslag på åtgärder som skyndar på utrikes födda kvinnors etablering på arbetsmarknaden."
+    }
+  ]
 }

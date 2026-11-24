@@ -17,10 +17,48 @@
   "committee": "AU",
   "keywords": ["arbetslivskriminalitet", "arbetsmiljö", "upphandling", "svartarbete"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i februari 2024 om tilläggsdirektiv till Delegationen mot arbetslivskriminalitet. Delegationen lämnade i februari 2024 delbetänkandet om myndighetssamverkan och en gemensam tipsfunktion och i mars 2025 slutbetänkandet om upplägg, verktyg och åtgärder mot arbetslivskriminalitet. Dokumenten gäller arbetet mot arbetslivskriminalitet och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB126",
+      "designation": "Dir. 2024:26",
+      "title": "Tilläggsdirektiv till Delegationen mot arbetslivskriminalitet (A 2021:04)",
+      "date": "2024-02-22",
+      "url": "https://data.riksdagen.se/dokument/HCB126.html",
+      "relevance": "partial",
+      "note": "Tilläggsdirektiv till Delegationen mot arbetslivskriminalitet."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB314",
+      "designation": "SOU 2024:14",
+      "title": "Arbetslivskriminalitet",
+      "date": "2024-02-21",
+      "url": "https://data.riksdagen.se/dokument/HCB314.html",
+      "relevance": "partial",
+      "note": "Delegationens delbetänkande om myndighetssamverkan och en gemensam tipsfunktion mot arbetslivskriminalitet."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB325",
+      "designation": "SOU 2025:25",
+      "title": "Arbetslivskriminalitet",
+      "date": "2025-03-03",
+      "url": "https://data.riksdagen.se/dokument/HDB325.html",
+      "relevance": "partial",
+      "note": "Delegationens slutbetänkande om upplägg, verktyg och åtgärder mot arbetslivskriminalitet."
+    }
+  ]
 }

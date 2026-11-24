@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["cyberattacker", "spionage", "säkerhetskänslig verksamhet", "främmande makt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2026 fram en proposition med lagändringar för ett stärkt nationellt cybersäkerhetscenter, där Försvarets radioanstalt och de samverkande myndigheterna ska kunna utbyta uppgifter för att stärka cybersäkerheten i samhället. Lagändringarna föreslås träda i kraft i juli 2026. Förslagen gäller statens arbete mot cyberattacker och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -50,6 +57,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU29.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03214",
+      "designation": "Prop. 2025/26:214",
+      "title": "Lagändringar för ett stärkt nationellt cybersäkerhetscenter",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HD03214.html",
+      "relevance": "partial",
+      "note": "Föreslår regler om uppgiftsutbyte mellan myndigheter inom det nationella cybersäkerhetscentret; lagändringarna föreslås träda i kraft den 15 juli 2026."
     }
   ]
 }

@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["livsmedelsstrategi", "jordbruk", "självförsörjning", "livsmedel"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Enligt ett kommittédirektiv från juli 2026 beslutade regeringen i mars 2025 om Livsmedelsstrategin 2.0. I juli 2026 gav regeringen en särskild utredare i uppdrag att föreslå konkreta och uppföljningsbara mål och åtgärder för den svenska livsmedelsproduktionen 2031–2045, som underlag för en tillväxtagenda för livsmedelsproduktionen. Direktivet bygger vidare på livsmedelsstrategin och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB177",
+      "designation": "Dir. 2026:77",
+      "title": "Tillväxtagenda för en hållbar och robust svensk livsmedelsproduktion 2045",
+      "date": "2026-07-21",
+      "url": "https://data.riksdagen.se/dokument/HEB177.html",
+      "relevance": "partial",
+      "note": "Utredaren ska föreslå mål och åtgärder för livsmedelsproduktionen 2031–2045 och bygger på Livsmedelsstrategin 2.0, som regeringen beslutade i mars 2025."
     }
   ]
 }

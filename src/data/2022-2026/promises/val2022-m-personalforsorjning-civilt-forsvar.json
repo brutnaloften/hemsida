@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["personalförsörjning", "civilt försvar", "totalförsvarsplikt", "beredskap"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i juli 2023 om kommittédirektiv till en utredning om en långsiktigt hållbar personalförsörjning av det civila försvaret, och utredningen lämnade i januari 2025 betänkandet Plikten kallar. I juli 2026 lade regeringen fram en proposition med bland annat tydligare regler om krigsplacering och krigsorganisation i det civila försvaret och om civilplikt. Dokumenten gäller det civila försvarets personalförsörjning och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1116",
+      "designation": "Dir. 2023:116",
+      "title": "En långsiktigt hållbar personalförsörjning av det civila försvaret",
+      "date": "2023-07-27",
+      "url": "https://data.riksdagen.se/dokument/HBB1116.html",
+      "relevance": "partial",
+      "note": "Utredaren ska analysera och lämna förslag om hur personalbehoven inom det civila försvaret kan tryggas."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB36",
+      "designation": "SOU 2025:6",
+      "title": "Plikten kallar!",
+      "date": "2025-01-24",
+      "url": "https://data.riksdagen.se/dokument/HDB36.html",
+      "relevance": "partial",
+      "note": "Betänkandet Plikten kallar! med förslag om en modern personalförsörjning av det civila försvaret."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03302",
+      "designation": "Prop. 2025/26:302",
+      "title": "En modern personalförsörjning av det civila försvaret",
+      "date": "2026-07-07",
+      "url": "https://data.riksdagen.se/dokument/HD03302.html",
+      "relevance": "partial",
+      "note": "Föreslår tydligare regler om krigsplacering, krigsorganisation och civilplikt i det civila försvaret; lagändringarna föreslås träda i kraft den 1 januari 2027."
     }
   ]
 }

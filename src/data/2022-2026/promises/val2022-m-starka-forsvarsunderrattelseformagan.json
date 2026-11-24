@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["försvarsunderrättelse", "underrättelsetjänst", "FRA", "MUST"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2026 fram en proposition med en ny lag om signalspaning i försvarsunderrättelseverksamhet i krig eller krigsfara och ändringar i lagen om signalspaning i försvarsunderrättelseverksamhet, efter att en statlig utredning lämnat förslag om en modern och ändamålsenlig lagstiftning i september 2024. Signalspaning är en del av försvarsunderrättelseförmågan, så förslagen täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -50,6 +57,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01FöU18.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03179",
+      "designation": "Prop. 2025/26:179",
+      "title": "Signalspaning i försvarsunderrättelseverksamhet – en modern och ändamålsenlig lagstiftning",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03179.html",
+      "relevance": "partial",
+      "note": "Föreslår en ny lag om signalspaning i försvarsunderrättelseverksamhet i krig eller krigsfara och ändringar i lagen om signalspaning i försvarsunderrättelseverksamhet."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB359",
+      "designation": "SOU 2024:59",
+      "title": "Signalspaning i försvarsunderrättelseverksamhet",
+      "date": "2024-09-02",
+      "url": "https://data.riksdagen.se/dokument/HCB359.html",
+      "relevance": "partial",
+      "note": "Utredningens förslag om en modern och ändamålsenlig lagstiftning för signalspaning i försvarsunderrättelseverksamhet."
     }
   ]
 }
