@@ -17,9 +17,9 @@
   "committee": "UbU",
   "keywords": ["studielån", "CSN", "polisutbildning", "avskrivning"],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen föreslog i april 2026 att studielån för polisutbildning ska kunna skrivas av. Riksdagen godkände förslaget i juni 2026. Ändringen i studiestödslagen träder i kraft 1 januari 2027, och CSN ska då successivt skriva av studieskulden för dem som utbildar sig och arbetar som poliser. Ändringen i inkomstskattelagen träder i kraft 1 januari 2029. Lagarna täcker en del av löftet.",
+    "reasoning": "Regeringen lade i april 2026 fram ett förslag om att studielån för polisutbildning ska kunna skrivas av. Riksdagen beslutade om det i juni 2026. CSN ska successivt skriva av studielånen för den som utbildar sig och arbetar som polis. Lagen som genomför löftet är beslutad och träder i kraft den 1 januari 2027. Lagen ger regeringen eller en myndighet rätt att meddela föreskrifter om avskrivningen, så de närmare villkoren fastställs i förordning.",
     "date": "2026-11-24",
     "history": [
       {
@@ -85,8 +85,8 @@
       "title": "Lag (2026:1394) om ändring i studiestödslagen (1999:1395)",
       "date": "2027-01-01",
       "url": "https://svenskforfattningssamling.se/doc/20261394.html",
-      "relevance": "partial",
-      "note": "Själva avskrivningen av studielånen, alltså rätten till avskrivning för polisutbildning, finns inte i denna lag. Den ändrar bara nedsättning och återbetalning."
+      "relevance": "full",
+      "note": null
     },
     {
       "kind": "sfs",
