@@ -17,10 +17,48 @@
   "committee": "MJU",
   "keywords": ["minkfarmer", "pälsdjur", "djurskydd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i mars 2025 en utredare i uppdrag att utforma ett förbud mot uppfödning av djur för pälsproduktion, och utredningstiden förlängdes i december 2025. Utredningen lämnade sitt betänkande i maj 2026 och föreslår att förbudet skrivs in i djurskyddslagen och börjar gälla den 1 juli 2027.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB130",
+      "designation": "Dir. 2025:30",
+      "title": "Förbud mot uppfödning av djur för pälsproduktion",
+      "date": "2025-03-20",
+      "url": "https://data.riksdagen.se/dokument/HDB130.html",
+      "relevance": "full",
+      "note": "Uppdraget är att utforma ett förbud mot uppfödning och hållande av djur för pälsproduktion."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB1106",
+      "designation": "Dir. 2025:106",
+      "title": "Tilläggsdirektiv till Utredningen om förbud mot uppfödning av djur för pälsproduktion (LI 2025:01)",
+      "date": "2025-12-04",
+      "url": "https://data.riksdagen.se/dokument/HDB1106.html",
+      "relevance": "partial",
+      "note": "Utredningstiden förlängs till den 30 april 2026."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB329",
+      "designation": "SOU 2026:29",
+      "title": "Förbud mot uppfödning av djur för pälsproduktion",
+      "date": "2026-05-04",
+      "url": "https://data.riksdagen.se/dokument/HEB329.html",
+      "relevance": "full",
+      "note": "Föreslår ett förbud i en ny paragraf i 2 kap. djurskyddslagen som träder i kraft den 1 juli 2027."
+    }
+  ]
 }

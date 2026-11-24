@@ -76,7 +76,22 @@
       "date": "2025-05-16",
       "url": "https://data.riksdagen.se/dokument/HC01NU20.html",
       "relevance": "full",
-      "note": null
+      "note": null,
+      "votes": {
+        "S": "no",
+        "SD": "yes",
+        "C": "no",
+        "M": "yes",
+        "MP": "no",
+        "L": "yes",
+        "KD": "yes",
+        "V": "no"
+      },
+      "vote_point": {
+        "punkt": "1",
+        "rubrik": "Regeringens lagförslag",
+        "votering_id": "c728af79-652e-49ad-bc77-4ec630e9e0c5"
+      }
     },
     {
       "kind": "sfs",

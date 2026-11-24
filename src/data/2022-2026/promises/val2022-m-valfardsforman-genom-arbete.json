@@ -56,7 +56,22 @@
       "date": "2026-05-06",
       "url": "https://data.riksdagen.se/dokument/HD01SfU21.html",
       "relevance": "full",
-      "note": null
+      "note": null,
+      "votes": {
+        "S": "no",
+        "SD": "yes",
+        "C": "yes",
+        "M": "yes",
+        "MP": "abstain",
+        "L": "yes",
+        "KD": "yes",
+        "V": "abstain"
+      },
+      "vote_point": {
+        "punkt": "1",
+        "rubrik": "Regeringens lagförslag",
+        "votering_id": "fa1f8fad-842a-42c0-9460-735079c0780f"
+      }
     },
     {
       "kind": "sfs",
