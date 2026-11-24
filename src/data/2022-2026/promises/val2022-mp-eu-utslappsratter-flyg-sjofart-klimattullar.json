@@ -17,10 +17,38 @@
   "committee": "MJU",
   "keywords": ["utsläppsrätter", "EU ETS", "klimattullar", "flyg", "sjöfart"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i september 2023 fram en proposition om nya verksamheter i EU:s utsläppshandelssystem, där sjöfarten ska kunna omfattas och reglerna för flyget ändras. I mars 2024 följde en proposition med kompletterande svenska bestämmelser till EU:s klimattull, mekanismen för koldioxidjustering vid gränsen. Dokumenten gäller flyg och sjöfart i systemet samt klimattullar och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HA03144",
+      "designation": "Prop. 2022/23:144",
+      "title": "Nya verksamheter i utsläppshandelssystemet",
+      "date": "2023-09-11",
+      "url": "https://data.riksdagen.se/dokument/HA03144.html",
+      "relevance": "partial",
+      "note": "Föreslår regler som gör det möjligt att låta sjöfarten omfattas av utsläppshandelssystemet och ändrade regler för flyget i systemet."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0377",
+      "designation": "Prop. 2023/24:77",
+      "title": "Kompletterande bestämmelser till EU:s förordning om inrättande av en mekanism för koldioxidjustering vid gränsen",
+      "date": "2024-03-12",
+      "url": "https://data.riksdagen.se/dokument/HB0377.html",
+      "relevance": "partial",
+      "note": "Kompletterande svenska bestämmelser till EU:s förordning om en mekanism för koldioxidjustering vid gränsen, klimattullen."
+    }
+  ]
 }

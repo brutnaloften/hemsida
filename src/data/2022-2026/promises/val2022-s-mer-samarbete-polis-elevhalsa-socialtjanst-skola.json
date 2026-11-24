@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["samverkan", "elevhälsa", "socialtjänst", "polis", "skola"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2025 fram propositionen Skolor mot brott, där rektorn ska anmäla brott som kan ha begåtts av en elev till Polismyndigheten, med undantag när övervägande skäl talar emot en anmälan. I december 2024 föreslog en statlig utredning ökat uppgiftsutbyte i det brottsförebyggande arbetet mellan skolan, socialtjänsten och brottsbekämpande myndigheter. Förslagen gäller samarbete mellan skola, socialtjänst och polis och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
     {
@@ -42,6 +49,26 @@
       "url": "https://data.riksdagen.se/dokument/HC01UbU21.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03160",
+      "designation": "Prop. 2024/25:160",
+      "title": "Skolor mot brott",
+      "date": "2025-04-16",
+      "url": "https://data.riksdagen.se/dokument/HC03160.html",
+      "relevance": "partial",
+      "note": "Föreslår att rektorn ska anmäla misstänkta brott av elever till Polismyndigheten och regler om skolans säkerhetsarbete."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB387",
+      "designation": "SOU 2024:87",
+      "title": "Ökat uppgiftsutbyte i det brottsförebyggande arbetet",
+      "date": "2024-12-18",
+      "url": "https://data.riksdagen.se/dokument/HCB387.html",
+      "relevance": "partial",
+      "note": "Betänkandet om ökat uppgiftsutbyte i det brottsförebyggande arbetet utifrån skolans och socialtjänstens behov."
     }
   ]
 }

@@ -17,10 +17,48 @@
   "committee": "SoU",
   "keywords": ["hedersrelaterat våld", "förtryck", "likvärdig hjälp"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i januari 2024 om kommittédirektiv om skärpta straffskalor och andra förstärkta åtgärder mot hedersrelaterat våld och förtryck, lade i mars 2026 fram propositionen Stärkt lagstiftning mot hedersrelaterat våld och förtryck och beslutade i augusti 2026 om kommittédirektiv om en funktion med hedersombud för att stärka stödet till enskilda. Dokumenten gäller lagstiftning och stöd och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HCB18",
+      "designation": "Dir. 2024:8",
+      "title": "Förstärkta åtgärder mot hedersrelaterat våld och förtryck",
+      "date": "2024-01-18",
+      "url": "https://data.riksdagen.se/dokument/HCB18.html",
+      "relevance": "partial",
+      "note": "Utredaren ska bland annat ta ställning till skärpta straffskalor för hedersrelaterade brott och skärpta regler om utländska månggiften och fullmaktsäktenskap."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03213",
+      "designation": "Prop. 2025/26:213",
+      "title": "Stärkt lagstiftning mot hedersrelaterat våld och förtryck",
+      "date": "2026-03-19",
+      "url": "https://data.riksdagen.se/dokument/HD03213.html",
+      "relevance": "partial",
+      "note": "Föreslår stärkt lagstiftning mot hedersrelaterat våld och förtryck."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1103",
+      "designation": "Dir. 2026:103",
+      "title": "Stärkt stöd till personer som utsätts för hedersrelaterat våld och förtryck",
+      "date": "2026-08-27",
+      "url": "https://data.riksdagen.se/dokument/HEB1103.html",
+      "relevance": "partial",
+      "note": "Utredaren ska analysera och föreslå en funktion med hedersombud som vägleder den som utsätts för hedersrelaterat våld och förtryck."
+    }
+  ]
 }

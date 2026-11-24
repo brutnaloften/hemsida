@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["cyberförsvar", "cybersäkerhet", "cyberattacker"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i oktober 2024 fram propositionen Totalförsvaret 2025–2030, där regeringen bedömer att det militära försvarets cyberförsvarsförmåga, inklusive förmågan att genomföra defensiva och offensiva cyberoperationer, bör stärkas ytterligare, och att Försvarsmaktens krigsorganisation ska omfatta en cyberförsvarsdivision. Propositionen täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01FöU8.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0334",
+      "designation": "Prop. 2024/25:34",
+      "title": "Totalförsvaret 2025–2030",
+      "date": "2024-10-15",
+      "url": "https://data.riksdagen.se/dokument/HC0334.html",
+      "relevance": "partial",
+      "note": "Bedömer att det militära försvarets cyberförsvarsförmåga bör stärkas och anger en cyberförsvarsdivision i Försvarsmaktens krigsorganisation."
     }
   ]
 }

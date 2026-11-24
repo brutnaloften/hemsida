@@ -23,10 +23,17 @@
     "religiösa friskolor"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i juni 2026 fram propositionen Skärpta villkor för friskolesektorn. Den föreslår att det ska bli lättare att besluta om återkallelse av godkännande, verksamhetsförbud eller statliga åtgärder för rättelse vid allvarliga missförhållanden, och att Skolinspektionen under vissa förutsättningar får samtala med elever under 16 år utan vårdnadshavares samtycke. Förslagen gäller friskolor och täcker en del av löftet om att granska och stänga skolor.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -36,6 +43,26 @@
       "promises": ["tido-skarpt-granskning-konfessionella-skolor"],
       "outcome": "included",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03292",
+      "designation": "Prop. 2025/26:292",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HD03292.html",
+      "relevance": "partial",
+      "note": "Föreslår lättare återkallelse av godkännande och verksamhetsförbud vid allvarliga missförhållanden i friskolor samt samtal för Skolinspektionen med elever under 16 år."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB337",
+      "designation": "SOU 2025:37",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2025-04-08",
+      "url": "https://data.riksdagen.se/dokument/HDB337.html",
+      "relevance": "partial",
+      "note": "Delbetänkande med förslag om skärpta villkor för friskolesektorn, bland annat skärpta sanktioner vid tillsyn."
     }
   ]
 }

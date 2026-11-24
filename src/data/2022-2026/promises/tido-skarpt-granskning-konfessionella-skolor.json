@@ -26,11 +26,39 @@
     "oanmälda besök"
   ],
   "verdict": {
-    "value": "unassessed",
+    "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Löftet gäller ett uppdrag till Skolinspektionen att granska konfessionella skolor oftare, med oanmälda besök. Uppdrag till myndigheter ges i regleringsbrev och regeringsbeslut som ligger utanför det dokumentbestånd sidan bygger på. Löftet kan därför inte bedömas.",
-    "date": "2026-11-24",
-    "history": []
+    "reasoning": "Regeringen lade i juni 2026 fram propositionen Skärpta villkor för friskolesektorn. Den föreslår att det ska bli lättare att besluta om återkallelse av godkännande, verksamhetsförbud eller statliga åtgärder för rättelse vid allvarliga missförhållanden, och att Skolinspektionen under vissa förutsättningar får samtala med elever under 16 år utan vårdnadshavares samtycke. Förslagen gäller friskolor och täcker en del av löftet om skärpt granskning.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet gäller ett uppdrag till Skolinspektionen att granska konfessionella skolor oftare, med oanmälda besök. Uppdrag till myndigheter ges i regleringsbrev och regeringsbeslut som ligger utanför det dokumentbestånd sidan bygger på. Löftet kan därför inte bedömas.",
+        "date": "2026-11-24"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03292",
+      "designation": "Prop. 2025/26:292",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HD03292.html",
+      "relevance": "partial",
+      "note": "Föreslår lättare återkallelse av godkännande och verksamhetsförbud vid allvarliga missförhållanden i friskolor samt samtal för Skolinspektionen med elever under 16 år."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB337",
+      "designation": "SOU 2025:37",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2025-04-08",
+      "url": "https://data.riksdagen.se/dokument/HDB337.html",
+      "relevance": "partial",
+      "note": "Delbetänkande med förslag om skärpta villkor för friskolesektorn, bland annat skärpta sanktioner vid tillsyn."
+    }
+  ]
 }

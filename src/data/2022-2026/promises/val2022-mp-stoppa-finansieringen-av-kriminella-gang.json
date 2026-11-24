@@ -17,10 +17,48 @@
   "committee": "JuU",
   "keywords": ["gängkriminalitet", "myndighetssamverkan", "finansiering", "företag"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i september 2024 fram propositionen Bolag och brott med åtgärder mot brott som begås i och genom företag, bland annat fler kontroller i Bolagsverkets register och ett nytt brott för företagskapning. I april 2025 beslutade regeringen om kommittédirektiv om ytterligare åtgärder mot att företag används för att begå brott, och i maj 2025 lade den fram en proposition om en ny sekretessbrytande bestämmelse som låter myndigheter lämna uppgifter till varandra för att förebygga, förhindra eller upptäcka brottslig verksamhet. Dokumenten täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC038",
+      "designation": "Prop. 2024/25:8",
+      "title": "Bolag och brott",
+      "date": "2024-09-17",
+      "url": "https://data.riksdagen.se/dokument/HC038.html",
+      "relevance": "partial",
+      "note": "Föreslår åtgärder mot brott i och genom företag: fler kontroller i Bolagsverkets register, kriminalisering av företagskapning och skärpt straff för brott mot målvaktsförbudet."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB143",
+      "designation": "Dir. 2025:43",
+      "title": "Ytterligare åtgärder mot att företag används för att begå brott och genomförande av EU-direktiv om digitala verktyg och förfaranden inom bolagsrätten",
+      "date": "2025-04-24",
+      "url": "https://data.riksdagen.se/dokument/HDB143.html",
+      "relevance": "partial",
+      "note": "Utredaren ska föreslå ytterligare åtgärder för att Bolagsverket ska kunna arbeta mot brottslighet i företag."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03180",
+      "designation": "Prop. 2024/25:180",
+      "title": "Ökat informationsutbyte mellan myndigheter – en ny sekretessbrytande bestämmelse",
+      "date": "2025-05-28",
+      "url": "https://data.riksdagen.se/dokument/HC03180.html",
+      "relevance": "partial",
+      "note": "Föreslår en sekretessbrytande bestämmelse som låter myndigheter lämna uppgifter till varandra för att förebygga, förhindra eller upptäcka brottslig verksamhet."
+    }
+  ]
 }

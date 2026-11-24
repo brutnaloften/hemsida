@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["kunskapscentrum", "brottsprevention", "avhopparprogram", "gängkriminella"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i maj 2025 om kommittédirektiv till en utredning om stödet till avhoppare från organiserad brottslighet. Utredaren ska kartlägga kommunernas avhopparverksamheter, ta ställning till om kommunernas ansvar för stöd till avhoppare ska regleras särskilt och se över kontrollen av externa aktörer. Direktivet gäller avhopparverksamhet och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB153",
+      "designation": "Dir. 2025:53",
+      "title": "Förtydligat ansvar för stöd till avhoppare och förstärkt kontroll av externa aktörer som bedriver avhopparverksamhet",
+      "date": "2025-05-28",
+      "url": "https://data.riksdagen.se/dokument/HDB153.html",
+      "relevance": "partial",
+      "note": "Utredaren ska kartlägga kommunernas avhopparverksamheter, ta ställning till om kommunernas ansvar för stöd till avhoppare ska regleras särskilt i socialtjänstlagen och se över kontrollen av externa aktörer."
     }
   ]
 }
