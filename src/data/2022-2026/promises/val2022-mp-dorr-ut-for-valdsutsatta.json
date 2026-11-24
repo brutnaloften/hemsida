@@ -17,9 +17,9 @@
   "committee": "SoU",
   "keywords": ["våldsutsatta", "skydd", "samordning", "uppbrott"],
   "verdict": {
-    "value": "unassessed",
+    "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Löftet gäller att samordna ansvaret för skydd, boende och vård för våldsutsatta direkt efter uppbrottet. Samordningen ligger hos kommuner, regioner och myndigheter, vars beslut ligger utanför det dokumentbestånd sidan bygger på. Löftet kan därför inte bedömas.",
+    "reasoning": "Regeringen lade i oktober 2023 fram propositionen Stärkta rättigheter för barn och vuxna i skyddat boende, som föreslår att skyddat boende regleras i socialtjänstlagen som en boendeinsats till den som behöver stöd och skydd till följd av hot, våld eller andra övergrepp. Propositionen gäller skydd och boende för våldsutsatta och täcker en del av löftet.",
     "date": "2026-11-25",
     "history": [
       {
@@ -29,5 +29,16 @@
       }
     ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HB0331",
+      "designation": "Prop. 2023/24:31",
+      "title": "Stärkta rättigheter för barn och vuxna i skyddat boende",
+      "date": "2023-10-31",
+      "url": "https://data.riksdagen.se/dokument/HB0331.html",
+      "relevance": "partial",
+      "note": "Föreslår att skyddat boende regleras i socialtjänstlagen som en boendeinsats för den som behöver stöd och skydd till följd av hot, våld eller andra övergrepp."
+    }
+  ]
 }
