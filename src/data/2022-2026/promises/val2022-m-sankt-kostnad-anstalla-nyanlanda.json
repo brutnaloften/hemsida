@@ -17,10 +17,17 @@
   "committee": "AU",
   "keywords": ["anställningskostnader", "nyanlända", "långtidsarbetslösa", "anställningsstöd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i augusti 2026 en utredare i uppdrag att analysera subventionerade anställningar för långtidsarbetslösa, bland annat nivån på och taket för stödet. Uppdraget gäller en del av löftet, den som rör långtidsarbetslösa, och är ett utredningsuppdrag.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-lagre-anstallningskostnader-langtidsarbetslosa"],
       "outcome": "weakened",
       "note": "Avtalet gäller endast den som anställer långtidsarbetslösa, inte nyanlända."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB188",
+      "designation": "Dir. 2026:88",
+      "title": "Åtgärder mot långtidsarbetslöshet",
+      "date": "2026-08-06",
+      "url": "https://data.riksdagen.se/dokument/HEB188.html",
+      "relevance": "partial",
+      "note": "Gäller långtidsarbetslösa, inte nyanlända: utredningen ska analysera nivån på och taket för stödet till subventionerade anställningar."
     }
   ]
 }
