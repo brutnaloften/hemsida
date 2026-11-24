@@ -11,9 +11,122 @@
     "keyword:vårdköer",
     "keyword:offentlig vård",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "widen:privat sjukvårdsförsäkring|sjukvårdsförsäkring|förtur sjukvård|försäkring vårdköer|privata sjukvårdsförsäkringar"
   ],
   "candidates": [
+    {
+      "dok_id": "HEB138",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "38",
+      "datum": "2026-05-28",
+      "titel": "Effektiv nationell upphandling av specialiserad hälso- och sjukvård i privat regi",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB138.html",
+      "found_by": [
+        "widen:privat sjukvårdsförsäkring|sjukvårdsförsäkring|förtur sjukvård|försäkring vårdköer|privata sjukvårdsförsäkringar"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01SoU5",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU5",
+      "datum": "2023-01-17",
+      "titel": "Ökad kontroll i hälso- och sjukvården",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU5.html",
+      "found_by": [
+        "widen:privat sjukvårdsförsäkring|sjukvårdsförsäkring|förtur sjukvård|försäkring vårdköer|privata sjukvårdsförsäkringar"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01NU22",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "NU22",
+      "datum": "2026-04-29",
+      "titel": "Nya verktyg för stärkt konkurrens i privat och offentlig verksamhet",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HD01NU22.html",
+      "found_by": [
+        "widen:privat sjukvårdsförsäkring|sjukvårdsförsäkring|förtur sjukvård|försäkring vårdköer|privata sjukvårdsförsäkringar"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD03203",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "203",
+      "datum": "2026-03-17",
+      "titel": "Nya verktyg för stärkt konkurrens i privat och offentlig verksamhet",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03203.html",
+      "found_by": [
+        "widen:privat sjukvårdsförsäkring|sjukvårdsförsäkring|förtur sjukvård|försäkring vårdköer|privata sjukvårdsförsäkringar"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HDB322",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "22",
+      "datum": "2025-03-10",
+      "titel": "Förbättrad konkurrens i offentlig och privat verksamhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB322.html",
+      "found_by": [
+        "widen:privat sjukvårdsförsäkring|sjukvårdsförsäkring|förtur sjukvård|försäkring vårdköer|privata sjukvårdsförsäkringar"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HCB165",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "65",
+      "datum": "2024-06-27",
+      "titel": "Nationell rådgivare för stärkt privat-offentlig samverkan i totalförsvaret",
+      "organ": "Fö-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB165.html",
+      "found_by": [
+        "widen:privat sjukvårdsförsäkring|sjukvårdsförsäkring|förtur sjukvård|försäkring vårdköer|privata sjukvårdsförsäkringar"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01SoU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SoU16",
+      "datum": "2026-04-01",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU16.html",
+      "found_by": [
+        "widen:privat sjukvårdsförsäkring|sjukvårdsförsäkring|förtur sjukvård|försäkring vårdköer|privata sjukvårdsförsäkringar"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HC01SoU16",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU16",
+      "datum": "2025-06-04",
+      "titel": "Hälso- och sjukvårdens organisation",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU16.html",
+      "found_by": [
+        "widen:privat sjukvårdsförsäkring|sjukvårdsförsäkring|förtur sjukvård|försäkring vårdköer|privata sjukvårdsförsäkringar"
+      ],
+      "score": 10
+    },
     {
       "dok_id": "HEB13",
       "doktyp": "dir",

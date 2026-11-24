@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["skoldag", "förlängd skoldag", "undervisningstid", "stöd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i december 2023 en utredare i uppdrag att föreslå hur elever som riskerar att halka efter kan bli skyldiga att delta i lovskola eller extra studietid. I december 2024 föreslog utredningen en treårig försöksverksamhet med obligatorisk förstärkningsundervisning utöver den garanterade undervisningstiden, med 320 skolor och 16 000 elever. Förslaget gäller ett tidsbegränsat försök i stället för en generell möjlighet att förlänga skoldagen, så arbetet pågår.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-utokad-studietid-lovskola-lexhjalp"],
       "outcome": "included",
       "note": "Avtalet ger skolor möjlighet att utöka antalet skoldagar och undervisningstimmar för elever som behöver det."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1174",
+      "designation": "Dir. 2023:174",
+      "title": "Mer obligatorisk undervisningstid för elever som behöver det",
+      "date": "2023-12-14",
+      "url": "https://data.riksdagen.se/dokument/HBB1174.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB394",
+      "designation": "SOU 2024:94",
+      "title": "Förstärkningsundervisning i skolan",
+      "date": "2024-12-20",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "relevance": "partial",
+      "note": "Utredningen föreslår bara en treårig försöksverksamhet med förstärkningsundervisning; en av de två modellerna, halvklassundervisning, delar klassen i mindre grupper i stället för att förlänga skoldagen."
     }
   ]
 }

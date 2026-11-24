@@ -17,10 +17,68 @@
   "committee": "KrU",
   "keywords": ["kulturskapare", "upphovsrätt", "villkor"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen antog i november 2022 ändringar i upphovsrättslagen som genomför EU:s digitala upphovsrättsdirektiv, bland annat med rätt till skälig ersättning och information för upphovsmän. I januari 2024 föreslog en utredning fler undantag från upphovsrätten, vilket moderniserar reglerna men begränsar ensamrätten. I maj 2026 beslutade riksdagen om en reform av privatkopieringsersättningen som ger fler upphovsmän rätt till ersättning, och lagarna trädde i kraft 1 september 2026. Löftet är bredare än så och är därför delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HA01NU6",
+      "designation": "Bet. 2022/23:NU6",
+      "title": "Upphovsrätten på den digitala inre marknaden",
+      "date": "2022-11-24",
+      "url": "https://data.riksdagen.se/dokument/HA01NU6.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB34",
+      "designation": "SOU 2024:4",
+      "title": "Inskränkningarna i upphovsrätten",
+      "date": "2024-01-19",
+      "url": "https://data.riksdagen.se/dokument/HCB34.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03184",
+      "designation": "Prop. 2025/26:184",
+      "title": "Privatkopieringsersättning",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03184.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01NU23",
+      "designation": "Bet. 2025/26:NU23",
+      "title": "Privatkopieringsersättning",
+      "date": "2026-05-26",
+      "url": "https://data.riksdagen.se/dokument/HD01NU23.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1120",
+      "designation": "SFS 2026:1120",
+      "title": "Lag (2026:1120) om ändring i lagen (1960:729) om upphovsrätt till litterära och konstnärliga verk",
+      "date": "2026-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261120.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte övriga delar av löftet, som kulturskaparnas sociala villkor och en bredare modernisering av upphovsrätten utöver privatkopieringsersättningen."
+    }
+  ]
 }

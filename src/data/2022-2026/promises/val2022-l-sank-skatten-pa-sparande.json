@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["sparande", "kapitalbeskattning", "schablonintäkt", "sparskatt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Budgeten för 2025 införde en skattefri grundnivå för sparande på investeringssparkonto, i kapitalförsäkring och i en europeisk pensionsprodukt (PEPP). Grundnivån är 150 000 kronor från 1 januari 2025 och höjdes till 300 000 kronor från 1 januari 2026. Det sänker skatten på sparande i de sparformerna, medan löftet gäller sparande i allmänhet, så det är delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "note": "Avtalet sänker skatten på sparande genom en skattefri grundnivå i ISK."
     },
     {
+      "kind": "prop",
+      "dok_id": "HC031",
+      "designation": "Prop. 2024/25:1",
+      "title": "Budgetpropositionen för 2025",
+      "date": "2024-09-19",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HC01FiU1",
       "designation": "Bet. 2024/25:FiU1",
@@ -40,6 +57,26 @@
       "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1131",
+      "designation": "SFS 2024:1131",
+      "title": "Lag (2024:1131) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2025-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241131.html",
+      "relevance": "partial",
+      "note": "Det skattefria avdraget för sparande (150 000 kronor från 2025) gäller bara investeringssparkonto, kapitalförsäkring och pensionsprodukten PEPP. Höjningen till 300 000 kronor från 2026 finns i en annan lag."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1132",
+      "designation": "SFS 2024:1132",
+      "title": "Lag (2024:1132) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2026-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241132.html",
+      "relevance": "partial",
+      "note": "Höjer det skattefria avdraget till 300 000 kronor från 2026, men gäller bara investeringssparkonto, kapitalförsäkring och pensionsprodukten PEPP."
     }
   ]
 }
