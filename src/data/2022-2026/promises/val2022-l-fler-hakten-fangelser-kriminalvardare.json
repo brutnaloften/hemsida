@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["häkten", "fängelser", "kriminalvård", "kriminalvårdare", "platser"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Anslaget 1:6 Kriminalvården ökade nominellt från ett utfall på 11 940 mn kr 2022 till 20 282 mn kr 2025 (+69,9 procent, i fasta priser +51,1 procent). I budgeten för 2024 skrev regeringen att utbyggnaden av häkten och anstalter ska fortsätta och att den innebär minst en fördubbling av antalet platser, och ökade anslaget med 1 475 mn kr 2024. Anslaget mäter pengar, och hur många platser och kriminalvårdare det blivit framgår av andra uppgifter. Därför delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -50,6 +57,68 @@
       "url": "https://data.riksdagen.se/dokument/HD01CU25.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01JuU1",
+      "designation": "Bet. 2023/24:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2023-11-30",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU1.html",
+      "relevance": "partial",
+      "note": "Regeringen ökar anslaget 1:6 Kriminalvården med 1 475 mn kr 2024 för att fortsätta kapacitetsförstärkningen, och beräknar 1 200 mn kr 2025 och 2 850 mn kr från 2026; utbyggnaden beskrivs som minst en fördubbling av antalet platser på häkten och anstalter."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU1",
+      "designation": "Bet. 2024/25:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2024-11-29",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
+      "relevance": "partial",
+      "note": "Regeringen föreslår att anslaget 1:6 Kriminalvården anvisas 20 432 mn kr för 2025."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401006",
+        "namn": "Kriminalvården",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 12363.4,
+        "after": 20916.3
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 12 363 mn kr 2022 och 20 916 mn kr 2025, ändring 8 553 mn kr (+69,2 %). I fasta priser +50,5 % (sammanhang, avgör inte bedömningen). Anvisat belopp 2023 var 14 133 mn kr och 2024 17 800 mn kr.",
+      "date": "2024-11-29",
+      "relevance": "partial",
+      "note": "Anslaget 1:6 Kriminalvården finansierar Kriminalvårdens verksamhet; regeringen ökade det för att stärka kapaciteten."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401006",
+        "namn": "Kriminalvården",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 11939.5,
+        "after": 20281.9
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden. Nominellt utfall 11 940 mn kr 2022 och 20 282 mn kr 2025, ändring 8 342 mn kr (+69,9 %). I fasta priser +51,1 % (sammanhang, avgör inte bedömningen). Utfallet var 14 550 mn kr 2023 och 17 571 mn kr 2024.",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Utfallet steg i takt med anvisningarna. Anslaget visar pengar, inte hur många häkten, anstaltsplatser eller kriminalvårdare som tillkommit."
     }
   ]
 }

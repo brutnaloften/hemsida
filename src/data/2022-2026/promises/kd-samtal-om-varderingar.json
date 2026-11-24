@@ -3,12 +3,28 @@
   "term": "2022-2026",
   "title": "Samtal om värderingar",
   "description": "Föra samtal om värderingar och vilken kultur som ska råda i Sverige för att främja gemenskap och trygghet.",
-  "source": { "id": "kd-almedalen-2024" },
+  "source": {
+    "id": "kd-almedalen-2024"
+  },
   "parties": ["KD"],
-  "roles": { "KD": "government" },
+  "roles": {
+    "KD": "government"
+  },
   "type": "vague",
   "area": "Rättsstat och demokrati",
   "keywords": ["värderingar", "kultur", "gemenskap"],
-  "verdict": { "value": "unassessed", "reasoning": "", "date": "2026-10-28", "history": [] },
+  "verdict": {
+    "value": "not_assessable",
+    "assessedBy": "ai",
+    "reasoning": "Löftet beskriver en aktivitet, samtal om värderingar och kultur för att främja gemenskap och trygghet, med ett allmänt syfte och utan mål, tidpunkt eller mått. Eftersom inget går att mäta mot är löftet för vagt för ett omdöme.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-28"
+      }
+    ]
+  },
   "evidence": []
 }

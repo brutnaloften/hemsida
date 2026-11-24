@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["vårdplatser", "sjukhus", "vårdplatsbrist"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen skrev i budgeten för 2023 att antalet vårdplatser behöver öka, tillförde 2 000 mn kr för 2023 och beräknade 2 000 mn kr per år 2024 och 2025 för vårdplatser. Från 2024 ligger medlen i anslaget 1:11, vars utfall ökade nominellt från 2 989 mn kr 2022 till 7 512 mn kr 2025 (+151,3 procent, i fasta priser +123,6 procent). Anslaget mäter pengar till regionerna, och hur många vårdplatser som tillkommit framgår av andra uppgifter. Därför pågår arbetet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,78 @@
       "promises": ["tido-nationell-plan-vardplatser"],
       "outcome": "weakened",
       "note": "Avtalet anger att en nationell plan ska utredas och tas fram för hur bristen på vårdplatser ska åtgärdas."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01SoU1",
+      "designation": "Bet. 2022/23:SoU1",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
+      "relevance": "partial",
+      "note": "Regeringen ser ett behov av att öka antalet vårdplatser och att införa en prestationsbaserad ersättning till regionerna, och avser att ta fram en nationell strategi mot bristen på vårdplatser."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01SoU1",
+      "designation": "Bet. 2023/24:SoU1",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2023-12-06",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
+      "relevance": "partial",
+      "note": "Regeringen tillförde 2 000 mn kr för 2023 och beräknade 2 000 mn kr per år 2024 och 2025 för att utöka antalet vårdplatser; från 2024 flyttas beloppet från anslaget 1:6 till anslaget 1:11."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SoU1",
+      "designation": "Bet. 2024/25:SoU1",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "relevance": "partial",
+      "note": "Anslaget 1:11 får användas för prestationsbundna statsbidrag till regionerna för att korta vårdköer och väntetider och öka vårdens kapacitet och antalet disponibla vårdplatser."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0901011",
+        "namn": "Prestationsbundna insatser för att korta vårdköerna",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 3000.0,
+        "after": 7790.0
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 3 000 mn kr 2022 och 7 790 mn kr 2025, ändring 4 790 mn kr (+159,7 %). I fasta priser +131,0 % (sammanhang, avgör inte bedömningen). Anvisat belopp 2023 var 3 000 mn kr och 2024 4 985 mn kr.",
+      "date": "2024-12-04",
+      "relevance": "partial",
+      "note": "Anslaget 1:11 betalar prestationsbundna bidrag för kortare vårdköer och fler disponibla vårdplatser. Från 2024 ligger de 2 000 mn kr per år som avsatts för vårdplatser här."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0901011",
+        "namn": "Prestationsbundna insatser för att korta vårdköerna",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 2989.3,
+        "after": 7511.7
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden. Nominellt utfall 2 989 mn kr 2022 och 7 512 mn kr 2025, ändring 4 522 mn kr (+151,3 %). I fasta priser +123,6 % (sammanhang, avgör inte bedömningen). Utfallet var 2 990 mn kr 2023 och 4 984 mn kr 2024.",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Utfallet steg i takt med anvisningarna. Anslaget visar inte hur många vårdplatser som har tillkommit; 2023 låg vårdplatsmedlen i anslaget 1:6, som minskade från 32 000 till 10 798 mn kr i utfall 2022 till 2025."
     }
   ]
 }
