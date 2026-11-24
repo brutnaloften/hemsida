@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["straffskärpning", "sexualbrott", "våldsbrott", "våldtäkt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "År 2023 och 2025 skärpte riksdagen straffen för bland annat olaga hot, rån och utpressning i kriminella nätverk och straffansvaret för våldtäkt mot barn. Regeringen föreslog i april 2026 högre straff för de grövsta brotten: högsta straff för grov våldtäkt och grov våldtäkt mot barn höjs från tio till tolv års fängelse och straffskalan för synnerligen grov misshandel från fem–tio till sex–tolv år. Livstids fängelse kan dömas ut som gemensamt straff vid upprepade allvarliga brott. Riksdagen biföll i juni 2026 och ändringen gäller från den 1 augusti 2026.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,36 @@
       "date": "2022-10-14",
       "promises": ["tido-oversyn-straffskalor-vald-sexualbrott"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA0353",
+      "designation": "Prop. 2022/23:53",
+      "title": "Skärpta straff för brott i kriminella nätverk",
+      "date": "2023-01-31",
+      "url": "https://data.riksdagen.se/dokument/HA0353.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03124",
+      "designation": "Prop. 2024/25:124",
+      "title": "Skärpt syn på sexuella kränkningar, bedrägerier mot äldre och brott med kön som hatbrottsmotiv",
+      "date": "2025-03-27",
+      "url": "https://data.riksdagen.se/dokument/HC03124.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03218",
+      "designation": "Prop. 2025/26:218",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03218.html",
+      "relevance": "full",
       "note": null
     },
     {
@@ -60,6 +97,36 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-257",
+      "designation": "SFS 2023:257",
+      "title": "Lag (2023:257) om ändring i brottsbalken",
+      "date": "2023-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023257.html",
+      "relevance": "partial",
+      "note": "Skärper straffen för bland annat olaga hot, rån och utpressning i kriminella nätverk."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-586",
+      "designation": "SFS 2025:586",
+      "title": "Lag (2025:586) om ändring i brottsbalken",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025586.html",
+      "relevance": "partial",
+      "note": "Utvidgar straffansvaret för våldtäkt mot barn och för köp av sexuell handling på distans."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1318",
+      "designation": "SFS 2026:1318",
+      "title": "Lag (2026:1318) om ändring i brottsbalken",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261318.html",
+      "relevance": "full",
+      "note": "Höjer straffen för grov våldtäkt, grov våldtäkt mot barn och synnerligen grov misshandel och inför livstid som gemensamt straff vid upprepade allvarliga brott."
     }
   ]
 }

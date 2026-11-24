@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["tjänstemannaansvar", "ansvarsutkrävande", "offentlig maktutövning", "myndigheter"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i april 2026 ett nytt brott, missbruk av offentlig ställning, för den som i offentlig verksamhet uppsåtligen bryter mot lag för att få eller ge någon en otillbörlig förmån eller för att otillbörligt missgynna någon. Förslaget höjer också minimistraffet för grovt tjänstefel till fängelse i ett år och sex månader. Riksdagen biföll förslaget i juni 2026 och lagändringen gäller från den 1 augusti 2026. Det skärper det straffrättsliga ansvaret för den som utövar offentlig makt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "note": "Avtalet innebär bara en utredning av ett återinfört tjänstemannaansvar."
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03217",
+      "designation": "Prop. 2025/26:217",
+      "title": "Ett utökat straffrättsligt tjänstemannaansvar",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03217.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01JuU40",
       "designation": "Bet. 2025/26:JuU40",
@@ -40,6 +57,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU40.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1420",
+      "designation": "SFS 2026:1420",
+      "title": "Lag (2026:1420) om ändring i brottsbalken",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261420.html",
+      "relevance": "full",
+      "note": "Inför brottet missbruk av offentlig ställning och höjer minimistraffet för grovt tjänstefel till ett år och sex månader."
     }
   ]
 }

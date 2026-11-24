@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["avfallsförbränningsskatt", "kraftvärme", "elproduktion", "skatt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i budgetpropositionen för 2023, i november 2022, att lagen om skatt på avfall som förbränns upphävs. Riksdagen beslutade om förslaget i december 2022, och skatten avskaffades från den 1 januari 2023.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": ["tido-oversyn-skatter-kraftvarme"],
       "outcome": "weakened",
       "note": "Avtalet ser bara över avfallsförbränningsskatten, den tas inte bort."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA031",
+      "designation": "Prop. 2022/23:1",
+      "title": "Budgetpropositionen för 2023",
+      "date": "2022-11-08",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01FiU1",
+      "designation": "Bet. 2022/23:FiU1",
+      "title": "Statens budget 2023 – Rambeslutet",
+      "date": "2022-12-12",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2022-1778",
+      "designation": "SFS 2022:1778",
+      "title": "Lag (2022:1778) om upphävande av lagen (2019:1274) om skatt på avfall som förbränns",
+      "date": "2023-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20221778.html",
+      "relevance": "full",
+      "note": "Upphäver lagen om skatt på avfall som förbränns."
     }
   ]
 }

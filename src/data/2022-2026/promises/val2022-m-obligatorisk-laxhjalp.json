@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["läxhjälp", "lågstadiet", "kommuner", "skollagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i december 2023 en utredare i uppdrag att föreslå obligatorisk lovskola, extra studietid och läxhjälp i lägre årskurser. I december 2024 lade utredningen fram förslag om en försöksverksamhet med obligatorisk förstärkningsundervisning med statsbidrag och en statligt finansierad sommarskola. Dokumenten visar förslag och inget beslut, och de täcker bara en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-utokad-studietid-lovskola-lexhjalp"],
       "outcome": "weakened",
       "note": "Avtalet låter skolor föreskriva extra studietid och läxhjälp, men inför ingen skyldighet för kommuner."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1174",
+      "designation": "Dir. 2023:174",
+      "title": "Mer obligatorisk undervisningstid för elever som behöver det",
+      "date": "2023-12-14",
+      "url": "https://data.riksdagen.se/dokument/HBB1174.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB394",
+      "designation": "SOU 2024:94",
+      "title": "Förstärkningsundervisning i skolan ",
+      "date": "2024-12-20",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

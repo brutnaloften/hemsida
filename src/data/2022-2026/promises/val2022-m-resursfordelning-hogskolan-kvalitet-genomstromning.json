@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["resursfördelning", "högskola", "genomströmning", "akademisk kvalitet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i december 2024 fram forskningspolitiken för 2025–2028. Den säger att ökade forskningsanslag ska fördelas till de lärosäten som bäst uppfyller målen och att modellen för kvalitetsbaserad fördelning justeras så att kvalitet premieras mer. Det gäller forskningsanslagen, medan löftet också omfattade hur resurserna till utbildning fördelas efter genomströmning och etablering på arbetsmarknaden.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HC0360",
+      "designation": "Prop. 2024/25:60",
+      "title": "Forskning och innovation för framtid, nyfikenhet och nytta",
+      "date": "2024-12-12",
+      "url": "https://data.riksdagen.se/dokument/HC0360.html",
+      "relevance": "partial",
+      "note": "Justerar modellen för kvalitetsbaserad fördelning av forskningsanslag. Gäller inte resurser till utbildning."
+    },
+    {
       "kind": "bet",
       "dok_id": "HC01UbU15",
       "designation": "Bet. 2024/25:UbU15",
@@ -39,7 +56,7 @@
       "date": "2025-05-21",
       "url": "https://data.riksdagen.se/dokument/HC01UbU15.html",
       "relevance": "partial",
-      "note": null
+      "note": "Gäller förenade anställningar på högskolor och inte hur resurser fördelas."
     }
   ]
 }

@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["häktning", "unga lagöverträdare", "återfall", "allvarliga brott"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i juni 2026 att barn från 14 år ska kunna straffas för vissa allvarliga brott och att reglerna för anhållande och häktning av personer under 18 år ska gälla dem. Riksdagen biföll förslaget i augusti 2026 och lagändringarna gäller från den 10 september 2026. Barn som är 14 år kan därmed häktas, men bara i absoluta undantagsfall. Löftet gällde fler häktade unga vid allvarliga brott och risk för återfall, och villkoren för 15–17-åringar och för återfallsrisk är oförändrade.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "Betänkandena gäller dubbla straff och skärpta straffskalor samt skärpta regler för unga lagöverträdare, bland annat en särskild reglering som sänker straffbarhetsåldern för vissa allvarliga brott. Löftet gällde att fler unga ska häktas vid allvarliga brott och risk för återfall, vilket är en annan fråga än straffens nivå. Dokumenten kan därför inte ligga till grund för ett omdöme.",
+        "date": "2026-11-24"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-oversyn-frihetsberovande-unga-hakning-kvarhallande"],
       "outcome": "weakened",
       "note": "Avtalet utlovar endast en bred översyn av frihetsberövande av unga, inklusive häktning."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03293",
+      "designation": "Prop. 2025/26:293",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2026-06-30",
+      "url": "https://data.riksdagen.se/dokument/HD03293.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",
@@ -50,6 +67,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1528",
+      "designation": "SFS 2026:1528",
+      "title": "Lag (2026:1528) om ändring i brottsbalken",
+      "date": "2026-09-10",
+      "url": "https://svenskforfattningssamling.se/doc/20261528.html",
+      "relevance": "partial",
+      "note": "Sänker straffbarhetsåldern till 14 år för vissa allvarliga brott."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1530",
+      "designation": "SFS 2026:1530",
+      "title": "Lag (2026:1530) om ändring i lagen (1964:167) med särskilda bestämmelser om unga lagöverträdare",
+      "date": "2026-09-10",
+      "url": "https://svenskforfattningssamling.se/doc/20261530.html",
+      "relevance": "partial",
+      "note": "Låter reglerna om anhållande och häktning av personer under 18 år gälla barn från 14 år, i absoluta undantagsfall."
     }
   ]
 }

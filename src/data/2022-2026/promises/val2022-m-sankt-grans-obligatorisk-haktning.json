@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["häktning", "obligatorisk häktning", "straffvärde", "grov kvinnofridskränkning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i januari 2023 att presumtionen för häktning ska gälla vid brott med ett lägsta straff på ett år och sex månader i stället för två år. Riksdagen biföll förslaget i maj 2023 och lagändringen gäller från den 1 juli 2023. Löftet gällde en gräns på ett år, och den beslutade gränsen är ett år och sex månader. Riksdagen beslutade i juni 2026 dessutom att presumtionen ska gälla grov kvinnofridskränkning, grov fridskränkning och hedersförtryck samt försök, förberedelse och stämpling till vissa brott. Den ändringen gäller från den 1 augusti 2026.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,26 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HA0353",
+      "designation": "Prop. 2022/23:53",
+      "title": "Skärpta straff för brott i kriminella nätverk",
+      "date": "2023-01-31",
+      "url": "https://data.riksdagen.se/dokument/HA0353.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03218",
+      "designation": "Prop. 2025/26:218",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03218.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01JuU42",
       "designation": "Bet. 2025/26:JuU42",
@@ -40,6 +67,36 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU8",
+      "designation": "Bet. 2022/23:JuU8",
+      "title": "Skärpta straff för brott i kriminella nätverk",
+      "date": "2023-05-03",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU8.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-256",
+      "designation": "SFS 2023:256",
+      "title": "Lag (2023:256) om ändring i rättegångsbalken",
+      "date": "2023-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023256.html",
+      "relevance": "partial",
+      "note": "Sänker gränsen för presumtion för häktning från två år till ett år och sex månader, inte till ett år."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1319",
+      "designation": "SFS 2026:1319",
+      "title": "Lag (2026:1319) om ändring i rättegångsbalken",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261319.html",
+      "relevance": "partial",
+      "note": "Utvidgar presumtionen för häktning till fler brott och till försök, förberedelse och stämpling. Gränsen på ett år och sex månader ligger fast."
     }
   ]
 }
