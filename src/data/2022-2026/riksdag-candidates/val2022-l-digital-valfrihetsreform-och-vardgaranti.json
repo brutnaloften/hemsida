@@ -13,9 +13,93 @@
     "keyword:tillgänglighet",
     "all-keywords",
     "committee:SoU",
-    "widen:Behovsstyrd vård"
+    "widen:digitala vårdtjänster|digital vård|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare|nationella principer för utbud|digitalt förstahandsval|ersättning digitala vårdtjänster"
   ],
   "candidates": [
+    {
+      "dok_id": "HB01FöU12",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "FöU12",
+      "datum": "2024-06-13",
+      "titel": "Explosiva varor – ett nationellt tillståndsregister och kriminalisering av förstadier till brott mot tillståndsplikten",
+      "organ": "FöU",
+      "url": "https://data.riksdagen.se/dokument/HB01FöU12.html",
+      "found_by": [
+        "widen:digitala vårdtjänster|digital vård|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare|nationella principer för utbud|digitalt förstahandsval|ersättning digitala vårdtjänster"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HB03139",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "139",
+      "datum": "2024-05-14",
+      "titel": "Explosiva varor – ett nationellt tillståndsregister och kriminalisering av förstadier till brott mot tillståndsplikten",
+      "organ": "Försvarsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB03139.html",
+      "found_by": [
+        "widen:digitala vårdtjänster|digital vård|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare|nationella principer för utbud|digitalt förstahandsval|ersättning digitala vårdtjänster"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB36",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "6",
+      "datum": "2026-01-20",
+      "titel": "En nationell digital infrastruktur i hälso- och sjukvården ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB36.html",
+      "found_by": [
+        "widen:digitala vårdtjänster|digital vård|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare|nationella principer för utbud|digitalt förstahandsval|ersättning digitala vårdtjänster"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB152",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "52",
+      "datum": "2026-06-18",
+      "titel": "En utvecklad nationell fysisk planering av mark- och vattentillgångar",
+      "organ": "LI-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB152.html",
+      "found_by": [
+        "widen:digitala vårdtjänster|digital vård|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare|nationella principer för utbud|digitalt förstahandsval|ersättning digitala vårdtjänster"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01UU6",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "UU6",
+      "datum": "2024-02-16",
+      "titel": "Det svenska ordförandeskapet i Europeiska unionens råd första halvåret 2023",
+      "organ": "UU",
+      "url": "https://data.riksdagen.se/dokument/HB01UU6.html",
+      "found_by": [
+        "widen:digitala vårdtjänster|digital vård|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare|nationella principer för utbud|digitalt förstahandsval|ersättning digitala vårdtjänster"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01NU6",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "NU6",
+      "datum": "2022-11-24",
+      "titel": "Upphovsrätten på den digitala inre marknaden",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HA01NU6.html",
+      "found_by": [
+        "widen:digitala vårdtjänster|digital vård|vårdgaranti|digital tillgänglighet vård|vårdval digitala vårdgivare|nationella principer för utbud|digitalt förstahandsval|ersättning digitala vårdtjänster"
+      ],
+      "score": 10
+    },
     {
       "dok_id": "HEB338",
       "doktyp": "sou",
@@ -197,6 +281,18 @@
       "score": 10
     },
     {
+      "dok_id": "HEB192",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "92",
+      "datum": "2026-08-13",
+      "titel": "Nationella principer för utbud av hälso- och sjukvård i hela landet",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB192.html",
+      "found_by": ["widen:slice4-manual"],
+      "score": 10
+    },
+    {
       "dok_id": "HA01SoU12",
       "doktyp": "bet",
       "rm": "2022/23",
@@ -218,18 +314,6 @@
       "organ": "",
       "url": "https://data.riksdagen.se/dokument/HEB360.html",
       "found_by": ["keyword:tillgänglighet"],
-      "score": 1
-    },
-    {
-      "dok_id": "HEB192",
-      "doktyp": "dir",
-      "rm": "2026",
-      "beteckning": "92",
-      "datum": "2026-08-13",
-      "titel": "Nationella principer för utbud av hälso- och sjukvård i hela landet",
-      "organ": "S-dep",
-      "url": "https://data.riksdagen.se/dokument/HEB192.html",
-      "found_by": ["keyword:vårdgaranti"],
       "score": 1
     },
     {

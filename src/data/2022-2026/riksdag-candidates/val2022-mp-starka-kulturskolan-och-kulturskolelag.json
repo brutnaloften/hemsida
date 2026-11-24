@@ -10,7 +10,93 @@
     "keyword:kulturskolelag",
     "keyword:barns kultur",
     "all-keywords",
-    "committee:KrU"
+    "committee:KrU",
+    "widen:kulturskola|kulturskolan|kulturskolelag|kulturskoleutredning|kulturskolor|musik- och kulturskola|kommunal kulturskola"
   ],
-  "candidates": []
+  "candidates": [
+    {
+      "dok_id": "HEB413",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "13",
+      "datum": "2026-06-22",
+      "titel": "Spetsutbildning i musik i grundskolan – en försöksverksamhet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB413.html",
+      "found_by": [
+        "widen:kulturskola|kulturskolan|kulturskolelag|kulturskoleutredning|kulturskolor|musik- och kulturskola|kommunal kulturskola"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB358",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "58",
+      "datum": "2023-09-27",
+      "titel": "Kultursamhället - utvecklad samverkan mellan stat, region och kommun",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB358.html",
+      "found_by": [
+        "widen:kulturskola|kulturskolan|kulturskolelag|kulturskoleutredning|kulturskolor|musik- och kulturskola|kommunal kulturskola"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01KrU5",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KrU5",
+      "datum": "2026-02-06",
+      "titel": "Tillgång till kultur",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HD01KrU5.html",
+      "found_by": [
+        "widen:kulturskola|kulturskolan|kulturskolelag|kulturskoleutredning|kulturskolor|musik- och kulturskola|kommunal kulturskola"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01KrU8",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "KrU8",
+      "datum": "2024-03-25",
+      "titel": "Kultur och fritid för barn och unga",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HB01KrU8.html",
+      "found_by": [
+        "widen:kulturskola|kulturskolan|kulturskolelag|kulturskoleutredning|kulturskolor|musik- och kulturskola|kommunal kulturskola"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01KrU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "KrU3",
+      "datum": "2023-03-01",
+      "titel": "Kultur och fritid för barn och unga",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HA01KrU3.html",
+      "found_by": [
+        "widen:kulturskola|kulturskolan|kulturskolelag|kulturskoleutredning|kulturskolor|musik- och kulturskola|kommunal kulturskola"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HE01KrU1",
+      "doktyp": "bet",
+      "rm": "2026/27",
+      "beteckning": "KrU1",
+      "datum": "2026-09-21",
+      "titel": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HE01KrU1.html",
+      "found_by": [
+        "widen:kulturskola|kulturskolan|kulturskolelag|kulturskoleutredning|kulturskolor|musik- och kulturskola|kommunal kulturskola"
+      ],
+      "score": 10
+    }
+  ]
 }
