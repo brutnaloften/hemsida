@@ -165,6 +165,11 @@ describe('promiseSchema', () => {
       expect(promiseSchema.safeParse(withFigures('prop', [figure])).success).toBe(true);
     });
 
+    it('accepts the statement role for an opposition särskilt yttrande', () => {
+      const f = { ...figure, speaker: { role: 'statement', party: 'V' } };
+      expect(promiseSchema.safeParse(withFigures('bet', [f])).success).toBe(true);
+    });
+
     it('rejects figures on other kinds', () => {
       for (const kind of ['dir', 'sou', 'ds', 'sfs', 'mot']) {
         expect(promiseSchema.safeParse(withFigures(kind, [figure])).success, kind).toBe(false);
