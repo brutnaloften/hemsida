@@ -317,22 +317,35 @@ describe('v2 additions', () => {
     expect(SFS_JUDGE_TEMPLATE_VERSION).toBe('v4');
   });
 
-  it('skips budget propositions as pair sources', () => {
-    const store = { laws: sfs.laws, byProp: { B1: ['sfs-2025-3'], P3: ['sfs-2025-3'] } };
+  it('plans pairs for a budget proposition that has laws, and none for one without', () => {
+    const store = { laws: sfs.laws, byProp: { B1: ['sfs-2025-3'] } };
+    const budgetDocs = [
+      {
+        dok_id: 'B1',
+        doktyp: 'prop',
+        rm: '2024/25',
+        beteckning: '1',
+        titel: 'Budgetpropositionen',
+      },
+      {
+        dok_id: 'B2',
+        doktyp: 'prop',
+        rm: '2024/25',
+        beteckning: '1',
+        titel: 'Budgetpropositionen',
+      },
+    ];
     const pairs = planSfsPairs(
-      [prom('a', 'legislative', [propEv('B1')]), prom('b', 'legislative', [propEv('P3')])],
+      [prom('a', 'legislative', [propEv('B1')]), prom('b', 'legislative', [propEv('B2')])],
       store,
-      [
-        {
-          dok_id: 'B1',
-          doktyp: 'prop',
-          rm: '2024/25',
-          beteckning: '1',
-          titel: 'Budgetpropositionen',
-        },
-      ],
+      budgetDocs,
     );
-    expect(pairs.map((p) => p.id)).toEqual(['b::sfs-2025-3']);
+    expect(pairs.map((p) => p.id)).toEqual(['a::sfs-2025-3']);
+  });
+
+  it('never plans pairs for budget-type promises', () => {
+    const store = { laws: sfs.laws, byProp: { B1: ['sfs-2025-3'] } };
+    expect(planSfsPairs([prom('a', 'budget', [propEv('B1')])], store, [])).toEqual([]);
   });
 
   it('re-judges earlier full/partial, unjudged and other-template pairs; keeps same-template none/weaker', () => {

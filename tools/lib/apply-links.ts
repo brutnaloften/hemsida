@@ -241,6 +241,17 @@ export function sfsJudgements(
   return out;
 }
 
+/**
+ * Merge the results of several SFS judge runs (earlier first): a judgement for the same
+ * `<promise>::<sfs-key>` id in a later run replaces the earlier one, the rest are kept. One
+ * documented command can then reproduce judgements spread over a main run and later re-judgements.
+ */
+export function mergeSfsResults<T extends { id: string }>(runs: readonly (readonly T[])[]): T[] {
+  const byId = new Map<string, T>();
+  for (const results of runs) for (const r of results) byId.set(r.id, r);
+  return [...byId.values()];
+}
+
 interface SfsLinked {
   key: string;
   law: SfsLawInfo & { ikraft: string };
@@ -589,14 +600,20 @@ export function applyLinks(
     );
   }
 
-  // SFS: laws reached through the linked propositions (budget propositions and skrivelser excluded).
+  // SFS: laws reached through the linked propositions. A budget proposition counts only when the
+  // register shows laws passed through it (a promise linked to a spending bill with no law attached
+  // must not wait for a law that never comes); skrivelser never count.
   let outcome: SfsOutcome | null = null;
   if (useSfs) {
     const props = riksdag.filter(
       (e) =>
         e.kind === 'prop' &&
         isSupporting(e) &&
-        !(docs.has(e.dok_id) && isBudgetProp(docs.get(e.dok_id)!)),
+        !(
+          docs.has(e.dok_id) &&
+          isBudgetProp(docs.get(e.dok_id)!) &&
+          !(sfs!.byProp[e.dok_id]?.length ?? 0)
+        ),
     );
     const planning = riksdag.filter(
       (e) => ['dir', 'sou', 'ds'].includes(e.kind) && isSupporting(e),

@@ -90,10 +90,6 @@ export interface PlannableDoc {
   titel?: string | undefined;
 }
 
-/** Budget propositions are handled slice by slice; no single law implements a promise from them. */
-export const isBudgetDoc = (d: PlannableDoc): boolean =>
-  d.doktyp === 'prop' && (d.beteckning === '1' || /^Budgetpropositionen/.test(d.titel ?? ''));
-
 export interface SfsPair {
   /** `<promise_id>::<sfs-key>`, e.g. `tido-x::sfs-2025-625`. */
   id: string;
@@ -119,7 +115,6 @@ export function planSfsPairs(
   const betByRef = new Map(
     docs.filter((d) => d.doktyp === 'bet').map((d) => [`${d.rm}:${d.beteckning}`, d.dok_id]),
   );
-  const budget = new Set(docs.filter(isBudgetDoc).map((d) => d.dok_id));
   const pairs: SfsPair[] = [];
   for (const p of promises) {
     if (p.type !== 'legislative') continue;
@@ -128,8 +123,7 @@ export function planSfsPairs(
     const linked = new Set(
       p.evidence
         .filter((e) => e.kind === 'prop' && (e.relevance === 'full' || e.relevance === 'partial'))
-        .map((e) => e.dok_id!)
-        .filter((id) => !budget.has(id)),
+        .map((e) => e.dok_id!),
     );
     const byLaw = new Map<string, Set<string>>();
     for (const propId of [...linked].sort()) {

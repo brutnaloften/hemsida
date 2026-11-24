@@ -731,9 +731,16 @@ describe('applyLinks with SFS', () => {
     expect(r.verdict.value).toBe('in_progress');
   });
 
-  it('ignores a budget proposition when looking for pending propositions', () => {
+  it('ignores a budget proposition without laws when looking for pending propositions', () => {
     const sfs = sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] });
     expect(run(sfs, [pair('P1'), pair('PB')])!.verdict.value).toBe('fulfilled');
+  });
+
+  it('a budget proposition with a judged law is evidence for fulfilled', () => {
+    const sfs = sfsFor({ PB: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] });
+    const r = run(sfs, [pair('PB')])!;
+    expect(r.verdict.value).toBe('fulfilled');
+    expect(sfsOf(r).map((e) => e.dok_id)).toEqual(['sfs-2026-100']);
   });
 
   it('counts a proposition whose only law was judged none as having a law in force', () => {

@@ -3,7 +3,7 @@
  *   node --experimental-strip-types tools/ingest-sfs.ts [--term 2022-2026] [--limit N]
  *     [--prop <dok_id>] [--dry-run] [--refresh] [--riksdag-store <path>] [--cache <dir>] [--out <dir>]
  *
- * For every non-budget, non-skrivelse proposition in tools/out/riksdag-store/<term>.json it runs
+ * For every non-skrivelse proposition (budget propositions included) in tools/out/riksdag-store/<term>.json it runs
  * `/sfsr/adv?fritext=<rm>:<nr>`, fetches the register page of each hit once, and keeps the
  * entries whose Förarbeten cite exactly that proposition. Requests are sequential, one per
  * second; every raw page is cached in tools/out/sfsr-cache/ so a re-run (or a resumed run) only
@@ -17,7 +17,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
-import { isBudgetProp, isSkrivelse, type StoreDocument } from './lib/apply-links.ts';
+import { isSkrivelse, type StoreDocument } from './lib/apply-links.ts';
 import { writeJsonAtomic } from './lib/json.ts';
 import { defaultStorePath, loadStore } from './lib/riksdag-ingest.ts';
 import {
@@ -66,12 +66,33 @@ const riksdagStore = loadStore(
 
 const docs = Object.values(riksdagStore.documents) as StoreDocument[];
 const byRef = new Map<string, string>();
-for (const d of docs) if (d.doktyp === 'prop') byRef.set(`${d.rm}:${d.beteckning}`, d.dok_id);
+// Several documents can share a reference (a budget bill's utgiftsområden): the main one, the shortest dok_id, wins.
+for (const d of docs) {
+  if (d.doktyp !== 'prop') continue;
+  const ref = `${d.rm}:${d.beteckning}`;
+  const have = byRef.get(ref);
+  if (!have || d.dok_id.length < have.length) byRef.set(ref, d.dok_id);
+}
 const resolveProp = (ref: string) => byRef.get(ref);
 
-let props = docs.filter((d) => d.doktyp === 'prop' && !isBudgetProp(d) && !isSkrivelse(d));
+let props = docs.filter((d) => d.doktyp === 'prop' && !isSkrivelse(d));
 if (values.prop) props = props.filter((d) => d.dok_id === values.prop);
 props.sort((a, b) => a.dok_id.localeCompare(b.dok_id));
+// A budget bill is stored as one main document plus one per utgiftsområde, all with the same
+// rm:beteckning (Prop. 2025/26:1). The register is searched once per reference and the laws are
+// reachable from every document of it.
+const siblings = new Map<string, string[]>();
+for (const d of docs.filter((x) => x.doktyp === 'prop' && !isSkrivelse(x))) {
+  const ref = `${d.rm}:${d.beteckning}`;
+  siblings.set(ref, [...(siblings.get(ref) ?? []), d.dok_id]);
+}
+const seenRefs = new Set<string>();
+props = props.filter((d) => {
+  const ref = `${d.rm}:${d.beteckning}`;
+  if (seenRefs.has(ref)) return false;
+  seenRefs.add(ref);
+  return true;
+});
 if (values.limit) {
   if (!/^[1-9]\d*$/.test(values.limit)) throw new Error('--limit must be a positive integer');
   props = props.slice(0, Number.parseInt(values.limit, 10));
@@ -183,7 +204,7 @@ for (const [i, d] of props.entries()) {
     }
   }
   if (keys.length) {
-    byProp[d.dok_id] = keys;
+    for (const id of siblings.get(ref) ?? [d.dok_id]) byProp[id] = keys;
   }
   console.log(
     `[${i + 1}/${props.length}] ${d.dok_id} Prop. ${ref}: ${hitCount} hits, ${keys.length} laws`,
@@ -193,9 +214,12 @@ for (const [i, d] of props.entries()) {
 // A law that cites several store propositions is reachable from each of them.
 for (const [key, law] of Object.entries(laws)) {
   for (const p of law.props) {
-    if (!props.some((d) => d.dok_id === p)) continue;
-    const list = (byProp[p] ??= []);
-    if (!list.includes(key)) list.push(key);
+    const group = [...siblings.values()].find((ids) => ids.includes(p));
+    if (!group) continue;
+    for (const id of group) {
+      const list = (byProp[id] ??= []);
+      if (!list.includes(key)) list.push(key);
+    }
   }
 }
 
@@ -211,7 +235,7 @@ const store: SfsStore = sfsStoreSchema.parse({
   ),
 });
 
-const covered = Object.keys(store.byProp).length;
+const covered = props.filter((d) => store.byProp[d.dok_id]).length;
 console.log(
   `\n${Object.keys(store.laws).length} SFS numbers, ${covered}/${props.length} propositions with a law ` +
     `(${props.length - covered} without), ${fetched} pages fetched`,
