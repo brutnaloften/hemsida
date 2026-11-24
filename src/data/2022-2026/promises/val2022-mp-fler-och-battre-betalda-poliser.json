@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["poliser", "polislöner", "organiserad brottslighet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Miljöpartiet föreslog i sin budgetmotion för utgiftsområde 4 att 500 mn kr av regeringens ökade anslag till Polismyndigheten ska användas för att anställa fler lokalområdespoliser och administrativ personal, och höjde anslaget 1:1 Polismyndigheten med 75 mn kr för avhopparverksamhet (Mot. 2024/25:3060). Förslaget omfördelar alltså regeringens medel till fler poliser men tillför inga nya pengar för det, och motionen innehåller inget förslag om bättre löner för poliser. Riksdagen avslog anslagsförslagen (Bet. 2024/25:JuU1), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "title": "Utgiftsområde 4 Rättsväsendet",
       "date": "2023-11-30",
       "url": "https://data.riksdagen.se/dokument/HB01JuU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023060",
+      "designation": "Mot. 2024/25:3060",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023060.html",
+      "relevance": "partial",
+      "note": "Miljöpartiets budgetmotion för utgiftsområde 4 Rättsväsendet, redovisad i Bet. 2024/25:JuU1."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU1",
+      "designation": "Bet. 2024/25:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2024-11-29",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
       "relevance": "partial",
       "note": null
     }

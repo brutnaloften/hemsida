@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["poliser", "polisnärvaro", "polisen", "rättsväsendet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Socialdemokraterna lade i sin budgetmotion för utgiftsområde 4 fram målet att Polismyndigheten 2032 ska ha 50 000 anställda, varav minst 34 000 poliser, och sa att polisnärvaron ska byggas ut i hela landet, men föreslog det som ett tillkännagivande utan eget belopp: anslaget 1:1 Polismyndigheten ligger kvar på regeringens förslag (±0) (Mot. 2024/25:3111). Det är ett eget, kvantifierat förslag om fler poliser (till skillnad från ett obeloppsatt tillkännagivande om ökat bistånd), men inte en kraftig ökning utöver regeringens budget. Riksdagen avslog motionen (Bet. 2024/25:JuU1), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,26 @@
       "title": "Utgiftsområde 4 Rättsväsendet",
       "date": "2025-11-28",
       "url": "https://data.riksdagen.se/dokument/HD01JuU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023111",
+      "designation": "Mot. 2024/25:3111",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023111.html",
+      "relevance": "partial",
+      "note": "Socialdemokraternas budgetmotion för utgiftsområde 4 Rättsväsendet, redovisad i Bet. 2024/25:JuU1."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU1",
+      "designation": "Bet. 2024/25:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2024-11-29",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
       "relevance": "partial",
       "note": null
     }

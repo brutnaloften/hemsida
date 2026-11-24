@@ -17,10 +17,17 @@
   "committee": "FiU",
   "keywords": ["statsbidrag", "kommunalekonomisk utjämning", "regioner", "kommuner"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Vänsterpartiet föreslog i sin budgetmotion för utgiftsområde 25 att kommunsektorn skulle få 20 000 mn kr mer i generella statsbidrag, 5 000 mn kr mer i sektorsbidrag till sjukvården, nya anslag på 1 800 mn kr för investeringsstöd till samhällsfastigheter, 200 mn kr för brottsförebyggande arbete och 3 000 mn kr för Sverigejobb (Mot. 2024/25:1918). Anslaget 1:1 ökar bara med 1 647 mn kr i tabellen, eftersom partiet samtidigt räknar bort 21 040 mn kr för effekter på det kommunala skatteunderlaget av sina egna skatteförslag. Partiet avvisar också de riktade kömiljarderna till vården (−7 480 mn kr). Därför går inte alla delar i löftets riktning, men motionen innebär en tydlig ökning av statens medel till kommuner och regioner. Riksdagen avslog anslagsförslagen (Bet. 2024/25:FiU3), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01FiU3.html",
       "relevance": "contradicts",
       "note": null
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC021918",
+      "designation": "Mot. 2024/25:1918",
+      "title": "Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC021918.html",
+      "relevance": "partial",
+      "note": "Vänsterpartiets budgetmotion för utgiftsområde 25 Allmänna bidrag till kommuner, redovisad i Bet. 2024/25:FiU3."
     }
   ]
 }

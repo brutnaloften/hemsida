@@ -17,10 +17,58 @@
   "committee": "JuU",
   "keywords": ["tullen", "polisen", "narkotikahandel", "resurser"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Vänsterpartiet föreslog i sin budgetmotion för utgiftsområde 3 att anslaget 1:2 Tullverket skulle höjas med 100 mn kr utöver regeringens förslag (Mot. 2024/25:1941), och i motionen för utgiftsområde 4 att polisens tullverksamhet får 50 mn kr mer (Mot. 2024/25:1940). Samtidigt avvisade partiet regeringens satsningar på polisens kameraförmåga (200 mn kr) och inre utlänningskontroller (100 mn kr), så anslaget 1:1 Polismyndigheten blir 10 mn kr lägre än regeringens förslag. Tullens resurser ökar alltså, men polisens totala resurser gör det inte. Riksdagen avslog anslagsförslagen (Bet. 2024/25:SkU1 och Bet. 2024/25:JuU1), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HC021941",
+      "designation": "Mot. 2024/25:1941",
+      "title": "Utgiftsområde 3 Skatt, tull och exekution",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC021941.html",
+      "relevance": "partial",
+      "note": "Vänsterpartiets budgetmotion för utgiftsområde 3 Skatt, tull och exekution, redovisad i Bet. 2024/25:SkU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC021940",
+      "designation": "Mot. 2024/25:1940",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC021940.html",
+      "relevance": "partial",
+      "note": "Vänsterpartiets budgetmotion för utgiftsområde 4 Rättsväsendet, redovisad i Bet. 2024/25:JuU1."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SkU1",
+      "designation": "Bet. 2024/25:SkU1",
+      "title": "Utgiftsområde 3 Skatt, tull och exekution",
+      "date": "2024-11-28",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU1",
+      "designation": "Bet. 2024/25:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2024-11-29",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -17,10 +17,17 @@
   "committee": "TU",
   "keywords": ["laddinfrastruktur", "elbilar", "laddning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Miljöpartiet föreslog i sin budgetmotion för utgiftsområde 21 Energi att anslaget 1:8 Laddinfrastruktur skulle höjas med 100 mn kr jämfört med regeringens förslag på 930 mn kr, och att det tas fram nationella planer för utbyggd laddinfrastruktur med bättre tillgång längs de större vägarna och för boende som vill ladda hemma (Mot. 2024/25:3062). Motionen drar inte ned något anslag för laddning. Det täcker löftet om statliga satsningar på laddning i hela landet. Riksdagen avslog motionens anslagsförslag (Bet. 2024/25:NU3), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "title": "Utgiftsområde 21 Energi",
       "date": "2022-12-13",
       "url": "https://data.riksdagen.se/dokument/HA01NU3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023062",
+      "designation": "Mot. 2024/25:3062",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023062.html",
+      "relevance": "full",
+      "note": "Miljöpartiets budgetmotion för utgiftsområde 21 Energi, redovisad i Bet. 2024/25:NU3."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01NU3",
+      "designation": "Bet. 2024/25:NU3",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2024-12-09",
+      "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
       "relevance": "partial",
       "note": null
     }

@@ -17,10 +17,38 @@
   "committee": "NU",
   "keywords": ["förnybar energi", "vätgas", "elproduktion", "statliga satsningar"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Vänsterpartiet föreslog i sin budgetmotion för utgiftsområde 21 Energi nya anslag för förnybar el: 99:2 Investeringar till lokal förnybar elproduktion på 1 000 mn kr, 99:5 Havsvind, statligt ägande på 1 000 mn kr, 99:1 Stärkt elöverföringskapacitet på 2 000 mn kr och 99:3 Vindkraft – ersättningsmodell till kommuner på 275 mn kr, utan att något annat anslag i utgiftsområdet minskas (Mot. 2024/25:1912). Det är statliga satsningar på förnybar elproduktion. Motionen föreslår däremot ingen satsning på vätgas, som löftet också nämner. Riksdagen avslog anslagsförslagen (Bet. 2024/25:NU3), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HC021912",
+      "designation": "Mot. 2024/25:1912",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC021912.html",
+      "relevance": "partial",
+      "note": "Vänsterpartiets budgetmotion för utgiftsområde 21 Energi, redovisad i Bet. 2024/25:NU3."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01NU3",
+      "designation": "Bet. 2024/25:NU3",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2024-12-09",
+      "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

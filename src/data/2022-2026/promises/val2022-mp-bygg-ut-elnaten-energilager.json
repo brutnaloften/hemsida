@@ -17,36 +17,42 @@
   "committee": "NU",
   "keywords": ["elnät", "energilager", "smart energisystem"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i mars 2024 fram ett förslag om en tydligare process för tillståndsprövning av elnät, för att det ska gå snabbare att bygga ut och förstärka näten. Riksdagen biföll förslaget i maj 2024. Dokumenten gäller den del av löftet som handlar om att bygga ut elnäten.",
-    "date": "2026-11-15",
+    "reasoning": "Miljöpartiet föreslog i sin budgetmotion för utgiftsområde 21 Energi ett nytt anslag 99:3 Investeringsstöd för grön baskraft på 6 000 mn kr enligt tabellen (motiveringen nämner 5 miljarder), där energilagring i form av vätgas, pumpkraft och värmelagring samt smart styrning av elbilsladdning och värmepumpar uttryckligen ingår (Mot. 2024/25:3062). Det täcker delarna energilager och smart energisystem. Motionen innehåller däremot inget anslag eller förslag som gäller utbyggnad av elnäten, så löftets första del har partiet inte lagt något eget förslag om. Riksdagen avslog anslagsförslagen (Bet. 2024/25:NU3), så förslaget är partiets eget agerande, inte ett beslut. Tidigare bedömdes löftet på regeringens förslag om tillståndsprövning av elnät, vilket inte är Miljöpartiets eget agerande och därför inte längre används.",
+    "date": "2026-11-24",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2026-11-02"
+      },
+      {
+        "value": "in_progress",
+        "reasoning": "Regeringen lade i mars 2024 fram ett förslag om en tydligare process för tillståndsprövning av elnät, för att det ska gå snabbare att bygga ut och förstärka näten. Riksdagen biföll förslaget i maj 2024. Dokumenten gäller den del av löftet som handlar om att bygga ut elnäten.",
+        "date": "2026-11-15",
+        "assessedBy": "ai"
       }
     ]
   },
   "evidence": [
     {
-      "kind": "prop",
-      "dok_id": "HB0388",
-      "designation": "Prop. 2023/24:88",
-      "title": "En tydligare process för tillståndsprövning av elnät",
-      "date": "2024-03-19",
-      "url": "https://data.riksdagen.se/dokument/HB0388.html",
+      "kind": "mot",
+      "dok_id": "HC023062",
+      "designation": "Mot. 2024/25:3062",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023062.html",
       "relevance": "partial",
-      "note": null
+      "note": "Miljöpartiets budgetmotion för utgiftsområde 21 Energi, redovisad i Bet. 2024/25:NU3."
     },
     {
       "kind": "bet",
-      "dok_id": "HB01NU15",
-      "designation": "Bet. 2023/24:NU15",
-      "title": "En tydligare process för tillståndsprövning av elnät",
-      "date": "2024-05-16",
-      "url": "https://data.riksdagen.se/dokument/HB01NU15.html",
+      "dok_id": "HC01NU3",
+      "designation": "Bet. 2024/25:NU3",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2024-12-09",
+      "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
       "relevance": "partial",
       "note": null
     }
