@@ -17,11 +17,17 @@
   "committee": "KrU",
   "keywords": ["bidragsgivning", "uppföljning", "extremism", "demokratikrav", "föreningsbidrag"],
   "verdict": {
-    "value": "unassessed",
+    "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Överenskommelsen ska se över åtgärder mot att offentliga medel går till föreningar med islamistiska eller separatistiska kopplingar. Uppföljning av bidragsgivning sker hos myndigheterna enligt förordningar och regleringsbrev, som ligger utanför det dokumentbestånd sidan bygger på. Löftet kan därför inte bedömas.",
+    "reasoning": "Regeringen föreslog i april 2024 ett demokrativillkor för statligt stöd till trossamfund och för stöd ur Allmänna arvsfonden, och riksdagen biföll förslaget i juni 2024. Regeringen bedömer att samma villkor bör gälla övrigt stöd till civilsamhället, som regleras i förordningar. Dokumenten täcker en del av löftet.",
     "date": "2026-11-24",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -31,6 +37,26 @@
       "promises": ["tido-utredning-utlandsk-finansiering-trossamfund"],
       "outcome": "weakened",
       "note": "Avtalet ska se över åtgärder så att offentliga medel inte går till föreningar med islamistiska eller separatistiska kopplingar, men nämner ingen stärkt uppföljning av bidragsgivning."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB03119",
+      "designation": "Prop. 2023/24:119",
+      "title": "Statens stöd till trossamfund och civilsamhället – enhetliga och rättssäkra villkor",
+      "date": "2024-04-03",
+      "url": "https://data.riksdagen.se/dokument/HB03119.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01KrU7",
+      "designation": "Bet. 2023/24:KrU7",
+      "title": "Statens stöd till trossamfund och civilsamhället",
+      "date": "2024-06-13",
+      "url": "https://data.riksdagen.se/dokument/HB01KrU7.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

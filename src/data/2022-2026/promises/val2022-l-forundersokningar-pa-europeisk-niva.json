@@ -17,11 +17,17 @@
   "committee": "JuU",
   "keywords": ["förundersökning", "europeisk nivå", "gränsöverskridande brottslighet", "Europol"],
   "verdict": {
-    "value": "unassessed",
+    "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Löftet gäller att förundersökningar där flera länder berörs ska kunna bedrivas på europeisk nivå. Det kräver EU-regler som förhandlas av medlemsländerna och Europaparlamentet. Regeringens hållning i förhandlingar i EU och andra internationella organ ligger utanför det dokumentbestånd sidan bygger på. Löftet kan därför inte bedömas.",
+    "reasoning": "Regeringen lade i mars 2024 fram ett förslag om att Sverige ska delta i Europeiska åklagarmyndigheten, som utreder och lagför brott mot EU:s finansiella intressen i flera länder. Riksdagen beslutade i maj 2024 att godkänna förslaget. Dokumenten gäller brott mot EU:s finansiella intressen, och de täcker en del av löftet.",
     "date": "2026-11-24",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -39,6 +45,26 @@
       "title": "Skatteverket som behörig brottsbekämpande myndighet vid förenklat uppgiftsutbyte inom EU",
       "date": "2023-06-15",
       "url": "https://data.riksdagen.se/dokument/HA01SkU22.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0387",
+      "designation": "Prop. 2023/24:87",
+      "title": "Sveriges deltagande i Europeiska åklagarmyndigheten",
+      "date": "2024-03-12",
+      "url": "https://data.riksdagen.se/dokument/HB0387.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01JuU27",
+      "designation": "Bet. 2023/24:JuU27",
+      "title": "Sveriges deltagande i Europeiska åklagarmyndigheten",
+      "date": "2024-05-23",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU27.html",
       "relevance": "partial",
       "note": null
     }

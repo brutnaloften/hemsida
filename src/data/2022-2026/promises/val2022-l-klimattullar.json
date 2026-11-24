@@ -17,11 +17,17 @@
   "committee": "MJU",
   "keywords": ["klimattullar", "koldioxidtull", "CBAM", "EU", "handel"],
   "verdict": {
-    "value": "unassessed",
+    "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Löftet gäller att klimattullar införs för att höja kostnaden för utsläpp. Regeringens hållning i förhandlingar i EU och andra internationella organ ligger utanför det dokumentbestånd sidan bygger på. Löftet kan därför inte bedömas.",
+    "reasoning": "Regeringen lade i mars 2024 fram kompletterande svenska bestämmelser till EU:s förordning om en mekanism för koldioxidjustering vid gränsen, den så kallade klimattullen, och riksdagen biföll förslaget i maj 2024. Lagen reglerar bland annat behörig myndighet, godkännande av deklaranter, tillsyn och sanktionsavgift. Dokumenten gäller de svenska reglerna kring EU:s klimattull, och de täcker en del av löftet.",
     "date": "2026-11-24",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +36,26 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0377",
+      "designation": "Prop. 2023/24:77",
+      "title": "Kompletterande bestämmelser till EU:s förordning om inrättande av en mekanism för koldioxidjustering vid gränsen",
+      "date": "2024-03-12",
+      "url": "https://data.riksdagen.se/dokument/HB0377.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01SkU22",
+      "designation": "Bet. 2023/24:SkU22",
+      "title": "Kompletterande bestämmelser till EU:s förordning om inrättande av en mekanism för koldioxidjustering vid gränsen",
+      "date": "2024-05-16",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU22.html",
+      "relevance": "partial",
       "note": null
     }
   ]
