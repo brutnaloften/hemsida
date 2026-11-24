@@ -108,7 +108,7 @@ export default function PartyList({ rows, areas, agreement }: Props) {
   const shownCount = groups.reduce((n, g) => n + g.rows.length, 0);
 
   return (
-    <div className="grid gap-8 md:grid-cols-[16rem_1fr]">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-[16rem_minmax(0,1fr)]">
       <form
         role="search"
         aria-label="Filtrera partiets löften"
