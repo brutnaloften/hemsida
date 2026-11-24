@@ -241,6 +241,17 @@ export function sfsJudgements(
   return out;
 }
 
+/**
+ * Merge the results of several SFS judge runs (earlier first): a judgement for the same
+ * `<promise>::<sfs-key>` id in a later run replaces the earlier one, the rest are kept. One
+ * documented command can then reproduce judgements spread over a main run and later re-judgements.
+ */
+export function mergeSfsResults<T extends { id: string }>(runs: readonly (readonly T[])[]): T[] {
+  const byId = new Map<string, T>();
+  for (const results of runs) for (const r of results) byId.set(r.id, r);
+  return [...byId.values()];
+}
+
 interface SfsLinked {
   key: string;
   law: SfsLawInfo & { ikraft: string };
@@ -250,7 +261,7 @@ interface SfsLinked {
 interface SfsOutcome {
   /** Laws to show as evidence: judged full/partial/weaker, with an in-force date. */
   laws: SfsLinked[];
-  /** Linked (non-budget) propositions with no law in force yet. */
+  /** Linked propositions with no law in force yet (a budget bill only counts when a law of it delivers). */
   pending: RiksdagEvidence[];
   /** Linked dir/sou/ds dated after the newest proposition that has a law in force. */
   later: RiksdagEvidence[];
@@ -589,14 +600,22 @@ export function applyLinks(
     );
   }
 
-  // SFS: laws reached through the linked propositions (budget propositions and skrivelser excluded).
+  // SFS: laws reached through the linked propositions. A budget bill counts only when one of its
+  // laws delivers something of this promise (see `delivers`); skrivelser never count.
   let outcome: SfsOutcome | null = null;
   if (useSfs) {
+    // A budget proposition counts, as decided and as pending, only if one of its laws has a
+    // non-none, non-rejected judgement for this promise; otherwise it is ignored.
+    const delivers = (propId: string) =>
+      (sfs!.byProp[propId] ?? []).some((k) => {
+        const j = sfs!.judgements.get(`${promise.id}::${k}`);
+        return !rejected.has(k) && !!j && j.label !== 'none';
+      });
     const props = riksdag.filter(
       (e) =>
         e.kind === 'prop' &&
         isSupporting(e) &&
-        !(docs.has(e.dok_id) && isBudgetProp(docs.get(e.dok_id)!)),
+        !(docs.has(e.dok_id) && isBudgetProp(docs.get(e.dok_id)!) && !delivers(e.dok_id)),
     );
     const planning = riksdag.filter(
       (e) => ['dir', 'sou', 'ds'].includes(e.kind) && isSupporting(e),

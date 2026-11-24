@@ -90,10 +90,6 @@ export interface PlannableDoc {
   titel?: string | undefined;
 }
 
-/** Budget propositions are handled slice by slice; no single law implements a promise from them. */
-export const isBudgetDoc = (d: PlannableDoc): boolean =>
-  d.doktyp === 'prop' && (d.beteckning === '1' || /^Budgetpropositionen/.test(d.titel ?? ''));
-
 export interface SfsPair {
   /** `<promise_id>::<sfs-key>`, e.g. `tido-x::sfs-2025-625`. */
   id: string;
@@ -119,7 +115,19 @@ export function planSfsPairs(
   const betByRef = new Map(
     docs.filter((d) => d.doktyp === 'bet').map((d) => [`${d.rm}:${d.beteckning}`, d.dok_id]),
   );
-  const budget = new Set(docs.filter(isBudgetDoc).map((d) => d.dok_id));
+  // A budget bill is several store documents with one reference; the law text is in the main one
+  // (shortest dok_id), so prompts and pairs name that document whichever of them is linked.
+  const canonical = new Map<string, string>();
+  const mainOf = new Map<string, string>();
+  for (const d of docs) {
+    if (d.doktyp !== 'prop') continue;
+    const ref = `${d.rm}:${d.beteckning}`;
+    const have = mainOf.get(ref);
+    if (!have || d.dok_id.length < have.length) mainOf.set(ref, d.dok_id);
+  }
+  for (const d of docs) {
+    if (d.doktyp === 'prop') canonical.set(d.dok_id, mainOf.get(`${d.rm}:${d.beteckning}`)!);
+  }
   const pairs: SfsPair[] = [];
   for (const p of promises) {
     if (p.type !== 'legislative') continue;
@@ -129,7 +137,7 @@ export function planSfsPairs(
       p.evidence
         .filter((e) => e.kind === 'prop' && (e.relevance === 'full' || e.relevance === 'partial'))
         .map((e) => e.dok_id!)
-        .filter((id) => !budget.has(id)),
+        .map((id) => canonical.get(id) ?? id),
     );
     const byLaw = new Map<string, Set<string>>();
     for (const propId of [...linked].sort()) {

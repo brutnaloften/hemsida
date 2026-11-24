@@ -7,7 +7,9 @@
  *     [--ids a,b] [--exclude c,d]   (only / never these promise ids, e.g. to protect hand-set verdicts)
  *     [--base-ref origin/main]      (verdict history and date are computed against this ref; falls
  *                                    back to HEAD with a message when it does not resolve)
- *     [--sfs-store tools/out/sfs-store/<term>.json --sfs-run <name | path to results.json>
+ *     [--sfs-store tools/out/sfs-store/<term>.json --sfs-run <name | path to results.json>[,<...>]
+ *      (several judge runs, comma separated, earliest first: a later run's judgement of the same
+ *       promise/law replaces the earlier one)
  *      [--sfs-overrides tools/sfs-overrides.json]]
  * Budget promises are never touched, and a fulfilled / partially_fulfilled verdict is only recomputed
  * for legislative promises (with SFS input) and inquiry promises; elsewhere it is kept.
@@ -25,6 +27,7 @@ import {
   applyLinks,
   isDowngrade,
   mergeRunPairs,
+  mergeSfsResults,
   rebaseVerdict,
   selectedId,
   sfsJudgements,
@@ -41,9 +44,10 @@ import { defaultStorePath } from './lib/riksdag-ingest.ts';
 import { isRiksdagEvidence, promiseSchema, verdictSchema } from './lib/schema.ts';
 import { rejectedCandidatesFileSchema } from '../src/schema/rejected.ts';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const { values } = parseArgs({
   options: {
+    // Repository root; only the end-to-end test points it at a temporary tree.
+    root: { type: 'string', default: resolve(dirname(fileURLToPath(import.meta.url)), '..') },
     run: { type: 'string' },
     term: { type: 'string', default: '2022-2026' },
     'id-prefix': { type: 'string', default: '' },
@@ -56,9 +60,10 @@ const { values } = parseArgs({
     'base-ref': { type: 'string', default: 'origin/main' },
     'sfs-store': { type: 'string' },
     'sfs-run': { type: 'string' },
-    'sfs-overrides': { type: 'string', default: resolve(root, 'tools/sfs-overrides.json') },
+    'sfs-overrides': { type: 'string' },
   },
 });
+const root = resolve(values.root!);
 if (!values.run) throw new Error('usage: apply-links.ts --run <name> [--dry-run]');
 
 type ResultRow = {
@@ -132,13 +137,24 @@ if (!!values['sfs-store'] !== !!values['sfs-run']) {
 }
 if (values['sfs-store']) {
   const sfsStore = loadJson(resolve(values['sfs-store'])) as SfsInput;
-  const runArg = values['sfs-run']!;
-  const runPath = runArg.endsWith('.json')
-    ? resolve(runArg)
-    : resolve(root, 'tools/out/sfs-judge-runs', runArg, 'results.json');
-  const sfsResults = (loadJson(runPath) as { results: Parameters<typeof sfsJudgements>[0] })
-    .results;
-  const overrides = loadJson(resolve(values['sfs-overrides']!)) as Record<string, SfsOverride>;
+  // Several runs, comma separated, earliest first: a later run's judgement of the same
+  // (promise, law) replaces the earlier one.
+  const sfsResults = mergeSfsResults(
+    values['sfs-run']!.split(',')
+      .map((r) => r.trim())
+      .filter(Boolean)
+      .map((runArg) => {
+        const runPath = runArg.endsWith('.json')
+          ? resolve(runArg)
+          : resolve(root, 'tools/out/sfs-judge-runs', runArg, 'results.json');
+        return (loadJson(runPath) as { results: Parameters<typeof sfsJudgements>[0] }).results;
+      }),
+  );
+  const overrides = loadJson(
+    values['sfs-overrides']
+      ? resolve(values['sfs-overrides'])
+      : resolve(root, 'tools/sfs-overrides.json'),
+  ) as Record<string, SfsOverride>;
   const stale = (sfsResults as readonly { label: string; template_version?: string }[]).filter(
     (r) =>
       (r.label === 'full' || r.label === 'partial') &&

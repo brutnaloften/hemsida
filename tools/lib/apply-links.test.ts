@@ -731,9 +731,38 @@ describe('applyLinks with SFS', () => {
     expect(r.verdict.value).toBe('in_progress');
   });
 
-  it('ignores a budget proposition when looking for pending propositions', () => {
+  it('ignores a budget proposition without laws when looking for pending propositions', () => {
     const sfs = sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] });
     expect(run(sfs, [pair('P1'), pair('PB')])!.verdict.value).toBe('fulfilled');
+  });
+
+  it('a budget document whose only law is judged none neither decides nor hides a pending directive', () => {
+    const d = new Map(sdocs).set('PU', {
+      ...doc('PU', 'prop', '2026-09-20', '1'),
+      titel: 'Budgetpropositionen för 2026 - Utgiftsområde 10',
+    });
+    const withDir = new Map(d).set('S3', doc('S3', 'dir', '2026-06-01', '9'));
+    const sfs = sfsFor(
+      { P1: ['sfs-2026-100'], PU: ['sfs-2026-101'] },
+      { 'sfs-2026-100': ['full', 'high'], 'sfs-2026-101': ['none', 'high'] },
+    );
+    // PU is dated after P1; if it counted as decided, the directive (2026-06-01) would no longer be later.
+    const r = applyLinks(
+      base,
+      [pair('P1'), pair('PU'), pair('S3')],
+      withDir,
+      today,
+      new Map(),
+      sfs,
+    )!;
+    expect(r.verdict.value).toBe('in_progress');
+  });
+
+  it('a budget proposition with a judged law is evidence for fulfilled', () => {
+    const sfs = sfsFor({ PB: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] });
+    const r = run(sfs, [pair('PB')])!;
+    expect(r.verdict.value).toBe('fulfilled');
+    expect(sfsOf(r).map((e) => e.dok_id)).toEqual(['sfs-2026-100']);
   });
 
   it('counts a proposition whose only law was judged none as having a law in force', () => {
