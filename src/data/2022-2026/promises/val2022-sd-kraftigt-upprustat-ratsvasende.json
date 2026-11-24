@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["rättsväsende", "satsningar", "kriminalvård"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Utfallet för rättsväsendets fem största anslag ökade nominellt från 55 968 mn kr 2022 till 78 753 mn kr 2025, alltså 22 786 mn kr eller +40,7 procent. Per anslag (utfall 2022 till 2025): Polismyndigheten 33 313 till 44 759 mn kr (+34,4 %); Säkerhetspolisen 1 939 till 2 736 mn kr (+41,1 %); Åklagarmyndigheten 2 007 till 2 810 mn kr (+40,0 %); Sveriges Domstolar 6 769 till 8 165 mn kr (+20,6 %); Kriminalvården 11 940 till 20 282 mn kr (+69,9 %). Alla fem ökar också i fasta priser (mellan +7,3 och +51,1 procent). Riksdagen anvisade ökade belopp för rättsväsendet i varje budget under perioden (Bet. 2022/23:JuU1, Bet. 2023/24:JuU1, Bet. 2024/25:JuU1). Ökningar på mellan 21 och 70 procent nominellt är en kraftig upprustning, och löftet gäller anslagen själva. Avtalets egen, snävare formulering (Kriminalvården) ändrar inte det. Källa: ESV:s årsutfall och betänkandena. Därför uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -60,6 +67,216 @@
       "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401001",
+        "namn": "Polismyndigheten",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 33313.2,
+        "after": 44759.4
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 33 313 mn kr 2022 och 44 759 mn kr 2025, ändring 11 446 mn kr (+34,4 %). I fasta priser +19,6 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "full",
+      "note": "Anslaget Polismyndigheten i utgiftsområde 4; en av fem anslag som tillsammans är den största delen av rättsväsendet."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401001",
+        "namn": "Polismyndigheten",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 33838.0,
+        "after": 45211.7
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 33 838 mn kr 2022 och 45 212 mn kr 2025, ändring 11 374 mn kr (+33,6 %). I fasta priser +18,9 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-11-29",
+      "relevance": "full",
+      "note": "Anvisat belopp (budget plus ändringsbudgetar) enligt ESV; utgiftsområdet behandlas i Bet. 2024/25:JuU1."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401002",
+        "namn": "Säkerhetspolisen",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 1939.1,
+        "after": 2736.5
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 1 939 mn kr 2022 och 2 736 mn kr 2025, ändring 797 mn kr (+41,1 %). I fasta priser +25,6 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "full",
+      "note": "Anslaget Säkerhetspolisen i utgiftsområde 4; en av fem anslag som tillsammans är den största delen av rättsväsendet."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401002",
+        "namn": "Säkerhetspolisen",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 1898.4,
+        "after": 2757.4
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 1 898 mn kr 2022 och 2 757 mn kr 2025, ändring 859 mn kr (+45,2 %). I fasta priser +29,2 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-11-29",
+      "relevance": "full",
+      "note": "Anvisat belopp (budget plus ändringsbudgetar) enligt ESV; utgiftsområdet behandlas i Bet. 2024/25:JuU1."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401003",
+        "namn": "Åklagarmyndigheten",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 2006.8,
+        "after": 2809.9
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 2 007 mn kr 2022 och 2 810 mn kr 2025, ändring 803 mn kr (+40,0 %). I fasta priser +24,6 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "full",
+      "note": "Anslaget Åklagarmyndigheten i utgiftsområde 4; en av fem anslag som tillsammans är den största delen av rättsväsendet."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401003",
+        "namn": "Åklagarmyndigheten",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 2073.2,
+        "after": 2788.5
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 2 073 mn kr 2022 och 2 788 mn kr 2025, ändring 715 mn kr (+34,5 %). I fasta priser +19,7 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-11-29",
+      "relevance": "full",
+      "note": "Anvisat belopp (budget plus ändringsbudgetar) enligt ESV; utgiftsområdet behandlas i Bet. 2024/25:JuU1."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401005",
+        "namn": "Sveriges Domstolar",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 6768.9,
+        "after": 8165.4
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 6 769 mn kr 2022 och 8 165 mn kr 2025, ändring 1 396 mn kr (+20,6 %). I fasta priser +7,3 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "full",
+      "note": "Anslaget Sveriges Domstolar i utgiftsområde 4; en av fem anslag som tillsammans är den största delen av rättsväsendet."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401005",
+        "namn": "Sveriges Domstolar",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 6683.7,
+        "after": 8176.9
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 6 684 mn kr 2022 och 8 177 mn kr 2025, ändring 1 493 mn kr (+22,3 %). I fasta priser +8,9 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-11-29",
+      "relevance": "full",
+      "note": "Anvisat belopp (budget plus ändringsbudgetar) enligt ESV; utgiftsområdet behandlas i Bet. 2024/25:JuU1."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401006",
+        "namn": "Kriminalvården",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 11939.5,
+        "after": 20281.9
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 11 940 mn kr 2022 och 20 282 mn kr 2025, ändring 8 342 mn kr (+69,9 %). I fasta priser +51,1 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "full",
+      "note": "Anslaget Kriminalvården i utgiftsområde 4; en av fem anslag som tillsammans är den största delen av rättsväsendet."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401006",
+        "namn": "Kriminalvården",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 12363.4,
+        "after": 20916.3
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 12 363 mn kr 2022 och 20 916 mn kr 2025, ändring 8 553 mn kr (+69,2 %). I fasta priser +50,5 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-11-29",
+      "relevance": "full",
+      "note": "Anvisat belopp (budget plus ändringsbudgetar) enligt ESV; utgiftsområdet behandlas i Bet. 2024/25:JuU1."
     }
   ]
 }

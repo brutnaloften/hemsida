@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["Säkerhetspolisen", "Säpo", "liberal demokrati", "terrorism"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Anslaget 1:2 Säkerhetspolisen ökade nominellt från ett utfall på 1 939 mn kr 2022 till 2 736 mn kr 2025, alltså 797 mn kr eller +41,1 procent (i fasta priser +25,6 procent). Regeringen föreslog 2 061 mn kr för 2023 mot knappt 1 898 mn kr 2022 (Bet. 2022/23:JuU1) och 2 757 mn kr för 2025 (Bet. 2024/25:JuU1). Anslaget är Säkerhetspolisens eget och ökar i varje beslutad budget under perioden, så löftet om att stärka Säkerhetspolisen med mer resurser är uppfyllt i budgeten. Förmågan i sig kan inte mätas i ESV:s data. Källa: ESV:s årsutfall och betänkandena. Därför uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,68 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU1",
+      "designation": "Bet. 2022/23:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU1.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU1",
+      "designation": "Bet. 2024/25:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2024-11-29",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401002",
+        "namn": "Säkerhetspolisen",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 1939.1,
+        "after": 2736.5
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 1 939 mn kr 2022 och 2 736 mn kr 2025, ändring 797 mn kr (+41,1 %). I fasta priser +25,6 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "full",
+      "note": "Anslaget 1:2 Säkerhetspolisen i utgiftsområde 4."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401002",
+        "namn": "Säkerhetspolisen",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 1898.4,
+        "after": 2757.4
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 1 898 mn kr 2022 och 2 757 mn kr 2025, ändring 859 mn kr (+45,2 %). I fasta priser +29,2 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-11-29",
+      "relevance": "full",
+      "note": "Regeringen föreslog 2 060 983 000 kr för 2023 (Bet. 2022/23:JuU1) och 2 757 388 000 kr för 2025 (Bet. 2024/25:JuU1)."
     }
   ]
 }
