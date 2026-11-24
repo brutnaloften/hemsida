@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["hedersförtryck", "kartläggning", "hedersrelaterat våld", "utbredning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i mars 2025 en utredare i uppdrag att kartlägga och analysera förekomsten av hedersrelaterat våld och förtryck i förskolan, skolan och fritidshemmet. Dokumentet gäller alltså den del av löftet som rör hedersförtryckets utbredning inom dessa verksamheter.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB131",
+      "designation": "Dir. 2025:31",
+      "title": "Ökade insatser för att motverka hedersrelaterat våld och förtryck i förskolan, skolan och fritidshemmet",
+      "date": "2025-03-20",
+      "url": "https://data.riksdagen.se/dokument/HDB131.html",
+      "relevance": "partial",
       "note": null
     }
   ]
