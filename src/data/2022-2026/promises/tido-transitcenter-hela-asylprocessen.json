@@ -20,10 +20,16 @@
   "committee": "SfU",
   "keywords": ["transitcenter", "ankomstcenter", "EBO", "Ju 2021:12", "asylprocessen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-11",
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i juni 2023 tilläggsdirektiv till utredningen om ett ordnat initialt mottagande, med utgångspunkt att asylsökande bor i särskilda center under hela eller delar av asyltiden. Riksdagen beslutade i januari 2025 om en ny ordning där asylsökande som huvudregel får ekonomiskt bistånd bara om de bor på det tilldelade asylboendet, och lagarna gäller från 1 mars 2025. Det täcker en del av löftet, eftersom eget boende ersätts av tilldelat boende, och löftet bedöms som delvis uppfyllt.",
+    "date": "2026-11-24",
     "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-24"
+      },
       {
         "value": "unassessed",
         "reasoning": "",
@@ -37,5 +43,56 @@
       }
     ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB193",
+      "designation": "Dir. 2023:93",
+      "title": "Tilläggsdirektiv till Utredningen om ett ordnat initialt mottagande av asylsökande (Ju 2021:12)",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB193.html",
+      "relevance": "partial",
+      "note": "Utvidgar utredningen till att omhänderta delar av Tidöavtalet, med utgångspunkt att asylsökande under hela eller delar av asyltiden bor i särskilda center."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0349",
+      "designation": "Prop. 2024/25:49",
+      "title": "En ny ordning för asylsökandes boende",
+      "date": "2024-11-07",
+      "url": "https://data.riksdagen.se/dokument/HC0349.html",
+      "relevance": "partial",
+      "note": "Asylsökande får som huvudregel ekonomiskt bistånd under asyltiden bara om de bor på det tilldelade asylboendet."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SfU11",
+      "designation": "Bet. 2024/25:SfU11",
+      "title": "En ny ordning för asylsökandes boende",
+      "date": "2025-01-23",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU11.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-57",
+      "designation": "SFS 2025:57",
+      "title": "Lag (2025:57) om ändring i lagen (1994:137) om mottagande av asylsökande m.fl.",
+      "date": "2025-03-01",
+      "url": "https://svenskforfattningssamling.se/doc/202557.html",
+      "relevance": "partial",
+      "note": "Ekonomiskt bistånd under asyltiden knyts till att asylsökanden bor på det tilldelade asylboendet, vilket ersätter eget boende. Transitcenter enligt asylprocedurdirektivet införs inte."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-58",
+      "designation": "SFS 2025:58",
+      "title": "Lag (2025:58) om ändring i utlänningslagen (2005:716)",
+      "date": "2025-03-01",
+      "url": "https://svenskforfattningssamling.se/doc/202558.html",
+      "relevance": "partial",
+      "note": "Följdändring: en ansökan om uppehållstillstånd får betraktas som återkallad när den sökande inte bor på ett asylboende."
+    }
+  ]
 }
