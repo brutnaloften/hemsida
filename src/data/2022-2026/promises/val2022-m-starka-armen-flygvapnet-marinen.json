@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["armén", "flygvapnet", "marinen", "försvarsmateriel", "förmåga"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Pengarna till försvarsmakten har ökat kraftigt. Anslaget 1:1 Förbandsverksamhet och beredskap, som bär arméns, flygvapnets och marinens förband, ökade nominellt från ett utfall på 46 523 mn kr 2022 till 68 855 mn kr 2025, alltså 22 333 mn kr eller +48,0 procent (i fasta priser +31,7 procent). Anslaget 1:3 Anskaffning av materiel och anläggningar ökade från 24 345 mn kr till 58 829 mn kr, +141,6 procent (i fasta priser +115,0 procent). Regeringen föreslog 51 453 mn kr respektive 27 949 mn kr för 2023 (Bet. 2022/23:FöU1) och 66 246 mn kr respektive 59 559 mn kr för 2025 (Bet. 2024/25:FöU1). Anslagen gäller hela försvarsmakten och ESV delar inte upp dem på armé, flygvapen och marin, och löftet om förmåga kan inte mätas i budgetdata. Därför delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,120 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01FöU1",
+      "designation": "Bet. 2022/23:FöU1",
+      "title": "Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01FöU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01FöU1",
+      "designation": "Bet. 2023/24:FöU1",
+      "title": "Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "date": "2023-11-30",
+      "url": "https://data.riksdagen.se/dokument/HB01FöU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01FöU1",
+      "designation": "Bet. 2024/25:FöU1",
+      "title": "Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "date": "2024-11-28",
+      "url": "https://data.riksdagen.se/dokument/HC01FöU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0601001",
+        "namn": "Förbandsverksamhet och beredskap",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 46522.5,
+        "after": 68855.2
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 46 522 mn kr 2022 och 68 855 mn kr 2025, ändring 22 333 mn kr (+48,0 %). I fasta priser +31,7 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Anslaget 1:1 Förbandsverksamhet och beredskap i utgiftsområde 6. ESV delar inte upp det på armé, flygvapen och marin."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0601001",
+        "namn": "Förbandsverksamhet och beredskap",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 44634.8,
+        "after": 67352.5
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 44 635 mn kr 2022 och 67 352 mn kr 2025, ändring 22 718 mn kr (+50,9 %). I fasta priser +34,3 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-11-28",
+      "relevance": "partial",
+      "note": "Regeringen föreslog 51 453 mn kr för 2023 (Bet. 2022/23:FöU1), 60 650 mn kr för 2024 (Bet. 2023/24:FöU1) och 66 246 mn kr för 2025 (Bet. 2024/25:FöU1)."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0601003",
+        "namn": "Anskaffning av materiel och anläggningar",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 24345.3,
+        "after": 58829.3
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 24 345 mn kr 2022 och 58 829 mn kr 2025, ändring 34 484 mn kr (+141,6 %). I fasta priser +115,0 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Anslaget 1:3 Anskaffning av materiel och anläggningar i utgiftsområde 6. ESV delar inte upp det på armé, flygvapen och marin."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0601003",
+        "namn": "Anskaffning av materiel och anläggningar",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 23224.7,
+        "after": 60124.6
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 23 225 mn kr 2022 och 60 125 mn kr 2025, ändring 36 900 mn kr (+158,9 %). I fasta priser +130,3 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-11-28",
+      "relevance": "partial",
+      "note": "Regeringen föreslog 27 949 mn kr för 2023 (Bet. 2022/23:FöU1), 48 627 mn kr för 2024 (Bet. 2023/24:FöU1) och 59 559 mn kr för 2025 (Bet. 2024/25:FöU1)."
     }
   ]
 }
