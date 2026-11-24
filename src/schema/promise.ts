@@ -254,11 +254,102 @@ const budgetEvidenceSchema = z
   })
   .strict();
 
+const periodKey = z
+  .string()
+  .regex(/^\d{4}(-Q[1-4]|-(0[1-9]|1[0-2]))?$/, 'expected YYYY, YYYY-Qn or YYYY-MM');
+const periodFormat = (k: string) =>
+  k.length === 4 ? 'year' : k.includes('Q') ? 'quarter' : 'month';
+
+const periodValue = z
+  .object({
+    /** Period key as in the series file's `values`: "2022", "2022-Q1" or "2022-03". */
+    period: periodKey,
+    v: z.number(),
+  })
+  .strict();
+
+/** What the promise asks of the series; `none` when it states no measurable direction or level. */
+export const statisticTargetSchema = z.discriminatedUnion('type', [
+  z
+    .object({
+      type: z.literal('threshold'),
+      op: z.enum(['gte', 'lte']),
+      value: z.number(),
+      /** Year the promise sets for the level, when it sets one. */
+      byYear: z.number().int().optional(),
+    })
+    .strict(),
+  z.object({ type: z.literal('direction'), op: z.enum(['up', 'down']) }).strict(),
+  z.object({ type: z.literal('none') }).strict(),
+]);
+
+/**
+ * A measured outcome from an official statistics series (src/data/<term>/statistics/<id>.json, see
+ * statisticSeriesSchema). Describes numbers only; it never sets `broken` or `unfulfilled` and a series that
+ * moves against the promise never qualifies a verdict. There is no tier: a statistic is by
+ * definition a measured result. See "Statistic evidence" in docs/data-model.md.
+ */
+const statisticEvidenceSchema = z
+  .object({
+    kind: z.literal('statistic'),
+    /** Id of a series file in the same term; a data test checks it exists. */
+    series: slug,
+    /** Normally the last full year before the term (2022). */
+    baseline: periodValue,
+    /** The latest period at the series' `fetched_at`. */
+    latest: periodValue,
+    target: statisticTargetSchema,
+    /** `partial` when the series is a proxy or covers only part of the promise. */
+    relevance: z.enum(['full', 'partial']),
+    /** Swedish note on the baseline when it is not the last full year before the term. */
+    baselineNote: z.string().min(1).optional(),
+    /**
+     * Swedish note giving the inflation-adjusted change. Required (by the data test) for a series
+     * with a `priceBasis`, because the comparison itself is nominal.
+     */
+    inflationNote: z.string().min(1).optional(),
+    /** Release date of the latest period, used to place it on the timeline. */
+    date: isoDate,
+    note: z.string().nullable().default(null),
+  })
+  .strict()
+  .refine((e) => periodFormat(e.baseline.period) === periodFormat(e.latest.period), {
+    path: ['latest', 'period'],
+    message: 'baseline and latest must use the same period format',
+  })
+  .refine((e) => e.baseline.period < e.latest.period, {
+    path: ['latest', 'period'],
+    message: 'latest.period must be after baseline.period',
+  });
+
 export const evidenceSchema = z.discriminatedUnion('kind', [
   riksdagEvidenceSchema,
   agreementEvidenceSchema,
   budgetEvidenceSchema,
+  statisticEvidenceSchema,
 ]);
+
+/** The direction a statistic target asks for, or undefined when it states none. */
+function targetDirection(t: StatisticEvidence['target']): 'up' | 'down' | undefined {
+  if (t.type === 'direction') return t.op;
+  if (t.type === 'threshold') return t.op === 'gte' ? 'up' : 'down';
+  return undefined;
+}
+
+/** True when the series moved from baseline to latest in the direction the promise asks for. */
+export function statisticMoved(e: StatisticEvidence): boolean {
+  const dir = targetDirection(e.target);
+  if (dir === undefined) return false;
+  return dir === 'up' ? e.latest.v > e.baseline.v : e.latest.v < e.baseline.v;
+}
+
+/** True when the target is reached at `latest` (threshold level, or direction with a move). */
+export function statisticTargetMet(e: StatisticEvidence): boolean {
+  const t = e.target;
+  if (t.type === 'threshold') return t.op === 'gte' ? e.latest.v >= t.value : e.latest.v <= t.value;
+  if (t.type === 'direction') return statisticMoved(e);
+  return false;
+}
 
 /** Who set a verdict. Absent means the origin is not recorded (older verdicts and `unassessed`). */
 export const ASSESSED_BY = ['ai', 'human'] as const;
@@ -303,13 +394,14 @@ const MIN_SEARCH_NOTE_LENGTH = 30;
  * Evidence-to-verdict constraints for the CURRENT verdict (history entries are not checked; they
  * were judged against the evidence available at the time). Only Riksdag evidence counts, and a
  * `contradicts` entry never qualifies a verdict, with one exception: the party's own contrary motion
- * for `broken` on an opposition-only budget promise; `agreement` evidence never qualifies; `budget` evidence only through the budget verdict rule. See "Verdict" in docs/data-model.md.
+ * for `broken` on an opposition-only budget promise; `agreement` evidence never qualifies; `budget` evidence only through the budget verdict rule; `statistic` evidence only through the statistic verdict rule. See "Verdict" in docs/data-model.md.
  */
 function checkVerdictEvidence(
   p: {
     type: string;
     parties: string[];
     roles: Partial<Record<string, string>>;
+    term: string;
     verdict: { value: string; reasoning: string; date: string };
     evidence: Evidence[];
     committee?: string | undefined;
@@ -335,6 +427,36 @@ function checkVerdictEvidence(
     ? p.evidence.filter((e): e is BudgetEvidence => e.kind === 'budget' && e.tier !== undefined)
     : [];
   const anchored = riksdag.some((e) => e.kind === 'prop' || e.kind === 'bet');
+  // Statistic verdict rule (hemsida-50r.2): for a promise with a government or support party, a
+  // statistic plus action evidence (prop, bet or sfs) can qualify partially_fulfilled and
+  // fulfilled. A statistic shows the result, not the cause, so the action evidence is required
+  // too. Opposition-only promises are never judged on statistics, and a series that moved
+  // against the promise qualifies nothing.
+  const statisticJudgeable = Object.values(p.roles).some(
+    (r) => r === 'government' || r === 'support',
+  );
+  const statistics = statisticJudgeable
+    ? p.evidence.filter((e): e is StatisticEvidence => e.kind === 'statistic')
+    : [];
+  const termEnd = Number(p.term.slice(5));
+  const acted = riksdag.some((e) => e.kind === 'prop' || e.kind === 'bet' || e.kind === 'sfs');
+  // Both verdicts need the series to have moved in the promised direction; fulfilled also needs
+  // the target reached. A series that moved against the promise qualifies nothing.
+  const statisticPartial = acted && statistics.some((e) => statisticMoved(e));
+  const statisticFull =
+    acted &&
+    statistics.some(
+      (e) =>
+        e.relevance === 'full' &&
+        statisticMoved(e) &&
+        statisticTargetMet(e) &&
+        // a level promised for a year after the term cannot be settled before that year
+        !(
+          e.target.type === 'threshold' &&
+          e.target.byYear !== undefined &&
+          e.target.byYear > termEnd
+        ),
+    );
   const budgetOutcome = anchored && tiered.some((e) => e.tier === 'outcome');
   // An opposition-only budget promise is judged on the party's own act: a motion (its budget
   // alternative) that proposes the money. `fulfilled` needs a motion judged to cover all of it.
@@ -361,6 +483,16 @@ function checkVerdictEvidence(
       if (!riksdag.some((e) => e.kind === 'dir')) {
         fail(
           `verdict ${value} on an inquiry promise requires Riksdag evidence of kind dir (the inquiry directive; agreement and budget evidence do not count)`,
+        );
+      }
+    } else if (p.type === 'outcome') {
+      // An outcome promise is judged on a measured result: a statistic plus action evidence. A law
+      // alone says nothing about the result, and a series moving against the promise qualifies nothing.
+      if (!(value === 'partially_fulfilled' ? statisticPartial : statisticFull)) {
+        fail(
+          value === 'fulfilled'
+            ? 'verdict fulfilled on an outcome promise requires a statistic entry with relevance full that moved in the promised direction and reaches its target (a threshold level by a year within the term), plus a prop, bet or sfs entry; only for a promise with a government or support party'
+            : 'verdict partially_fulfilled on an outcome promise requires a statistic entry that moved in the promised direction, plus a prop, bet or sfs entry; only for a promise with a government or support party',
         );
       }
     } else if (
@@ -470,8 +602,71 @@ export const promiseSchema = z
       }
       agreementSources.add(e.source);
     });
+    p.evidence.forEach((e, i) => {
+      if (e.kind === 'statistic' && p.type !== 'outcome') {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['evidence', i, 'kind'],
+          message: 'statistic evidence is only allowed on an outcome promise',
+        });
+      }
+    });
     checkVerdictEvidence(p, ctx);
   });
+
+export const SERIES_SOURCES = [
+  'scb',
+  'bra',
+  'migrationsverket',
+  'skolverket',
+  'socialstyrelsen',
+  'energimyndigheten',
+  'trafikanalys',
+  'polisen',
+  'other',
+] as const;
+
+/**
+ * One official statistics series, `src/data/<term>/statistics/<id>.json`, written by an ingest
+ * tool. `selection` keeps the exact query so a reader can re-run it. `values` is keyed by period
+ * ("2022", "2022-Q1"). A price series sets `priceBasis` (the values are nominal or real); evidence
+ * on it must then carry an `inflationNote`.
+ */
+export const statisticSeriesSchema = z
+  .object({
+    id: slug,
+    source: z.enum(SERIES_SOURCES),
+    table: z.string().min(1),
+    selection: z.record(z.string(), z.string()),
+    label: z.string().min(1),
+    unit: z.string().min(1),
+    frequency: z.enum(['year', 'quarter', 'month']),
+    fetched_at: isoDate,
+    priceBasis: z.enum(['nominal', 'real']).optional(),
+    values: z.record(periodKey, z.number()),
+  })
+  .strict()
+  .refine(
+    (s) =>
+      s.priceBasis !== undefined ||
+      !/(?<![\p{L}\d])(kr|kronor|öre|sek)\s*(\/|per)\s*(l|liter|litre|kwh|mwh|kg|m3|m³)(?![\p{L}\d])/iu.test(
+        s.unit,
+      ),
+    {
+      path: ['priceBasis'],
+      message: 'a price series (unit in kr or öre per unit) must set priceBasis',
+    },
+  )
+  .refine((s) => Object.keys(s.values).every((k) => periodFormat(k) === s.frequency), {
+    path: ['values'],
+    message: 'every period key must match the series frequency (year, quarter or month)',
+  })
+  .refine((s) => Object.keys(s.values).length > 0, {
+    path: ['values'],
+    message: 'a series needs at least one value',
+  });
+
+export type StatisticSeries = z.infer<typeof statisticSeriesSchema>;
 
 export const sourceSchema = z
   .object({
@@ -497,9 +692,9 @@ export const sourceSchema = z
     }
   });
 
-/** True for evidence that is a Riksdag document (not agreement or budget evidence). */
+/** True for evidence that is a Riksdag document (not agreement, budget or statistic evidence). */
 export function isRiksdagEvidence(e: Evidence): e is RiksdagEvidence {
-  return e.kind !== 'agreement' && e.kind !== 'budget';
+  return e.kind !== 'agreement' && e.kind !== 'budget' && e.kind !== 'statistic';
 }
 
 export type PromiseRecord = z.infer<typeof promiseSchema>;
@@ -507,6 +702,7 @@ export type Evidence = z.infer<typeof evidenceSchema>;
 export type RiksdagEvidence = Extract<Evidence, { kind: (typeof EVIDENCE_KINDS)[number] }>;
 export type EvidenceFigure = z.infer<typeof evidenceFigureSchema>;
 export type BudgetEvidence = Extract<Evidence, { kind: 'budget' }>;
+export type StatisticEvidence = Extract<Evidence, { kind: 'statistic' }>;
 export type AgreementEvidence = Extract<Evidence, { kind: 'agreement' }>;
 export type AgreementOutcome = (typeof AGREEMENT_OUTCOMES)[number];
 export type Verdict = z.infer<typeof verdictSchema>;

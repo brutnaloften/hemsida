@@ -1,6 +1,6 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { promiseSchema, sourceSchema } from './schema/promise';
+import { promiseSchema, statisticSeriesSchema, sourceSchema } from './schema/promise';
 import { termSchema } from './schema/term';
 
 // One directory per term: src/data/<term>/promises/*.json
@@ -21,4 +21,10 @@ const terms = defineCollection({
   schema: termSchema,
 });
 
-export const collections = { promises, sources, terms };
+// Official statistics series that statistic evidence cites: src/data/<term>/statistics/*.json
+const statistics = defineCollection({
+  loader: glob({ pattern: '*/statistics/*.json', base: 'src/data' }),
+  schema: statisticSeriesSchema,
+});
+
+export const collections = { promises, sources, terms, statistics };
