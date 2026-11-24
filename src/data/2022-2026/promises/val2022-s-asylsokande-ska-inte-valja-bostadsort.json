@@ -17,11 +17,17 @@
   "committee": "SfU",
   "keywords": ["eget boende", "ebo", "asylsökande", "boendesegregation"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "En statlig utredning lade i november 2022 fram ett förslag om att ta bort möjligheten till eget boende för asylsökande. Alla asylsökande skulle i stället anvisas plats i asylboende, och boendet skulle vara ett villkor för dagersättning och undantag från krav på arbetstillstånd. Dokumentet visar förslag, inget beslut.",
-    "date": "2026-11-15",
+    "reasoning": "En statlig utredning föreslog i november 2022 att eget boende tas bort för asylsökande. Regeringen lade i november 2024 fram en proposition och riksdagen beslutade i januari 2025 att asylsökande som huvudregel får ekonomiskt bistånd under asyltiden bara om de bor på den plats på ett asylboende som de tilldelats. Lagarna gäller från 1 mars 2025. Asylsökande får fortfarande ordna boende själva men utan bistånd, och löftet bedöms därför som delvis uppfyllt.",
+    "date": "2026-11-24",
     "history": [
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning lade i november 2022 fram ett förslag om att ta bort möjligheten till eget boende för asylsökande. Alla asylsökande skulle i stället anvisas plats i asylboende, och boendet skulle vara ett villkor för dagersättning och undantag från krav på arbetstillstånd. Dokumentet visar förslag, inget beslut.",
+        "date": "2026-11-15"
+      },
       {
         "value": "unassessed",
         "reasoning": "",
@@ -39,6 +45,46 @@
       "url": "https://data.riksdagen.se/dokument/HAB364.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0349",
+      "designation": "Prop. 2024/25:49",
+      "title": "En ny ordning för asylsökandes boende",
+      "date": "2024-11-07",
+      "url": "https://data.riksdagen.se/dokument/HC0349.html",
+      "relevance": "full",
+      "note": "Utgångspunkten är att asylsökande bor på Migrationsverkets boenden i stället för att ordna boende på egen hand."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SfU11",
+      "designation": "Bet. 2024/25:SfU11",
+      "title": "En ny ordning för asylsökandes boende",
+      "date": "2025-01-23",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU11.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-57",
+      "designation": "SFS 2025:57",
+      "title": "Lag (2025:57) om ändring i lagen (1994:137) om mottagande av asylsökande m.fl.",
+      "date": "2025-03-01",
+      "url": "https://svenskforfattningssamling.se/doc/202557.html",
+      "relevance": "partial",
+      "note": "Ekonomiskt bistånd under asyltiden knyts till att asylsökanden bor på det tilldelade asylboendet. Eget boende är fortfarande tillåtet, men utan rätt till bistånd."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-58",
+      "designation": "SFS 2025:58",
+      "title": "Lag (2025:58) om ändring i utlänningslagen (2005:716)",
+      "date": "2025-03-01",
+      "url": "https://svenskforfattningssamling.se/doc/202558.html",
+      "relevance": "partial",
+      "note": "Följdändring: en ansökan om uppehållstillstånd får betraktas som återkallad när den sökande inte bor på ett asylboende."
     }
   ]
 }

@@ -275,14 +275,29 @@
     "reason": "Hand-added in the slice 4 close-out (dl5.12): the law is a step in the jobbskatteavdrag reform that the same law set delivers for the M promise sankt-skatt-pa-arbete; for this C promise (lower tax on jobs and business, especially small firms and the self-employed) it covers the jobs part and is partial.",
     "missing_sv": "Tredje förstärkningen av jobbskatteavdraget (från 2026), tillsammans med höjt grundavdrag för äldre och skattereduktion för sjuk- och aktivitetsersättning."
   },
-  "val2022-c-sank-skatten-pa-jobb-och-foretagande::sfs-2024-1156": {
-    "label": "partial",
-    "reason": "Hand-added in the slice 4 close-out (dl5.12): Prop. 2024/25:25 widens the växa-stöd (lower employer contributions when a one-person firm hires, now up to two employees, from 2025-01-01), which delivers the small-business part of the promise; SFS 2024:1156 holds the reduction itself and SFS 2024:1158 the consequential rule for enmansföretag.",
-    "missing_sv": "Utvidgat växa-stöd: nedsättning av arbetsgivaravgifterna för upp till två anställda i enmansföretag."
-  },
   "val2022-c-sank-skatten-pa-jobb-och-foretagande::sfs-2024-1158": {
     "label": "partial",
-    "reason": "Hand-added in the slice 4 close-out (dl5.12): Prop. 2024/25:25 widens the växa-stöd (lower employer contributions when a one-person firm hires, now up to two employees, from 2025-01-01), which delivers the small-business part of the promise; SFS 2024:1156 holds the reduction itself and SFS 2024:1158 the consequential rule for enmansföretag.",
-    "missing_sv": "Följdändring till det utvidgade växa-stödet för enmansföretag."
+    "reason": "Hand-added in the slice 4 close-out (dl5.12): Prop. 2024/25:25 widens the växa-stöd (lower employer contributions when a one-person firm hires, now up to two employees, from 2025-01-01). The växa-stöd sits in lagen (2016:1053), which SFS 2024:1158 amends (3-6 and 9 §§); this delivers the small-business part of the promise. SFS 2024:1156 only follows on in the stödområde law and is not linked.",
+    "missing_sv": "Utvidgat växa-stöd: nedsättningen av arbetsgivaravgifterna för enmansföretag som anställer gäller upp till två anställda."
+  },
+  "tido-transitcenter-hela-asylprocessen::sfs-2025-57": {
+    "label": "partial",
+    "reason": "Hand-added in the slice 4 close-out (dl5.12): Prop. 2024/25:49 and SFS 2025:57 tie financial assistance during the asylum period to living at the assigned asylum accommodation (the ending of eget boende); transit centres under article 43 of the asylum procedures directive are not introduced, so the compound promise is partial.",
+    "missing_sv": "Transitcenter enligt asylprocedurdirektivet införs inte."
+  },
+  "tido-transitcenter-hela-asylprocessen::sfs-2025-58": {
+    "label": "partial",
+    "reason": "Hand-added in the slice 4 close-out (dl5.12): Prop. 2024/25:49 and SFS 2025:57 tie financial assistance during the asylum period to living at the assigned asylum accommodation (the ending of eget boende); SFS 2025:58 is the follow-on rule on withdrawn residence-permit applications.",
+    "missing_sv": "Följdändring till den nya ordningen för asylsökandes boende."
+  },
+  "val2022-s-asylsokande-ska-inte-valja-bostadsort::sfs-2025-57": {
+    "label": "partial",
+    "reason": "Hand-added in the slice 4 close-out (dl5.12): Prop. 2024/25:49 and SFS 2025:57 tie financial assistance during the asylum period to living at the assigned asylum accommodation (the ending of eget boende); living privately remains allowed, but without the right to assistance, so the promise that asylum seekers may not choose where to live is delivered in part.",
+    "missing_sv": "Eget boende är fortfarande tillåtet, men utan rätt till bistånd."
+  },
+  "val2022-s-asylsokande-ska-inte-valja-bostadsort::sfs-2025-58": {
+    "label": "partial",
+    "reason": "Hand-added in the slice 4 close-out (dl5.12): Prop. 2024/25:49 and SFS 2025:57 tie financial assistance during the asylum period to living at the assigned asylum accommodation (the ending of eget boende); SFS 2025:58 is the follow-on rule on withdrawn residence-permit applications.",
+    "missing_sv": "Följdändring till den nya ordningen för asylsökandes boende."
   }
 }
