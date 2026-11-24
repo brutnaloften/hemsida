@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["förvar", "utvisning", "avvisning", "utlänningslagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "Regeringen föreslog i april 2026 skärpta regler om uppsikt och förvar där förutsättningarna för att ta en utlänning i förvar tydliggörs och utvidgas, och riksdagen biföll förslaget i juni 2026. Förslaget bygger till stor del på EU:s nya mottagandedirektiv, och löftet gällde särskilt fler personer med både utvisnings- och avvisningsbeslut. Hur mycket av löftet förslaget täcker går därför inte att avgöra.",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i april 2026 skärpta regler om uppsikt och förvar där förutsättningarna för att ta en utlänning i förvar tydliggörs och utvidgas, bland annat med förstärkt uppsikt och en säkerhetsavdelning i förvar. Riksdagen biföll förslaget i juni 2026. Lagändringarna gäller från den 21 juli 2026, med ytterligare ändringar från den 1 oktober 2026 och den 1 december 2027. Löftet gällde särskilt fler personer med både utvisnings- och avvisningsbeslut, medan lagarna är en allmän utvidgning av grunderna för förvar.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-fler-forvarsplatser"],
       "outcome": "included",
       "note": "Avtalet ökar antalet förvarsplatser."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03265",
+      "designation": "Prop. 2025/26:265",
+      "title": "Skärpta regler om uppsikt och förvar",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03265.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",
@@ -50,6 +67,36 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU45.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1425",
+      "designation": "SFS 2026:1425",
+      "title": "Lag (2026:1425) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-07-21",
+      "url": "https://svenskforfattningssamling.se/doc/20261425.html",
+      "relevance": "partial",
+      "note": "Utvidgar förutsättningarna för uppsikt och förvar av utlänningar. Texten pekar inte ut gruppen med både utvisnings- och avvisningsbeslut."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1426",
+      "designation": "SFS 2026:1426",
+      "title": "Lag (2026:1426) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-10-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261426.html",
+      "relevance": "partial",
+      "note": "Ändrar reglerna om förvar i utlänningslagen som en del av samma reform."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1427",
+      "designation": "SFS 2026:1427",
+      "title": "Lag (2026:1427) om ändring i utlänningslagen (2005:716)",
+      "date": "2027-12-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261427.html",
+      "relevance": "partial",
+      "note": "Ytterligare ändringar i utlänningslagens regler om uppsikt och förvar."
     }
   ]
 }

@@ -150,13 +150,14 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                 </p>
               </>
             ) : (
-              <>
-                {verdict.reasoning.trim() !== '' && <p class="mt-3">{verdict.reasoning}</p>}
+              verdict.reasoning.trim() !== '' ? (
+                <p class="mt-3">{verdict.reasoning}</p>
+              ) : (
                 <p class="mt-3">
                   Vi har inte bedömt det här löftet ännu. Bedömningen sätts när riksdagsdokument har
                   kopplats till löftet. Det betyder inte att löftet är uppfyllt eller brutet.
                 </p>
-              </>
+              )
             )
           }
         </section>
