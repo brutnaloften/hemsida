@@ -1,0 +1,23 @@
+{
+  "id": "scb-vaxthusgaser-nationell-total",
+  "source": "scb",
+  "table": "TAB4698",
+  "selection": {
+    "ContentsCode": "0000018Q",
+    "Sektor": "0.1",
+    "Vaxthusgaser": "CO2-ekv."
+  },
+  "label": "Växthusgasutsläpp, nationell total exkl. LULUCF och internationella transporter",
+  "unit": "kt CO2-ekvivalenter",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 51430.3,
+    "2019": 50191.1,
+    "2020": 45968.6,
+    "2021": 47711.2,
+    "2022": 45168,
+    "2023": 44233.6,
+    "2024": 47493.7
+  }
+}

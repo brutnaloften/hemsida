@@ -1,0 +1,25 @@
+{
+  "id": "scb-skyddad-natur-land-andel",
+  "source": "scb",
+  "table": "TAB6829",
+  "selection": {
+    "ContentsCode": "000008LS",
+    "Region": "00",
+    "Skyddsform": "TOTO",
+    "TypAvMiljo": "LAND"
+  },
+  "label": "Formellt skyddad natur, andel av landarealen (överlapp borträknat)",
+  "unit": "procent",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 13.6,
+    "2019": 13.7,
+    "2020": 13.8,
+    "2021": 13.8,
+    "2022": 13.9,
+    "2023": 13.9,
+    "2024": 14.2,
+    "2025": 14.3
+  }
+}

@@ -31,6 +31,10 @@ export const RULES: Record<string, Rule> = {
   // is revised later). Same conservative 1 July cut-off. Monthly KPI is not tracked yet: the
   // manifest records the latest year only.
   macro: { kind: 'annual', month: 7, day: 1 },
+  // ASSUMPTION: the SCB series in `tools/statistics-configs/` (AKU, installed capacity, housing,
+  // tax, emissions) have year Y out by spring Y+1, emissions in June. Same conservative 1 July
+  // cut-off. latestPeriod is the newest year over all series, so one lagging series is not flagged.
+  statistics: { kind: 'annual', month: 7, day: 1 },
   // ASSUMPTION: Riksdag publishes continuously, so a monthly refresh is enough. The 2022-2026
   // term is treated as closed by one fetch on or after 2026-10-31 (term ended with the September
   // 2026 election; the last documents are assumed to be out by then).

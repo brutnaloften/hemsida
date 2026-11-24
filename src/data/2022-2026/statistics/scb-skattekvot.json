@@ -1,0 +1,23 @@
+{
+  "id": "scb-skattekvot",
+  "source": "scb",
+  "table": "TAB121",
+  "selection": {
+    "ContentsCode": "000000SP",
+    "Skattetyp": "102"
+  },
+  "label": "Totala skatter som andel av BNP",
+  "unit": "procent av BNP",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 44.2,
+    "2019": 43.1,
+    "2020": 42.6,
+    "2021": 43.1,
+    "2022": 42.9,
+    "2023": 41.7,
+    "2024": 40.8,
+    "2025": 40.5
+  }
+}

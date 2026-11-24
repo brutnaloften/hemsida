@@ -1,0 +1,25 @@
+{
+  "id": "scb-arbetslosa-15-74-procent",
+  "source": "scb",
+  "table": "TAB2891",
+  "selection": {
+    "Alder": "tot15-74",
+    "Arbetskraftstillh": "ALÖS",
+    "ContentsCode": "AM04011Q",
+    "Kon": "1+2"
+  },
+  "label": "Arbetslöshet 15-74 år (AKU)",
+  "unit": "procent",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 6.5,
+    "2019": 6.9,
+    "2020": 8.5,
+    "2021": 8.9,
+    "2022": 7.5,
+    "2023": 7.7,
+    "2024": 8.4,
+    "2025": 8.8
+  }
+}

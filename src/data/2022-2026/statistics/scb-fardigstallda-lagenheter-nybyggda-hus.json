@@ -1,0 +1,25 @@
+{
+  "id": "scb-fardigstallda-lagenheter-nybyggda-hus",
+  "source": "scb",
+  "table": "TAB4193",
+  "selection": {
+    "ContentsCode": "0000005O",
+    "Hustyp": "FLERBO,SMÅHUS",
+    "Region": "00",
+    "Upplatelseform": "1,2,3"
+  },
+  "label": "Färdigställda lägenheter i nybyggda hus, riket (flerbostadshus och småhus, alla upplåtelseformer)",
+  "unit": "antal lägenheter",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 54876,
+    "2019": 55659,
+    "2020": 50479,
+    "2021": 50089,
+    "2022": 54018,
+    "2023": 65595,
+    "2024": 45475,
+    "2025": 31359
+  }
+}

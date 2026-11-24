@@ -1,0 +1,24 @@
+{
+  "id": "scb-bruttoproduktion-vind",
+  "source": "scb",
+  "table": "TAB4063",
+  "selection": {
+    "ContentsCode": "000006HR",
+    "Elomrade": "00",
+    "Kraftslag": "Vind"
+  },
+  "label": "Bruttoproduktion vindkraft, riket",
+  "unit": "GWh",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 16623,
+    "2019": 19847,
+    "2020": 27526,
+    "2021": 27244,
+    "2022": 33253,
+    "2023": 34245,
+    "2024": 40622,
+    "2025": 39166
+  }
+}

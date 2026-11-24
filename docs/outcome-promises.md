@@ -99,7 +99,7 @@ Probed 2026-11-24. Everything below was read from the live source; nothing is fi
 | Greenhouse gas emissions, national total          | `TAB4698` | CO2-ekv., 0.1 excl. LULUCF and intl.   | 45 168 (2022); 44 233.6; 47 493.7 kt (2024). Domestic transport 13 950.8; 13 900; 16 847.9 kt                                               |
 | Police employed (SSYK 336)                        | `TAB4355` | Poliser, all birth regions, both sexes | 14 218 (2022); 19 755 (2024), all birth regions incl. South America                                                                         |
 
-Two readings must not be used as they stand, and the ingest bead has to resolve them first:
+Two readings must not be used as they stand. Both were resolved in the ingest tool (see "Statistics ingest"): `TAB4698` is included, `TAB4355` is left out.
 
 - **`TAB4698` 2024** jumps by about 3 300 kt in the national total and about 2 900 kt in domestic transport against 2023. A 20 percent rise in one year is unlikely to be a method change. It fits the cut of the biofuel blending requirement (reduktionsplikt) to 6 percent from 2024, which raises fossil emissions in domestic transport and in work machinery, but this is a hypothesis. Verify against the table footnotes and the Naturvårdsverket release before using 2024.
 - **`TAB4355` police** rises 39 percent in two years, which is far larger than the police authority's own staffing. The register-based occupation coding is not a reliable police-headcount series. Use Polismyndigheten's own staffing statistics for the police promises and keep `TAB4355` out.
@@ -210,6 +210,28 @@ All 19 are government or support promises. Result:
 - **no (4):** kd-mobila-sjukvardsenheter-i-hemmet, sd-battre-villkor-och-halsovard-i-kvinnoyrken, sd-oka-takten-i-aterstallning-av-havsmiljon, sd-utbilda-efter-arbetsmarknadens-behov.
 
 Only one of the 19 can be settled from a verified API today, so most of `hemsida-ukhd` waits for the statistics path. The 4 `no` promises should stay `unassessed` or get `no_evidence` at the term-close review.
+
+## Statistics ingest
+
+`tools/ingest-statistics.ts` reads `tools/statistics-configs/<term>.json` and writes one `src/data/<term>/statistics/<id>.json` per series (schema: `statisticSeriesSchema`). Pure parsing is in `tools/lib/statistics-ingest.ts` (tested in `statistics-ingest.test.ts`).
+
+```
+node --experimental-strip-types tools/ingest-statistics.ts [--config <file>] [--only <id>] [--refresh] [--dry-run]
+```
+
+- **Config**: per series `id`, `source` (`scb`), `table`, `selection` (the exact `valueCodes`, stored in the series file), `label`, `unit`, `frequency`, optional `priceBasis`, `from` (first period kept, default 2018) and `sum`. A dimension with several codes (`"Hustyp": "FLERBO,SMÅHUS"`, comma separated) is summed per period; this is only allowed with `sum: true` and only makes sense for counts. `Tid` is never in the selection, every period from `from` is read. Wildcards are rejected, so a new SCB category can never silently change a series.
+- **Fetching**: PxWebApi v2 (`https://statistikdatabasen.scb.se/api/v2/`), sequential, 350 ms apart (limit 30 calls per 10 s). Raw responses are cached in `tools/out/statistics-cache/` (gitignored); a plain rerun reads the cache, so a data refresh must pass `--refresh`. A period SCB reports as missing (`..`) is left out and reported on the run's output line, never filled in.
+- **Determinism**: keys are sorted and `fetched_at` is kept when a series is unchanged, so a rerun leaves the files byte-identical. `--dry-run` writes nothing (series or freshness).
+- **Freshness**: dataset `statistics` in `src/data/freshness.json`, `latestPeriod` is the newest year over all series; rule in `tools/lib/freshness-check.ts` (annual, 1 July). A partial `--only` run does not touch it.
+
+### First series (2022-2026)
+
+25 series from `TAB2876`, `TAB2891`, `TAB4063` (wind, solar by elområde, nuclear capacity, wind and nuclear production), `TAB4193` (all dwellings and rented dwellings, summed over house type and tenure), `TAB1010`, `TAB121`, `TAB6829`, `TAB4698`. Baseline (2022) and latest values of every series were recomputed independently from the CSV output of the same API (explicit `Tid`, summed outside the tool) and matched.
+
+### The two suspect readings
+
+- **`TAB4698` 2024: included, the jump is real.** Naturvårdsverket reported (June 2025, preliminary) and the final statistics confirmed that Swedish emissions rose just over 7 percent in 2024, the largest rise since 2010, because the blending obligation (reduktionsplikt) was cut in January 2024, giving a lower share of biofuel in diesel for road vehicles and work machines. Domestic transport (+2.9 Mt) and work machinery (+0.9 Mt) carry the rise in the table. It is not a table or method break. Two cautions for anyone writing evidence: the table (updated 2025-12-16) says 47 493.7 kt for 2024, and Naturvårdsverket revised the 2024 total to 48.1 Mt in June 2026, so a `--refresh` may move it; and the rise has a policy cause, so reasoning must state it rather than present 2024 as a trend. Sources: Naturvårdsverket, "Sveriges klimatutsläpp ökade med 7 procent under 2024" (naturvardsverket.se, 2025-06) and its inrikes transporter statistics page.
+- **`TAB4355` police: left out.** It is an occupation (SSYK 336) register count, not a headcount of police officers (14 218 to 19 755 in two years is far above the authority's own staffing), so it is not a usable series for the police promises. Polismyndigheten's own staffing statistics are a different source and need a reader of their own (`hemsida-50r.5`).
 
 ## Recommended order
 
