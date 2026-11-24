@@ -17,10 +17,58 @@
   "committee": "KrU",
   "keywords": ["kulturliv", "återhämtning", "pandemin"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "reasoning": "Miljöpartiet föreslog en bred satsning på kulturen i alla fyra budgetmotioner för utgiftsområde 17, med ökningar över regeringens förslag på 2 817 miljoner kronor för 2023 (Mot. 2022/23:2097), 2 658 miljoner kronor för 2024 (Mot. 2023/24:2676), 2 893 miljoner kronor för 2025 (Mot. 2024/25:3033) och 2 405 miljoner kronor för 2026 (Mot. 2025/26:3520). Ökningen omfattar offentliga aktörer som regional kulturverksamhet (anslag 1:6, 100 till 147 miljoner kronor), centrala museer och Riksantikvarieämbetet, fria aktörer som teater, dans och musik (anslag 2:2 och 2:3, runt 50 miljoner kronor), professionella konstnärer (anslaget Ersättningar och bidrag till konstnärer, 30 miljoner kronor 2024 till 2026) och ideella aktörer (Insatser för den ideella sektorn, 80 till 200 miljoner kronor) samt allmän kulturverksamhet (anslag 1:2, 354 till 792 miljoner kronor). Motionen för 2023 beskriver uttryckligen en långsiktig återhämtningsplan efter pandemin för kultur i hela landet. Det enda anslag som minskas är Skapande skola 2026 (minus 226 miljoner kronor), som ersätts av en kulturgaranti för barn och unga, Kulturell allemansrätt, med 300 miljoner kronor, och inget anslag minskas 2023 till 2025. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:KrU1, 2023/24:KrU1, 2024/25:KrU1 och 2025/26:KrU1). Löftet är uppfyllt som partiets eget förslag, inte som beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022097",
+      "designation": "Mot. 2022/23:2097",
+      "title": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022097.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2023: 2 817 miljoner kronor mer än regeringen i utgiftsområde 17, med en återhämtningsplan för kultur i hela landet. Avslogs i Bet. 2022/23:KrU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022676",
+      "designation": "Mot. 2023/24:2676",
+      "title": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022676.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2024: 2 658 miljoner kronor mer än regeringen i utgiftsområde 17. Avslogs i Bet. 2023/24:KrU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023033",
+      "designation": "Mot. 2024/25:3033",
+      "title": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023033.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2025: 2 893 miljoner kronor mer än regeringen i utgiftsområde 17. Avslogs i Bet. 2024/25:KrU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023520",
+      "designation": "Mot. 2025/26:3520",
+      "title": "Utgiftsområde 17 Kultur, medier, trossamfund och fritid",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023520.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2026: 2 405 miljoner kronor mer än regeringen i utgiftsområde 17, Skapande skola ersätts av kulturgaranti. Avslogs i Bet. 2025/26:KrU1."
+    }
+  ]
 }

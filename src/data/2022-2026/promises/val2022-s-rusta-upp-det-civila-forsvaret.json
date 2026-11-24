@@ -17,12 +17,29 @@
   "committee": "FöU",
   "keywords": ["civilt försvar", "krisberedskap", "beredskapslager", "sjukvård"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Socialdemokraternas enda egna pengar för det civila försvaret och sjukvårdens beredskap finns i budgetmotionen för utgiftsområde 9 för 2025 (Mot. 2024/25:3022): 135 miljoner kronor mer än regeringen till anslag 2:2 Insatser för vaccinberedskap. I samma motion minskas de prestationsbundna insatserna för kortare vårdköer med 2 000 miljoner kronor och fritidskortet med 792 miljoner kronor, men inget som rör beredskap. Utgiftsområde 6 (Mot. 2022/23:2012 och 2023/24:2564) har avvikelse noll från regeringens förslag i summan, så partiet går varken längre eller kortare än regeringen där, och motionerna för 2025 och 2026 (Mot. 2024/25:3023 och 2025/26:3556) har ingen anslagstabell. Där kräver partiet beredskapssjukhus, en strategi för beredskapslager och krav på regionernas lager, men utan belopp. Budgetmotionerna för utgiftsområde 9 för 2023, 2024 och 2026 har ingen beredskapspost. Löftet om ökade resurser och beredskapslager för sjukvården är alltså bara delvis täckt, med ett års tillskott på 135 miljoner kronor. Riksdagen avslog motionen för 2025 (Bet. 2024/25:SoU1). Löftet är delvis uppfyllt som partiets eget förslag, inte som beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HC023022",
+      "designation": "Mot. 2024/25:3022",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023022.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025, utgiftsområde 9: 135 miljoner kronor mer än regeringen till anslag 2:2 Insatser för vaccinberedskap. Avslogs i Bet. 2024/25:SoU1."
+    },
     {
       "kind": "bet",
       "dok_id": "HC01FiU21",

@@ -17,10 +17,58 @@
   "committee": "SoU",
   "keywords": ["socialtjänst", "barnskydd", "förebyggande arbete", "resurser"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Vänsterpartiet höjde anslag 4:7 Bidrag till utveckling av socialt arbete m.m. i alla fyra budgetmotioner för utgiftsområde 9. För 2023 (Mot. 2022/23:1281) blev det 421 miljoner kronor mer än regeringen: 211 miljoner kronor för att behålla medlen för skyddat boende som regeringen flyttar, och 210 miljoner kronor till kommuner som satsar på Bostad först. För 2024 (Mot. 2023/24:2350) föreslogs 1 miljard kronor riktade till socialtjänstens arbete med barn och unga i riskgrupp. För 2025 (Mot. 2024/25:1920) blev det 1 450 miljoner kronor, med samma miljard, 350 miljoner kronor mot mäns våld mot kvinnor och 100 miljoner kronor för trygghetszoner. För 2026 (Mot. 2025/26:3164) blev det 1 653 miljoner kronor, med samma poster och 203 miljoner kronor för att avvisa regeringens jobbpremie. Inget anslag för socialtjänsten minskas i någon av motionerna. Det som minskas är bland annat de prestationsbundna insatserna för kortare vårdköer (anslag 1:11, 3 000 miljoner kronor 2023 och upp till 7 480 miljoner kronor 2025) och 2023 och 2024 delar av anslag 1:6. Pengarna till barnskydd och förebyggande arbete finns från 2024, men 2023 går ökningen till skyddat boende och Bostad först, och någon särskild post för kunskap finns inte utöver 5,5 miljoner kronor mer till Myndigheten för familjerätt och föräldraskapsstöd 2023. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:SoU1, 2023/24:SoU1, 2024/25:SoU1 och 2025/26:SoU1). Löftet är delvis uppfyllt som partiets eget förslag, inte som beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA021281",
+      "designation": "Mot. 2022/23:1281",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2022-11-22",
+      "url": "https://data.riksdagen.se/dokument/HA021281.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2023: anslag 4:7 höjs med 421 miljoner kronor (skyddat boende och Bostad först). Avslogs i Bet. 2022/23:SoU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022350",
+      "designation": "Mot. 2023/24:2350",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022350.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2024: anslag 4:7 höjs med 1 miljard kronor till socialtjänstens arbete med barn och unga i riskgrupp. Avslogs i Bet. 2023/24:SoU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC021920",
+      "designation": "Mot. 2024/25:1920",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC021920.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025: anslag 4:7 höjs med 1 450 miljoner kronor (barn och unga i riskgrupp, mäns våld, trygghetszoner). Avslogs i Bet. 2024/25:SoU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023164",
+      "designation": "Mot. 2025/26:3164",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2025-10-06",
+      "url": "https://data.riksdagen.se/dokument/HD023164.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: anslag 4:7 höjs med 1 653 miljoner kronor (barn och unga i riskgrupp, mäns våld, trygghetszoner, avvisad jobbpremie). Avslogs i Bet. 2025/26:SoU1."
+    }
+  ]
 }
