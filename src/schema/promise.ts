@@ -649,15 +649,17 @@ export const statisticSeriesSchema = z
   .refine(
     (s) =>
       s.priceBasis !== undefined ||
-      !/\b(kr|öre|sek)\b\s*(\/|per)\s*(l|liter|kwh|mwh|kg|m3)\b/i.test(s.unit),
+      !/(?<![\p{L}\d])(kr|kronor|öre|sek)\s*(\/|per)\s*(l|liter|litre|kwh|mwh|kg|m3|m³)(?![\p{L}\d])/iu.test(
+        s.unit,
+      ),
     {
       path: ['priceBasis'],
       message: 'a price series (unit in kr or öre per unit) must set priceBasis',
     },
   )
-  .refine((s) => new Set(Object.keys(s.values).map(periodFormat)).size === 1, {
+  .refine((s) => Object.keys(s.values).every((k) => periodFormat(k) === s.frequency), {
     path: ['values'],
-    message: 'all period keys must use one format',
+    message: 'every period key must match the series frequency (year, quarter or month)',
   })
   .refine((s) => Object.keys(s.values).length > 0, {
     path: ['values'],

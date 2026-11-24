@@ -315,13 +315,13 @@ describe('statistic evidence', () => {
   });
 
   it('rejects equal or mixed-format periods and statistics on non-outcome promises', () => {
-    const bad = (over: Record<string, unknown>) =>
+    const parses = (over: Record<string, unknown>) =>
       promiseSchema.safeParse(promise({ evidence: [stat(over)] })).success;
-    expect(bad({ latest: { period: '2022', v: 1 } })).toBe(false);
-    expect(bad({ latest: { period: '2025-Q1', v: 1 } })).toBe(false);
-    expect(bad({ latest: { period: '25', v: 1 } })).toBe(false);
+    expect(parses({ latest: { period: '2022', v: 1 } })).toBe(false);
+    expect(parses({ latest: { period: '2025-Q1', v: 1 } })).toBe(false);
+    expect(parses({ latest: { period: '25', v: 1 } })).toBe(false);
     expect(
-      bad({ latest: { period: '2025-Q4', v: 1 }, baseline: { period: '2022-Q1', v: 2 } }),
+      parses({ latest: { period: '2025-Q4', v: 1 }, baseline: { period: '2022-Q1', v: 2 } }),
     ).toBe(true);
     expect(promiseSchema.safeParse(promise({ type: 'legislative' })).success).toBe(false);
   });
@@ -329,6 +329,14 @@ describe('statistic evidence', () => {
   it('requires priceBasis on a price series and the newest period as latest', () => {
     const base = { ...seriesFixtures[3], priceBasis: undefined };
     expect(statisticSeriesSchema.safeParse(base).success).toBe(false);
+    for (const unit of ['öre/kWh', 'kronor per liter', 'kr/m³']) {
+      expect(statisticSeriesSchema.safeParse({ ...base, unit }).success, unit).toBe(false);
+    }
+    expect(statisticSeriesSchema.safeParse({ ...base, unit: 'tusen kr' }).success).toBe(true);
+    // a yearly series with quarter keys fails
+    expect(
+      statisticSeriesSchema.safeParse({ ...seriesFixtures[0], values: { '2022-Q1': 1 } }).success,
+    ).toBe(false);
     const p = promiseSchema.parse(
       promise({ evidence: [stat({ latest: { period: '2024', v: 350.9 } })] }),
     );
