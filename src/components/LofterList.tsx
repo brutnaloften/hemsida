@@ -278,7 +278,7 @@ export default function LofterList({ rows, areas, agreement }: Props) {
                     <AgreementBadge outcome={r.outcome} source={agreement} />
                   )}
                   <VerdictBadge verdict={r.verdict} />
-                  {r.assessedBy === 'ai' && <AiTag align="right" />}
+                  {r.assessedBy === 'ai' && <AiTag />}
                 </span>
               </a>
             </li>
