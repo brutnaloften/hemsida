@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["jobbskatteavdrag", "skatt på arbete", "inkomstskatt", "arbetslinjen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "I budgetpropositionen för 2025 föreslog regeringen ett förstärkt jobbskatteavdrag, främst för heltidsarbetande med låga och medelhöga inkomster. Riksdagen beslutade om det i november 2024 och ändringen i inkomstskattelagen gäller från den 1 januari 2025. Löftet gällde ett nytt brett jobbskatteavdrag; det som beslutats är en förstärkning av det befintliga avdraget.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,16 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet har sänkt skatt på arbetsinkomster och lägre skatt för låg- och medelinkomsttagare, men nämner varken jobbskatteavdrag eller tidpunkt."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC031",
+      "designation": "Prop. 2024/25:1",
+      "title": "Budgetpropositionen för 2025",
+      "date": "2024-09-19",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",
@@ -53,6 +70,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01SkU9.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1131",
+      "designation": "SFS 2024:1131",
+      "title": "Lag (2024:1131) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2025-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241131.html",
+      "relevance": "partial",
+      "note": "Förstärker jobbskatteavdraget från 2025, främst för låg- och medelinkomsttagare."
     }
   ]
 }

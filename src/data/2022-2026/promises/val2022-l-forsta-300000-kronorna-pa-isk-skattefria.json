@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["ISK", "investeringssparkonto", "schablonbeskattning", "skattefritt", "sparande"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "I budgetpropositionen för 2025 föreslog regeringen en skattefri grundnivå för sparande på investeringssparkonto: 150 000 kronor 2025 och 300 000 kronor från 2026. Riksdagen beslutade om skattereglerna i november 2024. Den första nivån gäller från den 1 januari 2025 och 300 000 kronor gäller från den 1 januari 2026.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": ["tido-isk-skattefri-grundniva-300000"],
       "outcome": "included",
       "note": "Avtalet gör de första 300 000 kronorna på ISK skattefria."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC031",
+      "designation": "Prop. 2024/25:1",
+      "title": "Budgetpropositionen för 2025",
+      "date": "2024-09-19",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1131",
+      "designation": "SFS 2024:1131",
+      "title": "Lag (2024:1131) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2025-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241131.html",
+      "relevance": "partial",
+      "note": "Inför den skattefria grundnivån på 150 000 kronor för investeringssparkonto från 2025."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1132",
+      "designation": "SFS 2024:1132",
+      "title": "Lag (2024:1132) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2026-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241132.html",
+      "relevance": "full",
+      "note": "Höjer den skattefria grundnivån till 300 000 kronor från 2026."
     }
   ]
 }
