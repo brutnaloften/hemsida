@@ -402,6 +402,24 @@ export function rebaseVerdict(
   return { ...next, date: today, history: [...base.history, asHistory(base)] };
 }
 
+const PROGRESS_RANK: Record<string, number> = {
+  unassessed: 0,
+  in_progress: 1,
+  partially_fulfilled: 2,
+  fulfilled: 3,
+};
+
+/**
+ * Whether recomputing `prev` into `next` would lower a delivered verdict (fulfilled or
+ * partially_fulfilled). Link runs are given per invocation and cover only part of a term, so a run
+ * that lacks the judgements behind an earlier verdict would otherwise silently demote it; the CLI
+ * keeps such a verdict unless `--allow-downgrade` is passed.
+ */
+export function isDowngrade(prev: string, next: string): boolean {
+  if (prev !== 'fulfilled' && prev !== 'partially_fulfilled') return false;
+  return (PROGRESS_RANK[next] ?? 0) < PROGRESS_RANK[prev]!;
+}
+
 /** Whether `id` is selected by the `--ids` / `--exclude` options (empty `only` selects all). */
 export function selectedId(
   id: string,
@@ -410,6 +428,9 @@ export function selectedId(
 ): boolean {
   return (only.size === 0 || only.has(id)) && !exclude.has(id);
 }
+
+/** Promise types `applyLinks` never touches: their verdicts are set elsewhere. */
+export const UNMANAGED_TYPES: ReadonlySet<string> = new Set(['budget']);
 
 /**
  * Returns null when the promise must not be touched or nothing would change.
@@ -432,13 +453,16 @@ export function applyLinks(
   sfs?: SfsInput,
   rejected: ReadonlySet<string> = new Set(),
 ): Applied | null {
+  // Budget promises are judged by the budget flow (anslag and macro data), never by link evidence.
+  if (UNMANAGED_TYPES.has(promise.type)) return null;
   const rerunAi = promise.verdict.assessedBy === 'ai';
   if (!rerunAi && promise.verdict.value !== 'unassessed') return null;
-  // Without SFS input the rules cannot reproduce a fulfilled / partially_fulfilled verdict: keep it.
+  // A fulfilled / partially_fulfilled verdict is only reproducible from what this tool reads: laws
+  // for a legislative promise (so only with SFS input), a directive for an inquiry. Anywhere else
+  // it was set by another flow and recomputing would downgrade it: keep it.
   if (
-    !sfs &&
-    promise.type !== 'inquiry' &&
-    ['fulfilled', 'partially_fulfilled'].includes(promise.verdict.value)
+    ['fulfilled', 'partially_fulfilled'].includes(promise.verdict.value) &&
+    !(promise.type === 'inquiry' || (promise.type === 'legislative' && sfs))
   )
     return null;
   // With SFS input the sfs entries are recomputed from the judgements; otherwise they stay as they are.
