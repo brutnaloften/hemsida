@@ -399,6 +399,19 @@ describe('promiseSchema', () => {
       ).toBe(false);
     });
 
+    it('needs a contradicting own motion for broken on an opposition-only budget promise', () => {
+      const opp = { parties: ['S'], roles: { S: 'opposition' } };
+      const mot = { ...prop, kind: 'mot', dok_id: 'HC023125', designation: 'Mot. 2024/25:3125' };
+      const against = { ...mot, relevance: 'contradicts' };
+      expect(ok(make('broken', [against], opp))).toBe(true);
+      // nothing weaker: a supporting motion, a vote or a cited document is not enough
+      expect(ok(make('broken', [mot], opp))).toBe(false);
+      expect(ok(make('broken', [{ ...bet, votes: { S: 'no' } }], opp))).toBe(false);
+      expect(ok(make('broken', [], opp))).toBe(false);
+      // other promise types and government budget promises are unchanged
+      expect(ok(make('broken', [against]))).toBe(false);
+    });
+
     it('does not apply to other promise types', () => {
       expect(ok(make('fulfilled', [outcome, prop], { type: 'outcome' }))).toBe(false);
     });
