@@ -299,7 +299,9 @@ Money can be evidenced at three tiers, and they must not be mixed up:
 2. **Actual outcome**: what was spent, ESV utfall (budget data).
 3. **Stated intention**: a prose statement in a bet/prop text such as "För 2026 avsätts 1 000 000 000 kronor för ...". This is the `figures` field on Riksdag evidence.
 
-Each figure: `year`, `amount` (mn kr nominal, like budget evidence), `scope` (the document's own Swedish wording of what the money is for), `tier` (always `intention`), `speaker` (`role` is `government`, `committee` or `reservation`, plus an optional `party`) and `quote` (the sentence it was read from). Example from bet 2024/25:SoU1: "För 2024 avsattes 1 600 000 000 kronor för förlossningsvård och kvinnors hälsa. För 2025 avsätts motsvarande belopp."
+Each figure: `year`, `amount` (mn kr nominal, like budget evidence), `scope` (the document's own Swedish wording of what the money is for), `tier` (always `intention`), `speaker` (`role` is one of `government`, `committee`, `reservation` or `statement` (see below), plus an optional `party`) and `quote` (the sentence it was read from). Example from bet 2024/25:SoU1: "För 2024 avsattes 1 600 000 000 kronor för förlossningsvård och kvinnors hälsa. För 2025 avsätts motsvarande belopp."
+
+Speaker roles: `government` (the proposition's own wording), `committee` (the committee's own wording), `reservation` (a party's formal reservation, voted on) and `statement` (a party's särskilt yttrande, a statement attached to the betänkande that is not voted on; in budget betänkanden the opposition uses it to abstain from the vote and give its own budget alternative). The text parser's `SpeakerKind` `special_statement` (`tools/lib/eval-summary.ts`) corresponds to `statement`.
 
 Figures are only allowed on `bet` and `prop` (enforced like `votes`) and never qualify a verdict: `checkVerdictEvidence` ignores them.
 

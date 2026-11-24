@@ -141,7 +141,7 @@ export const evidenceFigureSchema = z
     tier: z.literal('intention'),
     speaker: z
       .object({
-        role: z.enum(['government', 'committee', 'reservation']),
+        role: z.enum(['government', 'committee', 'reservation', 'statement']),
         party: partySchema.optional(),
       })
       .strict(),

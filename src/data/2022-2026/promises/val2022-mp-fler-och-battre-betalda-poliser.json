@@ -38,7 +38,20 @@
       "date": "2023-11-30",
       "url": "https://data.riksdagen.se/dokument/HB01JuU1.html",
       "relevance": "partial",
-      "note": null
+      "note": null,
+      "figures": [
+        {
+          "year": 2024,
+          "amount": 500,
+          "scope": "Del av de ökade anslagen till polisens tillväxt som ska gå till att anställa administrativ personal och frigöra resurser för områdespoliser",
+          "tier": "intention",
+          "speaker": {
+            "role": "statement",
+            "party": "MP"
+          },
+          "quote": "Miljöpartiet vill att 500 miljoner kronor av de ökade anslagen till polisens tillväxt ska gå till att anställa administrativ personal, vilket frigör resurser för områdespoliser."
+        }
+      ]
     },
     {
       "kind": "mot",
@@ -58,7 +71,20 @@
       "date": "2024-11-29",
       "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
       "relevance": "partial",
-      "note": null
+      "note": null,
+      "figures": [
+        {
+          "year": 2025,
+          "amount": 500,
+          "scope": "Del av de ökade anslagen till polisens tillväxt som ska gå till att anställa fler lokalområdespoliser och administrativ personal",
+          "tier": "intention",
+          "speaker": {
+            "role": "statement",
+            "party": "MP"
+          },
+          "quote": "Miljöpartiet vill att 500 miljoner kronor av de ökade anslagen till polisens tillväxt ska gå till att anställa fler lokalområdespoliser och administrativ personal."
+        }
+      ]
     }
   ]
 }
