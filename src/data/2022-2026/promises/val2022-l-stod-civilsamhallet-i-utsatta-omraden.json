@@ -23,11 +23,17 @@
     "flickor"
   ],
   "verdict": {
-    "value": "unassessed",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Löftet är: Det demokratiska civilsamhället i utsatta områden ska stödjas mer, särskilt kvinnors och flickors organisering. Anslagsnamnen i ESV:s budgetdata motsvarar inte det ändamålet, så inget anslag att jämföra utfallet för kan pekas ut. Utan en sådan jämförelse kan löftet inte bedömas, och verdiktet lämnas obedömt.",
+    "reasoning": "Regeringen ökade i budgeten för 2023 anslaget 3:3 Bidrag för kvinnors organisering för att stärka kvinnors och flickors organisering i utsatta områden och föreslog 48,2 mn kr för 2023. Utfallet ökade nominellt från 27,7 mn kr 2022 till 53,3 mn kr 2025 (+92,4 procent, i fasta priser +71,2 procent). Anslaget gäller kvinnors och flickors organisering, medan löftet gäller det demokratiska civilsamhället i utsatta områden i stort. Därför delvis uppfyllt.",
     "date": "2026-11-24",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -37,6 +43,58 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01AU1",
+      "designation": "Bet. 2022/23:AU1",
+      "title": "Utgiftsområde 13 Jämställdhet och nyanlända invandrares etablering",
+      "date": "2022-12-15",
+      "url": "https://data.riksdagen.se/dokument/HA01AU1.html",
+      "relevance": "partial",
+      "note": "Regeringen ökar anslaget 3:3 Bidrag för kvinnors organisering för att stärka kvinnors och flickors organisering i utsatta områden och föreslår 48,2 mn kr för 2023."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "1303003",
+        "namn": "Bidrag för kvinnors organisering",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 28.2,
+        "after": 53.2
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 28,2 mn kr 2022 och 53,2 mn kr 2025, ändring 25,0 mn kr (+88,7 %). I fasta priser +67,9 % (sammanhang, avgör inte bedömningen). Anvisat belopp 2023 var 48,2 mn kr och 2024 48,2 mn kr.",
+      "date": "2024-12-10",
+      "relevance": "partial",
+      "note": "Anslaget 3:3 Bidrag för kvinnors organisering betalar statsbidrag till kvinnors organisering; regeringen ökade det för kvinnors och flickors organisering i utsatta områden."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "1303003",
+        "namn": "Bidrag för kvinnors organisering",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 27.7,
+        "after": 53.3
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden. Nominellt utfall 27,7 mn kr 2022 och 53,3 mn kr 2025, ändring 25,6 mn kr (+92,4 %). I fasta priser +71,2 % (sammanhang, avgör inte bedömningen). Utfallet var 42,6 mn kr 2023 och 46,7 mn kr 2024.",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Utfallet steg i takt med anvisningarna. Anslaget gäller kvinnors och flickors organisering och inte civilsamhället i utsatta områden i stort."
     }
   ]
 }
