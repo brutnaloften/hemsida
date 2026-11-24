@@ -1,0 +1,24 @@
+{
+  "id": "socialstyrelsen-lvu-heldygn",
+  "source": "socialstyrelsen",
+  "table": "2025-10-9726-tabeller.xlsx, blad Tidsserier",
+  "selection": {
+    "sheet": "Tidsserier",
+    "labelColumn": "A",
+    "valueColumn": "H",
+    "url": "https://www.socialstyrelsen.se/contentassets/523ca104361a4e84b1a31c33782c503f/2025-10-9726-tabeller.xlsx"
+  },
+  "label": "Barn och unga med heldygnsplacering enligt LVU (vård eller omhändertagande)",
+  "unit": "barn och unga",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 8249,
+    "2019": 8405,
+    "2020": 9034,
+    "2021": 9764,
+    "2022": 10242,
+    "2023": 10659,
+    "2024": 11044
+  }
+}

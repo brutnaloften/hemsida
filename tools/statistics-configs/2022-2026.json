@@ -330,6 +330,125 @@
       },
       "label": "Växthusgasutsläpp, nationell total inkl. LULUCF, exkl. internationella transporter (netto)",
       "unit": "kt CO2-ekvivalenter"
+    },
+    {
+      "source": "migrationsverket",
+      "frequency": "year",
+      "id": "mv-kvotflyktingar-forstagangstillstand",
+      "table": "Beviljade uppehållstillstånd <år>.xlsx, blad Kön, första",
+      "files": [
+        {
+          "period": "2022",
+          "url": "https://www.migrationsverket.se/download/18.2cd2e409193b84c506a3538d/1789468224346/Beviljade%20uppeh%C3%A5llstillst%C3%A5nd%202022.xlsx"
+        },
+        {
+          "period": "2023",
+          "url": "https://www.migrationsverket.se/download/18.2cd2e409193b84c506a35393/1789468289374/Beviljade%20uppeh%C3%A5llstillst%C3%A5nd%202023.xlsx"
+        },
+        {
+          "period": "2024",
+          "url": "https://www.migrationsverket.se/download/18.2cd2e409193b84c506a33216/1789468346847/Beviljade%20uppeh%C3%A5llstillst%C3%A5nd%202024.xlsx"
+        },
+        {
+          "period": "2025",
+          "url": "https://www.migrationsverket.se/download/18.2cd2e409193b84c506a2306a/1789468403224/Beviljade%20uppeh%C3%A5llstillst%C3%A5nd%202025.xlsx"
+        }
+      ],
+      "sheet": "Kön, första",
+      "labelColumn": "B",
+      "rowLabel": "Vidarebosättning (Kvot)",
+      "valueColumn": "E",
+      "checks": [
+        {
+          "cell": "B6",
+          "equals": "Uppehållsgrund 2"
+        },
+        {
+          "cell": "E6",
+          "equals": "Totalt"
+        }
+      ],
+      "label": "Beviljade förstagångstillstånd, vidarebosättning (kvotflyktingar)",
+      "unit": "tillstånd"
+    },
+    {
+      "source": "socialstyrelsen",
+      "frequency": "year",
+      "id": "socialstyrelsen-lvu-heldygn",
+      "table": "2025-10-9726-tabeller.xlsx, blad Tidsserier",
+      "files": [
+        {
+          "period": "2018",
+          "url": "https://www.socialstyrelsen.se/contentassets/523ca104361a4e84b1a31c33782c503f/2025-10-9726-tabeller.xlsx"
+        },
+        {
+          "period": "2019",
+          "url": "https://www.socialstyrelsen.se/contentassets/523ca104361a4e84b1a31c33782c503f/2025-10-9726-tabeller.xlsx"
+        },
+        {
+          "period": "2020",
+          "url": "https://www.socialstyrelsen.se/contentassets/523ca104361a4e84b1a31c33782c503f/2025-10-9726-tabeller.xlsx"
+        },
+        {
+          "period": "2021",
+          "url": "https://www.socialstyrelsen.se/contentassets/523ca104361a4e84b1a31c33782c503f/2025-10-9726-tabeller.xlsx"
+        },
+        {
+          "period": "2022",
+          "url": "https://www.socialstyrelsen.se/contentassets/523ca104361a4e84b1a31c33782c503f/2025-10-9726-tabeller.xlsx"
+        },
+        {
+          "period": "2023",
+          "url": "https://www.socialstyrelsen.se/contentassets/523ca104361a4e84b1a31c33782c503f/2025-10-9726-tabeller.xlsx"
+        },
+        {
+          "period": "2024",
+          "url": "https://www.socialstyrelsen.se/contentassets/523ca104361a4e84b1a31c33782c503f/2025-10-9726-tabeller.xlsx"
+        }
+      ],
+      "sheet": "Tidsserier",
+      "labelColumn": "A",
+      "valueColumn": "H",
+      "checks": [
+        {
+          "cell": "A6",
+          "equals": "År"
+        },
+        {
+          "cell": "H5",
+          "equals": "Vård eller omhändertagande enligt LVU"
+        },
+        {
+          "cell": "H6",
+          "equals": "Totalt"
+        }
+      ],
+      "label": "Barn och unga med heldygnsplacering enligt LVU (vård eller omhändertagande)",
+      "unit": "barn och unga"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-kpi-drivmedel",
+      "table": "TAB2061",
+      "selection": {
+        "ContentsCode": "PR0101B6",
+        "VaruTjanstegrupp": "07.2.2"
+      },
+      "label": "KPI, drivmedel (COICOP 07.2.2), årsmedeltal",
+      "unit": "index (1980=100)",
+      "priceBasis": "nominal"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-kpi-totalt",
+      "table": "TAB4352",
+      "selection": {
+        "ContentsCode": "000000KL"
+      },
+      "label": "KPI totalt, fastställda årsmedeltal",
+      "unit": "index (1980=100)"
     }
   ]
 }

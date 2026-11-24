@@ -6,6 +6,7 @@
  */
 import { z } from 'zod/v4';
 import { statisticSeriesSchema, type StatisticSeries } from './schema.ts';
+import { columnOf, type Sheet } from './xlsx.ts';
 
 /** PxWebApi v2 base (the newer host; `macro-ingest.ts` still uses the v2beta host). */
 export const SCB_BASE = 'https://statistikdatabasen.scb.se/api/v2/';
@@ -34,11 +35,41 @@ export const seriesConfigSchema = z.strictObject({
 });
 export type SeriesConfig = z.infer<typeof seriesConfigSchema>;
 
+/**
+ * A series read from published .xlsx tables (Migrationsverket, Socialstyrelsen). Each period names
+ * the workbook it comes from (`files`; the same URL may repeat) and the value is the cell at
+ * `valueColumn` in the one row whose `labelColumn` cell equals `rowLabel` (or, without `rowLabel`,
+ * the period itself, for tables with a year per row). `checks` pin header cells so a layout change
+ * fails loudly instead of reading the wrong column. There is no rate-limit-free way to find the
+ * download URL (the agencies version it), so the URLs are config and a new release is a config change.
+ */
+export const xlsxSeriesConfigSchema = z.strictObject({
+  id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+  source: z.enum(['migrationsverket', 'socialstyrelsen']),
+  /** Free text stored as the series `table`: workbook name and sheet. */
+  table: z.string().min(1),
+  files: z.array(z.strictObject({ period: z.string().regex(/^\d{4}$/), url: z.url() })).min(1),
+  sheet: z.string().min(1),
+  labelColumn: z.string().regex(/^[A-Z]{1,2}$/),
+  rowLabel: z.string().min(1).optional(),
+  valueColumn: z.string().regex(/^[A-Z]{1,2}$/),
+  checks: z.array(
+    z.strictObject({ cell: z.string().regex(/^[A-Z]{1,2}\d+$/), equals: z.string() }),
+  ),
+  label: z.string().min(1),
+  unit: z.string().min(1),
+  frequency: z.literal('year'),
+});
+export type XlsxSeriesConfig = z.infer<typeof xlsxSeriesConfigSchema>;
+
 export const statisticsConfigSchema = z.strictObject({
   term: z.string().regex(/^\d{4}-\d{4}$/),
-  series: z.array(seriesConfigSchema).min(1),
+  series: z.array(z.union([seriesConfigSchema, xlsxSeriesConfigSchema])).min(1),
 });
 export type StatisticsConfig = z.infer<typeof statisticsConfigSchema>;
+export type AnySeriesConfig = StatisticsConfig['series'][number];
+
+export const isXlsx = (s: AnySeriesConfig): s is XlsxSeriesConfig => s.source !== 'scb';
 
 const hasList = (v: string) => v.includes(',');
 
@@ -48,6 +79,11 @@ export function parseConfig(raw: unknown): StatisticsConfig {
   for (const s of config.series) {
     if (ids.has(s.id)) throw new Error(`duplicate series id ${s.id}`);
     ids.add(s.id);
+    if (isXlsx(s)) {
+      const periods = s.files.map((f) => f.period);
+      if (new Set(periods).size !== periods.length) throw new Error(`${s.id}: duplicate period`);
+      continue;
+    }
     if (!s.selection.ContentsCode) throw new Error(`${s.id}: selection needs a ContentsCode`);
     if ('Tid' in s.selection) throw new Error(`${s.id}: Tid must not be in selection`);
     const lists = Object.entries(s.selection).filter(([, v]) => hasList(v));
@@ -151,12 +187,53 @@ export function periodKey(p: string): string {
   return p;
 }
 
+/**
+ * Reads one value from a parsed sheet (see `xlsxSeriesConfigSchema`). Throws when a header check
+ * fails, the row is missing or ambiguous, or the cell is not a number (suppressed cells such as
+ * ".." are never read as zero).
+ */
+export function readXlsxValue(sheet: Sheet, c: XlsxSeriesConfig, period: string): number {
+  for (const check of c.checks) {
+    const got = sheet.get(check.cell);
+    if (String(got ?? '').trim() !== check.equals) {
+      throw new Error(
+        `${c.id} ${period}: header ${check.cell} is ${JSON.stringify(got)}, expected ${JSON.stringify(check.equals)}`,
+      );
+    }
+  }
+  const wanted = c.rowLabel ?? period;
+  const rows = [...sheet]
+    .filter(([ref, v]) => columnOf(ref) === c.labelColumn && String(v).trim() === wanted)
+    .map(([ref]) => Number(/\d+$/.exec(ref)![0]));
+  if (rows.length !== 1) {
+    throw new Error(`${c.id} ${period}: ${rows.length} rows with ${c.labelColumn}="${wanted}"`);
+  }
+  const ref = `${c.valueColumn}${rows[0]}`;
+  const v = sheet.get(ref);
+  if (typeof v !== 'number')
+    throw new Error(`${c.id} ${period}: ${ref} is ${JSON.stringify(v)}, not a number`);
+  return v;
+}
+
 export interface BuildSeriesInput {
-  config: SeriesConfig;
+  config: AnySeriesConfig;
   values: Map<string, number>;
   /** YYYY-MM-DD, used when the values differ from `previous` (or there is none). */
   today: string;
   previous?: StatisticSeries;
+}
+
+/** What the series file records of an xlsx read, so a reader can repeat it. */
+export function xlsxSelection(c: XlsxSeriesConfig): Record<string, string> {
+  return {
+    sheet: c.sheet,
+    labelColumn: c.labelColumn,
+    ...(c.rowLabel ? { rowLabel: c.rowLabel } : {}),
+    valueColumn: c.valueColumn,
+    ...(new Set(c.files.map((f) => f.url)).size === 1
+      ? { url: c.files[0]!.url }
+      : Object.fromEntries(c.files.map((f) => [`url ${f.period}`, f.url]))),
+  };
 }
 
 /** Assembles and validates a series file. `fetched_at` is kept when the data is unchanged. */
@@ -167,10 +244,11 @@ export function buildSeries({
   previous,
 }: BuildSeriesInput): StatisticSeries {
   const sorted = Object.fromEntries([...values].sort(([a], [b]) => a.localeCompare(b)));
+  const selection = isXlsx(config) ? xlsxSelection(config) : config.selection;
   const unchanged =
     previous !== undefined &&
     JSON.stringify(previous.values) === JSON.stringify(sorted) &&
-    JSON.stringify(previous.selection) === JSON.stringify(config.selection) &&
+    JSON.stringify(previous.selection) === JSON.stringify(selection) &&
     previous.table === config.table &&
     previous.label === config.label &&
     previous.unit === config.unit;
@@ -178,12 +256,12 @@ export function buildSeries({
     id: config.id,
     source: config.source,
     table: config.table,
-    selection: config.selection,
+    selection,
     label: config.label,
     unit: config.unit,
     frequency: config.frequency,
     fetched_at: unchanged ? previous.fetched_at : today,
-    ...(config.priceBasis ? { priceBasis: config.priceBasis } : {}),
+    ...(!isXlsx(config) && config.priceBasis ? { priceBasis: config.priceBasis } : {}),
     values: sorted,
   });
 }
