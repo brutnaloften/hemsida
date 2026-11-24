@@ -123,7 +123,7 @@ export async function fillBetVotes(
     };
   }
   if (
-    /^\s*(rambeslut|utgiftsram)\w*/i.test(point.rubrik) ||
+    /^\s*utgiftsram/i.test(point.rubrik) ||
     /\brambeslut/i.test(point.rubrik) ||
     /ändringsbudget|ändrade ramar för utgiftsområden/i.test(`${point.rubrik} ${point.forslag}`)
   ) {
