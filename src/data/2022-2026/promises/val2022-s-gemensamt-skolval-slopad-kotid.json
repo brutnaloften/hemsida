@@ -17,10 +17,28 @@
   "committee": "UbU",
   "keywords": ["skolval", "kötid", "skolinformation", "likvärdighet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning presenterade i april 2024 ett förslag om att allmänheten ska få insyn i privata aktörer inom skolväsendet, så att det finns information om skolor som underlag för skolval. Förslaget gäller delen om oberoende skolinformation. Dokumentet är en utredning och visar förslag, inget beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB328",
+      "designation": "SOU 2024:28",
+      "title": "Offentlighetsprincipen eller insynslag, Allmänhetens insyn i enskilda aktörer inom skolväsendet",
+      "date": "2024-04-19",
+      "url": "https://data.riksdagen.se/dokument/HCB328.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["jobbonus", "försörjningsstöd", "tröskeleffekter", "arbete", "inkomstökning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2026 fram ett förslag om ett bidragstak i försörjningsstödet, med syfte att det ska löna sig mer att gå från försörjningsstöd till arbete. Riksdagen biföll förslaget i maj 2025... ",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,16 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet vill göra det mer lönsamt att gå från bidrag till arbete, men nämner inte jobbonusen."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03201",
+      "designation": "Prop. 2025/26:201",
+      "title": "Reformerat försörjningsstöd – bidragstak och ökade möjligheter till arbete",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03201.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",

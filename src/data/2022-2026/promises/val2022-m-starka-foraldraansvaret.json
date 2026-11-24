@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["föräldraansvar", "unga lagöverträdare", "brottsprevention", "socialtjänst"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i juni 2026 fram ett förslag om att socialnämnden ska kunna besluta att vårdnadshavare måste delta i insatser, med vite. Riksdagen biföll förslaget i augusti 2026 och lagar har beslutats. De träder i kraft 2 januari 2027. De stärker föräldraansvaret bara när det gäller att skydda barn och förebygga ungdomsbrott.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "note": "Avtalet innehåller en utredning om förstärkt föräldraansvar."
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03295",
+      "designation": "Prop. 2025/26:295",
+      "title": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "date": "2026-06-30",
+      "url": "https://data.riksdagen.se/dokument/HD03295.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01SoU39",
       "designation": "Bet. 2025/26:SoU39",
@@ -40,6 +57,46 @@
       "url": "https://data.riksdagen.se/dokument/HD01SoU39.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU41",
+      "designation": "Bet. 2025/26:JuU41",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1637",
+      "designation": "SFS 2026:1637",
+      "title": "Lag (2026:1637) om insatser inom socialtjänsten när samtycke saknas",
+      "date": "2027-01-02",
+      "url": "https://svenskforfattningssamling.se/doc/20261637.html",
+      "relevance": "partial",
+      "note": "Lagen är inte en generell betoning av föräldraansvaret. Den gäller bara socialtjänstinsatser utan samtycke, och föräldraansvaret nämns inte som mål."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1641",
+      "designation": "SFS 2026:1641",
+      "title": "Lag (2026:1641) om ändring i socialförsäkringsbalken",
+      "date": "2027-01-02",
+      "url": "https://svenskforfattningssamling.se/doc/20261641.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte löftet i stort om att betona och förstärka föräldraansvaret, till exempel vitesförelagda insatser till vårdnadshavare, som finns i andra lagar i propositionen."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1651",
+      "designation": "SFS 2026:1651",
+      "title": "Lag (2026:1651) om ändring i socialtjänstlagen (2025:400)",
+      "date": "2027-01-02",
+      "url": "https://svenskforfattningssamling.se/doc/20261651.html",
+      "relevance": "partial",
+      "note": "Själva föräldraansvarsåtgärderna (insatser till vårdnadshavare, vite) ligger i den nya separata lagen; denna lag är i huvudsak ändringar i socialtjänstlagen och genomför bara en del av löftet om att förstärka föräldraansvaret."
     }
   ]
 }

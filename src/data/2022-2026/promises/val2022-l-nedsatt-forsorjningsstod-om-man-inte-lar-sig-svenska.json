@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["försörjningsstöd", "socialtjänstlagen", "språkkrav", "SFI", "nedsättning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2026 fram ett förslag om aktivitetskrav för den som får försörjningsstöd, med bland annat aktiviteter för att stärka språkkunskaper. Riksdagen biföll förslaget i maj 2026, och en ändring i socialtjänstlagen trädde i kraft den 1 juli 2026. Dokumenten täcker bara en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -34,6 +41,36 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet kopplar försörjningsstöd och etableringsersättning till deltagande i bl.a. SFI och samhällsintroduktion, men säger inget om att försörjningsstödet ska nedsättas för den som inte lär sig svenska."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03207",
+      "designation": "Prop. 2025/26:207",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03207.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU29",
+      "designation": "Bet. 2025/26:SoU29",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU29.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-730",
+      "designation": "SFS 2026:730",
+      "title": "Lag (2026:730) om ändring i socialtjänstlagen (2025:400)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026730.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att försörjningsstödet i normalfallet kan sättas ned för den som inte lär sig svenska. Kravet gäller aktiviteter i allmänhet, inte språkinlärning specifikt, och reglerna om nedsättning syns inte i utdraget."
     }
   ]
 }

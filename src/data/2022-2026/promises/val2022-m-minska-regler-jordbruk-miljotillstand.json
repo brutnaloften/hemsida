@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["jordbruk", "regelförenkling", "miljötillstånd", "handläggningstider"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i mars och augusti 2026 tilläggsdirektiv till Miljötillståndsutredningen om effektivare och snabbare miljöprövning. Riksdagen beslutade i juni 2026 om en ny myndighet för miljöprövning och om förenklade regler för skogsbruket, bland annat kortare väntetid vid avverkningsanmälan. Dokumenten gäller kortare tillståndstider och regler för skogsbruk, en del av jordbruket.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,46 @@
       "promises": ["tido-utredning-forenkla-miljotillstandsprovning"],
       "outcome": "weakened",
       "note": "Avtalet utreder förenklad miljötillståndsprövning generellt, inte särskilt för jordbruket."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB119",
+      "designation": "Dir. 2026:19",
+      "title": "Tilläggsdirektiv till Miljötillståndsutredningen (KN 2023:02)",
+      "date": "2026-03-26",
+      "url": "https://data.riksdagen.se/dokument/HEB119.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01MJU24",
+      "designation": "Bet. 2025/26:MJU24",
+      "title": "Ny myndighet för miljöprövning",
+      "date": "2026-06-09",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU24.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01MJU29",
+      "designation": "Bet. 2025/26:MJU29",
+      "title": "Ett tydligt regelverk för aktivt skogsbruk",
+      "date": "2026-06-09",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU29.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB197",
+      "designation": "Dir. 2026:97",
+      "title": "Tilläggsdirektiv till Miljötillståndsutredningen (KN 2023:02)",
+      "date": "2026-08-27",
+      "url": "https://data.riksdagen.se/dokument/HEB197.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

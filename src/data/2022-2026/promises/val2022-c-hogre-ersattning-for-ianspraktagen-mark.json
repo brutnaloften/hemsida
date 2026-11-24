@@ -17,10 +17,48 @@
   "committee": "CU",
   "keywords": ["ersättning", "ianspråktagen mark", "expropriation", "markägare"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i maj 2026 om andel av vindkraftens intäkter till boende i närheten och i juni om ersättning vid markinskränkningar på grund av artskydd, med 100 miljoner kronor per år. I september 2026 fick en utredare i uppdrag att, om möjligt, föreslå högre mineralersättning vid gruvdrift. Delarna gäller vindkraft, artskydd och gruvor.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HD01NU20",
+      "designation": "Bet. 2025/26:NU20",
+      "title": "Vindkraft i kommuner",
+      "date": "2026-05-28",
+      "url": "https://data.riksdagen.se/dokument/HD01NU20.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01MJU28",
+      "designation": "Bet. 2025/26:MJU28",
+      "title": "Ersättning vid rådighetsinskränkningar till följd av artskyddet",
+      "date": "2026-06-09",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU28.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1120",
+      "designation": "Dir. 2026:120",
+      "title": "En effektiv och ändamålsenlig koncessionsprövning enligt minerallagen",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1120.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

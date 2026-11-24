@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["lantbruk", "regelförenkling", "självförsörjning", "konkurrenskraft"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2026:27 (Stärkt lönsamhet, konkurrenskraft och ökad livsmedelsproduktion i norra Sverige). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:CU23 (Sysselsättning och boende på landsbygden); Bet. 2025/26:MJU29 (Ett tydligt regelverk för aktivt skogsbruk), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,26 @@
       "title": "Sysselsättning och boende på landsbygden",
       "date": "2026-04-09",
       "url": "https://data.riksdagen.se/dokument/HD01CU23.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB127",
+      "designation": "Dir. 2026:27",
+      "title": "Stärkt lönsamhet, konkurrenskraft och ökad livsmedelsproduktion i norra Sverige",
+      "date": "2026-04-23",
+      "url": "https://data.riksdagen.se/dokument/HEB127.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01MJU29",
+      "designation": "Bet. 2025/26:MJU29",
+      "title": "Ett tydligt regelverk för aktivt skogsbruk",
+      "date": "2026-06-09",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU29.html",
       "relevance": "partial",
       "note": null
     }

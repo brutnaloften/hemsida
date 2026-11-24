@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["språkuppföljning", "svenska", "förskola", "barn"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "I september 2026 presenterades en departementspromemoria med förslag om en lag som ska få regionerna att inom barnhälsovården identifiera barn med annat modersmål än svenska som behöver stöd i svenska språket före skolstart. Den gäller en del av löftet: språkuppföljning för barn med annat modersmål. Dokumentet visar ett förslag, inget beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": ["tido-bvc-sprakscreening-integration-yngsta-barn"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HEB417",
+      "designation": "Ds 2026:17",
+      "title": "Identifiering av barn i behov av stöd för att utveckla sina färdigheter i svenska språket",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB417.html",
+      "relevance": "partial",
       "note": null
     }
   ]

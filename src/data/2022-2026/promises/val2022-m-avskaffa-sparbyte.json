@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["spårbyte", "arbetstillstånd", "asylansökan", "avslag"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i oktober 2023 en utredare i uppdrag att se över asylreglerna. Uppdraget omfattar bland annat att ta bort möjligheten att få uppehållstillstånd för arbete efter avslag på asylansökan, det vill säga spårbyte. I mars 2025 beslutade riksdagen att ställa sig bakom regeringens förslag till ändringar i utlänningslagen som avskaffar spårbyte.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1137",
+      "designation": "Dir. 2023:137",
+      "title": "Anpassning av det svenska regelverket för beviljande av asyl och asylförfarandet till miniminivån enligt EU-rätten",
+      "date": "2023-10-02",
+      "url": "https://data.riksdagen.se/dokument/HBB1137.html",
+      "relevance": "partial",
       "note": null
     },
     {

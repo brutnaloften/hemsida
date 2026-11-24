@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["medborgarskap", "välfärd", "kvalificering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i februari och mars 2026 skärpta krav för socialförsäkringen och för medborgarskap. Riksdagen beslutade om båda i april och maj, och i maj även om en grundlagsändring om återkallelse av medborgarskap. Två ändringar i medborgarskapslagen trädde i kraft 6 juni 2026. Ändringar i socialförsäkringsbalken träder i kraft 1 januari 2027 och i medborgarskapslagen 1 oktober 2027.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -35,6 +42,36 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet anger att en återgång till längre hemvisttid (minst åtta år), krav på egenförsörjning och skärpta krav på hederlig vandel för medborgarskap ska utredas och föreslås, och att en utredning ska föreslå en modell för kvalificering till välfärdsförmåner för nyanlända."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03136",
+      "designation": "Prop. 2025/26:136",
+      "title": "Kvalificering till socialförsäkringen",
+      "date": "2026-02-23",
+      "url": "https://data.riksdagen.se/dokument/HD03136.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03175",
+      "designation": "Prop. 2025/26:175",
+      "title": "Skärpta krav för svenskt medborgarskap",
+      "date": "2026-03-12",
+      "url": "https://data.riksdagen.se/dokument/HD03175.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB321",
+      "designation": "SOU 2026:21",
+      "title": "Återkallelse av svenskt medborgarskap",
+      "date": "2026-03-18",
+      "url": "https://data.riksdagen.se/dokument/HEB321.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",
@@ -65,6 +102,56 @@
       "url": "https://data.riksdagen.se/dokument/HD01KU34.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB141",
+      "designation": "Dir. 2026:41",
+      "title": "Ett krav på att personer som bosätter sig i Sverige ska kvalificera sig till insatsen personlig assistans",
+      "date": "2026-06-04",
+      "url": "https://data.riksdagen.se/dokument/HEB141.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-447",
+      "designation": "SFS 2026:447",
+      "title": "Lag (2026:447) om ändring i lagen (2001:82) om svenskt medborgarskap",
+      "date": "2026-06-06",
+      "url": "https://svenskforfattningssamling.se/doc/2026447.html",
+      "relevance": "partial",
+      "note": "Lagen höjer inte tröskeln för att ta del av skattefinansierad välfärd; den delen av löftet genomförs inte här."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-450",
+      "designation": "SFS 2026:450",
+      "title": "Lag (2026:450) om ändring i lagen (2014:481) om ändring i lagen (2001:82) om svenskt medborgarskap",
+      "date": "2026-06-06",
+      "url": "https://svenskforfattningssamling.se/doc/2026450.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte de övriga skärpningarna (hemvist, försörjningskrav, språk- och samhällskunskap, levnadssätt i allmänhet) och inte något om att höja tröskeln till skattefinansierad välfärd."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-853",
+      "designation": "SFS 2026:853",
+      "title": "Lag (2026:853) om ändring i socialförsäkringsbalken",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026853.html",
+      "relevance": "partial",
+      "note": "Skärpta villkor för medborgarskap ingår inte, och lagen höjer inte tröskeln till välfärd i stort utan bara vissa bosättningsbaserade socialförsäkringsförmåner."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-448",
+      "designation": "SFS 2026:448",
+      "title": "Lag (2026:448) om ändring i lagen (2001:82) om svenskt medborgarskap",
+      "date": "2027-10-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026448.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte övriga skärpningar (hemvist, levnadssätt, försörjningskrav) och inte den andra delen av löftet om att höja tröskeln till skattefinansierad välfärd."
     }
   ]
 }

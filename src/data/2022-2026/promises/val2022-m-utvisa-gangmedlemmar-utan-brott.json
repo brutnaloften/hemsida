@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["utvisning", "gängmedlemmar", "utlänningslagen", "medborgarskap"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En utredning föreslog i mars 2026 att dubbla medborgare dömda för grova brott i kriminella nätverk ska kunna förlora medborgarskapet. Riksdagen beslutade i juni 2026 att utlänningar som dömts till hårdare straff än böter lättare kan utvisas, och skärpte reglerna för utvisning av utlänningar som är säkerhetshot. Stegen gäller utvisning efter brottsdom och säkerhetshot.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-utvisning-gangkriminella-utan-dom"],
       "outcome": "weakened",
       "note": "Avtalet utreder bara möjligheten att utvisa gängkriminella utan svenskt medborgarskap utan dom."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB321",
+      "designation": "SOU 2026:21",
+      "title": "Återkallelse av svenskt medborgarskap",
+      "date": "2026-03-18",
+      "url": "https://data.riksdagen.se/dokument/HEB321.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03235",
+      "designation": "Prop. 2025/26:235",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HD03235.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",

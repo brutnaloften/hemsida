@@ -17,10 +17,38 @@
   "committee": "UbU",
   "keywords": ["vinstuttag", "skola", "friskolor"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i augusti 2026 om skärpta villkor för friskolor: ett förbud mot värdeöverföringar i vissa situationer, återbetalning av bidrag och särskild redovisning för privata skolhuvudmän. Det gäller en del av löftet. I september 2026 gav regeringen en utredare i uppdrag att se över ägarprövning, sanktioner och kontroll av statsbidrag i yrkeshögskolan.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU30",
+      "designation": "Bet. 2025/26:UbU30",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU30.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1121",
+      "designation": "Dir. 2026:121",
+      "title": "Bättre insyn och kontroll i yrkeshögskolan",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1121.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

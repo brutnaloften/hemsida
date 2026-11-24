@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["mängdrabatt", "straffmätning", "flerfaldig brottslighet", "brottsbalken"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i januari 2023 en ny modell med högre gemensamma straffskalor, så att varje tillkommande brott väger tyngre. Regeringen gav i juli 2023 ett utredningsuppdrag om en ny modell för flerfaldig brottslighet. Riksdagen antog i juni 2026 en ny gemensam straffskala och i augusti 2026 en ny regel för gemensamt straff. Lagen träder i kraft den dag regeringen bestämmer.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": ["tido-avskaffa-mangdrabatt"],
       "outcome": "included",
       "note": "Avtalet avskaffar dagens form av mängdrabatt."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB31",
+      "designation": "SOU 2023:1",
+      "title": "Skärpta straff för flerfaldig brottslighet",
+      "date": "2023-01-25",
+      "url": "https://data.riksdagen.se/dokument/HBB31.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1115",
+      "designation": "Dir. 2023:115",
+      "title": "En översyn av straffskalorna samt ett reformerat och mer rättvist påföljdssystem",
+      "date": "2023-07-20",
+      "url": "https://data.riksdagen.se/dokument/HBB1115.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU42",
+      "designation": "Bet. 2025/26:JuU42",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
+      "relevance": "full",
+      "note": null
     },
     {
       "kind": "bet",

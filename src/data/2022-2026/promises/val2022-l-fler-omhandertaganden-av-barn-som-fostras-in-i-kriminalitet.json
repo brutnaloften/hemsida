@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["omhändertagande", "LVU", "barn", "kriminalitet", "socialtjänst"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En utredning föreslog i april 2025 att fler barn ska kunna omhändertas, bland annat barn som dras in i kriminalitet via sina föräldrar. Riksdagen biföll i augusti 2026 en ny lag om omhändertagande med justerade grunder och en lag om förebyggande tvångsinsatser för barn i riskzon för brott. Det gäller en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,12 +39,42 @@
       "note": "Avtalet vill använda LVU oftare och utreda utökade möjligheter att omhänderta barn som lever nära kriminella miljöer."
     },
     {
-      "kind": "bet",
-      "dok_id": "HD01JuU2",
-      "designation": "Bet. 2025/26:JuU2",
-      "title": "Hemliga och preventiva tvångsmedel när barn under 15 år begår brott",
-      "date": "2025-09-16",
-      "url": "https://data.riksdagen.se/dokument/HD01JuU2.html",
+      "kind": "sou",
+      "dok_id": "HDB338",
+      "designation": "SOU 2025:38",
+      "title": "Att omhänderta barn och unga",
+      "date": "2025-04-08",
+      "url": "https://data.riksdagen.se/dokument/HDB338.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB38",
+      "designation": "SOU 2026:8",
+      "title": "Rättssäker samhällsvård för barn och unga",
+      "date": "2026-02-11",
+      "url": "https://data.riksdagen.se/dokument/HEB38.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03294",
+      "designation": "Prop. 2025/26:294",
+      "title": "För barns rättigheter och trygghet – en ny lag om omhändertagande för vård av barn och unga",
+      "date": "2026-06-30",
+      "url": "https://data.riksdagen.se/dokument/HD03294.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03295",
+      "designation": "Prop. 2025/26:295",
+      "title": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "date": "2026-06-30",
+      "url": "https://data.riksdagen.se/dokument/HD03295.html",
       "relevance": "partial",
       "note": null
     },
@@ -48,6 +85,26 @@
       "title": "För barns rättigheter och trygghet – en ny lag om omhändertagande för vård av barn och unga",
       "date": "2026-08-07",
       "url": "https://data.riksdagen.se/dokument/HD01SoU38.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU39",
+      "designation": "Bet. 2025/26:SoU39",
+      "title": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "date": "2026-08-07",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU39.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU41",
+      "designation": "Bet. 2025/26:JuU41",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
       "relevance": "partial",
       "note": null
     }

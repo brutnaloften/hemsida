@@ -17,10 +17,28 @@
   "committee": "SfU",
   "keywords": ["föräldraförsäkring", "jämställdhetsbonus", "jämställdhet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning om jämställdhetspolitiken, publicerad i juni 2026, rekommenderar att regeringen tillsätter en utredning som ser över föräldraledigheten och föräldraförsäkringen så att den främjar jämställdhet. Dokumentet gäller bara en del av löftet, nämligen översynen av föräldraförsäkringen. Någon förstärkt jämställdhetsbonus är inte föreslagen i det.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HEB341",
+      "designation": "SOU 2026:41",
+      "title": "Jämställdhet i en föränderlig tid - nuläge och vägar framåt, del 1",
+      "date": "2026-06-17",
+      "url": "https://data.riksdagen.se/dokument/HEB341.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

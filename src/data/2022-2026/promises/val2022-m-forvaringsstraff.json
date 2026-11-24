@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["förvaring", "förvaringsstraff", "serievåldtäktsmän", "samhällsfarliga"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i januari 2026 en ny tidsobestämd påföljd, säkerhetsförvaring, för personer som begått allvarliga brott och riskerar återfalla. Riksdagen biföll förslaget i mars 2026. En lag om verkställighet av säkerhetsförvaring trädde i kraft den 15 april 2026. Riksdagen beslutade i juni 2026 också om begränsade socialförsäkringsförmåner för dem som avtjänar säkerhetsförvaring. Lagen täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HD0395",
+      "designation": "Prop. 2025/26:95",
+      "title": "Säkerhetsförvaring – en ny tidsobestämd frihetsberövande påföljd",
+      "date": "2026-01-22",
+      "url": "https://data.riksdagen.se/dokument/HD0395.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01JuU27",
       "designation": "Bet. 2025/26:JuU27",
@@ -39,6 +56,36 @@
       "date": "2026-03-17",
       "url": "https://data.riksdagen.se/dokument/HD01JuU27.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-252",
+      "designation": "SFS 2026:252",
+      "title": "Lag (2026:252) om verkställighet av säkerhetsförvaring",
+      "date": "2026-04-15",
+      "url": "https://svenskforfattningssamling.se/doc/2026252.html",
+      "relevance": "partial",
+      "note": "Själva införandet av den tidsobestämda påföljden, alltså när den kan dömas ut och hur ramtiden kan förlängas så länge den dömde är farlig, finns i brottsbalken och inte i den här lagen."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03252",
+      "designation": "Prop. 2025/26:252",
+      "title": "En begränsning av rätten till socialförsäkringsförmåner för den som avtjänar fängelsestraff i kontrollerat boende eller som avtjänar säkerhetsförvaring",
+      "date": "2026-04-23",
+      "url": "https://data.riksdagen.se/dokument/HD03252.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU29",
+      "designation": "Bet. 2025/26:SfU29",
+      "title": "En begränsning av rätten till socialförsäkringsförmåner för den som avtjänar fängelsestraff i kontrollerat boende eller som avtjänar säkerhetsförvaring",
+      "date": "2026-06-04",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU29.html",
+      "relevance": "partial",
       "note": null
     }
   ]

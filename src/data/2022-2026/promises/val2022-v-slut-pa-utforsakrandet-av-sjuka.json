@@ -17,10 +17,38 @@
   "committee": "SfU",
   "keywords": ["sjukförsäkring", "utförsäkring", "Försäkringskassan", "sjukpenning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i november 2025 fram ett förslag om arbetsprövning med bibehållen sjukpenning. Riksdagen beslutade i januari 2026 att den som har full sjukpenning kan pröva arbete i två perioder om 14 dagar. Dokumenten gäller en del av löftet, en lättnad vid återgång i arbete i sjukförsäkringen.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD0353",
+      "designation": "Prop. 2025/26:53",
+      "title": "Arbetsprövning med bibehållen sjukpenning",
+      "date": "2025-11-11",
+      "url": "https://data.riksdagen.se/dokument/HD0353.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU9",
+      "designation": "Bet. 2025/26:SfU9",
+      "title": "Arbetsprövning med bibehållen sjukpenning",
+      "date": "2026-01-21",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU9.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

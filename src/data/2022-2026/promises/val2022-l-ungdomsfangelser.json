@@ -23,10 +23,17 @@
     "verkställighet"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett kommittédirektiv från den 3 september 2026 gäller en stärkt hälso- och sjukvård inom Kriminalvården, bland annat bättre vård för barn. Direktivet tar upp barn- och ungdomsavdelningar, där barn hålls åtskilda från vuxna. Dokumentet gäller den del av löftet som handlar om bättre vård under straffet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -36,6 +43,16 @@
       "promises": ["tido-ungdomsfangelser"],
       "outcome": "included",
       "note": "Avtalet inrättar särskilda ungdomsfängelser under Kriminalvården."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1119",
+      "designation": "Dir. 2026:119",
+      "title": "En stärkt hälso- och sjukvård inom Kriminalvården",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1119.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

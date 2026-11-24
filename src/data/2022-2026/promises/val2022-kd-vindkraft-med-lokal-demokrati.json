@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["vindkraft", "kommunalt veto", "lokal demokrati", "energi"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2026 fram ett förslag om att människor nära vindkraftverk ska få del av intäkterna. Riksdagen biföll förslaget i maj 2025 och kommunerna får ersättning. I juni 2026 gav regeringen en utredning i uppdrag att föreslå rätt till inlösen av bostäder nära vindkraft. Lagen om intäktsdelning trädde i kraft 1 juli 2026. Dokumenten täcker bara en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,46 @@
       "promises": ["tido-tillaggsuppdrag-vindkraft-ersattning-kommuner"],
       "outcome": "weakened",
       "note": "Avtalet utreder ersättning till kommuner vid vindkraftsutbyggnad, men inget om lokal demokrati eller anpassning efter lokala villkor. Osäker."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03239",
+      "designation": "Prop. 2025/26:239",
+      "title": "Vindkraft i kommuner",
+      "date": "2026-04-14",
+      "url": "https://data.riksdagen.se/dokument/HD03239.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01NU20",
+      "designation": "Bet. 2025/26:NU20",
+      "title": "Vindkraft i kommuner",
+      "date": "2026-05-28",
+      "url": "https://data.riksdagen.se/dokument/HD01NU20.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB158",
+      "designation": "Dir. 2026:58",
+      "title": "Fastighetsägares rätt till inlösen av fastigheter med bostad intill en vindkraftsanläggning",
+      "date": "2026-06-18",
+      "url": "https://data.riksdagen.se/dokument/HEB158.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1113",
+      "designation": "SFS 2026:1113",
+      "title": "Lag (2026:1113) om intäktsdelning från vindkraftsanläggningar",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261113.html",
+      "relevance": "partial",
+      "note": "Lagen ger inget kommunalt inflytande eller vetorätt och inget som anpassar vindkraftens storlek efter lokala villkor; den gäller bara ekonomisk ersättning till bostadsägare."
     }
   ]
 }

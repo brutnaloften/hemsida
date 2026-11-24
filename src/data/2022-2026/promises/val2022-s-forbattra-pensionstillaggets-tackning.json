@@ -17,10 +17,28 @@
   "committee": "SfU",
   "keywords": ["pensionstillägg", "pension", "garantipension", "pensionärer"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i juni 2026 att tillsätta en utredning om en reform av grundskyddet i ålderspensionssystemet, där inkomstpensionstillägget ingår. Syftet är att stärka drivkrafterna att arbeta och göra systemet mer träffsäkert. Uppdraget gäller hela grundskyddet och täcker därför bara en del av löftet om pensionstillägget.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HEB157",
+      "designation": "Dir. 2026:57",
+      "title": "Ett bättre och enklare grundskydd i ålderspensionssystemet",
+      "date": "2026-06-18",
+      "url": "https://data.riksdagen.se/dokument/HEB157.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

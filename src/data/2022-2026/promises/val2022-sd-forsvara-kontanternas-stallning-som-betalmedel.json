@@ -17,10 +17,17 @@
   "committee": "FiU",
   "keywords": ["kontanter", "betalmedel", "betaltjänster"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2026 fram ett förslag om att livsmedelsbutiker och apotek ska ta emot kontanter, med ändringar i betaltjänstlagen. Riksdagen biföll förslaget i maj 2026. Två lagar trädde i kraft den 1 juli 2026: en om skyldighet att ta emot kontant betalning i livsmedelsbutiker och apotek, och en ändring i betaltjänstlagen. Lagarna täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,46 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03199",
+      "designation": "Prop. 2025/26:199",
+      "title": "Åtgärder för att stärka kontanternas funktionssätt",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03199.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01FiU39",
+      "designation": "Bet. 2025/26:FiU39",
+      "title": "Åtgärder för att stärka kontanternas funktionssätt",
+      "date": "2026-05-21",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU39.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-769",
+      "designation": "SFS 2026:769",
+      "title": "Lag (2026:769) om skyldighet för livsmedelsbutiker och apotek att ta emot kontant betalning",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026769.html",
+      "relevance": "partial",
+      "note": "Skyldigheten gäller inte andra branscher, och den har undantag och beloppsgränser. Den breda försvaren av kontanternas ställning, till exempel kontantuttag och insättningar, ligger i en annan lag."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-770",
+      "designation": "SFS 2026:770",
+      "title": "Lag (2026:770) om ändring i lagen (2010:751) om betaltjänster",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026770.html",
+      "relevance": "partial",
+      "note": "Lagen innehåller inte skyldigheten för livsmedelsbutiker och apotek att ta emot kontanter, som ligger i en annan lag, och den stärker bara delar av kontanternas ställning."
     }
   ]
 }

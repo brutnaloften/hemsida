@@ -23,10 +23,17 @@
     "socialtjänst"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i november 2024 en utredning tilläggsdirektiv om obligatorisk uppföljning efter placering, och riksdagen beslutade i maj 2025 om en ny socialtjänstlag. Regeringen föreslog i juni 2026 att socialnämnden ska kunna besluta om insatser utan samtycke, och riksdagen biföll i augusti 2026. Lagen är beslutad och träder i kraft 2 januari 2027. Den verkar täcka löftet, men det är obekräftat.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,16 @@
       "note": "Avtalet inför mellantvång, dvs. tidiga och obligatoriska insatser i socialtjänstlagen."
     },
     {
+      "kind": "dir",
+      "dok_id": "HCB1114",
+      "designation": "Dir. 2024:114",
+      "title": "Tilläggsdirektiv till Utredningen om stärkt barnrättsperspektiv i LVU (S 2023:13)",
+      "date": "2024-11-21",
+      "url": "https://data.riksdagen.se/dokument/HCB1114.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HC01SoU23",
       "designation": "Bet. 2024/25:SoU23",
@@ -45,6 +62,56 @@
       "date": "2025-05-20",
       "url": "https://data.riksdagen.se/dokument/HC01SoU23.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03295",
+      "designation": "Prop. 2025/26:295",
+      "title": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "date": "2026-06-30",
+      "url": "https://data.riksdagen.se/dokument/HD03295.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU39",
+      "designation": "Bet. 2025/26:SoU39",
+      "title": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "date": "2026-08-07",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU39.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU41",
+      "designation": "Bet. 2025/26:JuU41",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HEB419",
+      "designation": "Ds 2026:19",
+      "title": "Utökad tillsyn över barn vars föräldrar omfattas av aktivitetskrav enligt socialtjänstlagen",
+      "date": "2026-09-07",
+      "url": "https://data.riksdagen.se/dokument/HEB419.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1637",
+      "designation": "SFS 2026:1637",
+      "title": "Lag (2026:1637) om insatser inom socialtjänsten när samtycke saknas",
+      "date": "2027-01-02",
+      "url": "https://svenskforfattningssamling.se/doc/20261637.html",
+      "relevance": "full",
       "note": null
     }
   ]

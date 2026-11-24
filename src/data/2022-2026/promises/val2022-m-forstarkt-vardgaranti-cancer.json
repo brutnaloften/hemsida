@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["vårdgaranti", "cancer", "cancerpatienter", "vårdgivare", "ersättning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i augusti 2026 direktiv till en utredning om nationella principer för utbudet av vård. Utredaren ska föreslå ytterligare åtgärder, bland annat ekonomiska konsekvenser, för regioner som inte håller vårdgarantins tidsgränser, och analysera en starkare rätt till vård i tid. Det gäller en del av löftet: skärpta krav kring vårdgarantin.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB192",
+      "designation": "Dir. 2026:92",
+      "title": "Nationella principer för utbud av hälso- och sjukvård i hela landet",
+      "date": "2026-08-13",
+      "url": "https://data.riksdagen.se/dokument/HEB192.html",
+      "relevance": "partial",
       "note": null
     }
   ]

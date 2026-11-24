@@ -17,10 +17,38 @@
   "committee": "JuU",
   "keywords": ["kontrollerande beteende", "mäns våld mot kvinnor", "kriminalisering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i juni 2025 fram ett förslag om att kriminalisera oskuldskontroller, oskuldsintyg och oskuldsingrepp. I oktober 2025 beslutade riksdagen att kriminalisera dessa, samt att underlåta att anmäla tvångsäktenskap och barnäktenskap. Dokumenten gäller bara en del av löftet: hedersrelaterade former av kontrollerande beteende.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC03189",
+      "designation": "Prop. 2024/25:189",
+      "title": "Kriminalisering av oskuldskontroller, oskuldsintyg och oskuldsingrepp",
+      "date": "2025-06-17",
+      "url": "https://data.riksdagen.se/dokument/HC03189.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU3",
+      "designation": "Bet. 2025/26:JuU3",
+      "title": "Kriminalisering av oskuldskontroller, oskuldsintyg och oskuldsingrepp",
+      "date": "2025-10-17",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU3.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["tillståndsprocesser", "gruvnäring", "elnät", "industri"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i april 2026 om ändringar i miljöbalken, plan- och bygglagen och ellagen som ger snabbare och mer förutsägbar prövning av förnybar energi. Regeringen gav i augusti 2026 Miljötillståndsutredningen tilläggsuppdrag om kontaktpunkter, bland annat för gruvor och nettonollindustri, och i september 2026 en utredning om miljöprövning för försvaret.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": ["tido-utredning-forenkla-miljotillstandsprovning"],
       "outcome": "weakened",
       "note": "Avtalet innehåller en utredning för att förenkla och förkorta miljötillståndsprövningen."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01NU18",
+      "designation": "Bet. 2025/26:NU18",
+      "title": "Tillståndsprövning enligt förnybartdirektivet",
+      "date": "2026-04-08",
+      "url": "https://data.riksdagen.se/dokument/HD01NU18.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB197",
+      "designation": "Dir. 2026:97",
+      "title": "Tilläggsdirektiv till Miljötillståndsutredningen (KN 2023:02)",
+      "date": "2026-08-27",
+      "url": "https://data.riksdagen.se/dokument/HEB197.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1110",
+      "designation": "Dir. 2026:110",
+      "title": "Miljöbalken och försvaret",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1110.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

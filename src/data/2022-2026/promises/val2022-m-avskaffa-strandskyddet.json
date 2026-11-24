@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["strandskydd", "bostadsbyggande", "miljöbalken", "strandnära boende"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i maj 2025 om lättnader i strandskyddet som ett första steg: inget generellt skydd vid små vatten och konstgjorda vatten, samt undantag för vattenbruk. I juni 2025 gav regeringen en utredare i uppdrag att reformera strandskyddet och öka möjligheterna att bygga nära vatten. I maj 2026 förlängdes utredningstiden till 31 december 2026. Dessa steg gäller en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,26 @@
       "title": "Lättnader i strandskyddet – ett första steg",
       "date": "2025-05-09",
       "url": "https://data.riksdagen.se/dokument/HC01MJU16.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB159",
+      "designation": "Dir. 2025:59",
+      "title": "Ett reformerat strandskydd",
+      "date": "2025-06-12",
+      "url": "https://data.riksdagen.se/dokument/HDB159.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB130",
+      "designation": "Dir. 2026:30",
+      "title": "Tilläggsdirektiv till Strandskyddsutredningen (KN 2025:01)",
+      "date": "2026-05-13",
+      "url": "https://data.riksdagen.se/dokument/HEB130.html",
       "relevance": "partial",
       "note": null
     }

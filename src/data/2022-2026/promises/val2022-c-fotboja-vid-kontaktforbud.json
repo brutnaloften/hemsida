@@ -17,10 +17,58 @@
   "committee": "JuU",
   "keywords": ["fotboja", "kontaktförbud", "brottsoffer", "elektronisk övervakning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i augusti 2025 fram ett förslag om fler möjligheter att avtjäna fängelsestraff med fotboja, och riksdagen biföll det i oktober 2025. Riksdagen biföll även 2026 ändringar om vistelseföreskrifter och om elektronisk övervakning av barn och unga inom socialtjänsten. Dokumenten gäller fotboja i andra sammanhang än kontaktförbud.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC03202",
+      "designation": "Prop. 2024/25:202",
+      "title": "Utökade möjligheter att verkställa fängelsestraff med elektronisk övervakning",
+      "date": "2025-08-26",
+      "url": "https://data.riksdagen.se/dokument/HC03202.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU7",
+      "designation": "Bet. 2025/26:JuU7",
+      "title": "Utökade möjligheter att verkställa fängelsestraff med elektronisk övervakning",
+      "date": "2025-10-22",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU7.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU38",
+      "designation": "Bet. 2025/26:JuU38",
+      "title": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
+      "date": "2026-05-27",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU38.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU39",
+      "designation": "Bet. 2025/26:SoU39",
+      "title": "Förebyggande insatser inom socialtjänsten till skydd för barn och unga vid bristande medverkan",
+      "date": "2026-08-07",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU39.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

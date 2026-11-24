@@ -17,10 +17,17 @@
   "committee": "CU",
   "keywords": ["plan- och bygglagen", "byggregler", "planering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2026:52 (En utvecklad nationell fysisk planering av mark- och vattentillgångar). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:CU25 (En snabbare utbyggnad av kriminalvårdsanstalter och häkten), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,16 @@
       "title": "En snabbare utbyggnad av kriminalvårdsanstalter och häkten",
       "date": "2026-05-06",
       "url": "https://data.riksdagen.se/dokument/HD01CU25.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB152",
+      "designation": "Dir. 2026:52",
+      "title": "En utvecklad nationell fysisk planering av mark- och vattentillgångar",
+      "date": "2026-06-18",
+      "url": "https://data.riksdagen.se/dokument/HEB152.html",
       "relevance": "partial",
       "note": null
     }

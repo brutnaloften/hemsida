@@ -17,12 +17,29 @@
   "committee": "KU",
   "keywords": ["grundlag", "opposition", "domstolarnas oberoende", "riksdagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2025 fram ett förslag om att ändringar i grundlagen ska kräva två tredjedelars majoritet i det bekräftande beslutet, samt åtgärder för domstolarnas oberoende, bland annat en nämnd med domarmajoritet för domstolsförvaltningen. I september 2025 beslutade riksdagen som vilande att grundlagsändringar ska kräva kvalificerad majoritet och beslutsförhet. Oppositionens skydd berörs bara delvis, och beslutet är ett första, vilande beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC03165",
+      "designation": "Prop. 2024/25:165",
+      "title": "Stärkt skydd för demokratin och domstolarnas oberoende",
+      "date": "2025-04-28",
+      "url": "https://data.riksdagen.se/dokument/HC03165.html",
+      "relevance": "full",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HD01KU2",

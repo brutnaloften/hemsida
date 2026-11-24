@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["bidragsbrott", "välfärdsfusk", "straff"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i juni 2026 om skärpta straffskalor, bland annat i bidragsbrottslagen, och om begränsade socialförsäkringsförmåner för vissa som avtjänar fängelsestraff. I augusti beslutade riksdagen om ett nytt påföljdssystem med generellt skärpta straff. I september 2026 gav regeringen en utredning i uppdrag att se över straffansvar för illegal arbetskraft.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-skarp-bidragsbrottslagen-foretagsstod"],
       "outcome": "included",
       "note": "Avtalet anger att bidragsbrottslagen skärps och även ska omfatta stöd till företag."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU29",
+      "designation": "Bet. 2025/26:SfU29",
+      "title": "En begränsning av rätten till socialförsäkringsförmåner för den som avtjänar fängelsestraff i kontrollerat boende eller som avtjänar säkerhetsförvaring",
+      "date": "2026-06-04",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU29.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",
@@ -48,6 +65,16 @@
       "title": "Ett nytt straffrättsligt påföljdssystem",
       "date": "2026-08-12",
       "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1114",
+      "designation": "Dir. 2026:114",
+      "title": "Straffrättsliga åtgärder mot användande av illegal arbetskraft",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1114.html",
       "relevance": "partial",
       "note": null
     }

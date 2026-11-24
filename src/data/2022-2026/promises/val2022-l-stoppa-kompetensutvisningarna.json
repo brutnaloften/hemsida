@@ -22,10 +22,17 @@
     "arbetstillstånd"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i december 2025 fram ett förslag om nya regler för arbetskraftsinvandring, bland annat att vissa högkvalificerade kan ansöka om tillstånd från Sverige och att EU-blåkort får längre tillståndstid. Riksdagen biföll förslaget i mars 2026 och en lagändring trädde i kraft 1 juni 2026. Dokumenten täcker bara en del av löftet om att stoppa kompetensutvisningarna.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -35,6 +42,56 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB315",
+      "designation": "SOU 2024:15",
+      "title": "Nya regler för arbetskraftsinvandring m.m.",
+      "date": "2024-02-15",
+      "url": "https://data.riksdagen.se/dokument/HCB315.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HDB418",
+      "designation": "Ds 2025:18",
+      "title": "Nya regler om ansökningsförfarandet för vissa uppehålls- och arbetstillstånd",
+      "date": "2025-06-10",
+      "url": "https://data.riksdagen.se/dokument/HDB418.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0387",
+      "designation": "Prop. 2025/26:87",
+      "title": "Nya regler för arbetskraftsinvandring",
+      "date": "2025-12-16",
+      "url": "https://data.riksdagen.se/dokument/HD0387.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU12",
+      "designation": "Bet. 2025/26:SfU12",
+      "title": "Nya regler för arbetskraftsinvandring",
+      "date": "2026-03-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU12.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-295",
+      "designation": "SFS 2026:295",
+      "title": "Lag (2026:295) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-06-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026295.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att kompetensutvisningarna av högkvalificerad arbetskraft upphör helt, och det finns ingen uttrycklig regel som stoppar utvisning av högkvalificerade vid mindre fel från arbetsgivaren."
     }
   ]
 }

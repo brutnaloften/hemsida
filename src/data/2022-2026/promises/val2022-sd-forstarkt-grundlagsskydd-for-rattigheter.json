@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["grundlag", "yttrandefrihet", "äganderätt", "religionsfrihet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i november 2022 om grundlagsändringar för tryck- och yttrandefriheten. I juni 2026 beslutade den om ersättning till markägare vid artskyddsinskränkningar, som rör äganderätten men är en vanlig lagändring. I augusti 2026 fick en kommitté i uppdrag att se över förtal och tryck- och yttrandefrihet. Ett förslag i november 2024 motverkar löftet genom att begränsa grundlagsskyddet för söktjänster med personuppgifter.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,56 @@
       "title": "Ett ändamålsenligt skydd för tryck- och yttrandefriheten (vilande grundlagsförslag m.m.)",
       "date": "2022-11-11",
       "url": "https://data.riksdagen.se/dokument/HA01KU6.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB375",
+      "designation": "SOU 2024:75",
+      "title": "Personuppgifter och mediegrundlagarna",
+      "date": "2024-11-22",
+      "url": "https://data.riksdagen.se/dokument/HCB375.html",
+      "relevance": "contradicts",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01KU34",
+      "designation": "Bet. 2025/26:KU34",
+      "title": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
+      "date": "2026-05-11",
+      "url": "https://data.riksdagen.se/dokument/HD01KU34.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01MJU28",
+      "designation": "Bet. 2025/26:MJU28",
+      "title": "Ersättning vid rådighetsinskränkningar till följd av artskyddet",
+      "date": "2026-06-09",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU28.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB156",
+      "designation": "Dir. 2026:56",
+      "title": "Grundlagsskydd för rätten till domstolsprövning",
+      "date": "2026-06-18",
+      "url": "https://data.riksdagen.se/dokument/HEB156.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB191",
+      "designation": "Dir. 2026:91",
+      "title": "En översyn av straffbestämmelserna om förtal och vissa andra frågor om tryck- och yttrandefrihet",
+      "date": "2026-08-13",
+      "url": "https://data.riksdagen.se/dokument/HEB191.html",
       "relevance": "partial",
       "note": null
     }

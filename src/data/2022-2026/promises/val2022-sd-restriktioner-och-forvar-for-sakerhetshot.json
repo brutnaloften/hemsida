@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["säkerhetshot", "förvar", "utlänningskontroll"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen biföll i mars 2026 säkerhetsförvaring, en tidsobestämd påföljd för farliga våldsbrottslingar, och en lag om verkställighet trädde i kraft 15 april 2026. I juni 2026 biföll riksdagen skärpta regler om uppsikt och förvar av utlänningar, bland annat elektronisk övervakning. Ändringar i utlänningslagen trädde i kraft i juli och oktober 2026. Lagarna täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -42,12 +49,62 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HD0395",
+      "designation": "Prop. 2025/26:95",
+      "title": "Säkerhetsförvaring – en ny tidsobestämd frihetsberövande påföljd",
+      "date": "2026-01-22",
+      "url": "https://data.riksdagen.se/dokument/HD0395.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01JuU27",
       "designation": "Bet. 2025/26:JuU27",
       "title": "Säkerhetsförvaring – en ny tidsobestämd frihetsberövande påföljd",
       "date": "2026-03-17",
       "url": "https://data.riksdagen.se/dokument/HD01JuU27.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-252",
+      "designation": "SFS 2026:252",
+      "title": "Lag (2026:252) om verkställighet av säkerhetsförvaring",
+      "date": "2026-04-15",
+      "url": "https://svenskforfattningssamling.se/doc/2026252.html",
+      "relevance": "partial",
+      "note": "Lagen innehåller inga hårda restriktioner (t.ex. uppehållsförbud eller kontaktförbud) och inget förvar för säkerhetshot som inte dömts för brott; den gäller bara dömda personer."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03265",
+      "designation": "Prop. 2025/26:265",
+      "title": "Skärpta regler om uppsikt och förvar",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03265.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03267",
+      "designation": "Prop. 2025/26:267",
+      "title": "Stärkt skydd mot utlänningar som utgör kvalificerade säkerhetshot",
+      "date": "2026-05-07",
+      "url": "https://data.riksdagen.se/dokument/HD03267.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU31",
+      "designation": "Bet. 2025/26:SfU31",
+      "title": "Skärpta regler om uppsikt och förvar",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU31.html",
       "relevance": "partial",
       "note": null
     },
@@ -60,6 +117,46 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU45.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1425",
+      "designation": "SFS 2026:1425",
+      "title": "Lag (2026:1425) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-07-21",
+      "url": "https://svenskforfattningssamling.se/doc/20261425.html",
+      "relevance": "partial",
+      "note": "Lagen är en allmän reform av uppsikt och förvar för utlänningar i migrationsprocessen och riktar sig inte specifikt mot säkerhetshot. Den ger möjligheter snarare än tydligt hårda restriktioner för alla säkerhetshot i Sverige."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1426",
+      "designation": "SFS 2026:1426",
+      "title": "Lag (2026:1426) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-10-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261426.html",
+      "relevance": "partial",
+      "note": "Lagen gäller inte säkerhetshot i allmänhet som befinner sig i Sverige, och texten visar inga särskilda hårda restriktioner för dem. Den rör främst asylsökande."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1432",
+      "designation": "SFS 2026:1432",
+      "title": "Lag (2026:1432) om ändring i lagen (2022:700) om särskild kontroll av vissa utlänningar",
+      "date": "2027-03-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261432.html",
+      "relevance": "partial",
+      "note": "Hårda restriktioner utöver förvar (t.ex. nya eller skärpta övervaknings- och uppsiktsåtgärder) införs inte, och förvar blir inte en generell skyldighet för alla säkerhetshot."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1427",
+      "designation": "SFS 2026:1427",
+      "title": "Lag (2026:1427) om ändring i utlänningslagen (2005:716)",
+      "date": "2027-12-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261427.html",
+      "relevance": "partial",
+      "note": "Lagen är en generell reform av uppsikt och förvar för utlänningar och riktar sig inte specifikt mot säkerhetshot; särskilda hårda restriktioner för säkerhetshot i Sverige framgår inte, och bestämmelserna träder i kraft först 2027-12-01."
     }
   ]
 }

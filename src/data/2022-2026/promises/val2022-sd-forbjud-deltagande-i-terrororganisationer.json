@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["terrororganisationer", "terrorism", "deltagande"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i februari 2026 ett nytt brott i brottsbalken som straffbelägger deltagande i och samröre med kriminella sammanslutningar. Förslaget gäller en del av löftet: organiserad brottslighet. Dokumenten visar ett utredningsförslag, inget beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB313",
+      "designation": "SOU 2026:13",
+      "title": "Straffansvar för deltagande i och samröre med kriminella sammanslutningar",
+      "date": "2026-02-17",
+      "url": "https://data.riksdagen.se/dokument/HEB313.html",
+      "relevance": "partial",
       "note": null
     }
   ]

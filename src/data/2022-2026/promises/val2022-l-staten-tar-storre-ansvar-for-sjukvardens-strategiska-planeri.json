@@ -23,10 +23,17 @@
     "hälso- och sjukvårdslagen"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i maj 2026 att tillsätta en utredning om en blod- och plasmaorganisation med utökat statligt ansvar, med hänsyn till beredskap och totalförsvar. I juli 2026 fick en utredare i uppdrag att föreslå statligt eller delvis statligt huvudmannaskap för rättspsykiatrin, med planering, finansiering, styrning och kompetensförsörjning. Dokumenten gäller blod och plasma samt rättspsykiatri.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,26 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet utreder statligt huvudmannaskap och stärker det nationella åtagandet för kompetensförsörjning och samverkan i regionala centra, men har inget uttalat statligt ansvar för strategisk planering, högspecialiserad vård och beredskap."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB137",
+      "designation": "Dir. 2026:37",
+      "title": "En blod- och plasmaorganisation med ett utökat statligt ansvar för stärkt försörjning av blod och plasma",
+      "date": "2026-05-28",
+      "url": "https://data.riksdagen.se/dokument/HEB137.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB171",
+      "designation": "Dir. 2026:71",
+      "title": "Ett ökat statligt ansvarstagande för den rättspsykiatriska vården",
+      "date": "2026-07-09",
+      "url": "https://data.riksdagen.se/dokument/HEB171.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

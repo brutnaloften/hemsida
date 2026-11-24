@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["utlänningslagen", "EU-rätten", "asylregler"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i december 2025 längre förvar, fler tvångsmedel och utvisning av medlemmar i kriminella nätverk. Riksdagen beslutade i juni 2026 om slopade permanenta uppehållstillstånd, skärpta regler om uppsikt och förvar, stärkt återvändande samt strängare utvisning på grund av brott. Besluten gäller delar av utlänningslagen.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,56 @@
       "promises": ["tido-asylregler-miniminivan-eu-ratten"],
       "outcome": "included",
       "note": "Avtalet anger att lagstiftningen för asylmottagande och anknytande regelverk anpassas så att den inte är mer generös än EU-rätten kräver."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3114",
+      "designation": "SOU 2025:114",
+      "title": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
+      "date": "2025-12-03",
+      "url": "https://data.riksdagen.se/dokument/HDB3114.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU30",
+      "designation": "Bet. 2025/26:SfU30",
+      "title": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "date": "2026-06-04",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU30.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU31",
+      "designation": "Bet. 2025/26:SfU31",
+      "title": "Skärpta regler om uppsikt och förvar",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU31.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU32",
+      "designation": "Bet. 2025/26:SfU32",
+      "title": "Stärkt återvändandeverksamhet",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU32.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU33",
+      "designation": "Bet. 2025/26:SfU33",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

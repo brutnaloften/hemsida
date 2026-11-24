@@ -17,10 +17,17 @@
   "committee": "AU",
   "keywords": ["integration", "anställningsbarhet", "krav"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i juni 2026 om en ny lag om tidsbegränsat boende för vissa nyanlända, med fokus på egna insatser för arbete och boende. Regeringen gav samma månad ett utredningsuppdrag om kvalificeringskrav för personlig assistans och i juni ett om att stärka svenskan med fler incitament. I augusti beslutade riksdagen om skärpta villkor för anhöriginvandring. Dokumenten gäller boende, assistans, språk och anhöriginvandring.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,26 @@
       "title": "Tidsbegränsat boende för vissa nyanlända invandrare – en ny lag om bosättning",
       "date": "2026-06-04",
       "url": "https://data.riksdagen.se/dokument/HD01AU14.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB141",
+      "designation": "Dir. 2026:41",
+      "title": "Ett krav på att personer som bosätter sig i Sverige ska kvalificera sig till insatsen personlig assistans",
+      "date": "2026-06-04",
+      "url": "https://data.riksdagen.se/dokument/HEB141.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB155",
+      "designation": "Dir. 2026:55",
+      "title": "Stärkt ställning för det svenska språket",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HEB155.html",
       "relevance": "partial",
       "note": null
     },

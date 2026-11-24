@@ -17,10 +17,17 @@
   "committee": "AU",
   "keywords": ["nyanlända", "särbehandling", "bostadskö", "subventionerade anställningar"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i februari 2024 en utredare i uppdrag att ta fram ett nytt bosättningssystem med tidsbegränsat boende. Utredningen föreslog i april 2025 en lag om etableringsboende, och regeringen lade i mars 2026 fram en proposition. Riksdagen beslutade i juni 2026 om en ny bosättningslag med tidsbegränsat boende för vissa nyanlända. Dokumenten gäller bara bostadsdelen.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,46 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB122",
+      "designation": "Dir. 2024:22",
+      "title": "Ett nytt system för bosättning för vissa nyanlända",
+      "date": "2024-02-15",
+      "url": "https://data.riksdagen.se/dokument/HCB122.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB335",
+      "designation": "SOU 2025:35",
+      "title": "Etableringsboendelagen",
+      "date": "2025-04-02",
+      "url": "https://data.riksdagen.se/dokument/HDB335.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03215",
+      "designation": "Prop. 2025/26:215",
+      "title": "Tidsbegränsat boende för vissa nyanlända invandrare – en ny lag om bosättning",
+      "date": "2026-03-31",
+      "url": "https://data.riksdagen.se/dokument/HD03215.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01AU14",
+      "designation": "Bet. 2025/26:AU14",
+      "title": "Tidsbegränsat boende för vissa nyanlända invandrare – en ny lag om bosättning",
+      "date": "2026-06-04",
+      "url": "https://data.riksdagen.se/dokument/HD01AU14.html",
+      "relevance": "partial",
       "note": null
     }
   ]

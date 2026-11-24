@@ -17,10 +17,58 @@
   "committee": "SoU",
   "keywords": ["assistans", "vinstuttag", "assistansbolag", "kriminalitet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i april 2025 en utredare i uppdrag att motverka välfärdsbrott och kriminellt utnyttjande inom personlig assistans. Riksdagen beslutade i november 2025 om skarpare tillsynsverktyg för IVO, bland annat kontroll av ägare och ledning. Ett nytt direktiv i maj 2026 rör regler om assistans utan tillstånd, och i september 2026 förlängdes utredningstiden till mars 2027.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB140",
+      "designation": "Dir. 2025:40",
+      "title": "Effektivare åtgärder mot välfärdsbrott och ökad förutsebarhet inom personlig assistans",
+      "date": "2025-04-16",
+      "url": "https://data.riksdagen.se/dokument/HDB140.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU8",
+      "designation": "Bet. 2025/26:SoU8",
+      "title": "Skarpare verktyg till Inspektionen för vård och omsorg",
+      "date": "2025-11-14",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU8.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB133",
+      "designation": "Dir. 2026:33",
+      "title": "Ett tydligare regelverk för långsiktiga och stabila förutsättningar för personlig assistans",
+      "date": "2026-05-21",
+      "url": "https://data.riksdagen.se/dokument/HEB133.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1108",
+      "designation": "Dir. 2026:108",
+      "title": "Tilläggsdirektiv till Utredningen om effektivare åtgärder mot välfärdsbrott och ökad förutsebarhet inom personlig assistans (S 2025:04)",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1108.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

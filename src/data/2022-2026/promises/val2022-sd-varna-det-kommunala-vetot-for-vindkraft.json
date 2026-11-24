@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["kommunalt veto", "vindkraft"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2026 fram ett förslag om vindkraft i kommuner, och riksdagen beslutade i maj 2026 om det. Beslutet gäller ersättning till närboende och behåller kravet på kommunal tillstyrkan som utgångspunkt för lagens omfattning, vilket rör en del av löftet. En utredning i december 2024 motverkar löftet genom att föreslå att kommunal tillstyrkan inte ska finnas vid havsbaserad vindkraft.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,36 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB389",
+      "designation": "SOU 2024:89",
+      "title": "Vindkraft i havet",
+      "date": "2024-12-16",
+      "url": "https://data.riksdagen.se/dokument/HCB389.html",
+      "relevance": "contradicts",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03239",
+      "designation": "Prop. 2025/26:239",
+      "title": "Vindkraft i kommuner",
+      "date": "2026-04-14",
+      "url": "https://data.riksdagen.se/dokument/HD03239.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01NU20",
+      "designation": "Bet. 2025/26:NU20",
+      "title": "Vindkraft i kommuner",
+      "date": "2026-05-28",
+      "url": "https://data.riksdagen.se/dokument/HD01NU20.html",
+      "relevance": "partial",
       "note": null
     }
   ]

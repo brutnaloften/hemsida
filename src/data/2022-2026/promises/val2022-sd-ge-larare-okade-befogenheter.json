@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["lärarbefogenheter", "lärare", "skollagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i mars 2025 mindre administration, reglerad undervisningstid och minsta planeringstid för lärare. Riksdagen beslutade i maj 2025 om visitationsrätt för rektorer, och i maj 2026 om reglering av tid för undervisningsuppdraget. Regeringen gav i juli 2025 ett utredningsuppdrag om skolplikt och i augusti 2026 ett om klasstorlekar. Dokumenten gäller delar av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,56 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet anger en författningsändring för att tydliggöra att läraren beslutar om undervisningen och en bred regelöversyn för att minska lärarnas administrativa arbetstid."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB326",
+      "designation": "SOU 2025:26",
+      "title": "Tid för undervisningsuppdraget",
+      "date": "2025-03-03",
+      "url": "https://data.riksdagen.se/dokument/HDB326.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01UbU21",
+      "designation": "Bet. 2024/25:UbU21",
+      "title": "Skolor mot brott",
+      "date": "2025-05-23",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU21.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB177",
+      "designation": "Dir. 2025:77",
+      "title": "Tydligare regler vid undantag från skolplikten",
+      "date": "2025-07-31",
+      "url": "https://data.riksdagen.se/dokument/HDB177.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU25",
+      "designation": "Bet. 2025/26:UbU25",
+      "title": "Tid för undervisningsuppdraget",
+      "date": "2026-05-29",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU25.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB196",
+      "designation": "Dir. 2026:96",
+      "title": "Åtgärder för lämpliga klasstorlekar",
+      "date": "2026-08-27",
+      "url": "https://data.riksdagen.se/dokument/HEB196.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

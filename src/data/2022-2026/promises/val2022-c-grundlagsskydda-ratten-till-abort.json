@@ -17,10 +17,48 @@
   "committee": "KU",
   "keywords": ["abort", "reproduktiv hälsa", "grundlag", "rättigheter"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Dokument i riksdagens register visar att åtgärden pågår: Dir. 2023:83 (Några frågor om grundläggande fri- och rättigheter); Prop. 2025/26:78 (En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap). Dokumenten behandlar bara delar av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:KU34 (En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB183",
+      "designation": "Dir. 2023:83",
+      "title": "Några frågor om grundläggande fri- och rättigheter",
+      "date": "2023-06-15",
+      "url": "https://data.riksdagen.se/dokument/HBB183.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0378",
+      "designation": "Prop. 2025/26:78",
+      "title": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
+      "date": "2025-12-05",
+      "url": "https://data.riksdagen.se/dokument/HD0378.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01KU34",
+      "designation": "Bet. 2025/26:KU34",
+      "title": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
+      "date": "2026-05-11",
+      "url": "https://data.riksdagen.se/dokument/HD01KU34.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

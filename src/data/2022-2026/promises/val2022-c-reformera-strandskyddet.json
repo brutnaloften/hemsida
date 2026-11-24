@@ -17,10 +17,28 @@
   "committee": "MJU",
   "keywords": ["strandskydd", "landsbygd", "bygga", "bo"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2025 en utredare i uppdrag att föreslå ytterligare lättnader i strandskyddet, så att det blir lättare att bygga nära vatten, bland annat i kust- och landsbygdssamhällen. Dokumentet visar ett utredningsuppdrag, inget lagförslag eller beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB159",
+      "designation": "Dir. 2025:59",
+      "title": "Ett reformerat strandskydd",
+      "date": "2025-06-12",
+      "url": "https://data.riksdagen.se/dokument/HDB159.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

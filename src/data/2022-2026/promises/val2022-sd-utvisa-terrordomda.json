@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["terrordömda", "utvisning", "medborgarskap"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i mars 2026 regler om att återkalla medborgarskap för personer med dubbelt medborgarskap som dömts för terrorbrott och andra grova brott. Regeringen föreslog i april skärpta utvisningsregler vid brott, och riksdagen biföll dem i juni. Riksdagen biföll även i juni ändringar om utvisning av kvalificerade säkerhetshot. Dokumenten gäller utvisning och ett förslag om medborgarskap.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -35,12 +42,32 @@
       "note": "Avtalet anger att förslag ska tas fram om återkallelse av medborgarskap och att en utredning ska skärpa regelverket kring utvisning på grund av brott. Terrordömda nämns inte särskilt."
     },
     {
+      "kind": "sou",
+      "dok_id": "HEB321",
+      "designation": "SOU 2026:21",
+      "title": "Återkallelse av svenskt medborgarskap",
+      "date": "2026-03-18",
+      "url": "https://data.riksdagen.se/dokument/HEB321.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03235",
+      "designation": "Prop. 2025/26:235",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HD03235.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
-      "dok_id": "HD01KU34",
-      "designation": "Bet. 2025/26:KU34",
-      "title": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
-      "date": "2026-05-11",
-      "url": "https://data.riksdagen.se/dokument/HD01KU34.html",
+      "dok_id": "HD01SfU33",
+      "designation": "Bet. 2025/26:SfU33",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
       "relevance": "partial",
       "note": null
     },

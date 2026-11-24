@@ -23,10 +23,17 @@
     "gåvoskatteavdrag"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Utredningar föreslog 2024–2026 bland annat en skattereduktion för juridiska personers gåvor, momsundantag för livsmedelsdonationer och avdrag för företags sponsring. Enligt riksdagens beslut i mars 2026 utvidgades gåvoskattereduktionen den 1 januari 2026 till att gälla juridiska personers gåvor. Det täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -35,6 +42,36 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB390",
+      "designation": "SOU 2024:90",
+      "title": "Skatteincitament för juridiska personers gåvor till ideell verksamhet",
+      "date": "2024-12-16",
+      "url": "https://data.riksdagen.se/dokument/HCB390.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB330",
+      "designation": "SOU 2025:30",
+      "title": "Enklare mervärdesskatteregler vid försäljning av begagnade varor och donation av livsmedel",
+      "date": "2025-03-25",
+      "url": "https://data.riksdagen.se/dokument/HDB330.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB35",
+      "designation": "SOU 2026:5",
+      "title": "Utvidgad avdragsrätt för sponsring m.m",
+      "date": "2026-01-20",
+      "url": "https://data.riksdagen.se/dokument/HEB35.html",
+      "relevance": "partial",
       "note": null
     },
     {

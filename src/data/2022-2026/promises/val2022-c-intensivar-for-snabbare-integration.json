@@ -17,10 +17,38 @@
   "committee": "SfU",
   "keywords": ["intensivår", "integration", "språkstudier", "praktik"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i maj 2025 att samhällsorientering ska ingå i sfi inom komvux och i en sammanhållen utbildning för deltagare i etableringsprogrammet, med minst 23 timmars språk och samhällsorientering i veckan. Regeringen gav i juni 2026 ett uppdrag om att stärka svenskan så att fler lär sig språket. Dokumenten gäller språkdelen av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB355",
+      "designation": "SOU 2025:55",
+      "title": "En reformerad samhällsorientering för bättre integration",
+      "date": "2025-05-08",
+      "url": "https://data.riksdagen.se/dokument/HDB355.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB155",
+      "designation": "Dir. 2026:55",
+      "title": "Stärkt ställning för det svenska språket",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HEB155.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

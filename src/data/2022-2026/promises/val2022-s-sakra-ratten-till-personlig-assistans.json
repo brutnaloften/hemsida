@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["personlig assistans", "lss", "funktionsnedsättning", "assistansersättning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i juni 2024 om stöd till personer med funktionsnedsättning och riktade ett tillkännagivande om en utredning av en hållbar finansiering av assistansersättningen. Regeringen gav i maj 2026 direktiv om en utredning av ett tydligare regelverk för personlig assistans. Ett direktiv i juni 2026 motverkar löftet: det gäller ett krav på att den som bosätter sig i Sverige ska kvalificera sig för insatsen.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
     {
@@ -31,6 +38,26 @@
       "date": "2024-06-05",
       "url": "https://data.riksdagen.se/dokument/HB01SoU13.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB133",
+      "designation": "Dir. 2026:33",
+      "title": "Ett tydligare regelverk för långsiktiga och stabila förutsättningar för personlig assistans",
+      "date": "2026-05-21",
+      "url": "https://data.riksdagen.se/dokument/HEB133.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB141",
+      "designation": "Dir. 2026:41",
+      "title": "Ett krav på att personer som bosätter sig i Sverige ska kvalificera sig till insatsen personlig assistans",
+      "date": "2026-06-04",
+      "url": "https://data.riksdagen.se/dokument/HEB141.html",
+      "relevance": "contradicts",
       "note": null
     }
   ]

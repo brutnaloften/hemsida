@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["utvisning på grund av brott", "återfall", "utlänningslagen", "brottsbalken"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2026 fram ett förslag om skärpta utvisningsregler, och riksdagen biföll det i juni 2026. Enligt lagen utvisas icke-medborgare för brott som ger en påföljd strängare än böter, och det blir lättare att utvisa. Lagen som genomför löftet trädde i kraft den 1 september 2026.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,12 +39,62 @@
       "note": "Avtalet ska göra att den som återfaller i brott lättare kan utvisas."
     },
     {
+      "kind": "sou",
+      "dok_id": "HDB354",
+      "designation": "SOU 2025:54",
+      "title": "Ett skärpt regelverk om utvisning på grund av brott",
+      "date": "2025-05-14",
+      "url": "https://data.riksdagen.se/dokument/HDB354.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU8",
+      "designation": "Bet. 2025/26:JuU8",
+      "title": "Skärpta regler för villkorlig frigivning",
+      "date": "2025-11-28",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU8.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3114",
+      "designation": "SOU 2025:114",
+      "title": "Skärpningar i lagen om särskild kontroll av vissa utlänningar och utlänningslagen",
+      "date": "2025-12-03",
+      "url": "https://data.riksdagen.se/dokument/HDB3114.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03235",
+      "designation": "Prop. 2025/26:235",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HD03235.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01SfU33",
       "designation": "Bet. 2025/26:SfU33",
       "title": "Skärpta regler om utvisning på grund av brott",
       "date": "2026-06-11",
       "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1259",
+      "designation": "SFS 2026:1259",
+      "title": "Lag (2026:1259) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261259.html",
       "relevance": "full",
       "note": null
     }

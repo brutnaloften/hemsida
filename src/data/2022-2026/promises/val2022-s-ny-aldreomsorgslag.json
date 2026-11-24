@@ -17,10 +17,68 @@
   "committee": "SoU",
   "keywords": ["äldreomsorgslag", "äldreomsorg", "sjuksköterskor", "likvärdig omsorg"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En utredning föreslog i januari 2025 ett språkkrav för personal i äldreomsorgen. Riksdagen beslutade i mars 2026 om ett nationellt språkkrav, och i april 2026 om ändringar i socialtjänstlagen, bland annat fast vårdkontakt i särskilt boende. Regeringen gav i april och juni 2026 utredningsuppdrag om ledarskap och om val av kön på personal. Dokumenten gäller delar av äldreomsorgen.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HCB378",
+      "designation": "SOU 2024:78",
+      "title": "Ett språkkrav för språkutveckling",
+      "date": "2025-01-01",
+      "url": "https://data.riksdagen.se/dokument/HCB378.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU26",
+      "designation": "Bet. 2025/26:SoU26",
+      "title": "Ett språkkrav inom äldreomsorgen",
+      "date": "2026-03-19",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU26.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB126",
+      "designation": "Dir. 2026:26",
+      "title": "Stärkt ledarskap inom äldreomsorgen",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HEB126.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU25",
+      "designation": "Bet. 2025/26:SoU25",
+      "title": "Stärkta insatser för äldre och för de som vårdar eller stöder närstående",
+      "date": "2026-04-24",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU25.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB147",
+      "designation": "Dir. 2026:47",
+      "title": "Ökad trygghet och möjlighet att välja kön på personal som utför insatser i äldreomsorgen",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HEB147.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

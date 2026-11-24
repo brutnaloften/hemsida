@@ -22,10 +22,17 @@
     "gängkriminalitet"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i mars 2025 en utredare i uppdrag att föreslå ett särskilt straffansvar för att delta i och knyta an till en kriminell sammanslutning, med de lagförslag som behövs. Uppdraget gäller själva kriminaliseringen av deltagande i kriminella gäng. Dokumenten visar ett utredningsuppdrag, inget beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -34,6 +41,16 @@
       "date": "2022-10-14",
       "promises": ["tido-kriminalisera-deltagande-kriminella-gang"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB128",
+      "designation": "Dir. 2025:28",
+      "title": "Kriminalisering av deltagande i kriminella sammanslutningar",
+      "date": "2025-03-13",
+      "url": "https://data.riksdagen.se/dokument/HDB128.html",
+      "relevance": "full",
       "note": null
     }
   ]

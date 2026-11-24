@@ -17,10 +17,28 @@
   "committee": "SoU",
   "keywords": ["chefsutbildning", "arbetsgrupp", "vård och omsorg", "ledarskap"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav den 1 april 2026 en utredare i uppdrag att föreslå en obligatorisk utbildning för chefer inom äldreomsorgen. Utredaren ska också analysera ett nationellt riktvärde för hur många medarbetare en chef högst bör ha. Dokumentet gäller äldreomsorg och anger inget tal på 25.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HEB126",
+      "designation": "Dir. 2026:26",
+      "title": "Stärkt ledarskap inom äldreomsorgen",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HEB126.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

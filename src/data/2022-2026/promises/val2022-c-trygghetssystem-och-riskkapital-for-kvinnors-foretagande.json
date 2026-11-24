@@ -17,10 +17,28 @@
   "committee": "NU",
   "keywords": ["kvinnors företagande", "trygghetssystem", "riskkapital", "entreprenörskap"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning lämnade i juni 2023 förslag på en ny struktur för reglerna om sjukpenninggrundande inkomst i trygghetssystemet. Förslagen omfattar bland annat en särskild regel för egenföretagare som startar nytt företag och bättre skydd för kombinatörer. Dokumenten gäller trygghetssystemet och visar förslag, inget beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HBB330",
+      "designation": "SOU 2023:30",
+      "title": "Ett trygghetssystem för alla - nytt regelverk för sjukpenninggrundande inkomst",
+      "date": "2023-06-20",
+      "url": "https://data.riksdagen.se/dokument/HBB330.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

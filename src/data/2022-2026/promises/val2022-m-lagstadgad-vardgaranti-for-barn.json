@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["vårdgaranti", "barn och unga", "psykisk ohälsa", "BUP", "30 dagar"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2026:92 (Nationella principer för utbud av hälso- och sjukvård i hela landet). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB192",
+      "designation": "Dir. 2026:92",
+      "title": "Nationella principer för utbud av hälso- och sjukvård i hela landet",
+      "date": "2026-08-13",
+      "url": "https://data.riksdagen.se/dokument/HEB192.html",
+      "relevance": "partial",
       "note": null
     }
   ]

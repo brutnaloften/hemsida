@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["personlig assistans", "statligt ansvar", "LSS"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i maj 2026 om direktiv till en utredning med syfte att skapa förutsättningar för att staten ska kunna ta över huvudmannaskapet för personlig assistans. Uppdraget gäller regelverket: bedömningen av rätten till assistans, en språklig och lagteknisk översyn av LSS samt straffbestämmelsen. Direktivet är ett förberedande steg och täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-statligt-ansvar-personlig-assistans"],
       "outcome": "weakened",
       "note": "Avtalet anger att åtgärder för ett statligt helhetsansvar för personlig assistans ska övervägas med målsättningen om ett statligt ansvar, utifrån utredningsförslag som väntas i mars 2023."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB133",
+      "designation": "Dir. 2026:33",
+      "title": "Ett tydligare regelverk för långsiktiga och stabila förutsättningar för personlig assistans",
+      "date": "2026-05-21",
+      "url": "https://data.riksdagen.se/dokument/HEB133.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

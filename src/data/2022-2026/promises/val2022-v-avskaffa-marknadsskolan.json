@@ -17,10 +17,28 @@
   "committee": "UbU",
   "keywords": ["marknadsskolan", "friskolor", "skolpeng", "vinstförbud"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i mars 2025 tilläggsdirektiv till utredningen om en nationell skolpengsnorm för ökad likvärdighet. Direktiven ändrar utredningens tidsfrist. Dokumentet gäller en del av löftet, nämligen arbetet med hur skolpengen ska fördelas, och är ett förberedande steg.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB123",
+      "designation": "Dir. 2025:23",
+      "title": "Tilläggsdirektiv till Utredningen om en nationell skolpengsnorm för ökad likvärdighet (U 2023:05)",
+      "date": "2025-03-06",
+      "url": "https://data.riksdagen.se/dokument/HDB123.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }
