@@ -1,0 +1,23 @@
+{
+  "id": "scb-eltillforsel-total",
+  "source": "scb",
+  "table": "TAB1010",
+  "selection": {
+    "ContentsCode": "EN0105A1",
+    "Prodslag": "Tot"
+  },
+  "label": "Total eltillförsel i Sverige, brutto",
+  "unit": "GWh",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 175586,
+    "2019": 177493,
+    "2020": 175644,
+    "2021": 180120,
+    "2022": 179323,
+    "2023": 173407,
+    "2024": 178055,
+    "2025": 174794
+  }
+}

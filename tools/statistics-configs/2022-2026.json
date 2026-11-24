@@ -1,0 +1,335 @@
+{
+  "term": "2022-2026",
+  "series": [
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-undersysselsatta-15-74",
+      "table": "TAB2876",
+      "selection": {
+        "Alder": "tot15-74",
+        "Arbetskraftsutbud": "3",
+        "ContentsCode": "AM0401UT",
+        "Kon": "1+2"
+      },
+      "label": "Undersysselsatta 15-74 år (AKU)",
+      "unit": "1000-tal personer"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-arbetslosa-15-74-procent",
+      "table": "TAB2891",
+      "selection": {
+        "Alder": "tot15-74",
+        "Arbetskraftstillh": "ALÖS",
+        "ContentsCode": "AM04011Q",
+        "Kon": "1+2"
+      },
+      "label": "Arbetslöshet 15-74 år (AKU)",
+      "unit": "procent"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-installerad-effekt-vind",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HP",
+        "Elomrade": "00",
+        "Kraftslag": "Vind"
+      },
+      "label": "Installerad effekt vindkraft, riket",
+      "unit": "MW"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-installerad-effekt-sol",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HP",
+        "Elomrade": "00",
+        "Kraftslag": "sol"
+      },
+      "label": "Installerad effekt solkraft, riket",
+      "unit": "MW"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-installerad-effekt-vind-se1",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HP",
+        "Elomrade": "SE1",
+        "Kraftslag": "Vind"
+      },
+      "label": "Installerad effekt vindkraft, elområde SE1",
+      "unit": "MW"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-installerad-effekt-sol-se1",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HP",
+        "Elomrade": "SE1",
+        "Kraftslag": "sol"
+      },
+      "label": "Installerad effekt solkraft, elområde SE1",
+      "unit": "MW"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-installerad-effekt-vind-se2",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HP",
+        "Elomrade": "SE2",
+        "Kraftslag": "Vind"
+      },
+      "label": "Installerad effekt vindkraft, elområde SE2",
+      "unit": "MW"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-installerad-effekt-sol-se2",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HP",
+        "Elomrade": "SE2",
+        "Kraftslag": "sol"
+      },
+      "label": "Installerad effekt solkraft, elområde SE2",
+      "unit": "MW"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-installerad-effekt-vind-se3",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HP",
+        "Elomrade": "SE3",
+        "Kraftslag": "Vind"
+      },
+      "label": "Installerad effekt vindkraft, elområde SE3",
+      "unit": "MW"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-installerad-effekt-sol-se3",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HP",
+        "Elomrade": "SE3",
+        "Kraftslag": "sol"
+      },
+      "label": "Installerad effekt solkraft, elområde SE3",
+      "unit": "MW"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-installerad-effekt-vind-se4",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HP",
+        "Elomrade": "SE4",
+        "Kraftslag": "Vind"
+      },
+      "label": "Installerad effekt vindkraft, elområde SE4",
+      "unit": "MW"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-installerad-effekt-sol-se4",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HP",
+        "Elomrade": "SE4",
+        "Kraftslag": "sol"
+      },
+      "label": "Installerad effekt solkraft, elområde SE4",
+      "unit": "MW"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-installerad-effekt-karnkraft",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HP",
+        "Elomrade": "00",
+        "Kraftslag": "Karnkraft"
+      },
+      "label": "Installerad effekt kärnkraft, riket",
+      "unit": "MW"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-bruttoproduktion-vind",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HR",
+        "Elomrade": "00",
+        "Kraftslag": "Vind"
+      },
+      "label": "Bruttoproduktion vindkraft, riket",
+      "unit": "GWh"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-bruttoproduktion-karnkraft",
+      "table": "TAB4063",
+      "selection": {
+        "ContentsCode": "000006HR",
+        "Elomrade": "00",
+        "Kraftslag": "Karnkraft"
+      },
+      "label": "Bruttoproduktion kärnkraft, riket",
+      "unit": "GWh"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-fardigstallda-lagenheter-nybyggda-hus",
+      "table": "TAB4193",
+      "selection": {
+        "ContentsCode": "0000005O",
+        "Hustyp": "FLERBO,SMÅHUS",
+        "Region": "00",
+        "Upplatelseform": "1,2,3"
+      },
+      "sum": true,
+      "label": "Färdigställda lägenheter i nybyggda hus, riket (flerbostadshus och småhus, alla upplåtelseformer)",
+      "unit": "antal lägenheter"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-fardigstallda-hyresratter-nybyggda-hus",
+      "table": "TAB4193",
+      "selection": {
+        "ContentsCode": "0000005O",
+        "Hustyp": "FLERBO,SMÅHUS",
+        "Region": "00",
+        "Upplatelseform": "1"
+      },
+      "sum": true,
+      "label": "Färdigställda hyresrätter i nybyggda hus, riket (flerbostadshus och småhus)",
+      "unit": "antal lägenheter"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-eltillforsel-total",
+      "table": "TAB1010",
+      "selection": {
+        "ContentsCode": "EN0105A1",
+        "Prodslag": "Tot"
+      },
+      "label": "Total eltillförsel i Sverige, brutto",
+      "unit": "GWh"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-elimport-brutto",
+      "table": "TAB1010",
+      "selection": {
+        "ContentsCode": "EN0105A1",
+        "Prodslag": "Imp"
+      },
+      "label": "Import av el, brutto (Sverige är nettoexportör)",
+      "unit": "GWh"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-skattekvot",
+      "table": "TAB121",
+      "selection": {
+        "ContentsCode": "000000SP",
+        "Skattetyp": "102"
+      },
+      "label": "Totala skatter som andel av BNP",
+      "unit": "procent av BNP"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-skyddad-natur-land-andel",
+      "table": "TAB6829",
+      "selection": {
+        "ContentsCode": "000008LS",
+        "Region": "00",
+        "Skyddsform": "TOTO",
+        "TypAvMiljo": "LAND"
+      },
+      "label": "Formellt skyddad natur, andel av landarealen (överlapp borträknat)",
+      "unit": "procent"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-skyddad-natur-total-andel",
+      "table": "TAB6829",
+      "selection": {
+        "ContentsCode": "000008LS",
+        "Region": "00",
+        "Skyddsform": "TOTO",
+        "TypAvMiljo": "TOT"
+      },
+      "label": "Formellt skyddad natur, andel av land- och vattenarealen (överlapp borträknat)",
+      "unit": "procent"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-vaxthusgaser-nationell-total",
+      "table": "TAB4698",
+      "selection": {
+        "ContentsCode": "0000018Q",
+        "Sektor": "0.1",
+        "Vaxthusgaser": "CO2-ekv."
+      },
+      "label": "Växthusgasutsläpp, nationell total exkl. LULUCF och internationella transporter",
+      "unit": "kt CO2-ekvivalenter"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-vaxthusgaser-inrikes-transporter",
+      "table": "TAB4698",
+      "selection": {
+        "ContentsCode": "0000018Q",
+        "Sektor": "8.0",
+        "Vaxthusgaser": "CO2-ekv."
+      },
+      "label": "Växthusgasutsläpp, inrikes transporter",
+      "unit": "kt CO2-ekvivalenter"
+    },
+    {
+      "source": "scb",
+      "frequency": "year",
+      "id": "scb-vaxthusgaser-netto-inkl-lulucf",
+      "table": "TAB4698",
+      "selection": {
+        "ContentsCode": "0000018Q",
+        "Sektor": "0.3",
+        "Vaxthusgaser": "CO2-ekv."
+      },
+      "label": "Växthusgasutsläpp, nationell total inkl. LULUCF, exkl. internationella transporter (netto)",
+      "unit": "kt CO2-ekvivalenter"
+    }
+  ]
+}

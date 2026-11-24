@@ -1,0 +1,24 @@
+{
+  "id": "scb-bruttoproduktion-karnkraft",
+  "source": "scb",
+  "table": "TAB4063",
+  "selection": {
+    "ContentsCode": "000006HR",
+    "Elomrade": "00",
+    "Kraftslag": "Karnkraft"
+  },
+  "label": "Bruttoproduktion kärnkraft, riket",
+  "unit": "GWh",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 68549,
+    "2019": 66130,
+    "2020": 49198,
+    "2021": 52965,
+    "2022": 51944,
+    "2023": 48470,
+    "2024": 50665,
+    "2025": 46392
+  }
+}

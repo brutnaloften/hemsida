@@ -1,0 +1,24 @@
+{
+  "id": "scb-installerad-effekt-karnkraft",
+  "source": "scb",
+  "table": "TAB4063",
+  "selection": {
+    "ContentsCode": "000006HP",
+    "Elomrade": "00",
+    "Kraftslag": "Karnkraft"
+  },
+  "label": "Installerad effekt kärnkraft, riket",
+  "unit": "MW",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 8656,
+    "2019": 8624,
+    "2020": 7777,
+    "2021": 6899,
+    "2022": 6901,
+    "2023": 7001,
+    "2024": 7001,
+    "2025": 7001
+  }
+}

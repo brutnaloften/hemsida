@@ -1,0 +1,24 @@
+{
+  "id": "scb-installerad-effekt-vind-se2",
+  "source": "scb",
+  "table": "TAB4063",
+  "selection": {
+    "ContentsCode": "000006HP",
+    "Elomrade": "SE2",
+    "Kraftslag": "Vind"
+  },
+  "label": "Installerad effekt vindkraft, elområde SE2",
+  "unit": "MW",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 2561,
+    "2019": 3148,
+    "2020": 3945,
+    "2021": 5168,
+    "2022": 5969,
+    "2023": 6823,
+    "2024": 7075,
+    "2025": 7765
+  }
+}

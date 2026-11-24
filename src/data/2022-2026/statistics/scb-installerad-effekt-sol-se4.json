@@ -1,0 +1,24 @@
+{
+  "id": "scb-installerad-effekt-sol-se4",
+  "source": "scb",
+  "table": "TAB4063",
+  "selection": {
+    "ContentsCode": "000006HP",
+    "Elomrade": "SE4",
+    "Kraftslag": "sol"
+  },
+  "label": "Installerad effekt solkraft, elområde SE4",
+  "unit": "MW",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 105,
+    "2019": 185,
+    "2020": 275,
+    "2021": 430,
+    "2022": 691,
+    "2023": 1174,
+    "2024": 1410,
+    "2025": 1558
+  }
+}

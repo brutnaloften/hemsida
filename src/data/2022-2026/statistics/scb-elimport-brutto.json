@@ -1,0 +1,23 @@
+{
+  "id": "scb-elimport-brutto",
+  "source": "scb",
+  "table": "TAB1010",
+  "selection": {
+    "ContentsCode": "EN0105A1",
+    "Prodslag": "Imp"
+  },
+  "label": "Import av el, brutto (Sverige är nettoexportör)",
+  "unit": "GWh",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2018": 12202,
+    "2019": 9070,
+    "2020": 11827,
+    "2021": 8341,
+    "2022": 6181,
+    "2023": 7329,
+    "2024": 5703,
+    "2025": 5169
+  }
+}
