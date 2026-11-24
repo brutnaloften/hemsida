@@ -19,7 +19,7 @@
   "verdict": {
     "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Riksdagen har beslutat om tre förstärkningar av jobbskatteavdraget: 11 miljarder kronor som började gälla 1 januari 2024, ytterligare ändringar genom budgeten för 2025 som började gälla 1 januari 2025 och en förstärkning på drygt 17 miljarder kronor som började gälla 1 januari 2026. Det är flera konkreta sänkningar av skatten på arbete, men de riktar sig främst till låg- och medelinkomster och löftet är brett formulerat, så det är delvis uppfyllt. I november 2023 beslutade riksdagen dessutom att pausa uppräkningen av skiktgränsen för statlig inkomstskatt för 2024, vilket går åt motsatt håll.",
+    "reasoning": "Riksdagen har beslutat om tre förstärkningar av jobbskatteavdraget: 11 miljarder kronor som började gälla 1 januari 2024, ytterligare ändringar genom budgeten för 2025 som började gälla 1 januari 2025 och en förstärkning på drygt 17 miljarder kronor som började gälla 1 januari 2026. Det är konkreta sänkningar av skatten på arbete, men de riktar sig främst till låg- och medelinkomster. I november 2023 beslutade riksdagen dessutom att pausa uppräkningen av skiktgränsen för statlig inkomstskatt för 2024, vilket går åt motsatt håll. Löftet bedöms därför som delvis uppfyllt.",
     "date": "2026-11-24",
     "history": [
       {
@@ -86,7 +86,7 @@
       "date": "2024-01-01",
       "url": "https://svenskforfattningssamling.se/doc/2023757.html",
       "relevance": "partial",
-      "note": "Löftet är allmänt formulerat; lagen är en enskild skattesänkning (11 miljarder kronor) riktad främst till låg- och medelinkomsttagare, och ingen bredare sänkning av skatten på arbete, till exempel för höga inkomster eller i senare steg, ingår."
+      "note": "Första förstärkningen av jobbskatteavdraget (11 miljarder kronor från 2024), riktad främst till heltidsarbetande med låga och medelhöga inkomster. Senare steg finns i andra lagar."
     },
     {
       "kind": "prop",
@@ -99,6 +99,16 @@
       "note": null
     },
     {
+      "kind": "bet",
+      "dok_id": "HC01FiU1",
+      "designation": "Bet. 2024/25:FiU1",
+      "title": "Statens budget 2025 – Rambeslutet",
+      "date": "2024-11-22",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "sfs",
       "dok_id": "sfs-2024-1131",
       "designation": "SFS 2024:1131",
@@ -106,7 +116,7 @@
       "date": "2025-01-01",
       "url": "https://svenskforfattningssamling.se/doc/20241131.html",
       "relevance": "partial",
-      "note": "Lagen är ett första steg och ett paket: den innehåller även ISK-avdrag och expertskattelättnad som inte rör skatt på arbete, och löftet om en bredare sänkning av skatten på arbete genomförs inte fullt ut."
+      "note": "Andra förstärkningen av jobbskatteavdraget och grundavdraget (från 2025), riktad främst till låga och medelhöga inkomster. Lagen innehåller också sparandeavdraget för ISK, som inte rör skatt på arbete."
     },
     {
       "kind": "prop",
@@ -119,6 +129,16 @@
       "note": null
     },
     {
+      "kind": "bet",
+      "dok_id": "HD01FiU1",
+      "designation": "Bet. 2025/26:FiU1",
+      "title": "Statens budget 2026 - Rambeslutet",
+      "date": "2025-11-21",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "sfs",
       "dok_id": "sfs-2025-1376",
       "designation": "SFS 2025:1376",
@@ -126,7 +146,7 @@
       "date": "2026-01-01",
       "url": "https://svenskforfattningssamling.se/doc/20251376.html",
       "relevance": "partial",
-      "note": "Skattesänkningen är ett första steg riktat främst till låga och medelhöga inkomster. Den omfattar inte alla arbetsinkomster och inte någon bredare sänkning av skatten på arbete."
+      "note": "Tredje förstärkningen av jobbskatteavdraget (från 2026), riktad främst till låga och medelhöga inkomster, tillsammans med höjt grundavdrag för äldre och skattereduktion för sjuk- och aktivitetsersättning."
     }
   ]
 }
