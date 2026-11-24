@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["förorenade områden", "sanering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen skrev i budgeten för 2023 att arbetet med förorenade områden ska hålla hög takt och tillförde 340 mn kr till anslaget 1:4 för sanering. Utfallet ökade nominellt från 735 mn kr 2022 till 964 mn kr 2025 (+31,2 procent, i fasta priser +16,7 procent). Det anvisade beloppet sjönk däremot från 1 157 till 1 064 mn kr (−8,0 procent). Från 2024 minskades anslaget när statsbidraget för flytt av fordonsvrak avvecklades och för att delvis betala en högre avgift till Internationella atomenergiorganet. Anslaget visar pengar och ingen rangordning mot andra uppgifter. Därför delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,58 @@
       "url": "https://data.riksdagen.se/dokument/HA01MJU1.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01MJU1",
+      "designation": "Bet. 2023/24:MJU1",
+      "title": "Utgiftsområde 20 Klimat, miljö och natur",
+      "date": "2023-12-11",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU1.html",
+      "relevance": "partial",
+      "note": "Anslaget 1:4 Sanering och återställning av förorenade områden minskas från 2024 när statsbidraget för flytt av övergivna fordonsvrak avvecklas och för att delvis finansiera en ökad avgift till Internationella atomenergiorganet (anslaget 1:7)."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2001004",
+        "namn": "Sanering och återställning av förorenade områden",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 1156.6,
+        "after": 1064.3
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 1 157 mn kr 2022 och 1 064 mn kr 2025, ändring -92,3 mn kr (−8,0 %). I fasta priser −18,1 % (sammanhang, avgör inte bedömningen). Anvisat belopp 2023 var 1 074 mn kr och 2024 1 098 mn kr.",
+      "date": "2024-12-11",
+      "relevance": "partial",
+      "note": "Anslaget 1:4 Sanering och återställning av förorenade områden finansierar inventering och sanering. Det anvisade beloppet var högre 2022 än senare år; från 2024 minskades anslaget när statsbidraget för flytt av övergivna fordonsvrak avvecklades och för att delvis betala en högre avgift till Internationella atomenergiorganet."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2001004",
+        "namn": "Sanering och återställning av förorenade områden",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 734.6,
+        "after": 963.7
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden. Nominellt utfall 735 mn kr 2022 och 964 mn kr 2025, ändring 229 mn kr (+31,2 %). I fasta priser +16,7 % (sammanhang, avgör inte bedömningen). Utfallet var 703 mn kr 2023 och 831 mn kr 2024.",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Utfallet steg från 735 till 964 mn kr, men det anvisade beloppet sjönk."
     }
   ]
 }

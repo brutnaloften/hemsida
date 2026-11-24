@@ -18,8 +18,9 @@
   "keywords": ["lanthandel", "driftstöd", "dagligvarubutiker", "landsbygd"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen skriver i budgetbetänkandet för 2026 att en förordning som tillämpas från den 1 januari 2025 ger bättre möjligheter att stödja dagligvarubutiker i gles- och landsbygder, med ett högsta driftstöd på 350 000 kronor per år och mottagare, och att nivån avses höjas till 370 000 kronor den 1 januari 2026. Stödet regleras i en förordning och betalas inom ett bredare anslag, så budgetdata kan inte avgöra saken. Verdiktet lämnas obedömt.",
+    "date": "2026-11-24",
     "history": []
   },
   "evidence": [
@@ -30,6 +31,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01NU2",
+      "designation": "Bet. 2025/26:NU2",
+      "title": "Utgiftsområde 19 Regional utveckling",
+      "date": "2025-12-10",
+      "url": "https://data.riksdagen.se/dokument/HD01NU2.html",
+      "relevance": "partial",
+      "note": "Regeringen anger att en förordning från 1 januari 2025 höjt det högsta särskilda driftstödet till dagligvarubutiker i gles- och landsbygder till 350 000 kronor per år och mottagare och avser höja det till 370 000 kronor den 1 januari 2026."
     }
   ]
 }

@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["speciallärare", "specialpedagoger", "statsbidrag", "skolan"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen avsatte i budgeten för 2023 400 mn kr för ökad tillgång till speciallärare, specialpedagogiska insatser och särskilda undervisningsgrupper och beräknade 700 mn kr 2024 och 800 mn kr 2025. Pengarna ligger i anslaget 1:5 Utveckling av skolväsendet, som ökade nominellt från ett utfall på 4 513 mn kr 2022 till 5 237 mn kr 2025 (+16,0 procent, i fasta priser +3,3 procent) och även rymmer läromedel och andra satsningar. Antalet speciallärare, som löftet anger till minst 1 000, framgår av andra uppgifter. Därför delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,58 @@
       "promises": ["tido-fler-speciallarare-sarskilda-undervisningsgrupper"],
       "outcome": "weakened",
       "note": "Avtalet nämner satsningar för ytterligare speciallärare men inget antal och ingen angiven statlig finansiering."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01UbU1",
+      "designation": "Bet. 2022/23:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2022-12-14",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
+      "relevance": "partial",
+      "note": "Regeringen ökar anslaget 1:5 Utveckling av skolväsendet för ökad tillgång till speciallärare, specialpedagogiska insatser och särskilda undervisningsgrupper med 400 mn kr 2023 och beräknar 700 mn kr 2024 och 800 mn kr 2025."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "1601005",
+        "namn": "Utveckling av skolväsendet och annan pedagogisk verksamhet",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 4653.7,
+        "after": 6501.9
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 4 654 mn kr 2022 och 6 502 mn kr 2025, ändring 1 848 mn kr (+39,7 %). I fasta priser +24,3 % (sammanhang, avgör inte bedömningen). Anvisat belopp 2023 var 3 879 mn kr och 2024 4 917 mn kr.",
+      "date": "2024-12-04",
+      "relevance": "partial",
+      "note": "Anslaget 1:5 Utveckling av skolväsendet rymmer pengarna till fler speciallärare, specialpedagogiska insatser och särskilda undervisningsgrupper, tillsammans med andra satsningar som läromedel."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "1601005",
+        "namn": "Utveckling av skolväsendet och annan pedagogisk verksamhet",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 4512.6,
+        "after": 5236.5
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden. Nominellt utfall 4 513 mn kr 2022 och 5 237 mn kr 2025, ändring 724 mn kr (+16,0 %). I fasta priser +3,3 % (sammanhang, avgör inte bedömningen). Utfallet var 3 307 mn kr 2023 och 4 586 mn kr 2024.",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Utfallet steg från 4 513 till 5 237 mn kr, men anslaget rymmer många satsningar och utfallet var lägre 2023 (3 307 mn kr). Anslaget visar pengar och inte hur många speciallärare som tillkommit."
     }
   ]
 }

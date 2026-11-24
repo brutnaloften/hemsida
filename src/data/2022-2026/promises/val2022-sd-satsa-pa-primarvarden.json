@@ -18,8 +18,9 @@
   "keywords": ["primärvård", "vårdcentraler", "fast läkarkontakt"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen anger i budgetbetänkandet för 2025 att 3 000 mn kr per år inom anslaget 1:6 Bidrag till folkhälsa och sjukvård används för primärvård och en nära och tillgänglig vård. Anslaget gick från ett utfall på 32 000 mn kr 2022 till 10 798 mn kr 2025 (−66,3 procent), bland annat för att vårdplatsmedlen flyttades till anslaget 1:11, så summan kan inte läsas som en primärvårdssatsning. Verdiktet lämnas obedömt.",
+    "date": "2026-11-24",
     "history": []
   },
   "evidence": [
@@ -40,6 +41,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01SoU23.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SoU1",
+      "designation": "Bet. 2024/25:SoU1",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "relevance": "partial",
+      "note": "Inom anslaget 1:6 används 3 000 mn kr årligen för åtgärder inom regionernas primärvård och kommunalt finansierad hälso- och sjukvård för en nära och tillgänglig vård med fokus på primärvården."
     }
   ]
 }

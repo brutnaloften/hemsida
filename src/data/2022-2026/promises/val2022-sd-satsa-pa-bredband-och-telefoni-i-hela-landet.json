@@ -18,8 +18,9 @@
   "keywords": ["bredband", "telefoni", "mobiltäckning"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen tillförde anslaget 2:5 Driftsäker och tillgänglig elektronisk kommunikation 600 mn kr extra för bredbandsstödet i budgeten för 2023. Anslagets utfall gick ändå från 1 636 mn kr 2022 till 812 mn kr 2025 (−50,4 procent), eftersom bredbandsstödet gick över till efterskottsbetalning och utbetalningarna flyttades mellan år. Därför kan summan inte avgöra utbyggnaden, och verdiktet lämnas obedömt.",
+    "date": "2026-11-24",
     "history": []
   },
   "evidence": [
@@ -40,6 +41,26 @@
       "url": "https://data.riksdagen.se/dokument/HA01TU3.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01TU1",
+      "designation": "Bet. 2022/23:TU1",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2022-12-14",
+      "url": "https://data.riksdagen.se/dokument/HA01TU1.html",
+      "relevance": "partial",
+      "note": "Anslaget 2:5 Driftsäker och tillgänglig elektronisk kommunikation tillförs 600 mn kr genom överföring av medel och ytterligare 600 mn kr för att stärka det nationella stödsystemet för bredbandsutbyggnad."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01TU1",
+      "designation": "Bet. 2023/24:TU1",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2023-12-07",
+      "url": "https://data.riksdagen.se/dokument/HB01TU1.html",
+      "relevance": "partial",
+      "note": "Anslaget 2:5 minskas med 1 180,6 mn kr till följd av en övergång till efterskottsbetalning av bredbandsstödet och anvisas 365 mn kr för 2024."
     }
   ]
 }

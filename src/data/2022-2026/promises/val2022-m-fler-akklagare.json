@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["åklagare", "Åklagarmyndigheten", "lagföring", "rekrytering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Anslaget 1:3 Åklagarmyndigheten ökade nominellt från ett utfall på 2 007 mn kr 2022 till 2 810 mn kr 2025 (+40,0 procent, i fasta priser +24,6 procent). Regeringen ökade anslaget med 160 mn kr 2023 för grova och svårutredda brott och med 50 mn kr från 2024, och skrev då att antalet medarbetare behöver öka och att fler åklagare behövs. Hur många åklagare det blivit och hur många brott som lett till fällande dom framgår av andra uppgifter. Därför delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,68 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01JuU1",
+      "designation": "Bet. 2023/24:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2023-11-30",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU1.html",
+      "relevance": "partial",
+      "note": "Regeringen skriver att antalet medarbetare behöver fortsätta öka och att fler åklagare behövs, och ökar anslaget 1:3 Åklagarmyndigheten med 50 mn kr från 2024."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU1",
+      "designation": "Bet. 2022/23:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU1.html",
+      "relevance": "partial",
+      "note": "Regeringen föreslår att anslaget 1:3 Åklagarmyndigheten ökas med 160 mn kr 2023 för att möta grova och svårutredda brott."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401003",
+        "namn": "Åklagarmyndigheten",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 2073.2,
+        "after": 2788.5
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 2 073 mn kr 2022 och 2 789 mn kr 2025, ändring 715 mn kr (+34,5 %). I fasta priser +19,7 % (sammanhang, avgör inte bedömningen). Anvisat belopp 2023 var 2 303 mn kr och 2024 2 633 mn kr.",
+      "date": "2024-11-29",
+      "relevance": "partial",
+      "note": "Anslaget 1:3 Åklagarmyndigheten finansierar åklagarväsendet; ökningen följer regeringens satsningar på fler medarbetare och åklagare."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401003",
+        "namn": "Åklagarmyndigheten",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 2006.8,
+        "after": 2809.9
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden. Nominellt utfall 2 007 mn kr 2022 och 2 810 mn kr 2025, ändring 803 mn kr (+40,0 %). I fasta priser +24,6 % (sammanhang, avgör inte bedömningen). Utfallet var 2 263 mn kr 2023 och 2 588 mn kr 2024.",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Utfallet steg i takt med anvisningarna. Anslaget visar pengar, inte hur många åklagare som tillkommit eller hur många brott som lett till fällande dom."
     }
   ]
 }
