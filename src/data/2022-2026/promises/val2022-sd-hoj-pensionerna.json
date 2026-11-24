@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["pensioner", "pensionshöjning", "pensionärer"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i mars 2026 regler om utdelning av överskott i inkomstpensionssystemet, och riksdagen biföll förslaget i maj 2026. När balanstalet överstiger 1,15 delas överskottet ut till de försäkrade, vilket höjer inkomstpensionerna. Lagen trädde i kraft den 1 augusti 2026 och tillämpas första gången för 2027. Den gäller inkomstpensionerna när ett överskott finns, så en del av löftet täcks.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -35,6 +42,16 @@
       "note": "Avtalet anger att förslag ska tas fram på hur pensionärernas ekonomi kan stärkas och sänkt skatt på pensionsinkomst."
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03169",
+      "designation": "Prop. 2025/26:169",
+      "title": "Utdelning av överskott i inkomstpensionssystemet",
+      "date": "2026-03-10",
+      "url": "https://data.riksdagen.se/dokument/HD03169.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01SfU25",
       "designation": "Bet. 2025/26:SfU25",
@@ -43,6 +60,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01SfU25.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1301",
+      "designation": "SFS 2026:1301",
+      "title": "Lag (2026:1301) om ändring i socialförsäkringsbalken",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261301.html",
+      "relevance": "partial",
+      "note": "Inför regler för utdelning av överskott i inkomstpensionssystemet. Gäller inkomstpensionerna när ett överskott finns."
     }
   ]
 }

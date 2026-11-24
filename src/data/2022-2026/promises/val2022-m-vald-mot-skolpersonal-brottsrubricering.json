@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["våld mot skolpersonal", "brottsrubricering", "skolpersonal", "hot och våld"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i april 2023 att brotten mot tjänsteman även omfattar utbildningspersonal inom skolväsendet, och riksdagen biföll förslaget i juni 2023. Lagen gäller från den 1 augusti 2023. Våren 2025 beslutade riksdagen om skärpta straffskalor för våld och hot mot tjänstemän, som gäller från den 2 juli 2025. Löftet gällde våld mot skolpersonal som ny brottsrubricering, och skyddet ges genom brottet våld mot tjänsteman, så en del av löftet täcks.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,46 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HA03106",
+      "designation": "Prop. 2022/23:106",
+      "title": "Skärpt syn på brott mot journalister och vissa andra samhällsnyttiga funktioner",
+      "date": "2023-04-25",
+      "url": "https://data.riksdagen.se/dokument/HA03106.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU27",
+      "designation": "Bet. 2022/23:JuU27",
+      "title": "Skärpt syn på brott mot journalister och vissa andra samhällsnyttiga funktioner",
+      "date": "2023-06-14",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU27.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-494",
+      "designation": "SFS 2023:494",
+      "title": "Lag (2023:494) om ändring i brottsbalken",
+      "date": "2023-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023494.html",
+      "relevance": "partial",
+      "note": "Utvidgar brotten mot tjänsteman i 17 kap. 5 § till utbildningspersonal inom skolväsendet. Något eget brott för våld mot skolpersonal införs inte."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03141",
+      "designation": "Prop. 2024/25:141",
+      "title": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03141.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HC01JuU29",
       "designation": "Bet. 2024/25:JuU29",
@@ -40,6 +87,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01JuU29.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-579",
+      "designation": "SFS 2025:579",
+      "title": "Lag (2025:579) om ändring i brottsbalken",
+      "date": "2025-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2025579.html",
+      "relevance": "partial",
+      "note": "Skärper straffskalorna för våld och hot mot tjänsteman och inför brottet förolämpning mot tjänsteman."
     }
   ]
 }

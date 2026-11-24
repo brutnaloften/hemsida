@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["kärnkraft", "reaktorer", "förbud", "tio reaktorer"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i oktober 2023 att förbudet mot fler än tio kärnkraftsreaktorer i samtidig drift tas bort, tillsammans med begränsningen till de platser där reaktorer redan finns. Riksdagen biföll förslaget i november 2023, och lagändringarna gäller från den 1 januari 2024.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HB0319",
+      "designation": "Prop. 2023/24:19",
+      "title": "Ny kärnkraft i Sverige – ett första steg",
+      "date": "2023-10-03",
+      "url": "https://data.riksdagen.se/dokument/HB0319.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HB01NU5",
       "designation": "Bet. 2023/24:NU5",
@@ -40,6 +57,26 @@
       "url": "https://data.riksdagen.se/dokument/HB01NU5.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-866",
+      "designation": "SFS 2023:866",
+      "title": "Lag (2023:866) om ändring i miljöbalken",
+      "date": "2024-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023866.html",
+      "relevance": "full",
+      "note": "Upphäver 17 kap. 6 a § miljöbalken, som begränsade antalet reaktorer i samtidig drift till tio."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-867",
+      "designation": "SFS 2023:867",
+      "title": "Lag (2023:867) om ändring i lagen (1984:3) om kärnteknisk verksamhet",
+      "date": "2024-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023867.html",
+      "relevance": "partial",
+      "note": "Följdändring i lagen om kärnteknisk verksamhet."
     }
   ]
 }

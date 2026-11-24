@@ -18,11 +18,22 @@
   "keywords": ["flygskatt", "flyg", "utsläpp", "elflyg"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i budgetpropositionen för 2025 att skatten på flygresor upphävs, och riksdagen beslutade om det hösten 2024. Skatten avskaffades från den 1 juli 2025, vilket går åt motsatt håll mot löftet om höjd flygskatt. Beslutet kan därför inte ligga till grund för en bedömning av löftet.",
+    "date": "2026-11-24",
     "history": []
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC031",
+      "designation": "Prop. 2024/25:1",
+      "title": "Budgetpropositionen för 2025",
+      "date": "2024-09-19",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "relevance": "contradicts",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HC01TU13",
@@ -32,6 +43,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01TU13.html",
       "relevance": "contradicts",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1138",
+      "designation": "SFS 2024:1138",
+      "title": "Lag (2024:1138) om upphävande av lagen (2017:1200) om skatt på flygresor",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241138.html",
+      "relevance": "contradicts",
+      "note": "Upphäver lagen om skatt på flygresor."
     }
   ]
 }

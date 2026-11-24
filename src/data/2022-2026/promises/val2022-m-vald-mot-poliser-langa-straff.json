@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["våld mot poliser", "blåljuspersonal", "straffskärpning", "fängelse"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i mars 2025 skärpta straffskalor för våld och hot mot tjänstemän, och riksdagen biföll förslaget i maj 2025. Lagen gäller från den 2 juli 2025 och omfattar tjänstemän i allmänhet. Straffskalan anger ramen för domstolens bedömning i det enskilda fallet, och därför täcks en del av löftet om att våld mot poliser alltid leder till långa fängelsestraff.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,22 +39,42 @@
       "note": "Avtalet skärper straffen för våld mot tjänsteman men garanterar inte långa fängelsestraff."
     },
     {
+      "kind": "prop",
+      "dok_id": "HC03141",
+      "designation": "Prop. 2024/25:141",
+      "title": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03141.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU29",
+      "designation": "Bet. 2024/25:JuU29",
+      "title": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
+      "date": "2025-05-14",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU29.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-579",
+      "designation": "SFS 2025:579",
+      "title": "Lag (2025:579) om ändring i brottsbalken",
+      "date": "2025-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2025579.html",
+      "relevance": "partial",
+      "note": "Skärper straffskalorna för våld och hot mot tjänsteman. Lagen gäller tjänstemän i allmänhet, inte bara poliser, och garanterar inte långa fängelsestraff."
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01JuU42",
       "designation": "Bet. 2025/26:JuU42",
       "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
       "date": "2026-06-11",
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
-      "kind": "bet",
-      "dok_id": "HD01JuU48",
-      "designation": "Bet. 2025/26:JuU48",
-      "title": "Ett nytt straffrättsligt påföljdssystem",
-      "date": "2026-08-12",
-      "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
       "relevance": "partial",
       "note": null
     }
