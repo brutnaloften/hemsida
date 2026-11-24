@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["personalbrist", "äldreomsorg", "sjukvård", "arbetsmiljö"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Vänsterpartiet föreslog i sin budgetmotion för utgiftsområde 9 (Mot. 2024/25:1920) 5,75 miljarder kronor mer än regeringen till bidraget för folkhälsa och sjukvård (anslag 1:6) och 700 miljoner kronor mer till psykiatri, men samtidigt 7,5 miljarder kronor mindre till prestationsbundna insatser för att korta vårdköerna (anslag 1:11). Räknat på hälso- och sjukvårdsanslagen blir nettot ungefär 1 miljard kronor lägre än regeringens förslag, och motionens totala höjning på 6,3 miljarder kronor går till stor del till tandvård och socialtjänst. Vänsterpartiet föreslog i stället mer pengar i form av generella statsbidrag till kommuner och regioner under utgiftsområde 25 (1,6 miljarder kronor 2025 och 11,1 miljarder 2026 på anslag 1:1, Mot. 2024/25:1924). Motionen hänvisar också till ökade resurser för att behålla personaltätheten i välfärden. Anslaget för stimulansbidrag inom äldreområdet (4:5) ändras inte, och motionen sätter inget mått på personalbristen. Förslaget motsvarar alltså en del av löftet: mer resurser till sjukvården och personalen. Därför delvis uppfyllt. Riksdagen avslog Mot. 2024/25:1920 (Bet. 2024/25:SoU1), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,36 @@
       "url": "https://data.riksdagen.se/dokument/HB01SoU21.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC021920",
+      "designation": "Mot. 2024/25:1920",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC021920.html",
+      "relevance": "partial",
+      "note": "Vänsterpartiets budgetmotion för utgiftsområde 9, redovisad i Bet. 2024/25:SoU1."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SoU1",
+      "designation": "Bet. 2024/25:SoU1",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC021924",
+      "designation": "Mot. 2024/25:1924",
+      "title": "För ett starkare Sverige – Klimat, välfärd och tillväxt",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC021924.html",
+      "relevance": "partial",
+      "note": "Vänsterpartiets budgetmotion för 2025 med förslag om generella statsbidrag under utgiftsområde 25."
     }
   ]
 }
