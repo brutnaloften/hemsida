@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["forskningsanslag", "forskningsfinansiering", "forskning", "statsbudget"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Tre av forskningens största anslag ökade nominellt mellan utfallet 2022 och 2025: Vetenskapsrådet från 7 393 till 8 290 mn kr (+12,1 procent), Uppsala universitet från 2 368 till 2 562 mn kr (+8,2 procent) och Lunds universitet från 2 433 till 2 672 mn kr (+9,8 procent). I fasta priser är förändringen -0,2, -3,7 och -2,3 procent. Regeringen föreslog 7 381 mn kr till Vetenskapsrådet för 2023 (Bet. 2022/23:UbU1) och en ökning med 595 mn kr för 2025 med anledning av forsknings- och innovationspropositionen (Bet. 2024/25:UbU1). Riktningen stämmer med löftet, men det gäller alla forskningsanslag och tre anslag är bara en del av dem. Källa: ESV:s årsutfall och betänkandena. Därför delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,110 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01UbU1",
+      "designation": "Bet. 2022/23:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2022-12-14",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01UbU1",
+      "designation": "Bet. 2024/25:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "1603001",
+        "namn": "Vetenskapsrådet: Forskning och forskningsinformation",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 7392.8,
+        "after": 8290.2
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 7 393 mn kr 2022 och 8 290 mn kr 2025, ändring 897 mn kr (+12,1 %). I fasta priser -0,2 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Anslaget 3:1 Vetenskapsrådet i utgiftsområde 16, ett av flera forskningsanslag."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "1603001",
+        "namn": "Vetenskapsrådet: Forskning och forskningsinformation",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 7328.8,
+        "after": 8424.0
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 7 329 mn kr 2022 och 8 424 mn kr 2025, ändring 1 095 mn kr (+14,9 %). I fasta priser +2,3 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-12-04",
+      "relevance": "partial",
+      "note": "Regeringen föreslog för 2025 en ökning med totalt 595 mn kr av anslaget med anledning av forsknings- och innovationspropositionen (Bet. 2024/25:UbU1)."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "1602004",
+        "namn": "Uppsala universitet: Forskning och utbildning på forskarnivå",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 2368.4,
+        "after": 2562.3
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 2 368 mn kr 2022 och 2 562 mn kr 2025, ändring 194 mn kr (+8,2 %). I fasta priser -3,7 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Uppsala universitet: forskning och utbildning på forskarnivå, ett av flera forskningsanslag."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "1602006",
+        "namn": "Lunds universitet: Forskning och utbildning på forskarnivå",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 2432.7,
+        "after": 2671.7
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 2 433 mn kr 2022 och 2 672 mn kr 2025, ändring 239 mn kr (+9,8 %). I fasta priser -2,3 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Lunds universitet: forskning och utbildning på forskarnivå, ett av flera forskningsanslag."
     }
   ]
 }

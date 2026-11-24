@@ -17,10 +17,17 @@
   "committee": "UU",
   "keywords": ["bistånd", "biståndsbudget"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Anslaget 7:1 Biståndsverksamhet minskade nominellt från ett utfall på 44 231 mn kr 2022 till 43 476 mn kr 2025, alltså -755 mn kr eller -1,7 procent (i fasta priser -12,5 procent); utfallet var högre 2023 och 2024. Det anvisade beloppet föll från 45 147 till 42 654 mn kr (-5,5 procent). Utskottet noterar att utgiftsramen för utgiftsområde 7 2025 är 44,5 mdkr, en minskning med ca 5,5 mdkr jämfört med 2024 (Bet. 2024/25:UU2). Riktningen stämmer med löftet, men minskningen är liten i löpande priser och löftets andra halva, att medlen går till svensk välfärd och trygghet, kan inte följas i ESV:s data. Källa: ESV:s årsutfall och betänkandena. Därför delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,58 @@
       "url": "https://data.riksdagen.se/dokument/HC01UU18.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01UU2",
+      "designation": "Bet. 2024/25:UU2",
+      "title": "Utgiftsområde 7 Internationellt bistånd",
+      "date": "2024-12-10",
+      "url": "https://data.riksdagen.se/dokument/HC01UU2.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0701001",
+        "namn": "Biståndsverksamhet",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 44230.8,
+        "after": 43476
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 44 231 mn kr 2022 och 43 476 mn kr 2025, ändring -755 mn kr (-1,7 %). I fasta priser -12,5 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Anslaget 7:1 Biståndsverksamhet i utgiftsområde 7. Omfördelningen till svensk välfärd syns inte i anslaget."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0701001",
+        "namn": "Biståndsverksamhet",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 45147.0,
+        "after": 42654.3
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 45 147 mn kr 2022 och 42 654 mn kr 2025, ändring -2 493 mn kr (-5,5 %). I fasta priser -15,9 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-12-10",
+      "relevance": "partial",
+      "note": "Utgiftsramen för utgiftsområde 7 för 2025 är 44,5 mdkr, en minskning med ca 5,5 mdkr jämfört med 2024 (Bet. 2024/25:UU2)."
     }
   ]
 }

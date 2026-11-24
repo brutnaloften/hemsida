@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["tullen", "stöldligor", "vapensmuggling", "befogenheter"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Anslaget 1:2 Tullverket ökade nominellt från ett utfall på 2 469 mn kr 2022 till 3 189 mn kr 2025, alltså 719 mn kr eller +29,1 procent (i fasta priser +14,9 procent). Regeringen föreslog 2 589 mn kr för 2023, knappt 107 mn kr mer än 2022 (Bet. 2022/23:SkU1), och 3 174 mn kr för 2025, drygt 299 mn kr mer än 2024, varav 198 mn kr för att motverka den kriminella ekonomin (Bet. 2024/25:SkU1). Resursdelen av löftet är alltså uppfylld, men löftet gäller också kraftfulla befogenheter, som är en fråga om lagstiftning och inte syns i ESV:s data. Källa: ESV:s årsutfall och betänkandena. Därför delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,68 @@
       "promises": ["tido-tullverket-brottsbekampande-uppgifter"],
       "outcome": "included",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01SkU1",
+      "designation": "Bet. 2022/23:SkU1",
+      "title": "Utgiftsområde 3 Skatt, tull och exekution",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU1.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SkU1",
+      "designation": "Bet. 2024/25:SkU1",
+      "title": "Utgiftsområde 3 Skatt, tull och exekution",
+      "date": "2024-11-28",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU1.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0301002",
+        "namn": "Tullverket",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 2469.3,
+        "after": 3188.6
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 2 469 mn kr 2022 och 3 189 mn kr 2025, ändring 719 mn kr (+29,1 %). I fasta priser +14,9 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Anslaget 1:2 Tullverket i utgiftsområde 3. Befogenheterna i löftet är lagstiftning och mäts inte av anslaget."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0301002",
+        "namn": "Tullverket",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 2481.7,
+        "after": 3174.5
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 2 482 mn kr 2022 och 3 174 mn kr 2025, ändring 693 mn kr (+27,9 %). I fasta priser +13,8 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-11-28",
+      "relevance": "partial",
+      "note": "Regeringen föreslog 2 588 670 000 kr för 2023 (Bet. 2022/23:SkU1) och 3 174 486 000 kr för 2025, drygt 299 mn kr mer än 2024 (Bet. 2024/25:SkU1)."
     }
   ]
 }

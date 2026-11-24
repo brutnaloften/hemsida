@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["psykiatri", "resurser", "psykisk ohälsa"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Anslaget 9:8 Bidrag till psykiatri ökade nominellt från ett utfall på 1 999 mn kr 2022 till 3 718 mn kr 2025, alltså 1 719 mn kr eller +86,0 procent (i fasta priser +65,5 procent). Regeringen föreslog en ökning med 1 500 mn kr för 2023 (Bet. 2022/23:SoU1) och för 2025 ökningar med 470 mn kr för barn- och ungdomspsykiatri, 400 mn kr för suicidprevention och 500 mn kr för primärvårdens arbete med psykisk ohälsa (Bet. 2024/25:SoU1). Anslaget är statens bidrag till psykiatri och psykisk hälsa; regionernas egna psykiatriutgifter ingår inte, så det går inte att säga hur mycket psykiatrins totala resurser har ökat. Källa: ESV:s årsutfall och betänkandena. Därför delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,68 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01SoU1",
+      "designation": "Bet. 2022/23:SoU1",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SoU1",
+      "designation": "Bet. 2024/25:SoU1",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU1.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0901008",
+        "namn": "Bidrag till psykiatri",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 1998.7,
+        "after": 3717.6
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 1 999 mn kr 2022 och 3 718 mn kr 2025, ändring 1 719 mn kr (+86,0 %). I fasta priser +65,5 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Anslaget 9:8 Bidrag till psykiatri i utgiftsområde 9. Regionernas egna psykiatriutgifter ingår inte."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0901008",
+        "namn": "Bidrag till psykiatri",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 2162.9,
+        "after": 3860.4
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 2 163 mn kr 2022 och 3 860 mn kr 2025, ändring 1 698 mn kr (+78,5 %). I fasta priser +58,8 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-12-04",
+      "relevance": "partial",
+      "note": "Regeringen föreslog 3 620 393 000 kr för 2025, med ökningar på 470, 400 och 500 mn kr (Bet. 2024/25:SoU1); för 2023 en ökning med 1 500 mn kr (Bet. 2022/23:SoU1)."
     }
   ]
 }
