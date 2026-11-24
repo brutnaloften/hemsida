@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["anställa", "industri", "lägre anställningskostnader"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i februari 2026 om tillfälligt nedsatta arbetsgivaravgifter för unga, vilket gäller anställning. I juni 2026 lade en statlig utredning fram förslag om kommuners mottagande av stora industrietableringar. I juli och september 2026 gav regeringen tilläggsdirektiv till Accelerationskontoret och ett nytt uppdrag om industrins konkurrenskraft.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,46 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet anger att arbetsgivare som anställer långtidsarbetslösa bör mötas av lägre anställningskostnader och att de administrativa kostnaderna för företagen ska bli lägre."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU11",
+      "designation": "Bet. 2025/26:SfU11",
+      "title": "Tillfälligt nedsatta arbetsgivaravgifter för 19–23-åringar",
+      "date": "2026-02-18",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU11.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB332",
+      "designation": "SOU 2026:32",
+      "title": "Att säga ja! Kommunernas förutsättningar att ta emot stora företagsetableringar och företagsexpansioner",
+      "date": "2026-06-02",
+      "url": "https://data.riksdagen.se/dokument/HEB332.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB181",
+      "designation": "Dir. 2026:81",
+      "title": "Tilläggsdirektiv till Accelerationskontor för att underlätta industrins omställning (KN 2024:05)",
+      "date": "2026-07-23",
+      "url": "https://data.riksdagen.se/dokument/HEB181.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1112",
+      "designation": "Dir. 2026:112",
+      "title": "Främjande av industrins klimatomställning och konkurrenskraft",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1112.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

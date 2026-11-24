@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["skyddat boende", "kvinnojourer", "våld mot kvinnor", "nationellt stöd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i oktober 2023 fram ett förslag om att skyddat boende ska regleras i socialtjänstlagen med krav på tillstånd från IVO. Riksdagen biföll förslaget i februari 2024. Två lagar trädde i kraft den 1 april 2024: en om placering av barn i skyddat boende och en ändring i socialtjänstlagen. De skapar ett nationellt regelverk, vilket täcker en del av löftet om nationellt stöd.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,46 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0331",
+      "designation": "Prop. 2023/24:31",
+      "title": "Stärkta rättigheter för barn och vuxna i skyddat boende",
+      "date": "2023-10-31",
+      "url": "https://data.riksdagen.se/dokument/HB0331.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01SoU6",
+      "designation": "Bet. 2023/24:SoU6",
+      "title": "Stärkta rättigheter för barn och vuxna i skyddat boende",
+      "date": "2024-02-08",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU6.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-79",
+      "designation": "SFS 2024:79",
+      "title": "Lag (2024:79) om placering av barn i skyddat boende",
+      "date": "2024-04-01",
+      "url": "https://svenskforfattningssamling.se/doc/202479.html",
+      "relevance": "partial",
+      "note": "Lagen ininför inget generellt nationellt stöd för skyddade boenden; reglering för vuxna, tillståndskrav och övrigt ligger i andra lagar."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-85",
+      "designation": "SFS 2024:85",
+      "title": "Lag (2024:85) om ändring i socialtjänstlagen (2001:453)",
+      "date": "2024-04-01",
+      "url": "https://svenskforfattningssamling.se/doc/202485.html",
+      "relevance": "partial",
+      "note": "Tillståndsplikten hos IVO och anmälningsplikten ligger i andra delar av propositionen, och det framgår inte att något nationellt stöd i form av t.ex. finansiering eller samordning införs. Placering av barn utan samtycke regleras i en separat lag."
     }
   ]
 }
