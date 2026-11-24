@@ -17,10 +17,58 @@
   "committee": "NU",
   "keywords": ["energieffektivisering", "stöd", "hushåll", "industri"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Miljöpartiet föreslog i sin budgetmotion för utgiftsområde 21 att anslaget 1:2 Insatser för energieffektivisering skulle höjas med 3 000 mn kr jämfört med regeringens 415 mn kr, för att återinföra och bredda Energisteget så att industriföretagens energieffektiviseringar får 60 procent av kostnaden täckt (Mot. 2024/25:3062). I motionen för utgiftsområde 18 föreslog partiet dessutom ett nytt anslag 99:4 Energieffektivisering av bostadsfastigheter och lokaler på 5 600 mn kr för 2025 (Mot. 2024/25:3059). Stödet riktas alltså både mot industrin och mot bostäder och lokaler, och ingen del av partiets förslag minskar stödet till energieffektivisering. Riksdagen avslog anslagsförslagen (Bet. 2024/25:NU3 och Bet. 2024/25:CU1), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HC023062",
+      "designation": "Mot. 2024/25:3062",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023062.html",
+      "relevance": "full",
+      "note": "Miljöpartiets budgetmotion för utgiftsområde 21 Energi, redovisad i Bet. 2024/25:NU3."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023059",
+      "designation": "Mot. 2024/25:3059",
+      "title": "Utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023059.html",
+      "relevance": "partial",
+      "note": "Miljöpartiets budgetmotion för utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik, redovisad i Bet. 2024/25:CU1."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01NU3",
+      "designation": "Bet. 2024/25:NU3",
+      "title": "Utgiftsområde 21 Energi",
+      "date": "2024-12-09",
+      "url": "https://data.riksdagen.se/dokument/HC01NU3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01CU1",
+      "designation": "Bet. 2024/25:CU1",
+      "title": "Utgiftsområde 18 Samhällsplanering, bostadsförsörjning och byggande samt konsumentpolitik",
+      "date": "2024-12-05",
+      "url": "https://data.riksdagen.se/dokument/HC01CU1.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

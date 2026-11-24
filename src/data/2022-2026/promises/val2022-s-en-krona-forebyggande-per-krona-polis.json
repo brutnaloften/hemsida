@@ -17,10 +17,58 @@
   "committee": "JuU",
   "keywords": ["förebyggande arbete", "poliser", "brottsprevention", "resurser"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Socialdemokraterna föreslog i sin budgetmotion för utgiftsområde 4 ett tillkännagivande om att för varje krona som satsas på polisen ska minst lika mycket satsas på förebyggande arbete (Mot. 2024/25:3111). Partiets budget följer principen: anslaget 1:1 Polismyndigheten lämnas oförändrat (±0), medan 1:7 Brottsförebyggande rådet höjs med 40 mn kr, 1:18 Akuta åtgärder vid gängkriminalitet med 100 mn kr och ett nytt anslag 99:1 Punktmarkera unga på glid på 1 500 mn kr tillförs i utgiftsområde 25 (Mot. 2024/25:3197). Motionen ställer alltså upp exakt den princip löftet anger och följer den i sin egen budget; den är ett tillkännagivande, inte en reglerad anslagsfördelning. Riksdagen avslog motionerna (Bet. 2024/25:JuU1 och Bet. 2024/25:FiU3), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HC023111",
+      "designation": "Mot. 2024/25:3111",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023111.html",
+      "relevance": "full",
+      "note": "Socialdemokraternas budgetmotion för utgiftsområde 4 Rättsväsendet, redovisad i Bet. 2024/25:JuU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023197",
+      "designation": "Mot. 2024/25:3197",
+      "title": "Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023197.html",
+      "relevance": "partial",
+      "note": "Socialdemokraternas budgetmotion för utgiftsområde 25 Allmänna bidrag till kommuner, redovisad i Bet. 2024/25:FiU3."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU1",
+      "designation": "Bet. 2024/25:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2024-11-29",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01FiU3",
+      "designation": "Bet. 2024/25:FiU3",
+      "title": "Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "date": "2024-12-12",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU3.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

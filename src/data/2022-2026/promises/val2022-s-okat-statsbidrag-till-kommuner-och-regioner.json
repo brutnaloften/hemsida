@@ -17,10 +17,38 @@
   "committee": "FiU",
   "keywords": ["statsbidrag", "kommuner", "regioner", "välfärd", "generella bidrag"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Socialdemokraterna föreslog i sin budgetmotion för utgiftsområde 25 att anslaget 1:1 Kommunalekonomisk utjämning skulle höjas med 6 576 mn kr jämfört med regeringens förslag, ett nytt anslag 99:2 Bidrag till småkommuner på 300 mn kr och ett nytt anslag 99:1 Punktmarkera unga på glid på 1 500 mn kr, och föreslog att de generella statsbidragen ska indexeras med juni-KPI (Mot. 2024/25:3197). Samtidigt avvisade partiet regeringens tillfälliga stöd till enskilda regioner, anslag 1:4, på 250 mn kr. Därför går inte alla delar i den utlovade riktningen, men nettoeffekten är en höjning med 8 126 mn kr. Riksdagen avslog anslagsförslagen (Bet. 2024/25:FiU3), så förslaget är partiets eget agerande, inte ett beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HC023197",
+      "designation": "Mot. 2024/25:3197",
+      "title": "Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023197.html",
+      "relevance": "partial",
+      "note": "Socialdemokraternas budgetmotion för utgiftsområde 25 Allmänna bidrag till kommuner, redovisad i Bet. 2024/25:FiU3."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01FiU3",
+      "designation": "Bet. 2024/25:FiU3",
+      "title": "Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "date": "2024-12-12",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU3.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }
