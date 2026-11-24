@@ -12,15 +12,22 @@
   "roles": {
     "M": "government"
   },
-  "type": "budget",
+  "type": "legislative",
   "area": "Energi",
   "committee": "NU",
   "keywords": ["kärnkraft", "lånegarantier", "reaktorer", "energipolitik"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i november 2023 att ta bort de lagliga hindren mot ny kärnkraft på nya platser och mot fler än tio reaktorer. I mars 2025 lade regeringen fram ett förslag om statliga lån till nya reaktorer, och riksdagen biföll det i maj 2025. En lag om statligt stöd för investeringar i ny kärnkraft trädde i kraft den 1 augusti 2025. Den täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HB0319",
+      "designation": "Prop. 2023/24:19",
+      "title": "Ny kärnkraft i Sverige – ett första steg",
+      "date": "2023-10-03",
+      "url": "https://data.riksdagen.se/dokument/HB0319.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HB01NU5",
       "designation": "Bet. 2023/24:NU5",
@@ -40,6 +57,36 @@
       "url": "https://data.riksdagen.se/dokument/HB01NU5.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03150",
+      "designation": "Prop. 2024/25:150",
+      "title": "Finansiering och riskdelning vid investeringar i ny kärnkraft",
+      "date": "2025-03-27",
+      "url": "https://data.riksdagen.se/dokument/HC03150.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01NU20",
+      "designation": "Bet. 2024/25:NU20",
+      "title": "Finansiering och riskdelning vid investeringar i ny kärnkraft",
+      "date": "2025-05-16",
+      "url": "https://data.riksdagen.se/dokument/HC01NU20.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-587",
+      "designation": "SFS 2025:587",
+      "title": "Lag (2025:587) om statligt stöd för investeringar i ny kärnkraft",
+      "date": "2025-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025587.html",
+      "relevance": "partial",
+      "note": "Lagen innehåller inga lånegarantier (stödet är statlig utlåning via Riksgälden plus differenskontrakt), och inget mål eller krav om 10 nya reaktorer finns; stödet kräver minst 300 MW på samma plats."
     }
   ]
 }

@@ -17,21 +17,68 @@
   "committee": "FöU",
   "keywords": ["försvar", "två procent", "BNP", "Nato"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "Löftet kommer från ett oppositionsparti och bedöms bara på partiets egna handlingar (som regel för oppositionspartier): en egen motion eller budgetmotion för utgiftsområde 6. Ingen sådan är länkad, så löftet lämnas obedömt tills en sådan har granskats (ingen S-motion för utgiftsområde 6 har hittats för ett annat löfte heller). Regeringens budgetutfall används inte mot partiet.",
+    "value": "partially_fulfilled",
+    "reasoning": "Löftet har två delar. Nato-delen: Centerpartiet röstade ja när riksdagen i mars 2023 godkände Sveriges anslutning till Nato (Bet. 2022/23:UU16). Delen om två procent av BNP: i partiets motioner om utgiftsområde 6 för 2023 och 2024 (Mot. 2022/23:2201 och Mot. 2023/24:2715) skriver partiet att det fortsatt vill driva på för att öka försvarsanslagen till två respektive minst två procent av BNP, men det finns inget yrkande som fastställer nivån eller tidpunkten. Partiets anslagsförslag ändrar utgiftsområdet marginellt jämfört med regeringen: 25 miljoner kronor lägre 2023 (50 miljoner kronor mindre till Försvarets radioanstalt, 25 miljoner mer till civil energiberedskap), 125 miljoner kronor högre 2024, 350 miljoner 2025 och 182 miljoner 2026 (Mot. 2024/25:2159 och Mot. 2025/26:3605), där 2026 räknar in 108 miljoner kronor lägre anslag för strålsäkerhet. Av anslagen går det inte att avgöra hur nära två procent av BNP partiets förslag låg. Därför delvis uppfyllt. Det är partiets eget agerande, inte ett beslut.",
     "date": "2026-11-24",
-    "history": []
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "Löftet kommer från ett oppositionsparti och bedöms bara på partiets egna handlingar (som regel för oppositionspartier): en egen motion eller budgetmotion för utgiftsområde 6. Ingen sådan är länkad, så löftet lämnas obedömt tills en sådan har granskats (ingen S-motion för utgiftsområde 6 har hittats för ett annat löfte heller). Regeringens budgetutfall används inte mot partiet.",
+        "date": "2026-11-24"
+      }
+    ]
   },
   "evidence": [
     {
       "kind": "bet",
-      "dok_id": "HC01UFöU3",
-      "designation": "Bet. 2024/25:UFöU3",
-      "title": "Svenskt deltagande i luftförsvarsoperation inom ramen för Nato",
-      "date": "2025-03-18",
-      "url": "https://data.riksdagen.se/dokument/HC01UFöU3.html",
+      "dok_id": "HA01UU16",
+      "designation": "Bet. 2022/23:UU16",
+      "title": "Sveriges medlemskap i Nato",
+      "date": "2023-03-16",
+      "url": "https://data.riksdagen.se/dokument/HA01UU16.html",
       "relevance": "partial",
-      "note": null
+      "note": "Riksdagens beslut att godkänna Sveriges anslutning till Nato."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HA022201",
+      "designation": "Mot. 2022/23:2201",
+      "title": "Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022201.html",
+      "relevance": "partial",
+      "note": "Centerpartiets motion för 2023: vill öka försvarsanslagen till två procent av BNP; anslagen sänks netto med 25 miljoner kronor."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022715",
+      "designation": "Mot. 2023/24:2715",
+      "title": "Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022715.html",
+      "relevance": "partial",
+      "note": "Centerpartiets motion för 2024: vill öka försvarsanslagen till minst två procent av BNP; anslagen höjs med 125 miljoner kronor."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC022159",
+      "designation": "Mot. 2024/25:2159",
+      "title": "Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC022159.html",
+      "relevance": "partial",
+      "note": "Centerpartiets motion för 2025: 350 miljoner kronor mer än regeringen till utgiftsområde 6."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023605",
+      "designation": "Mot. 2025/26:3605",
+      "title": "Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023605.html",
+      "relevance": "partial",
+      "note": "Centerpartiets motion för 2026: 182 miljoner kronor mer än regeringen till utgiftsområde 6."
     }
   ]
 }
