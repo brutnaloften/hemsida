@@ -76,3 +76,13 @@ dl5.4 should not set verdicts directly. Order of work, each a child bead filed f
 6. **Decide the 17 `not_answerable` promises** (`not_assessable` with reasoning, or hold for the outcome epic `hemsida-50r`).
 
 Beads: 1 = `hemsida-dl5.6`, 2 = `hemsida-dl5.7` (blocked by dl5.6), 3 = `hemsida-dl5.8`, 4 = `hemsida-dl5.9`, 5 = `hemsida-dl5.10`, 6 = `hemsida-dl5.11`.
+
+## Macro-ratio promises (`anslag_macro`, `hemsida-dl5.8`)
+
+Decision: six of the seven `anslag_macro` promises stay `unassessed`, with the figures and the reason written into each verdict's reasoning. `val2022-mp-over-1-procent-av-bni-till-bistand` was already settled on the party's own motion in an earlier PR and is untouched.
+
+- **Definitions.** Defence 2 % of BNP is Natos definition, and the ESV data carries no NATO delineation. Utgiftsområde 6 holds Försvarsmakten and the other defence agencies, anslag 1:14 Stöd till Ukraina (11 213 mn kr 2025) and 2:1 Kustbevakningen (1 984 mn kr 2025), but also civil parts (krisberedskap, räddningstjänst, strålsäkerhet), so it is not the NATO figure and not the same as the promise. Aid 1 % of BNI is OECD ODA, not UO 7 (they differ in, for example, refugee costs), and `macro.json` has BNP but no BNI. The deficit target is on offentlig sektors finansiella sparande, while ESV covers the state only.
+- **Figures (UO / BNP, outcome).** UO 6: 1,44 % (2022), 1,56 % (2023), 1,99 % (2024). The 2025 outcome is 163 509 mn kr and BNP 2025 is missing in `macro.json`, so 2025 is above 2 % only by an arithmetic bound (BNP would need to grow by about 27 % in a year to give less). UO 7: 0,79 % (2022), 0,76 % (2023), 0,77 % (2024); 2025 outcome 45 410 mn kr. Computed from `expenditure.json` and `macro.json` (sum of anslag per UO over BNP).
+- **How the budget verdict rule applies.** The rule compares the nominal change of a named anslag and its evidence entries are anslag-shaped (`anslag.kod`, `amounts.before/after`). A ratio promise has no anslag, and a nominal rise says nothing about a share of BNP, so a UO ratio is context in the reasoning and never a qualifying `budget` entry. Without a qualifying entry the schema allows no verdict above `unassessed`, and none is invented.
+- **Opposition promises (C and S defence)** are judged only on own acts; none is linked, so they stay `unassessed` pending a motion lookup (`hemsida-9lbv`; `hemsida-pgyi` already found no S UO 6 motion for a different promise).
+- **To settle later.** Needs a defined source for the real target: NATO's published Sweden figure (with its definition), OECD ODA and SCB BNI, and for the deficit target SCB/ESV offentliga finanser. Then the ratio promises can be judged from outcome ratios as a new evidence shape.
