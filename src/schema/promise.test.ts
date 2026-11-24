@@ -399,17 +399,31 @@ describe('promiseSchema', () => {
       ).toBe(false);
     });
 
+    const cited = (p: ReturnType<typeof make>) => ({
+      ...p,
+      verdict: { ...p.verdict, reasoning: 'Mot. 2024/25:3125 avvisar pengarna.' },
+    });
+
     it('needs a contradicting own motion for broken on an opposition-only budget promise', () => {
       const opp = { parties: ['S'], roles: { S: 'opposition' } };
       const mot = { ...prop, kind: 'mot', dok_id: 'HC023125', designation: 'Mot. 2024/25:3125' };
       const against = { ...mot, relevance: 'contradicts' };
-      expect(ok(make('broken', [against], opp))).toBe(true);
+      expect(ok(cited(make('broken', [against], opp)))).toBe(true);
+      // the reasoning must cite the motion
+      expect(ok(make('broken', [against], opp))).toBe(false);
       // nothing weaker: a supporting motion, a vote or a cited document is not enough
-      expect(ok(make('broken', [mot], opp))).toBe(false);
-      expect(ok(make('broken', [{ ...bet, votes: { S: 'no' } }], opp))).toBe(false);
-      expect(ok(make('broken', [], opp))).toBe(false);
-      // other promise types and government budget promises are unchanged
-      expect(ok(make('broken', [against]))).toBe(false);
+      expect(ok(cited(make('broken', [mot], opp)))).toBe(false);
+      expect(ok(cited(make('broken', [{ ...bet, votes: { S: 'no' } }], opp)))).toBe(false);
+      expect(ok(cited(make('broken', [], opp)))).toBe(false);
+      // government budget promises are unchanged
+      expect(ok(cited(make('broken', [against])))).toBe(false);
+    });
+
+    it('does not change broken for a non-budget opposition promise', () => {
+      const opp = { parties: ['S'], roles: { S: 'opposition' }, type: 'other_action' };
+      const mot = { ...prop, kind: 'mot', dok_id: 'HC023125', designation: 'Mot. 2024/25:3125' };
+      expect(ok(cited(make('broken', [{ ...mot, relevance: 'contradicts' }], opp)))).toBe(false);
+      expect(ok(cited(make('broken', [mot], opp)))).toBe(true);
     });
 
     it('does not apply to other promise types', () => {

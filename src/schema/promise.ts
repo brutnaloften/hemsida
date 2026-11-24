@@ -301,8 +301,9 @@ const MIN_SEARCH_NOTE_LENGTH = 30;
 
 /**
  * Evidence-to-verdict constraints for the CURRENT verdict (history entries are not checked; they
- * were judged against the evidence available at the time). Only Riksdag evidence counts;
- * `agreement` evidence never qualifies; `budget` evidence only through the budget verdict rule. See "Verdict" in docs/data-model.md.
+ * were judged against the evidence available at the time). Only Riksdag evidence counts, and a
+ * `contradicts` entry never qualifies a verdict, with one exception: the party's own contrary motion
+ * for `broken` on an opposition-only budget promise; `agreement` evidence never qualifies; `budget` evidence only through the budget verdict rule. See "Verdict" in docs/data-model.md.
  */
 function checkVerdictEvidence(
   p: {
@@ -317,7 +318,8 @@ function checkVerdictEvidence(
   ctx: z.core.$RefinementCtx,
 ): void {
   const { value, reasoning } = p.verdict;
-  // A document that works against the promise never qualifies a verdict.
+  // A document that works against the promise never qualifies a verdict (the one exception, an
+  // opposition party's own contrary motion for `broken`, is checked separately below).
   const riksdag = p.evidence.filter(isRiksdagEvidence).filter((e) => e.relevance !== 'contradicts');
   const fail = (message: string) =>
     ctx.addIssue({ code: 'custom', path: ['verdict', 'value'], message });
@@ -383,9 +385,16 @@ function checkVerdictEvidence(
   if (value === 'broken' && oppositionOnlyBudget) {
     // The party's own act against its own promise: its motion rejects or cuts the targeted money.
     // A vote or a cited document does not stand in for it (docs/data-model.md, "Opposition promises").
-    if (!p.evidence.some((e) => e.kind === 'mot' && e.relevance === 'contradicts')) {
+    const contrary = p.evidence
+      .filter(isRiksdagEvidence)
+      .filter((e) => e.kind === 'mot' && e.relevance === 'contradicts');
+    if (contrary.length === 0) {
       fail(
         "verdict broken on an opposition-only budget promise requires a mot entry with relevance contradicts (the party's own motion rejecting the targeted funding)",
+      );
+    } else if (!contrary.some((e) => reasoning.includes(e.designation))) {
+      fail(
+        'verdict broken on an opposition-only budget promise requires reasoning that cites the designation of the contradicting mot entry',
       );
     }
   } else if (value === 'broken') {
