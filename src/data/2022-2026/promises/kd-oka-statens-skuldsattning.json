@@ -3,9 +3,13 @@
   "term": "2022-2026",
   "title": "Öka statens skuldsättning för investeringar",
   "description": "Gå från ett överskottsmål till lånefinansiering av nödvändiga investeringar, med ett årligt underskott på 0,5 procent för att frigöra cirka 50 miljarder kronor per år.",
-  "source": { "id": "kd-almedalen-2024" },
+  "source": {
+    "id": "kd-almedalen-2024"
+  },
   "parties": ["KD"],
-  "roles": { "KD": "government" },
+  "roles": {
+    "KD": "government"
+  },
   "type": "budget",
   "area": "Ekonomi och skatter",
   "committee": "FiU",
@@ -16,6 +20,11 @@
     "finanspolitiskt ramverk",
     "lånefinansiering"
   ],
-  "verdict": { "value": "unassessed", "reasoning": "", "date": "2026-10-28", "history": [] },
+  "verdict": {
+    "value": "unassessed",
+    "reasoning": "Löftet gäller ett förändrat finanspolitiskt ramverk (ett årligt underskott på 0,5 procent av BNP i stället för överskottsmålet), som mäts på offentlig sektors finansiella sparande. ESV:s data i repot gäller statens inkomster och utgifter, inte offentlig sektor, och ingen proposition eller annat riksdagsdokument om ändrat ramverk finns bland bevisen. Därför finns inget som kan stödja ett omdöme, och verdictet lämnas obedömt i stället för att gissas; se docs/budget-promises.md, avsnittet om makrolöften.",
+    "date": "2026-11-24",
+    "history": []
+  },
   "evidence": []
 }
