@@ -17,12 +17,39 @@
   "committee": "MJU",
   "keywords": ["tillståndsprocesser", "tillståndsprövning", "elproduktion", "byråkrati"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i februari 2026 snabbare tillståndsprövning för förnybar energi. Riksdagen beslutade om det i april, och lagändringar i bland annat miljöbalken, ellagen och plan- och bygglagen började gälla 1 juli 2026. Ett riksdagsbeslut i februari 2026 motverkar löftet genom att kritisera EU-kommissionens förslag om påskyndade tillstånd. Dokumenten täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03118",
+      "designation": "Prop. 2025/26:118",
+      "title": "Tillståndsprövning enligt förnybartdirektivet",
+      "date": "2026-02-05",
+      "url": "https://data.riksdagen.se/dokument/HD03118.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01NU26",
+      "designation": "Bet. 2025/26:NU26",
+      "title": "Subsidiaritetsprövning av kommissionens förslag om riktlinjer för transeuropeisk energiinfrastruktur och påskyndandet av tillståndsförfaranden",
+      "date": "2026-02-26",
+      "url": "https://data.riksdagen.se/dokument/HD01NU26.html",
+      "relevance": "contradicts",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HD01NU18",
@@ -30,6 +57,96 @@
       "title": "Tillståndsprövning enligt förnybartdirektivet",
       "date": "2026-04-08",
       "url": "https://data.riksdagen.se/dokument/HD01NU18.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-399",
+      "designation": "SFS 2026:399",
+      "title": "Lag (2026:399) om verksamheter och åtgärder för förnybar energi",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026399.html",
+      "relevance": "partial",
+      "note": "De faktiska snabbare processerna, som tidsfrister, samrådsregler och förenklad miljöbedömning, finns i miljöbalken, plan- och bygglagen och sektorslagarna. Löftet gäller dessutom tillståndsprocesser för elproduktion i allmänhet, och lagen rör bara förnybar energi."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-400",
+      "designation": "SFS 2026:400",
+      "title": "Lag (2026:400) om ändring i miljöbalken",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026400.html",
+      "relevance": "partial",
+      "note": "Lagen gäller bara förnybar energi och bara vissa moment i miljöbalken. Tidsfrister i plan- och bygglagen, sektorslagarna och andra former av elproduktion och tillståndsprocesser ingår inte."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-401",
+      "designation": "SFS 2026:401",
+      "title": "Lag (2026:401) om ändring i lagen (1966:314) om kontinentalsockeln",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026401.html",
+      "relevance": "partial",
+      "note": "Lagen omfattar bara tillstånd enligt kontinentalsockelslagen för förnybar energi, inte tillståndsprocesser i stort för elproduktion (t.ex. miljöbalken, plan- och bygglagen, ellagen eller tidsfrister)."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-402",
+      "designation": "SFS 2026:402",
+      "title": "Lag (2026:402) om ändring i lagen (1978:160) om vissa rörledningar",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026402.html",
+      "relevance": "partial",
+      "note": "Lagen gäller bara rörledningskoncessioner för förnybar energi och inte tillståndsprocesser för elproduktion i stort, och den innehåller inga tidsfrister eller andra generella åtgärder för att snabba på."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-403",
+      "designation": "SFS 2026:403",
+      "title": "Lag (2026:403) om ändring i lagen (1992:1140) om Sveriges ekonomiska zon",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026403.html",
+      "relevance": "partial",
+      "note": "Lagen gäller bara förnybar energi i den ekonomiska zonen och inte tillståndsprocesser för elproduktion i stort, och den innehåller inga tidsfrister eller andra generella åtgärder för att snabba på processerna."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-404",
+      "designation": "SFS 2026:404",
+      "title": "Lag (2026:404) om ändring i ellagen (1997:857)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026404.html",
+      "relevance": "partial",
+      "note": "Lagen snabbar inte generellt på tillståndsprocesser för elproduktion; tidsfrister, miljöbalksändringar och plan- och bygglagens regler ligger i andra lagar, och ellagen gäller bara nätkoncession för ledningar."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-405",
+      "designation": "SFS 2026:405",
+      "title": "Lag (2026:405) om ändring i naturgaslagen (2005:403)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026405.html",
+      "relevance": "partial",
+      "note": "Lagen snabbar inte upp tillståndsprocesser generellt eller för elproduktion; den gäller bara naturgasledningar för förnybar energi och en enskild förenkling, inte t.ex. tidsfrister eller andra moment."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-406",
+      "designation": "SFS 2026:406",
+      "title": "Lag (2026:406) om ändring i plan- och bygglagen (2010:900)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026406.html",
+      "relevance": "partial",
+      "note": "Lagen snabbar inte upp tillståndsprocesserna för elproduktion generellt, till exempel prövning enligt miljöbalken, ellagen eller annan elproduktion än solenergi."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB197",
+      "designation": "Dir. 2026:97",
+      "title": "Tilläggsdirektiv till Miljötillståndsutredningen (KN 2023:02)",
+      "date": "2026-08-27",
+      "url": "https://data.riksdagen.se/dokument/HEB197.html",
       "relevance": "partial",
       "note": null
     }

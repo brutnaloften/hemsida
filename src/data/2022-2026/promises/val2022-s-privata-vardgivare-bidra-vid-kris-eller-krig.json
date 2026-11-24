@@ -17,10 +17,28 @@
   "committee": "SoU",
   "keywords": ["privata vårdgivare", "krisberedskap", "vårdplatser", "personal"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i juli 2026 fram en proposition om personalförsörjning av det civila försvaret. Den ger tydligare regler om krigsplacering och kräver att vissa aktörer har en bemannad krigsorganisation. Dokumentet gäller bara en del av löftet, nämligen personal i det civila försvaret i stort.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03302",
+      "designation": "Prop. 2025/26:302",
+      "title": "En modern personalförsörjning av det civila försvaret",
+      "date": "2026-07-07",
+      "url": "https://data.riksdagen.se/dokument/HD03302.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -17,10 +17,38 @@
   "committee": "SoU",
   "keywords": ["vårdgaranti", "vårdköer", "regioner", "väntetider"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i maj 2026 en utredare i uppdrag att förbereda nationell upphandling av specialiserad privat vård och stärkt nationell vårdförmedling. I augusti 2026 gavs en utredare i uppdrag att föreslå åtgärder, bland annat med ekonomiska följder, för regioner som inte håller vårdgarantins tidsgränser. Dokumenten visar utredningsuppdrag, inget beslut om vård i annan region.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HEB138",
+      "designation": "Dir. 2026:38",
+      "title": "Effektiv nationell upphandling av specialiserad hälso- och sjukvård i privat regi",
+      "date": "2026-05-28",
+      "url": "https://data.riksdagen.se/dokument/HEB138.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB192",
+      "designation": "Dir. 2026:92",
+      "title": "Nationella principer för utbud av hälso- och sjukvård i hela landet",
+      "date": "2026-08-13",
+      "url": "https://data.riksdagen.se/dokument/HEB192.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["straffskärpning", "vapenbrott", "våldtäkt", "utpressning", "brottsbalken"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade 2023 om skärpta straff för brott i kriminella nätverk och för allvarliga vapenbrott. Under 2025 och 2026 följde beslut om skärpt syn på sexuella kränkningar och om skärpta straffskalor för nästan 50 brott. En utredning från 2024 föreslår skärpta straff för förberedelse och stämpling.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -65,6 +72,16 @@
       "note": null
     },
     {
+      "kind": "sou",
+      "dok_id": "HCB355",
+      "designation": "SOU 2024:55",
+      "title": "En översyn av 23 kap. brottsbalken",
+      "date": "2024-09-24",
+      "url": "https://data.riksdagen.se/dokument/HCB355.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HC01JuU30",
       "designation": "Bet. 2024/25:JuU30",
@@ -72,6 +89,16 @@
       "date": "2025-05-14",
       "url": "https://data.riksdagen.se/dokument/HC01JuU30.html",
       "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU42",
+      "designation": "Bet. 2025/26:JuU42",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
+      "relevance": "full",
       "note": null
     }
   ]

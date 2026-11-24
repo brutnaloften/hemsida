@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["nationella prov", "central rättning", "slutprov", "Skolinspektionen", "betyg"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i mars 2026 nationella slutprov i grundskolan som rättas centralt. Riksdagen beslutade i juni 2026 om ett nytt betygssystem med slutprov och central rättning. Två ändringar i skollagen är beslutade och träder i kraft den 2 juli 2028 respektive den 1 januari 2031. De täcker en del av löftet: central rättning och slutprov.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -36,6 +43,36 @@
       "note": "Avtalet har central rättning av nationella prov och uppföljning av skolors resultat, men inget slutprov efter årskurs nio."
     },
     {
+      "kind": "sou",
+      "dok_id": "HDB318",
+      "designation": "SOU 2025:18",
+      "title": "Ett likvärdigt betygssystem",
+      "date": "2025-02-19",
+      "url": "https://data.riksdagen.se/dokument/HDB318.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB318d2",
+      "designation": "SOU 2025:18",
+      "title": "Ett likvärdigt betygssystem, del 2",
+      "date": "2025-02-19",
+      "url": "https://data.riksdagen.se/dokument/HDB318d2.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03197",
+      "designation": "Prop. 2025/26:197",
+      "title": "Ett likvärdigt betygssystem",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03197.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01UbU26",
       "designation": "Bet. 2025/26:UbU26",
@@ -44,6 +81,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01UbU26.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1243",
+      "designation": "SFS 2026:1243",
+      "title": "Lag (2026:1243) om ändring i skollagen (2010:800)",
+      "date": "2028-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/20261243.html",
+      "relevance": "partial",
+      "note": "Texten visar ingen skyldighet till central rättning av alla betygsgrundande nationella prov (endast \"bör\") och inget uppdrag till Skolinspektionen att granska skolor som avviker från nationella proven."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1245",
+      "designation": "SFS 2026:1245",
+      "title": "Lag (2026:1245) om ändring i skollagen (2010:800)",
+      "date": "2031-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261245.html",
+      "relevance": "partial",
+      "note": "Slutprov efter årskurs nio och central rättning i grundskolan, ett tydligt krav på central rättning samt Skolinspektionens uppdrag att granska skolor som avviker från nationella proven."
     }
   ]
 }

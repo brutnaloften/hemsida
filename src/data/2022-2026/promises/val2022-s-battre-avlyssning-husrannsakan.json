@@ -17,10 +17,78 @@
   "committee": "JuU",
   "keywords": ["avlyssning", "husrannsakan", "hemliga tvångsmedel", "polisen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i september 2023 om utökad användning av hemliga tvångsmedel som avlyssning, och under 2024 om fler verktyg för att hitta efterlysta personer och förebygga allvarliga brott. I maj 2026 beslutade riksdagen om ansiktsigenkänning i realtid och om tvångsmedel vid utredning av brott av unga, och regeringen gav en utredning i uppdrag att se över Säkerhetspolisens verktyg.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU31",
+      "designation": "Bet. 2022/23:JuU31",
+      "title": "Hemliga tvångsmedel - effektiva verktyg för att förhindra och utreda allvarliga brott",
+      "date": "2023-09-07",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU31.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01JuU26",
+      "designation": "Bet. 2023/24:JuU26",
+      "title": "Bättre möjligheter att verkställa frihetsberövanden",
+      "date": "2024-05-23",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU26.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01JuU24",
+      "designation": "Bet. 2023/24:JuU24",
+      "title": "Preventiva tvångsmedel för att förebygga och förhindra allvarliga brott",
+      "date": "2024-06-11",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU24.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU28",
+      "designation": "Bet. 2025/26:JuU28",
+      "title": "Polisens användning av AI för ansiktsigenkänning i realtid",
+      "date": "2026-05-21",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU28.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB134",
+      "designation": "Dir. 2026:34",
+      "title": "Säkerhetspolisens uppdrag som nationell säkerhetstjänst",
+      "date": "2026-05-21",
+      "url": "https://data.riksdagen.se/dokument/HEB134.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU37",
+      "designation": "Bet. 2025/26:JuU37",
+      "title": "Bättre möjligheter att utreda brott av unga lagöverträdare och några andra processrättsliga frågor",
+      "date": "2026-05-29",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU37.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

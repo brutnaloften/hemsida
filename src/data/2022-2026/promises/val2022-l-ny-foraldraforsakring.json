@@ -23,10 +23,17 @@
     "arbetsmarknad"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i april 2026 att slopa kravet på anmälan före ansökan om föräldrapenning, en förenkling inom föräldraförsäkringen. I juni 2026 föreslog en statlig utredning om jämställdhet att regeringen tillsätter en utredning av reglerna om föräldraledighet och föräldraförsäkringen. Dokumenten gäller bara delar av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -44,6 +51,16 @@
       "title": "Ett slopat krav på anmälan före ansökan om föräldrapenning",
       "date": "2026-04-16",
       "url": "https://data.riksdagen.se/dokument/HD01SfU20.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB341",
+      "designation": "SOU 2026:41",
+      "title": "Jämställdhet i en föränderlig tid - nuläge och vägar framåt, del 1",
+      "date": "2026-06-17",
+      "url": "https://data.riksdagen.se/dokument/HEB341.html",
       "relevance": "partial",
       "note": null
     }

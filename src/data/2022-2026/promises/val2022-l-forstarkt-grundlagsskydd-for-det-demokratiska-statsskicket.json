@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["grundlag", "regeringsformen", "demokratiskt statsskick", "grundlagsskydd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen antog i september 2025 som vilande ändringar i grundlagen att alla grundlagsändringar ska kräva kvalificerad majoritet och kvorum, samt ett stärkt skydd för domstolarnas oberoende. I november 2025 och maj 2026 följde vilande beslut om krisberedskap respektive grundlagsskyddad aborträtt och utökade begränsningar av föreningsfriheten. Regeringen tillsatte i juli 2025 och juni 2026 utredningar om skydd för äganderätt och rätten till domstolsprövning.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,12 +39,62 @@
       "note": null
     },
     {
+      "kind": "dir",
+      "dok_id": "HDB170",
+      "designation": "Dir. 2025:70",
+      "title": "Grundlagsskyddet för rätten till ersättning vid rådighetsinskränkningar",
+      "date": "2025-07-03",
+      "url": "https://data.riksdagen.se/dokument/HDB170.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01KU2",
+      "designation": "Bet. 2025/26:KU2",
+      "title": "Stärkt skydd för demokratin och domstolarnas oberoende",
+      "date": "2025-09-29",
+      "url": "https://data.riksdagen.se/dokument/HD01KU2.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01KU8",
+      "designation": "Bet. 2025/26:KU8",
+      "title": "Stärkt konstitutionell beredskap",
+      "date": "2025-11-14",
+      "url": "https://data.riksdagen.se/dokument/HD01KU8.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0378",
+      "designation": "Prop. 2025/26:78",
+      "title": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
+      "date": "2025-12-05",
+      "url": "https://data.riksdagen.se/dokument/HD0378.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01KU34",
       "designation": "Bet. 2025/26:KU34",
       "title": "En grundlagsskyddad aborträtt samt utökade möjligheter att begränsa föreningsfriheten och rätten till medborgarskap",
       "date": "2026-05-11",
       "url": "https://data.riksdagen.se/dokument/HD01KU34.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB156",
+      "designation": "Dir. 2026:56",
+      "title": "Grundlagsskydd för rätten till domstolsprövning",
+      "date": "2026-06-18",
+      "url": "https://data.riksdagen.se/dokument/HEB156.html",
       "relevance": "partial",
       "note": null
     }

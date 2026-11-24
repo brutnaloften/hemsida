@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["yttrandefrihet", "internet", "sociala plattformar"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen tillsatte i oktober 2023 en utredning om skydd för personuppgifter i mediegrundlagarna. I november 2024 föreslog utredningen att grundlagsskyddet för söktjänster som publicerar personuppgifter ska begränsas. Båda stegen motverkar löftet. I augusti 2026 beslutade regeringen direktiv om en översyn av förtalsreglerna och av ansvaret när material avpubliceras på nätet, vilket gäller en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,36 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1145",
+      "designation": "Dir. 2023:145",
+      "title": "Ett förstärkt skydd för personuppgifter på tryck- och yttrandefrihetsområdet",
+      "date": "2023-10-19",
+      "url": "https://data.riksdagen.se/dokument/HBB1145.html",
+      "relevance": "contradicts",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB375",
+      "designation": "SOU 2024:75",
+      "title": "Personuppgifter och mediegrundlagarna",
+      "date": "2024-11-22",
+      "url": "https://data.riksdagen.se/dokument/HCB375.html",
+      "relevance": "contradicts",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB191",
+      "designation": "Dir. 2026:91",
+      "title": "En översyn av straffbestämmelserna om förtal och vissa andra frågor om tryck- och yttrandefrihet",
+      "date": "2026-08-13",
+      "url": "https://data.riksdagen.se/dokument/HEB191.html",
+      "relevance": "partial",
       "note": null
     }
   ]

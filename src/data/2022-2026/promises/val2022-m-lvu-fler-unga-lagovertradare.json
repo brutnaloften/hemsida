@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["LVU", "lagen om vård av unga", "unga lagöverträdare", "omhändertagande"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i april 2025 vidgade grunder för omhändertagande, bland annat ett nytt grundande på destruktivt beteende. Regeringen lade i juni 2026 fram en proposition om en ny lag som ersätter LVU, och riksdagen biföll den i augusti 2026. Dokumenten täcker en del av löftet: ändrade grunder för omhändertagande, men inget som särskilt gäller unga lagöverträdare.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,46 @@
       "promises": ["tido-lvu-anvands-oftare", "tido-utred-lvu-utokade-omhandertaganden"],
       "outcome": "weakened",
       "note": "Avtalet vill använda LVU oftare för barn i kriminella miljöer, men nämner inte uttryckligen unga lagöverträdare."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB338",
+      "designation": "SOU 2025:38",
+      "title": "Att omhänderta barn och unga",
+      "date": "2025-04-08",
+      "url": "https://data.riksdagen.se/dokument/HDB338.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03294",
+      "designation": "Prop. 2025/26:294",
+      "title": "För barns rättigheter och trygghet – en ny lag om omhändertagande för vård av barn och unga",
+      "date": "2026-06-30",
+      "url": "https://data.riksdagen.se/dokument/HD03294.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU38",
+      "designation": "Bet. 2025/26:SoU38",
+      "title": "För barns rättigheter och trygghet – en ny lag om omhändertagande för vård av barn och unga",
+      "date": "2026-08-07",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU38.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU41",
+      "designation": "Bet. 2025/26:JuU41",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

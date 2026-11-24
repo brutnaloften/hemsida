@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["medborgarskap", "samhällskunskap", "medborgarskapstest", "medborgarskapslagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2026 fram ett förslag om skärpta krav för medborgarskap, bland annat krav på tillräckliga kunskaper om det svenska samhället. Riksdagen beslutade i april 2026 att godta förslaget. En lag om ändring i medborgarskapslagen trädde i kraft i juni 2026 och täcker en del av löftet, kunskapskravet. En annan ändringslag träder i kraft i oktober 2027.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,46 @@
       ],
       "outcome": "included",
       "note": "Avtalet kräver samhällskunskap och skärper kunskapskraven om samhälle och kultur för medborgarskap."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03175",
+      "designation": "Prop. 2025/26:175",
+      "title": "Skärpta krav för svenskt medborgarskap",
+      "date": "2026-03-12",
+      "url": "https://data.riksdagen.se/dokument/HD03175.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU28",
+      "designation": "Bet. 2025/26:SfU28",
+      "title": "Skärpta krav för svenskt medborgarskap",
+      "date": "2026-04-28",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU28.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-447",
+      "designation": "SFS 2026:447",
+      "title": "Lag (2026:447) om ändring i lagen (2001:82) om svenskt medborgarskap",
+      "date": "2026-06-06",
+      "url": "https://svenskforfattningssamling.se/doc/2026447.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-448",
+      "designation": "SFS 2026:448",
+      "title": "Lag (2026:448) om ändring i lagen (2001:82) om svenskt medborgarskap",
+      "date": "2027-10-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026448.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att provet specifikt prövar förståelse för hur det demokratiska samhället fungerar, och undantag i 13 c § kan göra att inte alla omfattas; det är oklart om kravet gäller som fullt villkor."
     }
   ]
 }

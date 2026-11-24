@@ -17,10 +17,48 @@
   "committee": "SoU",
   "keywords": ["fast läkarkontakt", "primärvård", "kontinuitet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "I september 2023 presenterade en promemoria ett förslag om att regionerna ska erbjuda digital kontakt i öppen vård, med fokus på fast vårdkontakt i primärvården. I maj 2024 gav regeringen en utredare i uppdrag att föreslå fast läkarkontakt inom specialiserad vård för patienter med utdragna vårdförlopp eller flera diagnoser. Riksdagen biföll i februari 2026 lagändringar om information om fast läkarkontakt och fast vårdkontakt i kommunal vård.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "ds",
+      "dok_id": "HBB427",
+      "designation": "Ds 2023:27",
+      "title": "Effektiv och behovsbaserad digital vård",
+      "date": "2023-09-13",
+      "url": "https://data.riksdagen.se/dokument/HBB427.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB150",
+      "designation": "Dir. 2024:50",
+      "title": "Bättre styrning för en tillgänglig och jämlik hälso- och sjukvård med god kontinuitet",
+      "date": "2024-05-23",
+      "url": "https://data.riksdagen.se/dokument/HCB150.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU23",
+      "designation": "Bet. 2025/26:SoU23",
+      "title": "Nästa steg för en god och nära vård",
+      "date": "2026-02-06",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU23.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

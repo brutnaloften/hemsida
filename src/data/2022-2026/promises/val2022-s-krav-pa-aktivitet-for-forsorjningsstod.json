@@ -17,10 +17,68 @@
   "committee": "SoU",
   "keywords": ["försörjningsstöd", "aktivitetskrav", "socialbidrag", "socialtjänst"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En promemoria i november 2024 föreslog ett obligatoriskt aktivitetskrav för vuxna som får försörjningsstöd. Regeringen lade i mars 2026 fram ett lagförslag och riksdagen biföll det i maj 2026. En lag om ändring i socialtjänstlagen trädde i kraft 1 juli 2026 och verkar täcka löftet, men det är obekräftat. En promemoria från september 2026 gäller tillsyn över barn och täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "ds",
+      "dok_id": "HCB429",
+      "designation": "Ds 2024:29",
+      "title": "Aktivitetskrav inom försörjningsstödet - för arbete, egenförsörjning och nationell likformighet",
+      "date": "2024-11-25",
+      "url": "https://data.riksdagen.se/dokument/HCB429.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03207",
+      "designation": "Prop. 2025/26:207",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03207.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU29",
+      "designation": "Bet. 2025/26:SoU29",
+      "title": "Aktivitetskrav för mottagare av försörjningsstöd",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU29.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-730",
+      "designation": "SFS 2026:730",
+      "title": "Lag (2026:730) om ändring i socialtjänstlagen (2025:400)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026730.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HEB419",
+      "designation": "Ds 2026:19",
+      "title": "Utökad tillsyn över barn vars föräldrar omfattas av aktivitetskrav enligt socialtjänstlagen",
+      "date": "2026-09-07",
+      "url": "https://data.riksdagen.se/dokument/HEB419.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

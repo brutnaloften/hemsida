@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["vindkraft", "ersättning", "närboende", "lokal nytta"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen biföll i maj 2026 ett betänkande om en lag som ger närboende del av vindkraftens intäkter, samt kommunal ersättning och lokal nytta. I juni 2026 fick en utredare i uppdrag att föreslå rätt till inlösen för ägare av bostäder intill vindkraft. I september 2026 fick en utredning i uppdrag att se över hur prospekteringsavgifter och mineralersättning kan fördelas till kommuner och markägare.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -31,6 +38,26 @@
       "date": "2026-05-28",
       "url": "https://data.riksdagen.se/dokument/HD01NU20.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB158",
+      "designation": "Dir. 2026:58",
+      "title": "Fastighetsägares rätt till inlösen av fastigheter med bostad intill en vindkraftsanläggning",
+      "date": "2026-06-18",
+      "url": "https://data.riksdagen.se/dokument/HEB158.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1120",
+      "designation": "Dir. 2026:120",
+      "title": "En effektiv och ändamålsenlig koncessionsprövning enligt minerallagen",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1120.html",
+      "relevance": "partial",
       "note": null
     }
   ]

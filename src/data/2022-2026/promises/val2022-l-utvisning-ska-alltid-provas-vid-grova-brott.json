@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["utvisning", "våldsbrott", "sexualbrott", "hedersbrott", "hatbrott"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i maj 2025 att åklagare alltid ska yrka utvisning och att domstolen ska utvisa när villkoren är uppfyllda. Regeringen lade fram ett förslag i april 2026 och riksdagen biföll det i juni 2026. Ändringen i utlänningslagen trädde i kraft 1 september 2026 och gäller brott med strängare straff än böter, alltså fler brott än de som löftet nämner.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,46 @@
       "promises": ["tido-fler-utvisningar-pa-grund-av-brott"],
       "outcome": "included",
       "note": "Avtalet vill att utvisningsfrågan alltid ska prövas när en utlänning åtalas för brott, vilket är bredare än grova vålds- och sexualbrott."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB354",
+      "designation": "SOU 2025:54",
+      "title": "Ett skärpt regelverk om utvisning på grund av brott",
+      "date": "2025-05-14",
+      "url": "https://data.riksdagen.se/dokument/HDB354.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03235",
+      "designation": "Prop. 2025/26:235",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HD03235.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU33",
+      "designation": "Bet. 2025/26:SfU33",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1259",
+      "designation": "SFS 2026:1259",
+      "title": "Lag (2026:1259) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261259.html",
+      "relevance": "partial",
+      "note": "Lagen anger inte särskilt de grova vålds- och sexualbrotten eller hat- och hedersbrotten. Åklagarens skyldighet att yrka på utvisning, som är det som säkerställer att utvisning alltid prövas, syns inte i den här lagen."
     }
   ]
 }

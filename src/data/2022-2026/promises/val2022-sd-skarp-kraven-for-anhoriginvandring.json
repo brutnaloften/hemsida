@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["anhöriginvandring", "försörjningskrav"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i oktober 2023 om vissa skärpta villkor för anhöriginvandring, bland annat högre åldersgräns och utvidgat försörjningskrav. Lagen trädde i kraft 1 december 2023. I augusti 2026 beslutade riksdagen om bland annat två års boendetid för anknytningspersonen och högre försörjningskrav, och den lagen trädde i kraft 1 oktober 2026. Lagarna täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -35,6 +42,16 @@
       "note": "Avtalet innehåller en proposition om skärpta villkor för anhöriginvandring och en utredning om skärpta försörjningskrav."
     },
     {
+      "kind": "prop",
+      "dok_id": "HB0318",
+      "designation": "Prop. 2023/24:18",
+      "title": "Vissa skärpta villkor för anhöriginvandring och begränsade möjligheter till uppehållstillstånd av humanitära skäl",
+      "date": "2023-09-26",
+      "url": "https://data.riksdagen.se/dokument/HB0318.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HB01SfU5",
       "designation": "Bet. 2023/24:SfU5",
@@ -45,12 +62,62 @@
       "note": null
     },
     {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-652",
+      "designation": "SFS 2023:652",
+      "title": "Lag (2023:652) om ändring i utlänningslagen (2005:716)",
+      "date": "2023-12-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023652.html",
+      "relevance": "partial",
+      "note": "Skärpningen gäller bara vissa fall; övriga krav för anhöriginvandring, som försörjningskrav och bostadskrav i allmänhet, skärps inte i denna lag."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB168",
+      "designation": "Dir. 2024:68",
+      "title": "Skärpta villkor för anhöriginvandring",
+      "date": "2024-07-11",
+      "url": "https://data.riksdagen.se/dokument/HCB168.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB395",
+      "designation": "SOU 2025:95",
+      "title": "Skärpta villkor för anhöriginvandring",
+      "date": "2025-09-05",
+      "url": "https://data.riksdagen.se/dokument/HDB395.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03301",
+      "designation": "Prop. 2025/26:301",
+      "title": "Skärpta villkor för anhöriginvandring",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HD03301.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01SfU37",
       "designation": "Bet. 2025/26:SfU37",
       "title": "Skärpta villkor för anhöriginvandring",
       "date": "2026-08-11",
       "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1686",
+      "designation": "SFS 2026:1686",
+      "title": "Lag (2026:1686) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-10-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261686.html",
       "relevance": "full",
       "note": null
     }

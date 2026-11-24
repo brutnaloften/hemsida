@@ -17,10 +17,68 @@
   "committee": "UbU",
   "keywords": ["skolbibliotek", "estetiska ämnen", "gymnasiet", "barns kultur"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i juli 2024 fram förslaget Stärkta skolbibliotek, och riksdagen beslutade i november 2024 om ändringar i skollagen och bibliotekslagen. Ändringarna trädde i kraft 1 juli 2025 och innebär att elever ska ha tillgång till bemannade skolbibliotek, där huvudmännen ska sträva efter personal med bibliotekariekompetens. Det täcker en del av löftet: bemanningen av skolbiblioteken.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HB03164",
+      "designation": "Prop. 2023/24:164",
+      "title": "Stärkta skolbibliotek",
+      "date": "2024-07-30",
+      "url": "https://data.riksdagen.se/dokument/HB03164.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01UbU4",
+      "designation": "Bet. 2024/25:UbU4",
+      "title": "Ändring av ikraftträdande av bestämmelser i skollagen om det nationella professionsprogrammet",
+      "date": "2024-11-14",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU4.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01UbU3",
+      "designation": "Bet. 2024/25:UbU3",
+      "title": "Stärkta skolbibliotek",
+      "date": "2024-11-15",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1072",
+      "designation": "SFS 2024:1072",
+      "title": "Lag (2024:1072) om ändring i skollagen (2010:800)",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241072.html",
+      "relevance": "partial",
+      "note": "Lagen ställer inget absolut krav på utbildad personal på alla skolbibliotek och innehåller inget om estetiska ämnen i alla gymnasieprogram eller en bredare satsning på barns kultur i skolan."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1075",
+      "designation": "SFS 2024:1075",
+      "title": "Lag (2024:1075) om ändring i skollagen (2010:800)",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241075.html",
+      "relevance": "partial",
+      "note": "Estetiska ämnen i alla gymnasieprogram och andra satsningar på barns kultur i skolan saknas, och kravet på utbildad personal är bara en strävan, inte en skyldighet."
+    }
+  ]
 }

@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["permission", "villkorlig frigivning", "gängkriminella", "kriminalvård"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: Dir. 2026:67 (Riktade insatser mot kriminella organisationer - En särlagstiftning för gängkriminella). Dokumentet behandlar bara en del av löftet. Riksdagen har även fattat beslut i Bet. 2025/26:JuU38 (Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott), men ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,26 @@
       "date": "2022-10-14",
       "promises": ["tido-inskrank-permission", "tido-villkorlig-frigivning-undantag"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU38",
+      "designation": "Bet. 2025/26:JuU38",
+      "title": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
+      "date": "2026-05-27",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU38.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB167",
+      "designation": "Dir. 2026:67",
+      "title": "Riktade insatser mot kriminella organisationer - En särlagstiftning för gängkriminella",
+      "date": "2026-07-02",
+      "url": "https://data.riksdagen.se/dokument/HEB167.html",
+      "relevance": "partial",
       "note": null
     }
   ]

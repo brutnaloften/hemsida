@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["energipolitiskt mål", "fossilfritt", "förnybart", "energi"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Ett dokument i riksdagens register visar att åtgärden pågår: SOU 2026:33 (Vägen mot utfasning). Dokumentet behandlar bara en del av löftet. Ingen SFS-författning är kopplad till löftet, så det bedöms inte som uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": ["tido-energipolitiskt-mal-fossilfritt"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB333",
+      "designation": "SOU 2026:33",
+      "title": "Vägen mot utfasning",
+      "date": "2026-05-28",
+      "url": "https://data.riksdagen.se/dokument/HEB333.html",
+      "relevance": "partial",
       "note": null
     }
   ]

@@ -17,10 +17,17 @@
   "committee": "CU",
   "keywords": ["byggregler", "boverkets byggregler", "plan- och bygglagen", "byggande"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i maj 2025 om lättnader i tillgänglighetskraven för studentbostäder. I april 2026 beslutade den om ändringar som effektiviserar byggprocessen, och i maj 2026 om undantag från plan- och bygglagen för kriminalvårdsanstalter och häkten. I juli 2026 gav regeringen en utredare i uppdrag att föreslå ändringar, främst om buller, för bostadsbyggande nära militära riksintresseområden.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -58,6 +65,16 @@
       "title": "En snabbare utbyggnad av kriminalvårdsanstalter och häkten",
       "date": "2026-05-06",
       "url": "https://data.riksdagen.se/dokument/HD01CU25.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB174",
+      "designation": "Dir. 2026:74",
+      "title": "Öka möjligheterna till bostadsbyggande i anslutning till områden som är av riksintresse för totalförsvarets militära del",
+      "date": "2026-07-16",
+      "url": "https://data.riksdagen.se/dokument/HEB174.html",
       "relevance": "partial",
       "note": null
     }

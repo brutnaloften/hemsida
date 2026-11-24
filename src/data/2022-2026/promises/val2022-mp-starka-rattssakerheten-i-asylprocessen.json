@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["rättssäkerhet", "asylprocessen", "hbtqi-flyktingar", "sårbara grupper"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i februari 2023 att lägga en skrivelse om offentliga biträden i migrationsärenden till handlingarna. I november 2025 beslutade riksdagen om skärpta krav på offentliga biträden och tolkar i migrationsärenden. Samma månad lämnade en utredning förslag om stärkt rättsligt stöd. I augusti 2026 gav regeringen en samordnare i uppdrag att stärka rättssäkerheten i ärenden om religiös konversion. Dokumenten gäller rättssäkerhet i asylprocessen.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "title": "Riksrevisionens rapport om offentliga biträden i migrationsärenden",
       "date": "2023-02-23",
       "url": "https://data.riksdagen.se/dokument/HA01SfU12.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU6",
+      "designation": "Bet. 2025/26:JuU6",
+      "title": "Skärpta krav för offentliga biträden och höjda kompetenskrav för tolkar i migrationsärenden",
+      "date": "2025-11-20",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU6.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3111",
+      "designation": "SOU 2025:111",
+      "title": "Rättssäkerhetens pris",
+      "date": "2025-11-25",
+      "url": "https://data.riksdagen.se/dokument/HDB3111.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1100",
+      "designation": "Dir. 2026:100",
+      "title": "Nationell samordnare för frågor om religiös konversion i asylprocessen",
+      "date": "2026-08-27",
+      "url": "https://data.riksdagen.se/dokument/HEB1100.html",
       "relevance": "partial",
       "note": null
     }

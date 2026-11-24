@@ -17,10 +17,28 @@
   "committee": "CU",
   "keywords": ["vårdnad", "gemensam vårdnad", "våldsutövare", "föräldrabalken"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juli 2025 en utredning i uppdrag att stärka barnets perspektiv i vårdnadstvister, genom juridiskt ombud, ställning och stöd för barnet. Det gäller delen om att stärka barnperspektivet. Dokumenten visar ett utredningsuppdrag, inget beslut om ändrade regler.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB172",
+      "designation": "Dir. 2025:72",
+      "title": "Barnets rätt att komma till tals i familjerättsliga frågor",
+      "date": "2025-07-03",
+      "url": "https://data.riksdagen.se/dokument/HDB172.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["kompetensutvisning", "arbetskraftsinvandring", "arbetstillstånd", "spetskompetens"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i november 2024 att genomföra EU:s blåkortsdirektiv, med lägre lönekrav och bredare krets för högkvalificerade arbetstagare. I juni 2025 lades ett förslag i en promemoria om att arbetstillstånd inte längre ska vara knutna till en arbetsgivare och att tiden efter uppsägning förlängs till upp till sex månader. Dokumenten visar förslag, inget beslut, i den senare delen.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,26 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SfU6",
+      "designation": "Bet. 2024/25:SfU6",
+      "title": "Genomförande av det nya blåkortsdirektivet",
+      "date": "2024-11-21",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU6.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HDB418",
+      "designation": "Ds 2025:18",
+      "title": "Nya regler om ansökningsförfarandet för vissa uppehålls- och arbetstillstånd",
+      "date": "2025-06-10",
+      "url": "https://data.riksdagen.se/dokument/HDB418.html",
+      "relevance": "partial",
       "note": null
     }
   ]

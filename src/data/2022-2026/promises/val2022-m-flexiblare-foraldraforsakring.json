@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["föräldraförsäkring", "dubbeldagar", "flexibilitet", "jämställdhet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i december 2023 om budgeten för familjeområdet, med fler dubbeldagar (från 30 till 60) och möjlighet att överlåta upp till 90 föräldrapenningdagar. I december 2025 beslutade riksdagen om en utvidgad tillfällig föräldrapenning. En statlig utredning från juni 2026 rekommenderar en översyn av reglerna, men det är ett förslag om utredning.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -39,6 +46,26 @@
       "date": "2023-12-07",
       "url": "https://data.riksdagen.se/dokument/HB01SfU3.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU3",
+      "designation": "Bet. 2025/26:SfU3",
+      "title": "Utgiftsområde 12 Ekonomisk trygghet för familjer och barn",
+      "date": "2025-12-03",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB341",
+      "designation": "SOU 2026:41",
+      "title": "Jämställdhet i en föränderlig tid - nuläge och vägar framåt, del 1",
+      "date": "2026-06-17",
+      "url": "https://data.riksdagen.se/dokument/HEB341.html",
+      "relevance": "partial",
       "note": null
     }
   ]

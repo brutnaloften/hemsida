@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["kontaktförbud", "brottsoffer"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2025 fram ett förslag om fler kontaktförbud, med bland annat nya grunder, skydd för vittnen och större områden. Riksdagen beslutade i maj 2025 i enlighet med förslaget. Ändringar i lagen om kontaktförbud och två närliggande lagar trädde i kraft 1 juli 2025. Lagen verkar täcka löftet, men det är obekräftat.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "note": "Avtalet anger att det geografiska området för kontaktförbud utökas kraftigt vid särskilt allvarlig hotbild och att möjlighet till husrannsakan för att delge beslut om kontaktförbud ska införas."
     },
     {
+      "kind": "prop",
+      "dok_id": "HC03123",
+      "designation": "Prop. 2024/25:123",
+      "title": "Kontaktförbud – ett utökat skydd för utsatta personer",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03123.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HC01JuU31",
       "designation": "Bet. 2024/25:JuU31",
@@ -39,6 +56,46 @@
       "date": "2025-05-14",
       "url": "https://data.riksdagen.se/dokument/HC01JuU31.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-561",
+      "designation": "SFS 2025:561",
+      "title": "Lag (2025:561) om ändring i lagen (1988:688) om kontaktförbud",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025561.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-562",
+      "designation": "SFS 2025:562",
+      "title": "Lag (2025:562) om ändring i lagen (1999:997) om särskild företrädare för barn",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025562.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte själva utvidgningen av möjligheterna till kontaktförbud, som ny grund, presumtion, större områden, skydd för målsägande och vittnen och husrannsakan, vilka ligger i lagen om kontaktförbud och andra lagar."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-564",
+      "designation": "SFS 2025:564",
+      "title": "Lag (2025:564) om ändring i lagen (2015:642) om europeisk skyddsorder",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025564.html",
+      "relevance": "partial",
+      "note": "Själva förbättringen av möjligheterna till kontaktförbud i Sverige (nya grunder, presumtion, förstahandsåtgärd) genomförs i lagen om kontaktförbud och andra lagar, inte här."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1102",
+      "designation": "Dir. 2026:102",
+      "title": "Barnfrid - förstärkta åtgärder mot sexuella kränkningar av barn och barnpornografibrott",
+      "date": "2026-08-27",
+      "url": "https://data.riksdagen.se/dokument/HEB1102.html",
+      "relevance": "partial",
       "note": null
     }
   ]

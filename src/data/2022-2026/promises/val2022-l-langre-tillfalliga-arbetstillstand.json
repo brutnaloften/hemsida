@@ -22,10 +22,17 @@
     "utlänningslagen"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i december 2025 längre tillståndstider för EU-blåkort och säsongsarbete. Riksdagen beslutade i mars 2026 att den sammanlagda tiden för säsongsarbete förlängs från sex till nio månader och att blåkort ges för längre tid. En ändring i utlänningslagen trädde i kraft 1 juni 2026. Den täcker en del av löftet: längre tillståndstid för vissa tillfälliga arbetstillstånd.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -37,6 +44,16 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HD0387",
+      "designation": "Prop. 2025/26:87",
+      "title": "Nya regler för arbetskraftsinvandring",
+      "date": "2025-12-16",
+      "url": "https://data.riksdagen.se/dokument/HD0387.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01SfU12",
       "designation": "Bet. 2025/26:SfU12",
@@ -45,6 +62,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01SfU12.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-295",
+      "designation": "SFS 2026:295",
+      "title": "Lag (2026:295) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-06-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026295.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att tillståndstiden förlängs för andra tillfälliga arbetstillstånd än EU-blåkort och säsongsarbete."
     }
   ]
 }

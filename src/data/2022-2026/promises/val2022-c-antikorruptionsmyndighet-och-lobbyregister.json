@@ -17,10 +17,38 @@
   "committee": "KU",
   "keywords": ["antikorruption", "lobbyregister", "transparens", "korruption"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen utvidgade i juni 2025 uppdraget till en utredning om straffrättsliga åtgärder mot korruption och tjänstefel. Utredningen lämnade i juli 2025 sitt betänkande med förslag om en ny korruptionsbrottslag, högre straffskalor för mutbrott och ett bredare handel med inflytande. Dokumenten gäller bara skärpta regler mot korruption och visar förslag, inget beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HDB157",
+      "designation": "Dir. 2025:57",
+      "title": "Tilläggsdirektiv till Utredningen om straffrättsliga åtgärder mot korruption och tjänstefel (Ju 2024:02)",
+      "date": "2025-06-05",
+      "url": "https://data.riksdagen.se/dokument/HDB157.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB387",
+      "designation": "SOU 2025:87",
+      "title": "Straffrättsliga åtgärder mot korruption och tjänstefel",
+      "date": "2025-07-28",
+      "url": "https://data.riksdagen.se/dokument/HDB387.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

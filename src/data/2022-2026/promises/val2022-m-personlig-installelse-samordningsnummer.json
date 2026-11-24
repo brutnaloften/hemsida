@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["samordningsnummer", "personlig inställelse", "folkbokföring", "bidragsfusk"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i november 2022 om en ny lag om samordningsnummer med biometriska identitetskontroller. Nummer som inte förnyas inom fem år blir vilande. I maj 2026 föreslog regeringen att fingeravtryck och ansiktsbilder ska registreras för personer med samordningsnummer. Riksdagen beslutade i juni 2026 om biometrisk jämförelse mellan Skatteverket och Migrationsverket. Dokumenten gäller skärpt identitetskontroll, en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,26 @@
       "title": "Stärkt system för samordningsnummer",
       "date": "2022-11-24",
       "url": "https://data.riksdagen.se/dokument/HA01SkU4.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03261",
+      "designation": "Prop. 2025/26:261",
+      "title": "Utökade befogenheter för Skatteverket inom folkbokföringsverksamheten",
+      "date": "2026-05-07",
+      "url": "https://data.riksdagen.se/dokument/HD03261.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SkU30",
+      "designation": "Bet. 2025/26:SkU30",
+      "title": "Utökade befogenheter för Skatteverket inom folkbokföringsverksamheten",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU30.html",
       "relevance": "partial",
       "note": null
     }

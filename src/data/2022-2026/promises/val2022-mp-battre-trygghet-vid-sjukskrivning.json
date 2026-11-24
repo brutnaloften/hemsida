@@ -17,10 +17,48 @@
   "committee": "SfU",
   "keywords": ["sjukförsäkring", "sjukskrivning", "myndighetssamverkan"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i februari 2023 utredningen om sjukförsäkringen tilläggsdirektiv om att kunna föreslå lagändringar vid onödigt långa sjukskrivningar och om inkomsttrygghet. I augusti 2023 föreslog en utredning tydligare roller och närmare samarbete mellan Försäkringskassan och vården. En utvärdering i april 2024 motverkar löftet genom att föreslå att reformerna från 2021–22 backas och att sjukpenning tidsbegränsas.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB120",
+      "designation": "Dir. 2023:20",
+      "title": "Tilläggsdirektiv till utredningen Sjukförsäkringen i förändring - en utvärdering (S 2022:07)",
+      "date": "2023-02-09",
+      "url": "https://data.riksdagen.se/dokument/HBB120.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB348",
+      "designation": "SOU 2023:48",
+      "title": "Rätt förutsättningar för sjukskrivning",
+      "date": "2023-08-31",
+      "url": "https://data.riksdagen.se/dokument/HBB348.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB326",
+      "designation": "SOU 2024:26",
+      "title": "En utvärdering av förändringar i sjukförsäkringens regelverk under 2021 och 2022",
+      "date": "2024-04-02",
+      "url": "https://data.riksdagen.se/dokument/HCB326.html",
+      "relevance": "contradicts",
+      "note": null
+    }
+  ]
 }

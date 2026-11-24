@@ -17,10 +17,38 @@
   "committee": "SoU",
   "keywords": ["äldreomsorgslag", "äldreomsorg", "sjuksköterskor", "likvärdig omsorg"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i april 2026 en utredare i uppdrag att se över obligatorisk ledarskapsutbildning och möjliga krav på medicinsk kompetens för chefer i äldreomsorgen. Riksdagen beslutade i april 2026 om ändringar i socialtjänstlagen, bland annat en fast omsorgskontakt i särskilda boenden. Dokumenten gäller bara delar av löftet: chefernas ledarskap och ändringar i den befintliga lagen.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HEB126",
+      "designation": "Dir. 2026:26",
+      "title": "Stärkt ledarskap inom äldreomsorgen",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HEB126.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SoU25",
+      "designation": "Bet. 2025/26:SoU25",
+      "title": "Stärkta insatser för äldre och för de som vårdar eller stöder närstående",
+      "date": "2026-04-24",
+      "url": "https://data.riksdagen.se/dokument/HD01SoU25.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

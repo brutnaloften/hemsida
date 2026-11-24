@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["vårdköer", "vårdgaranti", "tillgänglighet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i januari 2026 en samordnare i uppdrag att bidra till kortare vårdköer och stärka statens styrning av tillgången till vård. I augusti 2026 fick en utredning i uppdrag att föreslå åtgärder, bland annat ekonomiska konsekvenser för regioner när vårdgarantins tidsgränser inte hålls. Dokumenten gäller en skarpare vårdgaranti och visar uppdrag, inget beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-nationell-vardformedling"],
       "outcome": "weakened",
       "note": "Avtalet anger en nationell vårdförmedling i statlig regi där ledig kapacitet redovisas. Någon vårdgaranti nämns inte."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB13",
+      "designation": "Dir. 2026:3",
+      "title": "Samordnare för att korta vårdköerna i hälso- och sjukvården",
+      "date": "2026-01-08",
+      "url": "https://data.riksdagen.se/dokument/HEB13.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB192",
+      "designation": "Dir. 2026:92",
+      "title": "Nationella principer för utbud av hälso- och sjukvård i hela landet",
+      "date": "2026-08-13",
+      "url": "https://data.riksdagen.se/dokument/HEB192.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

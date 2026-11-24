@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["arbetsgivaravgift", "sjuklön", "småföretag"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i mars 2024 och riksdagen beslutade i maj 2024 att ersättningen för höga sjuklönekostnader tas bort, vilket motverkar löftet. En lag om särskild beräkning av avgifter för enmansföretag trädde i kraft 1 januari 2025. En lag om tillfälligt sänkta arbetsgivaravgifter för unga mellan 18 och 22 år trädde i kraft 1 april 2026. Lagarna täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,86 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0383",
+      "designation": "Prop. 2023/24:83",
+      "title": "Ersättning för höga sjuklönekostnader upphör",
+      "date": "2024-03-12",
+      "url": "https://data.riksdagen.se/dokument/HB0383.html",
+      "relevance": "contradicts",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01SfU16",
+      "designation": "Bet. 2023/24:SfU16",
+      "title": "Ersättning för höga sjuklönekostnader upphör",
+      "date": "2024-05-22",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU16.html",
+      "relevance": "contradicts",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0325",
+      "designation": "Prop. 2024/25:25",
+      "title": "Utvidgat växa-stöd – nedsättning av arbetsgivaravgifterna för upp till två anställda",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC0325.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01FiU1",
+      "designation": "Bet. 2024/25:FiU1",
+      "title": "Statens budget 2025 – Rambeslutet",
+      "date": "2024-11-22",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1158",
+      "designation": "SFS 2024:1158",
+      "title": "Lag (2024:1158) om ändring i lagen (2016:1053) om särskild beräkning av vissa avgifter för enmansföretag",
+      "date": "2025-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241158.html",
+      "relevance": "partial",
+      "note": "Lagen sänker inte sjuklönekostnaderna och sänker inte arbetsgivaravgiften för småföretag generellt, utan bara för växa-företag som anställer upp till två personer."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0366",
+      "designation": "Prop. 2025/26:66",
+      "title": "Tillfälligt nedsatta arbetsgivaravgifter för 19–23-åringar",
+      "date": "2025-11-27",
+      "url": "https://data.riksdagen.se/dokument/HD0366.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU11",
+      "designation": "Bet. 2025/26:SfU11",
+      "title": "Tillfälligt nedsatta arbetsgivaravgifter för 19–23-åringar",
+      "date": "2026-02-18",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU11.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-100",
+      "designation": "SFS 2026:100",
+      "title": "Lag (2026:100) om särskild beräkning av arbetsgivaravgifter och allmän löneavgift för personer som vid årets ingång fyllt 18 men inte 23 år",
+      "date": "2026-04-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026100.html",
+      "relevance": "partial",
+      "note": "Lagen riktar sig till unga anställda, inte småföretag som sådana, och sänker inte sjuklönekostnaderna; nedsättningen är dessutom tillfällig (till september 2027)."
     }
   ]
 }

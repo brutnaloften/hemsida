@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["straffrabatt", "villkorlig frigivning", "strafftid", "mängdrabatt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i november 2025 att villkorlig frigivning sker först efter tre fjärdedelar av straffet i stället för två tredjedelar, med start för straff på sex år eller mer. Ändringen i brottsbalken trädde i kraft 1 januari 2026 och täcker en del av löftet. I augusti 2026 beslutade riksdagen även att slopa ungdomsreduktionen för 18–20-åringar och om ett nytt påföljdssystem.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -37,6 +44,16 @@
       "note": "Avtalet avskaffar dagens mängdrabatt, tar bort straffreduktionen för personer över 18 år och gör villkorlig frigivning till undantag. Straffrabatten för personer under 18 år ska utredas."
     },
     {
+      "kind": "prop",
+      "dok_id": "HD0334",
+      "designation": "Prop. 2025/26:34",
+      "title": "Skärpta regler för villkorlig frigivning",
+      "date": "2025-10-16",
+      "url": "https://data.riksdagen.se/dokument/HD0334.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01JuU8",
       "designation": "Bet. 2025/26:JuU8",
@@ -47,12 +64,32 @@
       "note": null
     },
     {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-1414",
+      "designation": "SFS 2025:1414",
+      "title": "Lag (2025:1414) om ändring i brottsbalken",
+      "date": "2026-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20251414.html",
+      "relevance": "partial",
+      "note": "Hela strafftiden ska avtjänas före villkorlig frigivning, men det blir kvar villkorlig frigivning efter två tredjedelar eller tre fjärdedelar. Texten visar inte att straffrabatterna för flerfaldig brottslighet och för rå gärning som ung tas bort."
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01JuU41",
       "designation": "Bet. 2025/26:JuU41",
       "title": "Skärpta regler för unga lagöverträdare",
       "date": "2026-08-12",
       "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU48",
+      "designation": "Bet. 2025/26:JuU48",
+      "title": "Ett nytt straffrättsligt påföljdssystem",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
       "relevance": "partial",
       "note": null
     }

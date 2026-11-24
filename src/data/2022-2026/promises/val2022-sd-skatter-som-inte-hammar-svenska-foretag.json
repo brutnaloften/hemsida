@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["företagsskatt", "konkurrenskraft", "skattenivå"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En utredning föreslog i december 2025 fondandelsbolag och särskilda skatteregler för att stärka fondmarknadens konkurrenskraft. Riksdagen beslutade i februari 2026 om enklare noteringsregler och i juni 2026 om förbättrad tonnagebeskattning för sjöfarten. Ett direktiv från september 2026 gäller industrins konkurrenskraft, utan skatteförslag. Dokumenten gäller delar av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,12 +39,42 @@
       "note": "Avtalet har konkurrenskraftiga bolagsskatter och kapitalskatter."
     },
     {
+      "kind": "sou",
+      "dok_id": "HDB3117",
+      "designation": "SOU 2025:117",
+      "title": "Fondandelsbolag - för en mer konkurrenskraftig fondmarknad",
+      "date": "2025-12-10",
+      "url": "https://data.riksdagen.se/dokument/HDB3117.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01FiU29",
       "designation": "Bet. 2025/26:FiU29",
       "title": "Nya regler för att underlätta noteringar av värdepapper",
       "date": "2026-02-05",
       "url": "https://data.riksdagen.se/dokument/HD01FiU29.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SkU29",
+      "designation": "Bet. 2025/26:SkU29",
+      "title": "Förbättrade regler för svensk tonnagebeskattning",
+      "date": "2026-06-04",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU29.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1112",
+      "designation": "Dir. 2026:112",
+      "title": "Främjande av industrins klimatomställning och konkurrenskraft",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1112.html",
       "relevance": "partial",
       "note": null
     }

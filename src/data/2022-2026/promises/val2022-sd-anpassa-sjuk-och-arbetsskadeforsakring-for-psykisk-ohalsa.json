@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["arbetsskadeförsäkring", "psykisk ohälsa", "sjukförsäkring"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning i september 2023 föreslog att undantagen för vissa psykiska och psykosociala skador i arbetsskadeförsäkringen tas bort och att kraven för livränta lättas. Det gäller arbetsskadedelen av löftet. En utredning i april 2024 motverkar löftet genom att föreslå att lättnader i sjukförsäkringens regler från 2021–2022 återställs och att omställningskraven skärps.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,36 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB353",
+      "designation": "SOU 2023:53",
+      "title": "En ändamålsenlig arbetsskadeförsäkring - för bättre ekonomisk trygghet, kunskap och rättssäkerhet",
+      "date": "2023-09-14",
+      "url": "https://data.riksdagen.se/dokument/HBB353.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB353d2",
+      "designation": "SOU 2023:53",
+      "title": "En ändamålsenlig arbetsskadeförsäkring - för bättre ekonomisk trygghet, kunskap och rättssäkerhet, del 2",
+      "date": "2023-09-14",
+      "url": "https://data.riksdagen.se/dokument/HBB353d2.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB326",
+      "designation": "SOU 2024:26",
+      "title": "En utvärdering av förändringar i sjukförsäkringens regelverk under 2021 och 2022",
+      "date": "2024-04-02",
+      "url": "https://data.riksdagen.se/dokument/HCB326.html",
+      "relevance": "contradicts",
       "note": null
     }
   ]

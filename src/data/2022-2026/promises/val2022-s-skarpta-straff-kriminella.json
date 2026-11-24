@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["straff", "gängbrottslighet", "straffskärpning", "kriminalitet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i maj 2023 och juni 2026 om skärpta straff för brott i kriminella nätverk, bland annat dubbla straff och strängare straffskalor. I juni och augusti 2026 beslutade riksdagen även om strängare utvisningsregler, regler för unga lagöverträdare och ett nytt påföljdssystem, vilka gäller delar av löftet. I juli 2026 gavs ett utredningsuppdrag om straffskalor.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
     {
@@ -41,6 +48,56 @@
       "date": "2026-06-11",
       "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU33",
+      "designation": "Bet. 2025/26:SfU33",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU33.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03297",
+      "designation": "Prop. 2025/26:297",
+      "title": "Ett nytt straffrättsligt påföljdssystem",
+      "date": "2026-06-30",
+      "url": "https://data.riksdagen.se/dokument/HD03297.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB185",
+      "designation": "Dir. 2026:85",
+      "title": "Ett stärkt straffrättsligt skydd mot gärningar som skadar viktiga samhällsfunktioner och det demokratiska samtalet",
+      "date": "2026-07-30",
+      "url": "https://data.riksdagen.se/dokument/HEB185.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU41",
+      "designation": "Bet. 2025/26:JuU41",
+      "title": "Skärpta regler för unga lagöverträdare",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU41.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU48",
+      "designation": "Bet. 2025/26:JuU48",
+      "title": "Ett nytt straffrättsligt påföljdssystem",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
+      "relevance": "partial",
       "note": null
     }
   ]

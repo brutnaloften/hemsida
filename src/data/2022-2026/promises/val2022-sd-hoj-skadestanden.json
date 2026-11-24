@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["skadestånd", "brottsskadeersättning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i juni 2023 en utredare i uppdrag att överväga strängare vårdnadshavaransvar för skador som barn orsakar genom brott, bättre ersättning till poliser och andra samt tidigare utbetalning av brottsskadeersättning. Riksdagen biföll i maj 2026 ändringar i skadeståndslagen med ett strängare föräldraansvar för barns brott. Dokumenten gäller bara en del av löftet: skadestånd för barns brott.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB194",
+      "designation": "Dir. 2023:94",
+      "title": "Ersättningsregler med brottsoffret i fokus",
+      "date": "2023-06-22",
+      "url": "https://data.riksdagen.se/dokument/HBB194.html",
+      "relevance": "partial",
       "note": null
     },
     {

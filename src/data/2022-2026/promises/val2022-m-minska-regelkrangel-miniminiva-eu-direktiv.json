@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["överimplementering", "EU-direktiv", "miniminivå", "regelkrångel", "byråkrati"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i december 2025 en utredning i uppdrag att föreslå genomförande av EU:s direktiv om tillbörlig aktsamhet på miniminivå, och utredningens förslag kom i september 2026. Riksdagen beslutade i juni och augusti 2026 om migrationsregler som inte ska vara mer generösa än EU kräver. Ett direktiv från september 2026 gäller företagsråd. Dokumenten visar förslag och uppdrag på företagsområdet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,56 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB1109",
+      "designation": "Dir. 2025:109",
+      "title": "Tilläggsdirektiv till Utredningen om genomförande av EU:s direktiv om tillbörlig aktsamhet för företag i fråga om hållbarhet (KN 2024:09)",
+      "date": "2025-12-04",
+      "url": "https://data.riksdagen.se/dokument/HDB1109.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU30",
+      "designation": "Bet. 2025/26:SfU30",
+      "title": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "date": "2026-06-04",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU30.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU37",
+      "designation": "Bet. 2025/26:SfU37",
+      "title": "Skärpta villkor för anhöriginvandring",
+      "date": "2026-08-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1111",
+      "designation": "Dir. 2026:111",
+      "title": "Genomförande av EU-direktivet om ändring av direktivet om europeiska företagsråd",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1111.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB356",
+      "designation": "SOU 2026:56",
+      "title": "En lag om företagsansvar. Genomförande av EU-direktivet om tillbörlig aktsamhet för företag i fråga om hållbarhet",
+      "date": "2026-09-17",
+      "url": "https://data.riksdagen.se/dokument/HEB356.html",
+      "relevance": "full",
       "note": null
     }
   ]

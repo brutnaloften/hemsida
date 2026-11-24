@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["kärnkraft", "reaktorer", "lokalisering", "förbud"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i november 2023 att ta bort förbudet i miljöbalken mot reaktorer på andra platser än de befintliga kärnkraftverken. I juni 2026 beslutade riksdagen även att ta bort förbuden mot kärnkraft i flera kustområden. En statlig utredning från juni 2026 gäller regler om beredskapszoner och skadeståndsansvar för nya reaktorer, alltså en stödjande del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -49,6 +56,16 @@
       "date": "2026-06-05",
       "url": "https://data.riksdagen.se/dokument/HD01NU24.html",
       "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB340",
+      "designation": "SOU 2026:40",
+      "title": "Ny kärnkraft i Sverige– moderna regler för beredskap och skadeståndsansvar",
+      "date": "2026-06-18",
+      "url": "https://data.riksdagen.se/dokument/HEB340.html",
+      "relevance": "partial",
       "note": null
     }
   ]

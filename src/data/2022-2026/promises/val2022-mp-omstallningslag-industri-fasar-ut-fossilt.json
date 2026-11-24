@@ -17,10 +17,28 @@
   "committee": "NU",
   "keywords": ["omställningslag", "industri", "fossilgas", "2030"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i september 2026 att tillsätta en utredning om hur industrins klimatomställning och konkurrenskraft kan främjas. Uppdraget gäller bland annat finansiering, kontrakt för koldioxidavskiljning och fossilfria råvaror. Dokumentet täcker bara en del av löftet, nämligen industrins omställning.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HEB1112",
+      "designation": "Dir. 2026:112",
+      "title": "Främjande av industrins klimatomställning och konkurrenskraft",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1112.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["akademisk frihet", "grundlag", "regeringsformen", "forskningsfrihet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning lade i september 2026 fram förslag om att stärka skyddet för akademisk frihet i högskolelagen och i förordningar. Utredningen föreslår också att en parlamentarisk utredning tillsätts för att undersöka hur friheten kan skrivas in i grundlagen. Dokumentet gäller alltså ett förberedande steg mot grundlagsskyddet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB357",
+      "designation": "SOU 2026:57",
+      "title": "Akademisk frihet",
+      "date": "2026-09-11",
+      "url": "https://data.riksdagen.se/dokument/HEB357.html",
+      "relevance": "partial",
       "note": null
     }
   ]

@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["journalister", "straffrättsligt skydd", "yttrandefrihet", "hot och våld"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i maj 2025 att stärka skyddet i brottsbalken för offentliganställda mot våld, hot och trakasserier. Det gäller offentliganställda i allmänhet, alltså en del av löftet. I juli 2026 gav regeringen en utredare i uppdrag att se över skyddet för förtroendevalda och det demokratiska samtalet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,16 @@
       "title": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
       "date": "2025-05-14",
       "url": "https://data.riksdagen.se/dokument/HC01JuU29.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB185",
+      "designation": "Dir. 2026:85",
+      "title": "Ett stärkt straffrättsligt skydd mot gärningar som skadar viktiga samhällsfunktioner och det demokratiska samtalet",
+      "date": "2026-07-30",
+      "url": "https://data.riksdagen.se/dokument/HEB185.html",
       "relevance": "partial",
       "note": null
     }

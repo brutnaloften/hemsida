@@ -17,10 +17,28 @@
   "committee": "MJU",
   "keywords": ["utsläppsbudget", "klimatmål", "klimatpolitiska ramverket"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i november 2025 ett uppdaterat etappmål till 2030 med en enda målbana och redovisningsregler för kompletterande åtgärder. Utredningen gäller en del av löftet, en nationell utsläppsbana. Den föreslår också att ett budgetliknande mål för tiden efter 2030 ses över. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB3107",
+      "designation": "SOU 2025:107",
+      "title": "Sveriges nationella klimatmål - uppdaterat etappmål till 2030",
+      "date": "2025-11-03",
+      "url": "https://data.riksdagen.se/dokument/HDB3107.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

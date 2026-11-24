@@ -17,10 +17,88 @@
   "committee": "UbU",
   "keywords": ["vinstutdelning", "kvalitetskrav", "betyg", "rättssäkerhet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "En utredning föreslog i februari 2025 ett mer likvärdigt och rättssäkert betygssystem, och regeringen lade i mars 2026 fram en proposition. Riksdagen beslutade i juni 2026 om ändringar i skollagen. Tre lagar träder i kraft 2028-07-02, 2030-07-01 och 2031-01-01. De innebär bland annat en tiogradig betygsskala och centralt rättade nationella slutprov, vilket täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HDB318",
+      "designation": "SOU 2025:18",
+      "title": "Ett likvärdigt betygssystem",
+      "date": "2025-02-19",
+      "url": "https://data.riksdagen.se/dokument/HDB318.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB318d2",
+      "designation": "SOU 2025:18",
+      "title": "Ett likvärdigt betygssystem, del 2",
+      "date": "2025-02-19",
+      "url": "https://data.riksdagen.se/dokument/HDB318d2.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03197",
+      "designation": "Prop. 2025/26:197",
+      "title": "Ett likvärdigt betygssystem",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03197.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU26",
+      "designation": "Bet. 2025/26:UbU26",
+      "title": "Ett likvärdigt betygssystem",
+      "date": "2026-06-03",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU26.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1243",
+      "designation": "SFS 2026:1243",
+      "title": "Lag (2026:1243) om ändring i skollagen (2010:800)",
+      "date": "2028-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/20261243.html",
+      "relevance": "partial",
+      "note": "Kvalitetskrav för vinstutdelning i skolor finns inte i den text som visas."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1244",
+      "designation": "SFS 2026:1244",
+      "title": "Lag (2026:1244) om ändring i skollagen (2010:800)",
+      "date": "2030-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261244.html",
+      "relevance": "partial",
+      "note": "Kvalitetskraven för vinstutdelning i skolor genomförs inte alls, och betygssystemets rättssäkerhet täcks bara indirekt."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1245",
+      "designation": "SFS 2026:1245",
+      "title": "Lag (2026:1245) om ändring i skollagen (2010:800)",
+      "date": "2031-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261245.html",
+      "relevance": "partial",
+      "note": "Kvalitetskrav för vinstutdelning i skolor genomförs inte alls, och betygsreformen gäller här bara kommunal vuxenutbildning, inte övriga skolformer."
+    }
+  ]
 }

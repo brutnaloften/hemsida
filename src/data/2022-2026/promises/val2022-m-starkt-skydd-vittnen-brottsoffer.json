@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["vittnesskydd", "brottsoffer", "skydd", "vittnen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen sköt i februari 2023 upp ikraftträdandet av skärpt domstolssekretess för kontaktuppgifter och antog i november 2024 en lag om anonyma vittnen. I april och maj 2026 beslutade den om ändringar som ska skona brottsoffer och vittnen under rättegång samt öka brottsoffers trygghet vid återfall i brott. Ett direktiv från augusti 2026 gäller en utredning om barns skydd som brottsoffer.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,46 @@
       "title": "Stärkt sekretess i domstol för kontaktuppgifter till enskilda – ikraftträdande",
       "date": "2023-02-16",
       "url": "https://data.riksdagen.se/dokument/HA01JuU7.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU6",
+      "designation": "Bet. 2024/25:JuU6",
+      "title": "Anonyma vittnen",
+      "date": "2024-11-21",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU6.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU9",
+      "designation": "Bet. 2025/26:JuU9",
+      "title": "En mer rättssäker och effektiv domstolsprocess",
+      "date": "2026-04-29",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU9.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU38",
+      "designation": "Bet. 2025/26:JuU38",
+      "title": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
+      "date": "2026-05-27",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU38.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1102",
+      "designation": "Dir. 2026:102",
+      "title": "Barnfrid - förstärkta åtgärder mot sexuella kränkningar av barn och barnpornografibrott",
+      "date": "2026-08-27",
+      "url": "https://data.riksdagen.se/dokument/HEB1102.html",
       "relevance": "partial",
       "note": null
     }

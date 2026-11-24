@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["medborgarskap", "försörjningskrav", "självförsörjning", "medborgarskapslagen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2026 fram ett förslag om skärpta krav för medborgarskap, med ett försörjningskrav. Riksdagen biföll förslaget i april 2026, och en ändring i medborgarskapslagen trädde i kraft i juni 2026. Lagen verkar täcka löftet, men det är obekräftat. Ett beslut i augusti 2026 om anhöriginvandring täcker bara en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,46 @@
       "promises": ["tido-egenforsorjningskrav-medborgarskap"],
       "outcome": "included",
       "note": "Avtalet återinför krav på egenförsörjning för medborgarskap."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03175",
+      "designation": "Prop. 2025/26:175",
+      "title": "Skärpta krav för svenskt medborgarskap",
+      "date": "2026-03-12",
+      "url": "https://data.riksdagen.se/dokument/HD03175.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU28",
+      "designation": "Bet. 2025/26:SfU28",
+      "title": "Skärpta krav för svenskt medborgarskap",
+      "date": "2026-04-28",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU28.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-447",
+      "designation": "SFS 2026:447",
+      "title": "Lag (2026:447) om ändring i lagen (2001:82) om svenskt medborgarskap",
+      "date": "2026-06-06",
+      "url": "https://svenskforfattningssamling.se/doc/2026447.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU37",
+      "designation": "Bet. 2025/26:SfU37",
+      "title": "Skärpta villkor för anhöriginvandring",
+      "date": "2026-08-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU37.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

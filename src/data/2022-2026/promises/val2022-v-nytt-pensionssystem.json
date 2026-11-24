@@ -17,10 +17,68 @@
   "committee": "SfU",
   "keywords": ["pensionssystem", "pensioner", "fattigpensionärer", "garantipension"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2026 fram ett förslag om att dela ut överskott i inkomstpensionssystemet, och riksdagen biföll det i maj. I juni 2026 tillsattes en utredning om ett reformerat grundskydd i ålderspensionen. En lagändring i socialförsäkringsbalken trädde i kraft 1 augusti 2026, och en utredning föreslog i augusti en reform av premiepensionens utbetalningsfas. Dokumenten täcker bara delar av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03169",
+      "designation": "Prop. 2025/26:169",
+      "title": "Utdelning av överskott i inkomstpensionssystemet",
+      "date": "2026-03-10",
+      "url": "https://data.riksdagen.se/dokument/HD03169.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU25",
+      "designation": "Bet. 2025/26:SfU25",
+      "title": "Utdelning av överskott i inkomstpensionssystemet",
+      "date": "2026-05-27",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU25.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB157",
+      "designation": "Dir. 2026:57",
+      "title": "Ett bättre och enklare grundskydd i ålderspensionssystemet",
+      "date": "2026-06-18",
+      "url": "https://data.riksdagen.se/dokument/HEB157.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1301",
+      "designation": "SFS 2026:1301",
+      "title": "Lag (2026:1301) om ändring i socialförsäkringsbalken",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261301.html",
+      "relevance": "partial",
+      "note": "Lagen river inte upp det nuvarande pensionssystemet och ersätter det inte med ett nytt system; själva systemet och dess grundprinciper ligger kvar."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB349",
+      "designation": "SOU 2026:49",
+      "title": "Traditionell eller rationell",
+      "date": "2026-08-26",
+      "url": "https://data.riksdagen.se/dokument/HEB349.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

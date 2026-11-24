@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["vårdförmedling", "vårdköer", "vårdgaranti", "sjukvård"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav den 28 maj 2026 en utredare i uppdrag att stärka den nationella vårdförmedlingen. Uppdraget gäller nationell upphandling av specialiserad vård hos privata vårdgivare, patienters tillgång till nationell information om väntetider och ledig kapacitet samt en försöksverksamhet där patienter själva kan söka vård. Dokumentet täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-nationell-vardformedling"],
       "outcome": "included",
       "note": "Avtalet inför en nationell vårdförmedling i statlig regi där ledig kapacitet redovisas."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB138",
+      "designation": "Dir. 2026:38",
+      "title": "Effektiv nationell upphandling av specialiserad hälso- och sjukvård i privat regi",
+      "date": "2026-05-28",
+      "url": "https://data.riksdagen.se/dokument/HEB138.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

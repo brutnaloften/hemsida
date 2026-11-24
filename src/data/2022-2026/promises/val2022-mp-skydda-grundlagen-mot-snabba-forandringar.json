@@ -17,10 +17,38 @@
   "committee": "KU",
   "keywords": ["grundlag", "grundlagsändring", "demokrati"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i mars 2023 att grundlagsändringar ska kräva två tredjedels majoritet vid det andra beslutet, samt kvorumregler och längre tidsfrister. I september 2025 föreslog konstitutionsutskottet att riksdagen som vilande antar regeringens förslag om kvalificerad majoritet och kvorum vid alla grundlagsändringar. Det är ett första, vilande beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HBB312",
+      "designation": "SOU 2023:12",
+      "title": "Förstärkt skydd för demokratin och domstolarnas oberoende",
+      "date": "2023-03-20",
+      "url": "https://data.riksdagen.se/dokument/HBB312.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01KU2",
+      "designation": "Bet. 2025/26:KU2",
+      "title": "Stärkt skydd för demokratin och domstolarnas oberoende",
+      "date": "2025-09-29",
+      "url": "https://data.riksdagen.se/dokument/HD01KU2.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

@@ -17,10 +17,48 @@
   "committee": "KU",
   "keywords": ["samer", "minoriteter", "ILO 169", "urfolk"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i november 2023 att elever i gymnasieskolan som tillhör nationella minoriteter kan läsa sitt minoritetsspråk utan krav på förkunskaper. Det gäller en del av löftet, minoriteters rättigheter. I september 2026 lämnade Sanningskommissionen för det samiska folket en utredning om samiska rättigheter, med uppmaning att slutföra ratificeringen av ILO 169. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "bet",
+      "dok_id": "HB01UbU3",
+      "designation": "Bet. 2023/24:UbU3",
+      "title": "Utökad rätt för elever i gymnasieskolan och anpassade gymnasieskolan att läsa nationella minoritetsspråk",
+      "date": "2023-11-08",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB358",
+      "designation": "SOU 2026:58",
+      "title": "Markerna berättar och minns",
+      "date": "2026-09-30",
+      "url": "https://data.riksdagen.se/dokument/HEB358.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB358d2",
+      "designation": "SOU 2026:58",
+      "title": "Markerna berättar och minns",
+      "date": "2026-09-30",
+      "url": "https://data.riksdagen.se/dokument/HEB358d2.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

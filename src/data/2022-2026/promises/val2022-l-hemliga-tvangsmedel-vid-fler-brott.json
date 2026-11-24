@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["hemliga tvångsmedel", "avlyssning", "rättegångsbalken", "brottsmisstanke"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i september 2023 att hemliga tvångsmedel ska få användas i större utsträckning än tidigare. I maj 2024 kom en ny lag om hemliga tvångsmedel för att spåra efterlysta personer, och i september 2025 ett beslut som gäller misstänkta under 15 år. Regeringen gav 2025 och 2026 en utredare i uppdrag att se över reglerna, bland annat tillstånd knutna till person.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -48,6 +55,36 @@
       "title": "Bättre möjligheter att verkställa frihetsberövanden",
       "date": "2024-05-23",
       "url": "https://data.riksdagen.se/dokument/HB01JuU26.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB112",
+      "designation": "Dir. 2025:12",
+      "title": "Hemliga och preventiva tvångsmedel - en effektiv och tydlig reglering",
+      "date": "2025-02-20",
+      "url": "https://data.riksdagen.se/dokument/HDB112.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU2",
+      "designation": "Bet. 2025/26:JuU2",
+      "title": "Hemliga och preventiva tvångsmedel när barn under 15 år begår brott",
+      "date": "2025-09-16",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU2.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB120",
+      "designation": "Dir. 2026:20",
+      "title": "Tilläggsdirektiv till Utredningen om hemliga och preventiva tvångsmedel (Ju 2025:04)",
+      "date": "2026-03-26",
+      "url": "https://data.riksdagen.se/dokument/HEB120.html",
       "relevance": "partial",
       "note": null
     }
