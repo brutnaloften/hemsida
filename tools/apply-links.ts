@@ -4,11 +4,15 @@
  *     (several runs, comma separated: for a promise judged in more than one, the later run replaces
  *      the earlier, so give the main run first and a split re-link last)
  *     [--id-prefix tido-] [--today YYYY-MM-DD] [--dry-run]
+ *     [--ids a,b] [--exclude c,d]   (only / never these promise ids, e.g. to protect hand-set verdicts)
+ *     [--base-ref origin/main]      (verdict history and date are computed against this ref; falls
+ *                                    back to HEAD with a message when it does not resolve)
  *     [--sfs-store tools/out/sfs-store/<term>.json --sfs-run <name | path to results.json>
  *      [--sfs-overrides tools/sfs-overrides.json]]
  * Without --sfs-store and --sfs-run no SFS evidence is written and no fulfilled verdict is set.
  * Rules and limits: tools/lib/apply-links.ts. Run `pnpm fmt` afterwards.
  */
+import { execFileSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -16,6 +20,8 @@ import { parseArgs } from 'node:util';
 import {
   applyLinks,
   mergeRunPairs,
+  rebaseVerdict,
+  selectedId,
   sfsJudgements,
   type JudgedPair,
   type SfsInput,
@@ -39,6 +45,9 @@ const { values } = parseArgs({
     today: { type: 'string', default: new Date().toISOString().slice(0, 10) },
     'dry-run': { type: 'boolean', default: false },
     list: { type: 'boolean', default: false },
+    ids: { type: 'string' },
+    exclude: { type: 'string' },
+    'base-ref': { type: 'string', default: 'origin/main' },
     'sfs-store': { type: 'string' },
     'sfs-run': { type: 'string' },
     'sfs-overrides': { type: 'string', default: resolve(root, 'tools/sfs-overrides.json') },
@@ -154,13 +163,35 @@ for (const row of existsSync(rejectedFile)
 }
 
 const dir = resolve(root, 'src/data', values.term!, 'promises');
+const csv = (v?: string) => new Set((v ?? '').split(',').filter(Boolean));
+const only = csv(values.ids);
+const exclude = csv(values.exclude);
+
+// Verdict history and date are computed against the base ref, not the working tree.
+const git = (...args: string[]) =>
+  execFileSync('git', args, { cwd: root, encoding: 'utf-8', stdio: ['ignore', 'pipe', 'ignore'] });
+let baseRef = values['base-ref']!;
+try {
+  git('rev-parse', '--verify', `${baseRef}^{commit}`);
+} catch {
+  console.warn(`warning: base ref ${baseRef} not found, using HEAD for verdict history`);
+  baseRef = 'HEAD';
+}
+const baseVerdict = (file: string) => {
+  try {
+    const text = git('show', `${baseRef}:src/data/${values.term}/promises/${file}`);
+    return promiseSchema.parse(JSON.parse(text)).verdict;
+  } catch {
+    return null; // not on the base (new promise)
+  }
+};
 let changed = 0;
 const counts: Record<string, number> = {};
 const fulfilledRows: string[] = [];
 let entries = 0;
 for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
   const id = file.replace(/\.json$/, '');
-  if (!id.startsWith(values['id-prefix']!)) continue;
+  if (!id.startsWith(values['id-prefix']!) || !selectedId(id, only, exclude)) continue;
   const pairs = pairsBy.get(id);
   if (!pairs) continue;
   const raw = loadJson(resolve(dir, file));
@@ -175,7 +206,8 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     rejectedBy.get(id) ?? new Set(),
   );
   if (!applied) continue;
-  const next = promiseSchema.parse({ ...(raw as object), ...applied });
+  const verdict = rebaseVerdict(applied.verdict, baseVerdict(file), values.today!);
+  const next = promiseSchema.parse({ ...(raw as object), ...applied, verdict });
   changed++;
   entries += applied.evidence.length - promise.evidence.length;
   if (values.list) {

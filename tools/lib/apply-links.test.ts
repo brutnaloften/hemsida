@@ -5,6 +5,8 @@ import {
   designationOf,
   evidenceFor,
   mergeRunPairs,
+  rebaseVerdict,
+  selectedId,
   sfsJudgements,
   type JudgedPair,
   type SfsInput,
@@ -900,5 +902,45 @@ describe('applyLinks for inquiry promises', () => {
 
   it('a legislative promise with only a directive stays in_progress', () => {
     expect(run([pair('D1')], base).verdict.value).toBe('in_progress');
+  });
+});
+
+describe('rebaseVerdict', () => {
+  const v = (value: string, date: string, history: unknown[] = []) =>
+    ({
+      value,
+      assessedBy: 'ai',
+      reasoning: `r-${value}`,
+      date,
+      history,
+    }) as never as typeof base.verdict;
+  const baseV = v('unassessed', '2022-10-14');
+
+  it('leaves the whole block as on base when the value is unchanged', () => {
+    const next = v('unassessed', '2026-11-20', [
+      { value: 'in_progress', reasoning: 'x', date: 'd' },
+    ]);
+    expect(rebaseVerdict(next, baseV, '2026-11-24')).toEqual(baseV);
+  });
+
+  it('records only the base verdict in history when the value changes', () => {
+    const next = v('in_progress', '2026-11-20', [{ value: 'fake', reasoning: 'x', date: 'd' }]);
+    const out = rebaseVerdict(next, baseV, '2026-11-24');
+    expect(out.date).toBe('2026-11-24');
+    expect(out.history.map((h) => h.value)).toEqual(['unassessed']);
+  });
+
+  it('keeps the computed verdict when the promise is not on base', () => {
+    const next = v('in_progress', '2026-11-20');
+    expect(rebaseVerdict(next, null, '2026-11-24')).toBe(next);
+  });
+});
+
+describe('selectedId', () => {
+  it('applies --ids and --exclude', () => {
+    expect(selectedId('a', new Set(), new Set())).toBe(true);
+    expect(selectedId('a', new Set(['b']), new Set())).toBe(false);
+    expect(selectedId('a', new Set(['a']), new Set(['a']))).toBe(false);
+    expect(selectedId('a', new Set(), new Set(['b']))).toBe(true);
   });
 });
