@@ -5,6 +5,7 @@ import {
   designationOf,
   evidenceFor,
   mergeRunPairs,
+  isDowngrade,
   rebaseVerdict,
   selectedId,
   sfsJudgements,
@@ -341,6 +342,32 @@ describe('applyLinks', () => {
     const first = applyLinks(base, [pair('P1')], docs, '2026-11-10')!;
     const again = { ...base, evidence: first.evidence };
     expect(applyLinks(again, [pair('P1')], docs, '2026-11-10')).toBeNull();
+  });
+
+  it('never touches budget promises, whatever their verdict', () => {
+    const budget = { ...base, type: 'budget' as const };
+    expect(applyLinks(budget, [pair('P1')], docs, '2026-11-10')).toBeNull();
+    const ai = {
+      ...budget,
+      verdict: { ...base.verdict, value: 'in_progress' as const, assessedBy: 'ai' as const },
+    };
+    expect(applyLinks(ai, [pair('P1')], docs, '2026-11-10')).toBeNull();
+  });
+
+  it('keeps a delivered AI verdict on a type whose law or directive evidence it does not read', () => {
+    const delivered = {
+      ...base,
+      type: 'other_action' as const,
+      verdict: {
+        ...base.verdict,
+        value: 'fulfilled' as const,
+        assessedBy: 'ai' as const,
+        reasoning: 'x',
+      },
+    };
+    const sfs = { laws: {}, byProp: {}, judgements: new Map() } as SfsInput;
+    expect(applyLinks(delivered, [pair('P1')], docs, '2026-11-10', new Map(), sfs)).toBeNull();
+    expect(applyLinks(delivered, [pair('P1')], docs, '2026-11-10')).toBeNull();
   });
 
   describe('contradicts', () => {
@@ -768,7 +795,7 @@ describe('applyLinks with SFS', () => {
   });
 
   it('does not handle sfs for non-legislative promises', () => {
-    const budgetPromise = promiseSchema.parse({ ...base, type: 'budget' });
+    const budgetPromise = promiseSchema.parse({ ...base, type: 'other_action' });
     const sfs = sfsFor({ P1: ['sfs-2026-100'] }, { 'sfs-2026-100': ['full', 'high'] });
     const r = run(sfs, [pair('P1')], budgetPromise)!;
     expect(r.verdict.value).toBe('in_progress');
@@ -930,9 +957,38 @@ describe('rebaseVerdict', () => {
     expect(out.history.map((h) => h.value)).toEqual(['unassessed']);
   });
 
+  it('takes value, reasoning and assessedBy from the new verdict and appends base to a non-empty history', () => {
+    const older = { value: 'unassessed', reasoning: 'old', date: '2022-01-01' };
+    const published = { ...v('in_progress', '2026-11-01', [older]), assessedBy: undefined };
+    const next = {
+      ...v('fulfilled', '2026-11-20', [{ value: 'fake', reasoning: 'x', date: 'd' }]),
+      reasoning: 'new reasoning',
+    };
+    const out = rebaseVerdict(next, published as never, '2026-11-24');
+    expect(out.value).toBe('fulfilled');
+    expect(out.reasoning).toBe('new reasoning');
+    expect(out.assessedBy).toBe('ai');
+    expect(out.date).toBe('2026-11-24');
+    expect(out.history).toEqual([
+      older,
+      { value: 'in_progress', reasoning: 'r-in_progress', date: '2026-11-01' },
+    ]);
+  });
+
   it('keeps the computed verdict when the promise is not on base', () => {
     const next = v('in_progress', '2026-11-20');
     expect(rebaseVerdict(next, null, '2026-11-24')).toBe(next);
+  });
+});
+
+describe('isDowngrade', () => {
+  it('flags only a lowered fulfilled / partially_fulfilled verdict', () => {
+    expect(isDowngrade('fulfilled', 'in_progress')).toBe(true);
+    expect(isDowngrade('fulfilled', 'partially_fulfilled')).toBe(true);
+    expect(isDowngrade('partially_fulfilled', 'unassessed')).toBe(true);
+    expect(isDowngrade('partially_fulfilled', 'fulfilled')).toBe(false);
+    expect(isDowngrade('fulfilled', 'fulfilled')).toBe(false);
+    expect(isDowngrade('in_progress', 'unassessed')).toBe(false);
   });
 });
 

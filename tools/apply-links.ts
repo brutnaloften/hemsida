@@ -9,6 +9,10 @@
  *                                    back to HEAD with a message when it does not resolve)
  *     [--sfs-store tools/out/sfs-store/<term>.json --sfs-run <name | path to results.json>
  *      [--sfs-overrides tools/sfs-overrides.json]]
+ * Budget promises are never touched, and a fulfilled / partially_fulfilled verdict is only recomputed
+ * for legislative promises (with SFS input) and inquiry promises; elsewhere it is kept.
+ * A run that would lower a fulfilled / partially_fulfilled verdict keeps it and lists it, unless
+ * --allow-downgrade is given (runs only cover part of a term, so a missing judgement is not proof).
  * Without --sfs-store and --sfs-run no SFS evidence is written and no fulfilled verdict is set.
  * Rules and limits: tools/lib/apply-links.ts. Run `pnpm fmt` afterwards.
  */
@@ -19,6 +23,7 @@ import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import {
   applyLinks,
+  isDowngrade,
   mergeRunPairs,
   rebaseVerdict,
   selectedId,
@@ -33,7 +38,7 @@ import { addDecisions } from './lib/decided-by.ts';
 import { SFS_JUDGE_TEMPLATE_VERSION, SFS_RECHECK_TEMPLATE_VERSION } from './lib/sfs-judge.ts';
 import { loadJson, writeJson } from './lib/json.ts';
 import { defaultStorePath } from './lib/riksdag-ingest.ts';
-import { isRiksdagEvidence, promiseSchema } from './lib/schema.ts';
+import { isRiksdagEvidence, promiseSchema, verdictSchema } from './lib/schema.ts';
 import { rejectedCandidatesFileSchema } from '../src/schema/rejected.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -47,6 +52,7 @@ const { values } = parseArgs({
     list: { type: 'boolean', default: false },
     ids: { type: 'string' },
     exclude: { type: 'string' },
+    'allow-downgrade': { type: 'boolean', default: false },
     'base-ref': { type: 'string', default: 'origin/main' },
     'sfs-store': { type: 'string' },
     'sfs-run': { type: 'string' },
@@ -166,6 +172,16 @@ const dir = resolve(root, 'src/data', values.term!, 'promises');
 const csv = (v?: string) => new Set((v ?? '').split(',').filter(Boolean));
 const only = csv(values.ids);
 const exclude = csv(values.exclude);
+const knownIds = new Set(readdirSync(dir).map((f) => f.replace(/\.json$/, '')));
+for (const [flag, ids] of [
+  ['--ids', only],
+  ['--exclude', exclude],
+] as const) {
+  const unknown = [...ids].filter((id) => !knownIds.has(id));
+  if (unknown.length > 0) {
+    console.warn(`warning: ${flag} names unknown promise ids: ${unknown.join(', ')}`);
+  }
+}
 
 // Verdict history and date are computed against the base ref, not the working tree.
 const git = (...args: string[]) =>
@@ -178,13 +194,23 @@ try {
   baseRef = 'HEAD';
 }
 const baseVerdict = (file: string) => {
+  let text: string;
   try {
-    const text = git('show', `${baseRef}:src/data/${values.term}/promises/${file}`);
-    return promiseSchema.parse(JSON.parse(text)).verdict;
+    text = git('show', `${baseRef}:src/data/${values.term}/promises/${file}`);
   } catch {
     return null; // not on the base (new promise)
   }
+  try {
+    // Only the verdict block matters; the rest of the file may not match today's schema.
+    return verdictSchema.parse((JSON.parse(text) as { verdict?: unknown }).verdict);
+  } catch (e) {
+    console.warn(
+      `warning: ${file} on ${baseRef} has no parsable verdict (${(e as Error).message.split('\n')[0]}), keeping the computed verdict`,
+    );
+    return null;
+  }
 };
+const kept: string[] = [];
 let changed = 0;
 const counts: Record<string, number> = {};
 const fulfilledRows: string[] = [];
@@ -206,6 +232,10 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     rejectedBy.get(id) ?? new Set(),
   );
   if (!applied) continue;
+  if (!values['allow-downgrade'] && isDowngrade(promise.verdict.value, applied.verdict.value)) {
+    kept.push(`${id}: ${promise.verdict.value} -> ${applied.verdict.value}`);
+    continue;
+  }
   const verdict = rebaseVerdict(applied.verdict, baseVerdict(file), values.today!);
   const next = promiseSchema.parse({ ...(raw as object), ...applied, verdict });
   changed++;
@@ -251,6 +281,11 @@ console.log(
     .map(([v, n]) => `${n} ${v}`)
     .join(', ')}), ${entries} evidence entries`,
 );
+if (kept.length > 0) {
+  console.warn(
+    `\nKept ${kept.length} fulfilled / partially_fulfilled verdicts that these runs would lower (pass --allow-downgrade to apply):\n${kept.join('\n')}`,
+  );
+}
 if (fulfilledRows.length > 0) {
   console.log(`\nFulfilled (law, relevance, judge confidence):\n| promise | laws |\n| --- | --- |`);
   console.log(fulfilledRows.join('\n'));
