@@ -60,5 +60,25 @@ const {
       </main>
       <Footer />
     </div>
+    <script>
+      // AI-tag popups sit under their tag (absolute, left-aligned). When one opens, shift it sideways
+      // so it stays inside the viewport with a 16px gutter, wherever the tag is. The tags are rendered
+      // without React hydration, so this is a delegated listener.
+      const GUTTER = 16;
+      const place = (e: Event) => {
+        const tag = (e.target as Element | null)?.closest?.(".ai-tag");
+        const popup = tag?.lastElementChild as HTMLElement | null;
+        if (!popup) return;
+        popup.style.left = "";
+        const r = popup.getBoundingClientRect();
+        const vw = document.documentElement.clientWidth;
+        let dx = 0;
+        if (r.right > vw - GUTTER) dx = vw - GUTTER - r.right;
+        if (r.left + dx < GUTTER) dx = GUTTER - r.left;
+        if (dx) popup.style.left = `${Math.round(dx)}px`;
+      };
+      document.addEventListener("mouseover", place);
+      document.addEventListener("focusin", place);
+    </script>
   </body>
 </html>

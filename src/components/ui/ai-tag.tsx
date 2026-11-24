@@ -6,15 +6,13 @@ export const AI_TAG_WARNING =
 
 interface Props {
   className?: string;
-  /** Open the tooltip below the tag and align it to the right edge (for tags near the page edge). */
-  align?: 'left' | 'right';
 }
 
 /**
  * Small "AI" tag next to a verdict that was set by a model. Hover or focus shows the warning;
  * the text is also in the DOM (visually hidden until shown) so screen readers read it.
  */
-export function AiTag({ className, align = 'left' }: Props) {
+export function AiTag({ className }: Props) {
   return (
     <span className={cn('ai-tag group relative inline-flex shrink-0', className)}>
       <span
@@ -25,12 +23,11 @@ export function AiTag({ className, align = 'left' }: Props) {
       >
         AI
       </span>
+      {/* Under the tag, left-aligned; a script in Layout.astro shifts it sideways on open so it stays
+          inside the viewport (the tags are not hydrated, so this cannot be a React effect). */}
       <span
         aria-hidden="true"
-        className={cn(
-          'pointer-events-none absolute top-full z-20 mt-1 hidden w-64 max-w-[calc(100vw-2rem)] border border-foreground bg-background p-2 text-xs font-normal leading-snug text-foreground shadow-md group-hover:block group-focus-within:block',
-          align === 'right' ? 'right-0' : 'left-0',
-        )}
+        className="pointer-events-none absolute left-0 top-full z-20 mt-1 hidden w-64 max-w-[calc(100vw-2rem)] border border-foreground bg-background p-2 text-xs font-normal leading-snug text-foreground shadow-md group-hover:block group-focus-within:block"
       >
         {AI_TAG_WARNING}
       </span>
