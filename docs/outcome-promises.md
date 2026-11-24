@@ -7,15 +7,15 @@ Survey and design for the outcome epic (`hemsida-50r`). It is docs only: no sche
 Counted on `main` (2022-2026): 86 promises have `type: outcome`, all with a verdict of `unassessed` or `in_progress` that rests on action rather than on a measured result (`docs/data-model.md`, "Outcome promises stay unassessed for now").
 
 - 54 have a `government` or `support` party in `roles`. Statistics can say something about these.
-- 32 are opposition-only (C, MP, S, V). Official statistics measure what the government delivered, not what the opposition promised, so under the opposition rule in `docs/data-model.md` they are `not_assessable` unless the party itself did something. Statistics are context for them, never evidence against them. They are listed at the end and need no statistics work.
+- 32 are opposition-only (C, MP, S, V). Official statistics measure what the government delivered, not what the opposition promised, so statistics should never count against them. Today they are `unassessed` (`docs/data-model.md`, "Outcome promises stay unassessed for now"). **Proposal, needs a decision:** treat them like the opposition-only budget promises (the rule in `docs/data-model.md` under "Budget verdict rule", which is written for ESV data) and set `not_assessable` unless the party itself acted, with statistics shown only as context. That is not current policy for outcome promises. They are listed at the end and need no statistics work.
 - The 19 promises retyped to `outcome` in `hemsida-600` (bead `hemsida-ukhd`) are all in the 54. See "The 19 retyped promises".
 
-Of the 54: 4 are answerable now from an official series reachable through an API or open download (`yes`), 39 are `partial` (a series exists but is not an open API, only a proxy exists, or the promise has a date or a regional or qualitative part that a single figure cannot settle), and 11 are `no` (no measurable quantity, or the claim is a decision or event rather than a statistic).
+Of the 54: 3 are answerable now from an official series reachable through an API or open download (`yes`), 40 are `partial` (a series exists but is not an open API, only a proxy exists, or the promise has a date or a regional or qualitative part that a single figure cannot settle), and 11 are `no` (no measurable quantity, or the claim is a decision or event rather than a statistic).
 
 ## How outcome verdicts work today
 
 - Evidence kinds are Riksdag documents (`dir`, `sou`, `ds`, `prop`, `bet`, `sfs`, `mot`), `agreement` and `budget` (`src/schema/promise.ts`). There is **no statistics kind**.
-- `checkVerdictEvidence` only knows laws, directives and, for `budget` promises, ESV outcome entries. A law or budget on the same topic proves action, not the result, so outcome promises were deliberately left `unassessed`.
+- `checkVerdictEvidence` only knows laws, directives and, for `budget` promises, ESV outcome entries (plus a `mot` entry for an opposition-only `budget` promise). A law or budget on the same topic proves action, not the result, so outcome promises were deliberately left `unassessed`.
 - The budget flow is the closest precedent: a `budget` evidence entry stores a before/after pair read from committed data (`src/data/budget`), with a `tier` (`ceiling` or `outcome`), a `baselineNote`, a stable reference checked by a data test (`budget-links.test.ts`) and a policy that a figure moving the wrong way never backs `fulfilled` and never sets `broken` or `unfulfilled`.
 - `src/data/budget/macro.json` already holds two SCB series (KPI `TAB4352`, GDP `TAB3610`) fetched by `tools/ingest-macro.ts` through PxWebApi v2, with `source`, `fetched_at` and a values map by year. That is the pattern to reuse for outcome series.
 
@@ -46,11 +46,11 @@ Add one evidence branch, `statistic`, built like `budget`, plus a small shared s
 }
 ```
 
-The same file serves every promise that needs the series (police numbers back five promises). `source` is an enum (`scb`, `bra`, `migrationsverket`, `skolverket`, `socialstyrelsen`, `energimyndigheten`, `trafikanalys`, `polisen`, `other`); `selection` keeps the exact query so a reader can re-run it.
+The same file serves every promise that needs the series (police numbers back four promises, two of them government promises). `source` is an enum (`scb`, `bra`, `migrationsverket`, `skolverket`, `socialstyrelsen`, `energimyndigheten`, `trafikanalys`, `polisen`, `other`); `selection` keeps the exact query so a reader can re-run it.
 
 ### Evidence entry
 
-`kind: statistic`, strict, none of the Riksdag fields (like `budget`):
+`kind: statistic`, strict, none of the Riksdag fields (like `budget`). There is no `tier` field: every statistic is by definition a measured result, so the tier distinction of budget evidence does not apply. `isRiksdagEvidence` (`src/schema/promise.ts`) must be updated so the new kind is not treated as a Riksdag document (bead `hemsida-50r.2`).
 
 | Field       | Type             | Notes                                                                                                                     |
 | ----------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -59,7 +59,6 @@ The same file serves every promise that needs the series (police numbers back fi
 | `baseline`  | `{period, v}`    | Normally 2022, the last full year before the term; `baselineNote` (Swedish) when it differs                               |
 | `latest`    | `{period, v}`    | The latest period at `fetched_at`; the data test checks both values against the series file                               |
 | `target`    | object           | `{type: "threshold", op: "gte" or "lte", value, byYear?}`, `{type: "direction", op: "up" or "down"}`, or `{type: "none"}` |
-| `tier`      | `outcome`        | Reuses the budget meaning: a measured result. Only `outcome` entries qualify a verdict                                    |
 | `relevance` | `full`/`partial` | `partial` when the series is a proxy or covers only part of the promise                                                   |
 | `date`      | ISO date         | Release date of the latest period, to place it on the timeline                                                            |
 | `note`      | string or null   | Swedish note                                                                                                              |
@@ -68,9 +67,10 @@ The same file serves every promise that needs the series (police numbers back fi
 
 - `in_progress`: unchanged, still needs Riksdag action evidence. A statistic alone never sets it.
 - `partially_fulfilled`: a `statistic` entry exists and the series moved in the promised direction, but the target was not reached or the entry is `relevance: partial`. Needs the promise's action evidence too (`prop`, `bet` or `sfs`) for government parties, so a number that moved for other reasons does not credit the government alone. The reasoning must say that a statistic shows the result, not the cause.
-- `fulfilled`: `relevance: full`, a `threshold` target reached at `latest`, or a `direction` target met with the baseline and latest both stated. Promises with a `byYear` after the term (for example 2030, 2045) cannot be `fulfilled` from this evidence before that year.
+- `fulfilled`: `relevance: full`, a `threshold` target reached at `latest`, or a `direction` target met with the baseline and latest both stated, plus the same action-evidence floor as `partially_fulfilled` for a promise with a government or support party (a `prop`, `bet` or `sfs` entry; same shape as the budget rule in `docs/data-model.md`, where `fulfilled` additionally needs `relevance: full`). Promises with a `byYear` after the term (for example 2030, 2045) cannot be `fulfilled` from this evidence before that year.
 - A series moving against the promise is never `fulfilled`, and, as for budget data, never sets `broken` (needs an explicit contrary act) or `unfulfilled` (term-close review only). It is shown on the page and left for the term-close review.
-- Opposition-only promises: no `statistic` entry qualifies a verdict; `not_assessable` as today.
+- Opposition-only promises: no `statistic` entry qualifies a verdict. Whether they become `not_assessable` is the proposal above and needs a decision.
+- Price series (fuel) need a stated rule: compare nominal against nominal, and give the inflation-adjusted change (KPI `TAB4352` in `macro.json`) in the reasoning, because 2022 was a price spike.
 
 ### Worked examples (verified values, see the probe log)
 
@@ -84,7 +84,7 @@ Not implemented here. Schema, data test and rendering are separate beads (see "B
 
 Probed 2026-11-24. Everything below was read from the live source; nothing is filled in from memory.
 
-**SCB PxWebApi v2** (`https://statistikdatabasen.scb.se/api/v2`): works without a key, CC0 licence, CORS on, `json-stat2`/`csv`/`xlsx`, limit 30 calls per 10 s and 150 000 cells per call (same base as `tools/ingest-macro.ts`). Table search is semantic and patchy (several obvious queries return nothing), so tables must be located once and pinned by id.
+**SCB PxWebApi v2** (`https://statistikdatabasen.scb.se/api/v2`; `tools/ingest-macro.ts` uses the older base `api.scb.se/OV0104/v2beta`, see `tools/lib/macro-ingest.ts`, which should be reconciled in the ingest bead): works without a key, CC0 licence, CORS on, `json-stat2`/`csv`/`xlsx`, limit 30 calls per 10 s and 150 000 cells per call (same API version as `tools/ingest-macro.ts`). Table search is semantic and patchy (several obvious queries return nothing), so tables must be located once and pinned by id.
 
 | Quantity                                          | Table     | Selection read                         | Values read                                                                                                                                 |
 | ------------------------------------------------- | --------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -93,22 +93,22 @@ Probed 2026-11-24. Everything below was read from the live source; nothing is fi
 | Unemployment rate (AKU)                           | `TAB2891` | arbetslösa, totalt, 15-74, procent     | 7.5; 7.7; 8.4; 8.8 percent (2022-2025)                                                                                                      |
 | Employed with 1-19 contracted hours (AKU)         | `TAB3007` | 1-19 timmar, 15-74                     | 271.0 (2022); 277.8 thousand (2025); all employed 5 199 and 5 263 thousand                                                                  |
 | Installed capacity and gross production by source | `TAB4063` | Riket                                  | Wind 14 278 MW, 33 253 GWh (2022) to 18 127 MW, 39 166 GWh (2025); solar 2 367 to 5 542 MW; nuclear 6 901 to 7 001 MW, 51 944 to 46 392 GWh |
-| Net electricity supply and import                 | `TAB1010` | Tot, Imp, netto                        | Supply 176 160 (2022), 172 123 (2025); import 6 181, 5 169 (GWh)                                                                            |
+| Electricity supply and gross import               | `TAB1010` | Tot, Imp, netto                        | Supply 176 160 (2022), 172 123 (2025); gross import 6 181, 5 169 (GWh). Import is gross: Sweden is a net exporter                           |
 | Tax revenue as share of GDP                       | `TAB121`  | ODD Totala skatter, andel av BNP       | 42.9 (2022); 41.7; 40.8; 40.5 percent (2025)                                                                                                |
 | Formally protected nature, share                  | `TAB6829` | Riket, total (overlap removed)         | Land 13.9 percent (2022), 14.3 (2025); land and water 15.0, 15.7                                                                            |
 | Greenhouse gas emissions, national total          | `TAB4698` | CO2-ekv., 0.1 excl. LULUCF and intl.   | 45 168 (2022); 44 233.6; 47 493.7 kt (2024). Domestic transport 13 950.8; 13 900; 16 847.9 kt                                               |
-| Police employed (SSYK 336)                        | `TAB4355` | Poliser, all birth regions, both sexes | 14 164 (2022); 19 686 (2024)                                                                                                                |
+| Police employed (SSYK 336)                        | `TAB4355` | Poliser, all birth regions, both sexes | 14 218 (2022); 19 755 (2024), all birth regions incl. South America                                                                         |
 
 Two readings must not be used as they stand, and the ingest bead has to resolve them first:
 
-- **`TAB4698` 2024** jumps by about 3 300 kt in the national total and about 2 900 kt in domestic transport against 2023. That looks like a scope or method change (for example a revision of the series), not a real 20 percent rise. Read the table footnotes and the Naturvårdsverket release before using 2024.
+- **`TAB4698` 2024** jumps by about 3 300 kt in the national total and about 2 900 kt in domestic transport against 2023. A 20 percent rise in one year is unlikely to be a method change. It fits the cut of the biofuel blending requirement (reduktionsplikt) to 6 percent from 2024, which raises fossil emissions in domestic transport and in work machinery, but this is a hypothesis. Verify against the table footnotes and the Naturvårdsverket release before using 2024.
 - **`TAB4355` police** rises 39 percent in two years, which is far larger than the police authority's own staffing. The register-based occupation coding is not a reliable police-headcount series. Use Polismyndigheten's own staffing statistics for the police promises and keep `TAB4355` out.
 
 **Other sources:**
 
 - **Migrationsverket** open data (`migrationsverket.se/om-migrationsverket/statistik/oppna-data.html`): `.xlsx` downloads, no REST API. The current-year overview file has a "Vidarebosättning (Kvot)" row: 9 first-time permits and 57 extensions, January to November 2026. Per-year history for 2022-2025 is in the year files, not read yet; the 900 per year target needs it.
 - **BRÅ**: `bra.se` is reachable (HTTP 200); `statistik.bra.se` (the statistics database) failed TLS certificate verification from this machine and was not read. BRÅ crime figures are relevant to few outcome promises in this set (see table), so this does not block the first batch.
-- **Trafikanalys** `api.trafa.se`: reachable, returns structure items, no data pulled. Searches for charging infrastructure returned nothing, so charge points probably need Energimyndigheten or Power Circle.
+- **Trafikanalys** `api.trafa.se`: reachable, returns structure items, no data pulled. Searches for charging infrastructure returned nothing, so charge points (two government promises) probably need Energimyndigheten or Power Circle.
 - **Socialstyrelsen** statistics database: HTTP 403 for a script; downloadable tables only. **Kolada** v2 API returns 410 (retired; v3 not probed). **Energimyndigheten** `pxexternal`: connection failed.
 - Not probed: Skolverket, Försäkringskassan, Polismyndigheten, Kriminalvården, SiS, Naturvårdsverket (wolf inventory), Arbetsmiljöverket, Tillväxtverket, Plikt- och prövningsverket, Försvarsmakten.
 
@@ -182,24 +182,24 @@ Answerable: `yes` = a verified official series covers the promise's quantity; `p
 
 ### SD
 
-| Promise id                                                    | Quantity                              | Kind           | Source, table               | Answerable | Notes                                                                                          |
-| ------------------------------------------------------------- | ------------------------------------- | -------------- | --------------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
-| sd-oka-bostadsbyggandet                                       | Finished dwellings                    | direction up   | SCB `TAB4193`, `TAB2538`    | yes        | Worked example 3; falls from 54 018 to 31 359                                                  |
-| sd-minska-beroendet-av-energiimport                           | Net electricity import, energy import | direction down | SCB `TAB1010`               | yes        | Electricity only: import 6 181 to 5 169 GWh. Fuel imports not covered, so `relevance: partial` |
-| sd-bekampa-skuggsamhallet-med-fler-kontroller-och-utvisningar | Controls and expulsions               | direction up   | Polisen, Migrationsverket   | partial    | Not probed                                                                                     |
-| sd-battre-utredningar-och-kortare-handlaggningstider          | Processing time at Försäkringskassan  | direction down | Försäkringskassan open data | partial    | Not probed; "quality" has no number                                                            |
-| sd-grund-for-ett-yrke-som-efterfragas                         | Share completing vocational track     | direction up   | Skolverket                  | partial    | Not probed                                                                                     |
-| sd-oka-tryggheten-for-vardpersonal-och-pa-akutmottagningar    | Threat and violence incidents         | direction down | Arbetsmiljöverket, BRÅ      | partial    | Not probed                                                                                     |
-| sd-utbilda-efter-arbetsmarknadens-behov                       | Match of education to labour demand   | none           | -                           | no         | No measurable target                                                                           |
-| sd-battre-villkor-och-halsovard-i-kvinnoyrken                 | Occupational health coverage          | direction up   | -                           | no         | No national series                                                                             |
-| sd-oka-sjalvforsorjningsgraden-av-kritiska-produkter          | Self-sufficiency of critical goods    | direction up   | -                           | no         | No agreed definition or series                                                                 |
-| sd-oka-takten-i-aterstallning-av-havsmiljon                   | Pace of marine restoration            | direction up   | Havs- och vattenmyndigheten | no         | No rate series                                                                                 |
+| Promise id                                                    | Quantity                             | Kind           | Source, table               | Answerable | Notes                                                                                                                           |
+| ------------------------------------------------------------- | ------------------------------------ | -------------- | --------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| sd-oka-bostadsbyggandet                                       | Finished dwellings                   | direction up   | SCB `TAB4193`, `TAB2538`    | yes        | Worked example 3; falls from 54 018 to 31 359                                                                                   |
+| sd-minska-beroendet-av-energiimport                           | Energy import dependence             | direction down | SCB `TAB1010`               | partial    | Electricity only: gross import 6 181 to 5 169 GWh (Sweden is a net exporter). Fuel imports not covered, so `relevance: partial` |
+| sd-bekampa-skuggsamhallet-med-fler-kontroller-och-utvisningar | Controls and expulsions              | direction up   | Polisen, Migrationsverket   | partial    | Not probed                                                                                                                      |
+| sd-battre-utredningar-och-kortare-handlaggningstider          | Processing time at Försäkringskassan | direction down | Försäkringskassan open data | partial    | Not probed; "quality" has no number                                                                                             |
+| sd-grund-for-ett-yrke-som-efterfragas                         | Share completing vocational track    | direction up   | Skolverket                  | partial    | Not probed                                                                                                                      |
+| sd-oka-tryggheten-for-vardpersonal-och-pa-akutmottagningar    | Threat and violence incidents        | direction down | Arbetsmiljöverket, BRÅ      | partial    | Not probed                                                                                                                      |
+| sd-utbilda-efter-arbetsmarknadens-behov                       | Match of education to labour demand  | none           | -                           | no         | No measurable target                                                                                                            |
+| sd-battre-villkor-och-halsovard-i-kvinnoyrken                 | Occupational health coverage         | direction up   | -                           | no         | No national series                                                                                                              |
+| sd-oka-sjalvforsorjningsgraden-av-kritiska-produkter          | Self-sufficiency of critical goods   | direction up   | -                           | no         | No agreed definition or series                                                                                                  |
+| sd-oka-takten-i-aterstallning-av-havsmiljon                   | Pace of marine restoration           | direction up   | Havs- och vattenmyndigheten | no         | No rate series                                                                                                                  |
 
 ### Opposition-only promises (32): `not_assessable`, statistics as context
 
 C: bygg-ut-bredband-och-mobiltackning, fordubbla-utslappsfri-el, laddplatser-i-hela-landet, mangdubbla-biobransle-och-biogas, polistathet-till-eu-snittet-och-oppna-polisstationer, sank-det-totala-skattetrycket. MP: hoj-loner-i-kvinnodominerade-yrken, korta-vardkoer-i-hela-landet, kortare-handlaggningstider-for-arbetstillstand-och-asyl, skydda-30-procent-av-sveriges-natur, skydda-30-procent-av-varldens-hav, snabb-utbyggnad-havsbaserad-vindkraft. S: billigare-fritidsaktiviteter-for-barn, bygg-hyresratter-for-vanligt-folk, bygg-ut-elproduktionen-av-alla-slag, dubbla-antalet-laddstolpar-till-2030, fler-heltid-i-fasta-jobb-i-valfarden, fler-solpaneler, fler-utbildas-och-anstalls-i-aldreomsorgen, full-sysselsattning-overgripande-mal, kortare-vantetider-1177, mer-forbara-drivmedel, minst-70-procent-av-slutlonen-i-pension, minst-fordubbla-takten-i-elnatsutbyggnaden, varldens-forsta-fossilfria-valfardsnation. V: bostadsbyggande-pa-landsbygden, fler-larare-och-tidigare-insatser, fler-patrullerande-poliser, sankta-hyror-och-klimatsmarta-renoveringar, service-och-valfard-pa-mindre-orter, stoppa-diskriminering-och-rasism-pa-arbetsmarknaden, tunga-transporter-till-jarnvag-och-sjofart.
 
-Several of these (finished rented dwellings, installed solar, unemployment rate, protected nature) have verified series above and can be shown next to the promise as context, but no verdict follows from them. Whether these 32 are `not_assessable` or are left `unassessed` is the term-close review's call; the point here is that the statistics epic does not need them.
+Several of these (finished rented dwellings, installed solar, unemployment rate, protected nature) have verified series above and can be shown next to the promise as context, but no verdict follows from them. Whether these 32 become `not_assessable` is the proposal at the top of this document and needs a decision; the point here is that the statistics epic does not need them.
 
 ## The 19 retyped promises (`hemsida-ukhd`)
 
@@ -215,7 +215,7 @@ Only one of the 19 can be settled from a verified API today, so most of `hemsida
 
 1. **Schema and data test** for the `statistic` kind and series store (one bead). Nothing else can be committed without it.
 2. **Ingest tool for SCB series** (`tools/ingest-statistics.ts`), a config listing series ids, tables and selections, pinned by table id, written like `ingest-macro.ts` (paced, deterministic, `freshness.json`). Resolve the two flagged readings (`TAB4698` 2024, police) in this step.
-3. **First batch of settle PRs**, the four `yes` promises, and only where the Riksdag action evidence also exists: `m-minska-ofrivilligt-deltidsarbete`, `l-mer-sol-och-vindkraft-i-hela-landet`, `sd-oka-bostadsbyggandet`, `sd-minska-beroendet-av-energiimport`. Then `tido-kvotflyktingar-900-per-ar` once the Migrationsverket history is read, and the emissions pair (`l-fossilutslappen-fran-transportsektorn-ska-bort`, `l-klimatmal-nettonoll-2045-inom-vaxande-ekonomi`) once `TAB4698` is cleared.
-4. **Second batch: non-SCB sources** (Migrationsverket xlsx, Polismyndigheten staffing, Energimyndigheten, Socialstyrelsen, Naturvårdsverket wolf inventory) covering the police and wolf promises, five and two promises respectively, which gives the best return per source.
+3. **First batch of settle PRs**, the three `yes` promises, and only where the Riksdag action evidence also exists: `m-minska-ofrivilligt-deltidsarbete`, `l-mer-sol-och-vindkraft-i-hela-landet` and `sd-oka-bostadsbyggandet`. Then `sd-minska-beroendet-av-energiimport` as `partial` (electricity only), then `tido-kvotflyktingar-900-per-ar` once the Migrationsverket history is read, and the emissions pair (`l-fossilutslappen-fran-transportsektorn-ska-bort`, `l-klimatmal-nettonoll-2045-inom-vaxande-ekonomi`) once `TAB4698` is cleared.
+4. **Second batch: non-SCB sources** (Migrationsverket xlsx, Polismyndigheten staffing, Energimyndigheten, Socialstyrelsen, Naturvårdsverket wolf inventory) covering the police and wolf promises, four (two government) and two promises respectively, which gives the best return per source.
 5. **Retype the weak ones**: `kd-investera-i-sveriges-framtid` to `vague`, and review the 11 `no` promises at term close.
 6. Revisit BRÅ when its database is reachable; today it matters for very few of these promises.
