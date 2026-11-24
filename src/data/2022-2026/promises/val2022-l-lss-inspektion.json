@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["LSS-inspektion", "personlig assistans", "tillsyn", "oseriösa aktörer", "brukare"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i september 2025 skarpare verktyg för Inspektionen för vård och omsorg: sanktionsavgift, omedelbart förbud mot olovliga verksamheter, straffansvar för den som fortsätter trots förbud och utökad anmälningsskyldighet för kommunerna. Riksdagen biföll förslaget i november 2025. Förslaget stärker tillsynen över assistansen hos den befintliga inspektionen, och det täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0315",
+      "designation": "Prop. 2025/26:15",
+      "title": "Skarpare verktyg till Inspektionen för vård och omsorg",
+      "date": "2025-09-18",
+      "url": "https://data.riksdagen.se/dokument/HD0315.html",
+      "relevance": "partial",
+      "note": "Ger Inspektionen för vård och omsorg bland annat sanktionsavgift och möjlighet att omedelbart förbjuda olovliga verksamheter inom assistansen."
     },
     {
       "kind": "bet",
