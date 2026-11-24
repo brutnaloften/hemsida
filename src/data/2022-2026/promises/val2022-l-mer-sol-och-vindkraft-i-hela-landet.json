@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["solkraft", "vindkraft", "elproduktion", "förnybar el", "elpriser"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Installerad effekt ökade i alla fyra elområden från 2022 till 2025. I riket steg vindkraften från 14 278 till 18 127 MW och solkraften från 2 367 till 5 542 MW. Statistiken mäter utfallet och förklarar inte orsaken. Regeringen föreslog i november 2022 att höja skattereduktionen för solceller från 15 till 20 procent. År 2025 sänktes den till 15 procent och reduktionen för mikroproduktion av el togs bort, så stödet vid mandatperiodens slut är lägre än 2022. Riksdagen antog 2026 en lag om intäktsdelning för närboende till vindkraft. Åtgärderna täcker bara delar av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,281 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet säger att vindkraft och ny elproduktion behövs men nämner inga mål för mer sol- och vindkraft; vindkraften ska byggas på konkurrensneutrala villkor."
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-installerad-effekt-vind",
+      "baseline": {
+        "period": "2022",
+        "v": 14278
+      },
+      "latest": {
+        "period": "2025",
+        "v": 18127
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2026-10-08",
+      "note": "Installerad effekt enligt SCB. Riket, enbart vindkraft."
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-installerad-effekt-sol",
+      "baseline": {
+        "period": "2022",
+        "v": 2367
+      },
+      "latest": {
+        "period": "2025",
+        "v": 5542
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2026-10-08",
+      "note": "Installerad effekt enligt SCB. Riket, enbart solkraft."
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-installerad-effekt-vind-se1",
+      "baseline": {
+        "period": "2022",
+        "v": 2872
+      },
+      "latest": {
+        "period": "2025",
+        "v": 3291
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2026-10-08",
+      "note": "Vindkraft i elområde SE1, en del av ”i hela landet”."
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-installerad-effekt-vind-se2",
+      "baseline": {
+        "period": "2022",
+        "v": 5969
+      },
+      "latest": {
+        "period": "2025",
+        "v": 7765
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2026-10-08",
+      "note": "Vindkraft i elområde SE2, en del av ”i hela landet”."
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-installerad-effekt-vind-se3",
+      "baseline": {
+        "period": "2022",
+        "v": 3254
+      },
+      "latest": {
+        "period": "2025",
+        "v": 4494
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2026-10-08",
+      "note": "Vindkraft i elområde SE3, en del av ”i hela landet”."
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-installerad-effekt-vind-se4",
+      "baseline": {
+        "period": "2022",
+        "v": 2183
+      },
+      "latest": {
+        "period": "2025",
+        "v": 2577
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2026-10-08",
+      "note": "Vindkraft i elområde SE4, en del av ”i hela landet”."
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-installerad-effekt-sol-se1",
+      "baseline": {
+        "period": "2022",
+        "v": 18
+      },
+      "latest": {
+        "period": "2025",
+        "v": 49
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2026-10-08",
+      "note": "Solkraft i elområde SE1, en del av ”i hela landet”."
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-installerad-effekt-sol-se2",
+      "baseline": {
+        "period": "2022",
+        "v": 109
+      },
+      "latest": {
+        "period": "2025",
+        "v": 215
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2026-10-08",
+      "note": "Solkraft i elområde SE2, en del av ”i hela landet”."
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-installerad-effekt-sol-se3",
+      "baseline": {
+        "period": "2022",
+        "v": 1549
+      },
+      "latest": {
+        "period": "2025",
+        "v": 3720
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2026-10-08",
+      "note": "Solkraft i elområde SE3, en del av ”i hela landet”."
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-installerad-effekt-sol-se4",
+      "baseline": {
+        "period": "2022",
+        "v": 691
+      },
+      "latest": {
+        "period": "2025",
+        "v": 1558
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2026-10-08",
+      "note": "Solkraft i elområde SE4, en del av ”i hela landet”."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA0315",
+      "designation": "Prop. 2022/23:15",
+      "title": "Förstärkt skattereduktion för installation av solceller",
+      "date": "2022-11-10",
+      "url": "https://data.riksdagen.se/dokument/HA0315.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2022-1797",
+      "designation": "SFS 2022:1797",
+      "title": "Lag (2022:1797) om ändring i lagen (2020:1066) om förfarandet vid skattereduktion för installation av grön teknik",
+      "date": "2023-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20221797.html",
+      "relevance": "partial",
+      "note": "Gäller bara solceller, och höjningen togs tillbaka 2025."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03109",
+      "designation": "Prop. 2024/25:109",
+      "title": "Förändrade skattesubventioner för solceller och mikroproduktion av el",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03109.html",
+      "relevance": "contradicts",
+      "note": "Sänkte skattereduktionen för solceller från 20 till 15 procent och tog bort den för mikroproduktion av el."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01SkU17",
+      "designation": "Bet. 2024/25:SkU17",
+      "title": "Förändrade skattesubventioner för solceller och mikroproduktion av el",
+      "date": "2025-05-08",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU17.html",
+      "relevance": "contradicts",
+      "note": null,
+      "votes": {
+        "S": "yes",
+        "SD": "yes",
+        "C": "no",
+        "M": "yes",
+        "MP": "no",
+        "L": "yes",
+        "KD": "yes",
+        "V": "no"
+      },
+      "vote_point": {
+        "punkt": "1",
+        "rubrik": "Förändrade skattesubventioner för solceller och mikroproduktion av förnybar el",
+        "votering_id": "1173a52a-ec84-4098-bb8a-cbacb40b9c61"
+      }
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03239",
+      "designation": "Prop. 2025/26:239",
+      "title": "Vindkraft i kommuner",
+      "date": "2026-04-14",
+      "url": "https://data.riksdagen.se/dokument/HD03239.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01NU20",
+      "designation": "Bet. 2025/26:NU20",
+      "title": "Vindkraft i kommuner",
+      "date": "2026-05-28",
+      "url": "https://data.riksdagen.se/dokument/HD01NU20.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1113",
+      "designation": "SFS 2026:1113",
+      "title": "Lag (2026:1113) om intäktsdelning från vindkraftsanläggningar",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261113.html",
+      "relevance": "partial",
+      "note": "Ger närboende ersättning från vindkraftsintäkter men bygger ingen kraft i sig."
     }
   ]
 }

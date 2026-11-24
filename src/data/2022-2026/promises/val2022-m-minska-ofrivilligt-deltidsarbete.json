@@ -18,9 +18,16 @@
   "keywords": ["ofrivillig deltid", "deltidsarbete", "heltid", "jämställdhet"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "assessedBy": "ai",
+    "reasoning": "Antalet undersysselsatta, SCB:s närmaste mått på ofrivillig deltid, ökade från 299 000 år 2022 till 376 300 år 2025. Siffran gick åt fel håll. Statistiken mäter utfallet och förklarar inte orsaken. Löftet avgörs när mandatperioden är slut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,25 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-undersysselsatta-15-74",
+      "baseline": {
+        "period": "2022",
+        "v": 299
+      },
+      "latest": {
+        "period": "2025",
+        "v": 376.3
+      },
+      "target": {
+        "type": "direction",
+        "op": "down"
+      },
+      "relevance": "partial",
+      "date": "2026-01-23",
+      "note": "Undersysselsatta är personer som arbetar deltid och vill arbeta mer. SCB:s mått är det närmaste som finns för ofrivillig deltid, men det är ett närmevärde."
     }
   ]
 }
