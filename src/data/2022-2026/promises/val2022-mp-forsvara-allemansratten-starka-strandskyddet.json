@@ -17,15 +17,20 @@
   "committee": "MJU",
   "keywords": ["allemansrätten", "strandskydd", "miljöbalken"],
   "verdict": {
-    "value": "in_progress",
-    "assessedBy": "ai",
-    "reasoning": "Riksdagen beslutade i maj 2025 om lättnader i strandskyddet, bland annat att det generella skyddet tas bort vid små vatten. I juni 2025 gav regeringen en utredning i uppdrag att reformera strandskyddet, och i maj 2026 förlängdes dess tid till slutet av 2026. Flera beslut motverkar löftet: lättnaderna 2025, undantag för elledningar i maj 2024 och slopade kustförbud för kärnkraft i juni 2026.",
+    "value": "unassessed",
+    "reasoning": "",
     "date": "2026-11-24",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2026-11-02"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Riksdagen beslutade i maj 2025 om lättnader i strandskyddet, bland annat att det generella skyddet tas bort vid små vatten. I juni 2025 gav regeringen en utredning i uppdrag att reformera strandskyddet, och i maj 2026 förlängdes dess tid till slutet av 2026. Flera beslut motverkar löftet: lättnaderna 2025, undantag för elledningar i maj 2024 och slopade kustförbud för kärnkraft i juni 2026.",
+        "date": "2026-11-24"
       }
     ]
   },
@@ -78,16 +83,6 @@
       "date": "2026-03-12",
       "url": "https://data.riksdagen.se/dokument/HD01MJU13.html",
       "relevance": "contradicts",
-      "note": null
-    },
-    {
-      "kind": "dir",
-      "dok_id": "HEB130",
-      "designation": "Dir. 2026:30",
-      "title": "Tilläggsdirektiv till Strandskyddsutredningen (KN 2025:01)",
-      "date": "2026-05-13",
-      "url": "https://data.riksdagen.se/dokument/HEB130.html",
-      "relevance": "partial",
       "note": null
     },
     {

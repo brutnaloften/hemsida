@@ -17,15 +17,20 @@
   "committee": "SkU",
   "keywords": ["delningsekonomi", "skattesystemet", "plattformsekonomi", "skatteregler"],
   "verdict": {
-    "value": "in_progress",
-    "assessedBy": "ai",
-    "reasoning": "En statlig utredning lämnade i mars 2025 förslag på enklare mervärdesskatteregler vid försäljning av begagnade varor och vid donation av livsmedel. Dokumentet visar förslag, inget beslut. Det gäller bara en del av löftet, nämligen skatteregler för återbruk och donationer.",
+    "value": "unassessed",
+    "reasoning": "",
     "date": "2026-11-24",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-08-08"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning lämnade i mars 2025 förslag på enklare mervärdesskatteregler vid försäljning av begagnade varor och vid donation av livsmedel. Dokumentet visar förslag, inget beslut. Det gäller bara en del av löftet, nämligen skatteregler för återbruk och donationer.",
+        "date": "2026-11-24"
       }
     ]
   },
@@ -36,16 +41,6 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
-      "note": null
-    },
-    {
-      "kind": "sou",
-      "dok_id": "HDB330",
-      "designation": "SOU 2025:30",
-      "title": "Enklare mervärdesskatteregler vid försäljning av begagnade varor och donation av livsmedel",
-      "date": "2025-03-25",
-      "url": "https://data.riksdagen.se/dokument/HDB330.html",
-      "relevance": "partial",
       "note": null
     }
   ]
