@@ -140,12 +140,15 @@ if (values['sfs-store']) {
   // Several runs, comma separated, earliest first: a later run's judgement of the same
   // (promise, law) replaces the earlier one.
   const sfsResults = mergeSfsResults(
-    values['sfs-run']!.split(',').map((runArg) => {
-      const runPath = runArg.endsWith('.json')
-        ? resolve(runArg)
-        : resolve(root, 'tools/out/sfs-judge-runs', runArg, 'results.json');
-      return (loadJson(runPath) as { results: Parameters<typeof sfsJudgements>[0] }).results;
-    }),
+    values['sfs-run']!.split(',')
+      .map((r) => r.trim())
+      .filter(Boolean)
+      .map((runArg) => {
+        const runPath = runArg.endsWith('.json')
+          ? resolve(runArg)
+          : resolve(root, 'tools/out/sfs-judge-runs', runArg, 'results.json');
+        return (loadJson(runPath) as { results: Parameters<typeof sfsJudgements>[0] }).results;
+      }),
   );
   const overrides = loadJson(
     values['sfs-overrides']

@@ -317,7 +317,7 @@ describe('v2 additions', () => {
     expect(SFS_JUDGE_TEMPLATE_VERSION).toBe('v4');
   });
 
-  it('plans pairs for a budget proposition that has laws, and none for one without', () => {
+  it('plans pairs for a budget bill through its main document', () => {
     const store = { laws: sfs.laws, byProp: { B1: ['sfs-2025-3'] } };
     const budgetDocs = [
       {
@@ -340,7 +340,11 @@ describe('v2 additions', () => {
       store,
       budgetDocs,
     );
-    expect(pairs.map((p) => p.id)).toEqual(['a::sfs-2025-3']);
+    // The unit's main document (shortest dok_id) is the one named, whichever is linked.
+    expect(pairs.map((p) => [p.id, p.prop_ids])).toEqual([
+      ['a::sfs-2025-3', ['B1']],
+      ['b::sfs-2025-3', ['B1']],
+    ]);
   });
 
   it('never plans pairs for budget-type promises', () => {

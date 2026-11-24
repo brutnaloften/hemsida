@@ -1,6 +1,6 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { applyLinks, sfsJudgements, type StoreDocument } from './lib/apply-links.ts';
@@ -49,8 +49,14 @@ const linkPair = {
   proposed: true,
 };
 
+const tmpRoots: string[] = [];
+afterEach(() => {
+  for (const d of tmpRoots.splice(0)) rmSync(d, { recursive: true, force: true });
+});
+
 function setup() {
   const root = mkdtempSync(join(tmpdir(), 'apply-links-'));
+  tmpRoots.push(root);
   const write = (rel: string, data: unknown) => {
     const path = join(root, rel);
     mkdirSync(dirname(path), { recursive: true });

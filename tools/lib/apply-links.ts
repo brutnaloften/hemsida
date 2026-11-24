@@ -261,7 +261,7 @@ interface SfsLinked {
 interface SfsOutcome {
   /** Laws to show as evidence: judged full/partial/weaker, with an in-force date. */
   laws: SfsLinked[];
-  /** Linked (non-budget) propositions with no law in force yet. */
+  /** Linked propositions with no law in force yet (a budget bill only counts when a law of it delivers). */
   pending: RiksdagEvidence[];
   /** Linked dir/sou/ds dated after the newest proposition that has a law in force. */
   later: RiksdagEvidence[];
@@ -600,20 +600,22 @@ export function applyLinks(
     );
   }
 
-  // SFS: laws reached through the linked propositions. A budget proposition counts only when the
-  // register shows laws passed through it (a promise linked to a spending bill with no law attached
-  // must not wait for a law that never comes); skrivelser never count.
+  // SFS: laws reached through the linked propositions. A budget bill counts only when one of its
+  // laws delivers something of this promise (see `delivers`); skrivelser never count.
   let outcome: SfsOutcome | null = null;
   if (useSfs) {
+    // A budget proposition counts, as decided and as pending, only if one of its laws has a
+    // non-none, non-rejected judgement for this promise; otherwise it is ignored.
+    const delivers = (propId: string) =>
+      (sfs!.byProp[propId] ?? []).some((k) => {
+        const j = sfs!.judgements.get(`${promise.id}::${k}`);
+        return !rejected.has(k) && !!j && j.label !== 'none';
+      });
     const props = riksdag.filter(
       (e) =>
         e.kind === 'prop' &&
         isSupporting(e) &&
-        !(
-          docs.has(e.dok_id) &&
-          isBudgetProp(docs.get(e.dok_id)!) &&
-          !(sfs!.byProp[e.dok_id]?.length ?? 0)
-        ),
+        !(docs.has(e.dok_id) && isBudgetProp(docs.get(e.dok_id)!) && !delivers(e.dok_id)),
     );
     const planning = riksdag.filter(
       (e) => ['dir', 'sou', 'ds'].includes(e.kind) && isSupporting(e),
