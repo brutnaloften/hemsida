@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildIdf, stemsOf, widenSearch } from './widen-candidates.ts';
+import { buildIdf, PHRASE_BONUS, stemsOf, widenSearch } from './widen-candidates.ts';
 import type { StoredDocument } from './riksdag-ingest.ts';
 
 function doc(dok_id: string, titel: string, text = '', datum = '2024-01-01'): StoredDocument {
@@ -50,15 +50,20 @@ describe('widenSearch', () => {
     expect(widenSearch(promise, only, buildIdf(only), new Set(), 5)).toEqual([]);
   });
 
-  it('ranks a title that contains a hand-written term above body hits on common words', () => {
+  it('ranks a title that contains a hand-written phrase above title hits on common terms', () => {
+    const rich = {
+      ...promise,
+      keywords: ['visitation', 'vapen', 'polisens', 'befogenheter', 'husrannsakan'],
+    };
     const short = doc('PROP', 'Säkerhetszoner', 'Regeringens proposition');
     const noisy = doc(
       'NOISE',
-      'Polisfrågor',
-      'polisen får visitera polisen visitera visitera polisen särskilda zoner',
+      'Visitation vapen polisens befogenheter husrannsakan',
+      'visitation vapen',
     );
     const all = [noisy, short];
-    const hits = widenSearch(promise, all, buildIdf(all), new Set(), 5);
-    expect(hits[0]?.doc.dok_id).toBe('PROP');
+    const hits = widenSearch(rich, all, buildIdf(all), new Set(), 5);
+    expect(hits.map((h) => h.doc.dok_id)).toEqual(['PROP', 'NOISE']);
+    expect(hits[0]!.score).toBeGreaterThanOrEqual(PHRASE_BONUS);
   });
 });

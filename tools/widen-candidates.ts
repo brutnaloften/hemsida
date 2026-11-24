@@ -32,6 +32,9 @@ if (!values.terms) throw new Error('usage: widen-candidates.ts --terms <file> [-
 const term = values.term!;
 const per = Number(values.per);
 const minScore = Number(values['min-score']);
+if (!Number.isFinite(per) || per < 1) throw new Error('--per must be a positive number');
+if (!Number.isFinite(minScore) || minScore < 0)
+  throw new Error('--min-score must be a number >= 0');
 const extra = z
   .record(z.string(), z.array(z.string()))
   .parse(loadJson(resolve(root, values.terms)));
