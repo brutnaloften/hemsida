@@ -18,9 +18,16 @@
   "keywords": ["bostadsbyggande", "bostadsbrist"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "assessedBy": "ai",
+    "reasoning": "Antalet färdigställda lägenheter i nybyggda hus minskade från 54 018 år 2022 till 31 359 år 2025, efter en topp på 65 595 år 2023. Siffran gick åt fel håll. Statistiken mäter utfallet och förklarar inte orsaken. Löftet avgörs när mandatperioden är slut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,25 @@
       "url": "https://data.riksdagen.se/dokument/HC01CU6.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-fardigstallda-lagenheter-nybyggda-hus",
+      "baseline": {
+        "period": "2022",
+        "v": 54018
+      },
+      "latest": {
+        "period": "2025",
+        "v": 31359
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2026-05-11",
+      "note": "Färdigställda lägenheter i nybyggda småhus och flerbostadshus. Toppen var 65 595 år 2023. Siffran för 2025 är den senaste och kan revideras."
     }
   ]
 }

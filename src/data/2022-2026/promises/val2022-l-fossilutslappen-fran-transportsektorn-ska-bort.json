@@ -53,6 +53,26 @@
       "url": "https://data.riksdagen.se/dokument/HBB180.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-vaxthusgaser-inrikes-transporter",
+      "baseline": {
+        "period": "2022",
+        "v": 13950.8
+      },
+      "latest": {
+        "period": "2024",
+        "v": 16847.9
+      },
+      "target": {
+        "type": "threshold",
+        "op": "lte",
+        "value": 0
+      },
+      "relevance": "full",
+      "date": "2025-12-16",
+      "note": "Utsläppen från inrikes transporter, exklusive internationell bunkring. Senaste året är 2024, så jämförelsen gäller 2022 till 2024. Ökningen 2024 följer av att reduktionsplikten sänktes i januari 2024, enligt Naturvårdsverket."
     }
   ]
 }

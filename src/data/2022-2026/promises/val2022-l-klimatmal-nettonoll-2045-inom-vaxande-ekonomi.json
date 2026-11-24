@@ -18,9 +18,16 @@
   "keywords": ["klimatmål", "nettonoll", "2045", "växthusgaser", "negativa utsläpp"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "assessedBy": "ai",
+    "reasoning": "Målet gäller 2045, efter mandatperioden. Nettoutsläppen inklusive skog och mark sjönk från 2 023 kt år 2022 till minus 6 744 kt år 2024, men utsläppen utan skog och mark ökade från 45 168 till 47 494 kt. Statistiken mäter utfallet och är otillräcklig som ensamt underlag. Orsaken till 2024 års ökning är sänkt reduktionsplikt, enligt Naturvårdsverket.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,43 @@
       "url": "https://data.riksdagen.se/dokument/HB01MJU15.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-vaxthusgaser-netto-inkl-lulucf",
+      "baseline": {
+        "period": "2022",
+        "v": 2022.5
+      },
+      "latest": {
+        "period": "2024",
+        "v": -6744.2
+      },
+      "target": {
+        "type": "none"
+      },
+      "relevance": "partial",
+      "date": "2025-12-16",
+      "note": "Nettoutsläpp inklusive markanvändning och skog, som svänger mycket mellan åren. Sveriges klimatmål räknas annorlunda: minst 85 procent lägre utsläpp än 1990 utan markanvändning och skog, plus kompletterande åtgärder. Senaste året är 2024."
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-vaxthusgaser-nationell-total",
+      "baseline": {
+        "period": "2022",
+        "v": 45168
+      },
+      "latest": {
+        "period": "2024",
+        "v": 47493.7
+      },
+      "target": {
+        "type": "direction",
+        "op": "down"
+      },
+      "relevance": "partial",
+      "date": "2025-12-16",
+      "note": "Utsläpp utan markanvändning och internationell bunkring. De steg 2024 när reduktionsplikten sänktes i januari 2024, enligt Naturvårdsverket. Senaste året är 2024."
     }
   ]
 }
