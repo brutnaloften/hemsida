@@ -58,6 +58,141 @@ export const TYPE_FIXES: Readonly<Record<string, { type: PromiseRecord['type']; 
       type: 'legislative',
       reason: 'Tax cut typed `budget`; all other tax cuts are `legislative`.',
     },
+    'aterstall-tidigare-vatmarker': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'aterstart-av-ringhals-1-och-2': {
+      type: 'legislative',
+      reason:
+        'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'betalt-for-den-som-minskar-vaxthusgaser-i-atmosfaren': {
+      type: 'legislative',
+      reason:
+        'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'bygg-bort-jarnvagsnatets-flaskhalsar': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'byggut-stod-till-offer-for-hedersbrott': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'bygg-ut-utbildningar-med-hogst-kvalitet': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'civila-forsvaret-starks-i-samma-takt-som-det-militara': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'fler-anstallda-och-varnpliktiga-i-krigsorganisationen': {
+      type: 'outcome',
+      reason:
+        'Typed `other_action` by the proposal; retyped `outcome` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'fler-fossilfria-flygresor': {
+      type: 'outcome',
+      reason:
+        'Typed `other_action` by the proposal; retyped `outcome` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'fler-genomgar-grundlaggande-militar-utbildning': {
+      type: 'outcome',
+      reason:
+        'Typed `other_action` by the proposal; retyped `outcome` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'fler-laddstolpar': {
+      type: 'outcome',
+      reason:
+        'Typed `other_action` by the proposal; retyped `outcome` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'fler-sarskilda-ungdomshem': {
+      type: 'outcome',
+      reason:
+        'Typed `other_action` by the proposal; retyped `outcome` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'flexibla-former-for-sfi': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'fortsatt-inblandning-av-fossilfria-branslen': {
+      type: 'legislative',
+      reason:
+        'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'kommunala-bostadsbolag-arbetande-hyresgaster-utsatta-omraden': {
+      type: 'legislative',
+      reason:
+        'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'mer-sol-och-vindkraft-i-hela-landet': {
+      type: 'outcome',
+      reason:
+        'Typed `other_action` by the proposal; retyped `outcome` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'modern-utrustning-for-polisen-vid-kravaller': {
+      type: 'legislative',
+      reason:
+        'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'nationell-kraftsamling-for-fler-bemannade-vardplatser': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'nationella-hembesoksprogram-nyblivna-foraldrar': {
+      type: 'legislative',
+      reason:
+        'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'nationellt-stod-for-skyddade-boenden': {
+      type: 'legislative',
+      reason:
+        'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'ny-materiel-till-forsvaret': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'oka-den-larardledda-undervisningen': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'okat-ekonomiskt-politiskt-och-militart-stod-till-ukraina': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'rekrytera-basta-lararna-till-skolor-i-utsatta-omraden': {
+      type: 'legislative',
+      reason:
+        'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'sarskilda-initiativ-for-modra-och-forlossningsvarden': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'satsa-pa-energilagring': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
+    'sociala-team-pa-utsatta-skolor': {
+      type: 'budget',
+      reason:
+        'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
+    },
   };
 
 /** Wording and quote fixes, keyed by candidate id (without prefix). */
