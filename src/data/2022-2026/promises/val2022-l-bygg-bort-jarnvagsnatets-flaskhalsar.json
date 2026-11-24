@@ -17,10 +17,17 @@
   "committee": "TU",
   "keywords": ["järnväg", "flaskhalsar", "punktlighet", "Trafikverket", "infrastruktur"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Anslaget 1:1 Utveckling av statens transportinfrastruktur, som betalar investeringar i statliga vägar och järnvägar, ökade nominellt från ett utfall på 29 277 mn kr 2022 till 37 836 mn kr 2025, alltså 8 559 mn kr eller +29,2 procent (i fasta priser +15,0 procent). Utfallet var 34 173 mn kr 2023 och 32 872 mn kr 2024, så det sjönk 2024 men låg ändå över nivån 2022. För 2025 föreslog regeringen att 18 454 mn kr av Trafikverkets 39 051 mn kr skulle gå till järnvägsinvesteringar (Bet. 2024/25:TU1). Pengarna till järnvägsutbyggnad har ökat, men anslaget delas med väg och sjöfart och visar inte vilka flaskhalsar som har byggts bort eller om tågen går bättre i tid. Källa: ESV:s årsutfall och betänkandet. Därför delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,58 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01TU1",
+      "designation": "Bet. 2024/25:TU1",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01TU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2201001",
+        "namn": "Utveckling av statens transportinfrastruktur",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 29277.4,
+        "after": 37836.1
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 29 277 mn kr 2022 och 37 836 mn kr 2025, ändring 8 559 mn kr (+29,2 %). I fasta priser +15,0 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Anslaget 1:1 Utveckling av statens transportinfrastruktur i utgiftsområde 22. Anslaget delas mellan väg, järnväg och sjöfart; ESV delar inte upp utfallet."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2201001",
+        "namn": "Utveckling av statens transportinfrastruktur",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 31986.8,
+        "after": 41444
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 31 987 mn kr 2022 och 41 444 mn kr 2025, ändring 9 457 mn kr (+29,6 %). I fasta priser +15,3 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-12-04",
+      "relevance": "partial",
+      "note": "Regeringen föreslog 39 051 mn kr till Trafikverkets disposition för 2025, varav 18 454 mn kr järnvägsinvesteringar (Bet. 2024/25:TU1)."
     }
   ]
 }

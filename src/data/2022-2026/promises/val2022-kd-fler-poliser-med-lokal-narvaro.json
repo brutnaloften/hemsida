@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["poliser", "lokal närvaro", "landsbygd", "polisstationer"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Anslaget 1:1 Polismyndigheten ökade nominellt från ett utfall på 33 313 mn kr 2022 till 44 759 mn kr 2025, alltså 11 446 mn kr eller +34,4 procent (i fasta priser +19,6 procent). Regeringen föreslog 37 043 mn kr för 2023 (Bet. 2022/23:JuU1), 40 765 mn kr för 2024 (Bet. 2023/24:JuU1) och 45 212 mn kr för 2025 (Bet. 2024/25:JuU1), och i Bet. 2023/24:JuU1 anför regeringen att antalet poliser ska öka. Pengarna går åt rätt håll, men anslaget visar inte hur många poliser det finns eller var de tjänstgör, så löftet om fler poliser med lokal närvaro kan inte bekräftas i budgetdata. Källa: ESV:s årsutfall och betänkandena. Därför delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,78 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU1",
+      "designation": "Bet. 2022/23:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01JuU1",
+      "designation": "Bet. 2023/24:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2023-11-30",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU1",
+      "designation": "Bet. 2024/25:JuU1",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2024-11-29",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401001",
+        "namn": "Polismyndigheten",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 33313.2,
+        "after": 44759.4
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 33 313 mn kr 2022 och 44 759 mn kr 2025, ändring 11 446 mn kr (+34,4 %). I fasta priser +19,6 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Anslaget 1:1 Polismyndigheten i utgiftsområde 4. Antalet poliser och deras placering anges inte i anslaget."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0401001",
+        "namn": "Polismyndigheten",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 33838,
+        "after": 45211.7
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 33 838 mn kr 2022 och 45 212 mn kr 2025, ändring 11 374 mn kr (+33,6 %). I fasta priser +18,9 % (sammanhang, avgör inte bedömningen).",
+      "date": "2024-11-29",
+      "relevance": "partial",
+      "note": "Regeringen föreslog 37 043 mn kr för 2023 (Bet. 2022/23:JuU1), 40 765 mn kr för 2024 (Bet. 2023/24:JuU1) och 45 212 mn kr för 2025 (Bet. 2024/25:JuU1)."
     }
   ]
 }

@@ -17,10 +17,17 @@
   "committee": "TU",
   "keywords": ["regionala flygplatser", "beredskapsflygplats"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Anslaget 1:6 Ersättning avseende flygplatser, som finansierar delar av driftunderskotten vid kommunala och privata flygplatser med flyglinjer som staten upphandlar eller som ingår i det statliga nätet av beredskapsflygplatser, ökade nominellt från ett utfall på 256 mn kr 2022 till 292 mn kr 2025, alltså 36 mn kr eller +14,1 procent (i fasta priser +1,5 procent). Utfallet var lägre 2023 (154 mn kr). Anvisat belopp 2022 (258 mn kr) innehåller en engångsförstärkning på 129 mn kr genom ändringsbudget. För 2025 föreslog regeringen 296 mn kr till anslaget och trafikutskottet ställde sig bakom det (Bet. 2024/25:TU1). Stödet till flygplatserna finns alltså kvar och har ökat, men ESV:s data visar inte om varje enskild flygplats har bevarats eller hur nätet av beredskapsflygplatser har byggts ut. Därför delvis uppfyllt. Källa: ESV:s årsutfall och betänkandet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -50,6 +57,58 @@
       "url": "https://data.riksdagen.se/dokument/HC01TU13.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01TU1",
+      "designation": "Bet. 2024/25:TU1",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01TU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2201006",
+        "namn": "Ersättning avseende flygplatser",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 255.6,
+        "after": 291.7
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden (valmanifestet kom 2022). Nominellt utfall 256 mn kr 2022 och 292 mn kr 2025, ändring 36 mn kr (+14,1 %). I fasta priser +1,5 % (sammanhang, avgör inte bedömningen).",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Anslaget 1:6 Ersättning avseende flygplatser i utgiftsområde 22; det stöder också flygplatser med statligt upphandlade flyglinjer. Utfallet 2023 var 154 mn kr, lägre än 2022. Anslaget säger inget om enskilda flygplatser."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "2201006",
+        "namn": "Ersättning avseende flygplatser",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 257.8,
+        "after": 296
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 258 mn kr 2022 och 296 mn kr 2025, ändring 38 mn kr (+14,8 %). I fasta priser +2,2 % (sammanhang, avgör inte bedömningen). Beloppet 2022 innehåller 129 mn kr i ändringsbudget som engångsförstärkning.",
+      "date": "2024-12-04",
+      "relevance": "partial",
+      "note": "Regeringen föreslog 296 mn kr för 2025 och trafikutskottet ställde sig bakom förslaget (Bet. 2024/25:TU1)."
     }
   ]
 }
