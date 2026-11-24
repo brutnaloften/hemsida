@@ -89,7 +89,22 @@
       "date": "2026-05-08",
       "url": "https://data.riksdagen.se/dokument/HD01UbU20.html",
       "relevance": "full",
-      "note": null
+      "note": null,
+      "votes": {
+        "S": "yes",
+        "SD": "yes",
+        "C": "yes",
+        "M": "yes",
+        "MP": "no",
+        "L": "yes",
+        "KD": "yes",
+        "V": "no"
+      },
+      "vote_point": {
+        "punkt": "1",
+        "rubrik": "Regeringens lagförslag",
+        "votering_id": "41c822f8-2971-4744-a4da-3b8af08a5e56"
+      }
     },
     {
       "kind": "sfs",

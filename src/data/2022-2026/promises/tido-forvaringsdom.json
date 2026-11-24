@@ -73,7 +73,22 @@
       "date": "2026-03-17",
       "url": "https://data.riksdagen.se/dokument/HD01JuU27.html",
       "relevance": "full",
-      "note": null
+      "note": null,
+      "votes": {
+        "S": "yes",
+        "SD": "yes",
+        "C": "no",
+        "M": "yes",
+        "MP": "abstain",
+        "L": "yes",
+        "KD": "yes",
+        "V": "yes"
+      },
+      "vote_point": {
+        "punkt": "1",
+        "rubrik": "Regeringens lagförslag",
+        "votering_id": "90bf4fa7-db03-44de-af6e-db40d517e630"
+      }
     },
     {
       "kind": "sfs",

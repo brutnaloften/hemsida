@@ -71,12 +71,45 @@ describe('fillBetVotes', () => {
         rubrik: 'Grundlagsförslaget',
       },
     ]);
-    expect(await fillBetVotes(c, bet, [bet, prop])).toMatchObject({ status: 'ambiguous' });
+    expect(await fillBetVotes(c, bet, [bet, prop])).toMatchObject({
+      status: 'ambiguous',
+      reason: expect.stringContaining('vilande'),
+    });
   });
 
-  it('does not fill a whole-budget frame vote (Rambeslutet)', async () => {
-    const c = client([{ ...point('2', bill, V1), rubrik: 'Rambeslutet' }]);
-    expect(await fillBetVotes(c, bet, [bet, prop])).toMatchObject({ status: 'ambiguous' });
+  it.each(['Rambeslutet', 'Utgiftsramar för 2025', 'Beslut om rambeslut'])(
+    'does not fill a budget frame vote (%s)',
+    async (rubrik) => {
+      const c = client([{ ...point('2', bill, V1), rubrik }]);
+      expect(await fillBetVotes(c, bet, [bet, prop])).toMatchObject({
+        status: 'ambiguous',
+        reason: expect.stringContaining('budget frame vote'),
+      });
+    },
+  );
+
+  it('still fills a rubrik that merely starts with "Ram"', async () => {
+    const c = client([{ ...point('1', bill, V1), rubrik: 'Ramlag för solceller' }]);
+    expect((await fillBetVotes(c, bet, [bet, prop])).status).toBe('filled');
+  });
+
+  it('does not fill an ändringsbudget / ändrade ramar point (rubrik or forslag)', async () => {
+    const byRubrik = client([
+      { ...point('1', bill, V1), rubrik: 'Ändrade ramar för utgiftsområden för 2025' },
+    ]);
+    expect(await fillBetVotes(byRubrik, bet, [bet, prop])).toMatchObject({
+      status: 'ambiguous',
+      reason: expect.stringContaining('budget frame vote'),
+    });
+    const byForslag = client([
+      { ...point('1', `${bill} Ändringsbudget för 2025`, V1), rubrik: 'Regeringens förslag' },
+    ]);
+    expect(await fillBetVotes(byForslag, bet, [bet, prop])).toMatchObject({
+      status: 'ambiguous',
+      reason: expect.stringContaining('budget frame vote'),
+    });
+    const other = client([{ ...point('1', bill, V1), rubrik: 'Tilläggsbudget' }]);
+    expect((await fillBetVotes(other, bet, [bet, prop])).status).toBe('filled');
   });
 
   it('does not pick the voted point when an unvoted point also cites the proposition', async () => {
