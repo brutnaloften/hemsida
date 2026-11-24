@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["integration", "svenska normer", "krav"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade den 15 juni 2026 att skärpa kraven på vandel för uppehållstillstånd i utlänningslagen, vilket täcker en del av löftet. Den 25 juni 2026 gav regeringen en utredare i uppdrag att föreslå hur svenska språkets ställning och kunskaperna i svenska kan stärkas, bland annat för att människor ska förstå samhällets normer och värderingar. Arbetet pågår.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,26 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet anger att en kravbaserad integrationspolitik ska införas och att en utredning ska föreslå förändringar av reglerna om obligatorisk samhällsintroduktion och samhällsorientering."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU36",
+      "designation": "Bet. 2025/26:SfU36",
+      "title": "Skärpta och tydligare krav på vandel för uppehållstillstånd",
+      "date": "2026-06-11",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU36.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB155",
+      "designation": "Dir. 2026:55",
+      "title": "Stärkt ställning för det svenska språket",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HEB155.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

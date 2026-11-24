@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["regelförenkling", "rättssäkerhet", "jordbruk", "skogsbruk"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2026 fram ett förslag om enklare skogsregler och bättre rättssäkerhet, bland annat en enda domstol för överklaganden. Riksdagen biföll det i juni 2026, och ändringar i miljöbalken, skogsvårdslagen och sekretesslagen träder i kraft 1 januari 2027. De täcker bara skogsbruket, alltså en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03242",
+      "designation": "Prop. 2025/26:242",
+      "title": "Ett tydligt regelverk för aktivt skogsbruk",
+      "date": "2026-04-16",
+      "url": "https://data.riksdagen.se/dokument/HD03242.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01MJU29",
       "designation": "Bet. 2025/26:MJU29",
@@ -40,6 +57,36 @@
       "url": "https://data.riksdagen.se/dokument/HD01MJU29.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1238",
+      "designation": "SFS 2026:1238",
+      "title": "Lag (2026:1238) om ändring i miljöbalken",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261238.html",
+      "relevance": "partial",
+      "note": "Löftet gäller regelverken för jord- och skogsbruk i stort; jordbruket berörs inte och flera andra förenklingar ligger i andra lagar eller förordningar."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1239",
+      "designation": "SFS 2026:1239",
+      "title": "Lag (2026:1239) om ändring i skogsvårdslagen (1979:429)",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261239.html",
+      "relevance": "partial",
+      "note": "Lagen genomför inte övriga förenklingar för jord- och skogsbruk, som ändrad samrådsplikt, begränsad kunskapskostnad för markägare eller ändrade överklagandefrister; den berör inte heller jordbruket."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1241",
+      "designation": "SFS 2026:1241",
+      "title": "Lag (2026:1241) om ändring i offentlighets- och sekretesslagen (2009:400)",
+      "date": "2027-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261241.html",
+      "relevance": "partial",
+      "note": "Övriga förenklingar och rättssäkerhetsåtgärder (samrådskopplingen, kostnadsbegränsning, överklagande till mark- och miljödomstol, överklagandefrister, partsställning) ligger i andra lagar; jordbruket berörs inte."
     }
   ]
 }

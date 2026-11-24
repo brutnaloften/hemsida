@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["reduktionsplikt", "biodrivmedel", "fossilfria bränslen", "inblandning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen beslutade i november 2023 att sänka reduktionsplikten för bensin och diesel till sex procent 2024–2026, vilket motverkar löftet. Regeringen föreslog i mars 2025 nya nivåer för inblandningen, och riksdagen beslutade i maj 2025 om en höjning till 10 procent fram till 2030. Ändringen i lagen om reduktion av växthusgasutsläpp trädde i kraft 1 juli 2025 och täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0328",
+      "designation": "Prop. 2023/24:28",
+      "title": "Sänkning av reduktionsplikten för bensin och diesel",
+      "date": "2023-10-17",
+      "url": "https://data.riksdagen.se/dokument/HB0328.html",
+      "relevance": "contradicts",
       "note": null
     },
     {
@@ -42,6 +59,26 @@
       "note": null
     },
     {
+      "kind": "dir",
+      "dok_id": "HCB198",
+      "designation": "Dir. 2024:98",
+      "title": "Styrmedel för att bidra till en utfasning av fossila bränslen och att nå Sveriges klimatåtaganden i EU",
+      "date": "2024-10-24",
+      "url": "https://data.riksdagen.se/dokument/HCB198.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03131",
+      "designation": "Prop. 2024/25:131",
+      "title": "Nya regler för datacenter och hållbara bränslen samt en ny reduktionsplikt",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03131.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HC01MJU17",
       "designation": "Bet. 2024/25:MJU17",
@@ -50,6 +87,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01MJU17.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-576",
+      "designation": "SFS 2025:576",
+      "title": "Lag (2025:576) om ändring i lagen (2017:1201) om reduktion av växthusgasutsläpp från vissa fossila drivmedel",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025576.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att inblandningen av fossilfria bränslen uttryckligen säkras på tidigare nivå eller över tid. Flygfotogen utgår ur lagen, och reduktionsplikten kan delvis uppfyllas med el i stället för inblandning."
     }
   ]
 }

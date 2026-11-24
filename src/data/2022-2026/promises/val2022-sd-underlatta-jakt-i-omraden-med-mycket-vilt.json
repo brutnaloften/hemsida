@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["jakt", "vilt", "viltstam"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i januari 2025 tilläggsdirektiv till Jaktlagstiftningsutredningen. Bland de dokument som listas finns också två utredningsbetänkanden, om vissa förändringar av jaktlagstiftningen och om en ny viltförvaltningslagstiftning. Regeringen lade i mars 2026 fram en proposition om förenklingar i jaktlagstiftningen, och miljö- och jordbruksutskottet behandlade den i maj 2026. Dokumenten gäller enklare jakt i allmänhet, till exempel jakt på allmänt vatten och eftersök av skadat vilt, och visar att arbetet pågår.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,56 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB16",
+      "designation": "Dir. 2025:6",
+      "title": "Tilläggsdirektiv till Jaktlagstiftningsutredningen (LI 2024:01)",
+      "date": "2025-01-23",
+      "url": "https://data.riksdagen.se/dokument/HDB16.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB332",
+      "designation": "SOU 2025:32",
+      "title": "Vissa förändringar av jaktlagstiftningen",
+      "date": "2025-04-02",
+      "url": "https://data.riksdagen.se/dokument/HDB332.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3125",
+      "designation": "SOU 2025:125",
+      "title": "En ny viltförvaltningslagstiftning",
+      "date": "2026-01-01",
+      "url": "https://data.riksdagen.se/dokument/HDB3125.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03211",
+      "designation": "Prop. 2025/26:211",
+      "title": "Förenklingar i jaktlagstiftningen",
+      "date": "2026-03-19",
+      "url": "https://data.riksdagen.se/dokument/HD03211.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01MJU23",
+      "designation": "Bet. 2025/26:MJU23",
+      "title": "Förenklingar i jaktlagstiftningen",
+      "date": "2026-05-11",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU23.html",
+      "relevance": "partial",
       "note": null
     }
   ]

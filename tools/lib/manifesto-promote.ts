@@ -73,11 +73,6 @@ export const TYPE_FIXES: Readonly<Record<string, { type: PromiseRecord['type']; 
       reason:
         'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
     },
-    'betalt-for-den-som-minskar-vaxthusgaser-i-atmosfaren': {
-      type: 'legislative',
-      reason:
-        'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
-    },
     'bygg-bort-jarnvagsnatets-flaskhalsar': {
       type: 'budget',
       reason:
@@ -133,11 +128,6 @@ export const TYPE_FIXES: Readonly<Record<string, { type: PromiseRecord['type']; 
       reason:
         'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
     },
-    'kommunala-bostadsbolag-arbetande-hyresgaster-utsatta-omraden': {
-      type: 'legislative',
-      reason:
-        'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
-    },
     'mer-sol-och-vindkraft-i-hela-landet': {
       type: 'outcome',
       reason:
@@ -177,11 +167,6 @@ export const TYPE_FIXES: Readonly<Record<string, { type: PromiseRecord['type']; 
       type: 'budget',
       reason:
         'Typed `other_action` by the proposal; retyped `budget` (hemsida-600, docs/other-action-promises.md).',
-    },
-    'rekrytera-basta-lararna-till-skolor-i-utsatta-omraden': {
-      type: 'legislative',
-      reason:
-        'Typed `other_action` by the proposal; retyped `legislative` (hemsida-600, docs/other-action-promises.md).',
     },
     'sarskilda-initiativ-for-modra-och-forlossningsvarden': {
       type: 'budget',
