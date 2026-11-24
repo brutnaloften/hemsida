@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["3:12-reglerna", "fåmansbolag", "skatt", "förenkling"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Kommittén om förenklad beskattning av ägare till fåmansföretag lämnade i juni 2024 betänkandet Förenkla och förbättra!. Regeringen föreslog i september 2025 enklare skatteregler för delägare i fåmansföretag, där ett grundbelopp ersätter förenklingsregeln och beräkningen av gränsbeloppet blir enklare. Riksdagen beslutade i november 2025, och lagändringen i inkomstskattelagen trädde i kraft den 1 januari 2026. Det är den förenkling av 3:12-reglerna som löftet gäller.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,66 @@
       "promises": ["tido-battre-villkor-sma-foretag-312-regler"],
       "outcome": "weakened",
       "note": "Avtalet nämner förändringar i 3:12-regelverket, inte uttryckligen förenkling."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB110",
+      "designation": "Dir. 2023:10",
+      "title": "Tilläggsdirektiv till Kommittén om förenklad beskattning av ägare till fåmansföretag (Fi 2022:04)",
+      "date": "2023-01-26",
+      "url": "https://data.riksdagen.se/dokument/HBB110.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1128",
+      "designation": "Dir. 2023:128",
+      "title": "Tilläggsdirektiv till Kommittén om förenklad beskattning av ägare till fåmansföretag (Fi 2022:04)",
+      "date": "2023-09-07",
+      "url": "https://data.riksdagen.se/dokument/HBB1128.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB336",
+      "designation": "SOU 2024:36",
+      "title": "Förenkla och förbättra!",
+      "date": "2024-06-04",
+      "url": "https://data.riksdagen.se/dokument/HCB336.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD031",
+      "designation": "Prop. 2025/26:1",
+      "title": "Budgetpropositionen för 2026",
+      "date": "2025-09-22",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "relevance": "full",
+      "note": "Avsnitt 13.8 och bilaga 8: Enklare och bättre skatteregler för delägare i fåmansföretag."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01FiU1",
+      "designation": "Bet. 2025/26:FiU1",
+      "title": "Statens budget 2026 - Rambeslutet",
+      "date": "2025-11-21",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU1.html",
+      "relevance": "full",
+      "note": "Skattereglerna för delägare i fåmansföretag förenklas och förbättras."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-1361",
+      "designation": "SFS 2025:1361",
+      "title": "Lag (2025:1361) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2026-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20251361.html",
+      "relevance": "full",
+      "note": null
     }
   ]
 }

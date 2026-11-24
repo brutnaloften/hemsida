@@ -10,9 +10,70 @@
     "keyword:vårdnad",
     "keyword:familjerätt",
     "all-keywords",
-    "committee:CU"
+    "committee:CU",
+    "widen:vårdnad|vårdnadshavare|barnets bästa"
   ],
   "candidates": [
+    {
+      "dok_id": "HA01SoU9",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU9",
+      "datum": "2022-12-13",
+      "titel": "Barnets bästa vid fortsatt vård enligt LVU",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU9.html",
+      "found_by": ["widen:vårdnad|vårdnadshavare|barnets bästa"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01SoU26",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SoU26",
+      "datum": "2023-05-17",
+      "titel": "En sänkt åldersgräns för öppna insatser till barn utan vårdnadshavarens samtycke",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU26.html",
+      "found_by": ["widen:vårdnad|vårdnadshavare|barnets bästa"],
+      "score": 10
+    },
+    {
+      "dok_id": "HC01CU4",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "CU4",
+      "datum": "2024-11-21",
+      "titel": "Tryggare hem för barn",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HC01CU4.html",
+      "found_by": ["widen:vårdnad|vårdnadshavare|barnets bästa"],
+      "score": 10
+    },
+    {
+      "dok_id": "HCB430",
+      "doktyp": "ds",
+      "rm": "2024",
+      "beteckning": "30",
+      "datum": "2025-01-01",
+      "titel": "En lag om insatser inom socialtjänsten till vårdnadshavare, barn och unga när samtycke saknas ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB430.html",
+      "found_by": ["widen:vårdnad|vårdnadshavare|barnets bästa"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA0364",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "64",
+      "datum": "2023-02-21",
+      "titel": "En sänkt åldersgräns för öppna insatser till barn utan vårdnadshavarens samtycke",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0364.html",
+      "found_by": ["widen:vårdnad|vårdnadshavare|barnets bästa"],
+      "score": 10
+    },
     {
       "dok_id": "HD01CU12",
       "doktyp": "bet",

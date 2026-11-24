@@ -10,9 +10,70 @@
     "keyword:praktik",
     "keyword:utbildning",
     "all-keywords",
-    "committee:AU"
+    "committee:AU",
+    "widen:lärling|lärlingsutbildning|yrkesutbildning"
   ],
   "candidates": [
+    {
+      "dok_id": "HD03198",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "198",
+      "datum": "2026-03-17",
+      "titel": "Bättre förutsättningar för yrkesutbildning",
+      "organ": "Utbildningsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03198.html",
+      "found_by": ["widen:lärling|lärlingsutbildning|yrkesutbildning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01UbU10",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU10",
+      "datum": "2026-03-25",
+      "titel": "Gymnasieskolan",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU10.html",
+      "found_by": ["widen:lärling|lärlingsutbildning|yrkesutbildning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01UbU14",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU14",
+      "datum": "2026-01-26",
+      "titel": "Studiestöd",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU14.html",
+      "found_by": ["widen:lärling|lärlingsutbildning|yrkesutbildning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01UbU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU8",
+      "datum": "2026-02-09",
+      "titel": "Grundläggande om utbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU8.html",
+      "found_by": ["widen:lärling|lärlingsutbildning|yrkesutbildning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HC01UbU10",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "UbU10",
+      "datum": "2025-05-06",
+      "titel": "Grundläggande om utbildning",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU10.html",
+      "found_by": ["widen:lärling|lärlingsutbildning|yrkesutbildning"],
+      "score": 10
+    },
     {
       "dok_id": "HEB1121",
       "doktyp": "dir",

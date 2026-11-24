@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["terrororganisationer", "terrorism", "deltagande"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2023 fram ett förslag om ett särskilt straff för deltagande i en terroristorganisation, och riksdagen biföll det i april 2023. Lagen trädde i kraft den 1 juni 2023 och ändrar terroristbrottslagen så att deltagande i en terroristorganisation blir ett eget brott. Samröre med en terroristorganisation hade varit straffbart sedan den 1 mars 2020, så tillsammans är både deltagande och samröre nu förbjudna.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,36 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA0373",
+      "designation": "Prop. 2022/23:73",
+      "title": "En särskild straffbestämmelse för deltagande i en terroristorganisation",
+      "date": "2023-03-09",
+      "url": "https://data.riksdagen.se/dokument/HA0373.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01JuU20",
+      "designation": "Bet. 2022/23:JuU20",
+      "title": "En särskild straffbestämmelse för deltagande i en terroristorganisation",
+      "date": "2023-04-27",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU20.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-227",
+      "designation": "SFS 2023:227",
+      "title": "Lag (2023:227) om ändring i terroristbrottslagen (2022:666)",
+      "date": "2023-06-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023227.html",
+      "relevance": "full",
       "note": null
     }
   ]

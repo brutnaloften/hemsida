@@ -11,9 +11,70 @@
     "keyword:el",
     "keyword:företag",
     "all-keywords",
-    "committee:SkU"
+    "committee:SkU",
+    "widen:egenproducerad el|mikroproduktion|solceller|energiskatt"
   ],
   "candidates": [
+    {
+      "dok_id": "HC01SkU17",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU17",
+      "datum": "2025-05-08",
+      "titel": "Förändrade skattesubventioner för solceller och mikroproduktion av el",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU17.html",
+      "found_by": ["widen:egenproducerad el|mikroproduktion|solceller|energiskatt"],
+      "score": 10
+    },
+    {
+      "dok_id": "HC03109",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "109",
+      "datum": "2025-03-18",
+      "titel": "Förändrade skattesubventioner för solceller och mikroproduktion av el",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC03109.html",
+      "found_by": ["widen:egenproducerad el|mikroproduktion|solceller|energiskatt"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01MJU17",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU17",
+      "datum": "2024-05-24",
+      "titel": "Cirkulär och giftfri ekonomi och Riksrevisionens rapport om hantering av uttjänta solcellspaneler och vindturbinblad",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU17.html",
+      "found_by": ["widen:egenproducerad el|mikroproduktion|solceller|energiskatt"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB0349",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "49",
+      "datum": "2023-12-05",
+      "titel": "Riksrevisionens rapport om hantering av uttjänta solcellspaneler och vindturbinblad",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0349.html",
+      "found_by": ["widen:egenproducerad el|mikroproduktion|solceller|energiskatt"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA0315",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "15",
+      "datum": "2022-11-10",
+      "titel": "Förstärkt skattereduktion för installation av solceller",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0315.html",
+      "found_by": ["widen:egenproducerad el|mikroproduktion|solceller|energiskatt"],
+      "score": 10
+    },
     {
       "dok_id": "HD01FiU1",
       "doktyp": "bet",

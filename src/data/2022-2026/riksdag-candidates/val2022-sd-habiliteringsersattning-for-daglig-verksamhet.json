@@ -9,7 +9,69 @@
     "keyword:habiliteringsersättning",
     "keyword:daglig verksamhet",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "widen:habiliteringsersättning|daglig verksamhet|LSS"
   ],
-  "candidates": []
+  "candidates": [
+    {
+      "dok_id": "HBB1147",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "147",
+      "datum": "2023-10-19",
+      "titel": "Välfärdsteknik inom socialtjänsten och verksamhet enligt LSS",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1147.html",
+      "found_by": ["widen:habiliteringsersättning|daglig verksamhet|LSS"],
+      "score": 10
+    },
+    {
+      "dok_id": "HC01SoU15",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SoU15",
+      "datum": "2025-03-10",
+      "titel": "Stöd till personer med funktionsnedsättning",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HC01SoU15.html",
+      "found_by": ["widen:habiliteringsersättning|daglig verksamhet|LSS"],
+      "score": 10
+    },
+    {
+      "dok_id": "HC01FiU23",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU23",
+      "datum": "2025-04-29",
+      "titel": "Riksbankens verksamhet och förvaltning 2024",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU23.html",
+      "found_by": ["widen:habiliteringsersättning|daglig verksamhet|LSS"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01FiU23",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU23",
+      "datum": "2026-04-23",
+      "titel": "Riksbankens verksamhet och förvaltning 2025",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU23.html",
+      "found_by": ["widen:habiliteringsersättning|daglig verksamhet|LSS"],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB128",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "28",
+      "datum": "2026-05-13",
+      "titel": "En modern och ändamålsenlig dataskyddsreglering för Skatteverkets och Tullverkets brottsbekämpande verksamheter samt ett stärkt skydd för personal vid Skatteverket, Tullverket och Kronofogdemyndigheten",
+      "organ": "Fi-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB128.html",
+      "found_by": ["widen:habiliteringsersättning|daglig verksamhet|LSS"],
+      "score": 10
+    }
+  ]
 }

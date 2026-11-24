@@ -11,9 +11,70 @@
     "keyword:schablonskatt",
     "keyword:sparande",
     "all-keywords",
-    "committee:SkU"
+    "committee:SkU",
+    "widen:investeringssparkonto|schablonintäkt|kapitalunderlag"
   ],
   "candidates": [
+    {
+      "dok_id": "HA01SkU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU12",
+      "datum": "2023-04-27",
+      "titel": "Företag, kapital och fastighet",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU12.html",
+      "found_by": ["widen:investeringssparkonto|schablonintäkt|kapitalunderlag"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01SoU26",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SoU26",
+      "datum": "2024-03-12",
+      "titel": "Det schabloniserade föräldraavdraget",
+      "organ": "SoU",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU26.html",
+      "found_by": ["widen:investeringssparkonto|schablonintäkt|kapitalunderlag"],
+      "score": 10
+    },
+    {
+      "dok_id": "HC01SkU13",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SkU13",
+      "datum": "2025-04-01",
+      "titel": "Företag, kapital och fastighet",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HC01SkU13.html",
+      "found_by": ["widen:investeringssparkonto|schablonintäkt|kapitalunderlag"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01SkU21",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU21",
+      "datum": "2024-05-16",
+      "titel": "Anpassning av investeraravdraget med anledning av ändrade EU-regler om statligt stöd",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU21.html",
+      "found_by": ["widen:investeringssparkonto|schablonintäkt|kapitalunderlag"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD03296",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "296",
+      "datum": "2026-06-30",
+      "titel": "Skattetransparenta värdepappersfonder för institutionella investerare",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03296.html",
+      "found_by": ["widen:investeringssparkonto|schablonintäkt|kapitalunderlag"],
+      "score": 10
+    },
     {
       "dok_id": "HC01FiU1",
       "doktyp": "bet",

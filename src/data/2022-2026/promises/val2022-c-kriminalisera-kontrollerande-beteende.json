@@ -17,10 +17,48 @@
   "committee": "JuU",
   "keywords": ["kontrollerande beteende", "mäns våld mot kvinnor", "kriminalisering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i februari 2026 ett nytt brott, psykiskt våld, som gäller upprepade kränkningar som otillbörligt tvång och övervakning. Riksdagen biföll förslaget i maj 2026. Ändringen i brottsbalken trädde i kraft den 1 juli 2026 och täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03138",
+      "designation": "Prop. 2025/26:138",
+      "title": "En särskild straffbestämmelse för psykiskt våld",
+      "date": "2026-02-24",
+      "url": "https://data.riksdagen.se/dokument/HD03138.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU39",
+      "designation": "Bet. 2025/26:JuU39",
+      "title": "En särskild straffbestämmelse för psykiskt våld",
+      "date": "2026-05-07",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU39.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-852",
+      "designation": "SFS 2026:852",
+      "title": "Lag (2026:852) om ändring i brottsbalken",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026852.html",
+      "relevance": "partial",
+      "note": "Lagen straffbelägger inte kontrollerande beteende som sådant i vid mening. Kravet är att kränkningarna sammantagna är ägnade att allvarligt skada självkänslan, och bara angivna former av kontroll omfattas."
+    }
+  ]
 }

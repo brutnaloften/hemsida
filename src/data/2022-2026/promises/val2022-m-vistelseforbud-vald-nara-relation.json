@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["vistelseförbud", "våld i nära relation", "kontaktförbud", "bostadsområde"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2025 fram ett förslag om ett utökat kontaktförbud, och riksdagen biföll det i maj 2025. Lagändringen i kontaktförbudslagen trädde i kraft den 1 juli 2025. Den ger en presumtion för utvidgat kontaktförbud efter allvarliga brott mot en närstående och gör att förbudet kan gälla större områden, till exempel kring den utsattas bostad, vilket stärker skyddet för offer för våld i nära relationer. Åtgärden gäller kontaktförbud, medan ett särskilt vistelseförbud för den dömde är en annan sak, så löftet bedöms som delvis uppfyllt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": ["tido-vistelseforbud"],
       "outcome": "included",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03123",
+      "designation": "Prop. 2024/25:123",
+      "title": "Kontaktförbud – ett utökat skydd för utsatta personer",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03123.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU31",
+      "designation": "Bet. 2024/25:JuU31",
+      "title": "Kontaktförbud – ett utökat skydd för utsatta personer",
+      "date": "2025-05-14",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU31.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-561",
+      "designation": "SFS 2025:561",
+      "title": "Lag (2025:561) om ändring i lagen (1988:688) om kontaktförbud",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025561.html",
+      "relevance": "partial",
+      "note": "Lagen ger ett utvidgat kontaktförbud som kan gälla större områden, till exempel kring den utsattas bostad, men den ger ingen särskild form av vistelseförbud för den som dömts för våld i nära relation."
     }
   ]
 }

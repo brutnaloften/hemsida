@@ -10,9 +10,70 @@
     "keyword:användare",
     "keyword:avstängning",
     "all-keywords",
-    "committee:KU"
+    "committee:KU",
+    "widen:plattformar|yttrandefrihet|moderering"
   ],
   "candidates": [
+    {
+      "dok_id": "HA01SkU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU3",
+      "datum": "2022-11-29",
+      "titel": "Rapportering och utbyte av upplysningar om inkomster genom digitala plattformar",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU3.html",
+      "found_by": ["widen:plattformar|yttrandefrihet|moderering"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01CU35",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU35",
+      "datum": "2026-05-07",
+      "titel": "Nya regler om aktier på MTF-plattformar",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU35.html",
+      "found_by": ["widen:plattformar|yttrandefrihet|moderering"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD03125",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "125",
+      "datum": "2026-02-24",
+      "titel": "Nya regler om aktier på MTF-plattformar",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03125.html",
+      "found_by": ["widen:plattformar|yttrandefrihet|moderering"],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB33",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "3",
+      "datum": "2026-01-12",
+      "titel": "Genomförande av plattformsdirektivet",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB33.html",
+      "found_by": ["widen:plattformar|yttrandefrihet|moderering"],
+      "score": 10
+    },
+    {
+      "dok_id": "HCB1116",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "116",
+      "datum": "2024-11-21",
+      "titel": "Genomförande av EU-direktivet om förbättrade arbetsvillkor för plattformsarbete",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB1116.html",
+      "found_by": ["widen:plattformar|yttrandefrihet|moderering"],
+      "score": 10
+    },
     {
       "dok_id": "HD01UbU22",
       "doktyp": "bet",

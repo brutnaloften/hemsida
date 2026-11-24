@@ -26,9 +26,10 @@
     "våld i nära relation"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-11",
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "I juni 2023 beslutade regeringen om tilläggsdirektiv till utredningen om ett förstärkt samhällsskydd och minskad risk för återfall i brott. Utredningen lämnade i juli 2024 betänkandet Ett ändamålsenligt samhällsskydd. Båda dokumenten gäller bara en del av löftet om vistelseförbud efter avtjänat fängelsestraff.",
+    "date": "2026-11-24",
     "history": [
       {
         "value": "unassessed",
@@ -40,8 +41,34 @@
         "assessedBy": "ai",
         "reasoning": "Regeringen gav i juni 2023 en utredning tilläggsdirektiv inom arbetet med att stärka samhällsskyddet och minska risken för återfall i brott. I juli 2024 lämnade utredningen ett betänkande om ett ändamålsenligt samhällsskydd. Dokumenten täcker bara en del av löftet. Något beslut om vistelseförbud i upp till tio år framgår inte.",
         "date": "2026-11-10"
+      },
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-11"
       }
     ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB174",
+      "designation": "Dir. 2023:74",
+      "title": "Tilläggsdirektiv till Utredningen om ett förstärkt samhällsskydd och en minskad risk för återfall i brott (Ju 2022:10)",
+      "date": "2023-06-01",
+      "url": "https://data.riksdagen.se/dokument/HBB174.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB348",
+      "designation": "SOU 2024:48",
+      "title": "Ett ändamålsenligt samhällsskydd Volym 1",
+      "date": "2024-07-05",
+      "url": "https://data.riksdagen.se/dokument/HCB348.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

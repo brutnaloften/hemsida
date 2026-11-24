@@ -17,10 +17,17 @@
   "committee": "AU",
   "keywords": ["LAS-åldern", "anställningsskydd", "äldre", "arbeta längre"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen har tillsatt en utredning som ska föreslå att åldersgränsen för rätten att kvarstå i anställning följer pensionens riktålder, och utredningen har lämnat betänkandet Längre liv, längre arbetsliv. Arbetet gäller en höjning i takt med riktåldern, vilket är något annat än en höjning till 75 år, och rör därför bara en del av löftet. Löftet bedöms som pågående.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,36 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB153",
+      "designation": "Dir. 2024:53",
+      "title": "Anpassning av åldersgränsen för rätten att kvarstå i anställning till riktåldern för pension",
+      "date": "2024-05-30",
+      "url": "https://data.riksdagen.se/dokument/HCB153.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB135",
+      "designation": "Dir. 2025:35",
+      "title": "Tilläggsdirektiv till Utredningen om anpassning av åldersgränsen för rätten att kvarstå i anställning till riktåldern för pension (A 2024:04)",
+      "date": "2025-03-27",
+      "url": "https://data.riksdagen.se/dokument/HDB135.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB370",
+      "designation": "SOU 2025:70",
+      "title": "Längre liv, längre arbetsliv",
+      "date": "2025-06-17",
+      "url": "https://data.riksdagen.se/dokument/HDB370.html",
+      "relevance": "partial",
       "note": null
     }
   ]

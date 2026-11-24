@@ -10,9 +10,70 @@
     "keyword:elskatt",
     "keyword:elektrifiering",
     "all-keywords",
-    "committee:SkU"
+    "committee:SkU",
+    "widen:elskatt|energiskatt på el|elektrisk kraft"
   ],
   "candidates": [
+    {
+      "dok_id": "HA01SkU2",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU2",
+      "datum": "2022-10-20",
+      "titel": "BNP-indexering av skatterna på kemikalier i viss elektronik och avfallsförbränning",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU2.html",
+      "found_by": ["widen:elskatt|energiskatt på el|elektrisk kraft"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01CU30",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU30",
+      "datum": "2026-05-12",
+      "titel": "Nytt mål för effektiv energianvändning och genomförande av det omarbetade direktivet om byggnaders energiprestanda",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU30.html",
+      "found_by": ["widen:elskatt|energiskatt på el|elektrisk kraft"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01SkU21",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU21",
+      "datum": "2023-06-15",
+      "titel": "Ändrade transparensregler inom energibeskattningen",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU21.html",
+      "found_by": ["widen:elskatt|energiskatt på el|elektrisk kraft"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01SkU23",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SkU23",
+      "datum": "2026-04-16",
+      "titel": "Permanent skattefrihet för förmån av laddel på arbetsplatsen och utvidgad rätt till avdrag för drivmedelsutgifter",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HD01SkU23.html",
+      "found_by": ["widen:elskatt|energiskatt på el|elektrisk kraft"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01CU21",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU21",
+      "datum": "2026-02-27",
+      "titel": "Elektronisk inlämning av bouppteckningar",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU21.html",
+      "found_by": ["widen:elskatt|energiskatt på el|elektrisk kraft"],
+      "score": 10
+    },
     {
       "dok_id": "HD01FiU47",
       "doktyp": "bet",

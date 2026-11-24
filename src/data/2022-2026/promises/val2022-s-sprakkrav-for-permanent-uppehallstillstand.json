@@ -18,9 +18,55 @@
   "keywords": ["språkkrav", "permanent uppehållstillstånd", "svenska", "migration"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
+    "reasoning": "En statlig utredning föreslog i maj 2023 krav på kunskaper i svenska och om det svenska samhället för permanent uppehållstillstånd. I april 2026 bedömde regeringen i en proposition att de förslagen inte längre är ändamålsenliga, eftersom permanent uppehållstillstånd utmönstras för asylrelaterade grupper och vissa andra grupper, och att det saknas skäl att gå vidare med dem. Riksdagen beslutade i juni 2026 i enlighet med propositionen och avslog en reservation från Socialdemokraterna om ett etableringstillstånd med krav på språkfärdigheter i stället. Löftet i sin ursprungliga form drivs därför inte vidare. Eftersom Socialdemokraterna själva drev en variant med språkkrav och regeringen föreslår kunskapskrav för medborgarskap bedöms löftet inte som brutet, och det lämnas obedömt.",
+    "date": "2026-11-24",
     "history": []
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HBB325",
+      "designation": "SOU 2023:25",
+      "title": "Kunskapskrav för permanent uppehållstillstånd",
+      "date": "2023-05-30",
+      "url": "https://data.riksdagen.se/dokument/HBB325.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03262",
+      "designation": "Prop. 2025/26:262",
+      "title": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03262.html",
+      "relevance": "contradicts",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01SfU30",
+      "designation": "Bet. 2025/26:SfU30",
+      "title": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "date": "2026-06-04",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU30.html",
+      "relevance": "contradicts",
+      "note": null,
+      "votes": {
+        "S": "yes",
+        "SD": "yes",
+        "C": "yes",
+        "M": "yes",
+        "MP": "no",
+        "L": "yes",
+        "KD": "yes",
+        "V": "no"
+      },
+      "vote_point": {
+        "punkt": "1",
+        "rubrik": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+        "votering_id": "c536a86a-5c0e-4012-b544-eccf4921ba5a"
+      }
+    }
+  ]
 }

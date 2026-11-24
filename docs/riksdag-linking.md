@@ -22,6 +22,10 @@ Epic `hemsida-4np`. This is the map of how a promise gets its Riksdag evidence, 
 
 Freshness: `tools/check-freshness.ts` and `tools/sync-freshness-issues.ts` open `data-stale` issues when a dataset is older than its rule (`tools/lib/freshness-check.ts`); the `/refresh-data` skill turns one into a PR.
 
+## Widening the candidate search for promises with no evidence
+
+When the keyword search finds nothing useful (the promise wording differs from the document's, e.g. "visitationszoner" vs the bill "Säkerhetszoner"), `node --experimental-strip-types tools/widen-candidates.ts --terms tools/widen-terms/<x>.json [--per 5] [--dry-run]` ranks the whole local store by idf-weighted title and snippet hits for the promise's keywords, title, description and hand-written synonyms or law names from the terms file (`{"<promise-id>": ["säkerhetszoner"]}`). New hits go into the candidate file with `found_by` `widen:...` and score 10, ahead of the rest. Then judge them with `link-pairs` (`tools/link-configs/link-no-evidence-legislative-sonnet-v1-slice1*.json` are examples), `judge-sfs`, and `apply-links --ids ... --base-ref origin/main`. The search is noisy by design: the judge and a read of every proposed pair filter it, and off-topic pairs go in `rejected-candidates.json`. A pair only lands among the judged ones if it is within `max_per_promise`, so raise that when a document you know exists does not show up.
+
 ## The SFS step end to end (7b, 7c, 8)
 
 `data.riksdagen.se` cannot link a proposition to the law it produced, so laws come from Regeringskansliets SFS register (`docs/riksdag-api.md`, "SFS register"). The chain, run per term after the Riksdag evidence is in place:

@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["lovskola", "lågstadiet", "kommuner", "elever som ligger efter"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i december 2023 en utredare i uppdrag att föreslå obligatorisk lovskola för skolhuvudmän i fler årskurser, även lägre, och en skyldighet för elever som riskerar att inte nå målen att delta. Utredningen lämnade i december 2024 betänkandet Förstärkningsundervisning i skolan, med förslag om en treårig försöksverksamhet och en frivillig, statsfinansierad sommarskola för skolhuvudmän, vilket är en annan modell än löftet om lovskola från lågstadiet. Dokumenten visar utredningsarbete och inget beslut, så löftet bedöms som pågående.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-utokad-studietid-lovskola-lexhjalp"],
       "outcome": "weakened",
       "note": "Avtalet låter skolor erbjuda lovskola i lägre årskurser, men inför ingen skyldighet för kommuner och inget deltagandekrav."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1174",
+      "designation": "Dir. 2023:174",
+      "title": "Mer obligatorisk undervisningstid för elever som behöver det",
+      "date": "2023-12-14",
+      "url": "https://data.riksdagen.se/dokument/HBB1174.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB394",
+      "designation": "SOU 2024:94",
+      "title": "Förstärkningsundervisning i skolan",
+      "date": "2024-12-20",
+      "url": "https://data.riksdagen.se/dokument/HCB394.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

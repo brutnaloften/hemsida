@@ -11,9 +11,70 @@
     "keyword:tillväxtföretag",
     "keyword:skatt",
     "all-keywords",
-    "committee:SkU"
+    "committee:SkU",
+    "widen:personaloptioner|kvalificerade personaloptioner"
   ],
   "candidates": [
+    {
+      "dok_id": "HEB141",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "41",
+      "datum": "2026-06-04",
+      "titel": "Ett krav på att personer som bosätter sig i Sverige ska kvalificera sig till insatsen personlig assistans",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB141.html",
+      "found_by": ["widen:personaloptioner|kvalificerade personaloptioner"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01SfU21",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU21",
+      "datum": "2026-05-06",
+      "titel": "Kvalificering till socialförsäkringen",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU21.html",
+      "found_by": ["widen:personaloptioner|kvalificerade personaloptioner"],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB1149",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "149",
+      "datum": "2023-10-19",
+      "titel": "En ny modell för kvalificering till socialförsäkring och ekonomiskt bistånd för nyanlända och icke-medborgare",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1149.html",
+      "found_by": ["widen:personaloptioner|kvalificerade personaloptioner"],
+      "score": 10
+    },
+    {
+      "dok_id": "HCB149",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "49",
+      "datum": "2024-05-23",
+      "titel": "Stärkt skydd mot utlänningar som utgör kvalificerade säkerhetshot eller som har koppling till kriminella nätverk",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB149.html",
+      "found_by": ["widen:personaloptioner|kvalificerade personaloptioner"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01JuU45",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU45",
+      "datum": "2026-06-16",
+      "titel": "Stärkt skydd mot utlänningar som utgör kvalificerade säkerhetshot",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU45.html",
+      "found_by": ["widen:personaloptioner|kvalificerade personaloptioner"],
+      "score": 10
+    },
     {
       "dok_id": "HD03307",
       "doktyp": "prop",

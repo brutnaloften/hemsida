@@ -11,9 +11,70 @@
     "keyword:skatt",
     "keyword:energi",
     "all-keywords",
-    "committee:SkU"
+    "committee:SkU",
+    "widen:avfallsförbränning|skatt på avfallsförbränning"
   ],
   "candidates": [
+    {
+      "dok_id": "HA01SkU2",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU2",
+      "datum": "2022-10-20",
+      "titel": "BNP-indexering av skatterna på kemikalier i viss elektronik och avfallsförbränning",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU2.html",
+      "found_by": ["widen:avfallsförbränning|skatt på avfallsförbränning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD03270",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "270",
+      "datum": "2026-05-26",
+      "titel": "Kompletterande bestämmelser till EU-förordningar om kemikalier och avfall",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03270.html",
+      "found_by": ["widen:avfallsförbränning|skatt på avfallsförbränning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01MJU19",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU19",
+      "datum": "2026-04-16",
+      "titel": "Reformering av avfallslagstiftningen för ökad materialåtervinning",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU19.html",
+      "found_by": ["widen:avfallsförbränning|skatt på avfallsförbränning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD03108",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "108",
+      "datum": "2026-02-03",
+      "titel": "Reformering av avfallslagstiftningen för ökad materialåtervinning",
+      "organ": "Klimat- och näringslivsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03108.html",
+      "found_by": ["widen:avfallsförbränning|skatt på avfallsförbränning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01TU8",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "TU8",
+      "datum": "2023-03-21",
+      "titel": "Mottagningsanordningar i hamn för avfall från fartyg",
+      "organ": "TU",
+      "url": "https://data.riksdagen.se/dokument/HA01TU8.html",
+      "found_by": ["widen:avfallsförbränning|skatt på avfallsförbränning"],
+      "score": 10
+    },
     {
       "dok_id": "HD01FiU47",
       "doktyp": "bet",

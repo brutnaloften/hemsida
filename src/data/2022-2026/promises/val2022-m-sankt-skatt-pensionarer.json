@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["pensionärer", "skatt", "skatt på pension", "grundavdrag"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i september 2023 en sänkt skatt för pensionärer genom ett högre förhöjt grundavdrag för personer från 66 år. En lag om ändring i inkomstskattelagen trädde i kraft 1 januari 2024. I oktober 2025 föreslogs ett höjt grundavdrag igen, ungefär 2 300 kronor lägre skatt per år, och en ny lag trädde i kraft 1 januari 2026. Dokumenten täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,46 @@
       "promises": ["tido-sankt-skatt-arbetsinkomst-pensionsinkomst"],
       "outcome": "included",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0313",
+      "designation": "Prop. 2023/24:13",
+      "title": "Vissa förslag om sänkt skatt på arbetsinkomster och pension",
+      "date": "2023-09-28",
+      "url": "https://data.riksdagen.se/dokument/HB0313.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-757",
+      "designation": "SFS 2023:757",
+      "title": "Lag (2023:757) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2024-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023757.html",
+      "relevance": "partial",
+      "note": "Skattesänkningen gäller inte alla pensionärer: den riktas till personer som fyllt 66 år, med nivåer som beror på inkomst, och är en genomsnittlig sänkning på ca 1 300 kronor, inte en generell sänkning för alla."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0332",
+      "designation": "Prop. 2025/26:32",
+      "title": "Sänkt skatt på arbetsinkomster, pension och sjuk- och aktivitetsersättning",
+      "date": "2025-10-16",
+      "url": "https://data.riksdagen.se/dokument/HD0332.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-1376",
+      "designation": "SFS 2025:1376",
+      "title": "Lag (2025:1376) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2026-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20251376.html",
+      "relevance": "partial",
+      "note": "Skattesänkningen gäller inte alla pensionärer: den når bara pensionärer med högre inkomster än 3,24 prisbasbelopp, och pensionärer med lägre inkomster berörs inte."
     }
   ]
 }
