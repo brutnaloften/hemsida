@@ -17,10 +17,17 @@
   "committee": "KrU",
   "keywords": ["organisationsbidrag", "hbtq", "hat och hot", "statsbidrag"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i april 2024 ett demokrativillkor för statligt stöd till trossamfund och för stöd ur Allmänna arvsfonden. Organisationer vars uttalanden kan utgöra hets mot folkgrupp ska kunna uteslutas. Riksdagen biföll förslaget i juni 2024 och lagarna gäller från den 1 januari 2025. Löftet gällde organisationer som hetsar mot hbtq-personer, medan villkoret är allmänt och gäller bara stödet till trossamfund och ur Allmänna arvsfonden.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "note": "Avtalet utreder arvsfondens användning och kräver demokratiska värderingar hos medelsmottagare, men nämner inte hbtq-hat eller något stopp för bidrag."
     },
     {
+      "kind": "prop",
+      "dok_id": "HB03119",
+      "designation": "Prop. 2023/24:119",
+      "title": "Statens stöd till trossamfund och civilsamhället – enhetliga och rättssäkra villkor",
+      "date": "2024-04-03",
+      "url": "https://data.riksdagen.se/dokument/HB03119.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HB01KrU7",
       "designation": "Bet. 2023/24:KrU7",
@@ -40,6 +57,26 @@
       "url": "https://data.riksdagen.se/dokument/HB01KrU7.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-487",
+      "designation": "SFS 2024:487",
+      "title": "Lag (2024:487) om statsbidrag till trossamfund",
+      "date": "2025-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2024487.html",
+      "relevance": "partial",
+      "note": "Inför ett demokrativillkor för statsbidrag till trossamfund. Villkoret är allmänt formulerat."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-492",
+      "designation": "SFS 2024:492",
+      "title": "Lag (2024:492) om ändring i lagen (2021:401) om Allmänna arvsfonden",
+      "date": "2025-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2024492.html",
+      "relevance": "partial",
+      "note": "Inför ett demokrativillkor för stöd ur Allmänna arvsfonden. Villkoret är allmänt formulerat."
     }
   ]
 }

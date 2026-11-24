@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["bidragsbrott", "straffskärpning", "bidragsfusk", "straff"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i april 2026 att minimistraffet för grovt bidragsbrott höjs från sex månader till ett år, som en del av ett större paket med skärpta straffskalor. Riksdagen biföll förslaget i juni 2026 och lagändringen gäller från den 1 augusti 2026. Övriga straffskalor i bidragsbrottslagen ändras inte, så skärpningen gäller bara de grövre fallen.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-skarp-bidragsbrottslagen-foretagsstod"],
       "outcome": "weakened",
       "note": "Avtalet skärper bidragsbrottslagen, men anger inte uttryckligen högre straff."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03218",
+      "designation": "Prop. 2025/26:218",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03218.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",
@@ -42,14 +59,14 @@
       "note": null
     },
     {
-      "kind": "bet",
-      "dok_id": "HD01JuU48",
-      "designation": "Bet. 2025/26:JuU48",
-      "title": "Ett nytt straffrättsligt påföljdssystem",
-      "date": "2026-08-12",
-      "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1322",
+      "designation": "SFS 2026:1322",
+      "title": "Lag (2026:1322) om ändring i bidragsbrottslagen (2007:612)",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261322.html",
       "relevance": "partial",
-      "note": null
+      "note": "Höjer minimistraffet för grovt bidragsbrott från sex månader till ett år. Andra straffskalor i bidragsbrottslagen ändras inte."
     }
   ]
 }

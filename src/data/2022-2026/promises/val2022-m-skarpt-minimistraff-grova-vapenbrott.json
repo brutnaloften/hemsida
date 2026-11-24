@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["minimistraff", "grova vapenbrott", "vapenlagen", "straffskärpning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i oktober 2023 skärpta straff för de allvarligare vapenbrotten. Lägsta straff för grovt vapenbrott höjs från två till fyra års fängelse. Riksdagen biföll förslaget i december 2023 och lagändringen gäller från den 1 januari 2024. Löftet gällde ett lägsta straff på sex års fängelse, och det beslutade lägsta straffet är fyra år.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,14 +39,34 @@
       "note": "Avtalet skärper straffen för vapenbrott inom gängbrottslighet, men anger inga höjda minimistraff."
     },
     {
-      "kind": "bet",
-      "dok_id": "HD01JuU42",
-      "designation": "Bet. 2025/26:JuU42",
-      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
-      "date": "2026-06-11",
-      "url": "https://data.riksdagen.se/dokument/HD01JuU42.html",
+      "kind": "prop",
+      "dok_id": "HB0333",
+      "designation": "Prop. 2023/24:33",
+      "title": "Skjutvapen och explosiva varor – skärpta straff för de allvarligare brotten",
+      "date": "2023-10-26",
+      "url": "https://data.riksdagen.se/dokument/HB0333.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01JuU4",
+      "designation": "Bet. 2023/24:JuU4",
+      "title": "Skjutvapen och explosiva varor – skärpta straff för de allvarligare brotten",
+      "date": "2023-12-07",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU4.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-872",
+      "designation": "SFS 2023:872",
+      "title": "Lag (2023:872) om ändring i vapenlagen (1996:67)",
+      "date": "2024-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023872.html",
+      "relevance": "partial",
+      "note": "Höjer lägsta straff för grovt vapenbrott från två till fyra år, inte till sex som löftet gällde."
     }
   ]
 }

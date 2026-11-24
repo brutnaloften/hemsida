@@ -23,10 +23,17 @@
     "Skolinspektionen"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i juni 2026 skärpta villkor för fristående skolor: förbud mot värdeöverföringar vid nyetablering, ägandeförändring och tillsynsföreläggande, skärpta krav på långsiktighet och ekonomi, återbetalning av bidrag i vissa fall och att bara juridiska personer får driva skolor. Riksdagen biföll förslaget i augusti 2026 och lagändringen träder i kraft den 1 juli 2027. Löftet gällde kvalitetskriterier för vinstutdelning, medan reformen förbjuder värdeöverföringar i vissa situationer.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,16 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03292",
+      "designation": "Prop. 2025/26:292",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HD03292.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01UbU30",
       "designation": "Bet. 2025/26:UbU30",
@@ -46,6 +63,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01UbU30.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1634",
+      "designation": "SFS 2026:1634",
+      "title": "Lag (2026:1634) om ändring i skollagen (2010:800)",
+      "date": "2027-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261634.html",
+      "relevance": "partial",
+      "note": "Förbjuder värdeöverföringar vid nyetablering, ägandeförändring och tillsynsföreläggande."
     }
   ]
 }

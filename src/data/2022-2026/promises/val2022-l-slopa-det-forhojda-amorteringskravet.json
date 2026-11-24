@@ -17,10 +17,17 @@
   "committee": "FiU",
   "keywords": ["amorteringskrav", "skuldkvotstak", "bolån", "bostadsköp"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i februari 2026 en ny lag om begränsning av bostadskrediter som ersätter Finansinspektionens regler. Förslaget innebär att det skärpta amorteringskravet tas bort, alltså kravet på extra amortering med minst en procent när lånen överstiger 4,5 gånger bruttoårsinkomsten. Riksdagen biföll förslaget i mars 2026 och lagen gäller från den 1 april 2026.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,14 +39,34 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03119",
+      "designation": "Prop. 2025/26:119",
+      "title": "Utveckling av makrotillsynsområdet",
+      "date": "2026-02-05",
+      "url": "https://data.riksdagen.se/dokument/HD03119.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01FiU36",
       "designation": "Bet. 2025/26:FiU36",
       "title": "Utveckling av makrotillsynsområdet",
       "date": "2026-03-03",
       "url": "https://data.riksdagen.se/dokument/HD01FiU36.html",
-      "relevance": "partial",
+      "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-226",
+      "designation": "SFS 2026:226",
+      "title": "Lag (2026:226) om begränsning av bostadskrediter",
+      "date": "2026-04-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026226.html",
+      "relevance": "full",
+      "note": "Tar bort det skärpta amorteringskravet och ersätter Finansinspektionens föreskrifter om amortering och bolånetak med lag."
     }
   ]
 }
