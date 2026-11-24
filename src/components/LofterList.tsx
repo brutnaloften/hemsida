@@ -171,7 +171,7 @@ export default function LofterList({ rows, areas, agreement }: Props) {
   const active = hasActiveFilters(effective);
 
   return (
-    <div className="grid gap-8 md:grid-cols-[16rem_1fr]">
+    <div className="grid grid-cols-[minmax(0,1fr)] gap-8 md:grid-cols-[16rem_minmax(0,1fr)]">
       <form
         role="search"
         aria-label="Sök och filtrera löften"
@@ -269,7 +269,7 @@ export default function LofterList({ rows, areas, agreement }: Props) {
                     ))}
                   </span>
                   <span className="min-w-0">
-                    <span className="block font-medium">{r.title}</span>
+                    <span className="block break-words font-medium">{r.title}</span>
                     <span className="block text-xs text-muted-foreground">{r.area}</span>
                   </span>
                 </span>

@@ -28,7 +28,7 @@ export function AiTag({ className, align = 'left' }: Props) {
       <span
         aria-hidden="true"
         className={cn(
-          'pointer-events-none invisible absolute top-full z-20 mt-1 w-64 border border-foreground bg-background p-2 text-xs font-normal leading-snug text-foreground opacity-0 shadow-md transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100',
+          'pointer-events-none absolute top-full z-20 mt-1 hidden w-64 max-w-[calc(100vw-2rem)] border border-foreground bg-background p-2 text-xs font-normal leading-snug text-foreground shadow-md group-hover:block group-focus-within:block',
           align === 'right' ? 'right-0' : 'left-0',
         )}
       >

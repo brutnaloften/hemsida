@@ -42,7 +42,7 @@ const keyList = [
 <Layout period={{ kind: 'start', term }}>
   <!-- Hero -->
   <section class="border-b">
-    <div class="container mx-auto grid gap-8 px-4 py-10 md:px-6 md:py-16 lg:grid-cols-[1fr_320px] lg:gap-16">
+    <div class="container mx-auto grid grid-cols-1 gap-8 px-4 py-10 md:px-6 md:py-16 lg:grid-cols-[1fr_320px] lg:gap-16">
       <div>
         <p class="text-[13px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
           Mandatperioden <span class="font-mono">{term}</span> · valet {electionYear(term)}
@@ -98,7 +98,7 @@ const keyList = [
   }
 
   <!-- Government formation and agreement -->
-  <section class="container mx-auto grid gap-6 px-4 py-10 md:px-6 md:grid-cols-2" aria-labelledby="regering-rubrik">
+  <section class="container mx-auto grid grid-cols-1 gap-6 px-4 py-10 md:px-6 md:grid-cols-2" aria-labelledby="regering-rubrik">
     <div class="rounded-lg border p-5">
       <h2 id="regering-rubrik" class="font-serif text-xl font-semibold">Så styrdes landet {term}</h2>
       <dl class="mt-4 space-y-3">
@@ -181,7 +181,7 @@ const keyList = [
       model.cardGroups.map((g) => (
         <div class="mt-6">
           <h3 class="text-[13px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">{g.label}</h3>
-          <ul class="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <ul class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {g.cards.map((c) => (
               <li class="rounded-lg border">
                 <a href={path('party', c.party)} class="flex min-h-11 flex-col gap-3 p-4 outline-offset-2 hover:bg-muted focus-visible:outline focus-visible:outline-2">
@@ -231,7 +231,7 @@ const keyList = [
   <section class="border-t bg-muted" aria-labelledby="steg-rubrik">
     <div class="container mx-auto px-4 py-10 md:px-6">
       <h2 id="steg-rubrik" class="font-serif text-2xl font-semibold">Från löfte till lag</h2>
-      <ol class:list={['mt-6 grid gap-4 sm:grid-cols-2', model.agreements.length > 0 ? 'lg:grid-cols-4' : 'lg:grid-cols-3']}>
+      <ol class:list={['mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2', model.agreements.length > 0 ? 'lg:grid-cols-4' : 'lg:grid-cols-3']}>
         {
           [
             { title: 'Löftet', text: 'Partiet lovar något i sitt valmanifest.' },

@@ -215,6 +215,12 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+  /* Long Swedish compounds (agency names etc.) must wrap instead of widening the page on phones. */
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: break-word;
+  }
 }
 
 /* Budget explorer: diagonal stripes for the saldo box and the minus strip (not colour alone). */

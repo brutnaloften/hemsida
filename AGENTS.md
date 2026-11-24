@@ -28,6 +28,7 @@ The roadmap lives in beads as epics with child tasks and dependencies. `bd list 
 - `node --experimental-strip-types tools/audit-absence-claims.ts [--id-prefix tido-] [--out f.json]` — check every "nämns inte / saknas" sentence in AI reasoning against the cited documents' full text with a model (`docs/riksdag-linking.md`)
 - `node --experimental-strip-types tools/judge-sfs.ts [--name <run>] [--id-prefix tido-] [--dry-run]` — judge how much of a legislative promise each enacted law delivers (full/partial/weaker/none) with a model of your choice through the local Claude login; cached, `--max-cost` is an overall cap per run (`docs/riksdag-linking.md`, "The SFS step end to end")
 - `node --experimental-strip-types tools/cache-archive.ts <pack|publish|fetch|list> <riksdag-text|score-cache|link-cache>` — share the gitignored caches as GitHub Release archives (needs `gh`, `tar`, `zstd`; see `docs/cache-sharing.md`)
+- `node tools/check-mobile-overflow.mjs [--width 320] [--sample N]` — fail if any built page scrolls horizontally on a phone (needs `pnpm preview` running and Playwright, which is not a repo dependency; manual check, not in CI)
 
 oxfmt runs on staged files in the pre-commit hook (lint-staged).
 
