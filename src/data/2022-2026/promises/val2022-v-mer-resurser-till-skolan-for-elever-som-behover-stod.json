@@ -18,7 +18,7 @@
   "keywords": ["skolresurser", "elevstöd", "betyg", "kriminalitetsförebyggande"],
   "verdict": {
     "value": "partially_fulfilled",
-    "reasoning": "Vänsterpartiet föreslog riktade pengar till stöd för elever först i budgetmotionerna för 2025 och 2026. För 2025 (Mot. 2024/25:1909) föreslogs 1 miljard kronor till elevhälsan, men samtidigt drogs regeringens satsning på akutskolor in med 200 miljoner, så anslaget Utveckling av skolväsendet höjdes netto med 900 miljoner kronor. För 2026 (Mot. 2025/26:3169) föreslogs 1 miljard kronor mer än regeringen till elevhälsan från höstterminen. I motionerna för 2023 och 2024 fanns inget riktat elevstöd i utgiftsområde 16: för 2023 avvisades lovskola, spetsklasser och jour- och akutskolor, så anslaget minskades med 166 miljoner kronor, och för 2024 avvisades stödet till lärare i skolor med socioekonomiska utmaningar, så anslaget minskades med 192,5 miljoner. Partiet ville i stället ge generellt stöd till kommunerna, som tillhör ett annat utgiftsområde och inte har granskats här. Riksdagen avslog motionerna för 2025 och 2026 (Bet. 2024/25:UbU1 och 2025/26:UbU1), liksom för de två tidigare åren. Därför delvis uppfyllt: pengar till elevstöd föreslogs två av fyra år.",
+    "reasoning": "Vänsterpartiet föreslog riktade pengar till stöd för elever först i budgetmotionerna för 2025 och 2026. För 2025 (Mot. 2024/25:1909) föreslogs 1 miljard kronor till elevhälsan, men samtidigt drogs regeringens satsning på akutskolor in med 200 miljoner, så anslaget Utveckling av skolväsendet höjdes netto med 900 miljoner kronor. För 2026 (Mot. 2025/26:3169) föreslogs 1 miljard kronor mer än regeringen till elevhälsan från höstterminen. I motionerna för 2023 och 2024 fanns inget riktat elevstöd i utgiftsområde 16, och partiet drog tvärtom in regeringens pengar: i Mot. 2022/23:1238 avvisades lovskola (100 miljoner kronor), spetsklasser och jour- och akutskolor, så anslaget minskades med 166 miljoner kronor, och i Mot. 2023/24:2335 avvisades stödet till lärare i skolor med socioekonomiska utmaningar, så anslaget minskades med 192,5 miljoner. Lovskola och akutskolor är just stöd till elever som behöver hjälp att klara betygen, så 2023 gjorde partiet motsatsen till löftet, men eftersom motionerna för 2025 och 2026 sedan föreslår pengar till elevstöd bedöms löftet efter dessa förslag och inte som brutet. Partiet ville i stället ge generellt stöd till kommunerna, som tillhör ett annat utgiftsområde och inte har granskats här. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:UbU1, 2023/24:UbU1, 2024/25:UbU1 och 2025/26:UbU1). Därför delvis uppfyllt: pengar till elevstöd föreslogs två av fyra år.",
     "date": "2026-11-24",
     "assessedBy": "ai",
     "history": [
@@ -30,6 +30,26 @@
     ]
   },
   "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA021238",
+      "designation": "Mot. 2022/23:1238",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2022-11-22",
+      "url": "https://data.riksdagen.se/dokument/HA021238.html",
+      "relevance": "contradicts",
+      "note": "Budgetmotion för 2023: avvisar lovskola, spetsklasser och jour- och akutskolor, 166 miljoner kronor mindre än regeringen. Avslogs i Bet. 2022/23:UbU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022335",
+      "designation": "Mot. 2023/24:2335",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022335.html",
+      "relevance": "contradicts",
+      "note": "Budgetmotion för 2024: avvisar stödet till lärare i skolor med socioekonomiska utmaningar, 192,5 miljoner kronor mindre än regeringen. Avslogs i Bet. 2023/24:UbU1."
+    },
     {
       "kind": "mot",
       "dok_id": "HC021909",
