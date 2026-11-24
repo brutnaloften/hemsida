@@ -18,9 +18,16 @@
   "keywords": ["demens", "demensvård", "psykisk ohälsa", "äldre"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beskriver i budgeten för 2023 att Socialstyrelsen 2020 till 2022 fördelade statsbidrag till kommunerna för att höja kvaliteten i vård och omsorg för personer med demenssjukdom (Bet. 2022/23:SoU1). I budgeten för 2024 anges att Socialstyrelsen i maj 2023 fick i uppdrag att ta fram underlag till en utvecklad nationell demensstrategi (Bet. 2023/24:SoU1). Betänkandena beskriver bidrag och uppdrag, men de belopp som går till demensvården går inte att följa i ESV:s data, som saknar en anslagspost för demensvård. Det närmaste är anslaget 4:5 Stimulansbidrag och åtgärder inom äldreområdet, en samlingspost för bland annat bemanning, kompetens och särskilt boende, som minskade nominellt från ett utfall på 9 432 mn kr 2022 till 6 046 mn kr 2025 (-35,9 procent, i fasta priser -43,0 procent). Anslaget visar inte hur mycket som gått till demensvård, och ESV:s data säger inget om tid i vården eller om kunskaperna om demenssjukdomar. Därför lämnas löftet obedömt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01SoU1",
+      "designation": "Bet. 2022/23:SoU1",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2022-12-13",
+      "url": "https://data.riksdagen.se/dokument/HA01SoU1.html",
+      "relevance": "partial",
+      "note": "Socialstyrelsen fördelade 2020 till 2022 statsbidrag till kommunerna för att höja kvaliteten i vård och omsorg för personer med demenssjukdom."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01SoU1",
+      "designation": "Bet. 2023/24:SoU1",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2023-12-06",
+      "url": "https://data.riksdagen.se/dokument/HB01SoU1.html",
+      "relevance": "partial",
+      "note": "Socialstyrelsen fick i maj 2023 i uppdrag att ta fram underlag till en utvecklad nationell demensstrategi."
     }
   ]
 }

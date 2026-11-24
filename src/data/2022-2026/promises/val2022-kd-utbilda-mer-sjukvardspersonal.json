@@ -18,9 +18,16 @@
   "keywords": ["vårdutbildning", "personalbrist", "sjuksköterskor", "vårdpersonal"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "assessedBy": "ai",
+    "reasoning": "Regeringen skriver i budgeten för 2024 att den satsar resurser för att mer långsiktigt göra det möjligt att utbilda fler inom hälso- och sjukvården (Bet. 2023/24:UbU1). I budgeten för 2025 tillförs lärosätena medel från 2027 för att läkarutbildningen har förlängts (Bet. 2024/25:UbU1). Antalet utbildningsplatser på vårdutbildningarna ligger inom varje lärosätes anslag och syns inte som en egen post i ESV:s data. Den post som ligger närmast är 2:66 Ersättningar för klinisk utbildning och forskning, som betalar regionerna för den verksamhetsförlagda delen av bland annat läkar- och tandläkarutbildningen och som ökade nominellt från 2 770 mn kr 2022 till 2 984 mn kr 2025 (+7,7 procent, i fasta priser -4,1 procent). Anslaget visar inte om fler utbildas, eftersom en nominell ökning lika gärna är kompensation för högre priser. Därför lämnas löftet obedömt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,26 @@
       ],
       "outcome": "weakened",
       "note": "Avtalet kartlägger vårdpersonalbehovet och stärker det nationella åtagandet för kompetensförsörjningen, men lovar inte fler utbildningsplatser."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01UbU1",
+      "designation": "Bet. 2023/24:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2023-12-08",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU1.html",
+      "relevance": "partial",
+      "note": "Regeringen skriver att den satsar resurser för att mer långsiktigt göra det möjligt att utbilda fler inom hälso- och sjukvården."
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01UbU1",
+      "designation": "Bet. 2024/25:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2024-12-04",
+      "url": "https://data.riksdagen.se/dokument/HC01UbU1.html",
+      "relevance": "partial",
+      "note": "Medel till lärosätena beräknas öka från 2027 för att läkarutbildningen har förlängts; anslaget 2:66 anvisas 2 984 mn kr för 2025."
     }
   ]
 }

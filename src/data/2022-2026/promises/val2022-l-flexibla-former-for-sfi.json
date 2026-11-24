@@ -18,9 +18,16 @@
   "keywords": ["SFI", "flexibel undervisning", "öppna förskolan", "språkundervisning"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "assessedBy": "ai",
+    "reasoning": "Regeringen skriver i budgeten för 2024 att kvaliteten i sfi-utbildningen måste öka och föreslår att anslaget 1:17 Statligt stöd till vuxenutbildning ökas med 80 mn kr för statsbidrag till kommuner som erbjuder sfi till tillfälligt skyddsbehövande från Ukraina (Bet. 2023/24:UbU1). Det är ett bidrag för att fler ska få sfi, inte för flexibla undervisningsformer som kombination med öppna förskolan. Anslaget 1:17 är en samlingspost för vuxenutbildning och minskade nominellt från ett utfall på 4 952 mn kr 2022 till 3 642 mn kr 2025 (-26,5 procent, i fasta priser -34,6 procent). Det visar inte hur mycket som går till sfi eller hur undervisningen är utformad. Därför lämnas löftet obedömt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01UbU1",
+      "designation": "Bet. 2023/24:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2023-12-08",
+      "url": "https://data.riksdagen.se/dokument/HB01UbU1.html",
+      "relevance": "partial",
+      "note": "Anslaget 1:17 ökas med 80 mn kr för 2024 för statsbidrag till kommuner som erbjuder sfi till tillfälligt skyddsbehövande från Ukraina; regeringen anser att kvaliteten i sfi måste öka."
     }
   ]
 }
