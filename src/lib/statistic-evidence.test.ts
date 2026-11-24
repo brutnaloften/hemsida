@@ -278,6 +278,62 @@ describe('statistic evidence', () => {
     expect(statisticMoved(e)).toBe(false);
     expect(statisticMoved(statisticOf(stat({ target: { type: 'none' } })))).toBe(false);
   });
+
+  it('edge cases for moved, reached and unmoved series', () => {
+    const ok = (e: unknown, v: string) =>
+      promiseSchema.safeParse(promise({ evidence: [e, action], ...verdict(v) })).success;
+    const win = (target: unknown, latest: number, baseline = 120) =>
+      stat({
+        baseline: { period: '2022', v: baseline },
+        latest: { period: '2025', v: latest },
+        target,
+      });
+    // moved against the promise although above the threshold's reach: gte 100, 120 -> 105
+    const against = win({ type: 'threshold', op: 'gte', value: 100 }, 105);
+    expect(ok(against, 'partially_fulfilled')).toBe(false);
+    expect(ok(against, 'fulfilled')).toBe(false);
+    // lte threshold, fell and reached
+    const lteMet = win({ type: 'threshold', op: 'lte', value: 110 }, 105);
+    expect(ok(lteMet, 'partially_fulfilled')).toBe(true);
+    expect(ok(lteMet, 'fulfilled')).toBe(true);
+    // lte threshold, fell but not reached: partial only
+    const lteNot = win({ type: 'threshold', op: 'lte', value: 100 }, 105);
+    expect(ok(lteNot, 'partially_fulfilled')).toBe(true);
+    expect(ok(lteNot, 'fulfilled')).toBe(false);
+    // lte threshold, rose
+    const lteUp = win({ type: 'threshold', op: 'lte', value: 130 }, 125);
+    expect(ok(lteUp, 'partially_fulfilled')).toBe(false);
+    expect(ok(lteUp, 'fulfilled')).toBe(false);
+    // unchanged value
+    const flat = win({ type: 'direction', op: 'up' }, 120);
+    expect(ok(flat, 'partially_fulfilled')).toBe(false);
+    expect(ok(flat, 'fulfilled')).toBe(false);
+    // target none never qualifies
+    const none = win({ type: 'none' }, 200);
+    expect(ok(none, 'partially_fulfilled')).toBe(false);
+    expect(ok(none, 'fulfilled')).toBe(false);
+  });
+
+  it('rejects equal or mixed-format periods and statistics on non-outcome promises', () => {
+    const bad = (over: Record<string, unknown>) =>
+      promiseSchema.safeParse(promise({ evidence: [stat(over)] })).success;
+    expect(bad({ latest: { period: '2022', v: 1 } })).toBe(false);
+    expect(bad({ latest: { period: '2025-Q1', v: 1 } })).toBe(false);
+    expect(bad({ latest: { period: '25', v: 1 } })).toBe(false);
+    expect(
+      bad({ latest: { period: '2025-Q4', v: 1 }, baseline: { period: '2022-Q1', v: 2 } }),
+    ).toBe(true);
+    expect(promiseSchema.safeParse(promise({ type: 'legislative' })).success).toBe(false);
+  });
+
+  it('requires priceBasis on a price series and the newest period as latest', () => {
+    const base = { ...seriesFixtures[3], priceBasis: undefined };
+    expect(statisticSeriesSchema.safeParse(base).success).toBe(false);
+    const p = promiseSchema.parse(
+      promise({ evidence: [stat({ latest: { period: '2024', v: 350.9 } })] }),
+    );
+    expect(statisticRefProblems([p], seriesByTerm)[0]).toMatch(/not the newest/);
+  });
 });
 
 function statisticOf(raw: unknown) {

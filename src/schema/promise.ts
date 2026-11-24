@@ -254,10 +254,16 @@ const budgetEvidenceSchema = z
   })
   .strict();
 
+const periodKey = z
+  .string()
+  .regex(/^\d{4}(-Q[1-4]|-(0[1-9]|1[0-2]))?$/, 'expected YYYY, YYYY-Qn or YYYY-MM');
+const periodFormat = (k: string) =>
+  k.length === 4 ? 'year' : k.includes('Q') ? 'quarter' : 'month';
+
 const periodValue = z
   .object({
-    /** Period key as in the series file's `values`, e.g. "2022" (or "2022-Q1", "2022-03"). */
-    period: z.string().min(1),
+    /** Period key as in the series file's `values`: "2022", "2022-Q1" or "2022-03". */
+    period: periodKey,
     v: z.number(),
   })
   .strict();
@@ -307,6 +313,10 @@ const statisticEvidenceSchema = z
     note: z.string().nullable().default(null),
   })
   .strict()
+  .refine((e) => periodFormat(e.baseline.period) === periodFormat(e.latest.period), {
+    path: ['latest', 'period'],
+    message: 'baseline and latest must use the same period format',
+  })
   .refine((e) => e.baseline.period < e.latest.period, {
     path: ['latest', 'period'],
     message: 'latest.period must be after baseline.period',
@@ -430,13 +440,15 @@ function checkVerdictEvidence(
     : [];
   const termEnd = Number(p.term.slice(5));
   const acted = riksdag.some((e) => e.kind === 'prop' || e.kind === 'bet' || e.kind === 'sfs');
-  const statisticPartial =
-    acted && statistics.some((e) => statisticMoved(e) || statisticTargetMet(e));
+  // Both verdicts need the series to have moved in the promised direction; fulfilled also needs
+  // the target reached. A series that moved against the promise qualifies nothing.
+  const statisticPartial = acted && statistics.some((e) => statisticMoved(e));
   const statisticFull =
     acted &&
     statistics.some(
       (e) =>
         e.relevance === 'full' &&
+        statisticMoved(e) &&
         statisticTargetMet(e) &&
         // a level promised for a year after the term cannot be settled before that year
         !(
@@ -479,7 +491,7 @@ function checkVerdictEvidence(
       if (!(value === 'partially_fulfilled' ? statisticPartial : statisticFull)) {
         fail(
           value === 'fulfilled'
-            ? 'verdict fulfilled on an outcome promise requires a statistic entry with relevance full that reaches its target (a threshold level by a year within the term), plus a prop, bet or sfs entry; only for a promise with a government or support party'
+            ? 'verdict fulfilled on an outcome promise requires a statistic entry with relevance full that moved in the promised direction and reaches its target (a threshold level by a year within the term), plus a prop, bet or sfs entry; only for a promise with a government or support party'
             : 'verdict partially_fulfilled on an outcome promise requires a statistic entry that moved in the promised direction, plus a prop, bet or sfs entry; only for a promise with a government or support party',
         );
       }
@@ -590,6 +602,15 @@ export const promiseSchema = z
       }
       agreementSources.add(e.source);
     });
+    p.evidence.forEach((e, i) => {
+      if (e.kind === 'statistic' && p.type !== 'outcome') {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['evidence', i, 'kind'],
+          message: 'statistic evidence is only allowed on an outcome promise',
+        });
+      }
+    });
     checkVerdictEvidence(p, ctx);
   });
 
@@ -622,9 +643,22 @@ export const statisticSeriesSchema = z
     frequency: z.enum(['year', 'quarter', 'month']),
     fetched_at: isoDate,
     priceBasis: z.enum(['nominal', 'real']).optional(),
-    values: z.record(z.string().min(1), z.number()),
+    values: z.record(periodKey, z.number()),
   })
   .strict()
+  .refine(
+    (s) =>
+      s.priceBasis !== undefined ||
+      !/\b(kr|öre|sek)\b\s*(\/|per)\s*(l|liter|kwh|mwh|kg|m3)\b/i.test(s.unit),
+    {
+      path: ['priceBasis'],
+      message: 'a price series (unit in kr or öre per unit) must set priceBasis',
+    },
+  )
+  .refine((s) => new Set(Object.keys(s.values).map(periodFormat)).size === 1, {
+    path: ['values'],
+    message: 'all period keys must use one format',
+  })
   .refine((s) => Object.keys(s.values).length > 0, {
     path: ['values'],
     message: 'a series needs at least one value',

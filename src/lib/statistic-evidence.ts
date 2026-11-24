@@ -29,6 +29,12 @@ export function statisticRefProblems(
           problems.push(`${p.id}: ${which} ${period} is ${v}, series ${s.id} says ${actual}`);
         }
       }
+      const newest = Object.keys(s.values).sort().at(-1);
+      if (newest !== undefined && e.latest.period !== newest) {
+        problems.push(
+          `${p.id}: latest period ${e.latest.period} is not the newest in series ${s.id} (${newest})`,
+        );
+      }
       if (s.priceBasis !== undefined && e.inflationNote === undefined) {
         problems.push(
           `${p.id}: series ${s.id} is a price series (${s.priceBasis}); the entry needs an inflationNote`,

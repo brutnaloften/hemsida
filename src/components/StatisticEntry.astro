@@ -17,7 +17,7 @@ const f = formatStatistic(e, series);
   </p>
   <p class="font-medium">{f.label}</p>
   <p class="text-sm">
-    {f.baseline} &rarr; {f.latest} ({f.change})
+    {f.baseline} <span aria-label="till">&rarr;</span> {f.latest} ({f.change})
   </p>
   {f.target && <p class="text-sm">{f.target}</p>}
   {e.baselineNote && <p class="text-sm">{e.baselineNote}</p>}
