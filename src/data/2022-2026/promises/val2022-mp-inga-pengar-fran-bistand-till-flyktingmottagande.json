@@ -17,10 +17,58 @@
   "committee": "UU",
   "keywords": ["bistånd", "flyktingmottagande", "omföring"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Löftet är att inga pengar ska flyttas från biståndet till flyktingmottagandet. Miljöpartiets budgetmotioner för utgiftsområde 7 höjer anslag 1:1 Biståndsverksamhet med 9 753 miljoner kronor för 2023 (Mot. 2022/23:1468), 10 700 miljoner 2024 (Mot. 2023/24:2666), 12 469 miljoner 2025 (Mot. 2024/25:3049) och 19 100 miljoner 2026 (Mot. 2025/26:3523), mot regeringens förslag. Målet är 1,25 procent av BNI 2023, 1 procent med sikte på 1,25 procent 2024 och 1 procent 2025 och 2026. I texten för 2023, 2024 och 2025 motsätter sig partiet att kostnader för flyktingmottagande i Sverige tas från biståndet, men formuleringen är att avräkningarna ska minimeras, inte att de ska bort, och inget belopp eller någon tabellrad anger hur stor avräkningen blir i partiets budget. Motionen för 2026 nämner inte avräkningarna. Partiet föreslår alltså mer bistånd varje år och säger nej till avräkningar, men förslaget går inte så långt som löftet och kan inte läsas som att inga pengar flyttas. Löftet är delvis uppfyllt som partiets eget förslag. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:UU2, 2023/24:UU2, 2024/25:UU2 och 2025/26:UU2).",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA021468",
+      "designation": "Mot. 2022/23:1468",
+      "title": "Utgiftsområde 7 Internationellt bistånd",
+      "date": "2022-11-22",
+      "url": "https://data.riksdagen.se/dokument/HA021468.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2023: biståndsverksamhet +9 753 miljoner kronor, mål 1,25 procent av BNI, avräkningarna ska minimeras. Avslogs i Bet. 2022/23:UU2."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022666",
+      "designation": "Mot. 2023/24:2666",
+      "title": "Utgiftsområde 7 Internationellt bistånd",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022666.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2024: biståndsverksamhet +10 700 miljoner kronor, avräkningarna ska minimeras. Avslogs i Bet. 2023/24:UU2."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023049",
+      "designation": "Mot. 2024/25:3049",
+      "title": "Utgiftsområde 7 Internationellt bistånd",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023049.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025: biståndsverksamhet +12 469 miljoner kronor, rubriken Nej till avräkningar för asylmottagande men texten säger att de ska minimeras. Avslogs i Bet. 2024/25:UU2."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023523",
+      "designation": "Mot. 2025/26:3523",
+      "title": "Utgiftsområde 7 Internationellt bistånd",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023523.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: biståndsverksamhet +19 100 miljoner kronor, mål 1 procent av BNI; avräkningarna nämns inte. Avslogs i Bet. 2025/26:UU2."
+    }
+  ]
 }

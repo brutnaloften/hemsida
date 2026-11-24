@@ -17,10 +17,38 @@
   "committee": "TU",
   "keywords": ["nattåg", "tågtrafik", "Europa", "Norden"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Löftet är att säkra och utveckla nattågstrafiken i hela Sverige och knyta oss närmare Norden och Europa med fler avgångar. I Miljöpartiets budgetmotioner för utgiftsområde 22 för 2023 och 2024 (Mot. 2022/23:2174 och 2023/24:2708) nämns inga nattåg och anslag 1:7 Trafikavtal är oförändrat; där finns bara en generell kollektivtrafikpost på 5 000 miljoner kronor. För 2025 (Mot. 2024/25:3064) ökas anslag 1:7 med 247 miljoner kronor för att upprätthålla dagens tillgänglighet, och motionen anger att anslaget omfattar upphandlad trafik mellan Göteborg och Norrland och tåg mellan Stockholm eller Göteborg och Trondheim. För 2026 (Mot. 2025/26:3517) ökas anslag 1:7 med 197 miljoner kronor och anslag 1:16 Internationell tågtrafik med 30 miljoner kronor, och motionen säger att den nedlagda nattågslinjen Göteborg till Norrland, den planerade linjen till Trondheim och nattåg Hamburg och Berlin finansieras. Partiet föreslår alltså pengar för nattåg i de två sista budgetarna, men det handlar om att återinföra och behålla linjer, och anslag 1:16 höjs bara för att hålla anslaget oförändrat, så fler avgångar mot Europa än i dag finns inte som belopp. Samtidigt minskas anslaget för flygplatser med 175 miljoner kronor 2025 och 425 miljoner kronor 2026. Löftet är delvis uppfyllt som partiets eget förslag. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:TU1, 2023/24:TU1, 2024/25:TU1 och 2025/26:TU1).",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HC023064",
+      "designation": "Mot. 2024/25:3064",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023064.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025: trafikavtal +247 miljoner kronor, i anslaget ingår upphandlad trafik Göteborg–Norrland och tåg till Trondheim. Avslogs i Bet. 2024/25:TU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023517",
+      "designation": "Mot. 2025/26:3517",
+      "title": "Utgiftsområde 22 Kommunikationer",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023517.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: trafikavtal +197 och internationell tågtrafik +30 miljoner kronor, nattåg Göteborg–Norrland, Trondheim och Hamburg/Berlin. Avslogs i Bet. 2025/26:TU1."
+    }
+  ]
 }

@@ -17,10 +17,58 @@
   "committee": "SoU",
   "keywords": ["sociala insatser", "socialtjänst", "nyrekrytering", "unga"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "fulfilled",
+    "reasoning": "Löftet är fler och mer långtgående sociala insatser för att stoppa nyrekryteringen till kriminalitet. Socialdemokraterna föreslog pengar till sådana insatser i alla fyra budgetmotioner. För 2023 ökas anslag 4:7 i utgiftsområde 9 med 500 miljoner kronor till socialtjänstens brottsförebyggande arbete i kommuner med utsatta områden (Mot. 2022/23:2061); i samma motion avvisas fritidskortet (50 miljoner kronor) och regeringens satsning mot ohälsa och ensamhet bland äldre avvisas (145 miljoner kronor) med hänvisning till en egen satsning. För 2024 föreslås ett nytt anslag i utgiftsområde 25 på 1 000 miljoner kronor för akuta insatser mot gängvåld, där kommunerna ska kunna sätta in lokala krisgrupper och bidraget ska vägas särskilt mot kommuner med utsatta områden (Mot. 2023/24:2646). För 2025 avsätts 1 500 miljoner kronor till att punktmarkera unga på glid (Mot. 2024/25:3197) och för 2026 1 700 miljoner kronor till ett socialtjänstlyft med riskfamiljsprogram och punktmarkering av unga (Mot. 2025/26:3560). I motionerna för 2025 och 2026 minskas samtidigt det tillfälliga stödet till regioner med 250 miljoner kronor. Satsningen på akuta krisgrupper 2024 är mer av en akut insats än en förebyggande social insats, men de tre övriga åren är rakt i löftets riktning och beloppen växer från år till år. Löftet är uppfyllt som partiets eget förslag, inte som beslut. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:SoU1, 2023/24:FiU3, 2024/25:FiU3 och 2025/26:FiU3).",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022061",
+      "designation": "Mot. 2022/23:2061",
+      "title": "Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022061.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2023: bidrag till utvecklingen av socialt arbete +500 miljoner kronor (anslag 4:7) till brottsförebyggande arbete i utsatta områden. Avslogs i Bet. 2022/23:SoU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022646",
+      "designation": "Mot. 2023/24:2646",
+      "title": "Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022646.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2024: nytt anslag 99:1 Bidrag till kommuner för akuta insatser mot gängvåld, 1 000 miljoner kronor. Avslogs i Bet. 2023/24:FiU3."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023197",
+      "designation": "Mot. 2024/25:3197",
+      "title": "Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023197.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2025: nytt anslag 99:1 Punktmarkera unga på glid, 1 500 miljoner kronor. Avslogs i Bet. 2024/25:FiU3."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023560",
+      "designation": "Mot. 2025/26:3560",
+      "title": "Utgiftsområde 25 Allmänna bidrag till kommuner",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023560.html",
+      "relevance": "full",
+      "note": "Budgetmotion för 2026: nytt anslag 99:1 Socialtjänstlyft, riskfamiljsprogram och punktmarkering av unga, 1 700 miljoner kronor. Avslogs i Bet. 2025/26:FiU3."
+    }
+  ]
 }
