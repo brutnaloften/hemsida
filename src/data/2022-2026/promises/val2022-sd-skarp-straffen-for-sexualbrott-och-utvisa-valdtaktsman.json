@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["sexualbrott", "straff", "utvisning", "våldtäkt"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i april 2026 att högsta straffet för grov våldtäkt och grov våldtäkt mot barn höjs till tolv år och att livstid kan dömas ut som gemensamt straff vid upprepade allvarliga brott. Riksdagen biföll förslaget i juni 2026, och lagen trädde i kraft den 1 augusti 2026. Riksdagen beslutade samtidigt om skärpta regler om utvisning på grund av brott, som gäller från den 1 september 2026. Löftet gällde kraftigt skärpta straff och utvisning på livstid av utländska våldtäktsmän, och lagarna täcker en del av det.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -46,6 +53,26 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03235",
+      "designation": "Prop. 2025/26:235",
+      "title": "Skärpta regler om utvisning på grund av brott",
+      "date": "2026-04-01",
+      "url": "https://data.riksdagen.se/dokument/HD03235.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03218",
+      "designation": "Prop. 2025/26:218",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03218.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01JuU42",
       "designation": "Bet. 2025/26:JuU42",
@@ -66,6 +93,16 @@
       "note": null
     },
     {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1318",
+      "designation": "SFS 2026:1318",
+      "title": "Lag (2026:1318) om ändring i brottsbalken",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261318.html",
+      "relevance": "partial",
+      "note": "Höjer maxstraffet för grov våldtäkt och grov våldtäkt mot barn till tolv år och inför livstid som gemensamt straff vid flera grova brott. Andra straffskalor för sexualbrott ändras inte."
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01JuU48",
       "designation": "Bet. 2025/26:JuU48",
@@ -74,6 +111,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1259",
+      "designation": "SFS 2026:1259",
+      "title": "Lag (2026:1259) om ändring i utlänningslagen (2005:716)",
+      "date": "2026-09-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261259.html",
+      "relevance": "partial",
+      "note": "Skärper reglerna om utvisning på grund av brott och förlänger återreseförbuden."
     }
   ]
 }

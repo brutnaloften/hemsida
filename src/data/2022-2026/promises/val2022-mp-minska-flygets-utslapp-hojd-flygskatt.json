@@ -17,12 +17,29 @@
   "committee": "SkU",
   "keywords": ["flygskatt", "flyg", "utsläpp", "elflyg"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i mars 2025 en lag med kompletterande bestämmelser till EU:s regler om hållbara flygbränslen, med sanktionsavgifter och tillsyn, och riksdagen biföll förslaget i maj 2025. Lagen gäller från den 1 juli 2025 och rör omställningen till förnybara bränslen i flyget. Löftet gällde också höjd flygskatt och minskat flygresande, så en del av löftet täcks.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC03118",
+      "designation": "Prop. 2024/25:118",
+      "title": "Säkerställande av lika villkor för hållbar lufttransport",
+      "date": "2025-03-11",
+      "url": "https://data.riksdagen.se/dokument/HC03118.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HC01TU13",
@@ -30,8 +47,18 @@
       "title": "Luftfartsfrågor",
       "date": "2025-05-15",
       "url": "https://data.riksdagen.se/dokument/HC01TU13.html",
-      "relevance": "contradicts",
+      "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-606",
+      "designation": "SFS 2025:606",
+      "title": "Lag (2025:606) om tillhandahållande och användning av hållbara flygbränslen",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025606.html",
+      "relevance": "partial",
+      "note": "Kompletterande bestämmelser till EU:s förordning om hållbara flygbränslen: sanktionsavgifter, tillsyn och överklagande."
     }
   ]
 }

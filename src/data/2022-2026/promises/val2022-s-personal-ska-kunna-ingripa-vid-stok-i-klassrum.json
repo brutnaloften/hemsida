@@ -17,12 +17,29 @@
   "committee": "UbU",
   "keywords": ["ordning och reda", "stök", "lärare", "ingripa", "disciplin"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i mars 2026 ändringar i skollagen för bättre trygghet och studiero, och riksdagen biföll förslaget i maj 2026. Kravet på dokumentation när en elev visas ut ur undervisningslokalen eller får kvarsittning tas bort, vilket gör det enklare för lärare att ingripa direkt. Lagen trädde i kraft den 1 augusti 2026 och täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03193",
+      "designation": "Prop. 2025/26:193",
+      "title": "Bättre förutsättningar för trygghet och studiero i skolan",
+      "date": "2026-03-17",
+      "url": "https://data.riksdagen.se/dokument/HD03193.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HD01UbU22",
@@ -32,6 +49,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01UbU22.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1198",
+      "designation": "SFS 2026:1198",
+      "title": "Lag (2026:1198) om ändring i skollagen (2010:800)",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261198.html",
+      "relevance": "partial",
+      "note": "Tar bort kravet på dokumentation vid utvisning ur undervisningslokalen och kvarsittning. Gäller lärare och annan personal i skolan."
     }
   ]
 }
