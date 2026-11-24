@@ -27,9 +27,93 @@
     "score:tido-corpus-claude-v1-shard-18-of-20",
     "score:tido-corpus-claude-v1-shard-19-of-20",
     "score:tido-corpus-claude-v1-shard-20-of-20",
-    "widen:investeringssparkonto|schablonintäkt|skattefri nivå"
+    "widen:investeringssparkonto|ISK|schablonintäkt|skattefri grundnivå|kapitalunderlag|sänkt skatt på sparande|skatt på sparande"
   ],
   "candidates": [
+    {
+      "dok_id": "HD01FiU48",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU48",
+      "datum": "2026-04-21",
+      "titel": "Extra ändringsbudget för 2026 – Sänkt skatt på drivmedel samt el- och gasprisstöd",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU48.html",
+      "found_by": [
+        "widen:investeringssparkonto|ISK|schablonintäkt|skattefri grundnivå|kapitalunderlag|sänkt skatt på sparande|skatt på sparande"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01SkU7",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU7",
+      "datum": "2023-11-23",
+      "titel": "Sänkt skatt på bensin och diesel och sänkt skatt på jordbruksdiesel",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU7.html",
+      "found_by": [
+        "widen:investeringssparkonto|ISK|schablonintäkt|skattefri grundnivå|kapitalunderlag|sänkt skatt på sparande|skatt på sparande"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HC0330",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "30",
+      "datum": "2024-10-17",
+      "titel": "Sänkt skatt på bensin och diesel",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0330.html",
+      "found_by": [
+        "widen:investeringssparkonto|ISK|schablonintäkt|skattefri grundnivå|kapitalunderlag|sänkt skatt på sparande|skatt på sparande"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD03236",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "236",
+      "datum": "2026-04-13",
+      "titel": "Extra ändringsbudget för 2026 – Sänkt skatt på drivmedel samt el- och gasprisstöd",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03236.html",
+      "found_by": [
+        "widen:investeringssparkonto|ISK|schablonintäkt|skattefri grundnivå|kapitalunderlag|sänkt skatt på sparande|skatt på sparande"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD0332",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "32",
+      "datum": "2025-10-16",
+      "titel": "Sänkt skatt på arbetsinkomster, pension och sjuk- och aktivitetsersättning",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0332.html",
+      "found_by": [
+        "widen:investeringssparkonto|ISK|schablonintäkt|skattefri grundnivå|kapitalunderlag|sänkt skatt på sparande|skatt på sparande"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HB0324",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "24",
+      "datum": "2023-10-19",
+      "titel": "Sänkt skatt på bensin och diesel och sänkt skatt på jordbruksdiesel",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0324.html",
+      "found_by": [
+        "widen:investeringssparkonto|ISK|schablonintäkt|skattefri grundnivå|kapitalunderlag|sänkt skatt på sparande|skatt på sparande"
+      ],
+      "score": 10
+    },
     {
       "dok_id": "HD03296",
       "doktyp": "prop",
@@ -91,6 +175,32 @@
       "score": 10
     },
     {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["widen:slice4-manual"],
+      "score": 10,
+      "relevance": 0.97
+    },
+    {
+      "dok_id": "HC01FiU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU1",
+      "datum": "2024-11-22",
+      "titel": "Statens budget 2025 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "found_by": ["widen:slice4-manual"],
+      "score": 10,
+      "relevance": 0.95
+    },
+    {
       "dok_id": "HD031",
       "doktyp": "prop",
       "rm": "2025/26",
@@ -108,25 +218,6 @@
       ],
       "score": 4,
       "relevance": 0.9
-    },
-    {
-      "dok_id": "HC01FiU1",
-      "doktyp": "bet",
-      "rm": "2024/25",
-      "beteckning": "FiU1",
-      "datum": "2024-11-22",
-      "titel": "Statens budget 2025 – Rambeslutet",
-      "organ": "FiU",
-      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
-      "found_by": [
-        "keyword:investeringssparkonto",
-        "keyword:skattefri grundnivå",
-        "keyword:sparande",
-        "all-keywords",
-        "score:tido-corpus-claude-v1-shard-18-of-20"
-      ],
-      "score": 4,
-      "relevance": 0.95
     },
     {
       "dok_id": "HD03100",
@@ -181,24 +272,6 @@
       ],
       "score": 3,
       "relevance": 0.95
-    },
-    {
-      "dok_id": "HC031",
-      "doktyp": "prop",
-      "rm": "2024/25",
-      "beteckning": "1",
-      "datum": "2024-09-19",
-      "titel": "Budgetpropositionen för 2025",
-      "organ": "Finansdepartementet",
-      "url": "https://data.riksdagen.se/dokument/HC031.html",
-      "found_by": [
-        "keyword:investeringssparkonto",
-        "keyword:schablonintäkt",
-        "keyword:skattefri grundnivå",
-        "score:tido-corpus-claude-v1-shard-19-of-20"
-      ],
-      "score": 3,
-      "relevance": 0.97
     },
     {
       "dok_id": "HB01SkU12",
