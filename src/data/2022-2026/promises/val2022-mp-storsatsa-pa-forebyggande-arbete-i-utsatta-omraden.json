@@ -17,10 +17,78 @@
   "committee": "JuU",
   "keywords": ["förebyggande arbete", "utsatta områden", "brottsprevention"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Löftet är en storsatsning på det förebyggande arbetet i socioekonomiskt eftersatta områden. Miljöpartiets budgetmotioner för utgiftsområde 4 höjer anslag 1:14 (brottsförebyggande arbete) med 1 000 miljoner kronor varje år 2023 till 2026 (Mot. 2022/23:2167, 2023/24:2675, 2024/25:3060 och 2025/26:3510), mot regeringens 100 till 158 miljoner kronor, med uttalat mål att stoppa nyrekryteringen av unga till kriminalitet. För 2023 betalas det delvis genom att polisens anslag sänks med 1 000 miljoner kronor, så att utgiftsområdet i sin helhet ökar med 200 miljoner kronor. Beloppet är riktat till hela landet och inte öronmärkt för utsatta områden i någon tabell; för 2026 nämner motionen fler områdespoliser i särskilt utsatta områden, men bara i texten. Områdesinriktade poster finns i utgiftsområde 13: 25 miljoner kronor till åtgärder mot segregation för 2023 (Mot. 2022/23:2109) och 1 000 miljoner kronor till kraftfulla åtgärder mot segregation för 2025 (Mot. 2024/25:3036). Det stora förebyggande beloppet finns alltså varje år, men inriktningen på socioekonomiskt eftersatta områden syns bara delvis i förslagen. Löftet är delvis uppfyllt som partiets eget förslag. Riksdagen avslog alla förslagen (Bet. 2022/23:JuU1, 2023/24:JuU1, 2024/25:JuU1, 2025/26:JuU1 samt 2022/23:AU1 och 2024/25:AU1).",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022167",
+      "designation": "Mot. 2022/23:2167",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022167.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2023: brottsförebyggande arbete +1 000 miljoner kronor (anslag 1:14), polisen −1 000. Avslogs i Bet. 2022/23:JuU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HA022109",
+      "designation": "Mot. 2022/23:2109",
+      "title": "Utgiftsområde 13 Jämställdhet och nyanlända invandrares etablering",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022109.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2023: åtgärder mot segregation +25 miljoner kronor (anslag 4:1). Avslogs i Bet. 2022/23:AU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022675",
+      "designation": "Mot. 2023/24:2675",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022675.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2024: brottsförebyggande arbete +1 000 miljoner kronor (anslag 1:14) för att stoppa nyrekryteringen. Avslogs i Bet. 2023/24:JuU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023060",
+      "designation": "Mot. 2024/25:3060",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023060.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025: brottsförebyggande arbete +1 000 miljoner kronor (anslag 1:14). Avslogs i Bet. 2024/25:JuU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023036",
+      "designation": "Mot. 2024/25:3036",
+      "title": "Utgiftsområde 13 Integration och jämställdhet",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023036.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025: 1 000 miljoner kronor till åtgärder mot segregation och 70 till en ny myndighet. Avslogs i Bet. 2024/25:AU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023510",
+      "designation": "Mot. 2025/26:3510",
+      "title": "Utgiftsområde 4 Rättsväsendet",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023510.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: brottsförebyggande arbete +1 000 miljoner kronor (anslag 1:14). Avslogs i Bet. 2025/26:JuU1."
+    }
+  ]
 }

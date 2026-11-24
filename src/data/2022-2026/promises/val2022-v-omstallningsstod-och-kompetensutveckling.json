@@ -17,10 +17,58 @@
   "committee": "UbU",
   "keywords": ["omställningsstöd", "kompetensutveckling", "vuxenutbildning", "gröna jobb"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Löftet är massiva satsningar på omställningsstöd, kompetensutveckling och utbildning så att arbetare kan ta gröna jobb. Vänsterpartiets budgetmotioner för utgiftsområde 14 ökar anslag 1:3 (arbetsmarknadspolitiska program) med 2 535 miljoner kronor för 2023 (Mot. 2022/23:1243), 2 706 miljoner 2024 (Mot. 2023/24:2328), 2 238 miljoner 2025 (Mot. 2024/25:1942) och 2 106 miljoner 2026 (Mot. 2025/26:3167). För 2023 avvisas regeringens nedskärning på 1 500 miljoner kronor och arbetsmarknadsutbildningen ska nå minst 20 000 personer per år, riktad mot bristyrken, och motionen kopplar utbildningen till klimatomställningen. För 2024 avsätts 2 500 miljoner kronor av ökningen och för 2025 och 2026 vardera 2 000 miljoner kronor till aktiv arbetsmarknadspolitik med arbetsmarknadsutbildning. Anslaget för omställnings- och kompetensstöd är oförändrat 2023 till 2025 och ökar först 2026 med 200 miljoner kronor, när partiet avvisar en neddragning. Ingen post gäller särskilt omställning till gröna jobb. Utbildning och kompetensutveckling är alltså tydligt satsade på, men omställningsstödet bara 2026. Löftet är delvis uppfyllt som partiets eget förslag. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:AU2, 2023/24:AU2, 2024/25:AU2 och 2025/26:AU2).",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA021243",
+      "designation": "Mot. 2022/23:1243",
+      "title": "Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "date": "2022-11-22",
+      "url": "https://data.riksdagen.se/dokument/HA021243.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2023: arbetsmarknadspolitiska program +2 535 miljoner kronor, minst 20 000 platser i arbetsmarknadsutbildning mot bristyrken; omställnings- och kompetensstöd oförändrat. Avslogs i Bet. 2022/23:AU2."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022328",
+      "designation": "Mot. 2023/24:2328",
+      "title": "Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022328.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2024: arbetsmarknadspolitiska program +2 706 miljoner kronor, varav 2 500 till aktiv arbetsmarknadspolitik med arbetsmarknadsutbildning. Avslogs i Bet. 2023/24:AU2."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC021942",
+      "designation": "Mot. 2024/25:1942",
+      "title": "Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC021942.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025: arbetsmarknadspolitiska program +2 238 miljoner kronor, varav 2 000 till aktiv arbetsmarknadspolitik med arbetsmarknadsutbildning. Avslogs i Bet. 2024/25:AU2."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023167",
+      "designation": "Mot. 2025/26:3167",
+      "title": "Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "date": "2025-10-06",
+      "url": "https://data.riksdagen.se/dokument/HD023167.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: arbetsmarknadspolitiska program +2 106 miljoner kronor och omställnings- och kompetensstöd +200 miljoner kronor. Avslogs i Bet. 2025/26:AU2."
+    }
+  ]
 }

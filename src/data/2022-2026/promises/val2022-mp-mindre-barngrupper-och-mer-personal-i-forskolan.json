@@ -17,10 +17,58 @@
   "committee": "UbU",
   "keywords": ["förskola", "barngrupper", "personaltäthet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "reasoning": "Löftet gäller mindre barngrupper och mer personal i förskolan. Miljöpartiets budgetmotioner för utgiftsområde 16 lägger pengar på förskolan varje år: för 2023 ett likvärdighetsbidrag för förskolan på 2 000 miljoner kronor i ett nytt anslag 99:1 (Mot. 2022/23:2257), för 2024 samma bidrag på 1 000 miljoner kronor (Mot. 2023/24:2680), för 2025 en förskolemiljard på 1 000 miljoner kronor i anslag 1:7 (Mot. 2024/25:3215) och för 2026 500 miljoner kronor mer i anslag 1:7 för kvalitetshöjande åtgärder samt 750 miljoner kronor för fler timmar i fritids och förskola (Mot. 2025/26:3518). I motionerna för 2023 och 2024 står att pengarna ska kunna användas till att anställa fler pedagoger, höja lönerna, ge kompetensutveckling eller ge fler specialpedagoger, så delen om mer personal är täckt. Ordet barngrupper finns däremot inte i någon av de fyra motionerna och ingen post är riktad mot mindre barngrupper. För 2023 minskas anslag 1:5 med 885 miljoner kronor medan anslag 1:15 ökas med 2 800 miljoner kronor. Löftet är delvis uppfyllt som partiets eget förslag. Riksdagen avslog alla fyra motionerna (Bet. 2022/23:UbU1, 2023/24:UbU1, 2024/25:UbU1 och 2025/26:UbU1).",
+    "date": "2026-11-24",
+    "assessedBy": "ai",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "mot",
+      "dok_id": "HA022257",
+      "designation": "Mot. 2022/23:2257",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2022-11-23",
+      "url": "https://data.riksdagen.se/dokument/HA022257.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2023: likvärdighetsbidrag för förskolan 2 000 miljoner kronor (anslag 99:1) för fler pedagoger, högre löner och kompetensutveckling. Avslogs i Bet. 2022/23:UbU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HB022680",
+      "designation": "Mot. 2023/24:2680",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2023-10-05",
+      "url": "https://data.riksdagen.se/dokument/HB022680.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2024: likvärdighetsbidrag för förskolan 1 000 miljoner kronor (anslag 99:1). Avslogs i Bet. 2023/24:UbU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HC023215",
+      "designation": "Mot. 2024/25:3215",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2024-10-04",
+      "url": "https://data.riksdagen.se/dokument/HC023215.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2025: förskolemiljard, 1 000 miljoner kronor i anslag 1:7. Avslogs i Bet. 2024/25:UbU1."
+    },
+    {
+      "kind": "mot",
+      "dok_id": "HD023518",
+      "designation": "Mot. 2025/26:3518",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2025-10-07",
+      "url": "https://data.riksdagen.se/dokument/HD023518.html",
+      "relevance": "partial",
+      "note": "Budgetmotion för 2026: 500 miljoner kronor till kvalitetshöjande åtgärder i förskolan (anslag 1:7) och 750 miljoner kronor till fler timmar i fritids och förskola. Avslogs i Bet. 2025/26:UbU1."
+    }
+  ]
 }
