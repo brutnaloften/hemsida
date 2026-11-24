@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["energiskatt", "elskatt", "extraskatt", "elpriser", "skatt på el"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "I budgetpropositionen för 2026 föreslog regeringen att energiskatten på el sänks till 2022 års nivå. Riksdagen beslutade om skattesänkningen i budgetbehandlingen hösten 2025, och den nya skattesatsen, 36,0 öre per kilowattimme, är 8,2 öre lägre än den omräknade nivån som annars skulle gälla och gäller från den 1 januari 2026.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HD031",
+      "designation": "Prop. 2025/26:1",
+      "title": "Budgetpropositionen för 2026",
+      "date": "2025-09-22",
+      "url": "https://data.riksdagen.se/dokument/HD031.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01FiU48",
       "designation": "Bet. 2025/26:FiU48",
@@ -40,6 +57,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01FiU48.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-1357",
+      "designation": "SFS 2025:1357",
+      "title": "Lag (2025:1357) om ändring i lagen (1994:1776) om skatt på energi",
+      "date": "2026-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20251357.html",
+      "relevance": "full",
+      "note": "Sänker energiskatten på el till 36,0 öre per kilowattimme från 2026, 8,2 öre under den omräknade nivån."
     }
   ]
 }

@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["sexualbrott", "våldtäkt", "straffskärpning", "fängelse"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i april 2026 höjda straff för de grövsta sexualbrotten. Högsta straff för grov våldtäkt och grov våldtäkt mot barn höjs från tio till tolv års fängelse, och minimistraffet för kontakt för att träffa ett barn i sexuellt syfte höjs. Livstids fängelse kan dessutom dömas ut som gemensamt straff vid upprepade allvarliga våldsbrott och sexualbrott. Riksdagen biföll förslaget i juni 2026 och lagändringen gäller från den 1 augusti 2026. Löftet gällde 25 års fängelse för grov våldtäkt; det beslutade högsta straffet är tolv år.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": ["tido-oversyn-straffskalor-vald-sexualbrott"],
       "outcome": "weakened",
       "note": "Avtalet ser över och skärper straffen för bland annat sexualbrott, men anger inte 25 års fängelse för grov våldtäkt."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03218",
+      "designation": "Prop. 2025/26:218",
+      "title": "Dubbla straff för brott i kriminella nätverk och skärpta straffskalor",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03218.html",
+      "relevance": "partial",
+      "note": null
     },
     {
       "kind": "bet",
@@ -60,6 +77,16 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU48.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1318",
+      "designation": "SFS 2026:1318",
+      "title": "Lag (2026:1318) om ändring i brottsbalken",
+      "date": "2026-08-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261318.html",
+      "relevance": "partial",
+      "note": "Höjer maxstraffet för grov våldtäkt och grov våldtäkt mot barn till tolv år och inför livstid som gemensamt straff vid flera grova brott. Andra straffskalor för sexualbrott ändras inte."
     }
   ]
 }

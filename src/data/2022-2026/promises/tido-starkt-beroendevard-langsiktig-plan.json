@@ -20,18 +20,34 @@
   "committee": "SoU",
   "keywords": ["beroendevård", "missbruk", "beroendesjukdom", "sammanhållen vård", "regionerna"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-11",
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i april 2026 att regionerna ska ansvara för all hälso- och sjukvård vid skadligt bruk och beroende och att vården ska ges samordnat, med en ny lag om samordnad vård- och stödverksamhet. Riksdagen biföll förslaget i juni 2026 och lagarna träder i kraft den 1 januari 2028. Löftet gällde också en långsiktig plan för beroendevården, medan dokumenten handlar om samordnad vård och ansvarsfördelning.",
+    "date": "2026-11-24",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-11"
       }
     ]
   },
   "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03251",
+      "designation": "Prop. 2025/26:251",
+      "title": "En mer sammanhållen vård för personer med skadligt bruk eller beroende och andra psykiatriska tillstånd",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03251.html",
+      "relevance": "partial",
+      "note": null
+    },
     {
       "kind": "bet",
       "dok_id": "HD01SoU34",
@@ -39,8 +55,18 @@
       "title": "En mer sammanhållen vård för personer med skadligt bruk eller beroende och andra psykiatriska tillstånd",
       "date": "2026-06-04",
       "url": "https://data.riksdagen.se/dokument/HD01SoU34.html",
-      "relevance": "full",
+      "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1306",
+      "designation": "SFS 2026:1306",
+      "title": "Lag (2026:1306) om samordnad vård- och stödverksamhet",
+      "date": "2028-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261306.html",
+      "relevance": "partial",
+      "note": "Inför samordnad vård- och stödverksamhet för personer med skadligt bruk eller beroende och psykiatriska tillstånd. Ingen nationell plan ingår."
     }
   ]
 }
