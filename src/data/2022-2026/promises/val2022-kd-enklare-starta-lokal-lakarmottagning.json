@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["läkarmottagning", "vårdval", "landsbygd", "primärvård"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "I november 2023 lämnade en departementspromemoria förslag som ska göra det lättare för små vårdgivare, bland annat enskilda läkare, att ansluta sig till offentligt finansierad vård: lagarna om läkarvårdsersättning och om valfrihetssystem upphävs, mindre företag gynnas vid upphandling och ett statsbidrag införs i glesbygd. Förslagen täcker en del av löftet och finns i en promemoria.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,16 @@
       "date": "2022-10-14",
       "promises": [],
       "outcome": "not_addressed",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HBB423",
+      "designation": "Ds 2023:23",
+      "title": "Uppdrag att möjliggöra bättre tillgång till hälso- och sjukvård i hela landet genom främjande av etablering i glesbygd",
+      "date": "2023-11-08",
+      "url": "https://data.riksdagen.se/dokument/HBB423.html",
+      "relevance": "partial",
       "note": null
     }
   ]

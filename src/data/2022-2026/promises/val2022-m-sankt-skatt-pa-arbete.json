@@ -17,10 +17,17 @@
   "committee": "FiU",
   "keywords": ["skatt på arbete", "jobbskatteavdrag", "inkomstskatt", "arbetslinjen"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Riksdagen har beslutat om tre förstärkningar av jobbskatteavdraget: 11 miljarder kronor som började gälla 1 januari 2024, ytterligare ändringar genom budgeten för 2025 som började gälla 1 januari 2025 och en förstärkning på drygt 17 miljarder kronor som började gälla 1 januari 2026. Det är flera konkreta sänkningar av skatten på arbete, men de riktar sig främst till låg- och medelinkomster och löftet är brett formulerat, så det är delvis uppfyllt. I november 2023 beslutade riksdagen dessutom att pausa uppräkningen av skiktgränsen för statlig inkomstskatt för 2024, vilket går åt motsatt håll.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,96 @@
       "promises": ["tido-sankt-skatt-arbetsinkomst-pensionsinkomst"],
       "outcome": "included",
       "note": "Avtalet sänker skatten på arbetsinkomster."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0313",
+      "designation": "Prop. 2023/24:13",
+      "title": "Vissa förslag om sänkt skatt på arbetsinkomster och pension",
+      "date": "2023-09-28",
+      "url": "https://data.riksdagen.se/dokument/HB0313.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0327",
+      "designation": "Prop. 2023/24:27",
+      "title": "Pausad uppräkning av skiktgränsen för statlig inkomstskatt för beskattningsåret 2024",
+      "date": "2023-10-17",
+      "url": "https://data.riksdagen.se/dokument/HB0327.html",
+      "relevance": "contradicts",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01SkU8",
+      "designation": "Bet. 2023/24:SkU8",
+      "title": "Pausad uppräkning av skiktgränsen för statlig inkomstskatt för beskattningsåret 2024",
+      "date": "2023-11-23",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU8.html",
+      "relevance": "contradicts",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01FiU1",
+      "designation": "Bet. 2023/24:FiU1",
+      "title": "Statens budget 2024 - Rambeslutet",
+      "date": "2023-11-24",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU1.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-757",
+      "designation": "SFS 2023:757",
+      "title": "Lag (2023:757) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2024-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023757.html",
+      "relevance": "partial",
+      "note": "Löftet är allmänt formulerat; lagen är en enskild skattesänkning (11 miljarder kronor) riktad främst till låg- och medelinkomsttagare, och ingen bredare sänkning av skatten på arbete, till exempel för höga inkomster eller i senare steg, ingår."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC031",
+      "designation": "Prop. 2024/25:1",
+      "title": "Budgetpropositionen för 2025",
+      "date": "2024-09-19",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-1131",
+      "designation": "SFS 2024:1131",
+      "title": "Lag (2024:1131) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2025-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20241131.html",
+      "relevance": "partial",
+      "note": "Lagen är ett första steg och ett paket: den innehåller även ISK-avdrag och expertskattelättnad som inte rör skatt på arbete, och löftet om en bredare sänkning av skatten på arbete genomförs inte fullt ut."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0332",
+      "designation": "Prop. 2025/26:32",
+      "title": "Sänkt skatt på arbetsinkomster, pension och sjuk- och aktivitetsersättning",
+      "date": "2025-10-16",
+      "url": "https://data.riksdagen.se/dokument/HD0332.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-1376",
+      "designation": "SFS 2025:1376",
+      "title": "Lag (2025:1376) om ändring i inkomstskattelagen (1999:1229)",
+      "date": "2026-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20251376.html",
+      "relevance": "partial",
+      "note": "Skattesänkningen är ett första steg riktat främst till låga och medelhöga inkomster. Den omfattar inte alla arbetsinkomster och inte någon bredare sänkning av skatten på arbete."
     }
   ]
 }

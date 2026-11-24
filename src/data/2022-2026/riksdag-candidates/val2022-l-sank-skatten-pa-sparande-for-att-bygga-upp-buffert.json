@@ -11,9 +11,146 @@
     "keyword:kapitalbeskattning",
     "keyword:jämställdhet",
     "all-keywords",
-    "committee:SkU"
+    "committee:SkU",
+    "widen:schablonintäkt investeringssparkonto|investeringssparkonto|skatt på sparande|sänkt skatt på sparande|kapitalförsäkring skatt|skattefri sparande|kapitalskatt"
   ],
   "candidates": [
+    {
+      "dok_id": "HC01FiU1",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "FiU1",
+      "datum": "2024-11-22",
+      "titel": "Statens budget 2025 – Rambeslutet",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HC01FiU1.html",
+      "found_by": ["widen:slice3-manual"],
+      "score": 10
+    },
+    {
+      "dok_id": "HC031",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC031.html",
+      "found_by": ["widen:slice3-manual"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01SkU12",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU12",
+      "datum": "2023-04-27",
+      "titel": "Företag, kapital och fastighet",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU12.html",
+      "found_by": [
+        "widen:schablonintäkt investeringssparkonto|investeringssparkonto|skatt på sparande|sänkt skatt på sparande|kapitalförsäkring skatt|skattefri sparande|kapitalskatt"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HC0330",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "30",
+      "datum": "2024-10-17",
+      "titel": "Sänkt skatt på bensin och diesel",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HC0330.html",
+      "found_by": [
+        "widen:schablonintäkt investeringssparkonto|investeringssparkonto|skatt på sparande|sänkt skatt på sparande|kapitalförsäkring skatt|skattefri sparande|kapitalskatt"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01SkU7",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU7",
+      "datum": "2023-11-23",
+      "titel": "Sänkt skatt på bensin och diesel och sänkt skatt på jordbruksdiesel",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU7.html",
+      "found_by": [
+        "widen:schablonintäkt investeringssparkonto|investeringssparkonto|skatt på sparande|sänkt skatt på sparande|kapitalförsäkring skatt|skattefri sparande|kapitalskatt"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD03236",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "236",
+      "datum": "2026-04-13",
+      "titel": "Extra ändringsbudget för 2026 – Sänkt skatt på drivmedel samt el- och gasprisstöd",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03236.html",
+      "found_by": [
+        "widen:schablonintäkt investeringssparkonto|investeringssparkonto|skatt på sparande|sänkt skatt på sparande|kapitalförsäkring skatt|skattefri sparande|kapitalskatt"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HD0332",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "32",
+      "datum": "2025-10-16",
+      "titel": "Sänkt skatt på arbetsinkomster, pension och sjuk- och aktivitetsersättning",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD0332.html",
+      "found_by": [
+        "widen:schablonintäkt investeringssparkonto|investeringssparkonto|skatt på sparande|sänkt skatt på sparande|kapitalförsäkring skatt|skattefri sparande|kapitalskatt"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HB0324",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "24",
+      "datum": "2023-10-19",
+      "titel": "Sänkt skatt på bensin och diesel och sänkt skatt på jordbruksdiesel",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0324.html",
+      "found_by": [
+        "widen:schablonintäkt investeringssparkonto|investeringssparkonto|skatt på sparande|sänkt skatt på sparande|kapitalförsäkring skatt|skattefri sparande|kapitalskatt"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HB0313",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "13",
+      "datum": "2023-09-28",
+      "titel": "Vissa förslag om sänkt skatt på arbetsinkomster och pension",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0313.html",
+      "found_by": [
+        "widen:schablonintäkt investeringssparkonto|investeringssparkonto|skatt på sparande|sänkt skatt på sparande|kapitalförsäkring skatt|skattefri sparande|kapitalskatt"
+      ],
+      "score": 10
+    },
+    {
+      "dok_id": "HA0317",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "17",
+      "datum": "2022-11-15",
+      "titel": "Tillfälligt sänkt skatt på drivmedel och sänkt skatt på bränslen i viss värmeproduktion",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0317.html",
+      "found_by": [
+        "widen:schablonintäkt investeringssparkonto|investeringssparkonto|skatt på sparande|sänkt skatt på sparande|kapitalförsäkring skatt|skattefri sparande|kapitalskatt"
+      ],
+      "score": 10
+    },
     {
       "dok_id": "HEB341",
       "doktyp": "sou",

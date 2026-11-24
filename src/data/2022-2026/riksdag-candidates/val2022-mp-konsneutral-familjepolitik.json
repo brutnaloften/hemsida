@@ -5,8 +5,110 @@
     "from": "2022-09-01",
     "tom": "2026-09-30"
   },
-  "queries": ["keyword:familjepolitik", "keyword:könsneutral", "all-keywords", "committee:CU"],
+  "queries": [
+    "keyword:familjepolitik",
+    "keyword:könsneutral",
+    "all-keywords",
+    "committee:CU",
+    "widen:könsneutral|föräldrabalken|familjepolitik|föräldraskap flera"
+  ],
   "candidates": [
+    {
+      "dok_id": "HA01CU6",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "CU6",
+      "datum": "2023-04-04",
+      "titel": "Familjerätt",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HA01CU6.html",
+      "found_by": ["widen:könsneutral|föräldrabalken|familjepolitik|föräldraskap flera"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01SfU3",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU3",
+      "datum": "2025-12-03",
+      "titel": "Utgiftsområde 12 Ekonomisk trygghet för familjer och barn",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU3.html",
+      "found_by": ["widen:könsneutral|föräldrabalken|familjepolitik|föräldraskap flera"],
+      "score": 10
+    },
+    {
+      "dok_id": "HC01SfU3",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "SfU3",
+      "datum": "2024-12-06",
+      "titel": "Utgiftsområde 12 Ekonomisk trygghet för familjer och barn",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HC01SfU3.html",
+      "found_by": ["widen:könsneutral|föräldrabalken|familjepolitik|föräldraskap flera"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01SfU3",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SfU3",
+      "datum": "2023-12-07",
+      "titel": "Utgiftsområde 12 Ekonomisk trygghet för familjer och barn",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HB01SfU3.html",
+      "found_by": ["widen:könsneutral|föräldrabalken|familjepolitik|föräldraskap flera"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01SfU3",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SfU3",
+      "datum": "2022-12-13",
+      "titel": "Utgiftsområde 12 Ekonomisk trygghet för familjer och barn",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HA01SfU3.html",
+      "found_by": ["widen:könsneutral|föräldrabalken|familjepolitik|föräldraskap flera"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01SfU20",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "SfU20",
+      "datum": "2026-04-16",
+      "titel": "Ett slopat krav på anmälan före ansökan om föräldrapenning",
+      "organ": "SfU",
+      "url": "https://data.riksdagen.se/dokument/HD01SfU20.html",
+      "found_by": ["widen:könsneutral|föräldrabalken|familjepolitik|föräldraskap flera"],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB151",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "51",
+      "datum": "2026-06-11",
+      "titel": "Tilläggsdirektiv till Utredningen om barnets ställning i familjerättsliga frågor (Ju 2025:16)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB151.html",
+      "found_by": ["widen:könsneutral|föräldrabalken|familjepolitik|föräldraskap flera"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01CU12",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "CU12",
+      "datum": "2026-01-23",
+      "titel": "Familjerätt",
+      "organ": "CU",
+      "url": "https://data.riksdagen.se/dokument/HD01CU12.html",
+      "found_by": ["widen:könsneutral|föräldrabalken|familjepolitik|föräldraskap flera"],
+      "score": 10
+    },
     {
       "dok_id": "HD01SfU17",
       "doktyp": "bet",
