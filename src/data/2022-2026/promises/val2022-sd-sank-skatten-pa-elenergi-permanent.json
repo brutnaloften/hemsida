@@ -17,9 +17,9 @@
   "committee": "SkU",
   "keywords": ["energiskatt", "elskatt", "elektrifiering"],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "I budgetpropositionen för 2026 föreslog regeringen att energiskatten på el sänks till 36,0 öre per kilowattimme, och riksdagen beslutade om det i budgetbehandlingen hösten 2025. Skattesatsen gäller från den 1 januari 2026, och för åren därefter räknas den om enligt de ordinarie reglerna. Löftet gällde en permanent sänkning, och beslutet sätter satsen för 2026, så en del av löftet täcks.",
+    "reasoning": "I budgetpropositionen för 2026 föreslog regeringen att energiskatten på el sänks till 36,0 öre per kilowattimme, och riksdagen beslutade om det i budgetbehandlingen hösten 2025. Den lägre skattesatsen gäller från den 1 januari 2026 utan slutdatum, och senare år räknas om med den som utgångspunkt.",
     "date": "2026-11-24",
     "history": [
       {
@@ -45,7 +45,7 @@
       "title": "Budgetpropositionen för 2026",
       "date": "2025-09-22",
       "url": "https://data.riksdagen.se/dokument/HD031.html",
-      "relevance": "partial",
+      "relevance": "full",
       "note": null
     },
     {
@@ -65,8 +65,8 @@
       "title": "Lag (2025:1357) om ändring i lagen (1994:1776) om skatt på energi",
       "date": "2026-01-01",
       "url": "https://svenskforfattningssamling.se/doc/20251357.html",
-      "relevance": "partial",
-      "note": "Sänker energiskatten på el till 36,0 öre per kilowattimme för 2026."
+      "relevance": "full",
+      "note": "Sänker energiskatten på el till 36,0 öre per kilowattimme från 2026, utan slutdatum."
     }
   ]
 }

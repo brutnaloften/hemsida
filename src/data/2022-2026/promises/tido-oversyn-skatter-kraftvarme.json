@@ -28,7 +28,7 @@
   "verdict": {
     "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen föreslog i november 2022 i budgetpropositionen för 2023 att skatten på avfallsförbränning upphävs, och några dagar senare att bränsle i kraftvärme och viss annan värmeproduktion undantas från koldioxidskatt. Riksdagen beslutade i december 2022. Lagen som upphäver skatten på avfall som förbränns gäller från den 1 januari 2023. Löftet gällde en översyn av tre skatter, och beslutet rör avfallsförbränningsskatten, så en del av löftet täcks.",
+    "reasoning": "Regeringen föreslog i november 2022 i budgetpropositionen för 2023 att skatten på avfallsförbränning upphävs, och några dagar senare att bränsle i kraftvärme inom handeln med utsläppsrätter undantas från koldioxidskatt. Riksdagen beslutade i december 2022, och lagändringarna gäller från den 1 januari 2023. Löftet gällde en översyn av tre skatter, och besluten rör två av dem: avfallsförbränningsskatten och koldioxidskatten på bränsle i kraftvärme.",
     "date": "2026-11-24",
     "history": [
       {
@@ -77,7 +77,17 @@
       "date": "2023-01-01",
       "url": "https://svenskforfattningssamling.se/doc/20221778.html",
       "relevance": "partial",
-      "note": "Upphäver lagen om skatt på avfall som förbränns. Kraftvärmeskatten och skatten på bioolja ligger i andra beslut."
+      "note": "Upphäver lagen om skatt på avfall som förbränns."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2022-1775",
+      "designation": "SFS 2022:1775",
+      "title": "Lag (2022:1775) om ändring i lagen (1994:1776) om skatt på energi",
+      "date": "2023-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/20221775.html",
+      "relevance": "partial",
+      "note": "Undantar bränsle i kraftvärme inom handeln med utsläppsrätter från koldioxidskatt. Skatten på bioolja ligger i andra beslut."
     }
   ]
 }

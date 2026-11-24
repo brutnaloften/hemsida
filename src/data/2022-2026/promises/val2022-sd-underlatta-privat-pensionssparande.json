@@ -17,17 +17,11 @@
   "committee": "SkU",
   "keywords": ["pensionssparande", "sparande", "pension"],
   "verdict": {
-    "value": "partially_fulfilled",
+    "value": "unassessed",
     "assessedBy": "ai",
-    "reasoning": "Regeringen föreslog i oktober 2022 kompletterande regler till EU:s förordning om en paneuropeisk privat pensionsprodukt, ett nytt frivilligt pensionssparande, och riksdagen biföll förslaget i december 2022. Lagarna, som även reglerar skatten på produkten, gäller från den 1 januari 2023. De gäller en ny sparprodukt, och därför täcks en del av löftet om att underlätta privat pensionssparande.",
+    "reasoning": "Riksdagen beslutade i december 2022 om kompletterande bestämmelser och skatteregler till EU:s förordning om en paneuropeisk privat pensionsprodukt, som gäller direkt i Sverige. Lagarna kompletterar EU:s regler, medan löftet gäller att underlätta privat pensionssparande i allmänhet, så för en bedömning behövs ett beslut om svenska åtgärder för sparandet.",
     "date": "2026-11-24",
-    "history": [
-      {
-        "value": "unassessed",
-        "reasoning": "",
-        "date": "2026-11-02"
-      }
-    ]
+    "history": []
   },
   "evidence": [
     {
@@ -39,16 +33,6 @@
       "note": "Avtalet anger reformer som bidrar till breddat ägande, till exempel vad gäller boende, sparande och pension."
     },
     {
-      "kind": "prop",
-      "dok_id": "HA037",
-      "designation": "Prop. 2022/23:7",
-      "title": "En paneuropeisk privat pensionsprodukt",
-      "date": "2022-10-27",
-      "url": "https://data.riksdagen.se/dokument/HA037.html",
-      "relevance": "partial",
-      "note": null
-    },
-    {
       "kind": "bet",
       "dok_id": "HA01FiU14",
       "designation": "Bet. 2022/23:FiU14",
@@ -57,16 +41,6 @@
       "url": "https://data.riksdagen.se/dokument/HA01FiU14.html",
       "relevance": "partial",
       "note": null
-    },
-    {
-      "kind": "sfs",
-      "dok_id": "sfs-2022-1746",
-      "designation": "SFS 2022:1746",
-      "title": "Lag (2022:1746) med kompletterande bestämmelser till EU:s förordning om en paneuropeisk privat pensionsprodukt (PEPP-produkt)",
-      "date": "2023-01-01",
-      "url": "https://svenskforfattningssamling.se/doc/20221746.html",
-      "relevance": "partial",
-      "note": "Kompletterande bestämmelser till EU:s förordning om en paneuropeisk privat pensionsprodukt (PEPP)."
     }
   ]
 }

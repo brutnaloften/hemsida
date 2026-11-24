@@ -17,11 +17,17 @@
   "committee": "CU",
   "keywords": ["transpersoner", "könstillhörighet", "juridiskt kön"],
   "verdict": {
-    "value": "unassessed",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Riksdagen beslutade i april 2024 om en ny lag om fastställande av kön och en ny lag om vissa kirurgiska ingrepp i könsorganen. Ändring av kön i folkbokföringen skiljs från processen för kirurgiska ingrepp, och för sådana ingrepp krävs inget tillstånd från Socialstyrelsen. Löftet gällde också ett tredje juridiskt kön, och därför kan vi inte bedöma löftet som helhet.",
+    "reasoning": "Riksdagen beslutade i april 2024, på utskottets förslag, om en ny lag om fastställande av kön i vissa fall och en ny lag om vissa kirurgiska ingrepp i könsorganen, och den äldre lagen om fastställande av könstillhörighet upphävs. Ändring av kön i folkbokföringen skiljs från processen för kirurgiska ingrepp. Lagarna gäller från den 1 juli 2025. De ersätter den äldre könstillhörighetslagen, och löftet gällde även ett tredje juridiskt kön, så en del av löftet täcks.",
     "date": "2026-11-24",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +39,26 @@
       "url": "https://data.riksdagen.se/dokument/HB01SoU22.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-237",
+      "designation": "SFS 2024:237",
+      "title": "Lag (2024:237) om vissa kirurgiska ingrepp i könsorganen",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2024237.html",
+      "relevance": "partial",
+      "note": "Ny lag om vissa kirurgiska ingrepp i könsorganen. Antagen på utskottets initiativ."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-238",
+      "designation": "SFS 2024:238",
+      "title": "Lag (2024:238) om fastställande av kön i vissa fall",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2024238.html",
+      "relevance": "partial",
+      "note": "Ny lag om fastställande av kön i vissa fall, som ersätter lagen om fastställande av könstillhörighet. Tredje juridiskt kön införs inte. Antagen på utskottets initiativ."
     }
   ]
 }

@@ -232,5 +232,33 @@
   "tido-isk-skattefri-grundniva-300000::sfs-2024-1132": {
     "label": "full",
     "reason": "Read in Prop. 2024/25:1 section 12.9: the law raises the tax-free deduction on an investment savings account from 150,000 to 300,000 kr from 2026, which is the promised base level."
+  },
+  "val2022-sd-skarp-reglerna-om-tvangsgifte-manggifte-och-barngifte::sfs-2026-952": {
+    "label": "full",
+    "reason": "Hand-added: SFS 2026:952 (amends lagen 1904:26 s. 1; in force 2026-07-02 per Prop. 2025/26:213 section 2.4) is not in the SFS store because the 1904 register page is not parsed. It makes the ban on recognising unauthorised foreign marriages apply without exception, which covers the månggifte part."
+  },
+  "val2022-sd-skarp-reglerna-om-tvangsgifte-manggifte-och-barngifte::sfs-2026-951": {
+    "label": "partial",
+    "reason": "SFS 2026:951 only removes the fourth paragraph of 5 kap. 5 § äktenskapsbalken as a follow-on change; the ban itself is in SFS 2026:952.",
+    "missing_sv": "Följdändring i äktenskapsbalken: tar bort ett stycke i 5 kap. 5 §."
+  },
+  "val2022-mp-ny-konstillhorighetslag-och-tredje-juridiska-kon::sfs-2024-238": {
+    "label": "partial",
+    "reason": "Hand-added: SFS 2024:238 (Lag om fastställande av kön i vissa fall, in force 2025-07-01) came from a committee initiative (Bet. 2023/24:SoU22, no proposition), so the proposition-indexed SFS store does not hold it. It is the new könstillhörighetslag; a third legal sex is not introduced.",
+    "missing_sv": "Tredje juridiskt kön införs inte."
+  },
+  "val2022-mp-ny-konstillhorighetslag-och-tredje-juridiska-kon::sfs-2024-237": {
+    "label": "partial",
+    "reason": "Hand-added, same committee initiative: the new lag om vissa kirurgiska ingrepp i könsorganen, in force 2025-07-01."
+  },
+  "val2022-m-vald-mot-skolpersonal-brottsrubricering::sfs-2023-494": {
+    "label": "partial",
+    "reason": "Prop. 2022/23:106 extends the offences against tjänsteman (17 kap. 5 § brottsbalken) to utbildningspersonal inom skolväsendet; no separate offence for violence against school staff is created.",
+    "missing_sv": "Något eget brott för våld mot skolpersonal införs inte."
+  },
+  "tido-oversyn-skatter-kraftvarme::sfs-2022-1775": {
+    "label": "partial",
+    "reason": "Read in Prop. 2022/23:17: exempts fuel used in kraftvärme within the EU emissions trading system from carbon dioxide tax, one of the three taxes in the promise.",
+    "missing_sv": "Skatten på bioolja ligger i andra beslut."
   }
 }
