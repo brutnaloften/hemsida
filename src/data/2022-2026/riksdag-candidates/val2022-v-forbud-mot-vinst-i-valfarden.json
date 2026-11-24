@@ -11,9 +11,70 @@
     "keyword:privatisering",
     "keyword:välfärdsföretag",
     "all-keywords",
-    "committee:SoU"
+    "committee:SoU",
+    "widen:vinstuttag|välfärdsföretag|vinstbegränsning"
   ],
   "candidates": [
+    {
+      "dok_id": "HBB1147",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "147",
+      "datum": "2023-10-19",
+      "titel": "Välfärdsteknik inom socialtjänsten och verksamhet enligt LSS",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1147.html",
+      "found_by": ["widen:vinstuttag|välfärdsföretag|vinstbegränsning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01FiU43",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FiU43",
+      "datum": "2026-05-07",
+      "titel": "Förbättrade förutsättningar för kommuner att motverka felaktiga utbetalningar från välfärdssystemen",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HD01FiU43.html",
+      "found_by": ["widen:vinstuttag|välfärdsföretag|vinstbegränsning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB1108",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "108",
+      "datum": "2026-09-03",
+      "titel": "Tilläggsdirektiv till Utredningen om effektivare åtgärder mot välfärdsbrott och ökad förutsebarhet inom personlig assistans (S 2025:04)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1108.html",
+      "found_by": ["widen:vinstuttag|välfärdsföretag|vinstbegränsning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD03161",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "161",
+      "datum": "2026-03-17",
+      "titel": "Förbättrade förutsättningar för kommuner att motverka felaktiga utbetalningar från välfärdssystemen",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03161.html",
+      "found_by": ["widen:vinstuttag|välfärdsföretag|vinstbegränsning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HDB140",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "40",
+      "datum": "2025-04-16",
+      "titel": "Effektivare åtgärder mot välfärdsbrott och ökad förutsebarhet inom personlig assistans",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB140.html",
+      "found_by": ["widen:vinstuttag|välfärdsföretag|vinstbegränsning"],
+      "score": 10
+    },
     {
       "dok_id": "HD01SoU16",
       "doktyp": "bet",

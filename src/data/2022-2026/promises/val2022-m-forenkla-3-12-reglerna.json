@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["3:12-reglerna", "fåmansbolag", "skatt", "förenkling"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i januari 2023 en kommitté tilläggsuppdrag om förenklade 3:12-reglerna, med fokus på ägarförändringar och företagande, och med krav på lagförslag. I september 2023 utvidgades uppdraget med personaloptioner och nyckelkompetens, och tiden förlängdes. Dokumenten visar utredningsuppdrag, inget beslut om ändrade regler.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-battre-villkor-sma-foretag-312-regler"],
       "outcome": "weakened",
       "note": "Avtalet nämner förändringar i 3:12-regelverket, inte uttryckligen förenkling."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB110",
+      "designation": "Dir. 2023:10",
+      "title": "Tilläggsdirektiv till Kommittén om förenklad beskattning av ägare till fåmansföretag (Fi 2022:04)",
+      "date": "2023-01-26",
+      "url": "https://data.riksdagen.se/dokument/HBB110.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1128",
+      "designation": "Dir. 2023:128",
+      "title": "Tilläggsdirektiv till Kommittén om förenklad beskattning av ägare till fåmansföretag (Fi 2022:04)",
+      "date": "2023-09-07",
+      "url": "https://data.riksdagen.se/dokument/HBB1128.html",
+      "relevance": "partial",
+      "note": null
     }
   ]
 }

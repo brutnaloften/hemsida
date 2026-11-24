@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["visitationszoner", "vapen", "polisens befogenheter", "husrannsakan"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "I december 2023 presenterades en promemoria med förslag om säkerhetszoner i polislagen. I zonerna får polisen utökade möjligheter att visitera personer och söka efter vapen i fordon. Riksdagen beslutade i april 2024 att införa säkerhetszoner, där polisen får särskilda befogenheter att söka efter vapen och andra farliga föremål.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -29,6 +36,26 @@
       "date": "2022-10-14",
       "promises": ["tido-visitationszoner"],
       "outcome": "included",
+      "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HBB431",
+      "designation": "Ds 2023:31",
+      "title": "Säkerhetszoner - ökade möjligheter för polisen att visitera för att förebygga brott",
+      "date": "2023-12-15",
+      "url": "https://data.riksdagen.se/dokument/HBB431.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01JuU13",
+      "designation": "Bet. 2023/24:JuU13",
+      "title": "Säkerhetszoner",
+      "date": "2024-04-09",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU13.html",
+      "relevance": "full",
       "note": null
     }
   ]

@@ -11,9 +11,46 @@
     "keyword:lika villkor",
     "keyword:jakt",
     "all-keywords",
-    "committee:MJU"
+    "committee:MJU",
+    "widen:fjälljakt|jakt|jaktlagstiftning"
   ],
   "candidates": [
+    {
+      "dok_id": "HCB111",
+      "doktyp": "dir",
+      "rm": "2024",
+      "beteckning": "11",
+      "datum": "2024-01-25",
+      "titel": "En moderniserad jaktlagstiftning",
+      "organ": "LI-dep",
+      "url": "https://data.riksdagen.se/dokument/HCB111.html",
+      "found_by": ["widen:fjälljakt|jakt|jaktlagstiftning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HDB337",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "37",
+      "datum": "2025-04-08",
+      "titel": "Skärpta villkor för friskolesektorn",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB337.html",
+      "found_by": ["widen:fjälljakt|jakt|jaktlagstiftning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01KrU10",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "KrU10",
+      "datum": "2026-03-27",
+      "titel": "Kommissionens meddelande om en kulturkompass för Europa",
+      "organ": "KrU",
+      "url": "https://data.riksdagen.se/dokument/HD01KrU10.html",
+      "found_by": ["widen:fjälljakt|jakt|jaktlagstiftning"],
+      "score": 10
+    },
     {
       "dok_id": "HD01MJU23",
       "doktyp": "bet",

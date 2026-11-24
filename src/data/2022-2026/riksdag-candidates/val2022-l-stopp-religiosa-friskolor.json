@@ -11,9 +11,70 @@
     "keyword:skollagen",
     "keyword:etableringsstopp",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "widen:konfessionella|etableringsstopp|religiös inriktning"
   ],
   "candidates": [
+    {
+      "dok_id": "HEB1100",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "100",
+      "datum": "2026-08-27",
+      "titel": "Nationell samordnare för frågor om religiös konversion i asylprocessen",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB1100.html",
+      "found_by": ["widen:konfessionella|etableringsstopp|religiös inriktning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB153",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "53",
+      "datum": "2026-06-16",
+      "titel": "Religiös radikalisering med fokus på politisk islam - konsekvenser för demokratin, integration och utanförskap",
+      "organ": "A-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB153.html",
+      "found_by": ["widen:konfessionella|etableringsstopp|religiös inriktning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HDB335",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "35",
+      "datum": "2025-04-02",
+      "titel": "Etableringsboendelagen",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB335.html",
+      "found_by": ["widen:konfessionella|etableringsstopp|religiös inriktning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01NU6",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "NU6",
+      "datum": "2024-01-25",
+      "titel": "Riksrevisionens rapport om etablering av myndigheter utanför Stockholm",
+      "organ": "NU",
+      "url": "https://data.riksdagen.se/dokument/HB01NU6.html",
+      "found_by": ["widen:konfessionella|etableringsstopp|religiös inriktning"],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB423",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "23",
+      "datum": "2023-11-08",
+      "titel": "Uppdrag att möjliggöra bättre tillgång till hälso- och sjukvård i hela landet genom främjande av etablering i glesbygd ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB423.html",
+      "found_by": ["widen:konfessionella|etableringsstopp|religiös inriktning"],
+      "score": 10
+    },
     {
       "dok_id": "HD01UbU26",
       "doktyp": "bet",

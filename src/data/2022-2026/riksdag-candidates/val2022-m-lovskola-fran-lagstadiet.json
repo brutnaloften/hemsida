@@ -11,9 +11,70 @@
     "keyword:kommuner",
     "keyword:elever som ligger efter",
     "all-keywords",
-    "committee:UbU"
+    "committee:UbU",
+    "widen:lovskola|sommarskola|läxhjälp"
   ],
   "candidates": [
+    {
+      "dok_id": "HCB365",
+      "doktyp": "sou",
+      "rm": "2024",
+      "beteckning": "65",
+      "datum": "2024-10-01",
+      "titel": "Kommuners och regioners grundläggande beredskap inför kris och krig ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HCB365.html",
+      "found_by": ["widen:lovskola|sommarskola|läxhjälp"],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB1179",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "179",
+      "datum": "2023-12-14",
+      "titel": "Tilläggsdirektiv till Utredningen om kommuners och regioners grundläggande ansvar inför och under fredstida kriser och höjd beredskap (Fö 2023:02)",
+      "organ": "Fö-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB1179.html",
+      "found_by": ["widen:lovskola|sommarskola|läxhjälp"],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB151",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "51",
+      "datum": "2023-03-30",
+      "titel": "Kommuners och regioners grundläggande ansvar inför och under fredstida kriser och höjd beredskap",
+      "organ": "Försvarsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HBB151.html",
+      "found_by": ["widen:lovskola|sommarskola|läxhjälp"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01UbU24",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU24",
+      "datum": "2026-05-29",
+      "titel": "Förbättrat stöd i skolan",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU24.html",
+      "found_by": ["widen:lovskola|sommarskola|läxhjälp"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01UbU21",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "UbU21",
+      "datum": "2026-05-20",
+      "titel": "Överlämnande av uppgifter mellan skolor i brottsförebyggande syfte",
+      "organ": "UbU",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU21.html",
+      "found_by": ["widen:lovskola|sommarskola|läxhjälp"],
+      "score": 10
+    },
     {
       "dok_id": "HEB1120",
       "doktyp": "dir",

@@ -17,10 +17,78 @@
   "committee": "UbU",
   "keywords": ["vinstuttag", "friskolor", "vinstförbud", "skolans finansiering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i juni 2026 fram ett förslag om förbud mot vinstuttag i friskolor i tre lägen, och riksdagen biföll det i augusti 2026. Lagen om ändringen i skollagen träder i kraft 1 juli 2027. Den innebär förbud mot värdeöverföringar vid nyetablering, ägarbyte och kvalitetsbrister, alltså en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "dir",
+      "dok_id": "HBB1109",
+      "designation": "Dir. 2023:109",
+      "title": "Tilläggsdirektiv till Utredningen om vinst i skolan (U 2022:08)",
+      "date": "2023-07-06",
+      "url": "https://data.riksdagen.se/dokument/HBB1109.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB337",
+      "designation": "SOU 2025:37",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2025-04-08",
+      "url": "https://data.riksdagen.se/dokument/HDB337.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3123",
+      "designation": "SOU 2025:123",
+      "title": "Skärpta villkor för friskolesektorn - ytterligare förslag",
+      "date": "2026-01-01",
+      "url": "https://data.riksdagen.se/dokument/HDB3123.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03292",
+      "designation": "Prop. 2025/26:292",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2026-06-25",
+      "url": "https://data.riksdagen.se/dokument/HD03292.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01UbU30",
+      "designation": "Bet. 2025/26:UbU30",
+      "title": "Skärpta villkor för friskolesektorn",
+      "date": "2026-08-12",
+      "url": "https://data.riksdagen.se/dokument/HD01UbU30.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-1634",
+      "designation": "SFS 2026:1634",
+      "title": "Lag (2026:1634) om ändring i skollagen (2010:800)",
+      "date": "2027-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/20261634.html",
+      "relevance": "partial",
+      "note": "Ett generellt förbud mot vinstuttag i skolan saknas. Förbudet gäller bara i vissa situationer, så vinstuttag är fortsatt tillåtna för etablerade huvudmän utan tillsynsföreläggande."
+    }
+  ]
 }

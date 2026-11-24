@@ -11,9 +11,70 @@
     "keyword:stötdämpare",
     "keyword:energiskatt",
     "all-keywords",
-    "committee:SkU"
+    "committee:SkU",
+    "widen:elskatt|energiskatt på el|elpris"
   ],
   "candidates": [
+    {
+      "dok_id": "HC031d22",
+      "doktyp": "prop",
+      "rm": "2024/25",
+      "beteckning": "1",
+      "datum": "2024-09-19",
+      "titel": "Budgetpropositionen för 2025 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HC031d22.html",
+      "found_by": ["widen:elskatt|energiskatt på el|elpris"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB031d22",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "1",
+      "datum": "2023-09-20",
+      "titel": "Budgetpropositionen för 2024 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HB031d22.html",
+      "found_by": ["widen:elskatt|energiskatt på el|elpris"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA03112",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "112",
+      "datum": "2023-04-20",
+      "titel": "Ändrade transparensregler inom energibeskattningen",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA03112.html",
+      "found_by": ["widen:elskatt|energiskatt på el|elpris"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01FiU31",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "FiU31",
+      "datum": "2023-02-07",
+      "titel": "Extra ändringsbudget för 2023 – Stöd till Ukraina samt åtgärder riktade till företag och hushåll till följd av höga energipriser",
+      "organ": "FiU",
+      "url": "https://data.riksdagen.se/dokument/HA01FiU31.html",
+      "found_by": ["widen:elskatt|energiskatt på el|elpris"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA031d22",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "1",
+      "datum": "2022-11-08",
+      "titel": "Budgetpropositionen för 2023 - Utgiftsområde 21 Energi",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HA031d22.html",
+      "found_by": ["widen:elskatt|energiskatt på el|elpris"],
+      "score": 10
+    },
     {
       "dok_id": "HD01FiU48",
       "doktyp": "bet",

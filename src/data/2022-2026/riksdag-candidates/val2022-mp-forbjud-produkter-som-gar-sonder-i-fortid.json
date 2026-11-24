@@ -10,9 +10,70 @@
     "keyword:förbud",
     "keyword:produkter",
     "all-keywords",
-    "committee:CU"
+    "committee:CU",
+    "widen:reparation|hållbara produkter|rätt att reparera"
   ],
   "candidates": [
+    {
+      "dok_id": "HDB368",
+      "doktyp": "sou",
+      "rm": "2025",
+      "beteckning": "68",
+      "datum": "2025-06-10",
+      "titel": "Nya samverkansformer, modern byggnads- och reparationsberedskap",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HDB368.html",
+      "found_by": ["widen:reparation|hållbara produkter|rätt att reparera"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01SkU7",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "SkU7",
+      "datum": "2023-02-16",
+      "titel": "Höjd mervärdesskatt på vissa reparationer",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU7.html",
+      "found_by": ["widen:reparation|hållbara produkter|rätt att reparera"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA0335",
+      "doktyp": "prop",
+      "rm": "2022/23",
+      "beteckning": "35",
+      "datum": "2022-12-20",
+      "titel": "Höjd mervärdesskatt på vissa reparationer",
+      "organ": "Finansdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HA0335.html",
+      "found_by": ["widen:reparation|hållbara produkter|rätt att reparera"],
+      "score": 10
+    },
+    {
+      "dok_id": "HDB113",
+      "doktyp": "dir",
+      "rm": "2025",
+      "beteckning": "13",
+      "datum": "2025-02-20",
+      "titel": "Genomförande av två EU-direktiv för att främja en mer hållbar konsumtion",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HDB113.html",
+      "found_by": ["widen:reparation|hållbara produkter|rätt att reparera"],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB318d2",
+      "doktyp": "sou",
+      "rm": "2023",
+      "beteckning": "18",
+      "datum": "2023-04-28",
+      "titel": "Värdet av vinden Kompensation, incitament och planering för en hållbar fortsatt utbyggnad av vindkraften, del 2",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB318d2.html",
+      "found_by": ["widen:reparation|hållbara produkter|rätt att reparera"],
+      "score": 10
+    },
     {
       "dok_id": "HD01MJU18",
       "doktyp": "bet",

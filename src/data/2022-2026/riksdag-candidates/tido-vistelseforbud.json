@@ -30,9 +30,174 @@
     "score:tido-corpus-claude-v1-shard-17-of-20",
     "score:tido-corpus-claude-v1-shard-18-of-20",
     "score:tido-corpus-claude-v1-shard-19-of-20",
-    "score:tido-corpus-claude-v1-shard-20-of-20"
+    "score:tido-corpus-claude-v1-shard-20-of-20",
+    "widen:preventiva vistelseförbud|vistelseförbud på allmän plats"
   ],
   "candidates": [
+    {
+      "dok_id": "HEB362",
+      "doktyp": "sou",
+      "rm": "2026",
+      "beteckning": "62",
+      "datum": "2026-09-30",
+      "titel": "Preventiva vistelseförbud",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB362.html",
+      "found_by": [
+        "keyword:vistelseförbud",
+        "score:tido-corpus-claude-v1-shard-15-of-20",
+        "widen:preventiva vistelseförbud"
+      ],
+      "score": 20,
+      "relevance": 0.6
+    },
+    {
+      "dok_id": "HB01JuU12",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU12",
+      "datum": "2024-01-23",
+      "titel": "Preventiva vistelseförbud",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU12.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20", "widen:preventiva vistelseförbud"],
+      "score": 20,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HB0357",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "57",
+      "datum": "2023-12-21",
+      "titel": "Preventiva vistelseförbud",
+      "organ": "Justitiedepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0357.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20", "widen:preventiva vistelseförbud"],
+      "score": 20,
+      "relevance": 0.85
+    },
+    {
+      "dok_id": "HBB417",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "17",
+      "datum": "2023-06-30",
+      "titel": "Vistelseförbud på allmän plats och vissa andra platser",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB417.html",
+      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20", "widen:preventiva vistelseförbud"],
+      "score": 20,
+      "relevance": 0.9
+    },
+    {
+      "dok_id": "HEB161",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "61",
+      "datum": "2026-06-25",
+      "titel": "Tilläggsdirektiv till Utredningen om nödvärn, tillträdesförbud och preventiva vistelseförbud (Ju 2025:18)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB161.html",
+      "found_by": ["widen:preventiva vistelseförbud|vistelseförbud på allmän plats"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01JuU2",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU2",
+      "datum": "2025-09-16",
+      "titel": "Hemliga och preventiva tvångsmedel när barn under 15 år begår brott",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU2.html",
+      "found_by": ["widen:preventiva vistelseförbud|vistelseförbud på allmän plats"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01JuU24",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "JuU24",
+      "datum": "2024-06-11",
+      "titel": "Preventiva tvångsmedel för att förebygga och förhindra allvarliga brott",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HB01JuU24.html",
+      "found_by": ["widen:preventiva vistelseförbud|vistelseförbud på allmän plats"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01JuU38",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU38",
+      "datum": "2026-05-27",
+      "titel": "Ett förstärkt samhällsskydd och tydligare reaktioner vid återfall i brott",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU38.html",
+      "found_by": ["widen:preventiva vistelseförbud|vistelseförbud på allmän plats"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01AU13",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "AU13",
+      "datum": "2026-06-11",
+      "titel": "Frihet från våld, förtryck och utnyttjande – En nationell strategi mot mäns våld mot kvinnor, våld i nära relationer, utnyttjande i prostitution och människohandel samt hedersrelaterat våld och förtryck",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HD01AU13.html",
+      "found_by": ["widen:vistelseförbud|kontaktförbud|gängkriminalitet"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD03245",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "245",
+      "datum": "2026-04-14",
+      "titel": "Frihet från våld, förtryck och utnyttjande – En nationell strategi mot mäns våld mot kvinnor, våld i nära relationer, utnyttjande i prostitution och människohandel samt hedersrelaterat våld och förtryck",
+      "organ": "Arbetsmarknadsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03245.html",
+      "found_by": ["widen:vistelseförbud|kontaktförbud|gängkriminalitet"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01JuU30",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "JuU30",
+      "datum": "2026-05-05",
+      "titel": "Frihetsberövande påföljder för barn och unga",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
+      "found_by": ["widen:vistelseförbud|kontaktförbud|gängkriminalitet"],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB167",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "67",
+      "datum": "2026-07-02",
+      "titel": "Riktade insatser mot kriminella organisationer - En särlagstiftning för gängkriminella",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB167.html",
+      "found_by": ["widen:vistelseförbud|kontaktförbud|gängkriminalitet"],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB194",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "94",
+      "datum": "2026-08-20",
+      "titel": "Tilläggsdirektiv till utredningen om riktade insatser mot kriminella organisationer - en särlagstiftning för gängkriminella (Ju 2026:11)",
+      "organ": "Ju-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB194.html",
+      "found_by": ["widen:vistelseförbud|kontaktförbud|gängkriminalitet"],
+      "score": 10
+    },
     {
       "dok_id": "HB01JuU18",
       "doktyp": "bet",
@@ -186,19 +351,6 @@
       "relevance": 0.95
     },
     {
-      "dok_id": "HEB362",
-      "doktyp": "sou",
-      "rm": "2026",
-      "beteckning": "62",
-      "datum": "2026-09-30",
-      "titel": "Preventiva vistelseförbud",
-      "organ": "",
-      "url": "https://data.riksdagen.se/dokument/HEB362.html",
-      "found_by": ["keyword:vistelseförbud", "score:tido-corpus-claude-v1-shard-15-of-20"],
-      "score": 1,
-      "relevance": 0.6
-    },
-    {
       "dok_id": "HEB351",
       "doktyp": "sou",
       "rm": "2026",
@@ -236,19 +388,6 @@
       "found_by": ["keyword:vistelseförbud", "score:tido-corpus-claude-v1-shard-10-of-20"],
       "score": 1,
       "relevance": 0.7
-    },
-    {
-      "dok_id": "HB01JuU12",
-      "doktyp": "bet",
-      "rm": "2023/24",
-      "beteckning": "JuU12",
-      "datum": "2024-01-23",
-      "titel": "Preventiva vistelseförbud",
-      "organ": "JuU",
-      "url": "https://data.riksdagen.se/dokument/HB01JuU12.html",
-      "found_by": ["score:tido-corpus-claude-v1-shard-2-of-20"],
-      "score": 1,
-      "relevance": 0.9
     },
     {
       "dok_id": "HCB430",
@@ -301,19 +440,6 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
       "score": 1,
       "relevance": 0.95
-    },
-    {
-      "dok_id": "HB0357",
-      "doktyp": "prop",
-      "rm": "2023/24",
-      "beteckning": "57",
-      "datum": "2023-12-21",
-      "titel": "Preventiva vistelseförbud",
-      "organ": "Justitiedepartementet",
-      "url": "https://data.riksdagen.se/dokument/HB0357.html",
-      "found_by": ["score:tido-corpus-claude-v1-shard-5-of-20"],
-      "score": 1,
-      "relevance": 0.85
     },
     {
       "dok_id": "HD03181",
@@ -496,19 +622,6 @@
       "found_by": ["score:tido-corpus-claude-v1-shard-15-of-20"],
       "score": 1,
       "relevance": 0.85
-    },
-    {
-      "dok_id": "HBB417",
-      "doktyp": "ds",
-      "rm": "2023",
-      "beteckning": "17",
-      "datum": "2023-06-30",
-      "titel": "Vistelseförbud på allmän plats och vissa andra platser",
-      "organ": "",
-      "url": "https://data.riksdagen.se/dokument/HBB417.html",
-      "found_by": ["score:tido-corpus-claude-v1-shard-17-of-20"],
-      "score": 1,
-      "relevance": 0.9
     },
     {
       "dok_id": "HC031",

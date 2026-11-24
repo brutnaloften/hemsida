@@ -10,9 +10,70 @@
     "keyword:värnplikt",
     "keyword:krisberedskap",
     "all-keywords",
-    "committee:FöU"
+    "committee:FöU",
+    "widen:civilplikt|totalförsvarsplikt|värnplikt"
   ],
   "candidates": [
+    {
+      "dok_id": "HA01JuU28",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "JuU28",
+      "datum": "2023-05-25",
+      "titel": "Säkerhetsprövning av totalförsvarspliktiga m.m.",
+      "organ": "JuU",
+      "url": "https://data.riksdagen.se/dokument/HA01JuU28.html",
+      "found_by": ["widen:civilplikt|totalförsvarsplikt|värnplikt"],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB174",
+      "doktyp": "dir",
+      "rm": "2026",
+      "beteckning": "74",
+      "datum": "2026-07-16",
+      "titel": "Öka möjligheterna till bostadsbyggande i anslutning till områden som är av riksintresse för totalförsvarets militära del",
+      "organ": "LI-dep",
+      "url": "https://data.riksdagen.se/dokument/HEB174.html",
+      "found_by": ["widen:civilplikt|totalförsvarsplikt|värnplikt"],
+      "score": 10
+    },
+    {
+      "dok_id": "HEB412",
+      "doktyp": "ds",
+      "rm": "2026",
+      "beteckning": "12",
+      "datum": "2026-06-12",
+      "titel": "Skärpt läge - aktuell lägesbild i totalförsvaret och omvärlden",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HEB412.html",
+      "found_by": ["widen:civilplikt|totalförsvarsplikt|värnplikt"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD01FöU16",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "FöU16",
+      "datum": "2026-05-06",
+      "titel": "Ändrade regler om tillstånd och tillsyn för Totalförsvarets forskningsinstitut",
+      "organ": "FöU",
+      "url": "https://data.riksdagen.se/dokument/HD01FöU16.html",
+      "found_by": ["widen:civilplikt|totalförsvarsplikt|värnplikt"],
+      "score": 10
+    },
+    {
+      "dok_id": "HD03178",
+      "doktyp": "prop",
+      "rm": "2025/26",
+      "beteckning": "178",
+      "datum": "2026-03-17",
+      "titel": "Ändrade regler om tillstånd och tillsyn för Totalförsvarets forskningsinstitut",
+      "organ": "Försvarsdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HD03178.html",
+      "found_by": ["widen:civilplikt|totalförsvarsplikt|värnplikt"],
+      "score": 10
+    },
     {
       "dok_id": "HD01KU42",
       "doktyp": "bet",

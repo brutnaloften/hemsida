@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["mediestöd", "presstöd", "lokal journalistik", "granskande journalistik", "medier"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i juni 2023 fram ett förslag om en ny lag om mediestöd som ersätter det tidigare press- och mediestödet. Riksdagen biföll förslaget i november 2023, och den nya lagen trädde i kraft den 1 januari 2024. Dokumenten säger att lagen gör om stödet med fokus på lokal och regional nyhetsförsörjning och kvalitetsjournalistik i hela landet, och att den därmed täcker en del av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA03133",
+      "designation": "Prop. 2022/23:133",
+      "title": "Ett hållbart mediestöd för hela landet",
+      "date": "2023-06-20",
+      "url": "https://data.riksdagen.se/dokument/HA03133.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01KU3",
+      "designation": "Bet. 2023/24:KU3",
+      "title": "Ett hållbart mediestöd för hela landet",
+      "date": "2023-11-09",
+      "url": "https://data.riksdagen.se/dokument/HB01KU3.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-664",
+      "designation": "SFS 2023:664",
+      "title": "Lag (2023:664) om mediestöd",
+      "date": "2024-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023664.html",
+      "relevance": "partial",
+      "note": "Lagen anger ingen särskild inriktning på lokal granskande journalistik som stödvillkor; stödets utformning och fördelning regleras i förordning och föreskrifter, och stödet gäller även nationella medier."
     }
   ]
 }

@@ -17,10 +17,28 @@
   "committee": "SfU",
   "keywords": ["karensdag", "sjukförsäkring", "sjuklön"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "I december 2023 presenterades en promemoria som går igenom karensavdraget. Den föreslår ett karenstak, alltså ett tak efter sex avdrag, och ett bredare högriskskydd. Det gäller en del av löftet: förslagen lättar avdraget för personer med återkommande sjukfrånvaro, medan karensavdraget i övrigt finns kvar. Dokumentet visar förslag, inget beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "ds",
+      "dok_id": "HBB433",
+      "designation": "Ds 2023:33",
+      "title": "Karenstak och högriskskydd - en översyn av karensavdraget och förslag på utökade undantag",
+      "date": "2023-12-15",
+      "url": "https://data.riksdagen.se/dokument/HBB433.html",
+      "relevance": "partial",
+      "note": null
+    }
+  ]
 }

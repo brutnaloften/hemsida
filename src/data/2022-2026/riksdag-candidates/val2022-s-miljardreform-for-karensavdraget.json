@@ -11,9 +11,70 @@
     "keyword:sjukförsäkring",
     "keyword:rättvisa",
     "all-keywords",
-    "committee:SfU"
+    "committee:SfU",
+    "widen:karensavdrag|karensdag|sjuklön"
   ],
   "candidates": [
+    {
+      "dok_id": "HB0369",
+      "doktyp": "prop",
+      "rm": "2023/24",
+      "beteckning": "69",
+      "datum": "2024-02-20",
+      "titel": "Riksrevisionens rapport om ersättning för höga sjuklönekostnader",
+      "organ": "Socialdepartementet",
+      "url": "https://data.riksdagen.se/dokument/HB0369.html",
+      "found_by": ["widen:karensavdrag|karensdag|sjuklön"],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB433",
+      "doktyp": "ds",
+      "rm": "2023",
+      "beteckning": "33",
+      "datum": "2023-12-15",
+      "titel": "Karenstak och högriskskydd - en översyn av karensavdraget och förslag på utökade undantag ",
+      "organ": "",
+      "url": "https://data.riksdagen.se/dokument/HBB433.html",
+      "found_by": ["widen:karensavdrag|karensdag|sjuklön"],
+      "score": 10
+    },
+    {
+      "dok_id": "HBB120",
+      "doktyp": "dir",
+      "rm": "2023",
+      "beteckning": "20",
+      "datum": "2023-02-09",
+      "titel": "Tilläggsdirektiv till utredningen Sjukförsäkringen i förändring - en utvärdering (S 2022:07)",
+      "organ": "S-dep",
+      "url": "https://data.riksdagen.se/dokument/HBB120.html",
+      "found_by": ["widen:karensavdrag|karensdag|sjuklön"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01SkU18",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU18",
+      "datum": "2024-03-21",
+      "titel": "Riksrevisionens rapport om förändrade inkomstskatteregler 2011–2023",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU18.html",
+      "found_by": ["widen:karensavdrag|karensdag|sjuklön"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01AU2",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "AU2",
+      "datum": "2022-12-15",
+      "titel": "Utgiftsområde 14 Arbetsmarknad och arbetsliv",
+      "organ": "AU",
+      "url": "https://data.riksdagen.se/dokument/HA01AU2.html",
+      "found_by": ["widen:karensavdrag|karensdag|sjuklön"],
+      "score": 10
+    },
     {
       "dok_id": "HD01JuU48",
       "doktyp": "bet",

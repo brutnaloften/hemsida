@@ -17,10 +17,28 @@
   "committee": "SfU",
   "keywords": ["språkkrav", "permanent uppehållstillstånd", "svenska", "migration"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning lämnade i maj 2023 förslag om kunskapskrav för permanent uppehållstillstånd. Förslaget innebär krav på kunskaper i svenska, i form av ett hörförståelseprov på nivå A2, och om det svenska samhället. Kraven föreslås gälla från 1 juli 2027. Dokumenten visar förslag, inget beslut.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "sou",
+      "dok_id": "HBB325",
+      "designation": "SOU 2023:25",
+      "title": "Kunskapskrav för permanent uppehållstillstånd",
+      "date": "2023-05-30",
+      "url": "https://data.riksdagen.se/dokument/HBB325.html",
+      "relevance": "full",
+      "note": null
+    }
+  ]
 }

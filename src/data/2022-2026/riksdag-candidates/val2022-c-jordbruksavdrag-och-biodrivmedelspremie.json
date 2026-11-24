@@ -11,9 +11,70 @@
     "keyword:lantbruk",
     "keyword:skattesänkning",
     "all-keywords",
-    "committee:SkU"
+    "committee:SkU",
+    "widen:jordbruksavdrag|jordbruk|biodrivmedel"
   ],
   "candidates": [
+    {
+      "dok_id": "HD01MJU8",
+      "doktyp": "bet",
+      "rm": "2025/26",
+      "beteckning": "MJU8",
+      "datum": "2026-01-20",
+      "titel": "Jordbrukspolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU8.html",
+      "found_by": ["widen:jordbruksavdrag|jordbruk|biodrivmedel"],
+      "score": 10
+    },
+    {
+      "dok_id": "HC01MJU20",
+      "doktyp": "bet",
+      "rm": "2024/25",
+      "beteckning": "MJU20",
+      "datum": "2025-05-26",
+      "titel": "En utvidgad insamling och utlämning av djurhälsodata samt jordbrukspolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HC01MJU20.html",
+      "found_by": ["widen:jordbruksavdrag|jordbruk|biodrivmedel"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01MJU16",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "MJU16",
+      "datum": "2024-05-23",
+      "titel": "Jordbrukspolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HB01MJU16.html",
+      "found_by": ["widen:jordbruksavdrag|jordbruk|biodrivmedel"],
+      "score": 10
+    },
+    {
+      "dok_id": "HA01MJU11",
+      "doktyp": "bet",
+      "rm": "2022/23",
+      "beteckning": "MJU11",
+      "datum": "2023-03-17",
+      "titel": "Jordbrukspolitik",
+      "organ": "MJU",
+      "url": "https://data.riksdagen.se/dokument/HA01MJU11.html",
+      "found_by": ["widen:jordbruksavdrag|jordbruk|biodrivmedel"],
+      "score": 10
+    },
+    {
+      "dok_id": "HB01SkU7",
+      "doktyp": "bet",
+      "rm": "2023/24",
+      "beteckning": "SkU7",
+      "datum": "2023-11-23",
+      "titel": "Sänkt skatt på bensin och diesel och sänkt skatt på jordbruksdiesel",
+      "organ": "SkU",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU7.html",
+      "found_by": ["widen:jordbruksavdrag|jordbruk|biodrivmedel"],
+      "score": 10
+    },
     {
       "dok_id": "HD01SkU28",
       "doktyp": "bet",

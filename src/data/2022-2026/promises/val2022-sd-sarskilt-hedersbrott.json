@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["hedersbrott", "hedersförtryck", "brottsrubricering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i januari 2024 en utredning i uppdrag att se över straffen för hedersrelaterade brott. En utredning lämnade förslag i maj 2025, och regeringen lade fram en proposition i mars 2026. Riksdagen beslutade i maj 2026 om ändringar i brottsbalken, och lagen trädde i kraft den 2 juli 2026. Den stärker skyddet mot hedersrelaterat våld, särskilt vissa former av äktenskap, men är inte ett enskilt hedersbrott.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,56 @@
       "promises": ["tido-skarpt-hedersforstryck-lagstiftning"],
       "outcome": "weakened",
       "note": "Avtalet anger att lagstiftningen mot hedersrelaterat förtryck skärps, bland annat genom kriminalisering av kontrollerande beteende och oskuldskontroller. Ett särskilt hedersbrott nämns inte."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB18",
+      "designation": "Dir. 2024:8",
+      "title": "Förstärkta åtgärder mot hedersrelaterat våld och förtryck",
+      "date": "2024-01-18",
+      "url": "https://data.riksdagen.se/dokument/HCB18.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB359",
+      "designation": "SOU 2025:59",
+      "title": "Stärkt lagstiftning mot hedersrelaterat våld och förtryck",
+      "date": "2025-05-22",
+      "url": "https://data.riksdagen.se/dokument/HDB359.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03213",
+      "designation": "Prop. 2025/26:213",
+      "title": "Stärkt lagstiftning mot hedersrelaterat våld och förtryck",
+      "date": "2026-03-19",
+      "url": "https://data.riksdagen.se/dokument/HD03213.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01JuU43",
+      "designation": "Bet. 2025/26:JuU43",
+      "title": "Stärkt lagstiftning mot hedersrelaterat våld och förtryck",
+      "date": "2026-05-20",
+      "url": "https://data.riksdagen.se/dokument/HD01JuU43.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-950",
+      "designation": "SFS 2026:950",
+      "title": "Lag (2026:950) om ändring i brottsbalken",
+      "date": "2026-07-02",
+      "url": "https://svenskforfattningssamling.se/doc/2026950.html",
+      "relevance": "partial",
+      "note": "Ett generellt, särskilt hedersbrott, alltså en egen brottsrubricering för hedersrelaterad brottslighet, införs inte enligt texten."
     }
   ]
 }

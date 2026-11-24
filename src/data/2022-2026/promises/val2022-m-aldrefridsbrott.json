@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["äldrefridsbrott", "brottsrubricering", "brott mot äldre", "straff"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "En utredning i november 2023 motverkar löftet genom att föreslå extra grunder för grovt bedrägeri i stället för en ny brottsrubricering för brott mot äldre. Regeringen föreslog i mars 2025 att fler bedrägerier mot utsatta offer ska bli grova brott, och riksdagen biföll det i maj 2025. Ändringen i brottsbalken trädde i kraft 1 juli 2025 och täcker en del av löftet: skärpta straff för bedrägerier mot äldre.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,46 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB380",
+      "designation": "SOU 2023:80",
+      "title": "Ett starkare straffrättsligt skydd - mot sexuella kränkningar, bedrägerier i vissa fall och brott med hatmotiv avseende kön",
+      "date": "2023-11-22",
+      "url": "https://data.riksdagen.se/dokument/HBB380.html",
+      "relevance": "contradicts",
+      "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03124",
+      "designation": "Prop. 2024/25:124",
+      "title": "Skärpt syn på sexuella kränkningar, bedrägerier mot äldre och brott med kön som hatbrottsmotiv",
+      "date": "2025-03-27",
+      "url": "https://data.riksdagen.se/dokument/HC03124.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01JuU30",
+      "designation": "Bet. 2024/25:JuU30",
+      "title": "Skärpt syn på sexuella kränkningar, bedrägerier mot äldre och brott med kön som hatbrottsmotiv",
+      "date": "2025-05-14",
+      "url": "https://data.riksdagen.se/dokument/HC01JuU30.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2025-586",
+      "designation": "SFS 2025:586",
+      "title": "Lag (2025:586) om ändring i brottsbalken",
+      "date": "2025-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2025586.html",
+      "relevance": "partial",
+      "note": "Ingen ny brottsrubricering äldrefridsbrott införs, och straffskärpningen gäller inte brott mot äldre i allmänhet utan bara bedrägerier mot utsatta offer."
     }
   ]
 }

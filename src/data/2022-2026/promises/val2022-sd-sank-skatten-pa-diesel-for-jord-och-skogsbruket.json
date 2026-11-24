@@ -17,10 +17,17 @@
   "committee": "SkU",
   "keywords": ["dieselskatt", "jordbruk", "skogsbruk", "allmän löneavgift"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i mars 2023 och riksdagen beslutade i maj 2023 att den utökade skattenedsättningen på diesel i jord-, skogs- och vattenbruk förlängs. Lagen trädde i kraft 1 juli 2023. En ny ändring av energiskatten trädde i kraft 1 januari 2024 och förlänger sänkningen över 2024. Dokumenten täcker dieseldelen av löftet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,66 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA0369",
+      "designation": "Prop. 2022/23:69",
+      "title": "Förlängning av den tillfälligt utökade skattenedsättningen på viss dieselanvändning inom jord-, skogs- och vattenbruk",
+      "date": "2023-03-14",
+      "url": "https://data.riksdagen.se/dokument/HA0369.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01SkU17",
+      "designation": "Bet. 2022/23:SkU17",
+      "title": "Förlängning av den tillfälligt utökade skattenedsättningen på viss dieselanvändning inom jord-, skogs- och vattenbruk",
+      "date": "2023-05-23",
+      "url": "https://data.riksdagen.se/dokument/HA01SkU17.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-361",
+      "designation": "SFS 2023:361",
+      "title": "Lag (2023:361) om ändring i lagen (1994:1776) om skatt på energi",
+      "date": "2023-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023361.html",
+      "relevance": "partial",
+      "note": "Lagen sänker inte den allmänna löneavgiften, och dieselnedsättningen är tidsbegränsad till andra halvåret 2023 i stället för permanent."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB0324",
+      "designation": "Prop. 2023/24:24",
+      "title": "Sänkt skatt på bensin och diesel och sänkt skatt på jordbruksdiesel",
+      "date": "2023-10-19",
+      "url": "https://data.riksdagen.se/dokument/HB0324.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01SkU7",
+      "designation": "Bet. 2023/24:SkU7",
+      "title": "Sänkt skatt på bensin och diesel och sänkt skatt på jordbruksdiesel",
+      "date": "2023-11-23",
+      "url": "https://data.riksdagen.se/dokument/HB01SkU7.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-810",
+      "designation": "SFS 2023:810",
+      "title": "Lag (2023:810) om ändring i lagen (1994:1776) om skatt på energi",
+      "date": "2024-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023810.html",
+      "relevance": "partial",
+      "note": "Lagen sänker inte den allmänna löneavgiften, och dieselsänkningen är generell eller en förlängd nedsättning snarare än en ny särskild sänkning för jord- och skogsbruket."
     }
   ]
 }

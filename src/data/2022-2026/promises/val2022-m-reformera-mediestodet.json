@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["mediestöd", "presstöd", "digital omställning", "medier"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i juni 2023 fram ett förslag om en ny lag om mediestöd. Riksdagen biföll förslaget i november 2023, och den nya lagen ersätter de parallella press- och mediestöden och anpassar stödet till förändringar på mediemarknaden. Lagen trädde i kraft den 1 januari 2024 och täcker en del av löftet om att reformera mediestödet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA03133",
+      "designation": "Prop. 2022/23:133",
+      "title": "Ett hållbart mediestöd för hela landet",
+      "date": "2023-06-20",
+      "url": "https://data.riksdagen.se/dokument/HA03133.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01KU3",
+      "designation": "Bet. 2023/24:KU3",
+      "title": "Ett hållbart mediestöd för hela landet",
+      "date": "2023-11-09",
+      "url": "https://data.riksdagen.se/dokument/HB01KU3.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2023-664",
+      "designation": "SFS 2023:664",
+      "title": "Lag (2023:664) om mediestöd",
+      "date": "2024-01-01",
+      "url": "https://svenskforfattningssamling.se/doc/2023664.html",
+      "relevance": "partial",
+      "note": "Texten visar inte att lagen uttryckligen syftar till att stödja den digitala transformationen och omställningen; detaljerna i stödformerna ligger i föreskrifter."
     }
   ]
 }
