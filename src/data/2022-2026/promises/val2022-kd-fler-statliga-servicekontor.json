@@ -18,9 +18,16 @@
   "keywords": ["servicekontor", "samhällsservice", "landsbygd", "myndigheter"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "assessedBy": "ai",
+    "reasoning": "De statliga servicekontoren drivs av Statens servicecenter (anslaget 1:15). Anslaget ökade nominellt från ett utfall på 882 mn kr 2022 till 896 mn kr 2025, alltså 15 mn kr eller +1,7 procent (i fasta priser -9,5 procent), och det anvisade beloppet från 882 till 937 mn kr (+6,3 procent). Anslaget betalar hela myndigheten, inte bara kontoren, så siffrorna visar inte om fler servicekontor har inrättats. I budgeten för 2024 skriver regeringen att verksamheten vid servicekontoren behöver stabiliseras och att den därför för närvarande inte har för avsikt att gå vidare med förfrågningar om nya servicekontor på specifika orter (Bet. 2023/24:FiU2). Det talar emot löftet, men ett besked om att vänta är varken en omröstning eller en lag som visar att löftet har brutits, och det finns ingen uppgift om hur antalet kontor har utvecklats. Därför lämnas löftet obedömt.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HB01FiU2",
+      "designation": "Bet. 2023/24:FiU2",
+      "title": "Utgiftsområde 2 Samhällsekonomi och finansförvaltning",
+      "date": "2023-12-14",
+      "url": "https://data.riksdagen.se/dokument/HB01FiU2.html",
+      "relevance": "contradicts",
+      "note": "Regeringen bedömer att verksamheten vid servicekontoren behöver stabiliseras och har därför för närvarande inte för avsikt att gå vidare med förfrågningar om nya servicekontor på specifika orter."
     }
   ]
 }

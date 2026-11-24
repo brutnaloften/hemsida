@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["lovskola", "skola", "stödinsatser", "kunskapsutveckling"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog 100 mn kr extra för 2023 inom anslaget 1:5 Utveckling av skolväsendet och annan pedagogisk verksamhet bland annat för att erbjuda lovskola till elever i lägre årskurser (Bet. 2022/23:UbU1). Anslaget är en samlingspost för många satsningar, så ESV:s data visar inte hur mycket som gick till lovskola. Det anvisade beloppet ökade nominellt från 4 654 mn kr 2022 till 6 502 mn kr 2025, alltså 1 848 mn kr eller +39,7 procent (i fasta priser +24,3 procent), men var 16,7 procent lägre 2023 (3 879 mn kr) än 2022. Utfallet följer samma mönster: 4 513 mn kr 2022, 3 307 mn kr 2023 (-26,7 procent) och 5 237 mn kr 2025 (+16,0 procent, i fasta priser +3,3 procent). Betänkandena om budgeten för 2024 och 2025 (Bet. 2023/24:UbU1 och Bet. 2024/25:UbU1) anger inget särskilt belopp för lovskola, så det går inte att se om lovskolan har utökats efter 2023. Löftet bedöms därför som pågående och inte som delvis uppfyllt. Källa: ESV:s anvisade belopp och årsutfall samt betänkandet.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,58 @@
       "url": "https://data.riksdagen.se/dokument/HD01UbU24.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HA01UbU1",
+      "designation": "Bet. 2022/23:UbU1",
+      "title": "Utgiftsområde 16 Utbildning och universitetsforskning",
+      "date": "2022-12-14",
+      "url": "https://data.riksdagen.se/dokument/HA01UbU1.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "1601005",
+        "namn": "Utveckling av skolväsendet och annan pedagogisk verksamhet",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 4653.7,
+        "after": 6501.9
+      },
+      "tier": "ceiling",
+      "baselineNote": "Jämförelse mot det anvisade beloppet 2022. Nominellt anvisat belopp (budget plus ändringsbudgetar) 4 654 mn kr 2022 och 6 502 mn kr 2025, ändring 1 848 mn kr (+39,7 %). I fasta priser +24,3 % (sammanhang, avgör inte bedömningen). Anvisat belopp 2023 var 3 879 mn kr, 16,7 % lägre än 2022; 2025 innehåller 407 mn kr i ändringsbudget.",
+      "date": "2024-12-04",
+      "relevance": "partial",
+      "note": "Anslaget 1:5 är en samlingspost; regeringens enda angivna belopp för lovskola är 100 mn kr för 2023 (Bet. 2022/23:UbU1)."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "1601005",
+        "namn": "Utveckling av skolväsendet och annan pedagogisk verksamhet",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 4512.6,
+        "after": 5236.5
+      },
+      "tier": "outcome",
+      "baselineNote": "Jämförelse mot utfallet 2022, året före den första budgeten under mandatperioden. Nominellt utfall 4 513 mn kr 2022 och 5 237 mn kr 2025, ändring 724 mn kr (+16,0 %). I fasta priser +3,3 % (sammanhang, avgör inte bedömningen). Utfallet 2023 var 3 307 mn kr, 26,7 % lägre än 2022.",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Utfallet 2023 var 3 307 mn kr, lägre än 2022. Anslaget visar inte vad som gick till lovskola."
     }
   ]
 }

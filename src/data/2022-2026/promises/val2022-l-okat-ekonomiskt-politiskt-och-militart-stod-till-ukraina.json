@@ -17,10 +17,17 @@
   "committee": "UU",
   "keywords": ["Ukraina", "stöd", "militärt stöd", "ekonomiskt stöd", "politiskt stöd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Det militära stödet till Ukraina har ökat kraftigt i riksdagens beslut. Riksdagen gav regeringen rätt att skänka försvarsmateriel till ett värde av högst 4 349 mn kr i den extra ändringsbudgeten för 2023 (Bet. 2022/23:FiU31), ställde sig bakom ytterligare gåvor av försvarsmateriel och ekonomiskt stöd i två extra ändringsbudgetar för 2024 (Bet. 2023/24:FiU33 och Bet. 2023/24:FiU36), och för 2024-2026 finns en ram för det militära stödet på 75 miljarder kronor, 25 miljarder per år (Bet. 2023/24:FiU36). I budgeten för 2025 infördes anslaget 1:14 Stöd till Ukraina med 22 740 mn kr för ekonomiska bidrag till Ukrainas försvarsförmåga (Bet. 2024/25:FöU1). Efter en ändringsbudget som minskade anslaget med 10 930 mn kr blev det anvisade beloppet 11 810 mn kr, och utfallet 2025 var 11 213 mn kr. Anslaget fanns inte 2022, så det finns ingen tidigare nivå på anslaget att jämföra med och siffrorna visas som nivå (före = 0 betyder att anslaget saknades, inte att inget stöd gavs). Det civila och ekonomiska stödet går delvis via biståndsanslaget 1:1 Biståndsverksamhet, där ESV:s data inte särskiljer Ukraina; det anslaget minskade nominellt från ett utfall på 44 231 mn kr 2022 till 43 476 mn kr 2025 (-1,7 procent, i fasta priser -12,5 procent) och från ett anvisat belopp på 45 147 till 42 654 mn kr (-5,5 procent). Politiskt stöd mäts inte i budgetdata. Det militära stödet har alltså ökat tydligt medan det ekonomiska stödet inom biståndet och det politiska stödet inte går att mäta här. Därför delvis uppfyllt. Källa: ESV:s årsutfall och betänkandena.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -60,6 +67,58 @@
       "url": "https://data.riksdagen.se/dokument/HB01FiU36.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HC01FöU1",
+      "designation": "Bet. 2024/25:FöU1",
+      "title": "Utgiftsområde 6 Försvar och samhällets krisberedskap",
+      "date": "2024-11-28",
+      "url": "https://data.riksdagen.se/dokument/HC01FöU1.html",
+      "relevance": "partial",
+      "note": "Införde anslaget 1:14 Stöd till Ukraina med 22 740 mn kr för ekonomiska bidrag till Ukrainas försvarsförmåga."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0601014",
+        "namn": "Stöd till Ukraina",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 0,
+        "after": 11810.4
+      },
+      "tier": "ceiling",
+      "baselineNote": "Anslaget infördes i budgeten för 2025 och saknar utfall och anvisat belopp 2022, så före = 0 betyder att anslaget saknades och inte att inget stöd gavs. Nominellt anvisat belopp (budget plus ändringsbudget) 11 810 mn kr 2025; budgeten var 22 740 mn kr och en ändringsbudget minskade den med 10 930 mn kr.",
+      "date": "2024-11-28",
+      "relevance": "partial",
+      "note": "Regeringen föreslog 22 740 mn kr för 2025 (Bet. 2024/25:FöU1)."
+    },
+    {
+      "kind": "budget",
+      "anslag": {
+        "kod": "0601014",
+        "namn": "Stöd till Ukraina",
+        "release": 2025
+      },
+      "years": {
+        "from": 2022,
+        "to": 2025
+      },
+      "amounts": {
+        "before": 0,
+        "after": 11213.1
+      },
+      "tier": "outcome",
+      "baselineNote": "Anslaget infördes i budgeten för 2025 och saknar utfall 2022, så före = 0 betyder att anslaget saknades och inte att inget stöd gavs. Nominellt utfall 11 213 mn kr 2025. Ingen jämförelse mot tidigare nivå är möjlig.",
+      "date": "2025-12-31",
+      "relevance": "partial",
+      "note": "Gäller det militära stödet; det ekonomiska och politiska stödet till Ukraina täcks inte av anslaget. Biståndsanslaget 1:1 Biståndsverksamhet minskade nominellt med 1,7 % i utfall 2022-2025."
     }
   ]
 }
