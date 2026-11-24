@@ -41,7 +41,24 @@ describe('widenSearch', () => {
     expect(hits[0]?.doc.dok_id).toBe('A');
   });
 
-  it('skips documents already known and requires more than one weak match', () => {
+  it('skips documents already known', () => {
     expect(widenSearch(promise, docs, idf, new Set(['A']), 5).map((h) => h.doc.dok_id)).toEqual([]);
+  });
+
+  it('needs more than one weak body match unless a hand-written term is in the title', () => {
+    const only = [doc('C', 'Polisfrågor', 'allmänt om polisen')];
+    expect(widenSearch(promise, only, buildIdf(only), new Set(), 5)).toEqual([]);
+  });
+
+  it('ranks a title that contains a hand-written term above body hits on common words', () => {
+    const short = doc('PROP', 'Säkerhetszoner', 'Regeringens proposition');
+    const noisy = doc(
+      'NOISE',
+      'Polisfrågor',
+      'polisen får visitera polisen visitera visitera polisen särskilda zoner',
+    );
+    const all = [noisy, short];
+    const hits = widenSearch(promise, all, buildIdf(all), new Set(), 5);
+    expect(hits[0]?.doc.dok_id).toBe('PROP');
   });
 });

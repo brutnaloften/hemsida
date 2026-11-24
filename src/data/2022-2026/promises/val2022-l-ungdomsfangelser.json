@@ -23,10 +23,17 @@
     "verkställighet"
   ],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-08-08",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i februari 2026 fram ett förslag om frihetsberövande påföljder för barn och unga, och riksdagen biföll det i maj 2026. Två lagändringar, i brottsbalken och fängelselagen, trädde i kraft den 1 juli 2026. Barn under 18 år som döms till fängelse placeras på särskilda avdelningar, skilda från vuxna, med anpassade regler och skolgång.",
+    "date": "2026-11-24",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2022-08-08"
+      }
+    ]
   },
   "evidence": [
     {
@@ -38,6 +45,16 @@
       "note": "Avtalet inrättar särskilda ungdomsfängelser under Kriminalvården."
     },
     {
+      "kind": "prop",
+      "dok_id": "HD03132",
+      "designation": "Prop. 2025/26:132",
+      "title": "Frihetsberövande påföljder för barn och unga",
+      "date": "2026-02-19",
+      "url": "https://data.riksdagen.se/dokument/HD03132.html",
+      "relevance": "partial",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HD01JuU30",
       "designation": "Bet. 2025/26:JuU30",
@@ -46,6 +63,26 @@
       "url": "https://data.riksdagen.se/dokument/HD01JuU30.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-516",
+      "designation": "SFS 2026:516",
+      "title": "Lag (2026:516) om ändring i brottsbalken",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026516.html",
+      "relevance": "partial",
+      "note": "Själva inrättandet av särskilda fängelser eller avdelningar för unga och åtskillnaden från äldre intagna regleras i fängelselagen och andra lagar, inte i brottsbalken. Bättre vård under straffet framgår inte heller här."
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2026-530",
+      "designation": "SFS 2026:530",
+      "title": "Lag (2026:530) om ändring i fängelselagen (2010:610)",
+      "date": "2026-07-01",
+      "url": "https://svenskforfattningssamling.se/doc/2026530.html",
+      "relevance": "partial",
+      "note": "Lagen inrättar inte egna särskilda fängelser för unga kriminella utan avdelningar inom vanliga anstalter, och den gäller i första hand barn under 18 år. Åtagandet om bättre vård nås bara genom barnanpassade regler."
     }
   ]
 }

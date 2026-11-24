@@ -1,7 +1,7 @@
 /**
  * Add candidates for promises the keyword search missed, by ranking the whole local Riksdag store.
  *   node --experimental-strip-types tools/widen-candidates.ts --terms tools/widen-terms/<x>.json
- *     [--term 2022-2026] [--per 6] [--dry-run]
+ *     [--term 2022-2026] [--per 6] [--min-score 1000: only phrase hits] [--dry-run]
  * The terms file maps promise ids to hand-written synonyms and law names ({"<id>": ["säkerhetszoner"]}).
  * New hits are appended to src/data/<term>/riksdag-candidates/<id>.json with `found_by`
  * `widen:<terms>` and a high score so `link-pairs` judges them first. Documents already in the file
@@ -11,6 +11,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
+import { z } from 'zod';
 import { loadJson, writeJson } from './lib/json.ts';
 import { candidateFileSchema, type CandidateFile } from './lib/riksdag-candidates.ts';
 import { defaultStorePath, storeSchema } from './lib/riksdag-ingest.ts';
@@ -23,13 +24,22 @@ const { values } = parseArgs({
     terms: { type: 'string' },
     term: { type: 'string', default: '2022-2026' },
     per: { type: 'string', default: '6' },
+    'min-score': { type: 'string', default: '0' },
     'dry-run': { type: 'boolean', default: false },
   },
 });
 if (!values.terms) throw new Error('usage: widen-candidates.ts --terms <file> [--dry-run]');
 const term = values.term!;
 const per = Number(values.per);
-const extra = loadJson(resolve(root, values.terms)) as Record<string, string[]>;
+const minScore = Number(values['min-score']);
+const extra = z
+  .record(z.string(), z.array(z.string()))
+  .parse(loadJson(resolve(root, values.terms)));
+const promiseShape = z.object({
+  title: z.string(),
+  description: z.string(),
+  keywords: z.array(z.string()).optional(),
+});
 const store = storeSchema.parse(JSON.parse(readFileSync(defaultStorePath(root, term), 'utf8')));
 const docs = Object.values(store.documents).filter((d) => d.datum !== '');
 const idf = buildIdf(docs);
@@ -38,11 +48,9 @@ const rejected = rejectedCandidatesFileSchema.parse(
 );
 
 for (const [id, terms] of Object.entries(extra)) {
-  const promise = loadJson(resolve(root, 'src/data', term, 'promises', `${id}.json`)) as {
-    title: string;
-    description: string;
-    keywords?: string[];
-  };
+  const promise = promiseShape.parse(
+    loadJson(resolve(root, 'src/data', term, 'promises', `${id}.json`)),
+  );
   const file = resolve(root, 'src/data', term, 'riksdag-candidates', `${id}.json`);
   const existing: CandidateFile | null = existsSync(file)
     ? candidateFileSchema.parse(loadJson(file))
@@ -63,7 +71,7 @@ for (const [id, terms] of Object.entries(extra)) {
     idf,
     skip,
     per,
-  );
+  ).filter((h) => h.score >= minScore);
   console.log(`${id}: ${hits.length} new`);
   for (const h of hits)
     console.log(

@@ -17,9 +17,9 @@
   "committee": "JuU",
   "keywords": ["visitationszoner", "vapen", "polisens befogenheter", "husrannsakan"],
   "verdict": {
-    "value": "in_progress",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "I december 2023 presenterades en promemoria med förslag om säkerhetszoner i polislagen. I zonerna får polisen utökade möjligheter att visitera personer och söka efter vapen i fordon. Riksdagen beslutade i april 2024 att införa säkerhetszoner, där polisen får särskilda befogenheter att söka efter vapen och andra farliga föremål.",
+    "reasoning": "Regeringen föreslog i december 2023 säkerhetszoner, där polisen får visitera personer och fordon för att leta efter vapen. Riksdagen beslutade i april 2024 att införa zonerna genom en ändring i polislagen. Lagen som genomför löftet trädde i kraft den 25 april 2024.",
     "date": "2026-11-24",
     "history": [
       {
@@ -49,12 +49,32 @@
       "note": null
     },
     {
+      "kind": "prop",
+      "dok_id": "HB0384",
+      "designation": "Prop. 2023/24:84",
+      "title": "Säkerhetszoner",
+      "date": "2024-03-05",
+      "url": "https://data.riksdagen.se/dokument/HB0384.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
       "kind": "bet",
       "dok_id": "HB01JuU13",
       "designation": "Bet. 2023/24:JuU13",
       "title": "Säkerhetszoner",
       "date": "2024-04-09",
       "url": "https://data.riksdagen.se/dokument/HB01JuU13.html",
+      "relevance": "full",
+      "note": null
+    },
+    {
+      "kind": "sfs",
+      "dok_id": "sfs-2024-200",
+      "designation": "SFS 2024:200",
+      "title": "Lag (2024:200) om ändring i polislagen (1984:387)",
+      "date": "2024-04-25",
+      "url": "https://svenskforfattningssamling.se/doc/2024200.html",
       "relevance": "full",
       "note": null
     }

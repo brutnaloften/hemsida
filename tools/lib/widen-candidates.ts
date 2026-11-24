@@ -8,7 +8,7 @@ import type { StoredDocument } from './riksdag-ingest.ts';
 
 const STOPWORDS = new Set(
   (
-    'och att som för med den det ett inte från vara ska ska sig samt eller också mer bättre ' +
+    'och att som för med den det ett inte från vara ska sig samt eller också mer bättre ' +
     'alla fler finns genom mellan under efter inom utan sina deras detta dessa vilka vilket ' +
     'införa införs ändra göra göras ta bort ökad ökade nya ny nytt sverige svenska svensk'
   ).split(' '),
@@ -24,6 +24,9 @@ export function stemsOf(text: string): string[] {
     .filter((w) => w.length >= 5 && !STOPWORDS.has(w));
   return [...new Set(words.map((w) => w.slice(0, STEM_LENGTH)))];
 }
+
+/** Added to the score of a document whose title contains a hand-written term as a phrase. */
+export const PHRASE_BONUS = 1000;
 
 export interface WidenPromise {
   id: string;
@@ -50,10 +53,16 @@ export function buildIdf(docs: StoredDocument[]): Map<string, number> {
   return idf;
 }
 
+/** A term strong enough to count as a phrase: several words, or one long (so specific) word. */
+function isPhrase(term: string): boolean {
+  return /\s/.test(term.trim()) || term.trim().length >= 11;
+}
+
 /**
  * Rank documents for one promise. A title hit counts three times a snippet hit, hand-written
  * `extra` terms count double, and a document needs at least two distinct matched terms (or one
- * extra term in its title) so a single shared common word never qualifies.
+ * extra term in its title) so a single shared common word never qualifies. A title that contains a
+ * whole hand-written phrase gets a large bonus (see isPhrase).
  */
 export function widenSearch(
   promise: WidenPromise,
@@ -86,6 +95,12 @@ export function widenSearch(
         score += w;
         matched.push(t);
       }
+    }
+    // A title that contains a whole hand-written term outranks any pile of body hits on common words.
+    const lowerTitle = doc.titel.toLowerCase();
+    if (promise.extra.some((e) => isPhrase(e) && lowerTitle.includes(e.toLowerCase()))) {
+      score += PHRASE_BONUS;
+      extraInTitle = true;
     }
     if (matched.length >= 2 || extraInTitle) hits.push({ doc, score, matched });
   }
