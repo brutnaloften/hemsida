@@ -58,7 +58,7 @@
     "promise": {
       "id": "val2026-kd-avskaffad-reavinstskatt",
       "term": "2026-2030",
-      "title": "Avskaffa reavinstskatten efter fem års ägande",
+      "title": "Trappa ned reavinstskatten med 2 procent per år efter fem års ägande",
       "description": "Avskaffa reavinstskatten efter en tids ägande genom att den minskas med 2 procent årligen efter fem år.",
       "source": {
         "id": "valmanifest-2026-kd",
@@ -94,7 +94,7 @@
       },
       "parties": ["KD"],
       "roles": {},
-      "type": "budget",
+      "type": "legislative",
       "area": "Familj och jämställdhet",
       "committee": "SfU",
       "keywords": ["barnbidrag", "barnfamiljer", "familjeekonomi"],
@@ -1212,8 +1212,8 @@
       "parties": ["KD"],
       "roles": {},
       "type": "budget",
-      "area": "Socialförsäkring och pensioner",
-      "committee": "SfU",
+      "area": "Arbetsmarknad",
+      "committee": "AU",
       "keywords": ["pensionärer", "bonus", "äldre i arbete", "vård och omsorg"],
       "verdict": {
         "value": "unassessed",
@@ -1362,33 +1362,6 @@
   {
     "section": "En jämlik och tillgänglig vård",
     "promise": {
-      "id": "val2026-kd-juridiskt-kon-biologi",
-      "term": "2026-2030",
-      "title": "Låt juridiskt kön i grunden bygga på biologi",
-      "description": "Juridiskt kön ska i grunden vara en fråga om biologi, inte identitet.",
-      "source": {
-        "id": "valmanifest-2026-kd",
-        "page": 5,
-        "quote": "Juridiskt kön ska i grunden vara en fråga om biologi, inte identitet"
-      },
-      "parties": ["KD"],
-      "roles": {},
-      "type": "legislative",
-      "area": "Hälso- och sjukvård",
-      "committee": "SoU",
-      "keywords": ["juridiskt kön", "biologiskt kön", "könstillhörighet"],
-      "verdict": {
-        "value": "unassessed",
-        "reasoning": "",
-        "date": "2026-11-25",
-        "history": []
-      },
-      "evidence": []
-    }
-  },
-  {
-    "section": "En jämlik och tillgänglig vård",
-    "promise": {
       "id": "val2026-kd-klimakteriet-vard",
       "term": "2026-2030",
       "title": "Förbättra vården till kvinnor i klimakteriet",
@@ -1443,7 +1416,7 @@
   {
     "section": "En trygg välfärd",
     "promise": {
-      "id": "val2026-kd-mer-larardriven-undervisning",
+      "id": "val2026-kd-mer-larledd-undervisning",
       "term": "2026-2030",
       "title": "Mer lärarledd undervisning och mindre skärmtid",
       "description": "Mer lärarledd undervisning och mindre skärmtid i skolan.",
@@ -1532,11 +1505,11 @@
       "id": "val2026-kd-riv-upp-konsbyteslagen",
       "term": "2026-2030",
       "title": "Riv upp könsbyteslagen",
-      "description": "Riv upp könsbyteslagen; könsbyten ska vara en fråga om insatser och hjälp från vården.",
+      "description": "Riv upp könsbyteslagen. Juridiskt kön ska i grunden vara en fråga om biologi, inte identitet, och könsbyten en fråga om insatser och hjälp från vården.",
       "source": {
         "id": "valmanifest-2026-kd",
         "page": 5,
-        "quote": "Riv upp könsbyteslagen"
+        "quote": "Riv upp könsbyteslagen. Juridiskt kön ska i grunden vara en fråga om biologi, inte identitet"
       },
       "parties": ["KD"],
       "roles": {},
@@ -1594,7 +1567,7 @@
       },
       "parties": ["KD"],
       "roles": {},
-      "type": "outcome",
+      "type": "vague",
       "area": "Omsorg och socialtjänst",
       "committee": "SoU",
       "keywords": ["äldreboende", "söndagsstek", "vin", "måltider"],
@@ -2360,9 +2333,9 @@
       },
       "parties": ["KD"],
       "roles": {},
-      "type": "legislative",
-      "area": "Ekonomi och skatter",
-      "committee": "SkU",
+      "type": "other_action",
+      "area": "Klimat och miljö",
+      "committee": "MJU",
       "keywords": ["tullar", "kolkraft", "koldioxidtull", "klimat"],
       "verdict": {
         "value": "unassessed",
@@ -2549,7 +2522,7 @@
       },
       "parties": ["KD"],
       "roles": {},
-      "type": "legislative",
+      "type": "other_action",
       "area": "Näringsliv och företagande",
       "committee": "NU",
       "keywords": ["regelbörda", "regelförenkling", "en regel in två regler ut"],
@@ -3793,7 +3766,7 @@
       "roles": {},
       "type": "other_action",
       "area": "Migration och integration",
-      "committee": "SfU",
+      "committee": "AU",
       "keywords": ["introduktion", "nyanlända", "civilsamhälle", "upphandling"],
       "verdict": {
         "value": "unassessed",
