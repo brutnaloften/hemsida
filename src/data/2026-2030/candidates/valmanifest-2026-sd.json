@@ -4,8 +4,8 @@
     "promise": {
       "id": "val2026-sd-avskaffa-straffrabatter-mangdrabatt",
       "term": "2026-2030",
-      "title": "Avskaffa mängdrabatten och straffrabatterna så snart som möjligt",
-      "description": "Mängdrabatten på brott ska tas bort och hela straffskalan, även de högsta delarna, ska användas.",
+      "title": "Avskaffa straffrabatterna så snart som möjligt",
+      "description": "Mängdrabatten på brott och andra orimliga straffrabatter ska avskaffas så snart som möjligt och hela straffskalan, även de högsta delarna, ska användas.",
       "source": {
         "id": "valmanifest-2026-sd",
         "page": 4,
@@ -958,7 +958,7 @@
       },
       "parties": ["SD"],
       "roles": {},
-      "type": "vague",
+      "type": "other_action",
       "area": "Försvar och krisberedskap",
       "committee": "FöU",
       "keywords": ["reservsystem", "nordiskt samarbete", "beredskap"],
@@ -1687,7 +1687,7 @@
       },
       "parties": ["SD"],
       "roles": {},
-      "type": "legislative",
+      "type": "other_action",
       "area": "Hälso- och sjukvård",
       "committee": "SoU",
       "keywords": ["Systembolaget", "kylda drycker", "alkohollagen"],
@@ -1795,7 +1795,7 @@
       },
       "parties": ["SD"],
       "roles": {},
-      "type": "legislative",
+      "type": "other_action",
       "area": "Hälso- och sjukvård",
       "committee": "SoU",
       "keywords": ["Systembolaget", "öppettider", "söndagar"],
@@ -1899,7 +1899,7 @@
       "source": {
         "id": "valmanifest-2026-sd",
         "page": 12,
-        "quote": "det kommer aldrig vara en ökad reduktionsplikt eller skatt på plastpåsar"
+        "quote": "det kommer aldrig vara en ökad reduktionsplikt"
       },
       "parties": ["SD"],
       "roles": {},
@@ -2114,7 +2114,7 @@
     "promise": {
       "id": "val2026-sd-skriv-av-studieskulden-i-glesa-kommuner",
       "term": "2026-2030",
-      "title": "Skriv av en femtedel av studieskulden per år under fem år för offentliganställda i glesa kommuner",
+      "title": "Skriv av studieskulden för offentliganställda som bor eller flyttar till glesa kommuner",
       "description": "Studieskulden ska skrivas av för den som arbetar i offentlig sektor och bor eller flyttar till glesa och mycket glesa kommuner, en femtedel per år under fem år.",
       "source": {
         "id": "valmanifest-2026-sd",
@@ -2223,7 +2223,7 @@
       "id": "val2026-sd-brott-mot-svenskar-ska-betraktas-som-hatbrott",
       "term": "2026-2030",
       "title": "Rasistiskt motiverade brott mot svenskar ska betraktas som hatbrott",
-      "description": "Rasistiskt motiverade brott mot svenskar, till exempel förnedringsrån och gruppvåldtäkter, ska betraktas som hatbrott.",
+      "description": "Rasistiskt motiverade brott mot svenskar, till exempel förnedringsrån och gruppvåldtäkter, ska betraktas som hatbrott; brott där motivet har koppling till offrets svenska etnicitet bör medföra strängare straff.",
       "source": {
         "id": "valmanifest-2026-sd",
         "page": 14,
@@ -2343,33 +2343,6 @@
       "area": "Skola och utbildning",
       "committee": "UbU",
       "keywords": ["närhetsprincipen", "skolval", "urvalsgrunder"],
-      "verdict": {
-        "value": "unassessed",
-        "reasoning": "",
-        "date": "2026-11-25",
-        "history": []
-      },
-      "evidence": []
-    }
-  },
-  {
-    "section": "Svensk",
-    "promise": {
-      "id": "val2026-sd-strangare-straff-for-brott-mot-offrets-svenska-etnicitet",
-      "term": "2026-2030",
-      "title": "Strängare straff för brott där motivet har koppling till offrets svenska etnicitet",
-      "description": "Brott där motivet har koppling till offrets svenska etnicitet bör medföra strängare straff.",
-      "source": {
-        "id": "valmanifest-2026-sd",
-        "page": 14,
-        "quote": "brott där motivet har koppling till offrets svenska etnicitet bör medföra strängare straff"
-      },
-      "parties": ["SD"],
-      "roles": {},
-      "type": "legislative",
-      "area": "Kriminalpolitik",
-      "committee": "JuU",
-      "keywords": ["straffskärpning", "hatbrott", "etnicitet"],
       "verdict": {
         "value": "unassessed",
         "reasoning": "",
@@ -2571,6 +2544,33 @@
   {
     "section": "Svensk",
     "promise": {
+      "id": "val2026-sd-lat-atervandringsbidraget-aven-omfatta-naturaliserade-medbor",
+      "term": "2026-2030",
+      "title": "Låt återvandringsbidraget även omfatta naturaliserade svenska medborgare",
+      "description": "Återvandringsbidraget ska utökas ytterligare så att det även omfattar naturaliserade svenska medborgare som vill avsäga sig medborgarskapet och återvända till sina hemländer.",
+      "source": {
+        "id": "valmanifest-2026-sd",
+        "page": 15,
+        "quote": "Sverigedemokraterna vill dock att återvandringsbidraget utökas ytterligare till att även"
+      },
+      "parties": ["SD"],
+      "roles": {},
+      "type": "legislative",
+      "area": "Migration och integration",
+      "committee": "SfU",
+      "keywords": ["återvandringsbidrag", "återvandring", "naturaliserade medborgare"],
+      "verdict": {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-25",
+        "history": []
+      },
+      "evidence": []
+    }
+  },
+  {
+    "section": "Svensk",
+    "promise": {
       "id": "val2026-sd-nytt-system-enligt-finsk-modell-istallet-for-id06",
       "term": "2026-2030",
       "title": "Inför ett nytt system enligt finsk modell i stället för ID06",
@@ -2625,33 +2625,6 @@
   {
     "section": "Svensk",
     "promise": {
-      "id": "val2026-sd-utoka-aterundvandringsbidraget-ytterligare",
-      "term": "2026-2030",
-      "title": "Utöka återvandringsbidraget ytterligare",
-      "description": "Återvandringsbidraget ska utökas ytterligare så att det även omfattar naturaliserade svenska medborgare som vill avsäga sig medborgarskapet och återvända till sina hemländer.",
-      "source": {
-        "id": "valmanifest-2026-sd",
-        "page": 15,
-        "quote": "Sverigedemokraterna vill dock att återvandringsbidraget utökas ytterligare till att även"
-      },
-      "parties": ["SD"],
-      "roles": {},
-      "type": "legislative",
-      "area": "Migration och integration",
-      "committee": "SfU",
-      "keywords": ["återvandringsbidrag", "återvandring", "naturaliserade medborgare"],
-      "verdict": {
-        "value": "unassessed",
-        "reasoning": "",
-        "date": "2026-11-25",
-        "history": []
-      },
-      "evidence": []
-    }
-  },
-  {
-    "section": "Svensk",
-    "promise": {
       "id": "val2026-sd-aterkalla-medborgarskap-i-fler-fall",
       "term": "2026-2030",
       "title": "Verka för att medborgarskap kan återkallas i fler fall för naturaliserade medborgare med annat medborgarskap",
@@ -2686,7 +2659,7 @@
       "source": {
         "id": "valmanifest-2026-sd",
         "page": 16,
-        "quote": "Genom att renodla myndigheternas uppdrag, granska kommuner och regioner och stoppa felriktade bidrag ska mer av skattepengarna gå till kärnverksamheten"
+        "quote": "granska kommuner och regioner"
       },
       "parties": ["SD"],
       "roles": {},
@@ -2794,7 +2767,7 @@
       "source": {
         "id": "valmanifest-2026-sd",
         "page": 16,
-        "quote": "Genom att renodla myndigheternas uppdrag, granska kommuner och regioner och stoppa felriktade bidrag ska mer av skattepengarna gå till kärnverksamheten"
+        "quote": "Genom att renodla myndigheternas uppdrag"
       },
       "parties": ["SD"],
       "roles": {},
@@ -2875,7 +2848,7 @@
       "source": {
         "id": "valmanifest-2026-sd",
         "page": 16,
-        "quote": "Genom att renodla myndigheternas uppdrag, granska kommuner och regioner och stoppa felriktade bidrag ska mer av skattepengarna gå till kärnverksamheten"
+        "quote": "stoppa felriktade bidrag ska mer av skattepengarna gå till kärnverksamheten"
       },
       "parties": ["SD"],
       "roles": {},
@@ -3014,7 +2987,7 @@
       },
       "parties": ["SD"],
       "roles": {},
-      "type": "legislative",
+      "type": "other_action",
       "area": "Rättsstat och demokrati",
       "committee": "KU",
       "keywords": ["Palmeutredningen", "sekretess", "offentlighet"],
