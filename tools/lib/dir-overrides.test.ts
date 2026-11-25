@@ -52,17 +52,20 @@ describe('tools/dir-overrides.json', () => {
 
       it('matches the verdict the inquiry rule gives', () => {
         const confirmed = overrides.filter((x) => x.promise_id === o.promise_id);
-        // A directive without an entry may be one the judge already rated high; its evidence
-        // relevance is the best offline guess, so a full one also allows fulfilled.
+        // A directive without an entry may be one the judge already rated high, but the judge's
+        // confidence is not stored on the evidence entry. A non-overridden full directive
+        // therefore allows either verdict (fulfilled if it was high confidence, otherwise
+        // partially_fulfilled via the confirmed partial); a confirmed match requires fulfilled.
         const otherFull = promise!.evidence.some(
           (e) =>
             e.kind === 'dir' &&
             (e as { relevance?: string }).relevance === 'full' &&
             !confirmed.some((x) => x.designation === e.designation),
         );
-        const allowed =
-          confirmed.some((x) => x.relevance === 'match') || otherFull
-            ? ['fulfilled']
+        const allowed = confirmed.some((x) => x.relevance === 'match')
+          ? ['fulfilled']
+          : otherFull
+            ? ['fulfilled', 'partially_fulfilled']
             : ['partially_fulfilled'];
         expect(allowed).toContain(promise!.verdict.value);
         expect(promise!.verdict.assessedBy).toBe('ai');
@@ -127,6 +130,10 @@ describe('dir overrides in applyLinks', () => {
   it('only touches the named promise and directive, and only inquiry promises', () => {
     const other = { ...base, id: 'tido-y' };
     expect(findDirOverride([entry('match')], 'tido-y', 'Dir. 2023:98')).toBeUndefined();
+    expect(
+      findDirOverride([entry('match')], 'tido-x', 'Dir. 2023:98', '2026-2030'),
+    ).toBeUndefined();
+    expect(findDirOverride([entry('match')], 'tido-x', 'Dir. 2023:98', '2022-2026')).toBeDefined();
     expect(withDirOverrides(other, [medium('match')], docs, [entry('match')])[0]!.confidence).toBe(
       'medium',
     );

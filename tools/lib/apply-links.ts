@@ -462,7 +462,7 @@ export function withDirOverrides(
   return pairs.map((pair) => {
     const doc = docs.get(pair.document_id);
     if (!doc || doc.doktyp !== 'dir') return pair;
-    const o = findDirOverride(overrides, promise.id, designationOf(doc));
+    const o = findDirOverride(overrides, promise.id, designationOf(doc), promise.term);
     return o ? { ...pair, label: o.relevance, confidence: 'high', proposed: true } : pair;
   });
 }

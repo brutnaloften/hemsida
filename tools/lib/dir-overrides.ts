@@ -29,11 +29,20 @@ export const dirOverrideSchema = z.object({
 export const dirOverridesSchema = z.array(dirOverrideSchema);
 export type DirOverride = z.infer<typeof dirOverrideSchema>;
 
-/** Overrides for one promise and one directive, or undefined. */
+/**
+ * Overrides for one promise and one directive, or undefined. When `term` is given the entry's
+ * term must match too, so the same promise id in another term never picks up the override.
+ */
 export function findDirOverride(
   overrides: readonly DirOverride[],
   promiseId: string,
   designation: string,
+  term?: string,
 ): DirOverride | undefined {
-  return overrides.find((o) => o.promise_id === promiseId && o.designation === designation);
+  return overrides.find(
+    (o) =>
+      o.promise_id === promiseId &&
+      o.designation === designation &&
+      (term === undefined || o.term === term),
+  );
 }
