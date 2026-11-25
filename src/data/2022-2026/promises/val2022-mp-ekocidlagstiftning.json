@@ -17,11 +17,18 @@
   "committee": "MJU",
   "keywords": ["ekocid", "lagstiftning", "miljöbrott"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Löftet gäller att verka för ekocidlagstiftning. Det avgörs i internationella förhandlingar som regeringen deltar i.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet gäller att verka för ekocidlagstiftning. Det avgörs i internationella förhandlingar som regeringen deltar i.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": []
 }

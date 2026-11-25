@@ -17,11 +17,18 @@
   "committee": "SoU",
   "keywords": ["SiS", "akutplats", "ungdomshem", "kö", "våldsutövare"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Löftet gäller att kön till anläggningar för akut omhändertagande av unga våldsutövare ska vara noll. För att avgöra det krävs ett mått på kön, till exempel antal väntande eller väntetid till plats, från Statens institutionsstyrelse. Löftet kan inte avgöras ännu.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet gäller att kön till anläggningar för akut omhändertagande av unga våldsutövare ska vara noll. För att avgöra det krävs ett mått på kön, till exempel antal väntande eller väntetid till plats, från Statens institutionsstyrelse. Löftet kan inte avgöras ännu.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": [
     {

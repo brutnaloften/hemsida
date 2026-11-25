@@ -17,11 +17,18 @@
   "committee": "SkU",
   "keywords": ["ränteavdrag", "bolån", "bostadsskulder", "skatt"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Löftet gäller att ränteavdraget för bolån behålls, alltså att regelverket lämnas som det är. Det är en hållning som inte prövas genom ett enskilt beslut.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet gäller att ränteavdraget för bolån behålls, alltså att regelverket lämnas som det är. Det är en hållning som inte prövas genom ett enskilt beslut.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": [
     {

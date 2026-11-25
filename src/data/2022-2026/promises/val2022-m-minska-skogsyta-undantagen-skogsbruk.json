@@ -17,11 +17,18 @@
   "committee": "MJU",
   "keywords": ["skog", "skogsbruk", "skydd av skog", "produktion"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Löftet gäller skog som är undantagen från skogsbruk. SCB:s serie över formellt skyddad natur avser hela landet och alla naturtyper: andelen skyddad landyta steg från 13,9 procent 2022 till 14,3 procent 2025.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet gäller skog som är undantagen från skogsbruk. SCB:s serie över formellt skyddad natur avser hela landet och alla naturtyper: andelen skyddad landyta steg från 13,9 procent 2022 till 14,3 procent 2025.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": [
     {

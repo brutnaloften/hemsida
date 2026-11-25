@@ -17,11 +17,18 @@
   "committee": "CU",
   "keywords": ["trygghetsboenden", "äldreboende", "gemenskapsboende", "äldreomsorg"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Löftet gäller fler trygghetsboenden och gemenskapsboenden för äldre. Antal och tidpunkt är öppna. För att avgöra det krävs antalet sådana boenden 2022 och senare, till exempel från Boverket. Löftet kan inte avgöras ännu.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet gäller fler trygghetsboenden och gemenskapsboenden för äldre. Antal och tidpunkt är öppna. För att avgöra det krävs antalet sådana boenden 2022 och senare, till exempel från Boverket. Löftet kan inte avgöras ännu.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": [
     {

@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["polisen", "utrustning", "kravaller", "upplopp", "ordningsmakt"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "reasoning": "Inga riksdagsdokument har ännu kopplats till löftet, och därför kan vi inte bedöma det.",
-    "date": "2022-08-08",
-    "history": [],
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Inga riksdagsdokument har ännu kopplats till löftet, och därför kan vi inte bedöma det.",
+        "date": "2022-08-08"
+      }
+    ],
     "assessedBy": "ai"
   },
   "evidence": [

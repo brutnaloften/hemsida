@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["föräldrastöd", "kommuner", "brottsprevention", "föräldraansvar"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "reasoning": "Överenskommelsen har som mål att föräldrastödsprogram ska finnas i alla kommuner, som en frivillig satsning. Inga riksdagsdokument har ännu kopplats till löftet, och därför kan vi inte bedöma det.",
-    "date": "2026-10-29",
-    "history": [],
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Överenskommelsen har som mål att föräldrastödsprogram ska finnas i alla kommuner, som en frivillig satsning. Inga riksdagsdokument har ännu kopplats till löftet, och därför kan vi inte bedöma det.",
+        "date": "2026-10-29"
+      }
+    ],
     "assessedBy": "ai"
   },
   "evidence": [

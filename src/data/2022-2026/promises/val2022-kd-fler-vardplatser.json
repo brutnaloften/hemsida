@@ -17,11 +17,18 @@
   "committee": "SoU",
   "keywords": ["vårdplatser", "sjukhus", "vårdköer"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Löftet gäller att antalet vårdplatser ska öka. Antalet vårdplatser redovisas i rapporten Vårdkapacitet i balans och i Väntetidsdatabasen, och för att avgöra löftet behövs en nedladdningsbar tidsserie för 2022–2025. Löftet kan inte avgöras ännu.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet gäller att antalet vårdplatser ska öka. Antalet vårdplatser redovisas i rapporten Vårdkapacitet i balans och i Väntetidsdatabasen, och för att avgöra löftet behövs en nedladdningsbar tidsserie för 2022–2025. Löftet kan inte avgöras ännu.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": [
     {

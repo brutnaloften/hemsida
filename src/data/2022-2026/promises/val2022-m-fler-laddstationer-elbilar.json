@@ -17,11 +17,18 @@
   "committee": "TU",
   "keywords": ["laddstationer", "elbilar", "laddinfrastruktur", "glesbygd"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Löftet gäller bättre tillgång till laddstationer, även i glesbygd. Nobil-registret är byggt för realtidsdata, och stationernas id ändras. Energimyndighetens månadsbilder av registret omfattar 2025, och Trafikanalys redovisar ett enstaka värde för 2022 på annan grund. En jämförelse mellan 2022 och senare år vore därför missvisande. Löftet kan inte avgöras.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet gäller bättre tillgång till laddstationer, även i glesbygd. Nobil-registret är byggt för realtidsdata, och stationernas id ändras. Energimyndighetens månadsbilder av registret omfattar 2025, och Trafikanalys redovisar ett enstaka värde för 2022 på annan grund. En jämförelse mellan 2022 och senare år vore därför missvisande. Löftet kan inte avgöras.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": [
     {
