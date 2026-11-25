@@ -1,0 +1,25 @@
+{
+  "id": "mv-kvotflyktingar-forstagangstillstand",
+  "source": "migrationsverket",
+  "table": "Beviljade uppehållstillstånd <år>.xlsx, blad Kön, första",
+  "selection": {
+    "sheet": "Kön, första",
+    "labelColumn": "B",
+    "rowLabel": "Vidarebosättning (Kvot)",
+    "valueColumn": "E",
+    "url 2022": "https://www.migrationsverket.se/download/18.2cd2e409193b84c506a3538d/1789468224346/Beviljade%20uppeh%C3%A5llstillst%C3%A5nd%202022.xlsx",
+    "url 2023": "https://www.migrationsverket.se/download/18.2cd2e409193b84c506a35393/1789468289374/Beviljade%20uppeh%C3%A5llstillst%C3%A5nd%202023.xlsx",
+    "url 2024": "https://www.migrationsverket.se/download/18.2cd2e409193b84c506a33216/1789468346847/Beviljade%20uppeh%C3%A5llstillst%C3%A5nd%202024.xlsx",
+    "url 2025": "https://www.migrationsverket.se/download/18.2cd2e409193b84c506a2306a/1789468403224/Beviljade%20uppeh%C3%A5llstillst%C3%A5nd%202025.xlsx"
+  },
+  "label": "Beviljade förstagångstillstånd, vidarebosättning (kvotflyktingar)",
+  "unit": "tillstånd",
+  "frequency": "year",
+  "fetched_at": "2026-11-24",
+  "values": {
+    "2022": 3744,
+    "2023": 297,
+    "2024": 959,
+    "2025": 861
+  }
+}

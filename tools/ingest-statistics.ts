@@ -4,6 +4,10 @@
  *   node --experimental-strip-types tools/ingest-statistics.ts [--config tools/statistics-configs/2022-2026.json]
  *     [--only <series-id>] [--refresh] [--dry-run]
  *
+ * Series from the agencies' published .xlsx tables (Migrationsverket, Socialstyrelsen) are read from
+ * the workbook URLs in the config, cached as files next to the JSON (also paced at 350 ms per host
+ * request, one at a time). The series source decides; see `xlsxSeriesConfigSchema`.
+ *
  * The config lists the series (id, table, selection, unit, frequency, ...). Requests are sequential,
  * paced at 350 ms (under SCB's limit of 30 calls per 10 s). Every raw response is cached in
  * tools/out/statistics-cache/ (gitignored); a rerun reads the cache, `--refresh` refetches. A rerun
@@ -23,12 +27,16 @@ import {
   SCB_BASE,
   buildSeries,
   dataUrl,
+  isXlsx,
   latestYear,
   parseConfig,
   parseJsonStat2,
+  readXlsxValue,
   serializeSeries,
   type SeriesConfig,
+  type XlsxSeriesConfig,
 } from './lib/statistics-ingest.ts';
+import { readWorkbook, type Workbook } from './lib/xlsx.ts';
 
 const root = resolve(import.meta.dirname, '..');
 const MIN_INTERVAL_MS = 350;
@@ -76,13 +84,56 @@ async function getJson(s: SeriesConfig): Promise<unknown> {
   return body;
 }
 
+const xlsxCache = new Map<string, Workbook>();
+async function getWorkbook(url: string): Promise<Workbook> {
+  const hit = xlsxCache.get(url);
+  if (hit) return hit;
+  const file = resolve(
+    cacheDir,
+    `xlsx-${createHash('sha1').update(url).digest('hex').slice(0, 12)}.xlsx`,
+  );
+  let buf: Buffer;
+  if (!args.refresh && existsSync(file)) buf = readFileSync(file);
+  else {
+    const wait = lastRequest + MIN_INTERVAL_MS - Date.now();
+    if (wait > 0) await new Promise((r) => setTimeout(r, wait));
+    lastRequest = Date.now();
+    const res = await fetch(url, {
+      headers: { 'User-Agent': 'brutnaloften-ingest (political promise tracker)' },
+      signal: AbortSignal.timeout(TIMEOUT_MS * 2),
+    });
+    if (!res.ok) throw new Error(`${res.status} ${res.statusText} for ${url}`);
+    buf = Buffer.from(await res.arrayBuffer());
+    const book = readWorkbook(buf); // parse before caching: an HTML error page must not be kept
+    writeFileSync(file, buf);
+    xlsxCache.set(url, book);
+    return book;
+  }
+  const book = readWorkbook(buf);
+  xlsxCache.set(url, book);
+  return book;
+}
+
+async function readXlsxSeries(s: XlsxSeriesConfig): Promise<Map<string, number>> {
+  const values = new Map<string, number>();
+  for (const f of s.files) {
+    values.set(f.period, readXlsxValue(await getWorkbook(f.url), s, f.period));
+  }
+  return values;
+}
+
 const today = new Date().toISOString().slice(0, 10);
 const written: StatisticSeries[] = [];
 let changed = 0;
 mkdirSync(outDir, { recursive: true });
 for (const s of selected) {
-  const raw = await getJson(s);
-  const { values, missing } = parseJsonStat2(raw, { sum: s.sum ?? false, from: s.from });
+  let values: Map<string, number>;
+  let missing: string[] = [];
+  if (isXlsx(s)) values = await readXlsxSeries(s);
+  else {
+    const raw = await getJson(s);
+    ({ values, missing } = parseJsonStat2(raw, { sum: s.sum ?? false, from: s.from }));
+  }
   const path = resolve(outDir, `${s.id}.json`);
   const previous = existsSync(path)
     ? statisticSeriesSchema.parse(JSON.parse(readFileSync(path, 'utf8')))
