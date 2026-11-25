@@ -44,6 +44,41 @@ export function promoteManifesto(
   return out;
 }
 
+/** Every candidate must belong to the term and source the run was started for. */
+export function assertEntriesMatch(
+  entries: readonly ManifestoEntry[],
+  term: string,
+  sourceId: string,
+): void {
+  for (const { promise: p } of entries) {
+    if (p.term !== term) throw new Error(`${p.id}: term ${p.term} does not match --term ${term}`);
+    if (p.source.id !== sourceId) {
+      throw new Error(`${p.id}: source ${p.source.id} does not match --source ${sourceId}`);
+    }
+  }
+}
+
+/**
+ * Ids of existing promises that a re-promotion would clobber: anything with evidence or a verdict
+ * beyond what promotion itself sets (`unassessed`, `not_assessable`).
+ */
+export function protectedPromises(
+  existing: readonly Pick<PromiseRecord, 'id' | 'evidence' | 'verdict'>[],
+): string[] {
+  return existing
+    .filter(
+      (p) =>
+        p.evidence.length > 0 ||
+        (p.verdict.value !== 'unassessed' && p.verdict.value !== 'not_assessable'),
+    )
+    .map((p) => p.id);
+}
+
+/** Audit doc file name: keyed by the id prefix (`val2026-s`) so terms never overwrite each other. */
+export function promotionMapFileName(prefix: string): string {
+  return `manifesto-promotion-map-${prefix.replace(/-$/, '')}.md`;
+}
+
 /** As `promoteManifesto`, but the party must be in opposition (the 2022 opposition parties). */
 export function promoteOpposition(
   entries: readonly ManifestoEntry[],
@@ -52,7 +87,7 @@ export function promoteOpposition(
   return promoteManifesto(entries, party, { requireRole: 'opposition' });
 }
 
-/** Audit doc for a generic promotion run (docs/manifesto-promotion-map-<party>.md). */
+/** Audit doc for a generic promotion run (docs/<promotionMapFileName>). */
 export function renderPromotionMap(args: {
   title: string;
   sourceId: string;
@@ -64,6 +99,7 @@ export function renderPromotionMap(args: {
 }): string {
   const { title, sourceId, term, party, prefix, entries, promises } = args;
   const vague = promises.filter((p) => p.type === 'vague');
+  // `promises` is `promoteManifesto(entries)`, which maps one-to-one in order, so index i aligns.
   const bySection = new Map<string, string[]>();
   entries.forEach((e, i) => {
     const list = bySection.get(e.section) ?? [];
