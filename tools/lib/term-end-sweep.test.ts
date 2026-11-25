@@ -5,7 +5,8 @@ import {
   applyVerdict,
   buildReport,
   classify,
-  EXPIRED_PREFIX,
+  EXPIRED_FALLBACK,
+  resolveBaseVerdict,
   failureImplying,
 } from './term-end-sweep.ts';
 
@@ -141,17 +142,60 @@ describe('applyVerdict', () => {
     expect(promiseSchema.safeParse({ ...p, verdict: v }).success).toBe(true);
   });
 
-  it('prefixes a failure-implying reasoning and fills an empty one', () => {
+  it('leaves the reasoning untouched and fills an empty one', () => {
     const bad = promise('unassessed', [], {}, 'Åtgärden genomfördes inte.');
     expect(applyVerdict(bad.verdict, classify(bad)!, 'd')!.reasoning).toBe(
-      EXPIRED_PREFIX + 'Åtgärden genomfördes inte.',
+      'Åtgärden genomfördes inte.',
     );
     const empty = promise('unassessed', [], {}, '');
-    expect(applyVerdict(empty.verdict, classify(empty)!, 'd')!.reasoning).not.toBe('');
+    expect(applyVerdict(empty.verdict, classify(empty)!, 'd')!.reasoning).toBe(EXPIRED_FALLBACK);
   });
 
   it('does nothing for a flagged or kept promise', () => {
     const p = promise('in_progress', [ev('prop')]);
     expect(applyVerdict(p.verdict, classify(p)!, 'd')).toBeNull();
+  });
+});
+
+describe('resolveBaseVerdict', () => {
+  const current = promise('unassessed').verdict;
+  it('uses the base file, not the working tree', () => {
+    const base = promise('unassessed', [], {}, 'på basen');
+    const warnings: string[] = [];
+    const v = resolveBaseVerdict(JSON.stringify(base), current, (m) => warnings.push(m), 'p1');
+    expect(v.reasoning).toBe('på basen');
+    expect(warnings).toEqual([]);
+  });
+  it('falls back with a warning only when the file is missing on the base', () => {
+    const warnings: string[] = [];
+    expect(resolveBaseVerdict(null, current, (m) => warnings.push(m), 'p1')).toBe(current);
+    expect(warnings).toHaveLength(1);
+  });
+  it('throws on a base file that does not parse', () => {
+    expect(() => resolveBaseVerdict('{}', current, () => {})).toThrow();
+  });
+});
+
+describe('fulfilled-only qualification', () => {
+  it('flags an other_action promise with a bet that passes fulfilled but not partially_fulfilled', () => {
+    const c = classify(promise('in_progress', [ev('prop'), ev('bet')], { type: 'other_action' }));
+    expect(c?.action).toBe('rule_check');
+    expect(c?.proposedVerdict).toBe('fulfilled');
+  });
+});
+
+describe('contradicting and unicode cases', () => {
+  it('flags an expired-group promise that carries a contradicts bet', () => {
+    const c = classify(
+      promise('in_progress', [ev('dir'), ev('bet', { relevance: 'contradicts' })]),
+    );
+    expect(c?.action).toBe('expire_inquiry_only');
+    expect(c?.contradicts).toBe(true);
+    expect(classify(promise('unassessed', [ev('bet')]))?.contradicts).toBe(false);
+  });
+  it('matches failure wording next to Swedish letters', () => {
+    expect(failureImplying('Det misslyckades.')).toBe(true);
+    expect(failureImplying('Åtgärden är övergiven.')).toBe(true);
+    expect(failureImplying('Förbrutit är ett annat ord.')).toBe(false);
   });
 });

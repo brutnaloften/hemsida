@@ -34,19 +34,21 @@ export interface SweepItem {
   why: string;
   /** The reasoning would read as failure-implying next to "Löpt ut" (see failureImplying). */
   failureImplying: boolean;
+  /** Carries a bet/other Riksdag entry judged `contradicts` (works against the promise). */
+  contradicts: boolean;
 }
 
 /** Wording that says or hints the promise failed or that nothing happened. */
 const FAILURE_WORDING =
-  /\b(?:misslyck\w*|svek\w*|övergiv\w*|uteblev\w*|brutit|bruten|lyckades\s+inte|ej\s+uppfyllt|inte\s+uppfyllt|inget\s+har\s+hänt|ingen\s+åtgärd|inga\s+åtgärder|inte\s+genomf\w+|genomfördes\s+inte|har\s+inte\s+(?:införts|beslutats|genomförts|infört|beslutat|genomfört|tagits|tagit|vidtagits)|har\s+ingenting\s+hänt|inga\s+belägg|inga\s+dokument|inget\s+dokument)\b/i;
+  /(?<!\p{L})(?:misslyck\p{L}*|svek\p{L}*|övergiv\p{L}*|uteblev\p{L}*|brutit|bruten|lyckades\s+inte|ej\s+uppfyllt|inte\s+uppfyllt|inget\s+har\s+hänt|ingen\s+åtgärd|inga\s+åtgärder|inte\s+genomf\p{L}+|genomfördes\s+inte|har\s+inte\s+(?:införts|beslutats|genomförts|infört|beslutat|genomfört|tagits|tagit|vidtagits)|har\s+ingenting\s+hänt|inga\s+belägg|inga\s+dokument|inget\s+dokument)(?!\p{L})/iu;
 
 /** True when the reasoning contains an absence claim or failure wording. */
 export function failureImplying(reasoning: string): boolean {
   return FAILURE_WORDING.test(reasoning) || absenceSentences(reasoning).length > 0;
 }
 
-/** The notice prefixed to a reasoning that reads as failure-implying (apply mode only). */
-export const EXPIRED_PREFIX = 'Mandatperioden löpte ut utan avgörande verdikt. ';
+/** Fallback reasoning for an empty one (the schema needs reasoning for `expired`). */
+export const EXPIRED_FALLBACK = 'Mandatperioden löpte ut utan avgörande verdikt.';
 
 /** Riksdag evidence that counts toward a verdict (a `contradicts` entry never does). */
 function countingRiksdag(p: PromiseRecord) {
@@ -95,6 +97,7 @@ export function classify(p: PromiseRecord): SweepItem | null {
     currentVerdict: p.verdict.value,
     evidenceKinds: [...new Set(p.evidence.map((e) => e.kind))].sort(),
     failureImplying: failureImplying(p.verdict.reasoning),
+    contradicts: p.evidence.some((e) => isRiksdagEvidence(e) && e.relevance === 'contradicts'),
   };
   if (p.verdict.value === 'unassessed') {
     return {
@@ -108,14 +111,22 @@ export function classify(p: PromiseRecord): SweepItem | null {
   if (p.verdict.value !== 'in_progress') return null;
 
   const kinds = [...new Set(countingRiksdag(p).map((e) => e.kind))];
-  if (qualifiesFor(p, 'partially_fulfilled')) {
-    const full = qualifiesFor(p, 'fulfilled');
+  // Either verdict qualifying is enough: some promises pass fulfilled but not partially_fulfilled.
+  const partial = qualifiesFor(p, 'partially_fulfilled');
+  const full = qualifiesFor(p, 'fulfilled');
+  if (partial || full) {
+    const which =
+      partial && full
+        ? 'fulfilled or partially_fulfilled'
+        : full
+          ? 'fulfilled'
+          : 'partially_fulfilled';
     return {
       ...base,
-      proposedVerdict: full ? 'fulfilled or partially_fulfilled' : 'partially_fulfilled',
+      proposedVerdict: which,
       action: 'rule_check',
       group: stageGroup(p),
-      why: `Evidence already qualifies for ${full ? 'fulfilled' : 'partially_fulfilled'} under the existing rules (${signature(p)}); flagged for the rule check, not changed here.`,
+      why: `Evidence already qualifies for ${which} under the existing rules (${signature(p)}); flagged for the rule check, not changed here.`,
     };
   }
   const onlyInquiry =
@@ -253,11 +264,19 @@ export function renderMarkdown(r: SweepReport): string {
           .join(', ')} |`,
     ),
     '',
-    '### Failure-implying reasoning (would get the prefix in apply mode)',
+    '### Failure-implying reasoning: rewrite before `--apply` (the tool refuses otherwise)',
     '',
     ...table(
       r.items.filter(
         (i) => (i.action === 'expire' || i.action === 'expire_inquiry_only') && i.failureImplying,
+      ),
+    ),
+    '',
+    '### Expired group promises that carry a `contradicts` entry (check before applying)',
+    '',
+    ...table(
+      r.items.filter(
+        (i) => (i.action === 'expire' || i.action === 'expire_inquiry_only') && i.contradicts,
       ),
     ),
     '',
@@ -303,8 +322,9 @@ export function renderMarkdown(r: SweepReport): string {
 /**
  * Apply mode: the verdict block of one swept promise. `base` is the verdict as on main (its
  * history is kept and the verdict object itself is appended), `item` the classification. Reasoning
- * is kept; a failure-implying (or empty) one gets the neutral prefix. Returns null when the
- * promise is not swept to `expired`.
+ * is kept as is (an empty one gets a fallback sentence). Failure-implying reasons must be
+ * rewritten BEFORE the apply run; the CLI refuses otherwise. Returns null when the promise is not
+ * swept to `expired`.
  */
 export function applyVerdict(
   base: PromiseRecord['verdict'],
@@ -318,9 +338,8 @@ export function applyVerdict(
     reasoning: base.reasoning,
     date: base.date,
   };
-  const kept = base.reasoning.trim();
-  const reasoning =
-    kept === '' ? EXPIRED_PREFIX.trim() : item.failureImplying ? EXPIRED_PREFIX + kept : kept;
+  // The reasoning is kept untouched: the promise page already shows the "term ended" notice.
+  const reasoning = base.reasoning.trim() === '' ? EXPIRED_FALLBACK : base.reasoning;
   return {
     value: 'expired',
     assessedBy: 'ai',
@@ -328,4 +347,22 @@ export function applyVerdict(
     date,
     history: [...base.history, prev],
   };
+}
+
+/**
+ * The verdict as on the base ref. `baseText` is the file content on the base, or null when the file
+ * does not exist there (a promise added after the base); only then the working-tree verdict is
+ * used, with a warning.
+ */
+export function resolveBaseVerdict(
+  baseText: string | null,
+  current: PromiseRecord['verdict'],
+  warn: (msg: string) => void,
+  label = '',
+): PromiseRecord['verdict'] {
+  if (baseText === null) {
+    warn(`${label}: not on the base ref, using the working-tree verdict`);
+    return current;
+  }
+  return promiseSchema.parse(JSON.parse(baseText)).verdict;
 }
