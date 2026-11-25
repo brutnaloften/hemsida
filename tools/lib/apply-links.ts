@@ -31,7 +31,9 @@
  *    confidence (the directive sets up the whole inquiry the promise asks for), `partially_fulfilled`
  *    when a directive is judged `partial` at `high` confidence, otherwise `in_progress`. A later SOU,
  *    Ds or proposition is shown as evidence and never blocks `fulfilled` (unlike for a legislative
- *    promise, where a newer dir/sou/ds means the work is still going on);
+ *    promise, where a newer dir/sou/ds means the work is still going on). A directive read by hand
+ *    gets an entry in tools/dir-overrides.json, which counts as a `high` judgement with the recorded
+ *    relevance (see lib/dir-overrides.ts);
  *  - a `contradicts` pair (proposed, stage not `background`) becomes evidence with relevance
  *    `contradicts` ("Motverkar") on any eligible promise; it never counts toward the verdict, never
  *    pulls in a deciding betänkande, and a promise whose only evidence works against it stays
@@ -44,6 +46,7 @@
  *    replaced and the earlier verdict goes to history when its value changes), so a later backfill
  *    reaches them; any other verdict is left alone, which keeps hand edits safe.
  */
+import { findDirOverride, type DirOverride } from './dir-overrides.ts';
 import {
   isRiksdagEvidence,
   type Evidence,
@@ -445,6 +448,26 @@ export function selectedId(
 export const UNMANAGED_TYPES: ReadonlySet<string> = new Set(['budget']);
 
 /**
+ * Inquiry promises only: a hand-confirmed directive (tools/dir-overrides.json) replaces the judge's
+ * label with the recorded relevance at `high` confidence and counts as proposed. Pairs for other
+ * documents are untouched; an override for a pair the judge never saw changes nothing.
+ */
+export function withDirOverrides(
+  promise: PromiseRecord,
+  pairs: readonly JudgedPair[],
+  docs: ReadonlyMap<string, StoreDocument>,
+  overrides: readonly DirOverride[],
+): readonly JudgedPair[] {
+  if (promise.type !== 'inquiry' || overrides.length === 0) return pairs;
+  return pairs.map((pair) => {
+    const doc = docs.get(pair.document_id);
+    if (!doc || doc.doktyp !== 'dir') return pair;
+    const o = findDirOverride(overrides, promise.id, designationOf(doc));
+    return o ? { ...pair, label: o.relevance, confidence: 'high', proposed: true } : pair;
+  });
+}
+
+/**
  * Returns null when the promise must not be touched or nothing would change.
  *
  * Eligible: `unassessed` promises (Riksdag evidence already there is kept and new documents are
@@ -458,13 +481,15 @@ export const UNMANAGED_TYPES: ReadonlySet<string> = new Set(['budget']);
  */
 export function applyLinks(
   promise: PromiseRecord,
-  pairs: readonly JudgedPair[],
+  rawPairs: readonly JudgedPair[],
   docs: ReadonlyMap<string, StoreDocument>,
   today: string,
   decidedBy: ReadonlyMap<string, readonly string[]> = new Map(),
   sfs?: SfsInput,
   rejected: ReadonlySet<string> = new Set(),
+  dirOverrides: readonly DirOverride[] = [],
 ): Applied | null {
+  const pairs = withDirOverrides(promise, rawPairs, docs, dirOverrides);
   // Budget promises are judged by the budget flow (anslag and macro data), never by link evidence.
   if (UNMANAGED_TYPES.has(promise.type)) return null;
   // `expired` is set only by the term-end sweep; a link run never recomputes or overwrites it.

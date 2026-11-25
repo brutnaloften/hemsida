@@ -36,6 +36,7 @@ import {
   type SfsOverride,
   type StoreDocument,
 } from './lib/apply-links.ts';
+import { dirOverridesSchema } from './lib/dir-overrides.ts';
 import { CONFIDENCES } from './lib/link/config.ts';
 import { addDecisions } from './lib/decided-by.ts';
 import { SFS_JUDGE_TEMPLATE_VERSION, SFS_RECHECK_TEMPLATE_VERSION } from './lib/sfs-judge.ts';
@@ -184,6 +185,12 @@ for (const row of existsSync(rejectedFile)
   rejectedBy.get(row.promise_id)!.add(row.dok_id);
 }
 
+// Hand-confirmed directives for inquiry promises (docs/sfs-verdict-review.md, "Hand-confirmed directives").
+const dirOverridesFile = resolve(root, 'tools/dir-overrides.json');
+const dirOverrides = existsSync(dirOverridesFile)
+  ? dirOverridesSchema.parse(loadJson(dirOverridesFile))
+  : [];
+
 const dir = resolve(root, 'src/data', values.term!, 'promises');
 const csv = (v?: string) => new Set((v ?? '').split(',').filter(Boolean));
 const only = csv(values.ids);
@@ -246,6 +253,7 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     decidedBy,
     sfs,
     rejectedBy.get(id) ?? new Set(),
+    dirOverrides,
   );
   if (!applied) continue;
   if (!values['allow-downgrade'] && isDowngrade(promise.verdict.value, applied.verdict.value)) {
