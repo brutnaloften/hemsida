@@ -38,6 +38,14 @@ describe('termSchema', () => {
     const t = termSchema.parse({ id: '2026-2030', roles: {}, rolesPending: true });
     expect(t.rolesPending).toBe(true);
   });
+  it('defaults published to false', () => {
+    expect(termSchema.parse(valid).published).toBe(false);
+    expect(termSchema.parse({ ...valid, published: true }).published).toBe(true);
+  });
+  it('flags 2022-2026 as published and 2026-2030 not yet', () => {
+    expect(termSchema.parse(readJson(`${dataRoot}/2022-2026/term.json`)).published).toBe(true);
+    expect(termSchema.parse(readJson(`${dataRoot}/2026-2030/term.json`)).published).toBe(false);
+  });
   it('defaults rolesPending to false and then requires every party', () => {
     expect(termSchema.parse(valid).rolesPending).toBe(false);
     expect(termSchema.safeParse({ ...valid, roles: {} }).success).toBe(false);

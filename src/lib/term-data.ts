@@ -20,7 +20,7 @@ export async function getTerms(): Promise<(Term & TermInfo)[]> {
   }));
 }
 
-/** Latest term with data. */
+/** The default term (see `defaultTerm`: latest `published`). */
 export async function getDefaultTerm(): Promise<string> {
   return defaultTerm(await getTerms());
 }
