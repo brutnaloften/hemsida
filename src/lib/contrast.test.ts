@@ -124,3 +124,37 @@ describe.each(['light', 'dark'] as const)('contrast (%s)', (theme) => {
     expect(ratio(badges['--verdict-unassessed-border'], ground)).toBeGreaterThanOrEqual(3);
   });
 });
+
+describe.each(['light', 'dark'] as const)('verdict bar segments (%s)', (theme) => {
+  // One palette for both themes, defined once on :root; the dark theme inherits it.
+  const bar = block('light', '--verdict-fulfilled-bar');
+  const order = [
+    'fulfilled',
+    'partially_fulfilled',
+    'in_progress',
+    'no_evidence',
+    'unfulfilled',
+    'abandoned',
+    'broken',
+    'not_assessable',
+    'expired',
+  ] as const;
+
+  it('every verdict has a bar colour', () => {
+    for (const v of VERDICTS) expect(bar[`--verdict-${v}-bar`]).toBeDefined();
+  });
+
+  it('adjacent segments are clearly distinguishable', () => {
+    for (let i = 0; i < order.length - 1; i++) {
+      const a = bar[`--verdict-${order[i]}-bar`];
+      const b = bar[`--verdict-${order[i + 1]}-bar`];
+      expect(ratio(a, b), `${order[i]} vs ${order[i + 1]}`).toBeGreaterThanOrEqual(1.3);
+    }
+  });
+
+  it('fulfilled and expired are far apart', () => {
+    expect(
+      ratio(bar['--verdict-fulfilled-bar'], bar['--verdict-expired-bar']),
+    ).toBeGreaterThanOrEqual(3);
+  });
+});

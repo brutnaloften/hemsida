@@ -4,6 +4,7 @@ import {
   agreementOutcomeCounts,
   assessedCount,
   isTermComplete,
+  outcomeBreakdownText,
   verdictBarSegments,
   promisesForParty,
   verdictAriaLabel,
@@ -103,7 +104,7 @@ describe('verdict count texts', () => {
   it('lists outcomes in bar order for a complete term', () => {
     const counts = c({ fulfilled: 2, in_progress: 1, broken: 1, expired: 4 });
     expect(verdictSummaryText(8, counts)).toBe(
-      'Alla 8 löften har granskats: 2 uppfyllda, 1 pågår, 1 brutna. 4 löpte ut utan avgörande verdikt när mandatperioden tog slut.',
+      'Alla 8 löften har granskats: 2 uppfyllda, 1 pågår, 1 brutet. 4 löpte ut utan avgörande verdikt när mandatperioden tog slut.',
     );
   });
   it('keeps the unjudged framing when unassessed promises remain', () => {
@@ -115,11 +116,17 @@ describe('verdict count texts', () => {
   });
   it('mentions not assessable promises in summary and aria label', () => {
     const counts = c({ fulfilled: 1, not_assessable: 2 });
-    expect(verdictAriaLabel(3, counts)).toBe(
-      'Alla 3 löften granskade: 1 uppfyllda, 2 ej bedömbara',
-    );
+    expect(verdictAriaLabel(3, counts)).toBe('Alla 3 löften granskade: 1 uppfyllt, 2 ej bedömbara');
     expect(verdictSummaryText(3, counts)).toBe(
-      'Alla 3 löften har granskats: 1 uppfyllda, 2 ej bedömbara.',
+      'Alla 3 löften har granskats: 1 uppfyllt, 2 ej bedömbara.',
+    );
+  });
+  it('uses singular and thousands separators', () => {
+    expect(outcomeBreakdownText(c({ fulfilled: 1, broken: 1, expired: 1 }))).toBe(
+      '1 uppfyllt, 1 brutet, 1 löpte ut',
+    );
+    expect(outcomeBreakdownText(c({ expired: 1234 }))).toBe(
+      `${(1234).toLocaleString('sv-SE')} löpte ut`,
     );
   });
   it('an empty set is not complete', () => {

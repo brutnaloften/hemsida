@@ -28,6 +28,7 @@ const all = (await getCollection('promises'))
   .filter((e) => termOfFilePath(e.filePath ?? '') === term)
   .map((e) => e.data);
 const model = buildPartyModel(termRecord, party, sources, all);
+const complete = model.manifesto.length > 0 && model.manifesto.every((p) => p.verdict.value !== 'unassessed');
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 // The agreement the party stands behind in this term, read from the term record (zero or one in practice).
@@ -67,7 +68,7 @@ const otherTerm = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1
 
 <Layout
   title={`${name} — Brutna Löften`}
-  description={`Löften från ${name} och hur långt de bedömts.`}
+  description={complete ? `Löften från ${name} och hur det gick för dem.` : `Löften från ${name} och hur långt de bedömts.`}
   period={{ kind: 'party', term, param: party, subtitles }}
 >
   <div class="container mx-auto px-4 py-8 md:px-6 md:py-12">

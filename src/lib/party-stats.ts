@@ -96,17 +96,18 @@ export const BAR_ORDER = [
   'unassessed',
 ] as const satisfies readonly VerdictValue[];
 
-const OUTCOME_PHRASES: Record<VerdictValue, string> = {
-  fulfilled: 'uppfyllda',
-  partially_fulfilled: 'delvis uppfyllda',
-  in_progress: 'pågår',
-  no_evidence: 'utan funna belägg',
-  unfulfilled: 'ej uppfyllda',
-  abandoned: 'övergivna',
-  broken: 'brutna',
-  not_assessable: 'ej bedömbara',
-  expired: 'löpte ut',
-  unassessed: 'inte bedömda',
+/** Outcome phrase as [singular, plural]; "löfte" is neuter, so one promise is "uppfyllt". */
+const OUTCOME_PHRASES: Record<VerdictValue, readonly [string, string]> = {
+  fulfilled: ['uppfyllt', 'uppfyllda'],
+  partially_fulfilled: ['delvis uppfyllt', 'delvis uppfyllda'],
+  in_progress: ['pågår', 'pågår'],
+  no_evidence: ['utan funna belägg', 'utan funna belägg'],
+  unfulfilled: ['ej uppfyllt', 'ej uppfyllda'],
+  abandoned: ['övergivet', 'övergivna'],
+  broken: ['brutet', 'brutna'],
+  not_assessable: ['ej bedömbart', 'ej bedömbara'],
+  expired: ['löpte ut', 'löpte ut'],
+  unassessed: ['inte bedömt', 'inte bedömda'],
 };
 
 /**
@@ -125,7 +126,9 @@ export function verdictBarSegments(counts: Counts): { verdict: VerdictValue; n: 
 /** "5 uppfyllda, 3 pågår, 2 inte bedömda": outcome phrases in bar order, zero counts left out. */
 export function outcomeBreakdownText(counts: Counts, skip: readonly VerdictValue[] = []): string {
   return BAR_ORDER.filter((v) => counts[v] > 0 && !skip.includes(v))
-    .map((v) => `${counts[v]} ${OUTCOME_PHRASES[v]}`)
+    .map(
+      (v) => `${counts[v].toLocaleString('sv-SE')} ${OUTCOME_PHRASES[v][counts[v] === 1 ? 0 : 1]}`,
+    )
     .join(', ');
 }
 
