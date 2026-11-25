@@ -53,7 +53,8 @@ export const VERDICT_DESCRIPTIONS: Record<(typeof VERDICTS)[number], string> = {
     'Löftet har genomförts som det formulerades. En beslutad lag räknas, även om den träder i kraft först senare. För löften om en utredning räcker det att utredningen har tillsatts genom ett direktiv; ett senare betänkande visas som underlag men ändrar inte bedömningen.',
   partially_fulfilled:
     'Löftet har genomförts, men i väsentligt snävare eller svagare form än utlovat, eller bara till vissa delar. En beslutad lag räknas, även om den träder i kraft först senare.',
-  unfulfilled: 'Mandatperioden gick ut utan att löftet hade genomförts.',
+  unfulfilled:
+    'En bestämd åtgärd skulle ha genomförts under mandatperioden men gjordes tydligt inte.',
   abandoned: 'De partier som gav löftet har uttryckligen släppt det.',
   broken: 'Partierna har gjort tvärtemot löftet eller röstat emot det.',
   not_assessable: 'Löftet är för vagt för att kunna bedömas.',
