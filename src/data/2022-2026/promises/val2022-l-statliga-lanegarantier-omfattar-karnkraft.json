@@ -17,15 +17,21 @@
   "committee": "NU",
   "keywords": ["lånegarantier", "kärnkraft", "statliga garantier", "finansiering", "nyinvestering"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i mars 2025 fram ett förslag om statligt stöd till ny kärnkraft i form av statliga lån. Riksdagen biföll förslaget i maj 2025, med lån och differenskontrakt. En lag om statligt stöd för investeringar i ny kärnkraft trädde i kraft den 1 augusti 2025. Lagen verkar täcka löftet, men det är obekräftat.",
-    "date": "2026-11-15",
+    "reasoning": "Regeringen lade i mars 2025 fram ett förslag om statligt stöd till ny kärnkraft i form av statliga lån och dubbelriktade differenskontrakt. Riksdagen biföll det i maj 2025, och lagen om statligt stöd för investeringar i ny kärnkraft trädde i kraft den 1 augusti 2025. Lagen ger statligt finansieringsstöd till kärnkraften genom lån för uppförande och provdrift, en annan form av stöd än de lånegarantier som löftet nämner.",
+    "date": "2026-11-25",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-08-08"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i mars 2025 fram ett förslag om statligt stöd till ny kärnkraft i form av statliga lån. Riksdagen biföll förslaget i maj 2025, med lån och differenskontrakt. En lag om statligt stöd för investeringar i ny kärnkraft trädde i kraft den 1 augusti 2025. Lagen verkar täcka löftet, men det är obekräftat.",
+        "date": "2026-11-15"
       }
     ]
   },
@@ -80,8 +86,8 @@
       "title": "Lag (2025:587) om statligt stöd för investeringar i ny kärnkraft",
       "date": "2025-08-01",
       "url": "https://svenskforfattningssamling.se/doc/2025587.html",
-      "relevance": "full",
-      "note": null
+      "relevance": "partial",
+      "note": "Stödet ges som statliga lån och differenskontrakt, inte som lånegarantier."
     }
   ]
 }

@@ -17,15 +17,21 @@
   "committee": "SkU",
   "keywords": ["arbetsgivaravgifter", "ungdomsarbetslöshet", "nedsatta avgifter", "anställa unga"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i november 2025 fram ett förslag om tillfälligt sänkta arbetsgivaravgifter för unga. Riksdagen beslutade i februari 2026 i linje med förslaget, vilket gäller en åldersgrupp och tidsbegränsat. En lag om särskild beräkning av arbetsgivaravgifter för 18–22-åringar trädde i kraft 1 april 2026. Lagen verkar täcka löftet, men det är obekräftat.",
-    "date": "2026-11-23",
+    "reasoning": "Regeringen lade i november 2025 fram ett förslag om tillfälligt sänkta arbetsgivaravgifter för unga. Riksdagen biföll det i februari 2026 och en lag om särskild beräkning av arbetsgivaravgifter trädde i kraft den 1 april 2026. Lagen sänker avgifterna för anställda som vid årets ingång är 18 till 22 år, på ersättning upp till 25 000 kronor i månaden. Den gäller en tidsbegränsad period, till och med den 30 september 2027, och är därmed en svagare variant av löftet.",
+    "date": "2026-11-25",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-08-08"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i november 2025 fram ett förslag om tillfälligt sänkta arbetsgivaravgifter för unga. Riksdagen beslutade i februari 2026 i linje med förslaget, vilket gäller en åldersgrupp och tidsbegränsat. En lag om särskild beräkning av arbetsgivaravgifter för 18–22-åringar trädde i kraft 1 april 2026. Lagen verkar täcka löftet, men det är obekräftat.",
+        "date": "2026-11-23"
       }
     ]
   },
@@ -65,8 +71,8 @@
       "title": "Lag (2026:100) om särskild beräkning av arbetsgivaravgifter och allmän löneavgift för personer som vid årets ingång fyllt 18 men inte 23 år",
       "date": "2026-04-01",
       "url": "https://svenskforfattningssamling.se/doc/2026100.html",
-      "relevance": "full",
-      "note": null
+      "relevance": "partial",
+      "note": "Nedsättningen är tidsbegränsad (1 april 2026 till 30 september 2027) och gäller ersättning upp till 25 000 kronor i månaden."
     }
   ]
 }
