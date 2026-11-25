@@ -19,7 +19,7 @@
   "verdict": {
     "value": "unassessed",
     "assessedBy": "ai",
-    "reasoning": "Regeringen föreslog i april 2026 ändrade regler om samråd för skogsbruk, efter utredningar i december 2024 och augusti 2025 om ett tydligt regelverk för aktivt skogsbruk. Besluten går åt motsatt håll mot löftet, och därför kan de inte ligga till grund för en bedömning.",
+    "reasoning": "Utredningar i december 2024 och augusti 2025 om ett tydligt regelverk för aktivt skogsbruk föregick regeringens proposition i april 2026. Riksdagen antog propositionen i juni 2026 (betänkande 2025/26:MJU29): samrådsplikten enligt miljöbalken ska gälla skogsbruksåtgärder endast om regeringen föreskriver det. Reglerna minskar samrådet kring skogsbruksåtgärder, vilket går åt motsatt håll mot löftet om mer hyggesfritt skogsbruk.",
     "date": "2026-11-24",
     "history": []
   },
@@ -51,6 +51,16 @@
       "title": "Ett tydligt regelverk för aktivt skogsbruk",
       "date": "2026-04-16",
       "url": "https://data.riksdagen.se/dokument/HD03242.html",
+      "relevance": "contradicts",
+      "note": null
+    },
+    {
+      "kind": "bet",
+      "dok_id": "HD01MJU29",
+      "designation": "Bet. 2025/26:MJU29",
+      "title": "Ett tydligt regelverk för aktivt skogsbruk",
+      "date": "2026-06-09",
+      "url": "https://data.riksdagen.se/dokument/HD01MJU29.html",
       "relevance": "contradicts",
       "note": null
     }
