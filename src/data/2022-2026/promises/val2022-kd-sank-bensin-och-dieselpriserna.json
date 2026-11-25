@@ -17,15 +17,21 @@
   "committee": "SkU",
   "keywords": ["drivmedelspriser", "bensin", "diesel", "reduktionsplikt", "biobränsle"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lade i oktober 2023 fram ett förslag om att sänka reduktionsplikten för bensin och diesel till sex procent för 2024–2026, vilket innebär mindre inblandning av biobränsle. Riksdagen biföll förslaget i november 2023, med sänkta nivåer även för åren efter 2026 borttagna. Beslutet motiveras med att hålla nere bränslepriserna.",
-    "date": "2026-11-15",
+    "reasoning": "Riksdagen sänkte reduktionsplikten för bensin och diesel (Bet. 2023/24:MJU5), vilket ger mindre inblandning av biobränsle. SCB:s prisindex för drivmedel föll från 823,79 år 2022 till 607,52 år 2025, 26 procent nominellt och 34 procent i fasta priser. År 2022 var dock ett toppår, och 2025 ligger nära 2021 (611,16). Statistiken mäter utfallet, inte orsaken. Det går inte att säga hur mycket av sänkningen som beror på beslutet.",
+    "date": "2026-11-25",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2026-10-29"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lade i oktober 2023 fram ett förslag om att sänka reduktionsplikten för bensin och diesel till sex procent för 2024–2026, vilket innebär mindre inblandning av biobränsle. Riksdagen biföll förslaget i november 2023, med sänkta nivåer även för åren efter 2026 borttagna. Beslutet motiveras med att hålla nere bränslepriserna.",
+        "date": "2026-11-15"
       }
     ]
   },
@@ -72,6 +78,27 @@
         "rubrik": "Reduktionsnivåer för bensin och diesel",
         "votering_id": "21e8b615-c235-489f-8189-d26cabd56f24"
       }
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-kpi-drivmedel",
+      "baseline": {
+        "period": "2022",
+        "v": 823.79
+      },
+      "latest": {
+        "period": "2025",
+        "v": 607.52
+      },
+      "target": {
+        "type": "direction",
+        "op": "down"
+      },
+      "relevance": "partial",
+      "baselineNote": "År 2022 var ett prisrekordår. Indexet var 611,16 år 2021, nästan samma nivå som 2025 (607,52).",
+      "inflationNote": "Deflaterat med KPI totalt (371,91 till 417,98) minskade drivmedelsindexet med cirka 34 procent i fasta priser, mot 26 procent nominellt.",
+      "date": "2026-01-15",
+      "note": "Index för drivmedelspriser i SCB:s konsumentprisindex, inte kronor per liter. Det omfattar alla drivmedel som hushållen köper."
     }
   ]
 }

@@ -21,9 +21,32 @@
   "keywords": ["kvotflyktingar", "vidarebosättning", "900 per år", "UNHCR", "flyktingkvot"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2022-10-14",
+    "assessedBy": "ai",
+    "reasoning": "Migrationsverket beviljade 297 förstagångstillstånd för vidarebosättning (kvot) år 2023, 959 år 2024 och 861 år 2025, mot 3 744 år 2022. Nivån 900 per år nåddes alltså bara ett av åren. Tillstånd är inte detsamma som ankomster, och inget beslut om kvoten finns bland underlagen. Statistiken mäter utfallet, inte orsaken. Löftet avgörs när mandatperioden är slut.",
+    "date": "2026-11-25",
     "history": []
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "statistic",
+      "series": "mv-kvotflyktingar-forstagangstillstand",
+      "baseline": {
+        "period": "2022",
+        "v": 3744
+      },
+      "latest": {
+        "period": "2025",
+        "v": 861
+      },
+      "target": {
+        "type": "threshold",
+        "op": "gte",
+        "value": 900
+      },
+      "relevance": "partial",
+      "baselineNote": "År 2022 var året före mandatperioden. Nivån 3 744 ligger långt över åren därefter (297, 959, 861).",
+      "date": "2026-09-15",
+      "note": "Beviljade förstagångstillstånd för vidarebosättning, inte antal ankomster. Förlängningar räknas inte."
+    }
+  ]
 }

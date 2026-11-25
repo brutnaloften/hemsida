@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["LVU", "omhändertagande", "barn och unga", "socialtjänst"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
-    "history": []
+    "value": "partially_fulfilled",
+    "assessedBy": "ai",
+    "reasoning": "Antalet barn och unga med heldygnsplacering enligt LVU ökade från 10 242 år 2022 till 11 044 år 2024 (Socialstyrelsen). Riksdagen har behandlat en ny lag om omhändertagande för vård av barn och unga (Bet. 2025/26:SoU38). Betänkandet kommer efter den senaste mätperioden, och serien räknar även barn placerade tidigare år. Statistiken mäter utfallet, inte orsaken, och visar inte att fler omhändertagits på grund av beslutet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-10-29"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,25 @@
       "url": "https://data.riksdagen.se/dokument/HD01SoU38.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "statistic",
+      "series": "socialstyrelsen-lvu-heldygn",
+      "baseline": {
+        "period": "2022",
+        "v": 10242
+      },
+      "latest": {
+        "period": "2024",
+        "v": 11044
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2025-10-02",
+      "note": "Barn och unga med heldygnsplacering enligt LVU under året, vård eller omhändertagande. Serien omfattar även barn som placerats tidigare år och slutar 2024."
     }
   ]
 }
