@@ -10,16 +10,23 @@
   "roles": {
     "KD": "government"
   },
-  "type": "outcome",
+  "type": "vague",
   "area": "Ekonomi och skatter",
   "committee": "FiU",
   "keywords": ["investeringar", "tillväxt", "statsbudget"],
   "verdict": {
-    "value": "unassessed",
+    "value": "not_assessable",
     "assessedBy": "ai",
-    "reasoning": "Löftet säger bara att partiet ska driva frågan om investeringar för tillväxt och en starkare ekonomi. Det anger varken en åtgärd, en nivå eller ett mått som kan följas upp, så det finns inget att pröva mot statistik eller beslut. Löftet förblir obedömt.",
+    "reasoning": "Löftet säger bara att partiet ska driva frågan om investeringar för tillväxt och en starkare ekonomi. Det anger varken en åtgärd, en nivå eller ett mått som kan följas upp, så det går inte att bedöma.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet säger bara att partiet ska driva frågan om investeringar för tillväxt och en starkare ekonomi. Det anger varken en åtgärd, en nivå eller ett mått som kan följas upp, så det finns inget att pröva mot statistik eller beslut. Löftet förblir obedömt.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": []
 }

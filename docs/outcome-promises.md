@@ -4,7 +4,7 @@ Survey and design for the outcome epic (`hemsida-50r`). It is docs only: no sche
 
 ## Scope and headline numbers
 
-Counted on `main` (2022-2026): 86 promises have `type: outcome`, all with a verdict of `unassessed` or `in_progress` that rests on action rather than on a measured result (`docs/data-model.md`, "Outcome promises stay unassessed for now").
+Counted on `main` (2022-2026): 86 promises have `type: outcome`, all with a verdict of `unassessed` or `in_progress` that rests on action rather than on a measured result (`docs/data-model.md`, "Rules for setting a verdict from evidence").
 
 - 54 have a `government` or `support` party in `roles`. Statistics can say something about these.
 - 32 are opposition-only (C, MP, S, V). Official statistics measure what the government delivered, not what the opposition promised, so statistics should never count against them. **Rule in use (hemsida-dl5.15):** they are treated like the opposition-only budget promises (`docs/data-model.md`, "Opposition promises") and set to `not_assessable` unless the party itself acted, with statistics shown only as context. They are listed at the end and need no statistics work.
@@ -159,7 +159,7 @@ Answerable: `yes` = a verified official series covers the promise's quantity; `p
 
 | Promise id                                  | Quantity                                | Kind           | Source, table                                                    | Answerable | Notes                                                                                                                         |
 | ------------------------------------------- | --------------------------------------- | -------------- | ---------------------------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| kd-investera-i-sveriges-framtid             | none (will "drive the question")        | none           | -                                                                | no         | Retype to `vague`; see child beads                                                                                            |
+| kd-investera-i-sveriges-framtid             | none (will "drive the question")        | none           | -                                                                | no         | Retyped to `vague` and `not_assessable`                                                                                       |
 | kd-battre-villkor-i-vardens-bristyrken      | Share of agency (hired-in) staff, pay   | direction down | Socialstyrelsen, SKR                                             | partial    | Two clauses; no verified series                                                                                               |
 | kd-bygg-nya-karnkraftsreaktorer             | Reactors under construction, nuclear MW | direction up   | SCB `TAB4063` (6 901 to 7 001 MW)                                | partial    | Capacity moved by 100 MW (uprating, not new reactors); mostly a fact check                                                    |
 | kd-fler-trygghetsboenden                    | Number of trygghetsboenden              | direction up   | Boverket                                                         | partial    | Not probed                                                                                                                    |
