@@ -27,6 +27,7 @@ const rolesPending = termRecord?.rolesPending ?? false;
 const roles = rolesPresent(rows);
 const FILTER_LABELS = { government: 'Regering', support: 'Stödparti', opposition: 'Opposition' } as const;
 const hasUnassessed = rows.some((r) => r.verdicts.unassessed > 0);
+const hasExpired = rows.some((r) => r.verdicts.expired > 0);
 const complete = rows.length > 0 && !hasUnassessed;
 const pct = (n: number, total: number) => `${(n / total) * 100}%`;
 ---
@@ -40,7 +41,7 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
     <h1 class="font-serif text-3xl font-bold tracking-tight md:text-4xl">Partier</h1>
     <p class="mt-3 max-w-2xl text-muted-foreground">
       Jämför partierna i samma mått. Ett löfte som flera partier står bakom räknas för varje parti.{' '}
-      {hasUnassessed && <>&quot;Inte bedömt&quot; betyder inte att ett löfte är infriat eller brutet, bara att ingen har bedömt det ännu.{' '}</>}&quot;Löpt ut&quot; betyder att perioden tog slut utan avgörande bedömning, inte att löftet har svikits.
+      {hasUnassessed && <>&quot;Inte bedömt&quot; betyder inte att ett löfte är infriat eller brutet, bara att ingen har bedömt det ännu.{' '}</>}{hasExpired && <>&quot;Löpt ut&quot; betyder att perioden tog slut utan avgörande bedömning, inte att löftet har svikits.</>}
     </p>
 
     {rows.length === 0 && <p class="mt-8">Löften för perioden samlas in.</p>}
@@ -101,7 +102,7 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
                           <span class="text-sm text-muted-foreground">Står inte bakom överenskommelsen</span>
                         ) : cell.total === 0 ? (cell.points > 0 ? (
                           <p class="text-sm text-muted-foreground">
-                            {cell.points} punkter, {cell.pointsAssessed} {complete ? 'med tydligt utfall' : 'bedömda'}
+                            {cell.points} punkter, {cell.pointsAssessed} {complete ? 'med tydligt utfall' : 'bedömda mot Riksdagens dokument'}
                           </p>
                         ) : (
                           <span class="text-sm text-muted-foreground">
@@ -119,7 +120,7 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
                             </p>
                             {cell.points > 0 && (
                               <p class="mt-1 text-sm text-muted-foreground">
-                                {cell.points} punkter, {cell.pointsAssessed} {complete ? 'med tydligt utfall' : 'bedömda'}
+                                {cell.points} punkter, {cell.pointsAssessed} {complete ? 'med tydligt utfall' : 'bedömda mot Riksdagens dokument'}
                               </p>
                             )}
                           </>

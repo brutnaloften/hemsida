@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { termSchema } from './term';
+import { defaultTerm } from '../lib/terms';
 import { promiseSchema, sourceSchema } from './promise';
 
 const dataRoot = fileURLToPath(new URL('../data', import.meta.url));
@@ -127,5 +128,22 @@ describe('committed term records', () => {
       }
     }
     expect(problems).toEqual([]);
+  });
+});
+
+describe('defaultTerm on the real term records', () => {
+  it('picks the latest published term, so a data flip is covered', () => {
+    const ids = readdirSync(dataRoot).filter((d) => existsSync(`${dataRoot}/${d}/term.json`));
+    const infos = ids.map((id) => ({
+      id,
+      promiseCount: 1,
+      published: termSchema.parse(readJson(`${dataRoot}/${id}/term.json`)).published,
+    }));
+    const published = infos
+      .filter((t) => t.published)
+      .map((t) => t.id)
+      .sort();
+    expect(defaultTerm(infos)).toBe(published.at(-1));
+    expect(defaultTerm(infos)).toBe('2026-2030');
   });
 });
