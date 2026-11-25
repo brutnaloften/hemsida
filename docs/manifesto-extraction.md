@@ -18,7 +18,9 @@ How candidate promises are extracted from a party's election manifesto (valmanif
 ## Running an extraction (orchestrator)
 
 1. Make sure the source file exists and the manifesto PDF is available locally (use the `archive` URL if the original is gone). Pre-extract page text so the subagent and the validator read the same text:
-   `pdftotext manifesto.pdf tools/out/<source-id>.txt` (poppler; pages are separated by form feeds, page N is the Nth piece).
+   With poppler: `pdftotext manifesto.pdf tools/out/<source-id>.txt`. Without it (see _Extracting the page text_):
+   `node --experimental-strip-types tools/extract-pdf-text.ts manifesto.pdf <source-id> [--python .venv/bin/python]`
+   Pages are separated by form feeds; PDF page N is the Nth piece.
 2. Spawn a subagent per chunk of roughly 8-10 PDF pages (keeps each run small and resumable). Prompt outline:
    - the source id and PDF/text paths, and the page range for this chunk;
    - "Follow `EXTRACTION_RULES` in `tools/lib/manifesto-extract.ts`";
@@ -45,6 +47,24 @@ How candidate promises are extracted from a party's election manifesto (valmanif
 ### Loose quote fallback
 
 The primary quote check is strict: the normalised quote must be a substring of the normalised page text. Only if that fails does a loose fallback run, which removes every hyphen and space from both sides and compares again. This catches real hyphens split by a line break (`el-` / `bilar`) that PDF text extraction renders ambiguously. The cost is that the loose match can accept a quote with wrong spacing or a missing hyphen, so a loose-only match is reported as a warning (`quote only matches page N ignoring spaces and hyphens`) instead of passing silently. Review those quotes by hand.
+
+## Extracting the page text
+
+`tools/extract-pdf-text.ts` needs no poppler. It shells out to `tools/extract-pdf-pages.py` (pypdf) for the raw per-page text and normalises it in `tools/lib/pdf-text.ts` (tested): NFKC (so `fl`/`fi` ligatures become plain letters and quotes can be typed plainly), all whitespace collapsed (some PDFs, for example MP 2026, come out one word per line), each bullet on its own line, pages joined with form feeds, blank pages keeping their slot. Output: `tools/out/<source-id>.txt`.
+
+pypdf is not a repo dependency. Set it up once in a scratch venv:
+
+```
+python3 -m venv /tmp/pdfvenv && /tmp/pdfvenv/bin/pip install pypdf
+node --experimental-strip-types tools/extract-pdf-text.ts manifesto.pdf valmanifest-2026-mp --python /tmp/pdfvenv/bin/python
+```
+
+Notes:
+
+- Page numbering: the Nth piece is PDF page N. When the PDF has a cover, the printed page number is N - 1; a candidate's `page` is the PDF page.
+- A page with no text (scanned or image-only) is reported; it needs OCR, which is out of scope here.
+- If the original URL is gone, use the source's `archive` URL (the web.archive.org `id_` form serves the raw PDF).
+- Re-running `add-manifesto-candidates` after resetting a candidate file collides with existing promise files and suffixes ids with `-2`: delete the old promise files first.
 
 ## Swapping the pilot party
 
