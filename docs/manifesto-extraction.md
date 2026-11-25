@@ -48,7 +48,7 @@ The primary quote check is strict: the normalised quote must be a substring of t
 
 ## Swapping the pilot party
 
-Everything party-specific comes from the source file: add `src/data/sources/valmanifest-2022-<party>.json` (one party), then run the same steps with `--source valmanifest-2022-<party>`. No code changes. A new term needs a `TERM_ROLES` entry in `manifesto-extract.ts`.
+Everything party-specific comes from the source file: add `src/data/sources/valmanifest-2022-<party>.json` (one party), then run the same steps with `--source valmanifest-2022-<party>`. No code changes. A new term needs a `TERM_ROLES` entry in `manifesto-extract.ts`; `'pending'` (as for `2026-2030` until a government exists, matching `rolesPending: true` in its `term.json`) gives promises no roles instead of a guess.
 
 ## Not covered here
 

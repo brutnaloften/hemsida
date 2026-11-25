@@ -10,6 +10,7 @@ import {
   normalizeText,
   quoteMatchKind,
   quoteMatches,
+  rolesFor,
   splitPages,
   toManifestoEntry,
   validateCandidates,
@@ -444,5 +445,21 @@ describe('add-manifesto-candidates CLI', () => {
       { encoding: 'utf8' },
     );
     expect(validated).toMatch(/1 candidates, 0 with links, 0 errors/);
+  });
+});
+
+describe('rolesFor', () => {
+  it('maps 2022-2026 parties to roles, defaulting to opposition', () => {
+    expect(rolesFor('2022-2026', ['M', 'SD', 'S'])).toEqual({
+      M: 'government',
+      SD: 'support',
+      S: 'opposition',
+    });
+  });
+  it('gives no roles while the 2026-2030 government is not formed', () => {
+    expect(rolesFor('2026-2030', ['M', 'S'])).toEqual({});
+  });
+  it('throws for an unknown term', () => {
+    expect(() => rolesFor('2030-2034', ['M'])).toThrow(/TERM_ROLES/);
   });
 });

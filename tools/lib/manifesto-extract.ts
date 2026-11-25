@@ -72,14 +72,21 @@ export type ManifestoEntry = z.infer<typeof manifestoEntrySchema>;
 
 type Role = 'government' | 'support' | 'opposition';
 
-/** Party roles per term. Parties not listed are in opposition. */
-export const TERM_ROLES: Record<string, Record<string, Role>> = {
+/**
+ * Party roles per term. Parties not listed are in opposition. `'pending'` marks a term whose
+ * government is not formed yet (matches `rolesPending` in the term record): promises then get no
+ * roles at all, rather than a guessed one. Replace it with a table once the government exists,
+ * together with the term record, and update the promises' `roles`.
+ */
+export const TERM_ROLES: Record<string, Record<string, Role> | 'pending'> = {
   '2022-2026': { M: 'government', KD: 'government', L: 'government', SD: 'support' },
+  '2026-2030': 'pending',
 };
 
 export function rolesFor(term: string, parties: readonly string[]): Record<string, Role> {
   const table = TERM_ROLES[term];
   if (!table) throw new Error(`no role table for term ${term}; add it to TERM_ROLES`);
+  if (table === 'pending') return {};
   return Object.fromEntries(parties.map((p) => [p, table[p] ?? 'opposition']));
 }
 
