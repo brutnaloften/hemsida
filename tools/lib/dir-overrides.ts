@@ -12,6 +12,11 @@ import { z } from 'zod/v4';
 export const dirOverrideSchema = z.object({
   /** Promise id (the file name without `.json`). */
   promise_id: z.string().min(1),
+  /** Term folder of the promise under `src/data/` (default 2022-2026). */
+  term: z
+    .string()
+    .regex(/^\d{4}-\d{4}$/)
+    .default('2022-2026'),
   /** Display designation of the directive on that promise, e.g. `Dir. 2023:98`. */
   designation: z.string().regex(/^Dir\. \d{4}(\/\d{2})?:\d+$/),
   /** Confirmed relevance: `match` (the directive sets up the whole inquiry) or `partial`. */

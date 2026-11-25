@@ -18,8 +18,8 @@ const root = join(import.meta.dirname, '..', '..');
 const overrides = dirOverridesSchema.parse(
   JSON.parse(readFileSync(join(root, 'tools', 'dir-overrides.json'), 'utf8')),
 );
-const loadPromise = (id: string) => {
-  const file = join(root, 'src', 'data', '2022-2026', 'promises', `${id}.json`);
+const loadPromise = (id: string, term = '2022-2026') => {
+  const file = join(root, 'src', 'data', term, 'promises', `${id}.json`);
   return existsSync(file) ? promiseSchema.parse(JSON.parse(readFileSync(file, 'utf8'))) : null;
 };
 
@@ -31,7 +31,7 @@ describe('tools/dir-overrides.json', () => {
 
   for (const o of overrides) {
     describe(`${o.promise_id} / ${o.designation}`, () => {
-      const promise = loadPromise(o.promise_id);
+      const promise = loadPromise(o.promise_id, o.term);
 
       it('names an existing inquiry promise with that directive as evidence', () => {
         expect(promise).not.toBeNull();
@@ -52,10 +52,19 @@ describe('tools/dir-overrides.json', () => {
 
       it('matches the verdict the inquiry rule gives', () => {
         const confirmed = overrides.filter((x) => x.promise_id === o.promise_id);
-        const expected = confirmed.some((x) => x.relevance === 'match')
-          ? 'fulfilled'
-          : 'partially_fulfilled';
-        expect(promise!.verdict.value).toBe(expected);
+        // A directive without an entry may be one the judge already rated high; its evidence
+        // relevance is the best offline guess, so a full one also allows fulfilled.
+        const otherFull = promise!.evidence.some(
+          (e) =>
+            e.kind === 'dir' &&
+            (e as { relevance?: string }).relevance === 'full' &&
+            !confirmed.some((x) => x.designation === e.designation),
+        );
+        const allowed =
+          confirmed.some((x) => x.relevance === 'match') || otherFull
+            ? ['fulfilled']
+            : ['partially_fulfilled'];
+        expect(allowed).toContain(promise!.verdict.value);
         expect(promise!.verdict.assessedBy).toBe('ai');
         expect(reasoningProblems(promise!.verdict.reasoning, [], false, undefined, true)).toEqual(
           [],
@@ -93,6 +102,7 @@ describe('dir overrides in applyLinks', () => {
   });
   const entry = (relevance: 'match' | 'partial') => ({
     promise_id: 'tido-x',
+    term: '2022-2026',
     designation: 'Dir. 2023:98',
     relevance,
     reason: 'Read by hand against the directive text.',
