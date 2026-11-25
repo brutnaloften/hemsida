@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { ManifestoEntry } from './manifesto-extract.ts';
 import { VAGUE_REASONING } from './manifesto-promote.ts';
-import { promoteOpposition } from './opposition-promote.ts';
+import { promoteManifesto, promoteOpposition, renderPromotionMap } from './opposition-promote.ts';
 import { promiseSchema, type PromiseRecord } from './schema.ts';
 
 function promise(id: string, over: Partial<PromiseRecord> = {}): PromiseRecord {
@@ -56,12 +56,44 @@ describe('promoteOpposition', () => {
       note: null,
       rationale: 'x',
     };
-    expect(() => promoteOpposition([entry(promise('a'), link)], 'S')).toThrow(/Tidö link/);
+    expect(() => promoteOpposition([entry(promise('a'), link)], 'S')).toThrow(/agreement link/);
   });
 
   it('throws when the party is not in opposition', () => {
     const p = promise('a', { roles: { S: 'government' } });
     expect(() => promoteOpposition([entry(p)], 'S')).toThrow(/not opposition/);
+  });
+
+  it('promoteManifesto accepts any role and term when no role is required', () => {
+    const p2026 = (id: string, over: Partial<PromiseRecord> = {}) =>
+      promise(id, {
+        id: `val2026-s-${id}`,
+        term: '2026-2030',
+        source: { id: 'valmanifest-2026-s', page: 2 },
+        roles: { S: 'government' },
+        ...over,
+      });
+    const out = promoteManifesto([entry(p2026('a')), entry(p2026('b', { type: 'vague' }))], 'S');
+    expect(out.map((p) => p.verdict.value)).toEqual(['unassessed', 'not_assessable']);
+    expect(() => promoteManifesto([entry(p2026('a'))], 'S', { requireRole: 'opposition' })).toThrow(
+      /not opposition/,
+    );
+    expect(() => promoteManifesto([entry(p2026('a'))], 'V')).toThrow(/not a promise party/);
+    expect(() => promoteManifesto([entry(p2026('a')), entry(p2026('a'))], 'S')).toThrow(/unique/);
+
+    const entries = [entry(p2026('a')), entry(p2026('b', { type: 'vague' }))];
+    const doc = renderPromotionMap({
+      title: 'S 2026',
+      sourceId: 'valmanifest-2026-s',
+      term: '2026-2030',
+      party: 'S',
+      prefix: 'val2026-s-',
+      entries,
+      promises: promoteManifesto(entries, 'S'),
+    });
+    expect(doc).toContain('src/data/2026-2030/promises/');
+    expect(doc).toContain('`val2026-s-b`');
+    expect(doc).not.toMatch(/Tidö|2022/);
   });
 
   it('throws when a candidate already carries evidence', () => {
