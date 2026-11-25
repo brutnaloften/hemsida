@@ -15,6 +15,9 @@ export interface Workbook {
   sheets: Map<string, Sheet>;
 }
 
+/** Cap on one inflated entry (zip-bomb guard); real agency workbooks are well under 10 MB. */
+const MAX_ENTRY_BYTES = 200 * 1024 * 1024;
+
 /** Entries of a ZIP archive by name, inflated. Throws on anything but stored/deflate entries. */
 export function readZip(buf: Buffer): Map<string, Buffer> {
   let eocd = -1;
@@ -42,7 +45,7 @@ export function readZip(buf: Buffer): Map<string, Buffer> {
     const dataStart = local + 30 + buf.readUInt16LE(local + 26) + buf.readUInt16LE(local + 28);
     const raw = buf.subarray(dataStart, dataStart + compSize);
     if (method === 0) out.set(name, Buffer.from(raw));
-    else if (method === 8) out.set(name, inflateRawSync(raw));
+    else if (method === 8) out.set(name, inflateRawSync(raw, { maxOutputLength: MAX_ENTRY_BYTES }));
     else throw new Error(`unsupported zip compression method ${method} for ${name}`);
   }
   return out;
@@ -61,7 +64,8 @@ function unescapeXml(s: string): string {
 }
 
 function textOf(xml: string): string {
-  return [...xml.matchAll(/<t(?:\s[^>]*)?>([\s\S]*?)<\/t>/g)]
+  // Phonetic runs (<rPh>) are not part of the cell text.
+  return [...xml.replace(/<rPh[\s\S]*?<\/rPh>/g, '').matchAll(/<t(?:\s[^>]*)?>([\s\S]*?)<\/t>/g)]
     .map((m) => unescapeXml(m[1]!))
     .join('');
 }
@@ -79,8 +83,8 @@ export function readWorkbook(buf: Buffer): Workbook {
     return f.toString('utf8');
   };
   const shared = zip.has('xl/sharedStrings.xml')
-    ? [...get('xl/sharedStrings.xml').matchAll(/<si(?:\s[^>]*)?>([\s\S]*?)<\/si>/g)].map((m) =>
-        textOf(m[1]!),
+    ? [...get('xl/sharedStrings.xml').matchAll(/<si(?:\s[^>]*)?(?:\/>|>([\s\S]*?)<\/si>)/g)].map(
+        (m) => textOf(m[1] ?? ''),
       )
     : [];
   const rels = new Map<string, string>();
@@ -109,10 +113,15 @@ export function readWorkbook(buf: Buffer): Workbook {
         continue;
       }
       const v = /<v>([\s\S]*?)<\/v>/.exec(inner)?.[1];
-      if (v === undefined) continue;
+      if (v === undefined || v === '') continue;
       if (type === 's') cells.set(ref, shared[Number(v)] ?? '');
       else if (type === 'str') cells.set(ref, unescapeXml(v));
-      else if (type === undefined || type === 'n') cells.set(ref, Number(v));
+      else if (type === undefined || type === 'n') {
+        const n = Number(v);
+        if (!Number.isFinite(n))
+          throw new Error(`non-numeric value ${JSON.stringify(v)} in ${name}!${ref}`);
+        cells.set(ref, n);
+      }
       // booleans and errors are ignored
     }
     sheets.set(name, cells);

@@ -103,7 +103,7 @@ const config = xlsxSeriesConfigSchema.parse({
   unit: 'tillstånd',
   frequency: 'year',
 });
-const sheet = () => readWorkbook(xlsx(sheetXml, shared)).sheets.get('Kön, första')!;
+const sheet = () => readWorkbook(xlsx(sheetXml, shared));
 
 describe('readXlsxValue', () => {
   it('reads the cell in the labelled row under the checked header', () => {
@@ -113,7 +113,7 @@ describe('readXlsxValue', () => {
   it('fails when a header check does not hold', () => {
     expect(() =>
       readXlsxValue(sheet(), { ...config, checks: [{ cell: 'E6', equals: 'Kvinna' }] }, '2022'),
-    ).toThrow(/header E6/);
+    ).toThrow(/E6/);
   });
 
   it('fails on a missing or ambiguous row', () => {
@@ -130,9 +130,61 @@ describe('readXlsxValue', () => {
 
   it('uses the period as the row label without rowLabel', () => {
     const rows = `<row r="1"><c r="A1"><v>2022</v></c><c r="H1"><v>10242</v></c></row>`;
-    const s = readWorkbook(xlsx(rows, [])).sheets.get('Kön, första')!;
-    const c = { ...config, labelColumn: 'A', rowLabel: undefined, valueColumn: 'H', checks: [] };
+    const s = readWorkbook(xlsx(rows, []));
+    const c = {
+      ...config,
+      labelColumn: 'A',
+      rowLabel: undefined,
+      valueColumn: 'H',
+      checks: [{ cell: 'A1', equals: '{period}' }],
+    };
     expect(readXlsxValue(s, c, '2022')).toBe(10242);
+    // A period placeholder pins the year: the wrong file for a period fails.
+    expect(() => readXlsxValue(s, c, '2023')).toThrow(/A1/);
+  });
+
+  it('checks cells on another sheet and requires the sheet to exist', () => {
+    const c = { ...config, checks: [{ sheet: 'Saknas', cell: 'E6', equals: 'Totalt' }] };
+    expect(() => readXlsxValue(sheet(), c, '2022')).toThrow(/no sheet "Saknas"/);
+  });
+
+  it('rejects a config without checks', () => {
+    expect(() => xlsxSeriesConfigSchema.parse({ ...config, checks: [] })).toThrow();
+  });
+});
+
+describe('reader edge cases', () => {
+  const read = (rows: string, strings: string[] = []) =>
+    readWorkbook(xlsx(rows, strings)).sheets.get('Kön, första')!;
+
+  it('treats an empty <v> as an absent cell and throws on a non-numeric one', () => {
+    expect(read('<row r="1"><c r="A1"><v></v></c></row>').has('A1')).toBe(false);
+    expect(() => read('<row r="1"><c r="A1"><v>abc</v></c></row>')).toThrow(/non-numeric/);
+  });
+
+  it('keeps shared-string indexes aligned across an empty <si/>', () => {
+    const wb = zip({
+      'xl/workbook.xml': `<workbook ${NS} xmlns:r="x"><sheets><sheet name="S" sheetId="1" r:id="rId1"/></sheets></workbook>`,
+      'xl/_rels/workbook.xml.rels': `<Relationships><Relationship Id="rId1" Target="worksheets/sheet1.xml"/></Relationships>`,
+      'xl/sharedStrings.xml': `<sst ${NS}><si/><si><t>efter</t></si></sst>`,
+      'xl/worksheets/sheet1.xml': `<worksheet ${NS}><sheetData><row r="1"><c r="A1" t="s"><v>1</v></c></row></sheetData></worksheet>`,
+    });
+    expect(readWorkbook(wb).sheets.get('S')!.get('A1')).toBe('efter');
+  });
+
+  it('reads inline strings and rich-text shared strings without phonetic runs', () => {
+    const s = read(
+      '<row r="1"><c r="A1" t="inlineStr"><is><t>Rad</t></is></c><c r="B1" t="s"><v>0</v></c></row>',
+      [],
+    );
+    expect(s.get('A1')).toBe('Rad');
+    const rich = zip({
+      'xl/workbook.xml': `<workbook ${NS} xmlns:r="x"><sheets><sheet name="S" sheetId="1" r:id="rId1"/></sheets></workbook>`,
+      'xl/_rels/workbook.xml.rels': `<Relationships><Relationship Id="rId1" Target="worksheets/sheet1.xml"/></Relationships>`,
+      'xl/sharedStrings.xml': `<sst ${NS}><si><r><t>Vård </t></r><r><t xml:space="preserve">eller</t></r><rPh><t>ignored</t></rPh></si></sst>`,
+      'xl/worksheets/sheet1.xml': `<worksheet ${NS}><sheetData><row r="1"><c r="A1" t="s"><v>0</v></c></row></sheetData></worksheet>`,
+    });
+    expect(readWorkbook(rich).sheets.get('S')!.get('A1')).toBe('Vård eller');
   });
 });
 

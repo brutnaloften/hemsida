@@ -6,7 +6,7 @@
  */
 import { z } from 'zod/v4';
 import { statisticSeriesSchema, type StatisticSeries } from './schema.ts';
-import { columnOf, type Sheet } from './xlsx.ts';
+import { columnOf, rowOf, type Workbook } from './xlsx.ts';
 
 /** PxWebApi v2 base (the newer host; `macro-ingest.ts` still uses the v2beta host). */
 export const SCB_BASE = 'https://statistikdatabasen.scb.se/api/v2/';
@@ -53,9 +53,17 @@ export const xlsxSeriesConfigSchema = z.strictObject({
   labelColumn: z.string().regex(/^[A-Z]{1,2}$/),
   rowLabel: z.string().min(1).optional(),
   valueColumn: z.string().regex(/^[A-Z]{1,2}$/),
-  checks: z.array(
-    z.strictObject({ cell: z.string().regex(/^[A-Z]{1,2}\d+$/), equals: z.string() }),
-  ),
+  checks: z
+    .array(
+      z.strictObject({
+        /** Defaults to `sheet`. */
+        sheet: z.string().min(1).optional(),
+        cell: z.string().regex(/^[A-Z]{1,2}\d+$/),
+        /** `{period}` is replaced by the file's period, which pins the year inside a per-year file. */
+        equals: z.string(),
+      }),
+    )
+    .min(1),
   label: z.string().min(1),
   unit: z.string().min(1),
   frequency: z.literal('year'),
@@ -188,23 +196,31 @@ export function periodKey(p: string): string {
 }
 
 /**
- * Reads one value from a parsed sheet (see `xlsxSeriesConfigSchema`). Throws when a header check
+ * Reads one value from a parsed workbook (see `xlsxSeriesConfigSchema`). Throws when a header check
  * fails, the row is missing or ambiguous, or the cell is not a number (suppressed cells such as
  * ".." are never read as zero).
  */
-export function readXlsxValue(sheet: Sheet, c: XlsxSeriesConfig, period: string): number {
+export function readXlsxValue(book: Workbook, c: XlsxSeriesConfig, period: string): number {
+  const sheetOf = (name: string) => {
+    const s = book.sheets.get(name);
+    if (!s) throw new Error(`${c.id} ${period}: no sheet "${name}"`);
+    return s;
+  };
   for (const check of c.checks) {
-    const got = sheet.get(check.cell);
-    if (String(got ?? '').trim() !== check.equals) {
+    const name = check.sheet ?? c.sheet;
+    const got = sheetOf(name).get(check.cell);
+    const expected = check.equals.replaceAll('{period}', period);
+    if (String(got ?? '').trim() !== expected) {
       throw new Error(
-        `${c.id} ${period}: header ${check.cell} is ${JSON.stringify(got)}, expected ${JSON.stringify(check.equals)}`,
+        `${c.id} ${period}: ${name}!${check.cell} is ${JSON.stringify(got)}, expected ${JSON.stringify(expected)}`,
       );
     }
   }
+  const sheet = sheetOf(c.sheet);
   const wanted = c.rowLabel ?? period;
   const rows = [...sheet]
     .filter(([ref, v]) => columnOf(ref) === c.labelColumn && String(v).trim() === wanted)
-    .map(([ref]) => Number(/\d+$/.exec(ref)![0]));
+    .map(([ref]) => rowOf(ref));
   if (rows.length !== 1) {
     throw new Error(`${c.id} ${period}: ${rows.length} rows with ${c.labelColumn}="${wanted}"`);
   }

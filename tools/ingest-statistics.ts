@@ -117,9 +117,7 @@ async function getWorkbook(url: string): Promise<Workbook> {
 async function readXlsxSeries(s: XlsxSeriesConfig): Promise<Map<string, number>> {
   const values = new Map<string, number>();
   for (const f of s.files) {
-    const sheet = (await getWorkbook(f.url)).sheets.get(s.sheet);
-    if (!sheet) throw new Error(`${s.id}: no sheet "${s.sheet}" in ${f.url}`);
-    values.set(f.period, readXlsxValue(sheet, s, f.period));
+    values.set(f.period, readXlsxValue(await getWorkbook(f.url), s, f.period));
   }
   return values;
 }
