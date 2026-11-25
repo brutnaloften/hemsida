@@ -9,7 +9,7 @@ import type { Term } from '@/schema/term';
 
 export type PageKind = 'start' | 'partier' | 'party' | 'lofter' | 'agreement';
 
-export type Role = Term['roles'][keyof Term['roles']];
+export type Role = NonNullable<Term['roles'][keyof Term['roles']]>;
 
 export const ROLE_LABELS: Record<Role, string> = {
   government: 'Regeringsparti',

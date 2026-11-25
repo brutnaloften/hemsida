@@ -25,8 +25,16 @@ export const termSchema = z
   .object({
     /** `YYYY-YYYY`, also the directory name. */
     id: z.string().regex(/^\d{4}-\d{4}$/, 'expected YYYY-YYYY'),
-    /** Each party's role at the start of the term; every party is listed. */
-    roles: z.record(partySchema, z.enum(ROLES)),
+    /**
+     * Each party's role at the start of the term; every party is listed, except while
+     * `rolesPending` is true (then it is empty).
+     */
+    roles: z.partialRecord(partySchema, z.enum(ROLES)),
+    /**
+     * True from the election until a government exists: roles are not known yet, so `roles`
+     * is empty and nothing may rely on it. Set to false (and fill `roles`) once it is formed.
+     */
+    rolesPending: z.boolean().default(false),
     /** Ids of `government_agreement` sources. May be empty. */
     agreements: z.array(slug).default([]),
     /** Dated role changes during the term, e.g. a government change. */
@@ -36,9 +44,19 @@ export const termSchema = z
     const [from, to] = t.id.split('-').map(Number);
     if (to <= from)
       ctx.addIssue({ code: 'custom', path: ['id'], message: 'end year must follow start' });
-    for (const party of PARTIES) {
-      if (!(party in t.roles)) {
-        ctx.addIssue({ code: 'custom', path: ['roles', party], message: 'missing party' });
+    if (t.rolesPending) {
+      if (Object.keys(t.roles).length > 0 || t.role_changes.length > 0) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['rolesPending'],
+          message: 'rolesPending requires empty roles and role_changes',
+        });
+      }
+    } else {
+      for (const party of PARTIES) {
+        if (!(party in t.roles)) {
+          ctx.addIssue({ code: 'custom', path: ['roles', party], message: 'missing party' });
+        }
       }
     }
     if (new Set(t.agreements).size !== t.agreements.length) {

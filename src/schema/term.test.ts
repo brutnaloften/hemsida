@@ -34,6 +34,17 @@ describe('termSchema', () => {
   it('accepts several agreements', () => {
     expect(termSchema.safeParse({ ...valid, agreements: ['a', 'b'] }).success).toBe(true);
   });
+  it('accepts a term whose roles are pending, with empty roles', () => {
+    const t = termSchema.parse({ id: '2026-2030', roles: {}, rolesPending: true });
+    expect(t.rolesPending).toBe(true);
+  });
+  it('defaults rolesPending to false and then requires every party', () => {
+    expect(termSchema.parse(valid).rolesPending).toBe(false);
+    expect(termSchema.safeParse({ ...valid, roles: {} }).success).toBe(false);
+  });
+  it('rejects pending roles that are filled in', () => {
+    expect(termSchema.safeParse({ ...valid, rolesPending: true }).success).toBe(false);
+  });
   it('rejects a missing party', () => {
     const { MP: _mp, ...roles } = valid.roles;
     expect(termSchema.safeParse({ ...valid, roles }).success).toBe(false);
