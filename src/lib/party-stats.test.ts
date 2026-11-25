@@ -20,11 +20,12 @@ const all = [
   p('b', ['L'], 'fulfilled', 'Skola'),
   p('c', ['L'], 'broken', 'Skola'),
   p('d', ['L'], 'not_assessable'),
+  p('e', ['L'], 'expired'),
 ];
 
 describe('party-stats', () => {
   it('counts joint promises for every party', () => {
-    expect(promisesForParty(all, 'L')).toHaveLength(4);
+    expect(promisesForParty(all, 'L')).toHaveLength(5);
     expect(promisesForParty(all, 'SD')).toHaveLength(1);
     expect(promisesForParty(all, 'S')).toHaveLength(0);
   });
@@ -36,6 +37,7 @@ describe('party-stats', () => {
     expect(c.broken).toBe(1);
     expect(c.in_progress).toBe(0);
     expect(c.not_assessable).toBe(1);
+    expect(c.expired).toBe(1);
     expect(assessedCount(all)).toBe(2);
   });
 });

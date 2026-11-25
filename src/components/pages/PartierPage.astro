@@ -24,7 +24,7 @@ const agreements = (termRecord?.agreements ?? [])
   .filter((s) => s !== undefined);
 const roles = rolesPresent(rows);
 const FILTER_LABELS = { government: 'Regering', support: 'Stödparti', opposition: 'Opposition' } as const;
-const ASSESSED = VERDICTS.filter((v) => v !== 'unassessed' && v !== 'not_assessable');
+const ASSESSED = VERDICTS.filter((v) => v !== 'unassessed' && v !== 'not_assessable' && v !== 'expired');
 const hatch =
   'background-image:repeating-linear-gradient(135deg,hsl(var(--muted)) 0 6px,hsl(var(--background)) 6px 12px);border:1px dashed hsl(var(--muted-foreground));';
 const pct = (n: number, total: number) => `${(n / total) * 100}%`;

@@ -32,10 +32,13 @@ export function verdictCounts(
   return counts;
 }
 
-/** Promises with a real verdict: everything except `unassessed` and `not_assessable`. */
+/** Promises with a real verdict: everything except `unassessed`, `not_assessable` and `expired` (the term ended without a verdict). */
 export function assessedCount(promises: readonly Pick<PartyPromise, 'verdict'>[]): number {
   return promises.filter(
-    (p) => p.verdict.value !== 'unassessed' && p.verdict.value !== 'not_assessable',
+    (p) =>
+      p.verdict.value !== 'unassessed' &&
+      p.verdict.value !== 'not_assessable' &&
+      p.verdict.value !== 'expired',
   ).length;
 }
 

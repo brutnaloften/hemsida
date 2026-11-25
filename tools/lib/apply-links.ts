@@ -466,6 +466,8 @@ export function applyLinks(
 ): Applied | null {
   // Budget promises are judged by the budget flow (anslag and macro data), never by link evidence.
   if (UNMANAGED_TYPES.has(promise.type)) return null;
+  // `expired` is set only by the term-end sweep; a link run never recomputes or overwrites it.
+  if (promise.verdict.value === 'expired') return null;
   const rerunAi = promise.verdict.assessedBy === 'ai';
   if (!rerunAi && promise.verdict.value !== 'unassessed') return null;
   // A fulfilled / partially_fulfilled verdict is only reproducible from what this tool reads: laws

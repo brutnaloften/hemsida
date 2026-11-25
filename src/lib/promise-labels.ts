@@ -56,4 +56,6 @@ export const VERDICT_DESCRIPTIONS: Record<(typeof VERDICTS)[number], string> = {
   abandoned: 'De partier som gav löftet har uttryckligen släppt det.',
   broken: 'Partierna har gjort tvärtemot löftet eller röstat emot det.',
   not_assessable: 'Löftet är för vagt för att kunna bedömas.',
+  expired:
+    'Mandatperioden löpte ut utan att det gick att fälla ett avgörande verdikt. Det säger inte att löftet har svikits.',
 };
