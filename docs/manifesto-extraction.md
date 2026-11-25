@@ -48,6 +48,8 @@ How candidate promises are extracted from a party's election manifesto (valmanif
 
 The primary quote check is strict: the normalised quote must be a substring of the normalised page text. Only if that fails does a loose fallback run, which removes every hyphen and space from both sides and compares again. This catches real hyphens split by a line break (`el-` / `bilar`) that PDF text extraction renders ambiguously. The cost is that the loose match can accept a quote with wrong spacing or a missing hyphen, so a loose-only match is reported as a warning (`quote only matches page N ignoring spaces and hyphens`) instead of passing silently. Review those quotes by hand.
 
+Rule for intra-word gaps: PDF kerning or justification sometimes makes the extracted text carry a space inside a printed word (`språkfö rskola`, `hbtqi- person`). The quote stored in `source.quote` heals such gaps so it reproduces the printed text (remove the injected space, restore the hyphen); only whitespace differs, so the loose fallback is guaranteed to match. Each resulting `quote only matches page N ignoring spaces and hyphens` warning is expected and is listed in the PR body.
+
 ## Extracting the page text
 
 `tools/extract-pdf-text.ts` needs no poppler. It shells out to `tools/extract-pdf-pages.py` (pypdf) for the raw per-page text and normalises it in `tools/lib/pdf-text.ts` (tested): NFKC (so `fl`/`fi` ligatures become plain letters and quotes can be typed plainly), all whitespace collapsed (some PDFs, for example MP 2026, come out one word per line), each bullet on its own line, pages joined with form feeds, blank pages keeping their slot. Output: `tools/out/<source-id>.txt`.
