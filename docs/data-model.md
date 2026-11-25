@@ -78,7 +78,14 @@ A document that promises come from.
 - `roles` lists every party with its role at the start of the term (`government`, `support`, `opposition`).
 - `agreements` holds ids of `government_agreement` sources. Zero (`[]`), one or several are all valid.
 - `role_changes` (optional) are dated changes mid-term, e.g. a government change. The first change per party must differ from the starting role.
+- `published` (default `false`) is the "fully collected" flag, see "Default term" below.
 - Data tests check that `agreements` are `government_agreement` source files and that the `roles` in every promise file agree with the term record.
+
+### Default term
+
+The site's default term (root URL `/`, Navbar links, the `/search` redirect, the unscoped `/partier` redirects and the "other term" link on the Start page) is `defaultTerm()` in `src/lib/terms.ts`: the latest term whose record has `"published": true`. If no term is flagged it falls back to the latest term that has promises, then to the latest term. A term that is not flagged stays buildable and reachable from the term switcher.
+
+The flag is explicit and set by hand, not derived from the data, because a data-driven rule ("every party has promises", "no `unassessed`") is fragile: it flips as a side effect of a data PR, while the party roster and what counts as collected both change. **Flip rule:** add `"published": true` to a new term's `term.json` in its own PR once all 8 parties' manifesto promises are collected (for 2026-2030 that is when `hemsida-fzi.5` is done). `2022-2026` is flagged; `2026-2030` is not yet.
 
 ## Promise
 

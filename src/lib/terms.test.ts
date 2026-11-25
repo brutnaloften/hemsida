@@ -24,6 +24,20 @@ describe('defaultTerm', () => {
       ]),
     ).toBe('2022-2026');
   });
+  it('prefers the latest published term over a newer one with data', () => {
+    expect(
+      defaultTerm([
+        { id: '2026-2030', promiseCount: 40 },
+        { id: '2022-2026', promiseCount: 5, published: true },
+      ]),
+    ).toBe('2022-2026');
+    expect(
+      defaultTerm([
+        { id: '2026-2030', promiseCount: 40, published: true },
+        { id: '2022-2026', promiseCount: 5, published: true },
+      ]),
+    ).toBe('2026-2030');
+  });
   it('falls back to the latest term when none has data', () => {
     expect(defaultTerm([{ id: '2022-2026', promiseCount: 0 }])).toBe('2022-2026');
   });
@@ -36,6 +50,10 @@ describe('labels and paths', () => {
   it('labels data status', () => {
     expect(dataStatusLabel({ id: 'a', promiseCount: 1 })).toBe('Löften insamlade');
     expect(dataStatusLabel({ id: 'a', promiseCount: 0 })).toBe('Insamling pågår');
+    expect(dataStatusLabel({ id: 'a', promiseCount: 3, complete: false })).toBe('Löften insamlade');
+    expect(dataStatusLabel({ id: 'a', promiseCount: 3, complete: true })).toBe(
+      'Avslutad, alla löften granskade',
+    );
   });
   it('builds term-scoped paths', () => {
     expect(termPagePath('start', '2022-2026')).toBe('2022-2026/');

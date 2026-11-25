@@ -35,6 +35,12 @@ export const termSchema = z
      * is empty and nothing may rely on it. Set to false (and fill `roles`) once it is formed.
      */
     rolesPending: z.boolean().default(false),
+    /**
+     * Set by hand when the term is fully collected (every party's promises are in). The site's
+     * default term (root URL, navbar, search redirect) is the latest term with this flag; terms
+     * without it stay reachable from the term switcher. See docs/data-model.md, "Default term".
+     */
+    published: z.boolean().default(false),
     /** Ids of `government_agreement` sources. May be empty. */
     agreements: z.array(slug).default([]),
     /** Dated role changes during the term, e.g. a government change. */

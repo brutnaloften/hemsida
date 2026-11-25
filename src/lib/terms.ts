@@ -22,6 +22,10 @@ export interface TermInfo {
   id: string;
   /** Number of promises collected for the term. */
   promiseCount: number;
+  /** Hand-set flag from the term record: the term is fully collected and may be the default. */
+  published?: boolean;
+  /** True when the term has promises and none is `unassessed` (see `isTermComplete`). */
+  complete?: boolean;
 }
 
 /** Term id of a promise, taken from its file path `.../<term>/promises/<file>.json`. */
@@ -34,18 +38,24 @@ export function sortTerms<T extends { id: string }>(terms: readonly T[]): T[] {
   return [...terms].sort((a, b) => a.id.localeCompare(b.id));
 }
 
-/** Latest term that has promises; falls back to the latest term overall. */
+/**
+ * The default term: the latest one flagged `published` in its term record. If none is flagged,
+ * falls back to the latest term that has promises, then to the latest term overall.
+ */
 export function defaultTerm(terms: readonly TermInfo[]): string {
   const sorted = sortTerms(terms);
-  const withData = sorted.filter((t) => t.promiseCount > 0);
-  const pick = withData.at(-1) ?? sorted.at(-1);
+  const pick =
+    sorted.filter((t) => t.published).at(-1) ??
+    sorted.filter((t) => t.promiseCount > 0).at(-1) ??
+    sorted.at(-1);
   if (!pick) throw new Error('No terms defined');
   return pick.id;
 }
 
 /** Data status subtitle for overview pages. */
 export function dataStatusLabel(info: TermInfo): string {
-  return info.promiseCount > 0 ? 'Löften insamlade' : 'Insamling pågår';
+  if (info.promiseCount === 0) return 'Insamling pågår';
+  return info.complete ? 'Avslutad, alla löften granskade' : 'Löften insamlade';
 }
 
 /** Site-relative path of a term-dependent page. */
