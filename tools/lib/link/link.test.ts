@@ -10,6 +10,7 @@ import {
   createFakeJudge,
   createJudge,
   JudgeError,
+  isTransientJudgeError,
   judgeFor,
   parseApiJudgement,
   parseClaudeJudgement,
@@ -141,6 +142,25 @@ describe('judges', () => {
         modelUsage: {},
       }),
     ).toThrow(/429.*rate limited/);
+  });
+
+  it('marks a claude error_max_turns as transient, other non-HTTP failures as fatal', () => {
+    const failed = (subtype: string) => {
+      try {
+        parseClaudeJudgement({
+          subtype,
+          is_error: true,
+          errors: ['Reached maximum number of turns (1)'],
+          usage,
+          modelUsage: {},
+        });
+      } catch (err) {
+        return err;
+      }
+      throw new Error('expected a throw');
+    };
+    expect(isTransientJudgeError(failed('error_max_turns'))).toBe(true);
+    expect(isTransientJudgeError(failed('error_during_execution'))).toBe(false);
   });
 
   it('uses the cost the claude result reports', () => {

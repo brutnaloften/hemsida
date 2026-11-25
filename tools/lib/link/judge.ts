@@ -9,7 +9,7 @@ import type Anthropic from '@anthropic-ai/sdk';
 import { z } from 'zod';
 import { evalLabelSchema, evalStageSchema } from '../../../src/schema/eval.ts';
 import { createClient, isTransientApiError } from '../claude.ts';
-import type { ClaudeResult } from '../score/scorer.ts';
+import { CLAUDE_MAX_TURNS, type ClaudeResult } from '../score/scorer.ts';
 import { confidenceSchema } from './config.ts';
 
 export const judgementSchema = z.strictObject({
@@ -47,19 +47,25 @@ export interface JudgeResult {
   cost_usd?: number;
 }
 
-/** An error from a judge call carrying the HTTP status when known, so the runner can tell transient ones. */
+/**
+ * An error from a judge call carrying the HTTP status when known, so the runner can tell transient ones.
+ * `maxTurns` marks an Agent SDK `error_max_turns`: that one request ran out of turns, nothing else is wrong.
+ */
 export class JudgeError extends Error {
   status: number | null | undefined;
-  constructor(message: string, status?: number | null) {
+  maxTurns: boolean;
+  constructor(message: string, status?: number | null, maxTurns = false) {
     super(message);
     this.name = 'JudgeError';
     this.status = status;
+    this.maxTurns = maxTurns;
   }
 }
 
-/** Rate limits, overload and server errors: skip the request and go on, a re-run retries it. */
+/** Rate limits, overload, server errors and running out of turns: skip the request and go on, a re-run retries it. */
 export function isTransientJudgeError(err: unknown): boolean {
   if (isTransientApiError(err)) return true;
+  if (err instanceof JudgeError && err.maxTurns) return true;
   if (err instanceof JudgeError && typeof err.status === 'number') {
     return err.status === 429 || err.status === 529 || err.status >= 500;
   }
@@ -93,6 +99,7 @@ export function parseClaudeJudgement(message: ClaudeJudgeResult): JudgeResult {
     throw new JudgeError(
       `claude: ${message.subtype} (status ${message.api_error_status ?? '-'}): ${detail}`,
       message.api_error_status,
+      message.subtype === 'error_max_turns',
     );
   }
   const parsed = judgementSchema.safeParse(message.structured_output);
@@ -131,7 +138,7 @@ export function createClaudeJudge(model: string): Judge {
           model,
           settingSources: [], // no CLAUDE.md / project settings bleeding into the prompt
           tools: [],
-          maxTurns: 1,
+          maxTurns: CLAUDE_MAX_TURNS, // room for the SDK to retry structured output (see scorer.ts)
           thinking: { type: 'disabled' },
           systemPrompt: input.instructions,
           outputFormat: { type: 'json_schema', schema: JUDGEMENT_JSON_SCHEMA },

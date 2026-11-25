@@ -72,12 +72,14 @@ const outcome = await executeRun({
 if (outcome.summary) {
   const s = outcome.summary;
   console.log(
-    `${s.status}: ${s.sent} sent, ${s.cached} cached, ${s.remaining} remaining; ` +
+    `${s.status}: ${s.sent} sent, ${s.cached} cached, ${s.remaining} remaining, ${s.skipped} skipped; ` +
       `${s.input_tokens} input tokens, $${s.cost_usd.toFixed(4)}`,
   );
   if (outcome.report) console.log('\n' + formatReport(outcome.report));
   if (s.status !== 'complete') {
     console.error(s.error);
     process.exitCode = 1;
+  } else if (s.skipped > 0) {
+    console.error(s.error);
   }
 }
