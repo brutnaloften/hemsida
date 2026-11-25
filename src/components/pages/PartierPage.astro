@@ -101,7 +101,7 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
                           <span class="text-sm text-muted-foreground">Står inte bakom överenskommelsen</span>
                         ) : cell.total === 0 ? (cell.points > 0 ? (
                           <p class="text-sm text-muted-foreground">
-                            {cell.points} punkter, {cell.pointsAssessed} bedömda
+                            {cell.points} punkter, {cell.pointsAssessed} {complete ? 'med tydligt utfall' : 'bedömda'}
                           </p>
                         ) : (
                           <span class="text-sm text-muted-foreground">
@@ -119,7 +119,7 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
                             </p>
                             {cell.points > 0 && (
                               <p class="mt-1 text-sm text-muted-foreground">
-                                {cell.points} punkter, {cell.pointsAssessed} bedömda
+                                {cell.points} punkter, {cell.pointsAssessed} {complete ? 'med tydligt utfall' : 'bedömda'}
                               </p>
                             )}
                           </>

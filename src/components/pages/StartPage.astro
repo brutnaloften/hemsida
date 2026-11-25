@@ -190,7 +190,7 @@ const keyList = [
         {countScope}{' '}
         {!complete && <><strong>Inte bedömt</strong> säger ingenting om
         huruvida ett löfte hålls. Det betyder bara att ingen har bedömt det ännu.{' '}</>}{' '}
-        <strong>Löpt ut</strong> betyder att mandatperioden tog slut utan att löftet fick ett
+        <strong>Löpt ut</strong> betyder att mandatperioden tog slut utan att löftet fick en
         avgörande bedömning, inte att det har svikits. <strong>Ej bedömbart</strong> gäller löften som är för vaga för att kunna bedömas.{' '}
         <a href={`${base}om-metoden`} class="underline underline-offset-2">Så arbetar vi</a>
       </p>
@@ -223,7 +223,7 @@ const keyList = [
                     .filter((s) => s.points > 0)
                     .map((s) => (
                       <span class="text-sm text-muted-foreground">
-                        {s.agreement.name}: {num(s.points)} punkter, {num(s.assessed)} bedömda
+                        {s.agreement.name}: {num(s.points)} punkter, {num(s.assessed)} {complete ? 'med tydligt utfall' : 'bedömda'}
                       </span>
                     ))}
                   {c.agreementSplits
