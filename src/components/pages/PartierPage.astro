@@ -38,8 +38,8 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
   <div class="container mx-auto max-w-[1200px] px-4 py-8 md:px-6 md:py-12">
     <h1 class="font-serif text-3xl font-bold tracking-tight md:text-4xl">Partier</h1>
     <p class="mt-3 max-w-2xl text-muted-foreground">
-      Jämför partierna i samma mått. Ett löfte som flera partier står bakom räknas för varje parti.
-      {hasUnassessed && <>&quot;Inte bedömt&quot; betyder inte att ett löfte är infriat eller brutet, bara att ingen har bedömt det ännu. </>}&quot;Löpt ut&quot; betyder att perioden tog slut utan avgörande verdikt, inte att löftet har svikits.
+      Jämför partierna i samma mått. Ett löfte som flera partier står bakom räknas för varje parti.{' '}
+      {hasUnassessed && <>&quot;Inte bedömt&quot; betyder inte att ett löfte är infriat eller brutet, bara att ingen har bedömt det ännu.{' '}</>}&quot;Löpt ut&quot; betyder att perioden tog slut utan avgörande verdikt, inte att löftet har svikits.
     </p>
 
     {rows.length === 0 && <p class="mt-8">Löften för perioden samlas in.</p>}
@@ -66,7 +66,7 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
                   <th scope="col" class="px-4 py-3 font-semibold">Parti</th>
                   <th scope="col" class="px-4 py-3 font-semibold">Roll i perioden</th>
                   <th scope="col" class="px-4 py-3 text-right font-semibold">Vallöften</th>
-                  <th scope="col" class="px-4 py-3 font-semibold">Bedömning</th>
+                  <th scope="col" class="px-4 py-3 font-semibold">{complete ? 'Utfall' : 'Bedömning'}</th>
                   {agreements.map((a) => (
                     <th scope="col" class="px-4 py-3 font-semibold">I {agreementName(a)}</th>
                   ))}

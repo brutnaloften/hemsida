@@ -517,11 +517,11 @@
   --verdict-fulfilled-bar: #15803d;
   --verdict-partially_fulfilled-bar: #84cc16;
   --verdict-in_progress-bar: #3b82f6;
-  --verdict-no_evidence-bar: #e4e4e7;
-  --verdict-unfulfilled-bar: #f97316;
-  --verdict-abandoned-bar: #eab308;
-  --verdict-broken-bar: #dc2626;
-  --verdict-not_assessable-bar: #a1a1aa;
-  --verdict-expired-bar: #cbd5e1;
+  --verdict-no_evidence-bar: transparent;
+  --verdict-unfulfilled-bar: #fdba74;
+  --verdict-abandoned-bar: #92400e;
+  --verdict-broken-bar: #7f1d1d;
+  --verdict-not_assessable-bar: #e4e4e7;
+  --verdict-expired-bar: #94a3b8;
   --verdict-unassessed-bar: transparent;
 }

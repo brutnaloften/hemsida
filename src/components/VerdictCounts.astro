@@ -1,8 +1,7 @@
 ---
 import { VerdictBadge } from '@/components/ui/verdict-badge';
 import VerdictBar from '@/components/VerdictBar.astro';
-import { VERDICTS } from '@/schema/promise';
-import { verdictCounts, verdictSummaryText, type PartyPromise } from '@/lib/party-stats';
+import { BAR_ORDER, verdictCounts, verdictSummaryText, type PartyPromise } from '@/lib/party-stats';
 
 interface Props {
   promises: Pick<PartyPromise, 'verdict'>[];
@@ -10,7 +9,7 @@ interface Props {
 const { promises } = Astro.props;
 const counts = verdictCounts(promises);
 const total = promises.length;
-const legend = VERDICTS.filter((v) => counts[v] > 0);
+const legend = BAR_ORDER.filter((v) => counts[v] > 0);
 ---
 
 <p class="text-sm text-muted-foreground">{verdictSummaryText(total, counts)}</p>

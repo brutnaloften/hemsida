@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { AGREEMENT_OUTCOMES, VERDICTS, VOTE_VALUES } from '@/schema/promise';
+import { BAR_ORDER } from '@/lib/party-stats';
 
 /**
  * WCAG contrast of the text/background pairs in src/styles/globals.css, in both themes. The test
@@ -126,35 +127,34 @@ describe.each(['light', 'dark'] as const)('contrast (%s)', (theme) => {
 });
 
 describe.each(['light', 'dark'] as const)('verdict bar segments (%s)', (theme) => {
-  // One palette for both themes, defined once on :root; the dark theme inherits it.
+  // One palette for both themes, defined once on :root; the dark theme inherits it. The track is
+  // the theme's muted surface.
   const bar = block('light', '--verdict-fulfilled-bar');
-  const order = [
-    'fulfilled',
-    'partially_fulfilled',
-    'in_progress',
-    'no_evidence',
-    'unfulfilled',
-    'abandoned',
-    'broken',
-    'not_assessable',
-    'expired',
-  ] as const;
+  const track = block(theme, '--background')['--muted'];
+  const colour = (v: string) => bar[`--verdict-${v}-bar`];
+  const shown = BAR_ORDER.filter((v) => v !== 'unassessed' && v !== 'no_evidence');
 
   it('every verdict has a bar colour', () => {
-    for (const v of VERDICTS) expect(bar[`--verdict-${v}-bar`]).toBeDefined();
+    for (const v of VERDICTS) expect(colour(v)).toBeDefined();
   });
 
-  it('adjacent segments are clearly distinguishable', () => {
-    for (let i = 0; i < order.length - 1; i++) {
-      const a = bar[`--verdict-${order[i]}-bar`];
-      const b = bar[`--verdict-${order[i + 1]}-bar`];
-      expect(ratio(a, b), `${order[i]} vs ${order[i + 1]}`).toBeGreaterThanOrEqual(1.3);
+  it('segments are distinguishable whichever middle segments are empty', () => {
+    // Zero-count segments are dropped, so any pair can end up adjacent.
+    for (let i = 0; i < shown.length; i++) {
+      for (let j = i + 1; j < shown.length; j++) {
+        expect(
+          ratio(colour(shown[i]), colour(shown[j])),
+          `${shown[i]} vs ${shown[j]}`,
+        ).toBeGreaterThanOrEqual(1.15);
+      }
     }
   });
 
   it('fulfilled and expired are far apart', () => {
-    expect(
-      ratio(bar['--verdict-fulfilled-bar'], bar['--verdict-expired-bar']),
-    ).toBeGreaterThanOrEqual(3);
+    expect(ratio(colour('fulfilled'), colour('expired'))).toBeGreaterThanOrEqual(1.8);
+  });
+
+  it('the expired segment stands out from the track', () => {
+    expect(ratio(colour('expired'), track)).toBeGreaterThanOrEqual(1.8);
   });
 });

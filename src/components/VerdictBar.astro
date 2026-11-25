@@ -13,7 +13,7 @@ interface Props {
 const { counts, total, class: cls = 'h-2.5', decorative = false } = Astro.props;
 const segments = verdictBarSegments(counts);
 const pct = (n: number) => `${(n / total) * 100}%`;
-// Only a still-unjudged share is hatched; a finished term has a plain, fully coloured bar.
+// Only a still-unjudged share (or one with no evidence found) is hatched; a finished term has a plain, fully coloured bar.
 const hatch =
   'background-image:repeating-linear-gradient(135deg,hsl(var(--muted)) 0 4px,hsl(var(--background)) 4px 8px);';
 ---
@@ -27,7 +27,7 @@ const hatch =
   {
     segments.map((seg) => (
       <div
-        style={`width:${pct(seg.n)};background:var(--verdict-${seg.verdict}-bar);border-right:1px solid hsl(var(--background));${seg.verdict === 'unassessed' ? hatch : ''}`}
+        style={`width:${pct(seg.n)};background:var(--verdict-${seg.verdict}-bar);border-right:1px solid hsl(var(--background));${seg.verdict === 'unassessed' || seg.verdict === 'no_evidence' ? hatch : ''}`}
       />
     ))
   }
