@@ -36,6 +36,10 @@ describe('labels and paths', () => {
   it('labels data status', () => {
     expect(dataStatusLabel({ id: 'a', promiseCount: 1 })).toBe('Löften insamlade');
     expect(dataStatusLabel({ id: 'a', promiseCount: 0 })).toBe('Insamling pågår');
+    expect(dataStatusLabel({ id: 'a', promiseCount: 3, complete: false })).toBe('Löften insamlade');
+    expect(dataStatusLabel({ id: 'a', promiseCount: 3, complete: true })).toBe(
+      'Avslutad, alla löften granskade',
+    );
   });
   it('builds term-scoped paths', () => {
     expect(termPagePath('start', '2022-2026')).toBe('2022-2026/');

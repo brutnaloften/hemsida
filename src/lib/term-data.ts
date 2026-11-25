@@ -1,17 +1,22 @@
 import { getCollection } from 'astro:content';
+import { isTermComplete, verdictCounts } from '@/lib/party-stats';
 import { defaultTerm, sortTerms, termOfFilePath, type TermInfo } from '@/lib/terms';
+import type { VERDICTS } from '@/schema/promise';
 import type { Term } from '@/schema/term';
 
-/** All term records, oldest first, with their promise counts. */
+type VerdictValue = (typeof VERDICTS)[number];
+
+/** All term records, oldest first, with their promise counts and completeness. */
 export async function getTerms(): Promise<(Term & TermInfo)[]> {
-  const counts = new Map<string, number>();
+  const byTerm = new Map<string, { verdict: { value: VerdictValue } }[]>();
   for (const e of await getCollection('promises')) {
     const t = termOfFilePath(e.filePath ?? '');
-    if (t) counts.set(t, (counts.get(t) ?? 0) + 1);
+    if (t) byTerm.set(t, [...(byTerm.get(t) ?? []), e.data]);
   }
   return sortTerms((await getCollection('terms')).map((e) => e.data)).map((t) => ({
     ...t,
-    promiseCount: counts.get(t.id) ?? 0,
+    promiseCount: byTerm.get(t.id)?.length ?? 0,
+    complete: isTermComplete(verdictCounts(byTerm.get(t.id) ?? [])),
   }));
 }
 

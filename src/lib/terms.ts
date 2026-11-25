@@ -22,6 +22,8 @@ export interface TermInfo {
   id: string;
   /** Number of promises collected for the term. */
   promiseCount: number;
+  /** True when the term has promises and none is `unassessed` (see `isTermComplete`). */
+  complete?: boolean;
 }
 
 /** Term id of a promise, taken from its file path `.../<term>/promises/<file>.json`. */
@@ -45,7 +47,8 @@ export function defaultTerm(terms: readonly TermInfo[]): string {
 
 /** Data status subtitle for overview pages. */
 export function dataStatusLabel(info: TermInfo): string {
-  return info.promiseCount > 0 ? 'Löften insamlade' : 'Insamling pågår';
+  if (info.promiseCount === 0) return 'Insamling pågår';
+  return info.complete ? 'Avslutad, alla löften granskade' : 'Löften insamlade';
 }
 
 /** Site-relative path of a term-dependent page. */
