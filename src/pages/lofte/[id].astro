@@ -88,7 +88,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
           {
             promise.parties.map((p) => (
               <span class="inline-flex items-center gap-2">
-                <PartyChip party={p} role={promise.roles[p] ?? 'opposition'} size="inline" />
+                <PartyChip party={p} role={promise.roles[p]} size="inline" />
                 <span>{partyName(p)}</span>
               </span>
             ))
@@ -263,7 +263,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                               <li class="flex items-center gap-1.5">
                                 <PartyChip
                                   party={r.party}
-                                  role={promise.roles[r.party] ?? 'opposition'}
+                                  role={promise.roles[r.party]}
                                   size="inline"
                                 />
                                 <VoteBadge vote={r.vote} />
