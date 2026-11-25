@@ -154,7 +154,7 @@ const otherTerm = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1
               </section>
             )}
           </div>
-          {!agreement && (
+          {!agreement && !termRecord.rolesPending && (
             <p class="mt-4 text-sm text-muted-foreground">
               Partiet står inte bakom någon skriftlig överenskommelse under {term}.
             </p>

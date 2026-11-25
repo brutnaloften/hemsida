@@ -183,7 +183,7 @@ const keyList = [
           ? `Alla ${num(k.promises)} löften har granskats${k.verdicts.expired > 0 ? `; ${num(k.verdicts.expired)} löpte ut utan avgörande verdikt` : ''}. `
           : `${num(k.assessed)} av ${num(k.promises)} löften är bedömda. `}
         Siffran gäller alla löften under perioden:
-        vallöften, punkter i överenskommelser och utfästelser under mandatperioden.{' '}
+        {model.rolesPending ? ' vallöften och utfästelser under mandatperioden.' : ' vallöften, punkter i överenskommelser och utfästelser under mandatperioden.'}{' '}
         {!complete && <><strong>Inte bedömt</strong> säger ingenting om
         huruvida ett löfte hålls. Det betyder bara att ingen har bedömt det ännu.{' '}</>}{' '}
         <strong>Löpt ut</strong> betyder att mandatperioden tog slut utan att löftet fick ett
