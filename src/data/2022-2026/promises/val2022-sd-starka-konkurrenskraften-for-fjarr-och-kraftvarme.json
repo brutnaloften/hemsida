@@ -17,11 +17,17 @@
   "committee": "SkU",
   "keywords": ["fjärrvärme", "kraftvärme", "skatter"],
   "verdict": {
-    "value": "unassessed",
+    "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Löftet gäller att konkurrenskraften för fjärr- och kraftvärmen stärks. Det sker genom styrmedel, stöd och uppdrag till Energimyndigheten som regeringen beslutar om, och det ligger utanför det dokumentbestånd sidan bygger på. Löftet kan därför inte bedömas.",
+    "reasoning": "Regeringen föreslog i november 2022 i budgetpropositionen för 2023 att skatten på avfallsförbränning upphävs, och några dagar senare att bränsle i kraftvärme inom handeln med utsläppsrätter befrias från koldioxidskatt. Förslagen sänker skatterna för fjärr- och kraftvärme och täcker en del av löftet.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -31,6 +37,26 @@
       "promises": ["tido-fjarr-kraftvarmestrategi"],
       "outcome": "weakened",
       "note": "Avtalet anger att en ny fjärr- och kraftvärmestrategi tas fram."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA031",
+      "designation": "Prop. 2022/23:1",
+      "title": "Budgetpropositionen för 2023",
+      "date": "2022-11-08",
+      "url": "https://data.riksdagen.se/dokument/HA031.html",
+      "relevance": "partial",
+      "note": "Budgetpropositionen föreslår att skatten på avfallsförbränning upphävs."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA0317",
+      "designation": "Prop. 2022/23:17",
+      "title": "Tillfälligt sänkt skatt på drivmedel och sänkt skatt på bränslen i viss värmeproduktion",
+      "date": "2022-11-15",
+      "url": "https://data.riksdagen.se/dokument/HA0317.html",
+      "relevance": "partial",
+      "note": "Föreslår att bränsle i kraftvärmeproduktion inom utsläppshandelssystemet befrias från koldioxidskatt."
     }
   ]
 }
