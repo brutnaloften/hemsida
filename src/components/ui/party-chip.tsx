@@ -32,6 +32,9 @@ export function PartyChip({ party, role, size = 'card', className, ...rest }: Pr
   return (
     <span
       data-role={role}
+      {...(role === undefined
+        ? { title: 'Roll ej fastställd', 'aria-label': `${party}, roll ej fastställd` }
+        : {})}
       className={cn(
         'inline-flex shrink-0 items-center justify-center border-foreground font-mono font-medium',
         filled ? 'bg-foreground text-background' : 'bg-transparent text-foreground',

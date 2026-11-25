@@ -185,10 +185,21 @@ describe('basedOn via buildReverseIndex', () => {
 describe('voteRows', () => {
   it('lists recorded parties in party order with Swedish labels', () => {
     expect(voteRows({ V: 'no', S: 'abstain' })).toEqual([
-      { party: 'S', vote: 'abstain', label: 'Avstår' },
-      { party: 'V', vote: 'no', label: 'Nej' },
+      { party: 'S', vote: 'abstain', label: 'Avstår', role: undefined },
+      { party: 'V', vote: 'no', label: 'Nej', role: undefined },
     ]);
     expect(voteRows({})).toEqual([]);
+  });
+  it('takes roles from the term record, for every voting party', () => {
+    const term = { roles: { S: 'opposition', M: 'government', SD: 'support' } } as const;
+    expect(voteRows({ S: 'no', M: 'yes', SD: 'yes' }, term).map((r) => [r.party, r.role])).toEqual([
+      ['S', 'opposition'],
+      ['M', 'government'],
+      ['SD', 'support'],
+    ]);
+  });
+  it('gives no role while the term roles are pending', () => {
+    expect(voteRows({ S: 'no' }, { roles: {} })[0]?.role).toBeUndefined();
   });
 });
 
