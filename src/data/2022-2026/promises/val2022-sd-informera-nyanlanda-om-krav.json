@@ -17,10 +17,17 @@
   "committee": "SfU",
   "keywords": ["samhällsinformation", "nyanlända", "integration"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i december 2023 en utredare i uppdrag att förbättra samhällsorienteringen för nyanlända, bland annat genom att tydliggöra vilka förväntningar samhället har på personer som bor i Sverige. Utredningen lämnade i maj 2025 förslag om en reformerad samhällsorientering. Dokumenten gäller information till nyanlända och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-obligatorisk-samhallsintroduktion-och-samhallsorientering"],
       "outcome": "weakened",
       "note": "Avtalet anger att en utredning ska föreslå förändringar av reglerna om obligatorisk samhällsintroduktion och samhällsorientering."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1169",
+      "designation": "Dir. 2023:169",
+      "title": "En förbättrad samhällsorientering för nyanlända",
+      "date": "2023-12-14",
+      "url": "https://data.riksdagen.se/dokument/HBB1169.html",
+      "relevance": "partial",
+      "note": "Utredaren ska föreslå en förbättrad och obligatorisk samhällsorientering som tydliggör samhällets förväntningar."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB355",
+      "designation": "SOU 2025:55",
+      "title": "En reformerad samhällsorientering för bättre integration",
+      "date": "2025-05-08",
+      "url": "https://data.riksdagen.se/dokument/HDB355.html",
+      "relevance": "partial",
+      "note": "Utredningens förslag om en reformerad samhällsorientering."
     }
   ]
 }

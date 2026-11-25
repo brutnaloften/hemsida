@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["invasiva arter", "växtarter", "djurarter"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i november 2025 fram en proposition om skärpningar av regelverket för invasiva främmande arter. Införsel från ett annat EU-land i strid med ett nationellt förbud ska kunna leda till böter eller fängelse, och införseln ska anmälas till Tullverket, som får kontrollera och omhänderta arter. Förslagen gäller att förebygga införsel och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0341",
+      "designation": "Prop. 2025/26:41",
+      "title": "Skärpningar av regelverket för invasiva främmande arter",
+      "date": "2025-11-11",
+      "url": "https://data.riksdagen.se/dokument/HD0341.html",
+      "relevance": "partial",
+      "note": "Föreslår straff för införsel av invasiva främmande arter i strid med ett nationellt förbud och befogenheter för Tullverket att kontrollera och omhänderta arter."
     }
   ]
 }

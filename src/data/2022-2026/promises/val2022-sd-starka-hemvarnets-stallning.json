@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["Hemvärnet", "frivilligorganisationer"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i oktober 2024 fram propositionen Totalförsvaret 2025–2030, där målsättningen är att Hemvärnet ska omfatta 26 000 personer år 2030, mot omkring 22 000 i dag fördelade på 40 bataljoner. Det gäller Hemvärnets storlek och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0334",
+      "designation": "Prop. 2024/25:34",
+      "title": "Totalförsvaret 2025–2030",
+      "date": "2024-10-15",
+      "url": "https://data.riksdagen.se/dokument/HC0334.html",
+      "relevance": "partial",
+      "note": "Målsättningen är att Hemvärnet ska omfatta 26 000 personer år 2030."
     }
   ]
 }

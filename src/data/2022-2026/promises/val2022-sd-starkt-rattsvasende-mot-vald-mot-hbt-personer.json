@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["HBT", "hedersförtryck", "hatbrott"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2026 fram en proposition om stärkt lagstiftning mot hedersrelaterat våld och förtryck. Den beskriver att hbtqi-personer kan vara särskilt utsatta för hedersrelaterad brottslighet och att de straffrättsliga förslagen kan förbättra även deras rättigheter. Förslagen gäller hedersbrott och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01JuU30.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03213",
+      "designation": "Prop. 2025/26:213",
+      "title": "Stärkt lagstiftning mot hedersrelaterat våld och förtryck",
+      "date": "2026-03-19",
+      "url": "https://data.riksdagen.se/dokument/HD03213.html",
+      "relevance": "partial",
+      "note": "Föreslår stärkt straffrättslig lagstiftning mot hedersrelaterat våld och förtryck och beskriver att även hbtqi-personer kan drabbas."
     }
   ]
 }

@@ -17,10 +17,38 @@
   "committee": "JuU",
   "keywords": ["illegala skjutvapen", "vapenlagen", "skjutvapenvåld", "gängkriminalitet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i februari 2026 fram en proposition med en ny vapenlag som syftar till att motverka förekomsten av illegala vapen och den brottsliga användningen av vapen, bland annat genom en tydligare uppdelning mellan brott som typiskt begås av illegala vapeninnehavare och andra överträdelser. I april 2024 föreslog regeringen att tulltjänstemän får utökade befogenheter, bland annat att hålla kvar försändelser som kan innehålla skjutvapen. Förslagen täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03141",
+      "designation": "Prop. 2025/26:141",
+      "title": "En ny vapenlag",
+      "date": "2026-02-17",
+      "url": "https://data.riksdagen.se/dokument/HD03141.html",
+      "relevance": "partial",
+      "note": "Ny vapenlag som syftar till att motverka förekomsten av illegala vapen och den brottsliga användningen av vapen."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB03132",
+      "designation": "Prop. 2023/24:132",
+      "title": "Ny tullbefogenhetslag",
+      "date": "2024-04-16",
+      "url": "https://data.riksdagen.se/dokument/HB03132.html",
+      "relevance": "partial",
+      "note": "Utökar Tullverkets befogenheter, bland annat att hålla kvar försändelser som kan innehålla skjutvapen."
+    }
+  ]
 }

@@ -17,10 +17,17 @@
   "committee": "KU",
   "keywords": ["myndigheter", "sammanslagning", "slöseri"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i februari 2025 att nio mindre myndigheters verksamhet inordnas i andra myndigheter, vilket sammantaget innebär att elva mindre myndigheter avvecklas. Förslagen gäller sammanslagning av myndigheter och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB313",
+      "designation": "SOU 2025:13",
+      "title": "En effektivare organisering av mindre myndigheter - analys och förslag",
+      "date": "2025-02-10",
+      "url": "https://data.riksdagen.se/dokument/HDB313.html",
+      "relevance": "partial",
+      "note": "Föreslår att mindre myndigheters uppgifter överförs till andra myndigheter så att elva mindre myndigheter avvecklas."
     }
   ]
 }

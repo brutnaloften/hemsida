@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["psykisk hälsa", "nationell strategi", "suicidprevention"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lämnade i januari 2025 skrivelsen med en nationell strategi för psykisk hälsa och suicidprevention, och riksdagen lade den till handlingarna i maj 2025. I budgetpropositionen för 2026 föreslår regeringen att det nationella suicidpreventiva programmet ersätts av strategins mål och delmål. Dokumenten gäller strategin och dess genomförande och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01SoU7.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD031d11",
+      "designation": "Prop. 2025/26:1",
+      "title": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2025-09-22",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "relevance": "partial",
+      "note": "Regeringen föreslår att det nationella suicidpreventiva programmet ersätts av målen och delmålen i den nationella strategin för psykisk hälsa och suicidprevention."
     }
   ]
 }

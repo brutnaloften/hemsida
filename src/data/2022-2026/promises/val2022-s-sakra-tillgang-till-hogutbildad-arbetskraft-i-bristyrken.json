@@ -17,10 +17,28 @@
   "committee": "SfU",
   "keywords": ["bristyrken", "högutbildade", "arbetskraftsinvandring", "kompetensförsörjning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i september 2024 fram en proposition som genomför det nya blåkortsdirektivet för att förbättra möjligheterna att attrahera och behålla högkvalificerade arbetstagare, bland annat genom ett vidgat tillämpningsområde och enklare byten av arbetsgivare. Förslagen gäller högkvalificerad arbetskraft i allmänhet och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HC0318",
+      "designation": "Prop. 2024/25:18",
+      "title": "Genomförande av det nya blåkortsdirektivet",
+      "date": "2024-09-24",
+      "url": "https://data.riksdagen.se/dokument/HC0318.html",
+      "relevance": "partial",
+      "note": "Föreslår lagändringar för att attrahera och behålla högkvalificerade arbetstagare genom EU-blåkort."
+    }
+  ]
 }

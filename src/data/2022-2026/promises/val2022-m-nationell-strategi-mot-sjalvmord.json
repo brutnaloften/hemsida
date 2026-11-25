@@ -17,11 +17,18 @@
   "committee": "SoU",
   "keywords": ["självmord", "suicidprevention", "nationell strategi", "barn och unga"],
   "verdict": {
-    "value": "unassessed",
+    "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lämnade i januari 2025 skrivelsen med en nationell strategi inom området psykisk hälsa och suicidprevention, och riksdagen behandlade den i ett betänkande. En strategi är en inriktning för regeringens arbete som regeringen beslutar själv och lämnar till riksdagen i en skrivelse. Löftet kan därför inte bedömas.",
+    "reasoning": "Regeringen lämnade i januari 2025 skrivelsen med en nationell strategi för psykisk hälsa och suicidprevention, och riksdagen lade den till handlingarna i maj 2025. I budgetpropositionen för 2026 föreslår regeringen att det nationella suicidpreventiva programmet ersätts av strategins mål och delmål. Dokumenten gäller strategin och dess genomförande och täcker en del av löftet.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lämnade i januari 2025 skrivelsen med en nationell strategi inom området psykisk hälsa och suicidprevention, och riksdagen behandlade den i ett betänkande. En strategi är en inriktning för regeringens arbete som regeringen beslutar själv och lämnar till riksdagen i en skrivelse. Löftet kan därför inte bedömas.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": [
     {
@@ -41,6 +48,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01SoU7.html",
       "relevance": "full",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD031d11",
+      "designation": "Prop. 2025/26:1",
+      "title": "Budgetpropositionen för 2026 - Utgiftsområde 9 Hälsovård, sjukvård och social omsorg",
+      "date": "2025-09-22",
+      "url": "https://data.riksdagen.se/dokument/HD031d11.html",
+      "relevance": "partial",
+      "note": "Regeringen föreslår att det nationella suicidpreventiva programmet ersätts av målen och delmålen i den nationella strategin för psykisk hälsa och suicidprevention."
     }
   ]
 }

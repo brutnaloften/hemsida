@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["EU", "jaktpolitik", "viltvård"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i januari 2024 en utredare i uppdrag att se över jaktlagstiftningen, bland annat för att säkerställa att genomförandet av EU-regler på jaktområdet omfattar bara de arter som EU-reglerna gäller. Direktivet gäller hur EU-regler genomförs i svensk rätt och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB111",
+      "designation": "Dir. 2024:11",
+      "title": "En moderniserad jaktlagstiftning",
+      "date": "2024-01-25",
+      "url": "https://data.riksdagen.se/dokument/HCB111.html",
+      "relevance": "partial",
+      "note": "Utredaren ska förbättra genomförandet av EU:s jaktregler och säkerställa att det gäller bara de arter som EU-reglerna omfattar."
     }
   ]
 }

@@ -17,10 +17,28 @@
   "committee": "JuU",
   "keywords": ["gränskontroll", "vapen", "narkotika", "smuggling", "tull"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2024 fram en proposition om en ny tullbefogenhetslag som ger tulltjänstemän utökade befogenheter i kontrollverksamheten, till exempel att stoppa fordon, skyddsvisitera och öppna försändelser i fler fall. Reglerna omfattar bland annat kontroll vid misstanke om narkotika- och vapenbrott. Förslagen gäller tullens kontroll vid gränserna och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HB03132",
+      "designation": "Prop. 2023/24:132",
+      "title": "Ny tullbefogenhetslag",
+      "date": "2024-04-16",
+      "url": "https://data.riksdagen.se/dokument/HB03132.html",
+      "relevance": "partial",
+      "note": "Samlar och utökar Tullverkets befogenheter, bland annat att hålla kvar försändelser som kan innehålla narkotika eller skjutvapen."
+    }
+  ]
 }

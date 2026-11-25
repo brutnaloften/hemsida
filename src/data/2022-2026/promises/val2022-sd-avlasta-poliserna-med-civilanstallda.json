@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["civilanställda", "polisen", "administration"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "I en promemoria i juli 2025 föreslogs att civilanställda vid Polismyndigheten får utökad rätt att hålla förhör och vidta utredningsåtgärder innan förundersökning inletts. Det avlastar poliser i utredningsarbetet och täcker en del av löftet. Förslaget är en promemoria.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "ds",
+      "dok_id": "HDB420",
+      "designation": "Ds 2025:20",
+      "title": "Utökade befogenheter för civilanställda vid Polismyndigheten att utreda brott",
+      "date": "2025-07-07",
+      "url": "https://data.riksdagen.se/dokument/HDB420.html",
+      "relevance": "partial",
+      "note": "Föreslår att civilanställda vid Polismyndigheten får vidta fler utredningsåtgärder, vilket avlastar poliser."
     }
   ]
 }

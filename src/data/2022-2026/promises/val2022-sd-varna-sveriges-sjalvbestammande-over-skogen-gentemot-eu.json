@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["skog", "EU", "självbestämmande"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i februari 2024 en utredare i uppdrag att utveckla skogspolitiken för att möta policyutvecklingen inom EU och att föreslå ett utvecklat arbetssätt för Sveriges arbete i EU i skogliga frågor. Utredningen lämnade i augusti 2025 förslag, bland annat om en alternativ ansats i EU:s klimatpolitik för skogen. Dokumenten gäller Sveriges hållning i EU:s skogsfrågor och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB116",
+      "designation": "Dir. 2024:16",
+      "title": "En robust skogspolitik som ser skogen som en resurs",
+      "date": "2024-02-01",
+      "url": "https://data.riksdagen.se/dokument/HCB116.html",
+      "relevance": "partial",
+      "note": "Utredaren ska utveckla skogspolitiken för policyutvecklingen inom EU och Sveriges arbetssätt i EU i skogliga frågor."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB393",
+      "designation": "SOU 2025:93",
+      "title": "En robust skogspolitik för aktivt skogsbruk, del 1",
+      "date": "2025-08-28",
+      "url": "https://data.riksdagen.se/dokument/HDB393.html",
+      "relevance": "partial",
+      "note": "Utredningens förslag om skogspolitik, bland annat en alternativ ansats i EU:s klimatpolitik för skogen."
     }
   ]
 }
