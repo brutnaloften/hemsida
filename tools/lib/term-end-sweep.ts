@@ -48,7 +48,7 @@ export function failureImplying(reasoning: string): boolean {
 }
 
 /** Fallback reasoning for an empty one (the schema needs reasoning for `expired`). */
-export const EXPIRED_FALLBACK = 'Mandatperioden löpte ut utan avgörande verdikt.';
+export const EXPIRED_FALLBACK = 'Mandatperioden löpte ut utan avgörande bedömning.';
 
 /** Riksdag evidence that counts toward a verdict (a `contradicts` entry never does). */
 function countingRiksdag(p: PromiseRecord) {

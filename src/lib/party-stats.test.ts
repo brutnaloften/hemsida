@@ -97,14 +97,14 @@ describe('verdict count texts', () => {
     const counts = c({ expired: 3 });
     expect(isTermComplete(counts)).toBe(true);
     expect(verdictSummaryText(3, counts)).toBe(
-      'Alla 3 löften har granskats. 3 löpte ut utan avgörande verdikt när mandatperioden tog slut.',
+      'Alla 3 löften har granskats. 3 löpte ut utan avgörande bedömning när mandatperioden tog slut.',
     );
     expect(verdictAriaLabel(3, counts)).toBe('Alla 3 löften granskade: 3 löpte ut');
   });
   it('lists outcomes in bar order for a complete term', () => {
     const counts = c({ fulfilled: 2, in_progress: 1, broken: 1, expired: 4 });
     expect(verdictSummaryText(8, counts)).toBe(
-      'Alla 8 löften har granskats: 2 uppfyllda, 1 pågår, 1 brutet. 4 löpte ut utan avgörande verdikt när mandatperioden tog slut.',
+      'Alla 8 löften har granskats: 2 uppfyllda, 1 pågår, 1 brutet. 4 löpte ut utan avgörande bedömning när mandatperioden tog slut.',
     );
   });
   it('keeps the unjudged framing when unassessed promises remain', () => {

@@ -147,7 +147,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
             assessed ? (
               <>
                 {verdict.value === 'expired' && (
-                  <p class="mt-3 font-medium">Mandatperioden löpte ut utan avgörande verdikt</p>
+                  <p class="mt-3 font-medium">Mandatperioden löpte ut utan avgörande bedömning</p>
                 )}
                 {verdict.reasoning.trim() !== '' && (
                   <p class={verdict.value === 'expired' ? 'mt-1' : 'mt-3'}>{verdict.reasoning}</p>

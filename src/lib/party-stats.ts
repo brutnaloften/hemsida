@@ -141,7 +141,7 @@ export function verdictSummaryText(total: number, counts: Counts): string {
   return [
     lead,
     counts.expired > 0
-      ? `${counts.expired} löpte ut utan avgörande verdikt när mandatperioden tog slut.`
+      ? `${counts.expired} löpte ut utan avgörande bedömning när mandatperioden tog slut.`
       : '',
     counts.unassessed > 0 ? `${counts.unassessed} löften är ännu inte bedömda av någon.` : '',
   ]
