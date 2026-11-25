@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import { PartyChip } from '@/components/ui/party-chip';
 import { partyName } from '@/lib/promise-labels';
 import { ROLE_LABELS, termOfFilePath, termPagePath } from '@/lib/terms';
-import { buildPartierRows, rolesPresent } from '@/lib/partier-table';
+import { buildPartierRows, partyStatusText, rolesPresent } from '@/lib/partier-table';
 import { outcomeCountsText } from '@/lib/manifesto';
 import { agreementName, VERDICTS, VERDICT_LABELS } from '@/schema/promise';
 
@@ -39,7 +39,7 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
     <h1 class="font-serif text-3xl font-bold tracking-tight md:text-4xl">Partier</h1>
     <p class="mt-3 max-w-2xl text-muted-foreground">
       Jämför partierna i samma mått. Ett löfte som flera partier står bakom räknas för varje parti.
-      &quot;Inte bedömt&quot; betyder inte att ett löfte är infriat eller brutet, bara att ingen har bedömt det ännu.
+      &quot;Inte bedömt&quot; betyder inte att ett löfte är infriat eller brutet, bara att ingen har bedömt det ännu. &quot;Löpt ut&quot; betyder att perioden tog slut utan avgörande verdikt, inte att löftet har svikits.
     </p>
 
     {rows.length === 0 && <p class="mt-8">Löften för perioden samlas in.</p>}
@@ -101,14 +101,7 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
                       <p class="mt-1.5 text-sm text-muted-foreground">
                         {row.promiseCount === 0
                           ? 'Inga löften insamlade'
-                          : row.assessed === 0
-                            ? 'Inte bedömt ännu'
-                            : ASSESSED.filter((v) => row.verdicts[v] > 0)
-                                .map((v) => `${row.verdicts[v]} ${VERDICT_LABELS[v].toLocaleLowerCase('sv')}`)
-                                .join(' · ') +
-                              ` · ${row.verdicts.unassessed} inte bedömda` +
-                              (row.verdicts.not_assessable > 0 ? ` · ${row.verdicts.not_assessable} ej bedömbara` : '') +
-                              (row.verdicts.expired > 0 ? ` · ${row.verdicts.expired} löpte ut` : '')}
+                          : partyStatusText(row)}
                       </p>
                     </td>
                     {row.agreements.map((cell) => (

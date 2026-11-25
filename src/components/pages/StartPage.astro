@@ -34,7 +34,7 @@ const latestTerm = await getDefaultTerm();
 const keyList = [
   { n: k.promises, label: 'löften totalt' },
   { n: k.parties, label: 'partier' },
-  { n: k.assessed, label: 'bedömda hittills' },
+  { n: k.assessed, label: 'bedömda' },
   { n: k.riksdagDocuments, label: 'riksdagsdokument kopplade' },
 ];
 ---
@@ -165,7 +165,8 @@ const keyList = [
       <p class="mt-2 max-w-3xl">
         {num(k.assessed)} av {num(k.promises)} löften är bedömda. Siffran gäller alla löften under perioden:
         vallöften, punkter i överenskommelser och utfästelser under mandatperioden. <strong>Inte bedömt</strong> säger ingenting om
-        huruvida ett löfte hålls. Det betyder bara att ingen har bedömt det ännu.
+        huruvida ett löfte hålls. Det betyder bara att ingen har bedömt det ännu. <strong>Löpt ut</strong> betyder att mandatperioden tog slut utan att löftet fick ett
+        avgörande verdikt, inte att det har svikits. <strong>Ej bedömbart</strong> gäller löften som är för vaga för att kunna bedömas.
         <a href={`${base}om-metoden`} class="underline underline-offset-2">Så arbetar vi</a>
       </p>
     </div>

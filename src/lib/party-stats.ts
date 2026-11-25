@@ -79,3 +79,33 @@ export function agreementOutcomeCounts(promises: readonly { evidence: readonly E
   }
   return { counts, total };
 }
+
+type Counts = Record<VerdictValue, number>;
+
+/** Summary sentence under the verdict bar; zero counts are left out. */
+export function verdictSummaryText(total: number, assessed: number, counts: Counts): string {
+  return [
+    `${total} löften, varav ${assessed} bedömda.`,
+    counts.unassessed > 0 ? `${counts.unassessed} löften är ännu inte bedömda av någon.` : '',
+    counts.not_assessable > 0
+      ? `${counts.not_assessable} är ej bedömbara (till exempel vaga löften).`
+      : '',
+    counts.expired > 0
+      ? `${counts.expired} löpte ut utan avgörande verdikt när mandatperioden tog slut.`
+      : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+}
+
+/** Screen-reader label for the verdict bar; zero counts are left out. */
+export function verdictAriaLabel(total: number, assessed: number, counts: Counts): string {
+  return [
+    `${assessed} av ${total} löften är bedömda`,
+    counts.not_assessable > 0 ? `${counts.not_assessable} ej bedömbara` : '',
+    counts.expired > 0 ? `${counts.expired} löpte ut` : '',
+    counts.unassessed > 0 ? `${counts.unassessed} inte bedömda` : '',
+  ]
+    .filter(Boolean)
+    .join(', ');
+}

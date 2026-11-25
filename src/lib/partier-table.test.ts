@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildPartierRows, rolesPresent } from './partier-table';
+import { buildPartierRows, partyStatusText, rolesPresent } from './partier-table';
 
 const term = {
   roles: { S: 'opposition', M: 'government', SD: 'support', KD: 'government' },
@@ -74,5 +74,34 @@ describe('buildPartierRows', () => {
   it('has no agreement cells without agreements', () => {
     const r = buildPartierRows({ ...(term as object), agreements: [] } as never, promises, sources);
     expect(r[0].agreements).toEqual([]);
+  });
+});
+
+describe('partyStatusText', () => {
+  const v = (o: Partial<Record<string, number>>) =>
+    ({ unassessed: 0, not_assessable: 0, expired: 0, ...o }) as never;
+  it('handles no promises', () => {
+    expect(partyStatusText({ promiseCount: 0, verdicts: v({}) })).toBe('Inga löften insamlade');
+  });
+  it('shows only expired when nothing else is set', () => {
+    expect(partyStatusText({ promiseCount: 5, verdicts: v({ expired: 5 }) })).toBe('5 löpte ut');
+  });
+  it('shows only not assessable', () => {
+    expect(partyStatusText({ promiseCount: 2, verdicts: v({ not_assessable: 2 }) })).toBe(
+      '2 ej bedömbara',
+    );
+  });
+  it('hides a zero unassessed and lists assessed first', () => {
+    const t = partyStatusText({
+      promiseCount: 4,
+      verdicts: v({ fulfilled: 1, in_progress: 1, expired: 2 }),
+    });
+    expect(t).toBe('1 pågår · 1 uppfyllt · 2 löpte ut');
+    expect(t).not.toContain('inte bedömda');
+  });
+  it('shows unassessed when present', () => {
+    expect(partyStatusText({ promiseCount: 3, verdicts: v({ unassessed: 3 }) })).toBe(
+      '3 inte bedömda',
+    );
   });
 });
