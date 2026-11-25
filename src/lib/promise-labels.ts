@@ -35,6 +35,7 @@ export const EVIDENCE_KIND_LABELS: Record<EvidenceKind, string> = {
   bet: 'Betänkande',
   sfs: 'Lag (SFS)',
   mot: 'Motion',
+  skr: 'Skrivelse',
 };
 
 export function partyName(code: string): string {

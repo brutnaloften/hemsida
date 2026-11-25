@@ -496,7 +496,7 @@ describe('promiseSchema', () => {
 
     it('in_progress is rejected without dir/sou/ds/prop evidence', () => {
       expect(ok(make('in_progress', 'Pågår.', []))).toBe(false);
-      for (const kind of ['bet', 'sfs', 'mot']) {
+      for (const kind of ['bet', 'sfs', 'mot', 'skr']) {
         expect(ok(make('in_progress', 'Pågår.', [ev(kind)])), kind).toBe(false);
       }
       expect(messages(make('in_progress', 'Pågår.', []))[0]).toContain('in_progress requires');
@@ -513,6 +513,40 @@ describe('promiseSchema', () => {
       expect(ok(make('fulfilled', 'Klart.', [against('sfs')]))).toBe(false);
       // Nor does it document a broken promise, even when the reasoning cites it.
       expect(ok(make('broken', 'Beteckning prop motverkar.', [against('prop')]))).toBe(false);
+    });
+
+    describe('other_action fulfilled through bet or skr', () => {
+      const act = { type: 'other_action' };
+      it.each(['bet', 'skr'])('accepts fulfilled on a full %s entry', (kind) => {
+        expect(ok(make('fulfilled', 'Klart.', [ev(kind)], act))).toBe(true);
+      });
+      it('rejects partial relevance, contradicts and partially_fulfilled', () => {
+        for (const kind of ['bet', 'skr']) {
+          expect(ok(make('fulfilled', 'Klart.', [ev(kind, { relevance: 'partial' })], act))).toBe(
+            false,
+          );
+          expect(
+            ok(make('fulfilled', 'Klart.', [ev(kind, { relevance: 'contradicts' })], act)),
+          ).toBe(false);
+          expect(ok(make('partially_fulfilled', 'Delvis.', [ev(kind)], act))).toBe(false);
+        }
+      });
+      it('rejects other kinds and other promise types', () => {
+        for (const kind of ['dir', 'sou', 'ds', 'prop', 'mot']) {
+          expect(ok(make('fulfilled', 'Klart.', [ev(kind)], act)), kind).toBe(false);
+        }
+        for (const type of ['legislative', 'inquiry', 'vague', 'budget']) {
+          for (const kind of ['bet', 'skr']) {
+            expect(ok(make('fulfilled', 'Klart.', [ev(kind)], { type })), `${type} ${kind}`).toBe(
+              false,
+            );
+          }
+        }
+      });
+      it('keeps sfs working and does not let skr qualify in_progress', () => {
+        expect(ok(make('fulfilled', 'Lag.', [ev('sfs')], act))).toBe(true);
+        expect(ok(make('in_progress', 'Pågår.', [ev('skr')], act))).toBe(false);
+      });
     });
 
     it('fulfilled needs sfs evidence', () => {
