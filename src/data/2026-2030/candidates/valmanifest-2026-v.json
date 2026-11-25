@@ -148,10 +148,37 @@
       },
       "parties": ["V"],
       "roles": {},
-      "type": "vague",
+      "type": "budget",
       "area": "Klimat och miljö",
       "committee": "MJU",
       "keywords": ["klimatomställning", "investeringar", "klimat", "grön omställning"],
+      "verdict": {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-25",
+        "history": []
+      },
+      "evidence": []
+    }
+  },
+  {
+    "section": "En ny inriktning för Sverige",
+    "promise": {
+      "id": "val2026-v-sverige-ska-varna-biologisk-mangfald-och-skogen-som-kolsanka",
+      "term": "2026-2030",
+      "title": "Värna den biologiska mångfalden och skogen som kolsänka",
+      "description": "Sverige ska vara ett land som värnar den biologiska mångfalden och skogen som kolsänka.",
+      "source": {
+        "id": "valmanifest-2026-v",
+        "page": 2,
+        "quote": "Sverige behöver vara ett land som värnar den biologiska mångfalden och skogen som kolsänka"
+      },
+      "parties": ["V"],
+      "roles": {},
+      "type": "vague",
+      "area": "Klimat och miljö",
+      "committee": "MJU",
+      "keywords": ["biologisk mångfald", "skog", "kolsänka", "skogsskydd"],
       "verdict": {
         "value": "unassessed",
         "reasoning": "",
@@ -175,7 +202,7 @@
       },
       "parties": ["V"],
       "roles": {},
-      "type": "vague",
+      "type": "outcome",
       "area": "Ekonomi och skatter",
       "committee": "FiU",
       "keywords": ["skattegap", "kommuner", "kommunalekonomi", "utjämning"],
@@ -279,7 +306,7 @@
       "source": {
         "id": "valmanifest-2026-v",
         "page": 5,
-        "quote": "Vi tar tillbaka kontrollen: avkriminaliserar, avprivatiserar och anställer fler där behoven är som störst"
+        "quote": "anställer fler där behoven är som störst"
       },
       "parties": ["V"],
       "roles": {},
@@ -306,7 +333,7 @@
       "source": {
         "id": "valmanifest-2026-v",
         "page": 5,
-        "quote": "Vi tar tillbaka kontrollen: avkriminaliserar, avprivatiserar och anställer fler där behoven är som störst"
+        "quote": "avprivatiserar"
       },
       "parties": ["V"],
       "roles": {},
@@ -517,7 +544,7 @@
     "promise": {
       "id": "val2026-v-brotten-ska-bekampas",
       "term": "2026-2030",
-      "title": "Bekämpa brotten och våldet i bostadsområdena",
+      "title": "Bekämpa brotten",
       "description": "Brotten ska bekämpas så att ett fåtal inte kan sprida rädsla i bostadsområdena.",
       "source": {
         "id": "valmanifest-2026-v",
@@ -557,33 +584,6 @@
       "area": "Bostäder och samhällsbyggnad",
       "committee": "CU",
       "keywords": ["segregation", "bostadsområden", "integration", "utsatta områden"],
-      "verdict": {
-        "value": "unassessed",
-        "reasoning": "",
-        "date": "2026-11-25",
-        "history": []
-      },
-      "evidence": []
-    }
-  },
-  {
-    "section": "En ny inriktning för Sverige",
-    "promise": {
-      "id": "val2026-v-forbattra-arbetsmiljon",
-      "term": "2026-2030",
-      "title": "Förbättra arbetsmiljön",
-      "description": "Förbättra arbetsmiljön.",
-      "source": {
-        "id": "valmanifest-2026-v",
-        "page": 6,
-        "quote": "förbättra arbetsmiljön"
-      },
-      "parties": ["V"],
-      "roles": {},
-      "type": "vague",
-      "area": "Arbetsmarknad",
-      "committee": "AU",
-      "keywords": ["arbetsmiljö", "arbetsmiljölagen", "arbetsmiljöverket", "arbetsvillkor"],
       "verdict": {
         "value": "unassessed",
         "reasoning": "",
@@ -715,7 +715,7 @@
       },
       "parties": ["V"],
       "roles": {},
-      "type": "vague",
+      "type": "budget",
       "area": "Kriminalpolitik",
       "committee": "JuU",
       "keywords": ["avhopparverksamhet", "kriminella nätverk", "avhopparstöd", "gängkriminalitet"],
@@ -792,7 +792,7 @@
       "source": {
         "id": "valmanifest-2026-v",
         "page": 6,
-        "quote": "Vi vill stärka polisen, socialtjänsten, elevhälsan och fritidsverksamheten"
+        "quote": "Vi vill stärka polisen"
       },
       "parties": ["V"],
       "roles": {},
@@ -837,7 +837,7 @@
     }
   },
   {
-    "section": "En ny inriktning för Sverige (en förändring är möjlig)",
+    "section": "En förändring är möjlig",
     "promise": {
       "id": "val2026-v-de-som-tjanat-pa-krisen-tar-ansvar",
       "term": "2026-2030",
@@ -864,7 +864,7 @@
     }
   },
   {
-    "section": "En ny inriktning för Sverige (en förändring är möjlig)",
+    "section": "En förändring är möjlig",
     "promise": {
       "id": "val2026-v-human-politik-som-varnar-asylratten",
       "term": "2026-2030",
@@ -891,7 +891,7 @@
     }
   },
   {
-    "section": "En ny inriktning för Sverige (en förändring är möjlig)",
+    "section": "En förändring är möjlig",
     "promise": {
       "id": "val2026-v-pressa-ner-priserna",
       "term": "2026-2030",
@@ -918,7 +918,7 @@
     }
   },
   {
-    "section": "En ny inriktning för Sverige (en förändring är möjlig)",
+    "section": "En förändring är möjlig",
     "promise": {
       "id": "val2026-v-starka-hyresgasternas-installning",
       "term": "2026-2030",
@@ -1048,6 +1048,38 @@
       "area": "Kultur, medier och idrott",
       "committee": "KrU",
       "keywords": ["kultur", "folkbildning", "kulturpolitik", "långsiktig finansiering"],
+      "verdict": {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-25",
+        "history": []
+      },
+      "evidence": []
+    }
+  },
+  {
+    "section": "Ett starkare Sverige kräver en ny regering",
+    "promise": {
+      "id": "val2026-v-stodja-inte-regering-utan-v",
+      "term": "2026-2030",
+      "title": "Inte stödja eller släppa fram en regering som Vänsterpartiet inte ingår i",
+      "description": "Vänsterpartiet ska inte stödja eller släppa fram en regering som partiet inte ingår i.",
+      "source": {
+        "id": "valmanifest-2026-v",
+        "page": 10,
+        "quote": "vi inte kommer att stödja eller släppa fram en regering som vi inte ingår i"
+      },
+      "parties": ["V"],
+      "roles": {},
+      "type": "other_action",
+      "area": "Rättsstat och demokrati",
+      "committee": "KU",
+      "keywords": [
+        "regeringsbildning",
+        "statsministeromröstning",
+        "regeringssamarbete",
+        "stödparti"
+      ],
       "verdict": {
         "value": "unassessed",
         "reasoning": "",
