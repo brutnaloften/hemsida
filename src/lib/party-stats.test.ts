@@ -4,7 +4,9 @@ import {
   agreementOutcomeCounts,
   assessedCount,
   promisesForParty,
+  verdictAriaLabel,
   verdictCounts,
+  verdictSummaryText,
   type PartyPromise,
 } from '@/lib/party-stats';
 
@@ -82,5 +84,22 @@ describe('agreementOutcomeCounts', () => {
     expect(counts.weakened).toBe(1);
     expect(counts.included).toBe(0);
     expect(total).toBe(1);
+  });
+});
+
+describe('verdict count texts', () => {
+  const c = (o: Record<string, number>) =>
+    ({ ...verdictCounts([]), ...o }) as ReturnType<typeof verdictCounts>;
+  it('leaves out zero counts', () => {
+    const counts = c({ expired: 3 });
+    expect(verdictSummaryText(3, 0, counts)).toBe(
+      '3 löften, varav 0 bedömda. 3 löpte ut utan avgörande verdikt när mandatperioden tog slut.',
+    );
+    expect(verdictAriaLabel(3, 0, counts)).toBe('0 av 3 löften är bedömda, 3 löpte ut');
+  });
+  it('mentions unassessed when present', () => {
+    const counts = c({ unassessed: 2 });
+    expect(verdictSummaryText(2, 0, counts)).toContain('2 löften är ännu inte bedömda');
+    expect(verdictAriaLabel(2, 0, counts)).toBe('0 av 2 löften är bedömda, 2 inte bedömda');
   });
 });
