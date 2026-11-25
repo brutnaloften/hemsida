@@ -17,11 +17,18 @@
   "committee": "SoU",
   "keywords": ["förlossningsvård", "barnmorskor", "kontinuitet", "mödravård", "eftervård"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Löftet gäller att födande kvinnor har samma barnmorsketeam genom hela vårdkedjan. Hur förlossningsvården organiseras avgörs av regionerna.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet gäller att födande kvinnor har samma barnmorsketeam genom hela vårdkedjan. Hur förlossningsvården organiseras avgörs av regionerna.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": [
     {

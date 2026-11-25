@@ -17,11 +17,18 @@
   "committee": "KU",
   "keywords": ["statistik", "diskriminering", "rasism"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Löftet gäller systematisk statistik om diskriminering och rasism. Statistik tas fram av myndigheter efter regeringens uppdrag.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet gäller systematisk statistik om diskriminering och rasism. Statistik tas fram av myndigheter efter regeringens uppdrag.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": []
 }

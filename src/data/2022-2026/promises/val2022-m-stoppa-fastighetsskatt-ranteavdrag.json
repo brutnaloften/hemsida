@@ -17,11 +17,18 @@
   "committee": "SkU",
   "keywords": ["fastighetsskatt", "ränteavdrag", "bostad", "skatt"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Propositionen trappar av ränteavdraget för lån utan säkerhet. Ränteavdraget för lån med säkerhet i bostad ligger kvar, och löftet gäller fastighetsskatt och ränteavdrag för bostadslån. Avtrappningen gäller alltså en annan typ av lån, och därför kan den inte ligga till grund för ett omdöme.",
-    "date": "2026-11-24",
-    "history": []
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Propositionen trappar av ränteavdraget för lån utan säkerhet. Ränteavdraget för lån med säkerhet i bostad ligger kvar, och löftet gäller fastighetsskatt och ränteavdrag för bostadslån. Avtrappningen gäller alltså en annan typ av lån, och därför kan den inte ligga till grund för ett omdöme.",
+        "date": "2026-11-24"
+      }
+    ]
   },
   "evidence": [
     {

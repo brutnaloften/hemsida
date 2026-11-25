@@ -17,11 +17,18 @@
   "committee": "SoU",
   "keywords": ["äldreomsorg", "medicinsk kompetens", "sjuksköterskor"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Löftet gäller att den medicinska kompetensen i äldreomsorgen ökar. Kompetens saknar ett enskilt mått. Andelen sjuksköterskor bland personalen skulle kunna belysa det, men SCB:s yrkesstatistik är för osäker för att läsa av det. Löftet kan inte avgöras.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet gäller att den medicinska kompetensen i äldreomsorgen ökar. Kompetens saknar ett enskilt mått. Andelen sjuksköterskor bland personalen skulle kunna belysa det, men SCB:s yrkesstatistik är för osäker för att läsa av det. Löftet kan inte avgöras.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": [
     {

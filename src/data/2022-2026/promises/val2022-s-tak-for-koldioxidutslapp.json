@@ -17,11 +17,18 @@
   "committee": "UU",
   "keywords": ["koldioxid", "utsläppstak", "klimat", "atmosfären"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Löftet gäller ett tak för hur mycket mer koldioxid som kan släppas ut i atmosfären. Ett sådant tak förhandlas mellan stater i FN:s klimatförhandlingar och inom EU, där regeringen företräder Sverige. Löftet kan därför inte bedömas.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Löftet gäller ett tak för hur mycket mer koldioxid som kan släppas ut i atmosfären. Ett sådant tak förhandlas mellan stater i FN:s klimatförhandlingar och inom EU, där regeringen företräder Sverige. Löftet kan därför inte bedömas.",
+        "date": "2026-11-25"
+      }
+    ]
   },
   "evidence": []
 }

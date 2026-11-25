@@ -17,11 +17,18 @@
   "committee": "NU",
   "keywords": ["kärnkraft", "reaktorer", "drifttid", "energi"],
   "verdict": {
-    "value": "unassessed",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "Överenskommelsen ger kärnkraften rätt till drift så länge anläggningarna är i gott skick. Ägarna beslutar om driften inom de tillstånd som regeringen har gett, och Strålsäkerhetsmyndigheten har tillsyn. Löftet kan därför inte bedömas.",
-    "date": "2026-11-24",
-    "history": []
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "assessedBy": "ai",
+        "reasoning": "Överenskommelsen ger kärnkraften rätt till drift så länge anläggningarna är i gott skick. Ägarna beslutar om driften inom de tillstånd som regeringen har gett, och Strålsäkerhetsmyndigheten har tillsyn. Löftet kan därför inte bedömas.",
+        "date": "2026-11-24"
+      }
+    ]
   },
   "evidence": [
     {

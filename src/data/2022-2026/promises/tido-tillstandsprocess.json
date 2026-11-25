@@ -31,15 +31,21 @@
     "tillståndsprövning"
   ],
   "verdict": {
-    "value": "in_progress",
+    "value": "expired",
     "assessedBy": "ai",
     "reasoning": "En statlig utredning lämnade i januari 2025 förslag för att effektivisera tillståndsprövningen av ny kärnkraft: en begränsad prövning enligt miljöbalken, ett principbeslut och Strålsäkerhetsmyndigheten som beslutande myndighet. I oktober 2025 kom en ny utredning som gäller kärnavfallssystemet och vad tillståndsprövningen omfattar. Dokumenten visar förslag, inget beslut, och täcker bara en del av löftet.",
-    "date": "2026-11-11",
+    "date": "2026-11-25",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2022-10-14"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "En statlig utredning lämnade i januari 2025 förslag för att effektivisera tillståndsprövningen av ny kärnkraft: en begränsad prövning enligt miljöbalken, ett principbeslut och Strålsäkerhetsmyndigheten som beslutande myndighet. I oktober 2025 kom en ny utredning som gäller kärnavfallssystemet och vad tillståndsprövningen omfattar. Dokumenten visar förslag, inget beslut, och täcker bara en del av löftet.",
+        "date": "2026-11-11"
       }
     ]
   },
