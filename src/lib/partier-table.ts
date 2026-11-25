@@ -1,15 +1,10 @@
-import {
-  VERDICTS,
-  VERDICT_LABELS,
-  type AgreementOutcome,
-  type Evidence,
-  type Source,
-} from '@/schema/promise';
+import { type AgreementOutcome, type Evidence, type Source } from '@/schema/promise';
 import type { Term } from '@/schema/term';
 import {
   agreementOutcomeCounts,
   agreementPointStats,
   assessedCount,
+  outcomeBreakdownText,
   promisesForParty,
   verdictCounts,
   type PartyPromise,
@@ -91,17 +86,8 @@ export function rolesPresent(rows: readonly PartierRow[]): Role[] {
   return ROLE_ORDER.filter((r) => rows.some((row) => row.role === r));
 }
 
-/** Status parts for the Partier table: assessed verdicts first, then unassessed, not assessable and expired. Zero counts are left out. */
+/** Status text for the Partier table: the same outcome phrases and order as the bar and the Start cards. */
 export function partyStatusText(row: Pick<PartierRow, 'promiseCount' | 'verdicts'>): string {
   if (row.promiseCount === 0) return 'Inga löften insamlade';
-  const v = row.verdicts;
-  const parts = [
-    ...VERDICTS.filter(
-      (k) => k !== 'unassessed' && k !== 'not_assessable' && k !== 'expired' && v[k] > 0,
-    ).map((k) => `${v[k]} ${VERDICT_LABELS[k].toLocaleLowerCase('sv')}`),
-    ...(v.unassessed > 0 ? [`${v.unassessed} inte bedömda`] : []),
-    ...(v.not_assessable > 0 ? [`${v.not_assessable} ej bedömbara`] : []),
-    ...(v.expired > 0 ? [`${v.expired} löpte ut`] : []),
-  ];
-  return parts.join(' · ') || 'Inte bedömt ännu';
+  return outcomeBreakdownText(row.verdicts) || 'Inte bedömt ännu';
 }

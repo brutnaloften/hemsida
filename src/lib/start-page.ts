@@ -8,7 +8,12 @@
 import type { AgreementOutcome, Evidence, PromiseRecord } from '@/schema/promise';
 import { agreementName, ROLES } from '@/schema/promise';
 import type { Term } from '@/schema/term';
-import { agreementOutcomeCounts, agreementPointStats, assessedCount } from '@/lib/party-stats';
+import {
+  agreementOutcomeCounts,
+  agreementPointStats,
+  assessedCount,
+  verdictCounts,
+} from '@/lib/party-stats';
 import { isAgreement, isRiksdag } from '@/lib/timeline';
 import { manifestoOnly, outcomeCountsText } from '@/lib/manifesto';
 
@@ -46,6 +51,8 @@ export interface PartyCardData {
   /** The party's manifesto promises ("vallöften"). */
   promises: number;
   assessed: number;
+  /** The party's manifesto promises per verdict value (every value present). */
+  verdicts: ReturnType<typeof verdictCounts>;
   /** Per agreement the party stands behind: its points in the agreement and how many are assessed. */
   agreementPoints: { agreement: AgreementInfo; points: number; assessed: number }[];
   /** Per agreement the party stands behind: its manifesto promises split by outcome. */
@@ -58,7 +65,13 @@ export interface PartyCardData {
 
 export interface StartModel {
   /** Hero numbers count every promise in the term: manifesto, agreement points and pledges. */
-  keyNumbers: { promises: number; parties: number; assessed: number; riksdagDocuments: number };
+  keyNumbers: {
+    promises: number;
+    parties: number;
+    assessed: number;
+    riksdagDocuments: number;
+    verdicts: ReturnType<typeof verdictCounts>;
+  };
   roleGroups: { role: Role; label: string; parties: string[] }[];
   agreements: AgreementInfo[];
   cardGroups: { role: Role; label: string; cards: PartyCardData[] }[];
@@ -124,6 +137,7 @@ export function buildStartModel(
           role,
           promises: mine.length,
           assessed: assessedCount(mine),
+          verdicts: verdictCounts(mine),
           agreementPoints: agreements
             .filter((a) => a.parties.includes(party))
             .map((agreement) => ({
@@ -149,6 +163,7 @@ export function buildStartModel(
       promises: promises.length,
       parties: partiesInTerm.length,
       assessed: assessedCount(promises),
+      verdicts: verdictCounts(promises),
       riksdagDocuments: riksdagDocs.size,
     },
     roleGroups: cardGroups.map((g) => ({

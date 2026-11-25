@@ -83,6 +83,8 @@ describe('buildStartModel', () => {
     const mCard = cards.find((c) => c.party === 'M')!;
     expect(mCard.promises).toBe(2);
     expect(mCard.assessed).toBe(1);
+    expect(mCard.verdicts.unassessed).toBe(1);
+    expect(m.keyNumbers.verdicts.unassessed).toBe(2);
     // The agreement point is not a vallöfte, but is reported per party behind it.
     expect(mCard.agreementPoints).toMatchObject([{ points: 1, assessed: 1 }]);
     expect(cards.find((c) => c.party === 'S')!.agreementPoints).toEqual([]);

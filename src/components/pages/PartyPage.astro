@@ -28,6 +28,7 @@ const all = (await getCollection('promises'))
   .filter((e) => termOfFilePath(e.filePath ?? '') === term)
   .map((e) => e.data);
 const model = buildPartyModel(termRecord, party, sources, all);
+const complete = model.manifesto.length > 0 && model.manifesto.every((p) => p.verdict.value !== 'unassessed');
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 // The agreement the party stands behind in this term, read from the term record (zero or one in practice).
@@ -67,7 +68,7 @@ const otherTerm = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1
 
 <Layout
   title={`${name} — Brutna Löften`}
-  description={`Löften från ${name} och hur långt de bedömts.`}
+  description={complete ? `Löften från ${name} och hur det gick för dem.` : `Löften från ${name} och hur långt de bedömts.`}
   period={{ kind: 'party', term, param: party, subtitles }}
 >
   <div class="container mx-auto px-4 py-8 md:px-6 md:py-12">
@@ -119,7 +120,7 @@ const otherTerm = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1
         <>
           <div class={`mt-8 grid grid-cols-1 gap-6 ${agreement ? 'md:grid-cols-2' : ''}`}>
             <section class="rounded-md border p-4">
-              <h2 class="text-lg font-semibold">Vallöften och bedömningar</h2>
+              <h2 class="text-lg font-semibold">{complete ? 'Vallöften och utfall' : 'Vallöften och bedömningar'}</h2>
               <div class="mt-3">
                 {model.manifesto.length > 0 ? (
                   <VerdictCounts promises={model.manifesto.map((p) => ({ verdict: { value: p.verdict.value } }))} />
@@ -138,7 +139,7 @@ const otherTerm = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1
                 </h2>
                 {agreement.points > 0 && (
                   <p class="mt-2 text-sm text-muted-foreground">
-                    {agreement.points} punkter, {agreement.pointsAssessed} bedömda
+                    {agreement.points} punkter, {agreement.pointsAssessed} med verdikt
                   </p>
                 )}
                 <div class="mt-3">

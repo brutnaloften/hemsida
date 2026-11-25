@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { PartyChip } from '@/components/ui/party-chip';
+import VerdictBar from '@/components/VerdictBar.astro';
+import { isTermComplete, outcomeBreakdownText } from '@/lib/party-stats';
 import { getDefaultTerm } from '@/lib/term-data';
 import { partyName } from '@/lib/promise-labels';
 import { termOfFilePath, termPagePath } from '@/lib/terms';
@@ -30,11 +32,13 @@ const promises = (await getCollection('promises'))
 const model = buildStartModel(termRecord, sources, promises);
 const { keyNumbers: k } = model;
 const hasData = promises.length > 0;
+// Data driven: complete once no promise in the term is left unassessed.
+const complete = isTermComplete(k.verdicts);
 const latestTerm = await getDefaultTerm();
 const keyList = [
   { n: k.promises, label: 'löften totalt' },
   { n: k.parties, label: 'partier' },
-  { n: k.assessed, label: 'bedömda' },
+  { n: k.assessed, label: complete ? 'med verdikt' : 'bedömda' },
   { n: k.riksdagDocuments, label: 'riksdagsdokument kopplade' },
 ];
 ---
@@ -163,10 +167,15 @@ const keyList = [
         Var vi står just nu
       </h2>
       <p class="mt-2 max-w-3xl">
-        {num(k.assessed)} av {num(k.promises)} löften är bedömda. Siffran gäller alla löften under perioden:
-        vallöften, punkter i överenskommelser och utfästelser under mandatperioden. <strong>Inte bedömt</strong> säger ingenting om
-        huruvida ett löfte hålls. Det betyder bara att ingen har bedömt det ännu. <strong>Löpt ut</strong> betyder att mandatperioden tog slut utan att löftet fick ett
-        avgörande verdikt, inte att det har svikits. <strong>Ej bedömbart</strong> gäller löften som är för vaga för att kunna bedömas.
+        {complete
+          ? `Alla ${num(k.promises)} löften har granskats${k.verdicts.expired > 0 ? `; ${num(k.verdicts.expired)} löpte ut utan avgörande verdikt` : ''}. `
+          : `${num(k.assessed)} av ${num(k.promises)} löften är bedömda. `}
+        Siffran gäller alla löften under perioden:
+        vallöften, punkter i överenskommelser och utfästelser under mandatperioden.{' '}
+        {!complete && <><strong>Inte bedömt</strong> säger ingenting om
+        huruvida ett löfte hålls. Det betyder bara att ingen har bedömt det ännu.{' '}</>}{' '}
+        <strong>Löpt ut</strong> betyder att mandatperioden tog slut utan att löftet fick ett
+        avgörande verdikt, inte att det har svikits. <strong>Ej bedömbart</strong> gäller löften som är för vaga för att kunna bedömas.{' '}
         <a href={`${base}om-metoden`} class="underline underline-offset-2">Så arbetar vi</a>
       </p>
     </div>
@@ -191,22 +200,14 @@ const keyList = [
                     <span class="font-semibold">{partyName(c.party)}</span>
                   </span>
                   <span class="text-sm text-muted-foreground">
-                    {c.promises > 0 ? `${num(c.assessed)} av ${num(c.promises)} vallöften bedömda` : 'Inga vallöften insamlade'}
+                    {c.promises > 0 ? `${num(c.promises)} vallöften: ${outcomeBreakdownText(c.verdicts)}` : 'Inga vallöften insamlade'}
                   </span>
-                  {c.promises > 0 && (
-                    <span
-                      class="flex h-2.5 overflow-hidden rounded-full border border-dashed border-muted-foreground/60"
-                      role="img"
-                      aria-label={`${num(c.assessed)} av ${num(c.promises)} löften bedömda`}
-                    >
-                      <span class="bg-foreground/70" style={`width:${(c.assessed / c.promises) * 100}%`} />
-                    </span>
-                  )}
+                  {c.promises > 0 && <VerdictBar counts={c.verdicts} total={c.promises} decorative />}
                   {c.agreementPoints
                     .filter((s) => s.points > 0)
                     .map((s) => (
                       <span class="text-sm text-muted-foreground">
-                        {s.agreement.name}: {num(s.points)} punkter, {num(s.assessed)} bedömda
+                        {s.agreement.name}: {num(s.points)} punkter, {num(s.assessed)} med verdikt
                       </span>
                     ))}
                   {c.agreementSplits

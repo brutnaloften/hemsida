@@ -96,8 +96,8 @@ describe('partyStatusText', () => {
       promiseCount: 4,
       verdicts: v({ fulfilled: 1, in_progress: 1, expired: 2 }),
     });
-    expect(t).toBe('1 pågår · 1 uppfyllt · 2 löpte ut');
-    expect(t).not.toContain('inte bedömda');
+    expect(t).toBe('1 uppfyllt, 1 pågår, 2 löpte ut');
+    expect(t).not.toContain('inte bedömt');
   });
   it('shows unassessed when present', () => {
     expect(partyStatusText({ promiseCount: 3, verdicts: v({ unassessed: 3 }) })).toBe(

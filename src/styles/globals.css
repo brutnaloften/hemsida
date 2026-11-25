@@ -510,3 +510,18 @@
   background-color: var(--highlight);
   color: var(--highlight-foreground);
 }
+
+/* Mid-tone fills for the verdict bar, shared by both themes so adjacent segments stay distinct
+   (the badge backgrounds are near-black in dark mode and pale in light mode). */
+:root {
+  --verdict-fulfilled-bar: #15803d;
+  --verdict-partially_fulfilled-bar: #84cc16;
+  --verdict-in_progress-bar: #3b82f6;
+  --verdict-no_evidence-bar: transparent;
+  --verdict-unfulfilled-bar: #fdba74;
+  --verdict-abandoned-bar: #92400e;
+  --verdict-broken-bar: #7f1d1d;
+  --verdict-not_assessable-bar: #e4e4e7;
+  --verdict-expired-bar: #94a3b8;
+  --verdict-unassessed-bar: transparent;
+}
