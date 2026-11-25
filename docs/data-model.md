@@ -85,7 +85,7 @@ A document that promises come from.
 
 The site's default term (root URL `/`, Navbar links, the `/search` redirect, the unscoped `/partier` redirects and the "other term" link on the Start page) is `defaultTerm()` in `src/lib/terms.ts`: the latest term whose record has `"published": true`. If no term is flagged it falls back to the latest term that has promises, then to the latest term. A term that is not flagged stays buildable and reachable from the term switcher.
 
-The flag is explicit and set by hand, not derived from the data, because a data-driven rule ("every party has promises", "no `unassessed`") is fragile: it flips as a side effect of a data PR, while the party roster and what counts as collected both change. **Flip rule:** add `"published": true` to a new term's `term.json` in its own PR once all 8 parties' manifesto promises are collected (for 2026-2030 that is when `hemsida-fzi.5` is done). `2022-2026` is flagged; `2026-2030` is not yet.
+The flag is explicit and set by hand, not derived from the data, because a data-driven rule ("every party has promises", "no `unassessed`") is fragile: it flips as a side effect of a data PR, while the party roster and what counts as collected both change. **Flip rule:** add `"published": true` to a new term's `term.json` in its own PR once all 8 parties' manifesto promises are collected (for 2026-2030 that is when `hemsida-fzi.5` is done). Both `2022-2026` and `2026-2030` are flagged (2026-2030 since `hemsida-hzde`, all 8 manifestos collected); `defaultTerm()` picks the latest, so `2026-2030` is the default and `2022-2026` stays reachable from the term switcher.
 
 ## Promise
 

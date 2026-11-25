@@ -42,9 +42,9 @@ describe('termSchema', () => {
     expect(termSchema.parse(valid).published).toBe(false);
     expect(termSchema.parse({ ...valid, published: true }).published).toBe(true);
   });
-  it('flags 2022-2026 as published and 2026-2030 not yet', () => {
+  it('flags both terms as published, so the latest (2026-2030) is the default', () => {
     expect(termSchema.parse(readJson(`${dataRoot}/2022-2026/term.json`)).published).toBe(true);
-    expect(termSchema.parse(readJson(`${dataRoot}/2026-2030/term.json`)).published).toBe(false);
+    expect(termSchema.parse(readJson(`${dataRoot}/2026-2030/term.json`)).published).toBe(true);
   });
   it('defaults rolesPending to false and then requires every party', () => {
     expect(termSchema.parse(valid).rolesPending).toBe(false);
