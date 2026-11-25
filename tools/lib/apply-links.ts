@@ -134,8 +134,9 @@ const PLANNING = new Set(['dir', 'sou', 'ds', 'prop']);
 const isSupporting = (e: RiksdagEvidence): boolean => e.relevance !== 'contradicts';
 
 /**
- * The store files a regeringens skrivelse under doktyp `prop`, but it proposes nothing and the
- * schema has no `skr` kind, so it is never used as evidence.
+ * The store files a regeringens skrivelse under doktyp `prop`, but it proposes nothing, so
+ * `apply-links` never uses it as evidence (a `skr` entry is added by hand, for an `other_action`
+ * promise whose act is the skrivelse; docs/other-action-promises.md).
  */
 export function isSkrivelse(d: StoreDocument): boolean {
   return d.doktyp === 'prop' && /Regeringens skrivelse/.test((d.text ?? '').slice(0, 600));

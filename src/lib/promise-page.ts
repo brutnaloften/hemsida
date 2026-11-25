@@ -16,12 +16,16 @@ import {
   type VoteValue,
 } from '@/schema/promise';
 
-/** Riksdag pipeline stages in order. `sou` and `ds` share one stage; `mot` sits outside it. */
+/**
+ * Riksdag pipeline stages in order. `sou` and `ds` share one stage, a `skr` (regeringsskrivelse,
+ * the government's own paper to the Riksdag) sits in the `prop` stage; `mot` sits outside it.
+ */
 export const PIPELINE_STAGES = ['dir', 'utredning', 'prop', 'bet', 'sfs'] as const;
 export type PipelineStage = (typeof PIPELINE_STAGES)[number];
 
 export function stageOf(kind: RiksdagEvidence['kind']): PipelineStage | 'mot' {
   if (kind === 'sou' || kind === 'ds') return 'utredning';
+  if (kind === 'skr') return 'prop';
   return kind;
 }
 

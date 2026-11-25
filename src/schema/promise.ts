@@ -49,8 +49,12 @@ export const VERDICT_LABELS: Record<(typeof VERDICTS)[number], string> = {
   expired: 'Löpt ut',
 };
 
-/** Evidence kinds in pipeline order (dir -> sou/ds -> prop -> bet -> sfs); mot sits outside it. */
-export const EVIDENCE_KINDS = ['dir', 'sou', 'ds', 'prop', 'bet', 'sfs', 'mot'] as const;
+/**
+ * Evidence kinds in pipeline order (dir -> sou/ds -> prop -> bet -> sfs); mot sits outside it. `skr`
+ * is a regeringens skrivelse (the Riksdag files it under prop, but it proposes nothing); it only
+ * qualifies `fulfilled` on an `other_action` promise (see checkVerdictEvidence).
+ */
+export const EVIDENCE_KINDS = ['dir', 'sou', 'ds', 'prop', 'bet', 'sfs', 'mot', 'skr'] as const;
 
 /** How a party voted on a betänkande. */
 export const VOTE_VALUES = ['yes', 'no', 'abstain', 'absent'] as const;
@@ -521,6 +525,15 @@ function checkVerdictEvidence(
       }
     } else if (
       !riksdag.some((e) => e.kind === 'sfs') &&
+      // An other_action promise asks for an act that is not a law: a treaty accession approved by a
+      // Riksdag betänkande, or a national strategy delivered as a regeringsskrivelse. When that
+      // document is the act promised, a bet or skr entry judged `full` makes it fulfilled. Never
+      // partially_fulfilled, and no other promise type gets this route.
+      !(
+        p.type === 'other_action' &&
+        value === 'fulfilled' &&
+        riksdag.some((e) => (e.kind === 'bet' || e.kind === 'skr') && e.relevance === 'full')
+      ) &&
       !(value === 'partially_fulfilled'
         ? ownAct.length > 0
         : ownAct.some((e) => e.relevance === 'full')) &&
@@ -534,7 +547,7 @@ function checkVerdictEvidence(
       // An issued law is enough, including one whose in-force date (the sfs date) is still ahead:
       // the government's part is done once the law is adopted. Agreement and budget evidence do not count.
       fail(
-        `verdict ${value} requires Riksdag evidence of kind sfs (an issued law, in force or not yet; agreement and budget evidence do not count), or, for a budget promise by a government or support party, an outcome-tier budget entry plus a prop or bet, or, for an opposition-only budget promise, a mot entry (the party's own motion)${value === 'fulfilled' ? ' (fulfilled: the outcome or mot entry must have relevance full)' : ''}`,
+        `verdict ${value} requires Riksdag evidence of kind sfs (an issued law, in force or not yet; agreement and budget evidence do not count), or, for an other_action promise, a bet or skr entry with relevance full that is the act promised (fulfilled only), or, for a budget promise by a government or support party, an outcome-tier budget entry plus a prop or bet, or, for an opposition-only budget promise, a mot entry (the party's own motion)${value === 'fulfilled' ? ' (fulfilled: the outcome or mot entry must have relevance full)' : ''}`,
       );
     }
   }

@@ -17,15 +17,21 @@
   "committee": "SoU",
   "keywords": ["psykisk hälsa", "nationell strategi", "suicidprevention"],
   "verdict": {
-    "value": "in_progress",
+    "value": "fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen lämnade i januari 2025 skrivelsen med en nationell strategi för psykisk hälsa och suicidprevention, och riksdagen lade den till handlingarna i maj 2025. I budgetpropositionen för 2026 föreslår regeringen att det nationella suicidpreventiva programmet ersätts av strategins mål och delmål. Dokumenten gäller strategin och dess genomförande och täcker en del av löftet.",
+    "reasoning": "Regeringen lämnade den 10 januari 2025 till riksdagen en skrivelse med en nationell strategi för psykisk hälsa och suicidprevention för åren 2025–2034, med vision, övergripande mål och sju delmål. Riksdagen lade skrivelsen till handlingarna i maj 2025. Strategin är den nationella strategi för det fortsatta arbetet med psykisk hälsa som löftet gäller.",
     "date": "2026-11-25",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2026-11-02"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen lämnade i januari 2025 skrivelsen med en nationell strategi för psykisk hälsa och suicidprevention, och riksdagen lade den till handlingarna i maj 2025. I budgetpropositionen för 2026 föreslår regeringen att det nationella suicidpreventiva programmet ersätts av strategins mål och delmål. Dokumenten gäller strategin och dess genomförande och täcker en del av löftet.",
+        "date": "2026-11-25"
       }
     ]
   },
@@ -37,6 +43,16 @@
       "promises": ["tido-nationell-strategi-psykisk-halsa-suicidprevention"],
       "outcome": "included",
       "note": "Avtalet ger en nationell strategi för psykisk hälsa och suicidprevention."
+    },
+    {
+      "kind": "skr",
+      "dok_id": "HC0377",
+      "designation": "Skr. 2024/25:77",
+      "title": "Det handlar om livet – nationell strategi inom området psykisk hälsa och suicidprevention",
+      "date": "2025-01-10",
+      "url": "https://data.riksdagen.se/dokument/HC0377.html",
+      "relevance": "full",
+      "note": "Regeringens nationella strategi för psykisk hälsa och suicidprevention 2025–2034, lämnad till riksdagen."
     },
     {
       "kind": "bet",
