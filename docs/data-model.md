@@ -233,6 +233,8 @@ A promise is split into one promise per commitment when the agreement text lists
 
 A document that works against a promise (the judge label `contradicts`) is stored as Riksdag evidence with `relevance: contradicts` and shown in the timeline with the label "Motverkar" (distinct colour, dashed outline). It never counts toward a verdict: `checkVerdictEvidence` ignores it, so it cannot qualify `in_progress` or `fulfilled`, and it cannot qualify `broken` except as an opposition party's own contrary `mot` entry on its own opposition-only budget promise ("Opposition promises"), and it does not fill a pipeline stage in the timeline. `apply-links` writes it on any eligible promise, but a promise whose only evidence works against it stays `unassessed`.
 
+**Government acts never break an opposition-only promise.** A government act or law that does the opposite of a promise made only by opposition parties (any type) does not make it `broken`. Such a promise is judged on the party's own acts (its vote, reservation or motion). The contradicting document is shown as "Motverkar" and described in the reasoning.
+
 ### Evidence
 
 A reference to an official document that bears on the promise.
