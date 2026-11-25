@@ -22,6 +22,8 @@ export interface TermInfo {
   id: string;
   /** Number of promises collected for the term. */
   promiseCount: number;
+  /** Hand-set flag from the term record: the term is fully collected and may be the default. */
+  published?: boolean;
   /** True when the term has promises and none is `unassessed` (see `isTermComplete`). */
   complete?: boolean;
 }
@@ -36,11 +38,16 @@ export function sortTerms<T extends { id: string }>(terms: readonly T[]): T[] {
   return [...terms].sort((a, b) => a.id.localeCompare(b.id));
 }
 
-/** Latest term that has promises; falls back to the latest term overall. */
+/**
+ * The default term: the latest one flagged `published` in its term record. If none is flagged,
+ * falls back to the latest term that has promises, then to the latest term overall.
+ */
 export function defaultTerm(terms: readonly TermInfo[]): string {
   const sorted = sortTerms(terms);
-  const withData = sorted.filter((t) => t.promiseCount > 0);
-  const pick = withData.at(-1) ?? sorted.at(-1);
+  const pick =
+    sorted.filter((t) => t.published).at(-1) ??
+    sorted.filter((t) => t.promiseCount > 0).at(-1) ??
+    sorted.at(-1);
   if (!pick) throw new Error('No terms defined');
   return pick.id;
 }
