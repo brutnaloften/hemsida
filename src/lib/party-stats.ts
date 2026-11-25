@@ -82,30 +82,73 @@ export function agreementOutcomeCounts(promises: readonly { evidence: readonly E
 
 type Counts = Record<VerdictValue, number>;
 
-/** Summary sentence under the verdict bar; zero counts are left out. */
-export function verdictSummaryText(total: number, assessed: number, counts: Counts): string {
+/** Display order for the bar and the texts: delivered first, then open, failed, neutral, unjudged. */
+export const BAR_ORDER = [
+  'fulfilled',
+  'partially_fulfilled',
+  'in_progress',
+  'no_evidence',
+  'unfulfilled',
+  'abandoned',
+  'broken',
+  'not_assessable',
+  'expired',
+  'unassessed',
+] as const satisfies readonly VerdictValue[];
+
+const OUTCOME_PHRASES: Record<VerdictValue, string> = {
+  fulfilled: 'uppfyllda',
+  partially_fulfilled: 'delvis uppfyllda',
+  in_progress: 'pågår',
+  no_evidence: 'utan funna belägg',
+  unfulfilled: 'ej uppfyllda',
+  abandoned: 'övergivna',
+  broken: 'brutna',
+  not_assessable: 'ej bedömbara',
+  expired: 'löpte ut',
+  unassessed: 'inte bedömda',
+};
+
+/**
+ * The term is complete for a set of promises when it has promises and none is `unassessed`. Data
+ * driven, so a term that still has unjudged promises keeps the "inte bedömda" framing.
+ */
+export function isTermComplete(counts: Counts): boolean {
+  return counts.unassessed === 0 && VERDICTS.some((v) => counts[v] > 0);
+}
+
+/** Bar segments in display order; zero counts are left out so no segment renders at 0% width. */
+export function verdictBarSegments(counts: Counts): { verdict: VerdictValue; n: number }[] {
+  return BAR_ORDER.filter((v) => counts[v] > 0).map((v) => ({ verdict: v, n: counts[v] }));
+}
+
+/** "5 uppfyllda, 3 pågår, 2 inte bedömda": outcome phrases in bar order, zero counts left out. */
+export function outcomeBreakdownText(counts: Counts, skip: readonly VerdictValue[] = []): string {
+  return BAR_ORDER.filter((v) => counts[v] > 0 && !skip.includes(v))
+    .map((v) => `${counts[v]} ${OUTCOME_PHRASES[v]}`)
+    .join(', ');
+}
+
+/** Summary sentence under the verdict bar; leads with the outcome, zero counts are left out. */
+export function verdictSummaryText(total: number, counts: Counts): string {
+  const parts = outcomeBreakdownText(counts, ['unassessed', 'expired']);
+  const lead = isTermComplete(counts)
+    ? `Alla ${total} löften har granskats${parts ? `: ${parts}` : ''}.`
+    : `${total} löften${parts ? `: ${parts}` : ''}.`;
   return [
-    `${total} löften, varav ${assessed} bedömda.`,
-    counts.unassessed > 0 ? `${counts.unassessed} löften är ännu inte bedömda av någon.` : '',
-    counts.not_assessable > 0
-      ? `${counts.not_assessable} är ej bedömbara (till exempel vaga löften).`
-      : '',
+    lead,
     counts.expired > 0
       ? `${counts.expired} löpte ut utan avgörande verdikt när mandatperioden tog slut.`
       : '',
+    counts.unassessed > 0 ? `${counts.unassessed} löften är ännu inte bedömda av någon.` : '',
   ]
     .filter(Boolean)
     .join(' ');
 }
 
 /** Screen-reader label for the verdict bar; zero counts are left out. */
-export function verdictAriaLabel(total: number, assessed: number, counts: Counts): string {
-  return [
-    `${assessed} av ${total} löften är bedömda`,
-    counts.not_assessable > 0 ? `${counts.not_assessable} ej bedömbara` : '',
-    counts.expired > 0 ? `${counts.expired} löpte ut` : '',
-    counts.unassessed > 0 ? `${counts.unassessed} inte bedömda` : '',
-  ]
-    .filter(Boolean)
-    .join(', ');
+export function verdictAriaLabel(total: number, counts: Counts): string {
+  const lead = isTermComplete(counts) ? `Alla ${total} löften granskade` : `${total} löften`;
+  const parts = outcomeBreakdownText(counts);
+  return parts ? `${lead}: ${parts}` : lead;
 }

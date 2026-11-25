@@ -3,6 +3,8 @@ import type { AgreementOutcome, Evidence } from '@/schema/promise';
 import {
   agreementOutcomeCounts,
   assessedCount,
+  isTermComplete,
+  verdictBarSegments,
   promisesForParty,
   verdictAriaLabel,
   verdictCounts,
@@ -90,16 +92,43 @@ describe('agreementOutcomeCounts', () => {
 describe('verdict count texts', () => {
   const c = (o: Record<string, number>) =>
     ({ ...verdictCounts([]), ...o }) as ReturnType<typeof verdictCounts>;
-  it('leaves out zero counts', () => {
+  it('leads with the outcome and the expiry sentence when the term is complete', () => {
     const counts = c({ expired: 3 });
-    expect(verdictSummaryText(3, 0, counts)).toBe(
-      '3 löften, varav 0 bedömda. 3 löpte ut utan avgörande verdikt när mandatperioden tog slut.',
+    expect(isTermComplete(counts)).toBe(true);
+    expect(verdictSummaryText(3, counts)).toBe(
+      'Alla 3 löften har granskats. 3 löpte ut utan avgörande verdikt när mandatperioden tog slut.',
     );
-    expect(verdictAriaLabel(3, 0, counts)).toBe('0 av 3 löften är bedömda, 3 löpte ut');
+    expect(verdictAriaLabel(3, counts)).toBe('Alla 3 löften granskade: 3 löpte ut');
   });
-  it('mentions unassessed when present', () => {
+  it('lists outcomes in bar order for a complete term', () => {
+    const counts = c({ fulfilled: 2, in_progress: 1, broken: 1, expired: 4 });
+    expect(verdictSummaryText(8, counts)).toBe(
+      'Alla 8 löften har granskats: 2 uppfyllda, 1 pågår, 1 brutna. 4 löpte ut utan avgörande verdikt när mandatperioden tog slut.',
+    );
+  });
+  it('keeps the unjudged framing when unassessed promises remain', () => {
     const counts = c({ unassessed: 2 });
-    expect(verdictSummaryText(2, 0, counts)).toContain('2 löften är ännu inte bedömda');
-    expect(verdictAriaLabel(2, 0, counts)).toBe('0 av 2 löften är bedömda, 2 inte bedömda');
+    expect(isTermComplete(counts)).toBe(false);
+    expect(verdictSummaryText(2, counts)).toContain('2 löften är ännu inte bedömda');
+    expect(verdictSummaryText(2, counts)).not.toContain('Alla');
+    expect(verdictAriaLabel(2, counts)).toBe('2 löften: 2 inte bedömda');
+  });
+  it('mentions not assessable promises in summary and aria label', () => {
+    const counts = c({ fulfilled: 1, not_assessable: 2 });
+    expect(verdictAriaLabel(3, counts)).toBe(
+      'Alla 3 löften granskade: 1 uppfyllda, 2 ej bedömbara',
+    );
+    expect(verdictSummaryText(3, counts)).toBe(
+      'Alla 3 löften har granskats: 1 uppfyllda, 2 ej bedömbara.',
+    );
+  });
+  it('an empty set is not complete', () => {
+    expect(isTermComplete(c({}))).toBe(false);
+  });
+  it('leaves zero-count segments out of the bar', () => {
+    expect(verdictBarSegments(c({ expired: 2, fulfilled: 1 }))).toEqual([
+      { verdict: 'fulfilled', n: 1 },
+      { verdict: 'expired', n: 2 },
+    ]);
   });
 });
