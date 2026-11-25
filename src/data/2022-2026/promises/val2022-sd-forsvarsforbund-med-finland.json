@@ -17,11 +17,17 @@
   "committee": "FöU",
   "keywords": ["Finland", "försvarsförbund", "försvarssamarbete"],
   "verdict": {
-    "value": "unassessed",
+    "value": "in_progress",
     "assessedBy": "ai",
-    "reasoning": "Löftet gäller att Sverige verkar för ett försvarsförbund med Finland. Det är utrikes- och säkerhetspolitik som regeringen för i förhandlingar med andra stater, och den ligger utanför det dokumentbestånd sidan bygger på. Löftet kan därför inte bedömas.",
+    "reasoning": "Regeringen lade i april 2026 fram en proposition om att regeringen till och med 2026 får sätta in upp till 1 200 svenska soldater i Natos framskjutna närvaro i Finland. Insatsen fördjupar det militära samarbetet med Finland men sker inom Nato i stället för i ett bilateralt försvarsförbund, och täcker en del av löftet.",
     "date": "2026-11-25",
-    "history": []
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -31,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03220",
+      "designation": "Prop. 2025/26:220",
+      "title": "Svenskt bidrag till Natos framskjutna närvaro i Finland",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03220.html",
+      "relevance": "partial",
+      "note": "Föreslår att upp till 1 200 svenska soldater får sättas in i Natos framskjutna närvaro i Finland."
     }
   ]
 }
