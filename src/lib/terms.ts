@@ -74,6 +74,22 @@ export function termPagePath(kind: PageKind, term: string, param?: string): stri
   }
 }
 
+/**
+ * Hrefs of the term-dependent main navigation links: the page's own term, or the default term on
+ * pages that have none.
+ */
+export function navTermHrefs(
+  base: string,
+  pageTerm: string | undefined,
+  defaultTermId: string,
+): { partier: string; lofter: string } {
+  const term = pageTerm ?? defaultTermId;
+  return {
+    partier: `${base}${termPagePath('partier', term)}`,
+    lofter: `${base}${termPagePath('lofter', term)}`,
+  };
+}
+
 /** Role of a party at the start of a term, when the record lists it. */
 export function partyRole(term: Pick<Term, 'roles'>, party: string): Role | undefined {
   return term.roles[party as keyof Term['roles']];

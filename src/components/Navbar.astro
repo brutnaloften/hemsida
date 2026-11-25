@@ -1,14 +1,19 @@
 ---
 import ThemeToggle from './ThemeToggle';
 import { getDefaultTerm } from '@/lib/term-data';
-import { termPagePath } from '@/lib/terms';
+import { navTermHrefs } from '@/lib/terms';
+
+interface Props {
+  /** Term of the page being shown; the term links fall back to the default term without it. */
+  term?: string;
+}
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
-const term = await getDefaultTerm();
+const hrefs = navTermHrefs(base, Astro.props.term, await getDefaultTerm());
 const links = [
-  { href: `${base}${termPagePath('partier', term)}`, label: 'Partier', section: 'partier' },
-  { href: `${base}${termPagePath('lofter', term)}`, label: 'Löften', section: 'lofter' },
+  { href: hrefs.partier, label: 'Partier', section: 'partier' },
+  { href: hrefs.lofter, label: 'Löften', section: 'lofter' },
   { href: `${base}budget/`, label: 'Budget', section: 'budget' },
   { href: `${base}om-metoden`, label: 'Om metoden', section: 'om-metoden' },
 ];

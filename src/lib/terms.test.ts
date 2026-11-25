@@ -6,6 +6,7 @@ import {
   sortTerms,
   termOfFilePath,
   termPagePath,
+  navTermHrefs,
 } from './terms';
 
 describe('termOfFilePath', () => {
@@ -76,5 +77,21 @@ describe('labels and paths', () => {
 describe('partyRole for a pending term', () => {
   it('returns undefined, not a default role', () => {
     expect(partyRole({ roles: {} }, 'S')).toBeUndefined();
+  });
+});
+
+describe('navTermHrefs', () => {
+  it('links to the page term', () => {
+    expect(navTermHrefs('/', '2022-2026', '2026-2030')).toEqual({
+      partier: '/2022-2026/partier',
+      lofter: '/2022-2026/lofter',
+    });
+  });
+
+  it('falls back to the default term without a page term', () => {
+    expect(navTermHrefs('/x/', undefined, '2026-2030')).toEqual({
+      partier: '/x/2026-2030/partier',
+      lofter: '/x/2026-2030/lofter',
+    });
   });
 });

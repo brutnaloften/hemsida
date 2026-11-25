@@ -11,12 +11,15 @@ interface Props {
   /** Absolute canonical URL, for pages that are reachable under more than one path. */
   canonical?: string;
   /** Renders the period bar under the header; set on term-dependent pages only. */
+  /** Term of the page when it has no period bar (e.g. a promise); the nav links follow it. */
+  term?: string;
   period?: { kind: PageKind; term: string; param?: string; subtitles?: Record<string, string> };
 }
 
 const {
   canonical,
   period,
+  term,
   title = 'Brutna Löften',
   description = 'En databas som spårar och analyserar politiska löften i Sverige. Se vilka politiker som lever upp till sina ord.',
 } = Astro.props;
@@ -53,7 +56,7 @@ const {
   </head>
   <body>
     <div class="flex flex-col min-h-screen">
-      <Navbar />
+      <Navbar term={period?.term ?? term} />
       {period && <PeriodBar {...period} />}
       <main class="flex-1">
         <slot />
