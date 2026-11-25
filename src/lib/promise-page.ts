@@ -2,8 +2,11 @@
  * Pure helpers for the promise page: the "Vad har hänt?" timeline steps, the sidebar links and the
  * vote table. No Astro or React imports so they can be unit-tested with fixtures.
  */
+import { partyRole } from './terms';
+import type { Term } from '@/schema/term';
 import {
   PARTIES,
+  ROLES,
   agreementName,
   isRiksdagEvidence,
   type AgreementEvidence,
@@ -189,14 +192,24 @@ export function voteSummary(votes: Partial<Record<(typeof PARTIES)[number], Vote
     .join(', ');
 }
 
-/** Vote rows in fixed party order; parties without a recorded vote are left out. */
-export function voteRows(votes: Partial<Record<(typeof PARTIES)[number], VoteValue>>): {
+/**
+ * Vote rows in fixed party order; parties without a recorded vote are left out. `role` is the
+ * party's role in the term record (not the promise's own `roles`, which only cover its parties);
+ * undefined while the term's roles are pending.
+ */
+export function voteRows(
+  votes: Partial<Record<(typeof PARTIES)[number], VoteValue>>,
+  term?: Pick<Term, 'roles'>,
+): {
   party: (typeof PARTIES)[number];
   vote: VoteValue;
   label: string;
+  role: (typeof ROLES)[number] | undefined;
 }[] {
   return PARTIES.flatMap((party) => {
     const vote = votes[party];
-    return vote ? [{ party, vote, label: VOTE_LABELS[vote] }] : [];
+    return vote
+      ? [{ party, vote, label: VOTE_LABELS[vote], role: term ? partyRole(term, party) : undefined }]
+      : [];
   });
 }

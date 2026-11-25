@@ -262,7 +262,7 @@ export default function LofterList({ rows, areas, agreement }: Props) {
                       <PartyChip
                         key={p}
                         party={p}
-                        role={r.roles[p] ?? 'opposition'}
+                        role={r.roles[p]}
                         size="inline"
                         title={PARTY_NAMES[p as keyof typeof PARTY_NAMES]}
                       />

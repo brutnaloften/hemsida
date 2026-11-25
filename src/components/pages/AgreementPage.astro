@@ -31,7 +31,7 @@ const page = buildAgreementPage(agreementId, promises);
 const links = sourceLinks(source);
 const counts = outcomeCountsText(page.outcomeCounts);
 
-const roleOf = (party: string) => partyRole(termRecord, party) ?? 'opposition';
+const roleOf = (party: string) => partyRole(termRecord, party);
 const partyHref = (party: string) => `${base}${termPagePath('party', term, party)}`;
 const promiseHref = (id: string) => `${base}${promisePath(id)}`;
 const signatories = source.parties;

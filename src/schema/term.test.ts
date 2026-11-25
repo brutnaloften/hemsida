@@ -45,6 +45,17 @@ describe('termSchema', () => {
   it('rejects pending roles that are filled in', () => {
     expect(termSchema.safeParse({ ...valid, rolesPending: true }).success).toBe(false);
   });
+  it('rejects pending roles together with role_changes', () => {
+    const change = { date: '2026-11-01', party: 'S', role: 'government' };
+    const r = termSchema.safeParse({
+      id: '2026-2030',
+      roles: {},
+      rolesPending: true,
+      role_changes: [change],
+    });
+    expect(r.success).toBe(false);
+    expect(!r.success && r.error.issues.map((i) => i.path.join('.'))).toEqual(['rolesPending']);
+  });
   it('rejects a missing party', () => {
     const { MP: _mp, ...roles } = valid.roles;
     expect(termSchema.safeParse({ ...valid, roles }).success).toBe(false);

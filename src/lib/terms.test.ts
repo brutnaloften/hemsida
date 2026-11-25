@@ -54,3 +54,9 @@ describe('labels and paths', () => {
     expect(partyRole({ roles: { M: 'government' } as never }, 'M')).toBe('government');
   });
 });
+
+describe('partyRole for a pending term', () => {
+  it('returns undefined, not a default role', () => {
+    expect(partyRole({ roles: {} }, 'S')).toBeUndefined();
+  });
+});

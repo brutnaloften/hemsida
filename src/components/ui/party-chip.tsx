@@ -3,9 +3,9 @@ import type { ROLES } from '@/schema/promise';
 
 type Role = (typeof ROLES)[number];
 
-/** Government and support parties get a filled chip, opposition an outline. */
-export function isFilledRole(role: Role): boolean {
-  return role !== 'opposition';
+/** Government and support parties get a filled chip, opposition a solid outline. No role (pending) gets a dashed outline. */
+export function isFilledRole(role: Role | undefined): boolean {
+  return role === 'government' || role === 'support';
 }
 
 const SIZES = {
@@ -18,8 +18,11 @@ const SIZES = {
 interface Props extends React.HTMLAttributes<HTMLSpanElement> {
   /** Party code, e.g. "KD". Letters only, no party colours. */
   party: string;
-  /** The party's role in the selected term, from the term record, never from the party itself. */
-  role: Role;
+  /**
+   * The party's role in the selected term, from the term record, never from the party itself.
+   * Undefined while the term's roles are pending: the chip then carries no role.
+   */
+  role?: Role | undefined;
   size?: keyof typeof SIZES;
 }
 
@@ -29,9 +32,13 @@ export function PartyChip({ party, role, size = 'card', className, ...rest }: Pr
   return (
     <span
       data-role={role}
+      {...(role === undefined
+        ? { title: 'Roll ej fastställd', 'aria-label': `${party}, roll ej fastställd` }
+        : {})}
       className={cn(
         'inline-flex shrink-0 items-center justify-center border-foreground font-mono font-medium',
         filled ? 'bg-foreground text-background' : 'bg-transparent text-foreground',
+        role === undefined && 'border-dashed',
         SIZES[size],
         className,
       )}
