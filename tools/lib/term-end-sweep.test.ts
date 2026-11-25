@@ -3,6 +3,7 @@ import { promiseSchema } from './schema.ts';
 import type { PromiseRecord } from './schema.ts';
 import {
   applyVerdict,
+  inKeyOrder,
   buildReport,
   classify,
   EXPIRED_FALLBACK,
@@ -133,7 +134,7 @@ describe('applyVerdict', () => {
     p.verdict.history = [
       { value: 'unassessed', assessedBy: 'ai', reasoning: 'older', date: '2025-01-01' },
     ];
-    const v = applyVerdict(p.verdict, classify(p)!, '2026-11-26')!;
+    const v = applyVerdict(p.verdict, p.verdict, classify(p)!, '2026-11-26')!;
     expect(v.value).toBe('expired');
     expect(v.assessedBy).toBe('ai');
     expect(v.reasoning).toBe(p.verdict.reasoning);
@@ -144,16 +145,18 @@ describe('applyVerdict', () => {
 
   it('leaves the reasoning untouched and fills an empty one', () => {
     const bad = promise('unassessed', [], {}, 'Åtgärden genomfördes inte.');
-    expect(applyVerdict(bad.verdict, classify(bad)!, 'd')!.reasoning).toBe(
+    expect(applyVerdict(bad.verdict, bad.verdict, classify(bad)!, 'd', true)!.reasoning).toBe(
       'Åtgärden genomfördes inte.',
     );
     const empty = promise('unassessed', [], {}, '');
-    expect(applyVerdict(empty.verdict, classify(empty)!, 'd')!.reasoning).toBe(EXPIRED_FALLBACK);
+    expect(applyVerdict(empty.verdict, empty.verdict, classify(empty)!, 'd')!.reasoning).toBe(
+      EXPIRED_FALLBACK,
+    );
   });
 
   it('does nothing for a flagged or kept promise', () => {
     const p = promise('in_progress', [ev('prop')]);
-    expect(applyVerdict(p.verdict, classify(p)!, 'd')).toBeNull();
+    expect(applyVerdict(p.verdict, p.verdict, classify(p)!, 'd')).toBeNull();
   });
 });
 
@@ -197,5 +200,34 @@ describe('contradicting and unicode cases', () => {
     expect(failureImplying('Det misslyckades.')).toBe(true);
     expect(failureImplying('Åtgärden är övergiven.')).toBe(true);
     expect(failureImplying('Förbrutit är ett annat ord.')).toBe(false);
+  });
+});
+
+describe('apply with a rewritten working tree', () => {
+  const base = promise('unassessed', [], {}, 'Åtgärden genomfördes inte.');
+  const current = promise('unassessed', [], {}, 'Löftet har inte prövats mot något dokument.');
+  it('writes the working-tree reasoning and the base verdict into the history', () => {
+    const v = applyVerdict(base.verdict, current.verdict, classify(current)!, 'd')!;
+    expect(v.reasoning).toBe(current.verdict.reasoning);
+    expect(v.history.at(-1)?.reasoning).toBe('Åtgärden genomfördes inte.');
+  });
+  it('refuses a failure-implying reasoning that would be written', () => {
+    expect(() => applyVerdict(current.verdict, base.verdict, classify(base)!, 'd')).toThrow(
+      /failure-implying/,
+    );
+  });
+});
+
+describe('inKeyOrder', () => {
+  it('keeps existing key order and places a new key after its canonical predecessor', () => {
+    const existing = { value: 'unassessed', date: 'x', reasoning: 'r', history: [] };
+    const next = { value: 'expired', assessedBy: 'ai', reasoning: 'r', date: 'd', history: [1] };
+    expect(Object.keys(inKeyOrder(existing, next))).toEqual([
+      'value',
+      'assessedBy',
+      'date',
+      'reasoning',
+      'history',
+    ]);
   });
 });

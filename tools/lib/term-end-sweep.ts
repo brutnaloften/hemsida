@@ -272,7 +272,7 @@ export function renderMarkdown(r: SweepReport): string {
       ),
     ),
     '',
-    '### Expired group promises that carry a `contradicts` entry (check before applying)',
+    '### Expired group promises that carry a `contradicts` entry, unassessed ones included (check before applying)',
     '',
     ...table(
       r.items.filter(
@@ -320,16 +320,19 @@ export function renderMarkdown(r: SweepReport): string {
 }
 
 /**
- * Apply mode: the verdict block of one swept promise. `base` is the verdict as on main (its
- * history is kept and the verdict object itself is appended), `item` the classification. Reasoning
- * is kept as is (an empty one gets a fallback sentence). Failure-implying reasons must be
- * rewritten BEFORE the apply run; the CLI refuses otherwise. Returns null when the promise is not
- * swept to `expired`.
+ * Apply mode: the verdict block of one swept promise. The reasoning is the WORKING-TREE one
+ * (`current`: failure-implying reasons are rewritten there before the run; an empty one gets a
+ * fallback sentence). Only the history comes from `base` (the verdict as on the base ref): its
+ * history plus the base verdict object itself. Returns null when the promise is not swept to
+ * `expired`; throws when the reasoning that would be written is still failure-implying and
+ * `allowFailureWording` is not set.
  */
 export function applyVerdict(
   base: PromiseRecord['verdict'],
+  current: PromiseRecord['verdict'],
   item: SweepItem,
   date: string,
+  allowFailureWording = false,
 ): PromiseRecord['verdict'] | null {
   if (item.action !== 'expire' && item.action !== 'expire_inquiry_only') return null;
   const prev: PromiseRecord['verdict']['history'][number] = {
@@ -338,8 +341,12 @@ export function applyVerdict(
     reasoning: base.reasoning,
     date: base.date,
   };
-  // The reasoning is kept untouched: the promise page already shows the "term ended" notice.
-  const reasoning = base.reasoning.trim() === '' ? EXPIRED_FALLBACK : base.reasoning;
+  const reasoning = current.reasoning.trim() === '' ? EXPIRED_FALLBACK : current.reasoning;
+  if (!allowFailureWording && failureImplying(reasoning)) {
+    throw new Error(
+      `${item.id}: the reasoning to be written is failure-implying; rewrite it first`,
+    );
+  }
   return {
     value: 'expired',
     assessedBy: 'ai',
@@ -347,6 +354,28 @@ export function applyVerdict(
     date,
     history: [...base.history, prev],
   };
+}
+
+const VERDICT_KEY_ORDER = ['value', 'assessedBy', 'reasoning', 'date', 'history'];
+
+/**
+ * `next` with the key order of `existing` (the raw JSON verdict): existing keys keep their place,
+ * a new key goes after the nearest preceding key of the canonical order.
+ */
+export function inKeyOrder(
+  existing: Record<string, unknown>,
+  next: Record<string, unknown>,
+): Record<string, unknown> {
+  const order = Object.keys(existing).filter((k) => k in next);
+  for (const k of VERDICT_KEY_ORDER) {
+    if (!(k in next) || order.includes(k)) continue;
+    const before = VERDICT_KEY_ORDER.slice(0, VERDICT_KEY_ORDER.indexOf(k)).filter((x) =>
+      order.includes(x),
+    );
+    const at = before.length === 0 ? 0 : order.indexOf(before[before.length - 1]!) + 1;
+    order.splice(at, 0, k);
+  }
+  return Object.fromEntries(order.map((k) => [k, next[k]]));
 }
 
 /**

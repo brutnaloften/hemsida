@@ -23,6 +23,7 @@ import {
   applyVerdict,
   buildReport,
   classify,
+  inKeyOrder,
   renderMarkdown,
   resolveBaseVerdict,
 } from './lib/term-end-sweep.ts';
@@ -102,13 +103,15 @@ let written = 0;
 for (const { file, promise, item } of swept) {
   const verdict = applyVerdict(
     resolveBaseVerdict(baseText(file), promise.verdict, console.warn, promise.id),
+    promise.verdict,
     item!,
     date,
+    values['allow-failure-wording'],
   );
   if (!verdict) continue;
   // Edit the raw JSON in place so the key order of the file is kept (no reordering noise).
   const raw = JSON.parse(readFileSync(file, 'utf-8'));
-  raw.verdict = verdict;
+  raw.verdict = inKeyOrder(raw.verdict, verdict);
   promiseSchema.parse(raw);
   writeJsonAtomic(file, raw);
   written++;
