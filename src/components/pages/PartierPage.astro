@@ -107,7 +107,8 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
                                 .map((v) => `${row.verdicts[v]} ${VERDICT_LABELS[v].toLocaleLowerCase('sv')}`)
                                 .join(' · ') +
                               ` · ${row.verdicts.unassessed} inte bedömda` +
-                              (row.verdicts.not_assessable > 0 ? ` · ${row.verdicts.not_assessable} ej bedömbara` : '')}
+                              (row.verdicts.not_assessable > 0 ? ` · ${row.verdicts.not_assessable} ej bedömbara` : '') +
+                              (row.verdicts.expired > 0 ? ` · ${row.verdicts.expired} löpte ut` : '')}
                       </p>
                     </td>
                     {row.agreements.map((cell) => (

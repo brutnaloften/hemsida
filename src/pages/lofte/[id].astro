@@ -150,7 +150,7 @@ const sideTitle = 'text-xs font-semibold uppercase tracking-wider text-muted-for
                   <p class={verdict.value === 'expired' ? 'mt-1' : 'mt-3'}>{verdict.reasoning}</p>
                 )}
                 <p class="mt-2 text-sm text-muted-foreground">
-                  Bedömt {verdict.date}
+                  {verdict.value === 'expired' ? 'Satt' : 'Bedömt'} {verdict.date}
                   {history && (
                     <>
                       {' · '}

@@ -14,6 +14,7 @@ const pct = (n: number) => `${(n / total) * 100}%`;
 const segments = [
   { cls: 'bg-foreground/70', n: assessed, label: 'Bedömda', show: true },
   { cls: 'bg-zinc-400 dark:bg-zinc-600', n: counts.not_assessable, label: 'Ej bedömbara', show: counts.not_assessable > 0 },
+  { cls: 'bg-slate-300 dark:bg-slate-700', n: counts.expired, label: 'Löpt ut', show: counts.expired > 0 },
   { cls: 'bg-muted', n: counts.unassessed, label: 'Inte bedömda', show: true },
 ];
 const legend = VERDICTS.filter((v) => counts[v] > 0 || v === 'unassessed');
@@ -22,11 +23,12 @@ const legend = VERDICTS.filter((v) => counts[v] > 0 || v === 'unassessed');
 <p class="text-sm text-muted-foreground">
   {total} löften, varav {assessed} bedömda. {counts.unassessed} löften är ännu inte bedömda av någon.
   {counts.not_assessable > 0 && ` ${counts.not_assessable} är ej bedömbara (till exempel vaga löften).`}
+  {counts.expired > 0 && ` ${counts.expired} löpte ut utan avgörande verdikt när mandatperioden tog slut.`}
 </p>
 <div
   class="mt-3 flex h-3 w-full overflow-hidden rounded-full border border-dashed border-muted-foreground/50"
   role="img"
-  aria-label={`${assessed} av ${total} löften är bedömda, ${counts.not_assessable} ej bedömbara, ${counts.unassessed} inte bedömda`}
+  aria-label={`${assessed} av ${total} löften är bedömda, ${counts.not_assessable} ej bedömbara, ${counts.expired} löpte ut, ${counts.unassessed} inte bedömda`}
 >
   {segments.map((seg) => <div class={seg.cls} style={`width:${pct(seg.n)}`} />)}
 </div>
