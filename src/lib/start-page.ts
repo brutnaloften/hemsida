@@ -14,6 +14,7 @@ import {
   assessedCount,
   verdictCounts,
 } from '@/lib/party-stats';
+import { termParties } from '@/lib/terms';
 import { isAgreement, isRiksdag } from '@/lib/timeline';
 import { manifestoOnly, outcomeCountsText } from '@/lib/manifesto';
 
@@ -47,7 +48,8 @@ export interface AgreementInfo {
 
 export interface PartyCardData {
   party: string;
-  role: Role;
+  /** Undefined while the term's roles are pending. */
+  role: Role | undefined;
   /** The party's manifesto promises ("vallöften"). */
   promises: number;
   assessed: number;
@@ -72,9 +74,12 @@ export interface StartModel {
     riksdagDocuments: number;
     verdicts: ReturnType<typeof verdictCounts>;
   };
+  /** True from the election until the government is formed: no roles, no government sections. */
+  rolesPending: boolean;
   roleGroups: { role: Role; label: string; parties: string[] }[];
   agreements: AgreementInfo[];
-  cardGroups: { role: Role; label: string; cards: PartyCardData[] }[];
+  /** `role` is undefined for the single group of a pending term. */
+  cardGroups: { role: Role | undefined; label: string; cards: PartyCardData[] }[];
 }
 
 /** Count phrases for the agreement split line; wording shared with the Partier table. */
@@ -98,7 +103,7 @@ export function electionYear(termId: string): string {
 }
 
 export function buildStartModel(
-  term: Pick<Term, 'roles' | 'agreements'>,
+  term: Pick<Term, 'roles' | 'agreements'> & { rolesPending?: boolean | undefined },
   sources: readonly SourceInfo[],
   promises: readonly StartPromise[],
 ): StartModel {
@@ -124,39 +129,43 @@ export function buildStartModel(
     }
   }
 
-  const partiesInTerm = Object.keys(term.roles);
-  const cardGroups = ROLES.map((role) => ({
-    role,
-    label: ROLE_GROUP_LABELS[role],
-    cards: partiesInTerm
-      .filter((party) => term.roles[party as keyof Term['roles']] === role)
-      .map((party): PartyCardData => {
-        const mine = own.filter((p) => (p.parties as readonly string[]).includes(party));
-        return {
-          party,
-          role,
-          promises: mine.length,
-          assessed: assessedCount(mine),
-          verdicts: verdictCounts(mine),
-          agreementPoints: agreements
-            .filter((a) => a.parties.includes(party))
-            .map((agreement) => ({
-              agreement,
-              ...agreementPointStats(promises, agreement.id, party),
-            })),
-          agreementSplits: agreements
-            .filter((a) => a.parties.includes(party))
-            .map((agreement) => {
-              const forAgreement = mine.map((p) => ({
-                evidence: p.evidence.filter(
-                  (e: Evidence) => isAgreement(e) && e.source === agreement.id,
-                ),
-              }));
-              return { agreement, ...agreementOutcomeCounts(forAgreement) };
-            }),
-        };
-      }),
-  })).filter((g) => g.cards.length > 0);
+  const rolesPending = term.rolesPending ?? false;
+  const partiesInTerm = termParties({ rolesPending, ...term }, promises);
+  const card = ({ party, role }: { party: string; role: Role | undefined }): PartyCardData => {
+    const mine = own.filter((p) => (p.parties as readonly string[]).includes(party));
+    return {
+      party,
+      role,
+      promises: mine.length,
+      assessed: assessedCount(mine),
+      verdicts: verdictCounts(mine),
+      agreementPoints: agreements
+        .filter((a) => a.parties.includes(party))
+        .map((agreement) => ({
+          agreement,
+          ...agreementPointStats(promises, agreement.id, party),
+        })),
+      agreementSplits: agreements
+        .filter((a) => a.parties.includes(party))
+        .map((agreement) => {
+          const forAgreement = mine.map((p) => ({
+            evidence: p.evidence.filter(
+              (e: Evidence) => isAgreement(e) && e.source === agreement.id,
+            ),
+          }));
+          return { agreement, ...agreementOutcomeCounts(forAgreement) };
+        }),
+    };
+  };
+  // A pending term has no roles: one unlabelled group, and no government sections.
+  const cardGroups: StartModel['cardGroups'] = rolesPending
+    ? [{ role: undefined, label: 'Partier', cards: partiesInTerm.map(card) }]
+    : ROLES.map((role) => ({
+        role,
+        label: ROLE_GROUP_LABELS[role],
+        cards: partiesInTerm.filter((p) => p.role === role).map(card),
+      }));
+  const shownGroups = cardGroups.filter((g) => g.cards.length > 0);
 
   return {
     keyNumbers: {
@@ -166,12 +175,15 @@ export function buildStartModel(
       verdicts: verdictCounts(promises),
       riksdagDocuments: riksdagDocs.size,
     },
-    roleGroups: cardGroups.map((g) => ({
-      role: g.role,
-      label: g.label,
-      parties: g.cards.map((c) => c.party),
-    })),
+    rolesPending,
+    roleGroups: rolesPending
+      ? []
+      : shownGroups.map((g) => ({
+          role: g.role as Role,
+          label: g.label,
+          parties: g.cards.map((c) => c.party),
+        })),
     agreements,
-    cardGroups,
+    cardGroups: shownGroups,
   };
 }

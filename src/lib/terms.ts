@@ -5,6 +5,7 @@
  * can be tested without Astro. Paths are relative to the site base (no leading
  * slash), e.g. `2022-2026/partier/m`.
  */
+import { PARTIES } from '@/schema/promise';
 import type { Term } from '@/schema/term';
 
 export type PageKind = 'start' | 'partier' | 'party' | 'lofter' | 'agreement';
@@ -66,4 +67,23 @@ export function termPagePath(kind: PageKind, term: string, param?: string): stri
 /** Role of a party at the start of a term, when the record lists it. */
 export function partyRole(term: Pick<Term, 'roles'>, party: string): Role | undefined {
   return term.roles[party as keyof Term['roles']];
+}
+
+/**
+ * The parties of a term with their role. Normally the term record's roles (its order). While
+ * `rolesPending` there are no roles: the parties are the ones named by the term's promises, in
+ * the canonical party order, each without a role.
+ */
+export function termParties(
+  term: Pick<Term, 'roles' | 'rolesPending'>,
+  promises: readonly { parties: readonly string[] }[],
+): { party: string; role: Role | undefined }[] {
+  if (!term.rolesPending) {
+    return (Object.entries(term.roles) as [string, Role][]).map(([party, role]) => ({
+      party,
+      role,
+    }));
+  }
+  const named = new Set(promises.flatMap((p) => p.parties));
+  return PARTIES.filter((p) => named.has(p)).map((party) => ({ party, role: undefined }));
 }

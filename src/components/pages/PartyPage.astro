@@ -76,7 +76,7 @@ const otherTerm = terms.filter((t) => t.id !== term && t.promiseCount > 0).at(-1
       >&larr; Alla partier</a
     >
     <div class="mt-4 flex items-center gap-4">
-      <PartyChip party={party} role={roleKey ?? 'opposition'} size="header" />
+      <PartyChip party={party} role={roleKey} size="header" />
       <div class="min-w-0">
         <h1 class="text-2xl font-bold tracking-tight md:text-4xl">{name}</h1>
         {role && <p class="mt-1 text-muted-foreground">{role} {term}</p>}

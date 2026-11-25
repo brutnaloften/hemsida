@@ -10,7 +10,7 @@ import {
   type PartyPromise,
 } from '@/lib/party-stats';
 import { manifestoOnly } from '@/lib/manifesto';
-import type { Role } from '@/lib/terms';
+import { termParties, type Role } from '@/lib/terms';
 
 const ROLE_ORDER: Role[] = ['government', 'support', 'opposition'];
 
@@ -32,7 +32,8 @@ export interface AgreementCell {
 
 export interface PartierRow {
   party: string;
-  role: Role;
+  /** Undefined while the term's roles are pending. */
+  role: Role | undefined;
   promiseCount: number;
   assessed: number;
   verdicts: ReturnType<typeof verdictCounts>;
@@ -45,7 +46,7 @@ export interface PartierRow {
  * Agreements are the term's `agreements` that resolve to a source; unknown ids are skipped.
  */
 export function buildPartierRows(
-  term: Pick<Term, 'roles' | 'agreements'>,
+  term: Pick<Term, 'roles' | 'agreements'> & { rolesPending?: boolean | undefined },
   promises: readonly TablePromise[],
   sources: readonly Pick<Source, 'id' | 'parties' | 'kind'>[],
 ): PartierRow[] {
@@ -53,7 +54,7 @@ export function buildPartierRows(
     .map((id) => sources.find((s) => s.id === id))
     .filter((s): s is NonNullable<typeof s> => s !== undefined);
   const rows: PartierRow[] = [];
-  for (const [party, role] of Object.entries(term.roles) as [string, Role][]) {
+  for (const { party, role } of termParties({ rolesPending: false, ...term }, promises)) {
     // Only manifesto promises count: agreement points and mid-term pledges are not "vallöften".
     const own = promisesForParty(manifestoOnly(promises, sources), party);
     rows.push({
@@ -78,8 +79,10 @@ export function buildPartierRows(
     });
   }
   // Array.prototype.sort is stable, so the term record's order holds within a role.
-  return rows.sort((a, b) => ROLE_ORDER.indexOf(a.role) - ROLE_ORDER.indexOf(b.role));
+  return rows.sort((a, b) => rank(a.role) - rank(b.role));
 }
+
+const rank = (r: Role | undefined) => (r ? ROLE_ORDER.indexOf(r) : ROLE_ORDER.length);
 
 /** Roles present in the rows, in display order, for the filter chips. */
 export function rolesPresent(rows: readonly PartierRow[]): Role[] {

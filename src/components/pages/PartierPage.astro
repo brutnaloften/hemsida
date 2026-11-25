@@ -23,6 +23,7 @@ const rows = termRecord ? buildPartierRows(termRecord, promises, sources) : [];
 const agreements = (termRecord?.agreements ?? [])
   .map((id) => sources.find((s) => s.id === id))
   .filter((s) => s !== undefined);
+const rolesPending = termRecord?.rolesPending ?? false;
 const roles = rolesPresent(rows);
 const FILTER_LABELS = { government: 'Regering', support: 'Stödparti', opposition: 'Opposition' } as const;
 const hasUnassessed = rows.some((r) => r.verdicts.unassessed > 0);
@@ -46,25 +47,25 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
     {
       rows.length > 0 && (
         <>
-          <div hidden data-partier-filters class="mt-6 flex flex-wrap gap-2" role="group" aria-label="Filtrera på roll">
+          {!rolesPending && <div hidden data-partier-filters class="mt-6 flex flex-wrap gap-2" role="group" aria-label="Filtrera på roll">
             <button type="button" data-filter="" aria-pressed="true" class="partier-chip">Alla partier</button>
             {roles.map((r) => (
               <button type="button" data-filter={r} aria-pressed="false" class="partier-chip">
                 {FILTER_LABELS[r]}
               </button>
             ))}
-          </div>
+          </div>}
 
           <div class="mt-4 overflow-x-auto rounded-xl border" tabindex="0" role="region" aria-label="Tabell över partier, rulla i sidled">
             <table class="w-full min-w-[640px] border-collapse text-left text-[15px]">
               <caption class="sr-only">
-                Partier i {term}: roll i perioden, antal löften och {complete ? 'utfall' : 'bedömning'}
+                Partier i {term}: {!rolesPending && 'roll i perioden, '}antal löften och {complete ? 'utfall' : 'bedömning'}
                 {agreements.length > 0 && `, samt utfall i ${agreements.map(agreementName).join(' och ')}`}
               </caption>
               <thead class="bg-muted/50 text-xs uppercase tracking-wider text-muted-foreground">
                 <tr>
                   <th scope="col" class="px-4 py-3 font-semibold">Parti</th>
-                  <th scope="col" class="px-4 py-3 font-semibold">Roll i perioden</th>
+                  {!rolesPending && <th scope="col" class="px-4 py-3 font-semibold">Roll i perioden</th>}
                   <th scope="col" class="px-4 py-3 text-right font-semibold">Vallöften</th>
                   <th scope="col" class="px-4 py-3 font-semibold">{complete ? 'Utfall' : 'Bedömning'}</th>
                   {agreements.map((a) => (
@@ -84,7 +85,7 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
                         {partyName(row.party)}
                       </a>
                     </th>
-                    <td class="px-4 py-3">{ROLE_LABELS[row.role]}</td>
+                    {!rolesPending && row.role && <td class="px-4 py-3">{ROLE_LABELS[row.role]}</td>}
                     <td class="px-4 py-3 text-right tabular-nums">{row.promiseCount}</td>
                     <td class="min-w-48 px-4 py-3">
                       <VerdictBar counts={row.verdicts} total={row.promiseCount} decorative />
@@ -143,6 +144,16 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
       )
     }
 
+    {rolesPending ? (
+    <div class="mt-10">
+      <section class="rounded-xl border p-5">
+        <h2 class="font-serif text-xl font-semibold">Regeringen är inte bildad</h2>
+        <p class="mt-2 text-muted-foreground">
+          Partiernas roller och eventuella överenskommelser visas när en regering har bildats.
+        </p>
+      </section>
+    </div>
+    ) : (
     <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
       <section class="rounded-xl border p-5">
         <h2 class="font-serif text-xl font-semibold">Regeringsöverenskommelser</h2>
@@ -166,6 +177,7 @@ const pct = (n: number, total: number) => `${(n / total) * 100}%`;
         </p>
       </section>
     </div>
+    )}
   </div>
 </Layout>
 
