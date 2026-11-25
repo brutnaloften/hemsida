@@ -17,15 +17,21 @@
   "committee": "JuU",
   "keywords": ["gäng", "inkomster", "utredning", "organiserad brottslighet"],
   "verdict": {
-    "value": "in_progress",
+    "value": "partially_fulfilled",
     "assessedBy": "ai",
-    "reasoning": "Regeringen beslutade i augusti 2026 tilläggsdirektiv till utredningen om riktade insatser mot kriminella organisationer. Utredningen fick nya uppgifter som gäller företagsbot för företag som används som brottsverktyg, högre straff för ekonomisk brottslighet och begränsad vinst från brottsberättelser. Dessa delar rör gängens inkomster.",
-    "date": "2026-11-15",
+    "reasoning": "Regeringen gav den 20 augusti 2026 tilläggsdirektiv till utredningen om riktade insatser mot kriminella organisationer. Utredaren fick nya uppgifter som gäller företagsbot för företag som används som brottsverktyg, högre straff för ekonomisk brottslighet och begränsad vinst från brottsberättelser. Uppgifterna rör gängens inkomster och täcker en del av löftet.",
+    "date": "2026-11-25",
     "history": [
       {
         "value": "unassessed",
         "reasoning": "",
         "date": "2026-11-02"
+      },
+      {
+        "value": "in_progress",
+        "assessedBy": "ai",
+        "reasoning": "Regeringen beslutade i augusti 2026 tilläggsdirektiv till utredningen om riktade insatser mot kriminella organisationer. Utredningen fick nya uppgifter som gäller företagsbot för företag som används som brottsverktyg, högre straff för ekonomisk brottslighet och begränsad vinst från brottsberättelser. Dessa delar rör gängens inkomster.",
+        "date": "2026-11-15"
       }
     ]
   },
