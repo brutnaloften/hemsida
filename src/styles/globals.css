@@ -246,6 +246,9 @@
   --verdict-not_assessable-bg: #ecece8;
   --verdict-not_assessable-fg: #3a3e45;
   --verdict-not_assessable-border: #ecece8;
+  --verdict-expired-bg: #e2e8f0;
+  --verdict-expired-fg: #1e293b;
+  --verdict-expired-border: #e2e8f0;
   --verdict-in_progress-bg: #dbeafe;
   --verdict-in_progress-fg: #1e3a8a;
   --verdict-in_progress-border: #dbeafe;
@@ -306,6 +309,9 @@
   --verdict-not_assessable-bg: #2c2f35;
   --verdict-not_assessable-fg: #d4d6da;
   --verdict-not_assessable-border: #2c2f35;
+  --verdict-expired-bg: #1e293b;
+  --verdict-expired-fg: #e2e8f0;
+  --verdict-expired-border: #1e293b;
   --verdict-in_progress-bg: #172554;
   --verdict-in_progress-fg: #bfdbfe;
   --verdict-in_progress-border: #172554;
@@ -436,6 +442,11 @@
     background-color: var(--verdict-not_assessable-bg);
     color: var(--verdict-not_assessable-fg);
     border-color: var(--verdict-not_assessable-border);
+  }
+  .verdict-badge[data-verdict="expired"] {
+    background-color: var(--verdict-expired-bg);
+    color: var(--verdict-expired-fg);
+    border-color: var(--verdict-expired-border);
   }
   .verdict-badge[data-verdict="in_progress"] {
     background-color: var(--verdict-in_progress-bg);

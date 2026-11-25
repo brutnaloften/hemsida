@@ -474,6 +474,22 @@ describe('promiseSchema', () => {
       }
     });
 
+    it('expired needs reasoning and assessedBy ai, but no evidence', () => {
+      const exp = (reasoning: string, assessedBy?: string) => ({
+        ...make('expired', reasoning, []),
+        verdict: {
+          value: 'expired',
+          reasoning,
+          date: '2026-11-25',
+          ...(assessedBy ? { assessedBy } : {}),
+        },
+      });
+      expect(ok(exp('Mandatperioden tog slut.', 'ai'))).toBe(true);
+      expect(ok(exp('', 'ai'))).toBe(false);
+      expect(ok(exp('Mandatperioden tog slut.'))).toBe(false);
+      expect(ok(exp('Mandatperioden tog slut.', 'human'))).toBe(false);
+    });
+
     it.each(['dir', 'sou', 'ds', 'prop'])('in_progress is allowed with %s evidence', (kind) => {
       expect(ok(make('in_progress', 'Pågår.', [ev(kind)]))).toBe(true);
     });

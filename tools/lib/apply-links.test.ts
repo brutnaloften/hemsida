@@ -85,6 +85,20 @@ describe('mergeRunPairs', () => {
 });
 
 describe('applyLinks', () => {
+  it('never recomputes an expired verdict, even an AI one', () => {
+    const expired = {
+      ...base,
+      verdict: {
+        value: 'expired' as const,
+        reasoning: 'Mandatperioden tog slut.',
+        date: '2026-11-25',
+        assessedBy: 'ai' as const,
+        history: [],
+      },
+    };
+    expect(applyLinks(expired, [pair('P1')], docs, '2026-11-26')).toBeNull();
+  });
+
   describe('rejection list', () => {
     const unassessed = base;
     const rejected = new Set(['P1', 'B1']);

@@ -32,6 +32,7 @@ export const VERDICTS = [
   'abandoned',
   'broken',
   'not_assessable',
+  'expired',
 ] as const;
 
 /** Swedish display labels for verdict values. */
@@ -45,6 +46,7 @@ export const VERDICT_LABELS: Record<(typeof VERDICTS)[number], string> = {
   abandoned: 'Övergivet',
   broken: 'Brutet',
   not_assessable: 'Ej bedömbart',
+  expired: 'Löpt ut',
 };
 
 /** Evidence kinds in pipeline order (dir -> sou/ds -> prop -> bet -> sfs); mot sits outside it. */
@@ -376,9 +378,31 @@ function requireReasoning(
   }
 }
 
+/**
+ * `expired` is set only by the term-end sweep, which is a model run: it must say so with
+ * `assessedBy: 'ai'`. It needs reasoning (general rule above) and no evidence.
+ */
+function requireAiForExpired(
+  v: { value: string; assessedBy?: string | undefined },
+  ctx: z.core.$RefinementCtx,
+): void {
+  if (v.value === 'expired' && v.assessedBy !== 'ai') {
+    ctx.addIssue({
+      code: 'custom',
+      path: ['assessedBy'],
+      message: "verdict expired is set by the term-end sweep and requires assessedBy: 'ai'",
+    });
+  }
+}
+
 export const verdictSchema = verdictEntry
-  .extend({ history: z.array(verdictEntry.superRefine(requireReasoning)).default([]) })
-  .superRefine(requireReasoning);
+  .extend({
+    history: z
+      .array(verdictEntry.superRefine(requireReasoning).superRefine(requireAiForExpired))
+      .default([]),
+  })
+  .superRefine(requireReasoning)
+  .superRefine(requireAiForExpired);
 
 export const sourceRefSchema = z.object({
   id: slug,
