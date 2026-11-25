@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["EU", "yttre gräns", "gränsskydd"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i februari 2023 fram en proposition som anpassar svensk rätt till EU:s system för resetillstånd (ETIAS) för tredjelandsmedborgare som passerar de yttre gränserna. I april 2026 följde en proposition som anpassar svensk rätt till EU:s migrations- och asylpakt, bland annat screeningförfarandet för tredjelandsmedborgare vid de yttre gränserna. Dokumenten gäller EU:s gränskontroll och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,26 @@
       "url": "https://data.riksdagen.se/dokument/HA01SfU18.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA0366",
+      "designation": "Prop. 2022/23:66",
+      "title": "Anpassning av svensk rätt till EU:s nya system för reseuppgifter och resetillstånd",
+      "date": "2023-02-28",
+      "url": "https://data.riksdagen.se/dokument/HA0366.html",
+      "relevance": "partial",
+      "note": "Anpassar svensk rätt till EU:s system för reseuppgifter och resetillstånd, som förbättrar in- och utresekontrollerna vid de yttre gränserna."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03262",
+      "designation": "Prop. 2025/26:262",
+      "title": "Utmönstring av permanent uppehållstillstånd och anpassning av svensk rätt till EU:s migrations- och asylpakt",
+      "date": "2026-04-30",
+      "url": "https://data.riksdagen.se/dokument/HD03262.html",
+      "relevance": "partial",
+      "note": "Anpassar svensk rätt till EU:s migrations- och asylpakt, bland annat screeningförordningen för tredjelandsmedborgare vid de yttre gränserna."
     }
   ]
 }

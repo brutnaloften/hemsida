@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["polisers trygghet", "skyddade uppgifter", "hot mot poliser"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2024 fram en proposition om stärkt skydd för polisanställda som arbetar mot organiserad brottslighet: de ska i vissa fall kunna använda en annan uppgift än namn i beslut och handlingar, och sekretess ska gälla för uppgifter om deras identitet. I mars 2025 följde en proposition om ett starkare skydd mot våld, hot och trakasserier för offentliganställda. Förslagen täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -33,6 +40,26 @@
       ],
       "outcome": "included",
       "note": "Avtalet anger att uppgifter om poliser i ökad utsträckning kan anonymiseras, att poliser kan få skyddade uppgifter för sig och sin familj och att missfirmelse mot tjänsteman återinförs."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HB03102",
+      "designation": "Prop. 2023/24:102",
+      "title": "Stärkt skydd för vissa polisanställda",
+      "date": "2024-03-19",
+      "url": "https://data.riksdagen.se/dokument/HB03102.html",
+      "relevance": "partial",
+      "note": "Föreslår att polisanställda som arbetar mot organiserad brottslighet i vissa fall kan använda en annan uppgift än namn, och sekretess för uppgifter om deras identitet."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03141",
+      "designation": "Prop. 2024/25:141",
+      "title": "Ett starkare skydd för offentliganställda mot våld, hot och trakasserier m.m.",
+      "date": "2025-03-18",
+      "url": "https://data.riksdagen.se/dokument/HC03141.html",
+      "relevance": "partial",
+      "note": "Föreslår ett starkare straffrättsligt skydd för offentliganställda mot våld, hot och trakasserier och stöd för att utelämna beslutsfattarens namn."
     }
   ]
 }

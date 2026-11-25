@@ -17,10 +17,17 @@
   "committee": "TU",
   "keywords": ["Bromma flygplats", "inrikesflyg", "regionala flygplatser"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i maj 2025 en utredare i uppdrag att utreda statens roll som ägare av flygplatser och hur kvarvarande verksamhet på Bromma bör hanteras. Utredningen föreslog i september 2026 att Bromma flygplats tillsvidare ska ingå i Swedavia och att en kontrollstation upprättas år 2033, eftersom flygplatsens framtid bör avgöras då, samt att dagens beredskapsflygplatser fortsatt gäller. Förslaget håller flygplatsen kvar och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,26 @@
       "url": "https://data.riksdagen.se/dokument/HC01TU13.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB155",
+      "designation": "Dir. 2025:55",
+      "title": "Statens framtida roll som ägare och förvaltare av flygplatser samt Bromma flygplats funktion",
+      "date": "2025-05-28",
+      "url": "https://data.riksdagen.se/dokument/HDB155.html",
+      "relevance": "partial",
+      "note": "Utredaren ska utreda statens roll som ägare av flygplatser, det nationella basutbudet och hur kvarvarande verksamhet på Bromma flygplats bör hanteras."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB360",
+      "designation": "SOU 2026:60",
+      "title": "Sveriges flygplatser i en förändrad omvärld",
+      "date": "2026-09-30",
+      "url": "https://data.riksdagen.se/dokument/HEB360.html",
+      "relevance": "partial",
+      "note": "Föreslår att Bromma flygplats tillsvidare ingår i Swedavia och att en kontrollstation upprättas år 2033."
     }
   ]
 }

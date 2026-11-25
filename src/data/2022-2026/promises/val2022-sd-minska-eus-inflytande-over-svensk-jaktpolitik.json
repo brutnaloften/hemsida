@@ -17,10 +17,17 @@
   "committee": "MJU",
   "keywords": ["EU", "jaktpolitik", "viltvård"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i januari 2024 en utredare i uppdrag att se över jaktlagstiftningen, bland annat för att genomförandet av EU-regler på jaktområdet ska omfatta bara de arter som reglerna gäller. Utredningen föreslog i april 2025 att reglerna för skyddsjakt på klövvilt, som går längre än naturvårdsdirektiven kräver, förenklas. Dokumenten gäller hur EU-regler genomförs i svensk rätt och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,46 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB111",
+      "designation": "Dir. 2024:11",
+      "title": "En moderniserad jaktlagstiftning",
+      "date": "2024-01-25",
+      "url": "https://data.riksdagen.se/dokument/HCB111.html",
+      "relevance": "partial",
+      "note": "Utredaren ska förbättra genomförandet av EU:s jaktregler och säkerställa att det gäller bara de arter som EU-reglerna omfattar."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03211",
+      "designation": "Prop. 2025/26:211",
+      "title": "Förenklingar i jaktlagstiftningen",
+      "date": "2026-03-19",
+      "url": "https://data.riksdagen.se/dokument/HD03211.html",
+      "relevance": "partial",
+      "note": "Föreslår förenklingar i jaktlagen, bland annat genom att förbättra genomförandet av EU-rättsliga regler på jaktområdet."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB332",
+      "designation": "SOU 2025:32",
+      "title": "Vissa förändringar av jaktlagstiftningen",
+      "date": "2025-04-02",
+      "url": "https://data.riksdagen.se/dokument/HDB332.html",
+      "relevance": "partial",
+      "note": "Föreslår att reglerna för skyddsjakt på klövvilt, som går längre än naturvårdsdirektiven kräver, förenklas."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HDB3125",
+      "designation": "SOU 2025:125",
+      "title": "En ny viltförvaltningslagstiftning",
+      "date": "2026-01-01",
+      "url": "https://data.riksdagen.se/dokument/HDB3125.html",
+      "relevance": "partial",
+      "note": "Utredningens förslag till en ny viltförvaltningslagstiftning."
     }
   ]
 }

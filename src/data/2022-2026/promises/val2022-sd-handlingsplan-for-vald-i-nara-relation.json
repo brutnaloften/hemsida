@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["våld i nära relation", "handlingsplan"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i augusti 2023 en utredare i uppdrag att föreslå mål och strategier mot könsrelaterat våld, i februari 2025 ett uppdrag om att genomföra EU:s direktiv om våld mot kvinnor och våld i nära relationer och i september 2026 ett uppdrag om förstärkta åtgärder mot mäns våld mot kvinnor och våld i nära relationer. Regeringen lämnade i april 2026 en nationell strategi i en skrivelse. Direktiven gäller åtgärder och styrning och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1117",
+      "designation": "Dir. 2023:117",
+      "title": "En stärkt långsiktig styrning av arbetet mot könsrelaterat våld och hedersrelaterat våld och förtryck",
+      "date": "2023-08-03",
+      "url": "https://data.riksdagen.se/dokument/HBB1117.html",
+      "relevance": "partial",
+      "note": "Utredaren ska föreslå delmål och strategier för arbetet mot könsrelaterat våld, inklusive våld i nära relationer."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB121",
+      "designation": "Dir. 2025:21",
+      "title": "Genomförande av direktivet om bekämpning av våld mot kvinnor och våld i nära relationer",
+      "date": "2025-02-27",
+      "url": "https://data.riksdagen.se/dokument/HDB121.html",
+      "relevance": "partial",
+      "note": "Utredaren ska överväga åtgärder för att genomföra EU:s direktiv om bekämpning av våld mot kvinnor och våld i nära relationer."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1113",
+      "designation": "Dir. 2026:113",
+      "title": "Kvinnofrid - förstärkta åtgärder mot mäns våld mot kvinnor",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1113.html",
+      "relevance": "partial",
+      "note": "Utredaren ska se över myndigheternas arbete mot mäns våld mot kvinnor och våld i nära relationer."
     }
   ]
 }

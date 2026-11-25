@@ -17,10 +17,28 @@
   "committee": "SkU",
   "keywords": ["energieffektivisering", "rot-avdrag", "bostäder", "energisparande"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i mars 2026 fram en proposition med regler som genomför direktivet om byggnaders energiprestanda, bland annat energideklaration vid större ombyggnader och ett frivilligt verktyg med energirenoveringsplaner för byggnadsägare. Förslagen gäller byggnader i allmänhet och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
-  "evidence": []
+  "evidence": [
+    {
+      "kind": "prop",
+      "dok_id": "HD03159",
+      "designation": "Prop. 2025/26:159",
+      "title": "Nytt mål för effektiv energianvändning och genomförande av det omarbetade direktivet om byggnaders energiprestanda",
+      "date": "2026-03-05",
+      "url": "https://data.riksdagen.se/dokument/HD03159.html",
+      "relevance": "partial",
+      "note": "Genomför byggnadsdirektivet med energirenoveringsplaner och utökade krav på energideklaration."
+    }
+  ]
 }

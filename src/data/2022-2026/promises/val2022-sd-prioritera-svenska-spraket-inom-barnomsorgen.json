@@ -17,10 +17,17 @@
   "committee": "UbU",
   "keywords": ["förskola", "svenska språket", "barnomsorg"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i november 2024 en utredare i uppdrag att föreslå en likvärdig förskola av god kvalitet med obligatorisk språkförskola, och utredningen lämnade i juni 2026 förslag om en språkutvecklande förskola. Dokumenten gäller förskolans arbete med språket och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,26 @@
       "url": "https://data.riksdagen.se/dokument/HC01UbU1.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HCB1113",
+      "designation": "Dir. 2024:113",
+      "title": "En likvärdig förskola av god kvalitet med obligatorisk språkförskola",
+      "date": "2024-11-21",
+      "url": "https://data.riksdagen.se/dokument/HCB1113.html",
+      "relevance": "partial",
+      "note": "Utredaren ska föreslå en likvärdig förskola med obligatorisk språkförskola."
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HEB337",
+      "designation": "SOU 2026:37",
+      "title": "Förutsättningar för en likvärdig och språkutvecklande förskola",
+      "date": "2026-06-17",
+      "url": "https://data.riksdagen.se/dokument/HEB337.html",
+      "relevance": "partial",
+      "note": "Utredningens förslag om förutsättningar för en likvärdig och språkutvecklande förskola."
     }
   ]
 }

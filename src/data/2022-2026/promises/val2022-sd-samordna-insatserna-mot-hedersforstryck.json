@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["hedersförtryck", "samordning"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i augusti 2023 en utredare i uppdrag att föreslå mål och strategier för en långsiktig och samordnad styrning av arbetet mot könsrelaterat och hedersrelaterat våld. I augusti 2026 gav den en utredare i uppdrag att föreslå en funktion med hedersombud som vägleder den som utsätts och förhåller sig till myndigheternas ansvar och till samordnat stöd. Direktiven gäller styrning och stöd och täcker en del av löftet. Regeringen lämnade i april 2026 en ny nationell strategi i en skrivelse.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": ["tido-skarpt-hedersforstryck-lagstiftning"],
       "outcome": "weakened",
       "note": "Avtalet anger att lagstiftningen mot hedersrelaterat förtryck skärps och att myndigheternas arbete effektiviseras."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HBB1117",
+      "designation": "Dir. 2023:117",
+      "title": "En stärkt långsiktig styrning av arbetet mot könsrelaterat våld och hedersrelaterat våld och förtryck",
+      "date": "2023-08-03",
+      "url": "https://data.riksdagen.se/dokument/HBB1117.html",
+      "relevance": "partial",
+      "note": "Utredaren ska föreslå delmål och strategier för en långsiktig, samordnad styrning av arbetet mot könsrelaterat och hedersrelaterat våld."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1103",
+      "designation": "Dir. 2026:103",
+      "title": "Stärkt stöd till personer som utsätts för hedersrelaterat våld och förtryck",
+      "date": "2026-08-27",
+      "url": "https://data.riksdagen.se/dokument/HEB1103.html",
+      "relevance": "partial",
+      "note": "Utredaren ska föreslå en funktion med hedersombud som ska fungera tillsammans med myndigheters ansvar och befintligt samordnat stöd."
     }
   ]
 }

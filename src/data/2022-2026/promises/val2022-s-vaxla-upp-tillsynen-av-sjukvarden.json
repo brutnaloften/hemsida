@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["tillsyn", "sjukvård", "kvalitet", "ivo"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-01",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i april 2025 en utredare i uppdrag att utreda insatser för att stärka patientsäkerheten inom hälso- och sjukvården, bland annat om Inspektionen för vård och omsorg behöver utökade tillsynsbefogenheter, till exempel testköp hos estetiska verksamheter, och tillgång till uppgifter från belastningsregistret. Uppdraget gäller en del av tillsynen och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-01"
+      }
+    ]
   },
   "evidence": [
     {
@@ -32,6 +39,16 @@
       "url": "https://data.riksdagen.se/dokument/HA01SoU5.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB141",
+      "designation": "Dir. 2025:41",
+      "title": "Insatser för att stärka patientsäkerheten och motverka välfärdsbrottslighet inom hälso- och sjukvården",
+      "date": "2025-04-16",
+      "url": "https://data.riksdagen.se/dokument/HDB141.html",
+      "relevance": "partial",
+      "note": "Utredaren ska analysera utökade befogenheter och ökad tillgång till information för IVO i tillsynen över hälso- och sjukvården."
     }
   ]
 }

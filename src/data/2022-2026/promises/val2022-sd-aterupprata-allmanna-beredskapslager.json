@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["beredskapslager", "krisberedskap"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i januari 2023 fram en proposition om hälso- och sjukvårdens försörjningsberedskap med bland annat en lagerhållningsskyldighet för öppenvårdsapotek, och i mars 2026 en proposition om beredskapslager i livsmedelskedjan. Dokumenten gäller beredskapslager för läkemedel, sjukvårdsmateriel och livsmedel och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,26 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HA0345",
+      "designation": "Prop. 2022/23:45",
+      "title": "Vissa frågor om hälso- och sjukvårdens försörjningsberedskap",
+      "date": "2023-01-24",
+      "url": "https://data.riksdagen.se/dokument/HA0345.html",
+      "relevance": "partial",
+      "note": "Föreslår lagerhållningsskyldighet för öppenvårdsapotek och förtydligar att vården ska ha de sjukvårdsprodukter och den utrustning som behövs."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03205",
+      "designation": "Prop. 2025/26:205",
+      "title": "Beredskapslager i livsmedelskedjan",
+      "date": "2026-03-20",
+      "url": "https://data.riksdagen.se/dokument/HD03205.html",
+      "relevance": "partial",
+      "note": "Gäller beredskapslager i livsmedelskedjan."
     }
   ]
 }

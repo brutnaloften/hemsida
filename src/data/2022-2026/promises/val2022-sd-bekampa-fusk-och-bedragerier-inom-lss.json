@@ -17,10 +17,17 @@
   "committee": "SoU",
   "keywords": ["LSS", "bedrägerier", "välfärdsbrott"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i april 2025 en utredare i uppdrag att föreslå åtgärder mot välfärdsbrottslighet inom personlig assistans, bland annat en särskild inspektion för verksamhet enligt LSS, och i september 2026 förlängdes utredningstiden. I september 2025 lade regeringen fram en proposition med skarpare verktyg för tillsynen av verksamhet enligt LSS. Dokumenten gäller assistansen och tillsynen och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,36 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB140",
+      "designation": "Dir. 2025:40",
+      "title": "Effektivare åtgärder mot välfärdsbrott och ökad förutsebarhet inom personlig assistans",
+      "date": "2025-04-16",
+      "url": "https://data.riksdagen.se/dokument/HDB140.html",
+      "relevance": "partial",
+      "note": "Utredaren ska föreslå åtgärder mot välfärdsbrott inom personlig assistans, bland annat en särskild inspektion för LSS-verksamhet."
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HEB1108",
+      "designation": "Dir. 2026:108",
+      "title": "Tilläggsdirektiv till Utredningen om effektivare åtgärder mot välfärdsbrott och ökad förutsebarhet inom personlig assistans (S 2025:04)",
+      "date": "2026-09-03",
+      "url": "https://data.riksdagen.se/dokument/HEB1108.html",
+      "relevance": "partial",
+      "note": "Förlänger utredningstiden för uppdraget om åtgärder mot välfärdsbrott inom personlig assistans."
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD0315",
+      "designation": "Prop. 2025/26:15",
+      "title": "Skarpare verktyg till Inspektionen för vård och omsorg",
+      "date": "2025-09-18",
+      "url": "https://data.riksdagen.se/dokument/HD0315.html",
+      "relevance": "partial",
+      "note": "Föreslår utökade möjligheter för IVO att ingripa mot verksamheter enligt socialtjänstlagen och LSS som inte uppfyller kraven."
     }
   ]
 }

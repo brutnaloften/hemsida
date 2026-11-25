@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["Norden", "försvarssamarbete", "säkerhet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen lade i april 2026 fram en proposition om att regeringen till och med 2026 får sätta in upp till 1 200 svenska soldater i Natos framskjutna närvaro i Finland. Insatsen fördjupar det nordiska försvarssamarbetet och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -40,6 +47,16 @@
       "url": "https://data.riksdagen.se/dokument/HC01UU14.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HD03220",
+      "designation": "Prop. 2025/26:220",
+      "title": "Svenskt bidrag till Natos framskjutna närvaro i Finland",
+      "date": "2026-04-09",
+      "url": "https://data.riksdagen.se/dokument/HD03220.html",
+      "relevance": "partial",
+      "note": "Föreslår att upp till 1 200 svenska soldater får sättas in i Natos framskjutna närvaro i Finland."
     }
   ]
 }

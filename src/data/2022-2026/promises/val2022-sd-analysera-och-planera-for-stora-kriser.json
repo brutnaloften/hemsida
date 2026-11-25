@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["krisberedskap", "riskanalys", "planering"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i oktober 2024 en ändamålsenlig reglering av kommuners och regioners grundläggande ansvar och uppgifter inför fredstida kriser och höjd beredskap, vilket ger grunden för deras planering. Förslagen gäller den lokala och regionala nivån och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HCB365",
+      "designation": "SOU 2024:65",
+      "title": "Kommuners och regioners grundläggande beredskap inför kris och krig",
+      "date": "2024-10-01",
+      "url": "https://data.riksdagen.se/dokument/HCB365.html",
+      "relevance": "partial",
+      "note": "Föreslår reglering av kommuners och regioners grundläggande ansvar och uppgifter inför fredstida kriser och höjd beredskap."
     }
   ]
 }

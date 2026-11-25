@@ -17,10 +17,17 @@
   "committee": "NU",
   "keywords": ["skogsråvara", "hållbara produkter", "bioekonomi"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "En statlig utredning föreslog i december 2023 en nationell bioekonomistrategi med fokus på resurseffektiva, biobaserade lösningar, där biomassa från skogen är en av råvarorna. Förslaget gäller biobaserade produkter i allmänhet och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "sou",
+      "dok_id": "HBB384",
+      "designation": "SOU 2023:84",
+      "title": "En hållbar bioekonomistrategi- för ett välmående fossilfritt samhälle",
+      "date": "2023-12-04",
+      "url": "https://data.riksdagen.se/dokument/HBB384.html",
+      "relevance": "partial",
+      "note": "Föreslår en nationell bioekonomistrategi med fokus på resurseffektiva, biobaserade lösningar."
     }
   ]
 }

@@ -17,10 +17,17 @@
   "committee": "JuU",
   "keywords": ["företagare", "brottslighet", "butiksbrott"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen gav i september 2025 en utredare i uppdrag att föreslå en starkare nödvärnsrätt och bättre möjligheter att förhindra brottslighet och ordningsstörningar i butiker, så att näringsidkare och andra kan skydda sig. Direktivet gäller butiker snarare än brott mot företag i allmänhet och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "dir",
+      "dok_id": "HDB182",
+      "designation": "Dir. 2025:82",
+      "title": "En starkare nödvärnsrätt och ett effektivare tillträdesförbud",
+      "date": "2025-09-11",
+      "url": "https://data.riksdagen.se/dokument/HDB182.html",
+      "relevance": "partial",
+      "note": "Utredaren ska föreslå en starkare nödvärnsrätt och bättre möjligheter att förhindra brottslighet och ordningsstörningar i butiker."
     }
   ]
 }

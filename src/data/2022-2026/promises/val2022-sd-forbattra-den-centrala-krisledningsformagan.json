@@ -17,10 +17,17 @@
   "committee": "FöU",
   "keywords": ["krisledning", "krisberedskap", "Regeringskansliet"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen föreslog i juni 2025 ändringar i regeringsformen för att stärka den konstitutionella beredskapen, så att riksdagen och regeringen får bättre förutsättningar att fatta nödvändiga beslut i krig och andra svåra kriser. Förslagen gäller statsledningens beslutsförmåga och täcker en del av löftet.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC03155",
+      "designation": "Prop. 2024/25:155",
+      "title": "Stärkt konstitutionell beredskap",
+      "date": "2025-06-10",
+      "url": "https://data.riksdagen.se/dokument/HC03155.html",
+      "relevance": "partial",
+      "note": "Föreslår ändringar i regeringsformen som ger riksdagen och regeringen bättre förutsättningar att fullgöra sina uppgifter i krig och svåra kriser."
     }
   ]
 }

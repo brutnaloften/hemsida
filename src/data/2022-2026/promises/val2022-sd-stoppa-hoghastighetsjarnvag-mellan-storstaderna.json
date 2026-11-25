@@ -17,10 +17,17 @@
   "committee": "TU",
   "keywords": ["höghastighetståg", "järnväg", "storstäder"],
   "verdict": {
-    "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-11-02",
-    "history": []
+    "value": "in_progress",
+    "assessedBy": "ai",
+    "reasoning": "Regeringen beslutade i december 2022 att avbryta arbetet med projektet nya stambanor för höghastighetståg och prioriterar i stället upprustning av befintlig järnväg, eftersom höghastighetsjärnväg skulle ha trängt undan andra investeringar. Propositionen från oktober 2024 bygger på en överenskommelse mellan regeringen och Sverigedemokraterna och beskriver riksdagens tillkännagivande om att säga nej till höghastighetsjärnväg som slutbehandlat.",
+    "date": "2026-11-25",
+    "history": [
+      {
+        "value": "unassessed",
+        "reasoning": "",
+        "date": "2026-11-02"
+      }
+    ]
   },
   "evidence": [
     {
@@ -30,6 +37,16 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "prop",
+      "dok_id": "HC0328",
+      "designation": "Prop. 2024/25:28",
+      "title": "Vägen till en pålitlig transportinfrastruktur – för att hela Sverige ska fungera",
+      "date": "2024-10-03",
+      "url": "https://data.riksdagen.se/dokument/HC0328.html",
+      "relevance": "full",
+      "note": "Regeringen konstaterar att riksdagens tillkännagivande om att säga nej till höghastighetsjärnväg är slutbehandlat och prioriterar upprustning av befintlig järnväg."
     }
   ]
 }
