@@ -18,8 +18,9 @@
   "keywords": ["skog", "skogsbruk", "skydd av skog", "produktion"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
+    "assessedBy": "ai",
+    "reasoning": "Löftet gäller skog som är undantagen från skogsbruk. SCB:s serie över formellt skyddad natur avser hela landet och inte bara skog: andelen skyddad landyta steg från 13,9 procent 2022 till 14,3 procent 2025. Den mäter inte skog undantagen från skogsbruk och kan inte avgöra löftet.",
+    "date": "2026-11-25",
     "history": []
   },
   "evidence": [
@@ -30,6 +31,25 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-skyddad-natur-land-andel",
+      "baseline": {
+        "period": "2022",
+        "v": 13.9
+      },
+      "latest": {
+        "period": "2025",
+        "v": 14.3
+      },
+      "target": {
+        "type": "direction",
+        "op": "down"
+      },
+      "relevance": "partial",
+      "date": "2026-05-29",
+      "note": "Formellt skyddad natur som andel av landarealen i hela landet. Serien gäller all skyddad natur, inte bara skog undantagen från skogsbruk."
     }
   ]
 }

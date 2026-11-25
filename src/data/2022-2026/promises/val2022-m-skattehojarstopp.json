@@ -18,8 +18,9 @@
   "keywords": ["skattehöjarstopp", "skattetryck", "skatter", "mandatperiod"],
   "verdict": {
     "value": "unassessed",
-    "reasoning": "",
-    "date": "2026-10-29",
+    "assessedBy": "ai",
+    "reasoning": "Löftet gäller att de samlade skatterna inte höjs. SCB:s skattekvot sjönk från 42,9 procent av BNP 2022 till 40,5 procent 2025, men kvoten påverkas av konjunkturen och mäter inte om skattesatser har höjts. Statistiken mäter utfallet, inte orsaken. Löftet kan inte avgöras av den.",
+    "date": "2026-11-25",
     "history": []
   },
   "evidence": [
@@ -30,6 +31,24 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-skattekvot",
+      "baseline": {
+        "period": "2022",
+        "v": 42.9
+      },
+      "latest": {
+        "period": "2025",
+        "v": 40.5
+      },
+      "target": {
+        "type": "none"
+      },
+      "relevance": "partial",
+      "date": "2026-08-28",
+      "note": "Totala skatter som andel av BNP. Kvoten påverkas av konjunkturen och mäter inte om skattesatser har höjts."
     }
   ]
 }
