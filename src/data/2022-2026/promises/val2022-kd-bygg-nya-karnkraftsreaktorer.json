@@ -45,6 +45,25 @@
       "url": "https://data.riksdagen.se/dokument/HB01NU5.html",
       "relevance": "partial",
       "note": null
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-installerad-effekt-karnkraft",
+      "baseline": {
+        "period": "2022",
+        "v": 6901
+      },
+      "latest": {
+        "period": "2025",
+        "v": 7001
+      },
+      "target": {
+        "type": "direction",
+        "op": "up"
+      },
+      "relevance": "partial",
+      "date": "2026-10-08",
+      "note": "Installerad effekt i kärnkraften. Ökningen på 100 MW är för liten för att vara en ny reaktor. Serien mäter inte reaktorer under uppförande."
     }
   ]
 }

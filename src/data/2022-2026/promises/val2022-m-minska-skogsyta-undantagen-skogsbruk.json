@@ -31,6 +31,25 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-skyddad-natur-land-andel",
+      "baseline": {
+        "period": "2022",
+        "v": 13.9
+      },
+      "latest": {
+        "period": "2025",
+        "v": 14.3
+      },
+      "target": {
+        "type": "direction",
+        "op": "down"
+      },
+      "relevance": "partial",
+      "date": "2026-05-29",
+      "note": "Formellt skyddad natur som andel av landarealen i hela landet. Serien gäller all skyddad natur, inte bara skog undantagen från skogsbruk."
     }
   ]
 }

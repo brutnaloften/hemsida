@@ -31,6 +31,24 @@
       "promises": [],
       "outcome": "not_addressed",
       "note": null
+    },
+    {
+      "kind": "statistic",
+      "series": "scb-skattekvot",
+      "baseline": {
+        "period": "2022",
+        "v": 42.9
+      },
+      "latest": {
+        "period": "2025",
+        "v": 40.5
+      },
+      "target": {
+        "type": "none"
+      },
+      "relevance": "partial",
+      "date": "2026-08-28",
+      "note": "Totala skatter som andel av BNP. Kvoten påverkas av konjunkturen och mäter inte om skattesatser har höjts."
     }
   ]
 }
